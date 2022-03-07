@@ -55,7 +55,7 @@ In case of a cancellation of the Event, all participants will be notified by the
 
 The Event Tickets are fully refundable without stating a reason until**June 11th, 2021 23:59:59 CEST** (the “Refund End Time”). Refunds are no longer possible after that Refund End Time unless otherwise specified by the Organizers. The Organizers reserve the right to deduct administrative costs (bank, online payments services, etc) from the refund.
 
-Refund requests must be made by email to the[refunds@europython.eu](mailto:refunds@europython.eu) email address. The email must include the Order Code, Ticket IDs and name of the person who bought the ticket. Refunds are processed via Stripe and will be paid back to the same payment card which was used for the purchase of the tickets.
+Refund requests must be made by email to the [refunds@europython.eu](mailto:refunds@europython.eu) email address. The email must include the Order Code, Ticket IDs and name of the person who bought the ticket. Refunds are processed via Stripe and will be paid back to the same payment card which was used for the purchase of the tickets.
 
 Processing of the refunds will happen no later than 30 days after the end of the Event.
 
@@ -64,12 +64,12 @@ Alternatively, the ticket may be reassigned to another participant at no extra c
 
 ### Revocation Rights
 
-Conference tickets are not subject to the[EU regulations on distance selling and the 14-day cooling off period](https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_en.htm). Outside the above refund policy, we do not provide refunds on ticket purchases after the Refund End Date.
+Conference tickets are not subject to the [EU regulations on distance selling and the 14-day cooling off period](https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_en.htm). Outside the above refund policy, we do not provide refunds on ticket purchases after the Refund End Date.
 
 
 ## 5. Data Protection
 
-The Organizers are considered data controllers under the terms of the[Regulation (EU) No. 2016/679 (GDPR)](https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex:32016R0679).
+The Organizers are considered data controllers under the terms of the [Regulation (EU) No. 2016/679 (GDPR)](https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex:32016R0679).
 
 Please refer to our Data Protection Policy at<https://www.europython-society.org/privacy/> for details on how your data is processed.
 
@@ -78,7 +78,7 @@ All attendees, sponsors and other participants of the conference have to declare
 
 ### Right of Denial
 
-The Organizers hereby notifies that the Participant has the right to deny the storage and use of their personal information for advertising and marketing use. If desired, participants may revoke their consent to the use of their personal information for the foregoing reasons, at any time. It is sufficient to do so by email to:[privacy@europython.eu](mailto:privacy@europython.eu) or alternatively writing a letter to the Organizers.
+The Organizers hereby notifies that the Participant has the right to deny the storage and use of their personal information for advertising and marketing use. If desired, participants may revoke their consent to the use of their personal information for the foregoing reasons, at any time. It is sufficient to do so by email to: [privacy@europython.eu](mailto:privacy@europython.eu) or alternatively writing a letter to the Organizers.
 
 
 ### Recordings and Photography
@@ -93,7 +93,7 @@ In applying to participate in the event, the Participant gives a declaration of 
 
 ### Code of Conduct
 
-The Participant accepts the EuroPython Code of Conduct (the “Code of Conduct”), which can be found at[www.europython-society.org/coc/](http://www.europython-society.org/coc/). The Organizers may make alterations to the Code of Conduct from time to time. Minor alterations are not considered contractual deviations.
+The Participant accepts the EuroPython Code of Conduct (the “Code of Conduct”), which can be found at [www.europython-society.org/coc/](http://www.europython-society.org/coc/). The Organizers may make alterations to the Code of Conduct from time to time. Minor alterations are not considered contractual deviations.
 
 The Code of Conduct is part of this contract and shall be observed during participation in the event. The Participant consents to said Code of Conduct and shall comply with it.
 
@@ -119,7 +119,7 @@ The following requirements applies to either in-person participants, or online p
 
 ### Minors
 
-Unless tended by the childminders in the Venue, children/minors younger than 18 years old must be accompanied by an adult guardian at all times during the event, who accepts full liability for this child/minor. Consent to the privacy policies throughout our websites and this Terms & Conditions have to be given by the aforementioned adult. Please contact[privacy@europython.eu](mailto:privacy@europython.eu) for further information or instructions.
+Unless tended by the childminders in the Venue, children/minors younger than 18 years old must be accompanied by an adult guardian at all times during the event, who accepts full liability for this child/minor. Consent to the privacy policies throughout our websites and this Terms & Conditions have to be given by the aforementioned adult. Please contact [privacy@europython.eu](mailto:privacy@europython.eu) for further information or instructions.
 
 
 ### Exclusion from the Event
@@ -155,7 +155,7 @@ Ramnebacken 45
 424 38 Agnesberg  
 Sweden
 
-EMail:[board@europython.eu](mailto:board@europython.eu)
+EMail: [board@europython.eu](mailto:board@europython.eu)
 
 
 ## History
