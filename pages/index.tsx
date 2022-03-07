@@ -3,6 +3,7 @@ import { MDXRemote } from "next-mdx-remote";
 
 import { promises as fs } from "fs";
 import Head from "next/head";
+import path from "path";
 
 const Header = () => (
   <header>
@@ -149,11 +150,7 @@ export default function DocumentPage({ source }: { source: any }) {
           href="http://blog.europython.eu/rss"
         />
 
-        <link
-          rel="shortcut icon"
-          type="image/png"
-          href="/favicon.png"
-        />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
         <title>
           EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote
@@ -202,13 +199,10 @@ export default function DocumentPage({ source }: { source: any }) {
   );
 }
 
-export async function getStaticProps({
-  params,
-}: {
-  params: { path: String[] };
-}) {
-  const path = "data/faq.md";
-  const content = await fs.readFile(path);
+export async function getStaticProps() {
+  const faqPath = path.join(process.cwd(), 'data/faq.md')
+
+  const content = await fs.readFile(faqPath);
   const mdxSource = await serialize(content.toString());
   return { props: { source: mdxSource } };
 }
