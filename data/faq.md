@@ -4,7 +4,7 @@
 
 A. After 2 years of being fully remote, EuroPython 2022 will be held on **11th-17th July** and it will be both in person and virtual.
 
-The in-person conference will be held at [**The** **Convention Centre Dublin (The CCD**)](https://www.theccd.ie/) **in Dublin,** **Ireland**.
+The in-person conference will be held at **[The Convention Centre Dublin (The CCD)](https://www.theccd.ie/) in Dublin, Ireland**.
 
 For the virtual conference, detailed instructions will be announced at a later time.
 
