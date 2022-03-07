@@ -2,9 +2,9 @@
 
 ## **Q. When and where is EuroPython 2022 taking place?**
 
-A. After 2 years of being fully remote, EuroPython 2022 will be held on**11th-17th July**and it will be both in person and virtual.
+A. After 2 years of being fully remote, EuroPython 2022 will be held on **11th-17th July** and it will be both in person and virtual.
 
-The in-person conference will be held at [**The** **Convention Centre Dublin (The CCD**)](https://www.theccd.ie/)** in Dublin**,**Ireland**.
+The in-person conference will be held at [**The** **Convention Centre Dublin (The CCD**)](https://www.theccd.ie/) **in Dublin,** **Ireland**.
 
 For the virtual conference, detailed instructions will be announced at a later time.
 
@@ -20,7 +20,7 @@ A. The conference will be organised in three phases:
 
 ## **Q. What will the program look like?**
 
-A. To get an idea of what to expect, please have a look at the [EP2021 program](https://ep2021.europython.eu/events/sessions/) and the  [EP2019 program](https://ep2019.europython.eu/events/sessions/).
+A. To get an idea of what to expect, please have a look at the [EP2021 program](https://ep2021.europython.eu/events/sessions/) and the [EP2019 program](https://ep2019.europython.eu/events/sessions/).
 
 To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) for updates.
 
@@ -29,7 +29,7 @@ We aim to have a very diverse set of talks, tutorials, workshops, posters and ke
 
 ## **Q. When will you start accepting talk proposals?**
 
-A. The Call for Proposals (CFP) will be launched on** 8 March**. We are thrilled to receive proposals on any topic that could be of interest to our community.
+A. The Call for Proposals (CFP) will be launched on **8 March**. We are thrilled to receive proposals on any topic that could be of interest to our community.
 
 Especially if you are considering becoming a speaker for the first time, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. There is a [Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) as well as broader support options.
 
