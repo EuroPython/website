@@ -129,3 +129,7 @@ dmypy.json
 .pyre/
 
 .vscode/
+out/
+.next/
+.DS_Store
+node_modules/
