@@ -60,17 +60,17 @@ In addition, please take the following points into account:
 - Reimbursements will only be made to individuals who actually attended the conference. Please include a**photo of your conference badge** with your receipts/invoices.
 - Please consider the risk of the travel restrictions: Choose flexible booking options that allow you to cancel in case you can’t actually make it to the conference.
 - Grants cannot be transferred to other individuals.
-- If you’ve applied for a grant or accepted a grant, but cannot make it to the conference, please contact us at[finaid@europython.eu](mailto:finaid@europython.eu) so we can allocate the funds to someone else.
+- If you’ve applied for a grant or accepted a grant, but cannot make it to the conference, please contact us at [finaid@europython.eu](mailto:finaid@europython.eu) so we can allocate the funds to someone else.
 
 
 ### Privacy Policy
 
-The data we collect on this form will exclusively be used by our financial aid work group for the selection of grant recipients and the processing of financial aid refunds. No data is passed on to third parties, xcept to our accountants and the bank in order to process the refunds. We use Google Forms for the processing and Google Drive for storing the relevant information. For more details on our privacy policies, please see our[ privacy policy](https://ep2019.europython.eu/privacy.1.html).
+The data we collect on this form will exclusively be used by our financial aid work group for the selection of grant recipients and the processing of financial aid refunds. No data is passed on to third parties, xcept to our accountants and the bank in order to process the refunds. We use Google Forms for the processing and Google Drive for storing the relevant information. For more details on our privacy policies, please see our [ privacy policy](https://ep2019.europython.eu/privacy.1.html).
 
 
 ### Become a sponsor!
 
-If you want to support EuroPython and its efforts to make EuroPython accessible to everyone, please contact[sponsoring@europython.eu](mailto:sponsoring@europython.eu).
+If you want to support EuroPython and its efforts to make EuroPython accessible to everyone, please contact [sponsoring@europython.eu](mailto:sponsoring@europython.eu).
 
 Thank you.
 

@@ -29,7 +29,7 @@ EuroPython will provide a speaker training session to all selected speakers rega
 
 ## Mentors
 
-To become a Mentor you need to fill in the application form[here](https://forms.gle/QLfWU9bj1y5GRm219):
+To become a Mentor you need to fill in the application form [here](https://forms.gle/QLfWU9bj1y5GRm219):
 
 We expect mentors to have past speaking experience at conferences similar to EuroPython.
 
@@ -44,4 +44,4 @@ For mentors who took on a mentee, you are expected to provide 4 one-hour session
 
 ## Mentee
 
-If you are from an underrepresented or a marginalized group in the tech industry and have no prior speaking experience, but would like to submit to EuroPython 2022, please fill in the form[here](https://forms.gle/QLfWU9bj1y5GRm219)
+If you are from an underrepresented or a marginalized group in the tech industry and have no prior speaking experience, but would like to submit to EuroPython 2022, please fill in the form [here](https://forms.gle/QLfWU9bj1y5GRm219)
