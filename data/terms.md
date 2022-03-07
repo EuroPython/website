@@ -1,13 +1,8 @@
 # Terms & Conditions
 
-EuroPython 2022
+These terms and conditions (“T&C”) apply to all attendees, sponsors and other participants in the **EuroPython 2022 conference** (the “**Event**” or the “**Conference**”).
 
-This is the 2022 Draft. The terms and conditions are to be published here on the website at  
-<https://ep2022.europython.eu/terms/>
-
-These terms and conditions (“T&C”) apply to all attendees, sponsors and other participants in the**EuroPython 2022 conference** (the “**Event**” or the “**Conference**”).
-
-The “**Organizers”** of the Event**:** the EuroPython Society (EPS), having the registered address EuroPython Society, Ramnebacken 45, 424 38 Agnesberg, Sweden.
+The “**Organizers”** of the Event: the EuroPython Society (EPS), having the registered address EuroPython Society, Ramnebacken 45, 424 38 Agnesberg, Sweden.
 
 **Event Date**: 11 - 17 July 2022
 
@@ -26,7 +21,7 @@ Some ticket categories only have a limited number of available tickets. The numb
 
 For in-person events, the tickets can be picked up as badges at the conference registration desk on the first day of the Event. The badge permits access to the conference venue during the Event Days, subject to the ticket category.
 
-For an Online Event, the confirmation email represents the ticket. It is also listed in the Participant’s account on the Event Website. The Participant will be granted access to the online media used during the online event either directly by logging in to the Event Website on the Event Days or indirectly via URLs sent to the registered email address, subject to the ticket category.
+For an online event, the confirmation email represents the ticket. It is also listed in the Participant’s account on the Event Website. The Participant will be granted access to the online media used during the online event either directly by logging in to the Event Website on the Event Days or indirectly via URLs sent to the registered email address, subject to the ticket category.
 
 
 ## 2. Payments
@@ -53,7 +48,7 @@ In case of a cancellation of the Event, all participants will be notified by the
 
 ## 4. Refunds
 
-The Event Tickets are fully refundable without stating a reason until**June 11th, 2021 23:59:59 CEST** (the “Refund End Time”). Refunds are no longer possible after that Refund End Time unless otherwise specified by the Organizers. The Organizers reserve the right to deduct administrative costs (bank, online payments services, etc) from the refund.
+The Event Tickets are fully refundable without stating a reason until **June 11th, 2021 23:59:59 CEST** (the “Refund End Time”). Refunds are no longer possible after that Refund End Time unless otherwise specified by the Organizers. The Organizers reserve the right to deduct administrative costs (bank, online payments services, etc) from the refund.
 
 Refund requests must be made by email to the [refunds@europython.eu](mailto:refunds@europython.eu) email address. The email must include the Order Code, Ticket IDs and name of the person who bought the ticket. Refunds are processed via Stripe and will be paid back to the same payment card which was used for the purchase of the tickets.
 
@@ -71,7 +66,7 @@ Conference tickets are not subject to the [EU regulations on distance selling an
 
 The Organizers are considered data controllers under the terms of the [Regulation (EU) No. 2016/679 (GDPR)](https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex:32016R0679).
 
-Please refer to our Data Protection Policy at<https://www.europython-society.org/privacy/> for details on how your data is processed.
+Please refer to our Data Protection Policy at <https://www.europython-society.org/privacy/> for details on how your data is processed.
 
 All attendees, sponsors and other participants of the conference have to declare their consent to the above privacy policy.
 
@@ -109,12 +104,12 @@ The following requirements applies to either in-person participants, or online p
 
 1. _For in-person participants_, no animals (except guide dogs), no substance or article which is, in Venue's reasonable opinion, of a dangerous, explosive, hazardous or objectionable nature and/or no naked flame will be brought inside, outside or in the vicinity of the Venue, without written consent by the Organizers and subject to any conditions of such consent;
 2. _In-person participants_ will not try to gain unauthorized access to the Venue and only use the entrances and exits to the Venue, designated as such by the Venue;
-3. _For in-person participants,_no act or thing is done inside, outside or in the vicinity of Venue, which may, in Organizer’s reasonable opinion, be or become a nuisance to the attendees, the Venue, its other customers or any premises or buildings in its vicinity;
-4. _In-person participants_will immediately comply with any requirements or directions made or given by Venue relating in any way to the health and safety of the participants, the Organizers, sponsors and Venue personnel;
-5. _In-person participants_should not bring food /or beverages (other than bottled water or soft drinks) into the Venue which have not been authorized by the Organizers in writing.
-6. _Foronline participants, no attempt shall be made to gain unauthorized access to the Event, and will only use the invitation link sent to them for their own use; sharing the invitation link to the Online Event with unauthorized users can result in a ban from participation in the Event; the Organizers reserves the rights to investigate and deny entry to the Event should they suspect such unauthorized activities occur;_
-7. The_in-person participants_ shall not erect any stands, displays, advertisements, signs, notices, or other similar matters in the Venue; or fix any items to the walls, floor or other temporary or permanent structures of Venue. Similarly, the _online participants_should not have any form of advertisement on the Conference Platform, unless authorized to by the Organizers.
-8. for_online participants,_no recordings of sessions or chat transcripts run on the Conference Platform will be created, streamed or otherwise made accessible outside the Conference Platform, unless authorized by the Organizers;
+3. _For in-person participants_, no act or thing is done inside, outside or in the vicinity of Venue, which may, in Organizer’s reasonable opinion, be or become a nuisance to the attendees, the Venue, its other customers or any premises or buildings in its vicinity;
+4. _In-person participants_ will immediately comply with any requirements or directions made or given by Venue relating in any way to the health and safety of the participants, the Organizers, sponsors and Venue personnel;
+5. _In-person participants_ should not bring food /or beverages (other than bottled water or soft drinks) into the Venue which have not been authorized by the Organizers in writing.
+6. _For online participants_, no attempt shall be made to gain unauthorized access to the Event, and will only use the invitation link sent to them for their own use; sharing the invitation link to the Online Event with unauthorized users can result in a ban from participation in the Event; the Organizers reserves the rights to investigate and deny entry to the Event should they suspect such unauthorized activities occur;
+7. The _in-person participants_ shall not erect any stands, displays, advertisements, signs, notices, or other similar matters in the Venue; or fix any items to the walls, floor or other temporary or permanent structures of Venue. Similarly, the _online participants_ should not have any form of advertisement on the Conference Platform, unless authorized to by the Organizers.
+8. for _online participants_, no recordings of sessions or chat transcripts run on the Conference Platform will be created, streamed or otherwise made accessible outside the Conference Platform, unless authorized by the Organizers;
 
 
 ### Minors
