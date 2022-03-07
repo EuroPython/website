@@ -1,8 +1,17 @@
 export const Footer = () => (
   <footer>
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
+          <div>
+          <p>
+            <a href="/terms">
+            T&C
+            </a>
+          </p>
+          <p>
+            <a href="https://www.europython-society.org/privacy/" target="_blank">
+            Privacy Policy
+            </a>
+          </p>
+
           <a href="https://www.europython-society.org">
             <img src="/epslogo.png" />
           </a>
@@ -26,8 +35,7 @@ export const Footer = () => (
               EPS website
             </a>
           </p>
-        </div>
-      </div>
+          </div>
 
       <div
         className="row text-center"
@@ -79,7 +87,6 @@ export const Footer = () => (
             alt="powered by vercel"
           />
         </a>
-      </div>
-    </div>
+        </div>
   </footer>
 );
