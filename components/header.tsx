@@ -1,5 +1,9 @@
+import { HeaderNav } from "./header-nav";
+
 export const Header = () => (
   <header>
+    <HeaderNav />
+
     <svg
       viewBox="0 0 230.346 232.912"
       width="230.346"
