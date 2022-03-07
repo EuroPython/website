@@ -31,7 +31,7 @@ We aim to have a very diverse set of talks, tutorials, workshops, posters and ke
 
 A. The Call for Proposals (CFP) will be launched on** 8 March**. We are thrilled to receive proposals on any topic that could be of interest to our community.
 
-Especially if you are considering becoming a speaker for the first time, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. There is a S [peaker Mentorship Programme](https://ep2022.europython.eu/mentorship) as well as broader support options.
+Especially if you are considering becoming a speaker for the first time, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. There is a [Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) as well as broader support options.
 
 If you have something in mind, there is no better time to start preparing your proposal! For more insights, please have a look at the [EP2019 CFP page](https://ep2019.europython.eu/events/call-for-proposals/), which was our last in-person conference. Some details may change for EP2022, but overall, the structure is going to be similar.
 
