@@ -2,7 +2,7 @@ export const HeaderNav = () => (
   <nav>
     <a href="/">Home</a>
 
-    <a href="https://program.europython.eu">CFP</a>
+    <a href="https://program.europython.eu/europython-2022/cfp">CFP</a>
     <a href="/mentorship">Mentorship Programme</a>
     <a href="/finaid">Finaid</a>
 
