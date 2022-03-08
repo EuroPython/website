@@ -114,4 +114,4 @@ A. No, as of 7 March 2022 social distancing is not required. Please respect the 
 
 ## **Q. Do I need to be vaccinated to attend the conference in person?**
 
-A. As of 07 March 2022, though you are not required to be vaccinated to enter the venue, you need to show proof of vaccination or recovery to enter Ireland. More information can be found on the [Irish Government Website](https://www.gov.ie/en/publication/77952-government-advice-on-international-travel/). We strongly encourage you to take all the health precautionary measures you can to protect yourself and those around us. Thanks!  
+A. As of 07 March 2022, though you are not required to be vaccinated to enter the venue or Ireland as per the rules of the [Irish Government](https://www.gov.ie/en/publication/77952-government-advice-on-international-travel/), we strongly encourage you to take all the health precautionary measures you can to protect yourself and those around us. Thanks!  
