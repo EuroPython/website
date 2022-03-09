@@ -1,12 +1,14 @@
-export const Card = () => (
+type CardProps = {
+  title: string;
+  subtitle: string;
+  content: string;
+};
+
+export const Card = ({ title, subtitle, content }: CardProps) => (
   <aside>
-    <img src="/img/photo.png" alt="Proposal papers" />
-    <h3>Call for Proposals Open</h3>
-    <p className="card__subheading">From 8th-27th March</p>
-    <p>
-      There is no EuroPython without you. Our colourful and cosmopolitan
-      community only comes alive with your contributions. We invite you to step
-      up, step in and participate in our conference.
-    </p>
+    <img src="/img/photo.png" alt="" />
+    <h3>{title}</h3>
+    <p className="card__subheading">{subtitle}</p>
+    <p>{content}</p>
   </aside>
 );

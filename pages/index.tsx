@@ -6,42 +6,61 @@ import path from "path";
 import { Layout } from "../components/layout";
 import { Hero } from "../components/hero";
 import { Card } from "../components/card";
+import matter from "gray-matter";
 
-export default function IndexPage({ source }: { source: any }) {
+type Deadline = {
+  content: string;
+  data: {
+    title: string;
+    subtitle: string;
+  };
+};
+
+type Intro = {
+  source: any;
+  data: {
+    title: string;
+  };
+};
+
+type Venue = {
+  source: any;
+  data: {
+    title: string;
+    map: string;
+  };
+};
+
+export default function IndexPage({
+  deadlines,
+  intro,
+  venue,
+}: {
+  deadlines: Deadline[];
+  intro: Intro;
+  venue: Venue;
+}) {
   return (
     <Layout>
       <Hero />
 
       <section className="cards">
-        <Card />
-        <Card />
-        <Card />
+        {deadlines.map(({ data, content }) => (
+          <Card
+            key={data.title}
+            title={data.title}
+            subtitle={data.subtitle}
+            content={content}
+          />
+        ))}
       </section>
 
       <hr />
 
       <article className="homepage-cta__right">
         <div>
-          <h2>
-            EuroPython Dublin. <br />
-            You're invited!
-          </h2>
-          <p>
-            Welcome to the 21st EuroPython. We're the oldest and longest running
-            volunteer-led Python programming conference on the planet! Join us
-            in July in the beautiful and vibrant city of Dublin. We'll be
-            together, face to face and online, to celebrate our shared passion
-            for Python and its community!
-          </p>
-          <p>A week of all things Python:</p>
-          <ul>
-            <li>Monday & Tuesday, 11 & 12 July: Tutorials & Workshops</li>
-            <li>
-              Wednesday–Friday, 13-15 July: Conference talks & sponsor
-              exhibition
-            </li>
-            <li>Saturday & Sunday, 16 & 17 July : Sprints</li>
-          </ul>
+          <h2>{intro.data.title}</h2>
+          <MDXRemote {...intro.source} />
         </div>
         <div className="cta">
           <h3 className="h4">See schedule:</h3>
@@ -59,15 +78,11 @@ export default function IndexPage({ source }: { source: any }) {
           <img src="/img/map.png" className="image--4" alt="" />
         </div>
         <div>
-          <h2>Venue</h2>
-          <p>
-            The in-person conference will be held at The Convention Centre
-            Dublin (The CCD) in Dublin, Ireland. For the virtual conference,
-            detailed instructions will be announced at a later time.
-          </p>
+          <h2>{venue.data.title}</h2>
+          <MDXRemote {...venue.source} />
 
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9526.9707628466!2d-6.2395809!3d53.3478621!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x25faa23c18a1e358!2sThe%20Convention%20Centre%20Dublin!5e0!3m2!1sen!2suk!4v1646755209137!5m2!1sen!2suk"
+            src={venue.data.map}
             title="Map"
             width="600"
             height="450px"
@@ -87,9 +102,46 @@ export default function IndexPage({ source }: { source: any }) {
 }
 
 export async function getStaticProps() {
-  const faqPath = path.join(process.cwd(), "data/faq.md");
+  const basePath = path.join(process.cwd(), "data/deadlines");
+  const paths = await fs.readdir(basePath);
+  const deadlines = await Promise.all(
+    paths.map(async (filename) => {
+      const str = await fs.readFile(path.join(basePath, filename), "utf8");
 
-  const content = await fs.readFile(faqPath);
-  const mdxSource = await serialize(content.toString());
-  return { props: { source: mdxSource } };
+      const frontmatter = matter(str);
+
+      return {
+        content: frontmatter.content,
+        data: frontmatter.data,
+      };
+    })
+  );
+
+  const intro = await fs.readFile(
+    path.join(process.cwd(), "data/home/intro.md"),
+    "utf8"
+  );
+  const data = matter(intro);
+  const introSource = await serialize(data.content);
+
+  const venue = await fs.readFile(
+    path.join(process.cwd(), "data/home/venue.md"),
+    "utf8"
+  );
+  const venueData = matter(venue);
+  const venueSource = await serialize(venueData.content);
+
+  return {
+    props: {
+      deadlines,
+      intro: {
+        source: introSource,
+        data: data.data,
+      },
+      venue: {
+        source: venueSource,
+        data: venueData.data,
+      },
+    },
+  };
 }

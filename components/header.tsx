@@ -34,7 +34,7 @@ export const Header = () => (
       className="hide"
       aria-hidden="true"
     />
-    <a href="/index.html" className="visible-large">
+    <a href="/" className="visible-large">
       <span className="hide">EuroPython</span>
       <img
         src="/img/EP22logo.svg"
@@ -57,7 +57,7 @@ export const Header = () => (
     </a>
 
     <div className="header-controls hidden-large">
-      <a href="/index.html">
+      <a href="/">
         <img
           src="img/EP22logosmall.svg"
           className="header__logo"
@@ -76,7 +76,7 @@ export const Header = () => (
 
     <div className="header-mobile hidden-large">
       <div className="header-controls">
-        <a href="/index.html">
+        <a href="/">
           <img
             src="img/EP22logosmall.svg"
             className="header__logo"
