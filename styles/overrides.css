@@ -1,0 +1,10 @@
+footer #powered-by-vercel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+footer #powered-by-vercel a::after {
+  content: "";
+}

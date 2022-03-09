@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { ReactChild } from "react";
+import { ReactNode } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
 
-export const Layout = ({ children }: { children: ReactChild }) => {
+export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Head>
@@ -65,8 +65,12 @@ export const Layout = ({ children }: { children: ReactChild }) => {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </Head>
+
+      <a href="#main-content" className="hide">
+        Skip to main content
+      </a>
       <Header />
-      {children}
+      <main id="main-content">{children}</main>
       <Footer />
     </>
   );

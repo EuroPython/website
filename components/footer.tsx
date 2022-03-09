@@ -1,92 +1,41 @@
 export const Footer = () => (
   <footer>
-          <div>
-          <p>
-            <a href="/terms">
-            T&C
-            </a>
-          </p>
-          <p>
-            <a href="https://www.europython-society.org/privacy/" target="_blank">
-            Privacy Policy
-            </a>
-          </p>
-
-          <a href="https://www.europython-society.org">
-            <img src="/epslogo.png" />
-          </a>
-          <p
-            style={{
-              marginTop: "1em",
-              fontSize: "0.9em",
-            }}
-            className="text-light"
-          >
-            EuroPython Society (EPS)
-            <br />
-            Ramnebacken 45
-            <br />
-            424 38 Agnesberg
-            <br />
-            Sweden
-          </p>
-          <p>
-            <a href="https://www.europython-society.org" target="_blank">
-              EPS website
-            </a>
-          </p>
-          </div>
-
-      <div
-        className="row text-center"
-        style={{
-          marginTop: "3em",
-          fontFamily: "monospace",
-        }}
-      >
-        <div className="col-md-12">
-          <p>
-            <a href="https://blog.europython.eu" target="_blank">
-              blog.europython.eu
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://twitter.com/europython"
-              target="_blank"
-              className="btn-outline-primary"
-            >
-              twitter.com/europython
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://www.linkedin.com/company/europython"
-              target="_blank"
-              className="btn-outline-primary"
-            >
-              linkedin.com/company/europython
-            </a>
-          </p>
-        </div>
-      </div>
-
+    <article>
+      <img
+        src="/img/europythonlogo.png"
+        className="footer__logo"
+        alt="EuroPython Society Logo"
+      />
       <div>
         <p>
-          Copyright &copy; 2022, EuroPython Society,{" "}
-          <a href="mailto:info@europython-society.org">
-            info@europython-society.org
-          </a>
+          EuroPython Society (EPS)
+          <br />
+          Ramnebacken 45
+          <br />
+          424 38 Agnesberg
+          <br />
+          Sweden
         </p>
-
-        <hr />
-
-        <a href="https://vercel.com/?utm_source=europython-2022&utm_campaign=oss">
-          <img
-            src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg"
-            alt="powered by vercel"
-          />
-        </a>
-        </div>
+        <p>
+          <a href="https://blog.europython.eu">blog.europython.eu</a>
+          <br />
+          <a href="https://twitter.com/europython">twitter.com/europython</a>
+          <br />
+          <a href="https://linkedin.com/company/europython">
+            linkedin.com/company/europython
+          </a>
+          <br />
+          <a href="https://github.com/europython">github.com/europython</a>
+        </p>
+      </div>
+    </article>
+    <div id="powered-by-vercel">
+      <a href="https://vercel.com/?utm_source=europython-2022&utm_campaign=oss">
+        <img
+          src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg"
+          alt="powered by vercel"
+        />
+      </a>
+    </div>
   </footer>
 );
