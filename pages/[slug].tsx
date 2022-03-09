@@ -14,7 +14,9 @@ export default function Page({ source }: { source: any }) {
 }
 
 export async function getStaticPaths() {
-  const pages = await fs.readdir(path.join(process.cwd(), "data"));
+  const pages = (await fs.readdir(path.join(process.cwd(), "data"))).filter(
+    (p) => p.endsWith(".md")
+  );
   const paths = pages.map((page) => ({
     params: { slug: page.replace(".md", "") },
   }));
