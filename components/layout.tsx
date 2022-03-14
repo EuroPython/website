@@ -13,8 +13,8 @@ export const Layout = ({ children }: { children: ReactChild }) => {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
 
-        <meta http-equiv="cleartype" content="on" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta httpEquiv="cleartype" content="on" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
         <link
           rel="alternate"
