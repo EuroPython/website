@@ -7,12 +7,13 @@ import { Layout } from "../components/layout";
 import { wrapInArticles } from "../plugins/wrap-in-articles";
 import { highlightFirstHeading } from "../plugins/highlight-first-heading";
 import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
+import { Map } from "../components/map";
 
 export default function Page({ source }: { source: any }) {
   return (
     <Layout>
       <main id="main-content">
-        <MDXRemote {...source} />
+        <MDXRemote {...source} components={{ Map: Map }} />
       </main>
     </Layout>
   );

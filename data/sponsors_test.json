@@ -1,7 +1,7 @@
 {
   "tiers": [
     {
-      "name": "Diamon Tier",
+      "name": "Diamond Tier",
       "sponsors": [
         {
           "name": "Sponsor Name",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "name": "Platimum Tier",
+      "name": "Platinum Tier",
       "sponsors": [
         {
           "name": "Sponsor Name",

@@ -5,6 +5,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { Layout } from "../components/layout";
 import { Hero } from "../components/hero";
+import { Map } from "../components/map";
 import { Card } from "../components/card";
 import matter from "gray-matter";
 import { Sponsors } from "../components/sponsors";
@@ -83,19 +84,7 @@ export default function IndexPage({
             <h2>{venue.data.title}</h2>
             <MDXRemote {...venue.source} />
 
-            <iframe
-              src={venue.data.map}
-              title="Map"
-              width="600"
-              height="450px"
-              style={{
-                border: "0",
-                margin: "2rem 0 0",
-                height: 350,
-              }}
-              allowFullScreen={true}
-              loading="lazy"
-            ></iframe>
+            <Map />
           </div>
         </article>
       </main>
