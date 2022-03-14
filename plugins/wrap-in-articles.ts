@@ -6,8 +6,8 @@ import type { Node, Parent } from "unist";
 import type { Heading } from "mdast";
 import { matches } from "unist-util-select";
 
-const isHeading = (node: Node): node is Heading => {
-  return is(node, { type: "heading" });
+const isMainHeading = (node: Node): node is Heading => {
+  return is(node, { type: "heading" }) && (node as Heading).depth === 2;
 };
 
 export function wrapInArticles() {
@@ -33,7 +33,7 @@ function transform(tree: Node) {
     if (hasOnlyOneImage(child)) {
       currentArticle = null;
       children.push(child.children[0]);
-    } else if (!currentArticle || matches("heading", child)) {
+    } else if (!currentArticle || isMainHeading(child)) {
       currentArticle = {
         type: "section",
         children: [] as Node[],
