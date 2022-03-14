@@ -1,6 +1,8 @@
 ---
 title: Speaker Mentorship Programme
 subtitle: Open from 8th March
+url: /mentorship
+image: /img/photo.png
 ---
 
 All voices are welcome at EuroPython. But sometimes folks appreciate help and

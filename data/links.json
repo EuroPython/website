@@ -17,8 +17,8 @@
       "path": "/faq"
     },
     {
-      "name": "Covid info",
-      "path": "/covid-info"
+      "name": "Where",
+      "path": "/where"
     },
     {
       "name": "Sponsor",
@@ -53,6 +53,10 @@
     {
       "name": "Terms",
       "path": "/terms"
+    },
+    {
+      "name": "Where",
+      "path": "/where"
     }
   ]
 }

@@ -14,6 +14,8 @@ type Deadline = {
   content: string;
   data: {
     title: string;
+    image: string;
+    url: string;
     subtitle: string;
   };
 };
@@ -51,6 +53,8 @@ export default function IndexPage({
           {deadlines.map(({ data, content }) => (
             <Card
               key={data.title}
+              image={data.image}
+              url={data.url}
               title={data.title}
               subtitle={data.subtitle}
               content={content}
@@ -83,7 +87,9 @@ export default function IndexPage({
           <div>
             <h2>{venue.data.title}</h2>
             <MDXRemote {...venue.source} />
-
+            <a className="button" href="/where">
+              Read more
+            </a>
             <Map />
           </div>
         </article>

@@ -14,10 +14,17 @@
   max-width: 15rem;
 }
 
-
-
 .sponsors--no-sponsors .sponsors__intro {
   display: block;
   max-width: 32rem;
   margin: 0 auto;
+}
+
+.cards h3 {
+  font-size: 1.75rem;
+}
+
+.cards a {
+  color: inherit;
+  text-decoration: none;
 }
