@@ -4,7 +4,7 @@ As part of our commitment to the Python community, we are pleased to announce th
 
 **Financial Aid Sponsor for EuroPython 2022:**
 
-**![EuroPython Society](https://www.europython-society.org/content/images/2021/02/EPS-Logo-with-Text-v3-1024px-alpha-1.png)**
+**![EuroPython Society](/img/eps-logo-white.png)**
 
 We are sponsoring financial aid with € 20,000 this year.
 
