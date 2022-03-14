@@ -1,5 +1,5 @@
 ---
-title: EuroPython Dublin. You're invited!
+title: EuroPython&nbsp;Dublin<br/>You're invited!
 ---
 
 Welcome to the 21st EuroPython. We're the oldest and longest running

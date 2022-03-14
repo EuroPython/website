@@ -1,6 +1,6 @@
 ---
 title: Speaker Mentorship Programme
-subtitle: Open from 8th March
+subtitle: Open until 20th March
 url: /mentorship
 image: /img/photo.png
 ---

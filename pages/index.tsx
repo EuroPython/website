@@ -66,13 +66,13 @@ export default function IndexPage({
 
         <article className="homepage-cta__right">
           <div>
-            <h2>{intro.data.title}</h2>
+            <h2 dangerouslySetInnerHTML={{ __html: intro.data.title }}></h2>
             <MDXRemote {...intro.source} />
           </div>
           <div className="cta">
-            <h3 className="h4">See schedule:</h3>
-            <a className="button" href="#">
-              Coming soon
+            <h3 className="h4">Be part of EuroPython:</h3>
+            <a className="button" href="/cfp">
+              Submit a talk
             </a>
           </div>
         </article>

@@ -5,7 +5,7 @@ export const Hero = () => (
         <span>Euro</span>Python
       </h1>
       <h2>
-        <span>July 11 - 17 </span>
+        <span>11-17 July</span>
         <span>Dublin Ireland & Remote</span>
       </h2>
     </div>

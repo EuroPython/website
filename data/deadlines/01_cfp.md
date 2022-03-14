@@ -1,6 +1,6 @@
 ---
 title: Call for Proposals Open
-subtitle: From 8th-27th March
+subtitle: 8-27th March
 url: /cfp
 image: /img/photo.png
 ---

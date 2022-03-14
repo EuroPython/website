@@ -1,6 +1,6 @@
 ---
 title: Financial Aid Programme
-subtitle: Open from 8th March
+subtitle: Open until 23rd May
 url: /finaid
 image: /img/photo.png
 ---
