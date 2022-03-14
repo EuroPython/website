@@ -1,3 +1,5 @@
+import links from "../data/links.json";
+
 import { NavItems } from "./nav-items";
 
 export const Header = () => (
@@ -19,7 +21,7 @@ export const Header = () => (
     </a>
 
     <nav className="visible-large">
-      <NavItems />
+      <NavItems items={links.header} />
     </nav>
     <a className="button visible-large" href="/">
       Buy tickets
@@ -59,8 +61,9 @@ export const Header = () => (
 
       <nav className="header-mobile__navigation">
         <NavItems
-          preItems={[
+          items={[
             { name: "Buy tickets", path: "/", className: "navigation__cta" },
+            ...links.header,
           ]}
         />
       </nav>

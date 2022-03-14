@@ -1,17 +1,12 @@
+import links from "../data/links.json";
+
 import { NavItems } from "./nav-items";
 
 export const Footer = () => (
   <footer>
     <nav>
       <h6>Quicklinks</h6>
-      <NavItems
-        postItems={[
-          {
-            name: "Terms",
-            path: "/terms",
-          },
-        ]}
-      />
+      <NavItems items={links.footer} />
     </nav>
     <article>
       <img src="img/europythonlogo.png" className="footer__logo" />
