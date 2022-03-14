@@ -42,7 +42,7 @@ We would like to encourage you to buy your ticket as early as possible. This mak
 If you have questions about our ticket prices, the process, etc. please check our FAQ document for answers. If you still have questions, please consult our EuroPython Helpdesk.
 
 
-<a href="https://tickets.europython.eu"><button>Click here to buy the tickets<br>(the page will be active from 17th of March)</button></a>
+<a href="https://tickets.europython.eu"><button>Click here to buy the tickets<br/>(the page will be active from 17th of March)</button></a>
 
 
 ## Early Bird Ticket Sales
