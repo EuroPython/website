@@ -7,6 +7,7 @@ import { Layout } from "../components/layout";
 import { Hero } from "../components/hero";
 import { Card } from "../components/card";
 import matter from "gray-matter";
+import { Sponsors } from "../components/sponsors";
 
 type Deadline = {
   content: string;
@@ -42,61 +43,63 @@ export default function IndexPage({
 }) {
   return (
     <Layout>
-      <Hero />
+      <main id="main-content">
+        <Hero />
 
-      <section className="cards">
-        {deadlines.map(({ data, content }) => (
-          <Card
-            key={data.title}
-            title={data.title}
-            subtitle={data.subtitle}
-            content={content}
-          />
-        ))}
-      </section>
+        <section className="cards">
+          {deadlines.map(({ data, content }) => (
+            <Card
+              key={data.title}
+              title={data.title}
+              subtitle={data.subtitle}
+              content={content}
+            />
+          ))}
+        </section>
 
-      <hr />
+        <hr />
 
-      <article className="homepage-cta__right">
-        <div>
-          <h2>{intro.data.title}</h2>
-          <MDXRemote {...intro.source} />
-        </div>
-        <div className="cta">
-          <h3 className="h4">See schedule:</h3>
-          <a className="button" href="#">
-            Coming soon
-          </a>
-        </div>
-      </article>
-      <hr />
-      <article className="homepage-cta__venue">
-        <div>
-          <img src="/img/venue.png" className="image--1" alt="" />
-          <img src="/img/burst.png" className="image--2" alt="" />
-          <img src="/img/photo.png" className="image--3" alt="" />
-          <img src="/img/map.png" className="image--4" alt="" />
-        </div>
-        <div>
-          <h2>{venue.data.title}</h2>
-          <MDXRemote {...venue.source} />
+        <article className="homepage-cta__right">
+          <div>
+            <h2>{intro.data.title}</h2>
+            <MDXRemote {...intro.source} />
+          </div>
+          <div className="cta">
+            <h3 className="h4">See schedule:</h3>
+            <a className="button" href="#">
+              Coming soon
+            </a>
+          </div>
+        </article>
+        <hr />
+        <article className="homepage-cta__venue">
+          <div>
+            <img src="/img/venue.png" className="image--1" alt="" />
+            <img src="/img/burst.png" className="image--2" alt="" />
+            <img src="/img/photo.png" className="image--3" alt="" />
+            <img src="/img/map.png" className="image--4" alt="" />
+          </div>
+          <div>
+            <h2>{venue.data.title}</h2>
+            <MDXRemote {...venue.source} />
 
-          <iframe
-            src={venue.data.map}
-            title="Map"
-            width="600"
-            height="450px"
-            style={{
-              border: "0",
-              margin: "2rem 0 0",
-              height: 350,
-            }}
-            allowFullScreen={true}
-            loading="lazy"
-          ></iframe>
-        </div>
-      </article>
-      <hr />
+            <iframe
+              src={venue.data.map}
+              title="Map"
+              width="600"
+              height="450px"
+              style={{
+                border: "0",
+                margin: "2rem 0 0",
+                height: 350,
+              }}
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
+          </div>
+        </article>
+      </main>
+      <Sponsors />
     </Layout>
   );
 }

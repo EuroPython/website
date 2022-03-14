@@ -1,0 +1,16 @@
+{
+  "tiers": [
+    {
+      "name": "Diamon Tier",
+      "sponsors": []
+    },
+    {
+      "name": "Platimum Tier",
+      "sponsors": []
+    },
+    {
+      "name": "Gold Tier",
+      "sponsors": []
+    }
+  ]
+}

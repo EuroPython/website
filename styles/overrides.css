@@ -4,3 +4,20 @@
 #powered-by-vercel a::after {
   content: "";
 }
+
+.sponsors__logos a::after {
+  content: "";
+}
+
+.sponsors__logos img {
+  max-height: 8rem;
+  max-width: 15rem;
+}
+
+
+
+.sponsors--no-sponsors .sponsors__intro {
+  display: block;
+  max-width: 32rem;
+  margin: 0 auto;
+}

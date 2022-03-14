@@ -11,7 +11,9 @@ import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
 export default function Page({ source }: { source: any }) {
   return (
     <Layout>
-      <MDXRemote {...source} />
+      <main id="main-content">
+        <MDXRemote {...source} />
+      </main>
     </Layout>
   );
 }

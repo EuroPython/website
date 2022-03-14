@@ -68,7 +68,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         Skip to main content
       </a>
       <Header />
-      <main id="main-content">{children}</main>
+      {children}
       <Footer />
     </>
   );
