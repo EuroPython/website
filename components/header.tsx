@@ -59,7 +59,7 @@ export const Header = () => (
 
       <nav className="header-mobile__navigation">
         <NavItems
-          additionalItems={[
+          preItems={[
             { name: "Buy tickets", path: "/", className: "navigation__cta" },
           ]}
         />

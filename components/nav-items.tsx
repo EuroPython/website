@@ -1,23 +1,23 @@
 const NAVIGATION_ITEMS = [
   {
-    name: "News",
-    path: "/",
+    name: "CFP",
+    path: "/cfp",
   },
   {
-    name: "Registration",
-    path: "/registration",
+    name: "Mentorship",
+    path: "/mentorship",
   },
   {
-    name: "Setup",
-    path: "/",
+    name: "Finaid",
+    path: "/finaid",
   },
   {
     name: "FAQ",
     path: "/faq",
   },
   {
-    name: "Program",
-    path: "/",
+    name: "Covid info",
+    path: "/covid-info",
   },
   {
     name: "Sponsor",
@@ -26,11 +26,16 @@ const NAVIGATION_ITEMS = [
 ];
 
 type Props = {
-  additionalItems?: { name: string; path: string; className?: string }[];
+  preItems?: { name: string; path: string; className?: string }[];
+  postItems?: { name: string; path: string; className?: string }[];
 };
 
-export const NavItems = ({ additionalItems }: Props) => {
-  const items = [...(additionalItems || []), ...NAVIGATION_ITEMS];
+export const NavItems = ({ preItems, postItems }: Props) => {
+  const items = [
+    ...(preItems || []),
+    ...NAVIGATION_ITEMS,
+    ...(postItems || []),
+  ];
 
   return (
     <ul>

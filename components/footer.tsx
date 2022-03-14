@@ -4,7 +4,14 @@ export const Footer = () => (
   <footer>
     <nav>
       <h6>Quicklinks</h6>
-      <NavItems />
+      <NavItems
+        postItems={[
+          {
+            name: "Terms",
+            path: "/terms",
+          },
+        ]}
+      />
     </nav>
     <article>
       <img src="img/europythonlogo.png" className="footer__logo" />
