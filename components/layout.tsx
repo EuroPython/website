@@ -23,8 +23,6 @@ export const Layout = ({ children }: { children: ReactNode }) => {
           href="http://blog.europython.eu/rss"
         />
 
-        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-
         <title>
           EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote
         </title>
