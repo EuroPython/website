@@ -1,4 +1,4 @@
-# Buy tickets
+# Tickets
 
 ## Summary of the EuroPython 2022
 
