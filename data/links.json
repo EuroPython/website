@@ -57,6 +57,10 @@
     {
       "name": "Where",
       "path": "/where"
+    },
+    {
+      "name": "Contacts",
+      "path": "/contacts"
     }
   ]
 }
