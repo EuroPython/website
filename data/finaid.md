@@ -4,7 +4,7 @@ As part of our commitment to the Python community, we are pleased to announce th
 
 **Financial Aid Sponsor for EuroPython 2022:**
 
-**![EuroPython Society](https://lh3.googleusercontent.com/oPQFsgHwhS-tw2cqztLai68Tv4gou6wTbhh-fZqcbcte_HlwVDCADmmUNM_ANqIC0R7e6OZJw7KDy5kZ3k_se_G39Ku2zU9f2pqAO_4M3h2kpWuYmkZ8sgmvT6SLdo176RIP7ttw)**
+**![EuroPython Society](https://www.europython-society.org/content/images/2021/02/EPS-Logo-with-Text-v3-1024px-alpha-1.png)**
 
 We are sponsoring financial aid with € 20,000 this year.
 
@@ -12,7 +12,7 @@ You can apply for three different types of grants:
 
 1. **Free ticket.** Get a standard ticket to the conference for free.
 2. **Travel / Accommodation.** We will reimburse travel and/or accommodation costs up to € 400.
-3. **Visa Application Fee.** Get reimbursed for the costs of a single entry visa to Ireland (€ 60).  
+3. **Visa Application Fee.** Get reimbursed for the costs of a single entry visa to Ireland (€ 60).
 
 
 ## Grant Eligibility
