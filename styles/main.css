@@ -208,7 +208,7 @@ a {
   color: var(--color-primary)
 }
 
-a:hover {
+a:hover, #__next > footer a:hover {
   color: var(--color-primary-hover)
 }
 

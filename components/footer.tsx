@@ -1,11 +1,13 @@
+import { NavItems } from "./nav-items";
+
 export const Footer = () => (
   <footer>
+    <nav>
+      <h6>Quicklinks</h6>
+      <NavItems />
+    </nav>
     <article>
-      <img
-        src="/img/europythonlogo.png"
-        className="footer__logo"
-        alt="EuroPython Society Logo"
-      />
+      <img src="img/europythonlogo.png" className="footer__logo" />
       <div>
         <p>
           EuroPython Society (EPS)
@@ -27,15 +29,16 @@ export const Footer = () => (
           <br />
           <a href="https://github.com/europython">github.com/europython</a>
         </p>
+
+        <div id="powered-by-vercel">
+          <a href="https://vercel.com/?utm_source=europython-2022&utm_campaign=oss">
+            <img
+              src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg"
+              alt="powered by vercel"
+            />
+          </a>
+        </div>
       </div>
     </article>
-    <div id="powered-by-vercel">
-      <a href="https://vercel.com/?utm_source=europython-2022&utm_campaign=oss">
-        <img
-          src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg"
-          alt="powered by vercel"
-        />
-      </a>
-    </div>
   </footer>
 );

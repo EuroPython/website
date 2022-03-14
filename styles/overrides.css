@@ -1,10 +1,6 @@
-footer #powered-by-vercel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
+#powered-by-vercel {
+  margin-top: 20px;
 }
-
-footer #powered-by-vercel a::after {
+#powered-by-vercel a::after {
   content: "";
 }

@@ -1,29 +1,4 @@
-const NAVIGATION_ITEMS = [
-  {
-    name: "News",
-    path: "/",
-  },
-  {
-    name: "Registration",
-    path: "/registration",
-  },
-  {
-    name: "Setup",
-    path: "/",
-  },
-  {
-    name: "FAQ",
-    path: "/faq",
-  },
-  {
-    name: "Program",
-    path: "/",
-  },
-  {
-    name: "Sponsor",
-    path: "/sponsor",
-  },
-];
+import { NavItems } from "./nav-items";
 
 export const Header = () => (
   <header>
@@ -44,13 +19,7 @@ export const Header = () => (
     </a>
 
     <nav className="visible-large">
-      <ul>
-        {NAVIGATION_ITEMS.map(({ name, path }) => (
-          <li key={name}>
-            <a href={path}>{name}</a>
-          </li>
-        ))}
-      </ul>
+      <NavItems />
     </nav>
     <a className="button visible-large" href="/">
       Buy tickets
@@ -89,18 +58,11 @@ export const Header = () => (
       </div>
 
       <nav className="header-mobile__navigation">
-        <ul>
-          <li>
-            <a href="/" className="navigation__cta">
-              Buy tickets
-            </a>
-          </li>
-          {NAVIGATION_ITEMS.map(({ name, path }) => (
-            <li key={name}>
-              <a href={path}>{name}</a>
-            </li>
-          ))}
-        </ul>
+        <NavItems
+          additionalItems={[
+            { name: "Buy tickets", path: "/", className: "navigation__cta" },
+          ]}
+        />
       </nav>
     </div>
   </header>
