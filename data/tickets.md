@@ -61,21 +61,21 @@ During our last in-person conference at Basel in 2019, the Early Bird tickets so
 
 ### Business Tickets
 
-Conference Only Business Early Bird - Net price €395.00 + 23% VAT
-Conference Only Business - Net price €595.00 + 23% VAT
-Tutorial Only Business - Net price €416.50 + 23% VAT
-Combined Business - Net price €810.00 + 23% VAT
+- Conference Only Business Early Bird - Net price €395.00 + 23% VAT
+- Conference Only Business - Net price €595.00 + 23% VAT
+- Tutorial Only Business - Net price €416.50 + 23% VAT
+- Combined Business - Net price €810.00 + 23% VAT
 
 ### Student Tickets
 
-Conference Only Student Early Bird - €95.00 incl. 23% VAT
-Conference Only Student - €145.00 incl. 23% VAT
-Tutorial Only Student - €100.00 incl. 23% VAT
-Combined Student - €195.00 incl. 23% VAT
+- Conference Only Student Early Bird - €95.00 incl. 23% VAT
+- Conference Only Student - €145.00 incl. 23% VAT
+- Tutorial Only Student - €100.00 incl. 23% VAT
+- Combined Student - €195.00 incl. 23% VAT
 
 ### Personal Tickets
 
-Conference Only Personal Early Bird - €250.00 incl. 23% VAT
-Conference Only Personal - €375.00 incl. 23% VAT
-Tutorial Only Personal - €225.00 incl. 23% VAT
-Combined Personal - €480.00 incl. 23% VAT
+ - Conference Only Personal Early Bird - €250.00 incl. 23% VAT
+ - Conference Only Personal - €375.00 incl. 23% VAT
+ - Tutorial Only Personal - €225.00 incl. 23% VAT
+ - Combined Personal - €480.00 incl. 23% VAT
