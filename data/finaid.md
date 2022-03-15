@@ -44,9 +44,7 @@ who qualifies for a grant:
 
 ## How to apply
 
-<button><a href="https://forms.gle/7EAbk59cgaqtKN4r6">
-You can apply by filling out the application form here:
-</a></button>
+You can apply by filling out the application form [here](https://forms.gle/7EAbk59cgaqtKN4r6)
 
 ## Timeline
 
