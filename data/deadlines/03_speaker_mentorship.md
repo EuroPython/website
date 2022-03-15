@@ -2,7 +2,7 @@
 title: Speaker Mentorship Programme
 subtitle: Open until 20th March
 url: /mentorship
-image: /img/photo.png
+image: /images/cards/mentorship.jpg
 ---
 
 All voices are welcome at EuroPython. But sometimes folks appreciate help and

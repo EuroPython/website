@@ -2,7 +2,7 @@
 title: Financial Aid Programme
 subtitle: Open until 23rd May
 url: /finaid
-image: /img/photo.png
+image: /images/cards/finaid.jpg
 ---
 
 EuroPython is for everyone in our community, no matter your circumstances.
