@@ -33,7 +33,7 @@ We would like to encourage and trust you, to pick a ticket type that reasonably 
 
 - **Sudent**: Finally, if you are a student/postdoc researcher working in academia, we have the highly subsidised student ticket for you.
 
-*Please note: we will list the ticket type on the badge to make things easier for the registration desk staff.
+*Please note: we will list the ticket type on the badge to make things easier for the registration desk staff.*
 
 If you would like to support EuroPython and what we do for the community, please consider getting a higher priced ticket. Thank you!
 
