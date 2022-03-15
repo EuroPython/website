@@ -73,7 +73,7 @@ _Every ticket includes break refreshments and a light lunch for each day._
 
 We would like to encourage you to book your ticket early. This makes it easier for us to plan for the event and arrange e.g. the catering, badge printing, etc.
 
-If you have any questions, please check our [FAQ document](https://ep2022.europython.eu/faq). If you still have questions, don't hesitate to email our [EuroPython Helpdesk](helpdesk@europython.eu).
+If you have any questions, please check our [FAQ document](https://ep2022.europython.eu/faq). If you still have questions, don't hesitate to email our [EuroPython Helpdesk](mailto:helpdesk@europython.eu).
 
 
 ### Online Tickets
