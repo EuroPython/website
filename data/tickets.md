@@ -42,7 +42,7 @@ We would like to encourage you to book your ticket early. This makes it easier f
 If you have any questions, please check our [FAQ document](https://ep2022.europython.eu/faq). If you still have questions, don't hesitate to email our [EuroPython Helpdesk](helpdesk@europython.eu).
 
 
-<button>This button will become active on<br/> Thursday, March 17th March 2022 13:00 CET</button>
+<button>This button will become active on<br/> Thursday, 17th March 2022 13:00 CET</button>
 
 
 ## Early Bird Ticket Sales
