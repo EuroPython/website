@@ -2,7 +2,7 @@
 title: Call for Proposals Open
 subtitle: 8-27th March
 url: /cfp
-image: /img/photo.png
+image: /images/cards/cfp.jpg
 ---
 
 There is no EuroPython without you. Our colourful and cosmopolitan community

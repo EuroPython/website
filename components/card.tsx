@@ -12,7 +12,7 @@ export const Card = ({ title, subtitle, content, url, image }: CardProps) => (
   <aside>
     <a href={url}>
       <div style={{ position: "relative", aspectRatio: "8/5" }}>
-        <Image layout="fill" src={image} alt="" />
+        <Image layout="fill" src={image} width={300} alt="" />
       </div>
       <h3>{title}</h3>
       <p className="card__subheading">{subtitle}</p>
