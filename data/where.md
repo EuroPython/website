@@ -1,9 +1,14 @@
+---
+title: Where
+subtitle: EuroPython 2022 will be held in Dublin!
+---
+
 # Where
 
-EuroPython 2022 will be held in **Dublin**! The capital of the Republic of Ireland,
-one of Europe’s biggest tech hubs, is a lively city with extraordinarily rich
-and diverse food, culture, history and art lovers - the number of museums and
-restaurants can certainly tickle most tastes.
+EuroPython 2022 will be held in **Dublin**! The capital of the Republic of
+Ireland, one of Europe’s biggest tech hubs, is a lively city with
+extraordinarily rich and diverse food, culture, history and art lovers - the
+number of museums and restaurants can certainly tickle most tastes.
 
 As per EuroPython tradition, we shall walk around, chat, laugh and explore the
 city together. If you are not the “walking-type”, let the convenient

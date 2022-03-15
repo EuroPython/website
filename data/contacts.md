@@ -1,3 +1,8 @@
+---
+title: Contacts
+subtitle: Read how you can contact the EuroPython Organisation
+---
+
 # Contacts
 
 ### EuroPython Helpdesk

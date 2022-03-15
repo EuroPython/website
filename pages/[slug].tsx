@@ -2,7 +2,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-
+import matter from "gray-matter";
 import { promises as fs } from "fs";
 import path from "path";
 import { Layout } from "../components/layout";
@@ -22,9 +22,9 @@ const components = {
   ),
 };
 
-export default function Page({ source }: { source: any }) {
+export default function Page({ source, path }: { source: any; path: string }) {
   return (
-    <Layout>
+    <Layout path={path}>
       <main id="main-content">
         <MDXRemote {...source} components={components} />
       </main>
@@ -43,13 +43,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const faqPath = path.join(process.cwd(), `data/${params.slug}.md`);
+  const markdownPath = path.join(process.cwd(), `data/${params.slug}.md`);
 
-  const content = await fs.readFile(faqPath);
+  const page = await fs.readFile(markdownPath);
+  const { content } = matter(page);
   const mdxSource = await serialize(content.toString(), {
     mdxOptions: {
-      // @ts-ignore
-      rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }]],
+      rehypePlugins: [
+        // @ts-ignore
+        rehypeSlug,
+        // @ts-ignore
+        [rehypeAutolinkHeadings, { behavior: "wrap" }],
+      ],
       remarkPlugins: [
         wrapInArticles,
         highlightFirstHeading,
@@ -58,5 +63,5 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
       ],
     },
   });
-  return { props: { source: mdxSource } };
+  return { props: { source: mdxSource, path: params.slug } };
 }

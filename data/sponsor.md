@@ -1,3 +1,11 @@
+---
+title: Sponsor
+subtitle:
+  Sponsoring EuroPython guarantees you highly targeted visibility and the
+  opportunity to present yourself and your company to one of the largest and
+  most diverse Python communities in Europe and beyond.
+---
+
 # Sponsor
 
 Sponsoring EuroPython guarantees you highly targeted visibility and the

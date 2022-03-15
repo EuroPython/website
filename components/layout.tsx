@@ -3,7 +3,19 @@ import { ReactNode } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
 
-export const Layout = ({ children }: { children: ReactNode }) => {
+export const Layout = ({
+  children,
+  path,
+}: {
+  children: ReactNode;
+  path?: string;
+}) => {
+  const url = `https://ep2022.europython.eu/${path}`;
+  const imageUrl = path
+    ? `https://ep2022.europython.eu/social-cards/${path}.png`
+    : "https://ep2022.europython.eu/social-cards/default.png";
+
+    console.log(url, imageUrl)
   return (
     <>
       <Head>
@@ -34,28 +46,22 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <meta name="author" content="EuroPython" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ep2022.europython.eu/" />
+        <meta property="og:url" content={url} />
         <meta
           property="og:title"
           content="EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote"
         />
         <meta property="og:description" content="" />
-        <meta
-          property="og:image"
-          content="https://ep2022.europython.eu/2022-europython-social-card.png"
-        />
+        <meta property="og:image" content={imageUrl} />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://ep2022.europython.eu/" />
+        <meta property="twitter:url" content={url} />
         <meta
           property="twitter:title"
           content="EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote"
         />
         <meta property="twitter:description" content="" />
-        <meta
-          property="twitter:image"
-          content="https://ep2022.europython.eu/2022-europython-social-card.png"
-        />
+        <meta property="twitter:image" content={imageUrl} />
 
         <script
           defer
