@@ -49,7 +49,7 @@ If you have any questions, please check our [FAQ document](https://ep2022.europy
 
 We're offering a flat 33% discount across all tiers for Early Board Conference Tickets.
 
-We have a total of 250 Early Bird tickets (130 Business, 80 Personal, 40 Student) available when we open up ticket sales on **Thursday, 17th March 2022 11:59 CET**
+We have a total of 250 Early Bird tickets (130 Business, 80 Personal, 40 Student) available when we open up ticket sales on **Thursday, 17th March 2022 13:00 CET**
 
 We’ll switch to regular ticket sales as soon as Early Bird tickets are sold out.
 
