@@ -1,0 +1,66 @@
+{
+  "header": [
+    {
+      "name": "CFP",
+      "path": "/cfp"
+    },
+    {
+      "name": "Mentorship",
+      "path": "/mentorship"
+    },
+    {
+      "name": "Finaid",
+      "path": "/finaid"
+    },
+    {
+      "name": "FAQ",
+      "path": "/faq"
+    },
+    {
+      "name": "Where",
+      "path": "/where"
+    },
+    {
+      "name": "Sponsor",
+      "path": "/sponsor"
+    }
+  ],
+  "footer": [
+    {
+      "name": "CFP",
+      "path": "/cfp"
+    },
+    {
+      "name": "Mentorship",
+      "path": "/mentorship"
+    },
+    {
+      "name": "Finaid",
+      "path": "/finaid"
+    },
+    {
+      "name": "FAQ",
+      "path": "/faq"
+    },
+    {
+      "name": "Covid info",
+      "path": "/covid-info"
+    },
+    {
+      "name": "Sponsor",
+      "path": "/sponsor"
+    },
+    {
+      "name": "Terms",
+      "path": "/terms"
+    },
+    {
+      "name": "Where",
+      "path": "/where"
+    },
+    {
+      "name": "Contacts",
+      "path": "/contacts"
+    }
+  ]
+}

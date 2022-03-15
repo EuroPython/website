@@ -1,0 +1,41 @@
+#powered-by-vercel {
+  margin-top: 20px;
+}
+#powered-by-vercel a::after {
+  content: "";
+}
+
+.sponsors__logos a::after {
+  content: "";
+}
+
+.sponsors__logos img {
+  max-height: 8rem;
+  max-width: 15rem;
+}
+
+.sponsors--no-sponsors .sponsors__intro {
+  display: block;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.cards h3 {
+  font-size: 1.75rem;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.cards a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.next-image {
+  aspect-ratio: 16/9;
+  position: relative;
+}
