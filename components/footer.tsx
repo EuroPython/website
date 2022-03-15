@@ -1,3 +1,4 @@
+import Image from "next/image";
 import links from "../data/links.json";
 
 import { NavItems } from "./nav-items";
@@ -9,7 +10,9 @@ export const Footer = () => (
       <NavItems items={links.footer} />
     </nav>
     <article>
-      <img src="img/europythonlogo.png" className="footer__logo" />
+      <div className="footer__logo">
+        <Image width={444} height={444} src="/img/europythonlogo.png" />
+      </div>
       <div>
         <p>
           EuroPython Society (EPS)

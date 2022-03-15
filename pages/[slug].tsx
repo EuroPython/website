@@ -1,5 +1,7 @@
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 import { promises as fs } from "fs";
 import path from "path";
@@ -8,12 +10,23 @@ import { wrapInArticles } from "../plugins/wrap-in-articles";
 import { highlightFirstHeading } from "../plugins/highlight-first-heading";
 import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
 import { Map } from "../components/map";
+import Image from "next/image";
+
+const components = {
+  Map,
+  img: ({ src, alt, ...props }: any) => (
+    <figure className="next-image">
+      <Image src={src} alt={alt} {...props} layout="fill" objectFit="contain" />
+      {alt && <figcaption>{alt}</figcaption>}
+    </figure>
+  ),
+};
 
 export default function Page({ source }: { source: any }) {
   return (
     <Layout>
       <main id="main-content">
-        <MDXRemote {...source} components={{ Map: Map }} />
+        <MDXRemote {...source} components={components} />
       </main>
     </Layout>
   );
@@ -35,6 +48,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const content = await fs.readFile(faqPath);
   const mdxSource = await serialize(content.toString(), {
     mdxOptions: {
+      // @ts-ignore
+      rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }]],
       remarkPlugins: [
         wrapInArticles,
         highlightFirstHeading,

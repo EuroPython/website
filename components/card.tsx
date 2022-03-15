@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type CardProps = {
   title: string;
   subtitle: string;
@@ -9,7 +11,9 @@ type CardProps = {
 export const Card = ({ title, subtitle, content, url, image }: CardProps) => (
   <aside>
     <a href={url}>
-      <img src={image} alt="" />
+      <div style={{ position: "relative", aspectRatio: "8/5" }}>
+        <Image layout="fill" src={image} alt="" />
+      </div>
       <h3>{title}</h3>
       <p className="card__subheading">{subtitle}</p>
       <p>{content}</p>
