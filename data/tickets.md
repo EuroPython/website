@@ -30,6 +30,7 @@ EuroPython is organised by volunteers and a community-led conference. We encoura
 
 <button>This button will become active on<br/> Thursday, 17th March 2022 13:00 CET</button>
 
+
 ## Early Bird Ticket Sales
 
 We're offering a flat 33% discount across all tiers for Early Bird Conference Tickets.
@@ -42,29 +43,26 @@ During our last in-person conference at Basel in 2019, the Early Bird tickets so
 
 ## Ticket Prices
 
-### Business Tickets
+#### Business Tickets
 
 - Conference Only Business Early Bird - Net price €395.00 + 23% VAT
 - Conference Only Business - Net price €595.00 + 23% VAT
 - Tutorial Only Business - Net price €416.50 + 23% VAT
 - Combined Business - Net price €810.00 + 23% VAT
 
-### Student Tickets
+#### Student Tickets
 
 - Conference Only Student Early Bird - €95.00 incl. 23% VAT
 - Conference Only Student - €145.00 incl. 23% VAT
 - Tutorial Only Student - €100.00 incl. 23% VAT
 - Combined Student - €195.00 incl. 23% VAT
 
-### Personal Tickets
+#### Personal Tickets
 
  - Conference Only Personal Early Bird - €250.00 incl. 23% VAT
  - Conference Only Personal - €375.00 incl. 23% VAT
  - Tutorial Only Personal - €225.00 incl. 23% VAT
  - Combined Personal - €480.00 incl. 23% VAT
-
-### Online Tickets
-To be announced later. [Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup) to keep in the know!
 
 
 **Notes:** 
@@ -76,3 +74,7 @@ _Every ticket includes break refreshments and a light lunch for each day._
 We would like to encourage you to book your ticket early. This makes it easier for us to plan for the event and arrange e.g. the catering, badge printing, etc.
 
 If you have any questions, please check our [FAQ document](https://ep2022.europython.eu/faq). If you still have questions, don't hesitate to email our [EuroPython Helpdesk](helpdesk@europython.eu).
+
+
+### Online Tickets
+To be announced later. [Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup) to keep in the know!
