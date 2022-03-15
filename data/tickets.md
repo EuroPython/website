@@ -1,4 +1,4 @@
-# Tickets
+Tickets
 
 ## The What, Where and When of EuroPython 2022
 

@@ -5,7 +5,7 @@ subtitle:
   Mentorship program for EuroPython 2022.
 ---
 
-# Speaker Mentorship Program
+Speaker Mentorship Program
 
 As a diverse and inclusive community EuroPython offers support for potential
 speakers who want help preparing for their contribution. To achieve this end

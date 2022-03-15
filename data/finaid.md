@@ -6,7 +6,7 @@ subtitle:
   information you need to apply for such a grant in this page.
 ---
 
-# Financial Aid
+Financial Aid
 
 As part of our commitment to the Python community, we are pleased to
 offer grants for people in need of financial support to attend
