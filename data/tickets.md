@@ -61,7 +61,7 @@ We're offering a flat 33% discount across all tiers for Early Bird Conference
 Tickets!
 
 We have a total of 250 Early Bird tickets (130 Business, 80 Personal, 40
-Student) available when we open up ticket sales on
+Education) available when we open up ticket sales on
 **Thursday, 17th March 2022 13:00 CET**. These tickets will be obtained on a
 first come, first serve basis. When they're gone, they're all gone!
 
@@ -80,12 +80,12 @@ tickets sold out in _15 minutes_.
 - Tutorial Only Business - Net price €416.50 + 23% VAT
 - Combined Business - Net price €810.00 + 23% VAT
 
-### Student Tickets
+### Education Tickets
 
-- Conference Only Student Early Bird - €95.00 incl. 23% VAT
-- Conference Only Student - €145.00 incl. 23% VAT
-- Tutorial Only Student - €100.00 incl. 23% VAT
-- Combined Student - €195.00 incl. 23% VAT
+- Conference Only Education Early Bird - €95.00 incl. 23% VAT
+- Conference Only Education - €145.00 incl. 23% VAT
+- Tutorial Only Education - €100.00 incl. 23% VAT
+- Combined Education - €195.00 incl. 23% VAT
 
 ### Personal Tickets
 
