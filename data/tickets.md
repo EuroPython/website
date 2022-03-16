@@ -37,14 +37,14 @@ to support our diversity initiatives,
 [other grants](https://www.europython-society.org/grants/)
 offered to the European Python community. 
 
-- **Business Tickets**: for attendees whose company/business is paying for, or
-  if you use Python professionally. As someone with the means to afford this
-  tier you help us keep the conference affordable for everyone. Thank you!
+- **Business Tickets**: for attendees whose company/business is paying for
+  them to attend, or if you use Python professionally. As someone with the
+  means to afford this tier you help us keep the conference affordable for
+  everyone. Thank you!
 - **Personal Tickets**: for those who enjoy Python as a hobbyist or use it as
   a freelancer.
-- **Education Tickets**: for students. If you are a teacher and your
-  institution cannot cover a higher tier for you to attend, please use this
-  tier.
+- **Education Tickets**: for students, and teachers working in the education
+  sector (your main employment is at a school, college or university). 
 
 **Note**: If you need a proper VAT invoice listing your company's name, please
 purchase a business ticket. Personal Tickets do not include a company name. We
