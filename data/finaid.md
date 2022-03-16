@@ -6,45 +6,47 @@ subtitle:
   information you need to apply for such a grant in this page.
 ---
 
-# **Financial Aid**
+# Financial Aid
 
-As part of our commitment to the Python community, we are pleased to announce
-that we offer special grants for people in need of financial aid to attend
-EuroPython. You’ll find all the information you need to apply for such a grant
-below.
+As part of our commitment to the Python community, we are pleased to
+offer grants for people in need of financial support to attend
+EuroPython.
 
-**Financial Aid Sponsor for EuroPython 2022:**
+You’ll find all the information you need to apply for such a grant on this
+page.
 
-**![EuroPython Society](/img/eps-logo-white.png)**
+![EuroPython Society](/img/eps-logo-white.png)
 
-We are sponsoring financial aid with € 20,000 this year.
+The EuroPython Society are sponsoring financial aid with €20,000 this year.
 
 You can apply for three different types of grants:
 
 1. **Free ticket.** Get a standard ticket to the conference for free.
 2. **Travel / Accommodation.** We will reimburse travel and/or accommodation
-   costs up to € 400.
-3. **Visa Application Fee.** Get reimbursed for the costs of a single entry visa
-   to Ireland (€ 60).
+   costs up to €400.
+3. **Visa Application Fee.** Get reimbursed for the costs of a single entry
+   visa to Ireland (€60).
 
 ## Grant Eligibility
 
-Our grants are open to everyone in need of financial aid to participate in
-EuroPython. We will specifically look at the following criteria when deciding
-who qualifies for a grant:
+Our grants are open to everyone in need of financial support to participate in
+EuroPython. We will look at the following criteria to help decide who qualifies
+for a grant:
 
 1. **Contributors:** We want to support those who make the Python community
-   beter. That’s why we offer grants to people who put effort into the community
-   and EuroPython, including speakers, volunteers, community organizers, and
-   open-source contributors.
-2. **Economic factors.** Everyone should have a chance to attend EuroPython,
+   a positive, inclusive and welcoming space. We welcome grant applications
+   from folks who need financial support and who clearly put effort into
+   the community and EuroPython, including speakers, volunteers, community
+   organizers, and open-source contributors.
+2. **Economic factors:** Everyone should have a chance to attend EuroPython,
    regardless of their economic situation.
-3. **Diversity.** We want EuroPython to be the most diverse and inclusive event
-   possible.
+3. **Diversity:** We want EuroPython to be the most diverse and inclusive event
+   possible, and we especially want to help those from under-represented groups
+   in tech feel welcomed, be present in and contribute to our community.
 
 ## How to apply
 
-You can apply by filling out the application form [here](https://forms.gle/7EAbk59cgaqtKN4r6)
+Fill out the application form [here](https://forms.gle/7EAbk59cgaqtKN4r6).
 
 ## Timeline
 
@@ -64,16 +66,16 @@ conference ticket for free.
 ### Travel/Accommodation Grant & Visa Grant
 
 If you received a travel/accommodation grant or a visa grant, you will be
-reimbursed after the conference via PayPal or bank transfer. Do note that we can
-only reimburse you after we’ve received your receipts/invoices and **a photo of
-your conference badge**.
+reimbursed **after the conference via PayPal or bank transfer**. Do note that
+we can only reimburse you after we’ve received your receipts/invoices and
+**a photo of your conference badge**.
 
-In addition, please take the following points into account:
+In addition, please take pay attention to the following:
 
-- The total combined travel/accommodation grant cannot exceed € 300.
+- The total combined travel/accommodation grant cannot exceed €300.
 - If you’ve been offered a grant, you need to accept the grant by 13 June 2022.
 - Reimbursements will be made **after** the conference via PayPal or bank
-  transfer. It’s not possible to get reimbursed before the conference or by
+  transfer. It’s not possible to be reimbursed before the conference or by
   other means, such as cash.
 - Reimbursements will only be made after we’ve received your
   travel/accommodation receipts/invoices. The deadline to submit your
@@ -84,7 +86,7 @@ In addition, please take the following points into account:
 - Reimbursements will only be made to individuals who actually attended the
   conference. Please include a **photo of your conference badge** with your
   receipts/invoices.
-- Please consider the risk of the travel restrictions: Choose flexible booking
+- Please consider the risk of the travel restrictions: choose flexible booking
   options that allow you to cancel in case you can’t actually make it to the
   conference.
 - Grants cannot be transferred to other individuals.
@@ -93,14 +95,16 @@ In addition, please take the following points into account:
   [finaid@europython.eu](mailto:finaid@europython.eu) so we can allocate the
   funds to someone else.
 
+Thank you!
+
 ### Privacy Policy
 
-The data we collect on this form will exclusively be used by our financial aid
-work group for the selection of grant recipients and the processing of financial
-aid refunds. No data is passed on to third parties, xcept to our accountants and
-the bank in order to process the refunds. We use Google Forms for the processing
-and Google Drive for storing the relevant information. For more details on our
-privacy policies, please see our
+The data we collect on this form will be used exclusively by our financial aid
+working group for the selection of grant recipients and the processing of
+financial aid refunds. No data is passed to third parties, except to our
+accountants and the bank in order to process the refunds. We use Google Forms
+for the processing and Google Drive for storing the relevant information. For
+more details on our privacy policies, please see our
 [privacy policy](https://ep2019.europython.eu/privacy.1.html).
 
 ### Become a sponsor!
@@ -109,6 +113,6 @@ If you want to support EuroPython and its efforts to make EuroPython accessible
 to everyone, please contact
 [sponsoring@europython.eu](mailto:sponsoring@europython.eu).
 
-Thank you.
+Thank you!
 
 See you at EuroPython in Dublin!
