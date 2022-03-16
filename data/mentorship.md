@@ -2,10 +2,10 @@
 title: Mentorship
 subtitle:
   To help us achieve better diversity and inclusion, we will have the Speaker
-  Mentorship program for EuroPython 2022.
+  Mentorship programme for EuroPython 2022.
 ---
 
-# Speaker Mentorship Program
+# Speaker Mentorship Programme
 
 As a diverse and inclusive community EuroPython offers support for potential
 speakers who want help preparing for their contribution. To achieve this end
@@ -15,7 +15,7 @@ We are looking for both mentors and mentees to be a part of the programme.
 
 _Applications will remain open until Sunday 20th March, 2022._
 
-The mentorship program can be summarized into two types of activities:
+The mentorship programme can be summarized into two types of activities:
 
 ## 1. The One-to-One Mentorship Programme
 
