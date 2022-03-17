@@ -120,3 +120,6 @@ To be announced later.
 
 [Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup) to
 keep in the know!
+
+## How can I get a refund?
+We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 11 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at [refunds@europython.eu](mailto: refunds@europython.eu) if you need a refund due to special circumstances. 
