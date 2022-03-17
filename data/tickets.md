@@ -48,7 +48,7 @@ offered to the European Python community.
 
 **Note**: If you need a proper VAT invoice listing your company's name, please
 purchase a business ticket. Personal Tickets do not include a company name. We
-will list the ticket tier and type on your conference badge for accommodate the
+will list the ticket tier and type on your conference badge to accommodate the
 registration staff. 
 
 
@@ -68,7 +68,7 @@ first come, first serve basis. When they're gone, they're all gone!
 We'll switch to regular ticket sales as soon as Early Bird tickets are sold
 out.
 
-**NOTE** During our last in-person conference at Basel in 2019, the Early Bird
+**NOTE**: During our last in-person conference at Basel in 2019, the Early Bird
 tickets sold out in _15 minutes_.
 
 ## Ticket Prices
@@ -101,8 +101,7 @@ _Every ticket includes break refreshments and a light lunch for each day._
 
 **_Free Childcare_**: Children are welcome but need to be accompanied by their
 legal guardian. If you are attending with your children, please register a
-ticket for yourself **_and_** request a free childcare ticket for each child
-you will bring to the conference. 
+ticket for yourself **_and_** select how many children will require childcare at checkout. 
 
 We would like to encourage you to book your ticket early. This makes it easier
 for us to plan for the event and arrange important things like the catering,
