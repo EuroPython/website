@@ -1,5 +1,7 @@
 # Tickets
 
+<a class="button" href="https://tickets.europython.eu">Beam me up to the ticket shop now!</a>
+
 ## The What, Where and When of EuroPython 2022
 
 EuroPython 2022 will be held on 11-17th July. It will be both in person and

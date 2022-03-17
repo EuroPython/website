@@ -46,7 +46,8 @@ for a grant:
 
 ## How to apply
 
-Fill out the application form [here](https://forms.gle/7EAbk59cgaqtKN4r6).
+<a class="button" href="https://forms.gle/7EAbk59cgaqtKN4r6"> Fill out the application form</a>
+
 
 ## Timeline
 
