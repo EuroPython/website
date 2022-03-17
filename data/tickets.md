@@ -52,7 +52,7 @@ will list the ticket tier and type on your conference badge for accommodate the
 registration staff. 
 
 
-<button>This button will become active on<br/> Thursday, 17th March 2022 13:00 CET</button>
+<a class="button" href="https://tickets.europython.eu">Get your tickets here</a>
 
 
 ## Early Bird Ticket Sales
