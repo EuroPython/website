@@ -112,7 +112,7 @@ A. The EuroPython conference is entirely run by volunteers and we always need so
 
 ## **Q: Will I get a ticket refund or exchange if I cannot travel due to COVID restrictions?**
 
-A: Travelling can be expected to be complicated during a pandemic. We will aim to offer a full refund of the conference ticket if your circumstances change. Before 11 June, you can request a refund with no questions asked. After the date, please email us at [refunds@europython.eu](mailto: https://ep2022.europython.eu/tickets) if you need a refund due to special circumstances. 
+A: Travelling can be expected to be complicated during a pandemic. We will aim to offer a full refund of the conference ticket if your circumstances change. Before 11 June, you can request a refund with no questions asked. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances. 
 
 ## **Q: Will there be any COVID safety precautions at the venue?**
 
