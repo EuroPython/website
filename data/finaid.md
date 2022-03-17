@@ -15,7 +15,7 @@ EuroPython.
 You’ll find all the information you need to apply for such a grant on this
 page.
 
-[EuroPython Society](/img/eps-logo-white.png)
+![EuroPython Society](/img/eps-logo-white.png)
 
 The EuroPython Society are sponsoring financial aid with €20,000 this year.
 
