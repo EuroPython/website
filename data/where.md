@@ -89,25 +89,7 @@ traffic updates during peak drive time.
   [this link](https://www.eurocarparks.ie/ccdparking/).
 - [Park Rite IFSC Multi-Storey Car Park](https://www.parkrite.ie/carparks/ifsc)
   (few minutes walk from The Convention centre Dublin): Commons Street, D01
-  DA34, Dublin 1
-
-### Travel around Dublin
-
-You can buy the [Freedom Ticket](https://dodublin.ie/dodublin-card) card for
-~€45. You have 48 hours for the “Hop on/Hop off” tour and 72 Hours for using the
-Dublin Bus Network. This includes the 16, 41 routes from Dublin Airport to City
-centre, Go-Ahead Dublin public buses, [Luas](https://luas.ie/),
-[Dublin Area Rapid Transit](https://www.irishrail.ie/en-ie/about-us/iarnrod-eireann-services/dart-commuter)
-(in Dublin area only). - Another option is to buy a
-[Leap](https://about.leapcard.ie/leap-visitor-card) Visitors Card. It gives you
-unlimited travel over your selected time period on
-[Dublin Bus](http://www.dublinbus.ie/), Go-Ahead Ireland routes in Dublin,
-[Luas](https://luas.ie/),
-[Dublin Area Rapid Transit](https://www.irishrail.ie/en-ie/about-us/iarnrod-eireann-services/dart-commuter)
-and Commuter Rail. You can travel to and from the Airport at the start and end
-of your trip without any additional charge. For 24 hours the price is €10, 3
-days is €25 and 7 days is €40.
-
+  DA34, Dublin 1.
 Further information for parking options can be found
 [here](https://www.parkrite.ie/find-a-car-park).
 
@@ -116,3 +98,20 @@ Further information for parking options can be found
 For any COVID related information in Dublin, please refer to our dedicate
 [COVID Info page](/covid-info) and the Government
 [public health measures](https://www.gov.ie/en/campaigns/c36c85-covid-19-coronavirus/).
+
+### Tourist Tips: Around Dublin
+- You can buy the [Freedom Ticket](https://dodublin.ie/dodublin-card) card for
+~€45. You have 48 hours for the “Hop on/Hop off” tour and 72 Hours for using the
+Dublin Bus Network. This includes the 16, 41 routes from Dublin Airport to City
+centre, Go-Ahead Dublin public buses, [Luas](https://luas.ie/),
+[Dublin Area Rapid Transit](https://www.irishrail.ie/en-ie/about-us/iarnrod-eireann-services/dart-commuter)
+(in Dublin area only).
+- Another option is to buy a
+[Leap](https://about.leapcard.ie/leap-visitor-card) Visitors Card. It gives you
+unlimited travel over your selected time period on
+[Dublin Bus](http://www.dublinbus.ie/), Go-Ahead Ireland routes in Dublin,
+[Luas](https://luas.ie/),
+[Dublin Area Rapid Transit](https://www.irishrail.ie/en-ie/about-us/iarnrod-eireann-services/dart-commuter)
+and Commuter Rail. You can travel to and from the Airport at the start and end
+of your trip without any additional charge. For 24 hours the price is €10, 3
+days is €25 and 7 days is €40.
