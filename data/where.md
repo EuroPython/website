@@ -100,14 +100,14 @@ For any COVID related information in Dublin, please refer to our dedicate
 [public health measures](https://www.gov.ie/en/campaigns/c36c85-covid-19-coronavirus/).
 
 ### Tourist Tips: Around Dublin
-- You can buy the [Freedom Ticket](https://dodublin.ie/dodublin-card) card for
+- You can buy the [Freedom Ticket card](https://dodublin.ie/dodublin-card)  for
 ~€45. You have 48 hours for the “Hop on/Hop off” tour and 72 Hours for using the
 Dublin Bus Network. This includes the 16, 41 routes from Dublin Airport to City
 centre, Go-Ahead Dublin public buses, [Luas](https://luas.ie/),
 [Dublin Area Rapid Transit](https://www.irishrail.ie/en-ie/about-us/iarnrod-eireann-services/dart-commuter)
 (in Dublin area only).
 - Another option is to buy a
-[Leap](https://about.leapcard.ie/leap-visitor-card) Visitors Card. It gives you
+[Leap Visitors Card](https://about.leapcard.ie/leap-visitor-card). It gives you
 unlimited travel over your selected time period on
 [Dublin Bus](http://www.dublinbus.ie/), Go-Ahead Ireland routes in Dublin,
 [Luas](https://luas.ie/),
