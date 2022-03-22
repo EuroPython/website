@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: "/cfp",
-        destination: "https://program.europython.eu/europython-2022/cfp ",
+        destination: "https://program.europython.eu/europython-2022/cfp",
         permanent: true,
       },
     ];
