@@ -12,7 +12,7 @@ Please note that your own submissions will not be listed.
 
 The voting will open as soon as the CFP is finished.
 
-<a href="#" class="button">This link will become active when CFP is complete</a>
+<button>This button will become active when CFP is complete</button>
 
 If you'd like to stay up to date please follow our [twitter](https://twitter.com/europython) or [LinkedIn](https://linkedin.com/company/europython).
 
