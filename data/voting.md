@@ -14,10 +14,7 @@ The voting will open as soon as the CFP is finished.
 
 <button>This button will become active when CFP is complete</button>
 
-If you'd like to stay up to date please follow our [twitter](https://twitter.com/europython) or [LinkedIn](https://linkedin.com/company/europython).
-
-Or signup to our newsletter on [EuroPython Blog](https://blog.europython.eu/#/portal/signup) 
-
+Once open, voting will go on for a week. We'll push an update on our socials ([Twitter](https://twitter.com/europython), [LinkedIn](https://linkedin.com/company/europython)) & newsletter ([EuroPython Blog](https://blog.europython.eu/#/portal/signup)) when it goes live.
 
 ## Talk selection
 
