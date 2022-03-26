@@ -2,10 +2,7 @@ import "../styles/main.css";
 import "../styles/overrides.css";
 import type { AppProps } from "next/app";
 import { MDXProvider } from "@mdx-js/react";
-
-const components = {
-  h1: ({ children }: any) => <h1 style={{ color: "red" }}>🔣 {children}</h1>,
-};
+import { components } from "../components/mdx";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -9,18 +9,7 @@ import { Layout } from "../components/layout";
 import { wrapInArticles } from "../plugins/wrap-in-articles";
 import { highlightFirstHeading } from "../plugins/highlight-first-heading";
 import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
-import { Map } from "../components/map";
-import Image from "next/image";
-
-const components = {
-  Map,
-  img: ({ src, alt, ...props }: any) => (
-    <figure className="next-image">
-      <Image src={src} alt={alt} {...props} layout="fill" objectFit="contain" />
-      {alt && <figcaption>{alt}</figcaption>}
-    </figure>
-  ),
-};
+import { components } from "../components/mdx";
 
 export default function Page({ source, path }: { source: any; path: string }) {
   return (
