@@ -277,27 +277,33 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-h1.highlighted::before {
+h1.highlighted::before,
+.h1.highlighted::before {
   left: -4rem;
 }
 
-h2.highlighted::before {
+h2.highlighted::before,
+.h2.highlighted::before {
   left: -3rem;
 }
 
-h3.highlighted::before {
+h3.highlighted::before,
+.h3.highlighted::before {
   left: -2.5rem;
 }
 
-h4.highlighted::before {
+h4.highlighted::before,
+.h4.highlighted::before {
   left: -2rem;
 }
 
-h5.highlighted::before {
+h5.highlighted::before,
+.h5.highlighted::before {
   left: -1.75rem;
 }
 
-h6.highlighted::before {
+h6.highlighted::before,
+.h6.highlighted::before {
   left: -1.5rem;
 }
 
@@ -416,12 +422,22 @@ button, .button, input[type="submit"], input[type="button"], input[type="reset"]
   flex-shrink: 0;
   border: 0;
   text-decoration: none;
+  border: 2px solid var(--color-primary);
 }
 
 @media all and (min-width: 640px) {
   button, .button, input[type="submit"], input[type="button"], input[type="reset"] {
     padding: 1rem 1.5rem;
   }
+}
+
+.button + .button {
+  margin-left: 0.5rem;
+}
+
+.button.secondary {
+  background-color: var(--color-background);
+  color: var(--color-body);
 }
 
 input[type="submit"] {
@@ -627,7 +643,7 @@ select {
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
   appearance:none;
-  background-image: url(/img/arrow-down.svg);
+  background-image: url(/img/icons/arrow-down.svg);
   background-position: calc(100% - 1rem) center;
   background-repeat: no-repeat;
   background-size: 1.5rem 1.5rem;
@@ -797,7 +813,7 @@ blockquote {
 blockquote:before {
   content: '';
   display: block;
-  background-image: url(/img/quotes.svg);
+  background-image: url(/img/icons/quotes.svg);
   background-repeat: no-repeat;
   width: 4.5rem;
   height: 1.5rem;
@@ -1041,6 +1057,11 @@ figure {
   margin: var(--unit-3) 0;
   width: var(--measure-large);
   max-width: 100%;
+  position: relative;
+}
+
+figure img {
+  border-radius: 20px;
 }
 
 figcaption {
@@ -1219,6 +1240,8 @@ meter::-webkit-meter-even-less-good-value {
 
 .header-controls label {
   margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
   background-color: var(--color-body);
   color: var(--color-body-inverted);
 }
@@ -1288,7 +1311,7 @@ meter::-webkit-meter-even-less-good-value {
  */
 
 .hero-banner {
-  background-image: url(/img/2022.png);
+  background-image: url(/img/accents/2022.png);
   width: calc(100% + 3rem);
   margin-left: -1.5rem;
   padding-left: 1.5rem;
@@ -1305,7 +1328,7 @@ meter::-webkit-meter-even-less-good-value {
   position: absolute;
   width: 6rem;
   height: 6rem;
-  background-image: url(/img/accent-image.svg);
+  background-image: url(/img/accents/accent-image.svg);
   background-repeat: no-repeat;
   background-size: cover;
   right: 1rem;
@@ -1509,7 +1532,7 @@ meter::-webkit-meter-even-less-good-value {
     display: block;
     position: absolute;
     z-index: 1;
-    background-image: url(/img/accent-image-group.svg);
+    background-image: url(/img/accents/accent-image-group.svg);
     background-repeat: no-repeat;
     background-size: contain;
     height: 380px;
@@ -1585,7 +1608,7 @@ meter::-webkit-meter-even-less-good-value {
     display: block;
     position: absolute;
     z-index: 1;
-    background-image: url(/img/accent-image.svg);
+    background-image: url(/img/accents/accent-image.svg);
     background-repeat: no-repeat;
     background-size: contain;
     height: 120px;
@@ -1629,6 +1652,15 @@ meter::-webkit-meter-even-less-good-value {
     width: auto;
     top: 15rem;
   }
+}
+
+.cta--centered * {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  max-width: 100%;
 }
 
 /* Footer styles */
@@ -1678,13 +1710,13 @@ footer nav ul {
 
 footer nav ul li {
   margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: bold;
 }
 
 footer nav ul li a {
-  font-size: 2rem;
-  line-height: 2.5rem;
   text-decoration: none;
-  font-weight: bold;
 }
 
 footer nav ul li a.active {
@@ -1692,9 +1724,55 @@ footer nav ul li a.active {
 }
 
 @media all and (min-width: 850px) {
-  footer nav ul li a {
+  footer nav ul li {
     font-size: 3rem;
     line-height: 3.5rem;
+  }
+}
+
+
+/* Sub nav */
+
+footer .has-submenu button {
+  color: var(--color-body);
+  background-color: var(--color-background);
+  background-image: url(/img/icons/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: 0.75rem;
+  background-position: center;
+  width: 2rem;
+  height: 2.5rem;
+  padding: 0;
+  margin-left: 1rem;
+  vertical-align: top;
+  border-color: var(--color-background);
+}
+
+footer .has-submenu button:focus {
+  border: 0;
+}
+
+footer .has-submenu.open button {
+  background-image: url(/img/icons/arrow-up.svg)
+}
+
+footer .has-submenu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer .has-submenu ul li {
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+@media all and (min-width: 850px) {
+  footer .has-submenu button {
+    height: 3.5rem;
   }
 }
 
@@ -1731,7 +1809,7 @@ footer nav ul li a.active {
   position: absolute;
   width: 11rem;
   height: 14.5rem;
-  background-image: url(/img/accent-image-left.svg);
+  background-image: url(/img/accents/accent-image-left.svg);
   background-repeat: no-repeat;
   background-size: cover;
   left: -17rem;
@@ -1745,7 +1823,7 @@ footer nav ul li a.active {
   position: absolute;
   width: 11rem;
   height: 14.5rem;
-  background-image: url(/img/accent-image-right.svg);
+  background-image: url(/img/accents/accent-image-right.svg);
   background-repeat: no-repeat;
   background-size: cover;
   right: -17rem;
@@ -1754,7 +1832,7 @@ footer nav ul li a.active {
 }
 
 hr.accent-left::before {
-  background-image: url(/img/accent-image-right.svg);
+  background-image: url(/img/accents/accent-image-right.svg);
   width: 14rem;
   height: 18.5rem;
   top: -9rem;
@@ -1762,11 +1840,47 @@ hr.accent-left::before {
 }
 
 hr.accent-right::before {
-  background-image: url(/img/accent-image-left.svg);
+  background-image: url(/img/accents/accent-image-left.svg);
   width: 14rem;
   height: 18.5rem;
   top: -9rem;
   right: -10rem;
+}
+
+.burst-right img {
+  position: relative;
+  z-index: 2;
+}
+
+.burst-right::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  background-image: url(/img/accents/burst.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: -10rem;
+  top: -3rem;
+}
+
+@media all and (min-width: 480px) {
+  .burst-right::before {
+    width: 24rem;
+    height: 24rem;
+    right: -16rem;
+    top: -4rem;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .burst-right::before {
+    width: 42rem;
+    height: 42rem;
+    right: -23rem;
+    top: -6rem;
+  }
 }
 
 /* Speakers list */
@@ -1788,7 +1902,7 @@ hr.accent-right::before {
     position: absolute;
     width: 11rem;
     height: 11rem;
-    background-image: url(/img/accent-image.svg);
+    background-image: url(/img/accents/accent-image.svg);
     background-repeat: no-repeat;
     background-size: cover;
     left: 5rem;
@@ -1801,7 +1915,7 @@ hr.accent-right::before {
     position: absolute;
     width: 35rem;
     height: 33.75rem;
-    background-image: url(/img/swirl.svg);
+    background-image: url(/img/accents/swirl.svg);
     background-repeat: no-repeat;
     background-size: cover;
     left: 20%;
@@ -1897,7 +2011,7 @@ hr.accent-right::before {
 
 .sponsors__intro-content {
   margin-bottom: 2rem;
-  background-image: url(/img/sponsor-intro.svg);
+  background-image: url(/img/accents/sponsor-intro.svg);
   background-repeat: no-repeat;
   background-size: 4.875rem auto;
   padding-left: 6.125rem;
@@ -1975,4 +2089,232 @@ hr.accent-right::before {
 .sponsors__logos img {
   max-height: 8rem;
   max-width: 25%;
+}
+
+/* Sponsor tiers grid */
+
+.tiers-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 4rem 0rem 2rem;
+}
+
+.tier-card {
+  background: var(--color-body);
+  color: var(--color-body-inverted);
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+@media all and (min-width: 680px) {
+  .tiers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .tiers-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  .tiers-grid {
+    gap: 2rem;
+    margin: 4rem -2rem 2rem;
+  }
+
+  .tier-card {
+    padding: 2rem;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .tiers-grid {
+    gap: 2.25rem;
+    margin: 4rem -4rem 2rem;
+  }
+}
+
+.tier-card :first-child {
+  margin-top: 0;
+}
+
+.tier-card :last-child {
+  margin-bottom: 0;
+}
+
+.tier-card::after {
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 7.5rem;
+  background-image: url(/img/accents/tag-keystone.svg);
+  background-size: cover;
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+}
+
+@media all and (min-width: 480px) {
+  .tier-card::after {
+    width: 4.938rem;
+    height: 10.5rem;
+    right: 1.75rem;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  .tier-card::after {
+    right: 1.75rem;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .tier-card::after {
+    width: 5.9375rem;
+    height: 12.5rem;
+  }
+}
+
+.tier-card.diamond::after {
+  background-image: url(/img/accents/tag-diamond.svg);
+}
+
+.tier-card.platinum::after {
+  background-image: url(/img/accents/tag-platinum.svg);
+}
+
+.tier-card.gold::after {
+  background-image: url(/img/accents/tag-gold.svg);
+}
+
+.tier-card.silver::after {
+  background-image: url(/img/accents/tag-silver.svg);
+}
+
+.tier-card.bronze {
+  margin-bottom: 2rem;
+}
+
+.tier-card.bronze::after {
+  background-image: url(/img/accents/tag-bronze.svg);
+  height: 5rem;
+}
+
+.tier-card.patron::after {
+  background-image: url(/img/accents/tag-patron.svg);
+  height: 5rem;
+}
+
+@media all and (min-width: 480px) {
+  .tier-card.bronze::after,
+  .tier-card.patron::after {
+    height: 7rem;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .tier-card.bronze::after,
+  .tier-card.patron::after {
+    height: 8.125rem;
+  }
+}
+
+.tier-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.tier-card__slots {
+  font-size: 1.3125rem;
+  margin: 0.75rem 0;
+}
+
+.tier-card__price {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin: 0.75rem 0 1rem;
+}
+
+.tier-card__includes {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.tier-card ul {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tier-card ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.tier-card ul li::before {
+  content: '';
+  display: block;
+  background: url(/img/icons/tick.svg);
+  background-size: cover;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.35rem;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* Benefits list */
+
+.benefits-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.benefits-list li {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.benefits-list h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.benefits-list p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+}
+
+@media all and (min-width: 640px) {
+  .benefits-list .column {
+    max-width: calc((100% - 1.5rem) / 2);
+  }
+
+  .benefits-list li {
+    grid-template-columns: 4rem 1fr;
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .benefits-list h5 {
+    font-size: 2.25rem;
+  }
+
+  .benefits-list p {
+    font-size: unset;
+  }
 }
