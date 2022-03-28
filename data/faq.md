@@ -39,15 +39,19 @@ We aim to have a very diverse set of talks, tutorials, workshops, posters and
 keynotes, covering many different angles of where and how Python can be used to
 solve problems or do interesting things.
 
-## **Q. When will you start accepting talk proposals?**
+## **Q. When do you accept talk proposals?**
 
-A. The [Call for Proposals](https://program.europython.eu/europython-2022/cfp) (CFP) is open between **8-27 March**. We are thrilled
+A. The [Call for Proposals](https://program.europython.eu/europython-2022/cfp) (CFP) opened on 8 March.
+
+It has been extended for another week. New deadline: **3 April AoE**.
+
+We are thrilled
 to receive proposals on any topic that could be of interest to our community.
 
 Especially if you are considering becoming a speaker for the first time, or if
 you are from an underrepresented group, we strongly encourage you to send in
-your proposals. Check out our
-[Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) to apply to be a mentee or a mentor by 20 Marcha! Email us at ([program@europython.eu](mailto:program@europython.eu)) to tell us what other broader support you might need!
+your proposals. We ran a
+[Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) and matched 15 mentees and mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme. Email us at ([program@europython.eu](mailto:program@europython.eu)) to tell us what other broader support you might need!
 
 If you have something in mind, there is no better time to start preparing your
 proposal! For more insights, please have a look at the
@@ -56,10 +60,10 @@ which was our last in-person conference. The overall structure for EP2022 remain
 
 ## **Q. When will ticket sales start?**
 
-A. Early Bird ticket sales start on 17 March! Regular tickets sales will start right after early birds sell out. 
+A. Early Bird ticket sales started on 17 March! Regular tickets are also available alongside early birds tickets.
 
 As usual, there are several ticket options, so you can choose the one most
-suitable for you. 
+suitable for you.
 
 We offer flexibility for the tickets, depending on what you would like to attend. For the in-person conference, there will be:
 
@@ -67,18 +71,18 @@ We offer flexibility for the tickets, depending on what you would like to attend
 - Tutorials only ticket: access to only workshops/tutorials
 - Conference only ticket : you can attend the conference days
 
-Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for more details. 
+Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for more details.
 
 Instead, if you decide to attend the conference remotely, we will have special tickets for you. Subscribe to our
 [EuroPython Blog](https://blog.europython.eu/#/portal/signup) and stay tuned!
 
 ## **Q. What are the ticket prices like?**
 
-A. We have put a lot of work in keeping the ticket prices at a similar level to the last in-person conference in 2019, despite cost increases and the consequences of the pandemic. 
+A. We have put a lot of work in keeping the ticket prices at a similar level to the last in-person conference in 2019, despite cost increases and the consequences of the pandemic.
 
-Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for more details. 
+Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for more details.
 
-We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](https://ep2022.europython.eu/finaid)! 
+We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](https://ep2022.europython.eu/finaid)!
 
 ## **Q. Is there a Financial Aid Program for EP2022?**
 
@@ -106,13 +110,13 @@ If you’re interested, please contact [sponsoring@europython.eu](mailto:sponsor
 
 A. The EuroPython conference is entirely run by volunteers and we always need some extra help. If you want to get involved, please email [volunteers@europython.eu](mailto:volunteers@europython.eu) and we will be more than happy to answer your questions.
 
-# COVID RELATED QUESTIONS
+# COVID Related Questions
 
 **Please refer to our [COVID Info Page](https://ep2022.europython.eu/covid-info) for detailed information. Please bear in mind that the information in this section can change at any time and without warning. We will aim to provide updates whenever there is a change.**
 
 ## **Q: Will I get a ticket refund or exchange if I cannot travel due to COVID restrictions?**
 
-A: Travelling can be expected to be complicated during a pandemic. We will aim to offer a full refund of the conference ticket if your circumstances change. Before 11 June, you can request a refund with no questions asked. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances. 
+A: Travelling can be expected to be complicated during a pandemic. We will aim to offer a full refund of the conference ticket if your circumstances change. Before 11 June, you can request a refund with no questions asked. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances.
 
 ## **Q: Will there be any COVID safety precautions at the venue?**
 
