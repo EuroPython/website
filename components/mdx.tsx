@@ -4,6 +4,7 @@ import { ButtonWithTitle } from "../components/cta";
 import { SponsorTiers } from "./sponsor-tiers";
 import { BenefitItem, BenefitsList } from "./benefits-list";
 import { ButtonLink } from "./button-link";
+import { Note } from "./note";
 
 export const components = {
   Map,
@@ -12,6 +13,7 @@ export const components = {
   BenefitItem,
   BenefitsList,
   ButtonLink,
+  Note,
 
   img: ({ src, alt, ...props }: any) => (
     <figure className="next-image">

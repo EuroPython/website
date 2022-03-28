@@ -10,12 +10,11 @@ export const Layout = ({
   children: ReactNode;
   path?: string;
 }) => {
-  const url = `https://ep2022.europython.eu/${path}`;
+  const url = `https://ep2022.europython.eu/${path || ""}`;
   const imageUrl = path
     ? `https://ep2022.europython.eu/social-cards/${path}.png`
     : "https://ep2022.europython.eu/social-cards/default.png";
 
-    console.log(url, imageUrl)
   return (
     <>
       <Head>

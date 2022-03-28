@@ -39,3 +39,12 @@ h6 a,
   aspect-ratio: 16/9;
   position: relative;
 }
+
+.note {
+  margin-top: var(--unit-1-5);
+  padding: var(--unit-1-5);
+  border-left: 6px solid var(--color-primary);
+  width: 90%;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}

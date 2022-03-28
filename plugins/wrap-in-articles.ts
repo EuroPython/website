@@ -23,13 +23,14 @@ const hasOnlyOneImage = (node: Node): node is Parent => {
 };
 
 const shouldNotWrap = (node: Node) => {
-  if (is(node, { type: "jsx", value: "<SponsorTiers />" })) {
-    return true;
-  }
-
   if (is(node, { type: "jsx" })) {
     // @ts-ignore
-    if ((node.value as string).startsWith("<BenefitsList>")) {
+    const value = node.value;
+    if (
+      value.startsWith("<BenefitsList>") ||
+      value.startsWith("<SponsorTiers />") ||
+      value.startsWith("<Note>")
+    ) {
       return true;
     }
   }
