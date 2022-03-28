@@ -8,56 +8,65 @@ subtitle:
 
 # Sponsor
 
-<p className="large">The largest European conference for python.</p>
+<p className="large">Support the largest European Python conference</p>
 
 Sponsoring EuroPython guarantees you highly targeted visibility and the
 opportunity to present yourself and your company to one of the largest and most
 diverse Python communities in Europe and beyond.
 
-As a sponsor of EuroPython 2022, you will directly help promote the work of the
-great open-source community and help further its development.
+This July, we will finally be back together again, after two years of running online. Become a sponsor of EuroPython 2022, join us in [The Convention Centre Dublin](https://www.theccd.ie/) and directly help promote the work of the great open-source community and further its development.
 
 ![](/img/photo.png)
 
-<ButtonWithTitle title="Ready to become a sponsor?" text="Signup now" href="TODO" />
+<ButtonWithTitle title="Ready to become a sponsor and join us in Dublin?" text="Sign Up Now!" href="https://forms.gle/L2CxUpbr6wmV3Lsv8" />
 
 ---
 
-## The Demographics of EuroPython.
+## 2019 & 2021 Demographics
 
-Text todo...
+EuroPython 2019 was the last in-person conference, held in Basel, Switzerland.
+EuroPython 2021 was held online with a diverse reach across the world.
+EuroPython 2022 will be hybrid, both in Dublin & Online, combining the good of both worlds.
 
-<ButtonWithTitle title="Demographics Data" text="Download (PDF)" href="TODO" />
+<ButtonLink href="https://drive.google.com/file/d/1mNnS4-pH8rlF0jFqyWtAUozQwsoi8tDt/view?usp=sharing">2019 & 2021 Demographics (PDF)</ButtonLink>
+
 
 ---
-
 # Sponsor tiers
 
-A wonderful serenity has taken possession of my entire soul, like these sweet
-mornings of spring which I enjoy with my whole heart. I am alone, and feel the
-charm of existence in this spot, which was created for the bliss of souls like
-mine.
+At EuroPython 2022, we offer seven main packages, aiming to keep EuroPython accessible to most organisations keen to help the community.
 
-<ButtonLink secondary href="TODO">Package comparison table (PDF)</ButtonLink>
-<ButtonLink href="TODO">Signup Now</ButtonLink>
+<ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Package Comparison Table (PDF)</ButtonLink>
+<ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
 
 <SponsorTiers />
 
-The prices for 2022 haven’t been finalized yet, but will likely see an increase.
-As usual, we will also offer a 10% discount for early bird sponsors and free
-tables for Open Source Software.
-
 ## Add-ons!
 
-A wonderful serenity has taken possession of my entire soul, like these sweet
-mornings of spring which I enjoy with my whole heart. I am alone, and feel the
-charm of existence in this spot, which was created for the bliss of souls like
-mine.
-
-<ButtonLink secondary href="TODO">Take a look at the full list</ButtonLink>
-<ButtonLink href="TODO">Signup Now</ButtonLink>
+In addition to our main packages, we offer these add-ons as extras or stand-alone sponsor options.
 
 
+<ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Check out the list of Add-ons (PDF)</ButtonLink>
+<ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Signup Now</ButtonLink>
+
+## Discounts
+
+### Early Bird
+We will offer a 10% discount for early bird sponsors! Sign up early to take advantage!
+
+### Free Table for Open Source Software
+Supporting Open Source is at the core of EuroPython. Once again, we have free tables for Open Source Software projects during the conference. Reach out to the [sponsors team](mailto:sponsoring@europython.eu), share your project with us and book a free table! Please note that places are limited and available on a first-come-first-serve basis.
+
+### SME
+We have special offers for SMEs (small to medium sized companies) active in the Python community.
+
+If you are a small/startup company involved in Python based projects, and have less than 250,000 EUR annual revenue you can receive:
+
+- a 50% discount at the Patron level, or
+
+- a 20% discount at the Bronze level, or
+
+- 10% discount at the Silver level.
 ---
 
 ## Benefits of being a sponsor
@@ -69,11 +78,11 @@ pulse of anything Python-related? EuroPython was the first major Python
 community conference ever organised by volunteers.
 
 <BenefitsList>
-  <BenefitItem icon="network" title="Socialise:">Make contact with a vibrant network of innovators</BenefitItem>
-  <BenefitItem icon="target" title="Target:">Run a targeted marketing by reaching out directly to people interested in a topic</BenefitItem>
-  <BenefitItem icon="award" title="Image Cultivation:">Present yourself as a Python-related open source company!</BenefitItem>
-  <BenefitItem icon="sponsor" title="Sponsoring:">Support a great open source community!</BenefitItem>
-  <BenefitItem icon="transfer" title="Know-How Transfer:">Educate your staff and benefit from the knowledge of the community</BenefitItem>
-  <BenefitItem icon="headhunt" title="Head Hunting:">Take advantage of the conference for recruitment</BenefitItem>
-  <BenefitItem icon="rocket" title="New Business:">Use the conference to attract new projects</BenefitItem>
+  <BenefitItem icon="network" title="Socialise">Make contact with a vibrant network of innovators</BenefitItem>
+  <BenefitItem icon="target" title="Target">Run a targeted marketing by reaching out directly to people interested in a topic</BenefitItem>
+  <BenefitItem icon="award" title="Image Cultivation">Present yourself as a Python-related open source company!</BenefitItem>
+  <BenefitItem icon="sponsor" title="Community Building">Support a great open source community!</BenefitItem>
+  <BenefitItem icon="transfer" title="Know-How Transfer">Educate your staff and benefit from the knowledge of the community</BenefitItem>
+  <BenefitItem icon="headhunt" title="Head Hunting">Take advantage of the conference for recruitment</BenefitItem>
+  <BenefitItem icon="rocket" title="New Business">Use the conference to attract new projects</BenefitItem>
 </BenefitsList>
