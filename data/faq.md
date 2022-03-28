@@ -60,7 +60,7 @@ which was our last in-person conference. The overall structure for EP2022 remain
 
 ## **Q. When will ticket sales start?**
 
-A. Early Bird ticket sales start on 17 March! Regular tickets sales will start right after early birds sell out.
+A. Early Bird ticket sales started on 17 March! Regular tickets are also available alongside early birds tickets.
 
 As usual, there are several ticket options, so you can choose the one most
 suitable for you.
