@@ -69,7 +69,7 @@ export const SponsorTiers = () => {
         <ul>
           <li>6 sqm booth in exhibit hall</li>
           <li>2 complimentary session passes</li>
-          <li>Logo on EuroPython website</li>
+          <li>Logo on EuroPython website & signage</li>
           <li>And more!</li>
         </ul>
       </div>
@@ -77,12 +77,16 @@ export const SponsorTiers = () => {
         <div className="tier-card bronze">
           <h3>Bronze</h3>
           <p className="tier-card__price">€2,000</p>
-          <p className="tier-card__includes">Some text here</p>
+          <ul>
+            <li>Logo & recuriting ad on EuroPython website and more!</li>
+          </ul>
         </div>
         <div className="tier-card patron">
           <h3>Patron</h3>
           <p className="tier-card__price">€1000</p>
-          <p className="tier-card__includes">Some text here</p>
+          <ul>
+            <li>Logo on EuroPython website, welcome tweet and more!</li>
+          </ul>
         </div>
       </div>
     </div>
