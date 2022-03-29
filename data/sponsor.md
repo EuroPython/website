@@ -46,7 +46,7 @@ accessible to most organisations keen to help the community.
 Comparison Table (PDF)</ButtonLink>
 <ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
 
-<Note>We will offer a 10% discount for early bird sponsors! Sign up early to
+<Note>We will offer a 10% discount for early bird sponsors! Sign up by **29 April** to
 take advantage!</Note>
 
 <SponsorTiers />
@@ -58,13 +58,13 @@ stand-alone sponsor options.
 
 <ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Check
 out the list of Add-ons (PDF)</ButtonLink>
-<ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Signup Now</ButtonLink>
+<ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
 
 ## Discounts
 
 ### Early Bird
 
-We will offer a 10% discount for early bird sponsors! Sign up early to take
+We will offer a 10% discount for early bird sponsors! Sign up by **29 April** to take
 advantage!
 
 ### Free Table for Open Source Software
