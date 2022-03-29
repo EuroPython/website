@@ -46,7 +46,7 @@ accessible to most organisations keen to help the community.
 Comparison Table (PDF)</ButtonLink>
 <ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
 
-<Note>We will offer a 10% discount for early bird sponsors! Sign up by **29 April** to
+<Note>We will offer a 10% discount for early bird sponsors! Sign up by <b>29 April</b> to
 take advantage!</Note>
 
 <SponsorTiers />
