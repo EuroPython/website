@@ -5,10 +5,6 @@
       "path": "/cfp"
     },
     {
-      "name": "Mentorship",
-      "path": "/mentorship"
-    },
-    {
       "name": "Finaid",
       "path": "/finaid"
     },
@@ -23,6 +19,10 @@
     {
       "name": "Sponsor",
       "path": "/sponsor"
+    },
+    {
+      "name": "Code of Conduct",
+      "path": "https://www.europython-society.org/coc/"
     }
   ],
   "footer": [
@@ -43,7 +43,7 @@
       "path": "/faq"
     },
     {
-      "name": "Covid info",
+      "name": "Covid Info",
       "path": "/covid-info"
     },
     {
@@ -51,16 +51,16 @@
       "path": "/sponsor"
     },
     {
+      "name": "Contacts",
+      "path": "/contacts"
+    },
+    {
       "name": "Terms",
       "path": "/terms"
     },
     {
-      "name": "Where",
-      "path": "/where"
-    },
-    {
-      "name": "Contacts",
-      "path": "/contacts"
+      "name": "Privacy Policy",
+      "path": "https://www.europython-society.org/privacy/"
     }
   ]
 }
