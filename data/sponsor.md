@@ -32,8 +32,10 @@ EuroPython 2021 was held online with a diverse reach across the world.
 EuroPython 2022 will be hybrid, both in Dublin & Online, combining the good of
 both worlds.
 
+<div style={{textAlign: "center"}}>
 <ButtonLink href="https://drive.google.com/file/d/1mNnS4-pH8rlF0jFqyWtAUozQwsoi8tDt/view?usp=sharing">2019
 & 2021 Demographics (PDF)</ButtonLink>
+</div>
 
 ---
 
