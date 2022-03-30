@@ -57,6 +57,14 @@ take advantage!</Note>
 
 In addition to our main packages, we offer these add-ons as extras or
 stand-alone sponsor options.
+  <ul>
+    <li>Sponsored talk on a conference day: €3,500  </li>
+    <li>Childcare Sponsor: €5,000 </li>
+    <li>Financial Aid Sponsor: €5,000 </li>
+    <li>PyLadies Lunch Sponsor: €2,000</li>
+    <li>Open Space Room Sponsor: €2,000</li>
+    <li>And many more!</li>
+  </ul>
 
 <ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Check
 out the list of Add-ons (PDF)</ButtonLink>
