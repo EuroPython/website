@@ -2,7 +2,7 @@ export const SponsorTiers = () => {
   return (
     <div className="tiers-grid">
       <div className="tier-card keystone">
-        <h3>KeyStone</h3>
+        <h3>Keystone</h3>
         <p className="tier-card__slots">1 slot available</p>
         <p className="tier-card__price">€42,000</p>
         <p className="tier-card__includes">This tier includes:</p>

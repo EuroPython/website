@@ -67,14 +67,6 @@ out the list of Add-ons (PDF)</ButtonLink>
 We will offer a 10% discount for early bird sponsors! Sign up by **29 April** to take
 advantage!
 
-### Free Table for Open Source Software
-
-Supporting Open Source is at the core of EuroPython. Once again, we have free
-tables for Open Source Software projects during the conference. Reach out to the
-[sponsors team](mailto:sponsoring@europython.eu), share your project with us and
-book a free table! Please note that places are limited and available on a
-first-come-first-serve basis.
-
 ### SME
 
 We have special offers for SMEs (small to medium sized companies) active in the
@@ -89,6 +81,13 @@ less than 250,000 EUR annual revenue you can receive:
 
 - 10% discount at the Silver level.
 
+## Free Table for Open Source Projects
+Supporting Open Source is at the core of EuroPython. Once again, we have free
+tables for Open Source Software projects during the conference. Reach out to the
+[sponsors team](mailto:sponsoring@europython.eu), share your project with us and
+book a free table! Please note that places are limited and available on a
+first-come-first-serve basis.
+
 ---
 
 ## Benefits of being a sponsor
@@ -102,8 +101,7 @@ community conference ever organised by volunteers.
 <BenefitsList>
   <BenefitItem icon="network" title="Socialise">Make contact with a vibrant network of innovators</BenefitItem>
   <BenefitItem icon="target" title="Target">Run a targeted marketing by reaching out directly to people interested in a topic</BenefitItem>
-  <BenefitItem icon="award" title="Image Cultivation">Present yourself as a Python-related open source company!</BenefitItem>
-  <BenefitItem icon="sponsor" title="Community Building">Support a great open source community!</BenefitItem>
+  <BenefitItem icon="award" title="Community Cultivation">Let the world know your company support the Python open source community</BenefitItem>
   <BenefitItem icon="transfer" title="Know-How Transfer">Educate your staff and benefit from the knowledge of the community</BenefitItem>
   <BenefitItem icon="headhunt" title="Head Hunting">Take advantage of the conference for recruitment</BenefitItem>
   <BenefitItem icon="rocket" title="New Business">Use the conference to attract new projects</BenefitItem>
