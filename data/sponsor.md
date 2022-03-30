@@ -56,7 +56,9 @@ take advantage!</Note>
 ## Add-ons!
 
 In addition to our main packages, we offer these add-ons as extras or
-stand-alone sponsor options.
+stand-alone sponsor options. Below are some examples.
+
+Please note: each add-on has limited slots and some are exclusive. Please check the full list in the PDF for details.
   <ul>
     <li>Sponsored talk on a conference day: €3,500  </li>
     <li>Childcare Sponsor: €5,000 </li>
@@ -66,8 +68,7 @@ stand-alone sponsor options.
     <li>And many more!</li>
   </ul>
 
-<ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Check
-out the list of Add-ons (PDF)</ButtonLink>
+<ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Full list of add-ons (PDF)</ButtonLink>
 <ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
 
 ## Discounts
