@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="130px" viewBox="0 0 95 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle 7</title>
+    <defs>
+        <linearGradient x1="50%" y1="11.4594%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A59888" offset="0%"></stop>
+            <stop stop-color="#6C5F50" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sponsors-v2" transform="translate(-1242.000000, -3436.000000)" fill="url(#linearGradient-1)">
+            <g id="Tiers" transform="translate(90.000000, 2384.000000)">
+                <g id="Bronze-Tag" transform="translate(874.000000, 1042.000000)">
+                    <polygon id="Rectangle" points="278 10 373 10 373 140 325.5 104.192211 278 140"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

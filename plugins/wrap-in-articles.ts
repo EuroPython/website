@@ -22,6 +22,22 @@ const hasOnlyOneImage = (node: Node): node is Parent => {
   );
 };
 
+const shouldNotWrap = (node: Node) => {
+  if (is(node, { type: "jsx" })) {
+    // @ts-ignore
+    const value = node.value;
+    if (
+      value.startsWith("<BenefitsList>") ||
+      value.startsWith("<SponsorTiers />") ||
+      value.startsWith("<Note>")
+    ) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
 function transform(tree: Node) {
   const children = [];
   let currentArticle = null;
@@ -30,10 +46,17 @@ function transform(tree: Node) {
   for (let i = 0; i < (tree as Parent).children.length; i++) {
     const child = (tree as Parent).children[i];
 
-    if (hasOnlyOneImage(child)) {
+    if (matches("thematicBreak", child) || shouldNotWrap(child)) {
+      currentArticle = null;
+      children.push(child);
+    } else if (hasOnlyOneImage(child)) {
       currentArticle = null;
       children.push(child.children[0]);
-    } else if (!currentArticle || isMainHeading(child)) {
+    } else if (
+      !currentArticle ||
+      isMainHeading(child) ||
+      shouldNotWrap(child)
+    ) {
       currentArticle = {
         type: "section",
         children: [] as Node[],
