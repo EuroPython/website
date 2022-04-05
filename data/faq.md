@@ -17,6 +17,28 @@ Ireland**.
 For the virtual conference, detailed instructions will be announced at a later
 time.
 
+## **Milestones**
+<ul>
+  <li> 2022-03-08: CFP Starts </li>
+  <li> 2022-03-08: Speaker Mentorship Programme Starts </li>
+  <li> 2022-03-08: Financial Aid Programme Starts </li>
+  <li>2022-03-17: Ticket Sales Starts </li>
+  <li>2022-03-20: Speaker Mentorship Programme Ends </li>
+  <li>2022-03-23: AMA Session about CFP </li>
+  <li>2022-03-29: Sponsorship Signups Starts </li>
+  <li>The Week of 2022-04-04: Community Talk Voting Starts </li>
+  <li>2022-04-05: Panel Talk Review Starts </li>
+  <li>The Week of 2022-04-11: Community Talk Voting Ends </li>
+  <li>The week of 2022-04-20: Panel Talk Review Ends</li>
+  <li>2022-04-29: Sponsorship Early Bird Discount Ends</li>
+  <li>The Week of 2022-04-25: First Acceptance Notices to Speakers</li>
+  <li>The Week of 2022-05-09: Second Acceptance Notices to Speakers</li>
+  <li>The Week of 2022-05-09: List of Sessions Published</li>
+  <li>The Week of 2022-05-18: Schedule Published</li>
+  <li>2022-07-10: Gather & Set up at The CCD in Dublin!🤗</li>
+  <li>2022-07-11: Showtime 🎊 </li>
+</ul>
+
 ## **Q. What will the schedule look like?**
 
 A. The conference will be organised in three phases:
@@ -31,39 +53,39 @@ A. To get an idea of what to expect, please have a look at the
 [EP2021 programme](https://ep2021.europython.eu/events/sessions/) and the
 [EP2019 programme](https://ep2019.europython.eu/events/sessions/).
 
-To select talks, we run a Call for Proposals (CFP). Talks are then curated based
-on the input from the community voting and expert panel reviews. Make sure to subscribe to our
-[EuroPython Blog](https://blog.europython.eu/#/portal/signup) for updates.
+The conference will feature around 20 tutorials/workshops, 120 talk sessions and other interactive sessions such as Posters, Helpdesks, Panel Discussions and Maker Space.
 
-We aim to have a very diverse set of talks, tutorials, workshops, posters and
-keynotes, covering many different angles of where and how Python can be used to
-solve problems or do interesting things.
+We aim to have a very diverse programme, covering many different angles of where and how Python can be used to solve problems or do interesting things.
 
 ## **Q. When do you accept talk proposals?**
 
-A. The [Call for Proposals](https://program.europython.eu/europython-2022/cfp) (CFP) opened on 8 March.
+A. The [Call for Proposals](https://program.europython.eu/europython-2022/cfp) (CFP) ran between 8 March and 3 April.
 
-It has been extended for another week. New deadline: **3 April AoE**.
+We are thrilled to have received a record high of 429 proposals on a diverse range of topics.
 
-We are thrilled
-to receive proposals on any topic that could be of interest to our community.
+## **Q. How do you review and select talks?**
 
-Especially if you are considering becoming a speaker for the first time, or if
-you are from an underrepresented group, we strongly encourage you to send in
-your proposals. We ran a
-[Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) and matched 15 mentees and mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme. Email us at ([program@europython.eu](mailto:program@europython.eu)) to tell us what other broader support you might need!
+A. We believe that a good conference consists of popular talks as well as new or niche topics - all by and for our diverse community. Thus after Call for Proposals (CFP) finishes, submissions go through two round of unbiased reviews: speakers' names will not be displayed.
 
-If you have something in mind, there is no better time to start preparing your
-proposal! For more insights, please have a look at the
-[EP2019 CFP page](https://ep2019.europython.eu/events/call-for-proposals/),
-which was our last in-person conference. The overall structure for EP2022 remains the same.
+- community voting: open to all 2015-2022 EuroPython conference ticket holders + 2022 talk proposal submitters. Submissions are in random order for each voter. Please check out our [talk voting page](https://ep2022.europython.eu/voting) for details.
+
+- panel feedback: we invite a diverse group of experienced reviewers to refine & improve on submissions within their areas of expertise. The feedback helps the programme team make informed decisions while evaluating the quality of each submission. [Submit your interest here](https://t.co/JyOdGb71f8)
+
+The programme team will curate the final programme based on input from community voting, panel feedback and other editorial criteria such as the diversity of topics and speakers.
+
+[Subscribe to receive email updates](https://blog.europython.eu/#/portal/signup)
+
+## **Q. What support do you give to speakers?**
+A. If accepted, speakers are eligible for a free conference ticket and trainers a free combined ticket. In addition, speakers are encouraged to apply for additional [Financial Aid](https://ep2022.europython.eu/finaid), should there be a need.
+
+We want to give extra support to first-time speakers, especially the ones from an underrepresented group. It is in this spirit that we ran a
+[Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) and matched 15 mentees and mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme.
+
+Email us at ([program@europython.eu](mailto:program@europython.eu) to tell us what other broader speaker support you might need!
 
 ## **Q. When will ticket sales start?**
 
 A. Early Bird ticket sales started on 17 March! Regular tickets are also available alongside early birds tickets.
-
-As usual, there are several ticket options, so you can choose the one most
-suitable for you.
 
 We offer flexibility for the tickets, depending on what you would like to attend. For the in-person conference, there will be:
 
@@ -84,6 +106,9 @@ Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for mo
 
 We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](https://ep2022.europython.eu/finaid)!
 
+## **Q. Do you provide childcare?**
+A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.  
+
 ## **Q. Is there a Financial Aid Program for EP2022?**
 
 A. Yes, our
@@ -93,18 +118,22 @@ A. Yes, our
 
 A. The time and location of the conference have been set, so you can book at any time. We would recommend you consider flexible bookings in case of any changes of plans in the future as well as appropriate insurance cover.
 
+## **Q. Could you provide a visa invitation letter for my visa application?**
+
+A. Yes. We will set up a dedicated page with details on how to obtain the invitation letter in mid April. Please refer to the official [Irish Immigration Service](https://www.irishimmigration.ie/) for information, including the application process for an [Irish Conference/Event Visa](https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-options-for-working-in-ireland/coming-to-work-for-less-than-90-days/conference-event-visa/).
+
+
 ## **Q. Are you going to offer hotel discounts?**
 
-A. As of now there’s no discount that we know of or can offer. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) to stay tuned.
+A. As of now there’s no discount that we know of or can offer. We hope to give you suggestions in Mid-late April. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) to stay tuned.
 
 ## **Q. When can sponsors start signing up?**
 
-A. We are aiming to start sponsor signup in late March. Please check
-[2019 Sponsor Packages](https://ep2019.europython.eu/sponsor/packages/) to get an idea of the sponsorship options. The packages are not finalised yet, but will be similar to what we had in 2019. Sponsors who sign up early will again receive a 10% discount.
+A. Sponsors are welcome to sign up now! You can find all the details on our [sponsor page](https://ep2022.europython.eu/sponsor). Sponsors who sign up by 29 April will again receive a 10% Early Bird discount.
 
-We are committed to making EuroPython sponsorship accessible to most organisations keen to help the community.
+We are committed to making EuroPython sponsorship accessible to most organisations keen to help the community. [SME discount](https://ep2022.europython.eu/sponsor#sme) and [Free Table for Open Source Projects](https://ep2022.europython.eu/sponsor#free-table-for-open-source-projects) are offerings driven by our community spirit.
 
-If you’re interested, please contact [sponsoring@europython.eu](mailto:sponsoring@europython.eu) for details.
+If you’re interested in sponsorsing EuroPython 2022, get in touch with [the sponsor team](mailto:sponsoring@europython.eu).
 
 ## **Q. How can I help you with the conference organisation?**
 
