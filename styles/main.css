@@ -2318,3 +2318,21 @@ hr.accent-right::before {
     font-size: unset;
   }
 }
+
+ul.milestone-done li {
+  position: relative;
+  list-style: none
+}
+
+ul.milestone-done li::before {
+  content: '\2705  ';
+}
+
+ul.milestone-todo li {
+  position: relative;
+  list-style: none
+}
+
+ul.milestone-todo li::before {
+  content: '\1F4DD  ';
+}
