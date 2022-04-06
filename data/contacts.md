@@ -35,6 +35,10 @@ when referring to the conference.
 Please see the [Code of Conduct page](http://www.europython-society.org/coc/)
 for CoC contact information.
 
+### EuroPython Website Issues
+
+For problems with the website, we have a fancy option: report them using the [GitHub issue tracker](https://github.com/EuroPython/website/issues) for our website.
+
 ### EuroPython Privacy Inquiries
 
 For [EuroPython privacy](https://www.europython-society.org/privacy/) related

@@ -18,25 +18,27 @@ For the virtual conference, detailed instructions will be announced at a later
 time.
 
 ## **Milestones**
-<ul>
-  <li> 2022-03-08: CFP Starts </li>
-  <li> 2022-03-08: Speaker Mentorship Programme Starts </li>
-  <li> 2022-03-08: Financial Aid Programme Starts </li>
-  <li>2022-03-17: Ticket Sales Starts </li>
-  <li>2022-03-20: Speaker Mentorship Programme Ends </li>
-  <li>2022-03-23: AMA Session about CFP </li>
-  <li>2022-03-29: Sponsorship Signups Starts </li>
-  <li>The Week of 2022-04-04: Community Talk Voting Starts </li>
-  <li>The Week of 2022-04-04: Panel Talk Review Starts </li>
-  <li>The Week of 2022-04-11: Community Talk Voting Ends </li>
-  <li>The week of 2022-04-20: Panel Talk Review Ends</li>
-  <li>2022-04-29: Sponsorship Early Bird Discount Ends</li>
-  <li>The Week of 2022-04-25: First Acceptance Notices to Speakers</li>
-  <li>The Week of 2022-05-09: Second Acceptance Notices to Speakers</li>
-  <li>The Week of 2022-05-09: List of Sessions Published</li>
-  <li>The Week of 2022-05-18: Schedule Published</li>
-  <li>2022-07-10: Gather & Set up at The CCD in Dublin!🤗</li>
-  <li>2022-07-11: Showtime 🎊 </li>
+<ul className="milestone-done">
+  <li><b>2022-03-08</b>: CFP Starts </li>
+  <li><b>2022-03-08</b>: Speaker Mentorship Programme Starts </li>
+  <li><b>2022-03-08</b>: <a href="/finaid">Financial Aid Programme </a> Starts </li>
+  <li><b>2022-03-17</b>: <a href="/tickets">Ticket Sales </a> Starts </li>
+  <li><b>2022-03-20</b>: Speaker Mentorship Programme Ends </li>
+  <li><b>2022-03-23</b>: AMA Session about CFP </li>
+  <li><b>2022-03-29</b>: <a href="/sponsor">Sponsorship Signups</a> Starts </li>
+</ul>
+<ul className="milestone-todo">
+  <li><b>The Week of 2022-04-04</b>: Community Talk Voting Starts </li>
+  <li><b>The Week of 2022-04-04</b>: <a href="https://forms.gle/d7iYzGtAuu3fA25A8">Panel Talk Review </a> Starts </li>
+  <li><b>The Week of 2022-04-11</b>: Community Talk Voting Ends </li>
+  <li><b>The week of 2022-04-20</b>: Panel Talk Review Ends</li>
+  <li><b>2022-04-29</b>: Sponsorship Early Bird Discount Ends</li>
+  <li><b>The Week of 2022-04-25</b>: First Acceptance Notices to Speakers</li>
+  <li><b>The Week of 2022-05-09</b>: Second Acceptance Notices to Speakers</li>
+  <li><b>The Week of 2022-05-09</b>: List of Sessions Published</li>
+  <li><b>The Week of 2022-05-18</b>: Schedule Published</li>
+  <li><b>2022-07-10</b>: Gather & Set up at The CCD in Dublin! 🤗</li>
+  <li><b>2022-07-11</b>: Showtime! 🎊 </li>
 </ul>
 
 ## **Q. What will the schedule look like?**
@@ -67,7 +69,7 @@ We are thrilled to have received a record high of 429 proposals on a diverse ran
 
 A. We believe that a good conference consists of popular talks as well as new or niche topics - all by and for our diverse community. Thus, after Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. This is a "blind" process, so speakers' names will not be displayed to the reviewers.
 
-- community voting: open to all 2015-2022 EuroPython conference ticket holders + 2022 talk proposal submitters. Submissions are in random order for each voter. Please check out our [talk voting page](https://ep2022.europython.eu/voting) for details.
+- community voting: open to all 2015-2022 EuroPython conference ticket holders + 2022 talk proposal submitters. Submissions are in random order for each voter. Please check out our [talk voting page](/voting) for details.
 
 - panel feedback: a diverse group of experienced reviewers will refine and give feedback on the submissions within their realm of expertise. Their insights help the programme team refine and plan a programme that truly reflects, informs and stimulates our EuroPython family. [Submit your interest here](https://t.co/JyOdGb71f8)
 
@@ -78,7 +80,7 @@ Ultimately, the programme team curate the final programme based upon these impor
 ## **Q. What support do you give to speakers?**
 A. If accepted, speakers are eligible for a free conference ticket. Workshop & tutorial organisers are eligible for a free combined ticket. In addition, speakers are encouraged to apply for additional [Financial Aid](https://ep2022.europython.eu/finaid), should there be a need.
 
-We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. For example, our [Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) a matched 15 mentees with mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme.
+We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. For example, our [Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) matched 15 mentees with mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme.
 
 Email us at ([program@europython.eu](mailto:program@europython.eu) to tell us what other broader speaker support you might need!
 
@@ -103,7 +105,7 @@ A. We have put a lot of work in keeping the ticket prices at a similar level to 
 
 Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for more details.
 
-We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](https://ep2022.europython.eu/finaid)!
+We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](https://ep2022.europython.eu/finaid)
 
 ## **Q. Do you provide childcare?**
 A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.
