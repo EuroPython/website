@@ -35,9 +35,9 @@ Each of the three ticket types is available in three payment tiers.
 We encourage and trust you to pick a fair ticket tier that fits your personal
 circumstance. The money you spend will be put straight back into the community
 to support our diversity initiatives,
-[financial aid programmes](https://ep2022.europython.eu/finaid) and
+[financial aid programmes](/finaid) and
 [other grants](https://www.europython-society.org/grants/)
-offered to the European Python community. 
+offered to the European Python community.
 
 - **Business Tickets**: for attendees whose company/business is paying for
   them to attend, or if you use Python professionally. As someone with the
@@ -46,12 +46,12 @@ offered to the European Python community.
 - **Personal Tickets**: for those who enjoy Python as a hobbyist or use it as
   a freelancer.
 - **Education Tickets**: for students, and teachers working in the education
-  sector (your main employment is at a school, college or university). 
+  sector (your main employment is at a school, college or university).
 
 **Note**: If you need a proper VAT invoice listing your company's name, please
 purchase a business ticket. Personal Tickets do not include a company name. We
 will list the ticket tier and type on your conference badge to accommodate the
-registration staff. 
+registration staff.
 
 
 <a class="button" href="https://tickets.europython.eu">Get your tickets here</a>
@@ -97,13 +97,13 @@ tickets sold out in _15 minutes_.
  - Combined Personal - €480.00 incl. 23% VAT
 
 
-**Notes:** 
+**Notes:**
 
 _Every ticket includes break refreshments and a light lunch for each day._
 
 **_Free Childcare_**: Children are welcome but need to be accompanied by their
 legal guardian. If you are attending with your children, please register a
-ticket for yourself **_and_** select how many children will require childcare at checkout. 
+ticket for yourself **_and_** select how many children will require childcare at checkout.
 
 We would like to encourage you to book your ticket early. This makes it easier
 for us to plan for the event and arrange important things like the catering,
@@ -111,7 +111,7 @@ badge printing, and a million other things you'd never imagine would be
 involved in organising a conference.
 
 If you have any questions, please check our
-[FAQ document](https://ep2022.europython.eu/faq). If you still have questions,
+[FAQ document](/faq). If you still have questions,
 we're happy to help so don't hesitate to email our
 [EuroPython Helpdesk](mailto:helpdesk@europython.eu) (staffed by wonderful
 volunteers).
@@ -124,4 +124,4 @@ To be announced later.
 keep in the know!
 
 ## How can I get a refund?
-We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 11 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances. 
+We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 11 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances.

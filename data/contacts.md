@@ -23,9 +23,10 @@ project/event to suggest for our newsletter.
 
 Follow us on these channels:
 
-- [EuroPython Twitter Account](http://twitter.com/europython) (announcements)
 - [EuroPython YouTube Channel](http://europython.tv/) (conference videos)
+- [EuroPython Twitter Account](http://twitter.com/europython)
 - [EuroPython LinkedIn](https://www.linkedin.com/company/europython)
+- [EuroPython Telegram](https://t.me/+dEi3nIHzGRw0YjQy)
 
 Please use the hashtag [#EuroPython](https://twitter.com/hashtag/EuroPython)
 when referring to the conference.

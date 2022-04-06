@@ -78,9 +78,9 @@ Ultimately, the programme team curate the final programme based upon these impor
 [Subscribe to receive email updates](https://blog.europython.eu/#/portal/signup)
 
 ## **Q. What support do you give to speakers?**
-A. If accepted, speakers are eligible for a free conference ticket. Workshop & tutorial organisers are eligible for a free combined ticket. In addition, speakers are encouraged to apply for additional [Financial Aid](https://ep2022.europython.eu/finaid), should there be a need.
+A. If accepted, speakers are eligible for a free conference ticket. Workshop & tutorial organisers are eligible for a free combined ticket. In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.
 
-We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. For example, our [Speaker Mentorship Programme](https://ep2022.europython.eu/mentorship) matched 15 mentees with mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme.
+We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. For example, our [Speaker Mentorship Programme](/mentorship) matched 15 mentees with mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme.
 
 Email us at ([program@europython.eu](mailto:program@europython.eu) to tell us what other broader speaker support you might need!
 
@@ -94,7 +94,7 @@ We offer flexibility for the tickets, depending on what you would like to attend
 - Tutorials only ticket: access to only workshops/tutorials
 - Conference only ticket : you can attend the conference days
 
-Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for more details.
+Please check out our [Tickets page](/tickets) for more details.
 
 Instead, if you decide to attend the conference remotely, we will have special tickets for you. Subscribe to our
 [EuroPython Blog](https://blog.europython.eu/#/portal/signup) and stay tuned!
@@ -103,9 +103,9 @@ Instead, if you decide to attend the conference remotely, we will have special t
 
 A. We have put a lot of work in keeping the ticket prices at a similar level to the last in-person conference in 2019, despite cost increases and the consequences of the pandemic.
 
-Please check out our [Tickets page](https://ep2022.europython.eu/tickets) for more details.
+Please check out our [Tickets page](/tickets) for more details.
 
-We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](https://ep2022.europython.eu/finaid)
+We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](/finaid)
 
 ## **Q. Do you provide childcare?**
 A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.
@@ -115,7 +115,7 @@ A. Yes. Each ticket includes break refreshments and a light lunch for each day.
 
 ## **Q. Is there a Financial Aid Program for EP2022?**
 A. Yes, our
-[Financial Aid programme](https://ep2022.europython.eu/finaid) is open for submissions between 8 March - 23 May. If you need help attending the conference, make sure to submit your application early!
+[Financial Aid programme](/finaid) is open for submissions between 8 March - 23 May. If you need help attending the conference, make sure to submit your application early!
 
 ## **Q. How soon should I book accommodation and flights?**
 
@@ -132,9 +132,9 @@ A. As of now there’s no discount that we know of or can offer. We hope to give
 
 ## **Q. When can sponsors start signing up?**
 
-A. Sponsors are welcome to sign up now! You can find all the details on our [sponsor page](https://ep2022.europython.eu/sponsor). Sponsors who sign up by 29 April will again receive a 10% Early Bird discount.
+A. Sponsors are welcome to sign up now! You can find all the details on our [sponsor page](/sponsor). Sponsors who sign up by 29 April will again receive a 10% Early Bird discount.
 
-We are committed to making EuroPython sponsorship accessible to as many organisations as possible, who are keen to help the community. [SME discount](https://ep2022.europython.eu/sponsor#sme) and [Free Table for Open Source Projects](https://ep2022.europython.eu/sponsor#free-table-for-open-source-projects) are offerings driven by our community spirit.
+We are committed to making EuroPython sponsorship accessible to as many organisations as possible, who are keen to help the community. [SME discount](/sponsor#sme) and [Free Table for Open Source Projects](/sponsor#free-table-for-open-source-projects) are offerings driven by our community spirit.
 
 If you’re interested in sponsorsing EuroPython 2022, get in touch with [the sponsor team](mailto:sponsoring@europython.eu).
 
@@ -144,7 +144,7 @@ A. The EuroPython conference is entirely run by volunteers and we always need so
 
 # COVID Related Questions
 
-**Please refer to our [COVID Info Page](https://ep2022.europython.eu/covid-info) for detailed information. Please bear in mind that the information in this section can change at any time and without warning. We will aim to provide updates whenever there is a change.**
+**Please refer to our [COVID Info Page](/covid-info) for detailed information. Please bear in mind that the information in this section can change at any time and without warning. We will aim to provide updates whenever there is a change.**
 
 ## **Q: Will I get a ticket refund or exchange if I cannot travel due to COVID restrictions?**
 
