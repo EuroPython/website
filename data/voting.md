@@ -11,9 +11,8 @@ Community Voting will run for seven days from
 **Sunday, 17th April 23:59:59 CEST**
 
 </div>
-
 <div style={{textAlign: "center"}}>
-<ButtonLink href="voting.europython.eu">I’m ready to vote now!</ButtonLink>
+<ButtonLink href="https://voting.europython.eu">I’m ready to vote now!</ButtonLink>
 </div>
 
 ---
@@ -55,6 +54,11 @@ You should stay logged in by default. But if you are somehow logged out, just us
 ## Selection of Submissions
 We believe that a good conference consists of popular talks as well as new or niche topics - all by and for our diverse community. Ultimately, it is the programme team who curate and are responsible for the final programme, but one of the major factors upon which they rely, will be the preferences of the community through this voting process. We aim to publish the first round of list of sessions in the week of 09 May.
 
-[Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup) to stay tuned!
+<div style={{textAlign: "center"}}>
+<ButtonLink href="https://voting.europython.eu">Participate in Community Voting now!</ButtonLink>
+</div>
 
-Thank you for contributing to EuroPython!
+
+**[Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup)** to stay tuned!
+
+Thank you for contributing to EuroPython! ❤️

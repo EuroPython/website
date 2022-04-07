@@ -61,7 +61,7 @@ We aim to have a very diverse programme, covering the many different aspects of 
 
 ## **Q. When do you accept talk proposals?**
 
-A. The [Call for Proposals](https://program.europython.eu/europython-2022/cfp) (CFP) has closed. It ran between the 8 March - 3 April.
+A. The [Call for Proposals](/cfp) (CFP) has closed. It ran between the 8 March - 3 April.
 
 We are thrilled to have received a record high of 429 proposals on a diverse range of topics.
 

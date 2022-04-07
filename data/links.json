@@ -1,8 +1,8 @@
 {
   "header": [
     {
-      "name": "CFP",
-      "path": "/cfp"
+      "name": "Community Voting",
+      "path": "/voting"
     },
     {
       "name": "Finaid",
