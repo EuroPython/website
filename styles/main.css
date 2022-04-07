@@ -2336,3 +2336,17 @@ ul.milestone-todo li {
 ul.milestone-todo li::before {
   content: '\1F4DD  ';
 }
+
+button[name="vote"] {
+  display:inline block;
+  padding:0.35em 0.5em;
+  margin:0.3em 0.3em 0.3em 0.3em;
+  text-align:center;
+  min-width: 140px;
+}
+
+button[name="vote"]:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-body-inverted);
+  text-decoration: none
+}

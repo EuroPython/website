@@ -20,14 +20,14 @@ Community Voting will run for seven days from
 
 ## Our guiding principles
 - Our EuroPython family will directly shape the conference programme.
-- It is a blind process to guard against inevitable bias: speakers' names will not be displayed; submissions will be displayed in random order for each voting participant; you will not be able to vote on your own talk.
+- It is a blind process to guard against inevitable bias: speakers' names will not be displayed; submissions will be displayed in random order for each voting participant.
 - It’s robust against anonymous manipulation: only identities already known to us can participate.
 
 ## Who can participate?
 To be eligible to vote, you need an email address already  known to us, i.e. one that has been used for any of the following:
  - You've registered for one of the past EuroPython conferences between 2015 - 2021;
  - You've submitted a proposal for 2022;
- - You have a conference ticket by 11th April 2022.
+ - You have a conference ticket for 2022.
 
 ## How do I vote?
 - Go to the [Community Voting page](https://voting.europython.eu).
@@ -42,9 +42,11 @@ You should stay logged in by default. But if you are somehow logged out, just us
  - If you no longer have access to the email account once used to register for a past  conference, (e.g. it belongs to a previous employer), we unfortunately cannot add or change it for you.
 
 ### How does the voting system work?
-- For each submission, you can choose only one of four options:
-<ButtonLink>Must see</ButtonLink> <ButtonLink>Want to see</ButtonLink>
-<ButtonLink>Maybe</ButtonLink> <ButtonLink>Not interested</ButtonLink>
+- For each submission, you can choose only one of four options:<br></br>
+<button name="vote">Must see</button>
+<button name="vote">Want to see</button>
+<button name="vote">Maybe</button>
+<button name="vote">Not interested</button>
 - Your vote for each submission is automatically saved, but you can change it at any time before the voting phase ends.
 - Whenever you refresh the page, the order of the submissions will be randomised again.
 - You can filter submissions based on tracks you are interested in. You can also filter the ones you have not voted on.
