@@ -35,10 +35,6 @@
       "path": "/mentorship"
     },
     {
-      "name": "Finaid",
-      "path": "/finaid"
-    },
-    {
       "name": "FAQ",
       "path": "/faq"
     },
@@ -46,6 +42,12 @@
       "name": "Covid Info",
       "path": "/covid-info"
     },
+
+    {
+      "name": "Visa Info",
+      "path": "/visa"
+    },
+
     {
       "name": "Sponsor",
       "path": "/sponsor"
