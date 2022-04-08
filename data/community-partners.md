@@ -10,4 +10,12 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <img src="/img/womenwhocode-dublin-logo-500X500.png"  />
 <p>Women Who Code inspires women to excel in technology careers. Like every other city, Dublin Women Who Code has its own unique culture and local leaders rise to be both leaders of movement and leaders of the industry, paving the way for the new face of tech.</p>
 
+## [Dublin Linux Developers](https://www.meetup.com/Dublin-Linux-Developers/)
+<img src="/img/dublin-linux-developers-logo.png"  />
+<p>We love to build things with Linux! Come share projects with us that you have made with Linux, find out what Linux projects other people are working on, ask questions and meet new people. We welcome Raspberry PI projects, what you built with an old server scheduled for the bin, Linux on bare metal and virtual machines in the cloud are all welcome equally.</p>
+
+## [Dublin Linux Community](https://dublinlinux.org/)
+<img src="/img/dublin-linux-community-logo.png"  />
+<p>We’re a community of like-minded individuals in Dublin with a passion for Linux and all things free (as in free speech) and open source software. Whether you’re a seasoned Linux user or someone who would simply like to learn more please feel free to come along to one of our regular meetups.</p>
+
 Interested in getting your community featured here? Hit us up at [community@europython.eu](mailto:community@europython.eu)
