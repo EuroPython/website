@@ -23,7 +23,7 @@ export const Header = () => (
     <nav className="visible-large">
       <NavItems items={links.header} />
     </nav>
-    <a className="button visible-large" href="/tickets">
+    <a className="button visible-large header-main-cta" href="/tickets">
       Buy tickets
     </a>
 
@@ -36,7 +36,7 @@ export const Header = () => (
         />
       </a>
       <div>
-        <a className="button" href="/tickets">
+        <a className="button header-main-cta" href="/tickets">
           Buy tickets
         </a>
         <label htmlFor="nav_toggle" className="button">
