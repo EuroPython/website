@@ -37,16 +37,8 @@
       }]
     },
     {
-      "name": "In-kind",
-      "sponsors": [{
-        "name": "1Password",
-        "url": "https://1password.com/",
-        "logo": "img/logos/sponsor_logos/1P-wordmark.svg"
-      },
-    {"name": "vercel",
-      "url": "",
-      "logo": "img/logos/sponsor_logos/vercel-logotype-dark.svg"
-      }]
+      "name": "Supporters",
+      "sponsors": []
     }
   ]
 }
