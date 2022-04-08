@@ -1,15 +1,43 @@
 {
   "tiers": [
     {
-      "name": "Diamond Tier",
+      "name": "Keystone",
       "sponsors": []
     },
     {
-      "name": "Platinum Tier",
+      "name": "Platinum",
       "sponsors": []
     },
     {
-      "name": "Gold Tier",
+      "name": "Diamond",
+      "sponsors": []
+    },
+    {
+      "name": "Gold",
+      "sponsors": []
+    },
+    {
+      "name": "Silver",
+      "sponsors": []
+    },
+    {
+      "name": "Bronze",
+      "sponsors": []
+    },
+    {
+      "name": "Patron",
+      "sponsors": []
+    },
+    {
+      "name": "Financial Aid",
+      "sponsors": [{
+        "name": "EuroPython Society",
+        "url": "https://www.europython-society.org/",
+        "logo": "img/logos/sponsor_logos/EPS-Logo-with-Text-v3.svg"
+      }]
+    },
+    {
+      "name": "Supporters",
       "sponsors": []
     }
   ]
