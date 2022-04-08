@@ -122,9 +122,9 @@ A. Yes, our
 
 A. The time and location of the conference have been set, so you can book at any time. We would recommend you consider flexible bookings in case of any changes of plans in the future as well as appropriate insurance cover.
 
-## **Q. Could you provide a visa invitation letter for my visa application?**
+## **Q. Could you provide a visa support letter for my visa application?**
 
-A. Yes. We will set up a dedicated page with details on how to obtain the invitation letter in mid April. Please refer to the official [Irish Immigration Service](https://www.irishimmigration.ie/) for information, including the application process for an [Irish Conference/Event Visa](https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-options-for-working-in-ireland/coming-to-work-for-less-than-90-days/conference-event-visa/).
+A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. Please refer to the official [Irish Immigration Service](https://www.irishimmigration.ie/) for information, including the application process for an [Irish Conference/Event Visa](https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-options-for-working-in-ireland/coming-to-work-for-less-than-90-days/conference-event-visa/).
 
 
 ## **Q. Are you going to offer hotel discounts?**
