@@ -14,7 +14,7 @@ type Tier = {
 const SponsorTier = ({ tier }: { tier: Tier }) => {
   return (
     <div className="sponsors__tier">
-      <h4 className="sponsors__tier-title">Diamond Tier</h4>
+      <h4 className="sponsors__tier-title">{tier.name}</h4>
       <div className="sponsors__logos">
         {tier.sponsors.map((sponsor) => (
           <a
