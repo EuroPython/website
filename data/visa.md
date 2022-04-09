@@ -18,7 +18,7 @@ If you do need a visa to attend EuroPython 2022, you can apply for the Irish [Sh
 Please make sure to read the visa pages (linked above) carefully before making your application; the EuroPython organisers are not equipped to give any visa advice. If you do require a visa to travel to Ireland, it is advisable to submit your visa application at least **8 weeks** before your planned travel date.
 
 ## Visa Support Letters
-If you have a ticket to attend EuroPython 2022 and require a visa, you are welcome to apply for a support letter from the EuroPython Society. Simply fill in the form:
+If you have a ticket to attend EuroPython 2022 and require a visa, you are welcome to apply for a support letter from the EuroPython Society. Simply fill in the form **within the 4 week period prior to the date of your visa application**:
 
 <div style={{textAlign: "center"}}>
 <ButtonLink href="https://forms.gle/WE5Uv2KxoEyzrmEE6">Visa Support Letter Request Form</ButtonLink>
