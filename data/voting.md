@@ -37,7 +37,7 @@ To be eligible to vote, you need an email address already  known to us, i.e. one
 You should stay logged in by default. But if you are somehow logged out, just use the confirmation link from the email again or re-enter your email address to receive a new confirmation link.
 
 ### Don't remember which email was used for EuroPython?
- - Try a few different emails you might have used - the site will give you immediate feedback.
+ - Try a few different emails you might have used.
  - If you no longer have access to the email account once used to register for a past  conference, (e.g. it belongs to a previous employer), we unfortunately cannot add or change it for you.
 
 ### How does the voting system work?
