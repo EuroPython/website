@@ -11,7 +11,7 @@ export const Footer = () => (
     </nav>
     <article>
       <div className="footer__logo">
-        <Image width={444} height={444} src="/img/europythonlogo.png" />
+        <img width={444} height={444} src="/img/europythonlogo.png" />
       </div>
       <div>
         <p>
