@@ -8,7 +8,7 @@ Community Voting will run for seven days from
 
 **Monday, 11 April 12:00:00 CEST** to
 
-**Sunday, 17th April 23:59:59 CEST**
+**Sunday, 17th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)**
 
 </div>
 <div style={{textAlign: "center"}}>
