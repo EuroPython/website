@@ -1,26 +1,64 @@
-# Voting
+# Community Voting
 
-We'd like to hear your feedback about what would you like to see more of on the conference!
+Welcome to EuroPython Community Voting! We want feedback about what YOU would like to see at EuroPython 2022. We have over 400 proposals covering many aspects of Python, and we are excited to be putting together an engaging, educational and entertaining programme.  Your feedback is an important ingredient in this refinement and curation process.
 
-Everyone who attended EuroPython in the past (since 2015) or has bought a ticket or sent a proposal for EuroPython 2022 is eligible for voting.
+<div style={{textAlign: "center"}}>
 
-## How talk voting works
+Community Voting will run for seven days from
 
-The talk voting page will list all submitted proposals, including talks, tutorials and posters.
+**Monday, 11 April 13:00:00 CEST** to
 
-Please note that your own submissions will not be listed.
+**Sunday, 17th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)**
 
-The voting will open as soon as the CFP is finished.
+</div>
+<div style={{textAlign: "center"}}>
+<ButtonLink href="https://voting.europython.eu">I’m ready to vote now!</ButtonLink>
+</div>
 
-<button>This button will become active when CFP is complete</button>
+---
 
-Once open, voting will go on for a week. We'll push an update on our socials ([Twitter](https://twitter.com/europython), [LinkedIn](https://linkedin.com/company/europython)) & newsletter ([EuroPython Blog](https://blog.europython.eu/#/portal/signup)) when it goes live.
+## Our guiding principles
+- Our EuroPython family will directly shape the conference programme.
+- It is a blind process to guard against inevitable bias: speakers' names will not be displayed; submissions will be displayed in random order for each voting participant.
+- It’s robust against anonymous manipulation: only identities already known to us can participate.
 
-## Talk selection
+## Who can participate?
+To be eligible to vote, you need an email address already  known to us, i.e. one that has been used for any of the following:
+ - You've registered for one of the past EuroPython conferences between 2015 - 2021;
+ - You've submitted a proposal for 2022;
+ - You have a conference ticket for 2022.
 
-After the talk voting phase, the EuroPython Program Team will use the votes to select the talks and build a schedule.
+## How do I vote?
+- Go to the [Community Voting page](https://voting.europython.eu).
+- Enter an eligible email address (see [Who can participate](/voting#who-can-participate) above).
+- If the email is known to us, you will receive an email with a confirmation link.
+- Check your inbox (and spam) for the email with the confirmation link, click it and let the voting begin!
 
-The talk voting is a good and strong indicator what participants are interested to see.
-Submissions are selected by the Program Team based on editorial criteria to e.g. increase diversity, give a chance to less mainstream topics as well as avoiding too much of the same topic.
+You should stay logged in by default. But if you are somehow logged out, just use the confirmation link from the email again or re-enter your email address to receive a new confirmation link.
 
-In general, the Program Team will try to give as many speakers a chance to talk as possible. If speakers have submitted multiple talks, the one with the highest rating will most likely get selected.
+### Don't remember which email was used for EuroPython?
+ - Try a few different emails you might have used.
+ - If you no longer have access to the email account once used to register for a past  conference, (e.g. it belongs to a previous employer), we unfortunately cannot add or change it for you.
+
+### How does the voting system work?
+- For each submission, you can choose only one of four options:<br></br>
+<button name="vote">Must see</button>
+<button name="vote">Want to see</button>
+<button name="vote">Maybe</button>
+<button name="vote">Not interested</button>
+- Your vote for each submission is automatically saved, but you can change it at any time before the voting phase ends.
+- Whenever you refresh the page, the order of the submissions will be randomised again.
+- You can filter submissions based on tracks you are interested in. You can also filter the ones you have not voted on.
+- You are welcome to leave optional comments for each submission you vote on. They will only be shared with the programme team.
+
+## Selection of Submissions
+We believe that a good conference consists of popular talks as well as new or niche topics - all by and for our diverse community. Ultimately, it is the programme team who curate and are responsible for the final programme, but one of the major factors upon which they rely, will be the preferences of the community through this voting process. We aim to publish the first round of list of sessions in the week of 09 May.
+
+<div style={{textAlign: "center"}}>
+<ButtonLink href="https://voting.europython.eu">Participate in Community Voting now!</ButtonLink>
+</div>
+
+
+**[Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup)** to stay tuned!
+
+Thank you for contributing to EuroPython! ❤️

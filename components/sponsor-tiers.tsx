@@ -83,7 +83,7 @@ export const SponsorTiers = () => {
         </div>
         <div className="tier-card patron">
           <h3>Patron</h3>
-          <p className="tier-card__price">€1000</p>
+          <p className="tier-card__price">€1,000</p>
           <ul>
             <li>Logo on EuroPython website, welcome tweet and more!</li>
           </ul>
