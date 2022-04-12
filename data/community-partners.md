@@ -21,17 +21,8 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 ## [Codú Community](https://www.meetup.com/codu-community/)	
 <p>Let's teach you how to think like an engineer, code applications ready for public release, and become the builder of things that you want to be.</p>
 
-## [Data Scientists Ireland](https://www.meetup.com/DataScientistsIreland/)	
-<p>NEED A WRITE UP</p>
-
-## [Dublin Data Science](https://www.meetup.com/Dublin-Data-Science/)	
-<p>NEED A WRITE UP</p>
-
 ## [Farset Labs (Hackerspace)](https://www.meetup.com/farsetlabs/)	
 <p>Farset Labs is a community funded and volunteer operated charity, opened in 2012 as a place for creativity and technological tinkering. We’re open to everyone, no matter what you want to do, and we welcome people from all walks of life to use our space, come to our events, and get involved with the maker community in Northern Ireland.</p>
-
-## [GDG Belfast](https://gdg.community.dev/gdg-belfast/)	
-<p>NEED A WRITE UP</p>
 
 ## [Python Ireland](https://python.ie/)	
 <p>Python Ireland is the Irish organisation representing the various chapters of Python users. We organise meet ups and events for software developers, students, academics and anyone who wants to learn the language.</p>
@@ -43,6 +34,15 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <p>We believe in the power of our community, based on mutual support, caring, and sharing to bring awareness, inspire and educate next generations. Be a part of this powerful group of volunteers and actively change the role of women and minorities in AI.</p>
 
 ## [Women Who Code Belfast](https://www.womenwhocode.com/belfast)
+<p>NEED A WRITE UP</p>
+
+## [Data Scientists Ireland](https://www.meetup.com/DataScientistsIreland/)	
+<p>NEED A WRITE UP</p>
+
+## [Dublin Data Science](https://www.meetup.com/Dublin-Data-Science/)	
+<p>NEED A WRITE UP</p>
+
+## [GDG Belfast](https://gdg.community.dev/gdg-belfast/)	
 <p>NEED A WRITE UP</p>
 
 Interested in getting your community featured here? Hit us up at [community@europython.eu](mailto:community@europython.eu)
