@@ -22,10 +22,10 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <p>Let's teach you how to think like an engineer, code applications ready for public release, and become the builder of things that you want to be.</p>
 
 ## [Data Scientists Ireland](https://www.meetup.com/DataScientistsIreland/)	
-<p></p>
+<p>NEED A WRITE UP</p>
 
 ## [Dublin Data Science](https://www.meetup.com/Dublin-Data-Science/)	
-<p></p>
+<p>NEED A WRITE UP</p>
 
 ## [Farset Labs (Hackerspace)](https://www.meetup.com/farsetlabs/)	
 <p>Farset Labs is a community funded and volunteer operated charity, opened in 2012 as a place for creativity and technological tinkering. We’re open to everyone, no matter what you want to do, and we welcome people from all walks of life to use our space, come to our events, and get involved with the maker community in Northern Ireland.</p>
