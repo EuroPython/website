@@ -18,6 +18,18 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <img src="/img/dublin-linux-community-logo.png"  />
 <p>We’re a community of like-minded individuals in Dublin with a passion for Linux and all things free (as in free speech) and open source software. Whether you’re a seasoned Linux user or someone who would simply like to learn more please feel free to come along to one of our regular meetups.</p>
 
+## [Coding Grace](https://www.meetup.com/codinggrace/)
+<img src="/img/coding-grace-logo.png"  />
+<p>Coding Grace provides diversity-friendly workshops and events in an environment for developers and aspiring developers mentored by diverse instructors from the industry. We also advocate Irish diversity in tech through monthly newsletters and curated tech event listings from around Ireland.</p>
+
+## [PyBelfast](https://www.meetup.com/PyBelfast/)
+<img src="/img/pybelfast-logo.png"  />
+<p>PyBelfast is a group for anyone with an interest in the Python progamming language. We are dedicated to the encouragement of all things to do with the Python programming language in Belfast. This involves helping each other, discussing topics and sharing information.</p>
+
+## [Women Who Code Belfast](https://www.womenwhocode.com/belfast)
+<img src="/img/womenwhocode-belfast-logo.png"  />
+<p>Women Who Code Belfast is part of a global non-profit, Women Who Code, dedicated to inspiring women to excel in their technology careers. We aim to connect, support and encourage our community through providing  education programs and social events, often with industry and community partners. We welcome anyone to the Belfast network regardless of their tech and career journey.</p>
+
 ## [Codú Community](https://www.meetup.com/codu-community/)	
 <p>Let's teach you how to think like an engineer, code applications ready for public release, and become the builder of things that you want to be.</p>
 
@@ -32,9 +44,6 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 
 ## [Women in AI Ireland](https://www.womeninai.co/)	
 <p>We believe in the power of our community, based on mutual support, caring, and sharing to bring awareness, inspire and educate next generations. Be a part of this powerful group of volunteers and actively change the role of women and minorities in AI.</p>
-
-## [Women Who Code Belfast](https://www.womenwhocode.com/belfast)
-<p>NEED A WRITE UP</p>
 
 ## [Data Scientists Ireland](https://www.meetup.com/DataScientistsIreland/)	
 <p>NEED A WRITE UP</p>
