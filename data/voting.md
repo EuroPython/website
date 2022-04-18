@@ -2,13 +2,15 @@
 
 Welcome to EuroPython Community Voting! We want feedback about what YOU would like to see at EuroPython 2022. We have over 400 proposals covering many aspects of Python, and we are excited to be putting together an engaging, educational and entertaining programme.  Your feedback is an important ingredient in this refinement and curation process.
 
+
+
+<Note style={{textAlign: "center"}}>Community Voting Extended:</Note>
+
 <div style={{textAlign: "center"}}>
 
-Community Voting will run for seven days from
+from Monday, 11 April 13:00:00 CEST to
 
-**Monday, 11 April 13:00:00 CEST** to
-
-**Sunday, 17th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)**
+**Sunday, 24th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)**
 
 </div>
 <div style={{textAlign: "center"}}>
