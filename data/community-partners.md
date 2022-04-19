@@ -9,6 +9,9 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 ## [Codú Community](https://www.meetup.com/codu-community/)	
 <p>Let's teach you how to think like an engineer, code applications ready for public release, and become the builder of things that you want to be.</p>
 
+## [Dublin Data Science](https://www.meetup.com/Dublin-Data-Science/)
+<p>A meetup for all who are interested in data science and applied statistics. We cover - Statistics, Machine Learning & Analytics. Major languages used include SQL, R & Python, but we're always open to new tools.</p>
+
 ## [Dublin Linux Community](https://dublinlinux.org/)
 <img src="/img/dublin-linux-community-logo.png"  />
 <p>We’re a community of like-minded individuals in Dublin with a passion for Linux and all things free (as in free speech) and open source software. Whether you’re a seasoned Linux user or someone who would simply like to learn more please feel free to come along to one of our regular meetups.</p>
@@ -28,7 +31,8 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <img src="/img/pyladies-dublin-logo-1000X1000.png" />
 <p>We are the first Irish group of the international PyLadies. Our focus is to help more women become active participants and leaders in the Python open-source community. Our mission is to promote, educate and advance a diverse Python community. PyLadies Dublin also aims to provide a friendly support network for women and a bridge to the larger Python world. Anyone with an interest in Python is encouraged to participate!</p>
 
-## [Python Ireland](https://python.ie/)	
+## [Python Ireland](https://python.ie/)
+<img src="/img/pythonie-logo.png" />
 <p>Python Ireland is the Irish organisation representing the various chapters of Python users. We organise meet ups and events for software developers, students, academics and anyone who wants to learn the language.</p>
 
 ## [Tog Hackerspace](https://tog.ie)	
@@ -45,4 +49,4 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <img src="/img/womenwhocode-dublin-logo-500X500.png"  />
 <p>Women Who Code inspires women to excel in technology careers. Like every other city, Dublin Women Who Code has its own unique culture and local leaders rise to be both leaders of movement and leaders of the industry, paving the way for the new face of tech.</p>
 
-Interested in getting your community featured here? Hit us up at [community@europython.eu](mailto:community@europython.eu)
+If you're a Tech community based in Ireland/Northern Ireland region and are interested in getting featured here then drop us a line at [community@europython.eu](mailto:community@europython.eu)
