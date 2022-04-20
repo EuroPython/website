@@ -23,6 +23,9 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 ## [Farset Labs (Hackerspace)](https://www.meetup.com/farsetlabs/)	
 <p>Farset Labs is a community funded and volunteer operated charity, opened in 2012 as a place for creativity and technological tinkering. We’re open to everyone, no matter what you want to do, and we welcome people from all walks of life to use our space, come to our events, and get involved with the maker community in Northern Ireland.</p>
 
+## [GDG Belfast](https://gdg.community.dev/gdg-belfast/)	
+<p>Belfast GDG aims to provide something interesting every month either based on or related to the technology and services that Google offer. GDG stands for Google Developers Groups and is a platform offered by Google Developers to support community-run developer groups</p>
+
 ## [PyBelfast](https://www.meetup.com/PyBelfast/)
 <img src="/img/pybelfast-logo.png"  />
 <p>PyBelfast is a group for anyone with an interest in the Python progamming language. We are dedicated to the encouragement of all things to do with the Python programming language in Belfast. This involves helping each other, discussing topics and sharing information.</p>
