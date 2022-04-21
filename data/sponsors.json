@@ -18,7 +18,13 @@
     },
     {
       "name": "Silver",
-      "sponsors": []
+      "sponsors": [
+        {
+        "name": "SendCloud",
+        "url": "https://www.sendcloud.com/",
+        "logo": "img/logos/sponsor_logos/sendcloud.svg"
+        }
+      ]
     },
     {
       "name": "Bronze",
