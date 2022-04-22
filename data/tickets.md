@@ -96,6 +96,15 @@ tickets sold out in _15 minutes_.
  - Tutorial Only Personal - €225.00 incl. 23% VAT
  - Combined Personal - €480.00 incl. 23% VAT
 
+### Volume Discount for Teams
+
+ Is your company attending the conference as a team? We offer the following volume discount (Early Bird tickets excluded):
+
+ - get 5 business tickets of any type for the price of 4
+ - get 10 business tickets of any type for the price of 8
+ - get 15 business tickets of any type for the price of 11
+
+ Just email us at info@europython.eu to get the discount code! As a special thank you, we are happy to send out a mention on Twitter welcoming your team!
 
 **Notes:**
 
@@ -122,6 +131,7 @@ To be announced later.
 
 [Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup) to
 keep in the know!
+
 
 ## How can I get a refund?
 We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 11 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances.
