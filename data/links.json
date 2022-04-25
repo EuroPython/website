@@ -1,10 +1,6 @@
 {
   "header": [
     {
-      "name": "Community Voting",
-      "path": "/voting"
-    },
-    {
       "name": "Finaid",
       "path": "/finaid"
     },
@@ -13,12 +9,16 @@
       "path": "/faq"
     },
     {
+      "name": "Sponsor",
+      "path": "/sponsor"
+    },
+    {
       "name": "Where",
       "path": "/where"
     },
     {
-      "name": "Sponsor",
-      "path": "/sponsor"
+      "name": "Visa Info",
+      "path": "/visa"
     },
     {
       "name": "Code of Conduct",
@@ -31,6 +31,10 @@
       "path": "/cfp"
     },
     {
+      "name": "Community Voting",
+      "path": "/voting"
+    },
+    {
       "name": "Mentorship",
       "path": "/mentorship"
     },
@@ -41,11 +45,6 @@
     {
       "name": "Covid Info",
       "path": "/covid-info"
-    },
-
-    {
-      "name": "Visa Info",
-      "path": "/visa"
     },
 
     {
