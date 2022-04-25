@@ -10,7 +10,7 @@ Welcome to EuroPython Community Voting! We want feedback about what YOU would li
 
 Voting was available between
 
-from Monday, 11 April 13:00:00 CEST and
+Monday, 11 April 13:00:00 CEST and
 
 Sunday, 24th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
@@ -20,8 +20,7 @@ Sunday, 24th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Eart
 <div style={{textAlign: "center"}}>
 The app is running in readonly mode until ~mid May, so you can still review your votes and read the proposals.
 
-
-<ButtonLink href="https://voting.europython.eu">Click here to go to the app</ButtonLink>
+[Click here to go to the app](https://voting.europython.eu)
 </div>
 
 ---
