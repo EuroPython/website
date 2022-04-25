@@ -4,17 +4,23 @@ Welcome to EuroPython Community Voting! We want feedback about what YOU would li
 
 
 
-<Note style={{textAlign: "center"}}>Community Voting Extended:</Note>
+<Note style={{textAlign: "center"}}>Community Voting is Finished!</Note>
 
 <div style={{textAlign: "center"}}>
 
-from Monday, 11 April 13:00:00 CEST to
+Voting was available between
 
-**Sunday, 24th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)**
+from Monday, 11 April 13:00:00 CEST and
+
+Sunday, 24th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
 </div>
+
+
 <div style={{textAlign: "center"}}>
-<ButtonLink href="https://voting.europython.eu">I’m ready to vote now!</ButtonLink>
+The app is running in readonly mode until ~mid May, so you can still review your votes and read the proposals.
+
+<ButtonLink href="https://voting.europython.eu">Click here to go to the app</ButtonLink>
 </div>
 
 ---
