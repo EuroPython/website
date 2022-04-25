@@ -71,8 +71,8 @@ export default function IndexPage({
           </div>
           <div className="cta">
             <h3 className="h4">Be part of EuroPython:</h3>
-            <a className="button" href="/voting">
-              Participate in Community Voting
+            <a className="button" href="/sponsor">
+              Sponsor our community conference
             </a>
           </div>
         </article>
