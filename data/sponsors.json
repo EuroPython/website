@@ -36,14 +36,14 @@
       "name": "Silver",
       "sponsors": [
         {
-        "name": "SendCloud",
-        "url": "https://www.sendcloud.com/",
-        "logo": "img/logos/sponsor_logos/sendcloud.svg"
+          "name": "SendCloud",
+          "url": "https://www.sendcloud.com/",
+          "logo": "/img/logos/sponsor_logos/sendcloud.svg"
         },
         {
-        "name": "Ebury",
-        "url": "https://ebury.com/",
-        "logo": "img/logos/sponsor_logos/ebury.svg"
+          "name": "Ebury",
+          "url": "https://ebury.com/",
+          "logo": "/img/logos/sponsor_logos/ebury.svg"
         }
       ]
     },
@@ -57,11 +57,13 @@
     },
     {
       "name": "Financial Aid",
-      "sponsors": [{
-        "name": "EuroPython Society",
-        "url": "https://www.europython-society.org/",
-        "logo": "img/logos/sponsor_logos/EPS-Logo-with-Text-v3.svg"
-      }]
+      "sponsors": [
+        {
+          "name": "EuroPython Society",
+          "url": "https://www.europython-society.org/",
+          "logo": "/img/logos/sponsor_logos/EPS-Logo-with-Text-v3.svg"
+        }
+      ]
     },
     {
       "name": "Supporters",
@@ -76,7 +78,6 @@
           "url": "https://devitjobs.uk/jobs/Python/all",
           "logo": "img/logos/sponsor_logos/devitjobs.svg"
         }
-
       ]
     }
   ]

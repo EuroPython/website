@@ -9,6 +9,7 @@ import { Map } from "../components/map";
 import { Card } from "../components/card";
 import matter from "gray-matter";
 import { Sponsors } from "../components/sponsors";
+import { Keynoters } from "../components/keynoters";
 
 type Deadline = {
   content: string;
@@ -93,7 +94,9 @@ export default function IndexPage({
             <Map />
           </div>
         </article>
+        <hr />
       </main>
+      <Keynoters />
       <Sponsors />
     </Layout>
   );

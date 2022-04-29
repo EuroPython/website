@@ -2019,7 +2019,7 @@ hr.accent-right::before {
 /* Speakers list */
 
 .speakers-list__container {
-  margin: var(--unit-4) 0;
+  margin: var(--unit-4) auto;
   position: relative;
 }
 
@@ -2091,9 +2091,11 @@ hr.accent-right::before {
 
 .speakers-list li {
   flex-shrink: 0;
-  min-width: 240px;
+  width: 240px;
   height: 320px;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
 }
 
 .speakers-list img {
@@ -2103,11 +2105,14 @@ hr.accent-right::before {
   border-radius: 15px;
 }
 
-.speaker-description {
-  opacity: 0;
+.speakers-list .placeholder img {
+  height: 100%;
+  width: 70%;
+  object-fit: contain;
+  margin: -30px auto 0;
 }
 
-.speakers-list li:hover .speaker-description {
+.speaker-description {
   opacity: 100%;
   transition: opacity 0.25s;
   position: absolute;
@@ -2116,7 +2121,7 @@ hr.accent-right::before {
   font-weight: bold;
   bottom: 0;
   width: 100%;
-  min-height: 40%;
+  min-height: 20%;
   border-radius: 0 0 15px 15px;
   padding: 0.5rem 1.25rem 2rem;
 }
@@ -2126,6 +2131,10 @@ hr.accent-right::before {
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin: 0;
+}
+
+.placeholder .speaker-name {
+  font-size: 1rem;
 }
 
 .speaker-description p:not(.speaker-name) {
