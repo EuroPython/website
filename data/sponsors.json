@@ -44,7 +44,13 @@
     },
     {
       "name": "Supporters",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "1Password",
+          "url": "https://1password.com/",
+          "logo": "img/logos/sponsor_logos/1password_m30.svg"
+        }
+      ]
     }
   ]
 }
