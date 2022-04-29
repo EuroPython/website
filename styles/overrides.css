@@ -48,3 +48,47 @@ h6 a,
   font-size: 2.5rem;
   line-height: 1.2;
 }
+
+summary h2 {
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+summary,
+summary:hover {
+  list-style: none;
+  margin: 0;
+  text-decoration: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  padding: 0;
+}
+
+details::before {
+  display: none;
+}
+
+summary h2 {
+  font-size: 2rem;
+}
+
+summary h2::after {
+  content: "👇";
+  display: inline-block;
+  font-size: 0.8em;
+  margin-left: 0.4em;
+}
+
+details[open] summary h2::after {
+  content: "";
+}
+
+details[open] h2 {
+  text-decoration: none;
+}
