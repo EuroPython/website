@@ -8,19 +8,12 @@ subtitle:
 # Deadlines
 
 <ul>
- <li><a href="#sponsored-Content">Sponsored Workshop/Training submission: 7 June</a></li>
+ <li><a href="#sponsored-content">Sponsored Workshop/Training submission: 7 June</a></li>
  <li><a href="#exhibition">Ordering booth customizations: 31 June</a></li>
 </ul>
 
-<details>
-  <summary><h2>Early-bird Sponsorship Signup: 29 April</h2></summary>
-
-We are pleased to offer a 10% discount to early bird sponsors. The deadline for
-receiving the offer is 29 April. Availability is limited, so get in touch with
-us soon.
-
-</details>
-
+---
+<h2>Tickets</h2>
 <details>
   <summary><h2>Purchasing Sponsor Tickets: July 16th</h2></summary>
 
@@ -64,7 +57,6 @@ The tear down of the booths will be possible on Friday, Jul 12th, starting at
 
 </details>
 
----
 
 # Booth Design Mockups
 
