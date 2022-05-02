@@ -98,28 +98,31 @@ tickets sold out in _15 minutes_.
 
 ### Volume Discount for Teams
 
- Is your company attending the conference as a team? We offer the following volume discount (Early Bird tickets excluded):
+Is your company attending the conference as a team? We offer the following volume discount (Early Bird tickets excluded):
 
  - get 5 business tickets of any type for the price of 4
  - get 10 business tickets of any type for the price of 8
  - get 15 business tickets of any type for the price of 11
 
- Just email us at info@europython.eu to get the discount code! As a special thank you, we are happy to send out a mention on Twitter welcoming your team!
+Note: Volume discount will not apply if you mix & match between different ticket types.
 
-**Notes:**
+Ready to order? Just email us at info@europython.eu to get the discount code! As a special thank you, we are happy to send out a mention on Twitter welcoming your team!
 
-_Every ticket includes break refreshments and a light lunch for each day._
 
-**_Free Childcare_**: Children are welcome but need to be accompanied by their
+### Notes for In-person Tickets ###
+
+- Every ticket includes break refreshments and a light lunch for each day.
+
+- **Free Childcare**: Children are welcome but need to be accompanied by their
 legal guardian. If you are attending with your children, please register a
 ticket for yourself **_and_** select how many children will require childcare at checkout.
 
-We would like to encourage you to book your ticket early. This makes it easier
+- We would like to encourage you to book your ticket early. This makes it easier
 for us to plan for the event and arrange important things like the catering,
 badge printing, and a million other things you'd never imagine would be
 involved in organising a conference.
 
-If you have any questions, please check our
+- If you have any questions, please check our
 [FAQ document](/faq). If you still have questions,
 we're happy to help so don't hesitate to email our
 [EuroPython Helpdesk](mailto:helpdesk@europython.eu) (staffed by wonderful
