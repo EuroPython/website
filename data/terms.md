@@ -106,10 +106,12 @@ possible after that Refund End Time unless otherwise specified by the
 Organizers. The Organizers reserve the right to deduct administrative costs
 (bank, online payments services, etc) from the refund.
 
-Refund requests must be made by email to the
+Before June 11th, the participate can request a full refund from the order details link in the order confirmation email. After June 11th,refund requests must be made by email to the
 [refunds@europython.eu](mailto:refunds@europython.eu) email address. The email
-must include the Order Code, Ticket IDs and name of the person who bought the
-ticket. Refunds are processed via Stripe and will be paid back to the same
+must include the Order Code, Ticket IDs, name of the person who bought the
+ticket and the special circumstances.
+
+Refunds are processed via Stripe and will be paid back to the same
 payment card which was used for the purchase of the tickets.
 
 Processing of the refunds will happen no later than 30 days after the end of the
@@ -282,9 +284,11 @@ EMail: [board@europython.eu](mailto:board@europython.eu)
 
 ## History
 
-2021-04-05: Updated for 2022 Dublin & Remote event
+2022-05-02: Updated to include the automatic refund process
 
-2021-04-05: Updated for 2022 online event
+2022-04-05: Updated for 2022 Dublin & Remote event
+
+2022-04-05: Updated for 2022 online event
 
 2021-04-05: Updated for 2021 online event
 
