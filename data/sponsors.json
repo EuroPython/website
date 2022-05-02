@@ -14,7 +14,13 @@
     },
     {
       "name": "Gold",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "Channable",
+          "url": "https://www.channable.com",
+          "logo": "img/logos/sponsor_logos/channable.svg"
+        }
+      ]
     },
     {
       "name": "Silver",
@@ -23,6 +29,11 @@
         "name": "SendCloud",
         "url": "https://www.sendcloud.com/",
         "logo": "img/logos/sponsor_logos/sendcloud.svg"
+        },
+        {
+        "name": "Ebury",
+        "url": "https://ebury.com/",
+        "logo": "img/logos/sponsor_logos/ebury.svg"
         }
       ]
     },
@@ -44,7 +55,13 @@
     },
     {
       "name": "Supporters",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "1Password",
+          "url": "https://1password.com/",
+          "logo": "img/logos/sponsor_logos/1password_m30.svg"
+        }
+      ]
     }
   ]
 }

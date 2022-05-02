@@ -73,7 +73,7 @@ we can only reimburse you after we’ve received your receipts/invoices and
 
 In addition, please take pay attention to the following:
 
-- The total combined travel/accommodation grant cannot exceed €300.
+- The total combined travel/accommodation grant cannot exceed €400.
 - If you’ve been offered a grant, you need to accept the grant by **13 June 2022**.
 - Reimbursements will be made **after** the conference via PayPal or bank
   transfer. It’s not possible to be reimbursed before the conference or by

@@ -26,12 +26,13 @@ time.
   <li><b>2022-03-20</b>: Speaker Mentorship Programme Ends </li>
   <li><b>2022-03-23</b>: AMA Session about CFP </li>
   <li><b>2022-03-29</b>: <a href="/sponsor">Sponsorship Signups</a> Starts </li>
-</ul>
-<ul className="milestone-todo">
   <li><b>2022-04-11</b>: Community Talk Voting Starts </li>
   <li><b>2022-04-18</b>: Panel Talk Review Starts </li>
   <li><b>2022-04-24</b>: Community Talk Voting Ends </li>
   <li><b>2022-04-25</b>: Panel Talk Review Ends </li>
+
+</ul>
+<ul className="milestone-todo">
   <li><b>2022-04-29</b>: Sponsorship Early Bird Discount Ends</li>
   <li><b>The Week of 2022-04-25</b>: First Acceptance Notices to Speakers</li>
   <li><b>The Week of 2022-05-09</b>: Second Acceptance Notices to Speakers</li>
