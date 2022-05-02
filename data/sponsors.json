@@ -14,7 +14,13 @@
     },
     {
       "name": "Gold",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "Channable",
+          "url": "https://www.channable.com",
+          "logo": "img/logos/sponsor_logos/channable.svg"
+        }
+      ]
     },
     {
       "name": "Silver",
