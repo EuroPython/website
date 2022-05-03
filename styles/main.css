@@ -2067,6 +2067,10 @@ hr.accent-right::before {
   margin: var(--unit-3) 0;
 }
 
+.speakers-list-standalone {
+  justify-content: flex-start;
+}
+
 .speakers-list__cta {
   text-align: center;
   margin: 0 auto;
@@ -2086,6 +2090,10 @@ hr.accent-right::before {
   .speakers-list__cta {
     margin: 8rem 2rem 2rem auto;
     width: max-content;
+  }
+
+  .speakers-list.speakers-list-standalone li {
+    margin-left: 0;
   }
 }
 

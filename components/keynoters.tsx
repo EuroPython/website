@@ -1,6 +1,6 @@
 import keynoters from "../data/keynoters.json";
 
-const Keynote = ({
+export const Keynote = ({
   name,
   tagline,
   picture,
