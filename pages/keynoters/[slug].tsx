@@ -32,7 +32,7 @@ export default function Page({
   const keynoter = findKeynoter(speaker)!;
 
   return (
-    <Layout path={path}>
+    <Layout path={path} title={`${title} || EuroPython 2022`}>
       <main id="main-content">
         <h1 className="h2">{title}</h1>
         <h2 className="h3">
@@ -81,10 +81,9 @@ async function serializeWithPlugins(content: string, plugins: any[]) {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const markdownPath = path.join(
-    process.cwd(),
-    `data/keynoters/${params.slug}.md`
-  );
+  const pagePath = `keynoters/${params.slug}`;
+
+  const markdownPath = path.join(process.cwd(), `data/${pagePath}.md`);
 
   const page = await fs.readFile(markdownPath);
   const { content, data } = matter(page);
@@ -96,6 +95,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const bioSource = await serializeWithPlugins(data.bio, []);
 
   return {
-    props: { source: mdxSource, path: params.slug, data, bioSource },
+    props: { source: mdxSource, path: pagePath, data, bioSource },
   };
 }

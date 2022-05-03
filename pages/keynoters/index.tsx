@@ -4,7 +4,7 @@ import keynoters from "../../data/keynoters.json";
 
 export default function IndexPage() {
   return (
-    <Layout>
+    <Layout path="keynoters" title="Keynoters || EuroPython 2022">
       <main id="main-content">
         <h2 className="h3">Keynote speakers</h2>
         <ul className="speakers-list speakers-list-standalone">
