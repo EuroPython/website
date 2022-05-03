@@ -19,7 +19,7 @@ export default function Page({
   source,
   path,
   bioSource,
-  data: { title, bio, speaker },
+  data: { title, speaker },
 }: {
   source: any;
   bioSource: any;
@@ -34,10 +34,12 @@ export default function Page({
   return (
     <Layout path={path}>
       <main id="main-content">
-        <h1 className="highlighted">{title}</h1>
-        <h2>{keynoter.name}</h2>
+        <h1 className="h2">{title}</h1>
+        <h2 className="h3">
+          <a href="#about">{keynoter.name}</a>
+        </h2>
         <MDXRemote {...source} components={components} />
-        <div className="speaker-about">
+        <div className="speaker-about" id="about">
           <h2>About the keynoter</h2>
           <div className="speaker-about-content">
             <div>

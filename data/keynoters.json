@@ -2,14 +2,17 @@
   {
     "name": "Patrick Kavanagh",
     "tagline": "Electric Ireland",
-    "picture": "/keynoters/patrick-kavanagh.jpeg"
+    "picture": "/keynoters/patrick-kavanagh.jpeg",
+    "link": "/keynoters/patrick-kavanagh"
   },
   {
     "placeholder": true,
-    "picture": "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg"
+    "picture": "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
+    "link": "#"
   },
   {
     "placeholder": true,
-    "picture": "https://avatars.dicebear.com/api/adventurer/Pop.svg"
+    "picture": "https://avatars.dicebear.com/api/adventurer/Pop.svg",
+    "link": "#"
   }
 ]

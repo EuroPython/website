@@ -1,6 +1,5 @@
 import { Layout } from "../../components/layout";
-import { Hero } from "../../components/hero";
-import { Keynoters, Keynote } from "../../components/keynoters";
+import { Keynote } from "../../components/keynoters";
 import keynoters from "../../data/keynoters.json";
 
 export default function IndexPage() {
@@ -14,6 +13,7 @@ export default function IndexPage() {
               key={index}
               name={speaker.name}
               tagline={speaker.tagline}
+              link={speaker.link}
               picture={speaker.picture}
               placeholder={speaker.placeholder}
             />
