@@ -2151,6 +2151,25 @@ hr.accent-right::before {
   margin: 0.5rem 0 0;
 }
 
+.speaker-about-content {
+  display: grid;
+  gap: 30px;
+}
+
+@media all and (min-width: 640px) {
+  .speaker-about-content {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.speaker-about-content p:first-child {
+  margin-top: 0;
+}
+
+.speaker-about-content img {
+  height: auto;
+}
+
 /* Sponsors section */
 
 .sponsors {
@@ -2512,7 +2531,7 @@ button[name="vote"]:hover {
 /* Previous sponsors section */
 
 .previous-sponsors {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .sponsor-marquee {
@@ -2523,8 +2542,12 @@ button[name="vote"]:hover {
 }
 
 @keyframes marquee {
-  0%   { transform: translate(0, 0); }
-  100% { transform: translate(-2000px, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-2000px, 0);
+  }
 }
 
 .full-width {
@@ -2565,7 +2588,7 @@ button[name="vote"]:hover {
 
 @media all and (min-width: 960px) {
   .quotes-section::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 13rem;
@@ -2579,7 +2602,7 @@ button[name="vote"]:hover {
   }
 
   .quotes-section::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 7rem;
@@ -2700,7 +2723,8 @@ button[name="vote"]:hover {
   text-decoration: none;
 }
 
-.talk__title a:hover, .talk__title a:focus {
+.talk__title a:hover,
+.talk__title a:focus {
   color: var(--color-secondary-light);
   text-decoration: underline;
 }
