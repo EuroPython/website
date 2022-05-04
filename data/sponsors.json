@@ -65,7 +65,13 @@
           "name": "1Password",
           "url": "https://1password.com/",
           "logo": "img/logos/sponsor_logos/1password_m30.svg"
+        },
+        {
+          "name": "devitjobs",
+          "url": "https://devitjobs.uk/jobs/Python/all",
+          "logo": "img/logos/sponsor_logos/devitjobs.svg"
         }
+
       ]
     }
   ]
