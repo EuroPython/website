@@ -19,6 +19,11 @@
           "name": "Channable",
           "url": "https://www.channable.com",
           "logo": "img/logos/sponsor_logos/channable.svg"
+        },
+        {
+          "name": "Numberly",
+          "url": "https://numberly.com/",
+          "logo": "img/logos/sponsor_logos/numberly.svg"
         }
       ]
     },
