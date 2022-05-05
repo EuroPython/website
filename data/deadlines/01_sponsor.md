@@ -1,6 +1,6 @@
 ---
-title: Sponsorship Early Bird Signup
-subtitle: 10% off Early Bird till 29 April
+title: Become a Sponsor
+subtitle: Support the Community
 url: /sponsor
 image: /img/hall_rotated.png
 ---
