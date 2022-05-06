@@ -48,3 +48,127 @@ h6 a,
   font-size: 2.5rem;
   line-height: 1.2;
 }
+
+.schedule-item-break {
+  padding: 20px 10px;
+  background-color: #ecf8ea;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.schedule-slot {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+}
+
+.schedule-slot-time {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.schedule-item-talk {
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin: 20px 20px 0;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.schedule-item-title {
+  font-size: 1.3rem;
+}
+
+.schedule-metadata {
+  color: white;
+  font-size: 0.8em;
+  margin-top: 10px;
+  display: flex;
+}
+.schedule-metadata :first-child {
+  margin-right: 0.4em;
+}
+
+.schedule-item-speakers::after {
+  content: ", ";
+}
+
+.schedule-item-audience {
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  top: 0;
+  width: 30px;
+  color: white;
+  font-size: 0.7em;
+  background-color: var(--color-secondary);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.schedule-item-audience span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(90deg);
+  display: block;
+  transform-origin: 50% 50%;
+}
+
+.schedule {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 768px) {
+  .schedule {
+    display: grid;
+    background: white;
+    /* grid-template-rows: repeat(var(--total-slots), 1fr); */
+    grid-template-columns: repeat(var(--total-rooms), 1fr);
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .schedule > * {
+    display: contents;
+  }
+
+  .schedule-slot-time {
+    grid-column: 1 / 1;
+    grid-row: var(--row);
+  }
+
+  .schedule-item {
+    grid-column: 2 / 3;
+    grid-row: var(--row);
+  }
+
+  .schedule-item-break {
+    grid-column: 1 / calc(var(--total-rooms) + 1);
+    grid-row: var(--row);
+  }
+
+  .schedule-item-talk {
+    margin: 0;
+  }
+
+  .schedule-item-speakers::after {
+    content: "";
+  }
+
+  .schedule-item-rooms {
+    display: none;
+  }
+}
