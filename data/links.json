@@ -14,7 +14,13 @@
     },
     {
       "name": "Where",
-      "path": "/where"
+      "path": "/where",
+      "items": [
+        {
+          "name": "Campus",
+          "path": "/campus"
+        }
+      ]
     },
     {
       "name": "Visa Info",

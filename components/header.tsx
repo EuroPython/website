@@ -20,7 +20,7 @@ export const Header = () => (
       />
     </a>
 
-    <nav className="visible-large">
+    <nav className="visible-large nav-desktop">
       <NavItems items={links.header} />
     </nav>
     <a className="button visible-large header-main-cta" href="/tickets">
