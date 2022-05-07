@@ -2822,7 +2822,7 @@ button[name="vote"]:hover {
   .schedule .row,
   .schedule .headings {
     display: grid;
-    grid-template-columns: 5rem repeat(6, 1fr);
+    grid-template-columns: 5rem repeat(var(--total-rooms), 1fr);
     padding: 0rem 2rem 0rem 1rem;
   }
 
@@ -2844,7 +2844,7 @@ button[name="vote"]:hover {
 
   .schedule .row,
   .schedule .headings {
-    grid-template-columns: 6rem repeat(6, 1fr);
+    grid-template-columns: 6rem repeat(var(--total-rooms), 1fr);
     padding: 0rem 4rem;
   }
 

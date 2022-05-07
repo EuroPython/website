@@ -1,5 +1,4 @@
 import { Layout } from "../../components/layout";
-import { Hero } from "../../components/hero";
 
 // these should be sorted
 const tracks = [
@@ -25,6 +24,7 @@ type Event = (
   | {
       type: TalkType;
       speakers?: string[];
+      audience: "beginner" | "intermediate" | "advanced";
     }
 ) & {
   id: string;
@@ -62,6 +62,7 @@ const getEvent = ({
     title,
     tracks,
     type,
+    audience: "beginner",
   };
 };
 
@@ -145,6 +146,7 @@ const schedule: {
       title: "A longer talk",
       tracks: ["MongoDB"],
       type: "talk",
+      audience: "advanced",
     },
 
     ...(getEvents(
@@ -167,56 +169,36 @@ const Talk = ({
   cols: [number, number];
 }) => {
   return (
-    <a
-      className="schedule-item schedule-item-talk"
-      href="/"
-      style={{
-        gridColumn: `${cols[0]} / ${cols[1]}`,
-      }}
-    >
-      <div className="schedule-item-title">{event.title}</div>
-      <div className="schedule-metadata">
-        <div className="schedule-item-speakers">
-          {event.speakers?.join(",")}
+    <div>
+      <div className="talk">
+        <p className={`talk__rating ${event.audience}`}>{event.audience}</p>
+        <p className="talk__title">
+          <a href="session-1.html">{event.title}</a>
+        </p>
+        <div className="talk__speaker">
+          <img src="img/photos/speaker.png" />
+          <div className="speaker__bio">
+            <span className="speaker__name">{event.speakers?.join(", ")}</span>
+            <span className="speaker__title">speaker titles?</span>
+          </div>
         </div>
-        <div className="schedule-item-rooms">{event.tracks.join(", ")}</div>
+        <div className="talk__mobile-details">{event.tracks.join(", ")}</div>
       </div>
-      <div className="schedule-item-audience">
-        <span>Beginner</span>
-      </div>
-    </a>
+    </div>
   );
 };
 
 const Event = ({ event, cols }: { event: Event; cols: [number, number] }) => {
   if (event.type === "break") {
     return (
-      <div className="schedule-item schedule-item-break">
-        {event.time} {event.title}
+      <div className="break">
+        <span>{event.time}</span>
+        <span className="break__description">{event.title}</span>
       </div>
     );
   }
 
   return <Talk event={event} cols={cols} />;
-};
-
-const SlotContainer = ({
-  row,
-  children,
-}: {
-  row: number;
-  children: React.ReactNode;
-}) => {
-  return (
-    <div
-      className="schedule-slot"
-      style={{
-        "--row": row.toString(),
-      }}
-    >
-      {children}
-    </div>
-  );
 };
 
 const getColumnsForEvent = (event: Event): [number, number] => {
@@ -238,21 +220,17 @@ const TimeSlot = ({
   // "break" events don't need to show the time as they
   // are basically a separator for the time slots
   if (events.length === 1 && events[0].type === "break") {
-    return (
-      <SlotContainer row={row}>
-        <Event event={events[0]} cols={[0, 0]} />
-      </SlotContainer>
-    );
+    return <Event event={events[0]} cols={[0, 0]} />;
   }
 
   return (
-    <SlotContainer row={row}>
-      <div className="schedule-slot-time">{time}</div>
+    <div className="row">
+      <div className="talk__time">{time}</div>
       {events.map((event) => {
         const cols = getColumnsForEvent(event);
         return <Event event={event} key={event.id} cols={cols} />;
       })}
-    </SlotContainer>
+    </div>
   );
 };
 
@@ -283,18 +261,58 @@ export default function IndexPage({}: {}) {
 
   return (
     <Layout>
-      <div
-        className="schedule"
-        style={{
-          gridTemplateRows,
-          "--total-slots": totalSlots.toString(),
-          "--total-rooms": totalRooms.toString(),
-        }}
-      >
-        {Object.entries(groups).map(([time, events], index) => (
-          <TimeSlot time={time} events={events} key={time} row={index + 1} />
-        ))}
-      </div>
+      <main id="main-content">
+        <article className="accent-left">
+          <h1 className="highlighted">Schedule</h1>
+          <p className="large">
+            When I hear the buzz of the little world among the stalks.
+          </p>
+          <p>
+            A wonderful serenity has taken possession of my entire soul, like
+            these sweet mornings of spring which I enjoy with my whole heart. I
+            am alone, and feel the charm of existence in this spot, which was
+            created for the bliss of souls like mine.
+          </p>
+        </article>
+
+        <article>
+          <select id="schedule-select" className="select--schedule">
+            <option value="schedule-1" selected>
+              Monday, 11th July, 2022
+            </option>
+            <option value="schedule-2">Tuesday, 12th July, 2022</option>
+          </select>
+        </article>
+
+        <div
+          className="full-width schedule__container"
+          id="schedule-1"
+          style={{
+            gridTemplateRows,
+            "--total-slots": totalSlots.toString(),
+            "--total-rooms": totalRooms.toString(),
+          }}
+        >
+          <div className="schedule">
+            <h2 className="h4 schedule__date">Monday, 11th July, 2022</h2>
+            <div className="headings">
+              <span>Time</span>
+              {schedule.tracks.map((track) => (
+                <span key={track}>{track}</span>
+              ))}
+            </div>
+
+            {Object.entries(groups).map(([time, events], index) => (
+              <TimeSlot
+                time={time}
+                events={events}
+                key={time}
+                row={index + 1}
+              />
+            ))}
+          </div>
+        </div>
+      </main>
     </Layout>
   );
 }
