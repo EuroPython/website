@@ -2746,13 +2746,14 @@ button[name="vote"]:hover {
 
 .talk__speaker img {
   border-radius: 50%;
-  height: 2.75rem;
   width: 2.75rem;
+  height: 2.75rem;
   object-fit: cover;
+  aspect-ratio: 1;
 }
 
 .speaker__bio {
-  padding: 0 0.5rem !important;
+  padding: 0 0.5rem 0 0 !important;
   text-align: left;
 }
 
@@ -2798,7 +2799,8 @@ button[name="vote"]:hover {
   }
 
   .talk__speaker {
-    display: grid;
+    display: flex;
+    gap: 0.5rem;
   }
 
   .schedule .row {
