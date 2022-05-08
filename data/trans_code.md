@@ -17,7 +17,7 @@ It is a free full day workshop & hackday open to trans and non-binary folk, alli
 
 <ButtonWithTitle title="Want to be part of Trans*Code @ EuroPython?" text="Register your interest now!" href="https://forms.gle/EGGC2PJLwkyB2XsC7" />
 
-We will inform you of acceptance by email.
+We will inform you of acceptance by email within 7 days of your application
 
 If you have any questions, don't hesitate to reach out to the wonderful Trans\*Code team: [trans_code@europython.eu](mailto:trans_code@europython.eu)
 
