@@ -15,7 +15,7 @@ const tracks = [
 
 type TalkType = "talk" | "workshop" | "keynote";
 
-type EventType = TalkType | "break";
+type EventType = TalkType | "break" | "lighting-talks";
 
 type Speaker = {
   name: string;
@@ -26,6 +26,9 @@ type Speaker = {
 type Event = (
   | {
       type: "break";
+    }
+  | {
+      type: "lighting-talks";
     }
   | {
       type: TalkType;
@@ -126,7 +129,7 @@ const schedule: {
           name: "Lynn Cherny",
           tagline: "CEO",
 
-          image: "/img/photos/speaker.png",
+          image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
         },
       ],
       type: "keynote",
@@ -169,7 +172,7 @@ const schedule: {
         {
           name: "Raquel",
           tagline: "CEO",
-          image: "/img/photos/speaker.png",
+          image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
         },
       ],
     },
@@ -183,6 +186,108 @@ const schedule: {
       },
       1
     ) as any),
+    getEvent({
+      day: "2019-07-10",
+      time: "13:00",
+      endTime: "14:00",
+      title: "Lunch",
+      tracks: [
+        "MongoDB",
+        "PyCharm",
+        "Singapore",
+        "Osaka / Samarkand",
+        "Shangai",
+        "Boston",
+      ],
+      type: "break",
+    }),
+    ...(getEvents(
+      5,
+      {
+        day: "2019-07-10",
+        time: "14:10",
+        endTime: "14:30",
+      },
+      1
+    ) as any),
+    getEvent({
+      day: "2019-07-10",
+      time: "14:10",
+      endTime: "15:00",
+      title: "A talk spanning two time slots 🦥",
+      tracks: ["Boston"],
+      speakers: [
+        {
+          name: "Lynn Cherny",
+          tagline: "CEO",
+          image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
+        },
+      ],
+      type: "talk",
+    }),
+
+    ...(getEvents(
+      5,
+      {
+        day: "2019-07-10",
+        time: "14:35",
+        endTime: "15:00",
+      },
+      1
+    ) as any),
+
+    getEvent({
+      day: "2019-07-10",
+      time: "15:05",
+      endTime: "15:30",
+      title: "Coffee break",
+      tracks: [
+        "MongoDB",
+        "PyCharm",
+        "Singapore",
+        "Osaka / Samarkand",
+        "Shangai",
+        "Boston",
+      ],
+      type: "break",
+    }),
+
+    ...(getEvents(6, {
+      day: "2019-07-10",
+      time: "15:30",
+      endTime: "16:00",
+    }) as any),
+
+    ...(getEvents(6, {
+      day: "2019-07-10",
+      time: "16:05",
+      endTime: "16:30",
+    }) as any),
+
+    getEvent({
+      day: "2019-07-10",
+      time: "16:45",
+      endTime: "17:30",
+      title: "A keynote",
+      tracks: ["Boston"],
+      speakers: [
+        {
+          name: "Lynn Cherny",
+          tagline: "CEO",
+          image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
+        },
+      ],
+      type: "keynote",
+    }),
+
+    getEvent({
+      day: "2019-07-10",
+      time: "17:30",
+      endTime: "18:00",
+      title: "Lighting talks ⚡",
+      tracks: ["Boston"],
+      type: "lighting-talks",
+    }),
   ],
 };
 
@@ -190,33 +295,39 @@ const Talk = ({
   event,
   cols,
 }: {
-  event: Event & { type: TalkType };
+  event: Event & { type: TalkType | "lighting-talks" };
   cols: [number, number];
 }) => {
-  const singleSpeaker = event.speakers?.length === 1;
-  const firstSpeaker = event.speakers?.[0];
+  const speakers = event.type === "lighting-talks" ? [] : event.speakers;
+
+  const singleSpeaker = speakers?.length === 1;
+  const firstSpeaker = speakers?.[0];
 
   return (
     <div>
       <div className="talk">
-        <p className={`talk__rating ${event.audience}`}>{event.audience}</p>
+        {event.type !== "lighting-talks" && (
+          <p className={`talk__rating ${event.audience}`}>{event.audience}</p>
+        )}
         <p className="talk__title">
           <a href="session-1.html">{event.title}</a>
         </p>
-        <div className="talk__speaker">
-          {singleSpeaker && firstSpeaker?.image ? (
-            <img src={firstSpeaker.image} className="speaker__image" />
-          ) : null}
-
-          <div className="speaker__bio">
-            <span className="speaker__name">
-              {event.speakers?.map((s) => s.name).join(", ")}
-            </span>
-            {firstSpeaker?.tagline ? (
-              <span className="speaker__title">{firstSpeaker.tagline}</span>
+        {speakers ? (
+          <div className="talk__speaker">
+            {singleSpeaker && firstSpeaker?.image ? (
+              <img src={firstSpeaker.image} className="speaker__image" />
             ) : null}
+
+            <div className="speaker__bio">
+              <span className="speaker__name">
+                {speakers?.map((s) => s.name).join(", ")}
+              </span>
+              {firstSpeaker?.tagline ? (
+                <span className="speaker__title">{firstSpeaker.tagline}</span>
+              ) : null}
+            </div>
           </div>
-        </div>
+        ) : null}
         <div className="talk__mobile-details">{event.tracks.join(", ")}</div>
       </div>
     </div>
