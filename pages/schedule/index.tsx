@@ -310,7 +310,7 @@ const Talk = ({
           <p className={`talk__rating ${event.audience}`}>{event.audience}</p>
         )}
         <p className="talk__title">
-          <a href="session-1.html">{event.title}</a>
+          <a href="/talks/example">{event.title}</a>
         </p>
         {speakers ? (
           <div className="talk__speaker">
@@ -328,7 +328,9 @@ const Talk = ({
             </div>
           </div>
         ) : null}
-        <div className="talk__mobile-details">{event.tracks.join(", ")}</div>
+        <div className="talk__mobile-details">
+          {event.tracks.join(", ")}, {speakers?.map((s) => s.name).join(", ")}
+        </div>
       </div>
     </div>
   );
