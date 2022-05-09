@@ -2824,6 +2824,7 @@ button[name="vote"]:hover {
 
   .schedule .break,
   .schedule .talk,
+  .schedule .talk__time,
   .schedule .headings > span {
     grid-row: var(--grid-row);
     grid-column: var(--grid-column);
