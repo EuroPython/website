@@ -2839,10 +2839,6 @@ button[name="vote"]:hover {
     display: contents;
   }
 
-  .schedule .talk__time {
-    grid-column: span 1;
-  }
-
   .schedule .row div,
   .schedule .break span,
   .schedule .headings span {
