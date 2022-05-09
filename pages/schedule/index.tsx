@@ -7,11 +7,15 @@ const talks = talksData.filter((t) => t.day === "2019-07-10");
 // these should be sorted
 const rooms = Array.from(new Set(talks.flatMap((talk) => talk.rooms)));
 
-console.log(rooms);
-
 type TalkType = "talk" | "workshop" | "keynote";
 
-type EventType = TalkType | "break" | "lighting-talks";
+type EventType =
+  | TalkType
+  | "break"
+  | "lighting-talks"
+  | "poster"
+  | "panel"
+  | "open-space";
 
 type Speaker = {
   name: string;

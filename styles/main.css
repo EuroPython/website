@@ -2782,7 +2782,7 @@ button[name="vote"]:hover {
 @media all and (min-width: 640px) {
   .schedule .row {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-bottom: 1rem;
   }
