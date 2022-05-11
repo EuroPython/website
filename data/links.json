@@ -1,32 +1,60 @@
 {
-  "header": [
-    {
-      "name": "Finaid",
-      "path": "/finaid"
+  "header": [{
+      "name": "Programme (TBA)"
     },
     {
-      "name": "FAQ",
-      "path": "/faq"
+      "name": "Info & Support",
+      "items": [{
+          "name": "FAQ",
+          "path": "/faq"
+        },
+        {
+          "name": "Financial Aid",
+          "path": "/finaid"
+        },
+        {
+          "name": "Visa Information",
+          "path": "/visa"
+        }
+      ]
     },
     {
-      "name": "Sponsor",
-      "path": "/sponsor"
+      "name": "Dublin & Community",
+      "items": [{
+          "name": "Around Dublin",
+          "path": "/where"
+        },
+        {
+          "name": "Community Partners",
+          "path": "/community-partners"
+        }
+      ]
     },
     {
-      "name": "Where",
-      "path": "/where"
+      "name": "Events",
+      "items": [{
+          "name": "Django Girls",
+          "path": "https://djangogirls.org/en/dublin/"
+        },
+        {
+          "name": "Trans*Code",
+          "path": "/trans_code"
+        }
+
+      ]
     },
     {
-      "name": "Visa Info",
-      "path": "/visa"
+      "name": "Sponsorship",
+      "items": [{
+        "name": "Packages",
+        "path": "/sponsor"
+      }]
     },
     {
-      "name": "Code of Conduct",
-      "path": "https://www.europython-society.org/coc/"
+      "name": "Online (TBA)"
     }
   ],
-  "footer": [
-    {
+  "footer": [{
       "name": "CFP",
       "path": "/cfp"
     },
