@@ -23,6 +23,10 @@ export const Header = () => (
     <nav className="visible-large nav-desktop">
       <NavItems items={links.header} />
     </nav>
+    <a className="button visible-large header-main-cta" href="https://www.europython-society.org/coc/">
+      Code of Conduct
+    </a>
+
     <a className="button visible-large header-main-cta" href="/tickets">
       Buy tickets
     </a>
