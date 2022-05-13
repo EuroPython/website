@@ -29,6 +29,11 @@
           "name": "Optiver",
           "url": "https://www.optiver.com/",
           "logo": "img/logos/sponsor_logos/optiver.svg"
+        },
+        {
+          "name": "Optum",
+          "url": "https://www.optum.ie/",
+          "logo": "img/logos/sponsor_logos/optum.svg"
         }
       ]
     },
