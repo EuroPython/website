@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import sponsors from "../data/sponsors.json";
 
 type Sponsor = {
@@ -74,10 +75,10 @@ export const Sponsors = () => {
         {remaining.length > 0 && <hr />}
 
         {remaining.map((tier, index) => (
-          <>
-            <SponsorTier tier={tier} key={tier.name} />
+          <Fragment key={tier.name}>
+            <SponsorTier tier={tier} />
             {index !== remaining.length - 1 && <hr />}
-          </>
+          </Fragment>
         ))}
       </article>
     </div>
