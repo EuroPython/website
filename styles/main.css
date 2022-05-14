@@ -2659,7 +2659,7 @@ button[name="vote"]:hover {
   display: none;
 }
 
-.schedule .row div,
+.talk__time,
 .schedule .break span,
 .schedule .headings span {
   padding: 0.5rem 0.5rem;
@@ -2686,6 +2686,7 @@ button[name="vote"]:hover {
   height: 100%;
   padding: 0 !important;
   margin-bottom: 25px;
+  position: relative;
 }
 
 .talk p {
@@ -2693,13 +2694,32 @@ button[name="vote"]:hover {
 }
 
 .talk__rating {
-  width: 100%;
-  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   font-size: 0.75rem;
   line-height: 1rem;
   text-align: left;
   padding: 0.5rem 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  width: 20px;
+}
+
+.talk > .talk__title,
+.talk > .talk__mobile-details {
+  padding-right: 30px;
+}
+
+.talk__rating > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  display: block;
+  transform-origin: 50% 50%;
 }
 
 .beginner {
@@ -2793,6 +2813,18 @@ button[name="vote"]:hover {
 }
 
 @media all and (min-width: 1180px) {
+  .talk__rating {
+    position: static;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0;
+  }
+
+  .talk__rating > span {
+    position: static;
+    transform: none;
+  }
+
   .talk__rating {
     padding: 0.8rem;
   }

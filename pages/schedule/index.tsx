@@ -111,7 +111,11 @@ const getEvents = (
 const numberToTime = (number: number) => {
   const hours = Math.floor(number / 60);
   const minutes = number % 60;
-  return `${hours}:${minutes}`;
+
+  const hoursString = hours < 10 ? `0${hours}` : `${hours}`;
+  const minutesString = minutes < 10 ? `0${minutes}` : `${minutes}`;
+
+  return `${hoursString}:${minutesString}`;
 };
 
 const timeToNumber = (time: string) => {
@@ -128,7 +132,8 @@ type Schedule = {
 
 const schedule: Schedule = {
   rooms,
-  events: talks.map((talk) => {
+
+  events: talks.map((talk, index) => {
     const time = timeToNumber(talk.time);
     const evDuration = parseInt(talk.ev_duration || "0", 10);
     const ttDuration = parseInt(talk.tt_duration || "0", 10);
@@ -136,6 +141,7 @@ const schedule: Schedule = {
     const endTime = time + (evDuration || ttDuration);
 
     return {
+      id: index.toString(),
       title: talk.title || talk.ev_custom,
       day: talk.day,
       time: talk.time,
@@ -169,14 +175,14 @@ const Talk = ({
   return (
     <div className="talk" style={style}>
       {event.type !== "lighting-talks" && (
-        <p className={`talk__rating ${event.audience}`}>{event.audience}</p>
+        <p className={`talk__rating ${event.audience}`}>
+          <span>{event.audience}</span>
+        </p>
       )}
       <p className="talk__title">
         <a href="/talks/example">{event.title}</a>
       </p>
-      <p style={{ fontSize: 12 }}>
-        {event.time} 👉 {event.endTime}
-      </p>
+
       {speakers ? (
         <div className="talk__speaker">
           {singleSpeaker && firstSpeaker?.image ? (
@@ -206,7 +212,7 @@ const Break = ({
 }) => {
   return (
     <div className="break" style={style}>
-      <span>{event.time}</span>
+      <span>{numberToTime(timeToNumber(event.time))}</span>
       <span className="break__description">{event.title}</span>
     </div>
   );
@@ -293,7 +299,7 @@ const TimeSlot = ({
           "--grid-column": "1 / 2",
         }}
       >
-        {time}
+        {numberToTime(timeToNumber(time))}
       </div>
       {events.map((event) => {
         const position = getPositionForEvent(event, timeslots);
@@ -301,14 +307,17 @@ const TimeSlot = ({
         if (
           !["talk", "keynote", "workshop", "lighting-talks"].includes(
             event.type
-          )
+          ) ||
+          event.type === "break"
         ) {
           console.warn("Only talks supported", event.type);
+
           return null;
         }
 
         return (
           <Talk
+            key={event.id}
             event={event}
             style={{
               "--grid-row": `${position.rows.start} / ${position.rows.end}`,
