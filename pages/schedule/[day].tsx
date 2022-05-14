@@ -6,11 +6,6 @@ import scheduleData from "../../data/schedule.json";
 import type { Event, TalkType } from "../../types/schedule";
 import { useCallback } from "react";
 
-const rooms = scheduleData.rooms;
-const days = scheduleData.days.map((date) =>
-  parse(date, "yyyy-MM-dd", new Date())
-);
-
 const numberToTime = (number: number) => {
   const hours = Math.floor(number / 60);
   const minutes = number % 60;
@@ -37,9 +32,9 @@ type Schedule = {
 };
 
 const getSchedule = (day: string): Schedule => {
-  let currentDayTalks = scheduleData.talks.filter((t) => t.day === day);
+  let currentDay = scheduleData.days[day as keyof typeof scheduleData["days"]];
 
-  const events: Event[] = currentDayTalks.map((event, index) => {
+  const events: Event[] = currentDay.talks.map((event, index) => {
     const time = timeToNumber(event.time);
     const evDuration = parseInt(event.ev_duration || "0", 10);
     const ttDuration = parseInt(event.tt_duration || "0", 10);
@@ -73,7 +68,7 @@ const getSchedule = (day: string): Schedule => {
   }, {});
 
   return {
-    rooms,
+    rooms: currentDay.rooms,
     events,
     timeslots,
   };
@@ -187,7 +182,6 @@ const getPositionForEvent = (event: Event, schedule: Schedule): Position => {
 const TimeSlot = ({
   time,
   events,
-
   schedule,
   totalRooms,
 }: {
@@ -263,8 +257,12 @@ export default function SchedulePage({
     window.location.href = `/schedule/${event.target.value}`;
   }, []);
 
+  const days = Object.keys(scheduleData.days).map((date) =>
+    parse(date, "yyyy-MM-dd", new Date())
+  );
+
   const totalSlots = Object.keys(schedule.timeslots).length;
-  const totalRooms = rooms.length;
+  const totalRooms = schedule.rooms.length;
 
   const gridTemplateRows =
     "3.5rem " +
@@ -288,17 +286,14 @@ export default function SchedulePage({
             id="schedule-select"
             className="select--schedule"
             onChange={handleDaySelected}
+            defaultValue={day}
           >
             {days.map((d) => {
               const isoDate = format(d, "yyyy-MM-dd");
               const dateText = format(d, "eeee, do MMMM, yyyy");
 
               return (
-                <option
-                  key={isoDate}
-                  value={isoDate}
-                  selected={isoDate === day}
-                >
+                <option key={isoDate} value={isoDate}>
                   {dateText}
                 </option>
               );
@@ -355,7 +350,7 @@ export default function SchedulePage({
 }
 
 export async function getStaticPaths() {
-  const paths = scheduleData.days.map((day) => ({
+  const paths = Object.keys(scheduleData.days).map((day) => ({
     params: { day: day },
   }));
   return { paths, fallback: false };
@@ -363,6 +358,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { day: string } }) {
   const schedule = getSchedule(params.day);
+
+  console.log(schedule);
 
   return { props: { day: params.day, schedule } };
 }
