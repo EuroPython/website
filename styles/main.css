@@ -131,7 +131,7 @@ header nav ul {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: start;
   gap: var(--unit);
-  border-right: 2px solid var(--color-body);
+  margin: 0 1rem;
 }
 
 header + nav {
