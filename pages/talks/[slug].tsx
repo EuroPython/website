@@ -122,7 +122,6 @@ const getAllTalks = () => {
   return (
     Object.values(scheduleData.days)
       .flatMap((day) => day.talks)
-      // @ts-ignore
       .filter((talk) => !!talk.slug)
   );
 };
