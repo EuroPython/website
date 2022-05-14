@@ -359,7 +359,5 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: { params: { day: string } }) {
   const schedule = getSchedule(params.day);
 
-  console.log(schedule);
-
   return { props: { day: params.day, schedule } };
 }
