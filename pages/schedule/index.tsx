@@ -45,69 +45,6 @@ type Event = (
   type?: EventType;
 };
 
-const getEvent = ({
-  day = "2019-07-10",
-  time = "09:00",
-  endTime = "09:15",
-  title = "Morning announcements Auditorium",
-  speakers,
-  rooms = ["MongoDB"],
-  type = "break",
-}: {
-  day?: string;
-  time?: string;
-  endTime?: string;
-  title?: string;
-  speakers?: Speaker[];
-  rooms?: string[];
-  type?: EventType;
-}): Event => {
-  return {
-    id: `${day}-${time}-${title}`,
-    day,
-    time,
-    speakers,
-    endTime,
-    title,
-    rooms,
-    type,
-    audience: "beginner",
-  };
-};
-
-const getEvents = (
-  total: number,
-  {
-    day,
-    time,
-    endTime,
-  }: {
-    day: string;
-    time: string;
-    endTime: string;
-  },
-  offset: number = 0
-): Event[] => {
-  return new Array(total).fill(null).map((_, index) =>
-    getEvent({
-      day,
-      time,
-      endTime,
-      title: `Talk ${index + 1 + offset} Talk ${index + 1 + offset}. Talk ${
-        index + 1 + offset
-      } Talk ${index + 1 + offset} Talk ${index + 1 + offset}`,
-      rooms: [rooms[index + offset]!],
-      speakers: [
-        {
-          name: `Speaker ${index + offset}`,
-          tagline: `Tagline ${index + offset}`,
-        },
-      ],
-      type: "talk",
-    })
-  );
-};
-
 const numberToTime = (number: number) => {
   const hours = Math.floor(number / 60);
   const minutes = number % 60;
