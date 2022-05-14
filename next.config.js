@@ -3,7 +3,9 @@
 const scheduleData = require("./data/schedule.json");
 
 const getScheduleDays = async () => {
-  const potentialUnsortedDays = Array.from(new Set(scheduleData.days));
+  const potentialUnsortedDays = Array.from(
+    new Set(Object.keys(scheduleData.days))
+  );
 
   return potentialUnsortedDays.sort((a, b) => {
     const aDate = new Date(a);
