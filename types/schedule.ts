@@ -25,6 +25,7 @@ export type Event = (
       type: TalkType;
       speakers?: Speaker[];
       audience: string;
+      slug: string;
     }
 ) & {
   id: string;

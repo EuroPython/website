@@ -31,7 +31,8 @@
             "02.W.03",
             "03.N.21",
             "01.S.21"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -47,9 +48,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Dmitry Kisler",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "how-to-power-up-your-product-by-machine-learning-with-python-micro-service"
         },
         {
           "day": "2019-07-08",
@@ -65,9 +65,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Christian Barra",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "kubernetes-101-for-python-developers"
         },
         {
           "day": "2019-07-08",
@@ -83,9 +82,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Miguel Grinberg",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "first-steps-in-web-development-with-python"
         },
         {
           "day": "2019-07-08",
@@ -101,9 +99,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -119,9 +116,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -137,9 +133,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Shailen Sobhee",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "boost-your-python-and-machine-learning--algorithms"
         },
         {
           "day": "2019-07-08",
@@ -162,7 +157,8 @@
             "02.W.03",
             "03.N.21",
             "01.S.21"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -178,9 +174,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Dmitry Kisler",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "how-to-power-up-your-product-by-machine-learning-with-python-micro-service"
         },
         {
           "day": "2019-07-08",
@@ -196,9 +191,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Christian Barra",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "kubernetes-101-for-python-developers"
         },
         {
           "day": "2019-07-08",
@@ -214,9 +208,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Miguel Grinberg",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "first-steps-in-web-development-with-python"
         },
         {
           "day": "2019-07-08",
@@ -232,9 +225,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -250,9 +242,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -268,9 +259,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Shailen Sobhee",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "boost-your-python-and-machine-learning--algorithms"
         },
         {
           "day": "2019-07-08",
@@ -293,7 +283,8 @@
             "02.W.03",
             "03.N.21",
             "01.S.21"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -309,9 +300,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Francesco Pierfederici",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "keep-those-ducks-in-(type)-check!"
         },
         {
           "day": "2019-07-08",
@@ -327,9 +317,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Mike M\u00fcller",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "functional-programming-with-python"
         },
         {
           "day": "2019-07-08",
@@ -345,9 +334,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -363,9 +351,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Cheuk Ho",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "step-into-the-ai-era:-chatbots-that-know-if-you-are-angry"
         },
         {
           "day": "2019-07-08",
@@ -381,9 +368,8 @@
           "ev_duration": "180",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -399,9 +385,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Florian Bruhin",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "introduction-to-pytest"
         },
         {
           "day": "2019-07-08",
@@ -417,13 +402,8 @@
           "ev_duration": "15",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "02.S.21",
-            "02.N.21",
-            "02.W.09",
-            "02.W.03",
-            "03.N.21"
-          ]
+          "rooms": ["02.S.21", "02.N.21", "02.W.09", "02.W.03", "03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -439,9 +419,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Francesco Pierfederici",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "keep-those-ducks-in-(type)-check!"
         },
         {
           "day": "2019-07-08",
@@ -457,9 +436,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Mike M\u00fcller",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "functional-programming-with-python"
         },
         {
           "day": "2019-07-08",
@@ -475,9 +453,8 @@
           "ev_duration": "150",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -493,9 +470,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Cheuk Ho",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "step-into-the-ai-era:-chatbots-that-know-if-you-are-angry"
         },
         {
           "day": "2019-07-08",
@@ -511,9 +487,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-08",
@@ -529,9 +504,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Florian Bruhin",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "introduction-to-pytest"
         }
       ]
     },
@@ -566,7 +540,8 @@
             "02.W.03",
             "03.N.21",
             "01.S.21"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -582,9 +557,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Alexander Hendorf",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "analytics-with-\ud83d\udc3c-pandas-and-jupyterlab"
         },
         {
           "day": "2019-07-09",
@@ -600,9 +574,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Coen de Groot",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "write-your-own-games,-simulations-and-demonstrations-with-pygame"
         },
         {
           "day": "2019-07-09",
@@ -618,9 +591,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -636,9 +608,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -654,9 +625,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Roberto Polli",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "writing-interoperable-rest-apis-with-openapi-3-and-connexion"
         },
         {
           "day": "2019-07-09",
@@ -672,9 +642,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Michael Lynn Lynn",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "mongodb-for-python-developers"
         },
         {
           "day": "2019-07-09",
@@ -697,7 +666,8 @@
             "02.W.03",
             "03.N.21",
             "01.S.21"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -713,9 +683,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Alexander Hendorf",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "analytics-with-\ud83d\udc3c-pandas-and-jupyterlab"
         },
         {
           "day": "2019-07-09",
@@ -731,9 +700,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Coen de Groot",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "write-your-own-games,-simulations-and-demonstrations-with-pygame"
         },
         {
           "day": "2019-07-09",
@@ -749,9 +717,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -767,9 +734,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -785,9 +751,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Roberto Polli",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "writing-interoperable-rest-apis-with-openapi-3-and-connexion"
         },
         {
           "day": "2019-07-09",
@@ -803,9 +768,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Michael Lynn Lynn",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "mongodb-for-python-developers"
         },
         {
           "day": "2019-07-09",
@@ -828,7 +792,8 @@
             "02.W.03",
             "03.N.21",
             "01.S.21"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -844,9 +809,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Sandrine Pataut",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "get-to-grips-with-pandas-and-scikit-learn"
         },
         {
           "day": "2019-07-09",
@@ -862,9 +826,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Sebastian Roll",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "micropython-bootcamp:-batteries-included!"
         },
         {
           "day": "2019-07-09",
@@ -880,9 +843,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -898,9 +860,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Daniele Procida",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "but-i-never-wanted-to-do-devops!"
         },
         {
           "day": "2019-07-09",
@@ -916,9 +877,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -934,9 +894,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Shailen Sobhee",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "high-performance-deep-learning-with-intel-technologies"
         },
         {
           "day": "2019-07-09",
@@ -959,7 +918,8 @@
             "02.W.03",
             "03.N.21",
             "01.S.21"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -975,9 +935,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Sandrine Pataut",
-          "rooms": [
-            "02.S.21"
-          ]
+          "rooms": ["02.S.21"],
+          "slug": "get-to-grips-with-pandas-and-scikit-learn"
         },
         {
           "day": "2019-07-09",
@@ -993,9 +952,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Daniele Procida",
-          "rooms": [
-            "02.N.21"
-          ]
+          "rooms": ["02.N.21"],
+          "slug": "but-i-never-wanted-to-do-devops!"
         },
         {
           "day": "2019-07-09",
@@ -1011,9 +969,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Sebastian Roll",
-          "rooms": [
-            "02.W.09"
-          ]
+          "rooms": ["02.W.09"],
+          "slug": "micropython-bootcamp:-batteries-included!"
         },
         {
           "day": "2019-07-09",
@@ -1029,9 +986,8 @@
           "ev_duration": "150",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "03.N.21"
-          ]
+          "rooms": ["03.N.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -1047,9 +1003,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "01.S.21"
-          ]
+          "rooms": ["01.S.21"],
+          "slug": null
         },
         {
           "day": "2019-07-09",
@@ -1065,9 +1020,8 @@
           "ev_duration": "90",
           "tt_duration": "180",
           "speaker": "Shailen Sobhee",
-          "rooms": [
-            "02.W.03"
-          ]
+          "rooms": ["02.W.03"],
+          "slug": "high-performance-deep-learning-with-intel-technologies"
         }
       ]
     },
@@ -1098,9 +1052,8 @@
           "ev_duration": "15",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         },
         {
           "day": "2019-07-10",
@@ -1116,9 +1069,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Lynn Cherny",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "getting-your-data-joie-de-vivre-back!"
         },
         {
           "day": "2019-07-10",
@@ -1141,7 +1093,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-10",
@@ -1157,9 +1110,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Christian Heimes",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "auditing-hooks-and-security-transparency-for-cpython"
         },
         {
           "day": "2019-07-10",
@@ -1175,9 +1127,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Olivier Grisel",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "histogram-based-gradient-boosting-in-scikit-learn-0.21"
         },
         {
           "day": "2019-07-10",
@@ -1193,9 +1144,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Tyler Brough",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "using-python-to-teach-computational-finance"
         },
         {
           "day": "2019-07-10",
@@ -1211,9 +1161,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Nemanja Milosevic",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "classification-based-on-missing-features-in-deep-convolutional-neural-networks"
         },
         {
           "day": "2019-07-10",
@@ -1229,9 +1178,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Leonardo Rochael Almeida",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "from-days-to-minutes,-from-minutes-to-milliseconds-with-sqlalchemy"
         },
         {
           "day": "2019-07-10",
@@ -1247,9 +1195,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Christoph Heer",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "is-it-me,-or-the-gil?"
         },
         {
           "day": "2019-07-10",
@@ -1265,9 +1212,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Jovan Veljanoski",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "modern-data-science-with-vaex:-a-new-approach-to-dataframes-and-pipelines"
         },
         {
           "day": "2019-07-10",
@@ -1283,9 +1229,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Michele De Simoni",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "tensorflow-2.0:-tensorflow-strikes-back"
         },
         {
           "day": "2019-07-10",
@@ -1301,9 +1246,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Yan Orestes",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "understanding-how-a-malware-works-using-python"
         },
         {
           "day": "2019-07-10",
@@ -1319,9 +1263,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Samuel Colvin",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "python's-parallel-programming-possibilities---4-levels-of-concurrency"
         },
         {
           "day": "2019-07-10",
@@ -1337,9 +1280,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Sebastian Witowski",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "wait,-ipython-can-do-that?!"
         },
         {
           "day": "2019-07-10",
@@ -1355,9 +1297,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Rogier van der Geer",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "how-to-train-an-image-classifier-using-pytorch"
         },
         {
           "day": "2019-07-10",
@@ -1373,9 +1314,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "ANIL TUNCEL",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "bioinformatics-pipeline-for-revealing-tumour-heterogeneity"
         },
         {
           "day": "2019-07-10",
@@ -1391,9 +1331,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Mai Gim\u00e9nez",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "tensorflow-estimators"
         },
         {
           "day": "2019-07-10",
@@ -1409,9 +1348,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Petr Stehl\u00edk",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "the-dos-and-don'ts-of-task-queues"
         },
         {
           "day": "2019-07-10",
@@ -1427,9 +1365,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Dougal Matthews",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "the-secret-life-of-software"
         },
         {
           "day": "2019-07-10",
@@ -1445,9 +1382,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Shailen Sobhee",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "accelerate-your-deep-learning-inferencing-with-the-intel\u00ae-dl-boost-technology"
         },
         {
           "day": "2019-07-10",
@@ -1463,9 +1399,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Matthieu Amiguet ",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "python-for-realtime-audio-processing-in-a-live-music-context"
         },
         {
           "day": "2019-07-10",
@@ -1488,7 +1423,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-10",
@@ -1504,9 +1440,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Sebastian Roll",
-          "rooms": [
-            "Poster Session 1"
-          ]
+          "rooms": ["Poster Session 1"],
+          "slug": "from-circuit-board-design-to-finished-product"
         },
         {
           "day": "2019-07-10",
@@ -1522,9 +1457,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Martin Gfeller",
-          "rooms": [
-            "Poster Session 2"
-          ]
+          "rooms": ["Poster Session 2"],
+          "slug": "flexport-\u2013-extremely-pluggable-reporting"
         },
         {
           "day": "2019-07-10",
@@ -1540,9 +1474,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Oliver Bestwalter",
-          "rooms": [
-            "Help Desk"
-          ]
+          "rooms": ["Help Desk"],
+          "slug": "the-pytest/tox/devpi-help-desk"
         },
         {
           "day": "2019-07-10",
@@ -1558,9 +1491,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Paul Ganssle",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "build-your-python-extensions-with-rust!"
         },
         {
           "day": "2019-07-10",
@@ -1576,9 +1508,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Marc-Andre Lemburg",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "pyrun---shipping-the-python-3.7-runtime-in-just-4.8mb"
         },
         {
           "day": "2019-07-10",
@@ -1594,9 +1525,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Emmanuelle Gouillart",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "image-processing-with-scikit-image-and-dash"
         },
         {
           "day": "2019-07-10",
@@ -1612,9 +1542,8 @@
           "ev_duration": "60",
           "tt_duration": "60",
           "speaker": "lil anonymous",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "teaching-programming-to-the-next-generation"
         },
         {
           "day": "2019-07-10",
@@ -1630,9 +1559,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Dom Weldon",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "dash:-interactive-data-visualization-web-apps-with-no-javascript"
         },
         {
           "day": "2019-07-10",
@@ -1648,9 +1576,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Thomas Kluiters",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "securely-executing-python-machine-learning-models-with-distroless-images-at-ing"
         },
         {
           "day": "2019-07-10",
@@ -1666,9 +1593,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Adriana Dorneles",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "what-about-recommendation-engines?"
         },
         {
           "day": "2019-07-10",
@@ -1684,9 +1610,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Dimiter Naydenov",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "extracting-tabular-data-from-pdfs-with-camelot-and-excalibur"
         },
         {
           "day": "2019-07-10",
@@ -1702,9 +1627,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Tom Forbes",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "writing-a-python-autoreloader"
         },
         {
           "day": "2019-07-10",
@@ -1720,9 +1644,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Alisa Dammer",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "python-vs-rust-for-simulation"
         },
         {
           "day": "2019-07-10",
@@ -1738,9 +1661,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Elizaveta Shashkova",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "visual-debugger-for-jupyter-notebooks:-myth-or-reality?"
         },
         {
           "day": "2019-07-10",
@@ -1763,7 +1685,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-10",
@@ -1779,9 +1702,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Martin Christen",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "geospatial-analysis-using-python-and-jupyterhub"
         },
         {
           "day": "2019-07-10",
@@ -1797,9 +1719,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Mark Smith",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "publish-a-(perfect)-python-package-on-pypi"
         },
         {
           "day": "2019-07-10",
@@ -1815,9 +1736,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Franziska Oschmann",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "boosting-research-with-machine-learning."
         },
         {
           "day": "2019-07-10",
@@ -1833,9 +1753,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Katherine Kampf",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "building-a-powerful-pet-detector-in-notebooks"
         },
         {
           "day": "2019-07-10",
@@ -1851,9 +1770,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Sven-Hendrik Haase",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "become-a-command-line-wizard"
         },
         {
           "day": "2019-07-10",
@@ -1869,9 +1787,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Teresa Ingram",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "opt-out-of-online-sexism-\u2013-open-source-activism"
         },
         {
           "day": "2019-07-10",
@@ -1887,9 +1804,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Paolo Galeone",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "dissecting-tf.function-to-discover-autograph-strengths-and-subtleties"
         },
         {
           "day": "2019-07-10",
@@ -1905,9 +1821,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Peter Entschev",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "distributed-multi-gpu-computing-with-dask,-cupy-and-rapids"
         },
         {
           "day": "2019-07-10",
@@ -1923,9 +1838,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Shailen Sobhee",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "supercharge-your-deep-learning-algorithms-with-optimized-software"
         },
         {
           "day": "2019-07-10",
@@ -1941,9 +1855,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Vita Smid",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "static-typing:-beyond-the-basics-of-def-foo(x:-int)-->-str:"
         },
         {
           "day": "2019-07-10",
@@ -1959,9 +1872,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Cheuk Ho",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "do-we-have-a-diversity-problem-in-python-community?"
         },
         {
           "day": "2019-07-10",
@@ -1977,9 +1889,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Cristi\u00e1n Maureira-Fredes",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "unleash-the-power-of-c++-in-python"
         },
         {
           "day": "2019-07-10",
@@ -1995,9 +1906,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Yenny Cheung",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "why-you-should-pursue-public-speaking-and-how-to-get-there"
         },
         {
           "day": "2019-07-10",
@@ -2013,9 +1923,8 @@
           "ev_duration": "60",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         }
       ]
     },
@@ -2046,9 +1955,8 @@
           "ev_duration": "15",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         },
         {
           "day": "2019-07-11",
@@ -2064,9 +1972,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Athina Frantzana ",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "are-women-underrepresented-in-the-high-performance-computing-(hpc)-community?"
         },
         {
           "day": "2019-07-11",
@@ -2089,7 +1996,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-11",
@@ -2105,9 +2013,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Stefan Behnel",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "get-up-to-speed-with-cython-3.0"
         },
         {
           "day": "2019-07-11",
@@ -2123,9 +2030,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Christian Barra",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "how-software-can-feed-the-world-\ud83c\udf31"
         },
         {
           "day": "2019-07-11",
@@ -2141,9 +2047,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Gael Varoquaux",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "machine-learning-on-non-curated-data"
         },
         {
           "day": "2019-07-11",
@@ -2159,9 +2064,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Hynek Schlawack",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "maintaining-a-python-project-when-it\u2019s-not-your-job"
         },
         {
           "day": "2019-07-11",
@@ -2177,9 +2081,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Christian Heimes",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "introduction-to-low-level-profiling-and-tracing"
         },
         {
           "day": "2019-07-11",
@@ -2195,9 +2098,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Miroslav \u0160ediv\u00fd",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "a-day-has-only-24\u00b11-hours"
         },
         {
           "day": "2019-07-11",
@@ -2213,9 +2115,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Jon Nordby",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "audio-classification-with-machine-learning"
         },
         {
           "day": "2019-07-11",
@@ -2231,9 +2132,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Max B\u00e9langer",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "how-to-ship-a-python-app-to-a-hundred-million-desktops"
         },
         {
           "day": "2019-07-11",
@@ -2249,9 +2149,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Antonio Cuni",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "how-to-write-a-jit-compiler-in-30-minutes"
         },
         {
           "day": "2019-07-11",
@@ -2267,9 +2166,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Michele Simionato",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "tips-for-the-scientific-programmer"
         },
         {
           "day": "2019-07-11",
@@ -2285,9 +2183,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Paul Everitt",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "python-1994"
         },
         {
           "day": "2019-07-11",
@@ -2303,9 +2200,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Brad Miro",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "deep-learning-with-tensorflow-2.0"
         },
         {
           "day": "2019-07-11",
@@ -2321,9 +2217,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Daniele Procida",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "the-world's-cheapest,-simplest-plotter"
         },
         {
           "day": "2019-07-11",
@@ -2339,9 +2234,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Paul Hughes",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "building-data-driven-client-relationship-management-in-banking-with-python"
         },
         {
           "day": "2019-07-11",
@@ -2357,9 +2251,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Christoph Deil",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "understanding-numba---the-python-and-numpy-compiler"
         },
         {
           "day": "2019-07-11",
@@ -2375,9 +2268,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Ronan Lamy",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "opening-pypy's-magic-black-box"
         },
         {
           "day": "2019-07-11",
@@ -2393,9 +2285,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Reuven Lerner",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "practical-decorators"
         },
         {
           "day": "2019-07-11",
@@ -2411,9 +2302,8 @@
           "ev_duration": "60",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": null
         },
         {
           "day": "2019-07-11",
@@ -2429,9 +2319,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Mois\u00e9s Guimar\u00e3es",
-          "rooms": [
-            "Poster Session 1"
-          ]
+          "rooms": ["Poster Session 1"],
+          "slug": "protecting-secrets-with-oslo.config-and-hashicorp-vault"
         },
         {
           "day": "2019-07-11",
@@ -2447,9 +2336,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Takanori Suzuki",
-          "rooms": [
-            "Poster Session 2"
-          ]
+          "rooms": ["Poster Session 2"],
+          "slug": "python-boot-camp:-introduction-of-efforts-to-spread-python-all-over-japan"
         },
         {
           "day": "2019-07-11",
@@ -2472,7 +2360,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-11",
@@ -2488,9 +2377,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Sviatoslav Sydorenko",
-          "rooms": [
-            "Help Desk"
-          ]
+          "rooms": ["Help Desk"],
+          "slug": "\ud83e\udd16-open-source-projects-automation"
         },
         {
           "day": "2019-07-11",
@@ -2506,9 +2394,8 @@
           "ev_duration": "60",
           "tt_duration": "60",
           "speaker": "Raphael Pierzina",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "advanced-pytest"
         },
         {
           "day": "2019-07-11",
@@ -2524,9 +2411,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Alexander Hendorf",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "explaining-ai-to-managers-\ud83d\udc68\u200d\ud83d\udcbc\ud83e\udd16\ud83d\udc69\u200d\ud83d\udcbc"
         },
         {
           "day": "2019-07-11",
@@ -2542,9 +2428,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Maria Jose Molina-Contreras, PhD",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "\u201cwhen-a-biologist-met-python\u201d"
         },
         {
           "day": "2019-07-11",
@@ -2560,9 +2445,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "johnny dude",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "how-thinking-in-python-made-me-a-better-software-engineer"
         },
         {
           "day": "2019-07-11",
@@ -2578,9 +2462,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Patrick Arminio",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "graphql-in-python-\ud83c\udf53"
         },
         {
           "day": "2019-07-11",
@@ -2596,9 +2479,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Anton Caceres",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "how-to-build-a-python-microservice-without-losing-a-job"
         },
         {
           "day": "2019-07-11",
@@ -2614,9 +2496,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Iulia A. Avram",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "gamifying-the-study-of-algorithms"
         },
         {
           "day": "2019-07-11",
@@ -2632,9 +2513,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Florian Wahl",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "building-industry-4.0-logistics-applications-with-micropython-and-esp32-mcus"
         },
         {
           "day": "2019-07-11",
@@ -2650,9 +2530,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Micha\u0142 Karzy\u0144ski",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "from-python-script-to-open-source-project"
         },
         {
           "day": "2019-07-11",
@@ -2668,10 +2547,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Stanislav Geidl",
-          "rooms": [
-            "MongoDB",
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB", "MongoDB"],
+          "slug": "refactoring-in-python"
         },
         {
           "day": "2019-07-11",
@@ -2687,9 +2564,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Hubert Bry\u0142kowski",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "natural-language-processing-with-neural-networks."
         },
         {
           "day": "2019-07-11",
@@ -2712,7 +2588,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-11",
@@ -2728,9 +2605,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Mario Corchero",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "exceptional-exceptions"
         },
         {
           "day": "2019-07-11",
@@ -2746,9 +2622,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Marc-Andre Lemburg",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "europython-2020:-help-us-build-the-next-edition!"
         },
         {
           "day": "2019-07-11",
@@ -2764,9 +2639,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Philipp Thomann",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "plotvr---walk-through-your-data"
         },
         {
           "day": "2019-07-11",
@@ -2782,9 +2656,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Sebastian Roll",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "the-dangers-of-outsourcing-software-development"
         },
         {
           "day": "2019-07-11",
@@ -2800,9 +2673,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Joe Drumgoole",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "introduction-to-python-and-mongodb"
         },
         {
           "day": "2019-07-11",
@@ -2818,9 +2690,8 @@
           "ev_duration": "0",
           "tt_duration": "60",
           "speaker": "Alejandro Saucedo",
-          "rooms": [
-            "PyData track"
-          ]
+          "rooms": ["PyData track"],
+          "slug": "the-state-of-machine-learning-operations-in-2019"
         },
         {
           "day": "2019-07-11",
@@ -2836,9 +2707,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Nar Kumar Chhantyal",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "building-data-workflows-with-luigi-and-kubernetes"
         },
         {
           "day": "2019-07-11",
@@ -2854,9 +2724,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Stephan Jaensch",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "testing-microservices:-fast-and-with-confidence"
         },
         {
           "day": "2019-07-11",
@@ -2872,9 +2741,8 @@
           "ev_duration": "0",
           "tt_duration": "60",
           "speaker": "Marc-Andre Lemburg",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "eps-general-assembly-2019"
         },
         {
           "day": "2019-07-11",
@@ -2890,9 +2758,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Jeff Hollan ",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "deploy-python-to-the-cloud-faster-with-azure-serverless"
         },
         {
           "day": "2019-07-11",
@@ -2908,9 +2775,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Javier Jorge",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "speech-recognition-with-python"
         },
         {
           "day": "2019-07-11",
@@ -2926,9 +2792,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Luba Elliott ",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "ai-in-contemporary-art"
         },
         {
           "day": "2019-07-11",
@@ -2944,9 +2809,8 @@
           "ev_duration": "60",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         },
         {
           "day": "2019-07-11",
@@ -2972,7 +2836,8 @@
             "Poster Session 1",
             "Poster Session 2",
             "Help Desk"
-          ]
+          ],
+          "slug": null
         }
       ]
     },
@@ -3003,9 +2868,8 @@
           "ev_duration": "15",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         },
         {
           "day": "2019-07-12",
@@ -3021,9 +2885,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Victor Stinner",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "python-performance:-past,-present-and-future"
         },
         {
           "day": "2019-07-12",
@@ -3046,7 +2909,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-12",
@@ -3062,9 +2926,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Ronan Lamy",
-          "rooms": [
-            "Help Desk"
-          ]
+          "rooms": ["Help Desk"],
+          "slug": "pypy-help-desk"
         },
         {
           "day": "2019-07-12",
@@ -3080,9 +2943,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Pablo Galindo Salgado",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "the-soul-of-the-beast"
         },
         {
           "day": "2019-07-12",
@@ -3098,9 +2960,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Lynn Root",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "advanced-asyncio:-solving-real-world-production-problems"
         },
         {
           "day": "2019-07-12",
@@ -3116,9 +2977,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Peter Bittner",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "modern-continuous-delivery-for-python-developers"
         },
         {
           "day": "2019-07-12",
@@ -3134,9 +2994,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Stefan Baerisch",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "go(lang)-to-python"
         },
         {
           "day": "2019-07-12",
@@ -3152,9 +3011,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Alessandro Molina",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "python-standard-library,-the-hidden-gems"
         },
         {
           "day": "2019-07-12",
@@ -3170,10 +3028,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Mikhail Bushkov",
-          "rooms": [
-            "Singapore",
-            "Singapore"
-          ]
+          "rooms": ["Singapore", "Singapore"],
+          "slug": "evolving-a-helper-script-into-a-180,000-lines-of-python-code-project"
         },
         {
           "day": "2019-07-12",
@@ -3189,9 +3045,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Radoslav Georgiev",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "software-patterns-for-productive-teams"
         },
         {
           "day": "2019-07-12",
@@ -3207,9 +3062,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Tiago Montes",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "don't-do-this-at-work"
         },
         {
           "day": "2019-07-12",
@@ -3225,9 +3079,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Grzegorz Kocjan",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "don't-start-with-a-database"
         },
         {
           "day": "2019-07-12",
@@ -3243,9 +3096,8 @@
           "ev_duration": "45",
           "tt_duration": "45",
           "speaker": "Michal Wysokinski",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "asyncio-in-production---war-stories"
         },
         {
           "day": "2019-07-12",
@@ -3261,9 +3113,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Lennart Regebro",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "moving-big-projects-to-python-3"
         },
         {
           "day": "2019-07-12",
@@ -3279,9 +3130,8 @@
           "ev_duration": "0",
           "tt_duration": "45",
           "speaker": "Alexys Jacob",
-          "rooms": [
-            "Singapore"
-          ]
+          "rooms": ["Singapore"],
+          "slug": "how-we-run-graphql-apis-in-production-on-our-kubernetes-cluster"
         },
         {
           "day": "2019-07-12",
@@ -3297,9 +3147,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Anastasiia Tymoshchuk",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "the-agile-comedy:-from-hell-to-paradise"
         },
         {
           "day": "2019-07-12",
@@ -3315,9 +3164,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Clinton Roy",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "running-a-synchrotron-on-open-source-python"
         },
         {
           "day": "2019-07-12",
@@ -3333,9 +3181,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Ben Nuttall",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "astro-pi:-python-on-the-international-space-station"
         },
         {
           "day": "2019-07-12",
@@ -3351,9 +3198,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Batuhan Osman Ta\u015fkaya",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "hack-the-cpython"
         },
         {
           "day": "2019-07-12",
@@ -3369,9 +3215,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Justin Mayer",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "zen-of-python-dependency-management"
         },
         {
           "day": "2019-07-12",
@@ -3387,9 +3232,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Nicholas Tollervey",
-          "rooms": [
-            "Singapore"
-          ]
+          "rooms": ["Singapore"],
+          "slug": "tools-of-the-trade:-the-making-of-a-code-editor."
         },
         {
           "day": "2019-07-12",
@@ -3405,9 +3249,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Parth Shandilya",
-          "rooms": [
-            "Poster Session 1"
-          ]
+          "rooms": ["Poster Session 1"],
+          "slug": "chirps:-a-twitter-bot-framework-written-in-python"
         },
         {
           "day": "2019-07-12",
@@ -3423,9 +3266,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Christopher Lozinski",
-          "rooms": [
-            "Poster Session 2"
-          ]
+          "rooms": ["Poster Session 2"],
+          "slug": "the-forest-wiki"
         },
         {
           "day": "2019-07-12",
@@ -3448,7 +3290,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-12",
@@ -3464,9 +3307,8 @@
           "ev_duration": "0",
           "tt_duration": "180",
           "speaker": "Daniele Procida",
-          "rooms": [
-            "Help Desk"
-          ]
+          "rooms": ["Help Desk"],
+          "slug": "write-a-better-conference-talk-proposal"
         },
         {
           "day": "2019-07-12",
@@ -3482,9 +3324,8 @@
           "ev_duration": "60",
           "tt_duration": "60",
           "speaker": "Danny Engelbarts",
-          "rooms": [
-            "Singapore"
-          ]
+          "rooms": ["Singapore"],
+          "slug": "and-now-for-something-completely-different."
         },
         {
           "day": "2019-07-12",
@@ -3500,9 +3341,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Adrian M\u00f6nnich",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "useflask()---or-how-to-use-a-react-frontend-for-your-flask-app"
         },
         {
           "day": "2019-07-12",
@@ -3518,9 +3358,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Pierre Glaser",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "parallel-computing-in-python:-current-state-and-recent-advances"
         },
         {
           "day": "2019-07-12",
@@ -3536,9 +3375,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Max Humber",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "how-to-read-(code)"
         },
         {
           "day": "2019-07-12",
@@ -3554,9 +3392,8 @@
           "ev_duration": "0",
           "tt_duration": "60",
           "speaker": "Miguel Grinberg",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "look-ma,-no-http!"
         },
         {
           "day": "2019-07-12",
@@ -3572,9 +3409,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Rados\u0142aw Ganczarek",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "code-quality-in-python"
         },
         {
           "day": "2019-07-12",
@@ -3590,9 +3426,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Ivana Kellyerova",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "import-bacon-\ud83e\udd53"
         },
         {
           "day": "2019-07-12",
@@ -3608,9 +3443,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Jan Wagner",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "docker-meets-python---a-look-on-the-docker-sdk-for-python"
         },
         {
           "day": "2019-07-12",
@@ -3626,9 +3460,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Radomir Dopieralski",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "game-development-with-circuitpython"
         },
         {
           "day": "2019-07-12",
@@ -3644,9 +3477,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Dustin Ingram",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "google-cloud-for-pythonistas"
         },
         {
           "day": "2019-07-12",
@@ -3669,7 +3501,8 @@
             "PyCharm",
             "Shanghai",
             "Boston"
-          ]
+          ],
+          "slug": null
         },
         {
           "day": "2019-07-12",
@@ -3685,9 +3518,8 @@
           "ev_duration": "60",
           "tt_duration": "60",
           "speaker": "Holger Krekel",
-          "rooms": [
-            "Boston"
-          ]
+          "rooms": ["Boston"],
+          "slug": "delta-chat,-cffi,-pytest-and-all-the-rust"
         },
         {
           "day": "2019-07-12",
@@ -3703,9 +3535,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Juan Santos",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "pep-yourself:-10-peps-you-should-pay-attention-to"
         },
         {
           "day": "2019-07-12",
@@ -3721,9 +3552,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "\u0141ukasz K\u0105kol",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "code-review-for-beginners-and-experts:-tips-&-tricks"
         },
         {
           "day": "2019-07-12",
@@ -3739,9 +3569,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Andrey Vlasovskikh",
-          "rooms": [
-            "Singapore"
-          ]
+          "rooms": ["Singapore"],
+          "slug": "the-story-of-features-coming-in-python-3.8-and-beyond"
         },
         {
           "day": "2019-07-12",
@@ -3757,9 +3586,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "James Saryerwinnie",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "downloading-a-billion-files-in-python"
         },
         {
           "day": "2019-07-12",
@@ -3775,9 +3603,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Wojciech Rz\u0105sa",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "from-http-to-kafka-based-microservices"
         },
         {
           "day": "2019-07-12",
@@ -3793,9 +3620,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Dmitry Figol",
-          "rooms": [
-            "PyCharm"
-          ]
+          "rooms": ["PyCharm"],
+          "slug": "optimizing-docker-builds-for-python-applications"
         },
         {
           "day": "2019-07-12",
@@ -3811,9 +3637,8 @@
           "ev_duration": "30",
           "tt_duration": "30",
           "speaker": "Bernat Gabor",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": "status-quo-of-virtual-environments"
         },
         {
           "day": "2019-07-12",
@@ -3829,9 +3654,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Trapsilo Bumi",
-          "rooms": [
-            "Shanghai"
-          ]
+          "rooms": ["Shanghai"],
+          "slug": "enhancing-angklung-music-rehearsals-with-python"
         },
         {
           "day": "2019-07-12",
@@ -3847,9 +3671,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Andrei Neagu",
-          "rooms": [
-            "Osaka / Samarkand"
-          ]
+          "rooms": ["Osaka / Samarkand"],
+          "slug": "better-websockets---server-sent-events,-a-carefree-alternative"
         },
         {
           "day": "2019-07-12",
@@ -3865,9 +3688,8 @@
           "ev_duration": "0",
           "tt_duration": "30",
           "speaker": "Peter Sperl",
-          "rooms": [
-            "Singapore"
-          ]
+          "rooms": ["Singapore"],
+          "slug": "configuring-uwsgi-for-production:-the-defaults-are-all-wrong"
         },
         {
           "day": "2019-07-12",
@@ -3883,9 +3705,8 @@
           "ev_duration": "30",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         },
         {
           "day": "2019-07-12",
@@ -3901,9 +3722,8 @@
           "ev_duration": "45",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         },
         {
           "day": "2019-07-12",
@@ -3919,16 +3739,13 @@
           "ev_duration": "30",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "MongoDB"
-          ]
+          "rooms": ["MongoDB"],
+          "slug": null
         }
       ]
     },
     "2019-07-13": {
-      "rooms": [
-        "sprints"
-      ],
+      "rooms": ["sprints"],
       "talks": [
         {
           "day": "2019-07-13",
@@ -3944,9 +3761,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-13",
@@ -3962,9 +3778,8 @@
           "ev_duration": "30",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-13",
@@ -3980,9 +3795,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-13",
@@ -3998,9 +3812,8 @@
           "ev_duration": "60",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-13",
@@ -4016,9 +3829,8 @@
           "ev_duration": "60",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-13",
@@ -4034,9 +3846,8 @@
           "ev_duration": "30",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-13",
@@ -4052,9 +3863,8 @@
           "ev_duration": "150",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-13",
@@ -4070,16 +3880,13 @@
           "ev_duration": "15",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         }
       ]
     },
     "2019-07-14": {
-      "rooms": [
-        "sprints"
-      ],
+      "rooms": ["sprints"],
       "talks": [
         {
           "day": "2019-07-14",
@@ -4095,9 +3902,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4113,9 +3919,8 @@
           "ev_duration": "30",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4131,9 +3936,8 @@
           "ev_duration": "90",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4149,9 +3953,8 @@
           "ev_duration": "60",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4167,9 +3970,8 @@
           "ev_duration": "240",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4185,9 +3987,8 @@
           "ev_duration": "60",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4203,9 +4004,8 @@
           "ev_duration": "30",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4221,9 +4021,8 @@
           "ev_duration": "150",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         },
         {
           "day": "2019-07-14",
@@ -4239,9 +4038,8 @@
           "ev_duration": "15",
           "tt_duration": "",
           "speaker": "",
-          "rooms": [
-            "sprints"
-          ]
+          "rooms": ["sprints"],
+          "slug": null
         }
       ]
     }

@@ -1,25 +1,23 @@
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import matter from "gray-matter";
-import { promises as fs } from "fs";
-import path from "path";
+import scheduleData from "../../data/schedule.json";
 import { Layout } from "../../components/layout";
-import { wrapInArticles } from "../../plugins/wrap-in-articles";
-import { highlightFirstHeading } from "../../plugins/highlight-first-heading";
 
-import { components } from "../../components/mdx";
-
-export default function Page({ path }: { path: string }) {
+export default function Page({
+  path,
+  talk,
+}: {
+  path: string;
+  talk: {
+    title: string;
+  };
+}) {
+  console.log(talk);
   return (
     <Layout path={path}>
       <main id="main-content">
         <article className="accent-left">
-          <h1 className="highlighted">Schedule</h1>
-          <h2>Boost your Python and Machine Learning algorithms</h2>
+          <h1>{talk.title}</h1>
           <p>
-            <strong>Course content</strong>
+            <strong>Talk content</strong>
           </p>
           <p>
             <span className="tag">Analytics</span>
@@ -120,14 +118,40 @@ export default function Page({ path }: { path: string }) {
   );
 }
 
+const getAllTalks = () => {
+  return (
+    Object.values(scheduleData.days)
+      .flatMap((day) => day.talks)
+      // @ts-ignore
+      .filter((talk) => !!talk.slug)
+  );
+};
+
 export async function getStaticPaths() {
+  const allTalks = getAllTalks();
+
+  return {
+    paths: allTalks.map((talk) => ({
+      params: {
+        // @ts-ignore
+        slug: talk.slug,
+      },
+    })),
+    fallback: false,
+  };
+
   return { paths: [{ params: { slug: "example" } }], fallback: false };
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  const allTalks = getAllTalks();
+  // @ts-ignore
+  const talk = allTalks.find((talk) => talk.slug === params.slug);
+
   return {
     props: {
-      path: "/talks/example",
+      path: `/talks/${params.slug}`,
+      talk,
     },
   };
 }

@@ -49,6 +49,7 @@ const getSchedule = (day: string): Schedule => {
       endTime: numberToTime(endTime),
       audience: event.level,
       rooms: event.rooms,
+      slug: event.slug || "",
       type: event.ev_custom ? "break" : "talk",
       speakers: [
         {
@@ -94,7 +95,11 @@ const Talk = ({
         </p>
       )}
       <p className="talk__title">
-        <a href="/talks/example">{event.title}</a>
+        {event.type === "talk" ? (
+          <a href={`/talks/${event.slug}`}>{event.title}</a>
+        ) : (
+          event.title
+        )}
       </p>
 
       {speakers ? (
