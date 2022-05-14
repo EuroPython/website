@@ -2225,6 +2225,7 @@ hr.accent-right::before {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
+  margin: 2rem 0;
 }
 
 .sponsors__logos img {
