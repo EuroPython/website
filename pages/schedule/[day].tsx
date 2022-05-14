@@ -28,42 +28,54 @@ const timeToNumber = (time: string) => {
   return hourInt * 60 + minuteInt;
 };
 
+type Slots = Record<string, Event[]>;
+
 type Schedule = {
   rooms: string[];
   events: Event[];
+  timeslots: Slots;
 };
 
 const getSchedule = (day: string): Schedule => {
-  const talks = scheduleData.talks.filter((t) => t.day === day);
+  let currentDayTalks = scheduleData.talks.filter((t) => t.day === day);
+
+  const events: Event[] = currentDayTalks.map((event, index) => {
+    const time = timeToNumber(event.time);
+    const evDuration = parseInt(event.ev_duration || "0", 10);
+    const ttDuration = parseInt(event.tt_duration || "0", 10);
+
+    const endTime = time + (evDuration || ttDuration);
+
+    return {
+      id: index.toString(),
+      title: event.title || event.ev_custom,
+      day: event.day,
+      time: event.time,
+      endTime: numberToTime(endTime),
+      audience: event.level,
+      rooms: event.rooms,
+      type: event.ev_custom ? "break" : "talk",
+      speakers: [
+        {
+          name: event.speaker,
+          tagline: event.speaker,
+          image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
+        },
+      ],
+    };
+  });
+
+  const timeslots = events.reduce<Slots>((acc, talk) => {
+    const key = talk.time;
+    acc[key] = acc[key] || [];
+    acc[key].push(talk);
+    return acc;
+  }, {});
 
   return {
     rooms,
-
-    events: talks.map((talk, index) => {
-      const time = timeToNumber(talk.time);
-      const evDuration = parseInt(talk.ev_duration || "0", 10);
-      const ttDuration = parseInt(talk.tt_duration || "0", 10);
-
-      const endTime = time + (evDuration || ttDuration);
-
-      return {
-        id: index.toString(),
-        title: talk.title || talk.ev_custom,
-        day: talk.day,
-        time: talk.time,
-        endTime: numberToTime(endTime),
-        audience: talk.level,
-        rooms: talk.rooms,
-        type: talk.ev_custom ? "break" : "talk",
-        speakers: [
-          {
-            name: talk.speaker,
-            tagline: talk.speaker,
-            image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
-          },
-        ],
-      };
-    }),
+    events,
+    timeslots,
   };
 };
 
@@ -133,21 +145,19 @@ type Position = {
   };
 };
 
-type Timeslots = number[];
-
-const getPositionForEvent = (
-  event: Event,
-  timeSlots: Timeslots,
-  schedule: Schedule
-): Position => {
+const getPositionForEvent = (event: Event, schedule: Schedule): Position => {
   const startTime = timeToNumber(event.time);
   const endTime = timeToNumber(event.endTime);
 
+  const timeSlotsNumbers = Object.keys(schedule.timeslots).map((time) =>
+    timeToNumber(time)
+  );
+
   // startTime will always be present in timeSlots, since they are created based on
   // startTimes
-  const startTimeIndex = timeSlots.indexOf(startTime);
+  const startTimeIndex = timeSlotsNumbers.indexOf(startTime);
   // endTime might not be there because talks will potentially end before the next startTime
-  const timeSlotAfterEnd = timeSlots.find((t) => t >= endTime);
+  const timeSlotAfterEnd = timeSlotsNumbers.find((t) => t >= endTime);
 
   // assuming rooms have the same order as the rooms array
   const track = event.rooms[0];
@@ -164,7 +174,7 @@ const getPositionForEvent = (
       start: startTimeIndex + rowsOffset,
       end:
         (timeSlotAfterEnd
-          ? timeSlots.indexOf(timeSlotAfterEnd)
+          ? timeSlotsNumbers.indexOf(timeSlotAfterEnd)
           : startTimeIndex + 1) + rowsOffset,
     },
     cols: {
@@ -177,17 +187,16 @@ const getPositionForEvent = (
 const TimeSlot = ({
   time,
   events,
-  timeslots,
+
   schedule,
   totalRooms,
 }: {
   time: string;
   events: Event[];
-  timeslots: Timeslots;
   schedule: Schedule;
   totalRooms: number;
 }) => {
-  const position = getPositionForEvent(events[0], timeslots, schedule);
+  const position = getPositionForEvent(events[0], schedule);
 
   // "break" events don't need to show the time as they
   // are basically a separator for the time slots
@@ -215,7 +224,7 @@ const TimeSlot = ({
         {numberToTime(timeToNumber(time))}
       </div>
       {events.map((event) => {
-        const position = getPositionForEvent(event, timeslots, schedule);
+        const position = getPositionForEvent(event, schedule);
 
         if (
           !["talk", "keynote", "workshop", "lighting-talks"].includes(
@@ -243,26 +252,24 @@ const TimeSlot = ({
   );
 };
 
-export default function SchedulePage({ day }: { day: string }) {
-  const schedule = getSchedule(day);
+export default function SchedulePage({
+  day,
+  schedule,
+}: {
+  day: string;
+  schedule: Schedule;
+}) {
+  const handleDaySelected = useCallback((event) => {
+    window.location.href = `/schedule/${event.target.value}`;
+  }, []);
 
-  const talks = schedule.events;
-
-  type Slots = Record<string, Event[]>;
-  const groups = talks.reduce<Slots>((acc, talk) => {
-    const key = talk.time;
-    acc[key] = acc[key] || [];
-    acc[key].push(talk);
-    return acc;
-  }, {});
-
-  const totalSlots = Object.keys(groups).length;
-  const totalRooms = schedule.rooms.length;
+  const totalSlots = Object.keys(schedule.timeslots).length;
+  const totalRooms = rooms.length;
 
   const gridTemplateRows =
     "3.5rem " +
-    Object.entries(groups)
-      .map(([time, events]) => {
+    Object.entries(schedule.timeslots)
+      .map(([_, events]) => {
         if (events.length === 1 && events[0].type === "break") {
           return "3.5rem";
         }
@@ -270,12 +277,6 @@ export default function SchedulePage({ day }: { day: string }) {
         return "2fr";
       })
       .join(" ");
-
-  const timeslots = Object.keys(groups).map(timeToNumber);
-
-  const handleDaySelected = useCallback((event) => {
-    window.location.href = `/schedule/${event.target.value}`;
-  }, []);
 
   return (
     <Layout>
@@ -337,10 +338,9 @@ export default function SchedulePage({ day }: { day: string }) {
               ))}
             </div>
 
-            {Object.entries(groups).map(([time, events]) => (
+            {Object.entries(schedule.timeslots).map(([time, events]) => (
               <TimeSlot
                 time={time}
-                timeslots={timeslots}
                 events={events}
                 schedule={schedule}
                 key={time}
@@ -362,6 +362,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { day: string } }) {
-  // TODO: we should get the schedule here
-  return { props: { day: params.day } };
+  const schedule = getSchedule(params.day);
+
+  return { props: { day: params.day, schedule } };
 }
