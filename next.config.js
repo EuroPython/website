@@ -1,5 +1,18 @@
 /** @type {import('next').NextConfig} */
 
+const scheduleData = require("./data/schedule.json");
+
+const getScheduleDays = async () => {
+  const potentialUnsortedDays = Array.from(new Set(scheduleData.days));
+
+  return potentialUnsortedDays.sort((a, b) => {
+    const aDate = new Date(a);
+    const bDate = new Date(b);
+
+    return aDate.getTime() - bDate.getTime();
+  });
+};
+
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -30,14 +43,27 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
-    return [
+    const days = await getScheduleDays();
+
+    const redirects = [
       {
         source: "/cfp",
         destination: "https://program.europython.eu/europython-2022/cfp",
         permanent: true,
       },
     ];
+
+    if (days.length > 0) {
+      redirects.push({
+        source: "/schedule",
+        destination: `/schedule/${days[0]}`,
+        permanent: false,
+      });
+    }
+
+    return redirects;
   },
+
   async headers() {
     return [
       {

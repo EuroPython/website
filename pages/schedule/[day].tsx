@@ -1,49 +1,15 @@
+import parse from "date-fns/parse";
+import format from "date-fns/format";
+
 import { Layout } from "../../components/layout";
+import scheduleData from "../../data/schedule.json";
+import type { Event, TalkType } from "../../types/schedule";
+import { useCallback } from "react";
 
-import talksData from "../../data/schedule.json";
-
-const talks = talksData.filter((t) => t.day === "2019-07-10");
-
-// these should be sorted
-const rooms = Array.from(new Set(talks.flatMap((talk) => talk.rooms)));
-
-type TalkType = "talk" | "workshop" | "keynote";
-
-type EventType =
-  | TalkType
-  | "break"
-  | "lighting-talks"
-  | "poster"
-  | "panel"
-  | "open-space";
-
-type Speaker = {
-  name: string;
-  tagline?: string;
-  image?: string;
-};
-
-type Event = (
-  | {
-      type: "break";
-    }
-  | {
-      type: "lighting-talks";
-    }
-  | {
-      type: TalkType;
-      speakers?: Speaker[];
-      audience: string;
-    }
-) & {
-  id: string;
-  day: string;
-  time: string;
-  endTime: string;
-  title: string;
-  rooms: string[];
-  type?: EventType;
-};
+const rooms = scheduleData.rooms;
+const days = scheduleData.days.map((date) =>
+  parse(date, "yyyy-MM-dd", new Date())
+);
 
 const numberToTime = (number: number) => {
   const hours = Math.floor(number / 60);
@@ -67,34 +33,38 @@ type Schedule = {
   events: Event[];
 };
 
-const schedule: Schedule = {
-  rooms,
+const getSchedule = (day: string): Schedule => {
+  const talks = scheduleData.talks.filter((t) => t.day === day);
 
-  events: talks.map((talk, index) => {
-    const time = timeToNumber(talk.time);
-    const evDuration = parseInt(talk.ev_duration || "0", 10);
-    const ttDuration = parseInt(talk.tt_duration || "0", 10);
+  return {
+    rooms,
 
-    const endTime = time + (evDuration || ttDuration);
+    events: talks.map((talk, index) => {
+      const time = timeToNumber(talk.time);
+      const evDuration = parseInt(talk.ev_duration || "0", 10);
+      const ttDuration = parseInt(talk.tt_duration || "0", 10);
 
-    return {
-      id: index.toString(),
-      title: talk.title || talk.ev_custom,
-      day: talk.day,
-      time: talk.time,
-      endTime: numberToTime(endTime),
-      audience: talk.level,
-      rooms: talk.rooms,
-      type: talk.ev_custom ? "break" : "talk",
-      speakers: [
-        {
-          name: talk.speaker,
-          tagline: talk.speaker,
-          image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
-        },
-      ],
-    };
-  }),
+      const endTime = time + (evDuration || ttDuration);
+
+      return {
+        id: index.toString(),
+        title: talk.title || talk.ev_custom,
+        day: talk.day,
+        time: talk.time,
+        endTime: numberToTime(endTime),
+        audience: talk.level,
+        rooms: talk.rooms,
+        type: talk.ev_custom ? "break" : "talk",
+        speakers: [
+          {
+            name: talk.speaker,
+            tagline: talk.speaker,
+            image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
+          },
+        ],
+      };
+    }),
+  };
 };
 
 const Talk = ({
@@ -165,7 +135,11 @@ type Position = {
 
 type Timeslots = number[];
 
-const getPositionForEvent = (event: Event, timeSlots: Timeslots): Position => {
+const getPositionForEvent = (
+  event: Event,
+  timeSlots: Timeslots,
+  schedule: Schedule
+): Position => {
   const startTime = timeToNumber(event.time);
   const endTime = timeToNumber(event.endTime);
 
@@ -204,14 +178,16 @@ const TimeSlot = ({
   time,
   events,
   timeslots,
+  schedule,
   totalRooms,
 }: {
   time: string;
   events: Event[];
   timeslots: Timeslots;
+  schedule: Schedule;
   totalRooms: number;
 }) => {
-  const position = getPositionForEvent(events[0], timeslots);
+  const position = getPositionForEvent(events[0], timeslots, schedule);
 
   // "break" events don't need to show the time as they
   // are basically a separator for the time slots
@@ -239,7 +215,7 @@ const TimeSlot = ({
         {numberToTime(timeToNumber(time))}
       </div>
       {events.map((event) => {
-        const position = getPositionForEvent(event, timeslots);
+        const position = getPositionForEvent(event, timeslots, schedule);
 
         if (
           !["talk", "keynote", "workshop", "lighting-talks"].includes(
@@ -267,8 +243,9 @@ const TimeSlot = ({
   );
 };
 
-export default function IndexPage({}: {}) {
-  // TODO: filter by day, and order by time
+export default function SchedulePage({ day }: { day: string }) {
+  const schedule = getSchedule(day);
+
   const talks = schedule.events;
 
   type Slots = Record<string, Event[]>;
@@ -296,17 +273,35 @@ export default function IndexPage({}: {}) {
 
   const timeslots = Object.keys(groups).map(timeToNumber);
 
+  const handleDaySelected = useCallback((event) => {
+    window.location.href = `/schedule/${event.target.value}`;
+  }, []);
+
   return (
     <Layout>
       <main id="main-content">
         <article className="accent-left">
           <h1 className="highlighted">Schedule</h1>
 
-          <select id="schedule-select" className="select--schedule">
-            <option value="schedule-1" selected>
-              Monday, 11th July, 2022
-            </option>
-            <option value="schedule-2">Tuesday, 12th July, 2022</option>
+          <select
+            id="schedule-select"
+            className="select--schedule"
+            onChange={handleDaySelected}
+          >
+            {days.map((d) => {
+              const isoDate = format(d, "yyyy-MM-dd");
+              const dateText = format(d, "eeee, do MMMM, yyyy");
+
+              return (
+                <option
+                  key={isoDate}
+                  value={isoDate}
+                  selected={isoDate === day}
+                >
+                  {dateText}
+                </option>
+              );
+            })}
           </select>
         </article>
 
@@ -347,6 +342,7 @@ export default function IndexPage({}: {}) {
                 time={time}
                 timeslots={timeslots}
                 events={events}
+                schedule={schedule}
                 key={time}
                 totalRooms={totalRooms}
               />
@@ -356,4 +352,16 @@ export default function IndexPage({}: {}) {
       </main>
     </Layout>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = scheduleData.days.map((day) => ({
+    params: { day: day },
+  }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }: { params: { day: string } }) {
+  // TODO: we should get the schedule here
+  return { props: { day: params.day } };
 }
