@@ -2,7 +2,7 @@
 title:
   Python's role in unlocking the secrets of the Universe with the James Webb
   Space Telescope
-speaker: Patrick Kavanagh
+speaker: Dr. Patrick Kavanagh
 bio: Dr. Patrick Kavanagh is an astrophysicist and software developer based at
   the Dublin Institute for Advanced Studies (DIAS). He is an expert in
   high-energy studies of supernova remnants, superbubbles and the hot
