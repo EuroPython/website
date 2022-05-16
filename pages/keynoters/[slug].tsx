@@ -19,7 +19,7 @@ export default function Page({
   source,
   path,
   bioSource,
-  data: { title, speaker },
+  data: { title, speaker, affiliation },
 }: {
   source: any;
   bioSource: any;
@@ -27,6 +27,7 @@ export default function Page({
   data: {
     title: string;
     speaker: string;
+    affiliation?: string;
   };
 }) {
   const keynoter = findKeynoter(speaker)!;
@@ -47,6 +48,7 @@ export default function Page({
             </div>
 
             <div>
+              {affiliation ? <div>Affiliation: {affiliation}</div> : null}
               <MDXRemote {...bioSource} components={components} />
             </div>
           </div>
