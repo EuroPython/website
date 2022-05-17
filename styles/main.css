@@ -2068,7 +2068,7 @@ hr.accent-right::before {
 }
 
 .speakers-list-standalone {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .speakers-list__cta {
@@ -2093,7 +2093,7 @@ hr.accent-right::before {
   }
 
   .speakers-list.speakers-list-standalone li {
-    margin-left: 0;
+    margin-left: 2rem;
   }
 }
 
