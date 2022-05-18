@@ -65,9 +65,6 @@ export default function Page({
 
           {session.speakers.map((speaker) => (
             <div>
-              {speaker.avatar ? (
-                <img className="session__speaker-image" src={speaker.avatar} />
-              ) : null}
               <p className="large">{speaker.name}</p>
               <MDXRemote {...speaker.biographySource} />
             </div>
