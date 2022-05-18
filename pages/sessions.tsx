@@ -42,7 +42,7 @@ export default function SessionsPage({
   };
 
   return (
-    <Layout>
+    <Layout title="Accepted sessions">
       <main id="main-content">
         <h1>
           Accepted sessions
