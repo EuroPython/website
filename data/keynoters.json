@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Dr. Patrick Kavanagh",
+    "tagline": "Webb Developer",
+    "picture": "/keynoters/patrick-kavanagh.jpeg",
+    "link": "/keynoters/patrick-kavanagh"
+  },
+  {
+    "placeholder": true,
+    "picture": "https://avatars.dicebear.com/api/bottts/nicebotx.svg",
+    "link": "#"
+  },
+  {
+    "placeholder": true,
+    "picture": "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
+    "link": "#"
+  },
+  {
+    "placeholder": true,
+    "picture": "https://avatars.dicebear.com/api/adventurer/prachetx.svg",
+    "link": "#"
+  },
+  {
+    "placeholder": true,
+    "picture": "https://avatars.dicebear.com/api/adventurer/Pop.svg",
+    "link": "#"
+  }
+]
