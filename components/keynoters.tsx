@@ -55,9 +55,9 @@ export const Keynoters = () => {
       </ul>
 
       <div className="speakers-list__cta">
-        <h3 className="h4 highlighted">See all speakers</h3>
-        <a className="button" href="#">
-          Coming soon
+        <h3 className="h4 highlighted">See all sessions</h3>
+        <a className="button" href="/sessions">
+          Sessions
         </a>
       </div>
     </article>
