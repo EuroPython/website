@@ -44,7 +44,12 @@ export default function SessionsPage({
   return (
     <Layout>
       <main id="main-content">
-        <h1>Sessions list</h1>
+        <h1>
+          Accepted sessions
+          <p style={{ fontWeight: "normal" }}>
+            Note: this list might change soon
+          </p>
+        </h1>
 
         <form>
           <h2>Filters</h2>
@@ -129,9 +134,9 @@ export async function getStaticProps() {
   const tracks = Array.from(new Set(sessions.map((session) => session.track)));
   const submissionTypes = Array.from(
     new Set(sessions.map((session) => session.submission_type))
-  )
+  );
   tracks.sort();
-  submissionTypes.sort()
+  submissionTypes.sort();
 
   return {
     props: {
