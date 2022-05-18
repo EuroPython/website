@@ -42,7 +42,7 @@ export default function SessionsPage({
   };
 
   return (
-    <Layout title="Accepted sessions">
+    <Layout title="Accepted sessions - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
       <main id="main-content">
         <h1>
           Accepted sessions
