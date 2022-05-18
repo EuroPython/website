@@ -1,35 +1,43 @@
-import scheduleData from "../data/schedule.json";
 import { Layout } from "../components/layout";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
 
-export default function SessionsPage({
-  sessions,
-}: {
-  sessions: { title: string; speaker: string; slug: string }[];
-}) {
+type Speaker = {
+  code: string;
+  name: string;
+  avatar: string;
+};
+
+type Session = {
+  title: string;
+  slug: string;
+  abstract: string;
+  submission_type: string;
+  track: string;
+  speakers: Speaker[];
+  abstractSource: any;
+  code: string;
+};
+
+export default function SessionsPage({ sessions }: { sessions: Session[] }) {
   return (
     <Layout>
       <main id="main-content">
         <h1>Sessions list</h1>
-        {sessions.map(({ title, speaker, slug }) => (
-          <div key={slug}>
-            <h2>
-              <a href={`/talks/${slug}`}>{title}</a>
+        {sessions.map((session) => (
+          <div key={session.code} className="session-card">
+            <h2 className="highlighted">
+              <a href={`/talks/${session.slug}`}>{session.title}</a>
             </h2>
-            <p>{speaker}</p>
-
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Repellendus quo nemo, vero exercitationem numquam quod ab labore
-              quasi possimus neque porro vitae. Saepe cumque, maxime
-              necessitatibus quas aut blanditiis quidem?
+            <p className="session-card__author">
+              {session.speakers.map((speaker) => speaker.name).join(", ")}
             </p>
 
+            <MDXRemote {...session.abstractSource} />
+
             <p>
-              <span className="tag">Analytics</span>
-              <span className="tag">Data Science</span>
-              <span className="tag">Machine Learning</span>
-              <span className="tag">Performance</span>
-              <span className="tag">Scientific Libraries</span>
+              <span className="tag">{session.submission_type}</span>
+              <span className="tag">{session.track}</span>
             </p>
           </div>
         ))}
@@ -38,18 +46,23 @@ export default function SessionsPage({
   );
 }
 
-const getAllTalks = () => {
-  return Object.values(scheduleData.days)
-    .flatMap((day) => day.talks)
-    .filter((talk) => !!talk.slug);
-};
-
 export async function getStaticProps() {
-  const allTalks = getAllTalks();
+  const sessions = await Promise.all(
+    require(`../data/sessions/list.json`)
+      .filter((session: { state: string }) => session.state === "confirmed")
+      .map(async (session: { abstract: string }) => {
+        const mdxSource = await serialize(session.abstract, {});
+
+        return {
+          ...session,
+          abstractSource: mdxSource,
+        };
+      })
+  );
 
   return {
     props: {
-      sessions: allTalks,
+      sessions: sessions,
     },
   };
 }

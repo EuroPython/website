@@ -2979,3 +2979,7 @@ button[name="vote"]:hover {
 .session__speaker-image + p {
   margin-top: 2rem;
 }
+
+.session-card__author {
+  font-weight: bold;
+}
