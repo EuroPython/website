@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
@@ -19,28 +20,93 @@ type Session = {
   code: string;
 };
 
-export default function SessionsPage({ sessions }: { sessions: Session[] }) {
+export default function SessionsPage({
+  sessions,
+  tracks,
+  submissionTypes,
+}: {
+  sessions: Session[];
+  tracks: string[];
+  submissionTypes: string[];
+}) {
+  const [filters, setFilters] = useState({
+    track: "",
+    submission_type: "",
+  });
+
+  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFilters((preFilters) => ({
+      ...preFilters,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <Layout>
       <main id="main-content">
         <h1>Sessions list</h1>
-        {sessions.map((session) => (
-          <div key={session.code} className="session-card">
-            <h2 className="highlighted">
-              <a href={`/talks/${session.slug}`}>{session.title}</a>
-            </h2>
-            <p className="session-card__author">
-              {session.speakers.map((speaker) => speaker.name).join(", ")}
-            </p>
 
-            <MDXRemote {...session.abstractSource} />
-
-            <p>
-              <span className="tag">{session.submission_type}</span>
-              <span className="tag">{session.track}</span>
-            </p>
+        <form>
+          <h2>Filters</h2>
+          <div>
+            <label htmlFor="track">Track</label>
+            <select name="track" id="track" onChange={handleFilterChange}>
+              <option value="">All</option>
+              {tracks.map((track) => (
+                <option key={track} value={track}>
+                  {track}
+                </option>
+              ))}
+            </select>
           </div>
-        ))}
+
+          <div>
+            <label htmlFor="submission_type">Submission type</label>
+            <select
+              name="submission_type"
+              id="submission_type"
+              onChange={handleFilterChange}
+            >
+              <option value="">All</option>
+              {submissionTypes.map((submissionType) => (
+                <option key={submissionType} value={submissionType}>
+                  {submissionType}
+                </option>
+              ))}
+            </select>
+          </div>
+        </form>
+
+        {sessions
+          .filter((session) => {
+            if (filters.track && filters.track !== session.track) {
+              return false;
+            }
+            if (
+              filters.submission_type &&
+              filters.submission_type !== session.submission_type
+            ) {
+              return false;
+            }
+            return true;
+          })
+          .map((session) => (
+            <div key={session.code} className="session-card">
+              <h2 className="highlighted">
+                <a href={`/talks/${session.slug}`}>{session.title}</a>
+              </h2>
+              <p className="session-card__author">
+                {session.speakers.map((speaker) => speaker.name).join(", ")}
+              </p>
+
+              <MDXRemote {...session.abstractSource} />
+
+              <p>
+                <span className="tag">{session.submission_type}</span>
+                <span className="tag">{session.track}</span>
+              </p>
+            </div>
+          ))}
       </main>
     </Layout>
   );
@@ -60,9 +126,16 @@ export async function getStaticProps() {
       })
   );
 
+  const tracks = Array.from(new Set(sessions.map((session) => session.track)));
+  const submissionTypes = Array.from(
+    new Set(sessions.map((session) => session.submission_type))
+  );
+
   return {
     props: {
       sessions: sessions,
+      tracks,
+      submissionTypes,
     },
   };
 }
