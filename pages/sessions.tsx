@@ -93,7 +93,7 @@ export default function SessionsPage({
           .map((session) => (
             <div key={session.code} className="session-card">
               <h2 className="highlighted">
-                <a href={`/talks/${session.slug}`}>{session.title}</a>
+                <a href={`/session/${session.slug}`}>{session.title}</a>
               </h2>
               <p className="session-card__author">
                 {session.speakers.map((speaker) => speaker.name).join(", ")}

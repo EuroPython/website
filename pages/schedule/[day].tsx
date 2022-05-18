@@ -96,7 +96,7 @@ const Talk = ({
       )}
       <p className="talk__title">
         {event.type === "talk" ? (
-          <a href={`/talks/${event.slug}`}>{event.title}</a>
+          <a href={`/session/${event.slug}`}>{event.title}</a>
         ) : (
           event.title
         )}
