@@ -114,22 +114,24 @@ export default function SessionsPage({
 
 export async function getStaticProps() {
   const sessions = await Promise.all(
-    require(`../data/sessions/list.json`)
-      .filter((session: { state: string }) => session.state === "confirmed")
-      .map(async (session: { abstract: string }) => {
+    require(`../data/sessions/list.json`).map(
+      async (session: { abstract: string }) => {
         const mdxSource = await serialize(session.abstract, {});
 
         return {
           ...session,
           abstractSource: mdxSource,
         };
-      })
+      }
+    )
   );
 
   const tracks = Array.from(new Set(sessions.map((session) => session.track)));
   const submissionTypes = Array.from(
     new Set(sessions.map((session) => session.submission_type))
-  );
+  )
+  tracks.sort();
+  submissionTypes.sort()
 
   return {
     props: {
