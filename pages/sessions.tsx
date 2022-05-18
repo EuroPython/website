@@ -47,7 +47,7 @@ export default function SessionsPage({
         <h1>
           Accepted sessions
           <p style={{ fontWeight: "normal" }}>
-            Note: this list might change soon
+            Note: this list might change
           </p>
         </h1>
 
