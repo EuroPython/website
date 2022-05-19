@@ -1,6 +1,15 @@
 {
   "header": [{
-      "name": "Programme (TBA)"
+      "name": "Programme",
+      "items": [{
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "Keynoters",
+          "path": "/keynoters"
+        }
+      ]
     },
     {
       "name": "Info & Support",
