@@ -1,6 +1,6 @@
 type Item = {
   name: string;
-  path: string;
+  path?: string;
   className?: string;
   items?: Item[];
 };
@@ -20,7 +20,7 @@ export const NavItems = ({ items }: Props) => {
             <ul className="dropdown-menu">
               {item.items.map((subItem) => (
                 <li key={subItem.name}>
-                  <a href={subItem.path}>{subItem.name}</a>
+                  <a href={subItem.path || '#'}>{subItem.name}</a>
                 </li>
               ))}
             </ul>
