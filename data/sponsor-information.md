@@ -13,9 +13,9 @@ subtitle:
  <li><a href="#"> Sponsor Logo submission: June 17 </a></li>
  <li><a href="#"> Technical Case Study Blog Post submission: June 17 (Keystone, Diamond, Platinum) </a></li>
  <li><a href="#"> Video Ads submission (with and without audio): June 17 </a></li>
- <li><a href="#Booths"> Booth Customisations: June 24 </a></li>
+ <li><a href="#"> Booth Customisations: June 24 </a></li>
  <li><a href="#"> Sending in booth images: June 24 </a></li>
- <li><a href="#Tickets"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
+ <li><a href="#"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
  <li><a href="#"> Sponsor Feedback Questions submission:  June 27 </a></li>
  <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: June 27 </a></li>
  <li><a href="#"> Recruiting Session Presentation - presenter name & email: July 08 </a></li>
@@ -97,8 +97,6 @@ For all upgrades and add-on orders, please fill in the EuroPython 2022- Booth Or
 
 Deadline for ordering booth customisation and addons: Friday 24 June. A 30% surcharge will apply afterwards.
 Submission Channel: Contact Tony from OBExpo contact: tony@obexpo.ie
-
-
 </details>
 
 ---
