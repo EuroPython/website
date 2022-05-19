@@ -1,632 +1,610 @@
 [
-  {
-    "code": "87XUMG",
-    "title": "Why is it slow? Strategies for solving performance problems",
-    "speakers": [
-      {
-        "code": "9JJFPM",
-        "name": "Caleb Hattingh",
-        "biography": "TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD",
-        "avatar": "https://program.europython.eu/media/avatars/sqfortekmojitwitch_VVdyZFb.jpg",
-        "slug": "caleb-hattingh"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "why-is-it-slow-strategies-for-solving-performance-problems",
-    "track": "Software Engineering & Architecture",
-    "state": "accepted",
-    "abstract": "You have a performance problem, and you don't know what to do. All you know is that one of your endpoints is very slow; and perhaps it only affects a certain user. How do you figure out why it's slow, and what can you do to catch performance problems before they hurt users in production? This talk will step through several scenarios involving typical performance problems and how to diagnose them.",
-    "description": "You have a performance problem, and you don't know what to do. All you know is that one of your endpoints or applications is too slow; and perhaps it only affects a certain user or customer. How do you figure out why it's slow, and what can you do to catch performance problems before they hurt users in production?\r\n\r\nWe'll go through a wide range of strategies for detecting and diagnosing performance problems in typical production workloads. We'll cover both web-based domains as well as backend domains and other analytical applications involving number-crunching and big-data applications.\r\n\r\nWe'll step through the following high-level strategies:\r\n\r\n- Tracing: through instrumentation of your code, you will get detailed traces of where the time is spent in generating your web server responses.\r\n- Profiling: we'll look at profiling strategies using both the Python built-in cProfile tool, as well as awesome 3rd party libraries like pyspy, including how to use these with pytest\r\n- Isolation: how to figure out if performance is affected by CPU, or memory, disk, or network IO limitations.\r\n- Reasoning: we'll look at common scenarios that result in performance regressions such as the needless execution of sub-queries in rendering web views, or algorithmic analysis and \"big-O\" notation, or concurrency problems resulting from exhaustion of threads in a pool and asyncio concurrency limitations resulting from overloaded subscription.\r\n- Prophylaxis: we'll look at how to include benchmarks within your CI pipeline, including with pytest and other technologies to catch performance regressions ahead of time.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "98XE8Q",
-    "title": "When to refactor your code into generators and how",
-    "speakers": [
-      {
-        "code": "MDZNRX",
-        "name": "Jan-Hein B\u00fchrman",
-        "biography": "Jan-Hein is a software engineer who witnessed Python\u2019s first baby steps up very close, and loves programming in Python since then. While he worked in different software development roles, he always kept an eye on its development. After he has founded a dedicated Python software unit within Ordina, the company he works for, he\u2019s now back at the work that leaves him with a positive energy balance at the end of the day: programming in Python!",
-        "avatar": "https://program.europython.eu/media/avatars/Jan-Hein_helderder_aClbtTP.jpg",
-        "slug": "jan-hein-buhrman"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "when-to-refactor-your-code-into-generators-and-how",
-    "track": "Software Engineering & Architecture",
-    "state": "accepted",
-    "abstract": "Have you ever found yourself coding variations of a loop construct where fragments of the loop code were exactly the same between the variations? Or, in an attempt to factor out these common parts, you ended up with a loop construct containing a lot of conditional code for varying start, stop, or selection criteria?\r\n\r\nYou might have felt that the end result just didn't look right. Because of the duplicated parts in your code, you noticed that the code didn't conform to the DRY (_Don't Repeat Yourself_) principle. Or, after an attempt to combine the variations into a single loop, with consequently a lot of conditional code, your inner voice told you that the resulting code had become too complex and difficult to maintain.\r\n\r\nThis talk will show you a way out of this situation. It demonstrates how you can create a **generator function** that implements only the common parts of your loop construct. Subsequently you will learn how you can combine this generator function with distinct hand-crafted functions or building blocks from the standard library `itertools` module or the `more-itertools` package.\r\n\r\nAs an example, imagine you'd need to implement some varying functionality based on the Fibonacci sequence. This talk shows you how it would look like before and after you've refactored it into a **pipeline of generators**.\r\n\r\nAfter having seen this pattern, you will recognize more quickly when this kind of refactoring helps you to create more maintainable and more Pythonic code.",
-    "description": "",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "HAKFFR",
-    "title": "How we are making Python 3.11 faster",
-    "speakers": [
-      {
-        "code": "LUY39H",
-        "name": "Mark Shannon",
-        "biography": "I've been using Python since 2005.\r\nI have an extensive background in compilers, virtual machines and static analysis for dynamic languages, specifically Python.\r\nAfter a long interlude working on static analysis tools, I have returned to performance work over the last couple of years.\r\n\r\nI am currently working as technical lead with the \"Faster CPython\" team funded by Microsoft.",
-        "avatar": "https://program.europython.eu/media/avatars/IMG_20191130_122850_3mkOJrs.jpg",
-        "slug": "mark-shannon"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "how-we-are-making-python-3-11-faster",
-    "track": "(c)Python Internals",
-    "state": "accepted",
-    "abstract": "Python 3.11 is between 10% and 60% faster than Python 3.10, depending on the application. \r\nWe have achieved this in a fully portable way by making the interpreter adapt to the \r\nprogram being run, and by streamlining key data structures.\r\n\r\nIn this talk I will explain what changes we have made, and how they improve performance.",
-    "description": "The \"Faster CPython\" project aims to speed up Python, specifically CPython, by a large factor over the next few releases.\r\nThe first release to see the benefits of this work is Python 3.11.\r\n\r\nPython 3.11 includes the following major changes:\r\n\r\n* Adaptive specializing interpreter (PEP 659)\r\n* Consecutively allocated execution frames\r\n* Zero cost try-except\r\n* More regular object layout\r\n* Lazily created object dictionaries.\r\n\r\nI will describe each of these, describing how each helps speed up Python, and how they interact with each other.\r\n\r\nI will end the talk with some possible directions for Python 3.12.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "9EH9PG",
-    "title": "Packaging security with Nix",
-    "speakers": [
-      {
-        "code": "ADBNZ8",
-        "name": "Ryan Lahfa",
-        "biography": "FOSS developer, Nix expert, software engineering expert with a love for formal methods and mathematics.",
-        "avatar": null,
-        "slug": "ryan-lahfa"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "packaging-security-with-nix",
-    "track": "Security",
-    "state": "accepted",
-    "abstract": "Managing securely dependencies is becoming an increasing concern of the industry. Here, we showcase how Nix, a functional-oriented package manager, can get us very far and close class of vulnerabilities that PyPI / pip had in the past, e.g. rogue PyPI packages that steals personal data.",
-    "description": "",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "GKNSCM",
-    "title": "20 years of Cython",
-    "speakers": [
-      {
-        "code": "HGF873",
-        "name": "Stefan Behnel",
-        "biography": "Stefan has been using Python since the beginning of the century. He is loosely involved in several important projects in the Python data area, and maintains the [Cython compiler](https://cython.org/) and the [lxml XML toolkit](https://lxml.de). He is also a CPython core developer, gives talks and corporate trainings on Programming in Python and Cython, and committed to local climate activism.",
-        "avatar": "https://program.europython.eu/media/avatars/Vortragsmitschnitt_Kopf_YwWIlNI.jpg",
-        "slug": "stefan-behnel"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "20-years-of-cython",
-    "track": "Community & Diversity",
-    "state": "accepted",
-    "abstract": "On 2022-04-04, the [Cython compiler](https://cython.org/) turned 20. Let's hear the story of how it all started in the early days of this century, how it became a foundation of the Python data ecosystem, and where we are going in the future.",
-    "description": "On April 4th, 2002, Greg Ewing posted the first announcement of a compiler for Python extension modules, that he named [Pyrex](https://www.csse.canterbury.ac.nz/greg.ewing/python/Pyrex/).\r\n20 years later, its successor [Cython](https://cython.org/) has hundreds of thousands of users worldwide, that write software for tens of millions of people to use.\r\n\r\nSoftware built with Cython has helped people in\r\n[taking pictures of black holes](https://numpy.org/case-studies/blackhole-image/),\r\n[sending robots to Mars](https://learnpython.com/blog/python-on-mars/),\r\n[scaling up Django websites to a thousand million users](https://www.youtube.com/watch?v=_1MSX7V28Po),\r\n[building climate models](https://climt.readthedocs.io/en/latest/),\r\nanalysing, processing and [machine learning](https://scikit-learn.org/) of\r\n[human text](https://spacy.io/),\r\n[real world images](https://scikit-image.org/),\r\nand [other data from countless areas](https://pandas.pydata.org/),\r\nbe it scientific, financial, economic, ecologic or probably any other type of data from small to large scale.\r\n\r\nThis is the story of how it all started and how we got to where we are now.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "MADLNQ",
-    "title": "Python Packaging Automation \u2014 Auto-Publish to PyPI via Pull Requests",
-    "speakers": [
-      {
-        "code": "P9YEAF",
-        "name": "Justin Mayer",
-        "biography": "Justin Mayer is a serial entrepreneur, investor, and advocate for data portability and privacy. His latest project is [Fortressa.com](https://fortressa.com), which replaces expensive SaaS data silos with self-hosted open-source applications. He also maintains the [Pelican static site generator](https://github.com/getpelican/pelican) as well as a number of other projects for Python, Django, and the Fish shell.\r\n\r\nJustin speaks Japanese and Italian, graduated with honors from the University of California, Berkeley, and received his M.B.A. from the Wharton School of Business.\r\n\r\nHe writes about security and privacy at [justinmayer.com](https://justinmayer.com) and via [@JMayer on Twitter](https://twitter.com/jmayer).",
-        "avatar": "https://program.europython.eu/media/avatars/jm_c7gpVSI.jpg",
-        "slug": "justin-mayer"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "python-packaging-automation-auto-publish-to-pypi-via-pull-requests",
-    "track": "DevOps",
-    "state": "accepted",
-    "abstract": "A huge source of friction in software is publishing new releases. Somebody has to manually review commits and write a change-log, add a version number, and publish to PyPI. We will cover a better way: an automated process in which new versions are automatically published by merging pull requests.",
-    "description": "Empowering anyone to issue a new release by submitting a pull request? At first glance, it seems like an outlandish idea. Upon further inspection, however, the benefits become clear.\r\n\r\nOne of the biggest sources of friction in software development is packaging and publishing new releases. Somebody has to sift through the commits and write a change-log, tag it with a new version number, and publish the package to PyPI. And usually only one or two people have the access necessary for this last step.\r\n\r\nThe unfortunate result is an infrequent release cadence. Bug fixes and new features are sitting there in the `main` branch, but hardly anybody is benefiting from them because they aren\u2019t in a shipped release yet.\r\n\r\nThankfully, there\u2019s a better way: a continuous release process where new versions are auto-published via pull requests \u2014 without any manual monkeying.\r\n\r\nIn this environment, all pull requests must include a release file that describes the changes within. This file must also include whether the new version should be a major, minor, or patch release.\r\n\r\nThe continuous integration (CI) process looks for this file, and if one hasn\u2019t been included, the tests will fail, and the pull request won\u2019t be merged. Otherwise, a maintainer merges the pull request, and the CI process then uses the release file to put the description into the change-log, increment the version number, commit, tag, build, and publish the new release to PyPI.\r\n\r\nSo with almost no human input, every code contribution results in a new release in a matter of minutes. Every feature and bug-fix has its own release, without anyone having to remember to package and publish a new version. Plus, if a bug is found, it\u2019s now much easier to trace it to a specific release version.\r\n\r\nPerhaps the best part is that all contributors get to issue their own releases. What better way to welcome new contributors than to reward them with a dedicated release composed entirely of their own work?\r\n\r\nAttendees of this talk will take home the following knowledge and skills:\r\n\r\n* what kinds of problems are introduced by an infrequent release cadence\r\n* how automated releases solve those problems and provide myriad ancillary benefits\r\n* how to format and parse the release file\r\n* how to use continuous integration (CI) systems to automate releases\r\n* how to add deployment code so new versions are released when PRs are merged\r\n* how to use [AutoPub](https://github.com/autopub/autopub) to facilitate this process",
-    "duration": "30",
-    "python_level": "none",
-    "domain_level": "some"
-  },
-  {
-    "code": "MMWYWZ",
-    "title": "Applications of Python in Computational Chemistry and Material Design",
-    "speakers": [
-      {
-        "code": "9W9CWW",
-        "name": "Owain Beynon",
-        "biography": "PhD Student in Computational Chemistry at Cardiff University. \r\nResearch interests: software development, material science, catalysis, solid state physics.",
-        "avatar": null,
-        "slug": "owain-beynon"
-      }
-    ],
-    "submission_type": "Poster",
-    "slug": "applications-of-python-in-computational-chemistry-and-material-design",
-    "track": "~None of the above",
-    "state": "accepted",
-    "abstract": "Computational chemistry is the branch of chemistry that studies chemical systems through simulation and involves HPC architecture and software packages. Python has become an integral part of computational modelling of materials in recent years, with development of packages such as the Atomic Simulation Environment (ASE) which is a set of modules for manipulating, running and visualising atomic simulation. Furthermore, ASE integrates seamlessly with many electronic structure software packages, used for calculating the energy and properties of systems based on some level of theory, e.g Density Functional Theory (DFT). Moreover, the combination with other Python packages that integrate with ASE provide an ecosystem for atomic simulations. Packages such as CatLearn, a machine-learning approach used for calculating energies needed for reactions, along with Phonopy and FHI-vibes, both are for studying lattice dynamics of materials, to name a few, provide a comprehensive toolkit for the computational study of materials and chemical systems\r\n\r\nIn our research, such approaches are essential to further our understanding of materials and chemical processes, and of particular interest are materials for green and sustainable processes, such as catalysts used to produce fossil fuel alternatives. In this regard, as Python software becomes increasingly popular for the simulation and study of materials, it also provides the tools and methods needed for tackling some of the challenges of today",
-    "description": "Applications of Python in Computational Chemistry and Material Design\r\nOwain T. Beynon, Alun Owens, Andrew J. Logsdail\r\nCardiff Catalysis Institute, School of Chemistry, Cardiff University, Cardiff, Wales.\r\n\r\nComputational methods afford an insight into the behaviours and properties of materials and recently Python packages have increasingly become a powerful tool for the study of chemical systems. Computational chemistry is the branch of chemistry that studies chemical systems through simulation and involves HPC architecture and software packages. In general, there are two categories of simulation, dynamic and static and of these types, atoms in the system may be described by varying levels of theory: molecular (classical) mechanics (MM), quantum mechanics (QM) or a combination of the two (QM/MM). Static calculations obtain the property of the system at a fixed geometry, whereas dynamic calculations study the evolution of a system over a given timeframe. \r\n\r\nPython has become an integral part of computational modelling of materials in recent years, with development of packages such as the Atomic Simulation Environment (ASE) [1], which is a set of modules for manipulating, running and visualising atomic simulation. Furthermore, ASE integrates seamlessly with many electronic structure software packages, used for calculating the energy and properties of systems based on some level of theory, e.g Density Functional Theory (DFT), such as FHI-aims and VASP. [2,3] Moreover, the combination with other Python packages that integrate with ASE provide an ecosystem for atomic simulations (figure 1). Packages such as CatLearn, [4] a machine-learning approach used for determining transition states and energies needed for reactions, along with Phonopy and FHI-vibes, [5,6] both are for studying lattice dynamics of materials, and Py-ChemShell,[7] used for QM/MM calculations, to name a few, provide a comprehensive toolkit for the computational study of materials and chemical systems. \r\n\r\nIn our research, such approaches as outlined above are essential to further our understanding of materials and chemical processes, and of particular interest are materials for green and sustainable processes such as catalysts used for biofuel production, and battery materials, namely, zeolite Tin-BETA and Prussian Blue, [8-10] respectively. In collaboration with experimentalists, we seek to understand the synthetic methods and properties of these materials, with the aim to further establish them as viable alternatives to fossil fuels. In this regard, as Python software becomes increasingly popular for the simulation and study of materials, it also provides the tools and methods needed for tackling some of the grand challenges of today. \r\n\r\nReferences \r\n[1] A. Hjorth Larsen, et al. J. Phys. Condens. Matter 29 273002 (2017) [2] V. Blum, et al.  Comput. Phys. Commun., 180, 2175\u20132196 (2009) [3] G. Kresse and J. Hafner, Phys. Rev. B 47 , 558 (1993) [4] A. Garrido Torres, et al. Phys. Rev. Lett., 122, (2019)[5]A. Togo, I. Tanaka, Scr. Mater, 108 (2015). [6] F. Knoop et al. J. Open Source Softw. (2020) [7] Y. Lu, et al. J. Chem. Theory Comput., 15, 1317\u20131328 (2019) [8] A. Corma et al. Nature,\u202f412,\u202f423\u2013426 (2001) [9] C. Hammond, S. Conrad, I. Hermans, Angew. Chem. Int., 51, 11736\u201311739 (2012)[10] C. Ling. et al. J. Phys. Chem C 117 (2013)",
-    "duration": "60",
-    "python_level": "",
-    "domain_level": ""
-  },
-  {
-    "code": "TF9Z8Q",
-    "title": "HPy: a better C API for Python",
-    "speakers": [
-      {
-        "code": "T8FUFL",
-        "name": "Ronan Lamy",
-        "biography": "I'm a freelance software developer and open-source consultant. I'm a cofounder of HPy and I've been a PyPy core developer since 2012.",
-        "avatar": null,
-        "slug": "ronan-lamy"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "hpy-a-better-c-api-for-python",
-    "track": "(c)Python Internals",
-    "state": "accepted",
-    "abstract": "The official Python C API is specific to the current implementation of CPython. It has served us well and forms the basis upon which our entire extension ecosystem rests. \r\nHowever, it exposes a lot of internal details which makes it hard to implement it for other Python implementations (e.g. PyPy, GraalPython, Jython, IronPython, etc.), and \r\nprevents major evolutions of CPython itself, such as using a GC instead of refcounting, or removing the GIL.\r\n\r\nThis is where HPy comes in. It's a new C API designed from the ground up according to the following goals:\r\n* running much faster on alternate implementations, and at native speed on CPython\r\n* making it possible to compile a single binary which runs unmodified on all supported Python implementations and versions\r\n* being simpler and more manageable than the Python/C API\r\n* providing an improved debugging experience.\r\n\r\nWe'll discuss its current status and show how existing extensions can be gradually ported to it.",
-    "description": "",
-    "duration": "30",
-    "python_level": "expert",
-    "domain_level": "some"
-  },
-  {
-    "code": "TDUFJ9",
-    "title": "From circuit board design to finished product: the hobbyist\u2019s guide to hardware manufacturing",
-    "speakers": [
-      {
-        "code": "HBPEU7",
-        "name": "Sebastian Roll",
-        "biography": "Sebastian is a consultant, speaker and workshop organizer.\r\n\r\nHe has ten years of experience spanning Oil & Gas, Industrial IT and IoT. His main areas of interest include consulting practices, IoT and Python.",
-        "avatar": "https://program.europython.eu/media/avatars/Sebastian_Roll_lxEMZjv.jpg",
-        "slug": "sebastian-roll"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "from-circuit-board-design-to-finished-product-the-hobbyists-guide-to-hardware-manufacturing",
-    "track": "Makers",
-    "state": "accepted",
-    "abstract": "Ever wondered how hardware is made, or curious about making your own? \r\n\r\nWe share our experiences manufacturing a programmable gamepad for use in IoT/MicroPython workshops. \r\n\r\nWe will cover the entire production process, including:\r\n\r\n- Designing the PCB (Printed Circuit Board)\r\n- Choosing microcontroller and parts\r\n- Finding, ordering and assembling components\r\n- Pulling together firmware, drivers and software\r\n\r\nMistakes were indeed made along the way. Let's turn them into valuable lessons!",
-    "description": "",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "Q3FPVG",
-    "title": "Raise better errors with Exception Groups",
-    "speakers": [
-      {
-        "code": "VM3NZN",
-        "name": "Or Chen",
-        "biography": "I've been writing Python every day for 5 years, excited about Deep Learning, VR Gaming, and my dog Chika",
-        "avatar": "https://program.europython.eu/media/avatars/1634304370356_45bm3T9.jpg",
-        "slug": "or-chen"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "raise-better-errors-with-exception-groups",
-    "track": "Software Engineering & Architecture",
-    "state": "accepted",
-    "abstract": "New to python 3.11, Exception Groups help you raise and handle errors more robustly than ever before - you will delve deep into the current gaps in python's exception handling mechanisms, and get to know Error Groups, and a new python keyword except*, that can be used to overcome those issues and to write cleaner code.",
-    "description": "",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "F9FURV",
-    "title": "PyArrow and the future of data analytics",
-    "speakers": [
-      {
-        "code": "AQNTYV",
-        "name": "Alessandro Molina",
-        "biography": "Relying on Python as his primary development language for more than 15 years, has always been interested in Python as a Development Platform.\r\n\r\nHe worked as CTO and team leader of Python teams for the past 10 years and is currently core developer of the [TurboGears2](http://turbogears.org) web framework and a contributor to the [Apache Arrow](https://arrow.apache.org/) project.\r\n\r\nAlessandro is the author of [Crafting Test-Driven Software with Python](http://www.pythontdd.com) and [Modern Python Standard Library Cookbook](https://www.pythonstandardlibrarybook.com/)\r\nand has authored many OpenSource Python projects like the [DEPOT](https://depot.readthedocs.io/en/latest/) file storage framework and the [DukPy](https://github.com/amol-/dukpy#dukpy) JavaScript interpreter for Python.\r\n\r\nAlessandro has been an [active speaker](https://pyvideo.org/speaker/alessandro-molina.html) to tens of European conferences since 2012",
-        "avatar": null,
-        "slug": "alessandro-molina"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "pyarrow-and-the-future-of-data-analytics",
-    "track": "PyData: Data Engineering",
-    "state": "accepted",
-    "abstract": "In this talk we will introduce PyArrow and talk bout the transformation that the Arrow format is allowing in the Data Analytics world.\r\n\r\nPyArrow provides an in-memory format, a disk format, a network exchange protocol, a dataframe library and a query engine all integrated in a single library. But the Arrow ecosystem doesn't stop there and allows you to work integrating multiple different technologies. It can be a swiss army knife for data engineers and it integrates zero cost with NumPy and Pandas in many cases.",
-    "description": "",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "GAVCZ8",
-    "title": "Try Something Different: Explore MicroPython! (a rough guide for newcomers)",
-    "speakers": [
-      {
-        "code": "HYCU7H",
-        "name": "Andy Piper",
-        "biography": "Developer Advocate. API tinkerer. Friendly DEV.to moderator & community helper. IoT hacker (Eclipse IoT / MQTT). Perpetual student. LEGO fan. Prefer they/them pronouns.",
-        "avatar": null,
-        "slug": "andy-piper"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "try-something-different-explore-micropython-a-rough-guide-for-newcomers",
-    "track": "Makers",
-    "state": "accepted",
-    "abstract": "MicroPython - a reimplementation of Python for microcontrollers - is nine years old. How can you find your way in a jungle of tiny chips, circuits, and jumper wires? In this session, we will run through a brief introduction to the world of MicroPython. Beyond the basics, we will explore the projects, tools, and the  community that helped your intrepid speaker to get started as a newcomer.",
-    "description": "MicroPython is a reimplementation of Python for microcontrollers, originally developed as a result of a Kickstarter campaign. Today, it is an approachable way into programming for many young people, via boards like the Raspberry Pi Pico, the BBC micro:bit and the CodeBug - you can even run it on LEGO bricks! It is increasingly being used in commercial fields as well. MicroPython is helping Python to get into even more places, and making programmers more efficient as it does so.\r\n\r\nAndy Piper wanted to learn more, so he spent some time travelling and adventuring on the internet, to discover the community and projects around MicroPython.\r\n\r\nThe goal of this session is to briefly explain the What, Why and How of MicroPython. There *will* be circuit boards, and discussion of microcontrollers! We will take a look at examples, from established development boards to brand new ones. We will also acknowledge how MicroPython has been built upon, to enable different ways of working (with CircuitPython), and LEGO robots (via PyBricks). \r\n\r\nFinally, and most importantly, you'll get a good sense of the places you can find and learn from the MicroPython community, and how you can get involved and contribute!",
-    "duration": "30",
-    "python_level": "none",
-    "domain_level": "none"
-  },
-  {
-    "code": "ZK7MVG",
-    "title": "Property-based testing the Python way",
-    "speakers": [
-      {
-        "code": "TEJVNB",
-        "name": "Emma Saroyan",
-        "biography": "Emma is a developer advocate at Alpaca. She enjoys sharing her knowledge and learning from fellow developers.",
-        "avatar": "https://program.europython.eu/media/avatars/photo_bU7CgTE.jpg",
-        "slug": "emma-saroyan"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "property-based-testing-the-python-way",
-    "track": "Testing",
-    "state": "accepted",
-    "abstract": "What if I told you you could write simpler tests but still get better results ? \r\n\r\nWhat if I told you can automatically generate your test data ?\r\n\r\nThis may sound difficult to your traditional testing approach but can be easily done with property-based testing. \r\n\r\nProperty-based testing allows a range of inputs to be tested on a given aspect of a software property, abstracting away the details.\r\n\r\nIn the world of Python you can accomplish this with Hypothesis, the Python library used for property-based testing. \r\n\r\nHypothesis helps you design cleaner and clever test suites.",
-    "description": "This is an introductory talk about property-based testing. The talk requires some previous knowledge about testing to make the most out of it but if you are new and curious I think you would get something out of it.\r\n\r\nThe talk approaches a simple problem from two different testing perspectives. Giving you an idea about property-based testing and how it\u2019s different from the traditional approach with Python. \r\n\r\nThe main focus of the topic would be Hypothesis and how you can achieve your testing goals with it. \r\n\r\nBy the end of this talk you would have a solid understanding of property-based testing with Hypothesis, that would help you decide which testing approach fits your need. \r\n\r\n\r\nGiven below is a rough overview of the talk structure:\r\n\r\n- The testing problem - This is where you would explain the problem statement \r\n- The traditional approach\r\n- Cons of traditional approach\r\n- What is property-based testing ? \r\n- Intro to Hypothesis \r\n- Same problem solution with Hypothesis\r\n- Why choose Hypothesis as a go-to property based testing tool ? \r\n- Parametrized testing with Pytest vs Hypothesis approach \r\n- When or when not to use property based testing \r\n- How can you adopt `hypothesis` in your code base ? Some opinions here.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "RB7PNE",
-    "title": "CPython 3.11 in the Web Browser - A Journey",
-    "speakers": [
-      {
-        "code": "J3SDJ9",
-        "name": "Christian Heimes",
-        "biography": "Christian is an open source developer and Python core developer from Hamburg/Germany. He is well known for his work in the Python Security Response Team and as maintainer of CPython's ssl module.",
-        "avatar": "https://program.europython.eu/media/avatars/importthis3_gmC9ONc.jpg",
-        "slug": "christian-heimes"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "cpython-3-11-in-the-web-browser-a-journey",
-    "track": "(c)Python Internals",
-    "state": "accepted",
-    "abstract": "Python 3.11 alpha comes with experimental support for Web Assembly and can be built to run in modern web browsers or Node.js out of the box. I\u2019m going to show how we achieved the goal, which obstacles we faced, and what is missing to have fully working \u201cPython for the web\u201d.",
-    "description": "Python is ubiquitous, popular and runs almost everywhere \u2013 even on Mars. But there is one place that Python has not yet conquered: the browser. Python 3.11 may finally lay the foundation to make an old dream come true and have Python in the web browser.\r\n\r\nIn my talk I will explain how to cross-compile CPython 3.11 to Web Assembly and demonstrate how to run CPython in JavaScript engines. \r\nThe talk will cover\r\n\r\n* Why are some core developers and contributors working on Web Assembly port?\r\n* What is WASM and how do builds for browser, node, and WASI differ? What are the features and limitations of different WASM targets?\r\n* A short introduction to Python\u2019s build system and how cross compiling works.\r\n* What problems did we run into and how did we have to modify CPython\u2019s sources for WASM?\r\n* What does WASM support mean for the community and PyPI packages?",
-    "duration": "30",
-    "python_level": "expert",
-    "domain_level": "some"
-  },
-  {
-    "code": "YYQBM3",
-    "title": "Choosing the right database for your next project - Looking at options beyond PostgreSQL and MySQL",
-    "speakers": [
-      {
-        "code": "QYTJB9",
-        "name": "Marc-Andre Lemburg",
-        "biography": "Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany, specializing in the data, finance and database space. He has a degree in mathematics from the University of D\u00fcsseldorf.\r\n\r\nHis work with and for Python started in 1994. He is a Python Core Developer, designed and implemented the Unicode support in Python, and author of the mx Extensions, e.g. mxTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.\r\n\r\nMarc-Andre is a EuroPython Society (EPS) Fellow, a Python Software Foundation (PSF) founding Fellow and co-founded a local Python meeting in D\u00fcsseldorf (PyDDF). He served on the board of the PSF and EPS for many terms and loves to contribute to the growth of Python where ever he can.\r\n\r\nMore information is available on https://malemburg.com/",
-        "avatar": "https://program.europython.eu/media/avatars/mal-business-2-170x170_VPXpWrX.jpg",
-        "slug": "marc-andre-lemburg"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "choosing-the-right-database-for-your-next-project-looking-at-options-beyond-postgresql-and-mysql",
-    "track": "PyData: Data Engineering",
-    "state": "accepted",
-    "abstract": "In the last few years, lots of new database engines have been developed, making the selection process even more challenging than it was before, if you want to maintain an edge.\r\n\r\nThe talk will give an overview of what to consider in different situations.",
-    "description": "In the last few years, lots of new database engines have been developed and existing ones have been extended to cover new application spaces and features, making the selection process even more challenging than it was before, if you want to maintain an edge.\r\n\r\nThe talk will highlight the most important database engines to consider and their strengths when using them with Python applications, covering relational databases for general purpose tasks, data warehouse workloads, data analytics, machine learning, streaming data and massive scalability, to name a few aspects.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "expert"
-  },
-  {
-    "code": "KM8Z88",
-    "title": "Build with Audio: The easy & hard way!",
-    "speakers": [
-      {
-        "code": "DHPEJJ",
-        "name": "Vaibhav Srivastav",
-        "biography": "I am a Data Scientist and a Masters Candidate - Computational Linguistics at Universit\u00e4t Stuttgart. I am currently researching on Speech, Language and Vision methods for extracting value out of unstructured data.\r\n\r\nIn my previous stint with Deloitte Consulting LLP, I worked with Fortune Technology 10 clients to help them make data-driven (profitable) decisions. In my surplus time, I served as a Subject Matter Expert on Google Cloud Platform to help build scalable, resilient and fault-tolerant cloud workflows.\r\n\r\nBefore this, I have worked with startups across India to build Social Media Analytics Dashboards, Chat-bots, Recommendation Engines, and Forecasting Models.\r\n\r\nMy core interests lie in Natural Language Processing, Machine Learning/ Statistics and Cloud based Product development.\r\n\r\nApart from work and studies, I love travelling and delivering Workshops/ Talks at conferences and events across APAC and EU, DevConf.CZ, Berlin Buzzwords, DeveloperDays Poland, PyCon APAC (Philippines), Korea, Malaysia, Singapore, India, WWCode Asia Connect, Google DevFest, and Google Cloud Summit.",
-        "avatar": "https://program.europython.eu/media/avatars/JFlrSzB4_400x400_e1UV9lu.jpg",
-        "slug": "vaibhav-srivastav"
-      }
-    ],
-    "submission_type": "Tutorial",
-    "slug": "build-with-audio-the-easy-hard-way",
-    "track": "PyData: Deep Learning, NLP, CV",
-    "state": "accepted",
-    "abstract": "The audio (& speech) domain is going through a massive shift in terms of end-user performances. It is at the same tipping point as NLP was in 2017 before the Transformers revolution took over. We\u2019ve gone from needing a copious amount of data to create Spoken Language Understanding systems to just needing a 10-minute snippet. \r\n\r\nThis tutorial will help you create strong code-first & scientific foundations in dealing with Audio data and build real-world applications like Automatic Speech Recognition (ASR) Audio Classification, and Speaker Verification using backbone models like Wav2Vec2.0, HuBERT, etc.",
-    "description": "Unlike general Machine Learning problems where we either classify i.e. segregate a data point into a pre-defined class or regress around a continuous variable, audio related problems can be slightly more complex. Wherein, we either go from an audio representation to a text representation (ASR) or separate different layers of audio (Diarization) and so on. This tutorial will not only help you build applications like these but also unpack the science behind them using a code-first approach.\r\n\r\nEvery step of the way we\u2019ll first write and run some code and then take a step back and unpack it all till it makes sense. We\u2019ll make science *fun* again :)\r\n\r\nThe tutorial will be divided into 3 key sections:\r\n\r\n1. Read, Manipulate & Visualize Audio data\r\n2. Build your very own ASR system (using pre-trained models like Wav2Vec2.0) & deploy it\r\n3. Create an Audio Classification pipeline & infer the model for other downstream audio tasks \r\n\r\nAt the end of the tutorial, you\u2019ll develop strong intuition about Audio data and learn how to leverage large pre-trained backbone models for downstream tasks. You\u2019ll also learn how to create quick demos to test and share your models.\r\n\r\nLibraries: HuggingFace, SpeechBrain, PyTorch & Librosa",
-    "duration": "180",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "CQ7NBC",
-    "title": "Building a Just-in-Time Python FaaS Platform with Unikraft",
-    "speakers": [
-      {
-        "code": "GXDRHH",
-        "name": "Felipe Huici",
-        "biography": "Dr. Felipe Huici is CEO and Co-Founder at Unikraft UG, a start-up dedicated to lightweight and open source virtualization technologies and significantly lowering cloud infrastructure bills. In addition, Felipe is a chief researcher at NEC Laboratories Europe in Heidelberg, Germany where his main research and interests lie in the areas of high-performance software systems, and in particular specialization, virtualization and security. He has been published in several top-tier conferences and journals such as SOSP, ASPLOS, OSDI, Eurosys, SIGCOMM, NSDI, CoNEXT, and SIGCOMM CCR. Finally, Felipe is one of the founders and maintainers of the Linux Foundation Unikraft open source project.",
-        "avatar": "https://program.europython.eu/media/avatars/felipehuici_ixalJ4j.jpeg",
-        "slug": "felipe-huici"
-      },
-      {
-        "code": "RRE9DV",
-        "name": "Alexander Jung",
-        "biography": "Alexander Jung is a Co-Founder and Chief Product Officer at the Lightweight Virtualization company Unikraft, focusing on leading unikernels into market and mass deployment.  He is also a PhD student at Lancaster University, where he focuses primarily on optimizations of unikernels for network-bound operations; delivering effective continuous integration and deployment of VNF-based services; as well as compile-time methods for inter-VM communication based on library Operating Systems.  Previously he has worked as the Chief Information Officer at UK-based startup Adjacent Systems, securing and delivering systems for local law-enforcement and government.",
-        "avatar": "https://program.europython.eu/media/avatars/Photo-on-12.08.21-at-15.36_shop_copy_a4H0crA.jpg",
-        "slug": "alexander-jung"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "building-a-just-in-time-python-faas-platform-with-unikraft",
-    "track": "Infrastructure: Cloud & Hardware",
-    "state": "accepted",
-    "abstract": "Function-as-a-Service (FaaS) platforms are one of the key service offerings for any cloud provider. To provide strong isolation, the functions are run inside heavy-weight virtual machines (and within containers inside those for orchestration reasons). Consequently, such instances take too long to boot and so are kept on all the time, even though the functions only receive requests intermittently. The end result is that current FaaS platforms are much less efficient than they could be.\r\n\r\nWe will introduce a radically novel way to build FaaS platforms based on Python and the Unikraft Linux Foundation open source project (www.unikraft.org). Unikraft is a toolkit for building fully specialized, cloud-ready virtual machines called unikernels targeting a single application . Using Unikraft we can construct extremely specialized, Python-based unikernels that use only a few MBs to run a boot in 10s of milliseconds, allowing us to bring VMs up as a request to a function comes in, and to shut it down (or suspend it) afterwards. The result: a Python-based FaaS platform that is significantly more efficient and cheaper to operate than existing offerings.\r\n\r\nIn the talk we will provide an introduction to Unikraft, how Python is built on top of it, a full description of the FaaS platform and a short demo.",
-    "description": "Unikraft [1] is a unikernel (specialized virtual machine) project. Unikraft is able to target a specific application (e.g., a web server such as NGINX) and transparently build an entire software stack, from the operating system all the way up to systems libraries, that includes only the parts that the application needs and nothing more. Such specialization results in extremely short boot times (a few milliseconds compared to hundreds or thousands for Linux VMs), small image sizes and memory consumption (e.g., a few MBs vs. hundreds of MBs) and a minimal attack surface, to name a few benefits. The short boot times also allow us to bring Unikraft VMs up just-in-time, as a request for a service arrives, and to bring the instance back down (or suspend it) when the request is over, allowing for even greater efficiency.\r\n\r\nIn addition, Unikraft images are single address space: in cloud environments strong isolation is provided by the hypervisor, so for single application/single tenant VMs it does not make sense to have a kernel/user-space divide. The end result is higher efficiency in performance, with Unikraft yielding noticeably higher throughout than Linux [2].\r\n\r\nRegarding application support, we have put great effort towards making Unikraft as POSIX compatible as possible. Unikraft provides a syscall shim-layer and support for the musl libc, allowing us to run unmodified versions of Python. \r\n\r\nIn terms of orchestration, we have integrated Unikraft with major frameworks such as Kubernetes and Prometheus. This, along with extensive debugging facilities should make Unikraft easy to both use and develop for.\r\n\r\n[1] https://unikraft.org/\r\n[2] https://dl.acm.org/doi/10.1145/3447786.3456248 (best paper award)",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "KMCFKN",
-    "title": "Data Warehouses Meet Data Lakes",
-    "speakers": [
-      {
-        "code": "8MDEKJ",
-        "name": "Mauro",
-        "biography": "Mauro Pelucchi is a senior data scientist and big data engineer \r\nresponsible for the design of the \"Real-Time Labour Market Information System on Skill Requirements\" for CEDEFOP.\r\n\r\nHe currently works as Head of Global Data Science @ EMSI Burning-Glass with the goal to develop innovative models, methods and deployments of labour market data and other data to meet customer requirements and prototype new potential solutions. His main tasks are related to advanced machine learning modelling, labour market analyses, and the design of big data pipelines to process large datasets of online job vacancies.\r\nIn collaboration with the University of Milano-Bicocca, he took part in many research projects related to the labour market intelligence systems.\r\nHe collaborates with the University of Milano-Bicocca as a lecturer at the Master Business Intelligence and Big Data Analytics and with the University of Bergamo as a lecturer in Computer Engineering.",
-        "avatar": "https://program.europython.eu/media/avatars/BGT_Mauro_Pelucchi__LARGE_UV7Pfua.jpg",
-        "slug": "mauro"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "data-warehouses-meet-data-lakes",
-    "track": "PyData: Data Engineering",
-    "state": "accepted",
-    "abstract": "Many organizations have migrated their data warehouses to datalake solutions in recent years.\r\nWith the convergence of the data warehouse and the data lake, a new data management paradigm has emerged that combines the best of 2 approaches: the botton-up of big data and the top-down of a classic data warehouse.",
-    "description": "In this talk, I will explain the current challenges of a datalake and how we can approach a \r\nmoderm data architecture with the help of pyspark, hudi, delta.io or iceberg.\r\nWe will see how organize data in a data lake to support real-time processing of applications \r\nand analyzes across all varieties of data sets, structured and unstructured, how provides \r\nthe scale needed to support enterprise-wide digital transformation and creates one unique source of data \r\nfor multiple audiences.",
-    "duration": "30",
-    "python_level": "expert",
-    "domain_level": "expert"
-  },
-  {
-    "code": "NRNTLL",
-    "title": "Teaching Python - Modern Challenges",
-    "speakers": [
-      {
-        "code": "VGAQHM",
-        "name": "Nilo Ney Coutinho Menezes",
-        "biography": "Software Architect, distributed systems and cloud lover, using Python for development and teaching. I try to make Python accessible to a wide audience.",
-        "avatar": "https://program.europython.eu/media/avatars/nilo_yPTSnCx.png",
-        "slug": "nilo-ney-coutinho-menezes"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "teaching-python-modern-challenges",
-    "track": "Education, Teaching & Further Training",
-    "state": "accepted",
-    "abstract": "Teaching computer programming nowadays has its own challenges. In the past, lack of access to proper information and communication constraints were impediments to a wider audience. With the internet and the new video age, anybody can access Python or any other programming language content instantaneously and almost free. In this talk, some findings and observations related to remote teaching in formal and informal education are presented. Focus and discipline seem to be the scarce resource to learn properly new programming languages.",
-    "description": "Teaching computer programming nowadays has its own challenges. In the past, lack of access to proper information and communication constraints were impediments to a wider audience. With the internet and the new video age, anybody can access Python or any other programming language content instantaneously and almost free. In this talk, some findings and observations related to remote teaching in formal and informal education are presented. Focus and discipline seem to be the scarce resource to learn properly new programming languages.\r\nThis presentation is based on observations made throughout the years of Brazilian internet groups on Telegram where students with different backgrounds have an interest in learning Python. The impact of remote education due to the pandemic, the abundance of material, lack of basic math skills, and a support framework to help students are presented.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "JL7LBG",
-    "title": "Build your own linters",
-    "speakers": [
-      {
-        "code": "JHSJBW",
-        "name": "Rahul Jha",
-        "biography": "I'm a senior software engineer at https://deepsource.io, where I work on developing tools to improve code health and quality.\r\n\r\nI'm the maintainer of [Vulture](https://github.com/jendrikseipp/vulture), and it will have your dead Python. Thank you!",
-        "avatar": "https://program.europython.eu/media/avatars/rahul-profile-picture_VCHth3N.png",
-        "slug": "rahul-jha"
-      }
-    ],
-    "submission_type": "Tutorial",
-    "slug": "build-your-own-linters",
-    "track": "Testing",
-    "state": "accepted",
-    "abstract": "Despite a ton of wonderful linters out there, it pays off to scratch your itch and learn how to write one yourself. Anytime a pet peeve starts bothering you in code reviews, you\u2019ll have all the tools at your disposal.",
-    "description": "Developers are opinionated, and it reflects in their programming style \u2014 not just the way code _looks_, but how it _feels_: its organization and readability. In such cases, maintaining consistency across a project helps everyone involved. One aspect of this is ensuring that there are (at least partial) automated tests to enforce this style.\r\n\r\nThis training aims to enable the audience to write such tests by giving them a tour of code analysis and the vast array of tools it makes available to us. First, we dissect the code using Python's `ast` and `tokenize` modules and object internals like `__dict__`. From there and on, we visit some real-world examples:\r\n- A test to detect unnecessary use of double-quotes. They are such a terrible waste of pixels, after all.\r\n- Flagging the use of list() instead of []. The former is slower \u2013 as it requires an extra lookup in \"globals\" \u2013 and might result in a bug if the name is rebound to another object.\r\n- Find if statements are nested for more than four levels. It can lead to hard-to-understand, ugly-looking code.\r\n- Look for unused imports. Shred the extra loading time and memory amounting from these unused lines of code.",
-    "duration": "180",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "YBQYF3",
-    "title": "Forget Mono vs. Multi-Repo - Building Centralized Git Workflows with Python",
-    "speakers": [
-      {
-        "code": "EZU9HM",
-        "name": "David Melamed",
-        "biography": "Currently CTO and Co-Founder of Jit, the Continuous Security platform for Developers. David has a PhD in Bioinformatics and for the past 20 years has been a full-stack developer, CTO & technical evangelist, mostly in the cloud, and specifically in cloud security, working for leading organizations such as MyHeritage, CloudLock (acquired by Cisco) and leading the 'advanced development team' for the CTO of Cisco's cloud security (a $500M ARR BU).",
-        "avatar": "https://program.europython.eu/media/avatars/dvdmelamed-pic_drHBbME.jpeg",
-        "slug": "david-melamed"
-      },
-      {
-        "code": "TUCBCX",
-        "name": "Daniel Koch",
-        "biography": null,
-        "avatar": null,
-        "slug": "daniel-koch"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "forget-mono-vs-multi-repo-building-centralized-git-workflows-with-python",
-    "track": "DevOps",
-    "state": "accepted",
-    "abstract": "The mono vs. multi-repo is an age-old debate in the DevOpsphere, and one that can still cause flame wars.  What if I were to tell you that you don't have to choose?\r\nIn this talk we will dive into how we built a centralized Git workflow that can work with any kind of repo architecture, delivered with Python.\r\n\r\nOne of the greatest recurring pains in CI/CD is the need to reinvent the wheel and define your CI workflow for each and every repository or (micro)service, when eventually 99% of the config is the same.  What if we could hard reset this paradigm and create a single, unified workflow that is shared by all of our repos and microservices?  In this talk, we will showcase how a simple solution implemented in Python, demoed on Github as the SCM, and Github Actions for our CI, enabled us to unify this process for all of our services, and improve our CI/CD velocity by orders of magnitude.",
-    "description": "",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "QKS7UE",
-    "title": "Bulletproof Python \u2013 Property-Based Testing with Hypothesis",
-    "speakers": [
-      {
-        "code": "A7BNZH",
-        "name": "Michael Seifert",
-        "biography": "Michael is a consulting software engineer who helps product teams to develop Python software in the cloud. He worked with many different teams from various industries, but none of them practised property-based testing and only few were familiar with the concept.\r\n\r\nThis prompted him to spread the word about property-based testing and Hypothesis in an effort to help others write more robust and maintainable software.",
-        "avatar": "https://program.europython.eu/media/avatars/michael_seifert_-_300x300_KY7yE8t.png",
-        "slug": "michael-seifert"
-      }
-    ],
-    "submission_type": "Tutorial",
-    "slug": "bulletproof-python-property-based-testing-with-hypothesis",
-    "track": "Testing",
-    "state": "accepted",
-    "abstract": "Property-based testing is a great benefit to the robustness and maintainability of your software. Yet, the technique is still vastly underused in the Python community. The workshop gives a hands-on introduction to Hypothesis and practices different approaches for writing property-based tests.",
-    "description": "Do you find yourself working through pages of copied and pasted tests to accommodate a simple code change? Does your software frequently break in unexpected ways despite your testing efforts? Don\u2019t despair! Property-based testing could be your way out of that mess. Rather than working harder and writing more test code, property-based testing forces you to work smarter and test more code with fewer tests.\r\n\r\nTraditional tests are example-based. They require the developer to come up with arbitrary inputs and check a system\u2019s behavior against explicit outputs. More often than not, developers only think of inputs that are handled correctly by their code, thus leaving bugs hidden. Property-based tests generate the inputs for you and in many cases they\u2019re more likely to find invalid inputs than humans. The difficulty lies in formulating these test cases.\r\n\r\nAfter this workshop you\u2019ll be comfortable with property-based testing using Hypothesis. You\u2019ll have experience requesting appropriate test data from Hypothesis and in writing tests for common and more advanced properties. At work, your co-workers will be impressed by your unbreakable code ;)\r\n\r\nParticipants are expected to have basic familiarity with unit testing and a testing framework. Provided code examples use pytest.",
-    "duration": "180",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "WVFUYA",
-    "title": "Handling Errors the Graceful Way in Python",
-    "speakers": [
-      {
-        "code": "ND3VKT",
-        "name": "Riya Bansal",
-        "biography": "Riya Bansal is an enthusiastic and passionate Software Engineer at Microsoft with 3 years of experience with enterprise volume licensing products and Microservice technologies. Riya has a lot of experience working with Data Lakes as well. She has worked from small-sized Startups to large MNCs and gained a lot of experience over the years.\r\nShe is a big Pythonista and really interested in writing Python considering the best practices. Apart from that, Riya has also led\u00a0an amazing Python Community which is a volunteer-driven organization of amazing Pythonistas, enthusiasts, entrepreneurs, researchers, students, and many more with a primary interest in Python.\r\nShe has also been awarded the Google Women Tech makers Scholarship for her leadership skills and impact on the community of women in tech as well.  She has mentored over 10000+ students in the past.",
-        "avatar": "https://program.europython.eu/media/avatars/Me_0z8yiRT.JPG",
-        "slug": "riya-bansal"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "handling-errors-the-graceful-way-in-python",
-    "track": "Web",
-    "state": "accepted",
-    "abstract": "Things rarely go as planned, especially in the world of programming. Errors are the bane of a programmer\u2019s existence. You write an awesome piece of code, are ready to execute it and build a powerful machine learning model, and then poof. Python throws up an unexpected error, ending your hope of quick code execution.",
-    "description": "In the process of programming, we are always going to encounter various errors. \r\nThings rarely go as planned, especially in the world of programming. Errors are unavoidable when writing code, which can be frustrating at times. Every single one of us has faced this issue and emerged from it a better programmer. Dealing with bugs and errors is what builds our confidence in the long run and teaches us valuable lessons along the way.\r\nSo, in this talk, we'll discuss different ways of handling errors and making our lives a little better. \r\nWe'll talk about how code written with effective exception handling strategies can help us to catch bugs early in the software developmental cycle.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "some"
-  },
-  {
-    "code": "BRSSQK",
-    "title": "TDD in Python with pytest",
-    "speakers": [
-      {
-        "code": "7BS3PU",
-        "name": "Leonardo Giordani",
-        "biography": "Born in 1977 together with Star Wars, bash, Apple ][, Dire Straits, The Silmarillion, and many other great things.\r\n\r\nI started coding in April 1987 on a Sinclair ZX Spectrum. I then moved to MS-DOS PCs and in 1996 I started using Linux and became interested in operating system internals. I love software architectures, algorithms, mathematics and cryptography.\r\n\r\nI\u2019m mainly interested in open source software. I like both the theoretical and practical aspects of computer science.\r\n\r\nI am currently working as a contractor DevOps and Python developer while I design a DevOps bootcamp that I will run in London from June 2022.\r\n\r\nFrom 2013 I blog some technical thoughts at http://thedigitalcatonline.com.\r\n\r\nIn 2018 I published the free book \u201cClean Architectures in Python\u201d http://bit.ly/getpycabook",
-        "avatar": "https://program.europython.eu/media/avatars/Avatar400x400_cuVmtE6.jpg",
-        "slug": "leonardo-giordani"
-      }
-    ],
-    "submission_type": "Tutorial",
-    "slug": "tdd-in-python-with-pytest",
-    "track": "Testing",
-    "state": "accepted",
-    "abstract": "This workshop will guide you step-by-step through the implementation of a very simple Python library following a strict TDD workflow. At the end of the workshop you will have grasped the main principles of TDD and learned the fundamentals of the Python testing library pytest.",
-    "description": "Test-Driven Development (TDD) is fortunately one of the names that I can spot most frequently when people talk about methodologies. Unfortunately, many programmers still do not follow it, fearing that it will impose a further burden on the already difficult life of a developer.\r\n\r\nTDD is a methodology, something that can help you to create better code. But it is not going to solve all your problems. As with all methodologies you have to pay attention not to commit blindly to it. Try to understand the reasons why certain practices are suggested by the methodology and you will also understand when and why you can or have to be flexible.\r\n\r\nDuring the workshop we will learn what TDD is, and what are the main rules. We will do this developing a very simple Python library together in a sort of a game that mirrors a daily TDD development routine. While we do this, we will also learn how to use pytest, which is one of the most used testing libraries in Python. Oh, we will also learn when NOT to follow the rules!",
-    "duration": "180",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "3U9T9S",
-    "title": "Self-explaining APIs",
-    "speakers": [
-      {
-        "code": "VST3SV",
-        "name": "Roberto Polli",
-        "biography": "Roberto joined in the [Italian Digital Transformation Department](https://innovazione.gov.it/it/progetti/api/) - to create a national API Ecosystem based on internet standards.\r\n\r\nHe's a Red Hat Certified Engineer and MySQL/MongoDB certified DBA, but loves maintaining free software.\r\n\r\nA life ago he took a Math degree, and he's really proud of it.",
-        "avatar": null,
-        "slug": "roberto-polli"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "self-explaining-apis",
-    "track": "Software Engineering & Architecture",
-    "state": "accepted",
-    "abstract": "To mash up various APIs, data need to have a well defined meaning: imagine meshing up healthcare APIs using different units for human temperature, or financial APIs using different currencies.\r\n\r\nThis talk describes strategies and python tools to overcome these problems in large API ecosystems such as data exchanges between different countries.",
-    "description": "This talk will present strategies and python tools to create semantically interoperable REST APIs. After the problem statement, various solutions will be presented, including:\r\n\r\n* contract-first api development with OpenAPI 3, ontologies and controlled vocabularies like the ones [published by the European Union](https://op.europa.eu/en/web/eu-vocabularies/authority-tables);\r\n* the rdflib and pyld python libraries for processing json-ld and [RDF files](https://en.wikipedia.org/wiki/Resource_Description_Framework);\r\n* the use of centralized catalogs such as [schema.org](schema.org).\r\n\r\nPrerequisites:\r\n\r\n* no prior knowledge of semantics and ontologies;\r\n* practical experience with OpenAPI, json schema and data modeling and API design in general.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "expert"
-  },
-  {
-    "code": "9PQZKF",
-    "title": "Write Docs Devs Love: Ten Tricks To Level Up Your Tech Writing",
-    "speakers": [
-      {
-        "code": "SN9SZQ",
-        "name": "Mason Egger",
-        "biography": "Mason is currently a Developer Advocate at Gretel. Prior to his work at Gretel, he was a Developer Advocate at DigitalOcean. Prior to this he was an SRE helping build and maintain a highly available hybrid multicloud PaaS. He is an avid programmer, speaker, educator, and writer. He is an organizer of PyTexas and actively contributes to open source projects. In his spare time he enjoys reading, camping, kayaking, and exploring new places.",
-        "avatar": "https://program.europython.eu/media/avatars/attachment_6_Dicge7M.jpeg",
-        "slug": "mason-egger"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "write-docs-devs-love-ten-tricks-to-level-up-your-tech-writing",
-    "track": "Community & Diversity",
-    "state": "accepted",
-    "abstract": "Tutorials, blog posts, and product docs help developers learn. From our favorite tutorials to bad product docs we all consume technical writing. But what makes for good technical writing? In this talk I\u2019ll share 10 tips and tricks to improve your technical writing skills to help your readers succeed",
-    "description": "Think of that feeling you get when you follow an online tutorial or documentation and the code works on the first run. Now think of all the hours spent wasted following broken, outdated, or incomplete documentation. From our favorite tutorials to bad product docs we all consume technical writing. Tutorials, blog posts, and product docs help developers learn new things, build projects, and debug issues. But what makes one tutorial better than another? In this talk I'll discuss how you can write the documentation that developers love and I\u2019ll share 10 tips and tricks to improve your technical writing.\r\n\r\n#### Outline\r\n* Introduction (1 min)\r\n* Why is Technical Writing Important? (4 min)\r\n* My Top 10 Tips to improve your Technical Writing (20 min)\r\n  * \\# 10 - Make Your End Goal Clear\r\n  * \\# 9 - Don\u2019t Be Overly Verbose\r\n  * \\# 8 - Inclusive Language\r\n    * Avoid words like Simple, Easy\r\n  * \\# 7 - Avoid Technical Jargon\r\n  * \\# 6 - Define ALL Acronyms\r\n  * \\# 5 - Avoid Memes/Colloquialisms\r\n  * \\# 4 - Use Meaningful Code Samples and Variable Names\r\n  * \\# 3 - Don\u2019t Make Your Reader Leave Your Article\r\n  * \\# 2 - Make it Easy for the Reader to Find a Single Piece of Information\r\n  * \\# 1 - Verify Your Instructions! Test, Test, Test!\r\n  * \\# 0 Bonus! - Practice, Practice, Practice\r\n* How You Can Get Started in Technical Writing (3 min)\r\n* Conclusion & Questions (2 min)",
-    "duration": "30",
-    "python_level": "none",
-    "domain_level": "none"
-  },
-  {
-    "code": "TE7K7D",
-    "title": "Clean Architectures in Python",
-    "speakers": [
-      {
-        "code": "7BS3PU",
-        "name": "Leonardo Giordani",
-        "biography": "Born in 1977 together with Star Wars, bash, Apple ][, Dire Straits, The Silmarillion, and many other great things.\r\n\r\nI started coding in April 1987 on a Sinclair ZX Spectrum. I then moved to MS-DOS PCs and in 1996 I started using Linux and became interested in operating system internals. I love software architectures, algorithms, mathematics and cryptography.\r\n\r\nI\u2019m mainly interested in open source software. I like both the theoretical and practical aspects of computer science.\r\n\r\nI am currently working as a contractor DevOps and Python developer while I design a DevOps bootcamp that I will run in London from June 2022.\r\n\r\nFrom 2013 I blog some technical thoughts at http://thedigitalcatonline.com.\r\n\r\nIn 2018 I published the free book \u201cClean Architectures in Python\u201d http://bit.ly/getpycabook",
-        "avatar": "https://program.europython.eu/media/avatars/Avatar400x400_cuVmtE6.jpg",
-        "slug": "leonardo-giordani"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "clean-architectures-in-python",
-    "track": "Software Engineering & Architecture",
-    "state": "accepted",
-    "abstract": "A brief talk that introduces software developers to the idea of \"clean architecture\" and discusses how to reduce coupling between parts of a software system through well-known strategies such as abstraction and inversion of control.",
-    "description": "Architectural considerations are often overlooked by developers or completely delegated to a framework. We should start once again discussing how applications are structured, how components are connected and how to lower coupling between different parts of a system, to avoid creating software that cannot easily be maintained or changed. The \"clean architecture\" model predates Robert Martin, who recently brought it back to the attention of the community, and is a way of structuring applications that leverages layers separation and internal APIs to achieve a very tidy, fully-tested, and loosely coupled system.\r\n\r\nThe talk introduces the main ideas of the architecture, showing how the layers can be implemented in Python, following the content of the book \"Clean Architectures in Python\" edited by Leanpub. The book recently reached 25,000 downloads and many readers found it useful to start learning how to test software and how to structure an application without relying entirely on the framework.",
-    "duration": "30",
-    "python_level": "some",
-    "domain_level": "none"
-  },
-  {
-    "code": "LCNBCC",
-    "title": "Debugging asynchronous programs in Python",
-    "speakers": [
-      {
-        "code": "E9QEAS",
-        "name": "Andrii Soldatenko",
-        "biography": "Hi there! I\u2019m Pythonista from Ukraine, I'm working remotely as a Senior Software Engineer at Astronomer. Also I'm a speaker at many PyCons and meetups around the globe. In my free time I\u2019m crossFit and gymnastic amateur.",
-        "avatar": null,
-        "slug": "andrii-soldatenko"
-      }
-    ],
-    "submission_type": "Talk",
-    "slug": "debugging-asynchronous-programs-in-python",
-    "track": "Software Engineering & Architecture",
-    "state": "accepted",
-    "abstract": "Recently the interest in asynchronous programming has grown dramatically.\r\n Unfortunately, asynchronous programs do not always have reproducible behavior. Even when they are run with the same inputs, their results can be radically different.\r\n\tIn this talk I'll show you different approaches on how to debug asynchronous programs in Python.",
-    "description": "Luckily, when it comes to debugging asynchronous applications in python, we have a couple of options to consider. The writers of the asyncio module have very kindly provided a debug mode, which is quite powerful and can really aid us in our debugging adventures without the overhead of modifying the system's code base too dramatically. In particular I'll show you what asyncio debug mode means for developers, and how to source tracebacks for unhandled exceptions in futures. Also how to detect accidental blocking for I/O. We discuss how to monitor the asyncio event loop and collect metrics in statsD.\r\nFinally we discuss monitor and cli capabilities for asyncio applications based on aiomonitor and aioconsole. Also we discuss how asynchronous python works in REPL via autoawait based on ipython and how to do it in vanilla python REPL.",
-    "duration": "30",
-    "python_level": "expert",
-    "domain_level": "some"
-  }
+    {
+        "code": "87XUMG",
+        "title": "Why is it slow? Strategies for solving performance problems",
+        "speakers": [
+            {
+                "code": "9JJFPM",
+                "name": "Caleb Hattingh",
+                "biography": "TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD TBD",
+                "avatar": "https://program.europython.eu/media/avatars/sqfortekmojitwitch_VVdyZFb.jpg",
+                "slug": "caleb-hattingh"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "why-is-it-slow-strategies-for-solving-performance-problems",
+        "track": "Software Engineering & Architecture",
+        "state": "accepted",
+        "abstract": "You have a performance problem, and you don't know what to do. All you know is that one of your endpoints is very slow; and perhaps it only affects a certain user. How do you figure out why it's slow, and what can you do to catch performance problems before they hurt users in production? This talk will step through several scenarios involving typical performance problems and how to diagnose them.",
+        "description": "You have a performance problem, and you don't know what to do. All you know is that one of your endpoints or applications is too slow; and perhaps it only affects a certain user or customer. How do you figure out why it's slow, and what can you do to catch performance problems before they hurt users in production?\r\n\r\nWe'll go through a wide range of strategies for detecting and diagnosing performance problems in typical production workloads. We'll cover both web-based domains as well as backend domains and other analytical applications involving number-crunching and big-data applications.\r\n\r\nWe'll step through the following high-level strategies:\r\n\r\n- Tracing: through instrumentation of your code, you will get detailed traces of where the time is spent in generating your web server responses.\r\n- Profiling: we'll look at profiling strategies using both the Python built-in cProfile tool, as well as awesome 3rd party libraries like pyspy, including how to use these with pytest\r\n- Isolation: how to figure out if performance is affected by CPU, or memory, disk, or network IO limitations.\r\n- Reasoning: we'll look at common scenarios that result in performance regressions such as the needless execution of sub-queries in rendering web views, or algorithmic analysis and \"big-O\" notation, or concurrency problems resulting from exhaustion of threads in a pool and asyncio concurrency limitations resulting from overloaded subscription.\r\n- Prophylaxis: we'll look at how to include benchmarks within your CI pipeline, including with pytest and other technologies to catch performance regressions ahead of time.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "98XE8Q",
+        "title": "When to refactor your code into generators and how",
+        "speakers": [
+            {
+                "code": "MDZNRX",
+                "name": "Jan-Hein B\u00fchrman",
+                "biography": "Jan-Hein is a software engineer who witnessed Python\u2019s first baby steps up very close, and loves programming in Python since then. While he worked in different software development roles, he always kept an eye on its development. After he has founded a dedicated Python software unit within Ordina, the company he works for, he\u2019s now back at the work that leaves him with a positive energy balance at the end of the day: programming in Python!",
+                "avatar": "https://program.europython.eu/media/avatars/Jan-Hein_helderder_aClbtTP.jpg",
+                "slug": "jan-hein-buhrman"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "when-to-refactor-your-code-into-generators-and-how",
+        "track": "Software Engineering & Architecture",
+        "state": "accepted",
+        "abstract": "Have you ever found yourself coding variations of a loop construct where fragments of the loop code were exactly the same between the variations? Or, in an attempt to factor out these common parts, you ended up with a loop construct containing a lot of conditional code for varying start, stop, or selection criteria?\r\n\r\nYou might have felt that the end result just didn't look right. Because of the duplicated parts in your code, you noticed that the code didn't conform to the DRY (_Don't Repeat Yourself_) principle. Or, after an attempt to combine the variations into a single loop, with consequently a lot of conditional code, your inner voice told you that the resulting code had become too complex and difficult to maintain.\r\n\r\nThis talk will show you a way out of this situation. It demonstrates how you can create a **generator function** that implements only the common parts of your loop construct. Subsequently you will learn how you can combine this generator function with distinct hand-crafted functions or building blocks from the standard library `itertools` module or the `more-itertools` package.\r\n\r\nAs an example, imagine you'd need to implement some varying functionality based on the Fibonacci sequence. This talk shows you how it would look like before and after you've refactored it into a **pipeline of generators**.\r\n\r\nAfter having seen this pattern, you will recognize more quickly when this kind of refactoring helps you to create more maintainable and more Pythonic code.",
+        "description": "",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "HAKFFR",
+        "title": "How we are making Python 3.11 faster",
+        "speakers": [
+            {
+                "code": "LUY39H",
+                "name": "Mark Shannon",
+                "biography": "I've been using Python since 2005.\r\nI have an extensive background in compilers, virtual machines and static analysis for dynamic languages, specifically Python.\r\nAfter a long interlude working on static analysis tools, I have returned to performance work over the last couple of years.\r\n\r\nI am currently working as technical lead with the \"Faster CPython\" team funded by Microsoft.",
+                "avatar": "https://program.europython.eu/media/avatars/IMG_20191130_122850_3mkOJrs.jpg",
+                "slug": "mark-shannon"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "how-we-are-making-python-3-11-faster",
+        "track": "(c)Python Internals",
+        "state": "accepted",
+        "abstract": "Python 3.11 is between 10% and 60% faster than Python 3.10, depending on the application. \r\nWe have achieved this in a fully portable way by making the interpreter adapt to the \r\nprogram being run, and by streamlining key data structures.\r\n\r\nIn this talk I will explain what changes we have made, and how they improve performance.",
+        "description": "The \"Faster CPython\" project aims to speed up Python, specifically CPython, by a large factor over the next few releases.\r\nThe first release to see the benefits of this work is Python 3.11.\r\n\r\nPython 3.11 includes the following major changes:\r\n\r\n* Adaptive specializing interpreter (PEP 659)\r\n* Consecutively allocated execution frames\r\n* Zero cost try-except\r\n* More regular object layout\r\n* Lazily created object dictionaries.\r\n\r\nI will describe each of these, describing how each helps speed up Python, and how they interact with each other.\r\n\r\nI will end the talk with some possible directions for Python 3.12.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "9EH9PG",
+        "title": "Packaging security with Nix",
+        "speakers": [
+            {
+                "code": "ADBNZ8",
+                "name": "Ryan Lahfa",
+                "biography": "FOSS developer, Nix expert, software engineering expert with a love for formal methods and mathematics.",
+                "avatar": null,
+                "slug": "ryan-lahfa"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "packaging-security-with-nix",
+        "track": "Security",
+        "state": "accepted",
+        "abstract": "Managing securely dependencies is becoming an increasing concern of the industry. Here, we showcase how Nix, a functional-oriented package manager, can get us very far and close class of vulnerabilities that PyPI / pip had in the past, e.g. rogue PyPI packages that steals personal data.",
+        "description": "",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "GKNSCM",
+        "title": "20 years of Cython",
+        "speakers": [
+            {
+                "code": "HGF873",
+                "name": "Stefan Behnel",
+                "biography": "Stefan has been using Python since the beginning of the century. He is loosely involved in several important projects in the Python data area, and maintains the [Cython compiler](https://cython.org/) and the [lxml XML toolkit](https://lxml.de). He is also a CPython core developer, gives talks and corporate trainings on Programming in Python and Cython, and committed to local climate activism.",
+                "avatar": "https://program.europython.eu/media/avatars/Vortragsmitschnitt_Kopf_YwWIlNI.jpg",
+                "slug": "stefan-behnel"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "20-years-of-cython",
+        "track": "Community & Diversity",
+        "state": "accepted",
+        "abstract": "On 2022-04-04, the [Cython compiler](https://cython.org/) turned 20. Let's hear the story of how it all started in the early days of this century, how it became a foundation of the Python data ecosystem, and where we are going in the future.",
+        "description": "On April 4th, 2002, Greg Ewing posted the first announcement of a compiler for Python extension modules, that he named [Pyrex](https://www.csse.canterbury.ac.nz/greg.ewing/python/Pyrex/).\r\n20 years later, its successor [Cython](https://cython.org/) has hundreds of thousands of users worldwide, that write software for tens of millions of people to use.\r\n\r\nSoftware built with Cython has helped people in\r\n[taking pictures of black holes](https://numpy.org/case-studies/blackhole-image/),\r\n[sending robots to Mars](https://learnpython.com/blog/python-on-mars/),\r\n[scaling up Django websites to a thousand million users](https://www.youtube.com/watch?v=_1MSX7V28Po),\r\n[building climate models](https://climt.readthedocs.io/en/latest/),\r\nanalysing, processing and [machine learning](https://scikit-learn.org/) of\r\n[human text](https://spacy.io/),\r\n[real world images](https://scikit-image.org/),\r\nand [other data from countless areas](https://pandas.pydata.org/),\r\nbe it scientific, financial, economic, ecologic or probably any other type of data from small to large scale.\r\n\r\nThis is the story of how it all started and how we got to where we are now.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "MADLNQ",
+        "title": "Python Packaging Automation \u2014 Auto-Publish to PyPI via Pull Requests",
+        "speakers": [
+            {
+                "code": "P9YEAF",
+                "name": "Justin Mayer",
+                "biography": "Justin Mayer is a serial entrepreneur, investor, and advocate for data portability and privacy. His latest project is [Fortressa.com](https://fortressa.com), which replaces expensive SaaS data silos with self-hosted open-source applications. He also maintains the [Pelican static site generator](https://github.com/getpelican/pelican) as well as a number of other projects for Python, Django, and the Fish shell.\r\n\r\nJustin speaks Japanese and Italian, graduated with honors from the University of California, Berkeley, and received his M.B.A. from the Wharton School of Business.\r\n\r\nHe writes about security and privacy at [justinmayer.com](https://justinmayer.com) and via [@JMayer on Twitter](https://twitter.com/jmayer).",
+                "avatar": "https://program.europython.eu/media/avatars/jm_c7gpVSI.jpg",
+                "slug": "justin-mayer"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "python-packaging-automation-auto-publish-to-pypi-via-pull-requests",
+        "track": "DevOps",
+        "state": "accepted",
+        "abstract": "A huge source of friction in software is publishing new releases. Somebody has to manually review commits and write a change-log, add a version number, and publish to PyPI. We will cover a better way: an automated process in which new versions are automatically published by merging pull requests.",
+        "description": "Empowering anyone to issue a new release by submitting a pull request? At first glance, it seems like an outlandish idea. Upon further inspection, however, the benefits become clear.\r\n\r\nOne of the biggest sources of friction in software development is packaging and publishing new releases. Somebody has to sift through the commits and write a change-log, tag it with a new version number, and publish the package to PyPI. And usually only one or two people have the access necessary for this last step.\r\n\r\nThe unfortunate result is an infrequent release cadence. Bug fixes and new features are sitting there in the `main` branch, but hardly anybody is benefiting from them because they aren\u2019t in a shipped release yet.\r\n\r\nThankfully, there\u2019s a better way: a continuous release process where new versions are auto-published via pull requests \u2014 without any manual monkeying.\r\n\r\nIn this environment, all pull requests must include a release file that describes the changes within. This file must also include whether the new version should be a major, minor, or patch release.\r\n\r\nThe continuous integration (CI) process looks for this file, and if one hasn\u2019t been included, the tests will fail, and the pull request won\u2019t be merged. Otherwise, a maintainer merges the pull request, and the CI process then uses the release file to put the description into the change-log, increment the version number, commit, tag, build, and publish the new release to PyPI.\r\n\r\nSo with almost no human input, every code contribution results in a new release in a matter of minutes. Every feature and bug-fix has its own release, without anyone having to remember to package and publish a new version. Plus, if a bug is found, it\u2019s now much easier to trace it to a specific release version.\r\n\r\nPerhaps the best part is that all contributors get to issue their own releases. What better way to welcome new contributors than to reward them with a dedicated release composed entirely of their own work?\r\n\r\nAttendees of this talk will take home the following knowledge and skills:\r\n\r\n* what kinds of problems are introduced by an infrequent release cadence\r\n* how automated releases solve those problems and provide myriad ancillary benefits\r\n* how to format and parse the release file\r\n* how to use continuous integration (CI) systems to automate releases\r\n* how to add deployment code so new versions are released when PRs are merged\r\n* how to use [AutoPub](https://github.com/autopub/autopub) to facilitate this process",
+        "duration": "30",
+        "python_level": "none",
+        "domain_level": "some"
+    },
+    {
+        "code": "MMWYWZ",
+        "title": "Applications of Python in Computational Chemistry and Material Design",
+        "speakers": [
+            {
+                "code": "9W9CWW",
+                "name": "Owain Beynon",
+                "biography": "PhD Student in Computational Chemistry at Cardiff University. \r\nResearch interests: software development, material science, catalysis, solid state physics.",
+                "avatar": null,
+                "slug": "owain-beynon"
+            }
+        ],
+        "submission_type": "Poster",
+        "slug": "applications-of-python-in-computational-chemistry-and-material-design",
+        "track": "~None of the above",
+        "state": "accepted",
+        "abstract": "Computational chemistry is the branch of chemistry that studies chemical systems through simulation and involves HPC architecture and software packages. Python has become an integral part of computational modelling of materials in recent years, with development of packages such as the Atomic Simulation Environment (ASE) which is a set of modules for manipulating, running and visualising atomic simulation. Furthermore, ASE integrates seamlessly with many electronic structure software packages, used for calculating the energy and properties of systems based on some level of theory, e.g Density Functional Theory (DFT). Moreover, the combination with other Python packages that integrate with ASE provide an ecosystem for atomic simulations. Packages such as CatLearn, a machine-learning approach used for calculating energies needed for reactions, along with Phonopy and FHI-vibes, both are for studying lattice dynamics of materials, to name a few, provide a comprehensive toolkit for the computational study of materials and chemical systems\r\n\r\nIn our research, such approaches are essential to further our understanding of materials and chemical processes, and of particular interest are materials for green and sustainable processes, such as catalysts used to produce fossil fuel alternatives. In this regard, as Python software becomes increasingly popular for the simulation and study of materials, it also provides the tools and methods needed for tackling some of the challenges of today",
+        "description": "Applications of Python in Computational Chemistry and Material Design\r\nOwain T. Beynon, Alun Owens, Andrew J. Logsdail\r\nCardiff Catalysis Institute, School of Chemistry, Cardiff University, Cardiff, Wales.\r\n\r\nComputational methods afford an insight into the behaviours and properties of materials and recently Python packages have increasingly become a powerful tool for the study of chemical systems. Computational chemistry is the branch of chemistry that studies chemical systems through simulation and involves HPC architecture and software packages. In general, there are two categories of simulation, dynamic and static and of these types, atoms in the system may be described by varying levels of theory: molecular (classical) mechanics (MM), quantum mechanics (QM) or a combination of the two (QM/MM). Static calculations obtain the property of the system at a fixed geometry, whereas dynamic calculations study the evolution of a system over a given timeframe. \r\n\r\nPython has become an integral part of computational modelling of materials in recent years, with development of packages such as the Atomic Simulation Environment (ASE) [1], which is a set of modules for manipulating, running and visualising atomic simulation. Furthermore, ASE integrates seamlessly with many electronic structure software packages, used for calculating the energy and properties of systems based on some level of theory, e.g Density Functional Theory (DFT), such as FHI-aims and VASP. [2,3] Moreover, the combination with other Python packages that integrate with ASE provide an ecosystem for atomic simulations (figure 1). Packages such as CatLearn, [4] a machine-learning approach used for determining transition states and energies needed for reactions, along with Phonopy and FHI-vibes, [5,6] both are for studying lattice dynamics of materials, and Py-ChemShell,[7] used for QM/MM calculations, to name a few, provide a comprehensive toolkit for the computational study of materials and chemical systems. \r\n\r\nIn our research, such approaches as outlined above are essential to further our understanding of materials and chemical processes, and of particular interest are materials for green and sustainable processes such as catalysts used for biofuel production, and battery materials, namely, zeolite Tin-BETA and Prussian Blue, [8-10] respectively. In collaboration with experimentalists, we seek to understand the synthetic methods and properties of these materials, with the aim to further establish them as viable alternatives to fossil fuels. In this regard, as Python software becomes increasingly popular for the simulation and study of materials, it also provides the tools and methods needed for tackling some of the grand challenges of today. \r\n\r\nReferences \r\n[1] A. Hjorth Larsen, et al. J. Phys. Condens. Matter 29 273002 (2017) [2] V. Blum, et al.  Comput. Phys. Commun., 180, 2175\u20132196 (2009) [3] G. Kresse and J. Hafner, Phys. Rev. B 47 , 558 (1993) [4] A. Garrido Torres, et al. Phys. Rev. Lett., 122, (2019)[5]A. Togo, I. Tanaka, Scr. Mater, 108 (2015). [6] F. Knoop et al. J. Open Source Softw. (2020) [7] Y. Lu, et al. J. Chem. Theory Comput., 15, 1317\u20131328 (2019) [8] A. Corma et al. Nature,\u202f412,\u202f423\u2013426 (2001) [9] C. Hammond, S. Conrad, I. Hermans, Angew. Chem. Int., 51, 11736\u201311739 (2012)[10] C. Ling. et al. J. Phys. Chem C 117 (2013)",
+        "duration": "60",
+        "python_level": "",
+        "domain_level": ""
+    },
+    {
+        "code": "TF9Z8Q",
+        "title": "HPy: a better C API for Python",
+        "speakers": [
+            {
+                "code": "T8FUFL",
+                "name": "Ronan Lamy",
+                "biography": "I'm a freelance software developer and open-source consultant. I'm a cofounder of HPy and I've been a PyPy core developer since 2012.",
+                "avatar": null,
+                "slug": "ronan-lamy"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "hpy-a-better-c-api-for-python",
+        "track": "(c)Python Internals",
+        "state": "accepted",
+        "abstract": "The official Python C API is specific to the current implementation of CPython. It has served us well and forms the basis upon which our entire extension ecosystem rests. \r\nHowever, it exposes a lot of internal details which makes it hard to implement it for other Python implementations (e.g. PyPy, GraalPython, Jython, IronPython, etc.), and \r\nprevents major evolutions of CPython itself, such as using a GC instead of refcounting, or removing the GIL.\r\n\r\nThis is where HPy comes in. It's a new C API designed from the ground up according to the following goals:\r\n* running much faster on alternate implementations, and at native speed on CPython\r\n* making it possible to compile a single binary which runs unmodified on all supported Python implementations and versions\r\n* being simpler and more manageable than the Python/C API\r\n* providing an improved debugging experience.\r\n\r\nWe'll discuss its current status and show how existing extensions can be gradually ported to it.",
+        "description": "",
+        "duration": "30",
+        "python_level": "expert",
+        "domain_level": "some"
+    },
+    {
+        "code": "TDUFJ9",
+        "title": "From circuit board design to finished product: the hobbyist\u2019s guide to hardware manufacturing",
+        "speakers": [
+            {
+                "code": "HBPEU7",
+                "name": "Sebastian Roll",
+                "biography": "Sebastian is a consultant, speaker and workshop organizer.\r\n\r\nHe has ten years of experience spanning Oil & Gas, Industrial IT and IoT. His main areas of interest include consulting practices, IoT and Python.",
+                "avatar": "https://program.europython.eu/media/avatars/Sebastian_Roll_lxEMZjv.jpg",
+                "slug": "sebastian-roll"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "from-circuit-board-design-to-finished-product-the-hobbyists-guide-to-hardware-manufacturing",
+        "track": "Makers",
+        "state": "accepted",
+        "abstract": "Ever wondered how hardware is made, or curious about making your own? \r\n\r\nWe share our experiences manufacturing a programmable gamepad for use in IoT/MicroPython workshops. \r\n\r\nWe will cover the entire production process, including:\r\n\r\n- Designing the PCB (Printed Circuit Board)\r\n- Choosing microcontroller and parts\r\n- Finding, ordering and assembling components\r\n- Pulling together firmware, drivers and software\r\n\r\nMistakes were indeed made along the way. Let's turn them into valuable lessons!",
+        "description": "",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "Q3FPVG",
+        "title": "Raise better errors with Exception Groups",
+        "speakers": [
+            {
+                "code": "VM3NZN",
+                "name": "Or Chen",
+                "biography": "I've been writing Python every day for 5 years, excited about Deep Learning, VR Gaming, and my dog Chika",
+                "avatar": "https://program.europython.eu/media/avatars/1634304370356_45bm3T9.jpg",
+                "slug": "or-chen"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "raise-better-errors-with-exception-groups",
+        "track": "Software Engineering & Architecture",
+        "state": "accepted",
+        "abstract": "New to python 3.11, Exception Groups help you raise and handle errors more robustly than ever before - you will delve deep into the current gaps in python's exception handling mechanisms, and get to know Error Groups, and a new python keyword except*, that can be used to overcome those issues and to write cleaner code.",
+        "description": "",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "F9FURV",
+        "title": "PyArrow and the future of data analytics",
+        "speakers": [
+            {
+                "code": "AQNTYV",
+                "name": "Alessandro Molina",
+                "biography": "Relying on Python as his primary development language for more than 15 years, has always been interested in Python as a Development Platform.\r\n\r\nHe worked as CTO and team leader of Python teams for the past 10 years and is currently core developer of the [TurboGears2](http://turbogears.org) web framework and a contributor to the [Apache Arrow](https://arrow.apache.org/) project.\r\n\r\nAlessandro is the author of [Crafting Test-Driven Software with Python](http://www.pythontdd.com) and [Modern Python Standard Library Cookbook](https://www.pythonstandardlibrarybook.com/)\r\nand has authored many OpenSource Python projects like the [DEPOT](https://depot.readthedocs.io/en/latest/) file storage framework and the [DukPy](https://github.com/amol-/dukpy#dukpy) JavaScript interpreter for Python.\r\n\r\nAlessandro has been an [active speaker](https://pyvideo.org/speaker/alessandro-molina.html) to tens of European conferences since 2012",
+                "avatar": null,
+                "slug": "alessandro-molina"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "pyarrow-and-the-future-of-data-analytics",
+        "track": "PyData: Data Engineering",
+        "state": "accepted",
+        "abstract": "In this talk we will introduce PyArrow and talk bout the transformation that the Arrow format is allowing in the Data Analytics world.\r\n\r\nPyArrow provides an in-memory format, a disk format, a network exchange protocol, a dataframe library and a query engine all integrated in a single library. But the Arrow ecosystem doesn't stop there and allows you to work integrating multiple different technologies. It can be a swiss army knife for data engineers and it integrates zero cost with NumPy and Pandas in many cases.",
+        "description": "",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "GAVCZ8",
+        "title": "Try Something Different: Explore MicroPython! (a rough guide for newcomers)",
+        "speakers": [
+            {
+                "code": "HYCU7H",
+                "name": "Andy Piper",
+                "biography": "Developer Advocate. API tinkerer. Friendly DEV.to moderator & community helper. IoT hacker (Eclipse IoT / MQTT). Perpetual student. LEGO fan. Prefer they/them pronouns.",
+                "avatar": null,
+                "slug": "andy-piper"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "try-something-different-explore-micropython-a-rough-guide-for-newcomers",
+        "track": "Makers",
+        "state": "accepted",
+        "abstract": "MicroPython - a reimplementation of Python for microcontrollers - is nine years old. How can you find your way in a jungle of tiny chips, circuits, and jumper wires? In this session, we will run through a brief introduction to the world of MicroPython. Beyond the basics, we will explore the projects, tools, and the  community that helped your intrepid speaker to get started as a newcomer.",
+        "description": "MicroPython is a reimplementation of Python for microcontrollers, originally developed as a result of a Kickstarter campaign. Today, it is an approachable way into programming for many young people, via boards like the Raspberry Pi Pico, the BBC micro:bit and the CodeBug - you can even run it on LEGO bricks! It is increasingly being used in commercial fields as well. MicroPython is helping Python to get into even more places, and making programmers more efficient as it does so.\r\n\r\nAndy Piper wanted to learn more, so he spent some time travelling and adventuring on the internet, to discover the community and projects around MicroPython.\r\n\r\nThe goal of this session is to briefly explain the What, Why and How of MicroPython. There *will* be circuit boards, and discussion of microcontrollers! We will take a look at examples, from established development boards to brand new ones. We will also acknowledge how MicroPython has been built upon, to enable different ways of working (with CircuitPython), and LEGO robots (via PyBricks). \r\n\r\nFinally, and most importantly, you'll get a good sense of the places you can find and learn from the MicroPython community, and how you can get involved and contribute!",
+        "duration": "30",
+        "python_level": "none",
+        "domain_level": "none"
+    },
+    {
+        "code": "RB7PNE",
+        "title": "CPython 3.11 in the Web Browser - A Journey",
+        "speakers": [
+            {
+                "code": "J3SDJ9",
+                "name": "Christian Heimes",
+                "biography": "Christian is an open source developer and Python core developer from Hamburg/Germany. He is well known for his work in the Python Security Response Team and as maintainer of CPython's ssl module.",
+                "avatar": "https://program.europython.eu/media/avatars/importthis3_gmC9ONc.jpg",
+                "slug": "christian-heimes"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "cpython-3-11-in-the-web-browser-a-journey",
+        "track": "(c)Python Internals",
+        "state": "accepted",
+        "abstract": "Python 3.11 alpha comes with experimental support for Web Assembly and can be built to run in modern web browsers or Node.js out of the box. I\u2019m going to show how we achieved the goal, which obstacles we faced, and what is missing to have fully working \u201cPython for the web\u201d.",
+        "description": "Python is ubiquitous, popular and runs almost everywhere \u2013 even on Mars. But there is one place that Python has not yet conquered: the browser. Python 3.11 may finally lay the foundation to make an old dream come true and have Python in the web browser.\r\n\r\nIn my talk I will explain how to cross-compile CPython 3.11 to Web Assembly and demonstrate how to run CPython in JavaScript engines. \r\nThe talk will cover\r\n\r\n* Why are some core developers and contributors working on Web Assembly port?\r\n* What is WASM and how do builds for browser, node, and WASI differ? What are the features and limitations of different WASM targets?\r\n* A short introduction to Python\u2019s build system and how cross compiling works.\r\n* What problems did we run into and how did we have to modify CPython\u2019s sources for WASM?\r\n* What does WASM support mean for the community and PyPI packages?",
+        "duration": "30",
+        "python_level": "expert",
+        "domain_level": "some"
+    },
+    {
+        "code": "YYQBM3",
+        "title": "Choosing the right database for your next project - Looking at options beyond PostgreSQL and MySQL",
+        "speakers": [
+            {
+                "code": "QYTJB9",
+                "name": "Marc-Andre Lemburg",
+                "biography": "Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany, specializing in the data, finance and database space. He has a degree in mathematics from the University of D\u00fcsseldorf.\r\n\r\nHis work with and for Python started in 1994. He is a Python Core Developer, designed and implemented the Unicode support in Python, and author of the mx Extensions, e.g. mxTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.\r\n\r\nMarc-Andre is a EuroPython Society (EPS) Fellow, a Python Software Foundation (PSF) founding Fellow and co-founded a local Python meeting in D\u00fcsseldorf (PyDDF). He served on the board of the PSF and EPS for many terms and loves to contribute to the growth of Python where ever he can.\r\n\r\nMore information is available on https://malemburg.com/",
+                "avatar": "https://program.europython.eu/media/avatars/mal-business-2-170x170_VPXpWrX.jpg",
+                "slug": "marc-andre-lemburg"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "choosing-the-right-database-for-your-next-project-looking-at-options-beyond-postgresql-and-mysql",
+        "track": "PyData: Data Engineering",
+        "state": "accepted",
+        "abstract": "In the last few years, lots of new database engines have been developed, making the selection process even more challenging than it was before, if you want to maintain an edge.\r\n\r\nThe talk will give an overview of what to consider in different situations.",
+        "description": "In the last few years, lots of new database engines have been developed and existing ones have been extended to cover new application spaces and features, making the selection process even more challenging than it was before, if you want to maintain an edge.\r\n\r\nThe talk will highlight the most important database engines to consider and their strengths when using them with Python applications, covering relational databases for general purpose tasks, data warehouse workloads, data analytics, machine learning, streaming data and massive scalability, to name a few aspects.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "expert"
+    },
+    {
+        "code": "KM8Z88",
+        "title": "Build with Audio: The easy & hard way!",
+        "speakers": [
+            {
+                "code": "DHPEJJ",
+                "name": "Vaibhav Srivastav",
+                "biography": "I am a Data Scientist and a Masters Candidate - Computational Linguistics at Universit\u00e4t Stuttgart. I am currently researching on Speech, Language and Vision methods for extracting value out of unstructured data.\r\n\r\nIn my previous stint with Deloitte Consulting LLP, I worked with Fortune Technology 10 clients to help them make data-driven (profitable) decisions. In my surplus time, I served as a Subject Matter Expert on Google Cloud Platform to help build scalable, resilient and fault-tolerant cloud workflows.\r\n\r\nBefore this, I have worked with startups across India to build Social Media Analytics Dashboards, Chat-bots, Recommendation Engines, and Forecasting Models.\r\n\r\nMy core interests lie in Natural Language Processing, Machine Learning/ Statistics and Cloud based Product development.\r\n\r\nApart from work and studies, I love travelling and delivering Workshops/ Talks at conferences and events across APAC and EU, DevConf.CZ, Berlin Buzzwords, DeveloperDays Poland, PyCon APAC (Philippines), Korea, Malaysia, Singapore, India, WWCode Asia Connect, Google DevFest, and Google Cloud Summit.",
+                "avatar": "https://program.europython.eu/media/avatars/JFlrSzB4_400x400_e1UV9lu.jpg",
+                "slug": "vaibhav-srivastav"
+            }
+        ],
+        "submission_type": "Tutorial",
+        "slug": "build-with-audio-the-easy-hard-way",
+        "track": "PyData: Deep Learning, NLP, CV",
+        "state": "accepted",
+        "abstract": "The audio (& speech) domain is going through a massive shift in terms of end-user performances. It is at the same tipping point as NLP was in 2017 before the Transformers revolution took over. We\u2019ve gone from needing a copious amount of data to create Spoken Language Understanding systems to just needing a 10-minute snippet. \r\n\r\nThis tutorial will help you create strong code-first & scientific foundations in dealing with Audio data and build real-world applications like Automatic Speech Recognition (ASR) Audio Classification, and Speaker Verification using backbone models like Wav2Vec2.0, HuBERT, etc.",
+        "description": "Unlike general Machine Learning problems where we either classify i.e. segregate a data point into a pre-defined class or regress around a continuous variable, audio related problems can be slightly more complex. Wherein, we either go from an audio representation to a text representation (ASR) or separate different layers of audio (Diarization) and so on. This tutorial will not only help you build applications like these but also unpack the science behind them using a code-first approach.\r\n\r\nEvery step of the way we\u2019ll first write and run some code and then take a step back and unpack it all till it makes sense. We\u2019ll make science *fun* again :)\r\n\r\nThe tutorial will be divided into 3 key sections:\r\n\r\n1. Read, Manipulate & Visualize Audio data\r\n2. Build your very own ASR system (using pre-trained models like Wav2Vec2.0) & deploy it\r\n3. Create an Audio Classification pipeline & infer the model for other downstream audio tasks \r\n\r\nAt the end of the tutorial, you\u2019ll develop strong intuition about Audio data and learn how to leverage large pre-trained backbone models for downstream tasks. You\u2019ll also learn how to create quick demos to test and share your models.\r\n\r\nLibraries: HuggingFace, SpeechBrain, PyTorch & Librosa",
+        "duration": "180",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "CQ7NBC",
+        "title": "Building a Just-in-Time Python FaaS Platform with Unikraft",
+        "speakers": [
+            {
+                "code": "GXDRHH",
+                "name": "Felipe Huici",
+                "biography": "Dr. Felipe Huici is CEO and Co-Founder at Unikraft UG, a start-up dedicated to lightweight and open source virtualization technologies and significantly lowering cloud infrastructure bills. In addition, Felipe is a chief researcher at NEC Laboratories Europe in Heidelberg, Germany where his main research and interests lie in the areas of high-performance software systems, and in particular specialization, virtualization and security. He has been published in several top-tier conferences and journals such as SOSP, ASPLOS, OSDI, Eurosys, SIGCOMM, NSDI, CoNEXT, and SIGCOMM CCR. Finally, Felipe is one of the founders and maintainers of the Linux Foundation Unikraft open source project.",
+                "avatar": "https://program.europython.eu/media/avatars/felipehuici_ixalJ4j.jpeg",
+                "slug": "felipe-huici"
+            },
+            {
+                "code": "RRE9DV",
+                "name": "Alexander Jung",
+                "biography": "Alexander Jung is a Co-Founder and Chief Product Officer at the Lightweight Virtualization company Unikraft, focusing on leading unikernels into market and mass deployment.  He is also a PhD student at Lancaster University, where he focuses primarily on optimizations of unikernels for network-bound operations; delivering effective continuous integration and deployment of VNF-based services; as well as compile-time methods for inter-VM communication based on library Operating Systems.  Previously he has worked as the Chief Information Officer at UK-based startup Adjacent Systems, securing and delivering systems for local law-enforcement and government.",
+                "avatar": "https://program.europython.eu/media/avatars/Photo-on-12.08.21-at-15.36_shop_copy_a4H0crA.jpg",
+                "slug": "alexander-jung"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "building-a-just-in-time-python-faas-platform-with-unikraft",
+        "track": "Infrastructure: Cloud & Hardware",
+        "state": "accepted",
+        "abstract": "Function-as-a-Service (FaaS) platforms are one of the key service offerings for any cloud provider. To provide strong isolation, the functions are run inside heavy-weight virtual machines (and within containers inside those for orchestration reasons). Consequently, such instances take too long to boot and so are kept on all the time, even though the functions only receive requests intermittently. The end result is that current FaaS platforms are much less efficient than they could be.\r\n\r\nWe will introduce a radically novel way to build FaaS platforms based on Python and the Unikraft Linux Foundation open source project (www.unikraft.org). Unikraft is a toolkit for building fully specialized, cloud-ready virtual machines called unikernels targeting a single application . Using Unikraft we can construct extremely specialized, Python-based unikernels that use only a few MBs to run a boot in 10s of milliseconds, allowing us to bring VMs up as a request to a function comes in, and to shut it down (or suspend it) afterwards. The result: a Python-based FaaS platform that is significantly more efficient and cheaper to operate than existing offerings.\r\n\r\nIn the talk we will provide an introduction to Unikraft, how Python is built on top of it, a full description of the FaaS platform and a short demo.",
+        "description": "Unikraft [1] is a unikernel (specialized virtual machine) project. Unikraft is able to target a specific application (e.g., a web server such as NGINX) and transparently build an entire software stack, from the operating system all the way up to systems libraries, that includes only the parts that the application needs and nothing more. Such specialization results in extremely short boot times (a few milliseconds compared to hundreds or thousands for Linux VMs), small image sizes and memory consumption (e.g., a few MBs vs. hundreds of MBs) and a minimal attack surface, to name a few benefits. The short boot times also allow us to bring Unikraft VMs up just-in-time, as a request for a service arrives, and to bring the instance back down (or suspend it) when the request is over, allowing for even greater efficiency.\r\n\r\nIn addition, Unikraft images are single address space: in cloud environments strong isolation is provided by the hypervisor, so for single application/single tenant VMs it does not make sense to have a kernel/user-space divide. The end result is higher efficiency in performance, with Unikraft yielding noticeably higher throughout than Linux [2].\r\n\r\nRegarding application support, we have put great effort towards making Unikraft as POSIX compatible as possible. Unikraft provides a syscall shim-layer and support for the musl libc, allowing us to run unmodified versions of Python. \r\n\r\nIn terms of orchestration, we have integrated Unikraft with major frameworks such as Kubernetes and Prometheus. This, along with extensive debugging facilities should make Unikraft easy to both use and develop for.\r\n\r\n[1] https://unikraft.org/\r\n[2] https://dl.acm.org/doi/10.1145/3447786.3456248 (best paper award)",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "KMCFKN",
+        "title": "Data Warehouses Meet Data Lakes",
+        "speakers": [
+            {
+                "code": "8MDEKJ",
+                "name": "Mauro",
+                "biography": "Mauro Pelucchi is a senior data scientist and big data engineer \r\nresponsible for the design of the \"Real-Time Labour Market Information System on Skill Requirements\" for CEDEFOP.\r\n\r\nHe currently works as Head of Global Data Science @ EMSI Burning-Glass with the goal to develop innovative models, methods and deployments of labour market data and other data to meet customer requirements and prototype new potential solutions. His main tasks are related to advanced machine learning modelling, labour market analyses, and the design of big data pipelines to process large datasets of online job vacancies.\r\nIn collaboration with the University of Milano-Bicocca, he took part in many research projects related to the labour market intelligence systems.\r\nHe collaborates with the University of Milano-Bicocca as a lecturer at the Master Business Intelligence and Big Data Analytics and with the University of Bergamo as a lecturer in Computer Engineering.",
+                "avatar": "https://program.europython.eu/media/avatars/BGT_Mauro_Pelucchi__LARGE_UV7Pfua.jpg",
+                "slug": "mauro"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "data-warehouses-meet-data-lakes",
+        "track": "PyData: Data Engineering",
+        "state": "accepted",
+        "abstract": "Many organizations have migrated their data warehouses to datalake solutions in recent years.\r\nWith the convergence of the data warehouse and the data lake, a new data management paradigm has emerged that combines the best of 2 approaches: the botton-up of big data and the top-down of a classic data warehouse.",
+        "description": "In this talk, I will explain the current challenges of a datalake and how we can approach a \r\nmoderm data architecture with the help of pyspark, hudi, delta.io or iceberg.\r\nWe will see how organize data in a data lake to support real-time processing of applications \r\nand analyzes across all varieties of data sets, structured and unstructured, how provides \r\nthe scale needed to support enterprise-wide digital transformation and creates one unique source of data \r\nfor multiple audiences.",
+        "duration": "30",
+        "python_level": "expert",
+        "domain_level": "expert"
+    },
+    {
+        "code": "NRNTLL",
+        "title": "Teaching Python - Modern Challenges",
+        "speakers": [
+            {
+                "code": "VGAQHM",
+                "name": "Nilo Ney Coutinho Menezes",
+                "biography": "Software Architect, distributed systems and cloud lover, using Python for development and teaching. I try to make Python accessible to a wide audience.",
+                "avatar": "https://program.europython.eu/media/avatars/nilo_yPTSnCx.png",
+                "slug": "nilo-ney-coutinho-menezes"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "teaching-python-modern-challenges",
+        "track": "Education, Teaching & Further Training",
+        "state": "accepted",
+        "abstract": "Teaching computer programming nowadays has its own challenges. In the past, lack of access to proper information and communication constraints were impediments to a wider audience. With the internet and the new video age, anybody can access Python or any other programming language content instantaneously and almost free. In this talk, some findings and observations related to remote teaching in formal and informal education are presented. Focus and discipline seem to be the scarce resource to learn properly new programming languages.",
+        "description": "Teaching computer programming nowadays has its own challenges. In the past, lack of access to proper information and communication constraints were impediments to a wider audience. With the internet and the new video age, anybody can access Python or any other programming language content instantaneously and almost free. In this talk, some findings and observations related to remote teaching in formal and informal education are presented. Focus and discipline seem to be the scarce resource to learn properly new programming languages.\r\nThis presentation is based on observations made throughout the years of Brazilian internet groups on Telegram where students with different backgrounds have an interest in learning Python. The impact of remote education due to the pandemic, the abundance of material, lack of basic math skills, and a support framework to help students are presented.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "JL7LBG",
+        "title": "Build your own linters",
+        "speakers": [
+            {
+                "code": "JHSJBW",
+                "name": "Rahul Jha",
+                "biography": "I'm a senior software engineer at https://deepsource.io, where I work on developing tools to improve code health and quality.\r\n\r\nI'm the maintainer of [Vulture](https://github.com/jendrikseipp/vulture), and it will have your dead Python. Thank you!",
+                "avatar": "https://program.europython.eu/media/avatars/rahul-profile-picture_VCHth3N.png",
+                "slug": "rahul-jha"
+            }
+        ],
+        "submission_type": "Tutorial",
+        "slug": "build-your-own-linters",
+        "track": "Testing",
+        "state": "accepted",
+        "abstract": "Despite a ton of wonderful linters out there, it pays off to scratch your itch and learn how to write one yourself. Anytime a pet peeve starts bothering you in code reviews, you\u2019ll have all the tools at your disposal.",
+        "description": "Developers are opinionated, and it reflects in their programming style \u2014 not just the way code _looks_, but how it _feels_: its organization and readability. In such cases, maintaining consistency across a project helps everyone involved. One aspect of this is ensuring that there are (at least partial) automated tests to enforce this style.\r\n\r\nThis training aims to enable the audience to write such tests by giving them a tour of code analysis and the vast array of tools it makes available to us. First, we dissect the code using Python's `ast` and `tokenize` modules and object internals like `__dict__`. From there and on, we visit some real-world examples:\r\n- A test to detect unnecessary use of double-quotes. They are such a terrible waste of pixels, after all.\r\n- Flagging the use of list() instead of []. The former is slower \u2013 as it requires an extra lookup in \"globals\" \u2013 and might result in a bug if the name is rebound to another object.\r\n- Find if statements are nested for more than four levels. It can lead to hard-to-understand, ugly-looking code.\r\n- Look for unused imports. Shred the extra loading time and memory amounting from these unused lines of code.",
+        "duration": "180",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "YBQYF3",
+        "title": "Forget Mono vs. Multi-Repo - Building Centralized Git Workflows with Python",
+        "speakers": [
+            {
+                "code": "EZU9HM",
+                "name": "David Melamed",
+                "biography": "Currently CTO and Co-Founder of Jit, the Continuous Security platform for Developers. David has a PhD in Bioinformatics and for the past 20 years has been a full-stack developer, CTO & technical evangelist, mostly in the cloud, and specifically in cloud security, working for leading organizations such as MyHeritage, CloudLock (acquired by Cisco) and leading the 'advanced development team' for the CTO of Cisco's cloud security (a $500M ARR BU).",
+                "avatar": "https://program.europython.eu/media/avatars/dvdmelamed-pic_drHBbME.jpeg",
+                "slug": "david-melamed"
+            },
+            {
+                "code": "TUCBCX",
+                "name": "Daniel Koch",
+                "biography": null,
+                "avatar": null,
+                "slug": "daniel-koch"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "forget-mono-vs-multi-repo-building-centralized-git-workflows-with-python",
+        "track": "DevOps",
+        "state": "accepted",
+        "abstract": "The mono vs. multi-repo is an age-old debate in the DevOpsphere, and one that can still cause flame wars.  What if I were to tell you that you don't have to choose?\r\nIn this talk we will dive into how we built a centralized Git workflow that can work with any kind of repo architecture, delivered with Python.\r\n\r\nOne of the greatest recurring pains in CI/CD is the need to reinvent the wheel and define your CI workflow for each and every repository or (micro)service, when eventually 99% of the config is the same.  What if we could hard reset this paradigm and create a single, unified workflow that is shared by all of our repos and microservices?  In this talk, we will showcase how a simple solution implemented in Python, demoed on Github as the SCM, and Github Actions for our CI, enabled us to unify this process for all of our services, and improve our CI/CD velocity by orders of magnitude.",
+        "description": "",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "QKS7UE",
+        "title": "Bulletproof Python \u2013 Property-Based Testing with Hypothesis",
+        "speakers": [
+            {
+                "code": "A7BNZH",
+                "name": "Michael Seifert",
+                "biography": "Michael is a consulting software engineer who helps product teams to develop Python software in the cloud. He worked with many different teams from various industries, but none of them practised property-based testing and only few were familiar with the concept.\r\n\r\nThis prompted him to spread the word about property-based testing and Hypothesis in an effort to help others write more robust and maintainable software.",
+                "avatar": "https://program.europython.eu/media/avatars/michael_seifert_-_300x300_KY7yE8t.png",
+                "slug": "michael-seifert"
+            }
+        ],
+        "submission_type": "Tutorial",
+        "slug": "bulletproof-python-property-based-testing-with-hypothesis",
+        "track": "Testing",
+        "state": "accepted",
+        "abstract": "Property-based testing is a great benefit to the robustness and maintainability of your software. Yet, the technique is still vastly underused in the Python community. The workshop gives a hands-on introduction to Hypothesis and practices different approaches for writing property-based tests.",
+        "description": "Do you find yourself working through pages of copied and pasted tests to accommodate a simple code change? Does your software frequently break in unexpected ways despite your testing efforts? Don\u2019t despair! Property-based testing could be your way out of that mess. Rather than working harder and writing more test code, property-based testing forces you to work smarter and test more code with fewer tests.\r\n\r\nTraditional tests are example-based. They require the developer to come up with arbitrary inputs and check a system\u2019s behavior against explicit outputs. More often than not, developers only think of inputs that are handled correctly by their code, thus leaving bugs hidden. Property-based tests generate the inputs for you and in many cases they\u2019re more likely to find invalid inputs than humans. The difficulty lies in formulating these test cases.\r\n\r\nAfter this workshop you\u2019ll be comfortable with property-based testing using Hypothesis. You\u2019ll have experience requesting appropriate test data from Hypothesis and in writing tests for common and more advanced properties. At work, your co-workers will be impressed by your unbreakable code ;)\r\n\r\nParticipants are expected to have basic familiarity with unit testing and a testing framework. Provided code examples use pytest.",
+        "duration": "180",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "WVFUYA",
+        "title": "Handling Errors the Graceful Way in Python",
+        "speakers": [
+            {
+                "code": "ND3VKT",
+                "name": "Riya Bansal",
+                "biography": "Riya Bansal is an enthusiastic and passionate Software Engineer at Microsoft with 3 years of experience with enterprise volume licensing products and Microservice technologies. Riya has a lot of experience working with Data Lakes as well. She has worked from small-sized Startups to large MNCs and gained a lot of experience over the years.\r\nShe is a big Pythonista and really interested in writing Python considering the best practices. Apart from that, Riya has also led\u00a0an amazing Python Community which is a volunteer-driven organization of amazing Pythonistas, enthusiasts, entrepreneurs, researchers, students, and many more with a primary interest in Python.\r\nShe has also been awarded the Google Women Tech makers Scholarship for her leadership skills and impact on the community of women in tech as well.  She has mentored over 10000+ students in the past.",
+                "avatar": "https://program.europython.eu/media/avatars/Me_0z8yiRT.JPG",
+                "slug": "riya-bansal"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "handling-errors-the-graceful-way-in-python",
+        "track": "Web",
+        "state": "accepted",
+        "abstract": "Things rarely go as planned, especially in the world of programming. Errors are the bane of a programmer\u2019s existence. You write an awesome piece of code, are ready to execute it and build a powerful machine learning model, and then poof. Python throws up an unexpected error, ending your hope of quick code execution.",
+        "description": "In the process of programming, we are always going to encounter various errors. \r\nThings rarely go as planned, especially in the world of programming. Errors are unavoidable when writing code, which can be frustrating at times. Every single one of us has faced this issue and emerged from it a better programmer. Dealing with bugs and errors is what builds our confidence in the long run and teaches us valuable lessons along the way.\r\nSo, in this talk, we'll discuss different ways of handling errors and making our lives a little better. \r\nWe'll talk about how code written with effective exception handling strategies can help us to catch bugs early in the software developmental cycle.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "some"
+    },
+    {
+        "code": "BRSSQK",
+        "title": "TDD in Python with pytest",
+        "speakers": [
+            {
+                "code": "7BS3PU",
+                "name": "Leonardo Giordani",
+                "biography": "Born in 1977 together with Star Wars, bash, Apple ][, Dire Straits, The Silmarillion, and many other great things.\r\n\r\nI started coding in April 1987 on a Sinclair ZX Spectrum. I then moved to MS-DOS PCs and in 1996 I started using Linux and became interested in operating system internals. I love software architectures, algorithms, mathematics and cryptography.\r\n\r\nI\u2019m mainly interested in open source software. I like both the theoretical and practical aspects of computer science.\r\n\r\nI am currently working as a contractor DevOps and Python developer while I design a DevOps bootcamp that I will run in London from June 2022.\r\n\r\nFrom 2013 I blog some technical thoughts at http://thedigitalcatonline.com.\r\n\r\nIn 2018 I published the free book \u201cClean Architectures in Python\u201d http://bit.ly/getpycabook",
+                "avatar": "https://program.europython.eu/media/avatars/Avatar400x400_cuVmtE6.jpg",
+                "slug": "leonardo-giordani"
+            }
+        ],
+        "submission_type": "Tutorial",
+        "slug": "tdd-in-python-with-pytest",
+        "track": "Testing",
+        "state": "accepted",
+        "abstract": "This workshop will guide you step-by-step through the implementation of a very simple Python library following a strict TDD workflow. At the end of the workshop you will have grasped the main principles of TDD and learned the fundamentals of the Python testing library pytest.",
+        "description": "Test-Driven Development (TDD) is fortunately one of the names that I can spot most frequently when people talk about methodologies. Unfortunately, many programmers still do not follow it, fearing that it will impose a further burden on the already difficult life of a developer.\r\n\r\nTDD is a methodology, something that can help you to create better code. But it is not going to solve all your problems. As with all methodologies you have to pay attention not to commit blindly to it. Try to understand the reasons why certain practices are suggested by the methodology and you will also understand when and why you can or have to be flexible.\r\n\r\nDuring the workshop we will learn what TDD is, and what are the main rules. We will do this developing a very simple Python library together in a sort of a game that mirrors a daily TDD development routine. While we do this, we will also learn how to use pytest, which is one of the most used testing libraries in Python. Oh, we will also learn when NOT to follow the rules!",
+        "duration": "180",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "3U9T9S",
+        "title": "Self-explaining APIs",
+        "speakers": [
+            {
+                "code": "VST3SV",
+                "name": "Roberto Polli",
+                "biography": "Roberto joined in the [Italian Digital Transformation Department](https://innovazione.gov.it/it/progetti/api/) - to create a national API Ecosystem based on internet standards.\r\n\r\nHe's a Red Hat Certified Engineer and MySQL/MongoDB certified DBA, but loves maintaining free software.\r\n\r\nA life ago he took a Math degree, and he's really proud of it.",
+                "avatar": null,
+                "slug": "roberto-polli"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "self-explaining-apis",
+        "track": "Software Engineering & Architecture",
+        "state": "accepted",
+        "abstract": "To mash up various APIs, data need to have a well defined meaning: imagine meshing up healthcare APIs using different units for human temperature, or financial APIs using different currencies.\r\n\r\nThis talk describes strategies and python tools to overcome these problems in large API ecosystems such as data exchanges between different countries.",
+        "description": "This talk will present strategies and python tools to create semantically interoperable REST APIs. After the problem statement, various solutions will be presented, including:\r\n\r\n* contract-first api development with OpenAPI 3, ontologies and controlled vocabularies like the ones [published by the European Union](https://op.europa.eu/en/web/eu-vocabularies/authority-tables);\r\n* the rdflib and pyld python libraries for processing json-ld and [RDF files](https://en.wikipedia.org/wiki/Resource_Description_Framework);\r\n* the use of centralized catalogs such as [schema.org](schema.org).\r\n\r\nPrerequisites:\r\n\r\n* no prior knowledge of semantics and ontologies;\r\n* practical experience with OpenAPI, json schema and data modeling and API design in general.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "expert"
+    },
+    {
+        "code": "9PQZKF",
+        "title": "Write Docs Devs Love: Ten Tricks To Level Up Your Tech Writing",
+        "speakers": [
+            {
+                "code": "SN9SZQ",
+                "name": "Mason Egger",
+                "biography": "Mason is currently a Developer Advocate at Gretel. Prior to his work at Gretel, he was a Developer Advocate at DigitalOcean. Prior to this he was an SRE helping build and maintain a highly available hybrid multicloud PaaS. He is an avid programmer, speaker, educator, and writer. He is an organizer of PyTexas and actively contributes to open source projects. In his spare time he enjoys reading, camping, kayaking, and exploring new places.",
+                "avatar": "https://program.europython.eu/media/avatars/attachment_6_Dicge7M.jpeg",
+                "slug": "mason-egger"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "write-docs-devs-love-ten-tricks-to-level-up-your-tech-writing",
+        "track": "Community & Diversity",
+        "state": "accepted",
+        "abstract": "Tutorials, blog posts, and product docs help developers learn. From our favorite tutorials to bad product docs we all consume technical writing. But what makes for good technical writing? In this talk I\u2019ll share 10 tips and tricks to improve your technical writing skills to help your readers succeed",
+        "description": "Think of that feeling you get when you follow an online tutorial or documentation and the code works on the first run. Now think of all the hours spent wasted following broken, outdated, or incomplete documentation. From our favorite tutorials to bad product docs we all consume technical writing. Tutorials, blog posts, and product docs help developers learn new things, build projects, and debug issues. But what makes one tutorial better than another? In this talk I'll discuss how you can write the documentation that developers love and I\u2019ll share 10 tips and tricks to improve your technical writing.\r\n\r\n#### Outline\r\n* Introduction (1 min)\r\n* Why is Technical Writing Important? (4 min)\r\n* My Top 10 Tips to improve your Technical Writing (20 min)\r\n  * \\# 10 - Make Your End Goal Clear\r\n  * \\# 9 - Don\u2019t Be Overly Verbose\r\n  * \\# 8 - Inclusive Language\r\n    * Avoid words like Simple, Easy\r\n  * \\# 7 - Avoid Technical Jargon\r\n  * \\# 6 - Define ALL Acronyms\r\n  * \\# 5 - Avoid Memes/Colloquialisms\r\n  * \\# 4 - Use Meaningful Code Samples and Variable Names\r\n  * \\# 3 - Don\u2019t Make Your Reader Leave Your Article\r\n  * \\# 2 - Make it Easy for the Reader to Find a Single Piece of Information\r\n  * \\# 1 - Verify Your Instructions! Test, Test, Test!\r\n  * \\# 0 Bonus! - Practice, Practice, Practice\r\n* How You Can Get Started in Technical Writing (3 min)\r\n* Conclusion & Questions (2 min)",
+        "duration": "30",
+        "python_level": "none",
+        "domain_level": "none"
+    },
+    {
+        "code": "TE7K7D",
+        "title": "Clean Architectures in Python",
+        "speakers": [
+            {
+                "code": "7BS3PU",
+                "name": "Leonardo Giordani",
+                "biography": "Born in 1977 together with Star Wars, bash, Apple ][, Dire Straits, The Silmarillion, and many other great things.\r\n\r\nI started coding in April 1987 on a Sinclair ZX Spectrum. I then moved to MS-DOS PCs and in 1996 I started using Linux and became interested in operating system internals. I love software architectures, algorithms, mathematics and cryptography.\r\n\r\nI\u2019m mainly interested in open source software. I like both the theoretical and practical aspects of computer science.\r\n\r\nI am currently working as a contractor DevOps and Python developer while I design a DevOps bootcamp that I will run in London from June 2022.\r\n\r\nFrom 2013 I blog some technical thoughts at http://thedigitalcatonline.com.\r\n\r\nIn 2018 I published the free book \u201cClean Architectures in Python\u201d http://bit.ly/getpycabook",
+                "avatar": "https://program.europython.eu/media/avatars/Avatar400x400_cuVmtE6.jpg",
+                "slug": "leonardo-giordani"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "clean-architectures-in-python",
+        "track": "Software Engineering & Architecture",
+        "state": "accepted",
+        "abstract": "A brief talk that introduces software developers to the idea of \"clean architecture\" and discusses how to reduce coupling between parts of a software system through well-known strategies such as abstraction and inversion of control.",
+        "description": "Architectural considerations are often overlooked by developers or completely delegated to a framework. We should start once again discussing how applications are structured, how components are connected and how to lower coupling between different parts of a system, to avoid creating software that cannot easily be maintained or changed. The \"clean architecture\" model predates Robert Martin, who recently brought it back to the attention of the community, and is a way of structuring applications that leverages layers separation and internal APIs to achieve a very tidy, fully-tested, and loosely coupled system.\r\n\r\nThe talk introduces the main ideas of the architecture, showing how the layers can be implemented in Python, following the content of the book \"Clean Architectures in Python\" edited by Leanpub. The book recently reached 25,000 downloads and many readers found it useful to start learning how to test software and how to structure an application without relying entirely on the framework.",
+        "duration": "30",
+        "python_level": "some",
+        "domain_level": "none"
+    },
+    {
+        "code": "LCNBCC",
+        "title": "Debugging asynchronous programs in Python",
+        "speakers": [
+            {
+                "code": "E9QEAS",
+                "name": "Andrii Soldatenko",
+                "biography": "Hi there! I\u2019m Pythonista from Ukraine, I'm working remotely as a Senior Software Engineer at Astronomer. Also I'm a speaker at many PyCons and meetups around the globe. In my free time I\u2019m crossFit and gymnastic amateur.",
+                "avatar": null,
+                "slug": "andrii-soldatenko"
+            }
+        ],
+        "submission_type": "Talk",
+        "slug": "debugging-asynchronous-programs-in-python",
+        "track": "Software Engineering & Architecture",
+        "state": "accepted",
+        "abstract": "Recently the interest in asynchronous programming has grown dramatically.\r\n Unfortunately, asynchronous programs do not always have reproducible behavior. Even when they are run with the same inputs, their results can be radically different.\r\n\tIn this talk I'll show you different approaches on how to debug asynchronous programs in Python.",
+        "description": "Luckily, when it comes to debugging asynchronous applications in python, we have a couple of options to consider. The writers of the asyncio module have very kindly provided a debug mode, which is quite powerful and can really aid us in our debugging adventures without the overhead of modifying the system's code base too dramatically. In particular I'll show you what asyncio debug mode means for developers, and how to source tracebacks for unhandled exceptions in futures. Also how to detect accidental blocking for I/O. We discuss how to monitor the asyncio event loop and collect metrics in statsD.\r\nFinally we discuss monitor and cli capabilities for asyncio applications based on aiomonitor and aioconsole. Also we discuss how asynchronous python works in REPL via autoawait based on ipython and how to do it in vanilla python REPL.",
+        "duration": "30",
+        "python_level": "expert",
+        "domain_level": "some"
+    }
 ]
