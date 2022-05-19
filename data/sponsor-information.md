@@ -8,14 +8,14 @@ subtitle:
 # Deadlines
 
 <ul>
- <li><a href="#Tickets"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: June 10 </a></li>
+ <li><a href="#"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: June 10 </a></li>
  <li><a href="#"> Virtual Swag Page submission: June 17 </a></li>
  <li><a href="#"> Sponsor Logo submission: June 17 </a></li>
  <li><a href="#"> Technical Case Study Blog Post submission: June 17 (Keystone, Diamond, Platinum) </a></li>
  <li><a href="#"> Video Ads submission (with and without audio): June 17 </a></li>
  <li><a href="#"> Booth Customisations: June 24 </a></li>
  <li><a href="#"> Sending in booth images: June 24 </a></li>
- <li><a href="#"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
+ <li><a href="#Tickets"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
  <li><a href="#"> Sponsor Feedback Questions submission:  June 27 </a></li>
  <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: June 27 </a></li>
  <li><a href="#"> Recruiting Session Presentation - presenter name & email: July 08 </a></li>
@@ -32,22 +32,22 @@ For details, please refer to the relevant sections below.
 ---
 # Tickets
 <h2>Tickets</h2>
-<details>
-  <summary><h2> Complimentary / Discounted Tickets registration & assignment: June 27 </h2></summary>
+  <details>
+    <summary><h2> Complimentary / Discounted Tickets registration & assignment: June 27 </h2></summary>
 
-  <h3>Registration Process</h3>
-  <ol>
-  	<li>
-      <strong> Purchase the tickets in bulk by using the voucher links sent to you. </strong> They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
-    </li>
-  	<li>
-      <strong> Assign tickets </strong>: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from support@pretix.eu with Subject: Your order: XXXX and amend accordingly.
-    </li>
-  </ol>
-  Please finalise assigning all tickets to your team by June 27, so we have enough lead time for badge printing.
-  Note: We enforce a strict named pass policy. If your sponsorship package includes delivering a sponsored talk, workshop/tutorial or poster, you will also need to <strong> assign the presenter a ticket. </strong> Without a named ticket, our registration team will not be able to allow them into the conference.
-  We are happy to convert each conference ticket to 3 day passes. Email sponsoring@europython.eu in advance to state your preference.
-</details>
+    <h3>Registration Process</h3>
+    <ol>
+      <li>
+        <strong> Purchase the tickets in bulk by using the voucher links sent to you. </strong> They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
+      </li>
+      <li>
+        <strong> Assign tickets </strong>: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from support@pretix.eu with Subject: Your order: XXXX and amend accordingly.
+      </li>
+    </ol>
+    Please finalise assigning all tickets to your team by June 27, so we have enough lead time for badge printing.
+    Note: We enforce a strict named pass policy. If your sponsorship package includes delivering a sponsored talk, workshop/tutorial or poster, you will also need to <strong> assign the presenter a ticket. </strong> Without a named ticket, our registration team will not be able to allow them into the conference.
+    We are happy to convert each conference ticket to 3 day passes. Email sponsoring@europython.eu in advance to state your preference.
+  </details>
 
 ---
 
@@ -116,7 +116,7 @@ For details, please refer to the relevant sections below.
 </details>
 
 <details>
-    <summary><h2>Sponsored Sponsored Talk Submission: June 7th</h2></summary>
+  <summary><h2>Sponsored Sponsored Talk Submission: June 7th</h2></summary>
 
   As a Keystone, Diamond and Gold sponsor or sponsors having purchased a Sponsored
   Talk, you get one slot of 30 minutes as part of the official conference schedule
