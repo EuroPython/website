@@ -13,9 +13,9 @@ subtitle:
  <li><a href="#"> Sponsor Logo submission: June 17 </a></li>
  <li><a href="#"> Technical Case Study Blog Post submission: June 17 (Keystone, Diamond, Platinum) </a></li>
  <li><a href="#"> Video Ads submission (with and without audio): June 17 </a></li>
- <li><a href="#"> Booth Customisations: June 24 </a></li>
+ <li><a href="#Booths"> Booth Customisations: June 24 </a></li>
  <li><a href="#"> Sending in booth images: June 24 </a></li>
- <li><a href="#"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
+ <li><a href="#Tickets"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
  <li><a href="#"> Sponsor Feedback Questions submission:  June 27 </a></li>
  <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: June 27 </a></li>
  <li><a href="#"> Recruiting Session Presentation - presenter name & email: July 08 </a></li>
@@ -25,26 +25,35 @@ subtitle:
  <li><a href="#"> Parcel Services ordering: TBA </a></li>
 </ul>
 
+Please note that the above are hard deadlines. We cannot accept submissions after the listed dates and will not issue refunds in case the deadlines are not met.
+
+For details, please refer to the relevant sections below.
+
 ---
+# Tickets
 <h2>Tickets</h2>
 <details>
-  <summary><h2>Purchasing Sponsor Tickets: July 16th</h2></summary>
+  <summary><h2> Complimentary / Discounted Tickets registration & assignment: June 27 </h2></summary>
 
   <h3>Registration Process</h3>
   <ol>
   	<li>
-      <u><strong>Purchase the Conference & Sprint Business Ticket in bulk</strong></u> by using the voucher codes by 9th July: The sponsor representative will get a direct email with voucher codes to purchase in bulk the free and discounted tickets. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
+      <u><strong> Purchase the tickets in bulk by using the voucher links sent to you. </strong></u> They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
     </li>
   	<li>
-      <u><strong>Assign tickets</strong></u>: Assign the tickets to every team member that you have chosen to attend the conference.
+      <u><strong>Assign tickets</strong></u>: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from support@pretix.eu with Subject: Your order: XXXX and amend accordingly.
+
     </li>
   </ol>
+  Please finalise assigning all tickets to your team by June 27, so we have enough lead time for badge printing.
+
+  Note: We enforce a strict named pass policy. If your sponsorship package includes delivering a sponsored talk, workshop/tutorial or poster, you will also need to <strong> assign the presenter a ticket. </strong> Without a named ticket, our registration team will not be able to allow them into the conference.
+  We are happy to convert each conference ticket to 3 day passes. Email sponsoring@europython.eu in advance to state your preference.
 </details>
 
 ---
 
 # Exhibition
-
 <details>
   <summary><h2>Exhibition Schedule</h2></summary>
 
@@ -70,65 +79,25 @@ The tear down of the booths will be possible on Friday, Jul 12th, starting at
 
 </details>
 
-
-# Booth Design Mockups
-
-Booth building is managed by OBExpo
-
 <details>
-  <summary><h2>Silver Booth</h2></summary>
+  <summary><h2>Exhibit Booths</h2></summary>
+Sponsors of Silver and above will all be assigned a booth, ranging from 6-56 sqm depending on the package.
 
-  <img src="/img/booth_mocks/booth_slilver_mock.jpg"  />
-
-  <ul>
-    <li>3m x 2.0m back wall with graphic</li>
-    <li>1 waste bin</li>
-    <li>1 counter, lockable </li>
-    <li>1 bar stool</li>
-    <li>3 spotlights</li>
-    <li>1 power connection</li>
-    <li>6 sqm carpet</li>
-  </ul>
-
+</strong> Please refer to the EuroPython 2022 - Exhibit Booths.pdf for mockups and what is included in your booth, as part of your sponsorship package. </strong>
 </details>
 
-<details>
-  <summary><h2>Gold Booth</h2></summary>
-
-  <img src="/img/booth_mocks/booth_slilver_mock.jpg"  />
-
-  <ul>
-    <li>3m x 2.3m back wall with graphic</li>
-    <li>1 waste bin</li>
-    <li>1 counter, lockable </li>
-    <li>1 bar stool</li>
-    <li>3 spotlights</li>
-    <li>1 power connection</li>
-    <li>6 sqm carpet</li>
-  </ul>
-
-</details>
-
+# Booths
 <details>
   <summary><h2>Customization and additions to stands</h2></summary>
+All booth graphics can be upgraded from the default Wall Banner Graphic to Stretched Graphics.
 
-A booth construction and basic furniture (table, chair(s), power sockets, small
-wall mounted spotlights, and possibly a locker) are provided by us and included
-in your sponsorship package if you have booked a package with booth.
+There are other add-ons you can order, such as TV sets and furniture for your booth.
 
-If you want to customize the booths, please contact Congress Center Basel (CCB)
-directly:
+For all upgrades and add-on orders, please fill in the EuroPython 2022- Booth Order Forms.pdf and contact Tony O’Brien from OBExpo directly: tony@obexpo.ie
 
-Jasna Niederberger Manager Exhibitions jasna.niederberger@congress.ch +41 58 206
-30 95
+Deadline for ordering booth customisation and addons: Friday 24 June. A 30% surcharge will apply afterwards.
+Submission Channel: Contact Tony from OBExpo contact: tony@obexpo.ie
 
-and / or order customizations at this Congress Center Basel (CCB) shop:
-
-CCB online shop
-
-Deadline for all customization orders is June 21st. This is a hard deadline,
-since the booth builder has to make arrangements to implement these requests for
-changes.
 
 </details>
 
