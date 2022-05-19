@@ -76,13 +76,6 @@ For details, please refer to the relevant sections below.
 
 </details>
 
-<details>
-  <summary><h2>Exhibit Booths</h2></summary>
-  Sponsors of Silver and above will all be assigned a booth, ranging from 6-56 sqm depending on the package.
-
-  </strong> Please refer to the EuroPython 2022 - Exhibit Booths.pdf for mockups and what is included in your booth, as part of your sponsorship package. </strong>
-</details>
-
 # Booths
 <details>
   <summary><h2>Customization and additions to stands</h2></summary>
