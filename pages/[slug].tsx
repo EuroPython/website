@@ -11,9 +11,21 @@ import { highlightFirstHeading } from "../plugins/highlight-first-heading";
 import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
 import { components } from "../components/mdx";
 
-export default function Page({ source, path }: { source: any; path: string }) {
+export default function Page({
+  source,
+  title,
+  path,
+}: {
+  title: string;
+  source: any;
+  path: string;
+}) {
+  title = title
+    ? `${title} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`
+    : "EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote";
+
   return (
-    <Layout path={path}>
+    <Layout path={path} title={title}>
       <main id="main-content">
         <MDXRemote {...source} components={components} />
       </main>
@@ -35,7 +47,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const markdownPath = path.join(process.cwd(), `data/${params.slug}.md`);
 
   const page = await fs.readFile(markdownPath);
-  const { content } = matter(page);
+  const { content, data } = matter(page);
   const mdxSource = await serialize(content.toString(), {
     mdxOptions: {
       rehypePlugins: [
@@ -52,5 +64,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
       ],
     },
   });
-  return { props: { source: mdxSource, path: params.slug } };
+  return {
+    props: { source: mdxSource, path: params.slug, title: data.title },
+  };
 }
