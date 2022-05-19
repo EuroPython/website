@@ -2650,12 +2650,16 @@ button[name="vote"]:hover {
   margin: 2rem 0;
 }
 
+.schedule__date {
+  display: none;
+}
+
 .schedule .headings {
   color: var(--color-body-light);
   display: none;
 }
 
-.schedule .row div,
+.talk__time,
 .schedule .break span,
 .schedule .headings span {
   padding: 0.5rem 0.5rem;
@@ -2681,6 +2685,8 @@ button[name="vote"]:hover {
   width: 100%;
   height: 100%;
   padding: 0 !important;
+  margin-bottom: 25px;
+  position: relative;
 }
 
 .talk p {
@@ -2688,13 +2694,32 @@ button[name="vote"]:hover {
 }
 
 .talk__rating {
-  width: 100%;
-  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   font-size: 0.75rem;
   line-height: 1rem;
   text-align: left;
   padding: 0.5rem 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  width: 20px;
+}
+
+.talk > .talk__title,
+.talk > .talk__mobile-details {
+  padding-right: 30px;
+}
+
+.talk__rating > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  display: block;
+  transform-origin: 50% 50%;
 }
 
 .beginner {
@@ -2746,13 +2771,14 @@ button[name="vote"]:hover {
 
 .talk__speaker img {
   border-radius: 50%;
-  height: 2.75rem;
   width: 2.75rem;
+  height: 2.75rem;
   object-fit: cover;
+  aspect-ratio: 1;
 }
 
 .speaker__bio {
-  padding: 0 0.5rem !important;
+  padding: 0 0.5rem 0 0 !important;
   text-align: left;
 }
 
@@ -2776,7 +2802,9 @@ button[name="vote"]:hover {
 @media all and (min-width: 640px) {
   .schedule .row {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   .schedule .talk__time {
@@ -2785,6 +2813,18 @@ button[name="vote"]:hover {
 }
 
 @media all and (min-width: 1180px) {
+  .talk__rating {
+    position: static;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0;
+  }
+
+  .talk__rating > span {
+    position: static;
+    transform: none;
+  }
+
   .talk__rating {
     padding: 0.8rem;
   }
@@ -2798,19 +2838,37 @@ button[name="vote"]:hover {
   }
 
   .talk__speaker {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .schedule {
     display: grid;
+    gap: 1rem;
+    grid-template-columns: 5rem repeat(var(--total-rooms), 1fr);
+  }
+
+  .schedule .break {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .schedule .break,
+  .schedule .talk,
+  .schedule .talk__time,
+  .schedule .headings > span {
+    grid-row: var(--grid-row);
+    grid-column: var(--grid-column);
   }
 
   .schedule .row {
     padding: 0;
   }
 
-  .schedule .headings {
-    display: block;
-  }
-
-  .schedule .talk__time {
-    grid-column: span 1;
+  .schedule .headings,
+  .schedule .row {
+    display: contents;
   }
 
   .schedule .row div,
@@ -2821,13 +2879,10 @@ button[name="vote"]:hover {
 
   .schedule .row,
   .schedule .headings {
-    display: grid;
-    grid-template-columns: 5rem repeat(6, 1fr);
     padding: 0rem 2rem 0rem 1rem;
   }
 
   .schedule .break {
-    display: grid;
     grid-template-columns: 5rem 1fr;
     padding: 0rem 2rem 0rem 1rem;
   }
@@ -2844,7 +2899,6 @@ button[name="vote"]:hover {
 
   .schedule .row,
   .schedule .headings {
-    grid-template-columns: 6rem repeat(6, 1fr);
     padding: 0rem 4rem;
   }
 
@@ -2924,4 +2978,8 @@ button[name="vote"]:hover {
 
 .session__speaker-image + p {
   margin-top: 2rem;
+}
+
+.session-card__author {
+  font-weight: bold;
 }
