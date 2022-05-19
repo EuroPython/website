@@ -7,14 +7,16 @@ export const Layout = ({
   children,
   path,
   title,
+  socialCardUrl,
 }: {
   children: ReactNode;
   path?: string;
   title?: string;
+  socialCardUrl?: string;
 }) => {
   return (
     <>
-      <Meta path={path || ""} title={title} />
+      <Meta path={path || ""} title={title} socialCardUrl={socialCardUrl} />
 
       <a href="#main-content" className="hide">
         Skip to main content

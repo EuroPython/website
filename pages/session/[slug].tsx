@@ -11,6 +11,7 @@ type Speaker = {
 };
 
 type Session = {
+  code: string;
   title: string;
   slug: string;
   abstract: string;
@@ -30,8 +31,12 @@ export default function Page({
   path: string;
   session: Session;
 }) {
+  const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?session=${session.code}`;
+  const speakers = session.speakers.map((speaker) => speaker.name).join(", ");
+  const title = `${session.title} - ${speakers} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`;
+
   return (
-    <Layout path={path}>
+    <Layout path={path} socialCardUrl={socialCardUrl} title={title}>
       <main id="main-content">
         <article className="accent-left">
           <h1>{session.title}</h1>

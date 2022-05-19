@@ -2,14 +2,20 @@ import Head from "next/head";
 export const Meta = ({
   title = "EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote",
   path,
+  socialCardUrl,
 }: {
   title?: string;
   path: string;
+  socialCardUrl?: string;
 }) => {
   const url = `https://ep2022.europython.eu/${path}`;
-  const imageUrl = path
+  let imageUrl = path
     ? `https://ep2022.europython.eu/social-cards/${path}.png`
     : "https://ep2022.europython.eu/social-cards/default.png";
+
+  if (socialCardUrl) {
+    imageUrl = socialCardUrl;
+  }
 
   return (
     <Head>
