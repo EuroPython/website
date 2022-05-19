@@ -8,17 +8,17 @@ subtitle:
 # Deadlines
 
 <ul>
- <li><a href="#"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: June 10 </a></li>
- <li><a href="#"> Virtual Swag Page submission: June 17 </a></li>
- <li><a href="#"> Sponsor Logo submission: June 17 </a></li>
- <li><a href="#"> Technical Case Study Blog Post submission: June 17 (Keystone, Diamond, Platinum) </a></li>
- <li><a href="#"> Video Ads submission (with and without audio): June 17 </a></li>
- <li><a href="#"> Booth Customisations: June 24 </a></li>
- <li><a href="#"> Sending in booth images: June 24 </a></li>
- <li><a href="#tickets"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
- <li><a href="#"> Sponsor Feedback Questions submission:  June 27 </a></li>
- <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: June 27 </a></li>
- <li><a href="#"> Recruiting Session Presentation - presenter name & email: July 08 </a></li>
+ <li><a href="#"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: 2022-06-10 </a></li>
+ <li><a href="#"> Virtual Swag Page submission: 2022-06-17 </a></li>
+ <li><a href="#"> Sponsor Logo submission: 2022-06-17 </a></li>
+ <li><a href="#"> Technical Case Study Blog Post submission: 2022-06-17 (Keystone, Diamond, Platinum) </a></li>
+ <li><a href="#"> Video Ads submission (with and without audio): 2022-06-17 </a></li>
+ <li><a href="#exhibition"> Booth Customisations: 2022-06-24 </a></li>
+ <li><a href="#exhibition"> Sending in booth images: 2022-06-24 </a></li>
+ <li><a href="#registration"> Complimentary / Discounted Tickets registration & assignment: 2022-06-24 </a></li>
+ <li><a href="#"> Sponsor Feedback Questions submission: 2022-06-24 </a></li>
+ <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: 2022-06-27 </a></li>
+ <li><a href="#"> Recruiting Session Presentation - presenter name & email: 2022-07-08 </a></li>
  <li><a href="#"> Recruiting - On-site Job Board Ad submission: anytime during the conference (we'll have a white board for this) </a></li>
  <li><a href="#"> Tweet and/or Retweet. Linkedin Reshare: anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </a></li>
  <li><a href="#"> Participation in Daily Prize Draw Announcements: before noon of each conference day </a></li>
@@ -30,22 +30,17 @@ Please note that the above are hard deadlines. We cannot accept submissions afte
 For details, please refer to the relevant sections below.
 
 ---
-# Tickets
-<h2>Tickets</h2>
-  <details>
-    <summary><h2> Complimentary / Discounted Tickets registration & assignment: June 27 </h2></summary>
-    <ol>
-      <li>
-        <strong> Purchase the tickets in bulk by using the voucher links sent to you. </strong> They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
-      </li>
-      <li>
-        <strong> Assign tickets </strong>: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from support@pretix.eu with Subject: Your order: XXXX and amend accordingly.
-      </li>
-    </ol>
-    Please finalise assigning all tickets to your team by June 27, so we have enough lead time for badge printing.
-    Note: We enforce a strict named pass policy. If your sponsorship package includes delivering a sponsored talk, workshop/tutorial or poster, you will also need to <strong> assign the presenter a ticket. </strong> Without a named ticket, our registration team will not be able to allow them into the conference.
-    We are happy to convert each conference ticket to 3 day passes. Email sponsoring@europython.eu in advance to state your preference.
-  </details>
+# Registration
+<details>
+  <summary><h2>Ticket Registration Process</h2></summary>
+
+  -  Purchase all the complimentary / discounted tickets in bulk by using the voucher links sent to you. They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
+
+  - Assign tickets: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from [support@pretix.eu](support@pretix.eu) with *Subject: Your order: XXXX* and amend accordingly.
+
+  ***Deadline*** for registering and assigning the tickets: ***2022-06-27***
+
+</details>
 
 ---
 
@@ -53,69 +48,71 @@ For details, please refer to the relevant sections below.
 <details>
   <summary><h2>Exhibition Schedule</h2></summary>
 
-  The exhibition is open during the three main conference days only, from
-  Wednesday to Friday.
+**Exhibit Days**: during the three main conference days: **Wednesday to Friday, 13-17 July 2022**.
+**Exhibit Hours**: 9:00 - 18:00 on Wednesday & Thursday; 9:00 - 17:00 on Friday.
 
-  Exhibit opening times are: 9am to 6pm on Wednesday and Thursday, 9am to 5pm on
-  Friday.
-
-  Please ensure that prominent booths will be staffed during the opening hours.
-  Normal booths need to be staffed at least during the official breaks.
-</details>
-
-<details>
-  <summary><h2>Booth setup and teardown times</h2></summary>
-
-  Time for setting up the booths will be Tuesday, July 9th, around 15:00 (to be
-  confirmed by the booth builder) and Wednesday, July 10th, 8:00 - 10:00.
-
-  The tear down of the booths will be possible on Friday, Jul 12th, starting at
-  16:45 (to be confirmed by the booth builder).
+All booths should be staffed at least during the official breaks. It is highly recommended that they will be staffed during the opening hours, especially the more prominent ones, such as Keystone and Diamond.
 
 </details>
 
-# Booths
 <details>
-  <summary><h2>Customization and additions to stands</h2></summary>
+  <summary><h2>Exhibit Booths</h2></summary>
+  Sponsors of Silver and above will all be assigned a booth, ranging from 6-56 sqm depending on the package.
+
+  *** Please refer to the [EuroPython 2022 - Exhibit Booths.pdf](https://drive.google.com/file/d/1k2m9t445G4tpMON1VlGIg-SSgYTsQy5m/view?usp=sharing) for mockups and what is included in your booth, as part of your sponsorship package. ***
+</details>
+
+<details>
+  <summary><h2>Booth Build and Teardown</h2></summary>
+
+  - Build Time: Tuesday 8:00-16:00; sponsors can enter between 16:00-18:00
+  - Teardown Time: Friday 17:00; nobody allowed after the teardown starts.
+
+</details>
+
+<details>
+  <summary><h2>Booth Builder Contact</h2></summary>
+  We have contracted OBExpo to set up and manage the booths. You can reach out to Tony O'Brien with your booth related questions: <a href = "tony@obexpo.ie">tony@obexpo.ie</a>
+
+</details>
+
+<details>
+  <summary><h2>Booth & Counter Graphic</h2></summary>
+
+  **Booth graphic**: All booths include a Wall Banner Graphic that covers the entire back wall of your booth. It is highly recommended that you submit a company specific custom graphic for your booth.
+
+  Note: these wall banners with your graphic can be taken down afterwards for future reuse.
+
+  **Counter graphic**: All booths include at least one counter. Depending on the booth level, the amount and size can range. It is highly recommended that you submit a company specific custom graphic for the counter(s).
+
+  Should you choose not to submit your own graphic, a default EuroPython Society one will be provided.
+
+  **Graphic Submission Guide**
+  Graphics should be submitted directly to OBExpo, as specified below:
+
+  - Please refer to [EuroPython 2022 - Exhibit Booths.pdf](https://drive.google.com/file/d/1k2m9t445G4tpMON1VlGIg-SSgYTsQy5m/view?usp=sharing) for the dimensions of the back wall of your booth, and of the counter(s).
+
+  - Refer to [EuroPython 2022- Booth Order Forms.pdf](https://drive.google.com/file/d/1IhBXgiTWqkH4Pbo100vGHHzj-ZY-CEAl/view?usp=sharing) page 7 - artwork for file and delivery specifications.
+
+  Note: OBExpo has specifically asked us to emphasise that emailing or using WeTransfer or YouSendit are their preferred methods of sending the files. Permission based file sharing systems such as Google Drive or OneDrive are less preferred.
+
+  **Submission Channel**: Contact Tony from OBExpo contact: <a href = "tony@obexpo.ie">tony@obexpo.ie</a>
+
+</details>
+
+
+
+<details>
+  <summary><h2>Booth Customisation and Add-ons</h2></summary>
   All booth graphics can be upgraded from the default Wall Banner Graphic to Stretched Graphics.
 
   There are other add-ons you can order, such as TV sets and furniture for your booth.
 
-  For all upgrades and add-on orders, please fill in the EuroPython 2022- Booth Order Forms.pdf and contact Tony O’Brien from OBExpo directly: tony@obexpo.ie
+  For all upgrades and add-on orders, please fill in the [EuroPython 2022- Booth Order Forms.pdf](https://drive.google.com/file/d/1IhBXgiTWqkH4Pbo100vGHHzj-ZY-CEAl/view?usp=sharing) and contact Tony O’Brien from OBExpo directly: <a href = "tony@obexpo.ie">tony@obexpo.ie</a>
 
-  Deadline for ordering booth customisation and addons: Friday 24 June. A 30% surcharge will apply afterwards.
-  Submission Channel: Contact Tony from OBExpo contact: tony@obexpo.ie
+  **Deadline** for ordering booth customisation and addons: **Friday 24 June**. A 30% surcharge will apply afterwards.
+
+  **Submission Channel**: Contact Tony from OBExpo contact: <a href = "tony@obexpo.ie">tony@obexpo.ie</a>
 </details>
 
 ---
-
-# Sponsored Content
-
-<details>
-  <summary><h2>Sponsored Workshop/Training Submission: June 7th</h2></summary>
-
-  As a Keystone, or sponsors having purchased a Sponsored Workshop/Training, you
-  get one slot of 180 minutes as part of the official conference training/workshop
-  schedule (Monday & Tuesday, 26&27 July). Please let us know the trainer's name
-  by June 7th, so we can contact them for scheduling preferences and coordinate
-  with the Program Workgroup to guide them through the training/workshop
-  submission.
-
-  Deadline for submitting the trainer’s name for the Sponsored Workshop/Training:
-  June 7th Submission Channel: email sponsoring@europython.eu
-
-</details>
-
-<details>
-  <summary><h2>Sponsored Sponsored Talk Submission: June 7th</h2></summary>
-
-  As a Keystone, Diamond and Gold sponsor or sponsors having purchased a Sponsored
-  Talk, you get one slot of 30 minutes as part of the official conference schedule
-  (Wednesday to Friday, 28-30 July). Please let us know the speaker's name by June
-  7th, so we can contact them for scheduling preferences and coordinate with the
-  Program Workgroup to guide them through the talk submission.
-
-  Deadline for submitting the speaker’s name for the Sponsored Talk: June 7th
-  Submission Channel: email sponsoring@europython.eu
-
-</details>
