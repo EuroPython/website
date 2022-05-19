@@ -8,8 +8,21 @@ subtitle:
 # Deadlines
 
 <ul>
- <li><a href="#sponsored-content">Sponsored Workshop/Training submission: 7 June</a></li>
- <li><a href="#exhibition">Ordering booth customizations: 31 June</a></li>
+ <li><a href="#"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: June 10 </a></li>
+ <li><a href="#"> Virtual Swag Page submission: June 17 </a></li>
+ <li><a href="#"> Sponsor Logo submission: June 17 </a></li>
+ <li><a href="#"> Technical Case Study Blog Post submission: June 17 (Keystone, Diamond, Platinum) </a></li>
+ <li><a href="#"> Video Ads submission (with and without audio): June 17 </a></li>
+ <li><a href="#"> Booth Customisations: June 24 </a></li>
+ <li><a href="#"> Sending in booth images: June 24 </a></li>
+ <li><a href="#"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
+ <li><a href="#"> Sponsor Feedback Questions submission:  June 27 </a></li>
+ <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: June 27 </a></li>
+ <li><a href="#"> Recruiting Session Presentation - presenter name & email: July 08 </a></li>
+ <li><a href="#"> Recruiting - On-site Job Board Ad submission: anytime during the conference (we'll have a white board for this) </a></li>
+ <li><a href="#"> Tweet and/or Retweet. Linkedin Reshare: anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </a></li>
+ <li><a href="#"> Participation in Daily Prize Draw Announcements: before noon of each conference day </a></li>
+ <li><a href="#"> Parcel Services ordering: TBA </a></li>
 </ul>
 
 ---
