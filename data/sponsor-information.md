@@ -8,7 +8,7 @@ subtitle:
 # Deadlines
 
 <ul>
- <li><a href="#"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: June 10 </a></li>
+ <li><a href="#Tickets"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: June 10 </a></li>
  <li><a href="#"> Virtual Swag Page submission: June 17 </a></li>
  <li><a href="#"> Sponsor Logo submission: June 17 </a></li>
  <li><a href="#"> Technical Case Study Blog Post submission: June 17 (Keystone, Diamond, Platinum) </a></li>
@@ -38,11 +38,10 @@ For details, please refer to the relevant sections below.
   <h3>Registration Process</h3>
   <ol>
   	<li>
-      <u><strong> Purchase the tickets in bulk by using the voucher links sent to you. </strong></u> They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
+      <strong> Purchase the tickets in bulk by using the voucher links sent to you. </strong> They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
     </li>
   	<li>
-      <u><strong>Assign tickets</strong></u>: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from support@pretix.eu with Subject: Your order: XXXX and amend accordingly.
-
+      <strong> Assign tickets </strong>: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from support@pretix.eu with Subject: Your order: XXXX and amend accordingly.
     </li>
   </ol>
   Please finalise assigning all tickets to your team by June 27, so we have enough lead time for badge printing.
