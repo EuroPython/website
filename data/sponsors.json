@@ -34,6 +34,11 @@
           "name": "Optum",
           "url": "https://www.optum.ie/",
           "logo": "img/logos/sponsor_logos/optum.svg"
+        },
+        {
+          "name": "Arm",
+          "url": "https://www.arm.com/",
+          "logo": "img/logos/sponsor_logos/arm.svg"
         }
       ]
     },
@@ -49,7 +54,17 @@
           "name": "Ebury",
           "url": "https://ebury.com/",
           "logo": "/img/logos/sponsor_logos/ebury.svg"
-        }
+        },
+        {
+          "name": "Sourcery",
+          "url": "https://sourcery.ai",
+          "logo": "/img/logos/sponsor_logos/sourcery.svg"
+        },
+        {
+          "name": "Anvil",
+          "url": "https://anvil.works",
+          "logo": "/img/logos/sponsor_logos/anvil.svg"
+        },
       ]
     },
     {
