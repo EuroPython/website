@@ -56,46 +56,45 @@ For details, please refer to the relevant sections below.
 <details>
   <summary><h2>Exhibition Schedule</h2></summary>
 
-The exhibition is open during the three main conference days only, from
-Wednesday to Friday.
+  The exhibition is open during the three main conference days only, from
+  Wednesday to Friday.
 
-Exhibit opening times are: 9am to 6pm on Wednesday and Thursday, 9am to 5pm on
-Friday.
+  Exhibit opening times are: 9am to 6pm on Wednesday and Thursday, 9am to 5pm on
+  Friday.
 
-Please ensure that prominent booths will be staffed during the opening hours.
-Normal booths need to be staffed at least during the official breaks.
-
+  Please ensure that prominent booths will be staffed during the opening hours.
+  Normal booths need to be staffed at least during the official breaks.
 </details>
 
 <details>
   <summary><h2>Booth setup and teardown times</h2></summary>
 
-Time for setting up the booths will be Tuesday, July 9th, around 15:00 (to be
-confirmed by the booth builder) and Wednesday, July 10th, 8:00 - 10:00.
+  Time for setting up the booths will be Tuesday, July 9th, around 15:00 (to be
+  confirmed by the booth builder) and Wednesday, July 10th, 8:00 - 10:00.
 
-The tear down of the booths will be possible on Friday, Jul 12th, starting at
-16:45 (to be confirmed by the booth builder).
+  The tear down of the booths will be possible on Friday, Jul 12th, starting at
+  16:45 (to be confirmed by the booth builder).
 
 </details>
 
 <details>
   <summary><h2>Exhibit Booths</h2></summary>
-Sponsors of Silver and above will all be assigned a booth, ranging from 6-56 sqm depending on the package.
+  Sponsors of Silver and above will all be assigned a booth, ranging from 6-56 sqm depending on the package.
 
-</strong> Please refer to the EuroPython 2022 - Exhibit Booths.pdf for mockups and what is included in your booth, as part of your sponsorship package. </strong>
+  </strong> Please refer to the EuroPython 2022 - Exhibit Booths.pdf for mockups and what is included in your booth, as part of your sponsorship package. </strong>
 </details>
 
 # Booths
 <details>
   <summary><h2>Customization and additions to stands</h2></summary>
-All booth graphics can be upgraded from the default Wall Banner Graphic to Stretched Graphics.
+  All booth graphics can be upgraded from the default Wall Banner Graphic to Stretched Graphics.
 
-There are other add-ons you can order, such as TV sets and furniture for your booth.
+  There are other add-ons you can order, such as TV sets and furniture for your booth.
 
-For all upgrades and add-on orders, please fill in the EuroPython 2022- Booth Order Forms.pdf and contact Tony O’Brien from OBExpo directly: tony@obexpo.ie
+  For all upgrades and add-on orders, please fill in the EuroPython 2022- Booth Order Forms.pdf and contact Tony O’Brien from OBExpo directly: tony@obexpo.ie
 
-Deadline for ordering booth customisation and addons: Friday 24 June. A 30% surcharge will apply afterwards.
-Submission Channel: Contact Tony from OBExpo contact: tony@obexpo.ie
+  Deadline for ordering booth customisation and addons: Friday 24 June. A 30% surcharge will apply afterwards.
+  Submission Channel: Contact Tony from OBExpo contact: tony@obexpo.ie
 </details>
 
 ---
@@ -105,28 +104,28 @@ Submission Channel: Contact Tony from OBExpo contact: tony@obexpo.ie
 <details>
   <summary><h2>Sponsored Workshop/Training Submission: June 7th</h2></summary>
 
-As a Keystone, or sponsors having purchased a Sponsored Workshop/Training, you
-get one slot of 180 minutes as part of the official conference training/workshop
-schedule (Monday & Tuesday, 26&27 July). Please let us know the trainer's name
-by June 7th, so we can contact them for scheduling preferences and coordinate
-with the Program Workgroup to guide them through the training/workshop
-submission.
+  As a Keystone, or sponsors having purchased a Sponsored Workshop/Training, you
+  get one slot of 180 minutes as part of the official conference training/workshop
+  schedule (Monday & Tuesday, 26&27 July). Please let us know the trainer's name
+  by June 7th, so we can contact them for scheduling preferences and coordinate
+  with the Program Workgroup to guide them through the training/workshop
+  submission.
 
-Deadline for submitting the trainer’s name for the Sponsored Workshop/Training:
-June 7th Submission Channel: email sponsoring@europython.eu
+  Deadline for submitting the trainer’s name for the Sponsored Workshop/Training:
+  June 7th Submission Channel: email sponsoring@europython.eu
 
-</details>
+  </details>
 
-<details>
-  <summary><h2>Sponsored Sponsored Talk Submission: June 7th</h2></summary>
+  <details>
+    <summary><h2>Sponsored Sponsored Talk Submission: June 7th</h2></summary>
 
-As a Keystone, Diamond and Gold sponsor or sponsors having purchased a Sponsored
-Talk, you get one slot of 30 minutes as part of the official conference schedule
-(Wednesday to Friday, 28-30 July). Please let us know the speaker's name by June
-7th, so we can contact them for scheduling preferences and coordinate with the
-Program Workgroup to guide them through the talk submission.
+  As a Keystone, Diamond and Gold sponsor or sponsors having purchased a Sponsored
+  Talk, you get one slot of 30 minutes as part of the official conference schedule
+  (Wednesday to Friday, 28-30 July). Please let us know the speaker's name by June
+  7th, so we can contact them for scheduling preferences and coordinate with the
+  Program Workgroup to guide them through the talk submission.
 
-Deadline for submitting the speaker’s name for the Sponsored Talk: June 7th
-Submission Channel: email sponsoring@europython.eu
+  Deadline for submitting the speaker’s name for the Sponsored Talk: June 7th
+  Submission Channel: email sponsoring@europython.eu
 
 </details>
