@@ -45,7 +45,6 @@ For details, please refer to the relevant sections below.
     </li>
   </ol>
   Please finalise assigning all tickets to your team by June 27, so we have enough lead time for badge printing.
-
   Note: We enforce a strict named pass policy. If your sponsorship package includes delivering a sponsored talk, workshop/tutorial or poster, you will also need to <strong> assign the presenter a ticket. </strong> Without a named ticket, our registration team will not be able to allow them into the conference.
   We are happy to convert each conference ticket to 3 day passes. Email sponsoring@europython.eu in advance to state your preference.
 </details>
@@ -114,9 +113,9 @@ For details, please refer to the relevant sections below.
   Deadline for submitting the trainer’s name for the Sponsored Workshop/Training:
   June 7th Submission Channel: email sponsoring@europython.eu
 
-  </details>
+</details>
 
-  <details>
+<details>
     <summary><h2>Sponsored Sponsored Talk Submission: June 7th</h2></summary>
 
   As a Keystone, Diamond and Gold sponsor or sponsors having purchased a Sponsored
