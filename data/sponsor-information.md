@@ -15,7 +15,7 @@ subtitle:
  <li><a href="#"> Video Ads submission (with and without audio): June 17 </a></li>
  <li><a href="#"> Booth Customisations: June 24 </a></li>
  <li><a href="#"> Sending in booth images: June 24 </a></li>
- <li><a href="#Tickets"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
+ <li><a href="#tickets"> Complimentary / Discounted Tickets registration & assignment: June 27 </a></li>
  <li><a href="#"> Sponsor Feedback Questions submission:  June 27 </a></li>
  <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: June 27 </a></li>
  <li><a href="#"> Recruiting Session Presentation - presenter name & email: July 08 </a></li>
@@ -34,8 +34,6 @@ For details, please refer to the relevant sections below.
 <h2>Tickets</h2>
   <details>
     <summary><h2> Complimentary / Discounted Tickets registration & assignment: June 27 </h2></summary>
-
-    <h3>Registration Process</h3>
     <ol>
       <li>
         <strong> Purchase the tickets in bulk by using the voucher links sent to you. </strong> They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
