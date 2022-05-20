@@ -1,3 +1,7 @@
+---
+title: Community partners
+---
+
 # Community partners
 
 EuroPython is a community-driven conference, we wouldn't be able to make as much impact without the support of our brilliant Community Partners. Get to know our partners better below (alphabetical order).
@@ -6,7 +10,7 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <img src="/img/coding-grace-logo.png"  />
 <p>Coding Grace provides diversity-friendly workshops and events in an environment for developers and aspiring developers mentored by diverse instructors from the industry. We also advocate Irish diversity in tech through monthly newsletters and curated tech event listings from around Ireland.</p>
 
-## [Codú Community](https://www.meetup.com/codu-community/)	
+## [Codú Community](https://www.meetup.com/codu-community/)
 <p>Let's teach you how to think like an engineer, code applications ready for public release, and become the builder of things that you want to be.</p>
 
 ## [Dublin Data Science](https://www.meetup.com/Dublin-Data-Science/)
@@ -20,10 +24,10 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <img src="/img/dublin-linux-developers-logo.png"  />
 <p>We love to build things with Linux! Come share projects with us that you have made with Linux, find out what Linux projects other people are working on, ask questions and meet new people. We welcome Raspberry PI projects, what you built with an old server scheduled for the bin, Linux on bare metal and virtual machines in the cloud are all welcome equally.</p>
 
-## [Farset Labs (Hackerspace)](https://www.meetup.com/farsetlabs/)	
+## [Farset Labs (Hackerspace)](https://www.meetup.com/farsetlabs/)
 <p>Farset Labs is a community funded and volunteer operated charity, opened in 2012 as a place for creativity and technological tinkering. We’re open to everyone, no matter what you want to do, and we welcome people from all walks of life to use our space, come to our events, and get involved with the maker community in Northern Ireland.</p>
 
-## [GDG Belfast](https://gdg.community.dev/gdg-belfast/)	
+## [GDG Belfast](https://gdg.community.dev/gdg-belfast/)
 <p>Belfast GDG aims to provide something interesting every month either based on or related to the technology and services that Google offer. GDG stands for Google Developers Groups and is a platform offered by Google Developers to support community-run developer groups</p>
 
 ## [PyBelfast](https://www.meetup.com/PyBelfast/)
@@ -38,10 +42,10 @@ EuroPython is a community-driven conference, we wouldn't be able to make as much
 <img src="/img/pythonie-logo.png" />
 <p>Python Ireland is the Irish organisation representing the various chapters of Python users. We organise meet ups and events for software developers, students, academics and anyone who wants to learn the language.</p>
 
-## [Tog Hackerspace](https://tog.ie)	
+## [Tog Hackerspace](https://tog.ie)
 <p>TOG is a hackerspace based in the centre of Dublin, Ireland. It is a shared space where members have a place to be creative and work on their projects in an environment that is both inspiring and supportive of both new and old technologies.</p>
 
-## [Women in AI Ireland](https://www.womeninai.co/)	
+## [Women in AI Ireland](https://www.womeninai.co/)
 <p>We believe in the power of our community, based on mutual support, caring, and sharing to bring awareness, inspire and educate next generations. Be a part of this powerful group of volunteers and actively change the role of women and minorities in AI.</p>
 
 ## [Women Who Code Belfast](https://www.womenwhocode.com/belfast)

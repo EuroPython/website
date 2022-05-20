@@ -1,3 +1,8 @@
+---
+title: Tickets
+---
+
+
 # Tickets
 
 <a class="button" href="https://tickets.europython.eu">Beam me up to the ticket shop now!</a>

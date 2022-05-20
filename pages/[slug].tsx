@@ -65,6 +65,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     },
   });
   return {
-    props: { source: mdxSource, path: params.slug, title: data.title },
+    props: { source: mdxSource, path: params.slug, title: data.title || "" },
   };
 }
