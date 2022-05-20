@@ -226,3 +226,116 @@ For your recruiting ad on the on-site job-board, you can bring along a printed a
   **Submission Channel**: <a href = "sponsoring@europython.eu">sponsoring@europython.eu</a>
 
 </details>
+
+# Sponsor Promo
+<details>
+  <summary><h2>Sponsor Blog Post</h2></summary>
+
+  For Platinum, Diamond and Keystone Level sponsors, we will run blog posts highlighting the sponsor. The Communications team can help you craft a technical case study blog post. They will be posted on <a href="https://dev.to/t/europython" target="_blank">EuroPython's dev.to</a> .
+
+  Separately, Diamond and Keystone sponsors get to write one extra technical case study blog post to be published on our regular EuroPython Blog, which also goes to our and mailing lists. You may also opt to cross post the same blog across dev.to and the EuropPython blog.
+
+  For the blog post we will require **at least 3 paragraphs** of text and ideally a picture we can use (if you don't have a picture, we can use your logo as well).
+  The text should be written to highlight technical case study related to Python and address a technically oriented audience.
+
+  You can check out the <a href="https://blog.europython.eu/europython-2020-introducing-our-keystone-sponsor/" target="_blank">2020 Keystone Sponsor blog post</a> to get an idea.
+
+
+  Feel free to tie in any talk/special event you are organising at our conference at the end. After you've sent in the draft, we will forward it to our Communications Team for editing.
+
+**Deadline**  for sending the Blog Post text and picture: **2022-06-17**
+
+**Submission Channel**: <a href = "sponsoring@europython.eu">sponsoring@europython.eu</a>
+
+</details>
+
+<details>
+  <summary><h2>Virtual Swag Page</h2></summary>
+
+  Sponsors of Silver and above can be featured on our Virtual Swag Page of the website. We will list the page on our website as a swag page. If you have prepared any coupon codes, digital gifts, we can distribute them for you via the page. What you are eligible to submit depends on your sponsorship level:
+
+  - **Silver**: Submit a URL that features any promotional campaign for our attendees. Link is clickable from your company logo. If you do not have a URL campaign, but would rather submit graphics, we can also link to that.
+  - **Gold & above**: Submit a PDF brochure featuring your company or any promotions/gifts + everything included in the Silver level.
+  - **Keystone & Diamond**: Submit a sponsor blurb (up to 100 words) + everything included in the Gold & Platinum level.
+
+  Note: In order to avoid any file uploading issue, please upload the PDF brochure to your preferred file hosting service (Dropbox, Google Drive, OneDrive, WeTransfer, etc) and only submit the link to the above form.
+
+**Deadline** for sending in all the materials featured in the Virtual Swag Page: **2022-06-17**
+
+**Submission Channel**: <a href="https://forms.gle/dTzkh8BCMn77gGMSA" target="_blank">EuroPython 2022 Sponsor Assets Submission Form</a>
+</details>
+
+<details>
+  <summary><h2>Video Ads</h2></summary>
+
+  These are the two type of video ads we request from you:
+
+  - **Video ads on digital signage**: no audio, up to 30 seconds each - these will be cut into one big video to be played in various locations at the venue.
+
+  - **Video ads on streaming channels**: with audio, up to 30 seconds each - these will be played during breaks for the audience joining remotely.
+
+  File specification: in MP4 format of 720p or 1080p resolution.
+
+  You can submit different ads files to be played in these slots. Or alternatively, the same file will be played multiple times.
+
+How many video ads you wish to submit is entirely up to you. We recommend between 2 to 10 video ad files. The higher the sponsorship level, the more ad share you will get.
+Please note, in order not to run into any attachment max size issue, please upload everything you need to send us to a file hosting service (e.g. Dropbox, Google Drive, WeTransfer, OneDrive, etc) and only send us the link by **17th June**.  
+
+
+**Deadline** for sending in the links to all the Video Ads: **2022-06-17**
+
+**Submission Channel**: <a href="https://forms.gle/dTzkh8BCMn77gGMSA" target="_blank">EuroPython 2022 Sponsor Assets Submission Form</a>
+</details>
+
+<details>
+  <summary><h2>Sponsor Feedback Questions</h2></summary>
+
+  Keystone and Diamond level sponsors may request adding up to 3 questions to our feedback form which we will send to attendees near the end of the conference.
+
+  This is a great way to get an idea of how well the sponsorship worked out.
+
+  Please submit 1-3 questions, which could be multiple choice, free text or rating questions (1 to 5).
+  The form will be left open for around 1-2 months after the conference. We will send them to you afterwards.
+
+
+**Deadline**  for submitting the Sponsor Feedback Questions: **2022-06-27**
+
+**Submission Channel**: <a href="https://forms.gle/dTzkh8BCMn77gGMSA" target="_blank">EuroPython 2022 Sponsor Assets Submission Form</a>
+</details>
+
+<details>
+  <summary><h2>Three Emails to Attendees (opt-in)</h2></summary>
+
+  Keystone sponsor is eligible to draft three emails of your choice and have the organisers send them on your behalf to attendees who have opted to receive sponsor emails. You can take the opportunity to tie in with the blog post and recruiting emails/posts, introduce a particular activity or highlight of your company, or point attendees to something really technical and geeky about your company. It is entirely up to you how many emails, if any, you wish us to send and which angle you wish to take in each.
+
+**Deadline**  for submitting the draft of the three emails: Any time before or during the conference days.
+
+**Submission Channel**: <a href="sponsoring@europython.eu">sponsoring@europython.eu</a>
+</details>
+
+<details>
+  <summary><h2>Sponsor Retweets & Tweet</h2></summary>
+
+  All sponsors of Bronze and above can get a single retweet of one of your tweets to the followers of our <a href="https://twitter.com/europython" target="_blank">@europython</a> Twitter account. Please note that we normally do not retweet from companies, so signing up as a EuroPython sponsor is a good way to get a retweet.
+
+  Sponsor of Keystone, Diamond, Platinum additionally get to suggest a single tweet, which we'll send to the followers of our <a href="https://twitter.com/europython" target="_blank">@europython</a> Twitter account.
+
+  - **For the retweet**, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Retweet**: ***<your company name\>***"during or before the conference mentioning the URL of the tweet. We will then schedule it for a retweet.
+  - **For the tweet**, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Tweet**: ***<your company name\>***" during or before the conference mentioning the tweet text. We will then review it and schedule it after approval.
+
+**Deadline** for submitting retweet URL and the tweet text: Any time before or during the conference days.
+
+**Submission Channel**: <a href="sponsoring@europython.eu">sponsoring@europython.eu</a>
+</details>
+
+<details>
+  <summary><h2>LinkedIn Reshare</h2></summary>
+
+  Sponsor of Keystone, Diamond and Platinum get a single reshare of one of your posts to the subscriber of EuroPython’s LinkedIn group. We normally do not reshare from companies, so signing up as a EuroPython sponsor is a good way to get the exposure.
+
+  In order to get the reshare scheduled, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Linked Reshare**: ***<your company name\>***" during or before the conference mentioning the URL of the reshare. We will then schedule it for a retweet.
+
+**Deadline** for submitting Linkedin Reshare URL: Any time before or during the conference days.
+
+**Submission Channel**: <a href="sponsoring@europython.eu">sponsoring@europython.eu</a>
+</details>
