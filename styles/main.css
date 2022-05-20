@@ -86,7 +86,6 @@ header {
   background: var(--color-background);
   color: var(--color-body);
   padding: var(--unit-1-5);
-  overflow: hidden;
   display: flex;
   align-items: center;
   position: relative;
@@ -132,7 +131,7 @@ header nav ul {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: start;
   gap: var(--unit);
-  border-right: 2px solid var(--color-body);
+  margin: 0 1rem;
 }
 
 header + nav {
@@ -1839,6 +1838,8 @@ footer nav ul li a.active {
   border-left: 2px solid var(--color-body);
   border-right: 0;
   margin-top: 0;
+  z-index: 10;
+  background-color: var(--color-background);
 }
 
 .nav-desktop .has-dropdown:hover .dropdown-menu,
@@ -1860,6 +1861,11 @@ footer nav ul li a.active {
 .header-mobile__navigation .dropdown-menu li a {
   font-size: 1rem;
   padding: 0.5rem;
+}
+
+#__next > header nav .dropdown-menu li,
+#__next > header nav .dropdown-menu a {
+  width: 100%;
 }
 
 /* Footer sub nav */
