@@ -123,11 +123,11 @@ Shipping and customs for your goods are handled by [Interflow](https://www.inter
 **Contacts**:
 
 - Niall Thompson - <a href = "niall@interflow.ie">niall@interflow.ie </a>, +353 (0)86 3805000;
-- Anderson Marisa - <a href = "anderson.marisa@interflow.ie"> anderson.marisa@interflow.ie </a> +353 (0)87 2388185
+- Anderson Marisa - <a href = "anderson.marisa@interflow.ie"> anderson.marisa@interflow.ie</a>, +353 (0)87 2388185
 
 Here are shipping information provided by Interflow:
 
-- [Shipping Guidelines](https://drive.google.com/file/d/1PMtrNBgVYdCbpOKJiOPmyHM9sEcoJHI4/view?usp=sharing)
+- <a href = "mailto:niall@interflow.ie">Email Interflow for Shipping Guidelines </a>
 - [Delivery address and Shipping Label](https://drive.google.com/file/d/1TtlW5nWrOfuK-5JgK6iKq1S1rDAF2U6_/view?usp=sharing)
 
 Earliest delivery date: TBD. Please contact Niall or Anderson directly for more details.
