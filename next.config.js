@@ -53,6 +53,11 @@ const nextConfig = {
         destination: "https://program.europython.eu/europython-2022/cfp",
         permanent: true,
       },
+      {
+        source: "/sponsor-information",
+        destination: "/sponsor/information",
+        permanent: true,
+      },
     ];
 
     if (days.length > 0) {

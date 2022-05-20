@@ -5,11 +5,13 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import matter from "gray-matter";
 import { promises as fs } from "fs";
 import path from "path";
+import glob from "glob";
 import { Layout } from "../components/layout";
 import { wrapInArticles } from "../plugins/wrap-in-articles";
 import { highlightFirstHeading } from "../plugins/highlight-first-heading";
 import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
 import { components } from "../components/mdx";
+import { inspect } from "util";
 
 export default function Page({
   source,
@@ -34,17 +36,31 @@ export default function Page({
 }
 
 export async function getStaticPaths() {
-  const pages = (await fs.readdir(path.join(process.cwd(), "data"))).filter(
-    (p) => p.endsWith(".md")
-  );
+  const pages = glob.sync("data/pages-content/**/*.md");
+
   const paths = pages.map((page) => ({
-    params: { slug: page.replace(".md", "") },
+    params: {
+      parts: page
+        .replace("data/pages-content/", "")
+        .replace(".md", "")
+        .split("/"),
+    },
   }));
+
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const markdownPath = path.join(process.cwd(), `data/${params.slug}.md`);
+export async function getStaticProps({
+  params,
+}: {
+  params: { parts: string[] };
+}) {
+  const pagePath = params.parts.join("/");
+
+  const markdownPath = path.join(
+    process.cwd(),
+    `data/pages-content/${pagePath}.md`
+  );
 
   const page = await fs.readFile(markdownPath);
   const { content, data } = matter(page);
@@ -65,6 +81,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     },
   });
   return {
-    props: { source: mdxSource, path: params.slug, title: data.title || "" },
+    props: { source: mdxSource, path: pagePath, title: data.title || "" },
   };
 }
