@@ -111,7 +111,7 @@ Is your company attending the conference as a team? We offer the following volum
 
 Note: Volume discount will not apply if you mix & match between different ticket types.
 
-Ready to order? Just email us at info@europython.eu to get the discount code! As a special thank you, we are happy to send out a mention on Twitter welcoming your team!
+Ready to order? We have configured the discount to be automatic! Put your orders in the basket and enjoy! As a special thank you, if you want us to send send out a mention on Twitter welcoming your team, feel free to email us at [info@europython.eu](mailto:info@europython.eu) 👐
 
 
 ### Notes for In-person Tickets ###
