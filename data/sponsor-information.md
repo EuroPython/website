@@ -8,21 +8,21 @@ subtitle:
 # Deadlines
 
 <ul>
- <li><a href="#"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract: </a> 2022-06-10</li>
- <li><a href="#"> Virtual Swag Page submission: </a> 2022-06-17 </li>
- <li><a href="#"> Sponsor Logo submission: </a> 2022-06-17 </li>
- <li><a href="#"> Technical Case Study Blog Post submission: </a> 2022-06-17 (Keystone, Diamond, Platinum) </li>
- <li><a href="#"> Video Ads submission (with and without audio): </a> 2022-06-17 </li>
- <li><a href="#exhibition"> Booth Customisations: </a> 2022-06-24 </li>
- <li><a href="#exhibition"> Sending in booth images: </a> 2022-06-24 </li>
- <li><a href="#registration"> Complimentary / Discounted Tickets registration & assignment: </a> 2022-06-24 </li>
- <li><a href="#"> Sponsor Feedback Questions submission: </a> 2022-06-24 </li>
- <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission: </a> 2022-06-27 </li>
- <li><a href="#"> Recruiting Session Presentation - presenter name & email: </a> 2022-07-08 </li>
- <li><a href="#"> Recruiting - On-site Job Board Ad submission: </a> anytime during the conference (we'll have a white board for this) </li>
- <li><a href="#"> Tweet and/or Retweet. Linkedin Reshare: </a> anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </li>
- <li><a href="#"> Participation in Daily Prize Draw Announcements: </a> before noon of each conference day </li>
- <li><a href="#"> Parcel Services ordering: </a> TBA </li>
+ <li><a href="#"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract:</a> June 10</li>
+ <li><a href="#"> Virtual Swag Page submission:</a> June 17 </li>
+ <li><a href="#"> Sponsor Logo submission:</a> June 17 </li>
+ <li><a href="#"> Technical Case Study Blog Post submission:</a> June 17 (Keystone, Diamond, Platinum) </li>
+ <li><a href="#"> Video Ads submission (with and without audio):</a> June 17 </li>
+ <li><a href="#exhibition"> Booth Customisations:</a> June 24 </li>
+ <li><a href="#exhibition"> Sending in booth images:</a> June 24 </li>
+ <li><a href="#registration"> Complimentary / Discounted Tickets registration & assignment:</a> June 24 </li>
+ <li><a href="#"> Sponsor Feedback Questions submission:</a> June 24 </li>
+ <li><a href="#"> Recruiting - Job Board Ad on Website & Email Ad submission:</a> June 27 </li>
+ <li><a href="#"> Recruiting Session Presentation - presenter name & email:</a> July 08 </li>
+ <li><a href="#"> Recruiting - On-site Job Board Ad submission:</a> anytime during the conference (we'll have a white board for this) </li>
+ <li><a href="#"> Tweet and/or Retweet. Linkedin Reshare:</a> anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </li>
+ <li><a href="#"> Participation in Daily Prize Draw Announcements:</a> before noon of each conference day </li>
+ <li><a href="#"> Parcel Services ordering:</a> TBA </li>
 </ul>
 
 Please note that the above are hard deadlines. We cannot accept submissions after the listed dates and will not issue refunds in case the deadlines are not met.
@@ -38,7 +38,7 @@ For details, please refer to the relevant sections below.
 
   - Assign tickets: Assign the tickets to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from [support@pretix.eu](support@pretix.eu) with *Subject: Your order: XXXX* and amend accordingly.
 
-  ***Deadline*** for registering and assigning the tickets: ***2022-06-27***
+  ***Deadline*** for registering and assigning the tickets: ***June 27***
 
 </details>
 
