@@ -9,20 +9,20 @@ subtitle:
 
 <ul>
  <li><a href="#sponsored-content"> Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract:</a> June 10</li>
- <li><a href="#sponsor-promo"> Virtual Swag Page submission:</a> June 17 </li>
- <li><a href="#sponsor-promo"> Sponsor Logo submission:</a> June 17 </li>
- <li><a href="#sponsor-promo"> Technical Case Study Blog Post submission:</a> June 17 (Keystone, Diamond, Platinum) </li>
- <li><a href="#sponsor-promo"> Video Ads submission (with and without audio):</a> June 17 </li>
+ <li><a href="#virtual-swag-page"> Virtual Swag Page submission:</a> June 17 </li>
+ <li><a href="#sponsor-logo"> Sponsor Logo submission:</a> June 17 </li>
+ <li><a href="#sponsor-blog-post"> Technical Case Study Blog Post submission:</a> June 17 (Keystone, Diamond, Platinum) </li>
+ <li><a href="#video-ads"> Video Ads submission (with and without audio):</a> June 17 </li>
  <li><a href="#exhibition"> Booth Customisations:</a> June 24 </li>
- <li><a href="#exhibition"> Sending in booth images:</a> June 24 </li>
+ <li><a href="#booth-images"> Sending in booth images:</a> June 24 </li>
  <li><a href="#registration"> Tickets Registration & Assignment:</a> June 27 </li>
- <li><a href="#sponsor-promo"> Sponsor Feedback Questions submission:</a> June 27 </li>
+ <li><a href="#sponsor-feedback-questions"> Sponsor Feedback Questions submission:</a> June 27 </li>
  <li><a href="#recruiting"> Recruiting - Job Board Ad on Website & Email Ad submission:</a> June 27 </li>
- <li><a href="#recruiting"> Recruiting Session Presentation - presenter and slides:</a> July 08 </li>
- <li><a href="#recruiting"> Recruiting - On-site Job Board Ad submission:</a> anytime during the conference (we'll have a white board for this) </li>
- <li><a href="#recruiting"> Tweet and/or Retweet. Linkedin Reshare:</a> anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </li>
- <li><a href="#sponsor-promo"> Participation in Daily Prize Draw Announcements:</a> before noon of each conference day (Keystone, Diamond, Platinum)</li>
- <li><a href="#"> Parcel Services ordering:</a> TBA </li>
+ <li><a href="#recruiting-session"> Recruiting Session Presentation - presenter and slides:</a> July 08 </li>
+ <li><a href="#on-site-job-board"> Recruiting - On-site Job Board Ad submission:</a> anytime during the conference (we'll have a white board for this) </li>
+ <li><a href="#sponsor-tweet"> Tweet and/or Retweet. Linkedin Reshare:</a> anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </li>
+ <li><a href="#prize-draw"> Participation in Daily Prize Draw Announcements:</a> before noon of each conference day (Keystone, Diamond, Platinum)</li>
+ <li><a href="#parcel"> Parcel Services ordering:</a> TBA </li>
 </ul>
 
 Please note that the above are hard deadlines. We cannot accept submissions after the listed dates and will not issue refunds in case the deadlines are not met.
@@ -79,7 +79,7 @@ All booths should be staffed at least during the official breaks. It is highly r
 </details>
 
 <details>
-  <summary><h2>Booth & Counter Graphic</h2></summary>
+  <summary><h2 id="booth-images">Booth & Counter Graphic</h2></summary>
 
   **Booth graphic**: All booths include a Wall Banner Graphic that covers the entire back wall of your booth. **It is highly recommended that you submit a company specific custom graphic for your booth. The pricing is already included in your package.**
 
@@ -121,7 +121,7 @@ All booths should be staffed at least during the official breaks. It is highly r
 </details>
 
 <details>
-<summary><h2>Parcel Delivery & Gifts</h2></summary>
+<summary><h2 id="parcel">Parcel Delivery & Gifts</h2></summary>
 
 We aim to actively reduce the carbon footprint of the EuroPython conference series. Throughout the planning of the much anticipated EuroPython Dublin, we are mindful of sustainability. We made the distribution of physical gifts optional. Instead of staffing bags with your gifts, we give you the freedom to distribute them at your booth. We strongly encourage you to distribute gifts made of environmentally friendly materials, to focus on quality rather than quantity to reduce waste.
 
@@ -208,14 +208,14 @@ You can check out previous years’ lineup for inspiration:
 </details>
 
 <details>
-<summary><h2>On-site Job Board</h2></summary>
+<summary><h2 id="on-site-job-board">On-site Job Board</h2></summary>
 
 For your recruiting ad on the on-site job-board, you can bring along a printed ad and pin it on the whiteboard yourself.
 
 </details>
 
 <details>
-  <summary><h2>Recruiting session</h2></summary>
+  <summary><h2 id="recruiting-session">Recruiting session</h2></summary>
 
   The 45 min recruiting session will take place during one of the Conference Days (13-15 July). The exact details will be confirmed at a later date along with the conference schedule.
 
@@ -238,7 +238,7 @@ For your recruiting ad on the on-site job-board, you can bring along a printed a
 
 # Sponsor Promo
 <details>
-  <summary><h2>Sponsor Logo</h2></summary>
+  <summary><h2 id="sponsor-logo">Sponsor Logo</h2></summary>
 
   Your company's logo will be put together in various promotional materials, both in digital and print media. You should have already been asked to submit your logo both in PNG and a vector format (SVG, PDF, etc), when you sign up as a sponsor.
 
@@ -251,7 +251,7 @@ For your recruiting ad on the on-site job-board, you can bring along a printed a
 
 </details>
 <details>
-  <summary><h2>Sponsor Blog Post</h2></summary>
+  <summary><h2 id="sponsor-blog-post">Sponsor Blog Post</h2></summary>
 
   For Platinum, Diamond and Keystone Level sponsors, we will run blog posts highlighting the sponsor. The Communications team can help you craft a technical case study blog post. They will be posted on EuroPython's <a href="https://dev.to/t/europython" target="_blank">dev.to</a> .
 
@@ -272,7 +272,7 @@ For your recruiting ad on the on-site job-board, you can bring along a printed a
 </details>
 
 <details>
-  <summary><h2>Virtual Swag Page</h2></summary>
+  <summary><h2 id="virtual-swag-page">Virtual Swag Page</h2></summary>
 
   Sponsors of Silver and above can be featured on our Virtual Swag Page of the website. We will list the page on our website as a swag page. If you have prepared any coupon codes, digital gifts, we can distribute them for you via the page. What you are eligible to submit depends on your sponsorship level:
 
@@ -288,7 +288,7 @@ For your recruiting ad on the on-site job-board, you can bring along a printed a
 </details>
 
 <details>
-  <summary><h2>Video Ads</h2></summary>
+  <summary><h2 id="video-ads">Video Ads</h2></summary>
 
   These are the two type of video ads we request from you:
 
@@ -301,7 +301,7 @@ For your recruiting ad on the on-site job-board, you can bring along a printed a
 You can submit different ads files to be played in these slots. Or alternatively, the same file will be played multiple times.
 
 How many video ads you wish to submit is entirely up to you. We recommend between 2 to 10 video ad files. The higher the sponsorship level, the more ad share you will get.
-Please note, in order not to run into any attachment max size issue, please upload everything you need to send us to a file hosting service (e.g. Dropbox, Google Drive, WeTransfer, OneDrive, etc) and only send us the link by **17th June**.  
+Please note, in order not to run into any attachment max size issue, please upload everything you need to send us to a file hosting service (e.g. Dropbox, Google Drive, WeTransfer, OneDrive, etc) and only send us the link by **17th June**.
 
 
 **Deadline** for sending in the links to all the Video Ads: **2022-06-17**
@@ -310,7 +310,7 @@ Please note, in order not to run into any attachment max size issue, please uplo
 </details>
 
 <details>
-  <summary><h2>Sponsor Feedback Questions</h2></summary>
+  <summary><h2 id="sponsor-feedback-questions">Sponsor Feedback Questions</h2></summary>
 
   Keystone and Diamond level sponsors may request adding up to 3 questions to our feedback form which we will send to attendees near the end of the conference.
 
@@ -336,7 +336,7 @@ Please note, in order not to run into any attachment max size issue, please uplo
 </details>
 
 <details>
-  <summary><h2>Sponsor Retweets & Tweet</h2></summary>
+  <summary><h2 id="sponsor-tweet">Sponsor Retweets & Tweet</h2></summary>
 
   All sponsors of Bronze and above can get a single retweet of one of your tweets to the followers of our <a href="https://twitter.com/europython" target="_blank">@europython</a> Twitter account. Please note that we normally do not retweet from companies, so signing up as a EuroPython sponsor is a good way to get a retweet.
 
@@ -363,7 +363,7 @@ Please note, in order not to run into any attachment max size issue, please uplo
 </details>
 
 <details>
-  <summary><h2>Participation in Daily Prize Draw Announcements</h2></summary>
+  <summary><h2 id="prize-draw">Participation in Daily Prize Draw Announcements</h2></summary>
 
   For Platinum, Diamond and Keystone Level sponsors, you are eligible to participate in daily prize draw. Simply email the details before noon of the day of the prize draw so an organiser can announce it at the end of the day.
 
