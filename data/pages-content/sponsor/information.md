@@ -13,16 +13,18 @@ subtitle:
  <li><a href="#sponsor-logo"> Sponsor Logo submission:</a> June 17 </li>
  <li><a href="#sponsor-blog-post"> Technical Case Study Blog Post submission:</a> June 17 (Keystone, Diamond, Platinum) </li>
  <li><a href="#video-ads"> Video Ads submission (with and without audio):</a> June 17 </li>
- <li><a href="#exhibition"> Booth Customisations:</a> June 24 </li>
- <li><a href="#booth-images"> Sending in booth images:</a> June 24 </li>
+ <li><a href="#booth-customisations"> Booth Customisations:</a> June 24 </li>
+ <li><a href="#booth-images"> Booth & Counter graphics submission:</a> June 24 </li>
  <li><a href="#registration"> Tickets Registration & Assignment:</a> June 27 </li>
  <li><a href="#sponsor-feedback-questions"> Sponsor Feedback Questions submission:</a> June 27 </li>
- <li><a href="#recruiting"> Recruiting - Job Board Ad on Website & Email Ad submission:</a> June 27 </li>
+ <li><a href="#job-board-on-website"> Recruiting - Job Board Ad on Website submission:</a> June 27 </li>
+ <li><a href="#recruiting email"> Recruiting Email submission:</a> June 27 </li>
+ <li><a href="#parcel"> Parcel Services-</a> Deadline for ordering: June 30; Deadline for receiving parcel to the warehouse: July 6 </li>
  <li><a href="#recruiting-session"> Recruiting Session Presentation - presenter and slides:</a> July 08 </li>
  <li><a href="#on-site-job-board"> Recruiting - On-site Job Board Ad submission:</a> anytime during the conference (we'll have a white board for this) </li>
- <li><a href="#sponsor-tweet"> Tweet and/or Retweet. Linkedin Reshare:</a> anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </li>
+ <li><a href="#sponsor-tweet"> Tweet and/or Retweet. LinkedIn Reshare:</a> anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </li>
  <li><a href="#prize-draw"> Participation in Daily Prize Draw Announcements:</a> before noon of each conference day (Keystone, Diamond, Platinum)</li>
- <li><a href="#parcel"> Parcel Services ordering:</a> TBA </li>
+
 </ul>
 
 Please note that the above are hard deadlines. We cannot accept submissions after the listed dates and will not issue refunds in case the deadlines are not met.
@@ -83,6 +85,8 @@ All booths should be staffed at least during the official breaks. It is highly r
 
   **Booth graphic**: All booths include a Wall Banner Graphic that covers the entire back wall of your booth. **It is highly recommended that you submit a company specific custom graphic for your booth. The pricing is already included in your package.**
 
+  **You can upgrade to a single Stretched Graphic design. See [Booth Customisation](#booth-customisations) for details.**
+
   *Note: these wall banners with your graphic can be taken down afterwards for future reuse.*
 
   **Counter graphic**: All booths include at least one counter. Depending on the booth level, the amount and size can range. **It is highly recommended that you submit a company specific custom graphic for the counter(s).**
@@ -95,9 +99,9 @@ All booths should be staffed at least during the official breaks. It is highly r
 
   - Please refer to <a href = "https://drive.google.com/file/d/1k2m9t445G4tpMON1VlGIg-SSgYTsQy5m/view?usp=sharing" target="_blank">EuroPython 2022 - Exhibit Booths.pdf</a> for the dimensions of the back wall of your booth, and of the counter(s).
 
-  *Note: Keystone and Diamond booths will need two Wall Banner graphics to cover the entire back wall.*
+  ***Note: Keystone and Diamond booths will need two Wall Banner graphics to cover the entire back wall.****
 
-  - Refer to <a href = "https://drive.google.com/file/d/1IhBXgiTWqkH4Pbo100vGHHzj-ZY-CEAl/view?usp=sharing" target="_blank">EuroPython 2022- Booth Order Forms.pdf</a> last page - *artwork* for file and delivery specifications.
+  - Refer to <a href = "https://drive.google.com/file/d/1IhBXgiTWqkH4Pbo100vGHHzj-ZY-CEAl/view?usp=sharing" target="_blank">EuroPython 2022- Booth Order Forms.pdf</a> page 8 - *artwork* for file and delivery specifications.
 
   Note: OBExpo has specifically asked us to emphasise that emailing or using *WeTransfer* or *YouSendit* are their preferred methods of sending the files. Permission based file sharing systems such as Google Drive or OneDrive are less preferred.
 
@@ -108,7 +112,7 @@ All booths should be staffed at least during the official breaks. It is highly r
 </details>
 
 <details>
-  <summary><h2>Booth Customisation and Add-ons</h2></summary>
+  <summary><h2 id="booth-customisations">Booth Customisation and Add-ons</h2></summary>
   All booth graphics can be upgraded from the default Wall Banner Graphic to Stretched Graphics.
 
   There are other add-ons you can order, such as TV sets and furniture for your booth.
@@ -134,10 +138,16 @@ Shipping and customs for your goods are handled by <a href = "https://www.interf
 
 Here are shipping information provided by Interflow:
 
-- Email <a href = "mailto:niall@interflow.ie">Interflow</a> for Shipping Guidelines
+-  <a href = "https://drive.google.com/file/d/1zFCopPlWoC9ToPEmlxFessCJ4UaxLqu_/view?usp=sharing" target="_blank">Shipping Guidelines</a>. <b>Important: Please provide Interflow your Company name, point of contact name and email.</b> Contact Interflow for Details.
+- <a href = "https://www.interflow.ie/freight-order-form/" target="_blank">Freight Order link</a>.
 - <a href = "https://drive.google.com/file/d/1TtlW5nWrOfuK-5JgK6iKq1S1rDAF2U6_/view?usp=sharing" target="_blank">Delivery address and Shipping Label</a>.
 
-Earliest delivery date: TBD. Please contact Niall or Anderson directly for more details.
+**Deadlines:**
+- Deadline for receiving to the warehouse: 2022-07-06
+- Deadline for orders: 2022-06-30
+
+If you have any last-minute orders, please contact Interflow and keep them in the loop.
+Company name, point of contact name and email would be perfect
 
 </details>
 
@@ -174,7 +184,7 @@ You can check out previous years’ lineup for inspiration:
 # Recruiting
 
 <details>
-  <summary><h2>Job Board Ad on Website</h2></summary>
+  <summary><h2 id="job-board-on-website">Job Board Ad on Website</h2></summary>
 
   All sponsors with sponsorship levels Bronze and above are eligible for posting a job ad on our <a href="https://ep2022.europython.eu/job-board/" target="_blank">Job-board page </a>.
 
@@ -191,7 +201,7 @@ You can check out previous years’ lineup for inspiration:
 </details>
 
 <details>
-  <summary><h2>Recruiting Email Ad</h2></summary>
+  <summary><h2 id="recruiting email">Recruiting Email Ad</h2></summary>
 
   For all sponsors with sponsorship levels silver and above, if you are interested in us sending a recruiting email on your behalf, please submit the following information to <a href="https://forms.gle/dTzkh8BCMn77gGMSA" target="_blank">EuroPython 2022 Sponsor Assets Submission Form</a>:
 
@@ -251,16 +261,22 @@ For your recruiting ad on the on-site job-board, you can bring along a printed a
 
 </details>
 <details>
-  <summary><h2 id="sponsor-blog-post">Sponsor Blog Post</h2></summary>
+  <summary><h2 id="sponsor-blog-post">Technical Study Blog Post</h2></summary>
 
   For Platinum, Diamond and Keystone Level sponsors, we will run blog posts highlighting the sponsor. The Communications team can help you craft a technical case study blog post. They will be posted on EuroPython's <a href="https://dev.to/t/europython" target="_blank">dev.to</a> .
 
   Separately, Diamond and Keystone sponsors get to write one extra technical case study blog post to be published on our regular <a href="https://blog.europython.eu/" target="_blank">EuroPython Blog</a>, which also goes to our Twitter account and mailing lists. You may also opt to cross post the same blog across dev.to and the EuropPython blog.
 
   For each blog post, we will require **at least 3 paragraphs** of text and ideally a picture we can use (if you don't have a picture, we can use your logo as well).
-  The text should be written to highlight technical case study related to Python and address a technically oriented audience.
+
+  The text should be written to highlight technical case study related to Python, e.g. how you solved a problem or improved performance with Python. It should address a technically oriented audience.
 
   You can check out the <a href="https://blog.europython.eu/europython-2020-introducing-our-keystone-sponsor/" target="_blank">2020 Keystone Sponsor blog post</a> to get an idea.
+
+  Some good technical case Study examples:
+  - <a href="https://blog.google/technology/research/ai-monk-scale-skin-tone-story/" target="_blank">A closer look at the research to help AI see more skin tones</a>
+  - <a href="https://www.bloomberg.com/company/stories/bloomberg-memray-open-source-profiler-python-code/" target="_blank">Bloomberg publishes Memray</a>
+  - <a href="https://huggingface.co/blog/optimum-inference" target="_blank">Accelerated Inference with Optimum and Transformers Pipelines </a>
 
 
   Feel free to tie in any talk/special event you are organising at our conference at the end. After you've sent in the draft, we will forward it to our Communications Team for editing.
@@ -355,7 +371,7 @@ Please note, in order not to run into any attachment max size issue, please uplo
 
   Sponsor of Keystone, Diamond and Platinum get a single reshare of one of your posts to the subscriber of EuroPython’s LinkedIn group. We normally do not reshare from companies, so signing up as a EuroPython sponsor is a good way to get the exposure.
 
-  In order to get the reshare scheduled, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Linked Reshare**: ***<your company name\>***" during or before the conference mentioning the URL of the reshare. We will then schedule it for a retweet.
+  In order to get the reshare scheduled, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 LinkedIn Reshare**: ***<your company name\>***" during or before the conference mentioning the URL of the reshare. We will then schedule it for a retweet.
 
 **Deadline** for submitting Linkedin Reshare URL: Any time before or during the conference days.
 
