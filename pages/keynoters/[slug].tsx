@@ -19,11 +19,13 @@ export default function Page({
   source,
   path,
   bioSource,
+  slug,
   data: { title, speaker, affiliation },
 }: {
   source: any;
   bioSource: any;
   path: string;
+  slug: string;
   data: {
     title: string;
     speaker: string;
@@ -31,9 +33,15 @@ export default function Page({
   };
 }) {
   const keynoter = findKeynoter(speaker)!;
+  const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?keynoter=${slug}`;
+  console.log(socialCardUrl)
 
   return (
-    <Layout path={path} title={`${title} || EuroPython 2022`}>
+    <Layout
+      path={path}
+      title={`${title} || EuroPython 2022`}
+      socialCardUrl={socialCardUrl}
+    >
       <main id="main-content">
         <h1 className="h2">{title}</h1>
         <h2 className="h3">
@@ -97,6 +105,12 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const bioSource = await serializeWithPlugins(data.bio, []);
 
   return {
-    props: { source: mdxSource, path: pagePath, data, bioSource },
+    props: {
+      source: mdxSource,
+      path: pagePath,
+      data,
+      bioSource,
+      slug: params.slug,
+    },
   };
 }

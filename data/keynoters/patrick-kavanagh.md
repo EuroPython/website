@@ -20,6 +20,7 @@ bio: Dr. Patrick Kavanagh is an astrophysicist and software developer based at
   activities and analysis tools, and will support MIRI commissioning at the Webb
   Mission Operations Center at the Space Telescope Science Institute in
   Baltimore.
+subtitle: Webb developer
 ---
 
 The James Webb Space Telescope is a groundbreaking infrared observatory
