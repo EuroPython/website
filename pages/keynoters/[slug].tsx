@@ -34,7 +34,6 @@ export default function Page({
 }) {
   const keynoter = findKeynoter(speaker)!;
   const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?keynoter=${slug}`;
-  console.log(socialCardUrl)
 
   return (
     <Layout
