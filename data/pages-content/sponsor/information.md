@@ -147,7 +147,6 @@ Here are shipping information provided by Interflow:
 - Deadline for orders: 2022-06-30
 
 If you have any last-minute orders, please contact Interflow and keep them in the loop.
-Company name, point of contact name and email would be perfect
 
 </details>
 
