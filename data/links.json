@@ -57,7 +57,12 @@
       "items": [{
         "name": "Packages",
         "path": "/sponsor"
-      }]
+      },
+      {
+        "name": "Sponsor Information",
+        "path": "/sponsor/information"
+      }
+    ]
     },
     {
       "name": "Online (TBA)"
