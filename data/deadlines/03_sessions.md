@@ -1,6 +1,6 @@
 ---
 title: List of Sessions
-subtitle: More to be revealed
+subtitle: More to be Revealed
 url: /sessions
 image: /images/cards/finaid.jpg
 ---
