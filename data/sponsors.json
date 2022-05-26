@@ -6,7 +6,13 @@
     },
     {
       "name": "Platinum",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "Oomnitza",
+          "url": "https://www.oomnitza.com/",
+          "logo": "img/logos/sponsor_logos/oomnitza.svg"
+        }
+      ]
     },
     {
       "name": "Diamond",
@@ -64,12 +70,23 @@
           "name": "Anvil",
           "url": "https://anvil.works",
           "logo": "/img/logos/sponsor_logos/anvil.svg"
+        },
+        {
+          "name": "ApeWorX",
+          "url": "https://www.apeworx.io/",
+          "logo": "/img/logos/sponsor_logos/apeworx.svg"
         }
       ]
     },
     {
       "name": "Bronze",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "fourTheorem",
+          "url": "www.fourtheorem.com",
+          "logo": "/img/logos/sponsor_logos/fourtheorem.svg"
+        }
+      ]
     },
     {
       "name": "Patron",
@@ -97,6 +114,11 @@
           "name": "devitjobs",
           "url": "https://devitjobs.uk/jobs/Python/all",
           "logo": "img/logos/sponsor_logos/devitjobs.svg"
+        },
+        {
+          "name": "Packt",
+          "url": "http://packt.com/",
+          "logo": "img/logos/sponsor_logos/packt.svg"
         }
       ]
     }
