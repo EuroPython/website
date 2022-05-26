@@ -48,8 +48,7 @@ accessible to most organisations keen to help the community.
 Comparison Table (PDF)</ButtonLink>
 <ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
 
-<Note>We will offer a 10% discount for early bird sponsors! Sign up by <b>29 April</b> to
-take advantage!</Note>
+<Note>We are still <b>Keystone & Diamond </b> sponsors. Get in touch if you are interested in supporting us!</Note>
 
 <SponsorTiers />
 
@@ -75,8 +74,7 @@ Please note: each add-on has limited slots and some are exclusive. Please check 
 
 ### Early Bird
 
-We will offer a 10% discount for early bird sponsors! Sign up by **29 April** to take
-advantage!
+~~We will offer a 10% discount for early bird sponsors! Sign up by **29 April** to take advantage!~~
 
 ### SME
 

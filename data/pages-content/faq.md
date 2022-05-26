@@ -31,13 +31,12 @@ time.
   <li><b>2022-04-24</b>: Community Talk Voting Ends </li>
   <li><b>2022-05-03</b>: Panel Talk Review Ends </li>
   <li><b>2022-04-29</b>: Sponsorship Early Bird Discount Ends</li>
+  <li><b>2022-05-19</b>: List of Sessions Published</li>
+  <li><b>2022-05-23</b>: Financial Aid Programme Closes</li>
 </ul>
 <ul className="milestone-todo">
-  <li><b>The Week of 2022-05-09</b>: First Acceptance Notices to Speakers</li>
-  <li><b>The Week of 2022-05-16</b>: Second Acceptance Notices to Speakers</li>
-  <li><b>The Week of 2022-05-16</b>: List of Sessions Published</li>
-  <li><b>The Week of 2022-05-23</b>: Schedule Published</li>
-  <li><b>2022-05-23</b>: Financial Aid Programme Closes</li>
+
+  <li><b>The Week of 2022-05-30</b>: Schedule Published</li>
   <li><b>2022-07-10</b>: Gather & Set up at The CCD in Dublin! 🤗</li>
   <li><b>2022-07-11</b>: Showtime! 🎊 </li>
 </ul>

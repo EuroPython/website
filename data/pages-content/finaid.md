@@ -7,7 +7,13 @@ subtitle:
 ---
 
 # Financial Aid
+<div style={{textAlign: "center"}}>
+<button>The Finaid Programme is now closed.</button>
+</div>
 
+Applicants will be notified of acceptance/rejection by 6 June, 2022. See [timeline](#timeline) for details.
+
+---
 As part of our commitment to the Python community, we are pleased to
 offer grants for people in need of financial support to attend
 EuroPython.
@@ -52,8 +58,8 @@ for a grant:
 ## Timeline
 
 - 8 March (2022-03-08) - Applications for Financial Aid open
-- **23 May (2022-05-23)** - Deadline for submitting an application
-- 6 June (2022-06-07) - Applicants will be notified of acceptance/rejection
+- 23 May (2022-05-23) - Deadline for submitting an application
+- **6 June (2022-06-07)** - Applicants will be notified of acceptance/rejection
 - 13 June (2022-06-14) - Deadline for applicants to accept the grant
 - 24 July (2022-07-24) - Deadline to submit invoices/receipts
 
