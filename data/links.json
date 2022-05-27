@@ -48,8 +48,11 @@
         {
           "name": "Trans*Code",
           "path": "/trans_code"
-        }
-
+        },
+        {
+          "name": "PyLadies Lunch",
+          "path": "/pyladies-lunch"
+          }
       ]
     },
     {
