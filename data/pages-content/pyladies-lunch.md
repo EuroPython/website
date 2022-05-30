@@ -31,4 +31,6 @@ We would like to invite you to join us and make new friends (or catch up with fa
 </div>
 
 ### PyLadies Lunch Sponsor ###
+<a target="_blank" href="https://www.oomnitza.com/">
 <img src="/img/logos/sponsor_logos/oomnitza_white.png"  />
+</a>
