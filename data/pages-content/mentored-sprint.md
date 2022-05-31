@@ -12,7 +12,7 @@ subtitle:
 
 When: 14th July, 2022, during the main EuroPython conference (time still TBD) but you can participate for 2 or 4 hours. Room TBD.
 
-👉🏽 Apply to be a mentor on the day or feature your open source project: [email cheuk@europython.eu](mailto:cheuk@europython.eu)
+👉🏽 Apply to be a mentor on the day or feature your open source project: email [cheuk@europython.eu](mailto:cheuk@europython.eu)
 
 👉🏽 Apply to participate as a contributor (sprint on the day): [fill in this form](https://forms.gle/mTbjK2hYnAMoq2LXA).
 
@@ -45,7 +45,7 @@ By running similar events in smaller conferences we have learned that the attend
 
 ## GETTING INVOLVED ##
 *OPEN SOURCE PROJECTS AND MENTORS*
-The call for applications for projects will be open until the 8th of July 2022 and we encourage maintainers, contributors, and developers of any package attending EuroPython to participate in this mentored sprint. Please [email cheuk@europython.eu](mailto:cheuk@europython.eu)
+The call for applications for projects will be open until the 8th of July 2022 and we encourage maintainers, contributors, and developers of any package attending EuroPython to participate in this mentored sprint. Please email [cheuk@europython.eu](mailto:cheuk@europython.eu)
 
 *CONTRIBUTORS*
 The call for contributors (individuals willing to participate in the sprint) will also open until the 8th of July 2022 11:69pm AoE and we encourage anyone interested to attend. If you are wondering if this event is for you: it definitely is and we would love to have you taking part in this sprint.
