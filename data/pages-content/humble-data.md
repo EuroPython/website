@@ -30,7 +30,7 @@ You will need a computer with internet access. You are recommended to follow [th
 ## WHAT DO I NEED TO KNOW? ##
 If you have zero programming experience, this workshop is made for you! If you already have some experience but are new to Python, we’ve got you covered too – the materials are designed for attendees to progress through the materials at their own rate.
 
-## HOW IS THIS FREE? ##
+## HOW IS THIS POSSIBLE? ##
 This workshop is being run by data scientists and software engineers dedicated to the spirit of open source. Every day we benefit from the hard work of others when we use free open tools. This is our way of giving back. We thank EuroPython for their support in facilitating this workshop.
 
 If you would like to attend this workshop, [please apply here](https://forms.gle/Y9thJjuAQAiFm8D8A). Deadline: 4th July, 2022
