@@ -107,3 +107,15 @@ li.new::before {
   content: url(/img/accents/soldout_vertical.svg);
   padding: 0.5rem;
 }
+
+h5.new::before {
+  content: url(/img/accents/new_large.svg);
+  padding: 0.5rem;
+}
+
+h5.new::after {
+  content: "👇";
+  display: inline-block;
+  font-size: 0.8em;
+  margin-left: 0.4em;
+}

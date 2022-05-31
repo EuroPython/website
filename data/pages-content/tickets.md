@@ -3,6 +3,7 @@ title: Tickets
 ---
 
 # Tickets
+  <h5 className = "new"> Join the Waiting List for Remote Tickets NOW!</h5>
 
 <a class="button" href="https://tickets.europython.eu">Beam me up to the ticket shop now!</a>
 
@@ -85,8 +86,7 @@ out.
   <li>Conference Only Business - Net price €595.00 + 23% VAT</li>
   <li> Tutorial Only Business - Net price €416.50 + 23% VAT</li>
   <li>Combined Business - Net price €810.00 + 23% VAT</li>
-  <li className="new">Remote Conference Only Business (Available until 26 June) - €168 incl VAT</li>
-  <li className="new">Remote Late Bird Conference Only Business (Available on 27 June) - €256 incl VAT</li>
+
 </ul>
 
 ### Education Tickets
@@ -105,16 +105,24 @@ out.
  <li>Conference Only Personal - €375.00 incl. 23% VAT</li>
  <li> Tutorial Only Personal - €225.00 incl. 23% VAT</li>
  <li> Combined Personal - €480.00 incl. 23% VAT</li>
- <li className="new">Remote Conference Only Personal (Available until 26 June) - €42 incl VAT</li>
-<li className="new">Remote Late Bird Conference Only Personal (Available on 27 June) - €64 incl VAT</li>
 </ul>
 
-### Livestream Tickets
-We provide open and free access to the livestream of our conference talks (13-15 July). Rewind, catch-up, or playing on-demand might not be possible. There will be no interaction with the speakers or other in-person audience.
+### Remote Tickets
+<ul>
+  <li className="new">Remote Regular - Conference Only Business (Available until 26 June) - €168 incl VAT</li>
+  <li className="new">Remote Late Bird - Conference Only Business (Available on 27 June) - €256 incl VAT</li>
+  <li className="new">Remote Regular - Conference Only Personal (Available until 26 June) - €42 incl VAT</li>
+  <li className="new">Remote Late Bird - Conference Only Personal (Available on 27 June) - €64 incl VAT</li>
+</ul>  
 
-You are not required to register a ticket to access the livestreams. But if you would like an email reminder or receive up-to-date information, you are welcome to register for a free livestream ticket.
+If you cannot make it to Dublin and struggle to afford the remote tickets, there will be Financial Aid available sometime in June! You are welcome to apply if you need the help. We want to interact with **YOU** at EuroPython 2022!
 
-Note: In case of any technical problems with the free livestreaming on the day, we might not be able to provide a quick fix due to limited resources. Consider getting the remote tickets instead for guaranteed access.
+### Livestream-only Tickets
+We provide open and free access to the livestreams of our conference talks (13-15 July).
+
+You are not required to register a ticket to access these livestreams. If you would like an email reminder or receive up-to-date information about the conference, you are welcome to register for a free livestream-only ticket.
+
+Note: The free livestream-only ticket does not include support and you will be unable to interact with the speakers or other in-person audience. Consider getting a remote ticket instead.
 
 ### Volume Discount for Teams
 
@@ -147,14 +155,11 @@ Ready to order? We have configured the discount to be automatic! Put your orders
     [EuroPython Helpdesk](mailto:helpdesk@europython.eu) (staffed by wonderful
     volunteers).
 
-### Note for Remote Tickets
-If you cannot make it to Dublin and struggle to afford the remote tickets, there will be Financial Aid available soon! You are welcome to apply if you need the help. We want to interact with **YOU** at EuroPython 2022!
 
-## How can I get a refund?
+## How can I Get a Refund?
 
 - For in-person tickets: We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 11 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at <mailto:refunds@europython.eu> if you need a refund due to special circumstances.
 
 - For remote tickets:
-  - Before 11 June, you can request a full refund from the order details link in your order confirmation email.
-  - Between 11 June to 26 June, please email us at <mailto:refunds@europython.eu>.
+  - You can request a refund until 26 June by emailing us at <mailto:refunds@europython.eu>.
   - After 26 June, refund is not possible.

@@ -106,10 +106,12 @@ possible after that Refund End Time unless otherwise specified by the
 Organizers. The Organizers reserve the right to deduct administrative costs
 (bank, online payments services, etc) from the refund.
 
-Before June 11th, the participate can request a full refund from the order details link in the order confirmation email. After June 11th,refund requests must be made by email to the
+For in-person tickets, before June 11th, the participate can request a full refund  from the order details link in the order confirmation email. After June 11th,refund requests must be made by email to the
 [refunds@europython.eu](mailto:refunds@europython.eu) email address. The email
 must include the Order Code, Ticket IDs, name of the person who bought the
 ticket and the special circumstances.
+
+For remote tickets, refunds can be requested until 26 June by emailing [refunds@europython.eu](mailto:refunds@europython.eu). After 26 June, refund is not possible.
 
 Refunds are processed via Stripe and will be paid back to the same
 payment card which was used for the purchase of the tickets.
