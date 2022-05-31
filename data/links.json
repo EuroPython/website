@@ -52,7 +52,15 @@
         {
           "name": "PyLadies Lunch",
           "path": "/pyladies-lunch"
-          }
+        },
+        {
+          "name": "Mentored Sprint",
+          "path": "/mentored-sprint"
+        },
+        {
+          "name": " Beginners' Day - Humble Data Workshop",
+          "path": "/humble-data"
+        }
       ]
     },
     {
