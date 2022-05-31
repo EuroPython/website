@@ -1,8 +1,12 @@
 ---
 title: Mentored Sprint
+title: Mentored Sprint
 subtitle:
   The Mentored sprints project is not only a series of coding sprints to contribute to open source. But a community dedicated to mentor, support, and empower all of those folks that have faced and continue to face barriers to contributing to open source.
 ---
+
+# Mentored Sprint
+
 ## TL;DR ##
 ✨ We are running mentored sprints for diverse community members at EuroPython this year ✨
 
