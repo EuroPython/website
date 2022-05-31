@@ -24,6 +24,9 @@ Tuesday 12th July 2022 (time and room TBD).
 ## WHERE? ##
 EuroPython (see [here](/where))
 
+## WHO CAN JOIN? ##
+Anyone with a EuroPython [Conference Ticket or Combined Ticket](https://ep2022.europython.eu/tickets#ticket-types)
+
 ## WHAT DO I NEED TO BRING? ##
 You will need a computer with internet access. You are recommended to follow [this instruction to set up](https://github.com/HumbleData/beginners-data-workshop) but it's not required. Our mentors can help you set up on the day.
 
