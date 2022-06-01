@@ -1,6 +1,7 @@
 import { MDXRemote } from "next-mdx-remote";
 import { Layout } from "../../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
+import { fetchSessions } from "../../lib/sessions";
 
 type Speaker = {
   code: string;
@@ -145,7 +146,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const sessions = require(`../../data/sessions/list.json`);
+  const sessions = await fetchSessions();
 
   const session = sessions.find(
     (session: { slug: string }) => session.slug === params.slug

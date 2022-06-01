@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import { fetchSessions } from "../lib/sessions";
 
 type Speaker = {
   code: string;
@@ -43,10 +42,10 @@ export default function SessionsPage({
   };
 
   return (
-    <Layout title="Accepted sessions - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
+    <Layout title="Accepted tutorials - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
       <main id="main-content">
         <h1>
-          Accepted sessions
+          Accepted tutorials
           <p style={{ fontWeight: "normal" }}>Note: this list might change</p>
         </h1>
 
@@ -59,22 +58,6 @@ export default function SessionsPage({
               {tracks.map((track) => (
                 <option key={track} value={track}>
                   {track}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="submission_type">Submission type</label>
-            <select
-              name="submission_type"
-              id="submission_type"
-              onChange={handleFilterChange}
-            >
-              <option value="">All</option>
-              {submissionTypes.map((submissionType) => (
-                <option key={submissionType} value={submissionType}>
-                  {submissionType}
                 </option>
               ))}
             </select>
@@ -117,30 +100,31 @@ export default function SessionsPage({
 }
 
 export async function getStaticProps() {
-  const sessionsList = await fetchSessions();
-  const sessions = await Promise.all(
-    sessionsList.map(async (session: { abstract: string }) => {
-      const mdxSource = await serialize(session.abstract, {});
+  const sessions = (
+    await Promise.all(
+      require(`../data/sessions/list.json`).map(
+        async (session: { abstract: string }) => {
+          const mdxSource = await serialize(session.abstract, {});
 
-      return {
-        ...session,
-        abstractSource: mdxSource,
-      };
-    })
-  );
+          return {
+            ...session,
+            abstractSource: mdxSource,
+          };
+        }
+      )
+    )
+  ).filter((session) => session.submission_type === "Tutorial");
 
   const tracks = Array.from(new Set(sessions.map((session) => session.track)));
   const submissionTypes = Array.from(
     new Set(sessions.map((session) => session.submission_type))
   );
   tracks.sort();
-  submissionTypes.sort();
 
   return {
     props: {
       sessions: sessions,
       tracks,
-      submissionTypes,
     },
   };
 }
