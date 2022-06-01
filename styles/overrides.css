@@ -93,6 +93,12 @@ details[open] h2 {
   text-decoration: none;
 }
 
+a.img[href*="://"]:after
+{
+  content: "";
+  text-decoration: none !important
+}
+
 h2.soldout::after {
   content: url(/img/accents/soldout.svg);
   padding: 0.5rem;
