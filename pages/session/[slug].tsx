@@ -133,7 +133,7 @@ export default function Page({
 }
 
 export async function getStaticPaths() {
-  const sessions = require(`../../data/sessions/list.json`);
+  const sessions = await fetchSessions();
 
   return {
     paths: sessions.map((session: { slug: string }) => ({
