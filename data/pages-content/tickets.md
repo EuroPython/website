@@ -115,7 +115,7 @@ out.
   <li className="new">Remote Late Bird - Conference Only Personal (Available on 27 June) - €64 incl VAT</li>
 </ul>  
 
-If you cannot make it to Dublin and struggle to afford the remote tickets, there will be Financial Aid available sometime in June! You are welcome to apply if you need the help. We want to interact with **YOU** at EuroPython 2022!
+If you cannot make it to Dublin and struggle to afford the remote tickets, there will be Financial Aid for Remote Tickets available sometime in June! You are welcome to apply if you need the help. We want to interact with **YOU** at EuroPython 2022!
 
 ### Livestream-only Tickets
 We provide open and free access to the livestreams of our conference talks (13-15 July).
