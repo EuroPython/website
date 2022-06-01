@@ -5,6 +5,10 @@
           "name": "List of Sessions",
           "path": "/sessions"
         },
+{
+          "name": "List of Tutorials",
+          "path": "/tutorials"
+        },
         {
           "name": "Keynoters",
           "path": "/keynoters"
@@ -52,7 +56,15 @@
         {
           "name": "PyLadies Lunch",
           "path": "/pyladies-lunch"
-          }
+        },
+        {
+          "name": "Mentored Sprint",
+          "path": "/mentored-sprint"
+        },
+        {
+          "name": " Beginners' Day - Humble Data Workshop",
+          "path": "/humble-data"
+        }
       ]
     },
     {

@@ -43,10 +43,10 @@ export default function SessionsPage({
   };
 
   return (
-    <Layout title="Accepted sessions - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
+    <Layout title="Accepted tutorials - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
       <main id="main-content">
         <h1>
-          Accepted sessions
+          Accepted tutorials
           <p style={{ fontWeight: "normal" }}>Note: this list might change</p>
         </h1>
 
@@ -59,22 +59,6 @@ export default function SessionsPage({
               {tracks.map((track) => (
                 <option key={track} value={track}>
                   {track}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="submission_type">Submission type</label>
-            <select
-              name="submission_type"
-              id="submission_type"
-              onChange={handleFilterChange}
-            >
-              <option value="">All</option>
-              {submissionTypes.map((submissionType) => (
-                <option key={submissionType} value={submissionType}>
-                  {submissionType}
                 </option>
               ))}
             </select>
@@ -117,7 +101,10 @@ export default function SessionsPage({
 }
 
 export async function getStaticProps() {
-  const sessionsList = await fetchSessions();
+  const sessionsList = (await fetchSessions()).filter(
+    (session: { submission_type: string }) =>
+      session.submission_type.startsWith("Tutorial")
+  );
   const sessions = await Promise.all(
     sessionsList.map(async (session: { abstract: string }) => {
       const mdxSource = await serialize(session.abstract, {});
@@ -130,17 +117,12 @@ export async function getStaticProps() {
   );
 
   const tracks = Array.from(new Set(sessions.map((session) => session.track)));
-  const submissionTypes = Array.from(
-    new Set(sessions.map((session) => session.submission_type))
-  );
   tracks.sort();
-  submissionTypes.sort();
 
   return {
     props: {
       sessions: sessions,
       tracks,
-      submissionTypes,
     },
   };
 }
