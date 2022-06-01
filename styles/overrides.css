@@ -93,11 +93,11 @@ details[open] h2 {
   text-decoration: none;
 }
 
- pyladies-sponsor-url
 a.img[href*="://"]:after
 {
   content: "";
   text-decoration: none !important
+}
 
 h2.soldout::after {
   content: url(/img/accents/soldout.svg);
