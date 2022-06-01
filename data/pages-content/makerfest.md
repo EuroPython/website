@@ -19,7 +19,7 @@ If you’re a Maker, educator, or just interested in planning, putting together 
 
 MakerFest takes place during **EuroPython conference days, Wednesday 13 July to Friday 15 July**, at The Convention Centre Dublin.
 
-We will have a dedicated Maker area for showcasing projects, workshops, hardware and maker-related organisations such as [micro:bit](https://microbit.org/), [Northern Ireland Jam](http://niraspberryjam.com/), and [MakerMeet](https://www.makermeet.ie/). Activities will appeal to all levels of age\*, experience and skill.
+We will have a dedicated Maker area for showcasing projects, workshops, hardware and maker-related organisations such as [micro:bit](https://microbit.org/), [Northern Ireland Raspberry Jam](http://niraspberryjam.com/), [TOG Hackerspace](https://www.tog.ie/) and [MakerMeet](https://www.makermeet.ie/). Activities will appeal to all levels of age\*, experience and skill.
 
 **NOTE: Attendees under 18 years of age must be accompanied by a parent/legal guardian.**
 
