@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import { fetchSessions } from "../lib/sessions";
 
 type Speaker = {
   code: string;
@@ -100,25 +101,22 @@ export default function SessionsPage({
 }
 
 export async function getStaticProps() {
-  const sessions = (
-    await Promise.all(
-      require(`../data/sessions/list.json`).map(
-        async (session: { abstract: string }) => {
-          const mdxSource = await serialize(session.abstract, {});
+  const sessionsList = (await fetchSessions()).filter(
+    (session: { submission_type: string }) =>
+      session.submission_type.startsWith("Tutorial")
+  );
+  const sessions = await Promise.all(
+    sessionsList.map(async (session: { abstract: string }) => {
+      const mdxSource = await serialize(session.abstract, {});
 
-          return {
-            ...session,
-            abstractSource: mdxSource,
-          };
-        }
-      )
-    )
-  ).filter((session) => session.submission_type === "Tutorial");
+      return {
+        ...session,
+        abstractSource: mdxSource,
+      };
+    })
+  );
 
   const tracks = Array.from(new Set(sessions.map((session) => session.track)));
-  const submissionTypes = Array.from(
-    new Set(sessions.map((session) => session.submission_type))
-  );
   tracks.sort();
 
   return {
