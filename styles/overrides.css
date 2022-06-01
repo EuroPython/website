@@ -92,3 +92,9 @@ details[open] summary h2::after {
 details[open] h2 {
   text-decoration: none;
 }
+
+a.img[href*="://"]:after
+{
+  content: "";
+  text-decoration: none !important
+}
