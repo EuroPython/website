@@ -27,6 +27,15 @@ Rather, the mentor is a guide, supporter and source of help.
 
 ## 2. Webinar Workshops
 
+### First Time Speaker Workshop - 21 June 2022 (Tuesday):
+
+The main topic of the First Time Speaker Workshop will be “*how to prepare and deliver an effective talk*”.
+
+In the workshop, we have experienced speakers from our EuroPython community to share their know-how and advice on how you can prepare your talk and make it effective. We hope this will help you build more confidence before your presentation at EuroPython 2022.
+
+Note: EuroPython organisers will provide speaker training sessions for all the speakers closer to the conference. Whether you are presenting in-person or online, we have you covered in these sessions for any setup questions you might have. Stay tuned for announcement.
+
+
 ### Ask Me Anything about CFP workshop - 23 March 2022 (Wednesday):
 
 We encourage anyone who has no or little experience submitting to EuroPython's
@@ -35,12 +44,6 @@ a good proposal to what is the selection process of the talk.
 
 A recording of the session will be made available after the event.
 
-### First Time Speaker Workshop - TBA:
-
-EuroPython will provide a speaker training session for all selected speakers
-explaining how to set up the technology required to present at EuroPython.
-However, we would like to emphasize support for first-time speakers as they 
-prepare their talk and learn what to expect when contributing to EuroPython.
 
 ## Mentors
 

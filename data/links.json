@@ -28,6 +28,10 @@
         {
           "name": "Visa Information",
           "path": "/visa"
+        },
+        {
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
         }
       ]
     },
