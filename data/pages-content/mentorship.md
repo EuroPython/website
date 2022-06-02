@@ -15,12 +15,11 @@ We are looking for both mentors and mentees to be a part of the programme.
 
 ~~_Applications will remain open until Sunday 20th March, 2022._~~
 
-The mentorship programme comrises of two key activities:
-
+The mentorship programme comprises of two key activities:
 
 ## 1. Workshops
 
-### First Time Speaker Workshop - 21 June 2022 (Tuesday):
+### First Time Speaker Workshop - 21 June 2022 (Tuesday) [Registrations now open]:
 
 The main topic of the First Time Speaker Workshop will be “*how to prepare and deliver an effective talk*”.
 
@@ -38,7 +37,7 @@ A recording of the session will be made available after the event.
 
 ## 2. The One-to-One Mentorship Programme [_closed_]
 
-__This programme is now closed, but, we'll be back with an even bigger programme in 2023__
+__*This programme is now closed, but, we'll be back with an even bigger programme in 2023*__
 
 A mentee needing help will be matched with an experienced mentor. The mentor's
 job will be to facilitate and support the mentee so they are able to contribute
