@@ -46,6 +46,10 @@
     {
       "name": "Events",
       "items": [{
+        "name": " Beginners' Day - Humble Data Workshop",
+        "path": "/humble-data"
+      },
+        {
           "name": "Django Girls",
           "path": "https://djangogirls.org/en/dublin/"
         },
@@ -54,16 +58,16 @@
           "path": "/trans_code"
         },
         {
-          "name": "PyLadies Lunch",
-          "path": "/pyladies-lunch"
+          "name": "MakerFest",
+          "path": "/makerfest"
         },
         {
           "name": "Mentored Sprint",
           "path": "/mentored-sprint"
         },
         {
-          "name": " Beginners' Day - Humble Data Workshop",
-          "path": "/humble-data"
+          "name": "PyLadies Lunch",
+          "path": "/pyladies-lunch"
         }
       ]
     },
