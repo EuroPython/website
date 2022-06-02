@@ -13,28 +13,20 @@ we have set up the speaker mentorship programme.
 
 We are looking for both mentors and mentees to be a part of the programme.
 
-_Applications will remain open until Sunday 20th March, 2022._
+~~_Applications will remain open until Sunday 20th March, 2022._~~
 
-The mentorship programme can be summarized into two types of activities:
+The mentorship programme comrises of two key activities:
 
-## 1. The One-to-One Mentorship Programme
 
-A mentee needing help will be matched with an experienced mentor. The mentor's
-job will be to facilitate and support the mentee so they are able to contribute
-to EuroPython with confidence. It is **not** the job of the mentor to tell the
-mentee what their contribution should be (that's for the mentee to decide).
-Rather, the mentor is a guide, supporter and source of help.
-
-## 2. Webinar Workshops
+## 1. Workshops
 
 ### First Time Speaker Workshop - 21 June 2022 (Tuesday):
 
 The main topic of the First Time Speaker Workshop will be “*how to prepare and deliver an effective talk*”.
 
-In the workshop, we have experienced speakers from our EuroPython community to share their know-how and advice on how you can prepare your talk and make it effective. We hope this will help you build more confidence before your presentation at EuroPython 2022.
+In the workshop, we'll have experienced speakers from EuroPython community to share their know-how how you can deliver an effective talk. We hope this will help you pick some tricks of the trade before your presentation at EuroPython 2022.
 
-Note: EuroPython organisers will provide speaker training sessions for all the speakers closer to the conference. Whether you are presenting in-person or online, we have you covered in these sessions for any setup questions you might have. Stay tuned for announcement.
-
+Note: To register, please check out the last two emails sent you by the programme team and sign up via the form provided there. The session will take place over zoom and on 21st June 2022. If you face any issues then feel free to send an email at program@europython.eu
 
 ### Ask Me Anything about CFP workshop - 23 March 2022 (Wednesday):
 
@@ -44,11 +36,20 @@ a good proposal to what is the selection process of the talk.
 
 A recording of the session will be made available after the event.
 
+## 2. The One-to-One Mentorship Programme [_closed_]
+
+__This programme is now closed, but, we'll be back with an even bigger programme in 2023__
+
+A mentee needing help will be matched with an experienced mentor. The mentor's
+job will be to facilitate and support the mentee so they are able to contribute
+to EuroPython with confidence. It is **not** the job of the mentor to tell the
+mentee what their contribution should be (that's for the mentee to decide).
+Rather, the mentor is a guide, supporter and source of help.
 
 ## Mentors
 
-To become a Mentor you need to fill in the application form
-[here](https://forms.gle/QLfWU9bj1y5GRm219):
+~~To become a Mentor you need to fill in the application form
+[here](https://forms.gle/QLfWU9bj1y5GRm219)~~
 
 We expect mentors to have past speaking experience at conferences similar to
 EuroPython.
@@ -68,4 +69,4 @@ You will also be invited to join the panel of the Webinar Workshops.
 
 If you require help when contributing to EuroPython, especially
 if you are from an underrepresented or a marginalized group in the tech
-industry, please fill in the form [here](https://forms.gle/QLfWU9bj1y5GRm219).
+industry, ~~please fill in the form [here](https://forms.gle/QLfWU9bj1y5GRm219)~~.
