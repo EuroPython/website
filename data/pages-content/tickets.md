@@ -109,13 +109,15 @@ out.
 
 ### Remote Tickets
 <ul>
-  <li className="new">Remote Regular - Conference Only Business (Available until 26 June) - €168 incl VAT</li>
-  <li className="new">Remote Late Bird - Conference Only Business (Available on 27 June) - €256 incl VAT</li>
+  <li className="new">Remote Regular - Conference Only Business (Available until 26 June) - €137 excl 23% VAT†</li>
+  <li className="new">Remote Late Bird - Conference Only Business (Available on 27 June) - €208 excl 23% VAT†</li>
   <li className="new">Remote Regular - Conference Only Personal (Available until 26 June) - €42 incl VAT</li>
   <li className="new">Remote Late Bird - Conference Only Personal (Available on 27 June) - €64 incl VAT</li>
 </ul>  
 
 If you cannot make it to Dublin and struggle to afford the remote tickets, there will be Financial Aid for Remote Tickets available sometime in June! You are welcome to apply if you need the help. We want to interact with **YOU** at EuroPython 2022!
+
+†VAT on Business tickets will be reverse charged for businesses in the EU (excluding Ireland) providing a VAT ID, and not charged for businesses outside the EU. Reverse charge is not available for personal tickets as they are not intended to be bought by businesses. EU VAT rules state that individuals (wheter inside or outside the EU) should pay VAT in the place where the event takes place, even for online participation.
 
 ### Livestream-only Tickets
 We provide open and free access to the livestreams of our conference talks (13-15 July).
