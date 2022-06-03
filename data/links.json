@@ -12,7 +12,11 @@
         {
           "name": "Keynoters",
           "path": "/keynoters"
-        }
+        },
+        {
+          "name": "Speaker Information",
+          "path": "/speaker-info"
+        }        
       ]
     },
     {
