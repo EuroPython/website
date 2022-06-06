@@ -50,6 +50,11 @@
           "name": "Arm",
           "url": "https://www.arm.com/",
           "logo": "img/logos/sponsor_logos/arm.svg"
+        },
+        {
+          "name": "RenaissanceRe",
+          "url": "https://www.renre.com/",
+          "logo": "img/logos/sponsor_logos/renre.svg"
         }
       ]
     },
