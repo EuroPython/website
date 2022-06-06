@@ -11,6 +11,11 @@
           "name": "Oomnitza",
           "url": "https://www.oomnitza.com/",
           "logo": "img/logos/sponsor_logos/oomnitza.svg"
+        },
+        {
+          "name": "Microsoft",
+          "url": "https://www.microsoft.com/",
+          "logo": "img/logos/sponsor_logos/microsoft.svg"
         }
       ]
     },
