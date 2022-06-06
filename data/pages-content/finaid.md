@@ -11,7 +11,7 @@ subtitle:
 <ButtonWithTitle title="Financial Aid for Remote Tickets is available" text="Apply Now if You Need the Support!" href="https://forms.gle/k4Mh8T83PxADk9gq9" />
 </div>
 
-Applicants will be notified of acceptance/rejection by 6 June, 2022. See [timeline](#timeline) for details.
+Applicants for the previous **in-person Financial Aid applications** are notified of acceptance/rejection by 6 June, 2022. See [timeline](#timeline) for details.
 
 ---
 As part of our commitment to the Python community, we are pleased to
