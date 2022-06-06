@@ -107,6 +107,24 @@ Please check out our [Tickets page](/tickets) for more details.
 
 We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community. If you need help to attend the conference, you are most welcome to apply for [Financial Aid](/finaid)
 
+## **Q. Can I attend EuroPython remotely?**
+
+A. Yes, we have released remote tickets from 7th June 2022 onward. It is now possible to purchase a conference ticket (personal/ business) to participate in the conference from anywhere on the planet.
+
+Please check out our [Tickets page](/tickets) for more details.
+
+## **Q. What all would I be able to do with a remote ticket?**
+
+A. Remote participation during the Conference Days (Wednesday-Friday) will be possible. You'll be able to watch the live talks, keynotes & panels in all 6 tracks, participate in lightning talks, engage in live Q&A (with voice and video), and interact with available speakers in breakout discussions. Participation during sprint days is to be determined
+
+## **Q. I have bought an Online-Ticket: How can I Join?**
+
+A. We will have a dedicated platform to particpate at the confernece remotely. We will email instructions how to access and join in the week before the conference.
+
+## **Q. Will the conference talks and tutorials be recorded?**
+
+A. Recordings of the talks will be made available on our YouTube channel a few months after the conference. Tutorials will only be delivered in-person and will not be recorded.
+
 ## **Q. Do you provide childcare?**
 A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.
 
