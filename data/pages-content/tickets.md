@@ -109,15 +109,23 @@ out.
 
 ### Remote Tickets
 <ul>
-  <li className="new">Remote Regular - Conference Only Business (Available until 26 June) - €137 excl 23% VAT†</li>
-  <li className="new">Remote Late Bird - Conference Only Business (Available on 27 June) - €208 excl 23% VAT†</li>
-  <li className="new">Remote Regular - Conference Only Personal (Available until 26 June) - €42 incl VAT</li>
-  <li className="new">Remote Late Bird - Conference Only Personal (Available on 27 June) - €64 incl VAT</li>
+  <li className="new">Remote Regular - Conference Only Business (Available until 26 June) - €137 <i>excl 23% VAT †</i></li>
+  <li className="new">Remote Late Bird - Conference Only Business (Available on 27 June) - €208 <i>excl 23% VAT † </i></li>
+  <li className="new">Remote Regular - Conference Only Personal (Available until 26 June) - €42 <i>incl VAT †</i></li>
+  <li className="new">Remote Late Bird - Conference Only Personal (Available on 27 June) - €64 <i>incl VAT †</i></li>
 </ul>  
 
-If you cannot make it to Dublin and struggle to afford the remote tickets, there will be Financial Aid for Remote Tickets available sometime in June! You are welcome to apply if you need the help. We want to interact with **YOU** at EuroPython 2022!
+†VAT for Remote Tickets:
+- Business tickets:
+  - 23% Irish VAT applies for businesses in Ireland;
+  - VAT will be reverse charged for businesses in the EU (excluding Ireland) providing a valid VAT ID upon checkout;
+  - VAT will not be charged for businesses outside the EU.
+- Personal Tickets: 23% Irish VAT applies. Reverse charge is not available for personal tickets as they are not intended to be bought by businesses.
 
-†VAT on Business tickets will be reverse charged for businesses in the EU (excluding Ireland) providing a VAT ID, and not charged for businesses outside the EU. Reverse charge is not available for personal tickets as they are not intended to be bought by businesses. EU VAT rules state that individuals (wheter inside or outside the EU) should pay VAT in the place where the event takes place, even for online participation.
+<h5 className = "new"> Financial Aid for Remote Tickets </h5>
+
+If you cannot make it to Dublin and struggle to afford the remote tickets, you are welcome to apply for [Financial Aid for Remote Tickets](https://forms.gle/k4Mh8T83PxADk9gq9). We want to interact with **YOU** at EuroPython 2022! Check out the [Financial Aid](/finaid) page for details.
+
 
 ### Livestream-only Tickets
 We provide open and free access to the livestreams of our conference talks (13-15 July).

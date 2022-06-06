@@ -125,3 +125,18 @@ h5.new::after {
   font-size: 0.8em;
   margin-left: 0.4em;
 }
+
+li.closed::before {
+ content: url(/img/accents/closed_vertical.svg);
+ padding: 0.5rem;
+}
+
+h3.closed::before {
+  content: url(/img/accents/closed_big.svg);
+  padding: 0.5rem;
+}
+
+h3.new::before {
+  content: url(/img/accents/new_large.svg);
+  padding: 0.5rem;
+}

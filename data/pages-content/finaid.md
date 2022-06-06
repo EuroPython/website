@@ -8,7 +8,7 @@ subtitle:
 
 # Financial Aid
 <div style={{textAlign: "center"}}>
-<button>The Finaid Programme is now closed.</button>
+<ButtonWithTitle title="Financial Aid for Remote Tickets is available" text="Apply Now if You Need the Support!" href="https://forms.gle/k4Mh8T83PxADk9gq9" />
 </div>
 
 Applicants will be notified of acceptance/rejection by 6 June, 2022. See [timeline](#timeline) for details.
@@ -26,12 +26,13 @@ page.
 The EuroPython Society are sponsoring financial aid with €20,000 this year.
 
 You can apply for three different types of grants:
-
-1. **Free ticket.** Get a standard ticket to the conference for free.
-2. **Travel / Accommodation.** We will reimburse travel and/or accommodation
-   costs up to €400.
-3. **Visa Application Fee.** Get reimbursed for the costs of a single entry
-   visa to Ireland (€60).
+<ol>
+  <li className="closed"><b>Free In-person Ticket:</b> Get a standard ticket to the conference in-person for free.</li>
+  <li className="closed"><b>Travel / Accommodation:</b> We will reimburse travel and/or accommodation costs up to €400.</li>
+  <li className="closed"><b>Visa Application Fee:</b> Get reimbursed for the costs of a single entry
+     visa to Ireland (€60).</li>
+  <li className="new"><b>Free remote ticket:</b> Get a standard ticket to the conference remotely for free.</li>
+</ol>
 
 ## Grant Eligibility
 
@@ -52,25 +53,32 @@ for a grant:
 
 ## How to apply
 
-<a class="button" href="https://forms.gle/7EAbk59cgaqtKN4r6"> Fill out the application form</a>
+<a class="button" href="https://forms.gle/7EAbk59cgaqtKN4r6"> Apply for Financial Aid for Remote Tickets</a>
 
+Application for Financial Aid for Remote Tickets is open on 7 June. Applicants for in-person attendance are notified of acceptance/rejection by 6 June, 2022. See timeline for details.
 
 ## Timeline
 
 - 8 March (2022-03-08) - Applications for Financial Aid open
 - 23 May (2022-05-23) - Deadline for submitting an application
-- **6 June (2022-06-07)** - Applicants will be notified of acceptance/rejection
+- 6 June (2022-06-06) - Applicants will be notified of acceptance/rejection
+- **7 June (2022-06-07)** - Applications for Remote Financial Aid open
 - 13 June (2022-06-14) - Deadline for applicants to accept the grant
 - 24 July (2022-07-24) - Deadline to submit invoices/receipts
 
 ## Grant Policies
 
-### Free Ticket
+<h3 className="new"> Free Remote Ticket</h3>
+
+You will receive an individual voucher code that you can use to buy a regular
+conference remote ticket for free.
+
+<h3 className="closed"> Free In-person Ticket </h3>
 
 You will receive an individual voucher code that you can use to buy a regular
 conference ticket for free.
 
-### Travel/Accommodation Grant & Visa Grant
+<h3 className="closed"> Travel/Accommodation Grant & Visa Grant </h3>
 
 If you received a travel/accommodation grant or a visa grant, you will be
 reimbursed **after the conference via PayPal or bank transfer**. Do note that
