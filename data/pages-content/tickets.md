@@ -3,9 +3,9 @@ title: Tickets
 ---
 
 # Tickets
-  <h5 className = "new"> Join the Waiting List for Remote Tickets NOW!</h5>
+<h5 className = "new">Remote Tickets Available NOW!</h5>
 
-<a class="button" href="https://tickets.europython.eu">Beam me up to the ticket shop now!</a>
+  <a class="button" href="https://tickets.europython.eu">Beam me up to the ticket shop now!</a>
 
 ## The What, Where and When of EuroPython 2022
 
