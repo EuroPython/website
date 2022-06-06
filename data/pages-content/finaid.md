@@ -53,7 +53,7 @@ for a grant:
 
 ## How to apply
 
-<a class="button" href="https://forms.gle/7EAbk59cgaqtKN4r6"> Apply for Financial Aid for Remote Tickets</a>
+<a class="button" href="https://forms.gle/k4Mh8T83PxADk9gq9"> Apply for Financial Aid for Remote Tickets</a>
 
 Application for Financial Aid for Remote Tickets is open on 7 June. Applicants for in-person attendance are notified of acceptance/rejection by 6 June, 2022. See timeline for details.
 
