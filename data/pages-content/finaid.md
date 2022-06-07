@@ -69,17 +69,17 @@ Application for Financial Aid for Remote Tickets is open on 7 June. Applicants f
 
 ## Grant Policies
 
-<h3 className="new"> Free Remote Ticket</h3>
+<h3 className="new" id="free-remote"> Free Remote Ticket</h3>
 
 You will receive an individual voucher code that you can use to buy a regular
 conference remote ticket for free.
 
-<h3 className="closed"> Free In-person Ticket </h3>
+<h3 className="closed" id="free-ticket"> Free In-person Ticket </h3>
 
 You will receive an individual voucher code that you can use to buy a regular
 conference ticket for free.
 
-<h3 className="closed"> Travel/Accommodation Grant & Visa Grant </h3>
+<h3 className="closed" id="travelaccommodation-grant--visa-grant"> Travel/Accommodation Grant & Visa Grant </h3>
 
 If you received a travel/accommodation grant or a visa grant, you will be
 reimbursed **after the conference via PayPal or bank transfer**. Do note that
