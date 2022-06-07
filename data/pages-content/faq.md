@@ -51,11 +51,10 @@ A. The conference will be organised in three phases:
 
 ## **Q. What will the programme look like?**
 
-A. To get an idea of what to expect, please have a look at the
-[EP2021 programme](https://ep2021.europython.eu/events/sessions/) and the
-[EP2019 programme](https://ep2019.europython.eu/events/sessions/).
+A. Take a look at our accepted sessions:
+[EP2022 programme](/sessions)
 
-The conference will feature around 20 tutorials/workshops, 120 talk sessions and other interactive sessions such as Posters, Helpdesks, Panel Discussions and a Maker Space.
+The conference will feature around 20 tutorials/workshops/special events, 120 talk sessions and other interactive sessions such as Posters, Helpdesks, Panel Discussions and a MakerFest.
 
 We aim to have a very diverse programme, covering the many different aspects of where and how Python solves problems or engages in interesting things.
 
@@ -96,12 +95,11 @@ We offer flexibility for the tickets, depending on what you would like to attend
 
 Please check out our [Tickets page](/tickets) for more details.
 
-Instead, if you decide to attend the conference remotely, we will have special tickets for you. Subscribe to our
-[EuroPython Blog](https://blog.europython.eu/#/portal/signup) and stay tuned!
+Instead, if you decide to attend the conference remotely, also have remote tickets available for you to attend all talks, panels and keynotes during the conference days.
 
 ## **Q. What are the ticket prices like?**
 
-A. We have put a lot of work in keeping the ticket prices at a similar level to the last in-person conference in 2019, despite cost increases and the consequences of the pandemic.
+A. We have put a lot of work in keeping the in-person ticket prices at a similar level to the last in-person conference in 2019, despite cost increases and the consequences of the pandemic.
 
 Please check out our [Tickets page](/tickets) for more details.
 
@@ -109,31 +107,38 @@ We encourage and trust you to pick a fair ticket tier that fits your personal ci
 
 ## **Q. Can I attend EuroPython remotely?**
 
-A. Yes, we have released remote tickets from 7th June 2022 onward. It is now possible to purchase a conference ticket (personal/ business) to participate in the conference from anywhere on the planet.
+A. Yes, remote tickets are on sale from **7th June 2022** onward. It is now possible to purchase a conference ticket (personal/ business) to participate in the conference from anywhere on the planet.
 
 Please check out our [Tickets page](/tickets) for more details.
 
-## **Q. What all would I be able to do with a remote ticket?**
+## **Q. What access does a remote ticket give me?**
 
-A. Remote participation during the Conference Days (Wednesday-Friday) will be possible. You'll be able to watch the live talks, keynotes & panels in all 6 tracks, participate in lightning talks, engage in live Q&A (with voice and video), and interact with available speakers in breakout discussions. Participation during sprint days is to be determined
+A. We strive make remote participation as interactive as possible! During the Conference Days (Wednesday-Friday), not only can you watch the live talks, keynotes & panels in all 6 tracks, you can also participate in lightning talks, ask questions directly to a speaker (with voice and video), and chat with available speakers in breakout discussions. Participation during sprint days is to be determined.
 
-## **Q. I have bought an Online-Ticket: How can I Join?**
+## **Q. How can I join after having bought a remote ticket?**
 
-A. We will have a dedicated platform to particpate at the confernece remotely. We will email instructions how to access and join in the week before the conference.
+A. We will have a dedicated platform for you to join remotely. We will email the the joining instructions a few days before the conference.
+
+## **Q. What is the difference between a remote ticket and livestream-only ticket**
+
+A. As per our tradition, we provide open and free access to the livestreams of our conference talks (13-15 July). You are not required to register a ticket, but you are welcome to if you would like an email reminder or receive up-to-date information about the conference.
+
+But The free livestream-only ticket does not include support and you will be unable to interact with the speakers or other in-person audience. Consider getting a remote ticket instead.
 
 ## **Q. Will the conference talks and tutorials be recorded?**
 
 A. Recordings of the talks will be made available on our YouTube channel a few months after the conference. Tutorials will only be delivered in-person and will not be recorded.
 
-## **Q. Do you provide childcare?**
+## **Q. Is there a Financial Aid Program for EP2022?**
+A. Yes, our
+[Financial Aid programme](/finaid) for in-person participation was open for submissions between 8 March - 23 May. It has not closed. Fin
+
+## **Q. Do you provide childcare at the venue?**
 A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.
 
 ## **Q. Do you provide food at the venue?**
 A. Yes. Each ticket includes break refreshments and a light lunch for each day.
 
-## **Q. Is there a Financial Aid Program for EP2022?**
-A. Yes, our
-[Financial Aid programme](/finaid) is open for submissions between 8 March - 23 May. If you need help attending the conference, make sure to submit your application early!
 
 ## **Q. How soon should I book accommodation and flights?**
 
