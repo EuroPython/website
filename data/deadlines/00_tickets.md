@@ -1,5 +1,5 @@
 ---
-title: Remote Tickets Out
+title: Buy Remote Tickets
 subtitle: Celebrate Python Together
 url: /tickets
 image: /images/cards/early_bird.jpg
