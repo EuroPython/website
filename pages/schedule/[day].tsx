@@ -2,9 +2,9 @@ import parse from "date-fns/parse";
 import format from "date-fns/format";
 
 import { Layout } from "../../components/layout";
-import scheduleData from "../../data/schedule.json";
 import type { Event, TalkType } from "../../types/schedule";
 import { useCallback } from "react";
+import { fetchSchedule } from "../../lib/schedule";
 
 const numberToTime = (number: number) => {
   const hours = Math.floor(number / 60);
@@ -31,31 +31,62 @@ type Schedule = {
   timeslots: Slots;
 };
 
-const getSchedule = (day: string): Schedule => {
-  let currentDay = scheduleData.days[day as keyof typeof scheduleData["days"]];
+const TYPES_MAP = {
+  "Talk [in-person]": "talk",
+  "Talk [remote]": "talk-remote",
+  "Poster [in-person]": "poster",
+  "Tutorial [in-person]": "tutorial",
+};
 
+const AUDIENCE_MAP = {
+  none: "beginner",
+  some: "intermediate",
+  expert: "advanced",
+};
+
+const getScheduleForDay = async ({
+  schedule,
+  day,
+}: {
+  schedule: any;
+  day: string;
+}) => {
+  let currentDay = schedule.days[day];
+
+  // @ts-ignore, we'll add types later
   const events: Event[] = currentDay.talks.map((event, index) => {
     const time = timeToNumber(event.time);
     const evDuration = parseInt(event.ev_duration || "0", 10);
     const ttDuration = parseInt(event.tt_duration || "0", 10);
 
     const endTime = time + (evDuration || ttDuration);
+    // @ts-ignore we should improve the API
+    let eventType = TYPES_MAP[event.type] || "";
+    const title = event.title || event.ev_custom;
+
+    if (eventType === "") {
+      const lowerTitle = title.toLocaleLowerCase();
+      if (lowerTitle === "coffee break" || lowerTitle === "lunch break") {
+        eventType = "break";
+      } else {
+        console.log(eventType, event);
+      }
+    }
 
     return {
       id: index.toString(),
-      title: event.title || event.ev_custom,
+      title,
       day: event.day,
       time: event.time,
       endTime: numberToTime(endTime),
-      audience: event.level,
+      // @ts-ignore we should improve the API
+      audience: AUDIENCE_MAP[event.level] || "",
       rooms: event.rooms,
       slug: event.slug || "",
-      type: event.ev_custom ? "break" : "talk",
+      type: eventType,
       speakers: [
         {
           name: event.speaker,
-          tagline: event.speaker,
-          image: "https://avatars.dicebear.com/api/adventurer/Gpcjwb.svg",
         },
       ],
     };
@@ -225,13 +256,8 @@ const TimeSlot = ({
       {events.map((event) => {
         const position = getPositionForEvent(event, schedule);
 
-        if (
-          !["talk", "keynote", "workshop", "lighting-talks"].includes(
-            event.type
-          ) ||
-          event.type === "break"
-        ) {
-          console.warn("Only talks supported", event.type);
+        if (event.type === "break") {
+          console.warn("Only talks supported", event.type, event, events);
 
           return null;
         }
@@ -253,18 +279,16 @@ const TimeSlot = ({
 
 export default function SchedulePage({
   day,
+  days,
   schedule,
 }: {
   day: string;
+  days: string[];
   schedule: Schedule;
 }) {
   const handleDaySelected = useCallback((event) => {
     window.location.href = `/schedule/${event.target.value}`;
   }, []);
-
-  const days = Object.keys(scheduleData.days).map((date) =>
-    parse(date, "yyyy-MM-dd", new Date())
-  );
 
   const totalSlots = Object.keys(schedule.timeslots).length;
   const totalRooms = schedule.rooms.length;
@@ -293,16 +317,19 @@ export default function SchedulePage({
             onChange={handleDaySelected}
             defaultValue={day}
           >
-            {days.map((d) => {
-              const isoDate = format(d, "yyyy-MM-dd");
-              const dateText = format(d, "eeee, do MMMM, yyyy");
+            {days
+              .map((day) => parse(day, "yyyy-MM-dd", new Date()))
+              .sort((a, b) => a.getTime() - b.getTime())
+              .map((date) => {
+                const isoDate = format(date, "yyyy-MM-dd");
+                const dateText = format(date, "eeee, do MMMM, yyyy");
 
-              return (
-                <option key={isoDate} value={isoDate}>
-                  {dateText}
-                </option>
-              );
-            })}
+                return (
+                  <option key={isoDate} value={isoDate}>
+                    {dateText}
+                  </option>
+                );
+              })}
           </select>
         </article>
 
@@ -355,14 +382,24 @@ export default function SchedulePage({
 }
 
 export async function getStaticPaths() {
-  const paths = Object.keys(scheduleData.days).map((day) => ({
+  const schedule = await fetchSchedule();
+
+  const paths = Object.keys(schedule.days).map((day) => ({
     params: { day: day },
   }));
+
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }: { params: { day: string } }) {
-  const schedule = getSchedule(params.day);
+  const schedule = await fetchSchedule();
+  const daySchedule = await getScheduleForDay({ schedule, day: params.day });
 
-  return { props: { day: params.day, schedule } };
+  return {
+    props: {
+      day: params.day,
+      schedule: daySchedule,
+      days: Object.keys(schedule.days),
+    },
+  };
 }

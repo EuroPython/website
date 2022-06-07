@@ -2653,6 +2653,7 @@ button[name="vote"]:hover {
   text-align: center;
   font-weight: bold;
   margin: 2rem 0;
+  padding-bottom: 2rem;
 }
 
 .schedule__date {

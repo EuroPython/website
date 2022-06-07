@@ -1,4 +1,4 @@
-export type TalkType = "talk" | "workshop" | "keynote";
+export type TalkType = "talk" | "tutorial" | "talk-remote";
 
 export type EventType =
   | TalkType
@@ -17,6 +17,9 @@ export type Speaker = {
 export type Event = (
   | {
       type: "break";
+    }
+  | {
+      type: "unknown";
     }
   | {
       type: "lighting-talks";
