@@ -88,7 +88,11 @@
     ]
     },
     {
-      "name": "Online (TBA)"
+      "name": "Hybrid Participation",
+      "items": [{
+        "name": "EuroPython 2022 Remote",
+        "path": "/remote"
+      }]
     }
   ],
   "footer": [{
