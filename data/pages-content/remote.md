@@ -29,3 +29,8 @@ Remote participation is between 13-15 July (Wednesday - Friday):
 - On-Demand viewing will be available with a couple hours after the live stream
 
 *Note: Tutorials and Workshops on 11-12 July will not be streamed.*
+
+### Livestreams without interaction ###
+As per our tradition, we also provide open and free access to the livestreams of our conference talks (13-15 July). You are not required to register a ticket, but you are welcome to if you would like an email reminder or receive up-to-date information about the conference.
+
+But The free livestream-only ticket does not include support and you will be unable to interact with the speakers or other in-person audience. Consider getting a remote ticket instead.
