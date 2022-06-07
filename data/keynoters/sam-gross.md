@@ -2,19 +2,6 @@
 title: Multithreaded Python without the GIL
 speaker: Sam Gross
 bio: Sam Gross is a software engineer at Meta AI. He is a co-author of PyTorch, an open-source Python machine learning framework. He holds M.Eng. and B.S. degrees in computer science from the Massachusetts Institute of Technology.
-
-
-  Since moving to DIAS he has worked on the development of calibration and
-  software tools for the Mid-Infrared Instrument (MIRI) on Webb. MIRI is an
-  international project comprising a consortium of European partner institutes,
-  including DIAS, the European Space Agency, and partners in the US.
-
-
-  He works on many aspects of MIRI including the calibration of the MIRI Medium
-  Resolution Spectrometer, development of the MIRI simulator, MIRI commissioning
-  activities and analysis tools, and will support MIRI commissioning at the Webb
-  Mission Operations Center at the Space Telescope Science Institute in
-  Baltimore.
 subtitle: "Mostly thread-safe"
 ---
 
