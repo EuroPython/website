@@ -64,6 +64,7 @@ Application for Financial Aid for Remote Tickets is open on 7 June. Applicants f
 - 6 June (2022-06-06) - Applicants will be notified of acceptance/rejection
 - **7 June (2022-06-07)** - Applications for Remote Financial Aid open
 - 13 June (2022-06-14) - Deadline for applicants to accept the grant
+- 3 July (2022-07-03) - Applications for Remote Financial Aid emds
 - 24 July (2022-07-24) - Deadline to submit invoices/receipts
 
 ## Grant Policies
