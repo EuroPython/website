@@ -2678,6 +2678,8 @@ button[name="vote"]:hover {
 .schedule .break {
   padding: 1rem;
   background-color: var(--color-secondary-light);
+  position: relative;
+  z-index: 10;
 }
 
 .schedule .break .break__description {
