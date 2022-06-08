@@ -12,14 +12,15 @@
     "link": "/keynoters/laura-nolan"
   },
   {
-    "placeholder": true,
-    "picture": "https://avatars.dicebear.com/api/bottts/locking.svg",
-    "link": "#"
+    "name": "Sam Gross",
+    "tagline": "Mostly thread-safe",
+    "picture": "/keynoters/Sam-Gross.jpeg",
+    "link": "/keynoters/sam-gross"
   },
   {
     "placeholder": true,
     "picture": "https://avatars.dicebear.com/api/adventurer/prachetx.svg",
-    "link": "#"
+    "link": "/keynoters/sam-gross"
   },
   {
     "placeholder": true,
