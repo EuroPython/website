@@ -2,218 +2,17 @@ import parse from "date-fns/parse";
 import format from "date-fns/format";
 
 import { Layout } from "../../components/layout";
-import type { Event, TalkType } from "../../types/schedule";
+import type { Event } from "../../types/schedule";
 import { useCallback } from "react";
 import { fetchSchedule } from "../../lib/schedule";
-
-const numberToTime = (number: number) => {
-  const hours = Math.floor(number / 60);
-  const minutes = number % 60;
-
-  const hoursString = hours < 10 ? `0${hours}` : `${hours}`;
-  const minutesString = minutes < 10 ? `0${minutes}` : `${minutes}`;
-
-  return `${hoursString}:${minutesString}`;
-};
-
-const timeToNumber = (time: string) => {
-  const [hour, minute] = time.split(":");
-  const hourInt = parseInt(hour, 10);
-  const minuteInt = parseInt(minute, 10);
-  return hourInt * 60 + minuteInt;
-};
-
-type Slots = Record<string, Event[]>;
-
-type Schedule = {
-  rooms: string[];
-  events: Event[];
-  timeslots: Slots;
-};
-
-const TYPES_MAP = {
-  "Talk [in-person]": "talk",
-  "Talk [remote]": "talk-remote",
-  "Poster [in-person]": "poster",
-  "Tutorial [in-person]": "tutorial",
-};
-
-const AUDIENCE_MAP = {
-  none: "beginner",
-  some: "intermediate",
-  expert: "advanced",
-};
-
-const getScheduleForDay = async ({
-  schedule,
-  day,
-}: {
-  schedule: any;
-  day: string;
-}) => {
-  let currentDay = schedule.days[day];
-
-  // @ts-ignore, we'll add types later
-  const events: Event[] = currentDay.talks.map((event, index) => {
-    const time = timeToNumber(event.time);
-    const evDuration = parseInt(event.ev_duration || "0", 10);
-    const ttDuration = parseInt(event.tt_duration || "0", 10);
-
-    const endTime = time + (evDuration || ttDuration);
-    // @ts-ignore we should improve the API
-    let eventType = TYPES_MAP[event.type] || "";
-    const title = event.title || event.ev_custom;
-
-    if (eventType === "") {
-      const lowerTitle = title.toLocaleLowerCase();
-      if (lowerTitle === "coffee break" || lowerTitle === "lunch break") {
-        eventType = "break";
-      } else {
-        console.log(eventType, event);
-      }
-    }
-
-    return {
-      id: index.toString(),
-      title,
-      day: event.day,
-      time: event.time,
-      endTime: numberToTime(endTime),
-      // @ts-ignore we should improve the API
-      audience: AUDIENCE_MAP[event.level] || "",
-      rooms: event.rooms,
-      slug: event.slug || "",
-      type: eventType,
-      speakers: [
-        {
-          name: event.speaker,
-        },
-      ],
-    };
-  });
-
-  const timeslots = events.reduce<Slots>((acc, talk) => {
-    const key = talk.time;
-    acc[key] = acc[key] || [];
-    acc[key].push(talk);
-    return acc;
-  }, {});
-
-  return {
-    rooms: currentDay.rooms,
-    events,
-    timeslots,
-  };
-};
-
-const Talk = ({
-  event,
-  style,
-}: {
-  event: Event & { type: TalkType | "lighting-talks" };
-  style: React.CSSProperties;
-}) => {
-  const speakers = event.type === "lighting-talks" ? [] : event.speakers;
-
-  const singleSpeaker = speakers?.length === 1;
-  const firstSpeaker = speakers?.[0];
-
-  return (
-    <div className="talk" style={style}>
-      {event.type !== "lighting-talks" && (
-        <p className={`talk__rating ${event.audience}`}>
-          <span>{event.audience}</span>
-        </p>
-      )}
-      <p className="talk__title">
-        {event.type === "talk" ? (
-          <a href={`/session/${event.slug}`}>{event.title}</a>
-        ) : (
-          event.title
-        )}
-      </p>
-
-      {speakers ? (
-        <div className="talk__speaker">
-          {singleSpeaker && firstSpeaker?.image ? (
-            <img src={firstSpeaker.image} className="speaker__image" />
-          ) : null}
-
-          <div className="speaker__bio">
-            <span className="speaker__name">
-              {speakers?.map((s) => s.name).join(", ")}
-            </span>
-          </div>
-        </div>
-      ) : null}
-      <div className="talk__mobile-details">
-        {event.rooms.join(", ")}, {speakers?.map((s) => s.name).join(", ")}
-      </div>
-    </div>
-  );
-};
-
-const Break = ({
-  event,
-  style,
-}: {
-  event: Event & { type: "break" };
-  style: React.CSSProperties;
-}) => {
-  return (
-    <div className="break" style={style}>
-      <span>{numberToTime(timeToNumber(event.time))}</span>
-      <span className="break__description">{event.title}</span>
-    </div>
-  );
-};
-
-type Position = {
-  rows: { start: number; end: number };
-  cols: {
-    start: number;
-    end: number;
-  };
-};
-
-const getPositionForEvent = (event: Event, schedule: Schedule): Position => {
-  const startTime = timeToNumber(event.time);
-  const endTime = timeToNumber(event.endTime);
-
-  const timeSlotsNumbers = Object.keys(schedule.timeslots).map((time) =>
-    timeToNumber(time)
-  );
-
-  // startTime will always be present in timeSlots, since they are created based on
-  // startTimes
-  const startTimeIndex = timeSlotsNumbers.indexOf(startTime);
-  // endTime might not be there because talks will potentially end before the next startTime
-  const timeSlotAfterEnd = timeSlotsNumbers.find((t) => t >= endTime);
-
-  // assuming rooms have the same order as the rooms array
-  const track = event.rooms[0];
-  const trackIndex = schedule.rooms.indexOf(track);
-
-  // we have the heading and css grid indexes start at 1
-  const rowsOffset = 2;
-
-  // we have the time and css grid indexes start at 1
-  const colsOffset = 2;
-
-  return {
-    rows: {
-      start: startTimeIndex + rowsOffset,
-      end:
-        (timeSlotAfterEnd
-          ? timeSlotsNumbers.indexOf(timeSlotAfterEnd)
-          : startTimeIndex + 1) + rowsOffset,
-    },
-    cols: {
-      start: trackIndex + colsOffset,
-      end: trackIndex + colsOffset + event.rooms.length,
-    },
-  };
-};
+import { Session } from "../../components/schedule/session";
+import {
+  numberToTime,
+  timeToNumber,
+} from "../../components/schedule/time-helpers";
+import { Break } from "../../components/schedule/break";
+import { getPositionForEvent, getScheduleForDay } from "./schedule-utils";
+import { Schedule } from "./types";
 
 const TimeSlot = ({
   time,
@@ -263,7 +62,7 @@ const TimeSlot = ({
         }
 
         return (
-          <Talk
+          <Session
             key={event.id}
             event={event}
             style={{
