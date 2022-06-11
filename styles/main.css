@@ -2678,8 +2678,8 @@ button[name="vote"]:hover {
 .schedule .break {
   padding: 1rem;
   background-color: var(--color-secondary-light);
-  position: relative;
-  z-index: 10;
+  /* position: relative;
+  z-index: 10; */
 }
 
 .schedule .break .break__description {
@@ -2860,9 +2860,13 @@ button[name="vote"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: calc(2 + var(--total-rooms));
+    grid-row: var(--grid-row);
+    /* margin-bottom: -1rem; */
   }
 
-  .schedule .break,
+
   .schedule .talk,
   .schedule .talk__time,
   .schedule .headings > span {

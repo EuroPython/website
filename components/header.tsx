@@ -34,7 +34,7 @@ export const Header = () => (
     <div className="header-controls hidden-large">
       <a href="/">
         <img
-          src="img/EP22logosmall.svg"
+          src="/img/EP22logosmall.svg"
           className="header__logo"
           alt="EuroPython logo"
         />
@@ -53,7 +53,7 @@ export const Header = () => (
       <div className="header-controls">
         <a href="/">
           <img
-            src="img/EP22logosmall.svg"
+            src="/img/EP22logosmall.svg"
             className="header__logo"
             alt="EuroPython logo"
           />

@@ -1,29 +1,29 @@
-import type { Event, TalkType } from "../../types/schedule";
+import type { Session as SessionType, TalkType } from "./types";
 
 export const Session = ({
-  event,
+  session,
   style,
 }: {
-  event: Event & { type: TalkType | "lighting-talks" };
+  session: SessionType & { type: TalkType | "lighting-talks" };
   style: React.CSSProperties;
 }) => {
-  const speakers = event.type === "lighting-talks" ? [] : event.speakers;
+  const speakers = session.type === "lighting-talks" ? [] : session.speakers;
 
   const singleSpeaker = speakers?.length === 1;
   const firstSpeaker = speakers?.[0];
 
   return (
     <div className="talk" style={style}>
-      {event.type !== "lighting-talks" && (
-        <p className={`talk__rating ${event.audience}`}>
-          <span>{event.audience}</span>
+      {session.type !== "lighting-talks" ? (
+        <p className={`talk__rating ${session.audience}`}>
+          <span>{session.audience}</span>
         </p>
-      )}
+      ) : null}
       <p className="talk__title">
-        {event.type === "talk" ? (
-          <a href={`/session/${event.slug}`}>{event.title}</a>
+        {session.type === "talk" ? (
+          <a href={`/session/${session.slug}`}>{session.title}</a>
         ) : (
-          event.title
+          session.title
         )}
       </p>
 
@@ -41,7 +41,7 @@ export const Session = ({
         </div>
       ) : null}
       <div className="talk__mobile-details">
-        {event.rooms.join(", ")}, {speakers?.map((s) => s.name).join(", ")}
+        {session.rooms.join(", ")}, {speakers?.map((s) => s.name).join(", ")}
       </div>
     </div>
   );
