@@ -14,10 +14,10 @@ export const Session = ({
 
   return (
     <div className="talk" style={style}>
-      <header className={`${session.audience || ""}`}>
+      <header className={`${session.audience || ""} session-${session.type}`}>
         {session.audience ? (
           <p className={`talk__rating`}>{session.audience}</p>
-        ) : null}
+        ) : <p className={`talk__rating`}>{session.type}</p>}
         <p className={`talk__duration`}>{session.duration}m</p>
       </header>
       <p className="talk__title">

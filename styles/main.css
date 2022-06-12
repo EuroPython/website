@@ -40,6 +40,7 @@
   --color-beginner: #3dae2b;
   --color-intermediate: #f7b500;
   --color-advanced: #ce3333;
+  --color-poster: #f18a00;
 }
 
 * {
@@ -2747,6 +2748,10 @@ button[name="vote"]:hover {
 
 .advanced {
   background-color: var(--color-advanced);
+}
+
+.session-poster {
+  background-color: var(--color-poster);
 }
 
 .no-rating {
