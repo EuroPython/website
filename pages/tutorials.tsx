@@ -3,16 +3,23 @@ import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { fetchSessions } from "../lib/sessions";
-import { Session } from "../components/schedule/types";
+
+type Session = {
+  track: string;
+  submission_type: string;
+  code: string;
+  slug: string;
+  title: string;
+  speakers: { name: string }[];
+  abstractSource: any;
+};
 
 export default function SessionsPage({
   sessions,
   tracks,
-  submissionTypes,
 }: {
   sessions: Session[];
   tracks: string[];
-  submissionTypes: string[];
 }) {
   const [filters, setFilters] = useState({
     track: "",

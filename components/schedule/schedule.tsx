@@ -1,11 +1,7 @@
 import { Break } from "./break";
 import { Session } from "./session";
-import { numberToTime, timeToNumber } from "./time-helpers";
-import {
-  Schedule as ScheduleType,
-  Session as SessionType,
-  Slots,
-} from "./types";
+import { numberToTime } from "./time-helpers";
+import { Schedule as ScheduleType, Session as SessionType } from "./types";
 
 const ROW_HEIGHT = 25;
 const BREAK_ROWS = 3;
@@ -154,14 +150,7 @@ const Orphan = ({
   );
 };
 
-export const Schedule = ({
-  schedule,
-}: {
-  schedule: {
-    parts: any;
-    rooms: string[];
-  };
-}) => {
+export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
   const totalRooms = schedule.rooms.length;
   const { rowSizes, gridTemplateRows } = getGridMetrics(schedule);
 
@@ -197,7 +186,7 @@ export const Schedule = ({
           ))}
         </div>
 
-        {schedule.parts.map((slot, index) => {
+        {schedule.slots.map((slot, index) => {
           const row = getRowForTimeSlot(index, rowSizes);
 
           const style = {
@@ -210,7 +199,7 @@ export const Schedule = ({
 
           if (slot.type === "orphan") {
             const session = slot.sessions[0];
-            const row = getRowForOrphan(session, rowSizes, schedule.parts);
+            const row = getRowForOrphan(session, rowSizes, schedule.slots);
 
             return (
               <Orphan
@@ -244,8 +233,8 @@ const getRowSizeForSlot = (slot: { duration: number; type: string }) => {
   return SESSION_ROWS;
 };
 
-const getGridMetrics = (schedule: { parts: any; rooms: string[] }) => {
-  const rowSizes = schedule.parts.map(getRowSizeForSlot);
+const getGridMetrics = (schedule: ScheduleType) => {
+  const rowSizes = schedule.slots.map(getRowSizeForSlot);
 
   // this also includes the rooms row
   const gridTemplateRows = [1]

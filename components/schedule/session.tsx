@@ -1,10 +1,10 @@
-import type { Session as SessionType, TalkType } from "./types";
+import type { Session as SessionType } from "./types";
 
 export const Session = ({
   session,
   style,
 }: {
-  session: SessionType & { type: TalkType | "lighting-talks" };
+  session: SessionType;
   style: React.CSSProperties;
 }) => {
   const speakers = session.type === "lighting-talks" ? [] : session.speakers;
@@ -14,7 +14,7 @@ export const Session = ({
 
   return (
     <div className="talk" style={style}>
-      {session.type !== "lighting-talks" ? (
+      {session.audience ? (
         <p className={`talk__rating ${session.audience}`}>
           <span>{session.audience}</span>
         </p>

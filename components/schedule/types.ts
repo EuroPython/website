@@ -6,24 +6,15 @@ export type Slots = Record<
 export type Session = {
   id: string;
   title: string;
+  day: string;
   time: number;
   endTime: number;
   duration: number;
   slug: string;
-  abstract: string;
-  submission_type: string;
-  track: string;
-  rooms: string[],
+  audience?: string;
+  rooms: string[];
   type: string;
   speakers: Speaker[];
-  abstractSource: any;
-  code: string;
-};
-
-export type Schedule = {
-  rooms: string[];
-  events: Session[];
-  timeslots: Slots;
 };
 
 export type TalkType = "talk" | "tutorial" | "talk-remote";
@@ -42,28 +33,30 @@ export type Speaker = {
   image?: string;
 };
 
-// export type Session = (
-//   | {
-//       type: "break";
-//     }
-//   | {
-//       type: "unknown";
-//     }
-//   | {
-//       type: "lighting-talks";
-//     }
-//   | {
-//       type: TalkType;
-//       speakers?: Speaker[];
-//       audience: string;
-//       slug: string;
-//     }
-// ) & {
-//   id: string;
-//   day: string;
-//   time: string;
-//   endTime: string;
-//   title: string;
-//   rooms: string[];
-//   type?: SessionType;
-// };
+export type BreakTimeSlot = {
+  type: "break";
+  title: string;
+  duration: number;
+  time: number;
+};
+
+export type SessionsTimeSlot = {
+  type: "timeslot";
+  duration: number;
+  time: number;
+  sessions: Session[];
+};
+
+export type OrphanTimeSlot = {
+  type: "orphan";
+  duration: number;
+  time: number;
+  sessions: Session[];
+};
+
+export type TimeSlot = SessionsTimeSlot | BreakTimeSlot | OrphanTimeSlot;
+
+export type Schedule = {
+  rooms: string[];
+  slots: TimeSlot[];
+};

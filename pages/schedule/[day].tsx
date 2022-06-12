@@ -5,30 +5,18 @@ import { Layout } from "../../components/layout";
 import { useCallback } from "react";
 import { fetchSchedule } from "../../lib/schedule";
 
-import {
-  numberToTime,
-  timeToNumber,
-} from "../../components/schedule/time-helpers";
-import { Break } from "../../components/schedule/break";
-import {
-  getPositionForEvent,
-  getScheduleForDay,
-} from "../../components/schedule/schedule-utils";
-import type { Schedule as ScheduleType } from "../../components/schedule/types";
+import { getScheduleForDay } from "../../components/schedule/schedule-utils";
 import { Schedule } from "../../components/schedule/schedule";
-
-
+import { Schedule as ScheduleType } from "../../components/schedule/types";
 
 export default function SchedulePage({
   day,
   days,
   schedule,
-
 }: {
   day: string;
   days: string[];
-  // TODO: ....
-  schedule: any;
+  schedule: ScheduleType;
 }) {
   const handleDaySelected = useCallback((event) => {
     window.location.href = `/schedule/${event.target.value}`;

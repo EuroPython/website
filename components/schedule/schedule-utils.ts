@@ -1,7 +1,5 @@
-import type { Session } from "./types";
-
-import { timeToNumber, numberToTime } from "./time-helpers";
-import { Schedule, Slots } from "./types";
+import { timeToNumber } from "./time-helpers";
+import { Schedule, Session, SessionsTimeSlot, TimeSlot } from "./types";
 
 const TYPES_MAP = {
   "Talk [in-person]": "talk",
@@ -16,24 +14,21 @@ const AUDIENCE_MAP = {
   expert: "advanced",
 };
 
-type Position = {
-  rows: { start: number; end: number };
-  cols: {
-    start: number;
-    end: number;
-  };
-};
-
-const convertTalk = (talk: any): Session[] => {
+const convertTalk = (talk: any): Session => {
   const time = timeToNumber(talk.time);
   const evDuration = parseInt(talk.ev_duration || "0", 10);
   const ttDuration = parseInt(talk.tt_duration || "0", 10);
 
   const duration = evDuration || ttDuration;
   const endTime = time + duration;
-  // @ts-ignore we should improve the API
-  let eventType = TYPES_MAP[talk.type] || "";
-  const title = talk.title || talk.ev_custom;
+
+  const id = (talk.talk_id || talk.event_id) as string;
+  const title = (talk.title || talk.ev_custom) as string;
+  const audience = AUDIENCE_MAP[talk.level as keyof typeof AUDIENCE_MAP] || "";
+  const rooms = (talk.rooms || []) as string[];
+  const slug = (talk.slug || "") as string;
+
+  let eventType: string = TYPES_MAP[talk.type as keyof typeof TYPES_MAP] || "";
 
   if (eventType === "") {
     const lowerTitle = title.toLocaleLowerCase();
@@ -45,39 +40,31 @@ const convertTalk = (talk: any): Session[] => {
   }
 
   return {
-    id: talk.talk_id || talk.event_id,
+    id,
     title,
     duration,
-    day: talk.day,
+    day: talk.day as string,
     time,
     endTime,
-    // @ts-ignore we should improve the API
-    audience: AUDIENCE_MAP[talk.level] || "",
-    rooms: talk.rooms,
-    slug: talk.slug || "",
+    audience,
+    rooms,
+    slug,
     type: eventType,
     speakers: [
       {
-        name: talk.speaker,
+        name: talk.speaker as string,
       },
     ],
   };
 };
 
 const getTimeSlots = (sessions: Session[]) => {
-  type TimeSlot = {
-    type: "timeslot";
-    duration: number;
-    time: string;
-    sessions: Session[];
-  };
-
   const sessionsByTime = Object.values(
     sessions
       .sort((a, b) => {
         return a.time - b.time;
       })
-      .reduce<Record<number, TimeSlot>>((acc, talk) => {
+      .reduce<Record<number, SessionsTimeSlot>>((acc, talk) => {
         const key = talk.time;
 
         acc[key] = acc[key] || {
@@ -96,7 +83,7 @@ const getTimeSlots = (sessions: Session[]) => {
       }, {})
   );
 
-  const timeslots = sessionsByTime.map((timeslot, index) => {
+  const timeslots: TimeSlot[] = sessionsByTime.map((timeslot, index) => {
     if (timeslot.sessions.length === 1) {
       if (timeslot.sessions[0].type === "break") {
         return {
@@ -113,6 +100,7 @@ const getTimeSlots = (sessions: Session[]) => {
       const isFirst = index === 0;
       const isLast = index === sessionsByTime.length - 1;
       const isFirstOrLast = isFirst || isLast;
+
       if (!isFirstOrLast) {
         return {
           ...timeslot,
@@ -138,7 +126,7 @@ export const getScheduleForDay = async ({
   let currentDay = schedule.days[day];
 
   let sessions: Session[] = currentDay.talks.map(convertTalk);
-  const parts = getTimeSlots(sessions);
+  const slots = getTimeSlots(sessions);
 
-  return { parts, rooms: currentDay.rooms };
+  return { slots, rooms: currentDay.rooms } as Schedule;
 };
