@@ -83,9 +83,12 @@ const getTimeSlots = (sessions: Session[]) => {
       }, {})
   );
 
+  let breakSeen = false;
+
   const timeslots: TimeSlot[] = sessionsByTime.map((timeslot, index) => {
     if (timeslot.sessions.length === 1) {
       if (timeslot.sessions[0].type === "break") {
+        breakSeen = true;
         return {
           ...timeslot,
           title: timeslot.sessions[0].title,
@@ -95,13 +98,14 @@ const getTimeSlots = (sessions: Session[]) => {
 
       // special case for the first and last events in the day
       // they are usually a keynote or lighting talk
-      // TODO: there might be more than one
+      // we also treat all orphans before breaks as timeslots
+      // this is pretty hacky but it works for now
 
       const isFirst = index === 0;
       const isLast = index === sessionsByTime.length - 1;
       const isFirstOrLast = isFirst || isLast;
 
-      if (!isFirstOrLast) {
+      if (breakSeen && !isFirstOrLast) {
         return {
           ...timeslot,
           session: timeslot.sessions[0],
