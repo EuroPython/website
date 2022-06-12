@@ -1,7 +1,22 @@
 import { Break } from "./break";
 import { Session } from "./session";
 import { numberToTime } from "./time-helpers";
-import { Schedule as ScheduleType, Session as SessionType } from "./types";
+import {
+  Schedule as ScheduleType,
+  Session as SessionType,
+  TimeSlot,
+} from "./types";
+
+const map = (
+  value: number,
+
+  from: { low: number; high: number },
+  to: { low: number; high: number }
+) => {
+  return (
+    to.low + ((to.high - to.low) * (value - from.low)) / (from.high - from.low)
+  );
+};
 
 const ROW_HEIGHT = 25;
 const BREAK_ROWS = 3;
@@ -18,31 +33,35 @@ const getColumnForSession = (session: { rooms: string[] }, rooms: string[]) => {
   return { start, end };
 };
 
-const getRowForTimeSlot = (index: number, rowSizes: number[]) => {
+const getRowForTimeSlot = ({
+  index,
+  rowSizes,
+  duration,
+  slotDuration,
+}: {
+  index: number;
+  duration: number;
+  rowSizes: number[];
+  slotDuration: number;
+}) => {
   // css grids are 1-indexed, plus we have the rooms rows on the top
   const start =
     BREAK_ROWS + rowSizes.slice(0, index).reduce((acc, curr) => acc + curr, 0);
 
-  const end = start + rowSizes[index];
+  const rowSize = rowSizes[index];
+
+  const proportion = duration / slotDuration;
+  const actualSize = Math.ceil(rowSize * proportion);
+
+  const end = start + actualSize;
 
   return { start, end };
-};
-
-const map = (
-  value: number,
-
-  from: { low: number; high: number },
-  to: { low: number; high: number }
-) => {
-  return (
-    to.low + ((to.high - to.low) * (value - from.low)) / (from.high - from.low)
-  );
 };
 
 const getRowForOrphan = (
   session: { time: number },
   rowSizes: number[],
-  slots: any[]
+  slots: TimeSlot[]
 ) => {
   const slotsBefore = slots.filter(
     (slot) => slot.type !== "orphan" && slot.time < session.time
@@ -89,20 +108,29 @@ const getRowForOrphan = (
 
 const ScheduleSlot = ({
   slot,
+  index,
+  rowSizes,
   rooms,
-  style,
 }: {
-  slot: { time: number; sessions: SessionType[] };
+  slot: { time: number; sessions: SessionType[]; duration: number };
+  index: number;
+  rowSizes: number[];
   rooms: string[];
-  style: React.CSSProperties;
 }) => {
+  const row = getRowForTimeSlot({
+    index,
+    rowSizes,
+    duration: slot.duration,
+    slotDuration: slot.duration,
+  });
+
   return (
     <div className="row">
       <div
         className="talk__time"
         style={{
           "--grid-column": "1 / 2",
-          ...style,
+          "--grid-row": `${row.start} / ${row.end}`,
         }}
       >
         {numberToTime(slot.time)}
@@ -110,14 +138,20 @@ const ScheduleSlot = ({
 
       {slot.sessions.map((session) => {
         const column = getColumnForSession(session, rooms);
+        const row = getRowForTimeSlot({
+          index,
+          rowSizes,
+          slotDuration: slot.duration,
+          duration: session.duration,
+        });
 
         return (
           <Session
             key={session.id}
             session={session}
             style={{
-              ...style,
               "--grid-column": `${column.start} / ${column.end}`,
+              "--grid-row": `${row.start} / ${row.end}`,
             }}
           />
         );
@@ -198,14 +232,23 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
         </div>
 
         {schedule.slots.map((slot, index) => {
-          const row = getRowForTimeSlot(index, rowSizes);
-
-          const style = {
-            "--grid-row": `${row.start} / ${row.end}`,
-          };
-
           if (slot.type === "break") {
-            return <Break title={slot.title} time={slot.time} style={style} />;
+            const row = getRowForTimeSlot({
+              index,
+              rowSizes,
+              duration: slot.duration,
+              slotDuration: slot.duration,
+            });
+
+            return (
+              <Break
+                title={slot.title}
+                time={slot.time}
+                style={{
+                  "--grid-row": `${row.start} / ${row.end}`,
+                }}
+              />
+            );
           }
 
           if (slot.type === "orphan") {
@@ -224,7 +267,13 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
           }
 
           return (
-            <ScheduleSlot slot={slot} rooms={schedule.rooms} style={style} />
+            <ScheduleSlot
+              slot={slot}
+              rooms={schedule.rooms}
+              index={index}
+              key={index}
+              rowSizes={rowSizes}
+            />
           );
         })}
       </div>
