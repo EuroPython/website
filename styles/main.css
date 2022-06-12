@@ -2701,7 +2701,8 @@ button[name="vote"]:hover {
   margin: 0;
 }
 
-.talk__rating {
+.talk header {
+  padding: 0;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   font-size: 0.75rem;
@@ -2720,7 +2721,7 @@ button[name="vote"]:hover {
   padding-right: 30px;
 }
 
-.talk__rating > span {
+.talk__rating {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2728,6 +2729,12 @@ button[name="vote"]:hover {
   transform: translate(-50%, -50%) rotate(-90deg);
   display: block;
   transform-origin: 50% 50%;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.talk__duration {
+  display: none;
 }
 
 .beginner {
@@ -2753,7 +2760,7 @@ button[name="vote"]:hover {
 .talk__title {
   color: var(--color-secondary);
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.25rem;
   text-align: left;
 }
@@ -2821,20 +2828,24 @@ button[name="vote"]:hover {
 }
 
 @media all and (min-width: 1180px) {
-  .talk__rating {
-    position: static;
+  .talk header {
     width: 100%;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 0;
+    position: static;
+    display: flex;
   }
 
-  .talk__rating > span {
-    position: static;
-    transform: none;
+  .talk__duration {
+    display: block;
+    font-size: inherit;
+    line-height: inherit;
+    margin-left: auto!important;
   }
 
   .talk__rating {
-    padding: 0.8rem;
+    position: static;
+    transform: none;
   }
 
   .no-rating {
@@ -2912,10 +2923,6 @@ button[name="vote"]:hover {
 }
 
 @media all and (min-width: 1280px) {
-  .talk__rating {
-    padding: 1rem 0.8rem;
-  }
-
   .no-rating {
     padding: 3rem 0 !important;
   }
@@ -2938,18 +2945,8 @@ button[name="vote"]:hover {
     padding: 1rem 0.75rem;
   }
 
-  .talk__title {
-    padding: 1rem 1.125rem;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-
   .talk__speaker {
     margin: 0 1.125rem;
-  }
-
-  .talk__rating {
-    padding: 1rem 1.125rem;
   }
 }
 

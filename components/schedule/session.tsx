@@ -14,11 +14,12 @@ export const Session = ({
 
   return (
     <div className="talk" style={style}>
-      {session.audience ? (
-        <p className={`talk__rating ${session.audience}`}>
-          <span>{session.audience}</span>
-        </p>
-      ) : null}
+      <header className={`${session.audience || ""}`}>
+        {session.audience ? (
+          <p className={`talk__rating`}>{session.audience}</p>
+        ) : null}
+        <p className={`talk__duration`}>{session.duration}m</p>
+      </header>
       <p className="talk__title">
         {session.type === "talk" ? (
           <a href={`/session/${session.slug}`}>{session.title}</a>
