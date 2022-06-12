@@ -2863,9 +2863,16 @@ button[name="vote"]:hover {
     grid-column-start: 1;
     grid-column-end: calc(2 + var(--total-rooms));
     grid-row: var(--grid-row);
-    /* margin-bottom: -1rem; */
   }
 
+  .schedule .talk {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .schedule .talk__speaker {
+    margin-top: auto;
+  }
 
   .schedule .talk,
   .schedule .talk__time,
