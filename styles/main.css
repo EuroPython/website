@@ -2878,6 +2878,10 @@ button[name="vote"]:hover {
     padding: 0;
   }
 
+  .schedule .row-orphan .talk__time {
+    display: none;
+  }
+
   .schedule .headings,
   .schedule .row {
     display: contents;

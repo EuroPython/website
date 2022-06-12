@@ -94,7 +94,6 @@ const ScheduleSlot = ({
 }: {
   slot: { time: number; sessions: SessionType[] };
   rooms: string[];
-
   style: React.CSSProperties;
 }) => {
   return (
@@ -139,14 +138,26 @@ const Orphan = ({
   const column = getColumnForSession(session, rooms);
 
   return (
-    <Session
-      key={session.id}
-      session={session}
-      style={{
-        "--grid-column": `${column.start} / ${column.end}`,
-        ...style,
-      }}
-    />
+    <div className="row row-orphan">
+      <div
+        className="talk__time"
+        style={{
+          "--grid-column": "1 / 2",
+          ...style,
+        }}
+      >
+        {numberToTime(session.time)}
+      </div>
+
+      <Session
+        key={session.id}
+        session={session}
+        style={{
+          "--grid-column": `${column.start} / ${column.end}`,
+          ...style,
+        }}
+      />
+    </div>
   );
 };
 
