@@ -58,7 +58,7 @@
         },
         {
           "name": "Hudson River Trading",
-          "url": "https:/www.hudsonrivertrading.com/",
+          "url": "https://www.hudsonrivertrading.com/",
           "logo": "img/logos/sponsor_logos/hudsonrivertrading.svg"
         },
         {
@@ -147,12 +147,12 @@
         },
         {
           "name": "Packt",
-          "url": "http://packt.com/",
+          "url": "https://packt.com/",
           "logo": "img/logos/sponsor_logos/packt.svg"
         },
         {
           "name": "Sticker Mule",
-          "url": "http://https://mule.to/p2zi/",
+          "url": "https://mule.to/p2zi/",
           "logo": "img/logos/sponsor_logos/stickermule.svg"
         }
       ]
