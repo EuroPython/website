@@ -55,6 +55,21 @@
           "name": "RenaissanceRe",
           "url": "https://www.renre.com/",
           "logo": "img/logos/sponsor_logos/renre.svg"
+        },
+        {
+          "name": "Hudson River Trading",
+          "url": "https://www.hudsonrivertrading.com/",
+          "logo": "img/logos/sponsor_logos/hudsonrivertrading.svg"
+        },
+        {
+          "name": "Google Cloud",
+          "url": "https://cloud.google.com/",
+          "logo": "img/logos/sponsor_logos/googlecloud.svg"
+        },
+        {
+          "name": "Sonar",
+          "url": "https://www.sonarsource.com/",
+          "logo": "img/logos/sponsor_logos/sonar.svg"
         }
       ]
     },
@@ -93,8 +108,13 @@
       "sponsors": [
         {
           "name": "fourTheorem",
-          "url": "www.fourtheorem.com",
+          "url": "https://www.fourtheorem.com",
           "logo": "/img/logos/sponsor_logos/fourtheorem.svg"
+        },
+        {
+          "name": "Back Market",
+          "url": "https://www.backmarket.com",
+          "logo": "/img/logos/sponsor_logos/backmarket.svg"
         }
       ]
     },
@@ -127,8 +147,13 @@
         },
         {
           "name": "Packt",
-          "url": "http://packt.com/",
+          "url": "https://packt.com/",
           "logo": "img/logos/sponsor_logos/packt.svg"
+        },
+        {
+          "name": "Sticker Mule",
+          "url": "https://mule.to/p2zi/",
+          "logo": "img/logos/sponsor_logos/stickermule.svg"
         }
       ]
     }
