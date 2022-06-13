@@ -135,5 +135,6 @@ export async function getStaticProps() {
       tracks,
       submissionTypes,
     },
+    revalidate: 60
   };
 }

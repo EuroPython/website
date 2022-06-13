@@ -115,5 +115,6 @@ export async function getStaticProps() {
       sessions: sessions,
       tracks,
     },
+    revalidate: 60,
   };
 }

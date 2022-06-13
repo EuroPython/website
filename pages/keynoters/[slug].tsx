@@ -72,7 +72,7 @@ export async function getStaticPaths() {
   const paths = pages.map((page) => ({
     params: { slug: page.replace(".md", "") },
   }));
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 }
 
 async function serializeWithPlugins(content: string, plugins: any[]) {
@@ -111,5 +111,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
       bioSource,
       slug: params.slug,
     },
+    revalidate: 60,
   };
 }

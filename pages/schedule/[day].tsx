@@ -63,7 +63,7 @@ export async function getStaticPaths() {
     params: { day: day },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 }
 
 export async function getStaticProps({ params }: { params: { day: string } }) {
@@ -76,5 +76,6 @@ export async function getStaticProps({ params }: { params: { day: string } }) {
       schedule: daySchedule,
       days: Object.keys(schedule.days),
     },
+    revalidate: 60,
   };
 }
