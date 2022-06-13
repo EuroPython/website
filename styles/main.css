@@ -2845,7 +2845,7 @@ button[name="vote"]:hover {
     display: block;
     font-size: inherit;
     line-height: inherit;
-    margin-left: auto!important;
+    margin-left: auto !important;
   }
 
   .talk__rating {
@@ -2919,6 +2919,12 @@ button[name="vote"]:hover {
   .schedule .row,
   .schedule .headings {
     padding: 0rem 2rem 0rem 1rem;
+  }
+
+  .schedule .headings span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .schedule .break {

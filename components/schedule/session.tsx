@@ -1,3 +1,4 @@
+import { numberToTime, timeToNumber } from "./time-helpers";
 import type { Session as SessionType } from "./types";
 
 export const Session = ({
@@ -7,20 +8,26 @@ export const Session = ({
   session: SessionType;
   style: React.CSSProperties;
 }) => {
-  const speakers = session.type === "lighting-talks" ? [] : session.speakers;
+  const speakers = session.speakers;
 
   const singleSpeaker = speakers?.length === 1;
   const firstSpeaker = speakers?.[0];
 
   return (
-    <div className="talk" style={style}>
+    <div className="talk" style={style} onClick={() => console.log(session)}>
       <header className={`${session.audience || ""} session-${session.type}`}>
         {session.audience ? (
           <p className={`talk__rating`}>{session.audience}</p>
         ) : (
           <p className={`talk__rating`}>{session.type}</p>
         )}
-        <p className={`talk__duration`}>{session.duration}m</p>
+
+        <p className={`talk__duration`}>
+          {session.type === "poster" ? (
+            <>{numberToTime(session.time)} - </>
+          ) : null}
+          {session.duration}m
+        </p>
       </header>
       <p className="talk__title">
         {session.slug ? (
@@ -32,15 +39,16 @@ export const Session = ({
 
       {speakers.length ? (
         <div className="talk__speaker">
-          {singleSpeaker && firstSpeaker?.image ? (
-            <img src={firstSpeaker.image} className="speaker__image" />
-          ) : null}
-
-          <div className="speaker__bio">
-            <span className="speaker__name">
-              {speakers?.map((s) => s.name).join(", ")}
-            </span>
-          </div>
+          <>
+            {singleSpeaker && firstSpeaker?.image ? (
+              <img src={firstSpeaker.image} className="speaker__image" />
+            ) : null}
+            <div className="speaker__bio">
+              <span className="speaker__name">
+                {speakers?.map((s) => s.name).join(", ")}
+              </span>
+            </div>
+          </>
         </div>
       ) : null}
       <div className="talk__mobile-details">

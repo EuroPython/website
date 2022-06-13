@@ -1,5 +1,11 @@
 import { timeToNumber } from "./time-helpers";
-import { Schedule, Session, SessionsTimeSlot, TimeSlot } from "./types";
+import {
+  OrphanTimeSlot,
+  Schedule,
+  Session,
+  SessionsTimeSlot,
+  TimeSlot,
+} from "./types";
 
 const TYPES_MAP = {
   "Talk [in-person]": "talk",
@@ -13,6 +19,14 @@ const AUDIENCE_MAP = {
   some: "intermediate",
   expert: "advanced",
 };
+
+const mode = (arr: number[]) =>
+  arr
+    .sort(
+      (a, b) =>
+        arr.filter((v) => v === a).length - arr.filter((v) => v === b).length
+    )
+    .pop();
 
 const convertTalk = (talk: any): Session => {
   const time = timeToNumber(talk.time);
@@ -39,12 +53,10 @@ const convertTalk = (talk: any): Session => {
     }
   }
 
-  const speakers = talk.speaker
-    ? [
-        {
-          name: talk.speaker as string,
-        },
-      ]
+  const speakers = talk.speakers
+    ? talk.speakers.map((speaker: string) => ({
+        name: speaker,
+      }))
     : [];
 
   return {
@@ -68,60 +80,92 @@ const getTimeSlots = (sessions: Session[]) => {
       .sort((a, b) => {
         return a.time - b.time;
       })
-      .reduce<Record<number, SessionsTimeSlot>>((acc, talk) => {
-        const key = talk.time;
+      .reduce<Record<number, { time: number; sessions: Session[] }>>(
+        (acc, talk) => {
+          const key = talk.time;
 
-        acc[key] = acc[key] || {
-          time: key,
-          sessions: [],
-          duration: 0,
-          type: "timeslot",
-        };
+          acc[key] = acc[key] || {
+            time: key,
+            sessions: [],
+          };
 
-        acc[key].sessions.push(talk);
-        acc[key].duration = Math.max(
-          ...acc[key].sessions.map((s) => s.duration)
-        );
+          acc[key].sessions.push(talk);
 
-        return acc;
-      }, {})
+          return acc;
+        },
+        {}
+      )
   );
 
   let breakSeen = false;
+  const orphans: OrphanTimeSlot[] = [];
 
-  const timeslots: TimeSlot[] = sessionsByTime.map((timeslot, index) => {
-    if (timeslot.sessions.length === 1) {
-      if (timeslot.sessions[0].type === "break") {
-        breakSeen = true;
-        return {
-          ...timeslot,
-          title: timeslot.sessions[0].title,
-          type: "break",
-        };
+  const timeslots = sessionsByTime
+    .map((timeslot, index) => {
+      if (timeslot.sessions.length === 1) {
+        if (timeslot.sessions[0].type === "break") {
+          breakSeen = true;
+
+          return {
+            time: timeslot.time,
+            title: timeslot.sessions[0].title,
+            duration: timeslot.sessions[0].duration,
+            type: "break",
+          };
+        }
+        // special case for the first and last events in the day
+        // they are usually a keynote or lighting talk
+        // we also treat all orphans before breaks as timeslots
+        // this is pretty hacky but it works for now
+
+        const hasBreaksAfter = sessionsByTime
+          .slice(index + 1)
+          .some((timeslot) =>
+            timeslot.sessions.some((session) => session.type === "break")
+          );
+
+        const isFirst = index === 0;
+        const isLast = index === sessionsByTime.length - 1;
+        const isFirstOrLast = isFirst || isLast;
+
+        if (breakSeen && !isFirstOrLast && hasBreaksAfter) {
+          orphans.push({
+            time: timeslot.time,
+            session: timeslot.sessions[0],
+            duration: timeslot.sessions[0].duration,
+            type: "orphan",
+          });
+
+          return null;
+        }
       }
 
-      // special case for the first and last events in the day
-      // they are usually a keynote or lighting talk
-      // we also treat all orphans before breaks as timeslots
-      // this is pretty hacky but it works for now
+      return {
+        time: timeslot.time,
+        duration: -1,
+        sessions: timeslot.sessions,
+        type: "timeslot",
+      };
+    })
+    .filter((session) => session !== null) as TimeSlot[];
 
-      const isFirst = index === 0;
-      const isLast = index === sessionsByTime.length - 1;
-      const isFirstOrLast = isFirst || isLast;
+  for (let i = 0; i < timeslots.length; i++) {
+    const timeslot = timeslots[i];
+    let duration = timeslot.duration;
+    const nextTimeslot = timeslots[i + 1];
 
-      if (breakSeen && !isFirstOrLast) {
-        return {
-          ...timeslot,
-          session: timeslot.sessions[0],
-          type: "orphan",
-        };
-      }
+    // TODO: correct this
+
+    if (timeslot.type === "timeslot") {
+      duration = mode(
+        timeslot.sessions.map((session) => session.duration)
+      ) as number;
     }
 
-    return timeslot;
-  });
+    timeslot.duration = duration;
+  }
 
-  return timeslots;
+  return timeslots.concat(orphans);
 };
 
 export const getScheduleForDay = async ({

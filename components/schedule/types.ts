@@ -51,7 +51,7 @@ export type OrphanTimeSlot = {
   type: "orphan";
   duration: number;
   time: number;
-  sessions: Session[];
+  session: Session;
 };
 
 export type TimeSlot = SessionsTimeSlot | BreakTimeSlot | OrphanTimeSlot;

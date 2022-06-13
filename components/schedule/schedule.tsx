@@ -19,6 +19,7 @@ const map = (
 };
 
 const ROW_HEIGHT = 25;
+const HEADING_ROWS = 2;
 const BREAK_ROWS = 3;
 const SESSION_ROWS = 6;
 
@@ -46,7 +47,8 @@ const getRowForTimeSlot = ({
 }) => {
   // css grids are 1-indexed, plus we have the rooms rows on the top
   const start =
-    BREAK_ROWS + rowSizes.slice(0, index).reduce((acc, curr) => acc + curr, 0);
+    1 + HEADING_ROWS +
+    rowSizes.slice(0, index).reduce((acc, curr) => acc + curr, 0);
 
   const rowSize = rowSizes[index];
 
@@ -212,7 +214,7 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
         <div className="headings">
           <span
             style={{
-              "--grid-row": `1 / ${BREAK_ROWS}`,
+              "--grid-row": `1 / ${HEADING_ROWS + 1}`,
               "--grid-column": "1 / 2",
             }}
           >
@@ -222,7 +224,7 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
             <span
               key={track}
               style={{
-                "--grid-row": `1 / ${BREAK_ROWS}`,
+                "--grid-row": `1 / ${HEADING_ROWS + 1}`,
                 "--grid-column": `${index + 2}/${index + 3}`,
               }}
             >
@@ -244,6 +246,7 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
               <Break
                 title={slot.title}
                 time={slot.time}
+                key={index}
                 style={{
                   "--grid-row": `${row.start} / ${row.end}`,
                 }}
@@ -252,12 +255,12 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
           }
 
           if (slot.type === "orphan") {
-            const session = slot.sessions[0];
-            const row = getRowForOrphan(session, rowSizes, schedule.slots);
+            const row = getRowForOrphan(slot.session, rowSizes, schedule.slots);
 
             return (
               <Orphan
-                session={session}
+                key={index}
+                session={slot.session}
                 rooms={schedule.rooms}
                 style={{
                   "--grid-row": `${row.start} / ${row.end}`,
@@ -303,9 +306,11 @@ const getRowSizeForSlot = (slot: { duration: number; type: string }) => {
 
 const getGridMetrics = (schedule: ScheduleType) => {
   const rowSizes = schedule.slots.map(getRowSizeForSlot);
+  console.log(rowSizes)
+
 
   // this also includes the rooms row
-  const gridTemplateRows = [1]
+  const gridTemplateRows = [HEADING_ROWS]
     .concat(rowSizes)
     .filter((size) => size > 0)
     .map((size) => {
