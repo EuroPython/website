@@ -17,11 +17,13 @@ export const Session = ({
       <header className={`${session.audience || ""} session-${session.type}`}>
         {session.audience ? (
           <p className={`talk__rating`}>{session.audience}</p>
-        ) : <p className={`talk__rating`}>{session.type}</p>}
+        ) : (
+          <p className={`talk__rating`}>{session.type}</p>
+        )}
         <p className={`talk__duration`}>{session.duration}m</p>
       </header>
       <p className="talk__title">
-        {session.type === "talk" ? (
+        {session.slug ? (
           <a href={`/session/${session.slug}`}>{session.title}</a>
         ) : (
           session.title
