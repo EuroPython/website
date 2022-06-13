@@ -281,16 +281,24 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
   );
 };
 
+const getRowSizeForBreak = (duration: number) => {
+  return Math.ceil(BREAK_ROWS * (duration / 30));
+};
+
+const getRowSizeForSessionsSlot = (duration: number) => {
+  return Math.ceil(SESSION_ROWS * (duration / 30));
+};
+
 const getRowSizeForSlot = (slot: { duration: number; type: string }) => {
   if (slot.type === "break") {
-    return Math.ceil(BREAK_ROWS * (slot.duration / 30));
+    return getRowSizeForBreak(slot.duration);
   }
 
   if (slot.type === "orphan") {
     return 0;
   }
 
-  return SESSION_ROWS;
+  return getRowSizeForSessionsSlot(slot.duration);
 };
 
 const getGridMetrics = (schedule: ScheduleType) => {
