@@ -39,6 +39,14 @@ const convertTalk = (talk: any): Session => {
     }
   }
 
+  const speakers = talk.speaker
+    ? [
+        {
+          name: talk.speaker as string,
+        },
+      ]
+    : [];
+
   return {
     id,
     title,
@@ -50,11 +58,7 @@ const convertTalk = (talk: any): Session => {
     rooms,
     slug,
     type: eventType,
-    speakers: [
-      {
-        name: talk.speaker as string,
-      },
-    ],
+    speakers,
   };
 };
 

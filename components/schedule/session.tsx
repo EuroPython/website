@@ -30,7 +30,7 @@ export const Session = ({
         )}
       </p>
 
-      {speakers ? (
+      {speakers.length ? (
         <div className="talk__speaker">
           {singleSpeaker && firstSpeaker?.image ? (
             <img src={firstSpeaker.image} className="speaker__image" />
