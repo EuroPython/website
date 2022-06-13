@@ -20,7 +20,7 @@ const map = (
 
 const ROW_HEIGHT = 25;
 const BREAK_ROWS = 3;
-const SESSION_ROWS = 8;
+const SESSION_ROWS = 6;
 
 const getColumnForSession = (session: { rooms: string[] }, rooms: string[]) => {
   const roomIndexes = session.rooms.map((room) => rooms.indexOf(room)).sort();
