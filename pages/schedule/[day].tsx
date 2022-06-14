@@ -15,12 +15,19 @@ export default function SchedulePage({
   schedule,
 }: {
   day: string;
-  days: string[];
+  days: { day: string; type: string }[];
   schedule: ScheduleType;
 }) {
   const handleDaySelected = useCallback((event) => {
     window.location.href = `/schedule/${event.target.value}`;
   }, []);
+
+  const sortedDays = days.sort((a, b) => {
+    return (
+      parse(a.day, "yyyy-MM-dd", new Date()).getTime() -
+      parse(b.day, "yyyy-MM-dd", new Date()).getTime()
+    );
+  });
 
   return (
     <Layout>
@@ -34,19 +41,17 @@ export default function SchedulePage({
             onChange={handleDaySelected}
             defaultValue={day}
           >
-            {days
-              .map((day) => parse(day, "yyyy-MM-dd", new Date()))
-              .sort((a, b) => a.getTime() - b.getTime())
-              .map((date) => {
-                const isoDate = format(date, "yyyy-MM-dd");
-                const dateText = format(date, "eeee, do MMMM, yyyy");
+            {sortedDays.map(({ day, type }) => {
+              const date = parse(day, "yyyy-MM-dd", new Date());
+              const isoDate = format(date, "yyyy-MM-dd");
+              const dateText = format(date, "eeee, do MMMM, yyyy");
 
-                return (
-                  <option key={isoDate} value={isoDate}>
-                    {dateText}
-                  </option>
-                );
-              })}
+              return (
+                <option key={isoDate} value={isoDate}>
+                  {dateText} - {type}
+                </option>
+              );
+            })}
           </select>
         </article>
 
@@ -74,7 +79,10 @@ export async function getStaticProps({ params }: { params: { day: string } }) {
     props: {
       day: params.day,
       schedule: daySchedule,
-      days: Object.keys(schedule.days),
+      days: Object.entries(schedule.days).map(([day, _]) => ({
+        day,
+        type: ["2022-07-11", "2022-07-12"].includes(day) ? "Workshops" : "Talks",
+      })),
     },
     revalidate: 60,
   };

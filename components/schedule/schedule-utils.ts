@@ -84,7 +84,6 @@ const convertTalk = (talk: any): Session => {
 };
 
 const updateTimeslotDurations = (timeslots: TimeSlot[], rooms: string[]) => {
-  const timeslotDurations: number[] = [];
   const sessionsMatrix: number[][] = [];
 
   timeslots.forEach((timeslot) => {
