@@ -306,8 +306,6 @@ const getRowSizeForSlot = (slot: { duration: number; type: string }) => {
 
 const getGridMetrics = (schedule: ScheduleType) => {
   const rowSizes = schedule.slots.map(getRowSizeForSlot);
-  console.log(rowSizes)
-
 
   // this also includes the rooms row
   const gridTemplateRows = [HEADING_ROWS]
