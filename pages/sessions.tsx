@@ -4,21 +4,14 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { fetchSessions } from "../lib/sessions";
 
-type Speaker = {
-  code: string;
-  name: string;
-  avatar: string;
-};
-
 type Session = {
-  title: string;
-  slug: string;
-  abstract: string;
-  submission_type: string;
   track: string;
-  speakers: Speaker[];
-  abstractSource: any;
+  submission_type: string;
   code: string;
+  slug: string;
+  title: string;
+  speakers: { name: string }[];
+  abstractSource: any;
 };
 
 export default function SessionsPage({
@@ -142,5 +135,6 @@ export async function getStaticProps() {
       tracks,
       submissionTypes,
     },
+    revalidate: 60
   };
 }

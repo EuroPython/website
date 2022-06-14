@@ -141,7 +141,7 @@ export async function getStaticPaths() {
         slug: session.slug,
       },
     })),
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
@@ -176,5 +176,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
         speakers,
       },
     },
+    revalidate: 60,
   };
 }

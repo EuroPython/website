@@ -40,6 +40,8 @@
   --color-beginner: #3dae2b;
   --color-intermediate: #f7b500;
   --color-advanced: #ce3333;
+  --color-poster: #f18a00;
+  --color-opening: #3dae2b;
 }
 
 * {
@@ -2653,6 +2655,7 @@ button[name="vote"]:hover {
   text-align: center;
   font-weight: bold;
   margin: 2rem 0;
+  padding-bottom: 2rem;
 }
 
 .schedule__date {
@@ -2677,6 +2680,8 @@ button[name="vote"]:hover {
 .schedule .break {
   padding: 1rem;
   background-color: var(--color-secondary-light);
+  /* position: relative;
+  z-index: 10; */
 }
 
 .schedule .break .break__description {
@@ -2698,7 +2703,8 @@ button[name="vote"]:hover {
   margin: 0;
 }
 
-.talk__rating {
+.talk header {
+  padding: 0;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   font-size: 0.75rem;
@@ -2717,7 +2723,7 @@ button[name="vote"]:hover {
   padding-right: 30px;
 }
 
-.talk__rating > span {
+.talk__rating {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2725,6 +2731,12 @@ button[name="vote"]:hover {
   transform: translate(-50%, -50%) rotate(-90deg);
   display: block;
   transform-origin: 50% 50%;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.talk__duration {
+  display: none;
 }
 
 .beginner {
@@ -2739,6 +2751,16 @@ button[name="vote"]:hover {
   background-color: var(--color-advanced);
 }
 
+.session-poster {
+  background-color: var(--color-poster);
+}
+
+.session-opening-session,
+.session-keynote,
+.session-lighting-talks {
+  background-color: var(--color-opening);
+}
+
 .no-rating {
   padding: 2rem 0 1rem !important;
 }
@@ -2750,7 +2772,7 @@ button[name="vote"]:hover {
 .talk__title {
   color: var(--color-secondary);
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.25rem;
   text-align: left;
 }
@@ -2818,20 +2840,24 @@ button[name="vote"]:hover {
 }
 
 @media all and (min-width: 1180px) {
-  .talk__rating {
-    position: static;
+  .talk header {
     width: 100%;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 0;
+    position: static;
+    display: flex;
   }
 
-  .talk__rating > span {
-    position: static;
-    transform: none;
+  .talk__duration {
+    display: block;
+    font-size: inherit;
+    line-height: inherit;
+    margin-left: auto !important;
   }
 
   .talk__rating {
-    padding: 0.8rem;
+    position: static;
+    transform: none;
   }
 
   .no-rating {
@@ -2857,9 +2883,20 @@ button[name="vote"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: calc(2 + var(--total-rooms));
+    grid-row: var(--grid-row);
   }
 
-  .schedule .break,
+  .schedule .talk {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .schedule .talk__speaker {
+    margin-top: auto;
+  }
+
   .schedule .talk,
   .schedule .talk__time,
   .schedule .headings > span {
@@ -2869,6 +2906,10 @@ button[name="vote"]:hover {
 
   .schedule .row {
     padding: 0;
+  }
+
+  .schedule .row-orphan .talk__time {
+    display: none;
   }
 
   .schedule .headings,
@@ -2887,6 +2928,12 @@ button[name="vote"]:hover {
     padding: 0rem 2rem 0rem 1rem;
   }
 
+  .schedule .headings span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .schedule .break {
     grid-template-columns: 5rem 1fr;
     padding: 0rem 2rem 0rem 1rem;
@@ -2894,10 +2941,6 @@ button[name="vote"]:hover {
 }
 
 @media all and (min-width: 1280px) {
-  .talk__rating {
-    padding: 1rem 0.8rem;
-  }
-
   .no-rating {
     padding: 3rem 0 !important;
   }
@@ -2920,18 +2963,8 @@ button[name="vote"]:hover {
     padding: 1rem 0.75rem;
   }
 
-  .talk__title {
-    padding: 1rem 1.125rem;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-
   .talk__speaker {
     margin: 0 1.125rem;
-  }
-
-  .talk__rating {
-    padding: 1rem 1.125rem;
   }
 }
 

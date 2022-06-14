@@ -1,11 +1,12 @@
+// @ts-check
 /** @type {import('next').NextConfig} */
 
-const scheduleData = require("./data/schedule.json");
+const { fetchSchedule } = require("./lib/schedule");
 
 const getScheduleDays = async () => {
-  const potentialUnsortedDays = Array.from(
-    new Set(Object.keys(scheduleData.days))
-  );
+  const schedule = await fetchSchedule();
+
+  const potentialUnsortedDays = Array.from(new Set(Object.keys(schedule.days)));
 
   return potentialUnsortedDays.sort((a, b) => {
     const aDate = new Date(a);
