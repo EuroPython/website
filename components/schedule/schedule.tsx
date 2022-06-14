@@ -1,4 +1,5 @@
 import { Break } from "./break";
+import { getDayType } from "./schedule-utils";
 import { Session } from "./session";
 import { numberToTime } from "./time-helpers";
 import {
@@ -22,6 +23,7 @@ const ROW_HEIGHT = 25;
 const HEADING_ROWS = 2;
 const BREAK_ROWS = 3;
 const SESSION_ROWS = 6;
+const SESSION_ROWS_TUTORIALS = 4;
 
 const getColumnForSession = (session: { rooms: string[] }, rooms: string[]) => {
   const roomIndexes = session.rooms.map((room) => rooms.indexOf(room)).sort();
@@ -47,7 +49,8 @@ const getRowForTimeSlot = ({
 }) => {
   // css grids are 1-indexed, plus we have the rooms rows on the top
   const start =
-    1 + HEADING_ROWS +
+    1 +
+    HEADING_ROWS +
     rowSizes.slice(0, index).reduce((acc, curr) => acc + curr, 0);
 
   const rowSize = rowSizes[index];
@@ -63,7 +66,8 @@ const getRowForTimeSlot = ({
 const getRowForOrphan = (
   session: { time: number },
   rowSizes: number[],
-  slots: TimeSlot[]
+  slots: TimeSlot[],
+  dayType: "Tutorials" | "Talks"
 ) => {
   const slotsBefore = slots.filter(
     (slot) => slot.type !== "orphan" && slot.time < session.time
@@ -80,7 +84,7 @@ const getRowForOrphan = (
     map(
       timeDifferenceBefore,
       { low: 0, high: slotBefore.duration },
-      { low: 0, high: getRowSizeForSlot(slotBefore) }
+      { low: 0, high: getRowSizeForSlot(slotBefore, dayType) }
     )
   );
 
@@ -97,7 +101,7 @@ const getRowForOrphan = (
     map(
       timeDifferenceAfter,
       { low: 0, high: slotAfter.duration },
-      { low: 0, high: getRowSizeForSlot(slotAfter) }
+      { low: 0, high: getRowSizeForSlot(slotAfter, dayType) }
     )
   );
   const end =
@@ -197,9 +201,15 @@ const Orphan = ({
   );
 };
 
-export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
+export const Schedule = ({
+  schedule,
+  dayType,
+}: {
+  schedule: ScheduleType;
+  dayType: "Tutorials" | "Talks";
+}) => {
   const totalRooms = schedule.rooms.length;
-  const { rowSizes, gridTemplateRows } = getGridMetrics(schedule);
+  const { rowSizes, gridTemplateRows } = getGridMetrics(schedule, dayType);
 
   return (
     <div className="full-width schedule__container">
@@ -255,7 +265,12 @@ export const Schedule = ({ schedule }: { schedule: ScheduleType }) => {
           }
 
           if (slot.type === "orphan") {
-            const row = getRowForOrphan(slot.session, rowSizes, schedule.slots);
+            const row = getRowForOrphan(
+              slot.session,
+              rowSizes,
+              schedule.slots,
+              dayType
+            );
 
             return (
               <Orphan
@@ -288,11 +303,22 @@ const getRowSizeForBreak = (duration: number) => {
   return Math.ceil(BREAK_ROWS * (duration / 30));
 };
 
-const getRowSizeForSessionsSlot = (duration: number) => {
-  return Math.ceil(SESSION_ROWS * (duration / 30));
+const getRowSizeForSessionsSlot = (
+  duration: number,
+  dayType: "Tutorials" | "Talks"
+) => {
+  const base = dayType === "Tutorials" ? SESSION_ROWS_TUTORIALS : SESSION_ROWS;
+
+  return Math.ceil(base * (duration / 30));
 };
 
-const getRowSizeForSlot = (slot: { duration: number; type: string }) => {
+const getRowSizeForSlot = (
+  slot: {
+    duration: number;
+    type: string;
+  },
+  dayType: "Tutorials" | "Talks"
+) => {
   if (slot.type === "break") {
     return getRowSizeForBreak(slot.duration);
   }
@@ -301,11 +327,16 @@ const getRowSizeForSlot = (slot: { duration: number; type: string }) => {
     return 0;
   }
 
-  return getRowSizeForSessionsSlot(slot.duration);
+  return getRowSizeForSessionsSlot(slot.duration, dayType);
 };
 
-const getGridMetrics = (schedule: ScheduleType) => {
-  const rowSizes = schedule.slots.map(getRowSizeForSlot);
+const getGridMetrics = (
+  schedule: ScheduleType,
+  dayType: "Tutorials" | "Talks"
+) => {
+  const rowSizes = schedule.slots.map((slot) =>
+    getRowSizeForSlot(slot, dayType)
+  );
 
   // this also includes the rooms row
   const gridTemplateRows = [HEADING_ROWS]

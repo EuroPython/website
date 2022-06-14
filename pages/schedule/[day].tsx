@@ -5,7 +5,10 @@ import { Layout } from "../../components/layout";
 import { useCallback } from "react";
 import { fetchSchedule } from "../../lib/schedule";
 
-import { getScheduleForDay } from "../../components/schedule/schedule-utils";
+import {
+  getDayType,
+  getScheduleForDay,
+} from "../../components/schedule/schedule-utils";
 import { Schedule } from "../../components/schedule/schedule";
 import { Schedule as ScheduleType } from "../../components/schedule/types";
 
@@ -28,6 +31,8 @@ export default function SchedulePage({
       parse(b.day, "yyyy-MM-dd", new Date()).getTime()
     );
   });
+
+  const dayType = getDayType(day);
 
   return (
     <Layout>
@@ -55,7 +60,7 @@ export default function SchedulePage({
           </select>
         </article>
 
-        <Schedule schedule={schedule} />
+        <Schedule schedule={schedule} dayType={dayType} />
       </main>
     </Layout>
   );
@@ -81,7 +86,7 @@ export async function getStaticProps({ params }: { params: { day: string } }) {
       schedule: daySchedule,
       days: Object.entries(schedule.days).map(([day, _]) => ({
         day,
-        type: ["2022-07-11", "2022-07-12"].includes(day) ? "Workshops" : "Talks",
+        type: getDayType(day),
       })),
     },
     revalidate: 60,

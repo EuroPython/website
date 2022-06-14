@@ -1,5 +1,5 @@
 import { timeToNumber } from "./time-helpers";
-import { OrphanTimeSlot, Schedule, Session, TimeSlot } from "./types";
+import { OrphanTimeSlot, Session, TimeSlot } from "./types";
 
 const TYPES_MAP = {
   "Talk [in-person]": "talk",
@@ -13,14 +13,6 @@ const AUDIENCE_MAP = {
   some: "intermediate",
   expert: "advanced",
 };
-
-const mode = (arr: number[]) =>
-  arr
-    .sort(
-      (a, b) =>
-        arr.filter((v) => v === a).length - arr.filter((v) => v === b).length
-    )
-    .pop();
 
 const convertTalk = (talk: any): Session => {
   const time = timeToNumber(talk.time);
@@ -212,3 +204,6 @@ export const getScheduleForDay = async ({
 
   return { slots, rooms };
 };
+
+export const getDayType = (day: string) =>
+  ["2022-07-11", "2022-07-12"].includes(day) ? "Tutorials" : "Talks";
