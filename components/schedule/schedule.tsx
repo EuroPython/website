@@ -23,7 +23,7 @@ const ROW_HEIGHT = 25;
 const HEADING_ROWS = 2;
 const BREAK_ROWS = 3;
 const SESSION_ROWS = 6;
-const SESSION_ROWS_TUTORIALS = 4;
+const SESSION_ROWS_TUTORIALS = 3;
 
 const getColumnForSession = (session: { rooms: string[] }, rooms: string[]) => {
   const roomIndexes = session.rooms.map((room) => rooms.indexOf(room)).sort();
