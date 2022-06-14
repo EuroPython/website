@@ -2,6 +2,10 @@
   "header": [{
       "name": "Programme",
       "items": [{
+          "name": "Schedule",
+          "path": "/schedule"
+        },
+        {
           "name": "List of Sessions",
           "path": "/sessions"
         },
