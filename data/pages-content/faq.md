@@ -136,7 +136,9 @@ A. Recordings of the talks will be made available on our YouTube channel a few m
 
 ## **Q. Is there a Financial Aid Program for EP2022?**
 A. Yes, our
-[Financial Aid programme](/finaid) for in-person participation was open for submissions between 8 March - 23 May. It has not closed. Fin
+[Financial Aid programme](/finaid) for in-person participation was open for submissions between 8 March - 23 May. It is now closed.
+
+Financial Aid for Remote Tickets is open on 7 June, together with [remote ticket sales](/tickets#remote-tickets). If you need support to attend the conference remotely, make sure to [apply](/finaid#financial-aid) by 3 July 2022.
 
 ## **Q. Do you provide childcare at the venue?**
 A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.
