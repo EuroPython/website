@@ -45,11 +45,26 @@ const convertTalk = (talk: any): Session => {
   let eventType: string = TYPES_MAP[talk.type as keyof typeof TYPES_MAP] || "";
 
   if (eventType === "") {
-    const lowerTitle = title.toLocaleLowerCase();
-    if (lowerTitle === "coffee break" || lowerTitle === "lunch break") {
-      eventType = "break";
+    const type = (talk.type as string).toLocaleLowerCase();
+
+    if (type.startsWith("keynote")) {
+      eventType = "keynote";
+    } else if (type.startsWith("lightning talk")) {
+      eventType = "lightning-talks";
+    } else if (type.startsWith("panel")) {
+      eventType = "panel";
+    } else if (type.startsWith("opening session")) {
+      eventType = "opening-session";
+    } else if (type.startsWith("sponsored talk")) {
+      eventType = "sponsored-talk";
     } else {
-      console.log(eventType);
+      const lowerTitle = title.toLocaleLowerCase();
+
+      if (lowerTitle === "coffee break" || lowerTitle === "lunch break") {
+        eventType = "break";
+      } else {
+        console.info(eventType);
+      }
     }
   }
 

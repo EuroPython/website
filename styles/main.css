@@ -41,6 +41,7 @@
   --color-intermediate: #f7b500;
   --color-advanced: #ce3333;
   --color-poster: #f18a00;
+  --color-opening: #3dae2b;
 }
 
 * {
@@ -2752,6 +2753,12 @@ button[name="vote"]:hover {
 
 .session-poster {
   background-color: var(--color-poster);
+}
+
+.session-opening-session,
+.session-keynote,
+.session-lighting-talks {
+  background-color: var(--color-opening);
 }
 
 .no-rating {

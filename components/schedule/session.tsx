@@ -1,5 +1,29 @@
-import { numberToTime, timeToNumber } from "./time-helpers";
+import { numberToTime } from "./time-helpers";
 import type { Session as SessionType } from "./types";
+
+const getHeaderText = (session: SessionType) => {
+  if (session.type === "opening-session") {
+    return "Opening";
+  }
+
+  if (session.type === "keynote") {
+    return "Keynote";
+  }
+
+  if (session.type === "lightning-talks") {
+    return "Lightning Talks";
+  }
+
+  if (session.type === "panel") {
+    return "Panel";
+  }
+
+  if (session.audience) {
+    return session.audience;
+  }
+
+  return session.type;
+};
 
 export const Session = ({
   session,
@@ -16,11 +40,7 @@ export const Session = ({
   return (
     <div className="talk" style={style} onClick={() => console.log(session)}>
       <header className={`${session.audience || ""} session-${session.type}`}>
-        {session.audience ? (
-          <p className={`talk__rating`}>{session.audience}</p>
-        ) : (
-          <p className={`talk__rating`}>{session.type}</p>
-        )}
+        <p className={`talk__rating`}>{getHeaderText(session)}</p>
 
         <p className={`talk__duration`}>
           {session.type === "poster" ? (
