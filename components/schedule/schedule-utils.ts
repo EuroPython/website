@@ -106,6 +106,11 @@ const updateTimeslotDurations = (timeslots: TimeSlot[], rooms: string[]) => {
       maxDuration = Math.max(maxDuration, duration);
     });
 
+    // this happens when there's no next row
+    if (maxDuration == 0) {
+      maxDuration = Math.max(...row);
+    }
+
     timeslots[index].duration = maxDuration;
   });
 };
