@@ -35,11 +35,12 @@ time.
   <li><b>2022-05-23</b>: Financial Aid for In-person Participations Closes</li>
   <li><b>2022-06-07</b>: <a href="/tickets#remote-tickets">Remote Tickets - Regular Sales</a> Starts </li>
   <li><b>2022-06-07</b>: <a href="/finaid">Financial Aid  for Remote Tickets</a> Starts </li>
+  <li><b>2022-06-14</b>: Initial <a href="/schedule">Schedule </a> Published</li>
 
 </ul>
 <ul className="milestone-todo">
 
-  <li><b>The Week of 2022-06-13</b>: Schedule Published</li>
+
   <li><b>2022-06-27</b>: <a href="/tickets#remote-tickets">Remote Tickets - Late Bird</a> Starts </li>
   <li><b>2022-07-03</b>: Financial Aid  for Remote Tickets Ends </li>
   <li><b>2022-07-10</b>: Gather & Set up at The CCD in Dublin! 🤗</li>
