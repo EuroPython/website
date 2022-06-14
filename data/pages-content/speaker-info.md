@@ -3,11 +3,7 @@ title: Speaker Information
 subtitle: Learn about all things speaking at EuroPython
 ---
 
-# Frequently Asked Questions | Talks, Training Sessions, Posters
-
-### Q. How can I add another speaker to my proposal?
-
-You may add additional speakers to your proposal only while the CfP is still open. Speakers may not be changed after the closing of the CfP.
+# Frequently Asked Questions
  
 ### Q. Can I rely on Internet during my talk?
 
@@ -41,9 +37,9 @@ There won't be tables in front of each poster.
 
 Please log in to pretalx via (https://program.europython.eu) using the email address you submitted your proposal with and select the talk title that you want to edit. Edit the abstract/ description and then click on the save button.
 
-### Q. I am a Speaker at EuroPython, will I receive a Speaker ticket?
+### Q. I am a speaker at EuroPython, will I receive a Speaker ticket?
 
-Yes, we will be releasing Speakers in the 4th week of June. You'll receive an email from our program team program@europython.eu
+Yes, we will be releasing speakers in the 4th week of June. You'll receive an email from our program team program@europython.eu
 
 For those of you who have purchased tickets before the schedule is announced and thus cannot use the speaker coupons, we will be refunding them upon request.
 
@@ -64,6 +60,7 @@ You may talk about / present (almost) everything with certain boundaries:
 4. keep it short, the shorter the presentations, the more people can give a talk
 
 # Speaker preparations
+
 In particular, please check your talk time. The session chairs will have to make sure that all speakers only use the assigned talk time, so that the tracks don’t run out of sync.
 
 There are also some important technical things to prepare your talk at the conference:
@@ -71,11 +68,13 @@ There are also some important technical things to prepare your talk at the confe
 1. test your notebook with the projector in the room where you will be holding your talk
 2. make sure you have the right HDMI adapters with you
 3. make sure the projector resolution (they are all Full HD) is supported by your notebook
-4. It’s best to do all of the above a few hours or a day before your talk. In case of problems, you can then try to find alternative solutions, e.g. borrow someone’s notebook for the talk.
+
+It’s best to do all of the above a few hours or a day before your talk. In case of problems, you can then try to find alternative solutions, e.g. borrow someone’s notebook for the talk.
 
 It's ok to mention your company is hiring and include one slide for this at the end of your presentation. This should not take longer than one minute.
 
 # Tips for speakers
+
 *A few tips for giving a great talk at EuroPython...*
 
 ## Practice!
