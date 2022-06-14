@@ -5,7 +5,10 @@ import { Layout } from "../../components/layout";
 import { useCallback } from "react";
 import { fetchSchedule } from "../../lib/schedule";
 
-import { getScheduleForDay } from "../../components/schedule/schedule-utils";
+import {
+  getDayType,
+  getScheduleForDay,
+} from "../../components/schedule/schedule-utils";
 import { Schedule } from "../../components/schedule/schedule";
 import { Schedule as ScheduleType } from "../../components/schedule/types";
 
@@ -15,12 +18,21 @@ export default function SchedulePage({
   schedule,
 }: {
   day: string;
-  days: string[];
+  days: { day: string; type: string }[];
   schedule: ScheduleType;
 }) {
   const handleDaySelected = useCallback((event) => {
     window.location.href = `/schedule/${event.target.value}`;
   }, []);
+
+  const sortedDays = days.sort((a, b) => {
+    return (
+      parse(a.day, "yyyy-MM-dd", new Date()).getTime() -
+      parse(b.day, "yyyy-MM-dd", new Date()).getTime()
+    );
+  });
+
+  const dayType = getDayType(day);
 
   return (
     <Layout>
@@ -34,23 +46,21 @@ export default function SchedulePage({
             onChange={handleDaySelected}
             defaultValue={day}
           >
-            {days
-              .map((day) => parse(day, "yyyy-MM-dd", new Date()))
-              .sort((a, b) => a.getTime() - b.getTime())
-              .map((date) => {
-                const isoDate = format(date, "yyyy-MM-dd");
-                const dateText = format(date, "eeee, do MMMM, yyyy");
+            {sortedDays.map(({ day, type }) => {
+              const date = parse(day, "yyyy-MM-dd", new Date());
+              const isoDate = format(date, "yyyy-MM-dd");
+              const dateText = format(date, "eeee, do MMMM, yyyy");
 
-                return (
-                  <option key={isoDate} value={isoDate}>
-                    {dateText}
-                  </option>
-                );
-              })}
+              return (
+                <option key={isoDate} value={isoDate}>
+                  {dateText} - {type}
+                </option>
+              );
+            })}
           </select>
         </article>
 
-        <Schedule schedule={schedule} />
+        <Schedule schedule={schedule} dayType={dayType} />
       </main>
     </Layout>
   );
@@ -74,7 +84,10 @@ export async function getStaticProps({ params }: { params: { day: string } }) {
     props: {
       day: params.day,
       schedule: daySchedule,
-      days: Object.keys(schedule.days),
+      days: Object.entries(schedule.days).map(([day, _]) => ({
+        day,
+        type: getDayType(day),
+      })),
     },
     revalidate: 60,
   };

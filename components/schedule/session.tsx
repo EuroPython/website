@@ -38,7 +38,7 @@ export const Session = ({
   const firstSpeaker = speakers?.[0];
 
   return (
-    <div className="talk" style={style} onClick={() => console.log(session)}>
+    <div className="talk" style={style}>
       <header className={`${session.audience || ""} session-${session.type}`}>
         <p className={`talk__rating`}>{getHeaderText(session)}</p>
 
