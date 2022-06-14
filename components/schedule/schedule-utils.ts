@@ -1,11 +1,5 @@
 import { timeToNumber } from "./time-helpers";
-import {
-  OrphanTimeSlot,
-  Schedule,
-  Session,
-  SessionsTimeSlot,
-  TimeSlot,
-} from "./types";
+import { OrphanTimeSlot, Schedule, Session, TimeSlot } from "./types";
 
 const TYPES_MAP = {
   "Talk [in-person]": "talk",
@@ -89,7 +83,43 @@ const convertTalk = (talk: any): Session => {
   };
 };
 
-const getTimeSlots = (sessions: Session[]) => {
+const updateTimeslotDurations = (timeslots: TimeSlot[], rooms: string[]) => {
+  const timeslotDurations: number[] = [];
+  const sessionsMatrix: number[][] = [];
+
+  timeslots.forEach((timeslot) => {
+    if (timeslot.type === "break") {
+      sessionsMatrix.push(rooms.map(() => timeslot.duration));
+    } else if (timeslot.type === "timeslot") {
+      const row: number[] = [];
+
+      // assuming all events are for just one room
+      timeslot.sessions.forEach((session) => {
+        const index = rooms.indexOf(session.rooms[0]);
+        row[index] = session.duration;
+      });
+
+      sessionsMatrix.push(row);
+    }
+  });
+
+  sessionsMatrix.forEach((row, index) => {
+    const nextRow = sessionsMatrix[index + 1];
+    let maxDuration = 0;
+
+    row.forEach((duration, index) => {
+      if (!nextRow || !nextRow[index]) {
+        return;
+      }
+
+      maxDuration = Math.max(maxDuration, duration);
+    });
+
+    timeslots[index].duration = maxDuration;
+  });
+};
+
+const getTimeslots = (sessions: Session[], rooms: string[]) => {
   const sessionsByTime = Object.values(
     sessions
       .sort((a, b) => {
@@ -164,21 +194,7 @@ const getTimeSlots = (sessions: Session[]) => {
     })
     .filter((session) => session !== null) as TimeSlot[];
 
-  for (let i = 0; i < timeslots.length; i++) {
-    const timeslot = timeslots[i];
-    let duration = timeslot.duration;
-    const nextTimeslot = timeslots[i + 1];
-
-    // TODO: correct this
-
-    if (timeslot.type === "timeslot") {
-      duration = mode(
-        timeslot.sessions.map((session) => session.duration)
-      ) as number;
-    }
-
-    timeslot.duration = duration;
-  }
+  updateTimeslotDurations(timeslots, rooms);
 
   return timeslots.concat(orphans);
 };
@@ -190,10 +206,10 @@ export const getScheduleForDay = async ({
   schedule: any;
   day: string;
 }) => {
-  let currentDay = schedule.days[day];
+  const currentDay = schedule.days[day];
+  const rooms = currentDay.rooms;
+  const sessions = currentDay.talks.map(convertTalk);
+  const slots = getTimeslots(sessions, rooms);
 
-  let sessions: Session[] = currentDay.talks.map(convertTalk);
-  const slots = getTimeSlots(sessions);
-
-  return { slots, rooms: currentDay.rooms } as Schedule;
+  return { slots, rooms };
 };
