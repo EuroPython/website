@@ -33,7 +33,7 @@ export default function Page({
   };
 }) {
   const keynoter = findKeynoter(speaker)!;
-  const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?keynoter=${slug}`;
+  const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?keynoter=${slug}&v2`;
 
   return (
     <Layout
