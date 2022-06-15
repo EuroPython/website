@@ -9,6 +9,7 @@ bio:
   NGOs that works towards a legally-binding instrument to regulate autonomous
   weapons.
 affiliation: Campaign to Stop Killer Robots
+subtitle: not a killer robot
 ---
 
 Killer robots may sound like something from a movie, but in recent years weapons
