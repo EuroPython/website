@@ -133,18 +133,20 @@ Shipping and customs for your goods are handled by <a href = "https://www.interf
 
 **Contacts**:
 
+***NOTE: Caroline is the new designated coordinator overseeing all EuroPython shipment. Please make sure to contact her for shipping.***
+
+- Caroline Placido - <a href = "caroline.placido@interflow.ie"> caroline.placido@interflow.ie</a>, +353876661561 (mobile)
 - Niall Thompson - <a href = "mailto:niall@interflow.ie">niall@interflow.ie </a>, +353 (0)86 3805000;
-- Anderson Marisa - <a href = "mailto:anderson.marisa@interflow.ie"> anderson.marisa@interflow.ie</a>, +353 (0)87 2388185
 
 Here are shipping information provided by Interflow:
 
--  <a href = "https://drive.google.com/file/d/1zFCopPlWoC9ToPEmlxFessCJ4UaxLqu_/view?usp=sharing" target="_blank">Shipping Guidelines</a>. <b>Important: Please provide Interflow your Company name, point of contact name and email.</b> Contact Interflow for Details.
+-  <a href = "https://drive.google.com/file/d/1-I6rj1ISBViVLm_jaXgOxV6GpGQluS9y/view?usp=sharing" target="_blank">Shipping Guidelines</a>. <b>Important: Please provide Interflow your Company name, point of contact name and email.</b> Contact Interflow for Details.
 - <a href = "https://www.interflow.ie/freight-order-form/" target="_blank">Freight Order link</a>.
-- <a href = "https://drive.google.com/file/d/1TtlW5nWrOfuK-5JgK6iKq1S1rDAF2U6_/view?usp=sharing" target="_blank">Delivery address and Shipping Label</a>.
+- <a href = "https://drive.google.com/file/d/15QWQMg51LKZEXKudgopl7B-Ez56EAOJt/view?usp=sharing" target="_blank">Delivery address and Shipping Label</a>.
 
 **Deadlines:**
-- Deadline for receiving to the warehouse: 2022-07-06
 - Deadline for orders: 2022-06-30
+- Deadline for receiving to the warehouse: 2022-07-06
 
 If you have any last-minute orders, please contact Interflow and keep them in the loop.
 
