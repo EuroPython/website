@@ -12,14 +12,14 @@ subtitle:
  <li><a href="#virtual-swag-page"> Virtual Swag Page submission:</a> June 17 </li>
  <li><a href="#sponsor-logo"> Sponsor Logo submission:</a> June 17 </li>
  <li><a href="#sponsor-blog-post"> Technical Case Study Blog Post submission:</a> June 17 (Keystone, Diamond, Platinum) </li>
- <li><a href="#video-ads"> Video Ads submission (with and without audio):</a> June 17 </li>
+ <li><a href="#video-ads"> Video Ads submission (with and without audio):</a> June 24 </li>
  <li><a href="#booth-customisations"> Booth Customisations:</a> June 24 </li>
  <li><a href="#booth-images"> Booth & Counter graphics submission:</a> June 24 </li>
  <li><a href="#registration"> Tickets Registration & Assignment:</a> June 27 </li>
  <li><a href="#sponsor-feedback-questions"> Sponsor Feedback Questions submission:</a> June 27 </li>
  <li><a href="#job-board-on-website"> Recruiting - Job Board Ad on Website submission:</a> June 27 </li>
  <li><a href="#recruiting email"> Recruiting Email submission:</a> June 27 </li>
- <li><a href="#parcel"> Parcel Services-</a> Deadline for ordering: June 30; Deadline for receiving parcel to the warehouse: July 6 </li>
+ <li><a href="#parcel"> Parcel Services</a> Deadline for ordering: June 30; Deadline for receiving parcel to the warehouse: July 6 </li>
  <li><a href="#recruiting-session"> Recruiting Session Presentation - presenter and slides:</a> July 08 </li>
  <li><a href="#on-site-job-board"> Recruiting - On-site Job Board Ad submission:</a> anytime during the conference (we'll have a white board for this) </li>
  <li><a href="#sponsor-tweet"> Tweet and/or Retweet. LinkedIn Reshare:</a> anytime until the end of the conference, but please give enough lead time so we can schedule accordingly </li>
@@ -136,7 +136,7 @@ Shipping and customs for your goods are handled by <a href = "https://www.interf
 ***NOTE: Caroline is the new designated coordinator overseeing all EuroPython shipment. Please make sure to contact her for shipping.***
 
 - Caroline Placido - <a href = "caroline.placido@interflow.ie"> caroline.placido@interflow.ie</a>, +353876661561 (mobile)
-- Niall Thompson - <a href = "mailto:niall@interflow.ie">niall@interflow.ie </a>, +353 (0)86 3805000;
+- Niall Thompson - <a href = "mailto:niall@interflow.ie">niall@interflow.ie </a>, +353 (0)86 3805000
 
 Here are shipping information provided by Interflow:
 
