@@ -11,15 +11,15 @@ In a nutshell; Channable is simple, quick, and effective, and gives companies fu
 
 ### Integrations Engineer (Python) ###
 <details>
-Looking for a position where you can both write code and help our customers? Then you may want to read further! In this role, you are part of our Integrations team. The Integrations team is the bridge between our customer-facing teams (e.g. Support & Sales) and the actual code of the tool Channable. We translate our clients’ needs into functionality, and we translate technical solutions to the language our clients understand.
+  Looking for a position where you can both write code and help our customers? Then you may want to read further! In this role, you are part of our Integrations team. The Integrations team is the bridge between our customer-facing teams (e.g. Support & Sales) and the actual code of the tool Channable. We translate our clients’ needs into functionality, and we translate technical solutions to the language our clients understand.
 
-More specifically you will:
+  More specifically you will:
 
-- Be an accessible point of expertise within Channable on how our features work in the back-end
-- Solve bugs and other technical issues that are reported by the Support & Customer Success departments
-- Improve our tool’s existing functionalities to decrease the amount of technical issues in general
-- Implement feature requests for specific parts of our tool
-- Join calls with high-end clients & third party partners (e.g. Facebook) as the technical point of contact
+  - Be an accessible point of expertise within Channable on how our features work in the back-end
+  - Solve bugs and other technical issues that are reported by the Support & Customer Success departments
+  - Improve our tool’s existing functionalities to decrease the amount of technical issues in general
+  - Implement feature requests for specific parts of our tool
+  - Join calls with high-end clients & third party partners (e.g. Facebook) as the technical point of contact
 </details>
 
 [Apply here](https://jobs.channable.com/o/integrations-engineer-python-3) or contact Gio, our Tech Recruiter: giordano.tuvo@channable.com
@@ -27,17 +27,17 @@ More specifically you will:
 
 ### Python Software Engineer ###
 <details>
-In this position, you will be part of our diverse product team, that works on our main web application. The Product team is mainly responsible for our Python3 backend, which powers our API and serves as the main entry point for our services. You will be working on our API integrations, ads services, our export channels, new user-facing features, and our background jobs through which we process hundreds of millions of products per day. The Product team is working closely together with our Infrastructure and DevOps teams, which are developing many other services that power Channable under the hood, and all together we build our powerful tool!
+  In this position, you will be part of our diverse product team, that works on our main web application. The Product team is mainly responsible for our Python3 backend, which powers our API and serves as the main entry point for our services. You will be working on our API integrations, ads services, our export channels, new user-facing features, and our background jobs through which we process hundreds of millions of products per day. The Product team is working closely together with our Infrastructure and DevOps teams, which are developing many other services that power Channable under the hood, and all together we build our powerful tool!
 
-More specifically you will:
+  More specifically you will:
 
-- Contribute to our Python components and support new API’s
-- Design, develop, and test new product features
-- Collaborate with and review PRs of other team members
-- Improve the reliability and robustness of our application
-- Work on scalability and performance improvements
-- Work together with the sales and support teams on requirements and issues
-- Collaborate with the Integrations department about technical matters
+  - Contribute to our Python components and support new API’s
+  - Design, develop, and test new product features
+  - Collaborate with and review PRs of other team members
+  - Improve the reliability and robustness of our application
+  - Work on scalability and performance improvements
+  - Work together with the sales and support teams on requirements and issues
+  - Collaborate with the Integrations department about technical matters
 </details>
 
 [Apply here](https://jobs.channable.com/o/python-software-engineer-5) or contact Gio, our Tech Recruiter: giordano.tuvo@channable.com
