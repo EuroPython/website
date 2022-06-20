@@ -45,7 +45,7 @@ It is probably also worth mentioning that, in addition to the Trans*Code organis
 No, not at all! Trans*Code welcomes everyone! You may use Python or any other language you like. And if you don’t know how to code, that’s not a problem! Please come along and share your ideas, skills, and experience on a project.
 
 #### Is Trans*Code only for trans and non-binary people? ####
-Not at all. It is centred on trans and non-binary people and their issues, which is all to rare an experience for us, but we’d love to have non-trans people come as well. We welcome the chance to share our experiences and make new friends.
+Not at all. It is centred on trans and non-binary people and their issues, something which is all too rare for us, but we’d love to have non-trans people come as well. We welcome the chance to share our experiences and make new friends.
 
 #### What if I have an idea for a project? ####
 Please feel free to bring any and all ideas! We’d love to have you share whatever you’ve been working on/would like to work on/just think the trans/NB folk of the world need.
