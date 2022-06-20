@@ -43,7 +43,7 @@ More specifically you will:
 [Apply here](https://jobs.channable.com/o/python-software-engineer-5) or contact Gio, our Tech Recruiter: giordano.tuvo@channable.com
 
 
-## [Hudson River Trading]() ##
+## [Hudson River Trading](https://www.hudsonrivertrading.com/) ##
 At HRT we are mathematicians, computer scientists, statisticians, physicists, and engineers. We research and develop automated trading algorithms using advanced mathematical techniques.
 
 ### Operations Python Developer ###
