@@ -105,6 +105,11 @@
           "name": "Kraken Technologies",
           "url": "https://kraken.tech/",
           "logo": "/img/logos/sponsor_logos/kraken.svg"
+        },
+        {
+          "name": "Superblocks",
+          "url": "https://www.superblocks.com/?referrer=europython",
+          "logo": "/img/logos/sponsor_logos/superblocks.svg"
         }
       ]
     },
