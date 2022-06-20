@@ -151,6 +151,11 @@
           "logo": "img/logos/sponsor_logos/1password_m30.svg"
         },
         {
+          "name": "Evolabel",
+          "url": "https://www.evolabel.com/",
+          "logo": "img/logos/sponsor_logos/evolabel.svg"
+        },
+        {
           "name": "devitjobs",
           "url": "https://devitjobs.uk/jobs/Python/all",
           "logo": "img/logos/sponsor_logos/devitjobs.svg"
