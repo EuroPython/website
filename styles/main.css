@@ -377,6 +377,10 @@ h6,
   .h2 {
     font-size: 3rem;
   }
+
+  .session h1 {
+    font-size: 4rem;
+  }
 }
 
 hgroup {

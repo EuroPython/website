@@ -2,6 +2,8 @@ import { MDXRemote } from "next-mdx-remote";
 import { Layout } from "../../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { fetchSessions } from "../../lib/sessions";
+import parseISO from "date-fns/parseISO";
+import { format } from "date-fns";
 
 type Speaker = {
   code: string;
@@ -17,7 +19,10 @@ type Session = {
   slug: string;
   abstract: string;
   type: string;
+  room: string;
   abstractSource: any;
+  duration: number;
+  start: string;
   description: string;
   descriptionSource: any;
   track: string;
@@ -28,19 +33,33 @@ type Session = {
 export default function Page({
   path,
   session,
+  sessionsInParallel,
+  sessionsAfter,
 }: {
   path: string;
   session: Session;
+  sessionsAfter: Session[];
+  sessionsInParallel: Session[];
 }) {
   const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?session=${session.code}`;
   const speakers = session.speakers.map((speaker) => speaker.name).join(", ");
   const title = `${session.title} - ${speakers} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`;
 
+  const start = parseISO(session.start);
+
   return (
     <Layout path={path} socialCardUrl={socialCardUrl} title={title}>
-      <main id="main-content">
+      <main id="main-content" className="session">
         <article className="accent-left">
           <h1>{session.title}</h1>
+          <dl>
+            <dt>Room:</dt>
+            <dd>{session.room}</dd>
+            <dt>Start:</dt>
+            <dd>{format(start, "HH:mm 'on' dd MMMM yyyy")}</dd>
+            <dt>Duration:</dt>
+            <dd>{session.duration} minutes</dd>
+          </dl>
           <h2>Abstract</h2>
           <MDXRemote {...session.abstractSource} />
           <p>
@@ -79,54 +98,36 @@ export default function Page({
 
         <hr />
 
-        {/* <section className="cards accent-right">
+        <section className="cards accent-right">
           <aside>
             <h3>Sessions at the same time</h3>
             <ul className="unstyled-list">
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
+              {sessionsInParallel.map((s) => (
+                <li key={s.slug}>
+                  <a href={`/session/${s.slug}`}>{s.title}</a>
+                </li>
+              ))}
             </ul>
           </aside>
           <aside>
             <h3>After this session</h3>
             <ul className="unstyled-list">
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
-              <li>
-                <a href="/">Session name</a>
-              </li>
+              {sessionsAfter.map((s) => (
+                <li key={s.slug}>
+                  <a href={`/session/${s.slug}`}>{s.title}</a>
+                </li>
+              ))}
             </ul>
           </aside>
-        </section> */}
+        </section>
+
+        <hr />
+
+        <section className="cards">
+          <a className="h2" href={`/schedule/${format(start, "yyyy-MM-dd")}`}>
+            ← Back to schedule
+          </a>
+        </section>
       </main>
     </Layout>
   );
@@ -145,12 +146,19 @@ export async function getStaticPaths() {
   };
 }
 
+const getSession = (slug: string, sessions: any) => {
+  const session = sessions.find(
+    (session: { slug: string; code: string }) =>
+      session.slug === slug || session.code === slug
+  );
+
+  return session;
+};
+
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const sessions = await fetchSessions();
 
-  const session = sessions.find(
-    (session: { slug: string }) => session.slug === params.slug
-  );
+  const session = getSession(params.slug, sessions);
 
   const abstractSource = await serialize(session.abstract, {});
   const descriptionSource = await serialize(session.description, {});
@@ -165,6 +173,13 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     })
   );
 
+  const sessionsAfter = session.talks_after.map((code: string) =>
+    getSession(code, sessions)
+  );
+  const sessionsInParallel = session.talks_in_parallel.map((code: string) =>
+    getSession(code, sessions)
+  );
+
   return {
     props: {
       path: `/session/${params.slug}`,
@@ -175,6 +190,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
         descriptionSource,
         speakers,
       },
+      sessionsAfter,
+      sessionsInParallel,
     },
     revalidate: 60,
   };
