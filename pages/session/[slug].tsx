@@ -110,7 +110,7 @@ export default function Page({
           {sessionsInParallel.length ? (
             <aside>
               <h3>Sessions at the same time</h3>
-              <ul className="unstyled-list">
+              <ul className="unstyled-list links">
                 {sessionsInParallel.map((s) => (
                   <li key={s.slug}>
                     <a href={`/session/${s.slug}`}>{s.title}</a>
@@ -122,7 +122,7 @@ export default function Page({
           {sessionsAfter.length ? (
             <aside>
               <h3>After this session</h3>
-              <ul className="unstyled-list">
+              <ul className="unstyled-list links">
                 {sessionsAfter.map((s) => (
                   <li key={s.slug}>
                     <a href={`/session/${s.slug}`}>{s.title}</a>

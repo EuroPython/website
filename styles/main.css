@@ -1030,6 +1030,12 @@ li {
   padding-left: 0;
 }
 
+.unstyled-list.links a {
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 1em;
+}
+
 summary,
 summary:hover {
   margin-left: -1.5rem;
