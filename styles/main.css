@@ -377,6 +377,10 @@ h6,
   .h2 {
     font-size: 3rem;
   }
+
+  .session h1 {
+    font-size: 4rem;
+  }
 }
 
 hgroup {
@@ -1024,6 +1028,12 @@ li {
 .unstyled-list {
   list-style-type: none;
   padding-left: 0;
+}
+
+.unstyled-list.links a {
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 1em;
 }
 
 summary,
