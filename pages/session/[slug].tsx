@@ -45,7 +45,7 @@ export default function Page({
   const speakers = session.speakers.map((speaker) => speaker.name).join(", ");
   const title = `${session.title} - ${speakers} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`;
 
-  const start = parseISO(session.start);
+  const start = session.start ? parseISO(session.start) : null;
 
   return (
     <Layout path={path} socialCardUrl={socialCardUrl} title={title}>
@@ -53,10 +53,18 @@ export default function Page({
         <article className="accent-left">
           <h1>{session.title}</h1>
           <dl>
-            <dt>Room:</dt>
-            <dd>{session.room}</dd>
-            <dt>Start:</dt>
-            <dd>{format(start, "HH:mm 'on' dd MMMM yyyy")}</dd>
+            {session.room ? (
+              <>
+                <dt>Room:</dt>
+                <dd>{session.room}</dd>
+              </>
+            ) : null}
+            {start ? (
+              <>
+                <dt>Start:</dt>
+                <dd>{format(start, "HH:mm 'on' dd MMMM yyyy")}</dd>
+              </>
+            ) : null}
             <dt>Duration:</dt>
             <dd>{session.duration} minutes</dd>
           </dl>
@@ -125,13 +133,20 @@ export default function Page({
           ) : null}
         </section>
 
-        <hr />
+        {start ? (
+          <>
+            <hr />
 
-        <section className="cards">
-          <a className="h2" href={`/schedule/${format(start, "yyyy-MM-dd")}`}>
-            ← Back to schedule
-          </a>
-        </section>
+            <section className="cards">
+              <a
+                className="h2"
+                href={`/schedule/${format(start, "yyyy-MM-dd")}`}
+              >
+                ← Back to schedule
+              </a>
+            </section>
+          </>
+        ) : null}
       </main>
     </Layout>
   );
