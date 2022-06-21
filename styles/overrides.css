@@ -140,3 +140,20 @@ h3.new::before {
   content: url(/img/accents/new_large.svg);
   padding: 0.5rem;
 }
+
+p.tick::before {
+  content: "\2705  ";
+  padding: 0.5rem;
+}
+
+p.cross::before {
+  content: "\274C  ";
+  padding: 0.5rem;
+}
+
+p.tick::after, p.cross::after {
+  content: "👇";
+  display: inline-block;
+  font-size: 1.3em;
+  margin-left: 0.4em;
+}
