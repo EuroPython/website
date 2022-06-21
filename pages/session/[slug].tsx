@@ -99,26 +99,30 @@ export default function Page({
         <hr />
 
         <section className="cards accent-right">
-          <aside>
-            <h3>Sessions at the same time</h3>
-            <ul className="unstyled-list">
-              {sessionsInParallel.map((s) => (
-                <li key={s.slug}>
-                  <a href={`/session/${s.slug}`}>{s.title}</a>
-                </li>
-              ))}
-            </ul>
-          </aside>
-          <aside>
-            <h3>After this session</h3>
-            <ul className="unstyled-list">
-              {sessionsAfter.map((s) => (
-                <li key={s.slug}>
-                  <a href={`/session/${s.slug}`}>{s.title}</a>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          {sessionsInParallel.length ? (
+            <aside>
+              <h3>Sessions at the same time</h3>
+              <ul className="unstyled-list">
+                {sessionsInParallel.map((s) => (
+                  <li key={s.slug}>
+                    <a href={`/session/${s.slug}`}>{s.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          ) : null}
+          {sessionsAfter.length ? (
+            <aside>
+              <h3>After this session</h3>
+              <ul className="unstyled-list">
+                {sessionsAfter.map((s) => (
+                  <li key={s.slug}>
+                    <a href={`/session/${s.slug}`}>{s.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          ) : null}
         </section>
 
         <hr />
@@ -173,11 +177,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     })
   );
 
-  const sessionsAfter = session.talks_after.map((code: string) =>
+  const sessionsAfter = (session.talks_after || []).map((code: string) =>
     getSession(code, sessions)
   );
-  const sessionsInParallel = session.talks_in_parallel.map((code: string) =>
-    getSession(code, sessions)
+  const sessionsInParallel = (session.talks_in_parallel || []).map(
+    (code: string) => getSession(code, sessions)
   );
 
   return {
