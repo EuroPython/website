@@ -50,7 +50,7 @@ export const SponsorTiers = () => {
       </div>
       <div className="tier-card gold">
         <h3>Gold</h3>
-        <p className="tier-card__slots">Unlimited slots available</p>
+        <p className="tier-card__soldout"></p>
         <p className="tier-card__price">€9,500</p>
         <p className="tier-card__includes">This tier includes:</p>
         <ul>
@@ -63,7 +63,7 @@ export const SponsorTiers = () => {
       </div>
       <div className="tier-card silver">
         <h3>Silver</h3>
-        <p className="tier-card__slots">Unlimited slots available</p>
+        <p className="tier-card__soldout"></p>
         <p className="tier-card__price">€6,500</p>
         <p className="tier-card__includes">This tier includes:</p>
         <ul>
