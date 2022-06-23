@@ -9,7 +9,9 @@ subtitle:
 ## TL;DR ##
 ✨ We are running mentored sprints for diverse community members at EuroPython this year ✨
 
-When: 14th July, 2022, during the main EuroPython conference (time still TBD) but you can participate for 2 or 4 hours. Room TBD.
+When: 14th July, 2022, during the main EuroPython conference (14:00 - 16:30) but you take as many breaks as you want.
+
+Room: Wicklow Hall 2A.
 
 👉🏽 Apply to be a mentor on the day or feature your open source project: email [cheuk@europython.eu](mailto:cheuk@europython.eu)
 
@@ -26,7 +28,7 @@ Open source projects such as Python and its multiple stacks (web, scientific, et
 
 Walking the path from user to collaborator, and thus contributing to an open-source project, can sometimes be intimidating especially for newcomers. From a technical perspective, interacting with web-based hosting services (such as GitHub, GitLab, etc.), branching and opening pull requests can be overwhelming if these are not everyday actions of your workflow. The correctness of the code and potential bugs are other common obstacles and fears any newcomer might face. Not to mention the time and frustration accumulated over the task of finding a ‘beginner-friendly’ issue to work on.
 
-We also recognize that some groups are traditionally underrepresented in the open-source community and we would like to support them in their open-source path. We are running the fourth PyCon US mentored sprints for individuals from underrepresented groups willing to start contributing to Python projects. This event will provide a supportive, friendly, and safe environment for all the attendees and partner open source projects.
+We also recognize that some groups are traditionally underrepresented in the open-source community and we would like to support them in their open-source path. We are running the mentored sprints for individuals from underrepresented groups willing to start contributing to Python projects. This event will provide a supportive, friendly, and safe environment for all the attendees and partner open source projects.
 
 To achieve this goal, we are seeking to work with a number of Python projects and their maintainers interested in providing mentorship to these individuals. In return, we will provide guidance and advice on how to prepare the projects for the day and to better serve a diverse range of contributors.
 
@@ -50,7 +52,7 @@ The call for applications for projects will be open until the 8th of July 2022 a
 The call for contributors (individuals willing to participate in the sprint) will also open until the 8th of July 2022 11:69pm AoE and we encourage anyone interested to attend. If you are wondering if this event is for you: it definitely is and we would love to have you taking part in this sprint.
 
 *WHEN IS THE MENTORED SPRINT?*
-This mentored sprint will take place on Thursday, 14th July, 2022 (time and room TBD).
+This mentored sprint will take place on Thursday, 14th July, 2022 14:00 - 16:30 in Wicklow Hall 2A.
 
 *GETTING IN TOUCH*
 If you would like to contact the organizers for any business related to the mentored sprints please send us an email to [cheuk@europython.eu](mailto:cheuk@europython.eu)
