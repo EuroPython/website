@@ -41,11 +41,11 @@ Please log in to pretalx via (https://program.europython.eu) using the email add
 
 Yes, we will be releasing speakers in the 4th week of June. You'll receive an email from our program team program@europython.eu
 
-For those of you who have purchased tickets before the schedule is announced and thus cannot use the speaker coupons, we will be refunding them upon request.
+For those of you who have purchased tickets before the schedule was announced and thus already have a ticket – please still use the voucher we're going to send you; This is a special ticket type that unlocks a "Speaker" badge – if you want a speaker badge, please configure a new ticket. :)
 
-In order for us to issue the refunds, please provide us with your details by sending us an email at  refunds@europython.eu 
+Your old ticket can be refunded after you have procured the speaker ticket – please send us an email at refunds@europython.eu and we will cancel your old ticket and refund the money.
 
-You can also donate your already purchased ticket to our Financial Aid programme those will be put to good use and automatically go into the financial aid budget for the conference.
+You can also donate your already purchased ticket to our Financial Aid programme those will be put to good use and automatically go into the financial aid budget for the conference – in such case, please let us know and we will cancel your old ticket *without* a refund.
 
 ### Q. What is a Lightning Talk? and when will they be scheduled?
 
@@ -131,3 +131,19 @@ Also, think about the font size in your slides.  You may need to adjust your cod
 Remember, Python people are lovely :)
 
 Even the worst, most nervous presenter is always forgiven, because we all love Python, and we love hearing stories about it.
+
+# Tips for remote speakers
+
+## Double & triple check your internet connection
+We recommend using LAN cables to ensure that you have proper internet connection. Ensure that you do not have too many apps/ processes running in the background.
+
+## Ensure that your video feed is clear
+We'll be using zoom to broadcast you live during the conference. Do ensure that your webcam is clean and your surroundings are clean. If possible then position your webcam in such a way that your face covers 75% of the video feed.
+
+## Use a dedicated microphone
+We've seen that in-built microphones pick a lot of background noise. To avoid that please make sure that you are using a dedicated microphone during the presentation.
+
+## Reach out to us on venueless in case of emergencies
+You'll receive an invite to venueless (our online platform). Should you face an issue do reach out to us on the `remote-speaker` channel for remote presenters in case of emergencies.
+
+More tips incoming..
