@@ -16,6 +16,11 @@
           "name": "Microsoft",
           "url": "https://azure.microsoft.com/free/python/",
           "logo": "img/logos/sponsor_logos/microsoft.svg"
+        },
+        {
+          "name": "Bank of America",
+          "url": "https://careers.bankofamerica.com/en-us/job-search?ref=search&start=20&rows=30&search=jobsByLocation&filters=area%3DTechnology&searchstring=Dublin%2C+Ireland",
+          "logo": "img/logos/sponsor_logos/bofa.svg"
         }
       ]
     },
