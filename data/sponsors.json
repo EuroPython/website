@@ -110,6 +110,11 @@
           "name": "Superblocks",
           "url": "https://www.superblocks.com/?referrer=europython",
           "logo": "/img/logos/sponsor_logos/superblocks.svg"
+        },
+        {
+          "name": "DIGIT Game Studios",
+          "url": "https://www.digitgaming.com/",
+          "logo": "/img/logos/sponsor_logos/digit.svg"
         }
       ]
     },
