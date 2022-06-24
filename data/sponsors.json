@@ -75,6 +75,11 @@
           "name": "Sonar",
           "url": "https://www.sonarsource.com/",
           "logo": "img/logos/sponsor_logos/sonar.svg"
+        },
+        {
+          "name": "Udemy",
+          "url": "https://about.udemy.com/careers/",
+          "logo": "img/logos/sponsor_logos/udemy.svg"
         }
       ]
     },
