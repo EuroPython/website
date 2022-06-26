@@ -41,6 +41,11 @@
           "name": "Speaker Mentorship",
           "path": "/mentorship"
         }
+        ,
+        {
+          "name": "How to conference",
+          "path": "/how-to-conference"
+        }        
       ]
     },
     {
