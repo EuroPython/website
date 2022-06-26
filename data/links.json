@@ -66,6 +66,10 @@
           "path": "https://djangogirls.org/en/dublin/"
         },
         {
+          "name": "Hugging Face Gradio Hackathon",
+          "path": "/hf-gradio-hackathon"
+        },        
+        {
           "name": "Trans*Code",
           "path": "/trans_code"
         },
