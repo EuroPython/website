@@ -379,7 +379,7 @@ Numberly helps its customers collect, analyze and leverage their data across all
 
 [Apply here](https://jobs.smartrecruiters.com/numberly/743999812873647)
 
-## [Oomnitza](URL) ##
+## [Oomnitza](https://www.oomnitza.com/) ##
 
 Oomnitza is a Silicon Valley-based SaaS Enterprise Technology Management solution that provides a key business process system for endpoints, applications, infrastructure, and networking. It automates the lifecycle processes, from purchase to end of life, ensuring your technology is secure, compliant, and optimized.
 
