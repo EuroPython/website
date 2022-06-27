@@ -78,7 +78,9 @@ Algo Software Engineers (AE) are programmers that focus on the software that pow
 [Apply here](https://www.hudsonrivertrading.com/careers/job/?gh_jid=75806&req_id=5c9e144f1us)
 
 ## [RapidRatings Ireland](https://www.rapidratings.com) ##
-RapidRatings is a boutique fintech company and is transforming the way the world’s leading companies manage supply chain and third-party risk by providing the most sophisticated analysis of the financial health of public and private companies in the world. We provide predictive analytics and powerful technology that provides deep insight into company’s financial health. Here at RapidRatings we foster an environment where employees feel recognized for their contributions, appreciated for their individuality, and challenged to do their best. We know that bringing together employees with different backgrounds, perspectives, and experiences sparks innovation, promotes better decision making and yields the creative problem solving that’s critical to our long-term success. With us, you are not just a number – we value people who are working hard and strive to make a real difference. Join our team to be a part of an industry-changing company and drive your career in the right direction.
+RapidRatings is a boutique fintech company and is transforming the way the world’s leading companies manage supply chain and third-party risk by providing the most sophisticated analysis of the financial health of public and private companies in the world. We provide predictive analytics and powerful technology that provides deep insight into company’s financial health.
+
+Here at RapidRatings we foster an environment where employees feel recognized for their contributions, appreciated for their individuality, and challenged to do their best. We know that bringing together employees with different backgrounds, perspectives, and experiences sparks innovation, promotes better decision making and yields the creative problem solving that’s critical to our long-term success. With us, you are not just a number – we value people who are working hard and strive to make a real difference. Join our team to be a part of an industry-changing company and drive your career in the right direction.
 <details>
   <summary><h2 id="rr-backend-software-engineer">Backend Software Engineer</h2></summary>
   What background should you bring?
@@ -134,23 +136,15 @@ We currently have 1 full time job positions available in Ireland (hybrid or remo
 [Apply here](https://rapidratings.bamboohr.com/jobs/view.php?id=188)
 
 ## [Ebury](https://ebury.com/) ##
-Ebury is a Global FinTech company specialized in international payments, collections, and
-foreign exchange services. We apply new technologies to enhance and automate financial
-services and processes. This allows small and medium-sized businesses to trade and
-transact internationally by eliminating boundaries related to more traditional procedures.
-Founded in London in 2009, the company has grown its global market presence to a network
-of 30 offices in 20 countries and more than 1,200 employees.
-About the project, Tech Stack:
-You will contribute to the development of a transactional banking platform, focusing on
-receiving and issuing payments in more than 140 currencies.
-Our platform is a single platform (20+ Services) with 3 distinct channels for users to access
-our core functionality:
+Ebury is a Global FinTech company specialized in international payments, collections, and foreign exchange services. We apply new technologies to enhance and automate financial
+services and processes. This allows small and medium-sized businesses to trade and transact internationally by eliminating boundaries related to more traditional procedures.
+Founded in London in 2009, the company has grown its global market presence to a network of 30 offices in 20 countries and more than 1,200 employees.
+You will contribute to the development of a transactional banking platform, focusing on receiving and issuing payments in more than 140 currencies.
+Our platform is a single platform (20+ Services) with 3 distinct channels for users to access our core functionality:
 
 - Salesforce.com for our front office staff
 - Online banking portal build with Vue.js and A Rest API for 3rd party integrations.
 - We build and run services in production using tools such as Jenkins, Terraform, Sentry, Prometheus, ELK. All of these run smoothly in Docker containers on AWS ECS and Kubernetes. You will work with cross-functional product and technology teams across the company to build new features at large and multi-region scale.
-
-WHY WOULD YOU JOIN OUR TECH FAMILY?
 
 If you join Ebury you may count with:
 
