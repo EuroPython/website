@@ -76,3 +76,14 @@ Algo Software Engineers (AE) are programmers that focus on the software that pow
 </details>
 
 [Apply here](https://www.hudsonrivertrading.com/careers/job/?gh_jid=75806&req_id=5c9e144f1us)
+
+<!---
+template
+## [Company](URL) ##
+text
+<details>
+  <summary><h2 id="company-job-title">Job title</h2></summary>
+  text
+</details>
+[Apply here](URL)
+-->
