@@ -379,7 +379,57 @@ Numberly helps its customers collect, analyze and leverage their data across all
 
 [Apply here](https://jobs.smartrecruiters.com/numberly/743999812873647)
 
+## [Oomnitza](URL) ##
 
+Oomnitza is a Silicon Valley-based SaaS Enterprise Technology Management solution that provides a key business process system for endpoints, applications, infrastructure, and networking. It automates the lifecycle processes, from purchase to end of life, ensuring your technology is secure, compliant, and optimized.
+
+<details>
+  <summary><h2 id="Oomnitza-full-stack-engineer">Senior Full Stack Software Engineer (Ireland Remote)</h2></summary>
+
+  Team Oomnitza is looking for an experienced and driven Senior Full Stack Engineer to work on the next generation of SaaS enterprise software.
+  - You have a passion for simple, elegant design and shipping quality product.
+  - You enjoy collaborating and communicating within a rapidly growing, ambitious team.
+  - You have a strong focus on the user with empathy for their challenges and are excited to help build an infrastructure that delivers a positive experience for customers of any size.
+  - You have a strong sense of accountability and thrive in a dynamic team environment.
+
+  We are looking for analytical people who want to solve interesting and complex technological problems and are excited to grow with us as we scale.
+
+</details>
+
+[Apply here](https://jobs.lever.co/oomnitza/0832e416-75a4-4bf8-9f9f-9b56fca48a07) or contact Nicole nicole.maxwell@oomnitza.com
+
+<details>
+  <summary><h2 id="Oomnitza-qa-automation">QA Automation Engineer (Ireland Remote)</h2></summary>
+  Team Oomnitza is looking for an experienced and driven quality assurance automation engineer to work on the next generation of SaaS enterprise software.
+
+  - You will work with product and engineering teams to plan and develop automated test suites for the Oomnitza platform, use and develop new tools to effectively test and improve Oomnitza's - engineering processes, maintain and evaluate automated tests week to week and report problems you discover.
+  - You are excited about providing new tools to the QA team to make verification processes more efficient. You work with developers to make hard-to-test features more testable for QA.
+  - You understand the inner workings of technologies that you test.
+  - You know that it is the job of a Quality Assurance Engineer to speak up at any point in the process.
+  - You are someone with high standards who will push us to be better.
+  - You're someone who wants to see the impact of your work making a difference every day.
+  - You understand the role of Quality Assurance and you are a strong advocate for quality
+  - You are motivated to consider the user experience of the site for various types of users, test the edge cases of products, and lobby for having problems you've encountered get fixed.
+
+</details>
+
+[Apply here](https://jobs.lever.co/oomnitza/11ee5568-4ba2-43a9-95a1-0285e529d732) or contact Nicole nicole.maxwell@oomnitza.com
+
+<details>
+  <summary><h2 id="Oomnitza-eng-dev-manager">Engineering Development Manager (Ireland Remote)</h2></summary>
+  Oomnitza are growing and we are seeking a passionate and driven Engineering Development Manager  who will play a key role in accelerating our growth plans in EMEA.
+  As Engineering Development Manager you will lead a team (or teams) to deliver results that will impact Oomnitza’s  success.
+
+  The Engineering Development Manager adds value by leading and aligning the engineering team with Oomnitza’s vision.
+
+  - You care deeply about helping the people whom you manage grow into excellent engineers and great teammates.
+  - You are interested in technical work, with enough experience to make sure that engineers are moving in the right direction.
+
+  On a given day, you might be reviewing design documents and PRs, coordinating discussions between teams, collaborating on roadmaps with architectural and product stakeholders, and conducting 1:1s with team members.
+
+</details>
+
+[Apply here](https://jobs.lever.co/oomnitza/7c670568-4478-43bd-94f6-d562ff6da505) or contact Nicole nicole.maxwell@oomnitza.com
 
 
 
