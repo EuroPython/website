@@ -221,6 +221,173 @@ Candidate required skills:
 
 [Apply here](https://careers.ebury.com/jobs?department=IT+%26+Technology&query=)
 
+## [Numberly](https://numberly.com/) ##
+Numberly helps its customers collect, analyze and leverage their data across all marketing channels.
+<details>
+  <summary><h2 id="numberly-sw-engineer-dev-ops">Software Engineer / DevOps</h2></summary>
+  Due to our wide range of interconnected products,  our technical issues are very varied and often complex:
+  - processing thousands of queries per second, distributed throughout the world.
+  - operate multiple petabyte databases (Big Data™)
+  - automate our entire bare-metal infrastructure
+  - build tomorrow's digital marketing interfaces.
+
+  To do this, we want to use the right technologies for the right issues:
+  - Python 3 for our web services, our data engineering, and the automation of our infrastructure.
+  - MongoDB and PostgreSQL for their versatility in the use of the data
+  - ScyllaDB when it comes to performance
+  - GitLab and Kubernetes to provide the best possible development experience but also Kafka, Redis, Elasticsearch, Go, and many others...
+
+  Qualifications
+  - Strong IT culture and technical curiosity
+  - Thorough knowledge in at least one back-end stack
+  - Interest in databases, the world of open-source, and/or DevOps culture
+  - Good communicator, able to popularize work, defend ideas and listen to others
+  - Willingness to progress and to help others progress, technically (meetups, internal training) and humanly
+  - Good experience using Python and/or Javascript is a plus
+  - Daily use of Linux is very preferable but not required
+  - Professional English (our teams are international)
+
+  Additional Information
+  - At Numberly, we share a passion for transmission: weekly seminars, talks with professionals who are experts in their field, permanent learning.
+  - A fast and powerful onboarding, thanks in particular to:
+  - Jedi Masters given to new recruits;
+  - Live my life in different teams;
+  - Happy Meetings attended by all the teams in the world to share the group's news.
+  - We cultivate the freedom of speech that allows everyone to participate in the group's influence. Through 1000mercis impacts but also through our activities that create value in the open - Internet, we have a positive impact on our ecosystem.
+  - Numberly is Gender Equal by design (gender equality index of 97/100 in 2020, WeConnect International certification).
+  - Numberly is an international environment (you interact with many nationalities on a daily basis) where you feel at home: warm offices, friendly kitchens, a precise library, space for bicycles. - Coffee and tea at your disposal. Mystery lunches, fancy dress parties and sports classes.
+  - Remote work possible.
+  - Swile card (meal vouchers).
+  - Numberly welcomes candidates with disabilities.
+
+</details>
+
+[Apply here](https://jobs.smartrecruiters.com/numberly/743999812880549)
+
+<details>
+  <summary><h2 id="numberly-data-scientist">Data Scientist</h2></summary>
+
+  We are looking for a data scientist to work on innovative projects in the field of digital marketing.
+  Your job will be to help our team optimize Digital Marketing campaigns using Applied Mathematics and Machine Learning. You will join the data science and analysis team, composed of data scientists, data analysts and a machine learning engineer, where you will be designing new algorithms using your knowledge and analytical skills in order to take on new business challenges.
+
+  Position summary:
+
+  - You will take part in the elaboration, optimization and development of machine-learning algorithms, to improve the efficiency of Numberly’s Relationship Marketing Programs (examples of projects we are currently working on include: scoring of users with their probability of purchase, ranking inventories according to their predicted performance, product recommendation - algorithm, reinforcement learning applied to banner selection ...)
+  - You will have the ownership of the new algorithms you build, from understanding and assessing the business need to the modelisation (based on literature reviews) and finally the implementation in production with the help of our data engineers and machine learning engineer.
+  - You will work closely with marketing teams, project managers, data engineers and machine learning engineers and developers
+  - You will help improve existing algorithms, add new features and adapt them to a complex and always changing environment
+  - You will have access to large datasets to build supervised or unsupervised algorithms:
+  - behavioral and declarative data collected in real time
+  thousands of socio-demographic variables on millions of individuals
+  transactional data collected by our clients
+
+  Qualifications
+  - Master's degree required in a quantitative field such as Machine learning, Statistics or Applied Mathematics
+  - Machine learning algorithms knowledge (both supervised and unsupervised) is required
+  - Coding skills in an object oriented language is required (Python prefered, Java, Scala …)
+  - SQL knowledge will be strongly appreciated
+  - Knowledge or experience in Spark and airflow is a plus
+  - Highly motivated, intellectually curious, strongly interested in the digital industry
+  - Start-up spirit, capable at multitasking and prioritizing workload
+  - Excellent communication skills, strong motivation to work in a fast growing company in an international environment
+
+  Technical environment in Numberly:
+  - Hadoop ecosystem  (HDFS, Hive ... )
+  - Apache Spark
+  - Apache Airflow
+  - SQL Databases (Postgres, SQLServer)
+  - NoSQL databases (MongoDB, ScyllaDB, ElasticSearch, ...) and graph database (Neo4j)
+  - Apache Kafka
+  - Python, Java, Scala
+  - Git, Linux
+  - Docker, Kubernetes
+  - FastAPI
+
+  Additional Information
+
+  At Numberly, we share a passion for transmission: weekly seminars, talks with professionals who are experts in their field, permanent learning.
+  A fast and powerful onboarding, thanks in particular to :
+  - Jedi Masters given to new recruits;
+  - Live my life in different teams;
+  - Happy Meetings attended by all the teams in the world to share the group's news.
+  - We cultivate the freedom of speech that allows everyone to participate in the group's influence. Through 1000mercis impacts but also through our activities that create value in the open Internet, we have a positive impact on our ecosystem.
+  - Numberly is Gender Equal by design (gender equality index of 97/100 in 2020, WeConnect International certification).
+  - Numberly is an international environment (you interact with many nationalities on a daily basis) where you feel at home: warm offices, friendly kitchens, a precise library, space for bicycles.
+  - Coffee and tea at your disposal. Mystery lunches, fancy dress parties and sports classes.
+  - Remote work possible.
+  - Swile card (meal vouchers).
+  - Numberly welcomes candidates with disabilities.
+
+</details>
+
+[Apply here](https://jobs.smartrecruiters.com/numberly/743999826685826)
+
+<details>
+  <summary><h2 id="numberly-data-engineer">Data Engineer / DataOps</h2></summary>
+  Numberly is looking for a Data Engineer to join its dedicated team Data.
+  As a BI and Data Engineer you will:
+  - Create and maintain pipeline jobs that transfer client data to/from our database diverse infrastructure (Hive, MS SQL Server, MongoDB, ScyllaDB).
+  - Participate in a huge migration from CRM to CDP (SQL Server to hadoop, relational DB to NoSQL)
+  - Nurture our large Hadoop cluster, optimize distributed Data Operations and Storage.
+  - Participate in decision making concerning efficient & ethical use of data and technological evolution at Numberly.
+  - Work alongside Data Analytics, Data Scientists, DevOps, and many other talented techs.
+  - Suggest your own technological solutions and try them out (our latest POCs include Apache Druid and Tabular) .
+  - Join a great multicultural team filled with wonderful people
+
+  Qualifications
+
+  You :
+  - Like data in all its forms: raw, reworked, refined, calculated, analyzed, reused…
+  - Like work well done and pay attention to detail
+  - Dream of being able to develop and manage website databases with strong traffic
+  - Want to work with various, prestigious clients on different problems
+  - Are on the lookout for new languages/technologies and test the latest open source trends before others
+
+  You love the following stack?
+
+  - Hadoop ecosystem  (HDFS, Hive, Impala, HBase, ...)
+  - SQL Databases (MySQL, SQLServer)
+  - Apache Spark
+  - ETL (Apache Airflow or equivalent)
+  - NoSQL databases (MongoDB, ScyllaDB, ElasticSearch, ...)
+  - Apache Kafka
+  - Python, Java, Scala
+  - Git
+  - Linux
+
+  Even better if you know :
+
+  - Cube OLAP and SSRS
+  - Cloud Solutions (AWS, GCP, …)
+  - API REST, WebServices
+  - Docker
+  - Kubernetes
+  - Apache Druid
+  - Data Science and Machine Learning
+  - Message Queuing (RabbitMQ, Celery, …)
+
+  Additional Information
+
+  At Numberly, we share a passion for transmission: weekly seminars, talks with professionals who are experts in their field, permanent learning.
+
+  A fast and powerful onboarding, thanks in particular to:
+  - Jedi Masters given to new recruits;
+  - Live my life in different teams;
+  - Happy Meetings attended by all the teams in the world to share the group's news.
+  We cultivate the freedom of speech that allows everyone to participate in the group's influence. Through 1000mercis impacts but also through our activities that create value in the open - Internet, we have a positive impact on our ecosystem.
+  - Numberly is Gender Equal by design (gender equality index of 97/100 in 2020, WeConnect International certification).
+  Numberly is an international environment (you interact with many nationalities on a daily basis) where you feel at home: warm offices, friendly kitchens, a precise library, space for bicycles. - Coffee and tea at your disposal. Mystery lunches, fancy dress parties and sports classes.
+  - Remote work possible.
+  - Swile card (meal vouchers).
+  - Numberly welcomes candidates with disabilities.
+
+</details>
+
+[Apply here](https://jobs.smartrecruiters.com/numberly/743999812873647)
+
+
+
+
 
 <!---
 template
@@ -229,6 +396,8 @@ text
 <details>
   <summary><h2 id="company-job-title">Job title</h2></summary>
   text
+
 </details>
+
 [Apply here](URL)
 -->
