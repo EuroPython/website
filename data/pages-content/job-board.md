@@ -432,6 +432,111 @@ Oomnitza is a Silicon Valley-based SaaS Enterprise Technology Management solutio
 [Apply here](https://jobs.lever.co/oomnitza/7c670568-4478-43bd-94f6-d562ff6da505) or contact Nicole nicole.maxwell@oomnitza.com
 
 
+## [SendCloud](https://www.sendcloud.com/) ##
+This is what you tell people at parties 👋
+
+I work at one of the fastest-growing tech companies in Europe. We have a high-performing environment and we get rewarded for all of our wins. We even made it to the list of the Financial Times top 1000 fastest-growing companies. Together with Sendcloud, I am on a mission to empower businesses with world-class shipping. With more than 23,000 customers throughout Europe, and soon beyond, Sendcloud is the leading shipping solution in Europe.
+
+<details>
+  <summary><h2 id="sendcloud-backend-engineer">Backend Engineer</h2></summary>
+  Who are we looking for? 🧐
+  As a Python Developer, you will be working on the Sendcloud system. Sendcloud integrates various carriers and online stores in a fast and intuitive tool. We release early and often. The development team is responsible for building the Sendcloud system and keeping it running. Our code base has high test coverage, we apply continuous integration and we love to automate stuff to squeeze out manual steps in our process.
+
+  Work on our product is split across 4 domains, each with 2 - 3 cross-functional feature teams, focusing on different parts of our platform:
+  Domain Scaling: focused on integration and interaction with our clients’ e-commerce systems on one side, and support of Sendcloud’s internal teams like finance, operations, marketing, and customer support, on the other side.
+  Domain Delivery Experience: focused on improving the end-user experience with the checkout process, tracking and tracing of shipped parcels, and handling returns.
+  Domain Efficiency: deals with data generated through a shipping process and efficiently processing an order into shipment within the workflow.
+  Domain Carierrland: responsible for interacting with logistics service providers in order to optimize the process of carrier integration.
+
+  Apart from the above-mentioned, we have a Platform domain whose focus is to handle deployments and operations of our software, making sure our production is secure and stable. In there, our shared services team is responsible for building the accounts and authentication system and a large number of shared libraries used for integration. Also, the API enablement team is responsible for the maintenance and configuration of the API developer portal as an offering towards feature teams.
+
+  Our perfect match💗
+  At least 3-5 years of working experience with Python and frameworks like FastAPI and Django. Other Python web frameworks experience is a plus.
+  You have extensive experience using and building REST API’s.
+  Your code is always under test and version control (we use Git).
+  You know your way around Linux and how to work on the command-line.
+  You understand and design your code with observability in production in mind.
+  You have developed distributed and scalable code.
+  You have experience with at least one of the following technologies: Docker, AWS/Azure/GCP.
+  Good written and oral communication skills in English.
+
+  You share our core values;
+  💩 No bullshit: we don’t like big egos, we like honesty, transparency & openness. Share your mistakes with us and learn from them!
+  🎯 Grow & Win: Keep on learning and improving, from each other, mistakes and by actively searching for ways to keep on developing your skills.
+  🎠 Have fun: you are not afraid to be yourself and you love to be surrounded by your awesome colleagues!
+
+  Nice to have:
+  Our front-end is written in VueJS, so, front-end development experience is a big plus.
+  A DevOps mindset and knowledge of Kubernetes, Istio, and Grafana are a big plus.
+
+  Benefits🎉
+  Working in an internationally oriented, fast-growing, certified Great Place to Work! 📌
+  A good salary that grows with the company and your accomplishments
+  After 3 years of employment, you get a sabbatical of 4 weeks from us
+  Keep growing with a study budget of €2000,- per year!
+  Stay fit in our Sendcloud gym!
+  Pension scheme
+  Discount on a health insurance
+  Access to many different discount programs, shop til you drop! 🛒
+
+  This position is open to worldwide candidates.  We offer (in-house) relocation assistance, which will make sure that you have a smooth relocation process. 🏠
+  - A relocation allowance of €3.000 (net) to help you cover the costs of your move to the Netherlands.
+  - A flight ticket to the Netherlands for you (and your partner and children moving with you, if applicable);
+  - Transfer from the airport to your first accommodation
+  - We will help you out with your work VISA (and legal fees) and applying for the 30% ruling (if applicable).
+
+</details>
+
+
+
+<details>
+  <summary><h2 id="sendcloud-devops-engineer">DevOps engineer</h2></summary>
+
+  What you will do in this role 🧐
+
+  As a DevOps engineer you will be working on the Sendcloud platform within the platform domain. Your work will be distributed between the requirements set by the development team, while still being able to contribute to the overall platform improvements. That platform is used by our software development teams to build, test, deploy and run software themselves. You will be responsible for onboarding development teams into the world of DevOps, and guide developers on the importance of inclusion of non-functional requirements (observability, operations, deployments, security, etc.), with how to define their CI/CD pipelines, and assist them with software development tooling.
+
+  As a part of the DevOps team your goal is to make the product development teams fully independent and more productive with a self-service, scalable platform and related software development tooling. You will co-work with the software engineers from development teams, making sure they know how to use the platform, automate repeating tasks, and taking their feedback into account for further improvements.
+
+  Our perfect match💗
+  - You have a background in development and/or operations.
+  - You have at least 3 years of experience in a similar DevOps role.
+  - You have experience with Linux, the command line doesn't scare you.
+  - You have experience with Amazon Web Services.
+  - You swear by Infrastructure as Code (preferably with Terraform).
+  - You have experience developing software yourself.
+  - Knowledge of relational databases.
+  - You have strong experience with Kubernetes, Helm, and running production (micro)services.
+  - You have knowledge of Distributed systems, including containerized (micro)services and highly scalable web applications
+  - You know what it takes to build high-quality software on a professional basis
+  - You are eager to learn and keep improving yourself. You're up to date about the latest technologies and a passionate Engineer
+  - Good written and oral communication skills in English
+  - You are a team player and you like to share your opinion and knowledge.
+
+  Nice to have 🤩
+  Experience with educating people.
+  Experience with canary deployments.
+  Experience with Datadog.
+  You share our core values;
+
+  💩  No bullshit: we don’t like big egos, we like honesty, transparency & openness. Share your mistakes with us and learn from them!
+  🎯  Grow & Win: Keep on learning and improving, from each other, mistakes and by actively searching for ways to keep on developing your skills
+  🎠  Have fun:you are not afraid to be yourself and you love to be surrounded by your awesome colleagues!
+  Benefits🎉
+
+  Working in an internationally oriented, fast-growing, certified Great Place to Work! 📌
+  A good salary that grows with the company and your accomplishments
+  After 3 years of employment, you get a sabbatical of 4 weeks from us
+  Keep growing with a study budget of €2000,- per year!
+  Stay fit in our Sendcloud gym!
+  Pension scheme
+  Discount on a health insurance
+  Access to many different discount programs, shop til you drop! 🛍
+
+
+</details>
+
+[Apply here](https://www.sendcloud.com/jobs/)
 
 <!---
 template
