@@ -2914,6 +2914,17 @@ button[name="vote"]:hover {
     grid-column: var(--grid-column);
   }
 
+  .schedule .headings > span {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    z-index: 20;
+    background-color: white;
+  }
+  .schedule .headings > span.headings-bg {
+    z-index: 19;
+  }
+
   .schedule .row {
     padding: 0;
   }
