@@ -241,6 +241,15 @@ export const Schedule = ({
               {track}
             </span>
           ))}
+          <span
+            className="headings-bg"
+            style={{
+              "--grid-row": `1 / ${HEADING_ROWS + 1}`,
+              "--grid-column": `1 / ${totalRooms + 2}`,
+            }}
+          >
+            &nbsp;
+          </span>
         </div>
 
         {schedule.slots.map((slot, index) => {
