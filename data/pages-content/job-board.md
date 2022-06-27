@@ -90,7 +90,9 @@ RapidRatings is a boutique fintech company and is transforming the way the world
 
 
   We currently have 10+ full time job positions (experienced and junior) available in Ireland (hybrid or remote)
+
 </details>
+
 [Apply here](https://rapidratings.bamboohr.com/jobs/view.php?id=128)
 
 <details>
@@ -109,7 +111,9 @@ RapidRatings is a boutique fintech company and is transforming the way the world
   - Working in Agile environment
 
 We currently have 2 full time job positions available in Ireland (hybrid or remote)
+
 </details>
+
 [Apply here](https://rapidratings.bamboohr.com/jobs/view.php?id=184)
 
 <details>
@@ -126,7 +130,96 @@ We currently have 2 full time job positions available in Ireland (hybrid or remo
 
 We currently have 1 full time job positions available in Ireland (hybrid or remote)
 </details>
+
 [Apply here](https://rapidratings.bamboohr.com/jobs/view.php?id=188)
+
+## [Ebury](https://ebury.com/) ##
+Ebury is a Global FinTech company specialized in international payments, collections, and
+foreign exchange services. We apply new technologies to enhance and automate financial
+services and processes. This allows small and medium-sized businesses to trade and
+transact internationally by eliminating boundaries related to more traditional procedures.
+Founded in London in 2009, the company has grown its global market presence to a network
+of 30 offices in 20 countries and more than 1,200 employees.
+About the project, Tech Stack:
+You will contribute to the development of a transactional banking platform, focusing on
+receiving and issuing payments in more than 140 currencies.
+Our platform is a single platform (20+ Services) with 3 distinct channels for users to access
+our core functionality:
+
+- Salesforce.com for our front office staff
+- Online banking portal build with Vue.js and A Rest API for 3rd party integrations.
+- We build and run services in production using tools such as Jenkins, Terraform, Sentry, Prometheus, ELK. All of these run smoothly in Docker containers on AWS ECS and Kubernetes. You will work with cross-functional product and technology teams across the company to build new features at large and multi-region scale.
+
+WHY WOULD YOU JOIN OUR TECH FAMILY?
+
+If you join Ebury you may count with:
+
+- Being part of a remote-first distributed technology team having flexibility, better work-life balance and wellbeing.
+- Working with enthusiastic, innovative, multinational and collaborative teams, always ready to disrupt and revolutionize the fast-paced FinTech sector!
+- Clear career progression path and continued personal development through training and certifications.
+- Participation in the events of your field of expertise covered by the company.
+- Paid vacation even if you are a contractor.
+- Annual bonus based on your performance.
+- Team meetings once per year in one of our locations - last time it was in Malaga, Spain.
+
+<details>
+  <summary><h2 id="ebury-senior-python-dev">Senior Python Developer - 100% Remote</h2></summary>
+  We are looking for team players that:
+
+  - Have extensive (+5 years) experience in developing complex software systems - we work with Python/Django;
+  - Can “build and run” services and are comfortable with dockerizing code, defining standard REST endpoints, adding monitoring and alerting services
+  - Are writing testable and well covered with unit and integration tests code - we use Jenkins pipeline and Terraform for the deployment of services and infrastructure.
+  - Are comfortable using English language on daily bases both written and spoken
+
+Nice to have:
+  - Experience in developing systems for Mobile Apps Backend Environments.
+  - SQL knowledge.
+
+</details>
+
+[Apply here](https://careers.ebury.com/jobs?department=IT+%26+Technology&query=)
+
+
+<details>
+  <summary><h2 id="ebury-mobile-dev">Mobile Apps Backend Developer - 100% Remote</h2></summary>
+
+  You'll love to work with us if:
+
+  - You have experience in developing complex software systems for Mobile Apps Backend Environments. We mainly work with Python, but it is also ok if you are more comfortable with other languages - like Node.js or Go.
+  - You like to be a support for all the mobile backend as a service. Analytics, notifications, storage frameworks such as Firebase, Amplify, or similar.
+  - You want to “build and run” services. Therefore, you will be comfortable with dockerizing your code, defining standard REST endpoints, adding monitoring, and alerting for your services.
+  - K8s knowledge is a plus
+  - You build your code to be testable and well covered with unit and integration tests.
+  - We use CI Jenkins pipelines and terraform for the deployment of services and infrastructure. From time to time, you might need to contribute to it.
+  - You are able to communicate clearly and concisely your ideas in English both written and spoken.
+
+</details>
+
+[Apply here](https://careers.ebury.com/jobs?department=IT+%26+Technology&query=)
+
+
+<details>
+  <summary><h2 id="ebury-senior-sre">Senior Site Reliability Engineer - 100% Remote</h2></summary>
+
+You will be joining our SRE team to focus on site reliability of our Finance and Foreign
+Exchange platform, specifically looking to further decouple our application deployment and
+infrastructure.
+
+We are mainly in AWS, and we are actively migrating to EKS and implementing Kafka.
+Candidate required skills:
+
+- Several years of relevant industry experience building large scale distributed systems.
+- Experience operating web-scale deployments of containerised systems on Kubernetes and Amazon or Google Container Services.
+- A deep understanding of programming languages and the systems you've worked on.
+- A passion for architecting large systems with elegant interfaces that can scale easily
+- A hunger for tracking down root causes, no matter where it takes you and fixing them in systematic ways. Working with code owners to prevent repeats.
+- A love for writing code - we use Python; you don’t need to be an expert, but the experience is a plus and we will expect you to learn on the job.
+- Excellent written and interpersonal communication skills and willingness to uphold Eburys values.
+- Our operating language is English but a knowledge of Spanish or Portuguese is a bonus.
+
+</details>
+
+[Apply here](https://careers.ebury.com/jobs?department=IT+%26+Technology&query=)
 
 
 <!---
