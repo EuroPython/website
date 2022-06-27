@@ -64,11 +64,15 @@
         {
           "name": "Django Girls",
           "path": "https://djangogirls.org/en/dublin/"
-        },
+        },     
         {
           "name": "Trans*Code",
           "path": "/trans_code"
         },
+        {
+          "name": "Hugging Face Gradio Hackathon",
+          "path": "/hf-gradio-hackathon"
+        },        
         {
           "name": "MakerFest",
           "path": "/makerfest"
