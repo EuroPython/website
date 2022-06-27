@@ -77,6 +77,58 @@ Algo Software Engineers (AE) are programmers that focus on the software that pow
 
 [Apply here](https://www.hudsonrivertrading.com/careers/job/?gh_jid=75806&req_id=5c9e144f1us)
 
+## [RapidRatings Ireland](https://www.rapidratings.com) ##
+RapidRatings is a boutique fintech company and is transforming the way the world’s leading companies manage supply chain and third-party risk by providing the most sophisticated analysis of the financial health of public and private companies in the world. We provide predictive analytics and powerful technology that provides deep insight into company’s financial health. Here at RapidRatings we foster an environment where employees feel recognized for their contributions, appreciated for their individuality, and challenged to do their best. We know that bringing together employees with different backgrounds, perspectives, and experiences sparks innovation, promotes better decision making and yields the creative problem solving that’s critical to our long-term success. With us, you are not just a number – we value people who are working hard and strive to make a real difference. Join our team to be a part of an industry-changing company and drive your career in the right direction.
+<details>
+  <summary><h2 id="rr-backend-software-engineer">Backend Software Engineer</h2></summary>
+  What background should you bring?
+
+  - coding experience and knowledge of Python, experience with Django or Flask.
+  - comfortable navigating databases and experience with SQL.
+  - proficient with HTTP and socket services, REST and RPC APIS, OpenAPI as well as continuous Integration and testing (Jenkins).
+  - experience with AWS services (Lambda, EKS, ECR) or Containerisation (Docker, Kubernetes).
+
+
+  We currently have 10+ full time job positions (experienced and junior) available in Ireland (hybrid or remote)
+</details>
+[Apply here](https://rapidratings.bamboohr.com/jobs/view.php?id=128)
+
+<details>
+  <summary><h2 id="rr-frontend-software-engineer">Frontend/UI Engineer</h2></summary>
+  What background should you bring?
+
+  Knowledge in HTML5, CSS and Javascript are a must as that’s where you’ll be spending most of your time - and especially in the context of Adaptive & Responsive design. We're looking for a person with an appetite for learning, and the following core skillset:
+
+  - JavaScript ECMAScript 2018
+  - ReactJS
+  - Utility first CSS frameworks (Tailwind CSS)
+  - Webpack, Github Actions
+  - Data visualisation (preferably with D3)
+  - Unit testing (preferably with testing-library) and E2E testing (preferably with Cypress)
+  - Working experience in cross-browser and W3C accessibility standards
+  - Working in Agile environment
+
+We currently have 2 full time job positions available in Ireland (hybrid or remote)
+</details>
+[Apply here](https://rapidratings.bamboohr.com/jobs/view.php?id=184)
+
+<details>
+  <summary><h2 id="rr-data-engineer">Data Engineer</h2></summary>
+  What background should you bring? 
+
+  - Programming, systems integration, and Data Warehousing environments 
+  - Maintenance of systems, processes, code and pipelines for the processing of data from a range of sources and types
+  - ETL/DWH developer with strong knowledge in designing, developing and delivering end-to-end data integration processes for large scale data warehouses
+  - Deep Knowledge of SQL, data modelling and data warehousing concepts.
+  - Experience in data management frameworks; Data Quality Profiling, Metadata Management, Master Data Management, cleansing/standardising, and analysing. 
+  - Strong command of relevant programming/scripting languages: e.g., Python, R.
+  - Experience with and knowledge of data visualization tools e.g., Looker, QuickSight, Yellowfin, Pyramid
+
+We currently have 1 full time job positions available in Ireland (hybrid or remote)
+</details>
+[Apply here](https://rapidratings.bamboohr.com/jobs/view.php?id=188)
+
+
 <!---
 template
 ## [Company](URL) ##
