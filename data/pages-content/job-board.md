@@ -432,7 +432,7 @@ Oomnitza is a Silicon Valley-based SaaS Enterprise Technology Management solutio
 [Apply here](https://jobs.lever.co/oomnitza/7c670568-4478-43bd-94f6-d562ff6da505) or contact Nicole nicole.maxwell@oomnitza.com
 
 
-## [SendCloud](https://www.sendcloud.com/) ##
+## [Sendcloud](https://www.sendcloud.com/) ##
 This is what you tell people at parties 👋
 
 I work at one of the fastest-growing tech companies in Europe. We have a high-performing environment and we get rewarded for all of our wins. We even made it to the list of the Financial Times top 1000 fastest-growing companies. Together with Sendcloud, I am on a mission to empower businesses with world-class shipping. With more than 23,000 customers throughout Europe, and soon beyond, Sendcloud is the leading shipping solution in Europe.
