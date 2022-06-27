@@ -23,7 +23,7 @@ Anyone with a EuroPython Conference or Combined Ticket. Just join the Hugging Fa
 You will need a computer with internet access.
  
 # WHAT DO I NEED TO KNOW?
-Should have existing Python and machine learning knowledge. No Gradio or Hugging Face experience is necessary. 
+Should have existing (beginner level) Python and Machine Learning knowledge. No Gradio or Hugging Face experience is necessary. 
  
 # Mentors
 We will have two Gradio team members in person at EuroPython to help out hackathon attendees!
