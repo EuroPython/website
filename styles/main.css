@@ -2683,6 +2683,20 @@ button[name="vote"]:hover {
   padding: 0.5rem 0.5rem;
 }
 
+.talk__time {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 20;
+}
+
+@media all and (min-width: 1180px) {
+  .talk__time {
+    position: static;
+    z-index: 1;
+  }
+}
+
 .schedule .row {
   padding: 0 0.5rem;
 }
