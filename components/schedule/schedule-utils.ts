@@ -3,8 +3,10 @@ import { OrphanTimeSlot, Session, TimeSlot } from "./types";
 
 const TYPES_MAP = {
   "Talk [in-person]": "talk",
+  "Talk": "talk",
   "Talk [remote]": "talk-remote",
   "Poster [in-person]": "poster",
+  "Poster": "poster",
   "Tutorial [in-person]": "tutorial",
 };
 
