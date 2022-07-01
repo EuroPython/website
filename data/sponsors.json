@@ -90,6 +90,11 @@
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/python//?utm_medium=cto&utm_content=site-partner&utm_source=site-partner&utm_campaign=MKTG_2002TechEvent_EuroPython&tactic=616847",
           "logo": "img/logos/sponsor_logos/bloomberg.svg"
+        },
+        {
+          "name": "Workday",
+          "url": "https://www.workday.com",
+          "logo": "img/logos/sponsor_logos/workday.svg"
         }
       ]
     },
