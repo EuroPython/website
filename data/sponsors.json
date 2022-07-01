@@ -85,6 +85,11 @@
           "name": "Rapid Ratings",
           "url": "https://www.rapidratings.com",
           "logo": "img/logos/sponsor_logos/rapidratings.svg"
+        },
+        {
+          "name": "Workday",
+          "url": "https://www.workday.com",
+          "logo": "img/logos/sponsor_logos/workday.svg"
         }
       ]
     },
