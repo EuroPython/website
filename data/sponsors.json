@@ -155,6 +155,16 @@
           "name": "Back Market",
           "url": "https://www.backmarket.com",
           "logo": "/img/logos/sponsor_logos/backmarket.svg"
+        },
+        {
+          "name": "Kiwi.com",
+          "url": "https://jobs.kiwi.com/",
+          "logo": "/img/logos/sponsor_logos/kiwi.svg"
+        },
+        {
+          "name": "Inscribe",
+          "url": "https://www.inscribe.ai",
+          "logo": "/img/logos/sponsor_logos/inscribe.svg"
         }
       ]
     },
