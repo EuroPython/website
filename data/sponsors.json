@@ -209,6 +209,11 @@
           "name": "Sticker Mule",
           "url": "https://mule.to/p2zi/",
           "logo": "img/logos/sponsor_logos/stickermule.svg"
+        },
+        {
+          "name": "RS Ireland",
+          "url": "https://ie.rs-online.com",
+          "logo": "img/logos/sponsor_logos/rsireland.svg"
         }
       ]
     }
