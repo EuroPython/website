@@ -85,6 +85,11 @@
           "name": "Rapid Ratings",
           "url": "https://www.rapidratings.com",
           "logo": "img/logos/sponsor_logos/rapidratings.svg"
+        },
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/python//?utm_medium=cto&utm_content=site-partner&utm_source=site-partner&utm_campaign=MKTG_2002TechEvent_EuroPython&tactic=616847",
+          "logo": "img/logos/sponsor_logos/bloomberg.svg"
         }
       ]
     },
