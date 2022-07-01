@@ -2780,6 +2780,7 @@ button[name="vote"]:hover {
 }
 
 .session-opening-session,
+.session-registration,
 .session-keynote,
 .session-lighting-talks {
   background-color: var(--color-opening);

@@ -18,6 +18,10 @@ const getHeaderText = (session: SessionType) => {
     return "Panel";
   }
 
+  if (session.type === "registration") {
+    return "Registration";
+  }
+
   if (session.audience) {
     return session.audience;
   }
