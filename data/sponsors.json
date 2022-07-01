@@ -80,6 +80,11 @@
           "name": "Udemy",
           "url": "https://about.udemy.com/careers/",
           "logo": "img/logos/sponsor_logos/udemy.svg"
+        },
+        {
+          "name": "Rapid Ratings",
+          "url": "https://www.rapidratings.com",
+          "logo": "img/logos/sponsor_logos/rapidratings.svg"
         }
       ]
     },
