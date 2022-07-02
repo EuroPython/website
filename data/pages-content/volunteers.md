@@ -58,10 +58,11 @@ In return, we will have a small number of perks for you, some small gifts to say
   - This job involves walking and carrying items
 
 ## Ad-hoc Activities
+
   - There are always some tasks which we simply cannot plan beforehand:
-        - moving chairs, tables, or poster walls,
-        - guiding groups between the two venues,
-        - arranging transfers between venue and airport, etc.
+    * moving chairs, tables, or poster walls,
+    * guiding groups between the two venues,
+    * arranging transfers between venue and airport, etc.
 
 
 # More information
@@ -78,9 +79,11 @@ In return, we will have a small number of perks for you, some small gifts to say
   - You can sign up to any number of them.
 
 ### What kind of qualifications do I need?
+
   - You should be able to speak some English.
   - If you speak additional languages, even better. Please let us know.
   - Have time between two talks? Then why not spend it as an EuroPython Volunteer?
 
 ### Ask for help
+
 If you run into any problems, please ask in the #onsite-volunteers channel or contact our helpdesk@europython.eu for any information you may need.
