@@ -15,7 +15,7 @@ export default function IndexPage() {
               tagline={speaker.tagline}
               link={speaker.link}
               picture={speaker.picture}
-              placeholder={speaker.placeholder}
+              placeholder={false}
             />
           ))}
         </ul>

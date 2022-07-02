@@ -2075,13 +2075,24 @@ hr.accent-right::before {
 }
 
 .speakers-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   gap: 2rem;
   list-style-type: none;
   padding: 0;
   margin: var(--unit-3) 0;
+}
+
+@media screen and (min-width: 640px) {
+  .speakers-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .speakers-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .speakers-list-standalone {
@@ -2094,16 +2105,6 @@ hr.accent-right::before {
 }
 
 @media all and (min-width: 960px) {
-  .speakers-list li:first-child,
-  .speakers-list li:nth-child(7) {
-    margin-left: 7rem;
-  }
-
-  .speakers-list li:nth-child(6),
-  .speakers-list li:nth-child(12) {
-    margin-right: 7rem;
-  }
-
   .speakers-list__cta {
     margin: 8rem 2rem 2rem auto;
     width: max-content;
@@ -2116,7 +2117,8 @@ hr.accent-right::before {
 
 .speakers-list li {
   flex-shrink: 0;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 320px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.85);
