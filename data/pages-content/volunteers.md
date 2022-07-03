@@ -17,12 +17,11 @@ In return, we will have a small number of perks for you, some small gifts to say
   - Yo can sign up to any tasks on our Volunteer App before you have bought a ticket
   - You will not earn a ticket for being a volunteer
 
-# How to sign up #FIXME: link to app and images
-  - Sign up to the Europython Volunteers discord server.
+# How to sign up 
+  - Sign up to the Europython Volunteers discord server. [FIXME](http://link.to.discord)
   - Feel free to ask any questions related to volunteering in the #onsite-volunteers channel
-  - Acknowledge our EuroPython 2022 Data Privacy Policy. This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
-  - Sign up to our EuroPython 2022 Volunteer App 
-  - Assign yourself to available shifts on the management page (first come, first served)
+  - Acknowledge our [EuroPython 2022 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
+  - Assign yourself to available shifts on the [Operations spreadsheet](https://docs.google.com/spreadsheets/d/1Tx-gkvRUG0gu1AhvTowfnlWuejoB2YYqhO66EnCgwqo/edit?usp=sharing) (first come, first served)
 
 # Perks for volunteers
 
@@ -32,19 +31,20 @@ In return, we will have a small number of perks for you, some small gifts to say
 
 # Summary of tasks
 
-### Conference Desk
-  - Answer lots of questions
-  - Help with social event tickets, workshops, etc.
-  - Help with print outs, lost items, calls, etc.
-  - Good English skills are mandatory
-  - This job involves a lot of talking and smiling
-
 ### Registration Desk
   - Hand out registration badges
   - Check student IDs
   - Register On-Desk tickets and day passes
   - Answer general questions
   - This job involves a lot of talking
+
+### Session Chairing
+  - Help speakers in preparing their notebooks for the talks
+  - Introduce the speakers to the audience
+  - Signal time left to the speakers
+  - Make sure talks are finished on time
+  - Moderate Q&A session and help with passing around microphones and introduce remote attendees.
+  - This job involves speaking in front of people, moderation, and walking with a microphone
 
 ### T-Shirt Handout
 
