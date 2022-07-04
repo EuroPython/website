@@ -4,6 +4,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { fetchSessions } from "../../lib/sessions";
 import parseISO from "date-fns/parseISO";
 import { format } from "date-fns";
+import { Datetime } from "../../components/datetime";
 
 type Speaker = {
   code: string;
@@ -61,8 +62,22 @@ export default function Page({
             ) : null}
             {start ? (
               <>
-                <dt>Start:</dt>
-                <dd>{format(start, "HH:mm 'on' dd MMMM yyyy")}</dd>
+                <dt>Start (Dublin time):</dt>
+                <dd>
+                  <Datetime
+                    datetime={start}
+                    format="HH:mm 'on' dd MMMM yyyy"
+                    useUserTimezone={false}
+                  />
+                </dd>
+                <dt>Start (your time):</dt>
+                <dd>
+                  <Datetime
+                    datetime={start}
+                    format="HH:mm 'on' dd MMMM yyyy"
+                    useUserTimezone={true}
+                  />
+                </dd>
               </>
             ) : null}
             <dt>Duration:</dt>
@@ -97,7 +112,7 @@ export default function Page({
           </h2>
 
           {session.speakers.map((speaker) => (
-            <div>
+            <div key={speaker.code}>
               <p className="large">{speaker.name}</p>
               <MDXRemote {...speaker.biographySource} />
             </div>
@@ -192,12 +207,13 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     })
   );
 
-  const sessionsAfter = (session.talks_after || []).map((code: string) =>
-    getSession(code, sessions)
-  );
-  const sessionsInParallel = (session.talks_in_parallel || []).map(
-    (code: string) => getSession(code, sessions)
-  );
+  const sessionsAfter = (session.talks_after || [])
+    .map((code: string) => getSession(code, sessions) || null)
+    .filter((s: any) => s !== null);
+
+  const sessionsInParallel = (session.talks_in_parallel || [])
+    .map((code: string) => getSession(code, sessions) || null)
+    .filter((s: any) => s !== null);
 
   return {
     props: {
