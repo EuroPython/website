@@ -70,10 +70,6 @@ const convertTalk = (talk: any, sessions: any): Session => {
 
   const sessionInfo = sessions.find((session: any) => session.code === id);
 
-  if (!sessionInfo) {
-    console.log(talk);
-  }
-
   return {
     id,
     title,
