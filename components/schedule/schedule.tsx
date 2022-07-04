@@ -231,6 +231,8 @@ export const Schedule = ({
 }) => {
   const totalRooms = schedule.rooms.length;
   const { rowSizes, gridTemplateRows } = getGridMetrics(schedule, dayType);
+  const lastSession = schedule.slots[schedule.slots.length - 1];
+  const lastTime = lastSession.time + lastSession.duration;
 
   return (
     <div className="full-width schedule__container">
@@ -324,6 +326,7 @@ export const Schedule = ({
             />
           );
         })}
+        <Break title={"End of day"} time={lastTime} />
       </div>
     </div>
   );
