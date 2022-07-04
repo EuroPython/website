@@ -1358,7 +1358,7 @@ meter::-webkit-meter-even-less-good-value {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 200;
   background: var(--color-background);
   color: var(--color-body);
   padding: var(--unit-1-5);
@@ -2689,7 +2689,7 @@ button[name="vote"]:hover {
   position: sticky;
   top: 0;
   background: white;
-  z-index: 20;
+  z-index: 1;
 }
 
 @media all and (min-width: 1180px) {
@@ -2742,6 +2742,7 @@ button[name="vote"]:hover {
   right: -1px;
   bottom: 0;
   width: 20px;
+  z-index: 0;
 }
 
 .talk > .talk__title,
