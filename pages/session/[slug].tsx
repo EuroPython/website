@@ -207,12 +207,13 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     })
   );
 
-  const sessionsAfter = (session.talks_after || []).map((code: string) =>
-    getSession(code, sessions)
-  );
-  const sessionsInParallel = (session.talks_in_parallel || []).map(
-    (code: string) => getSession(code, sessions)
-  );
+  const sessionsAfter = (session.talks_after || [])
+    .map((code: string) => getSession(code, sessions) || null)
+    .filter((s: any) => s !== null);
+
+  const sessionsInParallel = (session.talks_in_parallel || [])
+    .map((code: string) => getSession(code, sessions) || null)
+    .filter((s: any) => s !== null);
 
   return {
     props: {
