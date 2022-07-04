@@ -7,31 +7,30 @@ subtitle:
 ---
 
 # Financial Aid
-<div style={{textAlign: "center"}}>
-<ButtonWithTitle title="Financial Aid for Remote Tickets is available" text="Apply Now if You Need the Support!" href="https://forms.gle/k4Mh8T83PxADk9gq9" />
-</div>
+Applications for Financial Aid are now **closed**. See the [timeline](#timeline) for more
+information.
 
-Applicants for the previous **in-person Financial Aid applications** are notified of acceptance/rejection by 6 June, 2022. See [timeline](#timeline) for details.
+If you have questions about your existing application, please reach out to us at
+[finaid@europython.eu](mailto:finaid@europython.eu).
 
 ---
 As part of our commitment to the Python community, we are pleased to
 offer grants for people in need of financial support to attend
 EuroPython.
 
-You’ll find all the information you need to apply for such a grant on this
-page.
+You’ll find all the information about such grants on this page.
 
 <img src="/img/eps-logo-white.png" width="50%" />
 
 The EuroPython Society are sponsoring financial aid with €20,000 this year.
 
-You can apply for three different types of grants:
+You can apply for four different types of grants:
 <ol>
   <li className="closed"><b>Free In-person Ticket:</b> Get a standard ticket to the conference in-person for free.</li>
   <li className="closed"><b>Travel / Accommodation:</b> We will reimburse travel and/or accommodation costs up to €400.</li>
   <li className="closed"><b>Visa Application Fee:</b> Get reimbursed for the costs of a single entry
      visa to Ireland (€60).</li>
-  <li className="new"><b>Free remote ticket:</b> Get a standard ticket to the conference remotely for free.</li>
+  <li className="closed"><b>Free remote ticket:</b> Get a standard ticket to the conference remotely for free.</li>
 </ol>
 
 ## Grant Eligibility
@@ -53,9 +52,7 @@ for a grant:
 
 ## How to apply
 
-<a class="button" href="https://forms.gle/k4Mh8T83PxADk9gq9"> Apply for Financial Aid for Remote Tickets</a>
-
-Application for Financial Aid for Remote Tickets is open on 7 June. Applicants for in-person attendance are notified of acceptance/rejection by 6 June, 2022. See timeline for details.
+You can no longer apply for Financial Aid for EuroPython 2022.
 
 ## Timeline
 
@@ -69,7 +66,7 @@ Application for Financial Aid for Remote Tickets is open on 7 June. Applicants f
 
 ## Grant Policies
 
-<h3 className="new" id="free-remote"> Free Remote Ticket</h3>
+<h3 className="closed" id="free-remote"> Free Remote Ticket</h3>
 
 You will receive an individual voucher code that you can use to buy a regular
 conference remote ticket for free.
