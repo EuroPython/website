@@ -22,6 +22,7 @@ In return, we will have a small number of perks for you, some small gifts to say
   - Assign yourself to available shifts on the Operations spreadsheet. (You will get the link after signing the Data Privacy Policy.) 
   - Sign up to the Europython Volunteers discord server. (The link is in our Operations Spreadsheet)
   - Please say hello and introduce yourself in #onsite-volunteers channel. Thanks <3
+  - If you have any problem with the process please email volunteers@europython.eu or find a volunteer fellow in the venue.
 
 # Perks for volunteers
 
@@ -61,7 +62,6 @@ In return, we will have a small number of perks for you, some small gifts to say
 
   - There are always some tasks which we simply cannot plan beforehand:
     * moving chairs, tables, or poster walls,
-    * guiding groups between the two venues,
     * arranging transfers between venue and airport, etc.
 
 
@@ -86,4 +86,4 @@ In return, we will have a small number of perks for you, some small gifts to say
 
 ### Ask for help
 
-If you run into any problems, please ask in the #onsite-volunteers channel or contact our helpdesk@europython.eu for any information you may need.
+If you run into any problems, please ask in the #onsite-volunteers channel in discord or contact our volunteers@europython.eu for any information you may need.
