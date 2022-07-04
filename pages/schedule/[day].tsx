@@ -61,6 +61,12 @@ export default function SchedulePage({
         </article>
 
         <Schedule schedule={schedule} dayType={dayType} />
+
+        <h1 className="highlighted">
+          <a href="#schedule-select" className="h1">
+            Back to top
+          </a>
+        </h1>
       </main>
     </Layout>
   );
