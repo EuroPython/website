@@ -3059,3 +3059,37 @@ button[name="vote"]:hover {
 .session-card__author {
   font-weight: bold;
 }
+
+.talk-time,
+.talk-time div {
+  text-align: center;
+  padding: 0 !important;
+}
+
+.talk-time {
+  display: flex;
+  justify-content: center;
+}
+
+.talk-time > div {
+  margin-left: 2em;
+}
+
+@media all and (min-width: 1180px) {
+  .talk-time {
+    display: block;
+  }
+
+  .talk-time > div {
+    margin-left: 0;
+  }
+}
+
+.talk-time time {
+  display: block;
+}
+
+.talk-time .timezone {
+  font-size: 0.7rem;
+  margin-bottom: 1em;
+}
