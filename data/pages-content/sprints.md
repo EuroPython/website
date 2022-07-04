@@ -27,11 +27,10 @@ Many thanks !
 
 # 2022 Sprints listings
 
-| Group/Topic     | Approx. number of people  | Room      | Contact                | Links to the project                |
-|-----------------|---------------------------|-----------|------------------------|-------------------------------------|
-| Example Project | 5                         | The Forum | helpdesk@europython.eu | https://your_project_url/README.src |
-|                 |                           |           |                        |                                     |
-|                 |                           |           |                        |                                     |
-|                 |                           |           |                        |                                     |
-|                 |                           |           |                        |                                     |
-|                 |                           |           |                        |                                     |
+### Example Project sprint (copy this for your project)
+
+- Number of people: 5 
+- Room: The Forum
+- Contact: helpdesk@europython 
+- Links: https://your_project_url/README.src
+
