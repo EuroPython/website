@@ -6,7 +6,7 @@ subtitle:
 # Virtual Swag #
 Welcome to EuroPython 2022!
 
-Since we're running a hybrid conference, we have virtual swag for you from our sponsors.
+Since we're running a hybrid conference in Dublin & Remotely, we have virtual swag for you, from our sponsors.
 
 Enjoy! 🐍 💝
 
