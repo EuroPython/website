@@ -3094,3 +3094,16 @@ button[name="vote"]:hover {
   font-size: 0.7rem;
   margin-bottom: 1em;
 }
+
+.calendar-link {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 2.4rem;
+  padding: 0 !important;
+}
+
+@media all and (min-width: 1180px) {
+  .calendar-link {
+    position: static;
+  }
+}
