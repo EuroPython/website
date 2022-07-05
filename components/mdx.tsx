@@ -15,10 +15,22 @@ export const components = {
   ButtonLink,
   Note,
 
-  img: ({ src, alt, ...props }: any) => (
-    <figure className="next-image">
-      <Image src={src} alt={alt} {...props} layout="fill" objectFit="contain" />
-      {alt && <figcaption>{alt}</figcaption>}
-    </figure>
-  ),
+  img: ({ src, alt, ...props }: any) => {
+    props.objectFit = "contain";
+
+    if (!props.width && !props.height) {
+      props.layout = "fill";
+      props.objectFit = "contain";
+    }
+    {
+      props.layout = "responsive";
+    }
+
+    return (
+      <figure className="next-image">
+        <Image src={src} alt={alt} {...props} />
+        {alt && <figcaption>{alt}</figcaption>}
+      </figure>
+    );
+  },
 };

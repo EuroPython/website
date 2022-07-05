@@ -16,10 +16,12 @@ import { inspect } from "util";
 export default function Page({
   source,
   title,
+  className,
   path,
 }: {
   title: string;
   source: any;
+  className?: string;
   path: string;
 }) {
   title = title
@@ -28,7 +30,7 @@ export default function Page({
 
   return (
     <Layout path={path} title={title}>
-      <main id="main-content">
+      <main id="main-content" className={className}>
         <MDXRemote {...source} components={components} />
       </main>
     </Layout>
@@ -81,6 +83,11 @@ export async function getStaticProps({
     },
   });
   return {
-    props: { source: mdxSource, path: pagePath, title: data.title || "" },
+    props: {
+      source: mdxSource,
+      path: pagePath,
+      title: data.title || "",
+      className: data.class || null,
+    },
   };
 }

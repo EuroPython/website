@@ -3093,3 +3093,17 @@ button[name="vote"]:hover {
   font-size: 0.7rem;
   margin-bottom: 1em;
 }
+
+.virtual-swag .logo {
+  max-width: 100%;
+  background-color: white;
+  padding: 3rem;
+}
+
+.virtual-swag .logo .next-image {
+  aspect-ratio: unset;
+}
+
+.virtual-swag figure img {
+  border-radius: 0;
+}
