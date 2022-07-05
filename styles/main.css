@@ -3104,7 +3104,5 @@ button[name="vote"]:hover {
 @media all and (min-width: 1180px) {
   .calendar-link {
     position: static;
-    display: inline-block;
-    margin-left: 0.4em;
   }
 }

@@ -7,12 +7,14 @@ export const ICALLink = ({
   start,
   end,
   url,
+  className,
 }: {
   title: string;
   description: string;
   start: string;
   end: string;
   url: string;
+  className?: string;
 }) => {
   const event = {
     title,
@@ -23,7 +25,7 @@ export const ICALLink = ({
   };
 
   return (
-    <ICalendarLink event={event}>
+    <ICalendarLink event={event} className={className}>
       <span title="Download ical">📆</span>
     </ICalendarLink>
   );

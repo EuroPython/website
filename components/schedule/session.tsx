@@ -65,15 +65,17 @@ export const Session = ({
           session.title
         )}
         {session.start && session.end ? (
-          <div className="calendar-link">
+          <>
+            {" "}
             <ICALLink
+              className="calendar-link"
               title={session.title}
               description={session.abstract}
               start={session.start}
               end={session.end}
               url={`https::/ep2022.europython.eu/session/${session.slug}`}
             />
-          </div>
+          </>
         ) : null}
       </p>
 
