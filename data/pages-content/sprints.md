@@ -10,7 +10,7 @@ As is tradition, sprints are not organized by the conference organizers, but ins
 
 ## What is a “Sprint” ?
 
-Most open source software development happens on the web and developers usually communicate online only when working on projects. This usually works out fine, but the lack of live meetings can sometimes be a limiting factor in making good progress.
+Most open source software development happens on the internet and developers usually communicate online only when working on projects. This usually works out fine, but the lack of live meetings can sometimes be a limiting factor in making good progress.
 
 For this reason, a form of impromptu coding meetups called “sprints” or “hackathons” (outside the Python community, the term “hackathon” is more common) were initiated, where developers interested in a project can get together for a short period of time to make quick progress. Since conferences provide the perfect occasion to meet, sprints are made part of the conference program.
 
