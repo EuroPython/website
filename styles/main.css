@@ -2904,6 +2904,7 @@ button[name="vote"]:hover {
     display: grid;
     gap: 1rem;
     grid-template-columns: 5rem repeat(var(--total-rooms), 1fr);
+    padding-right: 1rem;
   }
 
   .schedule .break {
