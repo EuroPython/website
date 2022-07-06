@@ -25,7 +25,7 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   </div>
 </a>
 
-[Get your swag here](/swag/Microsoft_swag.pdf)
+<a href="/swag/Microsoft_swag.pdf" target="_blank">Get your swag here</a>
 
 ---
 
@@ -43,7 +43,7 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   </div>
 </a>
 
-[Get your swag here](/swag/Bloomberg_swag.pdf)
+<a href="/swag/Bloomberg_swag.pdf" target="_blank">Get your swag here</a>
 
 ---
 
@@ -59,7 +59,8 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   <img src="/swag/Numberly_swag.png" width="2480" height="3508" />
 </a>
 
-[Get your swag here](/swag/Numberly_swag.pdf)
+<a href="/swag/Numberly_swag.pdf" target="_blank">Get your swag here</a>
+
 
 ---
 
@@ -76,7 +77,8 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   </div>
 </a>
 
-[Get your swag here](/swag/Optum_swag.pdf)
+<a href="/swag/Optum_swag.pdf" target="_blank">Get your swag here</a>
+
 
 ---
 
@@ -88,7 +90,9 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   </div>
 </a>
 
-[Get your swag here](https://cloud.google.com/developers/europython/)
+<br></br>
+<a href="https://cloud.google.com/developers/europython/" target="_blank">Get your swag here</a>
+
 
 ---
 
@@ -100,7 +104,8 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   </div>
 </a>
 
-[Get your swag here](https://www.hudsonrivertrading.com/about/)
+<br></br>
+<a href="https://www.hudsonrivertrading.com/about/" target="_blank">Get your swag here</a>
 
 ---
 
@@ -112,7 +117,8 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   </div>
 </a>
 
-[Get your swag here](https://www.sonarsource.com/python/?utm_source=europython&utm_medium=event&utm_campaign=python&utm_content=python_ss)
+<br></br>
+<a href="https://www.sonarsource.com/python/?utm_source=europython&utm_medium=event&utm_campaign=python&utm_content=python_ss" target="_blank">Get your swag here</a>
 
 ---
 
@@ -124,4 +130,5 @@ prepared virtual swag for you. Enjoy! 🐍 💝
   </div>
 </a>
 
-[Get your swag here](https://superblocks.com/win?referrer=europython)
+<br></br>
+<a href="https://superblocks.com/win?referrer=europython" target="_blank">Get your swag here</a>
