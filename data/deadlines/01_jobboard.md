@@ -1,6 +1,6 @@
 ---
-title: Check the Job Board
-subtitle: Find your next job
+title: Find Your Next Job
+subtitle: Check the Job Board
 url: /job-board
 image: /img/hall_rotated.png
 ---
