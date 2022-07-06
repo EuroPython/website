@@ -20,6 +20,10 @@
         {
           "name": "Speaker Information",
           "path": "/speaker-info"
+        },        
+        {
+          "name": "Sprints",
+          "path": "/sprints"
         }        
       ]
     },
