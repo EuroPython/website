@@ -628,6 +628,30 @@ Superblocks is the all-in-one programmable platform for developers to build beau
 [Apply here](https://boards.greenhouse.io/superblocks/jobs/4024365005)
 
 
+## [Bloomberg](https://careers.bloomberg.com) ##
+Bloomberg is building the world's most trusted information network for financial professionals. Our 6,500+ engineers are dedicated to advancing and building new systems for the Bloomberg Terminal to solve complex, real-world problems. ​We trust our teams to choose the right technologies for the job, and, at Bloomberg, the answer is often Python. We employ an active community of 2,000+ Python developers who have their hands in everything from financial analytics and data science to contributing to open source technologies like Project Jupyter. Bloomberg is proud to be a Visionary Sponsor of the Python Software Foundation and host of many Python community events around the world. Learn more at https://TechAtBloomberg.com/python.
+<details>
+  <summary><h2 id="bloomberg-sr-eng">Senior Software Engineer - Commodities Navigation and Analytics (London)</h2></summary>
+
+</details>
+
+[Apply here](https://careers.bloomberg.com/job/detail/103840)
+
+<details>
+  <summary><h2 id="bloomberg-sw-eng">Senior Software Engineer (C++/Python) - Electronic Trading Data Science Platform (London)</h2></summary>
+
+</details>
+
+[Apply here](https://careers.bloomberg.com/job/detail/93050)
+
+<details>
+  <summary><h2 id="bloomberg-eng-trade">Senior Software Engineer - Trade Processing (London)</h2></summary>
+
+</details>
+
+[Apply here](https://careers.bloomberg.com/job/detail/90500)
+
+
 <!---
 template
 ## [Company](URL) ##
