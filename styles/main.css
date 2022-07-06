@@ -3095,6 +3095,20 @@ button[name="vote"]:hover {
   margin-bottom: 1em;
 }
 
+.virtual-swag .logo {
+  max-width: 100%;
+  background-color: white;
+  padding: 3rem;
+}
+
+.virtual-swag .logo .next-image {
+  aspect-ratio: unset;
+}
+
+.virtual-swag figure img {
+  border-radius: 0;
+}
+
 .calendar-link {
   position: absolute;
   bottom: 0.8rem;
@@ -3106,6 +3120,7 @@ button[name="vote"]:hover {
   .calendar-link {
     position: static;
   }
+
 }
 
 .speakers-letters > h3 {

@@ -120,11 +120,15 @@
     {
       "name": "Hybrid Participation",
       "items": [
-        {
-          "name": "EuroPython 2022 Remote",
-          "path": "/remote"
-        }
-      ]
+      {
+        "name": "EuroPython 2022 Remote",
+        "path": "/remote"
+      },
+      {
+        "name": "Virtual Swag",
+        "path": "/virtual-swag"
+      }
+    ]
     }
   ],
   "footer": [
