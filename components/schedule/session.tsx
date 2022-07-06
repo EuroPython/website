@@ -1,3 +1,4 @@
+import { ICALLink } from "../ical-link";
 import { numberToTime } from "./time-helpers";
 import type { Session as SessionType } from "./types";
 
@@ -41,6 +42,10 @@ export const Session = ({
   const singleSpeaker = speakers?.length === 1;
   const firstSpeaker = speakers?.[0];
 
+  const roomsAndSpeakers = session.rooms.concat(
+    speakers?.map((s) => s.name) || []
+  );
+
   return (
     <div className="talk" style={style}>
       <header className={`${session.audience || ""} session-${session.type}`}>
@@ -59,6 +64,19 @@ export const Session = ({
         ) : (
           session.title
         )}
+        {session.start && session.end ? (
+          <>
+            {" "}
+            <ICALLink
+              className="calendar-link"
+              title={session.title}
+              description={session.abstract}
+              start={session.start}
+              end={session.end}
+              url={`https::/ep2022.europython.eu/session/${session.slug}`}
+            />
+          </>
+        ) : null}
       </p>
 
       {speakers.length ? (
@@ -75,9 +93,7 @@ export const Session = ({
           </>
         </div>
       ) : null}
-      <div className="talk__mobile-details">
-        {session.rooms.join(", ")}, {speakers?.map((s) => s.name).join(", ")}
-      </div>
+      <div className="talk__mobile-details">{roomsAndSpeakers.join(", ")}</div>
     </div>
   );
 };
