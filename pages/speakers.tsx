@@ -1,6 +1,7 @@
 import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { fetchSpeakers } from "../lib/speakers";
+import { Fragment } from "react";
 
 type Speaker = {
   code: string;
@@ -15,14 +16,16 @@ type Speaker = {
 
 export default function SpeakersPage({ speakers }: { speakers: Speaker[] }) {
   // group speakers by starting letter
-  const groups = speakers.reduce((acc, speaker) => {
-    const letter = speaker.name[0].toUpperCase();
-    if (!acc[letter]) {
-      acc[letter] = [];
-    }
-    acc[letter].push(speaker);
-    return acc;
-  }, {} as { [key: string]: Speaker[] });
+  const groups = speakers
+    .filter((speaker) => !!speaker.name)
+    .reduce((acc, speaker) => {
+      const letter = speaker.name[0].toUpperCase();
+      if (!acc[letter]) {
+        acc[letter] = [];
+      }
+      acc[letter].push(speaker);
+      return acc;
+    }, {} as { [key: string]: Speaker[] });
 
   return (
     <Layout title="Speakers - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
@@ -37,17 +40,21 @@ export default function SpeakersPage({ speakers }: { speakers: Speaker[] }) {
           ))}
         </div>
 
-        {Object.entries(groups).map(([letter, speakers]) => (
-          <div key={letter} id={`letter-${letter}`}>
-            <h2>{letter}</h2>
-            <ul>
-              {speakers.map((speaker) => (
-                <li key={speaker.code}>
-                  <a href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {Object.entries(groups).map(([letter, speakers], index) => (
+          <Fragment key={letter}>
+            <div id={`letter-${letter}`}>
+              <h2>{letter}</h2>
+              <ul className="all-speakers-list">
+                {speakers.map((speaker) => (
+                  <li key={speaker.code}>
+                    <a href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {index !== Object.keys(groups).length - 1 && <hr />}
+          </Fragment>
         ))}
       </main>
     </Layout>

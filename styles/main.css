@@ -3112,3 +3112,7 @@ button[name="vote"]:hover {
   display: inline-block;
   margin-right: 0.4em;
 }
+
+.all-speakers-list a {
+  color: inherit;
+}
