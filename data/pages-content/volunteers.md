@@ -18,10 +18,12 @@ In return, we will have a small number of perks for you, some small gifts to say
   - You will not earn a ticket for being a volunteer
 
 # How to sign up 
-  - Acknowledge our [EuroPython 2022 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
-  - Assign yourself to available shifts on the Operations spreadsheet. (You will get the link after signing the Data Privacy Policy.) 
-  - Sign up to the Europython Volunteers discord server. (The link is in our Operations Spreadsheet)
-  - Please say hello and introduce yourself in #onsite-volunteers channel. Thanks <3
+  - Fill this form and we will contact and onboard you. https://forms.gle/Y472nH5m8ZRWpbVP8 
+  - If you want to save some time you can: 
+      + Acknowledge our [EuroPython 2022 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
+      + Assign yourself to available shifts on the Operations spreadsheet. (You will get the link after signing the Data Privacy Policy.) 
+      + Sign up to the Europython Volunteers discord server. (The link is in our Operations Spreadsheet)
+      + Please say hello and introduce yourself in #onsite-volunteers channel. Thanks <3
   - If you have any problem with the process please email volunteers@europython.eu or find a volunteer fellow in the venue.
 
 # Perks for volunteers
