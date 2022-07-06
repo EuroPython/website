@@ -651,6 +651,13 @@ Bloomberg is building the world's most trusted information network for financial
 
 [Apply here](https://careers.bloomberg.com/job/detail/90500)
 
+## [Google Cloud](https://careers.google.com) ##
+Find your next job at Google • Google Cloud • YouTube and create • design • code • build for everyone: https://careers.google.com
+
+We currently have 1,400+ full-time job positions for Pythonistas worldwide:
+
+[Apply here](https://careers.google.com/jobs/results?employment_type=FULL_TIME&q=python)
+
 
 <!---
 template
