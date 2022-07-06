@@ -3107,3 +3107,12 @@ button[name="vote"]:hover {
     position: static;
   }
 }
+
+.speakers-letters > h3 {
+  display: inline-block;
+  margin-right: 0.4em;
+}
+
+.all-speakers-list a {
+  color: inherit;
+}

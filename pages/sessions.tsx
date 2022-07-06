@@ -10,7 +10,7 @@ type Session = {
   code: string;
   slug: string;
   title: string;
-  speakers: { name: string }[];
+  speakers: { name: string; slug: string }[];
   abstractSource: any;
 };
 
@@ -93,7 +93,12 @@ export default function SessionsPage({
                 <a href={`/session/${session.slug}`}>{session.title}</a>
               </h2>
               <p className="session-card__author">
-                {session.speakers.map((speaker) => speaker.name).join(", ")}
+                {session.speakers.map((speaker, index) => (
+                  <>
+                    <a href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
+                    {index < session.speakers.length - 1 && ", "}
+                  </>
+                ))}
               </p>
 
               <MDXRemote {...session.abstractSource} />
@@ -135,6 +140,6 @@ export async function getStaticProps() {
       tracks,
       submissionTypes,
     },
-    revalidate: 60
+    revalidate: 60,
   };
 }
