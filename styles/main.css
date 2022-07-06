@@ -2904,6 +2904,7 @@ button[name="vote"]:hover {
     display: grid;
     gap: 1rem;
     grid-template-columns: 5rem repeat(var(--total-rooms), 1fr);
+    padding-right: 1rem;
   }
 
   .schedule .break {
@@ -3106,4 +3107,17 @@ button[name="vote"]:hover {
 
 .virtual-swag figure img {
   border-radius: 0;
+}
+
+.calendar-link {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 2.4rem;
+  padding: 0 !important;
+}
+
+@media all and (min-width: 1180px) {
+  .calendar-link {
+    position: static;
+  }
 }

@@ -16,7 +16,7 @@ const AUDIENCE_MAP = {
   expert: "advanced",
 };
 
-const convertTalk = (talk: any): Session => {
+const convertTalk = (talk: any, sessions: any): Session => {
   const time = timeToNumber(talk.time);
   const evDuration = parseInt(talk.ev_duration || "0", 10);
   const ttDuration = parseInt(talk.tt_duration || "0", 10);
@@ -68,10 +68,13 @@ const convertTalk = (talk: any): Session => {
       }))
     : [];
 
+  const sessionInfo = sessions.find((session: any) => session.code === id);
+
   return {
     id,
     title,
     duration,
+    abstract: sessionInfo?.abstract || "",
     day: talk.day as string,
     time,
     endTime,
@@ -80,6 +83,8 @@ const convertTalk = (talk: any): Session => {
     slug,
     type: eventType,
     speakers,
+    start: sessionInfo?.start,
+    end: sessionInfo?.end,
   };
 };
 
@@ -206,14 +211,18 @@ const getTimeslots = (sessions: Session[], rooms: string[]) => {
 export const getScheduleForDay = async ({
   schedule,
   day,
+  sessions,
 }: {
   schedule: any;
+  sessions: any;
   day: string;
 }) => {
   const currentDay = schedule.days[day];
   const rooms = currentDay.rooms;
-  const sessions = currentDay.talks.map(convertTalk);
-  const slots = getTimeslots(sessions, rooms);
+  const talks = currentDay.talks.map((talk: any) =>
+    convertTalk(talk, sessions)
+  );
+  const slots = getTimeslots(talks, rooms);
 
   return { slots, rooms };
 };

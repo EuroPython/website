@@ -7,6 +7,7 @@ export type Session = {
   id: string;
   title: string;
   day: string;
+  abstract: string;
   time: number;
   endTime: number;
   duration: number;
@@ -14,6 +15,8 @@ export type Session = {
   audience?: string;
   rooms: string[];
   type: string;
+  start?: string;
+  end?: string;
   speakers: Speaker[];
 };
 
