@@ -20,11 +20,11 @@
         {
           "name": "Speaker Information",
           "path": "/speaker-info"
-        },        
+        },
         {
           "name": "Sprints",
           "path": "/sprints"
-        }        
+        }
       ]
     },
     {
@@ -72,7 +72,7 @@
         {
           "name": "Django Girls",
           "path": "https://djangogirls.org/en/dublin/"
-        },     
+        },
         {
           "name": "Trans*Code",
           "path": "/trans_code"
@@ -80,7 +80,7 @@
         {
           "name": "Hugging Face Gradio Hackathon",
           "path": "/hf-gradio-hackathon"
-        },        
+        },
         {
           "name": "MakerFest",
           "path": "/makerfest"
@@ -112,7 +112,12 @@
       "items": [{
         "name": "EuroPython 2022 Remote",
         "path": "/remote"
-      }]
+      },
+      {
+        "name": "Virtual Swag",
+        "path": "/virtual-swag"
+      }
+    ]
     }
   ],
   "footer": [{
