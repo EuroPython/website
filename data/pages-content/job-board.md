@@ -575,7 +575,34 @@ Udemy is the world’s largest education platform with more than 30 million mont
 [See open positions here](https://about.udemy.com/jobs/4378188004/)
 
 
+## [Bank of America](https://careers.bankofamerica.com) ##
+In Dublin we are always finding new ways to create a global impact by driving real, positive change through technical innovation.
+Join us and you’ll have the chance to drive environmental, societal, and governmental change, set industry standards and benefit from a wide range of learning and development programmes.
+We’re recruiting for a range of tech roles now. Discover careers at Bank of America today.
 
+<details>
+  <summary><h2 id="bofa-full-stack">Full Stack Developer</h2></summary>
+  Here in our Dublin office we are looking to recruit for a Full Stack Developer role within our Strategic Asset Liability Management Technology (SALMT) space. The team is responsible for delivering cash management, forecasting & funding solutions for treasury globally.
+
+</details>
+
+[See more and apply here](https://careers.bankofamerica.com/en-us/job-detail/21075889/full-stack-developer-dublin-ireland)
+
+<details>
+  <summary><h2 id="bofa-web-ui">Senior Web UI Developer - Risk & Finance Technology </h2></summary>
+  We are looking for a talented senior web UI developer to join the DublinDevLab. You will be responsible for designing and building cutting edge web UI solutions to help solve complex business problems within one of the most interesting parts of one of the world’s largest banks. The successful candidate will be an experienced engineer, who is adaptable and enthusiastic about learning new technologies and business domains.
+
+</details>
+
+[See more and apply here](https://careers.bankofamerica.com/en-us/job-detail/22023891/senior-web-ui-developer-risk-finance-technology-dublin-ireland)
+
+<details>
+  <summary><h2 id="bofa-hadoop">Software Engineer – Hadoop – Risk & Finance Technology</h2></summary>
+  We are looking for a talented senior Hadoop developer to work in the Risk & Finance Technology team. You will be responsible for designing and developing BigData ETL solutions to help solve complex business problems within one of the most interesting parts of one of the world’s largest banks. You will work closely with business users, business analysts and development colleagues to build best in class risk management solutions.
+
+</details>
+
+[See more and apply here](https://careers.bankofamerica.com/en-us/job-detail/22021507/software-engineer-hadoop-risk-finance-technology-dublin-ireland)
 
 
 <!---
