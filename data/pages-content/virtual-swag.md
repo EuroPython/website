@@ -47,6 +47,22 @@ prepared virtual swag for you. Enjoy! 🐍 💝
 
 ---
 
+# Numberly
+
+<a className="img" id="numberly" target="_blank" href="https://numberly.com/en/technology/">
+  <div className="logo">
+    <img src="/swag/numberly.svg" width="469" height="119" />
+  </div>
+</a>
+
+<a className="img" target="_blank" href="/swag/Numberly_swag.pdf">
+  <img src="/swag/Numberly_swag.png" width="2480" height="3508" />
+</a>
+
+[Get your swag here](/swag/Numberly_swag.pdf)
+
+---
+
 # Optum
 
 <a className="img" id="optum" target="_blank" href="https://optum.co/joinus">
@@ -85,18 +101,6 @@ prepared virtual swag for you. Enjoy! 🐍 💝
 </a>
 
 [Get your swag here](https://www.hudsonrivertrading.com/about/)
-
----
-
-# Numberly
-
-<a className="img" id="numberly" target="_blank" href="https://numberly.com/en/technology/">
-  <div className="logo">
-    <img src="/swag/numberly.svg" width="469" height="119" />
-  </div>
-</a>
-
-[Get your swag here](https://numberly.com/en/technology/)
 
 ---
 
