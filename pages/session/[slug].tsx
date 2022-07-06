@@ -10,6 +10,7 @@ type Speaker = {
   code: string;
   name: string;
   avatar: string;
+  slug: string;
   biography: string;
   biographySource: any;
 };
@@ -113,7 +114,9 @@ export default function Page({
 
           {session.speakers.map((speaker) => (
             <div key={speaker.code}>
-              <p className="large">{speaker.name}</p>
+              <p className="large">
+                <a href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
+              </p>
               <MDXRemote {...speaker.biographySource} />
             </div>
           ))}
