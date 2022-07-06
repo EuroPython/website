@@ -116,11 +116,11 @@ prepared virtual swag for you. Enjoy! 🐍 💝
 
 ---
 
-# Udemy
+# Superblocks
 
-<a className="img" id="udemy" target="_blank" href="https://superblocks.com/win?referrer=europython">
+<a className="img" id="Superblocks" target="_blank" href="https://superblocks.com/win?referrer=europython">
   <div className="logo">
-    <img src="/swag/udemy.svg" width="798" height="300" />
+    <img src="/swag/superblocks.svg" width="798" height="300" />
   </div>
 </a>
 
