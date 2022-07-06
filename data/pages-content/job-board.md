@@ -604,6 +604,29 @@ We’re recruiting for a range of tech roles now. Discover careers at Bank of Am
 
 [See more and apply here](https://careers.bankofamerica.com/en-us/job-detail/22021507/software-engineer-hadoop-risk-finance-technology-dublin-ireland)
 
+## [Superblocks](https://www.superblocks.com/?referrer=europython) ##
+Superblocks is the all-in-one programmable platform for developers to build beautiful, secure, enterprise-grade internal tools fast: build any internal app, automate any workflow and schedule any job. Developers use the Superblocks development environment to bind their datasources and UI components together using drag and drop or code. Many programming languages are already supported, including Javascript, Python and SQL.  Superblocks apps, workflows, or jobs are then deployed onto a custom URL with permissions, SSO, audit logging, and other enterprise functionality.
+<details>
+  <summary><h2 id="superblocks-frontend">Software Engineer - Frontend</h2></summary>
+
+</details>
+
+[Apply here](https://boards.greenhouse.io/superblocks/jobs/4024363005)
+
+<details>
+  <summary><h2 id="superblocks-backend">Software Engineer - Backend</h2></summary>
+
+</details>
+
+[Apply here](https://boards.greenhouse.io/superblocks/jobs/4024362005)
+
+<details>
+  <summary><h2 id="superblocks-solutions">Solutions Engineer</h2></summary>
+
+</details>
+
+[Apply here](https://boards.greenhouse.io/superblocks/jobs/4024365005)
+
 
 <!---
 template
