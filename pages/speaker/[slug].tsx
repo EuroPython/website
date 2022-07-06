@@ -94,11 +94,13 @@ export async function getStaticPaths() {
   const speakers = await fetchSpeakers();
 
   return {
-    paths: speakers.map((speaker: { slug: string }) => ({
-      params: {
-        slug: speaker.slug,
-      },
-    })),
+    paths: speakers
+      .filter((speaker: { name: string }) => !!speaker.name)
+      .map((speaker: { slug: string }) => ({
+        params: {
+          slug: speaker.slug,
+        },
+      })),
     fallback: "blocking",
   };
 }
