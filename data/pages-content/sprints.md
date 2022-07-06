@@ -5,7 +5,7 @@ subtitle: Organize or join a sprint in Europython 2022!
 
 Sprints will be run on the conference weekend: Saturday & Sunday Jul 16 & 17 on the conference venue. 
 
-As is tradition, sprints are not organized by the conference organizers, but instead run by the participants who want to put on a sprint. We only provide the virtual rooms and guidance on how to run the sprints.
+As is tradition, sprints are not organized by the conference organizers, but instead run by the participants who want to put on a sprint. We only provide the rooms and guidance on how to run the sprints.
 
 
 ## What is a “Sprint” ?
@@ -26,6 +26,8 @@ Remember to announce it on the social channels too!
 Many thanks !
 
 # 2022 Sprints listings
+
+<p> Please add your sprint here! </p>
 
 ### Example Project sprint (copy this for your project)
 
