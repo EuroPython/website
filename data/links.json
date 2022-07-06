@@ -40,6 +40,10 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
+        },
+        {
+          "name": "Volunteers",
+          "path": "/volunteers"
         }
       ]
     },
