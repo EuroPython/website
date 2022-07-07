@@ -54,12 +54,13 @@ A. The conference will be organised in three phases:
 
 ## **Q. What will the programme look like?**
 
-A. Take a look at our accepted sessions:
-[EP2022 programme](/sessions)
+A. Take a look at our conference schedule:
+[EP2022 programme](/schedule)
 
-The conference will feature around 20 tutorials/workshops/special events, 120 talk sessions and other interactive sessions such as Posters, Helpdesks, Panel Discussions and a MakerFest.
+The conference will feature around 20 tutorials/workshops/special events, 120 talk sessions and other interactive sessions such as Posters, Panel Discussions and a MakerFest.We aim to have a very diverse programme, covering the many different aspects of where and how Python solves problems or engages in interesting things.
 
-We aim to have a very diverse programme, covering the many different aspects of where and how Python solves problems or engages in interesting things.
+Make sure to also check out our different Events listed on our homepage!
+
 
 ## **Q. When do you accept talk proposals?**
 
@@ -80,13 +81,13 @@ Ultimately, the programme team curate the final programme based upon these impor
 [Subscribe to receive email updates](https://blog.europython.eu/#/portal/signup)
 
 ## **Q. What support do you give to speakers?**
-A. If accepted, speakers are eligible for a free conference ticket. Workshop & tutorial organisers are eligible for a free combined ticket. In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.
+A. If accepted,all speakers are eligible for a free conference ticket. Workshop & tutorial organisers are eligible for a free combined ticket. In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.
 
 We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. For example, our [Speaker Mentorship Programme](/mentorship) matched 15 mentees with mentors. Check out the [AMA session](https://www.youtube.com/watch?v=18donGcl0Jg) as part of the Mentorship Programme.
 
 Email us at ([program@europython.eu](mailto:program@europython.eu) to tell us what other broader speaker support you might need!
 
-## **Q. When will ticket sales start?**
+## **Q. When do ticket sales start?**
 
 A. Early Bird ticket sales started on 17 March! Regular tickets are also available alongside early birds tickets.
 
@@ -120,7 +121,7 @@ A. We strive make remote participation as interactive as possible! During the Co
 
 ## **Q. How can I join after having bought a remote ticket?**
 
-A. We will have a dedicated platform for you to join remotely. We will email the the joining instructions a few days before the conference.
+A. Any ticket (except the Stream-only) will have a link to join our remote platform Venueless. Just open your ticket and click on the link to join. There is no user or password, the link is your password. Each ticket can allow 3 simultaneous sessions. If you join with more than 3 devices, the oldest will be logged out. 
 
 ## **Q. What is the difference between a remote ticket and livestream-only ticket**
 
@@ -138,37 +139,55 @@ A. Yes, our
 
 Financial Aid for Remote Tickets is open on 7 June, together with [remote ticket sales](/tickets#remote-tickets). If you need support to attend the conference remotely, make sure to [apply](/finaid#financial-aid) by 3 July 2022.
 
+## **Q. When can sponsors start signing up?**
+
+A. Sponsorship has now closed. Thank you for all the all your support! All sponsorship packages are listed in the [sponsor page](/sponsor). Sponsor related deadlines can be found in the [sponsor info page](/sponsor/information).
+
+We are committed to making EuroPython sponsorship accessible to as many organisations as possible, who are keen to help the community. [SME discount](/sponsor#sme) and [Free Table for Open Source Projects](/sponsor#free-table-for-open-source-projects) are offerings driven by our community spirit.
+
+If you’re interested in sponsorsing EuroPython 2022, get in touch with [the sponsor team](mailto:sponsoring@europython.eu).
+
+# DUBLIN / VENUE QUESTIONS #
+
+## **Q. How do I get to the venue?** ##
+A. We list the information [here](/where)
+
+## **Q. Will I have internet at the venue?** ##
+A. Yes!
+
+## **Q. Where can I charge my precious devices?** ##
+A. During the Tutorial Days (Monday and Tuesday) and Sprints Weekend, the rooms are set up in classroom style. So you will have access to power while learning about cool Python things.
+
+Between Wednesday and Friday, you will have access to power at Level 3 of the Auditorium, The Forum, The Open Space (Wicklow Hall 2A), The Quiet Room (Wicklow Hall 2B).
+
+## **Q. What kind of power plug does Ireland use? What if my devices don't fit?** ##
+
+A. In Ireland the power plugs and sockets are of [type G](https://www.power-plugs-sockets.com/ireland/). The standard voltage is 230 V and the standard frequency is 50 Hz.
+
+It is your duty to bring adequate adapters. The organisers will have a few adapters for emergency. You may also be able to buy a European Schuko-Irish adapter at the venue for 5 EUR each. It would be very difficult to source any other type of adapters during the conference.
+
 ## **Q. Do you provide childcare at the venue?**
 A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.
 
 ## **Q. Do you provide food at the venue?**
 A. Yes. Each ticket includes break refreshments and a light lunch for each day.
 
-
 ## **Q. How soon should I book accommodation and flights?**
-
 A. The time and location of the conference have been set, so you can book at any time. We would recommend you consider flexible bookings in case of any changes of plans in the future as well as appropriate insurance cover.
 
 ## **Q. Could you provide a visa support letter for my visa application?**
 
 A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. Please refer to the official [Irish Immigration Service](https://www.irishimmigration.ie/) for information, including the application process for an [Irish Conference/Event Visa](https://www.irishimmigration.ie/coming-to-work-in-ireland/what-are-my-options-for-working-in-ireland/coming-to-work-for-less-than-90-days/conference-event-visa/).
 
-
 ## **Q. Are you going to offer hotel discounts?**
 
-A. As of now there’s no discount that we know of or can offer. We hope to give you suggestions in Mid-late April. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) to stay tuned.
+A. As of now there’s no discount that we know of or can offer.
 
-## **Q. When can sponsors start signing up?**
 
-A. Sponsors are welcome to sign up now! You can find all the details on our [sponsor page](/sponsor). Sponsors who sign up by 29 April will again receive a 10% Early Bird discount.
-
-We are committed to making EuroPython sponsorship accessible to as many organisations as possible, who are keen to help the community. [SME discount](/sponsor#sme) and [Free Table for Open Source Projects](/sponsor#free-table-for-open-source-projects) are offerings driven by our community spirit.
-
-If you’re interested in sponsorsing EuroPython 2022, get in touch with [the sponsor team](mailto:sponsoring@europython.eu).
 
 ## **Q. How can I help you with the conference organisation?**
 
-A. The EuroPython conference is entirely run by volunteers and we always need some extra help. If you want to get involved, please email [volunteers@europython.eu](mailto:volunteers@europython.eu) and we will be more than happy to answer your questions.
+A. The EuroPython conference is entirely run by volunteers and we always need some extra help. If you are attending the conference and want to get involved, you can find the details about [how to become an onsite volunteer] (/volunteers)!
 
 # COVID Related Questions
 
@@ -180,15 +199,15 @@ A: Travelling can be expected to be complicated during a pandemic. We will aim t
 
 ## **Q: Will there be any COVID safety precautions at the venue?**
 
-A: We will follow the [Government of Ireland’s guidelines](https://www.gov.ie/en/campaigns/c36c85-covid-19-coronavirus/) and there will be appropriate safety precautions at the venue. As of 7 March 2022, the venue is operating at full capacity. The majority of COVID restrictions have been lifted and the only restriction that remains is that hospitality staff must still wear masks.
+A: We will follow the [Government of Ireland’s guidelines](https://www.gov.ie/en/campaigns/c36c85-covid-19-coronavirus/) and there will be appropriate safety precautions at the venue. As of 7 March 2022, the venue is operating at full capacity. The majority of COVID restrictions have been lifted. Though there are currently no legal requirements to wear face-masks at the conference, all The CCD staff will wear masks. We will have sanitisers across the venue.
 
 ## **Q. Do I need to wear a mask during the conference?**
 
-A. You are not required to wear a mask but please be mindful of people who want to do so. Risk is perceived differently by people and you should respect their choice.
+A. Although you are not legally required to wear a mask, we strongly recommend that you do, whenever possible.
 
 ## **Q. Do I need to keep social distance during the conference?**
 
-A. No, as of 7 March 2022 social distancing is not required. Please respect the choices of your fellow attendees if they ask you to keep your distance from them.
+A. As of 7 March 2022 social distancing is not required. We will have stickers indicating people's comfort level for interaction: Happy to hug; Happy to handshake; Elbow bumps only; I like my distance. Please respect the choices of your fellow attendees if they ask you to keep your distance from them.
 
 ## **Q. Do I need to be vaccinated to attend the conference in person?**
 
