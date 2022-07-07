@@ -3128,6 +3128,6 @@ button[name="vote"]:hover {
   margin-right: 0.4em;
 }
 
-.all-speakers-list a {
+.all-speakers-list a, .speaker-link {
   color: inherit;
 }

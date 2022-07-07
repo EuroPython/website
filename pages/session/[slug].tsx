@@ -115,7 +115,7 @@ export default function Page({
           {session.speakers.map((speaker) => (
             <div key={speaker.code}>
               <p className="large">
-                <a href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
+                <a href={`/speaker/${speaker.slug}`} className="speaker-link">{speaker.name}</a>
               </p>
               <MDXRemote {...speaker.biographySource} />
             </div>
