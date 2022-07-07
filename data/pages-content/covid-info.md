@@ -7,7 +7,7 @@ subtitle: Learn about the covid19 policy at EuroPython
 
 Hey Pythonistas! If you’re interested in attending EuroPython 2022 in Dublin,
 Ireland, we have prepared some information about COVID-19 related health
-measures.
+measures. We are committed to organising a safe conference and will comply with all safety protocols the Irish Government set out.
 
 _NOTE:_ Given the constantly changing situation of COVID-19, the information can
 change at any time and without warning; so could the capacity and restrictions
@@ -29,29 +29,43 @@ undertaking
 [antigen or PCR testing](https://www2.hse.ie/conditions/covid19/testing/) as
 appropriate.
 
-## The Venue rules
+## The rules and protocols by Law & The CCD
 
 For conferences, the majority of COVID-19 restrictions at the venue have been
 lifted:
 
+- The CCD staff will wear face-masks;
+- Alcohol-based hand-sanitizer dispensers will be available throughout the building;
 - no mandatory mask for attendees;
 - no additional check of vaccination status;
 - no restrictions for lunches and/or coffee breaks;
 - no social distancing needed when queuing or for any seating arrangements;
 - no capacity limit.
 
-## Recommendations
+## Strong Recommendations
 
-Though most restrictions have been lifted, and you are not required to wear a
-mask or keep social distance during the conference at the venue, please be
-mindful of people who want to do so. Risk is perceived differently by people and
-you should respect their choice.
+Though the majority of COVID restrictions have been lifted, and you are not legally required to wear face-masks at the conference, we strongly recommend that you do, whenever possible. We will have sanitisers across the venue. Please use them.
+
+As of 7 March 2022 social distancing is not required. We will have stickers indicating people's comfort level for interaction: Happy to hug; Happy to handshake; Elbow bumps only; I like my distance. Please respect the choices of your fellow attendees if they ask you to keep your distance from them.
 
 We strongly encourage you to take all the health precautionary measures you can
 to protect yourself and those around us. Thanks!
 
 ---
 
+# COVID Facilities
+
+## Tests
+- <a href="https://www.gov.ie/en/service/e55b8-book-an-antigen-test-and-get-an-eu-digital-covid-certificate/#dublin" target="_blank">Get an Antigen Test</a>
+
+- <a href="https://covid19test.healthservice.ie/hse-self-referral/" target="_blank">Book a PCR Test</a>
+
+## Pharmacies Nearby
+- <a href="https://www.ifscpharmacy.ie/" target="_blank">Remedi Pharmacy</a>: Unit 8 Custom House Square, IFSC, Dublin, Ireland
+- <a href="https://www.lifepharmacy.ie/storelocator/pharmacy-hanover-quay" target="_blank">Life Pharmacy Hanover Quay</a>: Unit 4, The Marker, Forbes Street, Dublin 2, Ireland
+- <a href="https://www.lombardpharmacy.ie/" target="_blank">Lombard Pharmacy</a>: 32 Lombard St E, Dublin 2, D02 EH24, Ireland
+
+---
 **Last update 09 March 2022**
 
 Official references:
