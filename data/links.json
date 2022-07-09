@@ -41,6 +41,10 @@
           "path": "/faq"
         },
         {
+          "name": "COVID Info",
+          "path": "/covid-info"
+        },
+        {
           "name": "Financial Aid",
           "path": "/finaid"
         },

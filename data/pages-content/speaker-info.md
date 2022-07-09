@@ -4,20 +4,22 @@ subtitle: Learn about all things speaking at EuroPython
 ---
 
 # Frequently Asked Questions
- 
+
 ### Q. Can I rely on Internet during my talk?
 
-The conference venue's wifi should be able to handle the large number of devices we expect at the conference. However, as experience shows, relying on Internet during talks is a risky game, so we advise to have a backup plan available to be able to give the talk without Internet connection.
+We will aim to have cabled network for speakers, as well as the conference venue's wifi. However, as experience shows, relying on Internet during talks is a risky game, so we advise you toconsider having a backup plan available to be able to give the talk without Internet connection.
 
-We will try to have cabled Internet available at speaker desks, but cannot promise anything at this time.
+### Q. Do I need adapters for my talk?
 
-### Q. Do I need video adapters for my talk?
-
-We will have HDMI to VGA and mini-DisplayPort to VGA adapters available in each room, but it's always a good idea to bring your own.
+We have very limited HDMI to VGA, mini-DisplayPort to VGA, and Lightning to HDMI adapters available in case of emergency. It's always a good idea to bring your own.
 
 If you are speaking, please test your notebook and adapter with the projector in the room where your talk is scheduled on the day before you give your talk. For speakers giving their talk on Monday, please test your notebooks in one of the breaks before the talks.
 
 Please also check our tips for speakers below.
+
+### Q. Would there be water for speakers?
+
+Due to COVID concerns, we will not have water dedicated to speakers. We will have water coolers at every floor. Please bring your own bottle and refill it before your talk. If you don't have a bottle, we will have limited supply of single-use paper cups available.
 
 ### Q. Do I have to print my poster?
 
@@ -29,7 +31,7 @@ Posters should be **portrait** DIN A0 sized: 84.1cm wide × 118.9cm high.
 
 ### Q. Where will be the poster session?
 
-The area for the poster session will be in the Forum, the poster presentation will overlap with lunch so more attendees have a chance to interact.
+Poster sessions will be in The Forum. You can hang your posters on Wednesday, to be displayed throughout the conference. But please be there to discuss your poster with our attendees in the scheduled session. The poster presentation will overlap with lunch so more attendees have a chance to interact.
 
 There won't be tables in front of each poster.
 
@@ -143,7 +145,7 @@ We'll be using zoom to broadcast you live during the conference. Do ensure that 
 ## Use a dedicated microphone
 We've seen that in-built microphones pick a lot of background noise. To avoid that please make sure that you are using a dedicated microphone during the presentation.
 
-## Reach out to us on venueless in case of emergencies
-You'll receive an invite to venueless (our online platform). Should you face an issue do reach out to us on the `remote-speaker` channel for remote presenters in case of emergencies.
+## Reach out to us on Venueless in case of emergencies
+Just open your speaker ticket and click on the "Join online event" green button to join Venueless, our online platform. Should you face an issue, do reach out to us on the `speakers` channel for remote presenters in case of emergencies.
 
 More tips incoming..
