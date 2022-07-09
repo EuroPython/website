@@ -41,7 +41,7 @@ They are named as such because the hallway can be a place of as much discussion 
 #### Being social @ EuroPython
 At EuroPython we love and encourage informal connections and discussions so much that we decided to help by distributing stickers signalling people’s levels of approachability (and willingness to interact). A green sticker indicates you are up to handshakes and conversations, the blue one says you are up for hugs (and conversations). The yellow signs elbow bumps and signals you should only approach that person if you know them, and finally, the red sticker hints they are not willing to engage in conversations.
 
-![summary](https://user-images.githubusercontent.com/42092770/178044993-d16da742-e1e0-40cd-81c8-c274ddded2df.svg)<br>
+![summary](https://user-images.githubusercontent.com/42092770/178044993-d16da742-e1e0-40cd-81c8-c274ddded2df.svg)
 
 Our conference stickers designed to ease interaction
 
@@ -53,7 +53,7 @@ To the first-timers, especially, please remember that you can always ask to join
 Picture this: You have listened carefully, weighed the knowledge of the people in the room, bit your fingernails and decided to raise your hand to ask THE QUESTION. First of all, we would like to thank you because, without you, our Q&A would be dead.
 Unfortunately, in such circumstances, time is extremely limited and we are here to help you with your enquiry to better help our speaker on addressing it.
 
-![xkcd_conference_question](https://imgs.xkcd.com/comics/conference_question.png) <br>
+![xkcd_conference_question](https://imgs.xkcd.com/comics/conference_question.png)
 
 This person. Do not be like them.
 Source: https://imgs.xkcd.com/comics/conference_question.png
@@ -72,7 +72,7 @@ To avoid such a scenario we recommend you take it _slow_. Take breaks, maybe ski
 Moreover, try and keep your sleep schedule to the best of your extent (easier said than done) and remember to stay hydrated. Dublin doesn’t have the typical hot European summer but coffee ain’t water, yo!
 This is a marathon, not a sprint. And we learn more and assimilate content better when we are rested and enjoying ourselves. And remember: all work and no fun makes us all dull girls! And no one wants to deal with your grumpy self so be cool!
 
-![keep_calm_conference_time](https://sd.keepcalms.com/i-w600/keep-calm-its-conference-time-4.jpg) <br>
+![keep_calm_conference_time](https://sd.keepcalms.com/i-w600/keep-calm-its-conference-time-4.jpg)
 
 Source: https://keepcalms.com/p/keep-calm-its-conference-time/ 
 
