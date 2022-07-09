@@ -146,6 +146,6 @@ We'll be using zoom to broadcast you live during the conference. Do ensure that 
 We've seen that in-built microphones pick a lot of background noise. To avoid that please make sure that you are using a dedicated microphone during the presentation.
 
 ## Reach out to us on Venueless in case of emergencies
-Just open your speaker ticket and click on the "Join online event" green button to join Venueless, our online platform. Should you face an issue, do reach out to us on the `remote-speaker` channel for remote presenters in case of emergencies.
+Just open your speaker ticket and click on the "Join online event" green button to join Venueless, our online platform. Should you face an issue, do reach out to us on the `speakers` channel for remote presenters in case of emergencies.
 
 More tips incoming..

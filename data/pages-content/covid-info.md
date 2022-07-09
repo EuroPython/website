@@ -44,9 +44,31 @@ lifted:
 
 ## Strong Recommendations
 
-Though the majority of COVID restrictions have been lifted, and you are not legally required to wear face-masks at the conference, we strongly recommend that you do, whenever possible. We will have sanitisers across the venue. Please use them.
+Though the majority of COVID restrictions have been lifted, and you are not legally required to wear face-masks at the conference, we strongly recommend that you do, whenever possible. You are encouraged to bring your own mask. Should you forget or lose your own mask, we have a supply of 1000 surgical masks for emergency across days. We will also have sanitisers across the venue. Please use them.
 
-As of 7 March 2022 social distancing is not required. We will have stickers indicating people's comfort level for interaction: Happy to hug; Happy to handshake; Elbow bumps only; I like my distance. Please respect the choices of your fellow attendees if they ask you to keep your distance from them.
+As of 7 March 2022 social distancing is not required. We will have stickers indicating people's comfort level for interaction:
+
+<figure className="small">
+  <p><img src="/img/social-distancing/hug_turquoise.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">Happy to hug</figcaption>
+</figure>
+
+<figure className="small">
+  <p><img src="/img/social-distancing/handshake_green.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">Happy to handshake</figcaption>
+</figure>
+
+<figure className="small">
+  <p><img src="/img/social-distancing/fistbump_yellow.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">First Bump Only</figcaption>
+</figure>
+
+<figure className="small">
+  <p><img src="/img/social-distancing/keep_away_red.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">I like my distance</figcaption>
+</figure>
+
+Please respect the choices of your fellow attendees if they ask you to keep your distance from them.
 
 We strongly encourage you to take all the health precautionary measures you can
 to protect yourself and those around us. Thanks!

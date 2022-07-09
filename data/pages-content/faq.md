@@ -121,7 +121,7 @@ A. We strive make remote participation as interactive as possible! During the Co
 
 ## **Q. How can I join after having bought a remote ticket?**
 
-A. Any ticket (except the Stream-only) will have a link to join our remote platform Venueless. Just open your ticket and click on the link to join. There is no user or password, the link is your password. Each ticket can allow 3 simultaneous sessions. If you join with more than 3 devices, the oldest will be logged out. 
+A. Any ticket (except the Stream-only) will have a link to join our remote platform Venueless. Just open your ticket and click on the link to join. There is no user or password, the link is your password. Each ticket can allow 3 simultaneous sessions. If you join with more than 3 devices, the oldest will be logged out.
 
 ## **Q. What is the difference between a remote ticket and livestream-only ticket**
 
@@ -164,7 +164,7 @@ Between Wednesday and Friday, you will have access to power at Level 3 of the Au
 
 A. In Ireland the power plugs and sockets are of [type G](https://www.power-plugs-sockets.com/ireland/). The standard voltage is 230 V and the standard frequency is 50 Hz.
 
-It is your duty to bring adequate adapters. The organisers will have a few adapters for emergency. You may also be able to buy a European Schuko-Irish adapter at the venue for 5 EUR each. It would be very difficult to source any other type of adapters during the conference.
+It is your duty to bring adequate adapters. The organisers will have a few adapters for emergency, primarily for speakers. You may also be able to buy a European Schuko-Irish adapter from the venue at the cloakroom for 5 EUR each. It would be very difficult to source any other type of adapters during the conference.
 
 ## **Q. Do you provide childcare at the venue?**
 A. Yes. Children are welcome and we provide free childcare service at the venue staffed by qualified childminders. If you are attending with your children, please register a ticket for yourself and select how many children will require childcare at checkout. Space is limited, so do register your request early.
@@ -203,11 +203,33 @@ A: We will follow the [Government of Ireland’s guidelines](https://www.gov.ie/
 
 ## **Q. Do I need to wear a mask during the conference?**
 
-A. Although you are not legally required to wear a mask, we strongly recommend that you do, whenever possible.
+A. Although you are not legally required to wear a mask, we strongly recommend that you do, whenever possible. You are encouraged to bring your own mask. Should you forget or lose your own mask, we have a supply of 1000 surgical masks for emergency across days.
 
 ## **Q. Do I need to keep social distance during the conference?**
 
-A. As of 7 March 2022 social distancing is not required. We will have stickers indicating people's comfort level for interaction: Happy to hug; Happy to handshake; Elbow bumps only; I like my distance. Please respect the choices of your fellow attendees if they ask you to keep your distance from them.
+A. As of 7 March 2022 social distancing is not required. We will have stickers indicating people's comfort level for interaction:
+
+<figure className="small">
+  <p><img src="/img/social-distancing/hug_turquoise.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">Happy to hug</figcaption>
+</figure>
+
+<figure className="small">
+  <p><img src="/img/social-distancing/handshake_green.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">Happy to handshake</figcaption>
+</figure>
+
+<figure className="small">
+  <p><img src="/img/social-distancing/fistbump_yellow.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">First Bump Only</figcaption>
+</figure>
+
+<figure className="small">
+  <p><img src="/img/social-distancing/keep_away_red.svg" width="0.1" height="0.1"/></p>
+  <figcaption className="small">I like my distance</figcaption>
+</figure>
+
+Please respect the choices of your fellow attendees if they ask you to keep your distance from them.
 
 ## **Q. Do I need to be vaccinated to attend the conference in person?**
 
