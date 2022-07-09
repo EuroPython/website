@@ -39,7 +39,7 @@ Many thanks !
 ### Mu Editor 🐮 🐍 🎉
 
 - Number of people: 4-5 core maintainers + anyone who wants to join us.
-- Room: The Forum (otherwise somewhere clearly signposting us)
+- Room: Wicklow Hall 2A/B (otherwise somewhere clearly signposting us)
 - Contact: ntoll@ntoll.org
 - Links: [main website](https://codewith.mu), [developer docs](https://mu.readthedocs.io/en/latest/), [our approach](https://mu.readthedocs.io/en/latest/contributing.html), [CoC](https://mu.readthedocs.io/en/latest/code_of_conduct.html), [developer setup](https://mu.readthedocs.io/en/latest/setup.html) and [suggested first steps](https://mu.readthedocs.io/en/latest/first-steps.html).
 
