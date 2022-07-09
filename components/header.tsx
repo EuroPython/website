@@ -23,7 +23,10 @@ export const Header = () => (
     <nav className="visible-large nav-desktop">
       <NavItems items={links.header} />
     </nav>
-    <a className="button visible-large header-main-cta" href="https://www.europython-society.org/coc/">
+    <a
+      className="button visible-large header-main-cta"
+      href="https://www.europython-society.org/coc/"
+    >
       Code of Conduct
     </a>
 
@@ -66,7 +69,16 @@ export const Header = () => (
       <nav className="header-mobile__navigation">
         <NavItems
           items={[
-            { name: "Buy tickets", path: "/tickets", className: "navigation__cta" },
+            {
+              name: "Code of Conduct",
+              path: "https://www.europython-society.org/coc/",
+              className: "navigation__cta",
+            },
+            {
+              name: "Buy tickets",
+              path: "/tickets",
+              className: "navigation__cta",
+            },
             ...links.header,
           ]}
         />

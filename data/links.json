@@ -1,7 +1,9 @@
 {
-  "header": [{
+  "header": [
+    {
       "name": "Programme",
-      "items": [{
+      "items": [
+        {
           "name": "Schedule",
           "path": "/schedule"
         },
@@ -9,9 +11,13 @@
           "name": "List of Sessions",
           "path": "/sessions"
         },
-{
+        {
           "name": "List of Tutorials",
           "path": "/tutorials"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
         },
         {
           "name": "Keynoters",
@@ -20,12 +26,17 @@
         {
           "name": "Speaker Information",
           "path": "/speaker-info"
-        }        
+        },
+        {
+          "name": "Sprints",
+          "path": "/sprints"
+        }
       ]
     },
     {
       "name": "Info & Support",
-      "items": [{
+      "items": [
+        {
           "name": "FAQ",
           "path": "/faq"
         },
@@ -40,6 +51,10 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
+        },
+        {
+          "name": "Volunteers",
+          "path": "/volunteers"
         }
         ,
         {
@@ -50,7 +65,8 @@
     },
     {
       "name": "Dublin & Community",
-      "items": [{
+      "items": [
+        {
           "name": "Around Dublin",
           "path": "/where"
         },
@@ -62,10 +78,11 @@
     },
     {
       "name": "Events",
-      "items": [{
-        "name": " Beginners' Day - Humble Data Workshop",
-        "path": "/humble-data"
-      },
+      "items": [
+        {
+          "name": " Beginners' Day - Humble Data Workshop",
+          "path": "/humble-data"
+        },
         {
           "name": "Django Girls",
           "path": "https://djangogirls.org/en/dublin/"
@@ -73,6 +90,10 @@
         {
           "name": "Trans*Code",
           "path": "/trans_code"
+        },
+        {
+          "name": "Hugging Face Gradio Hackathon",
+          "path": "/hf-gradio-hackathon"
         },
         {
           "name": "MakerFest",
@@ -90,25 +111,33 @@
     },
     {
       "name": "Sponsorship",
-      "items": [{
-        "name": "Packages",
-        "path": "/sponsor"
-      },
-      {
-        "name": "Sponsor Information",
-        "path": "/sponsor/information"
-      }
-    ]
+      "items": [
+        {
+          "name": "Packages",
+          "path": "/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsor/information"
+        }
+      ]
     },
     {
       "name": "Hybrid Participation",
-      "items": [{
+      "items": [
+      {
         "name": "EuroPython 2022 Remote",
         "path": "/remote"
-      }]
+      },
+      {
+        "name": "Virtual Swag",
+        "path": "/virtual-swag"
+      }
+    ]
     }
   ],
-  "footer": [{
+  "footer": [
+    {
       "name": "CFP",
       "path": "/cfp"
     },

@@ -3,8 +3,10 @@ import { OrphanTimeSlot, Session, TimeSlot } from "./types";
 
 const TYPES_MAP = {
   "Talk [in-person]": "talk",
+  Talk: "talk",
   "Talk [remote]": "talk-remote",
   "Poster [in-person]": "poster",
+  Poster: "poster",
   "Tutorial [in-person]": "tutorial",
 };
 
@@ -14,7 +16,7 @@ const AUDIENCE_MAP = {
   expert: "advanced",
 };
 
-const convertTalk = (talk: any): Session => {
+const convertTalk = (talk: any, sessions: any): Session => {
   const time = timeToNumber(talk.time);
   const evDuration = parseInt(talk.ev_duration || "0", 10);
   const ttDuration = parseInt(talk.tt_duration || "0", 10);
@@ -24,9 +26,13 @@ const convertTalk = (talk: any): Session => {
 
   const id = (talk.talk_id || talk.event_id) as string;
   const title = (talk.title || talk.ev_custom) as string;
-  const audience = AUDIENCE_MAP[talk.level as keyof typeof AUDIENCE_MAP] || "";
+  let audience = AUDIENCE_MAP[talk.level as keyof typeof AUDIENCE_MAP] || "";
   const rooms = (talk.rooms || []) as string[];
   const slug = (talk.slug || "") as string;
+
+  if (slug === "registration") {
+    audience = "";
+  }
 
   let eventType: string = TYPES_MAP[talk.type as keyof typeof TYPES_MAP] || "";
 
@@ -37,6 +43,8 @@ const convertTalk = (talk: any): Session => {
       eventType = "keynote";
     } else if (type.startsWith("lightning talk")) {
       eventType = "lightning-talks";
+    } else if (type.startsWith("registration")) {
+      eventType = "registration";
     } else if (type.startsWith("panel")) {
       eventType = "panel";
     } else if (type.startsWith("opening session")) {
@@ -60,10 +68,13 @@ const convertTalk = (talk: any): Session => {
       }))
     : [];
 
+  const sessionInfo = sessions.find((session: any) => session.code === id);
+
   return {
     id,
     title,
     duration,
+    abstract: sessionInfo?.abstract || "",
     day: talk.day as string,
     time,
     endTime,
@@ -72,6 +83,8 @@ const convertTalk = (talk: any): Session => {
     slug,
     type: eventType,
     speakers,
+    start: sessionInfo?.start,
+    end: sessionInfo?.end,
   };
 };
 
@@ -198,14 +211,18 @@ const getTimeslots = (sessions: Session[], rooms: string[]) => {
 export const getScheduleForDay = async ({
   schedule,
   day,
+  sessions,
 }: {
   schedule: any;
+  sessions: any;
   day: string;
 }) => {
   const currentDay = schedule.days[day];
   const rooms = currentDay.rooms;
-  const sessions = currentDay.talks.map(convertTalk);
-  const slots = getTimeslots(sessions, rooms);
+  const talks = currentDay.talks.map((talk: any) =>
+    convertTalk(talk, sessions)
+  );
+  const slots = getTimeslots(talks, rooms);
 
   return { slots, rooms };
 };

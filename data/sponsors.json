@@ -80,6 +80,21 @@
           "name": "Udemy",
           "url": "https://about.udemy.com/careers/",
           "logo": "img/logos/sponsor_logos/udemy.svg"
+        },
+        {
+          "name": "Rapid Ratings",
+          "url": "https://www.rapidratings.com",
+          "logo": "img/logos/sponsor_logos/rapidratings.svg"
+        },
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/python//?utm_medium=cto&utm_content=site-partner&utm_source=site-partner&utm_campaign=MKTG_2002TechEvent_EuroPython&tactic=616847",
+          "logo": "img/logos/sponsor_logos/bloomberg.svg"
+        },
+        {
+          "name": "Workday",
+          "url": "https://www.workday.com",
+          "logo": "img/logos/sponsor_logos/workday.svg"
         }
       ]
     },
@@ -140,6 +155,21 @@
           "name": "Back Market",
           "url": "https://www.backmarket.com",
           "logo": "/img/logos/sponsor_logos/backmarket.svg"
+        },
+        {
+          "name": "Kiwi.com",
+          "url": "https://jobs.kiwi.com/",
+          "logo": "/img/logos/sponsor_logos/kiwi.svg"
+        },
+        {
+          "name": "Inscribe",
+          "url": "https://www.inscribe.ai",
+          "logo": "/img/logos/sponsor_logos/inscribe.svg"
+        },
+        {
+          "name": "Zalando",
+          "url": "https://www.zalandodublin.com/",
+          "logo": "/img/logos/sponsor_logos/zalando.svg"
         }
       ]
     },
@@ -184,6 +214,11 @@
           "name": "Sticker Mule",
           "url": "https://mule.to/p2zi/",
           "logo": "img/logos/sponsor_logos/stickermule.svg"
+        },
+        {
+          "name": "RS Ireland",
+          "url": "https://ie.rs-online.com",
+          "logo": "img/logos/sponsor_logos/rsireland.svg"
         }
       ]
     }

@@ -1,5 +1,6 @@
+import { parseISO } from "date-fns";
+import { Datetime } from "../datetime";
 import { Break } from "./break";
-import { getDayType } from "./schedule-utils";
 import { Session } from "./session";
 import { numberToTime } from "./time-helpers";
 import {
@@ -7,6 +8,26 @@ import {
   Session as SessionType,
   TimeSlot,
 } from "./types";
+
+const TalkTime = ({ time }: { time: number }) => {
+  const timeAsString = numberToTime(time);
+
+  const isoTime = parseISO(`2022-07-13T${timeAsString}:00+01:00`);
+
+  return (
+    <div className="talk-time">
+      <div>
+        <Datetime datetime={isoTime} useUserTimezone={false} format={"HH:mm"} />
+        <div className="timezone">(Dublin)</div>
+      </div>
+
+      <div>
+        <Datetime datetime={isoTime} useUserTimezone={true} format={"HH:mm"} />
+        <div className="timezone">(You)</div>
+      </div>
+    </div>
+  );
+};
 
 const map = (
   value: number,
@@ -139,7 +160,7 @@ const ScheduleSlot = ({
           "--grid-row": `${row.start} / ${row.end}`,
         }}
       >
-        {numberToTime(slot.time)}
+        <TalkTime time={slot.time} />
       </div>
 
       {slot.sessions.map((session) => {
@@ -186,7 +207,7 @@ const Orphan = ({
           ...style,
         }}
       >
-        {numberToTime(session.time)}
+        <TalkTime time={session.time} />
       </div>
 
       <Session
@@ -210,6 +231,8 @@ export const Schedule = ({
 }) => {
   const totalRooms = schedule.rooms.length;
   const { rowSizes, gridTemplateRows } = getGridMetrics(schedule, dayType);
+  const lastSession = schedule.slots[schedule.slots.length - 1];
+  const lastTime = lastSession.time + lastSession.duration;
 
   return (
     <div className="full-width schedule__container">
@@ -241,6 +264,15 @@ export const Schedule = ({
               {track}
             </span>
           ))}
+          <span
+            className="headings-bg"
+            style={{
+              "--grid-row": `1 / ${HEADING_ROWS + 1}`,
+              "--grid-column": `1 / ${totalRooms + 2}`,
+            }}
+          >
+            &nbsp;
+          </span>
         </div>
 
         {schedule.slots.map((slot, index) => {
@@ -294,6 +326,7 @@ export const Schedule = ({
             />
           );
         })}
+        <Break title={"End of day"} time={lastTime} />
       </div>
     </div>
   );

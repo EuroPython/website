@@ -1358,7 +1358,7 @@ meter::-webkit-meter-even-less-good-value {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 200;
   background: var(--color-background);
   color: var(--color-body);
   padding: var(--unit-1-5);
@@ -2075,13 +2075,24 @@ hr.accent-right::before {
 }
 
 .speakers-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   gap: 2rem;
   list-style-type: none;
   padding: 0;
   margin: var(--unit-3) 0;
+}
+
+@media screen and (min-width: 640px) {
+  .speakers-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .speakers-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .speakers-list-standalone {
@@ -2094,16 +2105,6 @@ hr.accent-right::before {
 }
 
 @media all and (min-width: 960px) {
-  .speakers-list li:first-child,
-  .speakers-list li:nth-child(7) {
-    margin-left: 7rem;
-  }
-
-  .speakers-list li:nth-child(6),
-  .speakers-list li:nth-child(12) {
-    margin-right: 7rem;
-  }
-
   .speakers-list__cta {
     margin: 8rem 2rem 2rem auto;
     width: max-content;
@@ -2116,7 +2117,8 @@ hr.accent-right::before {
 
 .speakers-list li {
   flex-shrink: 0;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 320px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.85);
@@ -2665,7 +2667,6 @@ button[name="vote"]:hover {
   text-align: center;
   font-weight: bold;
   margin: 2rem 0;
-  padding-bottom: 2rem;
 }
 
 .schedule__date {
@@ -2681,6 +2682,20 @@ button[name="vote"]:hover {
 .schedule .break span,
 .schedule .headings span {
   padding: 0.5rem 0.5rem;
+}
+
+.talk__time {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+@media all and (min-width: 1180px) {
+  .talk__time {
+    position: static;
+    z-index: 1;
+  }
 }
 
 .schedule .row {
@@ -2726,6 +2741,7 @@ button[name="vote"]:hover {
   right: -1px;
   bottom: 0;
   width: 20px;
+  z-index: 0;
 }
 
 .talk > .talk__title,
@@ -2766,6 +2782,7 @@ button[name="vote"]:hover {
 }
 
 .session-opening-session,
+.session-registration,
 .session-keynote,
 .session-lighting-talks {
   background-color: var(--color-opening);
@@ -2887,6 +2904,7 @@ button[name="vote"]:hover {
     display: grid;
     gap: 1rem;
     grid-template-columns: 5rem repeat(var(--total-rooms), 1fr);
+    padding-right: 1rem;
   }
 
   .schedule .break {
@@ -2912,6 +2930,17 @@ button[name="vote"]:hover {
   .schedule .headings > span {
     grid-row: var(--grid-row);
     grid-column: var(--grid-column);
+  }
+
+  .schedule .headings > span {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    z-index: 20;
+    background-color: white;
+  }
+  .schedule .headings > span.headings-bg {
+    z-index: 19;
   }
 
   .schedule .row {
@@ -3030,4 +3059,75 @@ button[name="vote"]:hover {
 
 .session-card__author {
   font-weight: bold;
+}
+
+.talk-time,
+.talk-time div {
+  text-align: center;
+  padding: 0 !important;
+}
+
+.talk-time {
+  display: flex;
+  justify-content: center;
+}
+
+.talk-time > div {
+  margin-left: 2em;
+}
+
+@media all and (min-width: 1180px) {
+  .talk-time {
+    display: block;
+  }
+
+  .talk-time > div {
+    margin-left: 0;
+  }
+}
+
+.talk-time time {
+  display: block;
+}
+
+.talk-time .timezone {
+  font-size: 0.7rem;
+  margin-bottom: 1em;
+}
+
+.virtual-swag .logo {
+  max-width: 100%;
+  background-color: white;
+  padding: 3rem;
+}
+
+.virtual-swag .logo .next-image {
+  aspect-ratio: unset;
+}
+
+.virtual-swag figure img {
+  border-radius: 0;
+}
+
+.calendar-link {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 2.4rem;
+  padding: 0 !important;
+}
+
+@media all and (min-width: 1180px) {
+  .calendar-link {
+    position: static;
+  }
+
+}
+
+.speakers-letters > h3 {
+  display: inline-block;
+  margin-right: 0.4em;
+}
+
+.all-speakers-list a, .speaker-link {
+  color: inherit;
 }
