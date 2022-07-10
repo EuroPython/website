@@ -34,7 +34,7 @@ Keep an eye on the scratchpad outside the Wicklow Hall 2A to know what’s going
 
 
 #### Quiet Room
-_Add content about the quiet room at at Wicklow Hall 2B_.
+Sometimes all we really need is a break! Thinking about that, we have made available for you the _Quiet Room_ at the Wicklow Hall 2B. As the name suggests, the space is destined for you to stay quiet, get sme work done or simply reduce social interaction. It is a no-phone noise zone. Think a library where you bring your own books and get a stern look from everyone if you make too much noise.
 
 
 Now that you have your schedule ready and are ready to mingle, let’s jump into the nitty-gritty of conference attendance.
@@ -71,7 +71,7 @@ Our conference stickers designed to ease interaction
 
 We hope these can facilitate interaction and make it easier for everyone coming back from a social distancing spree, who is not sure how to engage or what to do at social events just yet
 
-To the first-timers, especially, please remember that you can always ask to join a conversation. As [Tim Pepper](https://blogs.vmware.com/opensource/2018/05/15/hallway-track-open-source-conferences/) wisely says “Most hallway track conversations can be approached by saying, “Hi, do you mind if I join the conversation? A conversation in the open is clearly welcoming for other people to join. ”, so please do not shy away from great discussions.
+To the first-timers, especially, please remember that you can always ask to join a conversation. As [Tim Pepper](https://blogs.vmware.com/opensource/2018/05/15/hallway-track-open-source-conferences/) wisely says “Most hallway track conversations can be approached by saying, “Hi, do you mind if I join the conversation?" A conversation in the open is clearly welcoming for other people to join. ”, so please do not shy away from great discussions.
 
 ### Asking questions
 Picture this: You have listened carefully, weighed the knowledge of the people in the room, bit your fingernails and decided to raise your hand to ask THE QUESTION. First of all, we would like to thank you because, without you, our Q&A would be dead.
@@ -95,6 +95,8 @@ Have you booked sessions from 9 am to 6 pm without a lunch break and meetings in
 To avoid such a scenario we recommend you take it _slow_. Take breaks, maybe skip a few lectures and talk to people. Make friends, contribute to the hallway track, and gather swag.
 Moreover, try and keep your sleep schedule to the best of your extent (easier said than done) and remember to stay hydrated. Dublin doesn't have the typical hot European summer but coffee ain’t water, yo!
 This is a marathon, not a sprint. And we learn more and assimilate content better when we are rested and enjoying ourselves. And remember: all work and no fun makes us all dull girls! And no one wants to deal with your grumpy self so be cool!
+
+And in case you do get grumpy, check out our Quiet Room at Wicklow Hall 2B for a bit of a rest.
 
 <figure src="https://sd.keepcalms.com/i-w600/keep-calm-its-conference-time-4.jpg" />
 
