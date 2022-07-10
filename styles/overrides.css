@@ -165,6 +165,14 @@ p.tick::after, p.cross::after {
   margin: 0.75rem 0;
 }
 
+figure {
+  margin: 0;
+  display: inline-block;
+  width: 90%;
+  max-width: 100%;
+  position: relative;
+}
+
 figure.small {
   margin: 0;
   display: inline-block;
