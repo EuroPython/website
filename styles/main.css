@@ -2724,6 +2724,10 @@ button[name="vote"]:hover {
   position: relative;
 }
 
+.talk:target {
+  opacity: 0.9;
+}
+
 .talk p {
   margin: 0;
 }
