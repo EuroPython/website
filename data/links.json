@@ -45,6 +45,10 @@
           "path": "/covid-info"
         },
         {
+          "name": "Conferece Rooms at The CCD",
+          "path": "/rooms"
+        },
+        {
           "name": "Financial Aid",
           "path": "/finaid"
         },
@@ -64,7 +68,7 @@
         {
           "name": "How to conference",
           "path": "/how-to-conference"
-        }        
+        }
       ]
     },
     {
