@@ -164,3 +164,32 @@ p.tick::after, p.cross::after {
   font-size: 1.3125rem;
   margin: 0.75rem 0;
 }
+
+figure {
+  margin: 0;
+  display: inline-block;
+  width: 90%;
+  max-width: 100%;
+  position: relative;
+}
+
+figure.small {
+  margin: 0;
+  display: inline-block;
+  width: 33%;
+  max-width: 100%;
+  position: relative;
+  margin-right: 2.5rem;
+}
+
+figcaption.small {
+  padding:0;
+  color: var(--color-body);
+  font-size: 1.3rem;
+}
+
+figcaption.small:before {
+  content: "#";
+  display: inline-block;
+  margin-right: 0.5rem;
+}
