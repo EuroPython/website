@@ -55,6 +55,17 @@
     }
   },
   {
+    "slug": "liffey-meeting-room-2",
+    "name": "Liffey Meeting Room 2",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/view-the-venue/liffey-meeting-room-2",
+    "image": {
+      "path": "/images/rooms/liffey-hall-2.png",
+      "width": 1792,
+      "height": 1022
+    }
+  },
+  {
     "slug": "liffey-a",
     "name": "Liffey A",
     "floor": "Level 1",

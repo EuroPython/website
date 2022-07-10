@@ -29,11 +29,11 @@ export default function SessionsPage({}) {
           <dt>
             <a href="/room/liffey-hall-1">Liffey Hall 1</a>
           </dt>
-          <dd>Special Workshop</dd>
+          <dd>Django Girls (separate registraion)</dd>
           <dt>
             <a href="/room/liffey-hall-2">Liffey Hall 2</a>
           </dt>
-          <dd>Special Workshop (Pew Pew)</dd>
+          <dd>Pew Pew Workshop (Open to Conference-only tickets holders)</dd>
           <dt>
             <a href="/room/level-1-foyer">Level 1</a> &{" "}
             <a href="/room/level-2-foyer">2 Foyer</a>
@@ -70,11 +70,18 @@ export default function SessionsPage({}) {
           <dt>
             <a href="/room/liffey-hall-1">Liffey Hall 1</a>
           </dt>
-          <dd>Sponsored Workshop</dd>
+          <dd>Trans*Code Workshop</dd>
+
           <dt>
             <a href="/room/liffey-hall-2">Liffey Hall 2</a>
           </dt>
-          <dd>Special Workshop (Beginners' Day)</dd>
+          <dd>Sponsored Workshops</dd>
+          <dt>
+            <a href="/room/liffey-meeting-room-2">Liffey Meeting Room 2</a>
+          </dt>
+
+
+          <dd>Beginners' Day - Humble Data (Open to Conference Only Ticket Holders)</dd>
           <dt>
             <a href="/room/level-1-foyer">Level 1</a> &{" "}
             <a href="/room/level-2-foyer">2 Foyer</a>
@@ -161,7 +168,7 @@ export default function SessionsPage({}) {
           <dt>
             <a href="/room/forum">The Forum - Far end</a>
           </dt>
-          <dd>10 OSS Table Area</dd>
+          <dd>OSS Tables</dd>
           <dt>
             <a href="/room/forum">The Forum - West</a>
           </dt>
@@ -179,7 +186,7 @@ export default function SessionsPage({}) {
           </dt>
           <dd>Food Area </dd>
           <dt>
-            <a href="/room/forum">The Forum</a>
+            <a href="/room/forum">The Forum Entrance Area</a>
           </dt>
           <dd>Job Board</dd>
         </dl>
