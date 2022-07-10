@@ -11,12 +11,12 @@ and live entertainment.
 ## Social Event Ticket ##
 **Please note: The social event is not included in the conference ticket!**
 
-Tickets for the social event are available in our [ticket store](https://ep2022.europython.eu/tickets) at a price of 10 €. 
+Tickets for the social event are available in our [ticket store](/tickets) at a price of 10 €. 
 We only have a limited number of tickets available, so book early if you want to be sure to get a ticket!
 
 As for our regular tickets, you can pay using a debit or credit card. Unless otherwise mentioned, all prices include 23% Irish VAT.
 
-  <ButtonWithTitle title="Interested in join us?" text="Buy your ticket now!" href="https://ep2022.europython.eu/tickets" />
+  <ButtonWithTitle title="Interested in join the party?" text="Buy your ticket now!" href="/tickets" />
 
 ## Social Event Summary ##
 
