@@ -122,6 +122,24 @@ prepared virtual swag for you. Enjoy! 🐍 💝
 
 ---
 
+# Rapid Ratings
+
+<a className="img" id="rapidratings" target="_blank" href="https://www.rapidratings.com">
+  <div className="logo">
+    <img src="/swag/rapidratings.svg" width="708" height="205" />
+  </div>
+</a>
+<a className="img" target="_blank" href="/swag/rapidratings_swag.pdf">
+  <div>
+    <img src="/swag/rapidratings_swag.png" width="3508" height="2480" />
+  </div>
+</a>
+
+<a href="/swag/rapidratings_swag.pdf" target="_blank">Get your swag here</a>
+
+
+---
+
 # Superblocks
 
 <a className="img" id="Superblocks" target="_blank" href="https://superblocks.com/win?referrer=europython">
