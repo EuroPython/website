@@ -34,6 +34,7 @@ export type Speaker = {
   name: string;
   tagline?: string;
   image?: string;
+  slug?: string;
 };
 
 export type BreakTimeSlot = {
