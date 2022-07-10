@@ -1,0 +1,34 @@
+{
+  "rooms": [
+    {
+      "name": "The auditorium",
+      "slug": "auditorium",
+      "youtubeId": "tRtxCCRdZOs"
+    },
+    {
+      "name": "Liffey A",
+      "slug": "liffey-a",
+      "youtubeId": "nahN_PnGF3s"
+    },
+    {
+      "name": "Liffey B",
+      "slug": "liffey-b",
+      "youtubeId": "x3-I2j4zSHI"
+    },
+    {
+      "name": "Liffey Hall 1",
+      "slug": "liffey-hall-1",
+      "youtubeId": "6ZhdFyd2jLU"
+    },
+    {
+      "name": "Liffey Hall 2",
+      "slug": "liffey-hall-2",
+      "youtubeId": "fOU67VYm8J0"
+    },
+    {
+      "name": "Wicklow Hall",
+      "slug": "wicklow-hall",
+      "youtubeId": "yVZ0RgUXQFc"
+    }
+  ]
+}
