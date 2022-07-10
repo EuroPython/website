@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "ground-foyer",
+    "name": "Ground Foyer",
+    "floor": "Ground Floor",
+    "factSheet": "https://www.theccd.ie/media/22._ground_floor_foyer_floor_plan.pdf?v=ODQ3",
+    "image": {
+      "path": "/images/rooms/ground-floor-foyer.png",
+      "width": 1146,
+      "height": 638
+    }
+  },
+  {
+    "slug": "wicklow-hall-1",
+    "name": "Wicklow Hall 1",
+    "floor": "Level 2",
+    "factSheet": "https://www.theccd.ie/media/5._wicklow_hall_1_floor_plan.pdf?v=ODI4",
+    "image": {
+      "path": "/images/rooms/wicklow-hall-1.png",
+      "width": 1698,
+      "height": 864
+    }
+  },
+  {
+    "slug": "wicklow-hall-2",
+    "name": "Wicklow Hall 2",
+    "floor": "Level 2",
+    "factSheet": "https://www.theccd.ie/media/6._wicklow_hall_2_floor_plan.pdf?v=ODI5",
+    "image": {
+      "path": "/images/rooms/wicklow-hall-2.png",
+      "width": 1368,
+      "height": 700
+    }
+  },
+  {
+    "slug": "liffey-hall-1",
+    "name": "Liffey Hall 1",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/media/3._liffey_hall_1_floor_plan.pdf?v=ODM5",
+    "image": {
+      "path": "/images/rooms/liffey-hall-1.png",
+      "width": 1728,
+      "height": 972
+    }
+  },
+  {
+    "slug": "liffey-hall-2",
+    "name": "Liffey Hall 2",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/media/4._liffey_hall_2_floor_plan.pdf?v=ODQw",
+    "image": {
+      "path": "/images/rooms/liffey-hall-2.png",
+      "width": 1792,
+      "height": 1022
+    }
+  },
+  {
+    "slug": "liffey-meeting-room-2",
+    "name": "Liffey Meeting Room 2",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/view-the-venue/liffey-meeting-room-2",
+    "image": {
+      "path": "/images/rooms/liffey-hall-2.png",
+      "width": 1792,
+      "height": 1022
+    }
+  },
+  {
+    "slug": "liffey-a",
+    "name": "Liffey A",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/media/2.the_liffey_floor_plan.pdf?v=ODI3",
+    "image": {
+      "path": "/images/rooms/liffey-a.png",
+      "width": 1634,
+      "height": 910
+    }
+  },
+  {
+    "slug": "liffey-b",
+    "name": "Liffey B",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/media/2.the_liffey_floor_plan.pdf?v=ODI3",
+    "image": {
+      "path": "/images/rooms/liffey-a.png",
+      "width": 1634,
+      "height": 910
+    }
+  },
+  {
+    "slug": "level-1-foyer",
+    "name": "Level 1 Foyer",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/media/23._level_1_foyer_floor_plan.pdf?v=ODQ4",
+    "image": {
+      "path": "/images/rooms/level-1-foyer.png",
+      "width": 2030,
+      "height": 1138
+    }
+  },
+  {
+    "slug": "level-2-foyer",
+    "name": "Level 2 Foyer",
+    "floor": "Level 2",
+    "factSheet": "https://www.theccd.ie/media/24._level_2_foyer_floor_plan.pdf?v=OTQ0",
+    "image": {
+      "path": "/images/rooms/level-2-foyer.png",
+      "width": 1014,
+      "height": 514
+    }
+  },
+  {
+    "slug": "level-3-foyer",
+    "name": "Level 3 Foyer",
+    "floor": "Level 3",
+    "factSheet": "https://www.theccd.ie/media/25._level_3_foyer_floor_plan.pdf?v=ODUw",
+    "image": {
+      "path": "/images/rooms/level-3-foyer.png",
+      "width": 2662,
+      "height": 1576
+    }
+  },
+  {
+    "slug": "level-5-foyer",
+    "name": "Level 5 Foyer",
+    "floor": "Level 5",
+    "factSheet": "https://www.theccd.ie/media/27._level_5_foyer_floor_plan.pdf?v=ODUy",
+    "image": {
+      "path": "/images/rooms/level-5-foyer.png",
+      "width": 1576,
+      "height": 888
+    }
+  },
+  {
+    "slug": "ecocem",
+    "name": "Ecocem",
+    "floor": "Level 2",
+    "factSheet": "https://www.theccd.ie/media/12._ecocem_room_floor_plan.pdf?v=ODM1",
+    "image": {
+      "path": "/images/rooms/ecocem.png",
+      "width": 1394,
+      "height": 718
+    }
+  },
+  {
+    "slug": "auditorium",
+    "name": "The Auditorium",
+    "floor": "Level 3 / 4 / 5",
+    "factSheet": "https://www.theccd.ie/media/auditorium_seating_chart.pdf?v=MjE5",
+    "image": null
+  },
+  {
+    "slug": "liffey-boardroom-3",
+    "name": "Liffey Boardroom 3",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/media/20._liffey_boardroom_3_floor_plan.pdf?v=ODQ1",
+    "image": {
+      "path": "/images/rooms/liffey-boardroom-3.png",
+      "width": 1766,
+      "height": 976
+    }
+  },
+  {
+    "slug": "liffey-boardroom-4",
+    "name": "Liffey Boardroom 4",
+    "floor": "Level 1",
+    "factSheet": "https://www.theccd.ie/media/21._liffey_boardroom_4_floor_plan.pdf?v=ODQ2",
+    "image": {
+      "path": "/images/rooms/liffey-boardroom-4.png",
+      "width": 1766,
+      "height": 976
+    }
+  },
+  {
+    "slug": "forum",
+    "name": "The Forum",
+    "floor": "Ground floor",
+    "factSheet": "https://www.theccd.ie/media/21._liffey_boardroom_4_floor_plan.pdf?v=ODQ2",
+    "image": {
+      "path": "/images/rooms/forum.png",
+      "width": 1568,
+      "height": 830
+    }
+  }
+]
