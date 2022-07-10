@@ -39,15 +39,12 @@ export const Session = ({
 }) => {
   const speakers = session.speakers;
 
-  const singleSpeaker = speakers?.length === 1;
-  const firstSpeaker = speakers?.[0];
-
   const roomsAndSpeakers = session.rooms.concat(
     speakers?.map((s) => s.name) || []
   );
 
   return (
-    <div className="talk" style={style}>
+    <div className="talk" style={style} id={session.id}>
       <header className={`${session.audience || ""} session-${session.type}`}>
         <p className={`talk__rating`}>{getHeaderText(session)}</p>
 

@@ -115,7 +115,9 @@ export default function Page({
           {session.speakers.map((speaker) => (
             <div key={speaker.code}>
               <p className="large">
-                <a href={`/speaker/${speaker.slug}`} className="speaker-link">{speaker.name}</a>
+                <a href={`/speaker/${speaker.slug}`} className="speaker-link">
+                  {speaker.name}
+                </a>
               </p>
               <MDXRemote {...speaker.biographySource} />
             </div>
@@ -158,7 +160,9 @@ export default function Page({
             <section className="cards">
               <a
                 className="h2"
-                href={`/schedule/${format(start, "yyyy-MM-dd")}`}
+                href={`/schedule/${format(start, "yyyy-MM-dd")}#${
+                  session.code
+                }`}
               >
                 ← Back to schedule
               </a>
