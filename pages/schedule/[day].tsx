@@ -12,6 +12,7 @@ import {
 import { Schedule } from "../../components/schedule/schedule";
 import { Schedule as ScheduleType } from "../../components/schedule/types";
 import { fetchSessions } from "../../lib/sessions";
+import { fetchSpeakers } from "../../lib/speakers";
 
 export default function SchedulePage({
   day,
@@ -84,12 +85,17 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { day: string } }) {
-  const schedule = await fetchSchedule();
-  const sessions = await fetchSessions();
+  const [schedule, sessions, speakers] = await Promise.all([
+    fetchSchedule(),
+    fetchSessions(),
+    fetchSpeakers(),
+  ]);
+
   const daySchedule = await getScheduleForDay({
     schedule,
     day: params.day,
     sessions,
+    speakers,
   });
 
   return {
