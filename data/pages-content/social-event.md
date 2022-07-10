@@ -5,13 +5,13 @@ subtitle:
 ---
 ## EuroPython 2022 Social Event ##
 After the keynotes and talks on Tuesday, July 12, we've organized a social event for you at the conference venue,
-the Dublin Convention Centre (CCD). Starting at 20:00 CEST you can join us for an evening party with food, drinks
-and live entertainment.
+the Dublin Convention Centre (CCD). join us for an evening party with food, drinks
+and live tradicional Irish music!
 
 ## Social Event Ticket ##
 **Please note: The social event is not included in the conference ticket!**
 
-Tickets for the social event are available in our general [ticket store](/tickets) at a price of 10 €. Make sure to
+Tickets for the social event are available in our general [ticket store](/tickets) at a price of 20 €. Make sure to
 scroll near the bottom where you will find the Social Event Ticket entry.
 We only have a limited number of tickets available, so book early if you want to be sure to get a ticket!
 
@@ -22,13 +22,26 @@ As for our regular tickets, you can pay using a debit or credit card. Unless oth
 ## Social Event Summary ##
 
 - Where: The conference venue, the CCD.
-- When: Tuesday July 12, starting at 20:00 CEST
-- Price: 10 € (**not refundable**). The ticket includes free food, two hours of free drinks (you have to pay for drinks yourself after that) and live entertainment.
+- When: Thursday July 14, starting at 20:00 CEST
+- Price: 20 € (**not refundable**). The ticket includes a bento box, and a welcome drink (you have to pay for drinks yourself after that) and live tradicional Irish music. 
 - Schedule:
-    - Entrance will open starting at 19:00 CEST
-    - Party will start at 20:00 CEST
-    - Closing: 23:30 CEST
+    - 19:00 CEST Event starts
+    - 20:00 - 22:00 CEST Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show.
+    - 22:00 - 23:30 CEST Social continues
+    - 23:30 CEST Bar closing.
 
+### Food Selection
+We have a selection of Bento boxes to cater for most preferences. The menu will be:
+- Grilled chicken with tabbouleh, tender stem broccoli, pomegranate.
+- Marinated Salmon with sesame and galangal, quinoa and oriental cabbage.
+- Sautéed tempeh with rice noodle and black radish galangal and baby corn.
+
+Accompanied with: California maki roll with wasabi and soya sundried tomato sourdough.
+Followed by: Raspberry cheesecake with raspberry jelly.
+
+_We will also have **vegan** options._
+
+*Please note the CCD is a cashless venue and only except card/ contactless payments.* 
 ---
 <div style={{textAlign: "center"}}>
 <Note>Big THANK YOU to our... </Note>
