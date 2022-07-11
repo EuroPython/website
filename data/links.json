@@ -114,6 +114,10 @@
         {
           "name": "PyLadies Lunch",
           "path": "/pyladies-lunch"
+        },
+        {
+          "name": "Social Event",
+          "path": "/social-event"
         }
       ]
     },
