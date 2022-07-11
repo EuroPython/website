@@ -52,6 +52,7 @@ Projects that have shown interested in appearing in the mentored sprint:
 * [scikit-learn](https://github.com/scikit-learn/scikit-learn)
 * [Mu](https://github.com/scikit-learn/scikit-learn)
 * [Hypothesis](https://github.com/HypothesisWorks/hypothesis)
+* [Strawberry](https://github.com/strawberry-graphql/strawberry)
 
 ## GETTING INVOLVED ##
 *OPEN SOURCE PROJECTS AND MENTORS*
