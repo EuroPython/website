@@ -11,13 +11,13 @@ and live traditional Irish music!
 ## Social Event Ticket ##
 **Please note: The social event is not included in the conference ticket!**
 
-Tickets for the social event are available in our general [ticket store](/tickets) at a price of 20 €. Make sure to
+Tickets for the social event are available in our general [ticket store](https://tickets.europython.eu) at a price of 20 €. Make sure to
 look above the "Remote Tickets" header where you will find the Social Event Ticket entry.
 We only have a limited number of tickets available, so book early if you want to be sure to get a ticket!
 
 As for our regular tickets, you can pay using a debit or credit card. Unless otherwise mentioned, all prices include 23% Irish VAT.
 
-  <ButtonWithTitle title="Interested in join the party?" text="Buy your ticket now!" href="/tickets" />
+  <ButtonWithTitle title="Interested in join the party?" text="Buy your ticket now!" href="https://tickets.europython.eu" />
 
 ## Social Event Summary (all times are local/Dublin times) ##
 
