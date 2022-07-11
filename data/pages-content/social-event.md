@@ -12,7 +12,7 @@ and live traditional Irish music!
 **Please note: The social event is not included in the conference ticket!**
 
 Tickets for the social event are available in our general [ticket store](/tickets) at a price of 20 €. Make sure to
-scroll near the bottom where you will find the Social Event Ticket entry.
+look above the "Remote Tickets" header where you will find the Social Event Ticket entry.
 We only have a limited number of tickets available, so book early if you want to be sure to get a ticket!
 
 As for our regular tickets, you can pay using a debit or credit card. Unless otherwise mentioned, all prices include 23% Irish VAT.
