@@ -2724,6 +2724,10 @@ button[name="vote"]:hover {
   position: relative;
 }
 
+.talk:target {
+  opacity: 0.9;
+}
+
 .talk p {
   margin: 0;
 }
@@ -2839,6 +2843,10 @@ button[name="vote"]:hover {
 .speaker__name {
   font-size: 0.875rem;
   display: block;
+}
+
+.speaker__name a {
+  color: inherit;
 }
 
 .speaker__title {
@@ -3120,7 +3128,6 @@ button[name="vote"]:hover {
   .calendar-link {
     position: static;
   }
-
 }
 
 .speakers-letters > h3 {
@@ -3128,6 +3135,7 @@ button[name="vote"]:hover {
   margin-right: 0.4em;
 }
 
-.all-speakers-list a, .speaker-link {
+.all-speakers-list a,
+.speaker-link {
   color: inherit;
 }

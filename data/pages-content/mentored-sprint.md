@@ -44,6 +44,16 @@ EuroPython is one of the the biggest Python conference organized every year, tho
 
 By running similar events in smaller conferences we have learned that the attendees (and projects) get much more out of it by having maintainers, organizers, and attendees working together. This way the maintainers of a certain package can provide directed, effective and in-person mentoring to a group of individuals, and the attendees feel more confident and usually leave with a higher sense of accomplishment.
 
+Projects that have shown interested in appearing in the mentored sprint:
+
+* [Fairlearn](https://github.com/fairlearn/fairlearn/)
+* [OpenMetaData](https://github.com/open-metadata/OpenMetadata)
+* [CircuitPython](https://github.com/adafruit/circuitpython)
+* [scikit-learn](https://github.com/scikit-learn/scikit-learn)
+* [Mu](https://github.com/scikit-learn/scikit-learn)
+* [Hypothesis](https://github.com/HypothesisWorks/hypothesis)
+* [Strawberry](https://github.com/strawberry-graphql/strawberry)
+
 ## GETTING INVOLVED ##
 *OPEN SOURCE PROJECTS AND MENTORS*
 The call for applications for projects will be open until the 8th of July 2022 and we encourage maintainers, contributors, and developers of any package attending EuroPython to participate in this mentored sprint. Please email [cheuk@europython.eu](mailto:cheuk@europython.eu)

@@ -39,15 +39,12 @@ export const Session = ({
 }) => {
   const speakers = session.speakers;
 
-  const singleSpeaker = speakers?.length === 1;
-  const firstSpeaker = speakers?.[0];
-
   const roomsAndSpeakers = session.rooms.concat(
     speakers?.map((s) => s.name) || []
   );
 
   return (
-    <div className="talk" style={style}>
+    <div className="talk" style={style} id={session.id}>
       <header className={`${session.audience || ""} session-${session.type}`}>
         <p className={`talk__rating`}>{getHeaderText(session)}</p>
 
@@ -82,12 +79,18 @@ export const Session = ({
       {speakers.length ? (
         <div className="talk__speaker">
           <>
-            {singleSpeaker && firstSpeaker?.image ? (
-              <img src={firstSpeaker.image} className="speaker__image" />
-            ) : null}
             <div className="speaker__bio">
               <span className="speaker__name">
-                {speakers?.map((s) => s.name).join(", ")}
+                {speakers.map((speaker, index) => (
+                  <>
+                    {speaker.slug ? (
+                      <a href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
+                    ) : (
+                      speaker.name
+                    )}
+                    {index < session.speakers.length - 1 && ", "}
+                  </>
+                ))}
               </span>
             </div>
           </>

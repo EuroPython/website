@@ -2,6 +2,7 @@
 /** @type {import('next').NextConfig} */
 
 const { fetchSchedule } = require("./lib/schedule");
+const live = require("./data/live.json");
 
 const getScheduleDays = async () => {
   const schedule = await fetchSchedule();
@@ -58,6 +59,11 @@ const nextConfig = {
         source: "/sponsor-information",
         destination: "/sponsor/information",
         permanent: true,
+      },
+      {
+        source: "/live",
+        destination: `/live/${live.rooms[0].slug}`,
+        permanent: false,
       },
     ];
 

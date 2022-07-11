@@ -16,7 +16,7 @@ as interactive as possible.
 ### How to participate in the conference remotely?
 
 - To participate in the conference interactively (with guaranteed access to livestreams), a "remote ticket" registration is required. See details and pricing on the [Buy Tickets](/tickets#remote-tickets) page;
-- Instructions on how to access to the remote event platform will be sent to your email a few days closer to the event.
+- Any ticket (except the Stream-only) will have a link to join our remote platform Venueless. Just open your ticket and click on the link to join. There is no user or password, the link is your password. Each ticket can allow 3 simultaneous sessions. If you join with more than 3 devices, the oldest will be logged out. 
 
 *Note: in-person ticket holders will be provided with remote event access*
 
