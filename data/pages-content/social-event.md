@@ -5,8 +5,8 @@ subtitle:
 ---
 ## EuroPython 2022 Social Event ##
 After the keynotes and talks on Tuesday, July 12, we've organized a social event for you at the conference venue,
-the Dublin Convention Centre (CCD). join us for an evening party with food, drinks
-and live tradicional Irish music!
+the Dublin Convention Centre (CCD). Join us for an evening party with food, drinks
+and live traditional Irish music!
 
 ## Social Event Ticket ##
 **Please note: The social event is not included in the conference ticket!**
@@ -22,13 +22,18 @@ As for our regular tickets, you can pay using a debit or credit card. Unless oth
 ## Social Event Summary ##
 
 - Where: The conference venue, the CCD.
-- When: Thursday July 14, starting at 20:00 CEST
-- Price: 20 € (**not refundable**). The ticket includes a bento box, and a welcome drink (you have to pay for drinks yourself after that) and live tradicional Irish music. 
+- When: Thursday July 14, starting at 20:00 Dublin time
+- Price: 20 € (**not refundable**). The ticket includes a bento box, and a welcome drink (you have to pay for drinks yourself after that) and live traditional Irish music. 
 - Schedule:
-    - 19:00 CEST Event starts
-    - 20:00 - 22:00 CEST Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show.
-    - 22:00 - 23:30 CEST Social continues
-    - 23:30 CEST Bar closing.
+    - 19:00 Dublin time Event starts
+    - 20:00 - 22:00 Dublin time Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show.
+    - 22:00 - 23:30 Dublin time Social continues
+    - 23:30 Dublin time Bar closing.
+
+
+### Raffle ###
+Our social event sponsor, [Kiwi](https://jobs.kiwi.com) has organised a [raffle](https://pages.beamery.com/kiwicomtalent/form/kiwi-com-euro-python-raffle-2022/sign-up)! They will also have some printed flyers available at the registration desk during the conference days. These flyers will have a QR code that you can use to sign up for the raffle. Alternatively, you can use the URL above. Kiwi will do two rounds of raffle extractions during the social event.
+
 
 ### Food Selection
 We have a selection of Bento boxes to cater for most preferences. The menu will be:
@@ -36,7 +41,7 @@ We have a selection of Bento boxes to cater for most preferences. The menu will 
 - Marinated Salmon with sesame and galangal, quinoa and oriental cabbage.
 - Sautéed tempeh with rice noodle and black radish galangal and baby corn.
 
-Accompanied with: California maki roll with wasabi and soya sundried tomato sourdough.
+Accompanied with: California maki roll with wasabi and soya sun-dried tomato sourdough.
 Followed by: Raspberry cheesecake with raspberry jelly.
 
 _We will also have **vegan** options._
