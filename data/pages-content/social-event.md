@@ -19,16 +19,16 @@ As for our regular tickets, you can pay using a debit or credit card. Unless oth
 
   <ButtonWithTitle title="Interested in join the party?" text="Buy your ticket now!" href="/tickets" />
 
-## Social Event Summary ##
+## Social Event Summary (all times are local/Dublin times) ##
 
 - Where: The conference venue, the CCD.
-- When: Thursday July 14, starting at 20:00 Dublin time
+- When: Thursday July 14, starting at 20:00
 - Price: 20 € (**not refundable**). The ticket includes a bento box, and a welcome drink (you have to pay for drinks yourself after that) and live traditional Irish music. 
 - Schedule:
-    - 19:00 Dublin time Event starts
-    - 20:00 - 22:00 Dublin time Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show.
-    - 22:00 - 23:30 Dublin time Social continues
-    - 23:30 Dublin time Bar closing.
+    - 19:00 Event starts
+    - 20:00 - 22:00 Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show.
+    - 22:00 - 23:30 Social continues
+    - 23:30 Bar closing.
 
 
 ### Raffle ###
