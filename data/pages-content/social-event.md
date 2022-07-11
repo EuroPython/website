@@ -26,7 +26,7 @@ As for our regular tickets, you can pay using a debit or credit card. Unless oth
 - Price: 20 € (**not refundable**). The ticket includes a bento box, and a welcome drink (you have to pay for drinks yourself after that) and live traditional Irish music. 
 - Schedule:
     - 19:00 Event starts
-    - 20:00 - 22:00 Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show.
+    - 20:00 - 22:00 Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show, should you want to try. Of course nobody will force you to dance if that were not your thing :-)
     - 22:00 - 23:30 Social continues
     - 23:30 Bar closing.
 
