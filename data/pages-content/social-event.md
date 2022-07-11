@@ -1,10 +1,10 @@
 ---
 title: Social Event
 subtitle:
-  Come to the EuroPython 2022 social event on Tuesday evening!
+  Come to the EuroPython 2022 social event on Thursday evening!
 ---
 ## EuroPython 2022 Social Event ##
-After the keynotes and talks on Tuesday, July 12, we've organized a social event for you at the conference venue,
+After the keynotes and talks on Thursday, July 14, we've organized a social event for you at the conference venue,
 the Dublin Convention Centre (CCD). Join us for an evening party with food, drinks
 and live traditional Irish music!
 
