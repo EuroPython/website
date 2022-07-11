@@ -46,7 +46,7 @@ Followed by: Raspberry cheesecake with raspberry jelly.
 
 _We will also have **vegan** options._
 
-*Please note the CCD is a cashless venue and only except card/ contactless payments.* 
+*Please note the CCD is a cashless venue and only accept card/ contactless payments.* 
 ---
 <div style={{textAlign: "center"}}>
 <Note>Big THANK YOU to our... </Note>
