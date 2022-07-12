@@ -3,6 +3,7 @@
 
 const { fetchSchedule } = require("./lib/schedule");
 const live = require("./data/live.json");
+const format = require("date-fns/format");
 
 const getScheduleDays = async () => {
   const schedule = await fetchSchedule();
@@ -68,9 +69,13 @@ const nextConfig = {
     ];
 
     if (days.length > 0) {
+      const today = format(new Date(), "yyyy-MM-dd");
+
+      let day = days.includes(today) ? today : days[0];
+
       redirects.push({
         source: "/schedule",
-        destination: `/schedule/${days[0]}`,
+        destination: `/schedule/${day}`,
         permanent: false,
       });
     }
