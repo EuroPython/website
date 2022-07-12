@@ -35,6 +35,13 @@ As for our regular tickets, you can pay using a debit or credit card. Unless oth
 Our social event sponsor, [Kiwi](https://jobs.kiwi.com) has organised a [raffle](https://pages.beamery.com/kiwicomtalent/form/kiwi-com-euro-python-raffle-2022/sign-up)! They will also have some printed flyers available at the registration desk during the conference days. These flyers will have a QR code that you can use to sign up for the raffle. Alternatively, you can use the URL above. Kiwi will do two rounds of raffle extractions during the social event.
 
 
+### Live Entertainment ###
+
+“The Full Shilling" is a new and exciting collective of musicians from Dublin, Ireland. Their lively set consists of a mix of Irish songs and dances and are guaranteed to get the toes tapping! 
+
+For this Thursday's gig we are joined by three wonderful musicians, Eoghan Scott (guitar/vocals), Sarah-May Rogers (vocals/fiddle), Claire Sherry (banjo). They will also have a special guest appearance of two world famous dancers, Jean Kennedy and Ciaran McManus who have just returned from a tour with Lord of the Dance! Come along and enjoy the craic! 
+
+
 ### Food Selection
 We have a selection of Bento boxes to cater for most preferences. The menu will be:
 - Grilled chicken with tabbouleh, tender stem broccoli, pomegranate.
