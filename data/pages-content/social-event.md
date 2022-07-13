@@ -32,7 +32,7 @@ As for our regular tickets, you can pay using a debit or credit card. Unless oth
 
 
 ### Raffle ###
-Our social event sponsor, [Kiwi.com](https://jobs.kiwi.com) has organised a [raffle](https://pages.beamery.com/kiwicomtalent/form/kiwi-com-euro-python-raffle-2022/sign-up)! They will also have some printed flyers available at the registration desk during the conference days. These flyers will have a QR code that you can use to sign up for the raffle. Alternatively, you can use the URL above. Kiwi.com will do two rounds of raffle extractions during the social event.
+Our social event sponsor, [Kiwi.com](https://jobs.kiwi.com) has organised a raffle! They will also have some printed flyers available at the registration desk during the conference days. These flyers will have a QR code that you can use to sign up for the raffle. Alternatively, you can use the URL above. Kiwi.com will do two rounds of raffle extractions during the social event.
 
 
 ### Live Entertainment ###
