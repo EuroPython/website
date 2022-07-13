@@ -50,7 +50,7 @@ Many thanks !
 - Contact: ntoll@ntoll.org
 - Links: [main website](https://codewith.mu), [developer docs](https://mu.readthedocs.io/en/latest/), [our approach](https://mu.readthedocs.io/en/latest/contributing.html), [CoC](https://mu.readthedocs.io/en/latest/code_of_conduct.html), [developer setup](https://mu.readthedocs.io/en/latest/setup.html) and [suggested first steps](https://mu.readthedocs.io/en/latest/first-steps.html).
 
-### `pup`
+### pup
 
 - Number of people: 1 (+the Mu Editor friends) + anyone wanting to experiment, learn, or contribute.
 - Room: (same as Mu Editor's)
