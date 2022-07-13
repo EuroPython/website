@@ -70,7 +70,8 @@ export const Session = ({
               description={session.abstract}
               start={session.start}
               end={session.end}
-              url={`https::/ep2022.europython.eu/session/${session.slug}`}
+              room={session.rooms.join(", ")}
+              url={`https://ep2022.europython.eu/session/${session.slug}`}
             />
           </>
         ) : null}
