@@ -3139,3 +3139,9 @@ button[name="vote"]:hover {
 .speaker-link {
   color: inherit;
 }
+
+.button.header-main-cta--live {
+  background: var(--color-advanced);
+  color: white;
+  border-color: white;
+}
