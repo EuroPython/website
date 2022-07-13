@@ -37,6 +37,10 @@
       "name": "Info & Support",
       "items": [
         {
+          "name": "Buy tickets",
+          "path": "/tickets"
+        },
+        {
           "name": "FAQ",
           "path": "/faq"
         },
