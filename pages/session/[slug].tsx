@@ -201,6 +201,12 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
   const session = getSession(params.slug, sessions);
 
+  if (!session) {
+    return {
+      notFound: true,
+    };
+  }
+
   const abstractSource = await serialize(session.abstract, {});
   const descriptionSource = await serialize(session.description, {});
 
