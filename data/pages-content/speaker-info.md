@@ -11,9 +11,9 @@ We will aim to have cabled network for speakers, as well as the conference venue
 
 ### Q. Do I need adapters for my talk?
 
-We have very limited HDMI to VGA, mini-DisplayPort to VGA, and Lightning to HDMI adapters available in case of emergency. It's always a good idea to bring your own.
+We have very limited USB-C to HDMI, mini-DisplayPort to HDMI and Lightning to HDMI adapters available in case of emergency. It's always a good idea to bring your own.
 
-If you are speaking, please test your notebook and adapter with the projector in the room where your talk is scheduled on the day before you give your talk. For speakers giving their talk on Monday, please test your notebooks in one of the breaks before the talks.
+If you are speaking, please test your notebook and adapter with the TV available in the Speakers room (Liffey Board Room 3). 
 
 Please also check our tips for speakers below.
 

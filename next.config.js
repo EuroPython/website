@@ -1,21 +1,7 @@
 // @ts-check
 /** @type {import('next').NextConfig} */
 
-const { fetchSchedule } = require("./lib/schedule");
 const live = require("./data/live.json");
-
-const getScheduleDays = async () => {
-  const schedule = await fetchSchedule();
-
-  const potentialUnsortedDays = Array.from(new Set(Object.keys(schedule.days)));
-
-  return potentialUnsortedDays.sort((a, b) => {
-    const aDate = new Date(a);
-    const bDate = new Date(b);
-
-    return aDate.getTime() - bDate.getTime();
-  });
-};
 
 const securityHeaders = [
   {
@@ -47,9 +33,7 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
-    const days = await getScheduleDays();
-
-    const redirects = [
+    return [
       {
         source: "/cfp",
         destination: "https://program.europython.eu/europython-2022/cfp",
@@ -66,16 +50,6 @@ const nextConfig = {
         permanent: false,
       },
     ];
-
-    if (days.length > 0) {
-      redirects.push({
-        source: "/schedule",
-        destination: `/schedule/${days[0]}`,
-        permanent: false,
-      });
-    }
-
-    return redirects;
   },
 
   async headers() {

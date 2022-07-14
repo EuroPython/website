@@ -1955,7 +1955,7 @@ footer .has-submenu ul li {
 
 .accent-left::before {
   content: "";
-  display: block;
+  display: none;
   position: absolute;
   width: 11rem;
   height: 14.5rem;
@@ -1969,7 +1969,7 @@ footer .has-submenu ul li {
 
 .accent-right::before {
   content: "";
-  display: block;
+  display: none;
   position: absolute;
   width: 11rem;
   height: 14.5rem;
@@ -1979,6 +1979,16 @@ footer .has-submenu ul li {
   right: -17rem;
   top: 10rem;
   z-index: 1;
+}
+
+@media screen and (min-width: 1180px) {
+  .accent-left::before {
+    display: block;
+  }
+
+  .accent-right::before {
+    display: block;
+  }
 }
 
 hr.accent-left::before {
@@ -3138,4 +3148,10 @@ button[name="vote"]:hover {
 .all-speakers-list a,
 .speaker-link {
   color: inherit;
+}
+
+.button.header-main-cta--live {
+  background: var(--color-advanced);
+  color: white;
+  border-color: white;
 }

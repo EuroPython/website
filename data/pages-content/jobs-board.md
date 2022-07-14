@@ -542,14 +542,20 @@ template
 ## [Optum](https://optum.co) ##
 Want to build a new future for healthcare?
 
-It only takes one inspired idea to change the world. At Optum and UnitedHealth Group, the technology and innovation we invent is in service of a feature where healthcare serves everyone more fairly, productively and consistently. We work tirelessly to create technology solutions to create a healthier world, one idea at a time. Across Optum we’re not just using technology and analytics to help millions receive care, we’re evolving it by understanding how that care is provided, paid for and, most importantly, how it helps improve health through greater outcomes. There are no limits here on the resources you’ll have or the challenges you’ll encounter. From the most advanced application development tools and methodologies to innovative approaches to AI and Data Science, we’re doing, sharing and learning new ways to make technology and healthcare work better. We want to make health care work better for everyone. This depends on hiring the best and brightest. Explore our opportunities and career site today and begin your life’s best work℠.
+It only takes one inspired idea to change the world. At Optum and UnitedHealth Group, the technology and innovation we invent is in service of a feature where healthcare serves everyone more fairly, productively and consistently. We work tirelessly to build solutions to create a healthier world, one idea at a time. 
+
+Across Optum we’re not just using technology and analytics to help millions receive care, we’re evolving it by understanding how that care is provided, paid for and, most importantly, how it helps improve health through greater outcomes. There are no limits here on the resources you’ll have or the challenges you’ll encounter. From the most advanced application development tools and methodologies to innovative approaches to AI and Data Science, we’re doing, sharing and learning new ways to make technology and healthcare work better. And with the largest and best store of healthcare related data in the world, this is challenge on an enormous scale with incredible potential.
+
+We want to make health care work better for everyone. This depends on hiring the best and brightest. Explore our opportunities and career site today and begin your life’s best work℠.
 <details>
-  <summary><h2 id="optum-data-eng">Principal Data Engineer (Remote or Hybrid)</h2></summary>
-  You will be an important member of a team focused on innovation; developing proofs of concepts that leverage data in new and exciting ways.
+  <summary><h2 id="optum-data-eng">VP – Software Engineering and Data Science</h2></summary>
+  Reporting directly into the Chief Data Scientist of Optum Enterprise Data and Analytics, this Senior Leadership role will provide visionary direction to talented teams of innovators across our enterprise. 
+
+  This is an opportunity to leverage your technology expertise and understanding of market trends, to formulate, develop and execute multi-year strategic technology plans to grow the business and deliver real value to our customers. And we’ll give you the partnership opportunities to get those incubated solutions into the right teams to continue the development post R&D.
 
 </details>
 
-[Apply here](https://optum.co/PrincipalDataEng)
+[Apply here](https://optum.co/VPEngDataScience)
 
 <details>
   <summary><h2 id="optum-data-scientist">Senior Data Scientist (Hybrid)</h2></summary>

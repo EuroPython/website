@@ -6,6 +6,7 @@ export const ICALLink = ({
   description,
   start,
   end,
+  room,
   url,
   className,
 }: {
@@ -14,14 +15,15 @@ export const ICALLink = ({
   start: string;
   end: string;
   url: string;
+  room: string;
   className?: string;
 }) => {
   const event = {
     title,
-    description,
+    description: url + "\n\n" + description,
     startTime: start,
     endTime: end,
-    location: url,
+    location: room,
   };
 
   return (

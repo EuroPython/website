@@ -37,8 +37,16 @@
       "name": "Info & Support",
       "items": [
         {
+          "name": "Buy tickets",
+          "path": "/tickets"
+        },
+        {
           "name": "FAQ",
           "path": "/faq"
+        },
+        {
+          "name": "Conference Rooms at The CCD",
+          "path": "/rooms"
         },
         {
           "name": "COVID Info",
@@ -64,7 +72,7 @@
         {
           "name": "How to conference",
           "path": "/how-to-conference"
-        }        
+        }
       ]
     },
     {
@@ -110,6 +118,10 @@
         {
           "name": "PyLadies Lunch",
           "path": "/pyladies-lunch"
+        },
+        {
+          "name": "Social Event",
+          "path": "/social-event"
         }
       ]
     },

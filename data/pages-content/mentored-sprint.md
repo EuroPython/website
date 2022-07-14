@@ -50,8 +50,9 @@ Projects that have shown interested in appearing in the mentored sprint:
 * [OpenMetaData](https://github.com/open-metadata/OpenMetadata)
 * [CircuitPython](https://github.com/adafruit/circuitpython)
 * [scikit-learn](https://github.com/scikit-learn/scikit-learn)
-* [Mu](https://github.com/scikit-learn/scikit-learn)
+* [Mu](https://github.com/mu-editor/mu)
 * [Hypothesis](https://github.com/HypothesisWorks/hypothesis)
+* [Strawberry](https://github.com/strawberry-graphql/strawberry)
 
 ## GETTING INVOLVED ##
 *OPEN SOURCE PROJECTS AND MENTORS*

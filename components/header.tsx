@@ -30,8 +30,11 @@ export const Header = () => (
       Code of Conduct
     </a>
 
-    <a className="button visible-large header-main-cta" href="/tickets">
-      Buy tickets
+    <a
+      className="button visible-large header-main-cta header-main-cta--live"
+      href="/live"
+    >
+      Live 📹
     </a>
 
     <div className="header-controls hidden-large">
@@ -43,8 +46,11 @@ export const Header = () => (
         />
       </a>
       <div>
-        <a className="button header-main-cta" href="/tickets">
-          Buy tickets
+        <a
+          className="button header-main-cta header-main-cta--live"
+          href="/live"
+        >
+          Live 📹
         </a>
         <label htmlFor="nav_toggle" className="button">
           Menu
@@ -72,6 +78,11 @@ export const Header = () => (
             {
               name: "Code of Conduct",
               path: "https://www.europython-society.org/coc/",
+              className: "navigation__cta",
+            },
+            {
+              name: "Live 📹",
+              path: "/live",
               className: "navigation__cta",
             },
             {
