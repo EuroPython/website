@@ -13,7 +13,7 @@ We will aim to have cabled network for speakers, as well as the conference venue
 
 We have very limited USB-C to HDMI, mini-DisplayPort to HDMI and Lightning to HDMI adapters available in case of emergency. It's always a good idea to bring your own.
 
-If you are speaking, please test your notebook and adapter with the TV available in the Speakers room (Liffey Board Room 4). 
+If you are speaking, please test your notebook and adapter with the TV available in the Speakers room (Liffey Board Room 3). 
 
 Please also check our tips for speakers below.
 
