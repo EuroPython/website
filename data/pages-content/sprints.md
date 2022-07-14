@@ -65,7 +65,6 @@ Many thanks !
 - Contact: jlehtosalo@gmail.com
 - Links: [Mypy repo](https://github.com/python/mypy), [Developer docs](https://github.com/python/mypy/blob/master/CONTRIBUTING.md)
 
-
 ### blume and gotu
 
 - Number of people: myself and anyone who wants to hoin
@@ -73,3 +72,9 @@ Many thanks !
 - Contact: swfiua@gmail.com (Johnny Gill)
 - Links: https://github.com/swfiua/blume https://github.com/swfiua/gotu
 
+### VertFlow
+🌱 _Run containers on the cloud using green energy_
+- **Number of people:** Me + anyone who loves Python and hates carbon emissions. _Data {analysts, scientists, engineers} particularly welcome!_
+- **Room:**  < Not sure yet >
+- **Contact:** day.r.jack@gmail.com (Jack Lockyer-Stevens)
+- **Links:** [📺 About VertFlow](https://drive.google.com/file/d/1csuniWXVrOfDxJ1g1pFndpQWESf_uLin/view?usp=sharing) | [🐍 Github](https://github.com/ovotech/VertFlow)
