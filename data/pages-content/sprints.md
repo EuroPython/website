@@ -57,3 +57,10 @@ Many thanks !
 - Contact: tiago.montes@gmail.com
 - Links: [PyPI](https://pypi.org/project/pup/), [github](https://github.com/mu-editor/pup/), [docs (in need of love!)](https://pup.readthedocs.io/en/latest/).
 
+
+### blume and gotu
+
+- Number of people: myself and anyone who wants to hoin
+- Room:  Wicklow 2A/B
+- Contact: swfiua@gmail.com (Johnny Gill)
+- Links: https://github.com/swfiua/blume https://github.com/swfiua/gotu
