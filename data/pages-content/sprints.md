@@ -57,6 +57,14 @@ Many thanks !
 - Contact: tiago.montes@gmail.com
 - Links: [PyPI](https://pypi.org/project/pup/), [github](https://github.com/mu-editor/pup/), [docs (in need of love!)](https://pup.readthedocs.io/en/latest/).
 
+### Mypy & mypyc sprint
+
+- Number of people: 2 maintainers + anyone who wants to join us.
+- Room: Wicklow Hall 1
+- Python Level: medium/advanced
+- Contact: jlehtosalo@gmail.com
+- Links: [Mypy repo](https://github.com/python/mypy), [Developer docs](https://github.com/python/mypy/blob/master/CONTRIBUTING.md)
+
 
 ### blume and gotu
 
@@ -64,3 +72,4 @@ Many thanks !
 - Room:  Wicklow 2A/B
 - Contact: swfiua@gmail.com (Johnny Gill)
 - Links: https://github.com/swfiua/blume https://github.com/swfiua/gotu
+
