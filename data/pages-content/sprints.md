@@ -65,3 +65,11 @@ Many thanks !
 - Contact: jlehtosalo@gmail.com
 - Links: [Mypy repo](https://github.com/python/mypy), [Developer docs](https://github.com/python/mypy/blob/master/CONTRIBUTING.md)
 
+
+### blume and gotu
+
+- Number of people: myself and anyone who wants to hoin
+- Room:  Wicklow 2A/B
+- Contact: swfiua@gmail.com (Johnny Gill)
+- Links: https://github.com/swfiua/blume https://github.com/swfiua/gotu
+
