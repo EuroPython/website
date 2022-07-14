@@ -22,10 +22,10 @@ As for our regular tickets, you can pay using a debit or credit card. Unless oth
 ## Social Event Summary (all times are local/Dublin times) ##
 
 - Where: The conference venue, the CCD.
-- When: Thursday July 14, starting at 20:00
-- Price: 20 € (**not refundable**). The ticket includes a bento box, and a welcome drink (you have to pay for drinks yourself after that) and live traditional Irish music. 
+- When: Thursday July 14, starting at 19:00
+- Price: 20 € (**not refundable**). The ticket includes a bento box, and a welcome drink (you have to pay for drinks yourself after that) and live traditional Irish music.
 - Schedule:
-    - 19:00 Event starts
+    - 19:00 Event starts: chat & laugh with each other!
     - 20:00 - 22:00 Live Traditional Irish Music - Listen to music played by 3 local Irish musicians. There will be a couple of dancers who’ll be there to show you how to join in with the dancing throughout the show, should you want to try. Of course nobody will force you to dance if that were not your thing :-)
     - 22:00 - 23:30 Social continues
     - 23:30 Bar closing.
@@ -37,9 +37,9 @@ Our social event sponsor, [Kiwi.com](https://jobs.kiwi.com) has organised a raff
 
 ### Live Entertainment ###
 
-“The Full Shilling" is a new and exciting collective of musicians from Dublin, Ireland. Their lively set consists of a mix of Irish songs and dances and are guaranteed to get the toes tapping! 
+“The Full Shilling" is a new and exciting collective of musicians from Dublin, Ireland. Their lively set consists of a mix of Irish songs and dances and are guaranteed to get the toes tapping!
 
-For this Thursday's gig we are joined by three wonderful musicians, Eoghan Scott (guitar/vocals), Sarah-May Rogers (vocals/fiddle), Claire Sherry (banjo). They will also have a special guest appearance of two world famous dancers, Jean Kennedy and Ciaran McManus who have just returned from a tour with Lord of the Dance! Come along and enjoy the craic! 
+For this Thursday's gig we are joined by three wonderful musicians, Eoghan Scott (guitar/vocals), Sarah-May Rogers (vocals/fiddle), Claire Sherry (banjo). They will also have a special guest appearance of two world famous dancers, Jean Kennedy and Ciaran McManus who have just returned from a tour with Lord of the Dance! Come along and enjoy the craic!
 
 
 ### Food Selection
@@ -53,7 +53,7 @@ Followed by: Raspberry cheesecake with raspberry jelly.
 
 _We will also have **vegan** options._
 
-*Please note the CCD is a cashless venue and only accept card/ contactless payments.* 
+*Please note the CCD is a cashless venue and only accept card/ contactless payments.*
 ---
 <div style={{textAlign: "center"}}>
 <Note>Big THANK YOU to our... </Note>
