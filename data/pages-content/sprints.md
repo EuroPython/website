@@ -141,3 +141,13 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Contact: [Disconnect3d](dominik.b.czarnota+europythonpwndbg@gmail.com)
 - Links:
     - [Pwndbg on GitHub](https://github.com/pwndbg/pwndbg/)
+
+### Godot-Python
+
+- Number of people: myself (the guy with a Godot cap)
+- Room: Wicklow Hall 2
+- Python level: medium (mostly C/Cython stuff)
+- Contact: [touilleMan](emmanuel.leblond+europython@gmail.com)
+- Links:
+    - [Godot-Python on GitHub](https://github.com/touilleMan/godot-python)
+    - [Godot game engine](https://godotengine.org/)
