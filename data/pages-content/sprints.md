@@ -114,3 +114,12 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Links:
     - [Getting started guideline for the sprint](https://github.com/scikit-learn-inria-fondation/EuroPython22)
     - [Scikit-learn contributing guideline](https://scikit-learn.org/stable/developers/contributing.html)
+
+### HPy
+
+- Number of people: myself and anyone who wants to learn HPy
+- Wicklow Hall 2  (Saturday only)
+- Python Level: medium/advanced
+- Contact: ronan.lamy@gmail.com
+- Links:
+    - [HPy docs](https://docs.hpyproject.org/en/latest/)
