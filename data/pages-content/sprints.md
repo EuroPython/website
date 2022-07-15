@@ -132,3 +132,12 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Contact: [Cheuk](me@cheuk.dev) (I am not the maintainer)
 - Links:
     - [Hypothesis on GitHub](https://github.com/HypothesisWorks/hypothesis)
+
+### Pwndbg (GDB plugin)
+
+- Number of people: myself and ppl who want to learn or contribute
+- Room: ?
+- Python level: medium
+- Contact: [Disconnect3d](dominik.b.czarnota+europythonpwndbg@gmail.com)
+- Links:
+    - [Pwndbg on GitHub](https://github.com/pwndbg/pwndbg/)
