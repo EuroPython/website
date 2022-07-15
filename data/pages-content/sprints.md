@@ -123,3 +123,12 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Contact: ronan.lamy@gmail.com
 - Links:
     - [HPy docs](https://docs.hpyproject.org/en/latest/)
+
+### Hypothesis
+
+- Number of people: myself and 2-3 more
+- Room: Wicklow Hall 2
+- Python Level: basic Python knowledge
+- Contact: [Cheuk](me@cheuk.dev) (I am not the maintainer)
+- Links:
+    - [Hypothesis on GitHub](https://github.com/HypothesisWorks/hypothesis)
