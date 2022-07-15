@@ -87,3 +87,11 @@ _Just learning to use Python with Azure...!_
 - Python Level: any
 - Contact: Richard Jackson - jacksorjacksor@pm.me / @jacksorjacksor
 - Links: [Azure on Python](https://azure.microsoft.com/en-gb/develop/python)
+
+### CircuitPython
+Python on microcontrollers.
+- Number of people: Me + up to three people
+- Wicklow Hall 2
+- Python Level: intermediate
+- Contact: Radomir Dopieralski - ep2022sprints@dopieralski.pl / @deshipu@mastodon.technology
+- Links: [CircuitPython](https://circuitpython.org)
