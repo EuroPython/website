@@ -71,9 +71,10 @@ export default function IndexPage({
             <MDXRemote {...intro.source} />
           </div>
           <div className="cta">
-            <h3 className="h4">Be part of EuroPython:</h3>
-            <a className="button" href="/sponsor">
-              Sponsor our community conference
+            <h3 className="h4">Watch EuroPython Live Streams:</h3>
+            <a className="button" href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p
+" target="_blank">
+              Enjoy the party of Python!
             </a>
           </div>
         </article>

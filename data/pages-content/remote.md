@@ -16,7 +16,7 @@ as interactive as possible.
 ### How to participate in the conference remotely?
 
 - To participate in the conference interactively (with guaranteed access to livestreams), a "remote ticket" registration is required. See details and pricing on the [Buy Tickets](/tickets#remote-tickets) page;
-- Any ticket (except the Stream-only) will have a link to join our remote platform Venueless. Just open your ticket and click on the link to join. There is no user or password, the link is your password. Each ticket can allow 3 simultaneous sessions. If you join with more than 3 devices, the oldest will be logged out. 
+- Any ticket (except the Stream-only) will have a link to join our remote platform Venueless. Just open your ticket and click on the link to join. There is no user or password, the link is your password. Each ticket can allow 3 simultaneous sessions. If you join with more than 3 devices, the oldest will be logged out.
 
 *Note: in-person ticket holders will be provided with remote event access*
 
@@ -34,3 +34,9 @@ Remote participation is between 13-15 July (Wednesday - Friday):
 As per our tradition, we also provide open and free access to the livestreams of our conference talks (13-15 July). You are not required to register a ticket, but you are welcome to if you would like an email reminder or receive up-to-date information about the conference.
 
 But The free livestream-only ticket does not include support and you will be unable to interact with the speakers or other in-person audience. Consider getting a remote ticket instead.
+
+### YouTube Links Every Day ###
+
+
+<ButtonWithTitle title="Why list many links when you have a playlist?
+" text="Enjoy all EuroPython 2022 Livestreams" href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p" />
