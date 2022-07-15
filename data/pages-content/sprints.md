@@ -96,6 +96,15 @@ Python on microcontrollers.
 - Contact: Radomir Dopieralski - ep2022sprints@dopieralski.pl / @deshipu@mastodon.technology
 - Links: [CircuitPython](https://circuitpython.org)
 
+### Update ansible-community/pytest-ansible
+Pytest-ansible isn't compatible with the latest versions of ansible or python, lets create a PR to change that.
+Disclaimer - I haven't comitted to pytest-ansible before, just a keen user. 
+- Number of people: Me + up to three people
+- Wicklow Hall 2
+- Python Level: intermediate
+- Contact: Peter Blackburn peter.blackburn@icloud.com
+- Links: https://github.com/ansible-community/pytest-ansible
+
 ### scikit-learn
 
 - Number of people: 6-7 people already familiar with the project + anyone willing to join
