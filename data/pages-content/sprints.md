@@ -105,6 +105,15 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Contact: Peter Blackburn peter.blackburn@icloud.com
 - Links: https://github.com/ansible-community/pytest-ansible
 
+### Mitogen
+Mitogen is a library for fast zero-install remote execution of Python and accerlating Ansible.
+
+- Room: 1, so far
+- Room: Wicklow Hall 2
+- Python Level: intermediate
+- Contact: alex@moreati.org.uk
+- Links: https://github.com/mitogen-hq/mitogen
+
 ### scikit-learn
 
 - Number of people: 6-7 people already familiar with the project + anyone willing to join
