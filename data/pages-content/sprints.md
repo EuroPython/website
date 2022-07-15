@@ -136,7 +136,7 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 ### Pwndbg (GDB plugin)
 
 - Number of people: myself and ppl who want to learn or contribute
-- Room: ?
+- Room: Wicklow Hall 2 (Saturday only)
 - Python level: medium
 - Contact: [Disconnect3d](dominik.b.czarnota+europythonpwndbg@gmail.com)
 - Links:
