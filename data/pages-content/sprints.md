@@ -78,3 +78,12 @@ Many thanks !
 - **Room:**  < Not sure yet >
 - **Contact:** day.r.jack@gmail.com (Jack Lockyer-Stevens)
 - **Links:** [📺 About VertFlow](https://drive.google.com/file/d/1csuniWXVrOfDxJ1g1pFndpQWESf_uLin/view?usp=sharing) | [🐍 Github](https://github.com/ovotech/VertFlow)
+
+### Untitled Azure Project
+
+_Just learning to use Python with Azure...!_
+- Number of people: Me + whoever would like to be learn as well!
+- Room: Liffey Hall 1
+- Python Level: any
+- Contact: Richard Jackson - jacksorjacksor@pm.me / @jacksorjacksor
+- Links: [Azure on Python](https://azure.microsoft.com/en-gb/develop/python)
