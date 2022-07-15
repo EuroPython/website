@@ -141,3 +141,13 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Contact: [Disconnect3d](dominik.b.czarnota+europythonpwndbg@gmail.com)
 - Links:
     - [Pwndbg on GitHub](https://github.com/pwndbg/pwndbg/)
+
+### Pyodide
+
+- Number of people: 2 maintainers + anyone willing to join
+- Wicklow Hall 2
+- Python Level: any
+- Contact: Roman Yurchak rth.yurchak@gmail.com
+- Links:
+    - [Project home](https://github.com/pyodide/pyodide)
+    - [Pyodide contributing guideline](https://pyodide.org/en/latest/development/contributing.html)
