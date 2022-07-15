@@ -95,3 +95,13 @@ Python on microcontrollers.
 - Python Level: intermediate
 - Contact: Radomir Dopieralski - ep2022sprints@dopieralski.pl / @deshipu@mastodon.technology
 - Links: [CircuitPython](https://circuitpython.org)
+
+### scikit-learn
+
+- Number of people: 6-7 people already familiar with the project + anyone willing to join
+- Wicklow Hall 2
+- Python Level: any
+- Contact: g.lemaitre58@gmail.com
+- Links:
+    - [Getting started guideline for the sprint](https://github.com/scikit-learn-inria-fondation/EuroPython22)
+    - [Scikit-learn contributing guideline](https://scikit-learn.org/stable/developers/contributing.html)
