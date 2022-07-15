@@ -150,4 +150,4 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Contact: Roman Yurchak rth.yurchak@gmail.com
 - Links:
     - [Project home](https://github.com/pyodide/pyodide)
-    - [Pyodide contributing guideline](https://pyodide.org/en/latest/development/contributing.html)
+    - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
