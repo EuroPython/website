@@ -74,7 +74,7 @@ export default function IndexPage({
             <h3 className="h4">Watch EuroPython Live Streams:</h3>
             <a className="button" href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p
 " target="_blank">
-              Sponsor our community conference
+              Enjoy the party of Python!
             </a>
           </div>
         </article>
