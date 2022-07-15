@@ -129,7 +129,7 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Number of people: myself and 2-3 more
 - Room: Wicklow Hall 2
 - Python Level: basic Python knowledge
-- Contact: [Cheuk](me@cheuk.dev) (I am not the maintainer)
+- Contact: [Cheuk](mailto:me@cheuk.dev) (I am not the maintainer)
 - Links:
     - [Hypothesis on GitHub](https://github.com/HypothesisWorks/hypothesis)
 
@@ -138,6 +138,16 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Number of people: myself and ppl who want to learn or contribute
 - Room: Wicklow Hall 2 (Saturday only)
 - Python level: medium
-- Contact: [Disconnect3d](dominik.b.czarnota+europythonpwndbg@gmail.com)
+- Contact: [Disconnect3d](mailto:dominik.b.czarnota+europythonpwndbg@gmail.com)
 - Links:
     - [Pwndbg on GitHub](https://github.com/pwndbg/pwndbg/)
+
+### Pyodide
+
+- Number of people: 2 maintainers + anyone willing to join
+- Wicklow Hall 2
+- Python Level: any
+- Contact: Roman Yurchak rth.yurchak@gmail.com
+- Links:
+    - [Project home](https://github.com/pyodide/pyodide)
+    - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
