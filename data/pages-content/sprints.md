@@ -105,6 +105,15 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Contact: Peter Blackburn peter.blackburn@icloud.com
 - Links: https://github.com/ansible-community/pytest-ansible
 
+### Mitogen
+Mitogen is a library for fast zero-install remote execution of Python and accerlating Ansible.
+
+- Room: 1, so far
+- Room: Wicklow Hall 2
+- Python Level: intermediate
+- Contact: alex@moreati.org.uk
+- Links: https://github.com/mitogen-hq/mitogen
+
 ### scikit-learn
 
 - Number of people: 6-7 people already familiar with the project + anyone willing to join
@@ -129,7 +138,7 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Number of people: myself and 2-3 more
 - Room: Wicklow Hall 2
 - Python Level: basic Python knowledge
-- Contact: [Cheuk](me@cheuk.dev) (I am not the maintainer)
+- Contact: [Cheuk](mailto:me@cheuk.dev) (I am not the maintainer)
 - Links:
     - [Hypothesis on GitHub](https://github.com/HypothesisWorks/hypothesis)
 
@@ -138,7 +147,7 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Number of people: myself and ppl who want to learn or contribute
 - Room: Wicklow Hall 2 (Saturday only)
 - Python level: medium
-- Contact: [Disconnect3d](dominik.b.czarnota+europythonpwndbg@gmail.com)
+- Contact: [Disconnect3d](mailto:dominik.b.czarnota+europythonpwndbg@gmail.com)
 - Links:
     - [Pwndbg on GitHub](https://github.com/pwndbg/pwndbg/)
 
@@ -151,3 +160,14 @@ Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Links:
     - [Godot-Python on GitHub](https://github.com/touilleMan/godot-python)
     - [Godot game engine](https://godotengine.org/)
+
+### Pyodide
+
+- Number of people: 2 maintainers + anyone willing to join
+- Wicklow Hall 2
+- Python Level: any
+- Contact: Roman Yurchak rth.yurchak@gmail.com
+- Links:
+    - [Project home](https://github.com/pyodide/pyodide)
+    - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
+
