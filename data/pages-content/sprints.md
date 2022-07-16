@@ -2,6 +2,27 @@
 title: EuroPython 2022 Sprints
 subtitle: Organise or join a sprint in EuroPython 2022!
 ---
+<div style={{textAlign: "center"}}>
+  <Note>EuroPython 2022 Sprint Info </Note>
+</div>
+
+- **ROOMS**
+  - Sprint Room 1: **Liffey Hall 1** (# A bit quiet as of 10am Sat)
+  - Sprint Room 2: **Wicklow Hall 2A**
+  - Sprint Room 3: **Wicklow Hall 2B**
+  - Quiet Room: **Wicklow Meeting Room 1**
+  - Coffee & Lunch: **Level 1 Foyer & Level 2 Foyer**
+
+- **SCHEDULE**
+  - 09:30 - 11:00 **Sprint Session**
+  - 11:00 - 11:15 ** Coffee Break **
+  - 11:15 - 13:00 ** Sprint Session **
+  - 13:00 - 14:00 ** Lunch Break **
+  - 14:00 - 15:15 ** Sprint Session **
+  - 15:15 - 15:30 ** Coffee Break **
+  - 15:30 - 17:00 ** Sprint Session **
+---
+
 # Sprints #
 
 Sprints will be run on the conference weekend: Saturday & Sunday 16 & 17 Jul on the conference venue.
@@ -98,7 +119,7 @@ Python on microcontrollers.
 
 ### Update ansible-community/pytest-ansible
 Pytest-ansible isn't compatible with the latest versions of ansible or python, lets create a PR to change that.
-Disclaimer - I haven't comitted to pytest-ansible before, just a keen user. 
+Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
 - Number of people: Me + up to three people
 - Wicklow Hall 2
 - Python Level: intermediate
@@ -170,4 +191,3 @@ Mitogen is a library for fast zero-install remote execution of Python and accerl
 - Links:
     - [Project home](https://github.com/pyodide/pyodide)
     - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
-
