@@ -191,3 +191,12 @@ Mitogen is a library for fast zero-install remote execution of Python and accerl
 - Links:
     - [Project home](https://github.com/pyodide/pyodide)
     - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
+
+### Hugging Face + Gradio Hackathon
+
+- Number of people: 3 maintainers + anyone willing to join
+- Build Machine Learning demos. You can also join if you don't know much about ML!
+- Liffey Hall 2
+- Python Level: any
+- Links:
+    - [Event Page](https://huggingface.co/EuroPython2022)
