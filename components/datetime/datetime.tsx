@@ -1,5 +1,4 @@
 import format from "date-fns/format";
-import parseISO from "date-fns/parseISO";
 import { formatInTimeZone } from "date-fns-tz";
 
 export const Datetime = ({
