@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,6 +16,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["global.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/schedule.js"],
+  "include": [
+    "global.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "lib/schedule.js"
+  ],
   "exclude": ["node_modules"]
 }

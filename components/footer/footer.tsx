@@ -1,7 +1,6 @@
-import Image from "next/image";
-import links from "../data/links.json";
+import links from "../../data/links.json";
 
-import { NavItems } from "./nav-items";
+import { NavItems } from "../nav-items";
 
 export const Footer = () => (
   <footer>
