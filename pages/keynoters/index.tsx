@@ -1,5 +1,5 @@
 import { Layout } from "../../components/layout";
-import { Keynote } from "../../components/keynoters";
+import { Keynoter } from "../../components/keynoters/keynoter";
 import keynoters from "../../data/keynoters.json";
 
 export default function IndexPage() {
@@ -9,7 +9,7 @@ export default function IndexPage() {
         <h2 className="h3">Keynote speakers</h2>
         <ul className="speakers-list speakers-list-standalone">
           {keynoters.map((speaker, index) => (
-            <Keynote
+            <Keynoter
               key={index}
               name={speaker.name}
               tagline={speaker.tagline}
