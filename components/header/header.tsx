@@ -1,17 +1,63 @@
+import cx from "classnames";
+
 import links from "../../data/links.json";
 
 import { NavItems } from "../nav-items";
 
+const HeaderButton = ({
+  children,
+  href,
+  variant = "standard",
+}: {
+  children: React.ReactNode;
+  href?: string;
+  variant?: "standard" | "live";
+}) => {
+  return (
+    <a
+      className={cx("border-white border-2 py-3 px-4 font-extrabold text-lg", {
+        "bg-white": variant !== "live",
+        "text-black": variant !== "live",
+        "bg-red": variant === "live",
+      })}
+      href={href}
+    >
+      {children}
+    </a>
+  );
+};
+
+const HeaderContent = ({ mobile = false }: { mobile?: boolean }) => {
+  return (
+    <>
+      <a href="/">
+        <img
+          src="/img/EP22logosmall.svg"
+          className="w-11 h-auto mr-4 block"
+          alt="EuroPython logo"
+        />
+      </a>
+      <div className="ml-auto">
+        {!mobile ? <HeaderButton variant="live">Live 📹</HeaderButton> : null}
+
+        <label htmlFor="nav_toggle">
+          <HeaderButton>{mobile ? "Close menu" : "Menu"}</HeaderButton>
+        </label>
+      </div>
+    </>
+  );
+};
+
 export const Header = () => (
-  <header>
+  <header className="p-6 flex items-center">
     <input
       type="checkbox"
       name="mobile-controls"
       id="nav_toggle"
-      className="hide"
+      className="hidden peer"
       aria-hidden="true"
     />
-    <a href="/" className="visible-large">
+    <a href="/" className="hidden">
       <span className="hide">EuroPython</span>
       <img
         src="/img/EP22logo.svg"
@@ -20,75 +66,31 @@ export const Header = () => (
       />
     </a>
 
-    <nav className="visible-large nav-desktop">
+    <nav className="hidden">
       <NavItems items={links.header} />
     </nav>
-    <a
-      className="button visible-large header-main-cta"
-      href="https://www.europython-society.org/coc/"
-    >
-      Code of Conduct
-    </a>
 
-    <a
-      className="button visible-large header-main-cta header-main-cta--live"
-      href="/live"
-    >
-      Live 📹
-    </a>
+    <HeaderContent />
 
-    <div className="header-controls hidden-large">
-      <a href="/">
-        <img
-          src="/img/EP22logosmall.svg"
-          className="header__logo"
-          alt="EuroPython logo"
-        />
-      </a>
-      <div>
-        <a
-          className="button header-main-cta header-main-cta--live"
-          href="/live"
-        >
-          Live 📹
-        </a>
-        <label htmlFor="nav_toggle" className="button">
-          Menu
-        </label>
-      </div>
-    </div>
-
-    <div className="header-mobile hidden-large">
-      <div className="header-controls">
-        <a href="/">
-          <img
-            src="/img/EP22logosmall.svg"
-            className="header__logo"
-            alt="EuroPython logo"
-          />
-        </a>
-        <label htmlFor="nav_toggle" className="button">
-          Close menu
-        </label>
+    <div className="fixed bg-green-800 top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block z-10 p-6">
+      <div className="flex items-center">
+        <HeaderContent mobile />
       </div>
 
-      <nav className="header-mobile__navigation">
+      <nav className="mt-8">
         <NavItems
           items={[
             {
               name: "Code of Conduct",
               path: "https://www.europython-society.org/coc/",
-              className: "navigation__cta",
             },
             {
               name: "Live 📹",
               path: "/live",
-              className: "navigation__cta",
             },
             {
               name: "Buy tickets",
               path: "/tickets",
-              className: "navigation__cta",
             },
             ...links.header,
           ]}

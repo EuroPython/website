@@ -1,5 +1,4 @@
 import "../styles/main.css";
-import "../styles/overrides.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

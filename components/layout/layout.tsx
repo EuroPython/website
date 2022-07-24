@@ -18,7 +18,7 @@ export const Layout = ({
     <>
       <Meta path={path || ""} title={title} socialCardUrl={socialCardUrl} />
 
-      <a href="#main-content" className="hide">
+      <a href="#main-content" className="sr-only">
         Skip to main content
       </a>
       <Header />
