@@ -1,0 +1,1 @@
+export { Sponsors } from "./sponsors";
