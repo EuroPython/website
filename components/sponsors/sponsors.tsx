@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import sponsors from "../data/sponsors.json";
+import sponsors from "../../data/sponsors.json";
 
 type Sponsor = {
   name: string;

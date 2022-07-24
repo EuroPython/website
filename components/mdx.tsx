@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Map } from "../components/map";
-import { ButtonWithTitle } from "../components/cta";
+import { Map } from "./map";
+import { ButtonWithTitle } from "./button-with-title";
 import { SponsorTiers } from "./sponsor-tiers";
 import { BenefitItem, BenefitsList } from "./benefits-list";
 import { ButtonLink } from "./button-link";
