@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { Footer } from "./footer";
-import { Header } from "./header";
-import { Meta } from "./meta";
+import { Footer } from "../footer";
+import { Header } from "../header";
+import { Meta } from "../meta";
 
 export const Layout = ({
   children,
