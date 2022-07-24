@@ -10,18 +10,18 @@ type Props = {
 
 export const NavItems = ({ items }: Props) => {
   return (
-    <ul>
+    <ul className="md:grid grid-cols-3">
       {items.map((item) => (
-        <li key={item.name} className="border-b-2 border-green-500">
+        <li key={item.name} className="border-b-2 border-green-500 md:border-0">
           <a
             href={item.path}
-            className="font-bold inline-block w-full text-3xl p-5 text-center"
+            className="font-bold inline-block w-full text-3xl md:text-base p-5 text-center"
           >
             {item.name}
           </a>
 
           {item.items ? (
-            <ul className="mb-3">
+            <ul className="mb-3 md:hidden">
               {item.items.map((subItem) => (
                 <li key={subItem.name}>
                   <a
