@@ -19,7 +19,7 @@ const meta: ComponentMeta<typeof Datetime> = {
 
 export const Main: Story = {
   args: {
-    datetime: new Date(),
+    datetime: new Date("2020-01-01T22:00:00.000Z"),
     format: "HH:mm dd/MM/yyyy",
     useUserTimezone: false,
   },
