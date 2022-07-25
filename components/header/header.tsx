@@ -71,7 +71,7 @@ export const Header = () => (
 
     <HeaderActions />
 
-    <div className="fixed bg-green-800 top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block z-10 p-6">
+    <div className="fixed bg-green-800 top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block z-50 p-6">
       <div className="flex items-center">
         <HeaderLogo />
         <HeaderActions mobile />

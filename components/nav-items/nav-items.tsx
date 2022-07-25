@@ -24,7 +24,7 @@ export const NavItems = ({ items }: Props) => {
           </a>
 
           {item.items ? (
-            <ul className="mb-3 md:hidden md:group-hover:block md:absolute z-10 md:bg-green-800 md:border-l-2">
+            <ul className="mb-3 md:hidden md:group-hover:block md:absolute z-50 md:bg-green-800 md:border-l-2">
               {item.items.map((subItem) => (
                 <li key={subItem.name}>
                   <a

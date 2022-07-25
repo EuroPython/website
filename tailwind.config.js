@@ -15,6 +15,9 @@ module.exports = {
       red: "#ce3333",
     },
     extend: {
+      aspectRatio: {
+        hero: "2.4380530973",
+      },
       fontFamily: {
         sans: [
           "Segoe UI",
