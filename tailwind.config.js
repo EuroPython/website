@@ -6,12 +6,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      white: "#fff",
+      black: "#000",
+      "green-300": "#3dae2b",
+      "green-500": "#194712",
+      "green-800": "#001c13",
+      red: "#ce3333",
+    },
     extend: {
-      colors: {
-        "green-500": "#194712",
-        "green-800": "#001c13",
-        red: "#ce3333",
-      },
       fontFamily: {
         sans: [
           "Segoe UI",
