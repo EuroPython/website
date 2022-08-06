@@ -36,7 +36,7 @@ const HeaderLogo = () => {
   return (
     <a href="/">
       <Logo variant="small" className="w-11 h-auto mr-4 block md:hidden" />
-      <Logo className="w-36 h-auto mr-4 hidden md:block" />
+      <Logo className="h-auto hidden md:block w-full pr-8" />
     </a>
   );
 };
@@ -63,6 +63,7 @@ export const Header = () => (
       className="hidden peer"
       aria-hidden="true"
     />
+
     <HeaderLogo />
 
     <nav className="mx-auto hidden md:block">
