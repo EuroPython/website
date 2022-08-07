@@ -3,6 +3,17 @@ import { Footer } from "../footer";
 import { Header } from "../header";
 import { Meta } from "../meta";
 
+const LayoutContainer = ({ children }: { children: ReactNode }) => {
+  return (
+    <main
+      id="main-content"
+      className="layout-wrapper"
+    >
+      {children}
+    </main>
+  );
+};
+
 export const Layout = ({
   children,
   path,
@@ -22,7 +33,9 @@ export const Layout = ({
         Skip to main content
       </a>
       <Header />
-      {children}
+
+      <LayoutContainer>{children}</LayoutContainer>
+
       <Footer />
     </>
   );

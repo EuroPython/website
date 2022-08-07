@@ -10,6 +10,7 @@ import { Card } from "../components/card";
 import matter from "gray-matter";
 import { Sponsors } from "../components/sponsors";
 import { Keynoters } from "../components/keynoters";
+import { Fullbleed } from "components/layout/fullbled";
 
 type Deadline = {
   content: string;
@@ -47,56 +48,60 @@ export default function IndexPage({
 }) {
   return (
     <Layout>
-      <main id="main-content">
+      <Fullbleed>
         <Hero />
+      </Fullbleed>
 
-        <section className="cards">
-          {deadlines.map(({ data, content }) => (
-            <Card
-              key={data.title}
-              image={data.image}
-              url={data.url}
-              title={data.title}
-              subtitle={data.subtitle}
-              content={content}
-            />
-          ))}
-        </section>
+      <section className="cards">
+        {deadlines.map(({ data, content }) => (
+          <Card
+            key={data.title}
+            image={data.image}
+            url={data.url}
+            title={data.title}
+            subtitle={data.subtitle}
+            content={content}
+          />
+        ))}
+      </section>
 
-        <hr />
+      <hr />
 
-        <article className="homepage-cta__right">
-          <div>
-            <h2 dangerouslySetInnerHTML={{ __html: intro.data.title }}></h2>
-            <MDXRemote {...intro.source} />
-          </div>
-          <div className="cta">
-            <h3 className="h4">Watch EuroPython Live Streams:</h3>
-            <a className="button" href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p
-" target="_blank">
-              Enjoy the party of Python!
-            </a>
-          </div>
-        </article>
-        <hr />
-        <article className="homepage-cta__venue">
-          <div>
-            <img src="/img/venue.png" className="image--1" alt="" />
-            <img src="/img/burst.png" className="image--2" alt="" />
-            <img src="/img/photo.png" className="image--3" alt="" />
-            <img src="/img/map.png" className="image--4" alt="" />
-          </div>
-          <div>
-            <h2>{venue.data.title}</h2>
-            <MDXRemote {...venue.source} />
-            <a className="button" href="/where">
-              Read more
-            </a>
-            <Map />
-          </div>
-        </article>
-        <hr />
-      </main>
+      <article className="homepage-cta__right">
+        <div>
+          <h2 dangerouslySetInnerHTML={{ __html: intro.data.title }}></h2>
+          <MDXRemote {...intro.source} />
+        </div>
+        <div className="cta">
+          <h3 className="h4">Watch EuroPython Live Streams:</h3>
+          <a
+            className="button"
+            href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p"
+            target="_blank"
+          >
+            Enjoy the party of Python!
+          </a>
+        </div>
+      </article>
+      <hr />
+      <article className="homepage-cta__venue">
+        <div>
+          <img src="/img/venue.png" className="image--1" alt="" />
+          <img src="/img/burst.png" className="image--2" alt="" />
+          <img src="/img/photo.png" className="image--3" alt="" />
+          <img src="/img/map.png" className="image--4" alt="" />
+        </div>
+        <div>
+          <h2>{venue.data.title}</h2>
+          <MDXRemote {...venue.source} />
+          <a className="button" href="/where">
+            Read more
+          </a>
+          <Map />
+        </div>
+      </article>
+      <hr />
+
       <Keynoters />
       <Sponsors />
     </Layout>

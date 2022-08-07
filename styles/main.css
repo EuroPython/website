@@ -5,3 +5,20 @@
 body {
   @apply bg-green-800 text-white;
 }
+
+.layout-wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(85ch, 100%)
+    1fr;
+}
+
+.layout-wrapper > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
