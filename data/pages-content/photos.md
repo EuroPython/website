@@ -6,7 +6,12 @@ subtitle: Savour, relive, share the highlights of EuroPython 2022
 # EuroPython 2022 Photos
 
 ### Official Photos
-<ButtonWithTitle title="taken by Larissa Oliveira & Liam McCafferty" text="EuroPython 2022 Official Photos!" href="https://www.flickr.com/groups/14792291@N24/" />
+<ButtonWithTitle title="taken by Larissa Oliveira † & Liam McCafferty †" text="EuroPython 2022 Official Photos!" href="https://www.flickr.com/groups/14792291@N24/" />
+
+† Credit:
+- <a href="https://linktr.ee/larissaoliveiraphotography)" target="_blank">Larissa Oliveira</a>
+
+- <a href="https://mccafferty.eu/)" target="_blank">Liam McCafferty</a>
 
 ### Community Photos
 
