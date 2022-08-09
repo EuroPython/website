@@ -37,8 +37,8 @@
       "name": "Info & Support",
       "items": [
         {
-          "name": "Buy tickets",
-          "path": "/tickets"
+          "name": "Photos",
+          "path": "/photos"
         },
         {
           "name": "FAQ",
@@ -49,26 +49,13 @@
           "path": "/rooms"
         },
         {
-          "name": "COVID Info",
-          "path": "/covid-info"
-        },
-        {
           "name": "Financial Aid",
           "path": "/finaid"
         },
         {
-          "name": "Visa Information",
-          "path": "/visa"
-        },
-        {
-          "name": "Speaker Mentorship",
-          "path": "/mentorship"
-        },
-        {
           "name": "Volunteers",
           "path": "/volunteers"
-        }
-        ,
+        },
         {
           "name": "How to conference",
           "path": "/how-to-conference"
@@ -166,14 +153,13 @@
       "path": "/mentorship"
     },
     {
-      "name": "FAQ",
-      "path": "/faq"
-    },
-    {
       "name": "Covid Info",
       "path": "/covid-info"
     },
-
+    {
+      "name": "Visa Information",
+      "path": "/visa"
+    },
     {
       "name": "Sponsor",
       "path": "/sponsor"
