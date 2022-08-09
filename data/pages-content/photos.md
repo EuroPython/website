@@ -8,9 +8,9 @@ subtitle: Savour, relive, share the highlights of EuroPython 2022
 ### Official Photos
 Check out the official photographs of the EuroPython 2022 - savour, relive & share the highlights of the Pythonic week of joy in Dublin & remote ❤️ 🐍
 
-<ButtonWithTitle title="taken by Larissa Oliveira † & Liam McCafferty †" text="EuroPython 2022 Official Photos!" href="https://www.flickr.com/groups/14792291@N24/" />
+<ButtonWithTitle title="taken by Larissa Oliveira & Liam McCafferty" text="EuroPython 2022 Official Photos!" href="https://www.flickr.com/groups/14792291@N24/" />
 
-† Credit:
+* Credit:
 - <a href="https://linktr.ee/larissaoliveiraphotography" target="_blank">Larissa Oliveira</a>
 
 - <a href="https://mccafferty.eu/" target="_blank">Liam McCafferty</a>
