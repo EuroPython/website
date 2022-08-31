@@ -197,6 +197,7 @@ And a big shout-out to our Django Girls Workshop coaches:
 As a community conference, the conference wouldn't have been possible and certainly less fun without every single volunteer who chipped in both in Dublin and remotely. Big thanks to every one of you!
 
 ### On-site Volunteers
+- Artem Kislovskiy
 - Cassie Follett
 - Cyril Bitterich
 - Dhanshree Arora
