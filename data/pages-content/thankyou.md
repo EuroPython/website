@@ -203,6 +203,7 @@ As a community conference, the conference wouldn't have been possible and certai
 - Dhanshree Arora
 - Haseeb Majid
 - Iqbal Abdullah
+- Konstantin Ignatov
 - Michael Seifert
 - Rodrigo Girão Serrão
 - Sebastian Witowski
