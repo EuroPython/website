@@ -10,6 +10,8 @@ The journey to Dublin was a 2-year arduous wait. But we made it together and it'
 
 EuroPython 2022 was run solely by a group of dedicated volunteers, as it has been every year since 2002. Without further ado, let's meet the amazing humans who spent countless hours & poured endless love into making EuroPython 2022!
 
+<img src="/images/cards/volunteers.jpg" width="100%" height="100%"/>
+
 
 ## EuroPython Society Board
 
