@@ -21,7 +21,7 @@ Check out the official photographs of the EuroPython 2022 - savour, relive & sha
 
 Want to share highlights of YOUR EuroPython 2022? It's easy!
 
-- <a href="https://www.flickr.com/groups/14806027@N20/)" target="_blank">EuroPython 2022 Community Group on Flickr</a>: If you already have your photos on Flickr, we made a community public group: populate it now with your beautiful photos and memories!
+- <a href="https://www.flickr.com/groups/14806027@N20/" target="_blank">EuroPython 2022 Community Group on Flickr</a>: If you already have your photos on Flickr, we made a community public group: populate it now with your beautiful photos and memories!
 
 - If you do not have your photos on Flickr or want to share your Flickr album here anyway, get them listed:
 
