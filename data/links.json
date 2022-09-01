@@ -37,13 +37,18 @@
       "name": "Info & Support",
       "items": [
         {
-          "name": "Photos",
-          "path": "/photos"
-        },
-        {
           "name": "FAQ",
           "path": "/faq"
         },
+        {
+          "name": "EuroPython 2022 Team",
+          "path": "/thankyou"
+        },
+        {
+          "name": "Conference Photos",
+          "path": "/photos"
+        },
+
         {
           "name": "Conference Rooms at The CCD",
           "path": "/rooms"
@@ -140,6 +145,10 @@
     }
   ],
   "footer": [
+    {
+      "name": "EuroPython 2022 Team",
+      "path": "/thankyou"
+    },
     {
       "name": "CFP",
       "path": "/cfp"
