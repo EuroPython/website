@@ -275,12 +275,26 @@ Big thanks to our AV team <a href="https://www.gonzodesign.it/" target="_blank">
 - Alessandro Arese Visconti
 - Valentina Bucca
 
-### Website
+### Conference Logo
+
+Our logo was again designed by Jessica Peña Moro from <a href="https://simetriko.com" target="_blank">Simetriko Diseño y Publicidad</a>. Jessica has been our logo designer since 2015.
+
+### Conference Website
+
 Our website was newly designed this year by <a href="https://www.dev.ngo/" target="_blank">The Developer Society</a> and deployed to <a href="https://vercel.com/" target="_blank">Vercel</a> .
 
 You can find the source code of our website on <a href="https://github.com/EuroPython/website" target="_blank">GitHub</a>
 
+### Conference Photographers
+
+The official <a href="https://www.flickr.com/groups/14792291@N24/" target="_blank"> conference photos</a> were taken by:
+- <a href="https://linktr.ee/larissaoliveiraphotography" target="_blank">Larissa Oliveira</a> during the Tutorial & Conference days; and by
+
+- <a href="https://mccafferty.eu/" target="_blank">Liam McCafferty</a> during the Sprint Weekend.
+
+
 ### The Full Shilling - Social Event Performers
+
 The social event was made ever so special by our Dublin collective of musicians “The Full Shilling":
 - Claire Sherry (banjo)
 - Eoghan Scott (guitar/vocals)
@@ -298,7 +312,7 @@ The conference wouldn't be possible without:
   <li> <a href="https://pretix.eu/about/en/" target="_blank">Pretix</a> & <a href="https://venueless.org/en/" target="_blank">venueless</a>  – special thanks to Dennis Lichtenthäler & Raphael Michel </li>
   <li> <a href="https://pretalx.com/p/about/" target="_blank">Pretalx</a> – special thanks to Tobias Kunze </li>
   <li> <a href="https://1password.com/" target="_blank">1Password</a> </li>
-  <li> <a href="https://zammad.com/en" target="_blank">Zammad</a> </li>
+  <li> <a href="https://zammad.com/en" target="_blank">Zammad</a> (self-hosted) </li>
   <li> <a href="https://www.google.com/nonprofits/" target="_blank">Google Workspace</a> </li>
   <li> <a href="https://plausible.io/" target="_blank">Plausible</a> </li>
 </ul>
