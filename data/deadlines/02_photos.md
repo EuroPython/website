@@ -1,6 +1,6 @@
 ---
 title: 2022 Team
-subtitle: The unsung heroes
+subtitle: The Unsung Heroes
 url: /thankyou
 image: /images/cards/volunteers.jpg
 ---
