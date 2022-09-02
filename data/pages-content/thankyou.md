@@ -201,6 +201,7 @@ As a community conference, the conference wouldn't have been possible and certai
 ### On-site Volunteers
 - Artem Kislovskiy
 - Cassie Follett
+- Chung-Fan Tsai
 - Cyril Bitterich
 - Dhanshree Arora
 - Haseeb Majid
