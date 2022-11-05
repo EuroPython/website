@@ -32,6 +32,9 @@ export default function Page({
 }) {
   const title = `${speaker.name} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`;
   const hasExtra = speaker.affiliation || speaker.homepage || speaker.twitter;
+  if (speaker.homepage != null) {
+     speaker.homepage = (speaker.homepage.indexOf('://') === -1) ? 'https://' + speaker.homepage : speaker.homepage;
+  }
 
   return (
     <Layout path={path} title={title}>
