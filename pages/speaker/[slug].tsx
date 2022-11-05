@@ -11,6 +11,7 @@ type Speaker = {
   slug: string;
   affiliation: string;
   homepage: string | null;
+  homepageUrl: string | null;
   twitter: string | null;
   bioSource: any;
 };
@@ -32,6 +33,9 @@ export default function Page({
 }) {
   const title = `${speaker.name} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`;
   const hasExtra = speaker.affiliation || speaker.homepage || speaker.twitter;
+  if (speaker.homepage != null) {
+     speaker.homepageUrl = (speaker.homepage.indexOf('://') === -1) ? 'https://' + speaker.homepage : speaker.homepage;
+  }
 
   return (
     <Layout path={path} title={title}>
@@ -63,11 +67,11 @@ export default function Page({
                     <dd>{speaker.affiliation}</dd>
                   </>
                 )}
-                {speaker.homepage && (
+                {speaker.homepageUrl && (
                   <>
                     <dt>Homepage</dt>
                     <dd>
-                      <a href={speaker.homepage}>{speaker.homepage}</a>
+                      <a href={speaker.homepageUrl}>{speaker.homepage}</a>
                     </dd>
                   </>
                 )}
