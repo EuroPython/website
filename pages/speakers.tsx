@@ -2,6 +2,7 @@ import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { fetchSpeakers } from "../lib/speakers";
 import { Fragment } from "react";
+import { Separator } from "components/separator/separator";
 
 type Speaker = {
   code: string;
@@ -53,7 +54,7 @@ export default function SpeakersPage({ speakers }: { speakers: Speaker[] }) {
               </ul>
             </div>
 
-            {index !== Object.keys(groups).length - 1 && <hr />}
+            {index !== Object.keys(groups).length - 1 && <Separator />}
           </Fragment>
         ))}
       </main>

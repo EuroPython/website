@@ -10,7 +10,8 @@ import { Card } from "../components/card";
 import matter from "gray-matter";
 import { Sponsors } from "../components/sponsors";
 import { Keynoters } from "../components/keynoters";
-import { Fullbleed } from "components/layout/fullbled";
+import { Fullbleed } from "components/layout/fullbleed";
+import { Separator } from "components/separator/separator";
 
 type Deadline = {
   content: string;
@@ -65,7 +66,7 @@ export default function IndexPage({
         ))}
       </section>
 
-      <hr />
+      <Separator />
 
       <article className="homepage-cta__right">
         <div>
@@ -83,7 +84,7 @@ export default function IndexPage({
           </a>
         </div>
       </article>
-      <hr />
+      <Separator />
       <article className="homepage-cta__venue">
         <div>
           <img src="/img/venue.png" className="image--1" alt="" />
@@ -100,7 +101,7 @@ export default function IndexPage({
           <Map />
         </div>
       </article>
-      <hr />
+      <Separator />
 
       <Keynoters />
       <Sponsors />

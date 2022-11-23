@@ -1,3 +1,4 @@
+import { Separator } from "components/separator/separator";
 import { Fragment } from "react";
 import sponsors from "../../data/sponsors.json";
 
@@ -72,12 +73,12 @@ export const Sponsors = () => {
           </div>
           {topTier.sponsors.length > 0 && <SponsorTier tier={topTier} />}
         </div>
-        {remaining.length > 0 && <hr />}
+        {remaining.length > 0 && <Separator />}
 
         {remaining.map((tier, index) => (
           <Fragment key={tier.name}>
             <SponsorTier tier={tier} />
-            {index !== remaining.length - 1 && <hr />}
+            {index !== remaining.length - 1 && <Separator />}
           </Fragment>
         ))}
       </article>

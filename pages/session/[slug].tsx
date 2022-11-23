@@ -5,6 +5,7 @@ import { fetchSessions } from "../../lib/sessions";
 import parseISO from "date-fns/parseISO";
 import { format } from "date-fns";
 import { Datetime } from "../../components/datetime";
+import { Separator } from "components/separator/separator";
 
 type Speaker = {
   code: string;
@@ -105,7 +106,7 @@ export default function Page({
           )}
         </article>
 
-        <hr />
+        <Separator />
 
         <article className="accent-left">
           <h2 className="h5">
@@ -124,7 +125,7 @@ export default function Page({
           ))}
         </article>
 
-        <hr />
+        <Separator />
 
         <section className="cards accent-right">
           {sessionsInParallel.length ? (
@@ -155,7 +156,7 @@ export default function Page({
 
         {start ? (
           <>
-            <hr />
+            <Separator />
 
             <section className="cards">
               <a
