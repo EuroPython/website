@@ -9,7 +9,7 @@ export const BenefitsList = ({ children }: { children: React.ReactNode }) => {
   const secondHalf = benefits.slice(half, benefits.length);
 
   return (
-    <ul className="benefits-list">
+    <ul className="gap-5 md:grid grid-cols-2">
       <div className="column">
         {/* @ts-ignore */}
         {firstHalf.map((benefit, i) => cloneElement(benefit, { key: i }))}
