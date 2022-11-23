@@ -12,6 +12,7 @@ import { Sponsors } from "../components/sponsors";
 import { Keynoters } from "../components/keynoters";
 import { Fullbleed } from "components/layout/fullbleed";
 import { Separator } from "components/separator/separator";
+import { CardContainer } from "components/card/card-container";
 
 type Deadline = {
   content: string;
@@ -53,7 +54,7 @@ export default function IndexPage({
         <Hero />
       </Fullbleed>
 
-      <section className="flex justify-between">
+      <CardContainer>
         {deadlines.map(({ data, content }) => (
           <Card
             key={data.title}
@@ -64,7 +65,7 @@ export default function IndexPage({
             content={content}
           />
         ))}
-      </section>
+      </CardContainer>
 
       <Separator />
 

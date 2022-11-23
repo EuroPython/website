@@ -9,7 +9,7 @@ type CardProps = {
 };
 
 export const Card = ({ title, subtitle, content, url, image }: CardProps) => (
-  <a href={url} className="block w-64">
+  <a href={url} className="block min-w-[250px] md:w-[40%] lg:w-[30%]">
     <div className="relative">
       <Image
         src={image}
