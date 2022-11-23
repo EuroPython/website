@@ -52,7 +52,7 @@ export default function IndexPage({
         <Hero />
       </Fullbleed>
 
-      <section className="cards">
+      <section className="flex justify-between">
         {deadlines.map(({ data, content }) => (
           <Card
             key={data.title}
