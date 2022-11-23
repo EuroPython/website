@@ -1,5 +1,12 @@
+import clsx from "clsx";
 import { ReactNode } from "react";
 
-export const Fullbleed = ({ children }: { children: ReactNode }) => {
-  return <div className="full-bleed">{children}</div>;
+export const Fullbleed = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
+  return <div className={clsx("full-bleed", className)}>{children}</div>;
 };

@@ -12,7 +12,6 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
-    <title>{"14732B44-ECE4-4D34-AAB6-60C9A82E0EB6@1x"}</title>
     <g
       id="Page-1"
       stroke="none"
@@ -101,7 +100,7 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
 
 export const Keynoters = () => {
   return (
-    <section className="relative">
+    <section className="relative my-24">
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
       <Title>
