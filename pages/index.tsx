@@ -70,8 +70,13 @@ export default function IndexPage({
 
       <article className="homepage-cta__right">
         <div>
-          <h2 dangerouslySetInnerHTML={{ __html: intro.data.title }}></h2>
-          <MDXRemote {...intro.source} />
+          <h2
+            className="text-7xl font-bold"
+            dangerouslySetInnerHTML={{ __html: intro.data.title }}
+          ></h2>
+          <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
+            <MDXRemote {...intro.source} />
+          </div>
         </div>
         <div className="cta">
           <h3 className="h4">Watch EuroPython Live Streams:</h3>
@@ -84,6 +89,7 @@ export default function IndexPage({
           </a>
         </div>
       </article>
+
       <Separator />
       <article className="homepage-cta__venue">
         <div>

@@ -10,7 +10,7 @@ body {
   display: grid;
   grid-template-columns:
     1fr
-    min(85ch, 100%)
+    min(1150px, 100%)
     1fr;
 }
 
