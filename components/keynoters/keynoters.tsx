@@ -100,7 +100,7 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
 
 export const Keynoters = () => {
   return (
-    <section className="relative my-24">
+    <section className="relative my-24 px-12">
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
       <Title>
@@ -109,7 +109,7 @@ export const Keynoters = () => {
         </Link>
       </Title>
 
-      <ul className="grid gap-6 grid-cols-4 auto-rows-[1fr] mt-12 mb-24">
+      <ul className="grid gap-6 grid-cols-2 md:grid-cols-4 auto-rows-[1fr] mt-12 mb-24">
         {keynoters.map((speaker, index) => (
           <Keynoter
             key={index}

@@ -1,7 +1,7 @@
 import links from "../../data/links.json";
 
 export const Footer = () => (
-  <footer className="max-w-4xl lg:max-w-6xl mx-auto py-16 md:grid grid-cols-2">
+  <footer className="max-w-4xl lg:max-w-6xl mx-auto py-16 md:grid grid-cols-2 px-12">
     <nav>
       <h6 className="font-bold text-xl mb-6">Quicklinks</h6>
 

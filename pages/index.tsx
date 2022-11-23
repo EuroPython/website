@@ -73,28 +73,32 @@ export default function IndexPage({
 
       <Separator />
 
-      <HeroWithCTA
-        ctaTitle="Watch EuroPython Live Streams:"
-        ctaButton={
-          <ButtonLink href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p">
-            Enjoy the party of Python!
-          </ButtonLink>
-        }
-      >
-        <Title>
-          <div dangerouslySetInnerHTML={{ __html: intro.data.title }}></div>
-        </Title>
+      <div className="px-12">
+        <HeroWithCTA
+          ctaTitle="Watch EuroPython Live Streams:"
+          ctaButton={
+            <ButtonLink href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p">
+              Enjoy the party of Python!
+            </ButtonLink>
+          }
+        >
+          <Title>
+            <div dangerouslySetInnerHTML={{ __html: intro.data.title }}></div>
+          </Title>
 
-        <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
-          <MDXRemote {...intro.source} />
-        </div>
-      </HeroWithCTA>
+          <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
+            <MDXRemote {...intro.source} />
+          </div>
+        </HeroWithCTA>
+      </div>
 
       <Separator />
 
-      <HeroVenue title={venue.data.title}>
-        <MDXRemote {...venue.source} />
-      </HeroVenue>
+      <div className="px-12">
+        <HeroVenue title={venue.data.title}>
+          <MDXRemote {...venue.source} />
+        </HeroVenue>
+      </div>
 
       <Separator />
 
