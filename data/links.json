@@ -37,38 +37,30 @@
       "name": "Info & Support",
       "items": [
         {
-          "name": "Buy tickets",
-          "path": "/tickets"
-        },
-        {
           "name": "FAQ",
           "path": "/faq"
         },
         {
-          "name": "Conference Rooms at The CCD",
-          "path": "/rooms"
+          "name": "EuroPython 2022 Team",
+          "path": "/thankyou"
         },
         {
-          "name": "COVID Info",
-          "path": "/covid-info"
+          "name": "Conference Photos",
+          "path": "/photos"
+        },
+
+        {
+          "name": "Conference Rooms at The CCD",
+          "path": "/rooms"
         },
         {
           "name": "Financial Aid",
           "path": "/finaid"
         },
         {
-          "name": "Visa Information",
-          "path": "/visa"
-        },
-        {
-          "name": "Speaker Mentorship",
-          "path": "/mentorship"
-        },
-        {
           "name": "Volunteers",
           "path": "/volunteers"
-        }
-        ,
+        },
         {
           "name": "How to conference",
           "path": "/how-to-conference"
@@ -154,6 +146,10 @@
   ],
   "footer": [
     {
+      "name": "EuroPython 2022 Team",
+      "path": "/thankyou"
+    },
+    {
       "name": "CFP",
       "path": "/cfp"
     },
@@ -166,14 +162,13 @@
       "path": "/mentorship"
     },
     {
-      "name": "FAQ",
-      "path": "/faq"
-    },
-    {
       "name": "Covid Info",
       "path": "/covid-info"
     },
-
+    {
+      "name": "Visa Information",
+      "path": "/visa"
+    },
     {
       "name": "Sponsor",
       "path": "/sponsor"
