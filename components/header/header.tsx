@@ -19,6 +19,7 @@ const HeaderButton = ({
     <a
       className={clsx(
         "border-white border-2 py-3 px-4 font-extrabold text-lg whitespace-nowrap",
+        "cursor-pointer hover:bg-primary-hover",
         {
           "bg-white": variant !== "live",
           "text-black": variant !== "live",
@@ -47,7 +48,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
         {!mobile ? <HeaderButton variant="live">Live 📹</HeaderButton> : null}
 
         <label htmlFor="nav_toggle" className="flex md:hidden ">
-          <HeaderButton>{mobile ? "Close menu" : "Menu"}</HeaderButton>
+          <HeaderButton>{mobile ? "Close Menu" : "Menu"}</HeaderButton>
         </label>
       </div>
     </>

@@ -21,6 +21,7 @@ export const NavItems = ({ items }: Props) => {
             className="font-bold inline-block w-full text-3xl md:text-base p-5 text-center md:text-left md:border-l-2 md:mt-4 md:p-2 md:px-5 md:hover:bg-green-300"
           >
             {item.name}
+            {item.path?.startsWith("http") ? <span> ↗</span> : null}
           </a>
 
           {item.items ? (
@@ -32,6 +33,7 @@ export const NavItems = ({ items }: Props) => {
                     className="bg-green-500 block w-full font-bold text-center md:text-left mb-[2px] p-2 md:px-5 md:hover:bg-green-300"
                   >
                     {subItem.name}
+                    {subItem.path?.startsWith("http") ? <span> ↗</span> : null}
                   </a>
                 </li>
               ))}
