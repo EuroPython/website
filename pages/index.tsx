@@ -16,6 +16,7 @@ import { CardContainer } from "components/card/card-container";
 import { HeroWithCTA } from "components/hero-section/hero-with-cta";
 import { ButtonLink } from "components/button-link";
 import { HeroVenue } from "components/hero-section/hero-venue";
+import { Title } from "components/typography/title";
 
 type Deadline = {
   content: string;
@@ -80,10 +81,10 @@ export default function IndexPage({
           </ButtonLink>
         }
       >
-        <h2
-          className="text-7xl font-bold"
-          dangerouslySetInnerHTML={{ __html: intro.data.title }}
-        ></h2>
+        <Title>
+          <div dangerouslySetInnerHTML={{ __html: intro.data.title }}></div>
+        </Title>
+
         <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
           <MDXRemote {...intro.source} />
         </div>

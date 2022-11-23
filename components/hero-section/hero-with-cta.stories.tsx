@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ButtonLink } from "components/button-link";
+import { Title } from "components/typography/title";
 
 import { HeroWithCTA } from "./hero-with-cta";
 
@@ -24,7 +25,10 @@ export const Main: ComponentStory<typeof HeroWithCTA> = ({
     }
     {...args}
   >
-    <h2 className="text-7xl font-bold">EuroPython Dublin You're invited!</h2>
+    <Title>
+      EuroPython Dublin
+      <br /> You're invited!
+    </Title>
     <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
       <p>
         Welcome to the 21st EuroPython. We're the oldest and longest running
