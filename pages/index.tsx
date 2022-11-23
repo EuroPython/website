@@ -13,6 +13,9 @@ import { Keynoters } from "../components/keynoters";
 import { Fullbleed } from "components/layout/fullbleed";
 import { Separator } from "components/separator/separator";
 import { CardContainer } from "components/card/card-container";
+import { HeroWithCTA } from "components/hero-section/hero-with-cta";
+import { ButtonLink } from "components/button-link";
+import { HeroVenue } from "components/hero-section/hero-venue";
 
 type Deadline = {
   content: string;
@@ -69,45 +72,29 @@ export default function IndexPage({
 
       <Separator />
 
-      <article className="homepage-cta__right">
-        <div>
-          <h2
-            className="text-7xl font-bold"
-            dangerouslySetInnerHTML={{ __html: intro.data.title }}
-          ></h2>
-          <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
-            <MDXRemote {...intro.source} />
-          </div>
-        </div>
-        <div className="cta">
-          <h3 className="h4">Watch EuroPython Live Streams:</h3>
-          <a
-            className="button"
-            href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p"
-            target="_blank"
-          >
+      <HeroWithCTA
+        ctaTitle="Watch EuroPython Live Streams:"
+        ctaButton={
+          <ButtonLink href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p">
             Enjoy the party of Python!
-          </a>
+          </ButtonLink>
+        }
+      >
+        <h2
+          className="text-7xl font-bold"
+          dangerouslySetInnerHTML={{ __html: intro.data.title }}
+        ></h2>
+        <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
+          <MDXRemote {...intro.source} />
         </div>
-      </article>
+      </HeroWithCTA>
 
       <Separator />
-      <article className="homepage-cta__venue">
-        <div>
-          <img src="/img/venue.png" className="image--1" alt="" />
-          <img src="/img/burst.png" className="image--2" alt="" />
-          <img src="/img/photo.png" className="image--3" alt="" />
-          <img src="/img/map.png" className="image--4" alt="" />
-        </div>
-        <div>
-          <h2>{venue.data.title}</h2>
-          <MDXRemote {...venue.source} />
-          <a className="button" href="/where">
-            Read more
-          </a>
-          <Map />
-        </div>
-      </article>
+
+      <HeroVenue title={venue.data.title}>
+        <MDXRemote {...venue.source} />
+      </HeroVenue>
+
       <Separator />
 
       <Keynoters />
