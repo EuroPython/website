@@ -13,17 +13,22 @@ export const Keynoter = ({
   tagline?: string;
   picture: string;
 }) => (
-  <li className={placeholder ? "placeholder" : ""}>
+  <li className="max-w-md list-none">
     <Link href={link}>
-      <a>
-        <img src={picture} />
-        <div className="speaker-description">
+      <a className="block w-full h-full relative">
+        <img src={picture} className="rounded-2xl w-full h-full object-cover" />
+
+        <div className="absolute bottom-0 left-0 right-0 px-5 pt-2 pb-8 bg-keynoter-info rounded-2xl rounded-t-none">
           {placeholder ? (
-            <p className="speaker-name">More keynoters coming soon</p>
+            <p className="text-body-inverted font-bold">
+              More keynoters coming soon
+            </p>
           ) : (
             <>
-              <p className="speaker-name">{name}</p>
-              {tagline ? <p>{tagline}</p> : null}
+              <p className="text-body-inverted font-bold">{name}</p>
+              {tagline ? (
+                <p className="text-body-light font-bold">{tagline}</p>
+              ) : null}
             </>
           )}
         </div>

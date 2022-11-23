@@ -13,7 +13,7 @@ export const Main: Story = {
     name: "Raquel Dou",
     tagline: "EPS Chair",
     link: "/raquel-dou",
-    picture: "https://avatars.dicebear.com/api/adventurer/Pop.svg",
+    picture: "https://i.pravatar.cc/650?u=abc1@example.com",
   },
 };
 

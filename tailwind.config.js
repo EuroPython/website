@@ -9,6 +9,8 @@ module.exports = {
     colors: {
       white: "#fff",
       black: "#000",
+      "body-inverted": "#001c13",
+      "body-light": "#888",
       "green-300": "#3dae2b",
       "green-500": "#194712",
       "green-800": "#001c13",
@@ -16,6 +18,7 @@ module.exports = {
       "primary-hover": "#f4a740",
       "primary-active": "#f4a740",
       red: "#ce3333",
+      "keynoter-info": "hsla(0,0%,100%,.85)",
     },
     extend: {
       aspectRatio: {
