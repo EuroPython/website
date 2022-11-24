@@ -10,6 +10,7 @@ import { Title } from "components/typography/title";
 import clsx from "clsx";
 import { Prose } from "components/prose/prose";
 import { Tag, TagContainer } from "components/tag/tag";
+import { DefinitionList, DefinitionTerm, DefinitionDescription } from "components/definition-list/definition-list";
 
 type Speaker = {
   code: string;
@@ -35,33 +36,6 @@ type Session = {
   track: string;
   slidesUrl?: string;
   speakers: Speaker[];
-};
-
-const DefinitionList = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <dl
-      className={clsx(
-        "grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2",
-        className
-      )}
-    >
-      {children}
-    </dl>
-  );
-};
-
-const DefinitionTerm = ({ children }: { children: React.ReactNode }) => {
-  return <dt className="font-bold">{children}</dt>;
-};
-
-const DefinitionDescription = ({ children }: { children: React.ReactNode }) => {
-  return <dd>{children}</dd>;
 };
 
 export default function Page({
