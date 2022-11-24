@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ButtonLink } from "components/button-link";
+import { Prose } from "components/prose/prose";
 import { Title } from "components/typography/title";
 
 import { HeroWithCTA } from "./hero-with-cta";
@@ -29,7 +30,7 @@ export const Main: ComponentStory<typeof HeroWithCTA> = ({
       EuroPython Dublin
       <br /> You're invited!
     </Title>
-    <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
+    <Prose>
       <p>
         Welcome to the 21st EuroPython. We're the oldest and longest running
         volunteer-led Python programming conference on the planet! Join us in
@@ -48,6 +49,6 @@ export const Main: ComponentStory<typeof HeroWithCTA> = ({
         </li>
         <li>Saturday &amp; Sunday, 16 &amp; 17 July: Sprints</li>
       </ul>
-    </div>
+    </Prose>
   </HeroWithCTA>
 );

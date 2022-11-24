@@ -17,6 +17,7 @@ import { HeroWithCTA } from "components/hero-section/hero-with-cta";
 import { ButtonLink } from "components/button-link";
 import { HeroVenue } from "components/hero-section/hero-venue";
 import { Title } from "components/typography/title";
+import { Prose } from "components/prose/prose";
 
 type Deadline = {
   content: string;
@@ -86,9 +87,9 @@ export default function IndexPage({
             <div dangerouslySetInnerHTML={{ __html: intro.data.title }}></div>
           </Title>
 
-          <div className="prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
+          <Prose>
             <MDXRemote {...intro.source} />
-          </div>
+          </Prose>
         </HeroWithCTA>
       </div>
 

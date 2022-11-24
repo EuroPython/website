@@ -1,5 +1,6 @@
 import { ButtonLink } from "components/button-link";
 import { Map } from "components/map";
+import { Prose } from "components/prose/prose";
 
 export const HeroVenue = ({
   title,
@@ -27,11 +28,7 @@ export const HeroVenue = ({
       <div>
         <h2 className="mt-12 mb-8 font-bold text-5xl">{title}</h2>
 
-        {/* TODO; move prose to a new component */}
-
-        <div className="mb-4 prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc">
-          {children}
-        </div>
+        <Prose>{children}</Prose>
 
         <ButtonLink href="/venue">Read more</ButtonLink>
 
