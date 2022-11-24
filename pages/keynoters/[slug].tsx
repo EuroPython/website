@@ -10,6 +10,8 @@ import { wrapInArticles } from "../../plugins/wrap-in-articles";
 import { highlightFirstHeading } from "../../plugins/highlight-first-heading";
 import { components } from "../../components/mdx";
 import keynoters from "../../data/keynoters.json";
+import { Title } from "components/typography/title";
+import { Prose } from "components/prose/prose";
 
 const findKeynoter = (name: string) => {
   return keynoters.find((keynoter) => keynoter.name === name);
@@ -41,22 +43,29 @@ export default function Page({
       title={`${title} || EuroPython 2022`}
       socialCardUrl={socialCardUrl}
     >
-      <main id="main-content">
-        <h1 className="h2">{title}</h1>
-        <h2 className="h3">
+      <main id="main-content" className="px-6">
+        <Title level={2}>{title}</Title>
+        <Title level={3}>
           <a href="#about">{keynoter.name}</a>
-        </h2>
-        <MDXRemote {...source} components={components} />
-        <div className="speaker-about" id="about">
-          <h2>About the keynoter</h2>
-          <div className="speaker-about-content">
+        </Title>
+
+        <Prose>
+          <MDXRemote {...source} components={components} />
+        </Prose>
+
+        <div id="about">
+          <Title level={2}>About the keynoter</Title>
+          <div>
             <div>
-              <img src={keynoter.picture} />
+              <img src={keynoter.picture} className="w-full max-w-sm mb-12" />
             </div>
 
             <div>
               {affiliation ? <div>Affiliation: {affiliation}</div> : null}
-              <MDXRemote {...bioSource} components={components} />
+
+              <Prose>
+                <MDXRemote {...bioSource} components={components} />
+              </Prose>
             </div>
           </div>
         </div>

@@ -54,8 +54,12 @@ export default function Page({
           <Title>{speaker.name}</Title>
 
           {speaker.avatar && (
-            <div className="w-full max-w-sm mb-12">
-              <img src={getAvatarUrl(speaker.avatar)} alt={speaker.name} />
+            <div>
+              <img
+                src={getAvatarUrl(speaker.avatar)}
+                alt={speaker.name}
+                className="w-full max-w-sm mb-12"
+              />
             </div>
           )}
 
