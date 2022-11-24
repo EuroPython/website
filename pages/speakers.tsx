@@ -3,6 +3,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { fetchSpeakers } from "../lib/speakers";
 import { Fragment } from "react";
 import { Separator } from "components/separator/separator";
+import { Title } from "components/typography/title";
 
 type Speaker = {
   code: string;
@@ -30,25 +31,26 @@ export default function SpeakersPage({ speakers }: { speakers: Speaker[] }) {
 
   return (
     <Layout title="Speakers - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
-      <main id="main-content">
-        <h1>Speakers</h1>
+      <main id="main-content" className="px-6">
+        <Title>Speakers</Title>
 
-        <div className="speakers-letters">
+        <div className="flex text-3xl font-bold flex-wrap">
           {Object.keys(groups).map((letter) => (
-            <h3 key={letter}>
+            <Title level={3} key={letter} className="mr-2">
               <a href={`#letter-${letter}`}>{letter}</a>
-            </h3>
+            </Title>
           ))}
         </div>
 
         {Object.entries(groups).map(([letter, speakers], index) => (
           <Fragment key={letter}>
             <div id={`letter-${letter}`}>
-              <h2>{letter}</h2>
-              <ul className="all-speakers-list">
+              <Title level={2}>{letter}</Title>
+
+              <ul className="list-disc pl-4">
                 {speakers.map((speaker) => (
-                  <li key={speaker.code}>
-                    <a href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
+                  <li key={speaker.code} className="mb-1">
+                    <a className="underline hover:text-primary-hover" href={`/speaker/${speaker.slug}`}>{speaker.name}</a>
                   </li>
                 ))}
               </ul>
