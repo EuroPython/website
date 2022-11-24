@@ -1,6 +1,7 @@
 import { Layout } from "../../components/layout";
 import Image from "next/image";
 import rooms from "../../data/rooms.json";
+import { Title } from "components/typography/title";
 
 export default function RoomPage({
   room,
@@ -24,14 +25,16 @@ export default function RoomPage({
       title={`Room ${room.name} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`}
       path={path}
     >
-      <main id="main-content">
-        <h1 style={{ marginBottom: 10 }}>{room.name}</h1>
-        <p>Level: {room.floor}</p>
+      <main id="main-content" className="px-6">
+        <Title className="!mb-2">{room.name}</Title>
+        <p className="font-bold">Level: {room.floor}</p>
 
-        <a href={room.factSheet}>Fact sheet</a>
+        <a className="underline text-primary" href={room.factSheet}>
+          Fact sheet
+        </a>
 
         {room.image ? (
-          <div style={{ marginTop: 20 }}>
+          <div className="mt-4">
             <Image
               src={room.image.path}
               width={room.image.width}
