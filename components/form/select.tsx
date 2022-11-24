@@ -6,11 +6,13 @@ export const Select = ({
   name,
   className,
   onChange,
+  defaultValue,
 }: {
   children: React.ReactNode;
   id: string;
   name: string;
   className?: string;
+  defaultValue?: string;
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }) => {
   return (
@@ -19,6 +21,7 @@ export const Select = ({
         id={id}
         name={name}
         onChange={onChange}
+        defaultValue={defaultValue}
         className={clsx(
           "block w-full bg-body-inverted text-lg h-16 py-2 pr-16 pl-4 border-2 appearance-none",
           "focus:outline-none focus:border-primary-active",
