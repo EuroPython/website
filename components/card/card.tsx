@@ -9,12 +9,13 @@ type CardProps = {
 };
 
 export const Card = ({ title, subtitle, content, url, image }: CardProps) => (
-  <a href={url} className="block min-w-[250px] md:w-[40%] lg:w-[30%]">
-    <div className="relative">
+  <a href={url} className="block min-w-[250px] w-full md:w-[40%] lg:w-[30%]">
+    <div className="relative w-full">
       <Image
         src={image}
         width={600}
         height={375}
+        layout="responsive"
         alt=""
         className="rounded-2xl"
       />

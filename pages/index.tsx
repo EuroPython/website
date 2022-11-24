@@ -74,7 +74,7 @@ export default function IndexPage({
 
       <Separator />
 
-      <div className="px-12">
+      <div className="px-6">
         <HeroWithCTA
           ctaTitle="Watch EuroPython Live Streams:"
           ctaButton={
@@ -95,7 +95,7 @@ export default function IndexPage({
 
       <Separator />
 
-      <div className="px-12">
+      <div className="px-6">
         <HeroVenue title={venue.data.title}>
           <MDXRemote {...venue.source} />
         </HeroVenue>

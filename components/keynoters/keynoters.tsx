@@ -100,7 +100,7 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
 
 export const Keynoters = () => {
   return (
-    <section className="relative my-24 px-12">
+    <section className="relative my-12 px-6">
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
       <Title>

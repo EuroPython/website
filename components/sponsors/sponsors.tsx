@@ -145,7 +145,7 @@ const SponsorTier = ({ tier }: { tier: Tier }) => {
           {tier.name}
         </span>
       </h4>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 ml-12 items-center justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 sm:gap-6 ml-12 items-center justify-items-center">
         {tier.sponsors.map((sponsor) => (
           <a
             key={sponsor.url}
@@ -174,7 +174,7 @@ export const Sponsors = () => {
   const noSponsors = remaining.length + topTier.sponsors.length === 0;
 
   return (
-    <Fullbleed className="bg-white text-body-inverted py-24">
+    <Fullbleed className="bg-white text-body-inverted py-24 px-6">
       <section className="max-w-4xl lg:max-w-6xl mx-auto mb-16">
         <div>
           <div className="flex gap-6">

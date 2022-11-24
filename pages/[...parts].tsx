@@ -12,11 +12,11 @@ import { highlightFirstHeading } from "../plugins/highlight-first-heading";
 import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
 import { components } from "../components/mdx";
 import { inspect } from "util";
+import { Prose } from "components/prose/prose";
 
 export default function Page({
   source,
   title,
-  className,
   path,
 }: {
   title: string;
@@ -30,8 +30,10 @@ export default function Page({
 
   return (
     <Layout path={path} title={title}>
-      <main id="main-content" className={className}>
-        <MDXRemote {...source} components={components} />
+      <main id="main-content" className="px-6">
+        <Prose>
+          <MDXRemote {...source} components={components} />
+        </Prose>
       </main>
     </Layout>
   );
