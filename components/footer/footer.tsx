@@ -1,8 +1,8 @@
 import links from "../../data/links.json";
 
 export const Footer = () => (
-  <footer className="max-w-4xl lg:max-w-6xl mx-auto py-16 md:grid grid-cols-2 px-12">
-    <nav>
+  <footer className="max-w-4xl lg:max-w-6xl mx-auto py-16 md:grid grid-cols-2 px-6">
+    <nav className="mb-12">
       <h6 className="font-bold text-xl mb-6">Quicklinks</h6>
 
       {links.footer.map((item) => (
@@ -18,9 +18,14 @@ export const Footer = () => (
       ))}
     </nav>
 
-    <article className="flex self-center gap-12">
-      <div className="">
-        <img width={444} height={444} src="/img/europythonlogo.png" />
+    <article className="flex flex-col md:flex-row self-center gap-8 md:gap-12">
+      <div>
+        <img
+          width={444}
+          height={444}
+          src="/img/europythonlogo.png"
+          className="max-w-[200px]"
+        />
       </div>
       <div>
         <address className="not-italic mb-4">

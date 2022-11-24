@@ -6,6 +6,7 @@ import { fetchSessions } from "../lib/sessions";
 import { Title } from "components/typography/title";
 import clsx from "clsx";
 import { Prose } from "components/prose/prose";
+import { TagContainer, Tag } from "components/tag/tag";
 
 type Session = {
   track: string;
@@ -71,25 +72,6 @@ const Select = ({
         />
       </svg>
     </div>
-  );
-};
-
-const Tag = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <span
-      className={clsx(
-        "inline-block bg-green-300 text-body px-4 py-2 rounded-xl font-bold",
-        className
-      )}
-    >
-      {children}
-    </span>
   );
 };
 
@@ -196,10 +178,10 @@ export default function SessionsPage({
                 <MDXRemote {...session.abstractSource} />
               </Prose>
 
-              <p className="space-x-2">
+              <TagContainer>
                 <Tag>{session.submission_type}</Tag>
                 <Tag>{session.track}</Tag>
-              </p>
+              </TagContainer>
             </div>
           ))}
       </main>

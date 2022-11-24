@@ -6,6 +6,10 @@ import parseISO from "date-fns/parseISO";
 import { format } from "date-fns";
 import { Datetime } from "../../components/datetime";
 import { Separator } from "components/separator/separator";
+import { Title } from "components/typography/title";
+import clsx from "clsx";
+import { Prose } from "components/prose/prose";
+import { Tag, TagContainer } from "components/tag/tag";
 
 type Speaker = {
   code: string;
@@ -33,6 +37,33 @@ type Session = {
   speakers: Speaker[];
 };
 
+const DefinitionList = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <dl
+      className={clsx(
+        "grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2",
+        className
+      )}
+    >
+      {children}
+    </dl>
+  );
+};
+
+const DefinitionTerm = ({ children }: { children: React.ReactNode }) => {
+  return <dt className="font-bold">{children}</dt>;
+};
+
+const DefinitionDescription = ({ children }: { children: React.ReactNode }) => {
+  return <dd>{children}</dd>;
+};
+
 export default function Page({
   path,
   session,
@@ -52,45 +83,57 @@ export default function Page({
 
   return (
     <Layout path={path} socialCardUrl={socialCardUrl} title={title}>
-      <main id="main-content" className="session">
+      <main id="main-content" className="px-6 pt-12">
         <article className="accent-left">
-          <h1>{session.title}</h1>
-          <dl>
-            {session.room ? (
-              <>
-                <dt>Room:</dt>
-                <dd>{session.room}</dd>
-              </>
-            ) : null}
-            {start ? (
-              <>
-                <dt>Start (Dublin time):</dt>
-                <dd>
-                  <Datetime
-                    datetime={start}
-                    format="HH:mm 'on' dd MMMM yyyy"
-                    useUserTimezone={false}
-                  />
-                </dd>
-                <dt>Start (your time):</dt>
-                <dd>
-                  <Datetime
-                    datetime={start}
-                    format="HH:mm 'on' dd MMMM yyyy"
-                    useUserTimezone={true}
-                  />
-                </dd>
-              </>
-            ) : null}
-            <dt>Duration:</dt>
-            <dd>{session.duration} minutes</dd>
-          </dl>
-          <h2>Abstract</h2>
-          <MDXRemote {...session.abstractSource} />
-          <p>
-            <span className="tag">{session.type}</span>
-            <span className="tag">{session.track}</span>
-          </p>
+          <header className="mb-6">
+            <Title level={2}>{session.title}</Title>
+            <DefinitionList>
+              {session.room ? (
+                <>
+                  <DefinitionTerm>Room:</DefinitionTerm>
+                  <DefinitionDescription>{session.room}</DefinitionDescription>
+                </>
+              ) : null}
+              {start ? (
+                <>
+                  <DefinitionTerm>Start (Dublin time):</DefinitionTerm>
+                  <DefinitionDescription>
+                    <Datetime
+                      datetime={start}
+                      format="HH:mm 'on' dd MMMM yyyy"
+                      useUserTimezone={false}
+                    />
+                  </DefinitionDescription>
+                  <DefinitionTerm>Start (your time):</DefinitionTerm>
+                  <DefinitionDescription>
+                    <Datetime
+                      datetime={start}
+                      format="HH:mm 'on' dd MMMM yyyy"
+                      useUserTimezone={true}
+                    />
+                  </DefinitionDescription>
+                </>
+              ) : null}
+              <DefinitionTerm>Duration:</DefinitionTerm>
+              <DefinitionDescription>
+                {session.duration} minutes
+              </DefinitionDescription>
+            </DefinitionList>
+          </header>
+
+          <Title level={2} className="!mb-6">
+            Abstract
+          </Title>
+
+          <Prose>
+            <MDXRemote {...session.abstractSource} />
+          </Prose>
+
+          <TagContainer className="mb-6">
+            <Tag>{session.type}</Tag>
+            <Tag>{session.track}</Tag>
+          </TagContainer>
+
           {session.slidesUrl && (
             <a href={session.slidesUrl} className="button">
               Download slides
@@ -98,8 +141,13 @@ export default function Page({
           )}
           {session.description ? (
             <>
-              <h2>Description</h2>
-              <MDXRemote {...session.descriptionSource} />
+              <Title level={2} className="!mb-6">
+                Description
+              </Title>
+
+              <Prose>
+                <MDXRemote {...session.descriptionSource} />
+              </Prose>
             </>
           ) : (
             ""
@@ -109,32 +157,42 @@ export default function Page({
         <Separator />
 
         <article className="accent-left">
-          <h2 className="h5">
+          <Title level={2}>
             The speaker{session.speakers.length > 1 ? "s" : ""}
-          </h2>
+          </Title>
 
           {session.speakers.map((speaker) => (
-            <div key={speaker.code}>
-              <p className="large">
-                <a href={`/speaker/${speaker.slug}`} className="speaker-link">
+            <div key={speaker.code} className="mb-4">
+              <p className="mb-4">
+                <a
+                  href={`/speaker/${speaker.slug}`}
+                  className="text-4xl hover:text-primary-hover underline font-bold"
+                >
                   {speaker.name}
                 </a>
               </p>
-              <MDXRemote {...speaker.biographySource} />
+              <Prose>
+                <MDXRemote {...speaker.biographySource} />
+              </Prose>
             </div>
           ))}
         </article>
 
         <Separator />
 
-        <section className="cards accent-right">
+        <section className="grid gap-6 md:grid-cols-2 accent-right">
           {sessionsInParallel.length ? (
             <aside>
-              <h3>Sessions at the same time</h3>
-              <ul className="unstyled-list links">
+              <Title level={4}>Sessions at the same time</Title>
+              <ul className="space-y-4">
                 {sessionsInParallel.map((s) => (
                   <li key={s.slug}>
-                    <a href={`/session/${s.slug}`}>{s.title}</a>
+                    <a
+                      className="underline hover:text-primary-hover"
+                      href={`/session/${s.slug}`}
+                    >
+                      {s.title}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -142,11 +200,16 @@ export default function Page({
           ) : null}
           {sessionsAfter.length ? (
             <aside>
-              <h3>After this session</h3>
-              <ul className="unstyled-list links">
+              <Title level={4}>After this session</Title>
+              <ul className="space-y-4">
                 {sessionsAfter.map((s) => (
                   <li key={s.slug}>
-                    <a href={`/session/${s.slug}`}>{s.title}</a>
+                    <a
+                      className="underline hover:text-primary-hover"
+                      href={`/session/${s.slug}`}
+                    >
+                      {s.title}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -158,16 +221,12 @@ export default function Page({
           <>
             <Separator />
 
-            <section className="cards">
-              <a
-                className="h2"
-                href={`/schedule/${format(start, "yyyy-MM-dd")}#${
-                  session.code
-                }`}
-              >
-                ← Back to schedule
-              </a>
-            </section>
+            <a
+              className="block text-6xl font-bold text-center hover:text-primary-hover mt-24 mb-12"
+              href={`/schedule/${format(start, "yyyy-MM-dd")}#${session.code}`}
+            >
+              ← Back to schedule
+            </a>
           </>
         ) : null}
       </main>

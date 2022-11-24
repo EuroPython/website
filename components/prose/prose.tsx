@@ -10,7 +10,7 @@ export const Prose = ({
   return (
     <div
       className={clsx(
-        "mb-4 prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc",
+        "mb-4 prose-lg prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-li:list-disc prose-a:underline",
         className
       )}
     >
