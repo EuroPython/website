@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
 import { fetchSessions } from "../lib/sessions";
 import { Title } from "components/typography/title";
 import clsx from "clsx";
-import { Prose } from "components/prose/prose";
-import { TagContainer, Tag } from "components/tag/tag";
+import { SessionSummary } from "components/session-summary/session-summary";
+import { Label } from "components/form/label";
+import { Select } from "components/form/select";
 
 type Session = {
   track: string;
@@ -16,63 +16,6 @@ type Session = {
   title: string;
   speakers: { name: string; slug: string }[];
   abstractSource: any;
-};
-
-const Label = ({
-  children,
-  htmlFor,
-}: {
-  children: React.ReactNode;
-  htmlFor: string;
-}) => {
-  return (
-    <label htmlFor={htmlFor} className="block font-bold mb-4 pl-3 text-lg">
-      {children}
-    </label>
-  );
-};
-
-const Select = ({
-  children,
-  id,
-  name,
-  className,
-  onChange,
-}: {
-  children: React.ReactNode;
-  id: string;
-  name: string;
-  className?: string;
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-}) => {
-  return (
-    <div className="relative">
-      <select
-        id={id}
-        name={name}
-        onChange={onChange}
-        className={clsx(
-          "block w-full bg-body-inverted text-lg h-16 py-2 pr-16 pl-4 border-2 appearance-none",
-          "focus:outline-none focus:border-primary-active",
-          className
-        )}
-      >
-        {children}
-      </select>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 12 8"
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none"
-      >
-        <path
-          d="M10.59.59 6 5.17 1.41.59 0 2l6 6 6-6z"
-          fill="#FFF"
-          fillRule="evenodd"
-        />
-      </svg>
-    </div>
-  );
 };
 
 export default function SessionsPage({
@@ -151,38 +94,7 @@ export default function SessionsPage({
             return true;
           })
           .map((session) => (
-            <div key={session.code} className="mt-12">
-              <Title level={2} highlighted className="!mb-6">
-                <a
-                  href={`/session/${session.slug}`}
-                  className="hover:text-primary-hover"
-                >
-                  {session.title}
-                </a>
-              </Title>
-              <p className="text-lg font-bold mb-4">
-                {session.speakers.map((speaker, index) => (
-                  <>
-                    <a
-                      href={`/speaker/${speaker.slug}`}
-                      className="text-primary underline"
-                    >
-                      {speaker.name}
-                    </a>
-                    {index < session.speakers.length - 1 && ", "}
-                  </>
-                ))}
-              </p>
-
-              <Prose>
-                <MDXRemote {...session.abstractSource} />
-              </Prose>
-
-              <TagContainer>
-                <Tag>{session.submission_type}</Tag>
-                <Tag>{session.track}</Tag>
-              </TagContainer>
-            </div>
+            <SessionSummary key={session.code} session={session} />
           ))}
       </main>
     </Layout>
