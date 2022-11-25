@@ -30,7 +30,7 @@ export const Title = ({
     >
       {highlighted ? (
         <span
-          className={clsx("absolute hidden xl:block", {
+          className={clsx("absolute hidden xl:block text-body-light", {
             "-left-16": level === 1,
             "-left-12": level === 2,
             "-left-8": level === 3,
