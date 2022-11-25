@@ -15,15 +15,15 @@ const TalkTime = ({ time }: { time: number }) => {
   const isoTime = parseISO(`2022-07-13T${timeAsString}:00+01:00`);
 
   return (
-    <div className="talk-time">
-      <div>
+    <div className="font-bold text-center">
+      <div className="mb-4">
         <Datetime datetime={isoTime} useUserTimezone={false} format={"HH:mm"} />
-        <div className="timezone">(Dublin)</div>
+        <div className="text-xs">(Dublin)</div>
       </div>
 
       <div>
         <Datetime datetime={isoTime} useUserTimezone={true} format={"HH:mm"} />
-        <div className="timezone">(You)</div>
+        <div className="text-xs">(You)</div>
       </div>
     </div>
   );
@@ -154,7 +154,7 @@ const ScheduleSlot = ({
   return (
     <div className="row contents">
       <div
-        className="talk__time"
+        className="schedule-item"
         style={{
           "--grid-column": "1 / 2",
           "--grid-row": `${row.start} / ${row.end}`,
@@ -200,13 +200,7 @@ const Orphan = ({
 
   return (
     <div className="row row-orphan contents">
-      <div
-        className="talk__time"
-        style={{
-          "--grid-column": "1 / 2",
-          ...style,
-        }}
-      >
+      <div className="talk__time schedule-item">
         <TalkTime time={session.time} />
       </div>
 
@@ -276,10 +270,10 @@ export const Schedule = ({
   return (
     <div>
       <div
-        className="grid my-8 bg-white text-black"
+        className="grid gap-4 my-8 bg-white text-black"
         style={{
           gridTemplateRows,
-          "--total-rooms": totalRooms.toString(),
+          gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
         }}
       >
         <ScheduleHeader schedule={schedule} />
@@ -300,6 +294,7 @@ export const Schedule = ({
                 key={index}
                 style={{
                   "--grid-row": `${row.start} / ${row.end}`,
+                  "--grid-column": `1 / ${totalRooms + 2}`,
                 }}
               />
             );
@@ -335,7 +330,14 @@ export const Schedule = ({
             />
           );
         })}
-        <Break title={"End of day"} time={lastTime} />
+        <Break
+          title={"End of day"}
+          time={lastTime}
+          style={{
+            // "--grid-row": `${rowSizes.length + 1} / ${rowSizes.length + 2}`,
+            "--grid-column": `1 / ${totalRooms + 2}`,
+          }}
+        />
       </div>
     </div>
   );

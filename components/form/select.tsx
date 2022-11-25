@@ -28,7 +28,8 @@ export const Select = ({
           "block w-full bg-body-inverted text-lg h-16 py-2 pr-16 pl-4 border-2 appearance-none",
           "focus:outline-none focus:border-primary-active",
           {
-            "bg-white text-body-inverted font-bold rounded-xl": variant === "rounded",
+            "bg-white text-body-inverted font-bold rounded-xl !text-2xl !py-6 !pl-6 !h-24":
+              variant === "rounded",
           },
           className
         )}
@@ -39,7 +40,10 @@ export const Select = ({
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 12 8"
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none"
+        className={clsx("absolute top-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none", {
+          "right-4": variant === "default",
+          "right-6": variant === "rounded",
+        })}
       >
         <path
           d="M10.59.59 6 5.17 1.41.59 0 2l6 6 6-6z"
