@@ -44,7 +44,7 @@ export const Session = ({
   );
 
   return (
-    <div className="talk" style={style} id={session.id}>
+    <div className="talk schedule-item" style={style} id={session.id}>
       <header className={`${session.audience || ""} session-${session.type}`}>
         <p className={`talk__rating`}>{getHeaderText(session)}</p>
 

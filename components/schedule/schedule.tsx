@@ -152,7 +152,7 @@ const ScheduleSlot = ({
   });
 
   return (
-    <div className="row">
+    <div className="row contents">
       <div
         className="talk__time"
         style={{
@@ -199,7 +199,7 @@ const Orphan = ({
   const column = getColumnForSession(session, rooms);
 
   return (
-    <div className="row row-orphan">
+    <div className="row row-orphan contents">
       <div
         className="talk__time"
         style={{
@@ -222,6 +222,45 @@ const Orphan = ({
   );
 };
 
+const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
+  const totalRooms = schedule.rooms.length;
+
+  return (
+    <div className="headings font-bold text-body-light contents">
+      <span
+        className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-white"
+        style={{
+          "--grid-row": `1 / ${HEADING_ROWS + 1}`,
+          "--grid-column": "1 / 2",
+        }}
+      >
+        Time
+      </span>
+      {schedule.rooms.map((track, index) => (
+        <span
+          className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-white"
+          key={track}
+          style={{
+            "--grid-row": `1 / ${HEADING_ROWS + 1}`,
+            "--grid-column": `${index + 2}/${index + 3}`,
+          }}
+        >
+          {track}
+        </span>
+      ))}
+      <span
+        className="schedule-item bg-white sticky z-10 top-0 self-start"
+        style={{
+          "--grid-row": `1 / ${HEADING_ROWS + 1}`,
+          "--grid-column": `1 / ${totalRooms + 2}`,
+        }}
+      >
+        &nbsp;
+      </span>
+    </div>
+  );
+};
+
 export const Schedule = ({
   schedule,
   dayType,
@@ -235,45 +274,15 @@ export const Schedule = ({
   const lastTime = lastSession.time + lastSession.duration;
 
   return (
-    <div className="full-width schedule__container">
+    <div>
       <div
-        className="schedule"
+        className="grid my-8 bg-white text-black"
         style={{
           gridTemplateRows,
           "--total-rooms": totalRooms.toString(),
         }}
       >
-        <h2 className="h4 schedule__date">Monday, 11th July, 2022 TODO</h2>
-        <div className="headings">
-          <span
-            style={{
-              "--grid-row": `1 / ${HEADING_ROWS + 1}`,
-              "--grid-column": "1 / 2",
-            }}
-          >
-            Time
-          </span>
-          {schedule.rooms.map((track, index) => (
-            <span
-              key={track}
-              style={{
-                "--grid-row": `1 / ${HEADING_ROWS + 1}`,
-                "--grid-column": `${index + 2}/${index + 3}`,
-              }}
-            >
-              {track}
-            </span>
-          ))}
-          <span
-            className="headings-bg"
-            style={{
-              "--grid-row": `1 / ${HEADING_ROWS + 1}`,
-              "--grid-column": `1 / ${totalRooms + 2}`,
-            }}
-          >
-            &nbsp;
-          </span>
-        </div>
+        <ScheduleHeader schedule={schedule} />
 
         {schedule.slots.map((slot, index) => {
           if (slot.type === "break") {

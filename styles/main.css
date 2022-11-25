@@ -22,3 +22,8 @@ body {
   width: 100%;
   grid-column: 1 / 4;
 }
+
+.schedule-item {
+  grid-row: var(--grid-row);
+  grid-column: var(--grid-column);
+}
