@@ -179,7 +179,7 @@ export const Sponsors = () => {
         <div>
           <div className="flex gap-6">
             <Detail />
-            <div className="max-w-[150px]">
+            <div className="max-w-[250px]">
               <h3 className="font-bold text-3xl mb-4">Sponsors</h3>
 
               {noSponsors ? (
@@ -197,7 +197,7 @@ export const Sponsors = () => {
                 </p>
               )}
 
-              <div className="text-center mt-4">
+              <div className="mt-4">
                 <ButtonLink href="/sponsor">Become a sponsor</ButtonLink>
               </div>
             </div>
