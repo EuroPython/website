@@ -5,12 +5,14 @@ export const Select = ({
   id,
   name,
   className,
+  variant = "default",
   onChange,
   defaultValue,
 }: {
   children: React.ReactNode;
   id: string;
   name: string;
+  variant?: "default" | "rounded";
   className?: string;
   defaultValue?: string;
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -25,6 +27,9 @@ export const Select = ({
         className={clsx(
           "block w-full bg-body-inverted text-lg h-16 py-2 pr-16 pl-4 border-2 appearance-none",
           "focus:outline-none focus:border-primary-active",
+          {
+            "bg-white text-body-inverted font-bold rounded-xl": variant === "rounded",
+          },
           className
         )}
       >
@@ -38,7 +43,7 @@ export const Select = ({
       >
         <path
           d="M10.59.59 6 5.17 1.41.59 0 2l6 6 6-6z"
-          fill="#FFF"
+          className="fill-current"
           fillRule="evenodd"
         />
       </svg>

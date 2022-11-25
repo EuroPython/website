@@ -13,6 +13,8 @@ import { Schedule } from "../../components/schedule/schedule";
 import { Schedule as ScheduleType } from "../../components/schedule/types";
 import { fetchSessions } from "../../lib/sessions";
 import { fetchSpeakers } from "../../lib/speakers";
+import { Title } from "components/typography/title";
+import { Select } from "components/form/select";
 
 export default function SchedulePage({
   day,
@@ -38,13 +40,14 @@ export default function SchedulePage({
 
   return (
     <Layout>
-      <main id="main-content">
+      <main id="main-content" className="px-6">
         <article className="accent-left">
-          <h1 className="highlighted">Schedule</h1>
+          <Title highlighted>Schedule</Title>
 
-          <select
+          <Select
             id="schedule-select"
-            className="select--schedule"
+            name="schedule-select"
+            variant="rounded"
             onChange={handleDaySelected}
             defaultValue={day}
           >
@@ -59,7 +62,7 @@ export default function SchedulePage({
                 </option>
               );
             })}
-          </select>
+          </Select>
         </article>
 
         <Schedule schedule={schedule} dayType={dayType} />
