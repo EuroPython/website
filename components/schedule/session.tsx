@@ -32,6 +32,44 @@ const getHeaderText = (session: SessionType) => {
   return session.type;
 };
 
+const SessionHeader = ({ session }: { session: SessionType }) => {
+  return (
+    <header
+      className={clsx(
+        "absolute right-0 top-0 bottom-0 w-5 rounded-r-lg whitespace-nowrap",
+        "bg-green-300 flex text-white justify-between text-xs py-2 px-3 font-bold leading-4",
+        "lg:static lg:w-full lg:rounded-none lg:rounded-t-lg",
+        {
+          "!bg-session-intermediate": session.audience === "intermediate",
+          "!bg-session-advanced": session.audience === "advanced",
+          "!bg-session-beginner": session.audience === "beginner",
+          "!bg-green-300": [
+            "keynote",
+            "registration",
+            "opening-session",
+          ].includes(session.type),
+        }
+      )}
+    >
+      <p
+        className={clsx(
+          "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-90",
+          "lg:static lg:rotate-0 lg:translate-x-0 lg:translate-y-0"
+        )}
+      >
+        {getHeaderText(session)}
+      </p>
+
+      <p className="hidden lg:block">
+        {session.type === "poster" ? (
+          <>{numberToTime(session.time)} - </>
+        ) : null}
+        {session.duration}m
+      </p>
+    </header>
+  );
+};
+
 export const Session = ({
   session,
   style,
@@ -49,36 +87,17 @@ export const Session = ({
 
   return (
     <div
-      className="schedule-item rounded-lg bg-body-inverted text-green-300 flex flex-col"
+      className={clsx(
+        "schedule-item",
+        "rounded-lg bg-body-inverted text-green-300 flex flex-col relative mb-4 mx-4",
+        "min-h-[100px] pr-6 lg:pr-0 lg:mb-0 lg:mx-0"
+      )}
       style={style}
       id={session.id}
     >
-      <header
-        className={clsx(
-          "w-full rounded-t-lg bg-green-300 flex text-white justify-between text-xs py-2 px-3 font-bold leading-4",
-          {
-            "!bg-session-intermediate": session.audience === "intermediate",
-            "!bg-session-advanced": session.audience === "advanced",
-            "!bg-session-beginner": session.audience === "beginner",
-            "!bg-green-300": [
-              "keynote",
-              "registration",
-              "opening-session",
-            ].includes(session.type),
-          }
-        )}
-      >
-        <p>{getHeaderText(session)}</p>
+      <SessionHeader session={session} />
 
-        <p>
-          {session.type === "poster" ? (
-            <>{numberToTime(session.time)} - </>
-          ) : null}
-          {session.duration}m
-        </p>
-      </header>
-
-      <p className="font-bold text-base py-2 px-3">
+      <p className="font-bold text-sm lg:text-base py-2 px-3">
         {session.slug ? (
           <a href={`/session/${session.slug}`}>{session.title}</a>
         ) : (
@@ -88,7 +107,7 @@ export const Session = ({
           <>
             {" "}
             <ICALLink
-              className="calendar-link"
+              className="absolute bottom-2 right-8 lg:static"
               title={session.title}
               description={session.abstract}
               start={session.start}
@@ -101,7 +120,7 @@ export const Session = ({
       </p>
 
       {nonEmptySpeakers.length ? (
-        <div className="mt-auto py-2 mx-3 mb-4 border-white border-t-[1px]">
+        <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-white border-t-[1px]">
           <>
             <div>
               <span>
@@ -125,7 +144,7 @@ export const Session = ({
           </>
         </div>
       ) : null}
-      <div className="talk__mobile-details hidden">
+      <div className="text-white text-sm font-bold mt-auto py-2 px-3 lg:hidden">
         {roomsAndSpeakers.join(", ")}
       </div>
     </div>

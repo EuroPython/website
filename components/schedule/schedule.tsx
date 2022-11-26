@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { parseISO } from "date-fns";
 import { Datetime } from "../datetime";
 import { Break } from "./break";
@@ -15,8 +16,13 @@ const TalkTime = ({ time }: { time: number }) => {
   const isoTime = parseISO(`2022-07-13T${timeAsString}:00+01:00`);
 
   return (
-    <div className="font-bold text-center">
-      <div className="mb-4">
+    <div
+      className={clsx(
+        "font-bold text-center flex gap-10 justify-center items-center py-3",
+        "lg:py-0 lg:flex-col lg:gap-2"
+      )}
+    >
+      <div>
         <Datetime datetime={isoTime} useUserTimezone={false} format={"HH:mm"} />
         <div className="text-xs">(Dublin)</div>
       </div>
@@ -152,10 +158,11 @@ const ScheduleSlot = ({
   });
 
   return (
-    <div className="row contents">
+    <div className="sm:grid grid-cols-2 lg:contents">
       <div
         className="schedule-item"
         style={{
+          gridColumn: "1 / 3",
           "--grid-column": "1 / 2",
           "--grid-row": `${row.start} / ${row.end}`,
         }}
@@ -220,7 +227,7 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
   const totalRooms = schedule.rooms.length;
 
   return (
-    <div className="headings font-bold text-body-light contents">
+    <div className="hidden lg:contents headings font-bold text-body-light">
       <span
         className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-white"
         style={{
@@ -270,7 +277,7 @@ export const Schedule = ({
   return (
     <div>
       <div
-        className="grid gap-4 my-8 bg-white text-black"
+        className="lg:grid gap-4 my-8 bg-white text-black"
         style={{
           gridTemplateRows,
           gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
