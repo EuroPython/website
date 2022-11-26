@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
 import { fetchSessions } from "../lib/sessions";
 import { SessionSummary } from "components/session-summary/session-summary";
 import { Label } from "components/form/label";
