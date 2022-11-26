@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Layout } from "../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
 import { fetchSessions } from "../lib/sessions";
+import { SessionSummary } from "components/session-summary/session-summary";
+import { Label } from "components/form/label";
+import { Select } from "components/form/select";
+import { Title } from "components/typography/title";
 
 type Session = {
   track: string;
@@ -35,24 +38,26 @@ export default function SessionsPage({
 
   return (
     <Layout title="Accepted tutorials - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote">
-      <main id="main-content">
-        <h1>
+      <main id="main-content" className="px-6">
+        <Title>
           Accepted tutorials
-          <p style={{ fontWeight: "normal" }}>Note: this list might change</p>
-        </h1>
+          <p className="font-normal text-base mt-4">
+            Note: this list might change
+          </p>
+        </Title>
 
         <form>
-          <h2>Filters</h2>
+          <Title level={2}>Filters</Title>
           <div>
-            <label htmlFor="track">Track</label>
-            <select name="track" id="track" onChange={handleFilterChange}>
+            <Label htmlFor="track">Track</Label>
+            <Select name="track" id="track" onChange={handleFilterChange}>
               <option value="">All</option>
               {tracks.map((track) => (
                 <option key={track} value={track}>
                   {track}
                 </option>
               ))}
-            </select>
+            </Select>
           </div>
         </form>
 
@@ -70,21 +75,7 @@ export default function SessionsPage({
             return true;
           })
           .map((session) => (
-            <div key={session.code} className="session-card">
-              <h2 className="highlighted">
-                <a href={`/session/${session.slug}`}>{session.title}</a>
-              </h2>
-              <p className="session-card__author">
-                {session.speakers.map((speaker) => speaker.name).join(", ")}
-              </p>
-
-              <MDXRemote {...session.abstractSource} />
-
-              <p>
-                <span className="tag">{session.submission_type}</span>
-                <span className="tag">{session.track}</span>
-              </p>
-            </div>
+            <SessionSummary key={session.code} session={session} />
           ))}
       </main>
     </Layout>

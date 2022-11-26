@@ -15,10 +15,10 @@ export const BenefitItem = ({
     | "transfer";
 }) => {
   return (
-    <li>
+    <li className="grid max-w-full grid-cols-[3rem_1fr] gap-5 mb-8">
       <img src={`/img/icons/${icon}.svg`} />
       <div>
-        <h5 className="h3">{title}</h5>
+        <h5 className="text-2xl font-bold">{title}</h5>
         <p>{children}</p>
       </div>
     </li>

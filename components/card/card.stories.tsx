@@ -1,28 +1,36 @@
-import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { Card } from "./card";
+import { CardContainer } from "./card-container";
 
-type Story = ComponentStoryObj<typeof Card>;
+export default {
+  title: "Card Container",
+  component: CardContainer,
+  subcomponents: { Card },
+} as ComponentMeta<typeof CardContainer>;
 
-const meta: ComponentMeta<typeof Card> = {
-  component: Card,
-  decorators: [
-    (Story) => (
-      <section className="cards">
-        <Story />
-      </section>
-    ),
-  ],
-};
-
-export const Main: Story = {
-  args: {
-    title: "Example card",
-    subtitle: "A card example",
-    content: "Some text",
-    url: "/something",
-    image: "https://picsum.photos/id/1/600/375",
-  },
-};
-
-export default meta;
+export const Main: ComponentStory<typeof CardContainer> = (args) => (
+  <CardContainer {...args}>
+    <Card
+      title="Example card"
+      subtitle="A card example"
+      content="Some text"
+      url="/something"
+      image="https://picsum.photos/id/1/600/375"
+    />
+    <Card
+      title="Example card"
+      subtitle="A card example"
+      content="Some text"
+      url="/something"
+      image="https://picsum.photos/id/1/600/375"
+    />
+    <Card
+      title="Example card"
+      subtitle="A card example"
+      content="Some text"
+      url="/something"
+      image="https://picsum.photos/id/1/600/375"
+    />
+  </CardContainer>
+);

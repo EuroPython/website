@@ -19,7 +19,7 @@ online. Become a sponsor of EuroPython 2022, join us in
 [The Convention Centre Dublin](https://www.theccd.ie/) and directly help promote
 the work of the great open-source community and further its development.
 
-![](/img/hall_rotated.png)
+<img src="/img/hall_rotated.png" width="3279" height="1785" />
 
 <ButtonWithTitle title="Ready to become a sponsor and join us in Dublin?" text="Sign Up Now!" href="https://forms.gle/L2CxUpbr6wmV3Lsv8" />
 

@@ -1,3 +1,6 @@
+import { ButtonLink } from "components/button-link";
+import { Title } from "components/typography/title";
+
 type Props = {
   title: string;
   href: string;
@@ -6,11 +9,14 @@ type Props = {
 
 export const ButtonWithTitle = ({ title, href, text }: Props) => {
   return (
-    <div className="cta cta--centered">
-      <h3 className="h4 highlighted">{title}</h3>
-      <a className="button" href={href}>
-        {text}
-      </a>
+    <div className="flex flex-col items-center">
+      <Title highlighted level={3}>
+        {title}
+      </Title>
+
+      <div>
+        <ButtonLink href={href}>{text}</ButtonLink>
+      </div>
     </div>
   );
 };

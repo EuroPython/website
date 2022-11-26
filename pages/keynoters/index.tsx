@@ -1,13 +1,15 @@
 import { Layout } from "../../components/layout";
 import { Keynoter } from "../../components/keynoters/keynoter";
 import keynoters from "../../data/keynoters.json";
+import { Title } from "components/typography/title";
 
 export default function IndexPage() {
   return (
     <Layout path="keynoters" title="Keynoters || EuroPython 2022">
-      <main id="main-content">
-        <h2 className="h3">Keynote speakers</h2>
-        <ul className="speakers-list speakers-list-standalone">
+      <main id="main-content" className="px-6">
+        <Title>Keynote speakers</Title>
+
+        <ul className="grid sm:grid-cols-2 gap-12">
           {keynoters.map((speaker, index) => (
             <Keynoter
               key={index}

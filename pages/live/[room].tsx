@@ -1,3 +1,5 @@
+import { Select } from "components/form/select";
+import { Title } from "components/typography/title";
 import { useCallback } from "react";
 import { Layout } from "../../components/layout";
 import live from "../../data/live.json";
@@ -17,23 +19,19 @@ export default function LivePage({
 
   return (
     <Layout>
-      <main id="main-content">
-        <h1 className="highlighted">{room.name}</h1>
+      <main id="main-content" className="px-6">
+        <Title highlighted>{room.name}</Title>
 
         <iframe
           id="ytplayer"
-          style={{
-            aspectRatio: "16/9",
-            border: 0,
-          }}
-          width="640"
-          height="360"
+          className="aspect-video border-none w-full mb-12"
           src={`https://www.youtube.com/embed/${room.youtubeId}?autoplay=1&amp;origin=https://ep2022.europython.eu`}
         ></iframe>
 
-        <h1>Change room:</h1>
+        <Title level={2}>Change room:</Title>
 
-        <select
+        <Select
+          name="schedule-select"
           id="schedule-select"
           className="select--schedule"
           onChange={handleRoomSelected}
@@ -46,7 +44,7 @@ export default function LivePage({
               </option>
             );
           })}
-        </select>
+        </Select>
       </main>
     </Layout>
   );

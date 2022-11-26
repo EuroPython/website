@@ -2,6 +2,13 @@ import { MDXRemote } from "next-mdx-remote";
 import { Layout } from "../../components/layout";
 import { serialize } from "next-mdx-remote/serialize";
 import { fetchSpeakers } from "../../lib/speakers";
+import { Title } from "components/typography/title";
+import { Prose } from "components/prose/prose";
+import {
+  DefinitionDescription,
+  DefinitionList,
+  DefinitionTerm,
+} from "components/definition-list/definition-list";
 
 type Speaker = {
   code: string;
@@ -34,58 +41,77 @@ export default function Page({
   const title = `${speaker.name} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`;
   const hasExtra = speaker.affiliation || speaker.homepage || speaker.twitter;
   if (speaker.homepage != null) {
-     speaker.homepageUrl = (speaker.homepage.indexOf('://') === -1) ? 'https://' + speaker.homepage : speaker.homepage;
+    speaker.homepageUrl =
+      speaker.homepage.indexOf("://") === -1
+        ? "https://" + speaker.homepage
+        : speaker.homepage;
   }
 
   return (
     <Layout path={path} title={title}>
-      <main id="main-content" className="session">
+      <main id="main-content" className="px-6">
         <article className="accent-left">
-          <h1>{speaker.name}</h1>
+          <Title>{speaker.name}</Title>
 
           {speaker.avatar && (
-            <div className="speaker-avatar">
-              <img src={getAvatarUrl(speaker.avatar)} alt={speaker.name} />
+            <div>
+              <img
+                src={getAvatarUrl(speaker.avatar)}
+                alt={speaker.name}
+                className="w-full max-w-sm mb-12"
+              />
             </div>
           )}
 
-          <h2>Biography</h2>
-          {speaker.bioSource ? (
-            <MDXRemote {...speaker.bioSource} />
-          ) : (
-            <p>This person hasn't provided a biography</p>
-          )}
+          <Title level={2}>Biography</Title>
+          <Prose>
+            {speaker.bioSource ? (
+              <MDXRemote {...speaker.bioSource} />
+            ) : (
+              <p>This person hasn't provided a biography</p>
+            )}
+          </Prose>
 
           {hasExtra ? (
             <>
-              <h2>More about the speaker</h2>
+              <Title level={2}>More about the speaker</Title>
 
-              <dl>
+              <DefinitionList>
                 {speaker.affiliation && (
                   <>
-                    <dt>Affiliation</dt>
-                    <dd>{speaker.affiliation}</dd>
+                    <DefinitionTerm>Affiliation</DefinitionTerm>
+                    <DefinitionDescription>
+                      {speaker.affiliation}
+                    </DefinitionDescription>
                   </>
                 )}
                 {speaker.homepageUrl && (
                   <>
-                    <dt>Homepage</dt>
-                    <dd>
-                      <a href={speaker.homepageUrl}>{speaker.homepage}</a>
-                    </dd>
+                    <DefinitionTerm>Homepage</DefinitionTerm>
+                    <DefinitionDescription>
+                      <a
+                        className="text-primary underline hover:text-primary-hover"
+                        href={speaker.homepageUrl}
+                      >
+                        {speaker.homepage}
+                      </a>
+                    </DefinitionDescription>
                   </>
                 )}
                 {speaker.twitter && (
                   <>
-                    <dt>Twitter</dt>
-                    <dd>
-                      <a href={`https://twitter.com/${speaker.twitter}`}>
+                    <DefinitionTerm>Twitter</DefinitionTerm>
+                    <DefinitionDescription>
+                      <a
+                        href={`https://twitter.com/${speaker.twitter}`}
+                        className="text-primary underline hover:text-primary-hover"
+                      >
                         {speaker.twitter}
                       </a>
-                    </dd>
+                    </DefinitionDescription>
                   </>
                 )}
-              </dl>
+              </DefinitionList>
             </>
           ) : null}
         </article>

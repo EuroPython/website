@@ -10,6 +10,14 @@ import { Card } from "../components/card";
 import matter from "gray-matter";
 import { Sponsors } from "../components/sponsors";
 import { Keynoters } from "../components/keynoters";
+import { Fullbleed } from "components/layout/fullbleed";
+import { Separator } from "components/separator/separator";
+import { CardContainer } from "components/card/card-container";
+import { HeroWithCTA } from "components/hero-section/hero-with-cta";
+import { ButtonLink } from "components/button-link";
+import { HeroVenue } from "components/hero-section/hero-venue";
+import { Title } from "components/typography/title";
+import { Prose } from "components/prose/prose";
 
 type Deadline = {
   content: string;
@@ -47,56 +55,54 @@ export default function IndexPage({
 }) {
   return (
     <Layout>
-      <main id="main-content">
+      <Fullbleed>
         <Hero />
+      </Fullbleed>
 
-        <section className="cards">
-          {deadlines.map(({ data, content }) => (
-            <Card
-              key={data.title}
-              image={data.image}
-              url={data.url}
-              title={data.title}
-              subtitle={data.subtitle}
-              content={content}
-            />
-          ))}
-        </section>
+      <CardContainer>
+        {deadlines.map(({ data, content }) => (
+          <Card
+            key={data.title}
+            image={data.image}
+            url={data.url}
+            title={data.title}
+            subtitle={data.subtitle}
+            content={content}
+          />
+        ))}
+      </CardContainer>
 
-        <hr />
+      <Separator />
 
-        <article className="homepage-cta__right">
-          <div>
-            <h2 dangerouslySetInnerHTML={{ __html: intro.data.title }}></h2>
-            <MDXRemote {...intro.source} />
-          </div>
-          <div className="cta">
-            <h3 className="h4">Watch EuroPython Live Streams:</h3>
-            <a className="button" href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p
-" target="_blank">
+      <div className="px-6">
+        <HeroWithCTA
+          ctaTitle="Watch EuroPython Live Streams:"
+          ctaButton={
+            <ButtonLink href="https://youtube.com/playlist?list=PL8uoeex94UhFzv6hQ_V02xfMCcl8sUr4p">
               Enjoy the party of Python!
-            </a>
-          </div>
-        </article>
-        <hr />
-        <article className="homepage-cta__venue">
-          <div>
-            <img src="/img/venue.png" className="image--1" alt="" />
-            <img src="/img/burst.png" className="image--2" alt="" />
-            <img src="/img/photo.png" className="image--3" alt="" />
-            <img src="/img/map.png" className="image--4" alt="" />
-          </div>
-          <div>
-            <h2>{venue.data.title}</h2>
-            <MDXRemote {...venue.source} />
-            <a className="button" href="/where">
-              Read more
-            </a>
-            <Map />
-          </div>
-        </article>
-        <hr />
-      </main>
+            </ButtonLink>
+          }
+        >
+          <Title>
+            <div dangerouslySetInnerHTML={{ __html: intro.data.title }}></div>
+          </Title>
+
+          <Prose>
+            <MDXRemote {...intro.source} />
+          </Prose>
+        </HeroWithCTA>
+      </div>
+
+      <Separator />
+
+      <div className="px-6">
+        <HeroVenue title={venue.data.title}>
+          <MDXRemote {...venue.source} />
+        </HeroVenue>
+      </div>
+
+      <Separator />
+
       <Keynoters />
       <Sponsors />
     </Layout>

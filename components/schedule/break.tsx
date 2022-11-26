@@ -10,9 +10,12 @@ export const Break = ({
   style?: React.CSSProperties;
 }) => {
   return (
-    <div className="break" style={style}>
+    <div
+      className="schedule-item flex items-center justify-center gap-2 font-bold bg-secondary-light min-h-[66px]"
+      style={style}
+    >
       <span>{numberToTime(time)}</span>
-      <span className="break__description">{title}</span>
+      <span>{title}</span>
     </div>
   );
 };

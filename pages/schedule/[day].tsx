@@ -13,6 +13,9 @@ import { Schedule } from "../../components/schedule/schedule";
 import { Schedule as ScheduleType } from "../../components/schedule/types";
 import { fetchSessions } from "../../lib/sessions";
 import { fetchSpeakers } from "../../lib/speakers";
+import { Title } from "components/typography/title";
+import { Select } from "components/form/select";
+import { Fullbleed } from "components/layout/fullbleed";
 
 export default function SchedulePage({
   day,
@@ -38,38 +41,39 @@ export default function SchedulePage({
 
   return (
     <Layout>
-      <main id="main-content">
-        <article className="accent-left">
-          <h1 className="highlighted">Schedule</h1>
+      <article className="accent-left">
+        <Title highlighted>Schedule</Title>
 
-          <select
-            id="schedule-select"
-            className="select--schedule"
-            onChange={handleDaySelected}
-            defaultValue={day}
-          >
-            {sortedDays.map(({ day, type }) => {
-              const date = parse(day, "yyyy-MM-dd", new Date());
-              const isoDate = format(date, "yyyy-MM-dd");
-              const dateText = format(date, "eeee, do MMMM, yyyy");
+        <Select
+          id="schedule-select"
+          name="schedule-select"
+          variant="rounded"
+          onChange={handleDaySelected}
+          defaultValue={day}
+        >
+          {sortedDays.map(({ day, type }) => {
+            const date = parse(day, "yyyy-MM-dd", new Date());
+            const isoDate = format(date, "yyyy-MM-dd");
+            const dateText = format(date, "eeee, do MMMM, yyyy");
 
-              return (
-                <option key={isoDate} value={isoDate}>
-                  {dateText} - {type}
-                </option>
-              );
-            })}
-          </select>
-        </article>
+            return (
+              <option key={isoDate} value={isoDate}>
+                {dateText} - {type}
+              </option>
+            );
+          })}
+        </Select>
+      </article>
 
+      <Fullbleed>
         <Schedule schedule={schedule} dayType={dayType} />
+      </Fullbleed>
 
-        <h1 className="highlighted">
-          <a href="#schedule-select" className="h1">
-            Back to top
-          </a>
-        </h1>
-      </main>
+      <h1 className="highlighted">
+        <a href="#schedule-select" className="h1">
+          Back to top
+        </a>
+      </h1>
     </Layout>
   );
 }
