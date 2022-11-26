@@ -13,7 +13,7 @@ const HeaderButton = ({
 }: {
   children: React.ReactNode;
   href?: string;
-  variant?: "standard" | "live";
+  variant?: "standard" | "menu" | "live";
 }) => {
   return (
     <a
@@ -21,7 +21,8 @@ const HeaderButton = ({
         "border-white border-2 py-3 px-4 font-extrabold text-lg whitespace-nowrap",
         "cursor-pointer hover:bg-primary-hover",
         {
-          "bg-white": variant !== "live",
+          "bg-white": variant === "menu",
+          "bg-primary": variant === "standard",
           "text-black": variant !== "live",
           "bg-red": variant === "live",
         }
@@ -37,18 +38,32 @@ const HeaderLogo = () => {
   return (
     <a href="/">
       <Logo variant="small" className="w-11 h-auto mr-4 block md:hidden" />
-      <Logo className="h-auto hidden md:block w-full pr-8" />
+      <Logo className="h-auto hidden md:block w-full pr-3 lg:pr-8" />
     </a>
   );
 };
 const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
   return (
     <>
-      <div className="ml-auto flex items-center">
-        {!mobile ? <HeaderButton variant="live">Live 📹</HeaderButton> : null}
+      <div className="ml-auto flex items-center -space-x-1">
+        {!mobile ? (
+          <>
+            <HeaderButton href="https://www.europython-society.org/coc/">
+              <abbr title="Code of Conduct" className="no-underline lg:hidden">
+                CoC
+              </abbr>
+              <span className="hidden lg:inline">Code of Conduct</span>
+            </HeaderButton>
+            <HeaderButton variant="live" href="/live">
+              Live 📹
+            </HeaderButton>
+          </>
+        ) : null}
 
-        <label htmlFor="nav_toggle" className="flex md:hidden ">
-          <HeaderButton>{mobile ? "Close Menu" : "Menu"}</HeaderButton>
+        <label htmlFor="nav_toggle" className="flex md:hidden">
+          <HeaderButton variant="menu">
+            {mobile ? "Close Menu" : "Menu"}
+          </HeaderButton>
         </label>
       </div>
     </>
@@ -73,7 +88,7 @@ export const Header = () => (
 
     <HeaderActions />
 
-    <div className="fixed bg-green-800 top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block z-50 p-6">
+    <div className="fixed bg-green-800 top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block md:peer-checked:hidden z-50 p-6">
       <div className="flex items-center">
         <HeaderLogo />
         <HeaderActions mobile />
