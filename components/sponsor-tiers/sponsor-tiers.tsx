@@ -92,6 +92,7 @@ const SponsorTier = ({
           style: "currency",
           currency: "EUR",
           maximumFractionDigits: 0,
+          minimumFractionDigits: 0,
         }).format(price)}
       </div>
 
