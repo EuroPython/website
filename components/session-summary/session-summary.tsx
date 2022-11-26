@@ -11,7 +11,7 @@ export const SessionSummary = ({
     slug: string;
     speakers: {
       name: string;
-      slug: string;
+      slug?: string;
     }[];
     submission_type: string;
     abstractSource: any;
@@ -32,7 +32,7 @@ export const SessionSummary = ({
         {session.speakers.map((speaker, index) => (
           <>
             <a
-              href={`/speaker/${speaker.slug}`}
+              href={speaker.slug ? `/speaker/${speaker.slug}` : ""}
               className="text-primary underline"
             >
               {speaker.name}
