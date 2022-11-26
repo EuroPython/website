@@ -1,93 +1,199 @@
+import clsx from "clsx";
+import { Title } from "components/typography/title";
+
+import * as React from "react";
+import { SVGProps } from "react";
+
+const Ribbon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="95px"
+    height="200px"
+    viewBox="0 0 95 200"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    {...props}
+  >
+    <defs>
+      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="overlay">
+        <stop stopColor="#ffffff" offset="0%" stopOpacity={0.4} />
+        <stop stopColor="#ffffff" offset="80%" stopOpacity={0} />
+      </linearGradient>
+    </defs>
+
+    <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+      <g transform="translate(-805.000000, -3436.000000)" fill="currentColor">
+        <g id="Tiers" transform="translate(90.000000, 2384.000000)">
+          <g id="Silver" transform="translate(437.000000, 1042.000000)">
+            <g id="Silver-Tag" transform="translate(278.000000, 10.000000)">
+              <polygon
+                id="Rectangle"
+                points="0 0 95 0 95 200 47.5 164.192211 0 200"
+              />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+      <g transform="translate(-805.000000, -3436.000000)" fill="url(#overlay)">
+        <g id="Tiers" transform="translate(90.000000, 2384.000000)">
+          <g id="Silver" transform="translate(437.000000, 1042.000000)">
+            <g id="Silver-Tag" transform="translate(278.000000, 10.000000)">
+              <polygon
+                id="Rectangle"
+                points="0 0 95 0 95 200 47.5 164.192211 0 200"
+              />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+);
+
+const SponsorTier = ({
+  title,
+  totalSlots,
+  price,
+  features,
+}: {
+  title: string;
+  totalSlots?: number;
+  price: number;
+  features: string[];
+}) => {
+  // TODO: this component is inside a prose container, so we need to reset some styles
+
+  return (
+    <div className="bg-white text-black rounded-2xl p-6 relative">
+      <Ribbon
+        className={clsx("absolute right-6 -top-6", {
+          "text-sponsor-keystone": title === "Keystone",
+          "text-sponsor-diamond": title === "Diamond",
+          "text-sponsor-platinum": title === "Platinum",
+          "text-sponsor-gold": title === "Gold",
+          "text-sponsor-silver": title === "Silver",
+          "text-sponsor-bronze": title === "Bronze",
+          "text-sponsor-patron": title === "Patron",
+        })}
+      />
+
+      <Title level={3} className="mt-0 mb-2">
+        {title}
+      </Title>
+
+      {totalSlots && (
+        <div className="text-xl mb-2">
+          <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
+        </div>
+      )}
+      <div className="font-bold text-3xl mb-2">
+        {new Intl.NumberFormat("en", {
+          style: "currency",
+          currency: "EUR",
+          maximumFractionDigits: 0,
+        }).format(price)}
+      </div>
+
+      <p className="font-bold text-base">This tier includes:</p>
+      <ul className="text-base">
+        {features.map((feature) => (
+          <li key={feature}>{feature}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 export const SponsorTiers = () => {
   return (
-    <div className="tiers-grid">
-      <div className="tier-card keystone">
-        <h3>Keystone</h3>
-        <p className="tier-card__slots">1 slot available</p>
-        <p className="tier-card__price">€42,000</p>
-        <p className="tier-card__includes">This tier includes:</p>
-        <ul>
-          <li>Plenary room named after your company</li>
-          <li>56 sqm booth in exhibit hall</li>
-          <li>12 complimentary session passes</li>
-          <li>Advertisement on virtual swag webpage</li>
-          <li>One blog post on EuroPython's blog</li>
-          <li>Access to recruiting session</li>
-          <li>1 sponsored workshop (3 hours)</li>
-          <li>1 sponsored talk (30 minutes)</li>
-          <li>Private organisers support</li>
-          <li>And more!</li>
-        </ul>
-      </div>
-      <div className="tier-card diamond">
-        <h3>Diamond</h3>
-        <p className="tier-card__slots">2 slots available</p>
-        <p className="tier-card__price">€30,000</p>
-        <p className="tier-card__includes">This tier includes:</p>
-        <ul>
-          <li>30 sqm booth in exhibit hall</li>
-          <li>8 complimentary session passes</li>
-          <li>Advertisement on virtual swag webpage</li>
-          <li>One blog post on EuroPython's blog</li>
-          <li>Access to recruiting session</li>
-          <li>1 sponsored talk (30 minutes)</li>
-          <li>And more!</li>
-        </ul>
-      </div>
-      <div className="tier-card platinum">
-        <h3>Platinum</h3>
-        <p className="tier-card__slots">4 slots available</p>
-        <p className="tier-card__price">€17,000</p>
-        <p className="tier-card__includes">This tier includes:</p>
-        <ul>
-          <li>16 sqm booth in exhibit hall</li>
-          <li>6 complimentary session passes</li>
-          <li>PDF brochure on virtual swag webpage</li>
-          <li>Access to recruiting session</li>
-          <li>1 sponsored talk (30 minutes)</li>
-          <li>And more!</li>
-        </ul>
-      </div>
-      <div className="tier-card gold">
-        <h3>Gold</h3>
-        <p className="tier-card__soldout"></p>
-        <p className="tier-card__price">€9,500</p>
-        <p className="tier-card__includes">This tier includes:</p>
-        <ul>
-          <li>9 sqm booth in exhibit hall</li>
-          <li>3 complimentary session passes</li>
-          <li>PDF brochure on virtual swag webpage</li>
-          <li>Access to recruiting session</li>
-          <li>And more!</li>
-        </ul>
-      </div>
-      <div className="tier-card silver">
-        <h3>Silver</h3>
-        <p className="tier-card__soldout"></p>
-        <p className="tier-card__price">€6,500</p>
-        <p className="tier-card__includes">This tier includes:</p>
-        <ul>
-          <li>6 sqm booth in exhibit hall</li>
-          <li>2 complimentary session passes</li>
-          <li>Logo on EuroPython website & signage</li>
-          <li>And more!</li>
-        </ul>
-      </div>
-      <div>
-        <div className="tier-card bronze">
-          <h3>Bronze</h3>
-          <p className="tier-card__price">€2,000</p>
-          <ul>
-            <li>Logo & recuriting ad on EuroPython website and more!</li>
-          </ul>
-        </div>
-        <div className="tier-card patron">
-          <h3>Patron</h3>
-          <p className="tier-card__price">€1,000</p>
-          <ul>
-            <li>Logo on EuroPython website, welcome tweet and more!</li>
-          </ul>
-        </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <SponsorTier
+        title="Keystone"
+        totalSlots={1}
+        price={42000}
+        features={[
+          "Plenary room named after your company",
+          "56 sqm booth in exhibit hall",
+          "12 complimentary session passes",
+          "Advertisement on virtual swag webpage",
+          "One blog post on EuroPython's blog",
+          "Access to recruiting session",
+          "1 sponsored workshop (3 hours)",
+          "1 sponsored talk (30 minutes)",
+          "Private organisers support",
+          "And more!",
+        ]}
+      />
+
+      <SponsorTier
+        title="Diamond"
+        totalSlots={2}
+        price={30000}
+        features={[
+          "30 sqm booth in exhibit hall",
+          "8 complimentary session passes",
+          "Advertisement on virtual swag webpage",
+          "One blog post on EuroPython's blog",
+          "Access to recruiting session",
+          "1 sponsored talk (30 minutes)",
+          "And more!",
+        ]}
+      />
+
+      <SponsorTier
+        title="Platinum"
+        totalSlots={4}
+        price={17000}
+        features={[
+          "16 sqm booth in exhibit hall",
+          "6 complimentary session passes",
+          "PDF brochure on virtual swag webpage",
+          "Access to recruiting session",
+          "1 sponsored talk (30 minutes)",
+          "And more!",
+        ]}
+      />
+
+      <SponsorTier
+        title="Gold"
+        totalSlots={6}
+        price={9500}
+        features={[
+          "9 sqm booth in exhibit hall",
+          "3 complimentary session passes",
+          "PDF brochure on virtual swag webpage",
+          "Access to recruiting session",
+          "And more!",
+        ]}
+      />
+
+      <SponsorTier
+        title="Silver"
+        totalSlots={8}
+        price={6500}
+        features={[
+          "6 sqm booth in exhibit hall",
+          "2 complimentary session passes",
+          "Logo on EuroPython website & signage",
+          "And more!",
+        ]}
+      />
+
+      <div className="space-y-10">
+        <SponsorTier
+          title="Bronze"
+          totalSlots={10}
+          price={2000}
+          features={["Logo & recuriting ad on EuroPython website and more!"]}
+        />
+
+        <SponsorTier
+          title="Patron"
+          totalSlots={12}
+          price={1000}
+          features={["Logo on EuroPython website, welcome tweet and more!"]}
+        />
       </div>
     </div>
   );
