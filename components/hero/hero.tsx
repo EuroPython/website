@@ -1,10 +1,10 @@
 import { Accent } from "components/accent";
-import Image from "next/image";
+import { Year } from "components/year";
 
 export const Hero = () => (
   <div className="relative aspect-hero justify-center flex items-center max-w-4xl lg:max-w-6xl mx-auto mb-16">
     <div className="absolute scale-125 md:scale-100">
-      <Image src={"/img/2022.png"} alt="" width={1149} height={409} />
+      <Year className="w-full" />
     </div>
 
     <Accent className="absolute -bottom-16 md:bottom-auto md:top-0 right-8 w-28" />
