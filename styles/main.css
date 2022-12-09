@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #f18a00;
+  --color-body-background: #001c13;
+  --color-hero-primary: #f18a00;
+  --color-hero-secondary: #f18a00;
+}
+
+.tp-dfwv {
+  position: fixed!important;
+  z-index: 9999;
+}
+
 body {
-  @apply bg-green-800 text-white;
+  @apply bg-body-background text-white;
 }
 
 .layout-wrapper {
