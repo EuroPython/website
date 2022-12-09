@@ -25,11 +25,12 @@ const Tweaks = () => {
     for (const [variable, value] of Object.entries(params)) {
       const label = variable.replace("--color-", "").replace("-", " ");
 
+      // @ts-ignore
       const input = pane.addInput(params, variable, {
         label,
       });
 
-      input.on("change", (ev) => {
+      input.on("change", (ev: { value: string }) => {
         document.documentElement.style.setProperty(variable, ev.value);
       });
     }
