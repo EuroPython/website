@@ -21,7 +21,7 @@ export const Card = ({ title, subtitle, content, url, image }: CardProps) => (
       />
     </div>
     <h3 className="text-3xl font-bold mt-6 mb-4">{title}</h3>
-    <p className="bg-primary inline-block text-black font-extrabold px-1 text-lg mb-4">
+    <p className="bg-primary inline-block text-text-inverted font-extrabold px-1 text-lg mb-4">
       {subtitle}
     </p>
     <p className="text-lg">{content}</p>

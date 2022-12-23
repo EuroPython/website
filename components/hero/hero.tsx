@@ -3,7 +3,7 @@ import { Year } from "components/year";
 
 export const Hero = () => (
   <div className="relative aspect-hero justify-center flex items-center max-w-4xl lg:max-w-6xl mx-auto mb-16">
-    <div className="absolute scale-125 md:scale-100">
+    <div className="absolute scale-125 md:scale-100 z-0">
       <Year className="w-full" />
     </div>
 

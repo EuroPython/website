@@ -37,13 +37,13 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
     <header
       className={clsx(
         "absolute right-0 top-0 bottom-0 w-5 rounded-r-lg whitespace-nowrap",
-        "bg-green-300 flex text-white justify-between text-xs py-2 px-3 font-bold leading-4",
+        "bg-secondary flex text-text justify-between text-xs py-2 px-3 font-bold leading-4",
         "lg:static lg:w-full lg:rounded-none lg:rounded-t-lg",
         {
           "!bg-session-intermediate": session.audience === "intermediate",
           "!bg-session-advanced": session.audience === "advanced",
           "!bg-session-beginner": session.audience === "beginner",
-          "!bg-green-300": [
+          "!bg-secondary": [
             "keynote",
             "registration",
             "opening-session",
@@ -89,7 +89,7 @@ export const Session = ({
     <div
       className={clsx(
         "schedule-item",
-        "rounded-lg bg-body-inverted text-green-300 flex flex-col relative mb-4 mx-4",
+        "rounded-lg bg-body-inverted text-secondary flex flex-col relative mb-4 mx-4",
         "min-h-[100px] pr-6 lg:pr-0 lg:mb-0 lg:mx-0"
       )}
       style={style}
@@ -120,7 +120,7 @@ export const Session = ({
       </p>
 
       {nonEmptySpeakers.length ? (
-        <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-white border-t-[1px]">
+        <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-text border-t-[1px]">
           <>
             <div>
               <span>
@@ -128,7 +128,7 @@ export const Session = ({
                   <Fragment key={speaker.name}>
                     {speaker.slug ? (
                       <a
-                        className="text-white underline text-sm font-bold"
+                        className="text-text underline text-sm font-bold"
                         href={`/speaker/${speaker.slug}`}
                       >
                         {speaker.name}
@@ -144,7 +144,7 @@ export const Session = ({
           </>
         </div>
       ) : null}
-      <div className="text-white text-sm font-bold mt-auto py-2 px-3 lg:hidden">
+      <div className="text-text text-sm font-bold mt-auto py-2 px-3 lg:hidden">
         {roomsAndSpeakers.join(", ")}
       </div>
     </div>

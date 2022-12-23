@@ -15,11 +15,11 @@ export const ButtonLink = ({
     <a
       className={clsx(
         "font-extrabold text-lg px-4 py-3 border-2 bg-primary border-primary inline-block leading-4",
-        "hover:bg-primary-hover hover:text-black",
+        "hover:bg-primary-hover hover:text-text-inverted",
         {
-          "bg-green-800": secondary,
-          "text-black": !secondary,
-          "text-white": secondary,
+          "bg-secondary-darkest": secondary,
+          "text-text-inverted": !secondary,
+          "text-text": secondary,
         }
       )}
       href={href}

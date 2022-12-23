@@ -14,23 +14,23 @@ export const NavItems = ({ items }: Props) => {
       {items.map((item) => (
         <li
           key={item.name}
-          className="border-b-2 border-green-500 md:border-0 group"
+          className="border-b-2 border-secondary-dark md:border-0 group"
         >
           <a
             href={item.path}
-            className="font-bold inline-block w-full text-3xl md:text-base p-5 text-center md:text-left md:border-l-2 md:mt-4 md:p-2 md:px-5 md:hover:bg-green-300"
+            className="font-bold inline-block w-full text-3xl md:text-base p-5 text-center md:text-left md:border-l-2 md:mt-4 md:p-2 md:px-5 md:hover:bg-secondary"
           >
             {item.name}
             {item.path?.startsWith("http") ? <span> ↗</span> : null}
           </a>
 
           {item.items ? (
-            <ul className="mb-3 md:hidden md:group-hover:block md:absolute z-50 md:bg-green-800 md:border-l-2">
+            <ul className="mb-3 md:hidden md:group-hover:block md:absolute z-50 md:bg-secondary-darkest md:border-l-2">
               {item.items.map((subItem) => (
                 <li key={subItem.name}>
                   <a
                     href={subItem.path || "#"}
-                    className="bg-green-500 block w-full font-bold text-center md:text-left mb-[2px] p-2 md:px-5 md:hover:bg-green-300"
+                    className="bg-secondary-dark block w-full font-bold text-center md:text-left mb-[2px] p-2 md:px-5 md:hover:bg-secondary"
                   >
                     {subItem.name}
                     {subItem.path?.startsWith("http") ? <span> ↗</span> : null}

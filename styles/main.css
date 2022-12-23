@@ -4,18 +4,26 @@
 
 :root {
   --color-primary: #f18a00;
+  --color-primary-hover: #f4a740;
+  --color-primary-active: #f4a740;
+  --color-secondary: #3dae2b;
+  --color-secondary-dark: #194712;
+  --color-secondary-darkest: #001c13;
+  --color-secondary-light: #ecf7ea;
+  --color-text: #fff;
+  --color-text-inverted: #000;
   --color-body-background: #001c13;
   --color-hero-primary: #f18a00;
   --color-hero-secondary: #f18a00;
 }
 
 .tp-dfwv {
-  position: fixed!important;
+  position: fixed !important;
   z-index: 9999;
 }
 
 body {
-  @apply bg-body-background text-white;
+  @apply bg-body-background text-text;
 }
 
 .layout-wrapper {

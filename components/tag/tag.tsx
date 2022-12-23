@@ -10,7 +10,7 @@ export const Tag = ({
   return (
     <span
       className={clsx(
-        "inline-block bg-green-300 text-body px-4 py-2 rounded-xl font-bold",
+        "inline-block bg-secondary text-body px-4 py-2 rounded-xl font-bold",
         className
       )}
     >
