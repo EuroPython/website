@@ -26,16 +26,14 @@ const Tweaks = () => {
 
     const pane = new Pane();
 
-    console.log(pane)
-
     for (const [section, colorVariables] of Object.entries(sections)) {
       // @ts-ignore
       const folder = pane.addFolder({
         title: section,
-        // expanded: false,
+        expanded: false,
       });
 
-      console.log(section)
+      console.log(section);
 
       const params = Object.fromEntries(
         colorVariables.map((variable) => {
