@@ -7,16 +7,16 @@ export const Hero = () => (
       <Year className="w-full" />
     </div>
 
-    <Accent className="absolute -bottom-16 md:bottom-auto md:top-0 right-8 w-28" />
+    {/* <Accent className="absolute -bottom-16 md:bottom-auto md:top-0 right-8 w-28" /> */}
 
     <div className="relative z-10">
       <h1 className="text-[16vw] lg:text-[12rem] mb-4">
         <span className="font-black">Euro</span>Python
       </h1>
-      <h2 className="font-black text-xl">
+      {/* <h2 className="font-black text-xl">
         <div>11-17 July</div>
         <div>Dublin Ireland & Remote</div>
-      </h2>
+      </h2> */}
     </div>
   </div>
 );

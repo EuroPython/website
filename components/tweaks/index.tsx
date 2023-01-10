@@ -1,7 +1,10 @@
 import { Pane } from "tweakpane";
 
 const Tweaks = () => {
-  if (typeof window !== "undefined") {
+  const shouldShow =
+    typeof window !== "undefined" && window.location.search.includes("tweaks");
+
+  if (shouldShow) {
     const sections = {
       text: [
         "--color-text",
