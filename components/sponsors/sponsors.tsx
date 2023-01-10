@@ -174,7 +174,7 @@ export const Sponsors = () => {
   const noSponsors = remaining.length + topTier.sponsors.length === 0;
 
   return (
-    <Fullbleed className="bg-white text-body-inverted py-24 px-6">
+    <Fullbleed className="bg-text text-body-inverted py-24 px-6">
       <section className="max-w-4xl lg:max-w-6xl mx-auto mb-16">
         <div>
           <div className="flex gap-6">

@@ -18,12 +18,12 @@ const HeaderButton = ({
   return (
     <a
       className={clsx(
-        "border-white border-2 py-3 px-4 font-extrabold text-lg whitespace-nowrap",
+        "border-text border-2 py-3 px-4 font-extrabold text-lg whitespace-nowrap",
         "cursor-pointer hover:bg-primary-hover",
         {
-          "bg-white": variant === "menu",
+          "bg-text": variant === "menu",
           "bg-primary": variant === "standard",
-          "text-black": variant !== "live",
+          "text-text-inverted": variant !== "live",
           "bg-red": variant === "live",
         }
       )}
@@ -71,7 +71,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
 };
 
 export const Header = () => (
-  <header className="p-6 flex items-center">
+  <header className="p-6 flex items-center relative z-20">
     <input
       type="checkbox"
       name="mobile-controls"
@@ -88,7 +88,7 @@ export const Header = () => (
 
     <HeaderActions />
 
-    <div className="fixed bg-green-800 top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block md:peer-checked:hidden z-50 p-6">
+    <div className="fixed bg-secondary-darkest top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block md:peer-checked:hidden z-50 p-6">
       <div className="flex items-center">
         <HeaderLogo />
         <HeaderActions mobile />

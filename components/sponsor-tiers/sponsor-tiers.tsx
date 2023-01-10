@@ -63,9 +63,10 @@ const SponsorTier = ({
   features: string[];
 }) => {
   // TODO: this component is inside a prose container, so we need to reset some styles
+  // we can use no-prose
 
   return (
-    <div className="bg-white text-black rounded-2xl p-6 relative">
+    <div className="bg-text text-text-inverted rounded-2xl p-6 relative">
       <Ribbon
         className={clsx("absolute right-6 -top-6", {
           "text-sponsor-keystone": title === "Keystone",

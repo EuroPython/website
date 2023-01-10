@@ -7,20 +7,30 @@ module.exports = {
   ],
   theme: {
     colors: {
-      white: "#fff",
       black: "#000",
+      text: "var(--color-text)",
+      "text-inverted": "var(--color-text-inverted)",
+
       "body-inverted": "#001c13",
+      "body-background": "var(--color-body-background)",
       "body-light": "#888",
-      "green-300": "#3dae2b",
-      "green-500": "#194712",
-      "green-800": "#001c13",
-      primary: "#f18a00",
-      "primary-hover": "#f4a740",
-      "primary-active": "#f4a740",
-      "secondary-light": "#ecf7ea",
+
+      "hero-primary": "var(--color-hero-primary)",
+      "hero-secondary": "var(--color-hero-secondary)",
+
+      primary: "var(--color-primary)",
+      "primary-hover": "var(--color-primary-hover)",
+      "primary-active": "var(--color-primary-active)",
+
+      "secondary": "var(--color-secondary)",
+      "secondary-dark": "var(--color-secondary-dark)",
+      "secondary-darkest": "var(--color-secondary-darkest)",
+      "secondary-light": "var(--color-secondary-light)",
+
       "session-beginner": "#3dae2b",
       "session-intermediate": "#f7b500",
       "session-advanced": "#ce3333",
+
       "sponsor-keystone": "#5c9f92",
       "sponsor-diamond": "#568497",
       "sponsor-platinum": "#6b6c6e",
@@ -28,6 +38,7 @@ module.exports = {
       "sponsor-silver": "#707172",
       "sponsor-bronze": "#6e6151",
       "sponsor-patron": "#a11217",
+
       red: "#ce3333",
       "keynoter-info": "hsla(0,0%,100%,.85)",
     },

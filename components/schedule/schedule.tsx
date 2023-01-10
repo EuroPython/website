@@ -229,7 +229,7 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
   return (
     <div className="hidden lg:contents headings font-bold text-body-light">
       <span
-        className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-white"
+        className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-text"
         style={{
           "--grid-row": `1 / ${HEADING_ROWS + 1}`,
           "--grid-column": "1 / 2",
@@ -239,7 +239,7 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
       </span>
       {schedule.rooms.map((track, index) => (
         <span
-          className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-white"
+          className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-text"
           key={track}
           style={{
             "--grid-row": `1 / ${HEADING_ROWS + 1}`,
@@ -250,7 +250,7 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
         </span>
       ))}
       <span
-        className="schedule-item bg-white sticky z-10 top-0 self-start"
+        className="schedule-item bg-text sticky z-10 top-0 self-start"
         style={{
           "--grid-row": `1 / ${HEADING_ROWS + 1}`,
           "--grid-column": `1 / ${totalRooms + 2}`,
@@ -277,7 +277,7 @@ export const Schedule = ({
   return (
     <div>
       <div
-        className="lg:grid gap-4 my-8 bg-white text-black"
+        className="lg:grid gap-4 my-8 bg-text text-text-inverted"
         style={{
           gridTemplateRows,
           gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
