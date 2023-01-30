@@ -44,7 +44,7 @@ export default function IndexPage() {
         ></script>
       </Head>
 
-      <div className="grid items-center justify-center content-center min-h-screen">
+      <div className="flex items-center justify-center content-center min-h-screen">
         <Hero />
       </div>
     </>
