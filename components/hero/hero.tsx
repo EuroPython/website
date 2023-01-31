@@ -12,10 +12,10 @@ export const Hero = () => (
     <div className="w-[80%] mx-auto">
       <Year />
 
-      <h2 className="font-black text-xl absolute -bottom-16">
+      <h2 className="font-black text-xl absolute -bottom-12">
         <div>17-23 July</div>
 
-        <div>Prague, Czech Republic & Remote</div>
+        {/* <div>Dublin Ireland & Remote</div> */}
       </h2>
     </div>
 
