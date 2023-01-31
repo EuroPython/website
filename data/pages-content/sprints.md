@@ -95,7 +95,7 @@ Many thanks !
 
 ### VertFlow
 🌱 _Run containers on the cloud using green energy_
-- **Number of people:** Me + anyone who loves Python and hates carbon emissions. _Data {analysts, scientists, engineers} particularly welcome!_
+- **Number of people:** Me + anyone who loves Python and hates carbon emissions. _Data analysts, scientists, engineers particularly welcome!_
 - **Room:**  < Not sure yet >
 - **Contact:** day.r.jack@gmail.com (Jack Lockyer-Stevens)
 - **Links:** [📺 About VertFlow](https://drive.google.com/file/d/1csuniWXVrOfDxJ1g1pFndpQWESf_uLin/view?usp=sharing) | [🐍 Github](https://github.com/ovotech/VertFlow)

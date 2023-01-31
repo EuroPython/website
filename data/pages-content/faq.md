@@ -10,7 +10,7 @@ subtitle: Frequently Asked Questions about EuroPython
 A. EuroPython 2023 will be held on
 **17-23 July 2023**. Put the dates in your diary!
 
-The in-person conference will be held at <b><a target="_blank" href="https://www.praguecc.cz/en/homepage">The Prague Congress Centre, the PCC</a></b> in Prague, Czech Republic.
+The in-person conference will be held at <b>[The Prague Congress Centre, the PCC](https://www.praguecc.cz/en/homepage)</b> in Prague, Czech Republic.
 
 For the virtual conference, detailed instructions will be announced at a later
 time.
@@ -32,9 +32,9 @@ A. The conference will be organised in three phases:
 
 A. The conference will feature around 20 hands-on tutorials & workshops, 120 talks and other interactive sessions. We aim to have a very diverse programme, covering the many different aspects of where and how Python solves problems or engages in interesting things.
 
-To get an idea of what to expect, have a look at the <a target="_blank" href="https://ep2022.europython.eu/schedule/">EP2022's programme.</a>
+To get an idea of what to expect, have a look at the [EP2022's programme.](https://ep2022.europython.eu/schedule/)
 
-To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting. Make sure to subscribe to our <a target="_blank" href="https://blog.europython.eu/#/portal/signup">EuroPython Blog</a> for updates.
+To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) for updates.
 
 We are always keen to hear new ideas on how to enrich the programme and other activities you are interested in participating during the conference. Share your thoughts with the programme team at programme@europython.eu.
 
@@ -43,26 +43,26 @@ We are always keen to hear new ideas on how to enrich the programme and other ac
 
 A. The Call for Proposals (CFP) will be launched in early March. We are thrilled to receive proposals on any topic that could be of interest to our community.
 
-Especially if you are considering becoming a speaker for the first time, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. There will be a speaker mentorship programme as well as broader support options. Make sure to subscribe to our <a target="_blank" href="https://blog.europython.eu/#/portal/signup">EuroPython Blog</a> for updates.
+Especially if you are considering becoming a speaker for the first time, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. There will be a speaker mentorship programme as well as broader support options. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) for updates.
 
 If you have something in mind, there is no better time to start preparing your  proposal! For more insights, please have a look at the <a target="_blank" href="https://ep2022.europython.eu/cfp">EuroPython 2022 CFP page</a>. Some details may change for 2023, but overall, the structure is going to be similar.
 
 ## **Q. When do ticket sales start?**
 
-A. Ticket sales will start in March. Make sure to subscribe to our <a target="_blank" href="https://blog.europython.eu/#/portal/signup">EuroPython Blog</a> where the opening dates will be announced.
+A. Ticket sales will start in March. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) where the opening dates will be announced.
 
 ## **Q. What are the ticket prices like?**
 
-A. We are aiming to keep the ticket prices similar to our <a target="_blank" href="https://ep2022.europython.eu/tickets#ticket-prices">conference in 2022</a>, though an increase might be necessary due to cost increases.
+A. We are aiming to keep the ticket prices similar to our [conference in 2022](https://ep2022.europython.eu/tickets#ticket-prices), though an increase might be necessary due to cost increases.
 
-As usual, there will be several ticket options, so you can choose the one most suitable for you. Details will be announced around the end of February on our website and <a target="_blank" href="https://blog.europython.eu/#/portal/signup">EuroPython Blog</a>.
+As usual, there will be several ticket options, so you can choose the one most suitable for you. Details will be announced around the end of February on our website and [EuroPython Blog](https://blog.europython.eu/#/portal/signup).
 
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
-A. Yes, we will have a Financial Aid programme this year similar to the one we had in <a target="_blank" href="https://ep2022.europython.eu/finaid">2022</a>. Please watch out for announcements on the <a target="_blank" href="https://blog.europython.eu/#/portal/signup">EuroPython Blog</a>.
+A. Yes, we will have a Financial Aid programme this year similar to the one we had in [2022](https://ep2022.europython.eu/finaid). Please watch out for announcements on the [EuroPython Blog](https://blog.europython.eu/#/portal/signup).
 
 ## **Q. When can sponsors start signing up?**
 
-A: The 2023 packages are not finalised yet, but will be similar to what we had in <a target="_blank" href="https://ep2022.europython.eu/sponsor">EuroPython 2022</a>. So do take a look to get an idea of the sponsorship options. **Sponsors who sign up early will again receive a 10% discount.**
+A: The 2023 packages are not finalised yet, but will be similar to what we had in [EuroPython 2022](https://ep2022.europython.eu/sponsor). So do take a look to get an idea of the sponsorship options. **Sponsors who sign up early will again receive a 10% discount.**
 
 We are committed to making EuroPython sponsorship accessible to most organisations keen to help the community. If you are interested in supporting EuroPython 2023, get in touch with our sponsors team at sponsors@europython.eu
 
@@ -71,13 +71,14 @@ We are committed to making EuroPython sponsorship accessible to most organisatio
 A. The EuroPython conference is entirely run by volunteers and we always need some extra help. If you want to get involved, please email volunteers@europython.eu and we are always happy for a chat!
 
 ---
+
 # COVID Related Questions
 
 **Please bear in mind that the information in this section can change at any time and without warning. We will aim to provide updates whenever there is a change.**
 
 ## **Q: Will there be any COVID safety precautions at the venue?**
 
-A: We will follow the <a target="_blank" href="https://www.mvcr.cz/mvcren/article/coronavirus-information-of-moi.aspx">guidelines of the government of the Czech Republic</a> and there will be appropriate safety precautions at the venue. As of 09 April 2022, special measures related to COVID have been lifted and entry into the Czech Republic is no longer subject to any special epidemiological conditions.
+A: We will follow the [guidelines of the government of the Czech Republic](https://www.mvcr.cz/mvcren/article/coronavirus-information-of-moi.aspx) and there will be appropriate safety precautions at the venue. As of 09 April 2022, special measures related to COVID have been lifted and entry into the Czech Republic is no longer subject to any special epidemiological conditions.
 
 We expect attendees to be mindful of health and considerate to others during the event. This includes having up-to-date vaccinations, and observing all reasonable precautions to protect yourself and those around us. Although you are not legally required to wear a mask, we strongly recommend and encourage that you do, whenever possible.
 

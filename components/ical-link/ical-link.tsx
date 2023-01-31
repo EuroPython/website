@@ -1,4 +1,3 @@
-import React from "react";
 import ICalendarLink from "react-icalendar-link";
 
 export const ICALLink = ({
@@ -27,6 +26,7 @@ export const ICALLink = ({
   };
 
   return (
+    // @ts-ignore
     <ICalendarLink event={event} className={className}>
       <span title="Download ical">📆</span>
     </ICalendarLink>

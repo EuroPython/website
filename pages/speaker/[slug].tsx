@@ -1,6 +1,5 @@
 import { MDXRemote } from "next-mdx-remote";
 import { Layout } from "../../components/layout";
-import { serialize } from "next-mdx-remote/serialize";
 import { fetchSpeakers } from "../../lib/speakers";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
@@ -9,6 +8,7 @@ import {
   DefinitionList,
   DefinitionTerm,
 } from "components/definition-list/definition-list";
+import { serialize } from "next-mdx-remote/serialize";
 
 type Speaker = {
   code: string;

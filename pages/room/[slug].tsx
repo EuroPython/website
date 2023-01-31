@@ -39,7 +39,7 @@ export default function RoomPage({
               src={room.image.path}
               width={room.image.width}
               height={room.image.height}
-              layout="responsive"
+              alt=""
             />
           </div>
         ) : null}

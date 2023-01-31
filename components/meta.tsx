@@ -9,13 +9,15 @@ export const Meta = ({
   socialCardUrl?: string;
 }) => {
   const url = `https://ep2023.europython.eu/${path}`;
-  let imageUrl = path
-    ? `https://ep2023.europython.eu/social-cards/${path}.png`
-    : "https://ep2023.europython.eu/social-cards/default.png";
+  // let imageUrl = path
+  //   ? `https://ep2023.europython.eu/social-cards/${path}.png`
+  //   : "https://ep2023.europython.eu/social-cards/default.png";
 
-  if (socialCardUrl) {
-    imageUrl = socialCardUrl;
-  }
+  // if (socialCardUrl) {
+  //   imageUrl = socialCardUrl;
+  // }
+
+  const imageUrl = "https://ep2023.europython.eu/social-cards/default.png";
 
   return (
     <Head>
@@ -35,10 +37,12 @@ export const Meta = ({
         href="http://blog.europython.eu/rss"
       />
 
-      <title>{title} </title>
+      <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content="" />
       <meta name="author" content="EuroPython" />
+
+      <link rel="icon" href="/epslogo.png" type="image/png" />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
@@ -51,12 +55,6 @@ export const Meta = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content="" />
       <meta property="twitter:image" content={imageUrl} />
-
-      <script
-        defer
-        data-domain="ep2023.europython.eu"
-        src="https://plausible.io/js/plausible.js"
-        ></script>
     </Head>
   );
 };

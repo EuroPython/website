@@ -1,16 +1,15 @@
 import { MDXRemote } from "next-mdx-remote";
 import { Layout } from "../../components/layout";
-import { serialize } from "next-mdx-remote/serialize";
 import { fetchSessions } from "../../lib/sessions";
 import parseISO from "date-fns/parseISO";
 import { format } from "date-fns";
 import { Datetime } from "../../components/datetime";
 import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
-import clsx from "clsx";
 import { Prose } from "components/prose/prose";
 import { Tag, TagContainer } from "components/tag/tag";
 import { DefinitionList, DefinitionTerm, DefinitionDescription } from "components/definition-list/definition-list";
+import { serialize } from "lib/mdx-utils";
 
 type Speaker = {
   code: string;

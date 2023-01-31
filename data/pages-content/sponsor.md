@@ -21,8 +21,8 @@ the work of the great open-source community and further its development.
 
 <img src="/img/hall_rotated.png" width="3279" height="1785" />
 
-<ButtonWithTitle title="Ready to become a sponsor and join us in Dublin?" text="Sign Up Now!" href="https://forms.gle/L2CxUpbr6wmV3Lsv8" />
 
+<ButtonWithTitle title="Ready to become a sponsor and join us in Dublin?" text="Sign Up Now!" href="https://forms.gle/L2CxUpbr6wmV3Lsv8" />
 ---
 
 ## 2019 & 2021 Demographics
@@ -107,11 +107,9 @@ in research. And what better place than EuroPython to keep your finger on the
 pulse of anything Python-related? EuroPython was the first major Python
 community conference ever organised by volunteers.
 
-<BenefitsList>
   <BenefitItem icon="network" title="Socialise">Make contact with a vibrant network of innovators</BenefitItem>
   <BenefitItem icon="target" title="Target">Run a targeted marketing by reaching out directly to people interested in a topic</BenefitItem>
   <BenefitItem icon="award" title="Community Cultivation">Let the world know your company support the Python open source community</BenefitItem>
   <BenefitItem icon="transfer" title="Know-How Transfer">Educate your staff and benefit from the knowledge of the community</BenefitItem>
   <BenefitItem icon="headhunt" title="Head Hunting">Take advantage of the conference for recruitment</BenefitItem>
   <BenefitItem icon="rocket" title="New Business">Use the conference to attract new projects</BenefitItem>
-</BenefitsList>

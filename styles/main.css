@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #f18a00;
-  --color-primary-hover: #f4a740;
-  --color-primary-active: #f4a740;
-  --color-secondary: #3dae2b;
-  --color-secondary-dark: #194712;
+  --color-primary: #00b8f0;
+  --color-primary-hover: #e5e5ff;
+  --color-primary-active: #e5e5ff;
+  --color-secondary: #2b4cae;
+  --color-secondary-dark: #203c90;
   --color-secondary-darkest: #001c13;
   --color-secondary-light: #ecf7ea;
   --color-text: #fff;
@@ -30,7 +30,7 @@ body {
   display: grid;
   grid-template-columns:
     1fr
-    min(1150px, 100%)
+    min(78ch, 100%)
     1fr;
 }
 
@@ -48,4 +48,8 @@ body {
     grid-row: var(--grid-row) !important;
     grid-column: var(--grid-column) !important;
   }
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) a {
+  text-decoration: none!important;
 }

@@ -26,7 +26,7 @@ export default function SchedulePage({
   days: { day: string; type: string }[];
   schedule: ScheduleType;
 }) {
-  const handleDaySelected = useCallback((event) => {
+  const handleDaySelected = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
     window.location.href = `/schedule/${event.target.value}`;
   }, []);
 

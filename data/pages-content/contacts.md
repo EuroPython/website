@@ -58,7 +58,7 @@ team:
 
 The EuroPython Society (EPS) can be reached via one of the following addresses:
 
-- Website:<http://www.europython-society.org/>
+- [Website](http://www.europython-society.org/)
 - EMail: [board@europython.eu](mailto:board@europython.eu) (to board members
   only)
 - Twitter: [@europythons](https://twitter.com/europythons)

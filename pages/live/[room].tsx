@@ -13,9 +13,12 @@ export default function LivePage({
     youtubeId: string;
   };
 }) {
-  const handleRoomSelected = useCallback((event) => {
-    window.location.href = `/live/${event.target.value}`;
-  }, []);
+  const handleRoomSelected = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      window.location.href = `/live/${event.target.value}`;
+    },
+    []
+  );
 
   return (
     <Layout>
