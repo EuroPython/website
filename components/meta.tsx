@@ -9,13 +9,15 @@ export const Meta = ({
   socialCardUrl?: string;
 }) => {
   const url = `https://ep2023.europython.eu/${path}`;
-  let imageUrl = path
-    ? `https://ep2023.europython.eu/social-cards/${path}.png`
-    : "https://ep2023.europython.eu/social-cards/default.png";
+  // let imageUrl = path
+  //   ? `https://ep2023.europython.eu/social-cards/${path}.png`
+  //   : "https://ep2023.europython.eu/social-cards/default.png";
 
-  if (socialCardUrl) {
-    imageUrl = socialCardUrl;
-  }
+  // if (socialCardUrl) {
+  //   imageUrl = socialCardUrl;
+  // }
+
+  const imageUrl = "https://ep2023.europython.eu/social-cards/default.png";
 
   return (
     <Head>
