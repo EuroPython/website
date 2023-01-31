@@ -1,6 +1,6 @@
 import Head from "next/head";
 export const Meta = ({
-  title = "EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote",
+  title = "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
   path,
   socialCardUrl,
 }: {
