@@ -8,10 +8,10 @@ export const Meta = ({
   path: string;
   socialCardUrl?: string;
 }) => {
-  const url = `https://ep2022.europython.eu/${path}`;
+  const url = `https://ep2023.europython.eu/${path}`;
   let imageUrl = path
-    ? `https://ep2022.europython.eu/social-cards/${path}.png`
-    : "https://ep2022.europython.eu/social-cards/default.png";
+    ? `https://ep2023.europython.eu/social-cards/${path}.png`
+    : "https://ep2023.europython.eu/social-cards/default.png";
 
   if (socialCardUrl) {
     imageUrl = socialCardUrl;
