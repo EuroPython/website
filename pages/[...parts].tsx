@@ -26,15 +26,13 @@ export default function Page({
   path: string;
 }) {
   title = title
-    ? `${title} - EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote`
-    : "EuroPython 2022 | July 11th-17th 2022 | Dublin Ireland & Remote";
+    ? `${title} - EuroPython 2023 | July 11th-17th 2023 | Dublin Ireland & Remote`
+    : "EuroPython 2023 | July 11th-17th 2023 | Dublin Ireland & Remote";
 
   return (
     <Layout path={path} title={title}>
       <main id="main-content" className="px-6">
-        <Prose>
-          <MDXRemote {...source} components={components} />
-        </Prose>
+        <MDXRemote {...source} components={components} />
       </main>
     </Layout>
   );
