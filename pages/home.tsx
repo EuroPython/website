@@ -1,11 +1,9 @@
-import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
 import { promises as fs } from "fs";
 import path from "path";
 import { Layout } from "../components/layout";
 import { Hero } from "../components/hero";
-import { Map } from "../components/map";
 import { Card } from "../components/card";
 import matter from "gray-matter";
 import { Sponsors } from "../components/sponsors";
@@ -18,6 +16,7 @@ import { ButtonLink } from "components/button-link";
 import { HeroVenue } from "components/hero-section/hero-venue";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
+import { serialize } from "lib/mdx-utils";
 
 type Deadline = {
   content: string;

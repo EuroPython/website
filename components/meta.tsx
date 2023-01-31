@@ -35,7 +35,7 @@ export const Meta = ({
         href="http://blog.europython.eu/rss"
       />
 
-      <title>{title} </title>
+      <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content="" />
       <meta name="author" content="EuroPython" />
@@ -51,12 +51,6 @@ export const Meta = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content="" />
       <meta property="twitter:image" content={imageUrl} />
-
-      <script
-        defer
-        data-domain="ep2023.europython.eu"
-        src="https://plausible.io/js/plausible.js"
-        ></script>
     </Head>
   );
 };

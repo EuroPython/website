@@ -113,7 +113,7 @@ out.
   <li className="new">Remote Late Bird - Conference Only Business (Available on 27 June) - €208 <i>excl 23% VAT † </i></li>
   <li className="new">Remote Regular - Conference Only Personal (Available until 26 June) - €42 <i>incl VAT †</i></li>
   <li className="new">Remote Late Bird - Conference Only Personal (Available on 27 June) - €64 <i>incl VAT †</i></li>
-</ul>  
+</ul>
 
 †VAT for Remote Tickets:
 - Business tickets:
@@ -144,7 +144,7 @@ Is your company attending the conference as a team? We offer the following volum
 
 Note: Volume discount will not apply if you mix & match between different ticket types.
 
-Ready to order? We have configured the discount to be automatic! Put your orders in the basket and enjoy! As a special thank you, if you want us to send send out a mention on Twitter welcoming your team, feel free to email us at <mailto:info@europython.eu> 👐
+Ready to order? We have configured the discount to be automatic! Put your orders in the basket and enjoy! As a special thank you, if you want us to send send out a mention on Twitter welcoming your team, feel free to email us at [info@europython.eu](mailto:info@europython.eu) 👐
 
 ### Notes for In-person Tickets
 
@@ -168,8 +168,8 @@ Ready to order? We have configured the discount to be automatic! Put your orders
 
 ## How can I Get a Refund?
 
-- For in-person tickets: We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 11 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at <mailto:refunds@europython.eu> if you need a refund due to special circumstances.
+- For in-person tickets: We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 11 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances.
 
 - For remote tickets:
-  - You can request a refund until 26 June by emailing us at <mailto:refunds@europython.eu>.
+  - You can request a refund until 26 June by emailing us at [info@europython.eu](mailto:info@europython.eu).
   - After 26 June, refund is not possible.

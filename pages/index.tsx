@@ -36,12 +36,6 @@ export default function IndexPage() {
         <meta property="twitter:url" content="https://ep2023.europython.eu" />
         <meta property="twitter:title" content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote" />
         <meta property="twitter:description" content="" />
-
-        <script
-          defer
-          data-domain="ep2023.europython.eu"
-          src="https://plausible.io/js/plausible.js"
-        ></script>
       </Head>
 
       <div className="flex items-center justify-center content-center min-h-screen">

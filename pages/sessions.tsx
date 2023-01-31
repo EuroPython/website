@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Layout } from "../components/layout";
-import { serialize } from "next-mdx-remote/serialize";
 import { fetchSessions } from "../lib/sessions";
 import { Title } from "components/typography/title";
-import clsx from "clsx";
 import { SessionSummary } from "components/session-summary/session-summary";
 import { Label } from "components/form/label";
 import { Select } from "components/form/select";
+import { serialize } from "next-mdx-remote/serialize";
 
 type Session = {
   track: string;

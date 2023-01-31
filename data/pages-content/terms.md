@@ -64,7 +64,7 @@ forms of payment are not possible.
 
 For debit or credit card payments, the cards will be charged immediately
 following the application. Debit and credit card payments are handled by the
-service provider Stripe (<https://stripe.com/>). The Organizers do not store any
+service provider [Stripe](https://stripe.com). The Organizers do not store any
 card information.
 
 ## 3. Performance and Cancellation
@@ -137,8 +137,7 @@ after the Refund End Date.
 The Organizers are considered data controllers under the terms of the
 [Regulation (EU) No. 2016/679 (GDPR)](https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex:32016R0679).
 
-Please refer to our Data Protection Policy at
-<https://www.europython-society.org/privacy/> for details on how your data is
+Please refer to our [Data Protection Policy](https://www.europython-society.org/privacy/) for details on how your data is
 processed.
 
 All attendees, sponsors and other participants of the conference have to declare

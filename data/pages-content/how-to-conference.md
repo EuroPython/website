@@ -28,8 +28,7 @@ Keep an eye on the scratchpad outside the Wicklow Hall 2A to know what’s going
 
 <figure>
   <img src="/img/ireland-castle.jpg" width="0.1" height="0.1"/>
-  <figcaption className="small">Slightly less open than this. Just mentally add a scratchpad to it and you will get the idea.
-</figcaption>
+  <figcaption className="small">Slightly less open than this. Just mentally add a scratchpad to it and you will get the idea.</figcaption>
 </figure>
 
 

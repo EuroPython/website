@@ -1,4 +1,3 @@
-import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -13,6 +12,7 @@ import { components } from "../../components/mdx";
 import keynoters from "../../data/keynoters.json";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
+import { serialize } from "next-mdx-remote/serialize";
 
 const findKeynoter = (name: string) => {
   return keynoters.find((keynoter) => keynoter.name === name);

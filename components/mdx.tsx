@@ -81,6 +81,8 @@ export const components = {
   Map,
   ButtonWithTitle,
   SponsorTiers,
+
+  // TODO: these two are not working together
   BenefitItem,
   BenefitsList,
   ButtonLink,

@@ -1,19 +1,13 @@
-import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeExternalLinks from "rehype-external-links";
+
 import matter from "gray-matter";
 import { promises as fs } from "fs";
 import path from "path";
 import glob from "glob";
 import { Layout } from "../components/layout";
-import { wrapInArticles } from "../plugins/wrap-in-articles";
-import { highlightFirstHeading } from "../plugins/highlight-first-heading";
-import { makeFirstParagraphBig } from "../plugins/make-first-paragraph-big";
 import { components } from "../components/mdx";
-import { inspect } from "util";
-import { Prose } from "components/prose/prose";
+import { serialize } from "lib/mdx-utils";
+
 
 export default function Page({
   source,
@@ -67,24 +61,7 @@ export async function getStaticProps({
 
   const page = await fs.readFile(markdownPath);
   const { content, data } = matter(page);
-  const mdxSource = await serialize(content.toString(), {
-    mdxOptions: {
-      rehypePlugins: [
-        // @ts-ignore
-        rehypeSlug,
-        // @ts-ignore
-        [rehypeAutolinkHeadings, { behavior: "wrap" }],
-        // @ts-ignore
-        [rehypeExternalLinks, { rel: ["nofollow"] }],
-      ],
-      remarkPlugins: [
-        wrapInArticles,
-        highlightFirstHeading,
-        // disabled for now, because it makes text too big
-        // makeFirstParagraphBig,
-      ],
-    },
-  });
+  const mdxSource = await serialize(content.toString());
   return {
     props: {
       source: mdxSource,

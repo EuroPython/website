@@ -38,7 +38,7 @@ For details, please refer to the relevant sections below.
 
   -  **Purchase all the complimentary / discounted tickets in bulk** by using the voucher links sent to you. They will be sent out to the sponsor representative. Please follow the direct email instructions and purchase all of the tickets you are entitled to.
 
-  - **Assign the tickets** to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from [support@pretix.eu](mailto:support@pretix.eu) with the **Subject: Your order**: ***<XXXX\>*** and amend accordingly.
+  - **Assign the tickets** to every team member that you have chosen to attend the conference. You can assign them by changing your order details after you make the order. Click the order URL in your order confirmation email from [support@pretix.eu](mailto:support@pretix.eu) with the **Subject: Your order**: ***XXXX*** and amend accordingly.
 
   ***Deadline*** for registering and assigning the tickets: ***June 27***
 
@@ -359,8 +359,8 @@ Please note, in order not to run into any attachment max size issue, please uplo
 
   Sponsor of Keystone, Diamond, Platinum additionally get to suggest a single tweet, which we'll send to the followers of our <a href="https://twitter.com/europython" target="_blank">@europython</a> Twitter account.
 
-  - **For the retweet**, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Retweet**: ***<your company name\>***"during or before the conference mentioning the URL of the tweet. We will then schedule it for a retweet.
-  - **For the tweet**, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Tweet**: ***<your company name\>***" during or before the conference mentioning the tweet text. We will then review it and schedule it after approval.
+  - **For the retweet**, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Retweet**: ***your company name***"during or before the conference mentioning the URL of the tweet. We will then schedule it for a retweet.
+  - **For the tweet**, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 Tweet**: ***your company name***" during or before the conference mentioning the tweet text. We will then review it and schedule it after approval.
 
 **Deadline** for submitting retweet URL and the tweet text: Any time before or during the conference days.
 
@@ -372,7 +372,7 @@ Please note, in order not to run into any attachment max size issue, please uplo
 
   Sponsor of Keystone, Diamond and Platinum get a single reshare of one of your posts to the subscriber of EuroPython’s LinkedIn group. We normally do not reshare from companies, so signing up as a EuroPython sponsor is a good way to get the exposure.
 
-  In order to get the reshare scheduled, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 LinkedIn Reshare**: ***<your company name\>***" during or before the conference mentioning the URL of the reshare. We will then schedule it for a retweet.
+  In order to get the reshare scheduled, please email <a href="sponsoring@europython.eu">sponsoring@europython.eu</a> with the subject "**EuroPython 2022 LinkedIn Reshare**: ***your company name***" during or before the conference mentioning the URL of the reshare. We will then schedule it for a retweet.
 
 **Deadline** for submitting Linkedin Reshare URL: Any time before or during the conference days.
 
