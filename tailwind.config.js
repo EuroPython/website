@@ -22,7 +22,7 @@ module.exports = {
       "primary-hover": "var(--color-primary-hover)",
       "primary-active": "var(--color-primary-active)",
 
-      "secondary": "var(--color-secondary)",
+      secondary: "var(--color-secondary)",
       "secondary-dark": "var(--color-secondary-dark)",
       "secondary-darkest": "var(--color-secondary-darkest)",
       "secondary-light": "var(--color-secondary-light)",
@@ -61,6 +61,14 @@ module.exports = {
           "Segoe UI Symbol",
         ],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.text"),
+            '--tw-prose-headings': theme('colors.white'),
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],
