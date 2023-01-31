@@ -27,6 +27,8 @@ export default function IndexPage() {
         <meta name="description" content="" />
         <meta name="author" content="EuroPython" />
 
+        <link rel="icon" href="/epslogo.png" type="image/png" />
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ep2023.europython.eu" />
         <meta property="og:title" content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote" />
