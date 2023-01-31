@@ -55,7 +55,7 @@ export const Meta = ({
       <script
         defer
         data-domain="ep2023.europython.eu"
-        src="https://plausible.io/js/plausible.js"
+        src="https://plausible.io/js/script.js"
       ></script>
     </Head>
   );
