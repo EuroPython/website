@@ -2,6 +2,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeExternalLinks from "rehype-external-links";
 import matter from "gray-matter";
 import { promises as fs } from "fs";
 import path from "path";
@@ -92,6 +93,8 @@ async function serializeWithPlugins(content: string, plugins: any[]) {
         rehypeSlug,
         // @ts-ignore
         [rehypeAutolinkHeadings, { behavior: "wrap" }],
+        // @ts-ignore
+        [rehypeExternalLinks, { rel: ["nofollow"] }],
       ],
       remarkPlugins: plugins,
     },
