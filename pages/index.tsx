@@ -1,9 +1,20 @@
 import { Hero } from "../components/hero";
 
 import Head from "next/head";
+import { useRef, useEffect } from "react";
+import { Clacks } from "components/clacks";
 
 export default function IndexPage() {
   const imageUrl = "https://ep2023.europython.eu/social-cards/default.png";
+  const metaRef = useRef<HTMLMetaElement>(null);
+
+  useEffect(() => {
+    console.log("metaRef", metaRef.current);
+    if (metaRef.current) {
+      // add comment before meta tag
+      metaRef.current.before(document.createComment("GNU Terry Pratchett"));
+    }
+  }, []);
 
   return (
     <>
@@ -24,8 +35,14 @@ export default function IndexPage() {
           href="http://blog.europython.eu/rss"
         />
 
-        <title>EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote</title>
-        <meta name="title" content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote" />
+        <title>
+          EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic &
+          Remote
+        </title>
+        <meta
+          name="title"
+          content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote"
+        />
         <meta name="description" content="" />
         <meta name="author" content="EuroPython" />
 
@@ -33,19 +50,23 @@ export default function IndexPage() {
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ep2023.europython.eu" />
-        <meta property="og:title" content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote" />
+        <meta
+          property="og:title"
+          content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote"
+        />
         <meta property="og:description" content="" />
         <meta property="og:image" content={imageUrl} />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://ep2023.europython.eu" />
-        <meta property="twitter:title" content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote" />
+        <meta
+          property="twitter:title"
+          content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote"
+        />
         <meta property="twitter:description" content="" />
         <meta property="twitter:image" content={imageUrl} />
-        <!-- In remembrance -->
-        <meta http-equiv="X-Clacks-Overhead" content="GNU John Pinner" />
-        <meta http-equiv="X-Clacks-Overhead" content="GNU Rob Collins" />
-        <meta http-equiv="X-Clacks-Overhead" content="GNU Oier Etxaniz" />
+
+        <Clacks />
       </Head>
 
       <div className="flex items-center justify-center content-center min-h-screen">
