@@ -42,6 +42,10 @@ export default function IndexPage() {
         <meta property="twitter:title" content="EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote" />
         <meta property="twitter:description" content="" />
         <meta property="twitter:image" content={imageUrl} />
+        <!-- In remembrance -->
+        <meta http-equiv="X-Clacks-Overhead" content="GNU John Pinner">
+        <meta http-equiv="X-Clacks-Overhead" content="GNU Rob Collins">
+        <meta http-equiv="X-Clacks-Overhead" content="GNU Oier Etxaniz">
       </Head>
 
       <div className="flex items-center justify-center content-center min-h-screen">
