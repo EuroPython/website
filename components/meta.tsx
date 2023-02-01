@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Clacks } from "./clacks";
 export const Meta = ({
   title = "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
   path,
@@ -55,6 +56,8 @@ export const Meta = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content="" />
       <meta property="twitter:image" content={imageUrl} />
+
+      <Clacks />
     </Head>
   );
 };
