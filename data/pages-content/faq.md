@@ -25,7 +25,7 @@ A. Currently, the EuroPython Society board are still finalising the contract wit
 A. The conference will be organised in three phases:
 
 1. Monday & Tuesday (17.07 & 18.07): workshops and tutorials
-2. Wednesday - Friday (18.07 - 21.07): main conference days
+2. Wednesday - Friday (19.07 - 21.07): main conference days
 3. Saturday & Sunday (22.07 & 23.07): sprints (hackathon), location and details TBC.
 
 ## **Q. What will the programme look like?**
