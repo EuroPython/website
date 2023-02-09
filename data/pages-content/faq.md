@@ -4,6 +4,19 @@ subtitle: Frequently Asked Questions about EuroPython
 ---
 
 # FAQ
+## **Milestones**
+<ul className="milestone-todo">
+</ul>
+
+<ul className="milestone-todo">
+<li><b>2023-02-22</b>: Mentorship Programme Sign-up starts </li>
+<li><b>2023-03-06</b>: Call for Proposals (CFP) Starts </li>
+<li><b>2023-03-19</b>: Call for Proposals (CFP) Ends </li>
+<li><b>2023 Early March</b>: Financial Aid Programme Starts </li>
+<li><b>2023 Early March</b>: Ticket Sales Start</li>
+<li><b>2023 March</b>: Sponsorship Sign-up Starts </li>
+<li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
+</ul>
 
 ## **Q. When and where is EuroPython 2023 taking place?**
 
@@ -41,7 +54,7 @@ We are always keen to hear new ideas on how to enrich the programme and other ac
 
 ## **Q. When do you accept talk proposals?**
 
-A. The Call for Proposals (CFP) will be launched in early March. We are thrilled to receive proposals on any topic that could be of interest to our community.
+A. The Call for Proposals (CFP) will run for two weeks between 6-19 March 2023. We are thrilled to receive proposals on any topic that could be of interest to our community.
 
 Especially if you are considering becoming a speaker for the first time, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. There will be a speaker mentorship programme as well as broader support options. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) for updates.
 
