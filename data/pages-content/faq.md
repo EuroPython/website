@@ -5,7 +5,7 @@ subtitle: Frequently Asked Questions about EuroPython
 
 # FAQ
 ## **Milestones**
-<ul className="milestone-todo">
+<ul className="milestone-done">
 </ul>
 
 <ul className="milestone-todo">
