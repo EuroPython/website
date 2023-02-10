@@ -54,6 +54,16 @@ body {
   text-decoration: none!important;
 }
 
+ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.3125rem;
+}
+
+
 ul.milestone-done li {
   position: relative;
   list-style: none;
