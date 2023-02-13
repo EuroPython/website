@@ -53,3 +53,21 @@ body {
 .prose :is(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none!important;
 }
+
+ul.milestone-done li {
+  position: relative;
+  list-style: none;
+}
+
+ul.milestone-done li::before {
+  content: "\2705  ";
+}
+
+ul.milestone-todo li {
+  position: relative;
+  list-style: none;
+}
+
+ul.milestone-todo li::before {
+  content: "\1F4DD  ";
+}
