@@ -35,6 +35,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/cfp",
+        destination: "https://program.europython.eu/europython-2022/cfp",
+        permanent: true,
+      },
+      {
         source: "/sponsor-information",
         destination: "/sponsor/information",
         permanent: true,
