@@ -18,6 +18,8 @@ subtitle: EuroPython Call for Proposals
 
 We invite proposals from the whole community on a wide range of topics. We welcome speakers at all python levels with any experience with public speaking.
 
+You are welcome to share your questions and ideas with our programme team at [programme@europython.eu](programme@europython.eu)
+
 ## The Conference Format ##
 
 The conference will feature around 16 Tutorials/Workshops and 120 talk sessions:
@@ -28,7 +30,7 @@ The conference will feature around 16 Tutorials/Workshops and 120 talk sessions:
 
 All presentation content can be at **beginner, intermediate or advanced** level.
 
-[comment]: # (Other than talks and tutorials, you are also welcome to submit **posters**: printed in large formats, it is a graphical way to showcase a project or a technology. Posters are exhibited at the conference, read at any time by participants, and can be discussed face to face with their authors during the poster session.)
+Other than talks and tutorials, you are also welcome to submit **posters** - printed in large formats. It is a graphical way to showcase your research, project or technology. Posters are exhibited at the conference, read at any time by participants, and can be discussed face-to-face with their authors during the poster session.
 
 
 ## Topics ##
@@ -47,7 +49,7 @@ As a reminder, EuroPython presentations are intended to share knowledge and expe
 
 We believe that a good conference consists of popular talks as well as new or niche topics - all by and for our diverse community. Thus, after Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. This is a "blind" process, so speakers' names will not be displayed to the reviewers.
 
-* **community voting**: open to all 2015-2023 EuroPython conference ticket holders + 2023 proposal submitters. Submissions are in random order for each voter. Please check out our talk voting page for details.
+* **community voting**: open to all 2015-2023 EuroPython conference ticket holders + 2023 proposal submitters. Submissions are in random order for each voter. Stay tuned for more details!
 
 * **panel feedback**: a diverse group of experienced reviewers will refine and give feedback on the submissions within their realm of expertise. Their insights help the programme team refine and plan a programme that truly reflects, informs and stimulates our EuroPython family. Submit your interest here
 
@@ -61,12 +63,3 @@ Mentorship Programme sign-up starts on 22 February. More details will be announc
 
 [comment]: # (The below is not decided ## Speaker Tickets ##)
 [comment]: # (We are hoping to meet as many speakers as possible in-person. To make travel easier, **accepted speakers are eligible for a free ticket to attend the conference**. Travel and accommodation expenses will not be reimbursed; but we will have a Financial Aid programme and encourage speakers, especially those from under-represented backgrounds to apply.)
-
----
-## Non-profit ##
-[comment]: # (not sure if we want to keep these below)
-EuroPython is a volunteer-run conference. All proceeds go to EuroPython Society which supports the Python community through its generous [EPS Grants Programme](https://www.europython-society.org/grants/) across Europe.
-
-[NumFOCUS](https://numfocus.org/), the entity behind PyData is a non-profit organisation that supports the development of open-source tools, such as Numpy, IPython, Jupyter, and many others.
-
-Please consider supporting both.
