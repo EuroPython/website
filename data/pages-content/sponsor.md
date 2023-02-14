@@ -1,28 +1,24 @@
 ---
 title: Sponsor
-subtitle:
-  Sponsoring EuroPython guarantees you highly targeted visibility and the
-  opportunity to present yourself and your company to one of the largest and
-  most diverse Python communities in Europe and beyond.
+subtitle: Sponsoring EuroPython guarantees you highly targeted visibility and the opportunity to present yourself and your company to one of the largest and most diverse Python communities in Europe and beyond.
 ---
+
 
 # Sponsor
 
-<p className="large">Support the largest European Python conference</p>
+<font size="+2.5">Support the Largest European Python Conference!</font>
 
-Sponsoring EuroPython guarantees you highly targeted visibility and the
-opportunity to present yourself and your company to one of the largest and most
-diverse Python communities in Europe and beyond.
+Sponsoring EuroPython guarantees you highly targeted visibility and the opportunity to present yourself and your company to one of the largest and most diverse Python communities in Europe and beyond.
 
-This July, we will finally be back together again, after two years of running
-online. Become a sponsor of EuroPython 2022, join us in
-[The Convention Centre Dublin](https://www.theccd.ie/) and directly help promote
-the work of the great open-source community and further its development.
+Become a sponsor of EuroPython 2023. Join us this July in the [Prague Congress Centre](https://www.praguecc.cz/en/homepage) and directly help promote the work of the great open-source community and further its development.
 
 <img src="/img/hall_rotated.png" width="3279" height="1785" />
 
+<Note>💌 We are currently working on the 2023 sponsorship offerings. You are welcome to get in touch already at [sponsorsing@europython.eu](mailto:sponsorsing@europython.eu) and we will keep you updated.  </Note>
 
-<ButtonWithTitle title="Ready to become a sponsor and join us in Dublin?" text="Sign Up Now!" href="https://forms.gle/L2CxUpbr6wmV3Lsv8" />
+<Note>Launch Sponsors will again get 10% of discount!</Note>
+
+<!-- <ButtonWithTitle title="Ready to become a sponsor and join us in Prague?" text="Sign Up Now!" href="" /> -->
 ---
 
 ## 2019 & 2021 Demographics
@@ -38,17 +34,29 @@ both worlds.
 </div>
 
 ---
+## Benefits of being a sponsor
 
-# Sponsor tiers
+For over 20 years, Python, renowned for its simplicity, reliability and
+flexibility, has become a leading programming language both in the industry and
+in research. And what better place than EuroPython to keep your finger on the
+pulse of anything Python-related? EuroPython was the first major Python
+community conference ever organised by volunteers.
 
-At EuroPython 2022, we offer seven main packages, aiming to keep EuroPython
-accessible to most organisations keen to help the community.
+  <BenefitItem icon="network" title="Socialise">Make contact with a vibrant network of innovators</BenefitItem>
+  <BenefitItem icon="target" title="Target">Run a targeted marketing by reaching out directly to people interested in a topic</BenefitItem>
+  <BenefitItem icon="award" title="Community Cultivation">Let the world know your company support the Python open source community</BenefitItem>
+  <BenefitItem icon="transfer" title="Know-How Transfer">Educate your staff and benefit from the knowledge of the community</BenefitItem>
+  <BenefitItem icon="headhunt" title="Head Hunting">Take advantage of the conference for recruitment</BenefitItem>
+  <BenefitItem icon="rocket" title="New Business">Use the conference to attract new projects</BenefitItem>
+
+
+<!-- # Sponsor tiers
+
+At EuroPython 2023, we offer seven main packages, aiming to keep EuroPython accessible to most organisations keen to help the community.
 
 <ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Package
 Comparison Table (PDF)</ButtonLink>
 <ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
-
-<Note>We are still <b>Keystone & Diamond </b> sponsors. Get in touch if you are interested in supporting us!</Note>
 
 <SponsorTiers />
 
@@ -60,21 +68,21 @@ stand-alone sponsor options. Below are some examples.
 Please note: each add-on has limited slots and some are exclusive. Please check the full list in the PDF for details.
   <ul>
     <li>Sponsored talk on a conference day: €3,500  </li>
-    <li>Childcare Sponsor: €5,000 </li>
-    <li>Financial Aid Sponsor: €5,000 </li>
-    <li>PyLadies Lunch Sponsor: €2,000</li>
-    <li>Open Space Room Sponsor: €2,000</li>
+    <li>Childcare Sponsors: €5,000 </li>
+    <li>Financial Aid Sponsors: €5,000 </li>
+    <li>PyLadies Lunch Sponsors: €2,000</li>
+    <li>Open Space Room Sponsors: €2,000</li>
     <li>And many more!</li>
   </ul>
 
-<ButtonLink secondary href="https://drive.google.com/file/d/1C-edc9O4iY_LpN4PZbyvSSf8uLNPzajf/view?usp=sharing">Full list of add-ons (PDF)</ButtonLink>
-<ButtonLink href="https://forms.gle/L2CxUpbr6wmV3Lsv8">Sign up Now!</ButtonLink>
+<ButtonLink secondary href="">Full list of add-ons (PDF)</ButtonLink>
+<ButtonLink href="">Sign up Now!</ButtonLink>
 
 ## Discounts
 
 ### Early Bird
 
-~~We will offer a 10% discount for early bird sponsors! Sign up by **29 April** to take advantage!~~
+We will offer a 10% discount for early bird sponsors! Sign up by ** ** to take advantage!
 
 ### SME
 
@@ -97,19 +105,4 @@ tables for Open Source Software projects during the conference. Reach out to the
 book a free table! Please note that places are limited and available on a
 first-come-first-serve basis.
 
----
-
-## Benefits of being a sponsor
-
-For over 20 years, Python, renowned for its simplicity, reliability and
-flexibility, has become a leading programming language both in the industry and
-in research. And what better place than EuroPython to keep your finger on the
-pulse of anything Python-related? EuroPython was the first major Python
-community conference ever organised by volunteers.
-
-  <BenefitItem icon="network" title="Socialise">Make contact with a vibrant network of innovators</BenefitItem>
-  <BenefitItem icon="target" title="Target">Run a targeted marketing by reaching out directly to people interested in a topic</BenefitItem>
-  <BenefitItem icon="award" title="Community Cultivation">Let the world know your company support the Python open source community</BenefitItem>
-  <BenefitItem icon="transfer" title="Know-How Transfer">Educate your staff and benefit from the knowledge of the community</BenefitItem>
-  <BenefitItem icon="headhunt" title="Head Hunting">Take advantage of the conference for recruitment</BenefitItem>
-  <BenefitItem icon="rocket" title="New Business">Use the conference to attract new projects</BenefitItem>
+--- -->
