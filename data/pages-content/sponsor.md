@@ -10,27 +10,26 @@ subtitle: Sponsoring EuroPython guarantees you highly targeted visibility and th
 
 Sponsoring EuroPython guarantees you highly targeted visibility and the opportunity to present yourself and your company to one of the largest and most diverse Python communities in Europe and beyond.
 
-Become a sponsor of EuroPython 2023. Join us this July in the [Prague Congress Centre](https://www.praguecc.cz/en/homepage) and directly help promote the work of the great open-source community and further its development.
+Become a sponsor of EuroPython 2023. Join us this July in the **[Prague Congress Centre (PCC)](https://www.praguecc.cz/en/homepage)** and directly help promote the work of the great open-source community and further its development.
 
 <img src="/img/hall_rotated.png" width="3279" height="1785" />
 
-<Note>💌 We are currently working on the 2023 sponsorship offerings. You are welcome to get in touch already at [sponsorsing@europython.eu](mailto:sponsorsing@europython.eu) and we will keep you updated.  </Note>
+<br></br>
+💌 We are currently working on the 2023 sponsorship offerings. Browse through the **2022 & 2019 Stats & Demographics below** and our [2022 offerings](https://ep2022.europython.eu/sponsor#sponsor-tiers) to get an idea.
 
-<Note>Launch Sponsors will again get 10% of discount!</Note>
+
+<Note>**Launch Sponsors will again get 10% of discount!**</Note>
+<Note> Reach out to us already at **[sponsorsing@europython.eu](mailto:sponsorsing@europython.eu)** to discuss your interest and options.</Note>
 
 <!-- <ButtonWithTitle title="Ready to become a sponsor and join us in Prague?" text="Sign Up Now!" href="" /> -->
----
 
-## 2019 & 2021 Demographics
+## Stats & Demographics
 
-EuroPython 2019 was the last in-person conference, held in Basel, Switzerland.
-EuroPython 2021 was held online with a diverse reach across the world.
-EuroPython 2022 will be hybrid, both in Dublin & Online, combining the good of
-both worlds.
+EuroPython 2022 was a hybrid conference, both in Dublin & Online, combining the good of both worlds. Prior to that, EuroPython 2019 was the last in-person conference, held in Basel, Switzerland.
 
 <div style={{textAlign: "center"}}>
-<ButtonLink href="https://drive.google.com/file/d/1mNnS4-pH8rlF0jFqyWtAUozQwsoi8tDt/view?usp=sharing">2019
-& 2021 Demographics (PDF)</ButtonLink>
+<ButtonLink href="https://drive.google.com/file/d/1qmZXvrSogaOKL-AuaXfiPJS_3wz6i0Hg/view?usp=share_link">2022
+& 2019 Stats & Demographics (PDF)</ButtonLink>
 </div>
 
 ---
