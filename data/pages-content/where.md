@@ -27,6 +27,8 @@ Check out the following resources for some guides to the city:
 
 - [Honest Guide (videos)](https://www.youtube.com/@HONESTGUIDE)
 
+- [USE-IT Prague Map) https://www.use-it.travel/cities/detail/prague/
+
 - [Prague Tourist Information](https://praguetouristinformation.com/en/)
 
 - [Prague.org](https://prague.org/)
