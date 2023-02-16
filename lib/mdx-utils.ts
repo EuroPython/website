@@ -2,6 +2,7 @@ import { serialize as mdxSerialize } from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
+import remarkGfm from 'remark-gfm'
 import remarkComment from "remark-comment";
 import { wrapInArticles } from "../plugins/wrap-in-articles";
 import { highlightFirstHeading } from "../plugins/highlight-first-heading";
@@ -21,6 +22,7 @@ export async function serialize(source: string, options?: any) {
         [rehypeExternalLinks, { rel: ["nofollow"], target: "_blank" }],
       ],
       remarkPlugins: [
+        remarkGfm,
         wrapInArticles,
         highlightFirstHeading,
         remarkComment,
