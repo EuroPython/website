@@ -14,7 +14,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-19</b>: Call for Proposals (CFP) Ends </li>
 <li><b>2023 Early March</b>: Financial Aid Programme Starts </li>
 <li><b>2023 Early March</b>: Ticket Sales Start</li>
-<li><b>2023 March</b>: Sponsorship Sign-up Starts </li>
+<li><b>2023 March</b>: [Sponsorship](/sponsor) Sign-up Starts </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
@@ -78,7 +78,9 @@ A. Yes, we will have a Financial Aid programme this year similar to the one we h
 
 ## **Q. When can sponsors start signing up?**
 
-A: The 2023 packages are not finalised yet, but will be similar to what we had in [EuroPython 2022](https://ep2022.europython.eu/sponsor). So do take a look to get an idea of the sponsorship options. **Sponsors who sign up early will again receive a 10% discount.**
+A: The 2023 packages are not finalised yet, but will be similar to what we had in [EuroPython 2022](https://ep2022.europython.eu/sponsor). So do take a look to get an idea of the sponsorship options. We will publish our 2023 offerings soon on our [Sponsor Page](/sponsor.)
+
+**Sponsors who sign up early will again receive a 10% discount.**
 
 We are committed to making EuroPython sponsorship accessible to most organisations keen to help the community. If you are interested in supporting EuroPython 2023, get in touch with our sponsors team at [sponsoring@europython.eu](sponsoring@europython.eu)
 
