@@ -11,7 +11,7 @@ subtitle: EuroPython 2023 will be held in Prague!
 
 <br></br>
 
-Prague is the capital of the Czech Republic. Sitting on the [Vltava River](https://www.youtube.com/watch?v=l6kqu2mk-Kw), the beautiful historic centre is a UNESCO world heritage site. There's a LOT to see, do and enjoy, in addition to the conference! The ancient fortress [Vyšehrad](https://www.vysehradtickets.com/vysehrad/) is just 10-min walk away from the conference venue.
+Prague is the capital of the Czech Republic. Sitting on the [Vltava River](https://www.youtube.com/watch?v=l6kqu2mk-Kw), the beautiful historic centre is a UNESCO world heritage site. There's a LOT to see, do and enjoy, in addition to the conference! The ancient [Vyšehrad](https://www.vysehradtickets.com/vysehrad/) is just 10-min walk away from the conference venue. Not only is is an ancient fortress, but also a park with a great view of Prague Castle and the river. We hope you enjoy taking a walk with fellow Pythonistas in the tranquil park when you need a bit of peace from the buzz of the conference.  
 
 As per EuroPython tradition, we shall walk around, chat, laugh and explore the city together. Whether it is to enjoy the stunning view of the "[City of a Hundred Spires](https://www.prague.eu/en/articles/the-towers-of-prague-10537)" from any (or all!) of the 120+ towers, or standing still to admire the wonder of [Prague Astronomical Clock](https://www.prague.eu/en/object/places/3129/astronomical-clock?back=1). The only problem is being spoiled for choice!
 
@@ -25,23 +25,28 @@ Check out the following resources for some guides to the city:
 
 - [My Prague - Insiders' Guide to the City (with audio)](https://english.radio.cz/node/8702571/o-poradu)
 
+- [Honest Guide (videos)](https://www.youtube.com/@HONESTGUIDE)
+
 - [Prague Tourist Information](https://praguetouristinformation.com/en/)
 
 - [Prague.org](https://prague.org/)
 
 ### Weather
- With an average July high of 25°c, remember to pack your shorts and sandals with your laptop, along with a spirit of adventure to explore one of the most visited and vibrant cities in Europe.
+ With an average July high of 25°C, remember to pack your shorts and sandals with your laptop, along with a spirit of adventure to explore one of the most visited and vibrant cities in Europe. Friendly reminder: it might get up to mid 30°C in July🥵 - we recommend packing sunscreen and regular hydration to avoid excessive burning.
 
 ## Prague Congress Centre - Conference Venue
 
 [The Prague Congress Centre](https://www.praguecc.cz/en/homepage) is the home of
-EuroPython in 2023 between 17-21 July. [Located within walking distance](https://www.google.com/maps/place/Prague+Congress+Centre/@50.0710932,14.4348111,13.75z/data=!4m5!3m4!1s0x0:0x4d26855708eb61f7!8m2!3d50.0625764!4d14.4290206?hl=en-GB)
-of the historic city centre, the conference centre is adjacent to the Vyšehrad
-station on Line C of the Prague underground railway network, providing convenient
-access by public transport from the city’s airport and all major rail and bus stations.
+EuroPython in 2023 between 17-21 July.
 
 It's an important venue, having hosted the IMF, NATO and other significant and
 powerful international organisations. Now they can add EuroPython to that list! 😛
+
+The conference centre is adjacent to the Vyšehrad - a short walk away from [Náplavka](https://www.mmzoneblog.com/naplavka), full of cafes, pubs and restaurants, a wonderful area to relax by the river and take in the spirit of the city.
+
+The Vyšehrad station next to the venue on Line C of the Prague underground railway network, also provides convenient
+access by public transport from the city’s airport and all major rail and bus stations.
+
 
 <Map></Map>
 
