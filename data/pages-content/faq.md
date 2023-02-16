@@ -59,7 +59,7 @@ A. The Call for Proposals (CFP) will run for two weeks between **6-19 March 2023
 
 Especially if you are considering becoming a speaker for the first time, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. A speaker mentorship programme will open for applications on 22 Feburary. We will also have other broader support options. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) for updates.
 
-If you have something in mind, there is no better time to start preparing your  proposal! For more insights, please have a look at the <a target="_blank" href="https://ep2022.europython.eu/cfp">EuroPython 2022 CFP page</a>. Some details may change for 2023, but overall, the structure is going to be similar.
+If you have something in mind, there is no better time to start preparing your  proposal! For more insights, please have a look at the [EuroPython 2022 CFP page](https://ep2022.europython.eu/cfp). Some details may change for 2023, but overall, the structure is going to be similar.
 
 If you have questions or ideas you would like to share with our team, you are most welcome to reach out to our programme team at [programme@europython.eu](mailto:programme@europython.eu).
 

@@ -28,5 +28,6 @@ We will have a dedicated Maker area for showcasing projects, workshops, hardware
 Do you have a funky project you want to share with the world? Why not present it as a workshop or display at the MakerFest?
 
 <div style={{textAlign: "center"}}>
-  <a class="button" href="https://forms.gle/xTdpFJ2rV8iqmMCb9">Register your interest now!</a>
+
+  [Register your interest now!](https://forms.gle/xTdpFJ2rV8iqmMCb9)
 </div>
