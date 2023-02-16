@@ -27,7 +27,10 @@ will give you all the information you need.
 EuroPython in 2023. [Located within walking distance](https://www.google.com/maps/place/Prague+Congress+Centre/@50.0710932,14.4348111,13.75z/data=!4m5!3m4!1s0x0:0x4d26855708eb61f7!8m2!3d50.0625764!4d14.4290206?hl=en-GB)
 of the historic city centre, the conference centre is adjacent to the Vyšehrad 
 station on Line C of the Prague underground railway network, providing convenient 
-access by public transport from the city’s airport and all major rail and bus stations. 
+access by public transport from the city’s airport and all major rail and bus stations.
+
+It's an important venue, having hosted the IMF, NATO and other significant and
+powerful international organisations. Now they can add EuroPython to that list! 😛
 
 <address>
 Kongresové centrum Praha, a.s.<br/>
