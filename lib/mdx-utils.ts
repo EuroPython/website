@@ -18,7 +18,7 @@ export async function serialize(source: string, options?: any) {
         // @ts-ignore
         [rehypeAutolinkHeadings, { behavior: "wrap" }],
         // @ts-ignore
-        [rehypeExternalLinks, { rel: ["nofollow"] }],
+        [rehypeExternalLinks, { rel: ["nofollow"], target: "_blank" }],
       ],
       remarkPlugins: [
         wrapInArticles,

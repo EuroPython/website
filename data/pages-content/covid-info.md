@@ -78,14 +78,14 @@ to protect yourself and those around us. Thanks!
 # COVID Facilities
 
 ## Tests
-- <a href="https://www.gov.ie/en/service/e55b8-book-an-antigen-test-and-get-an-eu-digital-covid-certificate/#dublin" target="_blank">Get an Antigen Test</a>
+- [Get an Antigen Test](https://www.gov.ie/en/service/e55b8-book-an-antigen-test-and-get-an-eu-digital-covid-certificate/#dublin)
 
-- <a href="https://covid19test.healthservice.ie/hse-self-referral/" target="_blank">Book a PCR Test</a>
+- [Book a PCR Test](https://covid19test.healthservice.ie/hse-self-referral/)
 
 ## Pharmacies Nearby
-- <a href="https://www.ifscpharmacy.ie/" target="_blank">Remedi Pharmacy</a>: Unit 8 Custom House Square, IFSC, Dublin, Ireland
-- <a href="https://www.lifepharmacy.ie/storelocator/pharmacy-hanover-quay" target="_blank">Life Pharmacy Hanover Quay</a>: Unit 4, The Marker, Forbes Street, Dublin 2, Ireland
-- <a href="https://www.lombardpharmacy.ie/" target="_blank">Lombard Pharmacy</a>: 32 Lombard St E, Dublin 2, D02 EH24, Ireland
+- [Remedi Pharmacy](https://www.ifscpharmacy.ie/): Unit 8 Custom House Square, IFSC, Dublin, Ireland
+- [Life Pharmacy Hanover Quay](https://www.lifepharmacy.ie/storelocator/pharmacy-hanover-quay): Unit 4, The Marker, Forbes Street, Dublin 2, Ireland
+- [Lombard Pharmacy](https://www.lombardpharmacy.ie/): 32 Lombard St E, Dublin 2, D02 EH24, Ireland
 
 ---
 **Last update 09 March 2022**
