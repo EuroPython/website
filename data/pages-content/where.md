@@ -7,11 +7,11 @@ subtitle: EuroPython 2023 will be held in Prague!
 <font size="+2.5">EuroPython 2023 will be held in **Prague**! We cannot wait to welcome you in one of the most beautiful cities in Europe!</font>
 
 ## Prague
-<img src="/img/Prague.jpeg" width="3279" height="1785"/>
+<img src="/img/Prague.jpeg"/>
 
 <br></br>
 
-The capital of the Czech Republic and sitting on the [Vltava River](https://www.youtube.com/watch?v=l6kqu2mk-Kw),the beautiful historic centre is a UNESCO world heritage site. There's a LOT to see, do and enjoy, in addition to the conference! The ancient fortress [Vyšehrad](https://www.vysehradtickets.com/vysehrad/) is just 10-min walk away from the conference venue.
+Prague is the capital of the Czech Republic. Sitting on the [Vltava River](https://www.youtube.com/watch?v=l6kqu2mk-Kw), the beautiful historic centre is a UNESCO world heritage site. There's a LOT to see, do and enjoy, in addition to the conference! The ancient fortress [Vyšehrad](https://www.vysehradtickets.com/vysehrad/) is just 10-min walk away from the conference venue.
 
 As per EuroPython tradition, we shall walk around, chat, laugh and explore the city together. Whether it is to enjoy the stunning view of the "[City of a Hundred Spires](https://www.prague.eu/en/articles/the-towers-of-prague-10537)" from any (or all!) of the 120+ towers, or standing still to admire the wonder of [Prague Astronomical Clock](https://www.prague.eu/en/object/places/3129/astronomical-clock?back=1). The only problem is being spoiled for choice!
 
@@ -51,21 +51,21 @@ Kongresové centrum Praha, a.s.<br/>
 140 00 Prague 4, Czechia<br/>
 </address>
 
-### Come to the Conference
+### Get to the Conference
 
 You can find detailed information on how to get to the conference centre
 [via the venue's website](https://www.praguecc.cz/en/how-to-get-here) or
 with their
 [convenient orientation guide (PDF)](https://www.praguecc.cz/users_data/files/ORIENTATION_PLANS_orientacni_pla.pdf).
 
-* **By plane**: [Prague's Václav Havel Airport (PRG)](https://www.prg.aero/en) is well connected
-to the conference venue via the public transport system.
-
-* **By train**: please refer to the [Czech Railways (České dráhy)](https://www.cd.cz/en/) website for timetables, bookings and ticket prices.
-
 * **By public transport**: plan your route and check the fares using the [Prague Public Transport website](https://www.dpp.cz/en)
 
-* **By car**: set your SatNav to GPS coordinates: 50.062112,14.428886. The Prague Congress Centre is adjacent to the North South Prague City Expressway – just follow the road signs for Prague Congress Centre. The venue has an underground car park and there is additional parking, above
+* **Planes**: [Prague's Václav Havel Airport (PRG)](https://www.prg.aero/en) is well connected
+to the conference venue via the public transport system.
+
+* **Trains**: please refer to the [Czech Railways (České dráhy)](https://www.cd.cz/en/) website for timetables, bookings and ticket prices.
+
+* **& Automobiles**: set your SatNav to GPS coordinates: 50.062112,14.428886. The Prague Congress Centre is adjacent to the North South Prague City Expressway – just follow the road signs for Prague Congress Centre. The venue has an underground car park and there is additional parking, above
 ground, to the south of the venue.
 
 ## Sprints Venue - TBC
