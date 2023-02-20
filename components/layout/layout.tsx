@@ -32,12 +32,12 @@ export const Layout = ({
       <a href="#main-content" className="sr-only">
         Skip to main content
       </a>
-      {/* <Header /> */}
+      <Header />
       <div className="h-12"></div>
 
       <LayoutContainer>{children}</LayoutContainer>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
