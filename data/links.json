@@ -4,116 +4,30 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Schedule",
-          "path": "/schedule"
+          "name": "Call for Proposals",
+          "path": "/cfp"
         },
         {
-          "name": "List of Sessions",
-          "path": "/sessions"
-        },
-        {
-          "name": "List of Tutorials",
-          "path": "/tutorials"
-        },
-        {
-          "name": "List of Speakers",
-          "path": "/speakers"
-        },
-        {
-          "name": "Keynoters",
-          "path": "/keynoters"
-        },
-        {
-          "name": "Speaker Information",
-          "path": "/speaker-info"
-        },
-        {
-          "name": "Sprints",
-          "path": "/sprints"
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
         }
       ]
     },
     {
-      "name": "Info & Support",
+      "name": "Info",
       "items": [
         {
           "name": "FAQ",
           "path": "/faq"
-        },
-        {
-          "name": "EuroPython 2022 Team",
-          "path": "/thankyou"
-        },
-        {
-          "name": "Conference Photos",
-          "path": "/photos"
-        },
-
-        {
-          "name": "Conference Rooms at The CCD",
-          "path": "/rooms"
-        },
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Volunteers",
-          "path": "/volunteers"
-        },
-        {
-          "name": "How to conference",
-          "path": "/how-to-conference"
         }
       ]
     },
     {
-      "name": "Dublin & Community",
+      "name": "Prague & Venue",
       "items": [
         {
-          "name": "Around Dublin",
+          "name": "Around Prague & PCC",
           "path": "/where"
-        },
-        {
-          "name": "Community Partners",
-          "path": "/community-partners"
-        }
-      ]
-    },
-    {
-      "name": "Events",
-      "items": [
-        {
-          "name": " Beginners' Day - Humble Data Workshop",
-          "path": "/humble-data"
-        },
-        {
-          "name": "Django Girls",
-          "path": "https://djangogirls.org/en/dublin/"
-        },
-        {
-          "name": "Trans*Code",
-          "path": "/trans_code"
-        },
-        {
-          "name": "Hugging Face Gradio Hackathon",
-          "path": "/hf-gradio-hackathon"
-        },
-        {
-          "name": "MakerFest",
-          "path": "/makerfest"
-        },
-        {
-          "name": "Mentored Sprint",
-          "path": "/mentored-sprint"
-        },
-        {
-          "name": "PyLadies Lunch",
-          "path": "/pyladies-lunch"
-        },
-        {
-          "name": "Social Event",
-          "path": "/social-event"
         }
       ]
     },
@@ -123,56 +37,24 @@
         {
           "name": "Packages",
           "path": "/sponsor"
-        },
-        {
-          "name": "Sponsor Information",
-          "path": "/sponsor/information"
         }
       ]
     },
     {
-      "name": "Hybrid Participation",
+      "name": "Support",
       "items": [
-      {
-        "name": "EuroPython 2022 Remote",
-        "path": "/remote"
-      },
-      {
-        "name": "Virtual Swag",
-        "path": "/virtual-swag"
-      }
-    ]
+        {
+          "name": "Financial Aid",
+          "path": "/finaid"
+        },
+        {
+          "name": "Visa Information",
+          "path": "/visa"
+        }
+      ]
     }
   ],
   "footer": [
-    {
-      "name": "EuroPython 2022 Team",
-      "path": "/thankyou"
-    },
-    {
-      "name": "CFP",
-      "path": "/cfp"
-    },
-    {
-      "name": "Community Voting",
-      "path": "/voting"
-    },
-    {
-      "name": "Mentorship",
-      "path": "/mentorship"
-    },
-    {
-      "name": "Covid Info",
-      "path": "/covid-info"
-    },
-    {
-      "name": "Visa Information",
-      "path": "/visa"
-    },
-    {
-      "name": "Sponsor",
-      "path": "/sponsor"
-    },
     {
       "name": "Contacts",
       "path": "/contacts"
