@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 
 import { Logo } from "components/logo";
+import { EPSLogo } from "components/logo/eps-logo";
 
 import links from "../../data/links.json";
 
@@ -42,6 +43,15 @@ const HeaderLogo = () => {
     </a>
   );
 };
+
+const HeaderLogoEPS = () => {
+  return (
+    <a href="/">
+      <EPSLogo className="h-auto w-16 lg:w-32 pr-3 lg:pr-8" />
+    </a>
+  );
+};
+
 const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
   return (
     <>
@@ -80,7 +90,8 @@ export const Header = () => (
       aria-hidden="true"
     />
 
-    <HeaderLogo />
+    {/* <HeaderLogo /> */}
+    <HeaderLogoEPS />
 
     <nav className="mx-auto hidden md:block">
       <NavItems items={links.header} />
@@ -90,7 +101,8 @@ export const Header = () => (
 
     <div className="fixed bg-secondary-darkest top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block md:peer-checked:hidden z-50 p-6">
       <div className="flex items-center">
-        <HeaderLogo />
+        {/* <HeaderLogo /> */}
+        <HeaderLogoEPS />
         <HeaderActions mobile />
       </div>
 
