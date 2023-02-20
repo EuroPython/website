@@ -6,23 +6,7 @@
     },
     {
       "name": "Platinum",
-      "sponsors": [
-        {
-          "name": "Oomnitza",
-          "url": "https://www.oomnitza.com/",
-          "logo": "img/logos/sponsor_logos/oomnitza.svg"
-        },
-        {
-          "name": "Microsoft",
-          "url": "https://azure.microsoft.com/free/python/",
-          "logo": "img/logos/sponsor_logos/microsoft.svg"
-        },
-        {
-          "name": "Bank of America",
-          "url": "https://careers.bankofamerica.com/en-us/job-search?ref=search&start=20&rows=30&search=jobsByLocation&filters=area%3DTechnology&searchstring=Dublin%2C+Ireland",
-          "logo": "img/logos/sponsor_logos/bofa.svg"
-        }
-      ]
+      "sponsors": []
     },
     {
       "name": "Diamond",
@@ -30,148 +14,15 @@
     },
     {
       "name": "Gold",
-      "sponsors": [
-        {
-          "name": "Channable",
-          "url": "https://www.channable.com",
-          "logo": "img/logos/sponsor_logos/channable.svg"
-        },
-        {
-          "name": "Numberly",
-          "url": "https://numberly.com/",
-          "logo": "img/logos/sponsor_logos/numberly.svg"
-        },
-        {
-          "name": "Optiver",
-          "url": "https://www.optiver.com/",
-          "logo": "img/logos/sponsor_logos/optiver.svg"
-        },
-        {
-          "name": "Optum",
-          "url": "https://www.optum.ie/",
-          "logo": "img/logos/sponsor_logos/optum.svg"
-        },
-        {
-          "name": "Arm",
-          "url": "https://www.arm.com/",
-          "logo": "img/logos/sponsor_logos/arm.svg"
-        },
-        {
-          "name": "RenaissanceRe",
-          "url": "https://www.renre.com/",
-          "logo": "img/logos/sponsor_logos/renre.svg"
-        },
-        {
-          "name": "Hudson River Trading",
-          "url": "https://www.hudsonrivertrading.com/",
-          "logo": "img/logos/sponsor_logos/hudsonrivertrading.svg"
-        },
-        {
-          "name": "Google Cloud",
-          "url": "https://cloud.google.com/",
-          "logo": "img/logos/sponsor_logos/googlecloud.svg"
-        },
-        {
-          "name": "Sonar",
-          "url": "https://www.sonarsource.com/",
-          "logo": "img/logos/sponsor_logos/sonar.svg"
-        },
-        {
-          "name": "Udemy",
-          "url": "https://about.udemy.com/careers/",
-          "logo": "img/logos/sponsor_logos/udemy.svg"
-        },
-        {
-          "name": "Rapid Ratings",
-          "url": "https://www.rapidratings.com",
-          "logo": "img/logos/sponsor_logos/rapidratings.svg"
-        },
-        {
-          "name": "Bloomberg",
-          "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/python//?utm_medium=cto&utm_content=site-partner&utm_source=site-partner&utm_campaign=MKTG_2002TechEvent_EuroPython&tactic=616847",
-          "logo": "img/logos/sponsor_logos/bloomberg.svg"
-        },
-        {
-          "name": "Workday",
-          "url": "https://www.workday.com",
-          "logo": "img/logos/sponsor_logos/workday.svg"
-        }
-      ]
+      "sponsors": []
     },
     {
       "name": "Silver",
-      "sponsors": [
-        {
-          "name": "SendCloud",
-          "url": "https://www.sendcloud.com/",
-          "logo": "/img/logos/sponsor_logos/sendcloud.svg"
-        },
-        {
-          "name": "Ebury",
-          "url": "https://ebury.com/",
-          "logo": "/img/logos/sponsor_logos/ebury.svg"
-        },
-        {
-          "name": "Sourcery",
-          "url": "https://sourcery.ai",
-          "logo": "/img/logos/sponsor_logos/sourcery.svg"
-        },
-        {
-          "name": "Anvil",
-          "url": "https://anvil.works",
-          "logo": "/img/logos/sponsor_logos/anvil.svg"
-        },
-        {
-          "name": "ApeWorX",
-          "url": "https://www.apeworx.io/",
-          "logo": "/img/logos/sponsor_logos/apeworx.svg"
-        },
-        {
-          "name": "Kraken Technologies",
-          "url": "https://kraken.tech/",
-          "logo": "/img/logos/sponsor_logos/kraken.svg"
-        },
-        {
-          "name": "Superblocks",
-          "url": "https://www.superblocks.com/?referrer=europython",
-          "logo": "/img/logos/sponsor_logos/superblocks.svg"
-        },
-        {
-          "name": "DIGIT Game Studios",
-          "url": "https://www.digitgaming.com/",
-          "logo": "/img/logos/sponsor_logos/digit.svg"
-        }
-      ]
+      "sponsors": []
     },
     {
       "name": "Bronze",
-      "sponsors": [
-        {
-          "name": "fourTheorem",
-          "url": "https://www.fourtheorem.com",
-          "logo": "/img/logos/sponsor_logos/fourtheorem.svg"
-        },
-        {
-          "name": "Back Market",
-          "url": "https://www.backmarket.com",
-          "logo": "/img/logos/sponsor_logos/backmarket.svg"
-        },
-        {
-          "name": "Kiwi.com",
-          "url": "https://jobs.kiwi.com/",
-          "logo": "/img/logos/sponsor_logos/kiwi.svg"
-        },
-        {
-          "name": "Inscribe",
-          "url": "https://www.inscribe.ai",
-          "logo": "/img/logos/sponsor_logos/inscribe.svg"
-        },
-        {
-          "name": "Zalando",
-          "url": "https://www.zalandodublin.com/",
-          "logo": "/img/logos/sponsor_logos/zalando.svg"
-        }
-      ]
+      "sponsors": []
     },
     {
       "name": "Patron",
@@ -179,48 +30,11 @@
     },
     {
       "name": "Financial Aid",
-      "sponsors": [
-        {
-          "name": "EuroPython Society",
-          "url": "https://www.europython-society.org/",
-          "logo": "/img/logos/sponsor_logos/EPS-Logo-with-Text-v3.svg"
-        }
-      ]
+      "sponsors": []
     },
     {
       "name": "Supporters",
-      "sponsors": [
-        {
-          "name": "1Password",
-          "url": "https://1password.com/",
-          "logo": "img/logos/sponsor_logos/1password_m30.svg"
-        },
-        {
-          "name": "Evolabel",
-          "url": "https://www.evolabel.com/",
-          "logo": "img/logos/sponsor_logos/evolabel.svg"
-        },
-        {
-          "name": "devitjobs",
-          "url": "https://devitjobs.uk/jobs/Python/all",
-          "logo": "img/logos/sponsor_logos/devitjobs.svg"
-        },
-        {
-          "name": "Packt",
-          "url": "https://packt.com/",
-          "logo": "img/logos/sponsor_logos/packt.svg"
-        },
-        {
-          "name": "Sticker Mule",
-          "url": "https://mule.to/p2zi/",
-          "logo": "img/logos/sponsor_logos/stickermule.svg"
-        },
-        {
-          "name": "RS Ireland",
-          "url": "https://ie.rs-online.com",
-          "logo": "img/logos/sponsor_logos/rsireland.svg"
-        }
-      ]
+      "sponsors": []
     }
   ]
 }
