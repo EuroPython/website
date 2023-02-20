@@ -53,9 +53,15 @@ export const components = {
   p: ({ children }: any) => (
     <p className="mb-4 text-xl leading-snug">{children}</p>
   ),
-  ul: ({ children }: any) => <ul className="mb-4 list-disc pl-4">{children}</ul>,
-  ol: ({ children }: any) => <ol className="mb-4 list-decimal pl-4">{children}</ol>,
-  li: ({ children }: any) => <li className="mb-2 text-xl leading-snug">{children}</li>,
+  ul: ({ children }: any) => (
+    <ul className="mb-4 list-disc pl-4">{children}</ul>
+  ),
+  ol: ({ children }: any) => (
+    <ol className="mb-4 list-decimal pl-4">{children}</ol>
+  ),
+  li: ({ children }: any) => (
+    <li className="mb-2 text-xl leading-snug">{children}</li>
+  ),
   a: ({ children, href, ...props }: any) => (
     <a
       className="text-primary hover:text-primary-hover underline"
@@ -91,17 +97,15 @@ export const components = {
   img: ({ src, alt, ...props }: any) => {
     props.objectFit = "contain";
 
+    let Component: string | typeof Image = Image;
+
     if (!props.width && !props.height) {
-      props.layout = "fill";
-      props.objectFit = "contain";
-    }
-    {
-      props.layout = "responsive";
+      Component = "img";
     }
 
     return (
-      <figure className="next-image">
-        <Image src={src} alt={alt} {...props} />
+      <figure className="next-image relative">
+        <Component src={src} alt={alt} {...props} />
         {alt && <figcaption>{alt}</figcaption>}
       </figure>
     );
