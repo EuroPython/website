@@ -64,9 +64,9 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
               </abbr>
               <span className="hidden lg:inline">Code of Conduct</span>
             </HeaderButton>
-            <HeaderButton variant="live" href="/live">
+            {/* <HeaderButton variant="live" href="/live">
               Live 📹
-            </HeaderButton>
+            </HeaderButton> */}
           </>
         ) : null}
 
@@ -113,10 +113,10 @@ export const Header = () => (
               name: "Code of Conduct",
               path: "https://www.europython-society.org/coc/",
             },
-            {
-              name: "Live 📹",
-              path: "/live",
-            },
+            // {
+            //   name: "Live 📹",
+            //   path: "/live",
+            // },
             {
               name: "Buy tickets",
               path: "/tickets",
