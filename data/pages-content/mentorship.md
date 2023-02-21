@@ -11,7 +11,7 @@ As a diverse and inclusive community EuroPython offers support for potential spe
 
 We are looking for both mentors and mentees to be a part of the programme.
 
-<div style={{textAlign: "center"}}>
+<div style={{textAlign: "center", marginBottom: 8}}>
 **EuroPython 2023 Speaker Mentorship Programme will be open for applications** between
 
  **Wednesday, 22 February 2023** and
@@ -21,7 +21,7 @@ We are looking for both mentors and mentees to be a part of the programme.
 
 Read on to find out the three key activities of the The Speaker Mentorship Programme.
 
-<div style={{textAlign: "center"}}>
+<div style={{textAlign: "center", marginBottom: 8}}>
 <ButtonLink href="https://forms.gle/gjv9cGRvdLKiiBQy9">Submit by 12 March to Become a Mentor or Mentee!</ButtonLink>
 </div>
 
@@ -30,11 +30,11 @@ Read on to find out the three key activities of the The Speaker Mentorship Progr
 
 ### Open between 22 February - 12 March 2023
 
-A mentee needing help with their proposal will be matched with an experienced mentor. The mentor's job is to facilitate and support the mentee so they are able to contribute to EuroPython with confidence. The bulk of the mentorship will be before **19 March**, prior to the closing of [Call for Proposals (CFP)](/cfp). A mentor serves as the guide, supporter and source of help to the mentee; they are not expected to tell the mentee what their contribution should be (that's for the mentee to decide). 
+A mentee needing help with their proposal will be matched with an experienced mentor. The mentor's job is to facilitate and support the mentee so they are able to contribute to EuroPython with confidence. The bulk of the mentorship will be before **19 March**, prior to the closing of [Call for Proposals (CFP)](/cfp). A mentor serves as the guide, supporter and source of help to the mentee; they are not expected to tell the mentee what their contribution should be (that's for the mentee to decide).
 
 ## Mentors
 
-<div style={{textAlign: "center"}}>
+<div style={{textAlign: "center", marginBottom: 8}}>
 <ButtonLink href="https://forms.gle/gjv9cGRvdLKiiBQy9">Apply by 12 March to Become a Mentor!</ButtonLink>
 </div>
 
@@ -53,7 +53,7 @@ You will also be invited to join the panel of the Webinar Workshops.
 
 ## Mentee
 
-<div style={{textAlign: "center"}}>
+<div style={{textAlign: "center", marginBottom: 8}}>
 <ButtonLink href="https://forms.gle/gjv9cGRvdLKiiBQy9">Apply by 12 March to Become a Mentee!</ButtonLink>
 </div>
 
@@ -76,7 +76,7 @@ A recording of the session will be made available after the event.
 
 ## 3. Speaker Placement Programme
 
-<div style={{textAlign: "center"}}>
+<div style={{textAlign: "center", marginBottom: 8}}>
 <ButtonWithTitle title="Looking for a speaker?" text="Register your interest now!" href="https://forms.gle/CZdhXdw2hFGVyeG67" /></div>
 
 One of the support that we provide for mentees is to provide speaking opportunities for them to practise. We understand that not all of our mentees will be speaking at EuroPython and for new speakers, speaking at a conference as their first speaking experience can be a bit intimidating. For that, we would like to help mentees to speak at a local event or meetup before or after EuroPython.
