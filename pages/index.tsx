@@ -3,6 +3,7 @@ import { Hero } from "../components/hero";
 import Head from "next/head";
 import { useRef, useEffect } from "react";
 import { Clacks } from "components/clacks";
+import Link from "next/link";
 
 export default function IndexPage() {
   const imageUrl = "https://ep2023.europython.eu/social-cards/default.png";
@@ -69,8 +70,12 @@ export default function IndexPage() {
         <Clacks />
       </Head>
 
-      <div className="flex items-center justify-center content-center min-h-screen">
+      <div className="flex items-center justify-center content-center min-h-screen flex-col">
         <Hero />
+
+        <Link href="/faq" className="block mt-2 underline">
+          Frequently Asked Questions
+        </Link>
       </div>
     </>
   );
