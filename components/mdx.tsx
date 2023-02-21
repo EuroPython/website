@@ -75,17 +75,15 @@ export const components = {
   img: ({ src, alt, ...props }: any) => {
     props.objectFit = "contain";
 
+    let Component: string | typeof Image = Image;
+
     if (!props.width && !props.height) {
-      props.layout = "fill";
-      props.objectFit = "contain";
-    }
-    {
-      props.layout = "responsive";
+      Component = "img";
     }
 
     return (
-      <figure className="next-image">
-        <Image src={src} alt={alt} {...props} />
+      <figure className="next-image relative">
+        <Component src={src} alt={alt} {...props} />
         {alt && <figcaption>{alt}</figcaption>}
       </figure>
     );
