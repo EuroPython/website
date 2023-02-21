@@ -1,117 +1,85 @@
 ---
 title: Where
-subtitle: EuroPython 2022 will be held in Dublin!
+subtitle: EuroPython 2023 will be held in Prague!
 ---
 
 # Where
+<font size="+2.5">EuroPython 2023 will be held in **Prague**! We cannot wait to welcome you in one of the most beautiful cities in Europe!</font>
 
-EuroPython 2022 will be held in **Dublin**! The capital of the Republic of
-Ireland, one of Europe’s biggest tech hubs, is a lively city with
-extraordinarily rich and diverse food, culture, history and art lovers - the
-number of museums and restaurants can certainly tickle most tastes.
+## Prague
+<img src="/img/Prague.jpeg"/>
 
-As per EuroPython tradition, we shall walk around, chat, laugh and explore the
-city together. If you are not the “walking-type”, let the convenient
-[public transportation network](https://www.dublinpublictransport.ie/) work its
-magic for you!
+<br></br>
 
-### The CCD Venue
+Prague is the capital of the Czech Republic. Sitting on the [Vltava River](https://www.youtube.com/watch?v=l6kqu2mk-Kw), the beautiful historic centre is a UNESCO world heritage site. There's a LOT to see, do and enjoy, in addition to the conference! The ancient [Vyšehrad](https://www.vysehradtickets.com/vysehrad/) is just 10-min walk away from the conference venue. Not only is is an ancient fortress, but also a park with a great view of Prague Castle and the river. We hope you enjoy taking a walk with fellow Pythonistas in the tranquil park when you need a bit of peace from the buzz of the conference.  
 
-[The Convention Centre Dublin (The CCD)](https://www.theccd.ie/) is the home of
-EuroPython 2022. It is located at the heart of Dublin near the river, a stone’s
-throw from the tech cluster in Silicon Docks, and a 10-minute walk from the city
-centre.
+As per EuroPython tradition, we shall walk around, chat, laugh and explore the city together. Whether it is to enjoy the stunning view of the "[City of a Hundred Spires](https://www.prague.eu/en/articles/the-towers-of-prague-10537)" from any (or all!) of the 120+ towers, or standing still to admire the wonder of [Prague Astronomical Clock](https://www.prague.eu/en/object/places/3129/astronomical-clock?back=1). The only problem is being spoiled for choice!
+
+In addition, Prague has an extensive and modern public transport system; its [public transport website](https://www.dpp.cz/en) will give you all the information you need.
+
+Check out the following resources for some guides to the city:
+
+- [Prague.eu](https://www.prague.eu/en)
+
+- [Timeout](https://www.timeout.com/prague)
+
+- [My Prague - Insiders' Guide to the City (with audio)](https://english.radio.cz/node/8702571/o-poradu)
+
+- [Honest Guide (videos)](https://www.youtube.com/@HONESTGUIDE)
+
+- [USEIT Prague Map](https://www.use-it.travel/cities/detail/prague/)
+
+- [Prague Tourist Information](https://praguetouristinformation.com/en/)
+
+- [Prague.org](https://prague.org/)
+
+### Weather
+ With an average July high of 25°C, remember to pack your shorts and sandals with your laptop, along with a spirit of adventure to explore one of the most visited and vibrant cities in Europe. Friendly reminder: it might get up to mid 30°C in July🥵 - we recommend packing sunscreen and regular hydration to avoid excessive burning.
+
+## Prague Congress Centre - Conference Venue
+
+[The Prague Congress Centre](https://www.praguecc.cz/en/homepage) is the home of
+EuroPython in 2023 between 17-21 July.
+
+It's an important venue, having hosted the IMF, NATO and other significant and
+powerful international organisations. Now they can add EuroPython to that list! 😛
+
+The conference centre is adjacent to the Vyšehrad - a short walk away from [Náplavka](https://www.mmzoneblog.com/naplavka), full of cafes, pubs and restaurants, a wonderful area to relax by the river and take in the spirit of the city.
+
+The Vyšehrad station next to the venue on Line C of the Prague underground railway network, also provides convenient
+access by public transport from the city’s airport and all major rail and bus stations.
+
+
+<Map></Map>
 
 <address>
-The Convention Centre Dublin (The CCD)<br /> Spencer Dock<br /> North Wall
-Quay<br /> Dublin<br /> D01 T1W6.
+Kongresové centrum Praha, a.s.<br/>
+5. května 1640/65, Nusle<br/>
+140 00 Prague 4, Czechia<br/>
 </address>
 
-<Map />
+### Get to the Conference
 
-### Come to the Conference
+You can find detailed information on how to get to the conference centre
+[via the venue's website](https://www.praguecc.cz/en/how-to-get-here) or
+with their
+[convenient orientation guide (PDF)](https://www.praguecc.cz/users_data/files/ORIENTATION_PLANS_orientacni_pla.pdf).
 
-You can find detailed information on how to get to The CCD
-[here](https://www.theccd.ie/how-to-get-here).
+* **By public transport**: plan your route and check the fares using the [Prague Public Transport website](https://www.dpp.cz/en)
 
-#### By Plane
+* **Planes**: [Prague's Václav Havel Airport (PRG)](https://www.prg.aero/en) is well connected
+to the conference venue via the public transport system.
 
-[Dublin Airport (DUB)](https://www.dublinairport.com/) is approximately 6 miles
-(10 kilometres) north of The CCD. You can travel to/from The CCD by car, taxi or
-bus.
+* **Trains**: please refer to the [Czech Railways (České dráhy)](https://www.cd.cz/en/) website for timetables, bookings and ticket prices.
 
-##### Bus
+* **& Automobiles**: set your SatNav to GPS coordinates: 50.062112,14.428886. The Prague Congress Centre is adjacent to the North South Prague City Expressway – just follow the road signs for Prague Congress Centre. The venue has an underground car park and there is additional parking, above
+ground, to the south of the venue.
 
-- From the airport, you can take the 702 bus and reach The CCD in about
-  20-30mins (depending on traffic). The
-  [ticket](https://www.aircoach.ie/book-tickets?orig=18&dest=30&pass%5B4%5D=1&pass%5B5%5D=0&pass%5B6%5D=0&tick=3&out=2022-02-27&o_tt=12%3A00&o_ts=after)
-  costs around €10. Get off at the _Clayton Hotel_ stop and it is a 5min walk to
-  The CCD.
-- [Dublin Express](https://www.dublinairport.com/to-from-the-airport/by-bus/dublin-buses)
-  also offers a direct service to and from the airport, stopping at _Custom
-  House_, which is a short walk from The CCD. Prices vary around €10 to €15 .
+## Sprints Venue - TBC
+This year, we are hoping to organise the sprints in a different venue, smaller, cosier, open to public. We will announce the sprints location soon as it is finalised!
 
-##### Taxi
 
-- Taxis to The CCD from the Dublin Airport would
-  [cost](https://www.transportforireland.ie/fares/taxi-fare-estimator/) around
-  €15-€30 (Depends on traffic). There is a taxi rank outside Arrivals.
-- [Free Now](https://free-now.com/ie/) is a recommended taxi app.
+## COVID Info
 
-#### By Sea
-
-Frequent ferry services to the UK and mainland Europe for both passengers and
-freight are within easy reach of The Convention Centre Dublin.
-[Dublin Port](http://www.dublinport.ie/) is just minutes away, while
-[Rosslare Harbour](http://rosslareeuroport.irishrail.ie/home/), with regular
-ferry services to Wales, France and Spain, is located just 2 hour’s drive from
-The CCD.
-
-#### By Train & Bus
-
-There are National Train and Bus services running between various Irish cities
-and Dublin. Some useful links are:
-
-- [Irish Rail](http://www.irishrail.ie/)
-- [Bus Eireann](http://www.buseireann.ie/)
-
-#### By Car
-
-[AA Roadwatch](https://www.theaa.ie/routes/newsroom/) provides regular updates
-on traffic and weather conditions on major routes throughout Ireland. You can
-also plan your journey with AA Routeplanner or Google Maps.
-[LiveDrive on 103.2](https://www2.livedrive.com/) Dublin City FM also gives live
-traffic updates during peak drive time.
-
-##### Parking at IFSC
-
-- The Convention centre Dublin at
-  [this link](https://www.eurocarparks.ie/ccdparking/).
-- [Park Rite IFSC Multi-Storey Car Park](https://www.parkrite.ie/carparks/ifsc)
-  (few minutes walk from The Convention centre Dublin): Commons Street, D01
-  DA34, Dublin 1.
-Further information for parking options can be found
-[here](https://www.parkrite.ie/find-a-car-park).
-
-### COVID Info
-
-For any COVID related information in Dublin, please refer to our dedicate
-[COVID Info page](/covid-info) and the Government
-[public health measures](https://www.gov.ie/en/campaigns/c36c85-covid-19-coronavirus/).
-
-### Tourist Tips: Around Dublin
-- You can buy the [Freedom Ticket card](https://dodublin.ie/dodublin-card)  for
-~€45. You have 48 hours for the “Hop on/Hop off” tour and 72 Hours for using the
-Dublin Bus Network. This includes the 16, 41 routes from Dublin Airport to City
-centre, Go-Ahead Dublin public buses, [Luas](https://luas.ie/),
-[Dublin Area Rapid Transit](https://www.irishrail.ie/en-ie/about-us/iarnrod-eireann-services/dart-commuter)
-(in Dublin area only).
-- Another option is to buy a
-[Leap Visitors Card](https://about.leapcard.ie/leap-visitor-card). It gives you
-unlimited travel over your selected time period on
-[Dublin Bus](http://www.dublinbus.ie/), Go-Ahead Ireland routes in Dublin,
-[Luas](https://luas.ie/),
-[Dublin Area Rapid Transit](https://www.irishrail.ie/en-ie/about-us/iarnrod-eireann-services/dart-commuter)
-and Commuter Rail. You can travel to and from the Airport at the start and end
-of your trip without any additional charge. For 24 hours the price is €10, 3
-days is €25 and 7 days is €40.
+For any COVID related information in Prague, please refer to our dedicate
+[COVID Info page](/covid-info) and the Czech Government's [COVID information portal](https://covid.gov.cz/en/).
