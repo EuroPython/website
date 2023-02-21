@@ -39,29 +39,12 @@
           "path": "/sponsor"
         }
       ]
-    },
-    {
-      "name": "Support",
-      "items": [
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Visa Information",
-          "path": "/visa"
-        }
-      ]
     }
   ],
   "footer": [
     {
       "name": "Contacts",
       "path": "/contacts"
-    },
-    {
-      "name": "Terms",
-      "path": "/terms"
     },
     {
       "name": "Privacy Policy",
