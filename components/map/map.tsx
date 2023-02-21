@@ -5,5 +5,6 @@ export const Map = () => (
     className="w-full aspect-video"
     allowFullScreen={true}
     loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
   ></iframe>
 );

@@ -13,8 +13,8 @@
   --color-text: #fff;
   --color-text-inverted: #000;
   --color-body-background: #030934;
-  --color-hero-primary: #e5e5ff;
-  --color-hero-secondary: #00b8f0;
+  --color-hero-primary: #4b5cba;
+  --color-hero-secondary: #b5682b;
 }
 
 .tp-dfwv {
@@ -30,7 +30,7 @@ body {
   display: grid;
   grid-template-columns:
     1fr
-    min(78ch, 100%)
+    min(1150px, 100%)
     1fr;
 }
 
@@ -51,18 +51,8 @@ body {
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) a {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
-
-ul {
-  list-style-type: disc;
-  padding-left: 1.25rem;
-}
-
-li {
-  margin-bottom: 0.3125rem;
-}
-
 
 ul.milestone-done li {
   position: relative;
