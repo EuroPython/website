@@ -98,7 +98,7 @@ possible after that Refund End Time unless otherwise specified by the
 Organisers. The Organisers reserve the right to deduct administrative costs
 (bank, online payments services, etc) from the refund.
 
-For in-person tickets, before 17th June, the participate can request a full refund from the order details URL link in the order confirmation email. After 17th June, special refund requests must be made by email to the
+For in-person tickets, before 17th June, the participants can request a full refund from the order details URL link in the order confirmation email. After 17th June, special refund requests must be made by email to the
 [refunds@europython.eu](mailto:refunds@europython.eu) email address. The email
 must include the Order Code, Ticket IDs, name of the person who bought the
 ticket and the special circumstances.
@@ -162,11 +162,10 @@ Organisers and/or third parties.
 The Participant accepts the EuroPython Code of Conduct (the “Code of Conduct”),
 which can be found at
 [www.europython-society.org/coc/](http://www.europython-society.org/coc/). The
-Organisers may make alterations to the Code of Conduct from time to time. Some
-alterations are not considered contractual deviations.
+Organisers may, from time to time, make alterations to the Code of Conduct, which are not considered contractual deviations.
 
-The Code of Conduct is part of this contract and shall be observed during
-participation in the event. The Participant consents to said Code of Conduct and
+The Code of Conduct is an integral part of the agreement and shall be observed during
+participation in the Event. The Participant consents to said Code of Conduct and
 shall comply with it.
 
 ### Use of the Conference Venue / Platform
@@ -178,11 +177,9 @@ The Participant will ensure or accept that:
 The following requirements apply to either in-person participants, or online
 participants, or both:
 
-1. _For in-person participants_, no animals (except guide dogs), no substance, alcohol or
-   article which is, in Venue's reasonable opinion, of a dangerous, explosive,
-   hazardous or objectionable nature and/or no naked flame will be brought
-   inside, outside or in the vicinity of the Venue, without written consent by
-   the Organisers and subject to any conditions of such consent;
+1. _For in-person participants_, it is not allowed to bring the following list of things inside the Venue, unless with explicit written consent by the Organises: animals (except guide dogs), weapons, naked flame, alcoholic beverages, narcotic or psychotropic substances, substance or
+article which is of a dangerous, explosive, hazardous or objectionable nature;
+
 2. _In-person participants_ will not try to gain unauthorised access to the
    Venue and only use the entrances and exits to the Venue, designated as such
    by the Venue;
@@ -193,6 +190,7 @@ participants, or both:
 4. _In-person participants_ will immediately comply with any requirements or
    directions made or given by Venue relating in any way to the health and
    safety of the participants, the Organisers, sponsors and Venue personnel;
+5. _In-person participants_ assume the responsibility of looking after their own personal belongings.
 <!-- 5. _In-person participants_ should not bring food /or beverages (other than
    bottled water or soft drinks) into the Venue which have not been authorised
    by the Organisers in writing. -->
