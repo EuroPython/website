@@ -24,7 +24,7 @@ const TalkTime = ({ time }: { time: number }) => {
     >
       <div>
         <Datetime datetime={isoTime} useUserTimezone={false} format={"HH:mm"} />
-        <div className="text-xs">(Dublin)</div>
+        <div className="text-xs">(Prague)</div>
       </div>
 
       <div>

@@ -12,7 +12,7 @@ export const Datetime = ({
 }) => {
   const formattedDate = useUserTimezone
     ? format(datetime, pattern)
-    : formatInTimeZone(datetime, "Europe/Dublin", pattern);
+    : formatInTimeZone(datetime, "Europe/Prague", pattern);
 
   return <time dateTime={datetime.toISOString()}>{formattedDate}</time>;
 };

@@ -8,7 +8,6 @@ import { Layout } from "../components/layout";
 import { components } from "../components/mdx";
 import { serialize } from "lib/mdx-utils";
 
-
 export default function Page({
   source,
   title,
@@ -20,8 +19,8 @@ export default function Page({
   path: string;
 }) {
   title = title
-    ? `${title} - EuroPython 2023 | July 11th-17th 2023 | Dublin Ireland & Remote`
-    : "EuroPython 2023 | July 11th-17th 2023 | Dublin Ireland & Remote";
+    ? `${title} - EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote`
+    : "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote";
 
   return (
     <Layout path={path} title={title}>
