@@ -11,7 +11,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <ul className="milestone-todo">
 <li><b>2023-02-22</b>: [Speaker Mentorship Programme](/mentorship) Sign-up Starts </li>
 <li><b>2023-03-06</b>: Call for Proposals (CFP) Starts </li>
-<li><b>2023-02-22</b>: Speaker Mentorship Programme Closes </li>
+<li><b>2023-03-12</b>: Speaker Mentorship Programme Closes </li>
 <li><b>2023-03-19</b>: Call for Proposals (CFP) Ends </li>
 <li><b>2023 Early March</b>: Financial Aid Programme Starts </li>
 <li><b>2023 Early March</b>: Ticket Sales Start</li>
