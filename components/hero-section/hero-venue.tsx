@@ -30,7 +30,7 @@ export const HeroVenue = ({
 
         <Prose>{children}</Prose>
 
-        <ButtonLink href="/venue">Read more</ButtonLink>
+        <ButtonLink href="/where#prague-congress-centre---conference-venue">Read more</ButtonLink>
 
         <div className="mt-8">
           <Map />
