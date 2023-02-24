@@ -1,14 +1,13 @@
 ---
-title: EuroPython&nbsp;Dublin<br/>You're invited!
+title: EuroPython&nbsp;Prague<br/>You're invited!
 ---
 
-Welcome to the 21st EuroPython. We're the oldest and longest running
+Welcome to the 22nd EuroPython. We're the oldest and longest running
 volunteer-led Python programming conference on the planet! Join us in July in
-the beautiful and vibrant city of Dublin. We'll be together, face to face and
-online, to celebrate our shared passion for Python and its community!
+the vibrant Bohemian city Prague. We'll be together, celebrating our shared passion for Python and its community!
 
 A week of all things Python:
 
-- Monday & Tuesday, 11 & 12 July: Tutorials & Workshops
-- Wednesday–Friday, 13-15 July: Conference talks & sponsor exhibition
-- Saturday & Sunday, 16 & 17 July: Sprints
+- Monday & Tuesday, 17 & 18 July: Tutorials & Workshops
+- Wednesday–Friday, 19-21 July: Conference talks & sponsor exhibition
+- Saturday & Sunday, 22 & 23 July: Sprints
