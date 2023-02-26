@@ -19,7 +19,7 @@ Become a sponsor of EuroPython 2023. Join us this July in the **[Prague Congress
 
 
 <Note>**Launch Sponsors will again get 10% of discount!**</Note>
-<Note> Reach out to us already at **[sponsorsing@europython.eu](mailto:sponsorsing@europython.eu)** to discuss your interest and options.</Note>
+<Note> Reach out to us already at **[sponsoring@europython.eu](mailto:sponsoring@europython.eu)** to discuss your interest and options.</Note>
 
 <!-- <ButtonWithTitle title="Ready to become a sponsor and join us in Prague?" text="Sign Up Now!" href="" /> -->
 
