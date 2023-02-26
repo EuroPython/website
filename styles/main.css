@@ -71,3 +71,13 @@ ul.milestone-todo li {
 ul.milestone-todo li::before {
   content: "\1F4DD  ";
 }
+
+img.findaid-accent-round-marker {
+  width: 80px;
+  margin: 0 20px;
+}
+
+div.finaid-sponsor {
+  width: 50%;
+  margin: 0 auto 2rem auto;
+}
