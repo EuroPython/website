@@ -33,7 +33,7 @@ Tickets may be subject to proper proof of eligibility (e.g. student ID or releva
 document). The Participants may be requested for such proof when picking up
 the ticket badge at the conference registration desk or by the Organisers
 during the Event. If eligibility cannot be proven, the ticket can be converted
-into a standard ticket or refunded.
+into a standard or business ticket.
 
 Some ticket categories only have a limited number of available tickets. The
 number of tickets is determined by the Organisers at their sole discretion.
@@ -86,7 +86,7 @@ under no obligation to reorganise the event.
 In case of a cancellation of the Event, all participants will be notified by the
 Organisers without delay and any payments made will be refunded. The Organisers’
 liability is limited to refunding the participation fee. All other liability for
-participant claims is excluded except in cases of intent or gross negligence on
+participant claims is excluded except in cases of wilful or gross negligence on
 the part of the Organisers. In particular, no claims may be made for refund of
 travel and accommodation costs, loss of working time or opportunity.
 
@@ -122,7 +122,7 @@ difference between the discounted ticket and the standard ticket price.
 Conference tickets are not subject to the
 [EU regulations on distance selling and the 14-day cooling off period](https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_en.htm).
 Outside the above refund policy, we do not provide refunds on ticket purchases
-after the Refund End Date, though we will always consider your particular circumstances.
+after the Refund End Date.
 
 ## 5. Data Protection
 
@@ -148,7 +148,7 @@ writing a letter to the Organisers.
 Participants may be photographed, filmed, or their voices recorded during the
 Event. Such recordings may be published by the Organisers and/or used for
 marketing purposes. Participation in the Event is conditional on the
-Participant’s consent to this, though Organisers will make an effort to respect the wish to to be photographed by the Participants.
+Participant’s consent to this.
 
 In applying to participate in the event, the Participant gives a declaration of
 consent to video and audio recordings and photography during the Event and that
@@ -172,41 +172,45 @@ shall comply with it.
 
 The Participant will ensure or accept that:
 
-### Use of the Venue and Online Platform
+### Use of the Venue
 
-The following requirements apply to either in-person participants, or online
-participants, or both:
+The following requirements apply to in-person participants:
 
-1. _For in-person participants_, it is not allowed to bring the following list of things inside the Venue, unless with explicit written consent by the Organises: animals (except guide dogs), weapons, naked flame, alcoholic beverages, narcotic or psychotropic substances, substance or
+1. It is not allowed to bring the following list of things inside the Venue, unless with explicit written consent by the Organises: animals (except guide dogs), weapons, naked flame, alcoholic beverages, narcotic or psychotropic substances, substance or
 article which is of a dangerous, explosive, hazardous or objectionable nature;
 
-2. _In-person participants_ will not try to gain unauthorised access to the
+2. Participants will not try to gain unauthorised access to the
    Venue and only use the entrances and exits to the Venue, designated as such
    by the Venue;
-3. _For in-person participants_, no act or thing is done inside, outside or in
+3. No act or thing is done inside, outside or in
    the vicinity of Venue, which may, in Organiser’s reasonable opinion, be or
    become a nuisance to the attendees, the Venue, its other customers or any
    premises or buildings in its vicinity;
-4. _In-person participants_ will immediately comply with any requirements or
+4. Participants will immediately comply with any requirements or
    directions made or given by Venue relating in any way to the health and
    safety of the participants, the Organisers, sponsors and Venue personnel;
-5. _In-person participants_ assume the responsibility of looking after their own personal belongings.
+5. Participants assume the responsibility of looking after their own personal belongings.
 <!-- 5. _In-person participants_ should not bring food /or beverages (other than
    bottled water or soft drinks) into the Venue which have not been authorised
    by the Organisers in writing. -->
-6. _For online participants_, no attempt shall be made to gain unauthorised
+6.  Participants shall not erect any stands, displays,
+   advertisements, signs, notices, or other similar matters in the Venue; or fix
+   any items to the walls, floor or other temporary or permanent structures of
+   Venue.
+
+### Use of the Conference Platform
+The following requirements apply to online (otherwise known as remote) participants:
+
+1. No attempt shall be made to gain unauthorised
    access to the Event, and will only use the invitation link sent to them for
    their own use; sharing the invitation link to the Online Event with
    unauthorised users can result in a ban from participation in the Event; the
    Organisers reserves the rights to investigate and deny entry to the Event
    should they suspect such unauthorised activities occur;
-7. The _in-person participants_ shall not erect any stands, displays,
-   advertisements, signs, notices, or other similar matters in the Venue; or fix
-   any items to the walls, floor or other temporary or permanent structures of
-   Venue. Similarly, the _online participants_ should not have any form of
+2. Online participants should not have any form of
    advertisement on the Conference Platform, unless authorised to by the
    Organisers.
-8. for _online participants_, no recordings of sessions or chat transcripts run
+3. No recordings of sessions or chat transcripts run
    on the Conference Platform will be created, streamed or otherwise made
    accessible outside the Conference Platform, unless authorised by the
    Organisers;
