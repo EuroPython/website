@@ -61,7 +61,7 @@ If you require help contributing to EuroPython, especially if you are from an un
 
 ## 2. Workshops ##
 
-### Ask Me Anything about CFP Workshop - Monday, 13 March 2023, 18:00 CET
+### Ask Me Anything about CFP Workshop - Tuesday, 14 March 2023, 18:00 CET
 
 We encourage anyone who has no or little experience submitting to EuroPython's CFP to join and ask questions. Questions can range from talk ideas, what makes a good proposal to what is the selection process of the talk.
 
