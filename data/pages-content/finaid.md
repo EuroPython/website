@@ -25,10 +25,10 @@ You’ll find all the information you need to apply for such a grant below.
 </div>
 
 
-The EuroPython Society are sponsoring financial aid with €20,000 this year.
+The EuroPython Society are sponsoring the Financial Aid Programme with €20,000 this year.
 
 If you want to support EuroPython and its efforts to make EuroPython accessible
-to everyone with a sponsorship, please contact
+to everyone, please consider sponsoring EuroPython by reaching out to
 [sponsoring@europython.eu][email-sponsoring].
 
 ---
@@ -70,8 +70,8 @@ for a grant:
 You can apply for Financial Aid by filling out the
 [application form][application-form].
 
-The data we collect on this form will exclusively be used by our financial aid
-work group for the selection of grant recipients and the processing of financial
+The data we collect on this form will exclusively be used by our Financial Aid
+team for the selection of grant recipients and the processing of financial
 aid refunds. No data is passed on to third parties, except to our accountants
 and the bank in order to process the refunds. We use Google Forms for the
 processing and Google Drive for storing the relevant information.
@@ -84,7 +84,7 @@ For more details on our privacy policies, please see our
 
 Grants will be awarded in two rounds. This makes it easier for us to reallocate
 grants in case grant offers were rejected in the first round. Receiving a grant
-early is also beneficial for people having to apply for a Schengen visa. 
+early is also beneficial for people having to apply for a Schengen visa.
 
 If you’ve applied for the first round, you will automatically be considered
 during the second round if you did not receive a grant during the first round.
@@ -192,9 +192,9 @@ reapply for round 2. Your application will automatically be considered for round
 ### Free Ticket Voucher Grant
 
 - You will receive an **individual voucher code** for a free **regular**
-  conference ticket that gives you access to the three main conference days. 
+  conference ticket that gives you access to the three main conference days.
 
-- We will not reimburse tickets that you’ve already bought. 
+- If you have already purchased a ticket prior to being granted a free Financial Aid ticket voucher, please request a refund for the paid ticket separately before using the voucher to claim your free ticket. The Financial Aid programme cannot reimburse you the cost of tickets you previously paid for directly.
 
 ### Travel/Accommodation Grant & Visa Application Fee Grant
 
@@ -205,7 +205,7 @@ receipt/invoices and a **photo of your conference badge**.
 
 In addition, please pay close attention to the following:
 
-- The total combined travel/accommodation grant cannot exceed €400.
+- The total combined travel/accommodation grant cannot exceed €400, unless otherwise agreed.
 - The Visa Application Fee Grant cannot exceed €80.
 - Reimbursements will be made **after** the conference via PayPal or bank
   transfer (SEPA and Swift). It’s not possible to be reimbursed before the
@@ -233,7 +233,7 @@ In addition, please pay close attention to the following:
 ## Additional question
 
 If you have any additional questions for the Financial Aid team, don't hesitate
-to contact us via [finaid@europython.eu][email-finaid]. 
+to contact us via [finaid@europython.eu][email-finaid].
 
 See you at EuroPython in Prague!
 

@@ -73,8 +73,9 @@ ul.milestone-todo li::before {
 }
 
 img.findaid-accent-round-marker {
-  width: 80px;
-  margin: 0 20px;
+  width: 130px;
+  margin: 20px 20px;
+  padding-right: 30px;
 }
 
 div.finaid-sponsor {
