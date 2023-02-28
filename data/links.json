@@ -39,6 +39,15 @@
           "path": "/sponsor"
         }
       ]
+    },
+    {
+      "name": "Support",
+      "items": [
+        {
+          "name": "Financial aid",
+          "path": "/finaid"
+        }
+      ]
     }
   ],
   "footer": [
