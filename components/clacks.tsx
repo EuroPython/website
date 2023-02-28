@@ -12,6 +12,7 @@ export const Clacks = () => {
       <meta httpEquiv="X-Clacks-Overhead" content="GNU John Pinner" />
       <meta httpEquiv="X-Clacks-Overhead" content="GNU Rob Collins" />
       <meta httpEquiv="X-Clacks-Overhead" content="GNU Oier Etxaniz" />
+      <meta httpEquiv="X-Clacks-Overhead" content="GNU Russel Winder" />
     `,
       }}
     ></head>
