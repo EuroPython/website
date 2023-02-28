@@ -10,23 +10,47 @@ import { Separator } from "./separator/separator";
 import { Title } from "./typography/title";
 
 export const components = {
-  h1: ({ children, className }: any) => {
-    return <Title level={1}>{children}</Title>;
+  h1: ({ children, className, ...props }: any) => {
+    return (
+      <Title level={1} {...props}>
+        {children}
+      </Title>
+    );
   },
-  h2: ({ children, className }: any) => {
-    return <Title level={2}>{children}</Title>;
+  h2: ({ children, className, ...props }: any) => {
+    return (
+      <Title level={2} {...props}>
+        {children}
+      </Title>
+    );
   },
-  h3: ({ children, className }: any) => {
-    return <Title level={3}>{children}</Title>;
+  h3: ({ children, className, ...props }: any) => {
+    return (
+      <Title level={3} {...props}>
+        {children}
+      </Title>
+    );
   },
-  h4: ({ children, className }: any) => {
-    return <Title level={4}>{children}</Title>;
+  h4: ({ children, className, ...props }: any) => {
+    return (
+      <Title level={4} {...props}>
+        {children}
+      </Title>
+    );
   },
-  h5: ({ children, className }: any) => {
-    return <Title level={5}>{children}</Title>;
+  h5: ({ children, className, ...props }: any) => {
+    return (
+      <Title level={5} {...props}>
+        {children}
+      </Title>
+    );
   },
-  h6: ({ children, className }: any) => {
-    return <Title level={6}>{children}</Title>;
+  h6: ({ children, className, ...props }: any) => {
+    return (
+      <Title level={6} {...props}>
+        {children}
+      </Title>
+    );
   },
   p: ({ children }: any) => (
     <p className="mb-4 text-xl leading-snug">{children}</p>

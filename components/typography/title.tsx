@@ -5,6 +5,7 @@ export const Title = ({
   highlighted = false,
   level = 1,
   className,
+  ...props
 }: {
   children: React.ReactNode;
   highlighted?: boolean;
@@ -27,6 +28,7 @@ export const Title = ({
         },
         className
       )}
+      {...props}
     >
       {highlighted ? (
         <span
