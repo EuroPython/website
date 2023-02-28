@@ -94,7 +94,7 @@ early.**
 
 **Note:** dates in the timeline follow the [Anywhere on Earth][AoE] convention.
 
-<table className="mt-8">
+<table className="mt-8 finaid-timeline">
 <tbody className="text-xl">
   <tr>
     <td>6 March 2023</td>
@@ -102,14 +102,14 @@ early.**
     <td>Applications open</td>
   </tr>
   <tr className="font-bold">
-    <td className="mb-2">23 April 2023</td>
+    <td>23 April 2023</td>
     <td>
       <img
         src="/img/accents/finaid-round1.svg"
         className="findaid-accent-round-marker"
         alt="round one" />
     </td>
-    <td className="mb-2">Deadline for submitting first-round applications</td>
+    <td>Deadline for submitting first-round applications</td>
   </tr>
   <tr>
     <td>8 May 2023</td>
@@ -143,7 +143,7 @@ early.**
   </tr>
   <tr>
     <td>5 June 2023</td>
-    <td>
+    <td className="finaid-accent">
       <img
         src="/img/accents/finaid-round2.svg"
         className="findaid-accent-round-marker"
