@@ -1,5 +1,9 @@
 # Tickets
 
+<div style={{textAlign: "center"}}>
+**Ticket Sales for EuroPython 2023 are expected to start on 21 March**
+</div>
+
 ## The What, Where and When of EuroPython 2023
 
 EuroPython 2023 will be held on 17-23 July. In person, it will be held at
@@ -43,7 +47,7 @@ offered to the European Python community.
 - **Personal Tickets**: for those who enjoy Python as a hobbyist or use it as
   a freelancer.
 - **Education Tickets**: for students, and teachers working in the education
-  sector (your main employment is at a school, college or university). We offer Education Tickets below costs.
+  sector (your main employment is at a school, college or university). We subsidise Education Tickets to make it accessible to everyone.
 
 **Note**: If you need a proper VAT invoice listing your company's name, please
 purchase a business ticket. Personal Tickets do not include a company name. We
@@ -51,50 +55,33 @@ will list the ticket tier and type on your conference badge to accommodate the
 registration staff.
 
 
-<button>Tickets available soon</button>
-
-
-## Early Bird Ticket Sales
-
-We're offering a flat #FIXME discount across all tiers for Early Bird Conference
-Tickets!
-
-We have a total of #FIXME Early Bird tickets (#FIXME Business, #FIXME Personal, #FIXME
-Education) available when we open up ticket sales on
-**Tuesday, 21 March 2022 #FIXME**. These tickets will be obtained on a
-first come, first serve basis. When they're gone, they're all gone!
-
-We'll switch to regular ticket sales as soon as Early Bird tickets are sold
-out.
-
-**NOTE**: During our last in-person conference at Basel in 2019, the Early Bird
-tickets sold out in _15 minutes_.
-
 ## Ticket Prices
+
+Regular tickets are available until **30 June 2023**, after which Late-bird rate applies. We strongly advise and greatly appreciate that you purchase your tickets early, to help us with the planning.
 
 ### Business Tickets
 
-- Conference Only Business Early Bird - Net price €#FIXME + 21% VAT
-- Conference Only Business - Net price €#FIXME + 21% VAT
-- Tutorial Only Business - Net price €#FIXME + 21% VAT
-- Combined Business - Net price €#FIXME + 21% VAT
-
+- Tutorial Only Business - Net price €350 + 21% VAT
+- Conference Only Business - Net price €450 + 21% VAT
+      - Late-Bird - Net price €675 + 21% VAT
+- Combined Business - Net price €690 + 21% VAT
+      - Late-Bird - Net price €1035 + 21% VAT
 
 ### Personal Tickets
 
- - Conference Only Personal Early Bird - €#FIXME incl. 23% VAT
- - Conference Only Personal - €#FIXME incl. 21% VAT
- - Tutorial Only Personal - €#FIXME incl. 21% VAT
- - Combined Personal - €#FIXME incl. 21% VAT
+- Tutorial Only Personal - €185 incl. 21% VAT
+- Conference Only Personal - €280 incl. 21% VAT
+      - Late-Bird - Net price €420 incl. 21% VAT
+- Combined Personal - €395 incl. 21% VAT
+      - Late-Bird - Net price €590 incl. 21% VAT
 
 ### Education Tickets
 
- - Conference Only Education Early Bird - €#FIXME incl. 21% VAT
- - Conference Only Education - €#FIXME incl. 21% VAT
- - Tutorial Only Education - €#FIXME incl. 21% VAT
- - Combined Education - €#FIXME incl. 21% VAT
+- Tutorial Only Education - €95 incl. 21% VAT
+- Conference Only Education - €130 incl. 21% VAT
+- Combined Education - €190 incl. 21% VAT
 
-### Volume Discount
+<!-- ### Volume Discount
 
  Is your company attending the conference as a team? We offer the following volume discount (Early Bird tickets excluded):
 
@@ -102,11 +89,11 @@ tickets sold out in _15 minutes_.
   - get 10 business tickets of any type for the price of 8
   - get 15 business tickets of any type for the price of 11
 
- Note: Volume discount will not apply if you mix & match between different ticket types.
+ Note: Volume discount will not apply if you mix & match between different ticket types. -->
 
 <!-- #FIXME Add volume discount for personal tier.  -->
 
- Ready to order? We will configure the discount to be automatic! Put your orders in the basket and enjoy! As a special thank you, if you want us to send out a mention on one of our social channels welcoming your team, feel free to email us at [info@europython.eu](mailto:info@europython.eu) 👐
+ <!-- Ready to order? We will configure the discount to be automatic! Put your orders in the basket and enjoy! As a special thank you, if you want us to send out a mention on one of our social channels welcoming your team, feel free to email us at [info@europython.eu](mailto:info@europython.eu) 👐 -->
 
 **Notes:**
 
@@ -135,4 +122,4 @@ To be announced later.
 keep in the know! -->
 
 ## How can I get a refund?
-We understand that things can be especially complicated during a pandemic. We aim to offer a full refund of your ticket(s) if your circumstances change. Before 17 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances.
+We understand things can be complicated at times and you may not be able to attend after booking your ticket. Therefore, we aim to offer a full refund of your ticket(s) if your circumstances change. Before 17 June, you can request a full refund from the order details link in your order confirmation email. After the date, please email us at [refunds@europython.eu](mailto:refunds@europython.eu) if you need a refund due to special circumstances.
