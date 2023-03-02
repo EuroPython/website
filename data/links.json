@@ -50,6 +50,19 @@
         {
           "name": "Financial aid",
           "path": "/finaid"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
+        }
+      ]
+    },
+    {
+      "name": "Registration",
+      "items": [
+        {
+          "name": "Buy Tickets",
+          "path": "/tickets"
         }
       ]
     }
