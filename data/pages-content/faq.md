@@ -13,6 +13,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-06</b>: [Call for Proposals (CFP)](/cfp) Starts </li>
 <li><b>2023-03-06</b>: [Financial Aid Programme](/finaid) Starts </li>
 <li><b>2023-03-12</b>: Speaker Mentorship Programme Closes </li>
+<li><b>2023-03-14</b>: [Speaker Mentorship Programme Ask Me Anything Event](/mentorship#ask-me-anything-about-cfp-workshop---tuesday-14-march-2023-1800-cet)</li>
 <li><b>2023-03-19</b>: Call for Proposals (CFP) Ends </li>
 <li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
 <li><b>2023 March</b>: [Sponsorship](/sponsor) Sign-up Starts </li>
