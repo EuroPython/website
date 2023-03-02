@@ -15,9 +15,8 @@ export const Card = ({ title, subtitle, content, url, image }: CardProps) => (
         src={image}
         width={600}
         height={375}
-        layout="responsive"
         alt=""
-        className="rounded-2xl"
+        className="rounded-2xl aspect-[3/2]"
       />
     </div>
     <h3 className="text-3xl font-bold mt-6 mb-4">{title}</h3>

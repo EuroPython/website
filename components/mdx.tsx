@@ -61,8 +61,10 @@ export const components = {
   ol: ({ children }: any) => (
     <ol className="mb-4 list-decimal pl-4">{children}</ol>
   ),
-  li: ({ children }: any) => (
-    <li className="mb-2 text-xl leading-snug">{children}</li>
+  li: ({ children, ...props }: any) => (
+    <li className="mb-2 text-xl leading-snug" {...props}>
+      {children}
+    </li>
   ),
   a: ({ children, href, ...props }: any) => (
     <a
