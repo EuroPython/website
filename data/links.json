@@ -19,6 +19,10 @@
         {
           "name": "FAQ",
           "path": "/faq"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
         }
       ]
     },
@@ -37,6 +41,15 @@
         {
           "name": "Packages",
           "path": "/sponsor"
+        }
+      ]
+    },
+    {
+      "name": "Support",
+      "items": [
+        {
+          "name": "Financial aid",
+          "path": "/finaid"
         }
       ]
     }
