@@ -6,15 +6,15 @@ subtitle: Frequently Asked Questions about EuroPython
 # FAQ
 ## **Milestones**
 <ul className="milestone-done">
+<li><b>2023-02-22</b>: [Speaker Mentorship Programme](/mentorship) Sign-up Starts </li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-02-22</b>: [Speaker Mentorship Programme](/mentorship) Sign-up Starts </li>
-<li><b>2023-03-06</b>: Call for Proposals (CFP) Starts </li>
+<li><b>2023-03-06</b>: [Call for Proposals (CFP)](/cfp) Starts </li>
+<li><b>2023-03-06</b>: [Financial Aid Programme](/finaid) Starts </li>
 <li><b>2023-03-12</b>: Speaker Mentorship Programme Closes </li>
 <li><b>2023-03-19</b>: Call for Proposals (CFP) Ends </li>
-<li><b>2023 Early March</b>: Financial Aid Programme Starts </li>
-<li><b>2023 Early March</b>: Ticket Sales Start</li>
+<li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
 <li><b>2023 March</b>: [Sponsorship](/sponsor) Sign-up Starts </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
@@ -32,9 +32,6 @@ We are planning on something a bit different for the sprints weekend. Stay tuned
 
 If you have any questions, you are welcome to reach out to the team at [helpdesk@europython.eu](helpdesk@europython.eu).
 
-## **Q. How soon should I book accommodation and flights?**
-A. Currently, the EuroPython Society board are still finalising the contract with the venue. Though we hope for no surprises, we would recommend you consider flexible bookings in case of any changes of plans in the future as well as appropriate insurance cover. We will inform the community soon as we've signed the final dotted line.
-
 ## **Q. What will the schedule look like?**
 
 A. The conference will be organised in three phases:
@@ -49,7 +46,7 @@ A. The conference will feature around 20 hands-on tutorials & workshops, 120 tal
 
 To get an idea of what to expect, have a look at the [EP2022's programme.](https://ep2022.europython.eu/schedule/)
 
-To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) for updates.
+To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting.
 
 We are always keen to hear new ideas on how to enrich the programme and other activities you are interested in participating during the conference. Share your thoughts with the programme team at [programme@europython.eu](mailto:programme@europython.eu).
 
@@ -60,26 +57,25 @@ A. The Call for Proposals (CFP) will run for two weeks between **6-19 March 2023
 
 Especially if you are considering becoming a **speaker for the first time**, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. Our [Speaker Mentorship Programme](/mentorship) is open for applications between 22 February - 12 March. We will also have other broader support options.
 
-If you have something in mind, there is no better time to start preparing your  proposal! For more insights, please have a look at the [EuroPython 2022 CFP page](https://ep2022.europython.eu/cfp). Some details may change for 2023, but overall, the structure is going to be similar.
+If you have something in mind, there is no better time to start preparing your proposal! Please have a look at our [CFP page](/cfp) for details and we look forward to your proposals!
 
 If you have questions or ideas you would like to share with our team, you are most welcome to reach out to our programme team at [programme@europython.eu](mailto:programme@europython.eu).
 
-## **Q. When do ticket sales start?**
 
-A. Ticket sales will start in March. Make sure to subscribe to our [EuroPython Blog](https://blog.europython.eu/#/portal/signup) where the opening dates will be announced.
+## **Q. When do ticket sales start and what are the ticket prices like?**
 
-## **Q. What are the ticket prices like?**
+A. Ticket sales are expected to start on **Tuesday 21 March.**
 
-A. We are aiming to keep the ticket prices similar to our [conference in 2022](https://ep2022.europython.eu/tickets#ticket-prices), though an increase might be necessary due to cost increases.
+We have put a lot of work in keeping the in-person ticket prices affordable. Check out our [tickets page](/tickets) for details.
 
-As usual, there will be several ticket options, so you can choose the one most suitable for you. Details will be announced around the end of February on our website and [EuroPython Blog](https://blog.europython.eu/#/portal/signup).
+We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community.
 
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
-A. Yes, we will have a Financial Aid programme this year similar to the one we had in [2022](https://ep2022.europython.eu/finaid). Please watch out for announcements on the [EuroPython Blog](https://blog.europython.eu/#/portal/signup).
+A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is open for application until 21 May. If you need help to attend the conference, you are most welcome to apply.
 
 ## **Q. When can sponsors start signing up?**
 
-A: The 2023 packages are not finalised yet, but will be similar to what we had in [EuroPython 2022](https://ep2022.europython.eu/sponsor). So do take a look to get an idea of the sponsorship options. We will publish our 2023 offerings soon on our [Sponsor Page](/sponsor.)
+A: The 2023 packages are not finalised yet, but will be similar to what we had in [EuroPython 2022](https://ep2022.europython.eu/sponsor). So do take a look to get an idea of the sponsorship options. We will publish our 2023 offerings soon on our [Sponsor Page](/sponsor).
 
 **Sponsors who sign up early will again receive a 10% discount.**
 

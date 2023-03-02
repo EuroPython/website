@@ -99,9 +99,7 @@ Regular tickets are available until **30 June 2023**, after which Late-bird rate
 
 Every ticket includes break refreshments and a light lunch for each day.
 
-**Free Childcare**: Children are welcome but need to be accompanied by their
-legal guardian. If you are attending with your children, please register a
-ticket for yourself **_and_** select how many children will require childcare at checkout.
+**Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout.
 
 We would like to encourage you to book your ticket early. This makes it easier
 for us to plan for the event and arrange important things like the catering,
