@@ -1,6 +1,6 @@
 ---
 title: Call for Proposals
-subtitle: 6-26 March
+subtitle: 6-19 March
 url: /cfp
 image: /images/cards/cfp1.jpg
 ---
