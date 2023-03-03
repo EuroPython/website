@@ -38,8 +38,8 @@ const HeaderButton = ({
 const HeaderLogo = () => {
   return (
     <a href="/">
-      <Logo variant="small" className="w-11 h-auto mr-4 block md:hidden" />
-      <Logo className="h-auto hidden md:block w-full pr-3 lg:pr-8" />
+      <img src="/img/logo.png"  className="w-11 h-auto mr-4 block md:hidden" />
+      <img src="/img/logo.png" className="h-auto hidden md:block w-full pr-3 lg:pr-8" />
     </a>
   );
 };
@@ -90,8 +90,8 @@ export const Header = () => (
       aria-hidden="true"
     />
 
-    {/* <HeaderLogo /> */}
-    <HeaderLogoEPS />
+    <HeaderLogo />
+    {/* <HeaderLogoEPS /> */}
 
     <nav className="mx-auto hidden md:block">
       <NavItems items={links.header} />
@@ -101,8 +101,8 @@ export const Header = () => (
 
     <div className="fixed bg-secondary-darkest top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block md:peer-checked:hidden z-50 p-6">
       <div className="flex items-center">
-        {/* <HeaderLogo /> */}
-        <HeaderLogoEPS />
+        <HeaderLogo />
+        {/* <HeaderLogoEPS /> */}
         <HeaderActions mobile />
       </div>
 
