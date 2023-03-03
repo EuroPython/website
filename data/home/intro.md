@@ -1,5 +1,5 @@
 ---
-title: EuroPython&nbsp;Prague<br/>You're invited!
+title: EuroPython Prague<br/>You're invited!
 ---
 
 Welcome to the 22nd EuroPython. We're the oldest and longest running
