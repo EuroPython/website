@@ -39,7 +39,7 @@ const HeaderLogo = () => {
   return (
     <a href="/">
       <img src="/img/logo.png"  className="w-11 h-auto mr-4 block md:hidden" />
-      <img src="/img/logo.png" className="h-auto w-32 hidden md:block pr-3 lg:pr-8" />
+      <img src="/img/logo-details.png" className="h-auto w-32 hidden md:block pr-3 lg:pr-8" />
     </a>
   );
 };
