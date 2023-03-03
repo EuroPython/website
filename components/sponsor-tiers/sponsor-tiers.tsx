@@ -8,7 +8,7 @@ const Ribbon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="95px"
     height="200px"
-    viewBox="0 0 95 200"
+    viewBox="0 0 105 180"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
@@ -113,10 +113,10 @@ export const SponsorTiers = () => {
       <SponsorTier
         title="Keystone"
         totalSlots={1}
-        price={42000}
+        price="Please ask"
         features={[
           "Plenary room named after your company",
-          "56 sqm booth in exhibit hall",
+          "central sizable booth in exhibit hall",
           "12 complimentary session passes",
           "Advertisement on virtual swag webpage",
           "One blog post on EuroPython's blog",
@@ -159,7 +159,6 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Gold"
-        totalSlots={6}
         price={9500}
         features={[
           "9 sqm booth in exhibit hall",
@@ -172,7 +171,6 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Silver"
-        totalSlots={8}
         price={6500}
         features={[
           "6 sqm booth in exhibit hall",
@@ -185,14 +183,12 @@ export const SponsorTiers = () => {
       <div className="space-y-10">
         <SponsorTier
           title="Bronze"
-          totalSlots={10}
           price={2000}
           features={["Logo & recuriting ad on EuroPython website and more!"]}
         />
 
         <SponsorTier
           title="Patron"
-          totalSlots={12}
           price={1000}
           features={["Logo on EuroPython website, welcome tweet and more!"]}
         />
