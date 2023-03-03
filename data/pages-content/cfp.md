@@ -10,6 +10,8 @@ subtitle: EuroPython Call for Proposals
  **Monday, 6 March 2023** and
 
  **Sunday, 19 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
+
+ Stay tuned for more details...🐍
 </div>
 
 
@@ -76,9 +78,18 @@ As in previous years, there will be a **Speaker Mentorship Programme** for anyon
 
 Mentorship Programme sign-up starts on **22 February**. More details will be announced soon!
 
-[comment]: # (The below is not decided ## Speaker Tickets ##)
-[comment]: # (We are hoping to meet as many speakers as possible in-person. To make travel easier, **accepted speakers are eligible for a free ticket to attend the conference**. Travel and accommodation expenses will not be reimbursed; but we will have a Financial Aid programme and encourage speakers, especially those from under-represented backgrounds to apply.)
+<!-- ## Speakers Benefits ## -->
+
+<!-- We are hoping to meet as many speakers as possible in-person. To make travel easier, **accepted speakers are eligible for a free ticket to attend the conference**. Travel and accommodation expenses will not be reimbursed; but our [Financial Aid programme](/finaid) is open for applications, and we encourage speakers, especially those from under-represented backgrounds to apply.) -->
 
 ## Open Source ##
 
 EuroPython's aim is to share knowledge, skills and experience for the benefit of all in our open source community. To this end, we encourage your contribution to be released under an open source licence, and for the tools and code needed to engage with your talk to be freely available under an open source license. Sales-oriented proposals whose main aim is to sell a product are discouraged at EuroPython.
+
+## Non-profit ##
+[comment]: # (not sure if we want to keep these below)
+EuroPython is a volunteer-run conference. All proceeds go to EuroPython Society which supports the Python community through its generous [EPS Grants Programme](https://www.europython-society.org/grants/) across Europe.
+
+[NumFOCUS](https://numfocus.org/), the entity behind PyData is a non-profit organisation that supports the development of open-source tools, such as Numpy, IPython, Jupyter, and many others.
+
+Please consider supporting both.
