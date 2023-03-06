@@ -7,11 +7,11 @@ subtitle: Frequently Asked Questions about EuroPython
 ## **Milestones**
 <ul className="milestone-done">
 <li><b>2023-02-22</b>: [Speaker Mentorship Programme](/mentorship) Sign-up Starts </li>
+<li><b>2023-03-06</b>: [Call for Proposals (CFP)](/cfp) Starts </li>
+<li><b>2023-03-06</b>: [Financial Aid Programme](/finaid) Starts </li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-03-06</b>: [Call for Proposals (CFP)](/cfp) Starts </li>
-<li><b>2023-03-06</b>: [Financial Aid Programme](/finaid) Starts </li>
 <li><b>2023-03-12</b>: Speaker Mentorship Programme Closes </li>
 <li><b>2023-03-14</b>: [Speaker Mentorship Programme Ask Me Anything Event](/mentorship#ask-me-anything-about-cfp-workshop---tuesday-14-march-2023-1800-cet)</li>
 <li><b>2023-03-19</b>: Call for Proposals (CFP) Ends </li>
