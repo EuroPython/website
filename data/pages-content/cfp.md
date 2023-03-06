@@ -4,14 +4,15 @@ subtitle: EuroPython Call for Proposals
 ---
 # Call for Proposals
 
-<div style={{textAlign: "center"}}>
-**EuroPython 2023 Call for Proposals (CFP) will be open** between
+<div style={{textAlign: "center",  marginBottom: 10}}>
+**EuroPython 2023 Call for Proposals (CFP) is open** between
 
  **Monday, 6 March 2023** and
 
  **Sunday, 19 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
- More details will be announced when we open the CFP...🐍
+ <ButtonLink href="https://program.europython.eu/europython-2023/cfp">Submit your proposal now!🐍</ButtonLink>
+
 </div>
 
 
@@ -32,7 +33,7 @@ If you’re thinking, “but they don’t mean me”, then we especially mean **
 * This is a volunteer led community, so join us - you will be welcomed with friendship, support and compassion.
 
 
-You are welcome to share your questions and ideas with our programme team at [programme@europython.eu](programme@europython.eu).
+You are welcome to share your questions and ideas with our programme team at [programme@europython.eu](mailto:programme@europython.eu).
 
 ## The Conference Format ##
 
@@ -52,6 +53,8 @@ All Presentations will be designated the following levels:
 * **Intermediate** - some knowledge is assumed, although aspects of the talk may introduce new (more advanced) topics.
 
 * **Advanced** - the audience is full of subject matter experts... go ahead and really geek out.
+
+In previous years we’ve had many beginner and intermediate level talks. **We’d love to encourage more advanced level contributions too.** Come geek out with us at the conference!
 
 ## Topics ##
 
@@ -74,13 +77,17 @@ To ensure our programme reflects our diverse community, submissions go through t
 
 ## First-Time Speakers ##
 
-As in previous years, there will be a **Speaker Mentorship Programme** for anyone who needs help preparing their contribution. We especially focus on those for whom it might be their first time contributing to our conference, especially those from under-represented backgrounds. To this end we will match mentees with experienced and supportive mentors and run two workshops online: one close to the CFP closing date, focusing on improving your submissions; the other close to the conference date, helping you improve your talk.
+As in previous years, there will be a **Speaker Mentorship Programme** for anyone who needs help preparing their contribution. We focus on those for whom it might be their first time contributing to our conference, especially those from under-represented backgrounds. To this end we will match mentees with experienced and supportive mentors and run two workshops online: one close to the CFP closing date, focusing on improving your submissions; the other close to the conference date, helping you improve your talk.
 
-Mentorship Programme sign-up starts on **22 February**. More details will be announced soon!
+Mentorship Programme sign-up has started on **22 February** and will remain open until 12 March. More details can be found on our [Mentorship page](/mentorship).
 
-<!-- ## Speakers Benefits ## -->
+## Speaker Support
 
-<!-- We are hoping to meet as many speakers as possible in-person. To make travel easier, **accepted speakers are eligible for a free ticket to attend the conference**. Travel and accommodation expenses will not be reimbursed; but our [Financial Aid programme](/finaid) is open for applications, and we encourage speakers, especially those from under-represented backgrounds to apply.) -->
+WE hope to meet as many speakers as possible in person. To make attendance more attractive, **accepted speakers are eligible for a free ticket to attend the conference**. Travel and accommodation expenses will not be reimbursed; but our [Financial Aid programme](/finaid) is open for applications, and we encourage speakers, especially those from under-represented backgrounds to apply.
+
+**Childcare**: We are excited to offer free childcare at the venue. During the conference hours, there will be a dedicated area with childcare professionals who will look after your children. Make sure to register your free speaker ticket for yourself and select how many children will require childcare at checkout.
+
+
 
 ## Open Source ##
 
