@@ -76,7 +76,7 @@ To ensure our programme reflects our diverse community, submissions go through t
 
 As in previous years, there will be a **Speaker Mentorship Programme** for anyone who needs help preparing their contribution. We especially focus on those for whom it might be their first time contributing to our conference, especially those from under-represented backgrounds. To this end we will match mentees with experienced and supportive mentors and run two workshops online: one close to the CFP closing date, focusing on improving your submissions; the other close to the conference date, helping you improve your talk.
 
-Mentorship Programme sign-up starts on **22 February**. More details will be announced soon!
+Mentorship Programme sign-up has started on **22 February** and will remain open until **12 March**. More details can be found [here](https://ep2023.europython.eu/mentorship)
 
 <!-- ## Speakers Benefits ## -->
 
