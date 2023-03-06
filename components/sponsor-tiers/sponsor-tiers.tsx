@@ -59,11 +59,21 @@ const SponsorTier = ({
 }: {
   title: string;
   totalSlots?: number;
-  price: number;
+  price: number | string;
   features: string[];
 }) => {
   // TODO: this component is inside a prose container, so we need to reset some styles
   // we can use no-prose
+
+  const formattedPrice =
+    typeof price === "number"
+      ? new Intl.NumberFormat("en", {
+          style: "currency",
+          currency: "EUR",
+          maximumFractionDigits: 0,
+          minimumFractionDigits: 0,
+        }).format(price)
+      : price;
 
   return (
     <div className="bg-text text-text-inverted rounded-2xl p-6 relative">
@@ -88,14 +98,7 @@ const SponsorTier = ({
           <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
         </div>
       )}
-      <div className="font-bold text-3xl mb-2">
-        {new Intl.NumberFormat("en", {
-          style: "currency",
-          currency: "EUR",
-          maximumFractionDigits: 0,
-          minimumFractionDigits: 0,
-        }).format(price)}
-      </div>
+      <div className="font-bold text-3xl mb-2">{formattedPrice}</div>
 
       <p className="font-bold text-base">This tier includes:</p>
       <ul className="text-base">
