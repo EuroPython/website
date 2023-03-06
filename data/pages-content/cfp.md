@@ -89,6 +89,7 @@ WE hope to meet as many speakers as possible in person. To make attendance more 
 
 
 
+
 ## Open Source ##
 
 EuroPython's aim is to share knowledge, skills and experience for the benefit of all in our open source community. To this end, we encourage your contribution to be released under an open source licence, and for the tools and code needed to engage with your talk to be freely available under an open source license. Sales-oriented proposals whose main aim is to sell a product are discouraged at EuroPython.
