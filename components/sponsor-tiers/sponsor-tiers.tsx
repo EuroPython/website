@@ -77,28 +77,30 @@ const SponsorTier = ({
 
   return (
     <div className="bg-text text-text-inverted rounded-2xl p-6 relative">
-      <Ribbon
-        className={clsx("absolute right-6 -top-6", {
-          "text-sponsor-keystone": title === "Keystone",
-          "text-sponsor-diamond": title === "Diamond",
-          "text-sponsor-platinum": title === "Platinum",
-          "text-sponsor-gold": title === "Gold",
-          "text-sponsor-silver": title === "Silver",
-          "text-sponsor-bronze": title === "Bronze",
-          "text-sponsor-patron": title === "Patron",
-        })}
-      />
+      <div className="h-[160px]">
+        <Ribbon
+          className={clsx("absolute right-6 -top-6", {
+            "text-sponsor-keystone": title === "Keystone",
+            "text-sponsor-diamond": title === "Diamond",
+            "text-sponsor-platinum": title === "Platinum",
+            "text-sponsor-gold": title === "Gold",
+            "text-sponsor-silver": title === "Silver",
+            "text-sponsor-bronze": title === "Bronze",
+            "text-sponsor-patron": title === "Patron",
+          })}
+        />
 
-      <Title level={3} className="mt-0 mb-2">
-        {title}
-      </Title>
+        <Title level={3} className="mt-0 !mb-2">
+          {title}
+        </Title>
 
-      {totalSlots && (
-        <div className="text-xl mb-2">
-          <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
-        </div>
-      )}
-      <div className="font-bold text-3xl mb-2">{formattedPrice}</div>
+        <div className="font-bold text-3xl">{formattedPrice}</div>
+        {totalSlots && (
+          <div className="text-xl">
+            <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
+          </div>
+        )}
+      </div>
 
       <p className="font-bold text-base">This tier includes:</p>
       <ul className="text-base">
