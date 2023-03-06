@@ -103,7 +103,7 @@ const SponsorTier = ({
       <p className="font-bold text-base">This tier includes:</p>
       <ul className="text-base">
         {features.map((feature) => (
-          <li key={feature}>{feature}</li>
+          <li key={feature}>✔️ {feature}</li>
         ))}
       </ul>
     </div>
