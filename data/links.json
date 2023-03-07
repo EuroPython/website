@@ -39,8 +39,12 @@
       "name": "Sponsorship",
       "items": [
         {
-          "name": "Packages",
+          "name": "Sponsor Packages",
           "path": "/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsor/information"
         }
       ]
     },
