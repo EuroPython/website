@@ -8,7 +8,7 @@ const Ribbon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width="95px"
     height="200px"
-    viewBox="0 0 95 200"
+    viewBox="0 0 105 180"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
@@ -59,48 +59,53 @@ const SponsorTier = ({
 }: {
   title: string;
   totalSlots?: number;
-  price: number;
+  price: number | string;
   features: string[];
 }) => {
   // TODO: this component is inside a prose container, so we need to reset some styles
   // we can use no-prose
 
-  return (
-    <div className="bg-text text-text-inverted rounded-2xl p-6 relative">
-      <Ribbon
-        className={clsx("absolute right-6 -top-6", {
-          "text-sponsor-keystone": title === "Keystone",
-          "text-sponsor-diamond": title === "Diamond",
-          "text-sponsor-platinum": title === "Platinum",
-          "text-sponsor-gold": title === "Gold",
-          "text-sponsor-silver": title === "Silver",
-          "text-sponsor-bronze": title === "Bronze",
-          "text-sponsor-patron": title === "Patron",
-        })}
-      />
-
-      <Title level={3} className="mt-0 mb-2">
-        {title}
-      </Title>
-
-      {totalSlots && (
-        <div className="text-xl mb-2">
-          <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
-        </div>
-      )}
-      <div className="font-bold text-3xl mb-2">
-        {new Intl.NumberFormat("en", {
+  const formattedPrice =
+    typeof price === "number"
+      ? new Intl.NumberFormat("en", {
           style: "currency",
           currency: "EUR",
           maximumFractionDigits: 0,
           minimumFractionDigits: 0,
-        }).format(price)}
+        }).format(price)
+      : price;
+
+  return (
+    <div className="bg-text text-text-inverted rounded-2xl p-6 relative">
+      <div className="h-[160px]">
+        <Ribbon
+          className={clsx("absolute right-6 -top-6", {
+            "text-sponsor-keystone": title === "Keystone",
+            "text-sponsor-diamond": title === "Diamond",
+            "text-sponsor-platinum": title === "Platinum",
+            "text-sponsor-gold": title === "Gold",
+            "text-sponsor-silver": title === "Silver",
+            "text-sponsor-bronze": title === "Bronze",
+            "text-sponsor-patron": title === "Patron",
+          })}
+        />
+
+        <Title level={3} className="mt-0 !mb-2">
+          {title}
+        </Title>
+
+        <div className="font-bold text-3xl">{formattedPrice}</div>
+        {totalSlots && (
+          <div className="text-xl">
+            <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
+          </div>
+        )}
       </div>
 
       <p className="font-bold text-base">This tier includes:</p>
       <ul className="text-base">
         {features.map((feature) => (
-          <li key={feature}>{feature}</li>
+          <li key={feature}>✔️ {feature}</li>
         ))}
       </ul>
     </div>
@@ -113,10 +118,10 @@ export const SponsorTiers = () => {
       <SponsorTier
         title="Keystone"
         totalSlots={1}
-        price={42000}
+        price="Please ask"
         features={[
           "Plenary room named after your company",
-          "56 sqm booth in exhibit hall",
+          "central sizable booth in exhibit hall",
           "12 complimentary session passes",
           "Advertisement on virtual swag webpage",
           "One blog post on EuroPython's blog",
@@ -159,7 +164,6 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Gold"
-        totalSlots={6}
         price={9500}
         features={[
           "9 sqm booth in exhibit hall",
@@ -172,7 +176,6 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Silver"
-        totalSlots={8}
         price={6500}
         features={[
           "6 sqm booth in exhibit hall",
@@ -185,14 +188,12 @@ export const SponsorTiers = () => {
       <div className="space-y-10">
         <SponsorTier
           title="Bronze"
-          totalSlots={10}
           price={2000}
           features={["Logo & recuriting ad on EuroPython website and more!"]}
         />
 
         <SponsorTier
           title="Patron"
-          totalSlots={12}
           price={1000}
           features={["Logo on EuroPython website, welcome tweet and more!"]}
         />
