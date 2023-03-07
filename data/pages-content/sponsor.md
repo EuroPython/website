@@ -30,13 +30,13 @@ EuroPython 2022 was a hybrid conference, both in Dublin & Online, combining the 
 
 At EuroPython 2023, we offer seven main packages, aiming to keep EuroPython accessible to most organisations keen to help the community.
 
-<Note>**Launch Sponsors will again get 10% of discount!** Sign up by **31 March** to take advantage!</Note>
-
-<Note>Reach out to us at **[sponsoring@europython.eu](mailto:sponsoring@europython.eu)** to discuss your interest and options.</Note>
+<Note>**Launch Sponsors will again get 10% of discount!** Sign up by **31 March** to take advantage! Reach out to us at sponsoring@europython.eu for any questions.</Note>
 
 <div style={{textAlign: "left", marginBottom: 30}}>
 <ButtonLink href="https://drive.google.com/file/d/15f6HGVUjgx2OKaLoCaIa6uNG3W0xLOm6/view?usp=share_link">Sponsor Packages & Options Table (PDF)</ButtonLink>
+<ButtonLink href="https://forms.gle/ZmKdd2qNzXbmM4Vb6">Sign up now!</ButtonLink>
 </div>
+
 
 <SponsorTiers />
 
@@ -55,6 +55,8 @@ Please note: each add-on has limited slots and some are exclusive. Please check 
 - And many more!
 
 <ButtonLink href="https://drive.google.com/file/d/15f6HGVUjgx2OKaLoCaIa6uNG3W0xLOm6/view?usp=share_link">Full list of Optional Extras (PDF)</ButtonLink>
+<ButtonLink href="https://forms.gle/ZmKdd2qNzXbmM4Vb6">Sign up now!</ButtonLink>
+
 
 ## Discounts
 

@@ -1,13 +1,15 @@
 ---
 title: Sponsor Information
 subtitle:
-  Thank you for supporting EuroPython 2022! You can find the deadlines and specs
+  Thank you for supporting EuroPython 2023! You can find the deadlines and specs
   for all the deliverables related to sponsorships on this page.
 ---
 
-# Deadlines
+<!-- # Deadlines -->
+# Sponsor Information
+<Note>Deadlines and specs of the deliverables will become available later. Stay tuned! If you have any questions, please reach out to the sponsorship team at sponsoring@europython.eu</Note>
 
-- [Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract:](#sponsored-content)
+<!-- - [Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract:](#sponsored-content)
   June 10
 - [Virtual Swag Page submission:](#virtual-swag-page) June 17
 - [Sponsor Logo submission:](#sponsor-logo) June 17
@@ -582,4 +584,4 @@ draw day**
 **Submission Channel**: email
 [sponsoring@europython.eu](sponsoring@europython.eu).
 
-</details>
+</details> -->
