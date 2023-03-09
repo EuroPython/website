@@ -81,6 +81,12 @@ We encourage and trust you to pick a fair ticket tier that fits your personal ci
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
 A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is open for application until 21 May. If you need help to attend the conference, you are most welcome to apply.
 
+## **Q. Do you provide childcare?**
+A: **Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout.
+
+## **Q. Could you provide a visa support letter for my visa application?**
+A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. Please refer to the Ministry of Foreign Affairs of Czech Republic for information, including the application process for an [ Schengen visa for the purpose of “business” when attending a conference](https://www.mzv.cz/jnp/en/information_for_aliens/short_stay_visa/conference.html).
+
 ## **Q. When can sponsors start signing up?**
 
 A: We are open for sponsorship signup now. You can find all the details of the 2023 sponsorship packages and options on our [sponsorship page](/sponsor), as well as the demographics of previous years.
