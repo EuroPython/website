@@ -39,7 +39,7 @@ You are welcome to share your questions and ideas with our programme team at [pr
 
 The conference will feature around 16 Tutorials/Workshops and 120 talk sessions:
 
-* **Tutorials/Workshops (17-18 July)**: hands-on **180-mins sessions**
+* **Tutorials/Workshops (17-18 July)**: hands-on **180-mins sessions** with 40-100 people
 
 * **Talks (19-21 July)** : **30, 45, or 60-minute** : presentations of specific and general interest to the European Python community (including a dedicated PyData track)
 
@@ -83,11 +83,9 @@ Mentorship Programme sign-up has started on **22 February** and will remain open
 
 ## Speaker Support
 
-WE hope to meet as many speakers as possible in person. To make attendance more attractive, **accepted speakers are eligible for a free ticket to attend the conference**. Travel and accommodation expenses will not be reimbursed; but our [Financial Aid programme](/finaid) is open for applications, and we encourage speakers, especially those from under-represented backgrounds to apply.
+We hope to meet as many speakers as possible in person. To make attendance more attractive, **accepted speakers are eligible for a free Conference Ticket; accepted workshop & tutorial organisers are eligible for a free Combined Ticket** (see details of the [ticket types](/tickets#ticket-types)). Travel and accommodation expenses will not be reimbursed,  but our [Financial Aid programme](/finaid) is open for applications, and we encourage speakers, especially those from under-represented backgrounds to apply.
 
 **Childcare**: We are excited to offer free childcare at the venue. During the conference hours, there will be a dedicated area with childcare professionals who will look after your children. Make sure to register your free speaker ticket for yourself and select how many children will require childcare at checkout.
-
-
 
 
 ## Open Source ##

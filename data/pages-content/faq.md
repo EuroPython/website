@@ -9,6 +9,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-02-22</b>: [Speaker Mentorship Programme](/mentorship) Sign-up Starts </li>
 <li><b>2023-03-06</b>: [Call for Proposals (CFP)](/cfp) Starts </li>
 <li><b>2023-03-06</b>: [Financial Aid Programme](/finaid) Starts </li>
+<li><b>2023-03-07</b>: [Sponsorship](/sponsor) Sign-up Starts </li>
 </ul>
 
 <ul className="milestone-todo">
@@ -16,7 +17,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-14</b>: [Speaker Mentorship Programme Ask Me Anything Event](/mentorship#ask-me-anything-about-cfp-workshop---tuesday-14-march-2023-1800-cet)</li>
 <li><b>2023-03-19</b>: Call for Proposals (CFP) Ends </li>
 <li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
-<li><b>2023 March</b>: [Sponsorship](/sponsor) Sign-up Starts </li>
+<li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
@@ -60,8 +61,14 @@ Especially if you are considering becoming a **speaker for the first time**, or 
 
 If you have something in mind, there is no better time to start preparing your proposal! Please have a look at our [CFP page](/cfp) for details and we look forward to your proposals!
 
-If you have questions or ideas you would like to share with our team, you are most welcome to reach out to our programme team at [programme@europython.eu](mailto:programme@europython.eu).
+If you have questions, you are most welcome to reach out to our programme team at [programme@europython.eu](mailto:programme@europython.eu).
 
+## **Q. What support do you give to speakers?**
+A. Accepted speakers are eligible for a free Conference Ticket; accepted workshop & tutorial organisers are eligible for a free Combined Ticket (see details of the [ticket types](/tickets#ticket-types)). In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.
+
+We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. Check out our [Speaker Mentorship Programme](/mentorship) for details.
+
+Email us at [programme@europython.eu](mailto:programme@europython.eu) to tell us what other speaker support you might need!
 
 ## **Q. When do ticket sales start and what are the ticket prices like?**
 
@@ -76,9 +83,9 @@ A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is op
 
 ## **Q. When can sponsors start signing up?**
 
-A: The 2023 packages are not finalised yet, but will be similar to what we had in [EuroPython 2022](https://ep2022.europython.eu/sponsor). So do take a look to get an idea of the sponsorship options. We will publish our 2023 offerings soon on our [Sponsor Page](/sponsor).
+A: We are open for sponsorship signup now. You can find all the details of the 2023 sponsorship packages and options on our [sponsorship page](/sponsor), as well as the demographics of previous years.
 
-**Sponsors who sign up early will again receive a 10% discount.**
+**Sponsors who sign up by 31 March will receive a 10% discount as our launch sponsors.**
 
 We are committed to making EuroPython sponsorship accessible to most organisations keen to help the community. If you are interested in supporting EuroPython 2023, get in touch with our sponsors team at [sponsoring@europython.eu](sponsoring@europython.eu)
 
