@@ -71,9 +71,9 @@ Regular tickets are available until **30 June 2023**, after which Late-bird rate
 
 - Tutorial Only Personal - €185 incl. 21% VAT
 - Conference Only Personal - €280 incl. 21% VAT
-      - Late-Bird - Net price €420 incl. 21% VAT
+      - Late-Bird - €420 incl. 21% VAT
 - Combined Personal - €395 incl. 21% VAT
-      - Late-Bird - Net price €590 incl. 21% VAT
+      - Late-Bird - €590 incl. 21% VAT
 
 ### Education Tickets
 
