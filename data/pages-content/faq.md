@@ -55,7 +55,7 @@ We are always keen to hear new ideas on how to enrich the programme and other ac
 
 ## **Q. When do you accept talk proposals?**
 
-A. The Call for Proposals (CFP) will run for two weeks between **6-19 March 2023**. We are thrilled to receive proposals on any topic that could be of interest to our community.
+A. The Call for Proposals (CFP) will run for two weeks, plus one week extension between **6-26 March 2023**. We are thrilled to receive proposals on any topic that could be of interest to our community.
 
 Especially if you are considering becoming a **speaker for the first time**, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. Our [Speaker Mentorship Programme](/mentorship) is open for applications between 22 February - 12 March. We will also have other broader support options.
 

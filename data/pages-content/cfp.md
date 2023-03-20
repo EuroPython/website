@@ -5,9 +5,9 @@ subtitle: EuroPython Call for Proposals
 # Call for Proposals
 
 <div style={{textAlign: "center",  marginBottom: 10}}>
-**EuroPython 2023 Call for Proposals (CFP) is open** between
+**EuroPython 2023 Call for Proposals (CFP) is open** from
 
- **Monday, 6 March 2023** and
+ **Monday, 6 March 2023** and currently extended until
 
  **Sunday, 26 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
