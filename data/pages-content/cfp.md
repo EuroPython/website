@@ -9,7 +9,7 @@ subtitle: EuroPython Call for Proposals
 
  **Monday, 6 March 2023** and
 
- **Sunday, 19 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
+ **Sunday, 26 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
  <ButtonLink href="https://program.europython.eu/europython-2023/cfp">Submit your proposal now!🐍</ButtonLink>
 
