@@ -22,15 +22,13 @@ Please make sure you read all the visa pages carefully and prepare all the requi
 Should you require a visa to travel to the Czech Republic, even though it is still possible to submit your visa application 15 days before your planned travel date, it is strongly advisable to apply **as soon as possible**, as it can sometimes take more than a month to receive a decision.
 
 ## Visa Support Letter
-Every registered attendee is welcome to request a visa support letter issued by the EuroPython Society, should you need one for your visa application. Once ticket sales open, we will open a form for you to request the support letter. Stay tuned!
+Every registered attendee is welcome to request a visa support letter issued by the EuroPython Society, should you need one for your visa application. Simply fill in the form **2 weeks before your planned visa application**:
 
-<!-- Simply fill in the form **1 week before your planned visa application.**:
-
-<div style={{textAlign: "center"}}>
-<ButtonLink href="https://forms.gle/WE5Uv2KxoEyzrmEE6">Visa Support Letter Request Form</ButtonLink>
+<div style={{textAlign: "center", marginBottom: 14}}>
+<ButtonLink href="https://forms.gle/Knvsz5i1ewYnZ5JZ6">Visa Support Letter Request Form</ButtonLink>
 </div>
 
-We will send you the completed letter via email. -->
+We will send you the completed letter via email.
 
 Please note that we only issue visa support letters to confirmed attendees. We kindly ask you to purchase your ticket before filling in the request form. If your company purchased the ticket on your behalf, please ask them to register you as an attendee, so you have the order code ready for the form.
 
