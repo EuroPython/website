@@ -3,7 +3,7 @@
 <div style={{textAlign: "center"}}>
 **EuroPython 2023 Tickets Available NOW!**
 
-  <ButtonLink href="https://pretix.eu/europython/ep2023/">Beam me up to the ticket shop!</ButtonLink>
+  <ButtonLink href="https://tickets.europython.eu/">Beam me up to the ticket shop!</ButtonLink>
 </div>
 
 ## The What, Where and When of EuroPython 2023
@@ -53,11 +53,14 @@ purchase a Business Ticket. Personal Tickets do not include a company name. We
 will list the ticket tier and type on your conference badge to accommodate the
 registration staff.
 
-<ButtonLink href="https://pretix.eu/europython/ep2023/">Get your tickets here</ButtonLink>
+<ButtonLink href="https://tickets.europython.eu/">Get your tickets here</ButtonLink>
 
 ## Ticket Prices
 
 Regular tickets are available until **30 June 2023**, after which Late-bird rate applies. We strongly advise and greatly appreciate that you purchase your tickets early, to help us with the planning.
+
+***Note: If you are a Czech company with a valid VAT ID, VAT will be reverse charged.***
+
 
 ### Business Tickets
 
@@ -67,7 +70,6 @@ Regular tickets are available until **30 June 2023**, after which Late-bird rate
 - Combined Business - Net price €690 + 21% VAT
       - Late-Bird - Net price €1035 + 21% VAT
 
-***Note - VAT for Czech Business***: VAT is not charged on Czech Business tickets, as reverse charge applies.
 
 ### Personal Tickets
 
