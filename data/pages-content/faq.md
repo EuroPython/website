@@ -10,13 +10,12 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-06</b>: [Call for Proposals (CFP)](/cfp) Starts </li>
 <li><b>2023-03-06</b>: [Financial Aid Programme](/finaid) Starts </li>
 <li><b>2023-03-07</b>: [Sponsorship](/sponsor) Sign-up Starts </li>
+<li><b>2023-03-14</b>: [Speaker Mentorship Programme Ask Me Anything Event](/mentorship#ask-me-anything-about-cfp-workshop---tuesday-14-march-2023-1800-cet)</li>
+<li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-03-12</b>: Speaker Mentorship Programme Closes </li>
-<li><b>2023-03-14</b>: [Speaker Mentorship Programme Ask Me Anything Event](/mentorship#ask-me-anything-about-cfp-workshop---tuesday-14-march-2023-1800-cet)</li>
 <li><b>2023-03-26</b>: Call for Proposals (CFP) Ends </li>
-<li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
 <li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
@@ -72,16 +71,18 @@ Email us at [programme@europython.eu](mailto:programme@europython.eu) to tell us
 
 ## **Q. When do ticket sales start and what are the ticket prices like?**
 
-A. Ticket sales are expected to start on **Tuesday 21 March.**
+A. Ticket sales are on sale now!
 
-We have put a lot of work in keeping the in-person ticket prices affordable. Check out our [tickets page](/tickets) for details.
+We have put a lot of work in keeping the in-person ticket prices affordable. Check out our [tickets page](/tickets) for details. We also offer [volume discount](/tickets#volume-discount) for businesses.
 
 We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community.
 
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
+
 A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is open for application until 21 May. If you need help to attend the conference, you are most welcome to apply.
 
 ## **Q. Do you provide childcare?**
+
 A: **Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout.
 
 ## **Q. Could you provide a visa support letter for my visa application?**
