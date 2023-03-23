@@ -39,7 +39,7 @@
       "sponsors": [
         { "name": "EuroPython Society",
           "url": "https://www.europython-society.org/",
-          "logo": "public/img/logos/sponsor_logos/EPS-Logo-with-Text-v3.svg"
+          "logo": "/img/logos/sponsor_logos/EPS-Logo-with-Text-v3.svg"
         }
       ]
     },
