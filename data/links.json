@@ -8,6 +8,10 @@
           "path": "/cfp"
         },
         {
+          "name": "Community Voting",
+          "path": "/voting"
+        },
+        {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
         }

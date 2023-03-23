@@ -4,30 +4,23 @@ title: Voting
 
 # Community Voting
 
-Welcome to EuroPython Community Voting! We want feedback about what YOU would like to see at EuroPython 2022. We have over 400 proposals covering many aspects of Python, and we are excited to be putting together an engaging, educational and entertaining programme.  Your feedback is an important ingredient in this refinement and curation process.
+Welcome to EuroPython Community Voting! We want feedback about what YOU would like to see at EuroPython 2023. We have around 500 proposals covering many aspects of Python, and we are excited to be putting together an engaging, educational and entertaining programme.  Your feedback is an important ingredient in this refinement and curation process.
 
 
-
-<Note style={{textAlign: "center"}}>Community Voting is Finished!</Note>
 
 <div style={{textAlign: "center"}}>
 
-Voting was available between
+Community Voting will open between
 
-Monday, 11 April 13:00:00 CEST and
+Monday, 27 March 14:00:00 CEST and
 
-Sunday, 24th April 23:59:59 [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
+Sunday, 9 April 23:59:59 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
+**Voting details will be published soon!**
 </div>
 
 
-<div style={{textAlign: "center"}}>
-The app is running in readonly mode until ~mid May, so you can still review your votes and read the proposals.
-
-[Click here to go to the app](https://voting.europython.eu)
-</div>
-
----
+<!-- ---
 
 ## Our guiding principles
 - Our EuroPython family will directly shape the conference programme.
@@ -73,4 +66,4 @@ We believe that a good conference consists of popular talks as well as new or ni
 
 **[Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup)** to stay tuned!
 
-Thank you for contributing to EuroPython! ❤️
+Thank you for contributing to EuroPython! ❤️ -->
