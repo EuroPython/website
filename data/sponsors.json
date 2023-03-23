@@ -18,7 +18,13 @@
     },
     {
       "name": "Silver",
-      "sponsors": []
+      "sponsors": [
+        { "name": "pretix",
+          "url": "https://pretix.eu/",
+          "logo": "/img/logos/sponsor_logos/pretix.svg"
+        }
+
+      ]
     },
     {
       "name": "Bronze",
