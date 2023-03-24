@@ -13,7 +13,7 @@ export const Button = ({
   return (
     <a
       className={clsx(
-        "font-extrabold text-lg px-4 py-3 border-2 bg-primary border-primary inline-block leading-4",
+        "font-extrabold text-lg px-4 py-3 border-2 bg-primary border-primary inline-block leading-4 min-w-[160px]",
         {
           "bg-secondary-darkest": secondary,
           "text-text-inverted": !secondary,
