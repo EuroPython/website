@@ -75,9 +75,9 @@ For ideas to contribute to the PyData track, take a look at PyData events: [pyda
 
 To ensure our programme reflects our diverse community, submissions go through three rounds of review and refinement before the final programme is announced:
 
-* **Community voting**  - is open to all 2015-2023 EuroPython conference ticket holders, and anyone who proposes a talk for the 2023 conference. This helps us judge both the uniqueness, niche-ness, popularity and interestingness of each proposal.
+* **[Community voting](/voting)** (27 March-02 April): is open to all 2015-2023 EuroPython conference ticket holders, and anyone who proposes a talk for the 2023 conference. This helps us judge both the uniqueness, niche-ness, popularity and interestingness of each proposal.
 
-* **Panel feedback** - a diverse group of experienced reviewers refine and provide constructive feedback on submissions within their realm of expertise. This helps us to judge the balance, quality and diversity of our programme.
+* **Panel feedback** (27 March-09 April): a diverse group of experienced reviewers refine and provide constructive feedback on submissions within their realm of expertise. This helps us to judge the balance, quality and diversity of our programme. Register your interest to become a panel reviewer [here](https://forms.gle/abeyB5pJMJKyZcS26)!
 
 * **Programme team** - appointed by the EuroPython Society, these volunteers curate the final programme based upon the results of community voting and panel feedback. They also ensure we meet editorial criteria such as diversity, depth and breadth of topics and speakers.
 
