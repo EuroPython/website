@@ -5,14 +5,21 @@ subtitle: EuroPython Call for Proposals
 # Call for Proposals
 
 <div style={{textAlign: "center",  marginBottom: 10}}>
-**EuroPython 2023 Call for Proposals (CFP) is open** from
+**EuroPython 2023 Call for Proposals (CFP) is now Closed.**
 
- **Monday, 6 March 2023** and currently extended until
+It was run between
 
- **Sunday, 26 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
+ **Monday, 6 March 2023** and **Sunday, 26 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
- <ButtonLink href="https://program.europython.eu/europython-2023/cfp">Submit your proposal now!🐍</ButtonLink>
+You can participate in the making of the programme by participating Community Voting and/or becoming a panel reviewer:
+</div>
 
+<div style={{textAlign: "center",  marginBottom: 10}}>
+ <ButtonLink href="/voting">Participate in community voting! 🐍</ButtonLink>
+</div>
+
+<div style={{textAlign: "center",  marginBottom: 10}}>
+ <ButtonLink href="https://forms.gle/abeyB5pJMJKyZcS26">Become a panel reviewer! 🐍</ButtonLink>
 </div>
 
 

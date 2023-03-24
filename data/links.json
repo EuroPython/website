@@ -4,12 +4,12 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Call for Proposals",
-          "path": "/cfp"
-        },
-        {
           "name": "Community Voting",
           "path": "/voting"
+        },
+        {
+          "name": "Call for Proposals",
+          "path": "/cfp"
         },
         {
           "name": "Speaker Mentorship",
