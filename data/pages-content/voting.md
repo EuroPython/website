@@ -4,7 +4,7 @@ title: Voting
 
 # Community Voting
 
-Welcome to EuroPython Community Voting! We want feedback about what YOU would like to see at EuroPython 2023. We have around 500 proposals covering many aspects of Python, and we are excited to be putting together an engaging, educational and entertaining programme.  Your feedback is an important ingredient in this refinement and curation process.
+Welcome to EuroPython Community Voting! We want feedback about what YOU would like to see at EuroPython 2023. We have around 550 proposals covering many aspects of Python, and we are excited to be putting together an engaging, educational and entertaining programme.  Your feedback is an important ingredient in this refinement and curation process.
 
 
 
