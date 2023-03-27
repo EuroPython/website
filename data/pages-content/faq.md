@@ -56,7 +56,7 @@ We are always keen to hear new ideas on how to enrich the programme and other ac
 
 ## **Q. When do you accept talk proposals?**
 
-A. The Call for Proposals (CFP) was run between **6-26 March 2023**. We are thrilled to have received more than 500 proposals on a wide range of topics. This record-breaking number of proposals reflected the great width of interests of our community. We are also proud to have provided support to first-time speakers via our [Speaker Mentorship Programme
+A. The Call for Proposals (CFP) was run between **6-26 March 2023**. We are thrilled to have received more than 500 proposals on a wide range of topics. This record-breaking number of proposals reflected the great width of interests of our community. We are also proud to have provided support to first-time speakers via our [Speaker Mentorship Programme](/mentorship).
 
 ## **Q. How do you review and select talks?**
 
