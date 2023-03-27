@@ -13,7 +13,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-14</b>: [Speaker Mentorship Programme Ask Me Anything Event](/mentorship#ask-me-anything-about-cfp-workshop---tuesday-14-march-2023-1800-cet)</li>
 <li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
 <li><b>2023-03-26</b>: Call for Proposals (CFP) Ends </li>
-<li><b>2023-03-27</b>: [Community Voting](/voting) starts </li>
+<li><b>2023-03-28</b>: [Community Voting](/voting) starts </li>
 </ul>
 
 <ul className="milestone-todo">

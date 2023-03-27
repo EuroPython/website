@@ -12,7 +12,7 @@ Welcome to EuroPython Community Voting! We want feedback about what YOU would li
 
 Community Voting is open between
 
-Monday, 27 March 14:00:00 CEST and
+Monday, 28 March 10:00:00 CEST and
 
 Sunday, 02 April 23:59:59 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
