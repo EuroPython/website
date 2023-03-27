@@ -12,21 +12,16 @@ As a diverse and inclusive community EuroPython offers support for potential spe
 We are looking for both mentors and mentees to be a part of the programme.
 
 <div style={{textAlign: "center", marginBottom: 8}}>
-**EuroPython 2023 Speaker Mentorship Programme will be open for applications** between
+EuroPython 2023 Speaker Mentorship Programme was open for applications between
 
- **Wednesday, 22 February 2023** and
+ Wednesday, 22 February 2023 and Sunday, 12 March 2023
 
- **Sunday, 12 March 2023** [AoE](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
+**All 37 mentees were matched with a mentor!🎉 Big thanks for everyone who participated!**
 </div>
 
-Read on to find out the three key activities of the The Speaker Mentorship Programme.
-
-<div style={{textAlign: "center", marginBottom: 8}}>
-<ButtonLink href="https://forms.gle/gjv9cGRvdLKiiBQy9">Submit by 12 March to Become a Mentor or Mentee!</ButtonLink>
-</div>
 
 ---
-## 1. One-to-One Mentorship Programme
+## 1. [CLOSED] One-to-One Mentorship Programme
 
 ### Open between 22 February - 12 March 2023
 
@@ -34,8 +29,8 @@ A mentee needing help with their proposal will be matched with an experienced me
 
 ## Mentors
 
-<div style={{textAlign: "center", marginBottom: 8}}>
-<ButtonLink href="https://forms.gle/gjv9cGRvdLKiiBQy9">Apply by 12 March to Become a Mentor!</ButtonLink>
+<div style={{textAlign: "center", marginBottom: 10}}>
+<Button>Form closed - Thank you for your contribution!</Button>
 </div>
 
 
@@ -53,20 +48,21 @@ You will also be invited to join the panel of the Webinar Workshops.
 
 ## Mentee
 
-<div style={{textAlign: "center", marginBottom: 8}}>
-<ButtonLink href="https://forms.gle/gjv9cGRvdLKiiBQy9">Apply by 12 March to Become a Mentee!</ButtonLink>
+<div style={{textAlign: "center", marginBottom: 10}}>
+<Button>Form closed - Look forward to your proposals!</Button>
 </div>
 
 If you require help contributing to EuroPython, especially if you are from an underrepresented or a marginalised group in the tech industry, you are welcome to submit your application above to become a mentee.
 
 ## 2. Workshops ##
 
-### Ask Me Anything about CFP Workshop - Tuesday, 14 March 2023, 18:00 CET
+### [COMPLETED] Ask Me Anything about CFP Workshop - Tuesday, 14 March 2023, 18:00 CET
 
-We encourage anyone who has no or little experience submitting to EuroPython's CFP to join and ask questions. Questions can range from talk ideas, what makes a good proposal to what is the selection process of the talk.
+Thank you, everyone who joined the session with your questions! You can view the recording of the session here:
 
-A recording of the session will be made available after the event.
-
+<div style={{textAlign: "center", marginBottom: 20}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HpSbrqmiSeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### First-Time Speaker Workshop - Date/Time TBA
 
