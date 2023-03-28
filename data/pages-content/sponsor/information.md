@@ -7,26 +7,25 @@ subtitle:
 
 <!-- # Deadlines -->
 # Sponsor Information
-<Note>Deadlines and specs of the deliverables will become available later. Stay tuned! If you have any questions, please reach out to the sponsorship team at sponsoring@europython.eu</Note>
 
-<!-- - [Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract:](#sponsored-content)
-  June 10
-- [Virtual Swag Page submission:](#virtual-swag-page) June 17
-- [Sponsor Logo submission:](#sponsor-logo) June 17
-- [Technical Case Study Blog Post submission:](#sponsor-blog-post) June 17
+- [Sponsored Talk | Workshop/Tutorial | Poster submission - presenter, presentation title & abstract:](#sponsored-content)
+  June 16
+- [Virtual Swag Page submission:](#virtual-swag-page) June 23
+- [Sponsor Logo submission:](#sponsor-logo) June 23
+- [Technical Case Study Blog Post submission:](#sponsor-blog-post) June 23
   (Keystone, Diamond, Platinum)
-- [Video Ads submission (with and without audio):](#video-ads) June 24
-- [Booth Customisations:](#booth-customisations) June 24
-- [Booth & Counter graphics submission:](#booth-images) June 24
-- [Tickets Registration & Assignment:](#registration) June 27
+- [Video Ads submission (with and without audio):](#video-ads) June 30
+- [Booth Customisations:](#booth-customisations) TBD
+- [Booth & Counter graphics submission:](#booth-images) TBD
+- [Tickets Registration & Assignment:](#registration) June 30
 - [Sponsor Feedback Questions submission:](#sponsor-feedback-questions) June 27
 - [Recruiting - Job Board Ad on Website submission:](#job-board-on-website) June
   27
 - [Recruiting Email submission:](#recruiting email) June 27
-- [Parcel Services](#parcel) Deadline for ordering: June 30; Deadline for
-  receiving parcel to the warehouse: July 6
+- [Parcel Services](#parcel) Deadline for ordering: TBD; Deadline for
+  receiving parcel to the warehouse: TBD
 - [Recruiting Session Presentation - presenter and slides:](#recruiting-session)
-  July 08
+  July 14
 - [Recruiting - On-site Job Board Ad submission:](#on-site-job-board) anytime
   during the conference (we'll have a white board for this)
 - [Tweet and/or Retweet. LinkedIn Reshare:](#sponsor-tweet) anytime until the
@@ -59,11 +58,11 @@ For details, please refer to the relevant sections below.
   [support@pretix.eu](mailto:support@pretix.eu) with the **Subject: Your
   order**: **_XXXX_** and amend accordingly.
 
-**_Deadline_** for registering and assigning the tickets: **_June 27_**
+**_Deadline_** for registering and assigning the tickets: **_June 30_**
 
 </details>
 
----
+<!-- ---
 
 # Exhibition
 
