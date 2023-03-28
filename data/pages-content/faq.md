@@ -12,11 +12,13 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-07</b>: [Sponsorship](/sponsor) Sign-up Starts </li>
 <li><b>2023-03-14</b>: [Speaker Mentorship Programme Ask Me Anything Event](/mentorship#ask-me-anything-about-cfp-workshop---tuesday-14-march-2023-1800-cet)</li>
 <li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
+<li><b>2023-03-26</b>: Call for Proposals (CFP) Ends </li>
+<li><b>2023-03-28</b>: [Community Voting](/voting) starts </li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-03-26</b>: Call for Proposals (CFP) Ends </li>
 <li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
+<li><b>2023-04-02</b>: Community Voting ends </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
@@ -47,20 +49,20 @@ A. The conference will feature around 20 hands-on tutorials & workshops, 120 tal
 
 To get an idea of what to expect, have a look at the [EP2022's programme.](https://ep2022.europython.eu/schedule/)
 
-To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting.
+To select talks, we ran a Call for Proposals (CFP). Talks are then curated based on the input from the community voting.
 
 We are always keen to hear new ideas on how to enrich the programme and other activities you are interested in participating during the conference. Share your thoughts with the programme team at [programme@europython.eu](mailto:programme@europython.eu).
 
 
 ## **Q. When do you accept talk proposals?**
 
-A. The Call for Proposals (CFP) will run for two weeks, plus one week extension between **6-26 March 2023**. We are thrilled to receive proposals on any topic that could be of interest to our community.
+A. The Call for Proposals (CFP) was run between **6-26 March 2023**. We are thrilled to have received more than 500 proposals on a wide range of topics. This record-breaking number of proposals reflected the great width of interests of our community. We are also proud to have provided support to first-time speakers via our [Speaker Mentorship Programme](/mentorship).
 
-Especially if you are considering becoming a **speaker for the first time**, or if you are from an underrepresented group, we strongly encourage you to send in your proposals. Our [Speaker Mentorship Programme](/mentorship) is open for applications between 22 February - 12 March. We will also have other broader support options.
+## **Q. How do you review and select talks?**
 
-If you have something in mind, there is no better time to start preparing your proposal! Please have a look at our [CFP page](/cfp) for details and we look forward to your proposals!
+A. After Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. You can find the details about our selection process [here](/cfp#selection-process)
 
-If you have questions, you are most welcome to reach out to our programme team at [programme@europython.eu](mailto:programme@europython.eu).
+You are welcome to participate [community voting](/voting) and/or submit your interest to become a reviewer [here](https://forms.gle/abeyB5pJMJKyZcS26)!
 
 ## **Q. What support do you give to speakers?**
 A. Accepted speakers are eligible for a free Conference Ticket; accepted workshop & tutorial organisers are eligible for a free Combined Ticket (see details of the [ticket types](/tickets#ticket-types)). In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.

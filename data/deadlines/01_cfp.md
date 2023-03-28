@@ -1,9 +1,7 @@
 ---
-title: Call for Proposals
-subtitle: 6-26 March
-url: /cfp
+title: Community Voting
+subtitle: Open till 02 April
+url: /voting
 image: /images/cards/cfp1.jpg
 ---
-There is no EuroPython without you. Our colourful and cosmopolitan community
-only comes alive with your contributions. We invite you to step up, step in and
-participate in our conference.
+We want feedback about what YOU would like to see at EuroPython 2023. Take part in community voting and be an important part of the curation process of the programme!
