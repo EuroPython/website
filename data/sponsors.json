@@ -14,7 +14,13 @@
     },
     {
       "name": "Gold",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "numberly",
+          "url": "https://numberly.com/en/",
+          "logo": "/img/logos/sponsor_logos/numberly.svg"
+        }
+      ]
     },
     {
       "name": "Silver",
@@ -24,7 +30,6 @@
           "url": "https://pretix.eu/",
           "logo": "/img/logos/sponsor_logos/pretix.svg"
         }
-
       ]
     },
     {
