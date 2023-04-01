@@ -54,7 +54,7 @@ export default function IndexPage({
   venue: Venue;
 }) {
   return (
-    <Layout>
+    <Layout headerInverted={true}>
       <Fullbleed>
         <Hero />
       </Fullbleed>
@@ -72,9 +72,7 @@ export default function IndexPage({
         ))}
       </CardContainer>
 
-      <Separator />
-
-      <div className="px-6">
+      <div className="mt-40 px-6">
         <HeroWithCTA
           ctaTitle="Support EuroPython:"
           ctaButton={
@@ -93,15 +91,11 @@ export default function IndexPage({
         </HeroWithCTA>
       </div>
 
-      <Separator />
-
-      <div className="px-6">
+      <div className="mt-40 mb-40 px-6">
         <HeroVenue title={venue.data.title}>
           <MDXRemote {...venue.source} />
         </HeroVenue>
       </div>
-
-      <Separator />
 
       <Sponsors />
     </Layout>

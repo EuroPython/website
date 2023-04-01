@@ -47,7 +47,7 @@ export default function SpeakersPage({ speakers }: { speakers: Speaker[] }) {
             <div id={`letter-${letter}`}>
               <Title level={2}>{letter}</Title>
 
-              <ul className="list-disc pl-4">
+              <ul className="pl-4">
                 {speakers.map((speaker) => (
                   <li key={speaker.code} className="mb-1">
                     <a className="underline hover:text-primary-hover" href={`/speaker/${speaker.slug}`}>{speaker.name}</a>

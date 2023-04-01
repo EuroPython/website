@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { ButtonLink } from "components/button-link";
 
 import { Logo } from "components/logo";
 import { EPSLogo } from "components/logo/eps-logo";
@@ -38,7 +39,7 @@ const HeaderButton = ({
 const HeaderLogo = () => {
   return (
     <a href="/">
-      <Logo variant="small" className="w-11 h-auto mr-4 block md:hidden" />
+      <Logo className="w-11 h-auto mr-4 block md:hidden" />
       <Logo className="h-auto hidden md:block w-full pr-3 lg:pr-8" />
     </a>
   );
@@ -58,15 +59,15 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
       <div className="ml-auto flex items-center -space-x-1">
         {!mobile ? (
           <>
-            <HeaderButton href="https://www.europython-society.org/coc/">
+            <ButtonLink href="https://www.europython-society.org/coc/">
               <abbr title="Code of Conduct" className="no-underline lg:hidden">
                 CoC
               </abbr>
               <span className="hidden lg:inline">Code of Conduct</span>
-            </HeaderButton>
-            {/* <HeaderButton variant="live" href="/live">
+            </ButtonLink>
+            {/* <ButtonLink variant="live" href="/live">
               Live 📹
-            </HeaderButton> */}
+            </ButtonLink> */}
           </>
         ) : null}
 
@@ -80,7 +81,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
   );
 };
 
-export const Header = () => (
+export const Header = ({ inverted = false }: { inverted?: boolean }) => (
   <header className="p-6 flex items-center relative z-20">
     <input
       type="checkbox"
@@ -90,11 +91,10 @@ export const Header = () => (
       aria-hidden="true"
     />
 
-    {/* <HeaderLogo /> */}
-    <HeaderLogoEPS />
+    <HeaderLogo />
 
     <nav className="mx-auto hidden md:block">
-      <NavItems items={links.header} />
+      <NavItems items={links.header} inverted={inverted} />
     </nav>
 
     <HeaderActions />

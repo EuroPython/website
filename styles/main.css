@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #00b8f0;
-  --color-primary-hover: #e5e5ff;
-  --color-primary-active: #e5e5ff;
-  --color-secondary: #2b4cae;
+  --color-primary: #0409e7;
+  --color-primary-hover: #3c3ffa;
+  --color-primary-active: #3c3ffa;
+  --color-secondary: #ff8b9d;
   --color-secondary-dark: #203c90;
   --color-secondary-darkest: #001c13;
   --color-secondary-light: #ecf7ea;
-  --color-text: #fff;
-  --color-text-inverted: #000;
-  --color-body-background: #030934;
+  --color-text: #000058;
+  --color-text-inverted: #fff;
+  --color-body-background: #f2e3d2;
   --color-hero-primary: #4b5cba;
   --color-hero-secondary: #b5682b;
 }
@@ -86,4 +86,24 @@ table.finaid-timeline td {
 div.finaid-sponsor {
   width: 50%;
   margin: 0 auto 2rem auto;
+}
+
+.list-disc li {
+  list-style: none;
+  position: relative;
+}
+
+ul.list-disc li::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  background-image: url(/img/list-item.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
 }
