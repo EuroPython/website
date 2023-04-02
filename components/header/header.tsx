@@ -20,8 +20,8 @@ const HeaderButton = ({
   return (
     <a
       className={clsx(
-        "border-text border-2 py-3 px-4 font-extrabold text-lg whitespace-nowrap",
-        "cursor-pointer hover:bg-primary-hover",
+        "font-bold text-lg px-4 py-4 bg-secondary rounded-[60px] inline-block leading-4",
+        "hover:bg-primary-hover hover:text-text-inverted",
         {
           "bg-text": variant === "menu",
           "bg-primary": variant === "standard",
@@ -36,11 +36,14 @@ const HeaderButton = ({
   );
 };
 
-const HeaderLogo = () => {
+const HeaderLogo = ({ inverted = false }: { inverted?: boolean }) => {
   return (
     <a href="/">
-      <Logo className="w-11 h-auto mr-4 block md:hidden" />
-      <Logo className="h-auto hidden md:block w-full pr-3 lg:pr-8" />
+      <Logo className="w-11 h-auto mr-4 block md:hidden" inverted={inverted} />
+      <Logo
+        className="h-auto hidden md:block w-full pr-3 lg:pr-8"
+        inverted={inverted}
+      />
     </a>
   );
 };
@@ -56,7 +59,7 @@ const HeaderLogoEPS = () => {
 const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
   return (
     <>
-      <div className="ml-auto flex items-center -space-x-1">
+      <div className="ml-auto flex items-center space-x-4">
         {!mobile ? (
           <>
             <ButtonLink href="https://www.europython-society.org/coc/">
@@ -71,7 +74,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
           </>
         ) : null}
 
-        <label htmlFor="nav_toggle" className="flex md:hidden">
+        <label htmlFor="nav_toggle" className="flex lg:hidden">
           <HeaderButton variant="menu">
             {mobile ? "Close Menu" : "Menu"}
           </HeaderButton>
@@ -91,18 +94,17 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
       aria-hidden="true"
     />
 
-    <HeaderLogo />
+    <HeaderLogo inverted={inverted} />
 
-    <nav className="mx-auto hidden md:block">
+    <nav className="mx-auto hidden lg:block">
       <NavItems items={links.header} inverted={inverted} />
     </nav>
 
     <HeaderActions />
 
-    <div className="fixed bg-secondary-darkest top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block md:peer-checked:hidden z-50 p-6">
+    <div className="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block lg:peer-checked:hidden z-50 p-6">
       <div className="flex items-center">
-        {/* <HeaderLogo /> */}
-        <HeaderLogoEPS />
+        <HeaderLogo />
         <HeaderActions mobile />
       </div>
 
