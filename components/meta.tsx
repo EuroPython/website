@@ -44,6 +44,7 @@ export const Meta = ({
       <meta name="author" content="EuroPython" />
 
       <link rel="icon" href="/epslogo.png" type="image/png" />
+      <link rel="stylesheet" href="https://use.typekit.net/rhp8qny.css"></link>
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
