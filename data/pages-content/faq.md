@@ -14,11 +14,11 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-21</b>: [Ticket Sales](/tickets) Start</li>
 <li><b>2023-03-26</b>: Call for Proposals (CFP) Ends </li>
 <li><b>2023-03-28</b>: [Community Voting](/voting) starts </li>
+<li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
-<li><b>2023-04-02</b>: Community Voting ends </li>
+<li><b>2023-04-14</b>: Community Voting ends </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
@@ -61,8 +61,6 @@ A. The Call for Proposals (CFP) was run between **6-26 March 2023**. We are thri
 ## **Q. How do you review and select talks?**
 
 A. After Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. You can find the details about our selection process [here](/cfp#selection-process)
-
-You are welcome to participate [community voting](/voting) and/or submit your interest to become a reviewer [here](https://forms.gle/abeyB5pJMJKyZcS26)!
 
 ## **Q. What support do you give to speakers?**
 A. Accepted speakers are eligible for a free Conference Ticket; accepted workshop & tutorial organisers are eligible for a free Combined Ticket (see details of the [ticket types](/tickets#ticket-types)). In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.

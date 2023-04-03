@@ -10,11 +10,13 @@ Welcome to EuroPython Community Voting! We want feedback about what YOU would li
 
 <div style={{textAlign: "center"}}>
 
-Community Voting is open between
+**Community Voting is Extended**:
+
+It is open between
 
 Monday, 28 March 10:00:00 CEST and
 
-Sunday, 02 April 23:59:59 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
+Friday, 14 April 23:59:59 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
 <ButtonLink href="https://voting.europython.eu">Take me to vote now!</ButtonLink>
 </div>
