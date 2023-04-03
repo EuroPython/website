@@ -55,7 +55,7 @@ module.exports = {
       fontFamily: {
         system: ["system-ui", "sans-serif"],
         title: [
-          "Neue Haas Grotesk Display Pro",
+          "neue-haas-grotesk-display",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
