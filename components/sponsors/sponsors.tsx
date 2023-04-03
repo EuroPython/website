@@ -151,7 +151,7 @@ export const Sponsors = () => {
               </div>
             </div>
 
-            <Graphic className="ml-auto h-[250px]" />
+            {/* <Graphic className="ml-auto h-[250px]" /> */}
           </div>
           {topTier.sponsors.length > 0 && <SponsorTier tier={topTier} />}
         </div>
