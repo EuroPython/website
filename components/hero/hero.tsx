@@ -450,7 +450,7 @@ const Year = () => {
       viewBox="0 0 1370 513"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute left-1/2 -translate-x-1/2 w-[120%] h-auto top-full translate-y-[-75%] max-w-[1600px]"
+      className="absolute left-1/2 -translate-x-1/2 w-[120%] h-auto top-full translate-y-[-70%] max-w-[1600px]"
     >
       <path
         d="M287.597 461.935L285.836 513H294.053L300.509 454.891L326.334 244.174L318.117 243C318.117 243 308.726 304.63 304.031 334.565C290.531 422.609 274.097 450.783 211.883 451.957C199.557 451.957 177.841 452.543 177.841 452.543H50.4769C56.3462 264.717 306.965 264.13 306.965 131.478C306.965 80.4131 265.293 45.1957 186.645 45.1957C106.235 45.1957 66.911 89.8043 49.89 102.717L48.7162 0.586949H40.4991L26.4128 258.848H34.6298C44.0207 160.826 97.4313 55.7609 181.362 55.7609C223.034 55.7609 257.663 83.9348 257.663 135C257.663 271.174 -0.585931 319.891 0.000998935 462.522L287.597 461.935Z"
@@ -473,9 +473,14 @@ const Year = () => {
 };
 
 export const Hero = () => (
-  <div className="bg-primary py-[250px] top-[-210px] relative">
+  <div className="bg-primary pt-[250px] pb-[180px] top-[-210px] relative">
     <div className="max-w-4xl lg:max-w-6xl mx-auto mb-16 w-full relative z-10 px-4">
       <HeroMain />
+
+      <div className="sr-only">
+        EuroPython Prague &amp; Remote 2023
+        <p>17-23 July 2023</p>
+      </div>
     </div>
     <Year />
   </div>
