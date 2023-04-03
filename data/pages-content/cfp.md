@@ -10,18 +10,14 @@ subtitle: EuroPython Call for Proposals
 It was run between
 
  **Monday, 6 March 2023** and **Sunday, 26 March 2023** [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
-
-You can participate in the making of the programme by participating Community Voting and/or becoming a panel reviewer:
 </div>
 
-<div style={{textAlign: "center",  marginBottom: 10}}>
- <ButtonLink href="/voting">Participate in community voting! 🐍</ButtonLink>
-</div>
+<div style={{textAlign: "center",  marginBottom: 12}}>
+While panel review is ongoing, you can be a part of the programme making by participating in community voting:
 
-<div style={{textAlign: "center",  marginBottom: 10}}>
- <ButtonLink href="https://forms.gle/abeyB5pJMJKyZcS26">Become a panel reviewer! 🐍</ButtonLink>
+ <ButtonLink href="/voting">Cast your votes by 14 April 🐍</ButtonLink>
 </div>
-
+---
 
 EuroPython reflects the colourful and diverse backgrounds, cultures and interests of our community, so you (yes, you!) should go for it: **propose something and represent!**
 
@@ -75,9 +71,9 @@ For ideas to contribute to the PyData track, take a look at PyData events: [pyda
 
 To ensure our programme reflects our diverse community, submissions go through three rounds of review and refinement before the final programme is announced:
 
-* **[Community voting](/voting)** (28 March-02 April): is open to all 2015-2023 EuroPython conference ticket holders, and anyone who proposes a talk for the 2023 conference. This helps us judge both the uniqueness, niche-ness, popularity and interestingness of each proposal.
+* **[Community voting](/voting)** (28 March-14 April): is open to all 2015-2023 EuroPython conference ticket holders, and anyone who proposes a talk for the 2023 conference. This helps us judge both the uniqueness, niche-ness, popularity and interestingness of each proposal.
 
-* **Panel feedback** (28 March-09 April): a diverse group of experienced reviewers refine and provide constructive feedback on submissions within their realm of expertise. This helps us to judge the balance, quality and diversity of our programme. Register your interest to become a panel reviewer [here](https://forms.gle/abeyB5pJMJKyZcS26)!
+* **Panel feedback** (28 March-14 April): a diverse group of experienced reviewers refine and provide constructive feedback on submissions within their realm of expertise. This helps us to judge the balance, quality and diversity of our programme.
 
 * **Programme team** - appointed by the EuroPython Society, these volunteers curate the final programme based upon the results of community voting and panel feedback. They also ensure we meet editorial criteria such as diversity, depth and breadth of topics and speakers.
 

@@ -1,6 +1,6 @@
 ---
 title: Community Voting
-subtitle: Open till 02 April
+subtitle: Open till 14 April
 url: /voting
 image: /images/cards/cfp1.jpg
 ---
