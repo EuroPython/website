@@ -18,11 +18,15 @@
       ]
     },
     {
-      "name": "Info",
+      "name": "Info & Support",
       "items": [
         {
           "name": "FAQ",
           "path": "/faq"
+        },
+        {
+          "name": "Financial aid",
+          "path": "/finaid"
         },
         {
           "name": "Visa Support Letter",
@@ -40,6 +44,16 @@
       ]
     },
     {
+      "name": "Events",
+      "items": [
+
+        {
+          "name": "WASM Summit",
+          "path": "/wasm"
+        }
+      ]
+    },
+    {
       "name": "Sponsorship",
       "items": [
         {
@@ -49,19 +63,6 @@
         {
           "name": "Sponsor Information",
           "path": "/sponsor/information"
-        }
-      ]
-    },
-    {
-      "name": "Support",
-      "items": [
-        {
-          "name": "Financial aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Visa Support Letter",
-          "path": "/visa"
         }
       ]
     },
