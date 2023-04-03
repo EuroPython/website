@@ -29,7 +29,9 @@ You need to have a valid EuroPython ticket to participate. Purchase a EuroPython
 The event is limited to 40 participants. If there is a topic you would like to present, please indicate it in the form and fill it early. Time slots are of 30min at most (10 min of presentation + 20 min for questions/discussion).
 
 <div style={{textAlign: "center", marginBottom: 12}}>
-<ButtonWithTitle title="Be part of the WASM summit" text="Register your interest now!" href="https://forms.gle/Yf1P4DXPaLFUEgYG7" />
+<font size="+2.5">Be Part of the WASM Summit</font>
+<br></br>
+<ButtonLink href="https://forms.gle/Yf1P4DXPaLFUEgYG7"> Register your interest now! </ButtonLink>
 </div>
 
 We will contact you with more details closer to the event.
