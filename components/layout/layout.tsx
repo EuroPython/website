@@ -5,10 +5,7 @@ import { Meta } from "../meta";
 
 const LayoutContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <main
-      id="main-content"
-      className="layout-wrapper"
-    >
+    <main id="main-content" className="layout-wrapper">
       {children}
     </main>
   );
@@ -19,11 +16,13 @@ export const Layout = ({
   path,
   title,
   socialCardUrl,
+  headerInverted = false,
 }: {
   children: ReactNode;
   path?: string;
   title?: string;
   socialCardUrl?: string;
+  headerInverted?: boolean;
 }) => {
   return (
     <>
@@ -32,7 +31,7 @@ export const Layout = ({
       <a href="#main-content" className="sr-only">
         Skip to main content
       </a>
-      <Header />
+      <Header inverted={headerInverted} />
       <div className="h-12"></div>
 
       <LayoutContainer>{children}</LayoutContainer>

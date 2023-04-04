@@ -9,6 +9,7 @@ import { Note } from "./note";
 import clsx from "clsx";
 import { Separator } from "./separator/separator";
 import { Title } from "./typography/title";
+import { Link } from "./link/link";
 
 export const components = {
   h1: ({ children, className, ...props }: any) => {
@@ -57,7 +58,7 @@ export const components = {
     <p className="mb-4 text-xl leading-snug">{children}</p>
   ),
   ul: ({ children }: any) => (
-    <ul className="mb-4 list-disc pl-4">{children}</ul>
+    <ul className="mb-4 list-disc pl-6">{children}</ul>
   ),
   ol: ({ children }: any) => (
     <ol className="mb-4 list-decimal pl-4">{children}</ol>
@@ -68,13 +69,9 @@ export const components = {
     </li>
   ),
   a: ({ children, href, ...props }: any) => (
-    <a
-      className="text-primary hover:text-primary-hover underline"
-      href={href}
-      {...props}
-    >
+    <Link href={href} {...props}>
       {children}
-    </a>
+    </Link>
   ),
   strong: ({ children }: any) => (
     <strong className="font-bold">{children}</strong>

@@ -14,7 +14,7 @@ export const ButtonLink = ({
   return (
     <a
       className={clsx(
-        "font-extrabold text-lg px-4 py-3 border-2 bg-primary border-primary inline-block leading-4",
+        "font-bold text-lg px-4 py-4 bg-secondary rounded-[60px] inline-block leading-4",
         "hover:bg-primary-hover hover:text-text-inverted",
         {
           "bg-secondary-darkest": secondary,

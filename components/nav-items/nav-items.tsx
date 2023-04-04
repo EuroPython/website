@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 type Item = {
   name: string;
   path?: string;
@@ -6,31 +8,38 @@ type Item = {
 
 type Props = {
   items: Item[];
+  inverted?: boolean;
 };
 
-export const NavItems = ({ items }: Props) => {
+export const NavItems = ({ items, inverted = false }: Props) => {
   return (
-    <ul className="md:grid grid-cols-3">
+    <ul className="flex flex-col lg:flex-row">
       {items.map((item) => (
         <li
           key={item.name}
-          className="border-b-2 border-secondary-dark md:border-0 group"
+          className={clsx(
+            "border-b border-border-secondary-dark lg:border-0 group",
+            {
+              "text-white": inverted,
+              "text-primary": !inverted,
+            }
+          )}
         >
           <a
             href={item.path}
-            className="font-bold inline-block w-full text-3xl md:text-base p-5 text-center md:text-left md:border-l-2 md:mt-4 md:p-2 md:px-5 md:hover:bg-secondary"
+            className="font-bold inline-block w-full text-3xl lg:text-base p-5 text-center lg:text-left lg:mt-4 lg:p-2 lg:px-5 lg:group-hover:bg-secondary"
           >
             {item.name}
             {item.path?.startsWith("http") ? <span> ↗</span> : null}
           </a>
 
           {item.items ? (
-            <ul className="mb-3 md:hidden md:group-hover:block md:absolute z-50 md:bg-secondary-darkest md:border-l-2">
+            <ul className="mb-3 lg:hidden lg:group-hover:block lg:absolute z-50 lg:bg-secondary">
               {item.items.map((subItem) => (
                 <li key={subItem.name}>
                   <a
                     href={subItem.path || "#"}
-                    className="bg-secondary-dark block w-full font-bold text-center md:text-left mb-[2px] p-2 md:px-5 md:hover:bg-secondary"
+                    className="bg-secondary text-white block w-full font-bold text-center lg:text-left mb-[2px] p-2 lg:px-5 lg:hover:bg-secondary-light"
                   >
                     {subItem.name}
                     {subItem.path?.startsWith("http") ? <span> ↗</span> : null}

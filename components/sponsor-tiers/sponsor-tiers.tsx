@@ -76,7 +76,7 @@ const SponsorTier = ({
       : price;
 
   return (
-    <div className="bg-text text-text-inverted rounded-2xl p-6 relative">
+    <div className="bg-white text-black rounded-2xl p-6 relative">
       <div className="h-[160px]">
         <Ribbon
           className={clsx("absolute right-6 -top-6", {
