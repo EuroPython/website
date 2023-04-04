@@ -34,7 +34,13 @@
     },
     {
       "name": "Bronze",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "energy & meteo systems",
+          "url": "https://www.energymeteo.com/about_us/jobs.php",
+          "logo": "img/logos/sponsor_logos/emsys-logo-orange-black-rgb.svg"
+        }
+      ]
     },
     {
       "name": "Patron",
