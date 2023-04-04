@@ -7,6 +7,7 @@ subtitle:
 # WebAssembly Summit
 - **When**: 18 July 2023
 - **Where**: Prague Congress Centre (PCC), Room TBC
+- **Who can join**: Anyone with a valid in-person EuroPython 2023 ticket - Conference, Tutorial or Combined (see [ticket types](tickets#ticket-types) for details).
 
 This summit aims to bring together maintainers and users of the Python with WebAssembly, to discuss the state of this ecosystem, existing challenges and ongoing work.
 
@@ -24,7 +25,7 @@ This summit aims to bring together maintainers and users of the Python with WebA
 
 ## Registration
 
-You need to have a valid EuroPython ticket to participate. Purchase a EuroPython ticket [here](/ticket), if you haven't already.
+You need to have a valid EuroPython in-person ticket ([Conference, Tutorial or Combined](tickets#ticket-types)) to participate. Purchase a EuroPython ticket [here](/tickets), if you haven't already.
 
 The event is limited to 40 participants. If there is a topic you would like to present, please indicate it in the form and fill it early. Time slots are of 30min at most (10 min of presentation + 20 min for questions/discussion).
 
