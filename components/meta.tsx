@@ -18,7 +18,7 @@ export const Meta = ({
   //   imageUrl = socialCardUrl;
   // }
 
-  const imageUrl = "https://ep2023.europython.eu/social-cards/default.png";
+  const imageUrl = "https://ep2023.europython.eu/social-cards/default.png?ep2023";
 
   return (
     <Head>
