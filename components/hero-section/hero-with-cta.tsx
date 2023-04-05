@@ -15,7 +15,7 @@ export const HeroWithCTA = ({
       <div>{children}</div>
 
       <div className="flex items-end justify-center">
-        <div className="relative -top-12 text-center">
+        <div className="mt-12 md:mt-0 md:relative -top-12 text-center">
           <Title level={3} className="font-bold text-3xl mb-4">
             {ctaTitle}
           </Title>
