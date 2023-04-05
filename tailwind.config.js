@@ -27,6 +27,8 @@ module.exports = {
       primary: "var(--color-primary)",
       "primary-hover": "var(--color-primary-hover)",
       "primary-active": "var(--color-primary-active)",
+      button: "var(--color-button)",
+      "button-hover": "var(--color-button-hover)",
 
       secondary: "var(--color-secondary)",
       "secondary-dark": "var(--color-secondary-dark)",
