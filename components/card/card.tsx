@@ -16,7 +16,7 @@ export const Card = ({ title, subtitle, content, url, image }: CardProps) => (
         width={600}
         height={375}
         alt=""
-        className="rounded-2xl aspect-[3/2]"
+        className="rounded-2xl aspect-[3/2] w-full"
       />
     </div>
     <h3 className="text-3xl font-bold mt-6 mb-4 text-primary">{title}</h3>
