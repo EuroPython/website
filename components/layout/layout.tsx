@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ReactNode } from "react";
 import { Footer } from "../footer";
 import { Header } from "../header";
@@ -32,7 +33,11 @@ export const Layout = ({
         Skip to main content
       </a>
       <Header inverted={headerInverted} />
-      <div className="h-12"></div>
+      <div
+        className={clsx("h-12", {
+          "bg-primary": headerInverted,
+        })}
+      ></div>
 
       <LayoutContainer>{children}</LayoutContainer>
 

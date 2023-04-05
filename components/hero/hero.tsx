@@ -473,15 +473,17 @@ const Year = () => {
 };
 
 export const Hero = () => (
-  <div className="bg-primary pt-[250px] pb-[180px] top-[-210px] relative">
-    <div className="max-w-4xl lg:max-w-6xl mx-auto mb-16 w-full relative z-10 px-4">
-      <HeroMain />
+  <div className="bg-body-background overflow-hidden">
+    <div className="bg-primary top-[-210px] relative pt-[250px] pb-[180px]">
+      <div className="max-w-4xl lg:max-w-6xl mx-auto mb-16 w-full relative z-10 px-4">
+        <HeroMain />
 
-      <div className="sr-only">
-        EuroPython Prague &amp; Remote 2023
-        <p>17-23 July 2023</p>
+        <div className="sr-only">
+          EuroPython Prague &amp; Remote 2023
+          <p>17-23 July 2023</p>
+        </div>
       </div>
+      <Year />
     </div>
-    <Year />
   </div>
 );
