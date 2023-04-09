@@ -1,5 +1,4 @@
 // @ts-check
-/** @type {import('next').NextConfig} */
 
 const live = require("./data/live.json");
 
@@ -30,8 +29,12 @@ const securityHeaders = [
   },
 ];
 
-const nextConfig = {
+/** @type {import('next').NextConfig} */
+module.exports = {
   reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
   async redirects() {
     return [
       {
@@ -56,5 +59,3 @@ const nextConfig = {
     ];
   },
 };
-
-module.exports = nextConfig;
