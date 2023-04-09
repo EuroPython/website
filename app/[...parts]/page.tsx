@@ -1,17 +1,12 @@
 import matter from "gray-matter";
 import { promises as fs } from "fs";
 import path from "path";
-import glob from "glob";
 
 import { serialize } from "lib/mdx-utils";
 import { MDXRemote } from "components/mdx-remote/mdx-remote";
 
-export default async function Page({
-  params,
-}: {
-  params: { parts: string[] };
-}) {
-  const pagePath = params.parts.join("/");
+const getPage = async (parts: string[]) => {
+  const pagePath = parts.join("/");
 
   const markdownPath = path.join(
     process.cwd(),
@@ -22,9 +17,30 @@ export default async function Page({
   const { content, data } = matter(page);
   const mdxSource = await serialize(content.toString());
 
-  //   let title = title
-  //     ? `${title} - EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote`
-  //     : "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote";
+  return {
+    mdxSource,
+    data,
+  };
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { parts: string[] };
+}) {
+  const { data } = await getPage(params.parts);
+
+  return {
+    title: data.title,
+  };
+}
+
+export default async function Page({
+  params,
+}: {
+  params: { parts: string[] };
+}) {
+  const { mdxSource } = await getPage(params.parts);
 
   return (
     <main id="main-content" className="px-6">

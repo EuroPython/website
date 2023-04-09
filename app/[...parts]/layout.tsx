@@ -3,16 +3,10 @@ import { Footer } from "components/footer";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title:
-    "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
-  description: "",
-  alternates: [
-    {
-      type: "application/rss+xml",
-      title: "EuroPython Blog RSS Feed",
-      href: "http://blog.europython.eu/rss",
-    },
-  ],
+  title: {
+    template:
+      "%s | EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+  },
 };
 
 const LayoutContainer = ({ children }: { children: ReactNode }) => {
