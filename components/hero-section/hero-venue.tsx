@@ -2,6 +2,7 @@ import { ButtonLink } from "components/button-link";
 import { Link } from "components/link/link";
 import { Prose } from "components/prose/prose";
 import { Title } from "components/typography/title";
+import Image from "next/image";
 
 export const HeroVenue = ({
   title,
@@ -13,7 +14,13 @@ export const HeroVenue = ({
   return (
     <article className="lg:grid gap-12 grid-cols-2">
       <div className="relative hidden lg:block">
-        <img src="/img/venue-hero.jpg" className="w-full h-auto" alt="" />
+        <Image
+          src="/img/venue-hero.jpg"
+          className="w-full h-auto"
+          alt=""
+          width={1200}
+          height={900}
+        />
       </div>
       <div className="flex flex-col justify-center">
         <Title level={2}>{title}</Title>
