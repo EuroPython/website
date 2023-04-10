@@ -11,6 +11,11 @@
           "name": "Kraken Technologies LTD",
           "url": "https://octopusenergy.group/",
           "logo": "/img/logos/sponsor_logos/KrakenV2_stacked_Dark_adobe_express.svg"
+        },
+        {
+          "name": "Microsoft",
+          "url": "https://learn.microsoft.com/en-us/azure/developer/python/",
+          "logo": "/img/logos/sponsor_logos/microsoft.svg"
         }
       ]
     },
