@@ -5,9 +5,7 @@ subtitle:
 ---
 ## What Is Trans\*Code? ##
 
-[Trans\*Code](https://www.trans.tech/) is an international hack event series focused on building connections and community while exploring the tech side of transgender issues and opportunities. Trans\*Code events are informal hackdays where participants can explore their ideas in collaboration with like-minded people. Coders, designers, activists, visionaries of all sorts, and community members not currently working in technology are all welcome and encouraged to participate.
-
-Trans\*Code is:
+**Trans\*Code** is an event:
 * Where you can connect and share ideas with trans and non-binary folks as well as allies and co-conspirators;
 * Where trans/NB people are not just included but centered;
 * Where you can explore that pet idea for a tech project centered around your experiences;
@@ -21,6 +19,8 @@ Trans\*Code is:
 <div style={{textAlign: "center"}}>
 *🌈 A safe space to be with people like ourselves and geek out*
 </div>
+
+[Trans\*Code](https://www.trans.tech/) is an international hack event series focused on building connections and community while exploring the tech side of transgender issues and opportunities. Trans\*Code events are informal hackdays where participants can explore their ideas in collaboration with like-minded people. Coders, designers, activists, visionaries of all sorts, and community members not currently working in technology are all welcome and encouraged to participate.
 
 Trans\*Code events are similar to hackathons, but with some key differences:
 * Events are only one day long. So you don’t need to take off an entire weekend;
