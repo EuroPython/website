@@ -109,3 +109,20 @@ ul.list-disc li::before {
   top: 50%;
   transform: translateY(-50%);
 }
+
+p.tick::before {
+  content: "\2705  ";
+  padding: 0.5rem;
+}
+
+p.cross::before {
+  content: "\274C  ";
+  padding: 0.5rem;
+}
+
+p.tick::after, p.cross::after {
+  content: "\23EC";
+  display: inline-block;
+  font-size: 1.3em;
+  margin-left: 0.4em;
+}
