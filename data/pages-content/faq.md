@@ -19,6 +19,7 @@ subtitle: Frequently Asked Questions about EuroPython
 
 <ul className="milestone-todo">
 <li><b>2023-04-14</b>: Community Voting ends </li>
+<li><b>2023-06-01</b>: First-Time Speaker's Workshop </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
