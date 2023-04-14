@@ -5,6 +5,10 @@
       "sponsors": []
     },
     {
+      "name": "Diamond",
+      "sponsors": []
+    },
+    {
       "name": "Platinum",
       "sponsors": [
         {
@@ -18,10 +22,6 @@
           "logo": "/img/logos/sponsor_logos/microsoft.svg"
         }
       ]
-    },
-    {
-      "name": "Diamond",
-      "sponsors": []
     },
     {
       "name": "Gold",
@@ -55,7 +55,13 @@
     },
     {
       "name": "Patron",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "Hudson River Trading",
+          "url": "https://www.hudsonrivertrading.com/",
+          "logo": "img/logos/sponsor_logos/hudsonrivertrading.svg"
+        }
+      ]
     },
     {
       "name": "Financial Aid",
