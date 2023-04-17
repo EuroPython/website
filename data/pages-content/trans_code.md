@@ -2,6 +2,8 @@
 title: Trans*Code
 subtitle:
   This year, in collaboration with the trans/NB community in Czechia, Trans*Code will be back on 18 July to continue building the tradition after its joyous return at EuroPython 2022 Dublin after the pandemic.
+  After nearly 3 years of virus hiatus, Trans*Code will be returning! We are delighted that EuroPython will be hosting a Trans*Code event in Dublin in July!
+social_card: trans_code.png
 ---
 ## What Is Trans\*Code? ##
 

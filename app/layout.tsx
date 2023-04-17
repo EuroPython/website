@@ -1,6 +1,7 @@
 import "../styles/main.css";
 
 export const metadata = {
+  metadataBase: new URL("https://ep2023.europython.eu/"),
   title:
     "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
   description: "",

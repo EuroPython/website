@@ -1,10 +1,36 @@
+import path from "path";
 import { ImageResponse } from "next/server";
+import { promises as fs } from "fs";
 
-export const size = { width: 1200, height: 600 };
-export const alt = "...";
-export const contentType = "image/png";
+export const getImage = async ({
+  page,
+}: {
+  page: {
+    data: {
+      social_card?: string;
+      title: string;
+      subtitle: string;
+    };
+  };
+}) => {
+  if (page.data.social_card) {
+    // read image and return it
 
-export default function og() {
+    const image = await fs.readFile(
+      // images are in the public folder at the root of the project
+      path.join(process.cwd(), "public", page.data.social_card)
+    );
+
+    return new Response(image, {
+      headers: {
+        "Content-Type": "image/png",
+      },
+    });
+  }
+
+  const title = page.data.title;
+  const description = page.data.subtitle || "";
+
   return new ImageResponse(
     (
       <div
@@ -467,16 +493,11 @@ export default function og() {
               marginBottom: 0,
             }}
           >
-            title
+            {title}
           </h1>
-          <p style={{ fontSize: 30, marginTop: 0 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-            convallis sapien, eget consequat ipsum. Nullam ut elit euismod,
-            consectetur elit vitae, ullamcorper nulla. Fusce neque sit amet quam
-            consequat congue.
-          </p>
+          <p style={{ fontSize: 30, marginTop: 0 }}>{description}</p>
         </div>
       </div>
     )
   );
-}
+};

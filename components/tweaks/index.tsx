@@ -36,8 +36,6 @@ const Tweaks = () => {
         expanded: false,
       });
 
-      console.log(section);
-
       const params = Object.fromEntries(
         colorVariables.map((variable) => {
           return [
