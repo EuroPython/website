@@ -21,7 +21,7 @@ subtitle:
 - [Sponsor Feedback Questions submission:](#sponsor-feedback-questions) June 27
 - [Recruiting - Job Board Ad on Website submission:](#job-board-on-website) June
   27
-- [Recruiting Email submission:](#recruiting email) June 27
+- [Recruiting Email submission:](#recruiting-email) June 27
 - [Parcel Services](#parcel) Deadline for ordering: TBD; Deadline for
   receiving parcel to the warehouse: TBD
 - [Recruiting Session Presentation - presenter and slides:](#recruiting-session)

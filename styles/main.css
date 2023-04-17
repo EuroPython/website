@@ -87,3 +87,7 @@ div.finaid-sponsor {
   width: 50%;
   margin: 0 auto 2rem auto;
 }
+
+summary h2::after {
+  content: "👇";
+}
