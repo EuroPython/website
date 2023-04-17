@@ -18,7 +18,7 @@ export const getImage = async ({
 
     const image = await fs.readFile(
       // images are in the public folder at the root of the project
-      path.join(process.cwd(), "public", page.data.social_card)
+      path.join(process.cwd(), "social-cards", page.data.social_card)
     );
 
     return new Response(image, {
