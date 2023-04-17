@@ -18,15 +18,15 @@
       ]
     },
     {
-      "name": "Info",
+      "name": "Events",
       "items": [
         {
-          "name": "FAQ",
-          "path": "/faq"
+          "name": "Trans*Code",
+          "path": "/trans_code"
         },
         {
-          "name": "Visa Support Letter",
-          "path": "/visa"
+          "name": "WASM Summit",
+          "path": "/wasm"
         }
       ]
     },
@@ -53,8 +53,12 @@
       ]
     },
     {
-      "name": "Support",
+      "name": "Info & Support",
       "items": [
+        {
+          "name": "FAQ",
+          "path": "/faq"
+        },
         {
           "name": "Financial aid",
           "path": "/finaid"

@@ -18,7 +18,7 @@ export const Meta = ({
   //   imageUrl = socialCardUrl;
   // }
 
-  const imageUrl = "https://ep2023.europython.eu/social-cards/default.png";
+  const imageUrl = "https://ep2023.europython.eu/social-cards/default.png?ep2023";
 
   return (
     <Head>
@@ -43,7 +43,8 @@ export const Meta = ({
       <meta name="description" content="" />
       <meta name="author" content="EuroPython" />
 
-      <link rel="icon" href="/epslogo.png" type="image/png" />
+      <link rel="icon" href="/favicon.png" type="image/png" />
+      <link rel="stylesheet" href="https://use.typekit.net/rhp8qny.css"></link>
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />

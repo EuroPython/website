@@ -9,7 +9,12 @@ module.exports = {
   theme: {
     colors: {
       black: "#000",
+      white: "#fff",
       text: "var(--color-text)",
+      transparent: "transparent",
+      current: "currentColor",
+      inherit: "inherit",
+
       "text-inverted": "var(--color-text-inverted)",
 
       "body-inverted": "#001c13",
@@ -22,6 +27,8 @@ module.exports = {
       primary: "var(--color-primary)",
       "primary-hover": "var(--color-primary-hover)",
       "primary-active": "var(--color-primary-active)",
+      button: "var(--color-button)",
+      "button-hover": "var(--color-button-hover)",
 
       secondary: "var(--color-secondary)",
       "secondary-dark": "var(--color-secondary-dark)",
@@ -49,6 +56,19 @@ module.exports = {
       },
       fontFamily: {
         system: ["system-ui", "sans-serif"],
+        title: [
+          "neue-haas-grotesk-display",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+        ],
         sans: [
           "-apple-system",
           "BlinkMacSystemFont",
@@ -66,7 +86,7 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme("colors.text"),
-            '--tw-prose-headings': theme('colors.white'),
+            "--tw-prose-headings": theme("colors.white"),
           },
         },
       }),

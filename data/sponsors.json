@@ -5,16 +5,33 @@
       "sponsors": []
     },
     {
-      "name": "Platinum",
-      "sponsors": []
-    },
-    {
       "name": "Diamond",
       "sponsors": []
     },
     {
+      "name": "Platinum",
+      "sponsors": [
+        {
+          "name": "Kraken Technologies LTD",
+          "url": "https://octopusenergy.group/",
+          "logo": "/img/logos/sponsor_logos/KrakenV2_stacked_Dark_adobe_express.svg"
+        },
+        {
+          "name": "Microsoft",
+          "url": "https://learn.microsoft.com/en-us/azure/developer/python/",
+          "logo": "/img/logos/sponsor_logos/microsoft.svg"
+        }
+      ]
+    },
+    {
       "name": "Gold",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "numberly",
+          "url": "https://numberly.com/en/",
+          "logo": "/img/logos/sponsor_logos/numberly.svg"
+        }
+      ]
     },
     {
       "name": "Silver",
@@ -24,16 +41,27 @@
           "url": "https://pretix.eu/",
           "logo": "/img/logos/sponsor_logos/pretix.svg"
         }
-
       ]
     },
     {
       "name": "Bronze",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "energy & meteo systems",
+          "url": "https://www.energymeteo.com/about_us/jobs.php",
+          "logo": "img/logos/sponsor_logos/emsys-logo-orange-black-rgb.svg"
+        }
+      ]
     },
     {
       "name": "Patron",
-      "sponsors": []
+      "sponsors": [
+        {
+          "name": "Hudson River Trading",
+          "url": "https://www.hudsonrivertrading.com/",
+          "logo": "img/logos/sponsor_logos/hudsonrivertrading.svg"
+        }
+      ]
     },
     {
       "name": "Financial Aid",

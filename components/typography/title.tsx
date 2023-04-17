@@ -17,7 +17,7 @@ export const Title = ({
   return (
     <Tag
       className={clsx(
-        "relative font-bold mb-[1em] [&>a]:text-text [&>a]:no-underline",
+        "relative font-title text-primary font-bold mb-[0.6em] [&>a]:text-text [&>a]:border-0 [&>a]:text-inherit",
         {
           "text-7xl": level === 1,
           "text-5xl": level === 2,

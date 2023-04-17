@@ -1,17 +1,23 @@
-module.exports = {
+import type { StorybookConfig } from "@storybook/nextjs";
+
+const config: StorybookConfig = {
   stories: [
     "../components/**/*.stories.mdx",
     "../components/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
-    "storybook-addon-next",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
-  framework: "@storybook/react",
+  framework: {
+    name: "@storybook/nextjs",
+    options: {},
+  },
   staticDirs: ["../public"],
-  core: {
-    builder: "@storybook/builder-webpack5",
+  docs: {
+    autodocs: true,
   },
 };
+
+export default config;

@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="250"
-   height="107.42188"
-   viewBox="0 0 66.145833 28.422037"
+   width="179.57294"
+   height="77.160248"
+   viewBox="0 0 47.512006 20.415314"
    version="1.1"
    id="svg848"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="pretix.svg"
+   sodipodi:docname="pretix1.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,11 +29,11 @@
      fit-margin-bottom="0"
      units="px"
      inkscape:zoom="0.68684764"
-     inkscape:cx="295.55317"
-     inkscape:cy="331.95135"
+     inkscape:cx="225.66868"
+     inkscape:cy="301.37688"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
-     inkscape:window-x="3840"
+     inkscape:window-x="3852"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -43,10 +43,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-23.395263,-55.513842)">
+     transform="translate(-42.029088,-63.520564)">
     <g
        id="g857"
-       transform="matrix(0.51676432,0,0,0.51676432,23.395263,55.513842)">
+       transform="matrix(0.37118756,0,0,0.37118756,42.029088,63.520564)">
       <path
          class="cls-1"
          d="m 36.29,23.21 c -0.35,0 -0.61,0.06 -0.83,0.13 v 8.29 c 0.19,0.06 0.45,0.13 0.77,0.13 1.73,0 2.46,-1.44 2.46,-4.26 0,-2.82 -0.64,-4.29 -2.4,-4.29 z"
