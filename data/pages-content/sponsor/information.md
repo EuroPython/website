@@ -268,7 +268,7 @@ poster PDF: **2023-06-19**
   <summary><h3 id="job-board-on-website">Job Board Ad on Website</h3></summary>
 
 All sponsors with sponsorship levels Bronze and above are eligible for posting a
-job ad on our [Job-board page](https://ep2023.europython.eu/job-board/) . If you
+job ad on our [Jobs board page](/jobs-board/) . If you
 are interested in submitting an ad, please send the job ad to
 [EuroPython 2023 Sponsor Assets Submission Form](https://forms.gle/9DPV2oyE5VY2hY3u6).
 We will then place it on the website after review.
