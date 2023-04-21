@@ -87,10 +87,10 @@ the more prominent ones, such as Keystone, Diamond and Platinum.
 
   Sponsors of Silver and above will all be assigned a booth, ranging from 6-56 sqm depending on the package.
 
-** Please refer to the
+**Please refer to the
 [EuroPython 2023 - Exhibit Booths](https://drive.google.com/file/d/17A45zHpjwrvZxKkf8-e9yUsHSqV1p74E/view?usp=sharing)
 for mockups and what is included in your booth, as part of your sponsorship
-package. **
+package.**
 </details>
 
 <!-- <details>
@@ -160,11 +160,9 @@ Graphics should be submitted directly to Exposale, as specified below.
 
 <h5>Graphics Submission</h5>
 
-**Submission Channel**: You can upload the files to any filesharing platform of your choice, e.g.
-_WeTransfer_ or _YouSendit_.
-Email the downloading link to *Linda Škarková* from Exposale: linda.skarkova@exposale.cz
+**Submission Channel**: You can upload the files to_WeTransfer_ and share it with *Linda Škarková* from Exposale: linda.skarkova@exposale.cz
 
-**Deadline** for submitting Booth & Counter Graphics: **2022-06-19**
+**Deadline** for submitting Booth & Counter Graphics: **2023-06-19**
 
 </details>
 
@@ -177,7 +175,7 @@ For all add-on orders, please fill in the
 [EuroPython 2023- Booth Order Forms.pdf](https://drive.google.com/file/d/1aBhs579EhtqFsP8GVwDu5cgFL5NqXKSJ/view?usp=sharing)
 and send it to Linda at Exposale directly.
 
-**Deadline** for ordering booth customisation and add-ons: **2022-06-19. A 25%
+**Deadline** for ordering booth customisation and add-ons: **2023-06-19. A 25%
 surcharge will apply afterwards.**
 
 **Submission Channel**: Send the order form to Linda Škarková at Exposale directly: linda.skarkova@exposale.cz
