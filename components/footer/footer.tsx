@@ -6,7 +6,7 @@ export const Footer = () => (
   <Fullbleed className="bg-primary text-white">
     <footer className="max-w-4xl lg:max-w-6xl mx-auto py-16 lg:grid grid-cols-2 px-6">
       <div>
-        <LogoExtended className="mb-12" />
+        <LogoExtended className="mb-12 max-w-full" />
 
         <nav className="mb-12">
           <h6 className="font-bold text-xl mb-6">Quicklinks</h6>
