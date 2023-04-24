@@ -40,6 +40,11 @@
           "name": "pretix",
           "url": "https://pretix.eu/",
           "logo": "/img/logos/sponsor_logos/pretix.svg"
+        },
+        {
+          "name": "The Mobility House",
+          "url": "https://www.mobilityhouse.com/",
+          "logo": "/img/logos/sponsor_logos/TMH_Logo_Black_Vertical.svg"
         }
       ]
     },
