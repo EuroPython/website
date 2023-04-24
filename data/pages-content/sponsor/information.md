@@ -56,7 +56,7 @@ Please refer to the relevant sections below for details. Thank you again for sup
   [support@pretix.eu](mailto:support@pretix.eu) with the Subject: **Your
   order**: **_XXXX_** and amend accordingly.
 
-**Deadline** for registering and assigning the tickets: **2023-06-19**
+**Deadline** for registering and assigning the tickets: **19 June, 2023**
 
 </details>
 
@@ -68,7 +68,7 @@ Please refer to the relevant sections below for details. Thank you again for sup
   <summary><h3>Exhibition Schedule</h3></summary>
 
 **Exhibit Days**: during the three main conference days: **Wednesday to Friday,
-19-21 July 2023**
+19-21 July, 2023**
 
 **Exhibit Hours**: 9:00-17:30
 
@@ -91,7 +91,7 @@ package.**
 <!-- <details>
   <summary><h3>Booth Build and Teardown</h3></summary>
 
-- Build Time:   FIXME: Tuesday 8:00-16:00; sponsors can enter between 16:00-18:00
+- Build Time:   Tuesday 8:00-16:00; sponsors can enter between 16:00-18:00
 - Teardown Time: Friday 17:30; nobody allowed after the teardown starts.
 
 </details> -->
@@ -111,7 +111,7 @@ entire back wall of your booth. **It is highly recommended that you submit a
 company specific custom graphic for your booth. The pricing is already included
 in your package.**
 
-<!-- _Note: FIXME: these wall banners with your graphic can be taken down afterwards for
+<!-- _Note: these wall banners with your graphic can be taken down afterwards for
 future reuse._ -->
 
 **Counter graphic**: All booths include one counter of size 1000 mm l. x 500mm w.  1000mm h. **It is highly recommended that you
@@ -155,7 +155,7 @@ Graphics should be submitted directly to Exposale, as specified below.
 
 <h5>Graphics Submission</h5>
 
-**Deadline** for submitting Booth & Counter Graphics: **2023-06-19**
+**Deadline** for submitting Booth & Counter Graphics: **19 June, 2023**
 
 **Submission Channel**: Please upload the files to [WeTransfer](https://wetransfer.com/) and share it with Linda Škarková from Exposale: linda.skarkova@exposale.cz
 
@@ -167,7 +167,7 @@ Graphics should be submitted directly to Exposale, as specified below.
 
 On top of [what is already included](https://drive.google.com/file/d/17A45zHpjwrvZxKkf8-e9yUsHSqV1p74E/view?usp=sharing) in your booth as part of the package, you can order add-ons, such as TV sets and furniture for your booth.
 
-**Deadline** for ordering booth customisation and add-ons: **2023-06-19. A 25%
+**Deadline** for ordering booth customisation and add-ons: **19 June, 2023. A 25%
 surcharge will apply afterwards.**
 
 **Submission Channel**: For all add-on orders, please fill in the
@@ -256,7 +256,7 @@ You can check out previous years’ lineup for inspiration:
 
 
 **Deadline** for informing us of the presenter, presentation title & abstract or
-poster PDF: **2023-06-19**
+poster PDF: **19 June, 2023**
 
 **Submission Channel**: [sponsoring@europython.eu](sponsoring@europython.eu)
 
@@ -279,7 +279,7 @@ address. For an example of how this looks like, please check out the
 [2022 Job Board](https://ep2022.europython.eu/jobs-board).
 
 **Deadline** for sending in the text for Job Board Ad on Website:
-**2023-06-26**.
+**26 June, 2023**.
 
 **Submission Channel**: [EuroPython 2023 Sponsor Assets Submission Form](https://forms.gle/9DPV2oyE5VY2hY3u6)
 
@@ -291,7 +291,7 @@ address. For an example of how this looks like, please check out the
 For all sponsors with sponsorship levels silver and above, you are given the opportunity to hightlight one of your job ads on our EuroPython blog. You can choose the one you have submitted for the job board on the website or submit a separate one.
 
 **Deadline** for or sending in the text for the Recruiting Ad on EuroPython Blog:
-**2023-06-26**
+**26 June, 2023**
 
 **Submission Channel**:
 [EuroPython 2023 Sponsor Assets Submission Form](https://forms.gle/9DPV2oyE5VY2hY3u6)
@@ -333,7 +333,7 @@ You can also check out the
 [2022 Recruiting Session](https://www.youtube.com/watch?v=Xebwkv3hHEE) to get an idea how it
 looked like in our last in-person conference.
 
-**Deadline** for submitting Recruiting Session Presentation: **2023-07-14**.
+**Deadline** for submitting Recruiting Session Presentation: **14 July, 2023**.
 
 **Submission Channel**: [sponsoring@europython.eu](sponsoring@europython.eu)
 
@@ -352,7 +352,7 @@ sponsor.
 If you fail to submit your logo at the time of signup or before the specified deadline, your
 logo might not be included in some printing materials.
 
-**Deadline** for submitting sponsor logo: **2023-06-12**
+**Deadline** for submitting sponsor logo: **12 June, 2023**
 
 **Submission Channel**: when you sign up as a sponsor or email
 [sponsoring@europython.eu](sponsoring@europython.eu) later.
@@ -393,7 +393,7 @@ Feel free to tie in any talk/special event you are organising at our conference
 at the end. After you've sent in the draft, we will forward it to our
 Communications Team for editing.
 
-**Deadline** for sending the Blog Post text and picture: **2023-06-19**
+**Deadline** for sending the Blog Post text and picture: **19 June, 2023**
 
 **Submission Channel**:
 [sponsoring@europython.eu](sponsoring@europython.eu)
@@ -418,7 +418,7 @@ brochure to your preferred file hosting service (Dropbox, Google Drive,
 OneDrive, WeTransfer, etc) and only submit the link to the above form.
 
 **Deadline** for sending in all the materials featured in the Virtual Swag Page:
-**2023-06-26**
+**26 June, 2023**
 
 **Submission Channel**:
 [EuroPython 2023 Sponsor Assets Submission Form](https://forms.gle/9DPV2oyE5VY2hY3u6)
@@ -450,7 +450,7 @@ size issue, please upload everything you need to send us to a file hosting
 service (e.g. Dropbox, Google Drive, WeTransfer, OneDrive, etc) and only send us
 the download link.
 
-**Deadline** for sending in the links to all the Video Ads: **2023-06-26**
+**Deadline** for sending in the links to all the Video Ads: **26 June, 2023**
 
 **Submission Channel**:
 [EuroPython 2023 Sponsor Assets Submission Form](https://forms.gle/9DPV2oyE5VY2hY3u6)
@@ -469,7 +469,7 @@ Please submit 1-3 questions, which could be multiple choice, free text or rating
 questions (1 to 5). The form will be left open for around 1-2 months after the
 conference. We will send them to you afterwards.
 
-**Deadline** for submitting the Sponsor Feedback Questions: **2023-06-26**
+**Deadline** for submitting the Sponsor Feedback Questions: **26 June, 2023**
 
 **Submission Channel**:
 [EuroPython 2023 Sponsor Assets Submission Form](https://forms.gle/9DPV2oyE5VY2hY3u6)
