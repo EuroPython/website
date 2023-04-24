@@ -8,27 +8,34 @@ subtitle:
 <!-- # Deadlines -->
 # Sponsor Information
 
+
+### Due Dates of Deliverables
+<h5> Monday, June 12</h5>
 - [Sponsored Talk | Workshop/Tutorial | Poster Submission:](#sponsored-content)
-  June 12
-- [Sponsor Logo Submission:](#sponsor-logo) June 12 (all sponsors)
-- [Tickets Registration & Assignment:](#registration) June 19 (all sponsors)
-- [Booth Customisations:](#booth-customisations) June 19 (Silver and above)
-- [Booth & Counter Graphics Submission:](#booth-images) June 19 (Silver and above)
-- [Technical Case Study Blog Post Submission:](#sponsor-blog-post) June 19
-  (Keystone, Diamond, Platinum)
-- [Virtual Swag Page Submission:](#virtual-swag-page) June 26 (Silver and above)
-- [Video Ads submission (with & without Audio):](#video-ads) June 26 (Gold and above)
-- [Sponsor Feedback Questions Submission:](#sponsor-feedback-questions) June 26 (Keystone, Diamond)
-- [Recruiting Ad on Website Submission:](#job-board-on-website) June 26 (Bronze and above)
-- [Recruiting Ad on EuroPython Blog Submission:](#recruiting-blog) June 26 (Silver and above)
+- [Sponsor Logo Submission:](#sponsor-logo) (all sponsors)
+
+<h5> Monday, June 19</h5>
+- [Tickets Registration & Assignment:](#registration) (all sponsors)
+- [Booth Customisations:](#booth-customisations) (Keystone, Diamond, Platinum, Gold, Silver)
+- [Booth & Counter Graphics Submission:](#booth-images) (Keystone, Diamond, Platinum, Gold, Silver)
+- [Technical Case Study Blog Post Submission:](#sponsor-blog-post) (Keystone, Diamond, Platinum)
+
+<h5> Monday, June 26</h5>
+- [Virtual Swag Page Submission:](#virtual-swag-page)  (Keystone, Diamond, Platinum, Gold, Silver)
+- [Video Ads submission (with & without Audio):](#video-ads) (Keystone, Diamond, Platinum, Gold)
+- [Sponsor Feedback Questions Submission:](#sponsor-feedback-questions) (Keystone, Diamond)
+- [Recruiting Ad on Website Submission:](#job-board-on-website) (Keystone, Diamond, Platinum, Gold, Silver, Bronze)
+- [Recruiting Ad on EuroPython Blog Submission:](#recruiting-blog) (Keystone, Diamond, Platinum, Gold, Silver)
 <!-- - [Parcel Services](#parcel) Deadline for ordering: TBD; Deadline for
   receiving parcel to the warehouse: TBD -->
 
-- [Recruiting Session Presentation Slides:](#recruiting-session) July 14 (Gold and above)
+<h5> Friday, July 14</h5>
+- [Recruiting Session Presentation Slides:](#recruiting-session) (Keystone, Diamond, Platinum, Gold)
+
+<h5> During the Conference</h5>
 - [Recruiting - On-site Job Board Ad submission:](#on-site-job-board) anytime
   during the conference (we'll have a white board for this)
-- [Tweet and/or Retweet. LinkedIn Reshare:](#sponsor-tweet) anytime till the
-  end of the conference; please give us enough lead time to schedule them
+- [Tweet and/or Retweet. LinkedIn Reshare:](#sponsor-tweet) anytime during the conference; please give us enough lead time to schedule them
 - [Participation in Daily Prize Draw Announcements:](#prize-draw) before noon of
   each conference day (Keystone, Diamond, Platinum)
 
@@ -36,14 +43,16 @@ Please note that the above are **hard deadlines**. We cannot accept submissions
 after the listed dates and will not issue refunds in case the deadlines are not
 met.
 
-Please refer to the relevant sections below for details. Thank you again for supporting EuroPython!
+Please refer to the relevant sections below for details.
+
+Thank you again for supporting EuroPython! 🐍
 
 ---
 
 # Registration
 
 <details>
-  <summary><h3>Ticket Registration & Assignment Process</h3></summary>
+  <summary><h4>Ticket Registration & Assignment Process</h4></summary>
 
 - **Purchase all the complimentary / discounted tickets in bulk** by using the
   voucher links sent to you. They will be sent out to the sponsor
@@ -65,7 +74,7 @@ Please refer to the relevant sections below for details. Thank you again for sup
 
 
 <details>
-  <summary><h3>Exhibition Schedule</h3></summary>
+  <summary><h4>Exhibition Schedule</h4></summary>
 
 **Exhibit Days**: during the three main conference days: **Wednesday to Friday,
 19-21 July, 2023**
@@ -78,7 +87,7 @@ the more prominent ones, such as Keystone, Diamond and Platinum.
 </details>
 
 <details>
-  <summary><h3>Exhibit Booths</h3></summary>
+  <summary><h4>Exhibit Booths</h4></summary>
 
   Sponsors of Silver and above will all be assigned a booth, ranging from 6-56 sqm depending on the package.
 
@@ -89,7 +98,7 @@ package.**
 </details>
 
 <!-- <details>
-  <summary><h3>Booth Build and Teardown</h3></summary>
+  <summary><h4>Booth Build and Teardown</h4></summary>
 
 - Build Time:   Tuesday 8:00-16:00; sponsors can enter between 16:00-18:00
 - Teardown Time: Friday 17:30; nobody allowed after the teardown starts.
@@ -97,14 +106,14 @@ package.**
 </details> -->
 
 <details>
-  <summary><h3>Booth Builder Contact</h3></summary>
+  <summary><h4>Booth Builder Contact</h4></summary>
 
   We have contracted [Exposale](https://www.exposale.eu/) to set up and manage the booths. You can reach out to [Linda Škarková](mailto:linda.skarkova@exposale.cz) with your booth related questions
 
 </details>
 
 <details>
-  <summary><h3 id="booth-images">Booth & Counter Graphic</h3></summary>
+  <summary><h4 id="booth-images">Booth & Counter Graphic</h4></summary>
 
 **Booth back wall graphic**: All booths include a wall graphic that covers the
 entire back wall of your booth. **It is highly recommended that you submit a
@@ -120,11 +129,11 @@ submit a company specific custom graphic for the counter.**
 Should you choose not to submit your own graphic, a default EuroPython Society
 one will be provided.
 
-<h4>Graphic Submission Guide</h4>
+<h5>Graphic Submission Guide</h5>
 
 Graphics should be submitted directly to Exposale, as specified below.
 
-<h5>Booth Graphic Sizes:</h5>
+<h6>Booth Graphic Sizes:</h6>
 
 - **Gold & Silver Booth Graphics**: 3000 mm w. x 2500 mm h. + 10 mm bleeds
 
@@ -134,10 +143,10 @@ Graphics should be submitted directly to Exposale, as specified below.
 
 - **Keystone Booth Graphics**: please ask
 
-<h5>Info Counter Graphic Size:</h5>
+<h6>Info Counter Graphic Size:</h6>
 - 950 mm w. x 960 mm h. + 10 mm bleeds
 
-<h5>Graphics Specifications:</h5>
+<h6>Graphics Specifications:</h6>
 
 - **Accepted file type**: standard print PDF; vector images are strongly preferred.
 
@@ -153,7 +162,7 @@ Graphics should be submitted directly to Exposale, as specified below.
 
 - **Colour Space**: use/send CMYK colour space only.
 
-<h5>Graphics Submission</h5>
+<h6>Graphics Submission</h6>
 
 **Deadline** for submitting Booth & Counter Graphics: **19 June, 2023**
 
@@ -163,7 +172,7 @@ Graphics should be submitted directly to Exposale, as specified below.
 </details>
 
 <details>
-  <summary><h3 id="booth-customisations">Booth Customisation and Add-ons</h3></summary>
+  <summary><h4 id="booth-customisations">Booth Customisation and Add-ons</h4></summary>
 
 On top of [what is already included](https://drive.google.com/file/d/17A45zHpjwrvZxKkf8-e9yUsHSqV1p74E/view?usp=sharing) in your booth as part of the package, you can order add-ons, such as TV sets and furniture for your booth.
 
@@ -176,7 +185,7 @@ surcharge will apply afterwards.**
 </details>
 
 <!-- <details>
-<summary><h3 id="parcel">Parcel Delivery & Gifts</h3></summary>
+<summary><h4 id="parcel">Parcel Delivery & Gifts</h4></summary>
 
 We aim to actively reduce the carbon footprint of the EuroPython conference
 series. Throughout the planning of the much anticipated EuroPython Dublin, we
@@ -214,7 +223,7 @@ the loop.
 </details> -->
 
 <details>
-  <summary><h3>Leads Collection</h3></summary>
+  <summary><h4>Leads Collection</h4></summary>
 
 We don't offer any specific feature for lead collection. You are welcome to talk
 to attendees and ask for their information and consent to be contacted. You can
@@ -237,7 +246,7 @@ at all times.
 # Sponsored Content
 
 <details>
-  <summary><h3>Talks | Workshops/Tutorials | Posters</h3></summary>
+  <summary><h4>Talks | Workshops/Tutorials | Posters</h4></summary>
 
 As part of your sponsorship package, it might include a sponsored talk,
 workshop/tutorial or poster session. You can find the details for each:
@@ -265,7 +274,7 @@ poster PDF: **19 June, 2023**
 # Recruiting
 
 <details>
-  <summary><h3 id="job-board-on-website">Job Board Ad on Website</h3></summary>
+  <summary><h4 id="job-board-on-website">Job Board Ad on Website</h4></summary>
 
 All sponsors with sponsorship levels Bronze and above are eligible for posting a
 job ad on our [Jobs board page](/jobs-board/) . If you
@@ -286,7 +295,7 @@ address. For an example of how this looks like, please check out the
 </details>
 
 <details>
-  <summary><h3 id="recruiting-blog">Recruiting Ad on EuroPython Blog</h3></summary>
+  <summary><h4 id="recruiting-blog">Recruiting Ad on EuroPython Blog</h4></summary>
 
 For all sponsors with sponsorship levels silver and above, you are given the opportunity to hightlight one of your job ads on our EuroPython blog. You can choose the one you have submitted for the job board on the website or submit a separate one.
 
@@ -299,7 +308,7 @@ For all sponsors with sponsorship levels silver and above, you are given the opp
 </details>
 
 <details>
-<summary><h3 id="on-site-job-board">On-site Job Board</h3></summary>
+<summary><h4 id="on-site-job-board">On-site Job Board</h4></summary>
 
 For your recruiting ad on the job-board in the venue, you can bring along a printed
 ad and pin it on the whiteboard yourself.
@@ -307,7 +316,7 @@ ad and pin it on the whiteboard yourself.
 </details>
 
 <details>
-  <summary><h3 id="recruiting-session">Recruiting session</h3></summary>
+  <summary><h4 id="recruiting-session">Recruiting session</h4></summary>
 
 The 45 min recruiting session will take place during one of the Conference Days
 (17-19 July). The exact details will be confirmed at a later date along with the
@@ -342,7 +351,7 @@ looked like in our last in-person conference.
 # Sponsor Promo
 
 <details>
-  <summary><h3 id="sponsor-logo">Sponsor Logo</h3></summary>
+  <summary><h4 id="sponsor-logo">Sponsor Logo</h4></summary>
 
 Your company's logo will be put together in various promotional materials, both
 in digital and print media. You should have already been asked to submit your
@@ -359,7 +368,7 @@ logo might not be included in some printing materials.
 
 </details>
 <details>
-  <summary><h3 id="sponsor-blog-post">Technical Study Blog Post</h3></summary>
+  <summary><h4 id="sponsor-blog-post">Technical Study Blog Post</h4></summary>
 
 For Platinum, Diamond and Keystone Level sponsors, we will run blog posts
 highlighting the sponsor. The Communications team can help you craft a technical
@@ -401,7 +410,7 @@ Communications Team for editing.
 </details>
 
 <details>
-  <summary><h3 id="virtual-swag-page">Virtual Swag Page</h3></summary>
+  <summary><h4 id="virtual-swag-page">Virtual Swag Page</h4></summary>
 
 Sponsors of Silver and above can be featured on our Virtual Swag Page of the
 website. We will list the page on our website as a swag page. If you have
@@ -426,7 +435,7 @@ OneDrive, WeTransfer, etc) and only submit the link to the above form.
 </details>
 
 <details>
-  <summary><h3 id="video-ads">Video Ads</h3></summary>
+  <summary><h4 id="video-ads">Video Ads</h4></summary>
 
 These are the two type of video ads we request from you:
 
@@ -458,7 +467,7 @@ the download link.
 </details>
 
 <details>
-  <summary><h3 id="sponsor-feedback-questions">Sponsor Feedback Questions</h3></summary>
+  <summary><h4 id="sponsor-feedback-questions">Sponsor Feedback Questions</h4></summary>
 
 Keystone and Diamond level sponsors may request adding up to 3 questions to our
 feedback form which we will send to attendees near the end of the conference.
@@ -477,7 +486,7 @@ conference. We will send them to you afterwards.
 </details>
 
 <details>
-  <summary><h3>Three Emails to Attendees (opt-in)</h3></summary>
+  <summary><h4>Three Emails to Attendees (opt-in)</h4></summary>
 
 Keystone sponsor is eligible to draft three emails of your choice and have the
 organisers send them on your behalf to attendees who have opted to receive
@@ -496,7 +505,7 @@ during the conference days.
 </details>
 
 <details>
-  <summary><h3 id="sponsor-tweet">Sponsor Retweets & Tweet</h3></summary>
+  <summary><h4 id="sponsor-tweet">Sponsor Retweets & Tweet</h4></summary>
 
 All sponsors of Bronze and above can get a single retweet of one of your tweets
 to the followers of our
@@ -529,7 +538,7 @@ during the conference days.
 </details>
 
 <details>
-  <summary><h3>LinkedIn Reshare</h3></summary>
+  <summary><h4>LinkedIn Reshare</h4></summary>
 
 Sponsor of Keystone, Diamond and Platinum get a single reshare of one of your
 posts to the subscriber of EuroPython’s LinkedIn group. We normally do not
@@ -551,7 +560,7 @@ conference days.
 </details>
 
 <details>
-  <summary><h3 id="prize-draw">Participation in Daily Prize Draw Announcements</h3></summary>
+  <summary><h4 id="prize-draw">Participation in Daily Prize Draw Announcements</h4></summary>
 
 For Platinum, Diamond and Keystone Level sponsors, you are eligible to
 participate in daily prize draw. Simply email the details before noon of the day

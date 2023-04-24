@@ -90,7 +90,7 @@ div.finaid-sponsor {
   margin: 0 auto 2rem auto;
 }
 
-summary h3::after {
+summary h4::after {
   content: "👇";
 }
 
