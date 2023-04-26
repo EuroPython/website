@@ -79,7 +79,9 @@ Thank you again for supporting EuroPython! 🐍
 **Exhibit Days**: during the three main conference days: **Wednesday to Friday,
 19-21 July, 2023**
 
-**Exhibit Hours**: 9:00-17:30
+**Exhibit Hours**:
+- Wednesday & Thursday (19-20 July): 9:00-17:00
+- Friday (21 July): 09:00 - 16:00
 
 All booths should be staffed at least during the official breaks. It is highly
 recommended that they will be staffed throughout the opening hours, especially
@@ -97,13 +99,13 @@ for mockups and what is included in your booth, as part of your sponsorship
 package.**
 </details>
 
-<!-- <details>
+<details>
   <summary><h4>Booth Build and Teardown</h4></summary>
 
-- Build Time:   Tuesday 8:00-16:00; sponsors can enter between 16:00-18:00
-- Teardown Time: Friday 17:30; nobody allowed after the teardown starts.
+- Build Time: Tuesday 18 July. We hope to allow entrance after build on Tuesday. But if the build is delayed, sponsors are welcome to come in on Wednesday at 08:00.
+- Teardown Time: Friday 16:00; nobody allowed after the teardown starts.
 
-</details> -->
+</details>
 
 <details>
   <summary><h4>Booth Builder Contact</h4></summary>
@@ -120,8 +122,8 @@ entire back wall of your booth. **It is highly recommended that you submit a
 company specific custom graphic for your booth. The pricing is already included
 in your package.**
 
-<!-- _Note: these wall banners with your graphic can be taken down afterwards for
-future reuse._ -->
+_Note: these wall banners with your graphic can be taken down afterwards for
+future reuse._
 
 **Counter graphic**: All booths include one counter of size 1000 mm l. x 500mm w.  1000mm h. **It is highly recommended that you
 submit a company specific custom graphic for the counter.**
@@ -201,7 +203,7 @@ Shipping and customs for your goods are handled by
 **Contacts**:
 
 
-- TBD - TBD@TBD), +TBD (mobile)
+- Martin ULIČNÝ - martin.+420 242 405 160, +TBD (mobile)
 
 Here are shipping information provided by DB Schenker:
 
