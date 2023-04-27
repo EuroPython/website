@@ -30,6 +30,11 @@
           "name": "numberly",
           "url": "https://numberly.com/en/",
           "logo": "/img/logos/sponsor_logos/numberly.svg"
+        },
+        {
+          "name": "google cloud",
+          "url": "https://cloud.google.com/",
+          "logo": "/img/logos/sponsor_logos/googlecloud.svg"
         }
       ]
     },
