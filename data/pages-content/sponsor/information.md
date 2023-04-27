@@ -71,7 +71,11 @@ Thank you again for supporting EuroPython! 🐍
 
 
 # Exhibition
+We have compiled all exhibition related information below.
 
+We provide a lockable counter to all exhibitors and advise everyone to store valuable goods in the locker overnight, or when the booth is unstaffed, just to have the peace of mind. EuroPython organisers are not responsible for any lost items.
+
+The EuroPython Society will take out public liability insurance for the event but are not responsible for any damages caused by the sponsors in the exhibit area or goods ordered from the booth builder. We encourage you to take out separate insurance when possible.
 
 <details>
   <summary><h4>Exhibition Schedule</h4></summary>
