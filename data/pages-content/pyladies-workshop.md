@@ -5,7 +5,7 @@ Our mission is to promote, educate and advance a diverse Python community throug
 ## About Workshop 
 Are you a woman or a girl interested in programming but unsure where to begin? Don't worry, we have the perfect workshop for you, designed to be welcoming and accessible to complete beginners!
 
-With the support of a friendly instructor, you'll create your very own version of the classic Snake video game, reminiscent of those on older Nokia mobile phones. You'll get hands-on experience writing code, learning fundamental programming concepts, and feeling the satisfaction of a computer finally obeying your commands.
+With the support of experienced mentors, you'll create your very own version of the classic Snake video game, reminiscent of those on older Nokia mobile phones. You'll get hands-on experience writing code, learning fundamental programming concepts, and feeling the satisfaction of a computer finally obeying your commands.
 
 If the project seems impractical, fear not! The main goal is to teach you basic programming principles that you can later apply to various fields, such as web application development, data analysis, machine learning, robotics, or system tool design.
 
@@ -13,7 +13,7 @@ This workshop is specifically tailored for total beginners. There's no need for 
 
 The workshop will be conducted in English and is completely free. However, space is limited, so be sure to register through the pyladies.cz website.
 
-If this introduction to programming sparks your interest, you can further explore the world of coding with one of the PyLadies spring beginner courses, starting shortly after the workshop.
+If this introduction to programming sparks your interest, you can further explore the world of coding with one of the PyLadies autumn beginner courses, starting shortly after the workshop.
 
 ## Workshop @ EuroPython 
 
