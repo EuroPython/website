@@ -35,6 +35,11 @@
           "name": "google cloud",
           "url": "https://cloud.google.com/",
           "logo": "/img/logos/sponsor_logos/googlecloud.svg"
+        },
+        {
+          "name": "arm",
+          "url": "https://www.arm.com/",
+          "logo": "/img/logos/sponsor_logos/arm.svg"
         }
       ]
     },
