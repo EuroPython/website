@@ -27,6 +27,10 @@
         {
           "name": "WASM Summit",
           "path": "/wasm"
+        },
+        {
+          "name": "PyLadies Snake Workshop",
+          "path": "/pyladies-workshop"
         }
       ]
     },
