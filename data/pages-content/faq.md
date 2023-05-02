@@ -15,10 +15,10 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-26</b>: Call for Proposals (CFP) Ends </li>
 <li><b>2023-03-28</b>: [Community Voting](/voting) starts </li>
 <li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
+<li><b>2023-04-14</b>: Community Voting ends </li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-04-14</b>: Community Voting ends </li>
 <li><b>2023-06-01</b>: First-Time Speaker's Workshop </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
