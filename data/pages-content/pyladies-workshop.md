@@ -21,3 +21,5 @@ If this introduction to programming sparks your interest, you can further explor
 - **When**: 17 July 2023
 - **Where**: Prague Congress Centre (PCC), Room TBC
 - **Price**: free of charge 
+
+<img src="/img/ep2023-snake-workshop.png" />
