@@ -1,5 +1,5 @@
 {
-  "name": "ep2022_website",
+  "name": "ep2023_website",
   "private": true,
   "scripts": {
     "dev": "next dev",

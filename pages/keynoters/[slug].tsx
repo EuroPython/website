@@ -18,6 +18,8 @@ const findKeynoter = (name: string) => {
   return keynoters.find((keynoter) => keynoter.name === name);
 };
 
+// TODO: move to /app
+
 export default function Page({
   source,
   path,
@@ -36,12 +38,12 @@ export default function Page({
   };
 }) {
   const keynoter = findKeynoter(speaker)!;
-  const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?keynoter=${slug}&v2`;
+  const socialCardUrl = `https://ep2023.europython.eu/api/social-cards/?keynoter=${slug}&v2`;
 
   return (
     <Layout
       path={path}
-      title={`${title} || EuroPython 2022`}
+      title={`${title} || EuroPython 2023`}
       socialCardUrl={socialCardUrl}
     >
       <main id="main-content" className="px-6">

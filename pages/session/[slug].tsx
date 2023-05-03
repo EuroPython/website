@@ -8,9 +8,14 @@ import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
 import { Tag, TagContainer } from "components/tag/tag";
-import { DefinitionList, DefinitionTerm, DefinitionDescription } from "components/definition-list/definition-list";
+import {
+  DefinitionList,
+  DefinitionTerm,
+  DefinitionDescription,
+} from "components/definition-list/definition-list";
 import { serialize } from "lib/mdx-utils";
 
+// TODO: move to /app
 type Speaker = {
   code: string;
   name: string;

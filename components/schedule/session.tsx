@@ -113,7 +113,7 @@ export const Session = ({
               start={session.start}
               end={session.end}
               room={session.rooms.join(", ")}
-              url={`https://ep2022.europython.eu/session/${session.slug}`}
+              url={`https://ep2023.europython.eu/session/${session.slug}`}
             />
           </>
         ) : null}

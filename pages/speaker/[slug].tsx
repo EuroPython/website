@@ -23,6 +23,8 @@ type Speaker = {
   bioSource: any;
 };
 
+// TODO: move to /app
+
 const getAvatarUrl = (avatar: string) => {
   if (avatar.startsWith("https://www.gravatar.com/avatar/")) {
     return `${avatar}?s=600`;

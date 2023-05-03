@@ -16,6 +16,8 @@ type Speaker = {
   twitter: string | null;
 };
 
+// TODO: move to /app
+
 export default function SpeakersPage({ speakers }: { speakers: Speaker[] }) {
   // group speakers by starting letter
   const groups = speakers

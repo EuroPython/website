@@ -17,6 +17,8 @@ type Session = {
   abstractSource: any;
 };
 
+// TODO: move to /app
+
 export default function SessionsPage({
   sessions,
   tracks,

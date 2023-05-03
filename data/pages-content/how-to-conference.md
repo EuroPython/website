@@ -9,17 +9,17 @@ subtitle:
 
 
 
-<img src="/img/logos/ep2022_banner.png" width="5%" height="5%"/>
+<img src="/img/logos/ep2023_banner.png" width="5%" height="5%"/>
 
-EuroPython (EP) is approaching (can you believe we are so close to it? Have you gotten your tickets yet? If not, you better purchase them [here](https://ep2022.europython.eu/tickets)!) and thinking about the first-time goers and the long-time-no-see ones, we thought about putting together a 101 on the how-to attend a conference for everyone. We hope it is useful and that we can all have fun and learn whilst doing it.
+EuroPython (EP) is approaching (can you believe we are so close to it? Have you gotten your tickets yet? If not, you better purchase them [here](https://ep2023.europython.eu/tickets)!) and thinking about the first-time goers and the long-time-no-see ones, we thought about putting together a 101 on the how-to attend a conference for everyone. We hope it is useful and that we can all have fun and learn whilst doing it.
 
 ### Make your own schedule
-There are a lot of things going on this year at EuroPython. Our schedule is packed with juicy content the entire week and you would be a fool to miss it. That being said, it is humanly impossible to see and do it all without the gift of omnipresence. You should then consider having a look at our wonderfully organised [schedule](https://ep2022.europython.eu/schedule/) and take your picks. The first two days (Monday and Tuesday) will be fully dedicated to tutorials and workshops.
-* Naomi Ceder will be hosting [Trans*Code](https://ep2022.europython.eu/trans_code), a hack event series focused on drawing attention to transgender issues and opportunities organised by trans people, for trans people.
+There are a lot of things going on this year at EuroPython. Our schedule is packed with juicy content the entire week and you would be a fool to miss it. That being said, it is humanly impossible to see and do it all without the gift of omnipresence. You should then consider having a look at our wonderfully organised [schedule](https://ep2023.europython.eu/schedule/) and take your picks. The first two days (Monday and Tuesday) will be fully dedicated to tutorials and workshops.
+* Naomi Ceder will be hosting [Trans*Code](https://ep2023.europython.eu/trans_code), a hack event series focused on drawing attention to transgender issues and opportunities organised by trans people, for trans people.
 * [DjangoGirls](https://djangogirls.org/en/dublin/) will have coaches available to help female beginners build their first website.
-* For the data scientists _wannabe_, Laís Carvalho will host a 6 hours [HumbleData](https://ep2022.europython.eu/humble-data) workshop covering the basics of Python and data science using Jupyter Notebooks.
-The following three days (Wednesday, Thursday and Friday) will be full of talks for all levels. Special attention will be dedicated to our wonderful [keynote speakers](https://ep2022.europython.eu/keynoters), who are four of the brightest voices which are leading our community and will talk about our current challenges and offer their take on them.
-Finally, to close the weekend with a golden key we will host sprints! Not sure what they are? You might want to have a look at our [Mentored Sprints](https://ep2022.europython.eu/mentored-sprint) session, which will be hosted on Thursday (14th).
+* For the data scientists _wannabe_, Laís Carvalho will host a 6 hours [HumbleData](https://ep2023.europython.eu/humble-data) workshop covering the basics of Python and data science using Jupyter Notebooks.
+The following three days (Wednesday, Thursday and Friday) will be full of talks for all levels. Special attention will be dedicated to our wonderful [keynote speakers](https://ep2023.europython.eu/keynoters), who are four of the brightest voices which are leading our community and will talk about our current challenges and offer their take on them.
+Finally, to close the weekend with a golden key we will host sprints! Not sure what they are? You might want to have a look at our [Mentored Sprints](https://ep2023.europython.eu/mentored-sprint) session, which will be hosted on Thursday (14th).
 
 #### Open Spaces
 We believe that conversations flow better when provided with a dedicated space to present your ideas and host discussions and prototype insights together. EuroPython will provide an open space area from Wednesday (13th) to Friday (15th) so you can bring your ideas and exchange some thoughts with the community. Any ticket holder will be able to reserve a time block there and propose an activity for other attendees to participate in.
@@ -118,7 +118,7 @@ EuroPython this year will finally be in-person but it will also be remote, for t
 #### Online platform
 
 * We are going to stream the 6 parallel tracks to Youtube (and Mux as a backup)
-* The streams are free. [Check the tickets!](https://ep2022.europython.eu/tickets)
+* The streams are free. [Check the tickets!](https://ep2023.europython.eu/tickets)
 * We also have [Venueless](https://venueless.org/en/), an online platform, for people to watch the stream while interacting with other remote attendees, sponsors, speakers and offline attendees.
 * Participants with Remote tickets can ask questions live using Zoom. (our Remote Operators are going to coordinate it in the chat). Our expectation is to give Remote participants the same opportunity as onsite ones. While asking questions you will be live on the screen in the venue and in the streaming.
 * To join Venueless you need a Remote ticket and a browser. It can also be used on mobile phones (3 devices maximum).
@@ -133,7 +133,7 @@ To conclude, we hope this article helps you enjoy more fully the conference we h
 As always, If you have any suggestions or questions, please email us at helpdesk@europython.eu. Keep an eye on our [Twitter](http://twitter.com/europython) page (loads of conference updates will show up there) and don’t forget to use the [#EuroPython](https://twitter.com/hashtag/EuroPython) hashtag to show the world how _your_ EuroPython is going.
 
 
-<figure src="/img/logos/ep2022_flag.png" />
+<figure src="/img/logos/ep2023_flag.png" />
 
 
 ### References

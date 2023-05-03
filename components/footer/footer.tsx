@@ -76,7 +76,7 @@ export const Footer = () => (
           </p>
 
           <div id="powered-by-vercel">
-            <a href="https://vercel.com/?utm_source=europython-2022&utm_campaign=oss">
+            <a href="https://vercel.com/?utm_source=europython-2023&utm_campaign=oss">
               <img
                 src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg"
                 alt="powered by vercel"

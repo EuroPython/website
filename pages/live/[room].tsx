@@ -4,6 +4,8 @@ import { useCallback } from "react";
 import { Layout } from "../../components/layout";
 import live from "../../data/live.json";
 
+// TODO: move to /app
+
 export default function LivePage({
   room,
 }: {
@@ -28,7 +30,7 @@ export default function LivePage({
         <iframe
           id="ytplayer"
           className="aspect-video border-none w-full mb-12"
-          src={`https://www.youtube.com/embed/${room.youtubeId}?autoplay=1&amp;origin=https://ep2022.europython.eu`}
+          src={`https://www.youtube.com/embed/${room.youtubeId}?autoplay=1&amp;origin=https://ep2023.europython.eu`}
         ></iframe>
 
         <Title level={2}>Change room:</Title>

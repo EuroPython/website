@@ -20,7 +20,7 @@ In return, we will have a small number of perks for you, some small gifts to say
 # How to sign up
   - Fill this form and we will contact and onboard you. https://forms.gle/Y472nH5m8ZRWpbVP8
   - If you want to save some time you can:
-      + Acknowledge our [EuroPython 2022 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
+      + Acknowledge our [EuroPython 2023Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
       + Assign yourself to available shifts on the Operations spreadsheet. (You will get the link after signing the Data Privacy Policy.)
       + Sign up to the Europython Volunteers discord server. (The link is in our Operations Spreadsheet)
       + Please say hello and introduce yourself in #onsite-volunteers channel. Thanks ❤️
@@ -73,7 +73,7 @@ In return, we will have a small number of perks for you, some small gifts to say
   - To help the EuroPython organizers keep the conference affordable for everyone
   - Show your EuroPython support to the Python community (by wearing your exclusive T-Shirt)
   - Get a huge applause during the closing session of the conference
-  - Get your name on our EuroPython 2020 Team page to stay there forever.
+  - Get your name on our EuroPython 2023 Team page to stay there forever.
 
 ### How much work is involved?
   - There are different tasks with different time required
