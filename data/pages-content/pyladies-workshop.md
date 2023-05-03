@@ -4,7 +4,7 @@ PyLadies is an international mentorship group with focus on helping more women b
 Our mission is to promote, educate and advance a diverse Python community through outreach, education, conferences, events and social gatherings.
 
 ## About the Workshop 
-Are you a woman or a girl interested in programming but unsure where to begin? Don't worry, we have the perfect workshop for you, designed to be welcoming and accessible to complete beginners!
+Are you a member of an under-represented group interested in programming but unsure where to begin? Don't worry, we have the perfect workshop for you, designed to be welcoming and accessible even if you don't have any prior programming experience!
 
 With the support of experienced mentors, you'll create your very own version of the classic Snake video game, reminiscent of those on older Nokia mobile phones. You'll get hands-on experience writing code, learning fundamental programming concepts, and feeling the satisfaction of a computer finally obeying your commands.
 
