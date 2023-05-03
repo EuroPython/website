@@ -90,6 +90,10 @@ div.finaid-sponsor {
   margin: 0 auto 2rem auto;
 }
 
+summary h4::after {
+  content: "👇";
+}
+
 .list-disc li {
   list-style: none;
   position: relative;

@@ -4,7 +4,7 @@ import { ButtonWithTitle } from "./button-with-title";
 import { SponsorTiers } from "./sponsor-tiers";
 import { BenefitItem, BenefitsList } from "./benefits-list";
 import { ButtonLink } from "./button-link";
-import {Button} from "./button";
+import { Button } from "./button";
 import { Note } from "./note";
 import clsx from "clsx";
 import { Separator } from "./separator/separator";
@@ -89,6 +89,20 @@ export const components = {
   Map,
   ButtonWithTitle,
   SponsorTiers,
+
+  details: ({ children, ...props }: any) => (
+    <details className="mb-4" {...props}>
+      {children}
+    </details>
+  ),
+
+  summary: ({ children, ...props }: any) => (
+    <summary className="list-none underline cursor-pointer" {...props}>
+      {children}
+    </summary>
+  ),
+
+  Title,
 
   // TODO: these two are not working together
   BenefitItem,
