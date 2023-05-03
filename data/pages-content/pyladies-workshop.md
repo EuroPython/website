@@ -1,6 +1,6 @@
 # Beginners' Day - PyLadies Snake Workshop
 ## About PyLadies
-PyLadies is an international mentorship group with focus on helping under-represented developers become active participants and leaders in the Python open-source community.
+PyLadies is an international mentorship group with focus on helping more women become active participants and leaders in the Python open-source community.
 Our mission is to promote, educate and advance a diverse Python community through outreach, education, conferences, events and social gatherings.
 
 ## About the Workshop 
