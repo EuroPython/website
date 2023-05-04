@@ -62,7 +62,8 @@ ul.milestone-done li {
 }
 
 ul.milestone-done li::before {
-  content: "\2705  ";
+  content: "\2705  " !important;
+  background: none !important;
 }
 
 ul.milestone-todo li {
@@ -71,7 +72,8 @@ ul.milestone-todo li {
 }
 
 ul.milestone-todo li::before {
-  content: "\1F4DD  ";
+  content: "\1F4DD  " !important;
+  background: none !important;
 }
 
 img.findaid-accent-round-marker {
@@ -124,7 +126,8 @@ p.cross::before {
   padding: 0.5rem;
 }
 
-p.tick::after, p.cross::after {
+p.tick::after,
+p.cross::after {
   content: "\23EC";
   display: inline-block;
   font-size: 1.3em;
