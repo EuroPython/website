@@ -15,6 +15,8 @@ It was run between
 <div style={{textAlign: "center",  marginBottom: 12}}>
 Community Voting and Panel Review both Ended
 
+We will publish the list of accepted proposals during the week of 14 May.
+
 Thank your for your participation and contribution! 🐍
 </div>
 ---
