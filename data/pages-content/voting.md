@@ -10,15 +10,15 @@ Welcome to EuroPython Community Voting! We want feedback about what YOU would li
 
 <div style={{textAlign: "center"}}>
 
-**Community Voting is Extended**:
+**Community Voting is Closed**:
 
-It is open between
+It was open between
 
 Monday, 28 March 10:00:00 CEST and
 
 Friday, 14 April 23:59:59 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
-<ButtonLink href="https://voting.europython.eu">Take me to vote now!</ButtonLink>
+Thank you for voting!
 </div>
 
 
@@ -64,11 +64,11 @@ You should stay logged in by default. But if you are somehow logged out, just us
 - You are welcome to leave optional comments for each submission you vote on. They will only be shared with the programme team.
 
 ## Selection of Submissions
-We believe that a good conference consists of popular talks as well as new or niche topics - all by and for our diverse community. Ultimately, it is the programme team who curate and are responsible for the final programme, but one of the major factors upon which they rely, will be the preferences of the community through this voting process. We aim to publish the first round of list of sessions in late April.
+We believe that a good conference consists of popular talks as well as new or niche topics - all by and for our diverse community. Ultimately, it is the programme team who curate and are responsible for the final programme, but one of the major factors upon which they rely, will be the preferences of the community through this voting process. We aim to publish the first round of list of sessions in Mid May.
 
-<div style={{textAlign: "center", marginBottom: 10}}>
+<!-- <div style={{textAlign: "center", marginBottom: 10}}>
 <ButtonLink href="https://voting.europython.eu">Participate in Community Voting now!</ButtonLink>
-</div>
+</div> -->
 
 
 **[Subscribe to our newsletter](https://blog.europython.eu/#/portal/signup)** to stay tuned!

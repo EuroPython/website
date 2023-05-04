@@ -1,7 +1,7 @@
 ---
-title: Community Voting
-subtitle: Open till 14 April
+title: Become a Sponsor
+subtitle: Support the Community
 url: /voting
-image: /images/cards/cfp1.jpg
+image: /img/hall_rotated.png
 ---
-We want feedback about what YOU would like to see at EuroPython 2023. Take part in community voting and be an important part of the curation process of the programme!
+Here's your chance to support the largest European Python conference in the booming tech hub Prague and showcase your company to the diverse Python Communities!
