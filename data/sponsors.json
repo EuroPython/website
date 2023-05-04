@@ -45,6 +45,11 @@
           "name": "arm",
           "url": "https://www.arm.com/",
           "logo": "/img/logos/sponsor_logos/arm.svg"
+        },
+        {
+          "name": "Sentry",
+          "url": "https://sentry.io/welcome?utm_medium=sponsored-event&utm_source=event&utm_campaign=event-europython-2023",
+          "logo": "/img/logos/sponsor_logos/sentry.svg"
         }
       ]
     },
