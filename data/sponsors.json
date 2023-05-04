@@ -20,6 +20,11 @@
           "name": "Microsoft",
           "url": "https://learn.microsoft.com/en-us/azure/developer/python/",
           "logo": "/img/logos/sponsor_logos/microsoft.svg"
+        },
+        {
+          "name": "Optiver",
+          "url": "https://optiver.com/",
+          "logo": "/img/logos/sponsor_logos/optiver.svg"
         }
       ]
     },
