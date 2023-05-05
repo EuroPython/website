@@ -120,6 +120,10 @@ export const components = {
       Component = "img";
     }
 
+    if (props.className?.includes("findaid-accent-round-marker")) {
+      alt = "";
+    }
+
     return (
       <figure className="next-image relative">
         <Component src={src} alt={alt} {...props} />
