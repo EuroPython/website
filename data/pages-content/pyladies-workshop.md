@@ -12,9 +12,7 @@ If the project seems impractical, fear not! The main goal is to teach you basic 
 
 This workshop is specifically tailored for total beginners. There's no need for prior programming knowledge; all you need is a computer and basic skills to use it (e.g., opening/saving files, installing programs).
 
-The workshop will be conducted in English and is completely free. However, space is limited, so be sure to register through the pyladies.cz website.
-
-If this introduction to programming sparks your interest, you can further explore the world of coding with one of the PyLadies autumn beginner courses, starting shortly after the workshop.
+The workshop will be conducted in English and is completely free. However, space is limited, so be sure to register through [this link](https://docs.google.com/forms/d/1r-8gQL1pMGJp45-jbVyEfJUcct0-RpbHUxEIo-hqReg/edit).
 
 ## Workshop @ EuroPython 
 
