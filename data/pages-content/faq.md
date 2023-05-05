@@ -19,6 +19,7 @@ subtitle: Frequently Asked Questions about EuroPython
 </ul>
 
 <ul className="milestone-todo">
+<li><b>The week of 2023-05-14</b>: List of Session Published</li>
 <li><b>2023-06-01</b>: First-Time Speaker's Workshop </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>

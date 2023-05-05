@@ -4,10 +4,6 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Community Voting",
-          "path": "/voting"
-        },
-        {
           "name": "Call for Proposals",
           "path": "/cfp"
         },
