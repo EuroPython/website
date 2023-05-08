@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Map } from "./map";
+import { MapSprints } from "./map-for-sprints";
 import { ButtonWithTitle } from "./button-with-title";
 import { SponsorTiers } from "./sponsor-tiers";
 import { BenefitItem, BenefitsList } from "./benefits-list";
@@ -89,6 +90,7 @@ export const components = {
     <article className={clsx(className, "mb-24")}>{children}</article>
   ),
   Map,
+  MapSprints,
   ButtonWithTitle,
   SponsorTiers,
 

@@ -65,19 +65,27 @@ You can find detailed information on how to get to the conference centre
 with their
 [convenient orientation guide (PDF)](https://www.praguecc.cz/users_data/files/ORIENTATION_PLANS_orientacni_pla.pdf).
 
+## VŠE - Sprints Venue
+The Rajska Building (RB), [Žižkov Campus, VŠE](https://www.vse.cz/english/about-vse/profile/campus/) (Prague University of Economics and Business) is the home of our sprints this year on 22-23 July. It is free to attend the sprints. Please check out our [sprints page](/sprints) for more information.
+
+<MapSprints></MapSprints>
+<address>
+Vysoká škola ekonomická v Praze<br/>
+nám. Winstona Churchilla 1938<br/>
+130 00 Praha 3-Žižkov, Czechia<br/>
+</address>
+
+### Get to the Sprints
+You can find the [Žižkov Campus Map, VŠE (PDF)](https://www.vse.cz/english/wp-content/uploads/sites/2/page/1000/planek_en.pdf) to help guide you. Detailed instructions on how to get to the Rajska Building will be announced soon!
+
+## Getting Around in Prague
+
 * **By public transport**: plan your route and check the fares using the [Prague Public Transport website](https://www.dpp.cz/en)
 
 * **Planes**: [Prague's Václav Havel Airport (PRG)](https://www.prg.aero/en) is well connected
-to the conference venue via the public transport system.
+to the conference and sprints venue via the public transport system.
 
 * **Trains**: please refer to the [Czech Railways (České dráhy)](https://www.cd.cz/en/) website for timetables, bookings and ticket prices.
-
-* **& Automobiles**: set your SatNav to GPS coordinates: 50.062112,14.428886. The Prague Congress Centre is adjacent to the North South Prague City Expressway – just follow the road signs for Prague Congress Centre. The venue has an underground car park and there is additional parking, above
-ground, to the south of the venue.
-
-## Sprints Venue - TBC
-This year, we are hoping to organise the sprints in a different venue, smaller, cosier, open to public. We will announce the sprints location soon as it is finalised!
-
 
 ## COVID Info
 

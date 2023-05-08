@@ -1,202 +1,86 @@
 ---
-title: EuroPython 2022 Sprints
-subtitle: Organise or join a sprint in EuroPython 2022!
+title: EuroPython 2023 Sprints
+subtitle: Organise or join a sprint in EuroPython 2023!
+social_card: sprints.png
+
 ---
-<div style={{textAlign: "center"}}>
-  <Note>EuroPython 2022 Sprint Info </Note>
+
+<!-- <div style={{textAlign: "center"}}>
+  <Note>EuroPython 2023 Sprint Info </Note>
 </div>
 
 - **ROOMS**
-  - Sprint Room 1: **Liffey Hall 1** (# A bit quiet as of 10am Sat)
-  - Sprint Room 2: **Wicklow Hall 2A**
-  - Sprint Room 3: **Wicklow Hall 2B**
-  - Quiet Room: **Wicklow Meeting Room 1**
-  - Coffee & Lunch: **Level 1 Foyer & Level 2 Foyer**
+  - Sprint Room 1: ****
+  - Sprint Room 2: ****
+  - Sprint Room 3: ****
+  - Quiet Room: ****
 
-- **SCHEDULE**
-  - 09:30 - 11:00 **Sprint Session**
-  - 11:00 - 11:15 ** Coffee Break **
-  - 11:15 - 13:00 ** Sprint Session **
-  - 13:00 - 14:00 ** Lunch Break **
-  - 14:00 - 15:15 ** Sprint Session **
-  - 15:15 - 15:30 ** Coffee Break **
-  - 15:30 - 17:00 ** Sprint Session **
+- **SCHEDULE** -->
+
 ---
 
-# Sprints #
+# EuroPython 2023 Sprints #
 
-Sprints will be run on the conference weekend: Saturday & Sunday 16 & 17 Jul on the conference venue.
+EuroPython 2023 Sprints will be during the weekend 22-23 July. This year, we are hosting the sprint weekend at a **different venue** and it will be free for anyone to join!
 
-As is tradition, sprints are not organised by the conference organisers, but instead run by the participants who want to put on a sprint. We only provide the rooms and guidance on how to run the sprints.
+As per our tradition, the conference organisers will provide the rooms and facilities but the sprints are organised by **YOU**. It is a great chance to contribute to open-source projects large and small, learn from each other, geek out and have fun. 🐍
 
+**When**: 22-23 July 2023
+
+**Where**: Rajska Building (RB), [Žižkov Campus, VŠE](https://www.vse.cz/english/about-vse/profile/campus/) (Prague University of Economics and Business)
+- **sprint rooms** - all on the 1st floor of RB
+- **chillout area**: the [atrium](https://drive.google.com/file/d/19qKwC7fmxupRINP5Pvj6Npe_eq0czI6Y/view?usp=sharing) on the ground floor of RB
+
+<!-- TODO: link map / page about sprint venue -->
+**Who can attend**:
+- If you have an in-person EuroPython ticket ([Conference, Tutorial or Combined](s#ticket-types)), then access to the sprints is already included. Remember to select your sprints attendance when buying / configuring your ticket, to let the organisers know.
+- If you do not have an in-person conference ticket, you can register to join the sprints for free. Registration information will be announced soon [here](tickets#sprint-tickets).
 
 ## What is a “Sprint” ?
 
-Most open source software development happens on the internet and developers usually communicate online only when working on projects. This usually works out fine, but the lack of live meetings can sometimes be a limiting factor in making good progress.
-
-For this reason, a form of impromptu coding meetups called “sprints” or “hackathons” (outside the Python community, the term “hackathon” is more common) were initiated, where developers interested in a project can get together for a short period of time to make quick progress. Since conferences provide the perfect occasion to meet, sprints are made part of the conference program.
+ “Sprints”, or “hackathons”, are a form of impromptu coding meetups where anyone interested in a project can come together for a short period of time to make quick progress, share knowledge and ideas, and solve problems together. The two-day sprint is the perfect way to end the full-week EuroPython conference, giving you a hands-on experience to solidify what you have learned and bond over the love for coding, making and problem solving.  
 
 <img src="/img/sprint_collection.png__2420x1619_q85_crop_subsampling-2_upscale.png" width="1210" height="808"   />
 
 
 ## Organising a Sprint
 
-We have 3 rooms at The CCD dedicated to the sprint weekend:
-- Liffey Hall 1, at Level 1; capacity: 50
-- Liffey Hall 2, at Level 1; capacity: 50
-- Wicklow Hall 2, at Level 2; capacity: 200
+**Sprint rooms**: we will have 11 rooms in total for the sprints, all of which are on the 1st floor of the Rajska Building (RB) of VŠE. Check out the [room layout](https://drive.google.com/file/d/1N2Q_jB3j4LRXS15WJI2STlXvBkGABbgC/view?usp=sharing) for details. The rooms 103-107 and 111-116 each have the capacity for 24 and look like [this (img)](https://drive.google.com/file/d/1J2ffugSUZcx4oZO6LGMsUjPL1Z2ZrWw1/view?usp=sharing). Room 109 has capacity for 48 and looks like [this (img)](https://drive.google.com/file/d/1iVOMcF5IxSGH4TgpDoby1bEQDBMLWhhP/view?usp=sharing).
 
-If you are planing to run a sprint at EuroPython 2022, please add it at the bottom of this page [creating a PR to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md)
+**Note**: As each room might have the capacity to host multiple sprints, it is recommended that sprint organisers prioritise proposing their sprints in already designated rooms that have sufficient space to accommodate the expected number of participants.
 
-Remember to announce it on the social channels too!
+- RB 103; capacity 24
+- RB 104; capacity 24
+- RB 105; capacity 24
+- RB 106; capacity 24
+- RB 107; capacity 24
+- RB 112; capacity 24
+- RB 113; capacity 24
+- RB 114; capacity 24
+- RB 115; capacity 24
+- RB 116; capacity 24
+- RB 109; capacity 48
 
-Many thanks !
+If you are planning to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md). If you have any questions, do not hesitate to reach out to us at programme@europython.eu.
 
-# 2022 Sprints listings
+Once accepted and published, remember to announce it on the social channels too and tag us @EuroPython ([twitter](https://twitter.com/europython), [LinkedIn](https://www.linkedin.com/company/europython/) and [mastodon](https://fosstodon.org/@europython))!
 
-<p> Please add your sprint here! </p>
+# 2023 Sprints listings
 
-### Example Project sprint (copy this for your project)
+Please add your sprint here!
 
-- Number of people: 5
-- Room: Liffey Hall 1
+### EuroPython 2023 Example Sprint (copy this for your project)
+
+- Number of people: 10
+- Room: RB 103
 - Python Level: any
-- Contact: helpdesk@europython
+- Contact: programme@europython
 - Links: https://your_project_url/README.src
 
-### Mu Editor 🐮 🐍 🎉
 
-- Number of people: 4-5 core maintainers + anyone who wants to join us.
-- Room: Wicklow Hall 2A/B (otherwise somewhere clearly signposting us)
-- Contact: ntoll@ntoll.org
-- Links: [main website](https://codewith.mu), [developer docs](https://mu.readthedocs.io/en/latest/), [our approach](https://mu.readthedocs.io/en/latest/contributing.html), [CoC](https://mu.readthedocs.io/en/latest/code_of_conduct.html), [developer setup](https://mu.readthedocs.io/en/latest/setup.html) and [suggested first steps](https://mu.readthedocs.io/en/latest/first-steps.html).
-
-### pup
-
-- Number of people: 1 (+the Mu Editor friends) + anyone wanting to experiment, learn, or contribute.
-- Room: (same as Mu Editor's)
-- Contact: tiago.montes@gmail.com
-- Links: [PyPI](https://pypi.org/project/pup/), [github](https://github.com/mu-editor/pup/), [docs (in need of love!)](https://pup.readthedocs.io/en/latest/).
-
-### Mypy & mypyc sprint
-
-- Number of people: 2 maintainers + anyone who wants to join us.
-- Room: Wicklow Hall 1
-- Python Level: medium/advanced
-- Contact: jlehtosalo@gmail.com
-- Links: [Mypy repo](https://github.com/python/mypy), [Developer docs](https://github.com/python/mypy/blob/master/CONTRIBUTING.md)
-
-### blume and gotu
-
-- Number of people: myself and anyone who wants to hoin
-- Room:  Wicklow 2A/B
-- Contact: swfiua@gmail.com (Johnny Gill)
-- Links: https://github.com/swfiua/blume https://github.com/swfiua/gotu
-
-### VertFlow
-🌱 _Run containers on the cloud using green energy_
-- **Number of people:** Me + anyone who loves Python and hates carbon emissions. _Data analysts, scientists, engineers particularly welcome!_
-- **Room:**  < Not sure yet >
-- **Contact:** day.r.jack@gmail.com (Jack Lockyer-Stevens)
-- **Links:** [📺 About VertFlow](https://drive.google.com/file/d/1csuniWXVrOfDxJ1g1pFndpQWESf_uLin/view?usp=sharing) | [🐍 Github](https://github.com/ovotech/VertFlow)
-
-### Untitled Azure Project
-
-_Just learning to use Python with Azure...!_
-- Number of people: Me + whoever would like to be learn as well!
-- Room: Liffey Hall 1
+### Strawberry GraphQL Sprint 🍓
+- Number of people: 5
+- Room: RB 103
 - Python Level: any
-- Contact: Richard Jackson - jacksorjacksor@pm.me / @jacksorjacksor
-- Links: [Azure on Python](https://azure.microsoft.com/en-gb/develop/python)
-
-### CircuitPython
-Python on microcontrollers.
-- Number of people: Me + up to three people
-- Wicklow Hall 2
-- Python Level: intermediate
-- Contact: Radomir Dopieralski - ep2022sprints@dopieralski.pl / @deshipu@mastodon.technology
-- Links: [CircuitPython](https://circuitpython.org)
-
-### Update ansible-community/pytest-ansible
-Pytest-ansible isn't compatible with the latest versions of ansible or python, lets create a PR to change that.
-Disclaimer - I haven't comitted to pytest-ansible before, just a keen user.
-- Number of people: Me + up to three people
-- Wicklow Hall 2
-- Python Level: intermediate
-- Contact: Peter Blackburn peter.blackburn@icloud.com
-- Links: https://github.com/ansible-community/pytest-ansible
-
-### Mitogen
-Mitogen is a library for fast zero-install remote execution of Python and accerlating Ansible.
-
-- Room: 1, so far
-- Room: Wicklow Hall 2
-- Python Level: intermediate
-- Contact: alex@moreati.org.uk
-- Links: https://github.com/mitogen-hq/mitogen
-
-### scikit-learn
-
-- Number of people: 6-7 people already familiar with the project + anyone willing to join
-- Wicklow Hall 2
-- Python Level: any
-- Contact: g.lemaitre58@gmail.com
-- Links:
-    - [Getting started guideline for the sprint](https://github.com/scikit-learn-inria-fondation/EuroPython22)
-    - [Scikit-learn contributing guideline](https://scikit-learn.org/stable/developers/contributing.html)
-
-### HPy
-
-- Number of people: myself and anyone who wants to learn HPy
-- Wicklow Hall 2  (Saturday only)
-- Python Level: medium/advanced
-- Contact: ronan.lamy@gmail.com
-- Links:
-    - [HPy docs](https://docs.hpyproject.org/en/latest/)
-
-### Hypothesis
-
-- Number of people: myself and 2-3 more
-- Room: Wicklow Hall 2
-- Python Level: basic Python knowledge
-- Contact: [Cheuk](mailto:me@cheuk.dev) (I am not the maintainer)
-- Links:
-    - [Hypothesis on GitHub](https://github.com/HypothesisWorks/hypothesis)
-
-### Pwndbg (GDB plugin)
-
-- Number of people: myself and ppl who want to learn or contribute
-- Room: Wicklow Hall 2 (Saturday only)
-- Python level: medium
-- Contact: [Disconnect3d](mailto:dominik.b.czarnota+europythonpwndbg@gmail.com)
-- Links:
-    - [Pwndbg on GitHub](https://github.com/pwndbg/pwndbg/)
-
-### Godot-Python
-
-- Number of people: myself (the guy with a Godot cap)
-- Room: Wicklow Hall 2
-- Python level: medium (mostly C/Cython stuff)
-- Contact: [touilleMan](emmanuel.leblond+europython@gmail.com)
-- Links:
-    - [Godot-Python on GitHub](https://github.com/touilleMan/godot-python)
-    - [Godot game engine](https://godotengine.org/)
-
-### Pyodide
-
-- Number of people: 2 maintainers + anyone willing to join
-- Wicklow Hall 2
-- Python Level: any
-- Contact: Roman Yurchak rth.yurchak@gmail.com
-- Links:
-    - [Project home](https://github.com/pyodide/pyodide)
-    - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
-
-### Hugging Face + Gradio Hackathon
-
-- Number of people: 3 maintainers + anyone willing to join
-- Build Machine Learning demos. You can also join if you don't know much about ML!
-- Liffey Hall 2
-- Python Level: any
-- Links:
-    - [Event Page](https://huggingface.co/EuroPython2022)
+- Contact:  [Patrick Arminio](https://github.com/patrick91)
+- Links: https://github.com/strawberry-graphql

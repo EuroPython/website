@@ -17,6 +17,10 @@
       "name": "Events",
       "items": [
         {
+          "name": "Sprint Weekend",
+          "path": "/sprints"
+        },
+        {
           "name": "Trans*Code",
           "path": "/trans_code"
         },
@@ -30,8 +34,16 @@
       "name": "Prague & Venue",
       "items": [
         {
-          "name": "Around Prague & PCC",
-          "path": "/where"
+          "name": "Around Prague",
+          "path": "/where#prague"
+        },
+        {
+          "name": "Conference Venue - PCC",
+          "path": "/where#prague-congress-centre---conference-venue"
+        },
+        {
+          "name": "Sprints Venue - VŠE",
+          "path": "/where#vše---sprints-venue"
         }
       ]
     },

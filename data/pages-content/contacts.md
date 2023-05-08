@@ -26,6 +26,7 @@ Follow us on these channels:
 - [EuroPython YouTube Channel](http://europython.tv/) (conference videos)
 - [EuroPython Twitter Account](http://twitter.com/europython)
 - [EuroPython LinkedIn](https://www.linkedin.com/company/europython)
+- [EuroPython Mastodon](https://fosstodon.org/@europython)
 - [EuroPython Telegram](https://t.me/+dEi3nIHzGRw0YjQy)
 
 Please use the hashtag [#EuroPython](https://twitter.com/hashtag/EuroPython)

@@ -16,6 +16,8 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-28</b>: [Community Voting](/voting) starts </li>
 <li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
 <li><b>2023-04-14</b>: Community Voting ends </li>
+<li><b>2023-05-09</b>: [Sprints Venue & Info](/sprints) Announced </li>
+
 </ul>
 
 <ul className="milestone-todo">
@@ -29,11 +31,11 @@ subtitle: Frequently Asked Questions about EuroPython
 A. EuroPython 2023 will be held on
 **17-23 July 2023**. Put the dates in your diary!
 
-The in-person conference will be held at <b>[The Prague Congress Centre, the PCC](https://www.praguecc.cz/en/homepage)</b> in Prague, Czech Republic.
+- **The in-person conference (17-21 July)** will be held at <b>[The Prague Congress Centre, the PCC](https://www.praguecc.cz/en/homepage)</b> in Prague, Czech Republic.
 
-For the virtual conference, detailed instructions will be announced at a later time.
+- For the virtual conference, detailed instructions will be announced at a later time.
 
-We are planning on something a bit different for the sprints weekend. Stay tuned for more details!
+- **[Sprint Weekend(22-23 July)](/sprints)** will take place in Rajska Building (RB), [Žižkov Campus, VŠE](https://www.vse.cz/english/about-vse/profile/campus/) (Prague University of Economics and Business). The sprints will be free of charge and open to the public. If you are only attending the sprints, separate registration will be required and registration information will be made available later [here](/tickets#sprint-tickets).
 
 If you have any questions, you are welcome to reach out to the team at [helpdesk@europython.eu](helpdesk@europython.eu).
 
@@ -85,7 +87,7 @@ A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is op
 
 ## **Q. Do you provide childcare?**
 
-A: **Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout.
+A: **Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout. Unfortunately, we might not be able to provide childcare for the sprint weekend.
 
 ## **Q. Could you provide a visa support letter for my visa application?**
 A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. Please refer to the Ministry of Foreign Affairs of Czech Republic for information, including the application process for an [ Schengen visa for the purpose of “business” when attending a conference](https://www.mzv.cz/jnp/en/information_for_aliens/short_stay_visa/conference.html).
