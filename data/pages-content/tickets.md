@@ -86,7 +86,9 @@ Regular tickets are available until **30 June 2023**, after which Late-bird rate
 - Combined Education - €190 incl. 21% VAT
 
 ### Sprint Tickets
-When you buy a conference ticket, access to the sprint weekend (22-23 July, location TBD) is already included. We appreciate if you could indicate your attendance during registration. Separately, registration to the sprint weekend alone will be made available at a later date. It will be free of charge & open to the public. Stay tuned for details!
+When you buy a conference ticket, access to the [sprint weekend, 22-23 July](/sprints) at the  VŠE (Prague University of Economics and Business) is already included. We appreciate if you could indicate your attendance during registration.
+
+Separately, registration to the sprint weekend alone will be made available at a later date. It will be free of charge & open to the public. Stay tuned for details!
 
 ### Volume Discount
 

@@ -27,13 +27,23 @@ export const HeroVenue = ({
 
         <Prose>{children}</Prose>
 
-        <div className="space-x-4">
+        <div className="space-x-4" style={{marginBottom: 10}}>
           <ButtonLink href="/where#prague-congress-centre---conference-venue">
-            Read more
+            PCC Conference Venue
           </ButtonLink>
 
           <Link href="https://www.google.com/maps?ll=50.062576,14.429021&z=14&t=m&mapclient=embed&cid=5559277398893748727">
-            Get directions
+            Get directions to the PCC
+          </Link>
+        </div>
+
+        <div className="space-x-4">
+          <ButtonLink href="/where#v%C5%A1e---sprints-venue">
+            VŠE Sprints Venue
+          </ButtonLink>
+
+          <Link href="https://goo.gl/maps/2PbAF2KvGtUqLS9V9">
+            Get directions to the VŠE
           </Link>
         </div>
       </div>
