@@ -1,6 +1,8 @@
 ---
 title: EuroPython 2023 Sprints
 subtitle: Organise or join a sprint in EuroPython 2023!
+social_card: sprints.png
+
 ---
 
 <!-- <div style={{textAlign: "center"}}>
