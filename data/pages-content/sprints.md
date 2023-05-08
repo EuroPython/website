@@ -43,7 +43,9 @@ As per our tradition, the conference organisers will provide the rooms and facil
 
 ## Organising a Sprint
 
-**Sprint rooms**: 10 [small rooms, max 24 people each](https://drive.google.com/file/d/1J2ffugSUZcx4oZO6LGMsUjPL1Z2ZrWw1/view?usp=sharing) and 1 [medium room, max 48 people each](https://drive.google.com/file/d/1iVOMcF5IxSGH4TgpDoby1bEQDBMLWhhP/view?usp=sharing), on the 1st floor of the Rajska Building (RB) of VŠE. Check out the [rooms layout](https://drive.google.com/file/d/1N2Q_jB3j4LRXS15WJI2STlXvBkGABbgC/view?usp=sharing) for details.
+**Sprint rooms**: we will have 11 rooms in total for the sprints, all of which are on the 1st floor of the Rajska Building (RB) of VŠE. Check out the [rooms layout](https://drive.google.com/file/d/1N2Q_jB3j4LRXS15WJI2STlXvBkGABbgC/view?usp=sharing) for details. The rooms 103-107 and 111-116 each has the capacity of 24 and looks like [this (img)](https://drive.google.com/file/d/1J2ffugSUZcx4oZO6LGMsUjPL1Z2ZrWw1/view?usp=sharing). The room 109 has the capacity of 48 and looks like [this (img)](https://drive.google.com/file/d/1iVOMcF5IxSGH4TgpDoby1bEQDBMLWhhP/view?usp=sharing).
+
+**Note**: As each room might have the capacity to host multiple sprints, it is recommended that sprint organisers prioritise proposing their sprints in already designated rooms that have sufficient space to accommodate the expected number of participants.
 
 - RB 103; capacity 24
 - RB 104; capacity 24
@@ -57,9 +59,9 @@ As per our tradition, the conference organisers will provide the rooms and facil
 - RB 116; capacity 24
 - RB 109; capacity 48
 
-If you are planing to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md).
+If you are planing to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md). If you have any questions, do not hesitate to reach out to us at programme@europython.eu.
 
-Once accepted and published, remember to announce it on the social channels too!
+Once accepted and published, remember to announce it on the social channels too and tag us @EuroPython ([twitter](https://twitter.com/europython), [LinkedIn](https://www.linkedin.com/company/europython/) and [mastodon](https://fosstodon.org/@europython))!
 
 # 2023 Sprints listings
 
@@ -70,7 +72,7 @@ Please add your sprint here!
 - Number of people: 10
 - Room: RB 103
 - Python Level: any
-- Contact: helpdesk@europython
+- Contact: programme@europython
 - Links: https://your_project_url/README.src
 
 
