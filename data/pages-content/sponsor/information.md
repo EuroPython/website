@@ -271,7 +271,7 @@ You can check out previous years’ lineup for inspiration:
 
 
 **Deadline** for informing us of the presenter, presentation title & abstract or
-poster PDF: **19 June, 2023**
+poster PDF: **12 June, 2023**
 
 **Submission Channel**: [sponsoring@europython.eu](sponsoring@europython.eu)
 
