@@ -49,33 +49,30 @@ As per our tradition, the conference organisers will provide the rooms and facil
 
 **Note**: As each room might have the capacity to host multiple sprints, it is recommended that sprint organisers prioritise proposing their sprints in already designated rooms that have sufficient space to accommodate the expected number of participants.
 
-- RB 103; capacity 24
-- RB 104; capacity 24
-- RB 105; capacity 24
-- RB 106; capacity 24
-- RB 107; capacity 24
-- RB 112; capacity 24
-- RB 113; capacity 24
-- RB 114; capacity 24
-- RB 115; capacity 24
-- RB 116; capacity 24
-- RB 109; capacity 48
+- RB 103; occupancy: 13/24
+- RB 104; occupancy: 0/24
+- RB 105; occupancy: 0/24
+- RB 106; occupancy: 0/24
+- RB 107; occupancy: 0/24
+- RB 112; occupancy: 0/24
+- RB 113; occupancy: 0/24
+- RB 114; occupancy: 0/24
+- RB 115; occupancy: 0/24
+- RB 116; occupancy: 0/24
+- RB 109; occupancy: 0/48
 
-If you are planning to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md). If you have any questions, do not hesitate to reach out to us at programme@europython.eu.
+If you are planning to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md):
+
+1. Copy the template at the bottom of the sprint list.
+2. Fill the template with your details.
+3. Add your sprint at the end of the list.
+4. Update the room occupancy in the list above.
+
+If you have any questions, do not hesitate to reach out to us at programme@europython.eu.
 
 Once accepted and published, remember to announce it on the social channels too and tag us @EuroPython ([twitter](https://twitter.com/europython), [LinkedIn](https://www.linkedin.com/company/europython/) and [mastodon](https://fosstodon.org/@europython))!
 
 # 2023 Sprints listings
-
-Please add your sprint here!
-
-### EuroPython 2023 Example Sprint (copy this for your project)
-
-- Number of people: 10
-- Room: RB 103
-- Python Level: any
-- Contact: programme@europython
-- Links: https://your_project_url/README.src
 
 
 ### Strawberry GraphQL Sprint 🍓
@@ -84,3 +81,23 @@ Please add your sprint here!
 - Python Level: any
 - Contact:  [Patrick Arminio](https://github.com/patrick91)
 - Links: https://github.com/strawberry-graphql
+
+
+### Textual Sprint
+
+- Number of people: 8
+- Room: RB 103
+- Python Level: 1+ years of experience recommended
+- Contact: [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my email address is my first name @textualize.io.
+- Links: https://github.com/textualize/textual
+
+
+Please add your sprint here!
+
+### EuroPython 2023 Example Sprint (copy this for your project)
+
+- Number of people: ??
+- Room: RB ???
+- Python Level: any
+- Contact: programme@europython
+- Links: https://your_project_url/README.src
