@@ -50,6 +50,11 @@
           "name": "Sentry",
           "url": "https://sentry.io/welcome?utm_medium=sponsored-event&utm_source=event&utm_campaign=event-europython-2023",
           "logo": "/img/logos/sponsor_logos/sentry.svg"
+        },
+        {
+          "name": "Temporal",
+          "url": "https://temporal.io/",
+          "logo": "/img/logos/sponsor_logos/temporal.svg"
         }
       ]
     },
