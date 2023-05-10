@@ -3,26 +3,31 @@ import { TagContainer, Tag } from "components/tag/tag";
 import { Title } from "components/typography/title";
 import { MDXRemote } from "next-mdx-remote";
 
+const capitalize = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
 export const SessionSummary = ({
   session,
 }: {
   session: {
     title: string;
-    slug: string;
+    code: string;
     speakers: {
       name: string;
-      slug?: string;
+      code?: string;
     }[];
-    submission_type: string;
-    abstractSource: any;
+    type: string;
+    // abstractSource: any;
     track: string;
+    experience?: string;
   };
 }) => {
   return (
     <div className="mt-12">
       <Title level={2} highlighted className="!mb-6">
         <a
-          href={`/session/${session.slug}`}
+          href={`/session/${session.code}`}
           className="hover:text-primary-hover"
         >
           {session.title}
@@ -32,7 +37,7 @@ export const SessionSummary = ({
         {session.speakers.map((speaker, index) => (
           <>
             <a
-              href={speaker.slug ? `/speaker/${speaker.slug}` : ""}
+              href={speaker.code ? `/speaker/${speaker.code}` : ""}
               className="text-primary underline"
             >
               {speaker.name}
@@ -42,12 +47,12 @@ export const SessionSummary = ({
         ))}
       </p>
 
-      <Prose>
-        <MDXRemote {...session.abstractSource} />
-      </Prose>
+      <Prose>{/* <MDXRemote {...session.abstractSource} /> */}</Prose>
 
       <TagContainer>
-        <Tag>{session.submission_type}</Tag>
+        <Tag>{session.type}</Tag>
+        {session.experience && <Tag>{capitalize(session.experience)}</Tag>}
+
         <Tag>{session.track}</Tag>
       </TagContainer>
     </div>
