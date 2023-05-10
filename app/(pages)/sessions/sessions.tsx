@@ -4,12 +4,20 @@ import { Label } from "components/form/label";
 import { Select } from "components/form/select";
 import { SessionSummary } from "components/session-summary/session-summary";
 import { Title } from "components/typography/title";
-import { useState } from "react";
-import { Session } from "./pretix";
+import { useMemo, useState } from "react";
+import { Session } from "@/lib/pretix";
 
 export const Sessions = ({ sessions }: { sessions: Session[] }) => {
-  const submissionTypes = [...new Set(sessions.map((session) => session.type))];
-  const tracks = [...new Set(sessions.map((session) => session.track))];
+  console.log("rendering");
+
+  const submissionTypes = useMemo(
+    () => [...new Set(sessions.map((session) => session.type))],
+    [sessions]
+  );
+  const tracks = useMemo(
+    () => [...new Set(sessions.map((session) => session.track))],
+    []
+  );
 
   const [filters, setFilters] = useState({
     track: "",
@@ -27,7 +35,7 @@ export const Sessions = ({ sessions }: { sessions: Session[] }) => {
     <div>
       <Title>
         Accepted sessions
-        <p className="font-normal text-base mt-4">
+        <p className="text-base mt-2 text-black">
           Note: this list might change
         </p>
       </Title>
@@ -70,7 +78,10 @@ export const Sessions = ({ sessions }: { sessions: Session[] }) => {
           return true;
         })
         .map((session) => (
-          <SessionSummary key={session.code} session={session} />
+          <SessionSummary
+            key={session.code}
+            session={session}
+          />
         ))}
     </div>
   );

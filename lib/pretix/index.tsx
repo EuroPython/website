@@ -1,5 +1,3 @@
-// todo: move this file to lib
-
 export type Root = {
   count: number;
   next: any;
@@ -91,6 +89,7 @@ const mapSession = (session: Result) => {
       name: speaker.name,
       avatar: speaker.avatar,
       bio: speaker.biography,
+      code: speaker.code,
     })),
     tags: session.tags,
     track: session.track.en,
