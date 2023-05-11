@@ -63,10 +63,11 @@ As per our tradition, the conference organisers will provide the rooms and facil
 
 If you are planning to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md):
 
-1. Copy the template at the bottom of the sprint list.
-2. Fill the template with your details.
-3. Add your sprint at the end of the list.
-4. Update the room occupancy in the list above.
+1. Make sure your sprint is about an _open source_ project.
+2. Copy the template at the bottom of the sprint list.
+3. Fill the template with your details.
+4. Add your sprint at the end of the list.
+5. Update the room occupancy in the list above.
 
 If you have any questions, do not hesitate to reach out to us at programme@europython.eu.
 
