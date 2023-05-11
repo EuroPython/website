@@ -49,7 +49,7 @@ As per our tradition, the conference organisers will provide the rooms and facil
 
 **Note**: As each room might have the capacity to host multiple sprints, it is recommended that sprint organisers prioritise proposing their sprints in already designated rooms that have sufficient space to accommodate the expected number of participants.
 
-- RB 103; occupancy: 13/24
+- RB 103; occupancy: 10/24
 - RB 104; occupancy: 0/24
 - RB 105; occupancy: 0/24
 - RB 106; occupancy: 0/24
@@ -85,7 +85,7 @@ Once accepted and published, remember to announce it on the social channels too 
 
 ### Textual Sprint
 
-- Number of people: 8
+- Number of people: ~5 (~4 contributors + 1 organiser)
 - Room: RB 103
 - Python Level: 1+ years of experience recommended
 - Contact: [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my email address is my first name @textualize.io.
@@ -96,7 +96,7 @@ Please add your sprint here!
 
 ### EuroPython 2023 Example Sprint (copy this for your project)
 
-- Number of people: ??
+- Number of people: ?? (? contributors + ? organisers)
 - Room: RB ???
 - Python Level: any
 - Contact: programme@europython
