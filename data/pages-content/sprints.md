@@ -96,7 +96,7 @@ Once accepted and published, remember to announce it on the social channels too 
 - Number of people: 10
 - Room: RB 109
 - Python Level: any
-- Contact: [Tanul Christian (Email)](tanulchristian@gmail.com), [Scriptogre (GitHub)](https://github.com/scriptogre) 
+- Contact: <mailto:tanulchristian@gmail.com>, [Scriptogre (GitHub)](https://github.com/scriptogre) 
 - Links: https://github.com/Significant-Gravitas/Auto-GPT
 
 Please add your sprint here!
