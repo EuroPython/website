@@ -59,7 +59,7 @@ As per our tradition, the conference organisers will provide the rooms and facil
 - RB 114; occupancy: 0/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
-- RB 109; occupancy: 0/48
+- RB 109; occupancy: 10/48
 
 If you are planning to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md):
 
@@ -91,6 +91,13 @@ Once accepted and published, remember to announce it on the social channels too 
 - Contact: [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my email address is my first name @textualize.io.
 - Links: https://github.com/textualize/textual
 
+### Auto-GPT Sprint 🚀
+
+- Number of people: 10
+- Room: RB 109
+- Python Level: any
+- Contact: [Tanul Christian (Email)](tanulchristian@gmail.com), [Scriptogre (GitHub)](https://github.com/scriptogre) 
+- Links: https://github.com/Significant-Gravitas/Auto-GPT
 
 Please add your sprint here!
 
