@@ -1,5 +1,5 @@
 ---
- title: Pyladies Snake workshop 
+ title: PyLadies Snake workshop 
  subtitle: 
    This year we're hosting a beginner's programming workshop with the aim of empowering more under-represented groups in the Python open-source community. This free workshop offers a welcoming environment for those with no prior coding experience. 
  social_card: ep2023-social-card-banner-snake-workshop.png
