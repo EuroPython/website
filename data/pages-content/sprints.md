@@ -66,8 +66,9 @@ If you are planning to run a sprint at EuroPython 2023, please add it at the bot
 1. Make sure your sprint is about an _open source_ project.
 2. Copy the template at the bottom of the sprint list.
 3. Fill the template with your details.
-4. Add your sprint at the end of the list.
-5. Update the room occupancy in the list above.
+4. Make sure that you link to a public repository of the project.
+5. Add your sprint at the end of the list.
+6. Update the room occupancy in the list above. (If this is your first time organising a sprint, be mindful of how many people you can accommodate.)
 
 If you have any questions, do not hesitate to reach out to us at programme@europython.eu.
 
