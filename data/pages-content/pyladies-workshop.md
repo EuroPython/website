@@ -1,3 +1,10 @@
+ --- 
+ title: Pyladies Snake workshop 
+ subtitle: 
+   This year we're hosting a beginner's programming workshop with the aim of empowering more under-represented groups in the Python open-source community. This free workshop offers a welcoming environment for those with no prior coding experience. 
+ social_card: ep2023-social-card-banner-snake-workshop.png
+ --- 
+
 # Beginners' Day - PyLadies Snake Workshop
 ## About PyLadies
 PyLadies is an international mentorship group with focus on helping more women become active participants and leaders in the Python open-source community.
@@ -14,7 +21,7 @@ This workshop is specifically tailored for total beginners. There's no need for 
 
 The workshop will be conducted in English and is completely free. However, space is limited, so be sure to register using the form below.
 <div style={{textAlign: "center", marginBottom: 20}}>
-<ButtonLink href="https://docs.google.com/forms/d/1r-8gQL1pMGJp45-jbVyEfJUcct0-RpbHUxEIo-hqReg/edit"> Register your interest now! </ButtonLink>
+<ButtonLink href="https://forms.gle/CXSx8d8t4pJNTZTr9"> Register your interest now! </ButtonLink>
 </div>
 
 ## Workshop @ EuroPython 
