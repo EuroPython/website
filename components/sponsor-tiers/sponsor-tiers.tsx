@@ -58,7 +58,7 @@ const SponsorTier = ({
   features,
 }: {
   title: string;
-  totalSlots?: number;
+  totalSlots?: number | string;
   price: number | string;
   features: string[];
 }) => {
