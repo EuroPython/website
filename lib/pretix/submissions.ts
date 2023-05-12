@@ -1,3 +1,6 @@
+import { Answer } from "./types";
+import { slugify } from "./utils/slugify";
+
 export type Root = {
   count: number;
   next: any;
@@ -42,28 +45,6 @@ export type Slot = {
   room_id: number;
 };
 
-export type Answer = {
-  id: number;
-  question: Question;
-  answer: string;
-  answer_file: any;
-  submission: string;
-  person: any;
-  options: any[];
-};
-
-export type Question = {
-  id: number;
-  question: QuestionValue;
-  required: boolean;
-  target: string;
-  options: any[];
-};
-
-export type QuestionValue = {
-  en: string;
-};
-
 const mapSession = (session: Result) => {
   const qa = {
     length: 2360,
@@ -81,6 +62,7 @@ const mapSession = (session: Result) => {
   return {
     id: session.code,
     code: session.code,
+    slug: slugify(session.title),
     title: session.title,
     description: session.description,
     abstract: session.abstract,
@@ -90,6 +72,7 @@ const mapSession = (session: Result) => {
       avatar: speaker.avatar,
       bio: speaker.biography,
       code: speaker.code,
+      slug: slugify(speaker.name),
     })),
     tags: session.tags,
     track: session.track.en,
@@ -117,6 +100,10 @@ export const fetchConfirmedSubmissions = async () => {
         Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       },
     });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch sessions");
+    }
 
     const data = (await response.json()) as Root;
 

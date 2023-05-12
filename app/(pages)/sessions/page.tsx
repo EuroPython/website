@@ -1,4 +1,4 @@
-import { fetchConfirmedSubmissions } from "@/lib/pretix";
+import { fetchConfirmedSubmissions } from "@/lib/pretix/submissions";
 import { Sessions } from "./sessions";
 
 export default async function SessionsPage() {

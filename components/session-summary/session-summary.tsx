@@ -17,9 +17,11 @@ export const SessionSummary = ({
     title: string;
     code: string;
     abstract: string;
+    slug: string;
     speakers: {
       name: string;
       code?: string;
+      slug: string;
     }[];
     type: string;
     track: string;
@@ -29,15 +31,18 @@ export const SessionSummary = ({
   return (
     <div className="mt-12">
       <Title level={2} highlighted className="!mb-6">
-        <a href={`/session/${session.code}`} className="!text-inherit hover:underline">
+        <a
+          href={`/session/${session.slug}`}
+          className="!text-inherit hover:underline"
+        >
           {session.title}
         </a>
       </Title>
       <p className="text-lg font-bold mb-4">
         {session.speakers.map((speaker, index) => (
-          <Fragment key={speaker.code}>
+          <Fragment key={speaker.slug}>
             <a
-              href={speaker.code ? `/speaker/${speaker.code}` : ""}
+              href={`/speaker/${speaker.slug}`}
               className="text-primary underline"
             >
               {speaker.name}
