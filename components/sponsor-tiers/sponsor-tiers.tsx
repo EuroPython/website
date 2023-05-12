@@ -150,7 +150,7 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum"
-        totalSlots={4}
+        totalSlots="No"
         price={17000}
         features={[
           "16 sqm booth in exhibit hall",
