@@ -1,5 +1,6 @@
 import { Answer } from "./types";
 import { slugify } from "./utils/slugify";
+import { cache } from "react";
 
 type Availability = {
   id: number;
@@ -111,8 +112,8 @@ export const fetchAllSpeakers = async () => {
   return speakers.map(mapSpeaker);
 };
 
-export const fetchSpeakerBySlug = async (slug: string) => {
+export const fetchSpeakerBySlug = cache(async (slug: string) => {
   const allSpeakers = await fetchAllSpeakers();
 
   return allSpeakers.find((speaker) => speaker.slug === slug);
-};
+});
