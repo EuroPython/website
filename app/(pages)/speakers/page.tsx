@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
-import { fetchAllSpeakers } from "@/lib/pretix";
+import { fetchSpeakersWithConfirmedSubmissions } from "@/lib/pretix";
 
 export default async function SpeakersPage() {
-  const speakers = await fetchAllSpeakers();
+  const speakers = await fetchSpeakersWithConfirmedSubmissions();
 
   // group speakers by starting letter
   const groups = speakers

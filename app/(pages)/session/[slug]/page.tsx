@@ -1,5 +1,3 @@
-import { MDXRemote } from "next-mdx-remote";
-import parseISO from "date-fns/parseISO";
 import { format } from "date-fns";
 import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
@@ -10,7 +8,6 @@ import {
   DefinitionTerm,
   DefinitionDescription,
 } from "components/definition-list/definition-list";
-import { serialize } from "lib/mdx-utils";
 import {
   fetchConfirmedSubmissions,
   fetchSubmissionBySlug,

@@ -1,3 +1,4 @@
+import { fetchConfirmedSubmissions } from "./submissions";
 import { Answer } from "./types";
 import { slugify } from "./utils/slugify";
 import { cache } from "react";
@@ -80,11 +81,14 @@ const mapSpeaker = (speaker: Speaker) => {
   };
 };
 
+// TODO: don't use this, it is slow and fetches all the speakers
+// not just the ones that have confirmed submissions
 export const fetchAllSpeakers = async () => {
   const qs = new URLSearchParams({
     limit: "100",
     questions: "all",
   });
+
   let url:
     | string
     | null = `https://pretalx.com/api/events/europython-2023/speakers/?${qs}`;
@@ -112,8 +116,37 @@ export const fetchAllSpeakers = async () => {
   return speakers.map(mapSpeaker);
 };
 
-export const fetchSpeakerBySlug = cache(async (slug: string) => {
-  const allSpeakers = await fetchAllSpeakers();
+export const fetchSpeakersWithConfirmedSubmissions = async () => {
+  const submissions = await fetchConfirmedSubmissions();
 
-  return allSpeakers.find((speaker) => speaker.slug === slug);
+  return Array.from(
+    new Set(submissions.map((submission) => submission.speakers).flat())
+  );
+};
+
+export const fetchSpeakerBySlug = cache(async (slug: string) => {
+  const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
+
+  const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
+
+  if (!speakerInfo) {
+    throw new Error("Failed to find speaker in submissions");
+  }
+
+  const response = await fetch(
+    `https://pretalx.com/api/events/europython-2023/speakers/${speakerInfo.code}/`,
+    {
+      headers: {
+        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch speaker");
+  }
+
+  const speaker = (await response.json()) as Speaker;
+
+  return mapSpeaker(speaker);
 });

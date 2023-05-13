@@ -1,4 +1,7 @@
-import { fetchAllSpeakers, fetchSpeakerBySlug } from "@/lib/pretix";
+import {
+  fetchSpeakersWithConfirmedSubmissions,
+  fetchSpeakerBySlug,
+} from "@/lib/pretix";
 import {
   DefinitionList,
   DefinitionTerm,
@@ -11,7 +14,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
 // export async function generateStaticParams() {
-//   const speakers = await fetchAllSpeakers();
+//   const speakers = await fetchSpeakersWithConfirmedSubmissions();
 
 //   return speakers.map((speaker) => ({
 //     slug: speaker.slug,
