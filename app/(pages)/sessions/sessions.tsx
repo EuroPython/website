@@ -31,9 +31,19 @@ export const Sessions = ({
   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFilters((preFilters) => ({
       ...preFilters,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value.toLowerCase(),
     }));
   };
+
+  const filteredSessions = sessions.filter((session) => {
+    if (filters.track && filters.track !== session.track.toLowerCase()) {
+      return false;
+    }
+    if (filters.type && filters.type !== session.type.toLowerCase()) {
+      return false;
+    }
+    return true;
+  });
 
   return (
     <div>
@@ -51,7 +61,11 @@ export const Sessions = ({
           <Select name="track" id="track" onChange={handleFilterChange}>
             <option value="">All</option>
             {tracks.map((track) => (
-              <option key={track} value={track}>
+              <option
+                key={track}
+                value={track}
+                selected={track.toLowerCase() === filters.track}
+              >
                 {track}
               </option>
             ))}
@@ -59,11 +73,15 @@ export const Sessions = ({
         </div>
 
         <div>
-          <Label htmlFor="tyle">Submission type</Label>
-          <Select name="tyle" id="tyle" onChange={handleFilterChange}>
+          <Label htmlFor="type">Submission type</Label>
+          <Select name="type" id="type" onChange={handleFilterChange}>
             <option value="">All</option>
             {submissionTypes.map((submissionType) => (
-              <option key={submissionType} value={submissionType}>
+              <option
+                key={submissionType}
+                value={submissionType}
+                selected={submissionType.toLowerCase() === filters.type}
+              >
                 {submissionType}
               </option>
             ))}
@@ -71,19 +89,15 @@ export const Sessions = ({
         </div>
       </form>
 
-      {sessions
-        .filter((session) => {
-          if (filters.track && filters.track !== session.track) {
-            return false;
-          }
-          if (filters.type && filters.type !== session.type) {
-            return false;
-          }
-          return true;
-        })
-        .map((session) => (
+      {filteredSessions.length ? (
+        filteredSessions.map((session) => (
           <SessionSummary key={session.code} session={session} />
-        ))}
+        ))
+      ) : (
+        <Title level={3} className="mt-8">
+          No sessions found
+        </Title>
+      )}
     </div>
   );
 };
