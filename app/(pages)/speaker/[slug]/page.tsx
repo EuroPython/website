@@ -1,4 +1,4 @@
-import { fetchSpeakerBySlug } from "@/lib/pretix";
+import { fetchAllSpeakers, fetchSpeakerBySlug } from "@/lib/pretix";
 import {
   DefinitionList,
   DefinitionTerm,
@@ -9,6 +9,16 @@ import { Prose } from "components/prose/prose";
 import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+
+export async function generateStaticParams() {
+  const speakers = await fetchAllSpeakers();
+
+  return speakers.map((speaker) => ({
+    params: {
+      slug: speaker.slug,
+    },
+  }));
+}
 
 const getAvatarUrl = (avatar: string) => {
   if (avatar.startsWith("https://www.gravatar.com/avatar/")) {
