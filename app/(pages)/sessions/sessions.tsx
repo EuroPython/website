@@ -7,9 +7,13 @@ import { Title } from "components/typography/title";
 import { useMemo, useState } from "react";
 import { Session } from "@/lib/pretix/submissions";
 
-export const Sessions = ({ sessions }: { sessions: Session[] }) => {
-  console.log("rendering");
-
+export const Sessions = ({
+  sessions,
+  type,
+}: {
+  sessions: Session[];
+  type?: "poster" | "talk" | "tutorial";
+}) => {
   const submissionTypes = useMemo(
     () => [...new Set(sessions.map((session) => session.type))],
     [sessions]
@@ -21,7 +25,7 @@ export const Sessions = ({ sessions }: { sessions: Session[] }) => {
 
   const [filters, setFilters] = useState({
     track: "",
-    type: "",
+    type: type || "",
   });
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -78,10 +82,7 @@ export const Sessions = ({ sessions }: { sessions: Session[] }) => {
           return true;
         })
         .map((session) => (
-          <SessionSummary
-            key={session.code}
-            session={session}
-          />
+          <SessionSummary key={session.code} session={session} />
         ))}
     </div>
   );
