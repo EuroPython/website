@@ -79,6 +79,8 @@ const mapSession = (session: Result) => {
     type: session.submission_type.en,
     length: qaLength,
     experience: qaExp,
+    room: null,
+    slidesUrl: null,
   };
 };
 
@@ -113,4 +115,10 @@ export const fetchConfirmedSubmissions = async () => {
   }
 
   return sessions.map(mapSession);
+};
+
+export const fetchSubmissionBySlug = async (slug: string) => {
+  const allSessions = await fetchConfirmedSubmissions();
+
+  return allSessions.find((session) => session.slug === slug);
 };
