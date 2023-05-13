@@ -14,9 +14,7 @@ export async function generateStaticParams() {
   const speakers = await fetchAllSpeakers();
 
   return speakers.map((speaker) => ({
-    params: {
-      slug: speaker.slug,
-    },
+    slug: speaker.slug,
   }));
 }
 

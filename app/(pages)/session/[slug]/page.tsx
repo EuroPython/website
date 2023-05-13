@@ -11,13 +11,24 @@ import {
   DefinitionDescription,
 } from "components/definition-list/definition-list";
 import { serialize } from "lib/mdx-utils";
-import { fetchSubmissionBySlug } from "@/lib/pretix/submissions";
+import {
+  fetchConfirmedSubmissions,
+  fetchSubmissionBySlug,
+} from "@/lib/pretix/submissions";
 import { notFound } from "next/navigation";
 import { Datetime } from "components/datetime";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { components } from "components/mdx";
 
 // TODO: metadata
+
+export async function generateStaticParams() {
+  const submissions = await fetchConfirmedSubmissions();
+
+  return submissions.map((submission) => ({
+    slug: submission.slug,
+  }));
+}
 
 export default async function SessionPage({
   params,
@@ -152,11 +163,11 @@ export default async function SessionPage({
             <ul className="space-y-4">
               {/* @ts-ignore */}
               {sessionsInParallel.map((s) => (
-                  <li key={s.slug}>
+                <li key={s.slug}>
                   <a
                     className="underline hover:text-primary-hover"
                     href={`/session/${s.slug}`}
-                    >
+                  >
                     {s.title}
                   </a>
                 </li>
@@ -165,7 +176,7 @@ export default async function SessionPage({
           </aside>
         ) : null}
         {sessionsAfter.length ? (
-            <aside>
+          <aside>
             <Title level={4}>After this session</Title>
             <ul className="space-y-4">
               {/* @ts-ignore */}
