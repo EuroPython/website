@@ -21,6 +21,10 @@
           "path": "/sprints"
         },
         {
+          "name": "Mentored Sprint",
+          "path": "/mentored-sprint"
+        },
+        {
           "name": "Trans*Code",
           "path": "/trans_code"
         },
