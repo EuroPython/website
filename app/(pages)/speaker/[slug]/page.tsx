@@ -10,13 +10,13 @@ import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
-export async function generateStaticParams() {
-  const speakers = await fetchAllSpeakers();
+// export async function generateStaticParams() {
+//   const speakers = await fetchAllSpeakers();
 
-  return speakers.map((speaker) => ({
-    slug: speaker.slug,
-  }));
-}
+//   return speakers.map((speaker) => ({
+//     slug: speaker.slug,
+//   }));
+// }
 
 const getAvatarUrl = (avatar: string) => {
   if (avatar.startsWith("https://www.gravatar.com/avatar/")) {
