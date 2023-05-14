@@ -58,7 +58,7 @@ export const components = {
   p: ({ children }: any) => (
     <p className="mb-4 text-xl leading-snug">{children}</p>
   ),
-  ul: ({ children, className, ...props }: any) => (
+  ul: ({ children, className, ordered, ...props }: any) => (
     <ul className={clsx("mb-4 list-disc pl-6", className)} {...props}>
       {children}
     </ul>
@@ -66,7 +66,7 @@ export const components = {
   ol: ({ children }: any) => (
     <ol className="mb-4 list-decimal pl-4">{children}</ol>
   ),
-  li: ({ children, ...props }: any) => (
+  li: ({ children, ordered, ...props }: any) => (
     <li className="mb-2 text-xl leading-snug" {...props}>
       {children}
     </li>
