@@ -2,6 +2,11 @@ import { Fragment } from "react";
 import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
 import { fetchSpeakersWithConfirmedSubmissions } from "@/lib/pretix";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Speakers",
+};
 
 export default async function SpeakersPage() {
   const speakers = await fetchSpeakersWithConfirmedSubmissions();

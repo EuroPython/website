@@ -13,6 +13,24 @@ import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
+import { Metadata } from "next";
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> => {
+  const speaker = await fetchSpeakerBySlug(params.slug);
+
+  if (!speaker) {
+    throw notFound();
+  }
+
+  return {
+    title: speaker.name,
+  };
+};
+
 // export async function generateStaticParams() {
 //   const speakers = await fetchSpeakersWithConfirmedSubmissions();
 

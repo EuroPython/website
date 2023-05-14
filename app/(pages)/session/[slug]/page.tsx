@@ -17,7 +17,24 @@ import { Datetime } from "components/datetime";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { components } from "components/mdx";
 
-// TODO: metadata
+import { Metadata } from "next";
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> => {
+  const session = await fetchSubmissionBySlug(params.slug);
+
+  if (!session) {
+    throw notFound();
+  }
+
+  return {
+    title: session.title,
+    description: session.abstract,
+  };
+};
 
 // export async function generateStaticParams() {
 //   const submissions = await fetchConfirmedSubmissions();

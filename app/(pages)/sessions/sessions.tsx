@@ -48,7 +48,7 @@ export const Sessions = ({
   return (
     <div>
       <Title>
-        Accepted sessions
+        Accepted {type ? type : "sessions"}
         <p className="text-base mt-2 text-black">
           Note: this list might change
         </p>
