@@ -1,5 +1,5 @@
 import { MDXRemote } from "components/mdx-remote/mdx-remote";
-import { getPage } from "./get-page";
+import { getPage } from "../get-page";
 import { notFound } from "next/navigation";
 
 // we are not using a catch-all because of this issue:
@@ -7,10 +7,10 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; secondLevel: string };
 }) {
   try {
-    const { data } = await getPage([params.slug], false);
+    const { data } = await getPage([params.slug, params.secondLevel], false);
 
     return {
       title: data.title,
@@ -22,16 +22,16 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: { slug: string; secondLevel: string };
+}) {
   try {
-    const { mdxSource } = await getPage([params.slug]);
+    const { mdxSource } = await getPage([params.slug, params.secondLevel]);
 
-    return (
-      <main id="main-content" className="px-6">
-        {/* @ts-ignore */}
-        <MDXRemote {...mdxSource} />
-      </main>
-    );
+    /* @ts-ignore */
+    return <MDXRemote {...mdxSource} />;
   } catch (e) {
     console.error(e);
 
