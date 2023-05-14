@@ -58,7 +58,7 @@ const SponsorTier = ({
   features,
 }: {
   title: string;
-  totalSlots?: number | string;
+  totalSlots?: number | null;
   price: number | string;
   features: string[];
 }) => {
@@ -95,11 +95,16 @@ const SponsorTier = ({
         </Title>
 
         <div className="font-bold text-3xl">{formattedPrice}</div>
-        {totalSlots && (
-          <div className="text-xl">
-            <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
-          </div>
-        )}
+        <div className="text-xl">
+          {totalSlots ? (
+            <>
+              <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""}{" "}
+              available
+            </>
+          ) : (
+            <>No slots available</>
+          )}
+        </div>
       </div>
 
       <p className="font-bold text-base">This tier includes:</p>
@@ -150,7 +155,7 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum"
-        totalSlots="No"
+        totalSlots={null}
         price={17000}
         features={[
           "16 sqm booth in exhibit hall",
