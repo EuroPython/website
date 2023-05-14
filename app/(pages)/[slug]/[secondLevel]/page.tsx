@@ -30,12 +30,8 @@ export default async function Page({
   try {
     const { mdxSource } = await getPage([params.slug, params.secondLevel]);
 
-    return (
-      <main id="main-content" className="px-6">
-        {/* @ts-ignore */}
-        <MDXRemote {...mdxSource} />
-      </main>
-    );
+    /* @ts-ignore */
+    return <MDXRemote {...mdxSource} />;
   } catch (e) {
     console.error(e);
 

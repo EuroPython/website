@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 const LayoutContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <main id="main-content" className="layout-wrapper">
+    <main id="main-content" className="layout-wrapper px-6">
       {children}
     </main>
   );
