@@ -56,7 +56,7 @@ As per our tradition, the conference organisers will provide the rooms and facil
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
 - RB 113; occupancy: 0/24
-- RB 114; occupancy: 0/24
+- RB 114; occupancy: 10/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
 - RB 109; occupancy: 0/48
@@ -93,6 +93,16 @@ Once accepted and published, remember to announce it on the social channels too 
 - Contact: [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my email address is my first name @textualize.io.
 - Links: https://github.com/textualize/textual
 
+### Pyodide
+
+- This sprint is for the Pyodide project but you are also very welcome to work on any Python with WebAssembly topics
+- Number of people: 2 maintainers + up to 8 participants: ~10
+- Room: RB 114
+- Python Level: any
+- Contact: Roman Yurchak rth.yurchak@gmail.com
+- Links:
+    - [Project home](https://github.com/pyodide/pyodide)
+    - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
 
 Please add your sprint here!
 
@@ -103,3 +113,4 @@ Please add your sprint here!
 - Python Level: any
 - Contact: programme@europython
 - Links: https://your_project_url/README.src
+
