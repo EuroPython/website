@@ -75,6 +75,11 @@
           "name": "The Mobility House",
           "url": "https://www.mobilityhouse.com/",
           "logo": "/img/logos/sponsor_logos/TMH_Logo_Black_Vertical.svg"
+        },
+        {
+          "name": "Sonar",
+          "url": "https://www.sonarsource.com/",
+          "logo": "/img/logos/sponsor_logos/sonar.svg"
         }
       ]
     },
