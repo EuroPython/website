@@ -4,6 +4,8 @@ subtitle: EuroPython Call for Proposals
 ---
 # Call for Proposals
 
+Test 123
+
 <div style={{textAlign: "center",  marginBottom: 10}}>
 **EuroPython 2023 Call for Proposals (CFP) is now Closed.**
 
