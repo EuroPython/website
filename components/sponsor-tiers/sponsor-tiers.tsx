@@ -58,7 +58,7 @@ const SponsorTier = ({
   features,
 }: {
   title: string;
-  totalSlots?: number | null;
+  totalSlots?: number;
   price: number | string;
   features: string[];
 }) => {
@@ -98,11 +98,12 @@ const SponsorTier = ({
         <div className="text-xl">
           {totalSlots ? (
             <>
-              <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""}{" "}
+              <span>{totalSlots}</span> slot{totalSlots == 1 ? "" : "s"}{" "}
+
               available
             </>
           ) : (
-            <>No slots available</>
+            <>No slot available</>
           )}
         </div>
       </div>
@@ -170,6 +171,7 @@ export const SponsorTiers = () => {
       <SponsorTier
         title="Gold"
         price={9500}
+        totalSlots={"limited"}
         features={[
           "9 sqm booth in exhibit hall",
           "3 complimentary session passes",
@@ -182,6 +184,7 @@ export const SponsorTiers = () => {
       <SponsorTier
         title="Silver"
         price={6500}
+        totalSlots={"limited"}
         features={[
           "6 sqm booth in exhibit hall",
           "2 complimentary session passes",
@@ -194,12 +197,14 @@ export const SponsorTiers = () => {
         <SponsorTier
           title="Bronze"
           price={2000}
+          totalSlots={"limited"}
           features={["Logo & recuriting ad on EuroPython website and more!"]}
         />
 
         <SponsorTier
           title="Patron"
           price={1000}
+          totalSlots={"limited"}
           features={["Logo on EuroPython website, welcome tweet and more!"]}
         />
       </div>
