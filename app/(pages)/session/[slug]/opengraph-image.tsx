@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/server";
-import { OpenGraphImage } from "components/opengraph-image/opengraph-image";
+import { OpenGraphImageSession } from "components/opengraph-image/opengraph-image-session";
 import { fetchSubmissionBySlug } from "@/lib/pretix/submissions";
 
 export const size = { width: 1200, height: 600 };
@@ -13,10 +13,13 @@ export default async function og({ params }: { params: { slug: string } }) {
   }
 
   const title = session.title;
-  // abstract might be too long
-  const description = "";
 
   return new ImageResponse(
-    <OpenGraphImage title={title} description={description} />
+    (
+      <OpenGraphImageSession
+        title={title}
+        speakers={session.speakers.map((x) => x.name)}
+      />
+    )
   );
 }
