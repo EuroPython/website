@@ -4,8 +4,16 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Call for Proposals",
-          "path": "/cfp"
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Tutorials",
+          "path": "/tutorials"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
         },
         {
           "name": "Speaker Mentorship",
@@ -96,6 +104,10 @@
     }
   ],
   "footer": [
+    {
+      "name": "Call for Proposals",
+      "path": "/cfp"
+    },
     {
       "name": "Contacts",
       "path": "/contacts"
