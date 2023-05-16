@@ -114,6 +114,14 @@ export const fetchConfirmedSubmissions = async () => {
     url = data.next;
   }
 
+  // remove duplicates by code
+  const seen = new Set();
+  sessions = sessions.filter((session) => {
+    const duplicate = seen.has(session.code);
+    seen.add(session.code);
+    return !duplicate;
+  });
+
   return sessions.map(mapSession);
 };
 
