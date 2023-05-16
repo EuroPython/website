@@ -9,17 +9,17 @@ subtitle:
 ## TL;DR ##
 ✨ We are running mentored sprints for diverse community members at EuroPython this year ✨
 
-When: 14th July, 2022, during the main EuroPython conference (14:00 - 16:30) but you take as many breaks as you want.
+When: 21st July, 2023, during the main EuroPython conference (Time TBC) but you take as many breaks as you want.
 
-Room: Wicklow Hall 2A.
+Room: TBC
 
 👉🏽 Apply to be a mentor on the day or feature your open source project: email [cheuk@europython.eu](mailto:cheuk@europython.eu)
 
-👉🏽 Apply to participate as a contributor (sprint on the day): [fill in this form](https://forms.gle/mTbjK2hYnAMoq2LXA).
+👉🏽 Apply to participate as a contributor (sprint on the day): [fill in this form](https://forms.gle/56EbHh4g19Mevo9i8).
 
 If you are not a member of an underrepresented group of the community and want to take on the sprint we encourage you to bring someone from an underrepresented group with you.
 
-👉🏽Volunteer for our Git Helpdesk (4 volunteers needed): Help new contributors with git/GitHub, such as cloning repo, creating branch, committing, resolving merge conflicts. [fill in this form](https://forms.gle/mTbjK2hYnAMoq2LXA)
+👉🏽Volunteer for our Git Helpdesk (4 volunteers needed): Help new contributors with git/GitHub, such as cloning repo, creating branch, committing, resolving merge conflicts. [fill in this form](https://forms.gle/56EbHh4g19Mevo9i8)
 
 📖 Check out our online handbook to learn more about our approach to sprinting: https://mentored-sprints.netlify.app/
 
@@ -46,13 +46,7 @@ By running similar events in smaller conferences we have learned that the attend
 
 Projects that have shown interested in appearing in the mentored sprint:
 
-* [Fairlearn](https://github.com/fairlearn/fairlearn/)
-* [OpenMetaData](https://github.com/open-metadata/OpenMetadata)
-* [CircuitPython](https://github.com/adafruit/circuitpython)
-* [scikit-learn](https://github.com/scikit-learn/scikit-learn)
-* [Mu](https://github.com/mu-editor/mu)
-* [Hypothesis](https://github.com/HypothesisWorks/hypothesis)
-* [Strawberry](https://github.com/strawberry-graphql/strawberry)
+(TBC)
 
 ## GETTING INVOLVED ##
 *OPEN SOURCE PROJECTS AND MENTORS*
@@ -62,7 +56,7 @@ The call for applications for projects will be open until the 8th of July 2022 a
 The call for contributors (individuals willing to participate in the sprint) will also open until the 8th of July 2022 11:69pm AoE and we encourage anyone interested to attend. If you are wondering if this event is for you: it definitely is and we would love to have you taking part in this sprint.
 
 *WHEN IS THE MENTORED SPRINT?*
-This mentored sprint will take place on Thursday, 14th July, 2022 14:00 - 16:30 in Wicklow Hall 2A.
+This mentored sprint will take place on Friday, 21st July, 2023 (Time and room TBC)
 
 *GETTING IN TOUCH*
 If you would like to contact the organizers for any business related to the mentored sprints please send us an email to [cheuk@europython.eu](mailto:cheuk@europython.eu)
