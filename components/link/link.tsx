@@ -13,7 +13,7 @@ export const Link = ({
   return (
     <a
       className={clsx(
-        "text-primary hover:text-primary-hover font-title font-bold border-b-2",
+        "text-primary hover:text-primary-hover font-title font-bold underline",
         className
       )}
       href={href}
