@@ -10,7 +10,7 @@ export const Link = ({
   href: string;
   children: React.ReactNode;
   className?: string;
-  node: any;
+  node?: any;
 }) => {
   return (
     <a
