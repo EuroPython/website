@@ -4,11 +4,13 @@ export const Link = ({
   href,
   children,
   className,
+  node,
   ...props
 }: {
   href: string;
   children: React.ReactNode;
   className?: string;
+  node: any;
 }) => {
   return (
     <a
