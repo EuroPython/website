@@ -113,15 +113,30 @@ export const fetchAllSpeakers = async () => {
     url = data.next;
   }
 
+  const seen = new Set();
+  speakers = speakers.filter((speaker) => {
+    const duplicate = seen.has(speaker.code);
+    seen.add(speaker.code);
+    return !duplicate;
+  });
+
   return speakers.map(mapSpeaker);
 };
 
 export const fetchSpeakersWithConfirmedSubmissions = async () => {
   const submissions = await fetchConfirmedSubmissions();
 
-  return Array.from(
+  const allSpeakers = Array.from(
     new Set(submissions.map((submission) => submission.speakers).flat())
   );
+
+  const seen = new Set();
+
+  return allSpeakers.filter((speaker) => {
+    const duplicate = seen.has(speaker.code);
+    seen.add(speaker.code);
+    return !duplicate;
+  });
 };
 
 export const fetchSpeakerBySlug = cache(async (slug: string) => {
