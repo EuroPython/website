@@ -3,6 +3,8 @@ import { Sessions } from "../sessions/sessions";
 
 import { Metadata } from "next";
 
+export const revalidate = 300; // 5 minutes
+
 export const metadata: Metadata = {
   title: "Tutorials",
 };
