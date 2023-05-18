@@ -55,7 +55,7 @@ As per our tradition, the conference organisers will provide the rooms and facil
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
-- RB 113; occupancy: 0/24
+- RB 113; occupancy: 10/24
 - RB 114; occupancy: 10/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
@@ -103,6 +103,19 @@ Once accepted and published, remember to announce it on the social channels too 
 - Links:
     - [Project home](https://github.com/pyodide/pyodide)
     - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
+
+### BeeWare (Briefcase, Toga and more)
+
+- Number of people: ~10 (1 organizer)
+- Room: RB 113
+- Python Level: any
+- Contact: Russell Keith-Magee ([Email](mailto:russell@beeware.org) [Github](https://github.com/freakboy3742) [Mastodon](https://cloudisland.nz/@freakboy3742))
+- Links: 
+    - [Project home](https://beeware.org)
+    - [Tutorial](https://docs.beeware.org)
+    - [Guide for first time contributors](https://beeware.org/contributing/how/first-time/)
+    - [Github](https://github.com/beeware)
+    - [Good first issues](https://github.com/search?q=user%3Abeeware+label%3A%22good%20first%20issue%22+is%3Aissue+is%3Aopen&type=issues)
 
 Please add your sprint here!
 
