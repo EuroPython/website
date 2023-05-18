@@ -88,7 +88,7 @@ export type Session = ReturnType<typeof mapSession>;
 
 export const fetchConfirmedSubmissions = async () => {
   const qs = new URLSearchParams({
-    limit: "100",
+    limit: "200",
     state: "confirmed",
     questions: "all",
   });
