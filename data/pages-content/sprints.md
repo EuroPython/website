@@ -49,7 +49,7 @@ As per our tradition, the conference organisers will provide the rooms and facil
 
 **Note**: As each room might have the capacity to host multiple sprints, it is recommended that sprint organisers prioritise proposing their sprints in already designated rooms that have sufficient space to accommodate the expected number of participants.
 
-- RB 103; occupancy: 10/24
+- RB 103; occupancy: 15/24
 - RB 104; occupancy: 0/24
 - RB 105; occupancy: 0/24
 - RB 106; occupancy: 0/24
@@ -104,6 +104,18 @@ Once accepted and published, remember to announce it on the social channels too 
     - [Project home](https://github.com/pyodide/pyodide)
     - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
 
+
+### WitnessAngel Sprint
+
+- Number of people: ~5 (up to 4 contributors + 1-2 organisers)
+- Room: RB 103
+- Python Level: 1+ years of experience recommended
+- Contact: Pakal contact@witnessangel.com
+- Links:
+    - [Homepage](https://witnessangel.com/en/home/)
+    - [Repositories](https://github.com/WitnessAngel/)
+ 
+ 
 ### BeeWare (Briefcase, Toga and more)
 
 - Number of people: ~10 (1 organizer)
