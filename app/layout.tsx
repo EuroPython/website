@@ -1,17 +1,17 @@
 import "../styles/main.css";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
+  title: {
+    default:
+      "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+    template: "%s | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+  },
   metadataBase: new URL("https://ep2023.europython.eu/"),
-  title:
-    "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
   description: "",
-  alternates: [
-    {
-      type: "application/rss+xml",
-      title: "EuroPython Blog RSS Feed",
-      href: "http://blog.europython.eu/rss",
-    },
-  ],
+  alternates: {
+    types: { "application/rss+xml": "http://blog.europython.eu/rss" },
+  },
 };
 
 export default function RootLayout({

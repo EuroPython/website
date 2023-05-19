@@ -12,6 +12,11 @@
       "name": "Platinum",
       "sponsors": [
         {
+          "name": "JetBrains",
+          "url": "https://www.jetbrains.com/pycharm",
+          "logo": "/img/logos/sponsor_logos/jetbrains.svg"
+        },
+        {
           "name": "Kraken Technologies LTD",
           "url": "https://octopusenergy.group/",
           "logo": "/img/logos/sponsor_logos/KrakenV2_stacked_Dark_adobe_express.svg"
@@ -70,6 +75,11 @@
           "name": "The Mobility House",
           "url": "https://www.mobilityhouse.com/",
           "logo": "/img/logos/sponsor_logos/TMH_Logo_Black_Vertical.svg"
+        },
+        {
+          "name": "Sonar",
+          "url": "https://www.sonarsource.com/",
+          "logo": "/img/logos/sponsor_logos/sonar.svg"
         }
       ]
     },

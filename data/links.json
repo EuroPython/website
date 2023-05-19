@@ -4,8 +4,16 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Call for Proposals",
-          "path": "/cfp"
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Tutorials",
+          "path": "/tutorials"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
         },
         {
           "name": "Speaker Mentorship",
@@ -21,6 +29,10 @@
           "path": "/sprints"
         },
         {
+          "name": "Mentored Sprint",
+          "path": "/mentored-sprint"
+        },
+        {
           "name": "Trans*Code",
           "path": "/trans_code"
         },
@@ -31,6 +43,10 @@
         {
           "name": "HumbleData Workshop",
           "path": "/humble-data"
+        },
+        {
+          "name": "PyLadies Snake Workshop",
+          "path": "/pyladies-workshop"
         }
       ]
     },
@@ -92,6 +108,10 @@
     }
   ],
   "footer": [
+    {
+      "name": "Call for Proposals",
+      "path": "/cfp"
+    },
     {
       "name": "Contacts",
       "path": "/contacts"
