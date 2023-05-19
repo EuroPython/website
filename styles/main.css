@@ -112,8 +112,14 @@ ul.list-disc li::before {
   background-position: 50% 50%;
   position: absolute;
   left: -30px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0.2em;
+}
+
+ul ul.list-disc li {
+  list-style: disc;
+}
+ul ul.list-disc li::before {
+  display: none;
 }
 
 p.tick::before {
