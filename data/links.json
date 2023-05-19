@@ -27,6 +27,10 @@
         {
           "name": "WASM Summit",
           "path": "/wasm"
+        },
+        {
+          "name": "HumbleData Workshop",
+          "path": "/humble-data"
         }
       ]
     },
