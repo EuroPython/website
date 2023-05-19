@@ -1,20 +1,21 @@
 ---
-title: Beginners' Day - Humble Data Workshop
+title: Humble Data Workshop
 subtitle:
   Would you like to learn to code but don’t know where to start? Would you like to take a peek at Data Science but are not sure how? Taking first steps are very hard. That is why we have decided to host a workshop to teach beginners how to start with Python and Data Science. Join and let's share our passion for the world of data science!
+social_card: ep2023-social-card-banner1686x888-humble-data.png
 ---
-## Beginners' Day - Humble Data Workshop ##
+## Humble Data Workshop ##
 *WE ARE BACK!*
-Following the success of several Beginners Data Workshop at PyCon US, Ghana, Namibia, Africa and PyData Global, we are glad to have it again at EuroPython!
+Following the success of several Beginner's Data Workshop at PyCon US, Ghana, Namibia, Africa and PyData Global, we are glad to have it again at EuroPython!
 
 👉🏽 [APPLY HERE TO ATTEND THIS WORKSHOP](https://forms.gle/jrF8uSb8w5tMhAyP8) (application deadline is 3rd July, 2023) 👈
 
-## Learn Python for Data Science in this Beginners' Day Workshop ##
+## Learn Python for Data Science in the Workshop ##
 Would you like to learn to code but don’t know where to start? Would you like to take a peek at Data Science but are not sure how? Taking first steps are very hard. That is why we have decided to host a workshop to teach beginners how to start with Python and Data Science. Join and let's share our passion for the world of data science!
 
 “We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.” – Python Software Foundation’s Diversity Statement
 
-We invite those from under-represented groups to apply to join us on Monday 17th July 2023 for the EuroPython Beginners' Day - Humble Data Workshop. There, you will learn the basics of programming in Python, useful libraries and tools, such as Jupyter Notebook that help with data analysis.
+We invite those from under-represented groups to apply to join us on Monday 17th July 2023 for the Humble Data Workshop at EuroPython. There, you will learn the basics of programming in Python, useful libraries and tools, such as Jupyter Notebook that help with data analysis.
 
 You will be divided into small groups, each with an assigned mentor to guide you through the workshop materials and answer your questions. You can expect plenty of exercises, quizzes and games, and inspiring talks from those who were once in your shoes.
 
@@ -40,7 +41,8 @@ This workshop is being run by data scientists and software engineers dedicated t
 If you would like to attend this workshop, [please apply here](https://forms.gle/jrF8uSb8w5tMhAyP8). Deadline: 3rd July, 2023.
 
 ## Mentors ##
-We are looking for volunteers to help mentor the attendees. There is no need to be an expert in programming, data science or Python – we are teaching the basics. But you do need: <br>
+We are looking for volunteers to help mentor the attendees. There is no need to be an expert in programming, data science or Python – we are teaching the basics. But you do need:
+
 👉🏽 Lots of patience, smiles and a *friendly attitude*.
 
 👉🏽 The ability to answer questions in a beginner-friendly way, even if it means the explanation is not technically precise.
@@ -51,7 +53,8 @@ We are looking for volunteers to help mentor the attendees. There is no need to 
 
 👉🏽 Will to learn and to teach the mentees.
 
-In return, you will meet new interesting people outside your usual *bubble*, gain eternal gratitude from a group of attendees, and help to break down stereotypes around what a developer “looks like”. <br>
+In return, you will meet new interesting people outside your usual *bubble*, gain eternal gratitude from a group of attendees, and help to break down stereotypes around what a developer “looks like”.
+
 **BONUS POINT**: All this *should* be added on to your CV!
 
 ### *Fill in this form*
