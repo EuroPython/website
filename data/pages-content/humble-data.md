@@ -2,13 +2,13 @@
 title: Humble Data Workshop
 subtitle:
   Would you like to learn to code but don’t know where to start? Would you like to take a peek at Data Science but are not sure how? Taking first steps are very hard. That is why we have decided to host a workshop to teach beginners how to start with Python and Data Science. Join and let's share our passion for the world of data science!
-social_card: ep2023-social-card-banner1686x888-humble-data.png
+social_card: social-card-humble-data.png
 ---
 ## Humble Data Workshop ##
 *WE ARE BACK!*
 Following the success of several Beginner's Data Workshop at PyCon US, Ghana, Namibia, Africa and PyData Global, we are glad to have it again at EuroPython!
 
-👉🏽 [APPLY HERE TO ATTEND THIS WORKSHOP](https://forms.gle/jrF8uSb8w5tMhAyP8) (application deadline is 3rd July, 2023) 👈
+👉🏽 [APPLY HERE TO ATTEND THIS WORKSHOP](https://forms.gle/jFP1CCNSp91ekyi16) (application deadline is 3rd July, 2023) 👈
 
 ## Learn Python for Data Science in the Workshop ##
 Would you like to learn to code but don’t know where to start? Would you like to take a peek at Data Science but are not sure how? Taking first steps are very hard. That is why we have decided to host a workshop to teach beginners how to start with Python and Data Science. Join and let's share our passion for the world of data science!
@@ -23,10 +23,10 @@ You will be divided into small groups, each with an assigned mentor to guide you
 Monday, 17th July 2023 (time and room to be determined).
 
 ## WHERE? ##
-EuroPython (see [here](/where)).
+EuroPython (see [here](/where#prague-congress-centre---conference-venue)).
 
 ## WHO CAN JOIN? ##
-Anyone with a EuroPython [Conference Ticket or Combined Ticket](https://ep2022.europython.eu/tickets#ticket-types).
+Anyone with a EuroPython [Conference Ticket or Combined Ticket](https://ep2023.europython.eu/tickets#ticket-types).
 
 ## WHAT DO I NEED TO BRING? ##
 You will need a computer or tablet with internet access. Nothing else!
@@ -38,7 +38,7 @@ If you have zero programming experience, this workshop is made for you! If you a
 ## HOW IS THIS POSSIBLE? ##
 This workshop is being run by data scientists and software engineers dedicated to the spirit of open source. Every day we benefit from the hard work of others when we use free open tools. This is our way of giving back. We thank EuroPython for their support in facilitating this workshop. ❤️
 
-If you would like to attend this workshop, [please apply here](https://forms.gle/jrF8uSb8w5tMhAyP8). Deadline: 3rd July, 2023.
+If you would like to attend this workshop, [please apply here](https://forms.gle/jFP1CCNSp91ekyi16). Deadline: 3rd July, 2023.
 
 ## Mentors ##
 We are looking for volunteers to help mentor the attendees. There is no need to be an expert in programming, data science or Python – we are teaching the basics. But you do need:
@@ -58,4 +58,4 @@ In return, you will meet new interesting people outside your usual *bubble*, gai
 **BONUS POINT**: All this *should* be added on to your CV!
 
 ### *Fill in this form*
-Apply to be mentor by [filling in this form](https://forms.gle/jrF8uSb8w5tMhAyP8).
+Apply to be mentor by [filling in this form](https://forms.gle/jFP1CCNSp91ekyi16).
