@@ -26,7 +26,7 @@ EuroPython 2023.
 </div>
 
 
-The EuroPython Society are sponsoring the Financial Aid Programme with €20,000 this year.
+The EuroPython Society are sponsoring the Financial Aid Programme with €25,000 this year.
 
 If you want to support EuroPython and its efforts to make EuroPython accessible
 to everyone, please consider sponsoring EuroPython by reaching out to
