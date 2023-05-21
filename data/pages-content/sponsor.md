@@ -30,13 +30,13 @@ EuroPython 2022 was a hybrid conference, both in Dublin & Online, combining the 
 
 At EuroPython 2023, we offer seven main packages, aiming to keep EuroPython accessible to most organisations keen to help the community.
 
-<Note>**Launch Sponsors will again get 10% of discount!** Sign up by **31 March** to take advantage! Reach out to us at sponsoring@europython.eu for any questions.</Note>
 
 <div style={{textAlign: "left", marginBottom: 30}}>
 <ButtonLink href="https://drive.google.com/file/d/15f6HGVUjgx2OKaLoCaIa6uNG3W0xLOm6/view?usp=share_link">Sponsor Packages & Options Table (PDF)</ButtonLink>
 <ButtonLink href="https://forms.gle/ZmKdd2qNzXbmM4Vb6">Sign up now!</ButtonLink>
 </div>
 
+<Note>**Platinum Packages have now sold out. Get in touch soon for other sponsorship options and support EuroPython!**</Note>
 
 <SponsorTiers />
 
@@ -54,15 +54,18 @@ Please note: each add-on has limited slots and some are exclusive. Please check 
 - Open Space Room Sponsors: €2,000
 - And many more!
 
-<ButtonLink href="https://drive.google.com/file/d/15f6HGVUjgx2OKaLoCaIa6uNG3W0xLOm6/view?usp=share_link">Full list of Optional Extras (PDF)</ButtonLink>
-<ButtonLink href="https://forms.gle/ZmKdd2qNzXbmM4Vb6">Sign up now!</ButtonLink>
+<div style={{textAlign: "left", right: 30}}>
 
+<ButtonLink href="https://drive.google.com/file/d/15f6HGVUjgx2OKaLoCaIa6uNG3W0xLOm6/view?usp=share_link">Full list of Optional Extras (PDF)</ButtonLink>
+
+<ButtonLink href="https://forms.gle/ZmKdd2qNzXbmM4Vb6">Sign up now!</ButtonLink>
+</div>
 
 ## Discounts
 
-### Early Bird
+### [CLOSED] Early Bird
 
-**10% discount** applies to launch sponsors who sign up by **31 March**. Reach out to us to at **[sponsoring@europython.eu](mailto:sponsoring@europython.eu)**
+ ~~**10% discount** applies to launch sponsors who sign up by **31 March**. Reach out to us to at **[sponsoring@europython.eu](mailto:sponsoring@europython.eu)**~~
 
 ### SME
 

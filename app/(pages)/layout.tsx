@@ -2,16 +2,9 @@ import { Header } from "components/header";
 import { Footer } from "components/footer";
 import { ReactNode } from "react";
 
-export const metadata = {
-  title: {
-    template:
-      "%s | EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
-  },
-};
-
 const LayoutContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <main id="main-content" className="layout-wrapper">
+    <main id="main-content" className="layout-wrapper px-6">
       {children}
     </main>
   );

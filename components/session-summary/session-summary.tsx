@@ -1,21 +1,31 @@
 import { Prose } from "components/prose/prose";
 import { TagContainer, Tag } from "components/tag/tag";
 import { Title } from "components/typography/title";
-import { MDXRemote } from "next-mdx-remote";
+import ReactMarkdown from "react-markdown";
+
+import { components } from "components/mdx";
+import { Fragment } from "react";
+
+const capitalize = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
 
 export const SessionSummary = ({
   session,
 }: {
   session: {
     title: string;
+    code: string;
+    abstract: string;
     slug: string;
     speakers: {
       name: string;
-      slug?: string;
+      code?: string;
+      slug: string;
     }[];
-    submission_type: string;
-    abstractSource: any;
+    type: string;
     track: string;
+    experience?: string;
   };
 }) => {
   return (
@@ -23,31 +33,35 @@ export const SessionSummary = ({
       <Title level={2} highlighted className="!mb-6">
         <a
           href={`/session/${session.slug}`}
-          className="hover:text-primary-hover"
+          className="!text-inherit hover:underline"
         >
           {session.title}
         </a>
       </Title>
       <p className="text-lg font-bold mb-4">
         {session.speakers.map((speaker, index) => (
-          <>
+          <Fragment key={speaker.slug}>
             <a
-              href={speaker.slug ? `/speaker/${speaker.slug}` : ""}
+              href={`/speaker/${speaker.slug}`}
               className="text-primary underline"
             >
               {speaker.name}
             </a>
             {index < session.speakers.length - 1 && ", "}
-          </>
+          </Fragment>
         ))}
       </p>
 
       <Prose>
-        <MDXRemote {...session.abstractSource} />
+        <ReactMarkdown components={components}>
+          {session.abstract}
+        </ReactMarkdown>
       </Prose>
 
       <TagContainer>
-        <Tag>{session.submission_type}</Tag>
+        <Tag>{session.type}</Tag>
+        {session.experience && <Tag>{capitalize(session.experience)}</Tag>}
+
         <Tag>{session.track}</Tag>
       </TagContainer>
     </div>

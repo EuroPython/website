@@ -6,7 +6,7 @@ export const Label = ({
   htmlFor: string;
 }) => {
   return (
-    <label htmlFor={htmlFor} className="block font-bold mb-4 pl-3 text-lg">
+    <label htmlFor={htmlFor} className="block text-primary font-bold mb-4 pl-3 text-lg">
       {children}
     </label>
   );

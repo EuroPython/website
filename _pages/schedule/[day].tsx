@@ -12,6 +12,7 @@ import {
 import { Schedule } from "../../components/schedule/schedule";
 import { Schedule as ScheduleType } from "../../components/schedule/types";
 import { fetchSessions } from "../../lib/sessions";
+// @ts-ignore
 import { fetchSpeakers } from "../../lib/speakers";
 import { Title } from "components/typography/title";
 import { Select } from "components/form/select";
@@ -26,9 +27,12 @@ export default function SchedulePage({
   days: { day: string; type: string }[];
   schedule: ScheduleType;
 }) {
-  const handleDaySelected = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
-    window.location.href = `/schedule/${event.target.value}`;
-  }, []);
+  const handleDaySelected = useCallback(
+    (event: React.ChangeEvent<HTMLSelectElement>) => {
+      window.location.href = `/schedule/${event.target.value}`;
+    },
+    []
+  );
 
   const sortedDays = days.sort((a, b) => {
     return (

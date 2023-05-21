@@ -49,24 +49,26 @@ As per our tradition, the conference organisers will provide the rooms and facil
 
 **Note**: As each room might have the capacity to host multiple sprints, it is recommended that sprint organisers prioritise proposing their sprints in already designated rooms that have sufficient space to accommodate the expected number of participants.
 
-- RB 103; occupancy: 13/24
+- RB 103; occupancy: 15/24
 - RB 104; occupancy: 0/24
 - RB 105; occupancy: 0/24
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
-- RB 113; occupancy: 0/24
-- RB 114; occupancy: 0/24
+- RB 113; occupancy: 10/24
+- RB 114; occupancy: 10/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
 - RB 109; occupancy: 0/48
 
 If you are planning to run a sprint at EuroPython 2023, please add it at the bottom of this page [creating a pull request to our website](https://github.com/EuroPython/website/blob/main/data/pages-content/sprints.md):
 
-1. Copy the template at the bottom of the sprint list.
-2. Fill the template with your details.
-3. Add your sprint at the end of the list.
-4. Update the room occupancy in the list above.
+1. Make sure your sprint is about an _open source_ project.
+2. Copy the template at the bottom of the sprint list.
+3. Fill the template with your details.
+4. Make sure that you link to a public repository of the project.
+5. Add your sprint at the end of the list.
+6. Update the room occupancy in the list above. (If this is your first time organising a sprint, be mindful of how many people you can accommodate.)
 
 If you have any questions, do not hesitate to reach out to us at programme@europython.eu.
 
@@ -85,19 +87,55 @@ Once accepted and published, remember to announce it on the social channels too 
 
 ### Textual Sprint
 
-- Number of people: 8
+- Number of people: ~5 (~4 contributors + 1 organiser)
 - Room: RB 103
 - Python Level: 1+ years of experience recommended
 - Contact: [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my email address is my first name @textualize.io.
 - Links: https://github.com/textualize/textual
 
+### Pyodide
+
+- This sprint is for the Pyodide project but you are also very welcome to work on any Python with WebAssembly topics
+- Number of people: 2 maintainers + up to 8 participants: ~10
+- Room: RB 114
+- Python Level: any
+- Contact: Roman Yurchak rth.yurchak@gmail.com
+- Links:
+    - [Project home](https://github.com/pyodide/pyodide)
+    - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
+
+
+### WitnessAngel Sprint
+
+- Number of people: ~5 (up to 4 contributors + 1-2 organisers)
+- Room: RB 103
+- Python Level: 1+ years of experience recommended
+- Contact: Pakal contact@witnessangel.com
+- Links:
+    - [Homepage](https://witnessangel.com/en/home/)
+    - [Repositories](https://github.com/WitnessAngel/)
+ 
+ 
+### BeeWare (Briefcase, Toga and more)
+
+- Number of people: ~10 (1 organizer)
+- Room: RB 113
+- Python Level: any
+- Contact: Russell Keith-Magee ([Email](mailto:russell@beeware.org) [Github](https://github.com/freakboy3742) [Mastodon](https://cloudisland.nz/@freakboy3742))
+- Links: 
+    - [Project home](https://beeware.org)
+    - [Tutorial](https://docs.beeware.org)
+    - [Guide for first time contributors](https://beeware.org/contributing/how/first-time/)
+    - [Github](https://github.com/beeware)
+    - [Good first issues](https://github.com/search?q=user%3Abeeware+label%3A%22good%20first%20issue%22+is%3Aissue+is%3Aopen&type=issues)
 
 Please add your sprint here!
 
 ### EuroPython 2023 Example Sprint (copy this for your project)
 
-- Number of people: ??
+- Number of people: ?? (? contributors + ? organisers)
 - Room: RB ???
 - Python Level: any
 - Contact: programme@europython
 - Links: https://your_project_url/README.src
+
