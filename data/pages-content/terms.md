@@ -92,8 +92,7 @@ travel and accommodation costs, loss of working time or opportunity.
 
 ## 4. Refunds
 
-The Event Tickets are fully refundable with no questions asked until **
-17th June, 2021 23:59:59 CEST** (the “Refund End Time”). Refunds are no longer
+The Event Tickets are fully refundable with no questions asked until **17th June, 2023 23:59:59 CEST** (the “Refund End Time”). Refunds are no longer
 possible after that Refund End Time unless otherwise specified by the
 Organisers. The Organisers reserve the right to deduct administrative costs
 (bank, online payments services, etc) from the refund.

@@ -113,6 +113,10 @@
       "path": "/contacts"
     },
     {
+      "name": "Terms",
+      "path": "/terms"
+    },
+    {
       "name": "Privacy Policy",
       "path": "https://www.europython-society.org/privacy/"
     }
