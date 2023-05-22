@@ -41,6 +41,10 @@
           "path": "/wasm"
         },
         {
+          "name": "HumbleData Workshop",
+          "path": "/humble-data"
+        },
+        {
           "name": "PyLadies Snake Workshop",
           "path": "/pyladies-workshop"
         }
