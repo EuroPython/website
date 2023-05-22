@@ -18,7 +18,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-04-14</b>: Community Voting ends </li>
 <li><b>2023-05-09</b>: [Sprints Venue & Info](/sprints) Announced </li>
 <li><b>2023-05-16</b>: [List of Session](/sessions) Published</li>
-<li><b>2023-05-22</b>: Financial Aid Programme Closes </li>
+<li><b>2023-05-21</b>: Financial Aid Programme Closes </li>
 
 </ul>
 
