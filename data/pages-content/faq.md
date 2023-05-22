@@ -17,12 +17,13 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
 <li><b>2023-04-14</b>: Community Voting ends </li>
 <li><b>2023-05-09</b>: [Sprints Venue & Info](/sprints) Announced </li>
+<li><b>2023-05-16</b>: [List of Session](/sessions) Published</li>
+<li><b>2023-05-22</b>: Financial Aid Programme Closes </li>
 
 </ul>
 
 <ul className="milestone-todo">
-<li><b>The week of 2023-05-14</b>: List of Session Published</li>
-<li><b>2023-06-01</b>: First-Time Speaker's Workshop </li>
+<li><b>2023-06-01</b>: [First-Time Speaker's Workshop](/mentorship#first-time-speaker-workshop---thursday-1-june-2023-1800-cest) </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
@@ -83,7 +84,7 @@ We encourage and trust you to pick a fair ticket tier that fits your personal ci
 
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
 
-A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is open for application until 21 May. If you need help to attend the conference, you are most welcome to apply.
+A. Yes, our [Financial Aid Programme](/finaid) for in-person participation was open for application until 21 May. It is now closed after receiving record-high applications. We are very proud to be supporting so many Pythonistas to attend the conference.
 
 ## **Q. Do you provide childcare?**
 
