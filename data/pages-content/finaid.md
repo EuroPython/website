@@ -12,7 +12,8 @@ As part of our commitment to the Python community, we are pleased to announce
 that we offer special grants for people in need of financial aid to attend
 EuroPython.
 
-You’ll find all the information you need to apply for such a grant below.
+**Note:** We are no longer accepting Financial Aid applications for 
+EuroPython 2023.
 
 ---
 
@@ -25,7 +26,7 @@ You’ll find all the information you need to apply for such a grant below.
 </div>
 
 
-The EuroPython Society are sponsoring the Financial Aid Programme with €20,000 this year.
+The EuroPython Society are sponsoring the Financial Aid Programme with €25,000 this year.
 
 If you want to support EuroPython and its efforts to make EuroPython accessible
 to everyone, please consider sponsoring EuroPython by reaching out to
@@ -67,14 +68,16 @@ for a grant:
 
 ## How to apply
 
-You can apply for Financial Aid by filling out the
-[application form][application-form].
+The deadline for submitting Financial Aid applications has passed. You can no
+longer apply for Financial Aid for EuroPython 2023.
 
-The data we collect on this form will exclusively be used by our Financial Aid
-team for the selection of grant recipients and the processing of financial
-aid refunds. No data is passed on to third parties, except to our accountants
-and the bank in order to process the refunds. We use Google Forms for the
-processing and Google Drive for storing the relevant information.
+### Privacy Policy
+
+The data we collect on the application form will exclusively be used by our
+Financial Aid team for the selection of grant recipients and the processing of
+financial aid refunds. No data is passed on to third parties, except to our
+accountants and the bank in order to process the refunds. We use Google Forms
+for the processing and Google Drive for storing the relevant information.
 
 For more details on our privacy policies, please see our
 [privacy policy][privacy-policy].
@@ -239,7 +242,6 @@ See you at EuroPython in Prague!
 
 ---
 
-[application-form]: https://forms.gle/iWvoFyb3XwZRVWpj8
 [privacy-policy]: https://www.europython-society.org/privacy/
 [AoE]: https://en.wikipedia.org/wiki/Anywhere_on_Earth
 [email-finaid]: mailto:finaid@europython.eu
