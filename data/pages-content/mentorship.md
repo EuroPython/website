@@ -65,7 +65,7 @@ We aim to have a 60-90 minutes long event. The main topic of the event will be â
 
 - In the second part (~15min) we will have a chat with our special guest Sebastian Witowski, around his post - [How to Make a Great Conference Talk](https://switowski.com/blog/how-to-make-a-great-conference-talk/).
 
-- In the next part of the workshop, we will have a group discussion with the rest of the experienced speakers around the some topics that arose during the chat with Sebastian.
+- In the next part of the workshop, we will have a group discussion with the rest of the experienced speakers around various topics that arise during the chat with Sebastian.
 
 - Finally, there will be a Q&A session where the first-time speakers will have the opportunity to ask their questions.
 
