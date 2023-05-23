@@ -55,6 +55,24 @@ You will also be invited to join the panel of the Webinar Workshops.
 If you require help contributing to EuroPython, especially if you are from an underrepresented or a marginalised group in the tech industry, you are welcome to submit your application above to become a mentee.
 
 ## 2. Workshops ##
+### First-Time Speaker Workshop - Thursday 1 June 2023, 18.00 CEST
+
+In this workshop, we'll have experienced speakers from the EuroPython community to share their know-how on delivering an effective talk. We hope this will help you learn something meaningful about public speaking before your presentation at EuroPython 2023.
+
+We aim to have a 60-90 minutes long event. The main topic of the event will be “how to make an effective talk”.
+
+- The first part (~15min) will be an introduction and some information will be shared from our programme team.
+
+- In the second part (~15min) we will have a chat with our special guest Sebastian Witowski, around his post - [How to Make a Great Conference Talk](https://switowski.com/blog/how-to-make-a-great-conference-talk/).
+
+- In the next part of the workshop, we will have a group discussion with the rest of the experienced speakers around the some topics that arose during the chat with Sebastian.
+
+- Finally, there will be a Q&A session where the first-time speakers will have the opportunity to ask their questions.
+
+A recording of the session will be made available after the event.
+
+<div style={{textAlign: "center", marginBottom: 15}}>
+<ButtonWithTitle title="Interested in the Speaker Workshop?" text="Register your interest now!" href="https://forms.gle/4jjRny5wHZ5nxrST9" /></div>
 
 ### [COMPLETED] Ask Me Anything about CFP Workshop - Tuesday, 14 March 2023, 18:00 CET
 
@@ -64,11 +82,6 @@ Thank you, everyone who joined the session with your questions! You can view the
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HpSbrqmiSeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-### First-Time Speaker Workshop - Thursday 1 June 2023, 18.00 CEST
-
-In this workshop, we'll have experienced speakers from the EuroPython community to share their know-how on delivering an effective talk. We hope this will help you learn something meaningful about public speaking before your presentation at EuroPython 2023.
-
-A recording of the session will be made available after the event.
 
 ## 3. Speaker Placement Programme
 
