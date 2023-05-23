@@ -297,13 +297,13 @@ export const OpenGraphImageSession = ({
 
         <svg
           width="821"
-          height="152"
+          height="100"
           viewBox="0 0 821 152"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={{
             width: 500,
-            margin: "0px 60px",
+            margin: "20px 60px",
           }}
         >
           <path

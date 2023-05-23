@@ -12,12 +12,10 @@ export default async function og({ params }: { params: { slug: string } }) {
     throw new Error("Session not found");
   }
 
-  const title = session.title;
-
   return new ImageResponse(
     (
       <OpenGraphImageSession
-        title={title}
+        title={session.title}
         speakers={session.speakers.map((x) => x.name)}
       />
     )
