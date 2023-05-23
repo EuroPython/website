@@ -32,10 +32,17 @@ export const generateMetadata = async ({
     throw notFound();
   }
 
-  return {
+  const metadata: Metadata = {
     title: session.title,
     description: session.abstract,
+    twitter: {
+      card: "summary_large_image",
+      title: session.title,
+      description: session.abstract,
+    },
   };
+
+  return metadata;
 };
 
 // export async function generateStaticParams() {
