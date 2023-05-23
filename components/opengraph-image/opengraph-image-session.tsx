@@ -473,7 +473,6 @@ export const OpenGraphImageSession = ({
             fontSize: 60,
             textTransform: "uppercase",
             marginBottom: 10,
-            textDecoration: "underline",
           }}
         >
           {title}
