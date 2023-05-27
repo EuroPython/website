@@ -47,6 +47,10 @@
         {
           "name": "PyLadies Snake Workshop",
           "path": "/pyladies-workshop"
+        },
+        {
+          "name": "PyLadies Social Event",
+          "path": "/pyladies-social-event"
         }
       ]
     },
