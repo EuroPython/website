@@ -1,6 +1,8 @@
 import "../styles/main.css";
 import { Metadata } from "next";
 
+import PlausibleProvider from "next-plausible";
+
 export const metadata: Metadata = {
   title: {
     default:
@@ -26,6 +28,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://use.typekit.net/rhp8qny.css"
         ></link>
+        <PlausibleProvider domain="ep2023.europython.eu" />
       </head>
       <body>{children}</body>
     </html>
