@@ -55,7 +55,7 @@ As per our tradition, the conference organisers will provide the rooms and facil
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
-- RB 113; occupancy: 24/24
+- RB 113; occupancy: 20/24
 - RB 114; occupancy: 10/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
@@ -133,7 +133,7 @@ Please add your sprint here!
 
 ### CPython Core (work on Python 3.13!)
 
-- Number of people: ~15 (10 contributors + 2 organisers)
+- Number of people: ~10 (2 organisers)
 - Room: RB 113
 - Python Level: any
 - Contact: Łukasz Langa ([Email](mailto:lukasz@langa.pl) [GitHub](https://github.com/ambv/) [Mastodon](https://mastodon.social/@ambv/)
