@@ -13,6 +13,10 @@ Our mission is to promote, educate and advance a diverse Python community throug
 ## About the Event 
 The event is a fantastic opportunity to engage with other women in tech, expand your network, and share your experiences. Let's foster our community spirit, deepen connections, and spark new collaborations. Connect, share and celebrate!
 
+<div style={{textAlign: "center", marginBottom: 20}}>
+<ButtonLink href="https://forms.gle/Uz8Xamou6ik4mLEp6"> Register your interest now! </ButtonLink>
+</div>
+
 ## Event @ EuroPython 
 - **When**: 21 July 2023, start: 7 PM
 - **Where**: pub Hospůdka na Hradbách, 10 minutes on foot from Prague Congress Centre
