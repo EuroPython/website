@@ -180,14 +180,11 @@ Please add your sprint here!
   - [CPython's Developer Guide](https://devguide.python.org/)
   - [Easy Issues](https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy)
 
-{/*
-
-### EuroPython 2023 Example Project (copy this for your project)
+<!-- ### EuroPython 2023 Example Project (copy this for your project)
 
 - Number of people: ?? (? contributors + ? organisers)
 - Room: RB ???
 - Python Level: any
 - Contact: programme@europython
 - Links: https://your_project_url/README.src
-
-*/}
+ -->
