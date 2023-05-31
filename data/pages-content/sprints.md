@@ -55,7 +55,7 @@ As per our tradition, the conference organisers will provide the rooms and facil
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
-- RB 113; occupancy: 10/24
+- RB 113; occupancy: 24/24
 - RB 114; occupancy: 10/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
@@ -77,7 +77,7 @@ Once accepted and published, remember to announce it on the social channels too 
 # 2023 Sprints listings
 
 
-### Strawberry GraphQL Sprint 🍓
+### Strawberry GraphQL 🍓
 - Number of people: 5
 - Room: RB 103
 - Python Level: any
@@ -85,7 +85,7 @@ Once accepted and published, remember to announce it on the social channels too 
 - Links: https://github.com/strawberry-graphql
 
 
-### Textual Sprint
+### Textual
 
 - Number of people: ~5 (~4 contributors + 1 organiser)
 - Room: RB 103
@@ -105,7 +105,7 @@ Once accepted and published, remember to announce it on the social channels too 
     - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
 
 
-### WitnessAngel Sprint
+### WitnessAngel
 
 - Number of people: ~5 (up to 4 contributors + 1-2 organisers)
 - Room: RB 103
@@ -131,7 +131,17 @@ Once accepted and published, remember to announce it on the social channels too 
 
 Please add your sprint here!
 
-### EuroPython 2023 Example Sprint (copy this for your project)
+### CPython Core (work on Python 3.13!)
+
+- Number of people: ~15 (10 contributors + 2 organisers)
+- Room: RB 113
+- Python Level: any
+- Contact: Łukasz Langa ([Email](mailto:lukasz@langa.pl) [GitHub](https://github.com/ambv/) [Mastodon](https://mastodon.social/@ambv/)
+- Links:
+    - [CPython's Developer Guide](https://devguide.python.org/)
+    - [Easy Issues](https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy)
+
+### EuroPython 2023 Example Project (copy this for your project)
 
 - Number of people: ?? (? contributors + ? organisers)
 - Room: RB ???
