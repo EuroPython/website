@@ -135,11 +135,13 @@ Please add your sprint here!
 
 - Number of people: ~10 (2 organisers)
 - Room: RB 113
-- Python Level: any
-- Contact: Łukasz Langa ([Email](mailto:lukasz@langa.pl) [GitHub](https://github.com/ambv/) [Mastodon](https://mastodon.social/@ambv/)
+- Python Level: 2+ years of experience recommended
+- Contact: Łukasz Langa ([Email](mailto:lukasz@langa.pl) [GitHub](https://github.com/ambv/) [Mastodon](https://mastodon.social/@ambv/))
 - Links:
     - [CPython's Developer Guide](https://devguide.python.org/)
     - [Easy Issues](https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy)
+
+<!--
 
 ### EuroPython 2023 Example Project (copy this for your project)
 
@@ -149,3 +151,4 @@ Please add your sprint here!
 - Contact: programme@europython
 - Links: https://your_project_url/README.src
 
+-->
