@@ -19,11 +19,10 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-05-09</b>: [Sprints Venue & Info](/sprints) Announced </li>
 <li><b>2023-05-16</b>: [List of Session](/sessions) Published</li>
 <li><b>2023-05-21</b>: Financial Aid Programme Closes </li>
-
+<li><b>2023-06-01</b>: [First-Time Speaker's Workshop](/mentorship#first-time-speaker-workshop---thursday-1-june-2023-1800-cest)</li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-06-01</b>: [First-Time Speaker's Workshop](/mentorship#first-time-speaker-workshop---thursday-1-june-2023-1800-cest) </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
