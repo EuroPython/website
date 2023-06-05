@@ -1,7 +1,8 @@
 ---
-title: Information for Volunteers
 title: Volunteers
-subtitle: Help us to have a great conference!
+subtitle: Help us have a great conference!
+---
+
 # Volunteering @ EuroPython
 
 Python owes much of its success to open source and the community surrounding it. In the same spirit, EuroPython is organized and run by volunteers from the Python community. Alas, we're only a few and need your help to make the show run as smoothly as possible. Each year we are joined by our awesome attendees as volunteers to help in running this wonderful conference. This page explains some of the ways you can help us.
@@ -11,30 +12,33 @@ Being a volunteer means giving your time for free, without expecting anything ba
 We will also have a small number of perks for you, some small gifts to say "thank you" for your time and for your help.
 
 
-# Things to remember
+## Things to remember
   - To enter the conference you need a ticket.
   - You can sign up to volunteer before having bought a ticket.
 
-# How to sign up
+## How to sign up
   - Fill in [this form](https://forms.gle/mokwmiYM2hhXbPEF6) - we will contact and onboard you. 
   - Acknowledge our [EuroPython 2023 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
   - We will reach out to you with a link to join the EuroPython Discord server.
   - Please say hello and introduce yourself in #onsite-volunteers channel. Thanks ❤️
   - If you have any problem with the process, please email volunteers@europython.eu
 
-# Perks for volunteers
+## Perks for volunteers
 
   - A free conference ticket if you volunteer for eight hours or more!
   - Get an awesome EuroPython Volunteer T-Shirt that you can keep and show off to your friends and a mention on the website to stay there forever :-)
   - A special group photo with all volunteers (time will be announced on the #onsite-volunteers)
 
 
-# Summary of tasks
+## What Volunteering at EuroPython looks like
+
+As a part of EuroPython volunteers' fleet, you will be the face of the conference. Your prime directive will be to ensure everyone coming to the conference has a great time. We want volunteers to be welcoming, helpful, collaborative, and overall making sure everyone is comfortable. Despite the different tasks laid down below, volunteers represent a single unit. Sometimes this would mean that as a session chair you will be asked about where the quiet room is, we expect you to help this person out or point them to someone who can. 
+
+We've put together an outline of some of the ways you can volunteer your time at the conference. 
 
 ### Registration Desk
   - Hand out registration badges
   - Check student IDs
-  - Register On-Desk tickets and day passes
   - Answer general questions
   - This job involves a lot of talking
 
@@ -45,7 +49,7 @@ We will also have a small number of perks for you, some small gifts to say "than
   - Keep the [Code of Conduct (CoC)](https://www.europython-society.org/coc/) in mind and contact CoC committee members if needed.
 
 ### Session Chairing
-  - Help speakers in preparing their notebooks for the talks
+  - Help speakers in preparing their computers for the talks
   - Introduce the speakers to the audience
   - Signal time left to the speakers
   - Make sure talks are finished on time
@@ -53,13 +57,10 @@ We will also have a small number of perks for you, some small gifts to say "than
   - This job involves speaking in front of people, moderation, and walking with a microphone
 
 ### T-Shirt Handout
-
   - Hand out the conference T-shirt
   - This job involves standing and lifting light items
 
 ### Set Up/Tear Down
-
-  - Helping hands are needed to set up the stage before the conference starts (Monday morning)
   - Putting up signange in hallways for various provisions (Bathroom, Quiet Room, Childcare etc)
   - Also on the last day (Friday afternoon for the main conference, Sunday for the sprints) to clear up the venue afterwards
   - This job involves walking and carrying items, some of which maybe heavy.
