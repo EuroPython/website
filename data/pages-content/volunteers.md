@@ -36,7 +36,7 @@ We've put together an outline of some of the ways you can volunteer your time at
   - Hand out registration badges
   - Check student IDs
   - Answer general questions
-  - This job involves a lot of talking
+  - This job involves a lot of talking.
 
 ### Room Manager
 
@@ -51,13 +51,13 @@ We've put together an outline of some of the ways you can volunteer your time at
   - Introduce the speakers to the audience
   - Signal time left to the speakers
   - Make sure talks are finished on time
-  - Moderate Q&A session and help with passing around microphones and introduce remote attendees.
-  - This job involves speaking in front of people, moderation, and walking with a microphone
+  - Moderate Q&A session and help with passing around microphones and introduce remote attendees
+  - This job involves speaking in front of people, moderation, and walking with a microphone.
 
 ### T-Shirt Handout
 
   - Hand out the conference T-shirt
-  - This job involves standing and lifting light items
+  - This job involves standing and lifting light items.
 
 ### Set Up/Tear Down
 
