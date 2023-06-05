@@ -13,15 +13,10 @@ We will also have a small number of perks for you, some small gifts to say "than
 
 
 ## Things to remember
+
   - To enter the conference you need a ticket.
   - You can sign up to volunteer before having bought a ticket.
 
-## How to sign up
-  - Fill in [this form](https://forms.gle/mokwmiYM2hhXbPEF6) - we will contact and onboard you. 
-  - Acknowledge our [EuroPython 2023 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
-  - We will reach out to you with a link to join the EuroPython Discord server.
-  - Please say hello and introduce yourself in #onsite-volunteers channel. Thanks ❤️
-  - If you have any problem with the process, please email volunteers@europython.eu
 
 ## Perks for volunteers
 
@@ -32,23 +27,26 @@ We will also have a small number of perks for you, some small gifts to say "than
 
 ## What Volunteering at EuroPython looks like
 
-As a part of EuroPython volunteers' fleet, you will be the face of the conference. Your prime directive will be to ensure everyone coming to the conference has a great time. We want volunteers to be welcoming, helpful, collaborative, and overall making sure everyone is comfortable. Despite the different tasks laid down below, volunteers represent a single unit. Sometimes this would mean that as a session chair you will be asked about where the quiet room is, we expect you to help this person out or point them to someone who can. 
+As a part of EuroPython volunteers' fleet, you will be the face of the conference. Your prime directive will be to ensure everyone coming to the conference has a great time. We want volunteers to be welcoming, helpful, collaborative, and overall making sure everyone is comfortable. Despite the different tasks laid down below, volunteers represent a single unit. Sometimes this would mean that as a session chair you will be asked about where the quiet room is, we expect you to help this person out or point them to someone who can.
 
-We've put together an outline of some of the ways you can volunteer your time at the conference. 
+We've put together an outline of some of the ways you can volunteer your time at the conference.
 
 ### Registration Desk
+
   - Hand out registration badges
   - Check student IDs
   - Answer general questions
   - This job involves a lot of talking
 
 ### Room Manager
+
   - Manage the room for an entire slot
   - Make sure the session chair and speakers are in the room in time
   - Keep in touch with the AV team to ensure everything is in order
   - Keep the [Code of Conduct (CoC)](https://www.europython-society.org/coc/) in mind and contact CoC committee members if needed.
 
 ### Session Chairing
+
   - Help speakers in preparing their computers for the talks
   - Introduce the speakers to the audience
   - Signal time left to the speakers
@@ -57,10 +55,12 @@ We've put together an outline of some of the ways you can volunteer your time at
   - This job involves speaking in front of people, moderation, and walking with a microphone
 
 ### T-Shirt Handout
+
   - Hand out the conference T-shirt
   - This job involves standing and lifting light items
 
 ### Set Up/Tear Down
+
   - Putting up signange in hallways for various provisions (Bathroom, Quiet Room, Childcare etc)
   - Also on the last day (Friday afternoon for the main conference, Sunday for the sprints) to clear up the venue afterwards
   - This job involves walking and carrying items, some of which maybe heavy.
@@ -73,16 +73,24 @@ We've put together an outline of some of the ways you can volunteer your time at
     * Moving chairs, tables, or poster walls,
     * Arranging transfers between venue and airport, etc.
 
+## How to sign up
 
-# More information
+<div style={{textAlign: "center", marginBottom: 8}}>
+<ButtonWithTitle title="Interested in Volunteering?" text="Register your interest now!" href="https://forms.gle/tmNgWU3rgLbPAVLC9" /></div>
+
+After you fill out the form above and acknowledge our [Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform), we will reach out to you with a link to join the EuroPython Discord server. Please say hello and introduce yourself in #onsite-volunteers channel. Thanks ❤️
+
+## More information
 
 ### Why be a EuroPython Volunteer?
+
   - To help the EuroPython organizers keep the conference affordable for everyone
   - Show your EuroPython support to the Python community (by wearing your exclusive T-Shirt)
   - Get a huge applause during the closing session of the conference
   - Get your name on our EuroPython 2023 Team page to stay there forever.
 
 ### How much work is involved?
+
   - There are different tasks with different time required
   - Each task is related with the concept of slot
   - You can sign up to any number of them.
