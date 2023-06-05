@@ -23,9 +23,9 @@ We will also have a small number of perks for you, some small gifts to say "than
 
 # Perks for volunteers
 
-  - :ticket: A free conference ticket if you volunteer for eight hours or more!
-  - :shirt: Get an awesome EuroPython Volunteer T-Shirt that you can keep and show off to your friends and a mention on the website to stay there forever :-)
-  - :camera: A special group photo with all volunteers (time will be announced on the #onsite-volunteers)
+  - A free conference ticket if you volunteer for eight hours or more!
+  - Get an awesome EuroPython Volunteer T-Shirt that you can keep and show off to your friends and a mention on the website to stay there forever :-)
+  - A special group photo with all volunteers (time will be announced on the #onsite-volunteers)
 
 
 # Summary of tasks
