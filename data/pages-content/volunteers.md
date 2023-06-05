@@ -27,7 +27,7 @@ We will also have a small number of perks for you, some small gifts to say "than
 
 ## What Volunteering at EuroPython looks like
 
-As a part of EuroPython volunteers' fleet, you will be the face of the conference. Your prime directive will be to ensure everyone coming to the conference has a great time. We want volunteers to be welcoming, helpful, collaborative, and overall making sure everyone is comfortable. Despite the different tasks laid down below, volunteers represent a single unit. Sometimes this would mean that as a session chair you will be asked about where the quiet room is, we expect you to help this person out or point them to someone who can.
+As a part of EuroPython volunteers' fleet, you will be the face of the conference. Your prime directive will be to ensure everyone coming to the conference has a great time. We want volunteers to be welcoming, helpful, collaborative, and overall making sure everyone (including yourself) is comfortable. Despite the different tasks laid down below, volunteers represent a single unit. Sometimes this would mean that as a session chair you will be asked about where the quiet room is, we expect you to help this person out or point them to someone who can.
 
 We've put together an outline of some of the ways you can volunteer your time at the conference.
 
@@ -70,7 +70,7 @@ We've put together an outline of some of the ways you can volunteer your time at
   - There are always some tasks which we simply cannot plan beforehand. Based on what's needed in the moment, you can be expected to do one or more of the following (not an exhaustive list):
     * Checking rooms to ensure all the necessary resources are in place
     * Helping out with Registration Desk duties
-    * Moving chairs, tables, or poster walls,
+    * Moving chairs, tables, or poster walls
     * Arranging transfers between venue and airport, etc.
 
 ## How to sign up
