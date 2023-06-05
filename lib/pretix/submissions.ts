@@ -122,6 +122,11 @@ export const fetchConfirmedSubmissions = async () => {
     return !duplicate;
   });
 
+  // filter out sessions that have placeholder in the title
+  sessions = sessions.filter(
+    (session) => !session.title.toLowerCase().includes("placeholder")
+  );
+
   return sessions.map(mapSession);
 };
 
