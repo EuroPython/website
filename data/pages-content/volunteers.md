@@ -1,7 +1,8 @@
 ---
 title: Information for Volunteers
+title: Volunteers
 subtitle: Help us to have a great conference!
----
+# Volunteering @ EuroPython
 
 Python owes much of its success to open source and the community surrounding it. In the same spirit, EuroPython is organized and run by volunteers from the Python community. Alas, we're only a few and need your help to make the show run as smoothly as possible. Each year we are joined by our awesome attendees as volunteers to help in running this wonderful conference. This page explains some of the ways you can help us.
 
@@ -15,11 +16,11 @@ We will also have a small number of perks for you, some small gifts to say "than
   - You can sign up to volunteer before having bought a ticket.
 
 # How to sign up
-  - Fill this form and we will contact and onboard you. https://forms.gle/mokwmiYM2hhXbPEF6
+  - Fill in [this form](https://forms.gle/mokwmiYM2hhXbPEF6) - we will contact and onboard you. 
   - Acknowledge our [EuroPython 2023 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
   - We will reach out to you with a link to join the EuroPython Discord server.
   - Please say hello and introduce yourself in #onsite-volunteers channel. Thanks ❤️
-  - If you have any problem with the process please email volunteers@europython.eu
+  - If you have any problem with the process, please email volunteers@europython.eu
 
 # Perks for volunteers
 
@@ -41,7 +42,7 @@ We will also have a small number of perks for you, some small gifts to say "than
   - Manage the room for an entire slot
   - Make sure the session chair and speakers are in the room in time
   - Keep in touch with the AV team to ensure everything is in order
-  - Keep the COC in mind and contact COC committee members if needed.
+  - Keep the [Code of Conduct (CoC)](https://www.europython-society.org/coc/) in mind and contact CoC committee members if needed.
 
 ### Session Chairing
   - Help speakers in preparing their notebooks for the talks
@@ -61,15 +62,15 @@ We will also have a small number of perks for you, some small gifts to say "than
   - Helping hands are needed to set up the stage before the conference starts (Monday morning)
   - Putting up signange in hallways for various provisions (Bathroom, Quiet Room, Childcare etc)
   - Also on the last day (Friday afternoon for the main conference, Sunday for the sprints) to clear up the venue afterwards
-  - This job involves walking and carrying items some of which maybe heavy.
+  - This job involves walking and carrying items, some of which maybe heavy.
 
 ## Runners and Ad-hoc Activities
 
   - There are always some tasks which we simply cannot plan beforehand. Based on what's needed in the moment, you can be expected to do one or more of the following (not an exhaustive list):
-    * Checking rooms to ensure they have all the resources they need
-    * Help out in Desk duties
-    * moving chairs, tables, or poster walls,
-    * arranging transfers between venue and airport, etc.
+    * Checking rooms to ensure all the necessary resources are in place
+    * Helping out with Registration Desk duties
+    * Moving chairs, tables, or poster walls,
+    * Arranging transfers between venue and airport, etc.
 
 
 # More information
