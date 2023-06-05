@@ -3,33 +3,29 @@ title: Information for Volunteers
 subtitle: Help us to have a great conference!
 ---
 
-EuroPython is organized and run by volunteers from the Python community, but we're only a few and need your help to make the show run as smoothly as possible, so we'd appreciate more help from the EuroPython attendees, if possible.
+Python owes much of its success to open source and the community surrounding it. In the same spirit, EuroPython is organized and run by volunteers from the Python community. Alas, we're only a few and need your help to make the show run as smoothly as possible. Each year we are joined by our awesome attendees as volunteers to help in running this wonderful conference. This page explains some of the ways you can help us.
 
-This page explains some of the tasks we have available for you.
+Being a volunteer means giving your time for free, without expecting anything back, just for the pleasure of being a part of this amazing conference. However this year we want to recognize people who dedicate a significant chunk of their time by offering free conference tickets to those who need it. (More details below!)
 
-Being a volunteer means to give your time for free, without expecting anything back, just for the pleasure of being a part of this amazing conference.
-
-In return, we will have a small number of perks for you, some small gifts to say "thank you" for your time and for your help.
+We will also have a small number of perks for you, some small gifts to say "thank you" for your time and for your help.
 
 
 # Things to remember
-  - To enter the conference you need a ticket
-  - Yo can sign up to any tasks on our Volunteer App before you have bought a ticket
-  - You will not earn a ticket for being a volunteer
+  - To enter the conference you need a ticket.
+  - You can sign up to volunteer before having bought a ticket.
 
 # How to sign up
-  - Fill this form and we will contact and onboard you. https://forms.gle/Y472nH5m8ZRWpbVP8
-  - If you want to save some time you can:
-      + Acknowledge our [EuroPython 2022 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
-      + Assign yourself to available shifts on the Operations spreadsheet. (You will get the link after signing the Data Privacy Policy.)
-      + Sign up to the Europython Volunteers discord server. (The link is in our Operations Spreadsheet)
-      + Please say hello and introduce yourself in #onsite-volunteers channel. Thanks ❤️
-  - If you have any problem with the process please email volunteers@europython.eu or find a volunteer fellow in the venue.
+  - Fill this form and we will contact and onboard you. https://forms.gle/mokwmiYM2hhXbPEF6
+  - Acknowledge our [EuroPython 2023 Data Privacy Policy](https://docs.google.com/forms/d/e/1FAIpQLSdNTLsFn-YKD4l6icY4NEhmVG5JRyawm-QcvZUQ9HSylEXldw/viewform). This is needed, since many of you will have to handle private data as part of e.g. helping at the registration desk.
+  - We will reach out to you with a link to join the EuroPython Discord server.
+  - Please say hello and introduce yourself in #onsite-volunteers channel. Thanks ❤️
+  - If you have any problem with the process please email volunteers@europython.eu
 
 # Perks for volunteers
 
-  - Get an awesome EuroPython Volunteer T-Shirt that you can keep and show off to your friends and a mention on the website to stay there forever :-) (1 slot activity)
-  - A special group photo with all volunteers (1 slot activity; time will be announced on the #onsite-volunteers)
+  - :ticket: A free conference ticket if you volunteer for eight hours or more!
+  - :shirt: Get an awesome EuroPython Volunteer T-Shirt that you can keep and show off to your friends and a mention on the website to stay there forever :-)
+  - :camera: A special group photo with all volunteers (time will be announced on the #onsite-volunteers)
 
 
 # Summary of tasks
@@ -40,6 +36,12 @@ In return, we will have a small number of perks for you, some small gifts to say
   - Register On-Desk tickets and day passes
   - Answer general questions
   - This job involves a lot of talking
+
+### Room Manager
+  - Manage the room for an entire slot
+  - Make sure the session chair and speakers are in the room in time
+  - Keep in touch with the AV team to ensure everything is in order
+  - Keep the COC in mind and contact COC committee members if needed.
 
 ### Session Chairing
   - Help speakers in preparing their notebooks for the talks
@@ -57,12 +59,15 @@ In return, we will have a small number of perks for you, some small gifts to say
 ### Set Up/Tear Down
 
   - Helping hands are needed to set up the stage before the conference starts (Monday morning)
+  - Putting up signange in hallways for various provisions (Bathroom, Quiet Room, Childcare etc)
   - Also on the last day (Friday afternoon for the main conference, Sunday for the sprints) to clear up the venue afterwards
-  - This job involves walking and carrying items
+  - This job involves walking and carrying items some of which maybe heavy.
 
-## Ad-hoc Activities
+## Runners and Ad-hoc Activities
 
-  - There are always some tasks which we simply cannot plan beforehand:
+  - There are always some tasks which we simply cannot plan beforehand. Based on what's needed in the moment, you can be expected to do one or more of the following (not an exhaustive list):
+    * Checking rooms to ensure they have all the resources they need
+    * Help out in Desk duties
     * moving chairs, tables, or poster walls,
     * arranging transfers between venue and airport, etc.
 
@@ -73,7 +78,7 @@ In return, we will have a small number of perks for you, some small gifts to say
   - To help the EuroPython organizers keep the conference affordable for everyone
   - Show your EuroPython support to the Python community (by wearing your exclusive T-Shirt)
   - Get a huge applause during the closing session of the conference
-  - Get your name on our EuroPython 2020 Team page to stay there forever.
+  - Get your name on our EuroPython 2023 Team page to stay there forever.
 
 ### How much work is involved?
   - There are different tasks with different time required
