@@ -98,6 +98,10 @@
         {
           "name": "Visa Support Letter",
           "path": "/visa"
+        },
+        {
+          "name": "Volunteers",
+          "path": "/volunteers"
         }
       ]
     },
