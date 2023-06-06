@@ -66,9 +66,11 @@ Thank you, everyone who joined the session with your questions! You can view the
 
 ### [COMPLETED] First-Time Speaker Workshop - Thursday 1 June 2023, 18.00 CEST
 
-Thank you, everyone who joined the session! It was, indeed, a very interesting discussion. 
+Thank you, everyone who joined the session! It was, indeed, a very interesting discussion. The recording of the event is here:
 
-The recording of the event will be available soon.
+<div style={{display: "flex", justifyContent: "center", marginBottom: 20}}>
+<iframe width="560" height="315" src="https://youtu.be/79IaKHo7qEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 3. Speaker Placement Programme
 
