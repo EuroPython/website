@@ -33,30 +33,38 @@ We've put together an outline of some of the ways you can volunteer your time at
 
 ### Registration Desk
 
-  - Hand out registration badges
-  - Check student IDs
-  - Answer general questions
-  - This job involves a lot of talking.
+This is a very people-first position and will require spending a considerable time at the registration desk talking to attendees, along with carrying out the following activities:
+
+  - Handing out registration badges
+  - Checking student IDs
+  - Answering general questions
+
+We want to call out that volunteers at the registration desk will generally not be able to attend talks for the duration of the task.
 
 ### Room Manager
 
-  - Manage the room for an entire slot
-  - Make sure the session chair and speakers are in the room in time
-  - Keep in touch with the AV team to ensure everything is in order
-  - Keep the [Code of Conduct (CoC)](https://www.europython-society.org/coc/) in mind and contact CoC committee members if needed.
+A room manager is responsible for ensuring everything in a room runs smoothly for the entirety of a slot. Some of the activities a room manager is expected to carry out involve:
+
+  - Ensuring people are seated before a talk, and the room is not overcrowded
+  - Making sure the session chair and speakers are in the room in time
+  - Keeping in touch with the AV team to ensure everything is in order
+  - Keeping the [Code of Conduct (CoC)](https://www.europython-society.org/coc/) in mind and contact CoC committee members if needed.
+
+We want to call out that room managers might not be able to attend or focus on talks for the duration of the task.
 
 ### Session Chairing
 
-  - Help speakers in preparing their computers for the talks
-  - Introduce the speakers to the audience
-  - Signal time left to the speakers
-  - Make sure talks are finished on time
-  - Moderate Q&A session and help with passing around microphones and introduce remote attendees
-  - This job involves speaking in front of people, moderation, and walking with a microphone.
+A session chair plays a key role in introducing talks and ensuring a seamless transition between talks scheduled during a slot. The activities that a session chair is expected to carry out include:
+
+  - Helping speakers in preparing their computers for the talks
+  - Introducing the speakers to the audience
+  - Signalling time left to the speakers
+  - Making sure talks are finished on time
+  - Moderating Q&A session and help with passing around microphones and introduce remote attendees
 
 ### T-Shirt Handout
 
-  - Hand out the conference T-shirt
+  - Handing out the conference T-shirt
   - This job involves standing and lifting light items.
 
 ### Set Up/Tear Down
