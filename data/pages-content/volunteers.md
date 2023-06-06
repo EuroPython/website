@@ -7,7 +7,7 @@ subtitle: Help us have a great conference!
 
 Python owes much of its success to open source and the community surrounding it. In the same spirit, EuroPython is organized and run by volunteers from the Python community. Alas, we're only a few and need your help to make the show run as smoothly as possible. Each year we are joined by our awesome attendees as volunteers to help in running this wonderful conference. This page explains some of the ways you can help us.
 
-Being a volunteer means giving your time for free, without expecting anything back, just for the pleasure of being a part of this amazing conference. However this year we want to recognize people who dedicate a significant chunk of their time by offering free conference tickets to those who need it. (More details below!)
+Being a volunteer means giving your time for free, without expecting anything back, just for the pleasure of being a part of this amazing conference. However this year we want to recognize people who dedicate a significant chunk of their time by offering free Combined (Tutorials + Conference) tickets to those who need it. (More details below!)
 
 We will also have a small number of perks for you, some small gifts to say "thank you" for your time and for your help.
 
@@ -37,7 +37,7 @@ This is a very people-first position and will require spending a considerable ti
 
   - Handing out registration badges
   - Checking student IDs
-  - Answering general questions
+  - Answering general questions.
 
 We want to call out that volunteers at the registration desk will generally not be able to attend talks for the duration of the task.
 
@@ -60,7 +60,7 @@ A session chair plays a key role in introducing talks and ensuring a seamless tr
   - Introducing the speakers to the audience
   - Signalling time left to the speakers
   - Making sure talks are finished on time
-  - Moderating Q&A session and help with passing around microphones and introduce remote attendees
+  - Moderating Q&A session and help with passing around microphones and introduce remote attendees.
 
 ### T-Shirt Handout
 
