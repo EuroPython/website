@@ -1,26 +1,31 @@
 [
   {
-    "name": "Dr. Patrick Kavanagh",
-    "tagline": "Webb Developer",
-    "picture": "/keynoters/patrick-kavanagh.jpeg",
-    "link": "/keynoters/patrick-kavanagh"
+    "name": "Petr Viktorin",
+    "tagline": "",
+    "picture": "/keynoters/petr_viktorin.jpg",
+    "link": "/keynoters/petr-viktorin"
   },
   {
-    "name": "Laura Nolan",
-    "tagline": "Not a killer robot",
-    "picture": "/keynoters/Laura-Nolan.png",
-    "link": "/keynoters/laura-nolan"
+    "name": "Ines Montani",
+    "tagline": "",
+    "picture": "/keynoters/Ines-Montani.png",
+    "link": "/keynoters/ines-montani"
   },
   {
-    "name": "Sam Gross",
-    "tagline": "Mostly thread-safe",
-    "picture": "/keynoters/Sam-Gross.jpeg",
-    "link": "/keynoters/sam-gross"
+    "name": "Sophie Wilson",
+    "tagline": "",
+    "picture": "/keynoters/Sophie-Wilson.jpg",
+    "link": "/keynoters/sophie-wilson"
   },
   {
-    "name": "Dr. Nakeema Stefflbauer",
-    "picture": "/keynoters/Nakeema_headshot_2022.jpg",
-    "tagline": "Dodging AI Dystopia",
-    "link": "/keynoters/nakeema-stefflbauer"
+    "name": "Andrew Smith",
+    "picture": "/keynoters/andrew_smith.jpg",
+    "tagline": "",
+    "link": "/keynoters/andrew-smith"
+  },
+  { "name": "To Be Revealed",
+    "picture": "https://api.dicebear.com/6.x/bottts/svg?seed=Cookie&scale=65&translateY=-15&eyes=bulging,dizzy,eva,frame1,frame2,glow,happy,hearts,robocop,roundFrame02,sensor,shade01,roundFrame01,round&sides=squareAssymetric,antenna01,antenna02,cables01,cables02,round,square&textureProbability=0&top=antenna,antennaCrooked,bulb01,glowingBulb01,glowingBulb02,radar,pyramid,lights,horns&backgroundColor=b6e3f4",
+    "tagline": "",
+    "link": ""
   }
 ]

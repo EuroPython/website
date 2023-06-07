@@ -54,10 +54,10 @@ export const Keynoters = () => {
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
       <Title>
-        <Link href={"/keynoters"}>Keynote speakers</Link>
+        <Link href={"/keynoters"}>Keynote Speakers</Link>
       </Title>
 
-      <ul className="grid gap-6 grid-cols-2 md:grid-cols-4 auto-rows-[1fr] mt-12 mb-24">
+      <ul className="grid gap-6 grid-cols-2 md:grid-cols-5 auto-rows-[1fr] mt-12 mb-24">
         {keynoters.map((speaker, index) => (
           <Keynoter
             key={index}
