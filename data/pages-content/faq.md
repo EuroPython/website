@@ -89,7 +89,9 @@ A. Yes, our [Financial Aid Programme](/finaid) for in-person participation was o
 
 A: **Free Childcare** is available at the conference for those who need it. [Susie's Babysitting](https://www.susies.cz/) will be providing the childcare services for us at the PCC venue. The services are suitable for babies, toddlers and young teens. The childcare professionals will be preparing different activities based for different age groups.
 
-Please make sure to register a ticket for yourself and select how many children will require childcare at checkout; you do not need to purchase a separate ticket for your child. If you are bringing your child who is interested in catching some of the conference talks, you can still register a childcare ticket if you need someone to look after them some of the time. Otherwise, the children need to be accompanied by you at all time during the conference; they do not need to register a separate ticket.
+Please make sure to register a ticket for yourself and select how many children will require childcare at checkout. If you are bringing your child who is interested in catching some of the conference talks, you can still register a childcare ticket if you need someone to look after them some of the time. Otherwise, the children need to be accompanied by you at all time during the conference; they do not need to register a separate ticket.
+
+We encourage you to keep in touch with us regarding the specifics of your childcare needs and we aim to provide the maximum flexibility for you. For any childcare related questions and clarifications, reach out to us at support@europython.eu.
 
 Unfortunately, we might not be able to provide childcare for the sprint weekend.
 
