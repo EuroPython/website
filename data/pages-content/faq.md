@@ -87,7 +87,11 @@ A. Yes, our [Financial Aid Programme](/finaid) for in-person participation was o
 
 ## **Q. Do you provide childcare?**
 
-A: **Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout. Unfortunately, we might not be able to provide childcare for the sprint weekend.
+A: **Free Childcare** is available at the conference for those who need it. [Susie's Babysitting](https://www.susies.cz/) will be providing the childcare services for us at the PCC venue. The services are suitable for babies, toddlers and young teens. The childcare professionals will be preparing different activities based for different age groups.
+
+Please make sure to register a ticket for yourself and select how many children will require childcare at checkout; you do not need to purchase a separate ticket for your child. If you are bringing your child who is interested in catching some of the conference talks, you can still register a childcare ticket if you need someone to look after them some of the time. Otherwise, the children need to be accompanied by you at all time during the conference; they do not need to register a separate ticket.
+
+Unfortunately, we might not be able to provide childcare for the sprint weekend.
 
 ## **Q. Could you provide a visa support letter for my visa application?**
 A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. Please refer to the Ministry of Foreign Affairs of Czech Republic for information, including the application process for an [ Schengen visa for the purpose of “business” when attending a conference](https://www.mzv.cz/jnp/en/information_for_aliens/short_stay_visa/conference.html).
