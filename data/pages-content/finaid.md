@@ -12,7 +12,7 @@ subtitle:
 <ButtonWithTitle title="Financial Aid for Remote Tickets Available" text="Apply Now if You Need the Support!" href="https://forms.gle/rXPSK92t9mk13WK5A" />
 </div>
 
-**Finaicial Aid for Remote Tickets** will run between 9 June to 7 July.
+**Finaicial Aid for Remote Tickets** will run between 9 June to 9 July.
 
 Applicants for the previous **in-person Financial Aid applications** were notified of acceptance/rejection by 5 June, 2023. See [timeline](#timeline) for details.
 
@@ -77,7 +77,7 @@ for a grant:
 <ButtonLink href="https://forms.gle/rXPSK92t9mk13WK5A"> Apply Now if You Need the Support! </ButtonLink>
 </div>
 
-**Application for Financial Aid for Remote Tickets runs between 9 June to 7 July.**
+**Application for Financial Aid for Remote Tickets runs between 9 June to 9 July.**
 
 Applicants for in-person attendance were notified of acceptance/rejection by 5 June, 2023. See timeline for details.
 
