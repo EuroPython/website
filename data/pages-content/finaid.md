@@ -8,16 +8,20 @@ subtitle:
 
 # Financial Aid
 
-As part of our commitment to the Python community, we are pleased to announce
-that we offer special grants for people in need of financial aid to attend
-EuroPython.
+<div style={{textAlign: "center", marginBottom: 15}}>
+<ButtonWithTitle title="Financial Aid for Remote Tickets Available" text="Apply Now if You Need the Support!" href="https://forms.gle/rXPSK92t9mk13WK5A" />
+</div>
 
-**Note:** We are no longer accepting Financial Aid applications for 
-EuroPython 2023.
+**Finaicial Aid for Remote Tickets** will run between 9 June to 7 July.
+
+Applicants for the previous **in-person Financial Aid applications** were notified of acceptance/rejection by 5 June, 2023. See [timeline](#timeline) for details.
 
 ---
 
-## Financial Aid Sponsors
+## Financial Aid Sponsor
+As part of our commitment to the Python community, we are pleased to announce
+that we offer special grants for people in need of financial aid to attend
+EuroPython.
 
 <div className="finaid-sponsor">
   <a href="https://www.europython-society.org/" target="_blank">
@@ -40,12 +44,13 @@ to everyone, please consider sponsoring EuroPython by reaching out to
 You can apply for three different types of grants:
 
 
-1. **Free Ticket Voucher Grant:** Get a voucher for a free standard ticket for
+1. **[CLOSED] Free Ticket Voucher Grant:** Get a voucher for a free standard ticket for
    the in-person conference.
-2. **Travel/Accommodation Grant:** We will reimburse travel and/or accommodation
+2. **[CLOSED] Travel/Accommodation Grant:** We will reimburse travel and/or accommodation
    costs up to €400.
-3. **Visa Application Fee Grant:** Get reimbursed for the costs of a short-stay
+3. **[CLOSED] Visa Application Fee Grant:** Get reimbursed for the costs of a short-stay
    Schengen visa to the Czech Republic (up to €80).
+4. **🆕 Free remote ticket:** Get a standard remote ticket join the conference remotely for free.
 
 
 ## Grant Eligibility
@@ -68,8 +73,13 @@ for a grant:
 
 ## How to apply
 
-The deadline for submitting Financial Aid applications has passed. You can no
-longer apply for Financial Aid for EuroPython 2023.
+<div style={{textAlign: "center", marginBottom: 15}}>
+<ButtonLink href="https://forms.gle/rXPSK92t9mk13WK5A"> Apply Now if You Need the Support! </ButtonLink>
+</div>
+
+**Application for Financial Aid for Remote Tickets runs between 9 June to 7 July.**
+
+Applicants for in-person attendance were notified of acceptance/rejection by 5 June, 2023. See timeline for details.
 
 ### Privacy Policy
 
@@ -85,7 +95,7 @@ For more details on our privacy policies, please see our
 
 ## Timeline
 
-Grants will be awarded in two rounds. This makes it easier for us to reallocate
+Grants for in-person participation will be awarded in two rounds. This makes it easier for us to reallocate
 grants in case grant offers were rejected in the first round. Receiving a grant
 early is also beneficial for people having to apply for a Schengen visa.
 
@@ -94,6 +104,8 @@ during the second round if you did not receive a grant during the first round.
 You do not have to reapply separately for the second round. **In fact, if you
 want to increase your chances of receiving a grant, it is recommended to apply
 early.**
+
+You can also apply for a grant to participate remotely when the separate application is open
 
 **Note:** dates in the timeline follow the [Anywhere on Earth][AoE] convention.
 
@@ -155,6 +167,11 @@ early.**
     <td>Second round of grant notifications</td>
   </tr>
   <tr>
+    <td className="font-bold">9 June 2023</td>
+    <td></td>
+    <td className="font-bold"> Applications for Remote Financial Aid open</td>
+  </tr>
+  <tr>
     <td>12 June 2023</td>
     <td>
       <img
@@ -163,6 +180,11 @@ early.**
         alt="round two" />
     </td>
     <td>Deadline to accept a second-round grant</td>
+  </tr>
+  <tr>
+    <td className="font-bold">9 July 2023</td>
+    <td></td>
+    <td className="font-bold"> Applications for Remote Financial Aid ends</td>
   </tr>
   <tr>
     <td>31 July 2023</td>
@@ -191,15 +213,19 @@ reapply for round 2. Your application will automatically be considered for round
 - The Financial Aid Team may also make grant offers outside the two main rounds
   of selection.
 
+### 🆕 Free Remote Ticket
 
-### Free Ticket Voucher Grant
+  You will receive an individual voucher code that you can use to buy a regular
+  conference remote ticket for free.
+
+### [CLOSED] Free Ticket Voucher Grant
 
 - You will receive an **individual voucher code** for a free **regular**
   conference ticket that gives you access to the three main conference days.
 
 - If you have already purchased a ticket prior to being granted a free Financial Aid ticket voucher, please request a refund for the paid ticket separately before using the voucher to claim your free ticket. The Financial Aid programme cannot reimburse you the cost of tickets you previously paid for directly.
 
-### Travel/Accommodation Grant & Visa Application Fee Grant
+### [CLOSED] Travel/Accommodation Grant & Visa Application Fee Grant
 
 If you received a travel/accommodation grant or a visa application fee grant,
 you will be reimbursed **after the conference** via PayPal or bank transfer

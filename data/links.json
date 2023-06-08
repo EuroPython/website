@@ -68,6 +68,10 @@
         {
           "name": "Sprints Venue - VŠE",
           "path": "/where#vše---sprints-venue"
+        },
+        {
+          "name": "EuroPython 2023 Remote",
+          "path": "/remote"
         }
       ]
     },
@@ -92,7 +96,7 @@
           "path": "/faq"
         },
         {
-          "name": "Financial aid",
+          "name": "Financial Aid",
           "path": "/finaid"
         },
         {

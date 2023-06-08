@@ -20,6 +20,8 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-05-16</b>: [List of Session](/sessions) Published</li>
 <li><b>2023-05-21</b>: Financial Aid Programme Closes </li>
 <li><b>2023-06-01</b>: [First-Time Speaker's Workshop](/mentorship#first-time-speaker-workshop---thursday-1-june-2023-1800-cest)</li>
+<li><b>2023-06-09</b>: <a href="/tickets#remote-tickets">Remote Tickets Sales</a> Starts </li>
+<li><b>2023-06-09</b>: <a href="/finaid">[Financial Aid for Remote Tickets](/finaid#-free-remote-ticket)</a> Starts </li>
 </ul>
 
 <ul className="milestone-todo">
@@ -77,13 +79,37 @@ Email us at [programme@europython.eu](mailto:programme@europython.eu) to tell us
 
 A. Ticket sales are on sale now!
 
-We have put a lot of work in keeping the in-person ticket prices affordable. Check out our [tickets page](/tickets) for details. We also offer [volume discount](/tickets#volume-discount) for businesses.
+We have put a lot of work in keeping the ticket prices affordable. Check out our [tickets page](/tickets) for details. We also offer [volume discount](/tickets#volume-discount) for in-person business tickets.
 
 We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community.
 
+## **Q. Can I attend EuroPython remotely?**
+
+A. Yes, remote tickets are on sale from **9th June 2023** onward. It is now possible to purchase a conference ticket (personal/ business) to participate in the conference from anywhere on the planet.
+
+Please check out our [Tickets page](/tickets) for more details.
+
+## **Q. What access does a remote ticket give me?**
+
+A. We strive make remote participation as interactive as possible! During the Conference Days (Wednesday-Friday), not only can you watch the live talks, keynotes & panels in all 6 tracks, engage in live text-based Q&A, and interact with speakers and other in-person attendees in chat channels.
+
+## **Q. How can I join after having bought a remote ticket?**
+
+A. We will send out an invite for you to join our dedicated discord server. Watch out for the email with the joining instructions a few days before the conference!
+
+## **Q. What is the difference between a remote ticket and livestream-only ticket**
+
+A. As per our tradition, we provide open and free access to the livestreams of our conference talks (19-21 July). You are not required to register a ticket, but you are welcome to if you would like an email reminder or receive up-to-date information about the conference.
+
+The free livestream-only ticket does not include support and you will be unable to interact with the speakers or other in-person audience. Consider getting a remote ticket instead.
+
+## **Q. Will the conference talks and tutorials be recorded?**
+
+A. Recordings of the talks will be made available on our YouTube channel a few months after the conference. Tutorials will only be delivered in-person and will not be recorded.
+
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
 
-A. Yes, our [Financial Aid Programme](/finaid) for in-person participation was open for application until 21 May. It is now closed after receiving record-high applications. We are very proud to be supporting so many Pythonistas to attend the conference.
+A. Yes, our [Financial Aid Programme](/finaid) for in-person participation was open for application until 21 May. It is now closed after receiving record-high applications. We are very proud to be supporting so many Pythonistas to attend the conference. [Financial Aid for Remote Tickets](/finaid#-free-remote-ticket) is open on 9 June, together with remote ticket sales. If you need support to attend the conference remotely, make sure to apply by 9 July 2023.
 
 ## **Q. Do you provide childcare?**
 
