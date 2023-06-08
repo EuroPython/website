@@ -50,7 +50,7 @@ You can apply for three different types of grants:
    costs up to €400.
 3. **[CLOSED] Visa Application Fee Grant:** Get reimbursed for the costs of a short-stay
    Schengen visa to the Czech Republic (up to €80).
-4. **🆕 Free remote ticket:** Get a standard remote ticket join the conference remotely for free.
+4. **🆕 Free remote ticket:** Get a standard remote ticket to join the conference remotely for free.
 
 
 ## Grant Eligibility
@@ -105,7 +105,7 @@ You do not have to reapply separately for the second round. **In fact, if you
 want to increase your chances of receiving a grant, it is recommended to apply
 early.**
 
-You can also apply for a grant to participate remotely when the separate application is open
+You can also apply for a grant to participate remotely when the separate application is open.
 
 **Note:** dates in the timeline follow the [Anywhere on Earth][AoE] convention.
 
@@ -215,8 +215,7 @@ reapply for round 2. Your application will automatically be considered for round
 
 ### 🆕 Free Remote Ticket
 
-  You will receive an individual voucher code that you can use to buy a regular
-  conference remote ticket for free.
+  You will receive an individual voucher code that you can use to claim a free remote conference ticket.
 
 ### [CLOSED] Free Ticket Voucher Grant
 

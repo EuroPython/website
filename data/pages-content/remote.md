@@ -15,7 +15,7 @@ as interactive as possible.
 ### How to participate in the conference remotely?
 
 - To participate in the conference interactively (with guaranteed access to livestreams), a "remote ticket" registration is required. See details and pricing on the [Buy Tickets](/tickets#remote-tickets) page;
-- Any ticket holders (except the Stream-only) will be sent a link to join our discord server. We will send out invites for you to join our server closer to the conference.
+- Any ticket holders (except the Stream-only) will receive a link to join our discord server. We will send out invites for you to join our server closer to the conference.
 
 *Note: in-person ticket holders will be provided with remote event access*
 
