@@ -190,3 +190,30 @@ export const fetchKeynoters = async () => {
     return !duplicate;
   });
 };
+
+export const fetchKeynoterBySlug = cache(async (slug: string) => {
+  const allSpeakers = await fetchKeynoters();
+
+  const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
+
+  if (!speakerInfo) {
+    throw new Error("Failed to find speaker in submissions");
+  }
+
+  const response = await fetch(
+    `https://pretalx.com/api/events/europython-2023/speakers/${speakerInfo.code}/`,
+    {
+      headers: {
+        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch speaker");
+  }
+
+  const speaker = (await response.json()) as Speaker;
+
+  return mapSpeaker(speaker);
+});

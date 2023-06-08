@@ -164,3 +164,11 @@ export const fetchKeynotes = async () => {
 
   return data.results.map(mapSession);
 };
+
+export const fetchKeynoteBySpeakerSlug = async (slug: string) => {
+  const allKeynotes = await fetchKeynotes();
+
+  return allKeynotes.find((keynote) =>
+    keynote.speakers.some((speaker) => speaker.slug === slug)
+  );
+};
