@@ -1,4 +1,4 @@
-import { fetchConfirmedSubmissions } from "./submissions";
+import { fetchConfirmedSubmissions, fetchKeynotes } from "./submissions";
 import { Answer } from "./types";
 import { slugify } from "./utils/slugify";
 import { cache } from "react";
@@ -165,3 +165,28 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
 
   return mapSpeaker(speaker);
 });
+
+export const fetchKeynoters = async () => {
+  const submissions = await fetchKeynotes();
+
+  const allSpeakers = Array.from(
+    new Set(
+      submissions
+        .map((submission) =>
+          submission.speakers.flatMap((speaker) => ({
+            ...speaker,
+            session: submission,
+          }))
+        )
+        .flat()
+    )
+  );
+
+  const seen = new Set();
+
+  return allSpeakers.filter((speaker) => {
+    const duplicate = seen.has(speaker.code);
+    seen.add(speaker.code);
+    return !duplicate;
+  });
+};

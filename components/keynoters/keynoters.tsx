@@ -2,8 +2,9 @@ import { ButtonLink } from "components/button-link";
 import { Title } from "components/typography/title";
 import Link from "next/link";
 import { SVGProps } from "react";
-import keynoters from "../../data/keynoters.json";
+
 import { Keynoter } from "./keynoter";
+import { fetchKeynoters } from "@/lib/pretix/speakers";
 
 const Background = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -48,12 +49,14 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const Keynoters = () => {
+export const Keynoters = async () => {
+  const keynoters = await fetchKeynoters()
+
   return (
     <section className="relative my-12 px-6">
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
-      <Title>
+      <Title className="text-accent">
         <Link href={"/keynoters"}>Keynote Speakers</Link>
       </Title>
 
@@ -62,9 +65,9 @@ export const Keynoters = () => {
           <Keynoter
             key={index}
             name={speaker.name}
-            tagline={speaker.tagline}
-            link={speaker.link}
-            picture={speaker.picture}
+            tagline={speaker.session.tagline}
+            link={`/keynoters/${speaker.slug}`}
+            picture={speaker.avatar}
             placeholder={false}
           />
         ))}

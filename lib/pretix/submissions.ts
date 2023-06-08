@@ -49,6 +49,7 @@ const mapSession = (session: Result) => {
   const qa = {
     length: 2360,
     exp: 2363,
+    tagline: 2645,
   };
 
   const answersByQuestion = session.answers.reduce((acc, answer) => {
@@ -58,6 +59,7 @@ const mapSession = (session: Result) => {
 
   const qaLength = answersByQuestion[qa.length] as string | undefined;
   const qaExp = answersByQuestion[qa.exp] as string | undefined;
+  const qaTagline = answersByQuestion[qa.tagline] as string | undefined;
 
   return {
     id: session.code,
@@ -74,8 +76,9 @@ const mapSession = (session: Result) => {
       code: speaker.code,
       slug: slugify(speaker.name),
     })),
+    tagline: qaTagline,
     tags: session.tags,
-    track: session.track.en,
+    track: session.track?.en,
     type: session.submission_type.en,
     length: qaLength,
     experience: qaExp,
@@ -134,4 +137,30 @@ export const fetchSubmissionBySlug = async (slug: string) => {
   const allSessions = await fetchConfirmedSubmissions();
 
   return allSessions.find((session) => session.slug === slug);
+};
+
+export const fetchKeynotes = async () => {
+  // https://pretalx.com/api/events/europython-2023/submissions/?content_locale=&submission_type=2752
+  const qs = new URLSearchParams({
+    limit: "200",
+    questions: "all",
+    submission_type: "2752",
+  });
+
+  let url = `https://pretalx.com/api/events/europython-2023/submissions/?${qs}`;
+
+  // there's only one page (keynotes are usually less than 10 :D)
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Token ${process.env.PRETALX_TOKEN}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch keynotes");
+  }
+
+  const data = (await response.json()) as Root;
+
+  return data.results.map(mapSession);
 };
