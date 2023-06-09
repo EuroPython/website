@@ -1,4 +1,3 @@
-import { format } from "date-fns";
 import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
@@ -8,18 +7,13 @@ import {
   DefinitionTerm,
   DefinitionDescription,
 } from "components/definition-list/definition-list";
-import {
-  fetchConfirmedSubmissions,
-  fetchKeynoteBySpeakerSlug,
-  fetchSubmissionBySlug,
-} from "@/lib/pretix/submissions";
+import { fetchKeynoteBySpeakerSlug } from "@/lib/pretix/submissions";
 import { notFound } from "next/navigation";
 import { Datetime } from "components/datetime";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { components } from "components/mdx";
 
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const revalidate = 300; // 5 minutes
 
@@ -203,112 +197,3 @@ export default async function SessionPage({
     </>
   );
 }
-
-// export default function Page({
-//     source,
-//     path,
-//     bioSource,
-//     slug,
-//     data: { title, speaker, affiliation },
-//   }: {
-//     source: any;
-//     bioSource: any;
-//     path: string;
-//     slug: string;
-//     data: {
-//       title: string;
-//       speaker: string;
-//       affiliation?: string;
-//     };
-//   }) {
-//     const keynoter = findKeynoter(speaker)!;
-//     const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?keynoter=${slug}&v2`;
-
-//     return (
-//       <Layout
-//         path={path}
-//         title={`${title} || EuroPython 2022`}
-//         socialCardUrl={socialCardUrl}
-//       >
-//         <main id="main-content" className="px-6">
-//           <Title level={2}>{title}</Title>
-//           <Title level={3}>
-//             <a href="#about">{keynoter.name}</a>
-//           </Title>
-
-//           <Prose>
-//             <MDXRemote {...source} components={components} />
-//           </Prose>
-
-//           <div id="about">
-//             <Title level={2}>About the keynoter</Title>
-//             <div>
-//               <div>
-//                 <img src={keynoter.picture} className="w-full max-w-sm mb-12" />
-//               </div>
-
-//               <div>
-//                 {affiliation ? <div>Affiliation: {affiliation}</div> : null}
-
-//                 <Prose>
-//                   <MDXRemote {...bioSource} components={components} />
-//                 </Prose>
-//               </div>
-//             </div>
-//           </div>
-//         </main>
-//       </Layout>
-//     );
-//   }
-
-//   export async function getStaticPaths() {
-//     const pages = (
-//       await fs.readdir(path.join(process.cwd(), "data/keynoters"))
-//     ).filter((p) => p.endsWith(".md"));
-//     const paths = pages.map((page) => ({
-//       params: { slug: page.replace(".md", "") },
-//     }));
-//     return { paths, fallback: "blocking" };
-//   }
-
-//   async function serializeWithPlugins(content: string, plugins: any[]) {
-//     return await serialize(content, {
-//       mdxOptions: {
-//         rehypePlugins: [
-//           // @ts-ignore
-//           rehypeSlug,
-//           // @ts-ignore
-//           [rehypeAutolinkHeadings, { behavior: "wrap" }],
-//           // @ts-ignore
-//           [rehypeExternalLinks, { rel: ["nofollow"] }],
-//         ],
-//         remarkPlugins: plugins,
-//       },
-//     });
-//   }
-
-//   export async function getStaticProps({ params }: { params: { slug: string } }) {
-//     const pagePath = `keynoters/${params.slug}`;
-
-//     const markdownPath = path.join(process.cwd(), `data/${pagePath}.md`);
-
-//     const page = await fs.readFile(markdownPath);
-//     const { content, data } = matter(page);
-
-//     const mdxSource = await serializeWithPlugins(content.toString(), [
-//       wrapInArticles,
-//       highlightFirstHeading,
-//     ]);
-//     const bioSource = await serializeWithPlugins(data.bio, []);
-
-//     return {
-//       props: {
-//         source: mdxSource,
-//         path: pagePath,
-//         data,
-//         bioSource,
-//         slug: params.slug,
-//       },
-//       revalidate: 60,
-//     };
-//   }
