@@ -120,7 +120,9 @@
           "name": "Sticker Mule",
           "url": "https://www.stickermule.com/eu/custom-stickers",
           "logo": "img/logos/sponsor_logos/stickermule.svg"
-      },
+        }
+      ]
+    },
     {
       "name": "Social Event Sponsor",
       "sponsors": [
@@ -131,6 +133,4 @@
         }
       ]
     }]
-    }
-  ]
 }
