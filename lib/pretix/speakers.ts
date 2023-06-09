@@ -124,7 +124,9 @@ export const fetchAllSpeakers = async () => {
 };
 
 export const fetchSpeakersWithConfirmedSubmissions = async () => {
-  const submissions = await fetchConfirmedSubmissions();
+  const submissions = (
+    await Promise.all([fetchConfirmedSubmissions(), fetchKeynotes()])
+  ).flat();
 
   const allSpeakers = Array.from(
     new Set(submissions.map((submission) => submission.speakers).flat())
