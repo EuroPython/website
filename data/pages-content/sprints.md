@@ -42,6 +42,9 @@ As per our tradition, the conference organisers will provide the rooms and facil
 
 <img src="/img/sprint_collection.png__2420x1619_q85_crop_subsampling-2_upscale.png" width="1210" height="808"   />
 
+## New to a "Sprint"?
+
+You may want to come to the [Mentored Sprint](/mentored-sprint) on Friday before going to the actually sprint! Mentored Sprint is tailed to beginners who have not contributed to open-source before. We will have mentors who will be there to help you and give you a head start of your contributing journey.
 
 ## Organising a Sprint
 
