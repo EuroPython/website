@@ -118,41 +118,45 @@ export default async function SessionPage({
           </DefinitionList>
         </header>
 
-        <Title level={2} className="!mb-6">
-          Abstract
-        </Title>
-
-        <Prose>
-          <ReactMarkdown components={components}>
-            {session.abstract}
-          </ReactMarkdown>
-        </Prose>
-
-        <TagContainer className="mb-6">
-          <Tag>{session.type}</Tag>
-          {session.track && <Tag>{session.track}</Tag>}
-        </TagContainer>
-
-        {session.slidesUrl && (
-          <a href={session.slidesUrl} className="button">
-            Download slides
-          </a>
-        )}
-        {session.description ? (
+        {session.abstract ? (
           <>
             <Title level={2} className="!mb-6">
-              Description
+              Abstract
             </Title>
 
             <Prose>
               <ReactMarkdown components={components}>
-                {session.description}
+                {session.abstract}
               </ReactMarkdown>
             </Prose>
+
+            <TagContainer className="mb-6">
+              <Tag>{session.type}</Tag>
+              {session.track && <Tag>{session.track}</Tag>}
+            </TagContainer>
+
+            {session.slidesUrl && (
+              <a href={session.slidesUrl} className="button">
+                Download slides
+              </a>
+            )}
+            {session.description ? (
+              <>
+                <Title level={2} className="!mb-6">
+                  Description
+                </Title>
+
+                <Prose>
+                  <ReactMarkdown components={components}>
+                    {session.description}
+                  </ReactMarkdown>
+                </Prose>
+              </>
+            ) : (
+              ""
+            )}
           </>
-        ) : (
-          ""
-        )}
+        ) : null}
       </article>
 
       <Separator />
