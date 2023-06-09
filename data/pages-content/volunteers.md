@@ -7,20 +7,22 @@ subtitle: Help us have a great conference!
 
 Python owes much of its success to open source and the community surrounding it. In the same spirit, EuroPython is organized and run by volunteers from the Python community. Alas, we're only a few and need your help to make the show run as smoothly as possible. Each year we are joined by our awesome attendees as volunteers to help in running this wonderful conference. This page explains some of the ways you can help us.
 
-Being a volunteer means giving your time for free, without expecting anything back, just for the pleasure of being a part of this amazing conference. However this year we want to recognize people who dedicate a significant chunk of their time by offering free Combined (Tutorials + Conference) tickets to those who need it. (More details below!)
+Being a volunteer means giving your time for free, without expecting anything back, just for the pleasure of being a part of this amazing conference. However this year we want to support people who dedicate a significant chunk of their time by offering free Combined (Tutorials + Conference) tickets to make the conference more accessible. (More details below!)
 
 We will also have a small number of perks for you, some small gifts to say "thank you" for your time and for your help.
 
 
 ## Things to remember
 
+  - This is in person volunteering and would require you to be present at the venue.
+  - While we strive to make the conference as accessible to everyone as possible, we cannot provide any travel or accomodation support to volunteers exclusively.
   - To enter the conference you need a ticket.
   - You can sign up to volunteer before having bought a ticket.
 
 
 ## Perks for volunteers
 
-  - A free conference ticket if you volunteer for eight hours or more!
+  - A free conference ticket if you volunteer for eight hours or more! You are welcome to volunteer as much or as little as you want to, even if you already hold a ticket.
   - Get an awesome EuroPython Volunteer T-Shirt that you can keep and show off to your friends and a mention on the website to stay there forever :-)
   - A special group photo with all volunteers (time will be announced on the #onsite-volunteers)
 
