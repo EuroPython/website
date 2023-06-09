@@ -4,8 +4,16 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Call for Proposals",
-          "path": "/cfp"
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Tutorials",
+          "path": "/tutorials"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
         },
         {
           "name": "Speaker Mentorship",
@@ -33,8 +41,16 @@
           "path": "/wasm"
         },
         {
+          "name": "HumbleData Workshop",
+          "path": "/humble-data"
+        },
+        {
           "name": "PyLadies Snake Workshop",
           "path": "/pyladies-workshop"
+        },
+        {
+          "name": "PyLadies Social Event",
+          "path": "/pyladies-social-event"
         }
       ]
     },
@@ -82,6 +98,10 @@
         {
           "name": "Visa Support Letter",
           "path": "/visa"
+        },
+        {
+          "name": "Volunteers",
+          "path": "/volunteers"
         }
       ]
     },
@@ -97,8 +117,16 @@
   ],
   "footer": [
     {
+      "name": "Call for Proposals",
+      "path": "/cfp"
+    },
+    {
       "name": "Contacts",
       "path": "/contacts"
+    },
+    {
+      "name": "Terms",
+      "path": "/terms"
     },
     {
       "name": "Privacy Policy",

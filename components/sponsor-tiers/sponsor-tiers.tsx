@@ -58,7 +58,7 @@ const SponsorTier = ({
   features,
 }: {
   title: string;
-  totalSlots?: number;
+  totalSlots?: number | null | string;
   price: number | string;
   features: string[];
 }) => {
@@ -95,11 +95,17 @@ const SponsorTier = ({
         </Title>
 
         <div className="font-bold text-3xl">{formattedPrice}</div>
-        {totalSlots && (
-          <div className="text-xl">
-            <span>{totalSlots}</span> slot{totalSlots > 1 ? "s" : ""} available
-          </div>
-        )}
+        <div className="text-xl">
+          {totalSlots ? (
+            <>
+              <span>{totalSlots}</span> slot{totalSlots == 1 ? "" : "s"}{" "}
+
+              available
+            </>
+          ) : (
+            <>No slot available</>
+          )}
+        </div>
       </div>
 
       <p className="font-bold text-base">This tier includes:</p>
@@ -150,7 +156,7 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum"
-        totalSlots={4}
+        totalSlots={null}
         price={17000}
         features={[
           "16 sqm booth in exhibit hall",
@@ -165,6 +171,7 @@ export const SponsorTiers = () => {
       <SponsorTier
         title="Gold"
         price={9500}
+        totalSlots={"limited"}
         features={[
           "9 sqm booth in exhibit hall",
           "3 complimentary session passes",
@@ -177,6 +184,7 @@ export const SponsorTiers = () => {
       <SponsorTier
         title="Silver"
         price={6500}
+        totalSlots={"limited"}
         features={[
           "6 sqm booth in exhibit hall",
           "2 complimentary session passes",
@@ -189,12 +197,14 @@ export const SponsorTiers = () => {
         <SponsorTier
           title="Bronze"
           price={2000}
-          features={["Logo & recuriting ad on EuroPython website and more!"]}
+          totalSlots={"limited"}
+          features={["Logo & recruiting ad on EuroPython website and more!"]}
         />
 
         <SponsorTier
           title="Patron"
           price={1000}
+          totalSlots={"limited"}
           features={["Logo on EuroPython website, welcome tweet and more!"]}
         />
       </div>

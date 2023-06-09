@@ -76,11 +76,23 @@ nám. Winstona Churchilla 1938<br/>
 </address>
 
 ### Get to the Sprints
-You can find the [Žižkov Campus Map, VŠE (PDF)](https://www.vse.cz/english/wp-content/uploads/sites/2/page/1000/planek_en.pdf) to help guide you. Detailed instructions on how to get to the Rajska Building will be announced soon!
+You can find the [Žižkov Campus Map, VŠE (PDF)](https://www.vse.cz/english/wp-content/uploads/sites/2/page/1000/planek_en.pdf) to help guide you. The entrance to the building can be recognized by the inscription "Vysoká škola ekonomická v Praze" above it.
+
+How to get there?
+* By bus: The nearest bus stop is Náměstí Winstona Churcilla (line 135) or Viktoria Žižkov (lines 101, 123, 135, 175, 176). If you disembark at Náměstí Winstona Churchilla, the entrance is directly across from the stop on Italská Street.
+* By tram: Viktoria Žižkov station (lines 26, 5, 9) is a 5-10 minute walk. Proceed along Seifertová Street, pass through the park (Pomník Winstona Churchilla on Google Maps), then reach Italská Street. A short uphill walk of about one to two minutes, and the entrance will be on your left.
+* By metro: Start from Hlavní Nádraží station (C line). After exiting the metro, ascend to the first floor (not the ground level) and turn left, following signs for the North platform (in Czech: Sever). Continue through the tunnel, ascend the escalators, and climb another set of stairs. You'll then find yourself on Italská Street, facing a large building - that's the VŠE building. Proceed uphill on Italská for a minute or two, and you'll see the entrance right there.
+
+<img src="/img/vse1.jpg"  />
+
+<br/>
+
+<img src="/img/vse2.jpg"  />
+
 
 ## Getting Around in Prague
 
-* **By public transport**: plan your route and check the fares using the [Prague Public Transport website](https://www.dpp.cz/en)
+* **By public transport**: plan your route and check the fares using the [Prague Public Transport website](https://www.dpp.cz/en). On your phone you can install the [Pubtran app](https://play.google.com/store/apps/details?id=cz.fhejl.pubtran).
 
 * **Planes**: [Prague's Václav Havel Airport (PRG)](https://www.prg.aero/en) is well connected
 to the conference and sprints venue via the public transport system.

@@ -17,12 +17,12 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
 <li><b>2023-04-14</b>: Community Voting ends </li>
 <li><b>2023-05-09</b>: [Sprints Venue & Info](/sprints) Announced </li>
-
+<li><b>2023-05-16</b>: [List of Session](/sessions) Published</li>
+<li><b>2023-05-21</b>: Financial Aid Programme Closes </li>
+<li><b>2023-06-01</b>: [First-Time Speaker's Workshop](/mentorship#first-time-speaker-workshop---thursday-1-june-2023-1800-cest)</li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>The week of 2023-05-14</b>: List of Session Published</li>
-<li><b>2023-06-01</b>: First-Time Speaker's Workshop </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
@@ -83,11 +83,17 @@ We encourage and trust you to pick a fair ticket tier that fits your personal ci
 
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
 
-A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is open for application until 21 May. If you need help to attend the conference, you are most welcome to apply.
+A. Yes, our [Financial Aid Programme](/finaid) for in-person participation was open for application until 21 May. It is now closed after receiving record-high applications. We are very proud to be supporting so many Pythonistas to attend the conference.
 
 ## **Q. Do you provide childcare?**
 
-A: **Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout. Unfortunately, we might not be able to provide childcare for the sprint weekend.
+A: **Free Childcare** is available at the conference for those who need it. [Susie's Babysitting](https://www.susies.cz/) will be providing the childcare services for us at the PCC venue. The services are suitable for babies, toddlers and young teens. The childcare professionals will be preparing different activities based for different age groups.
+
+Please make sure to register a ticket for yourself and select how many children will require childcare at checkout. If you are bringing your child who is interested in catching some of the conference talks, you can still register a childcare ticket if you need someone to look after them some of the time. Otherwise, the children need to be accompanied by you at all time during the conference; they do not need to register a separate ticket.
+
+We encourage you to keep in touch with us regarding the specifics of your childcare needs and we aim to provide the maximum flexibility for you. For any childcare related questions and clarifications, reach out to us at support@europython.eu.
+
+Unfortunately, we might not be able to provide childcare for the sprint weekend.
 
 ## **Q. Could you provide a visa support letter for my visa application?**
 A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. Please refer to the Ministry of Foreign Affairs of Czech Republic for information, including the application process for an [ Schengen visa for the purpose of “business” when attending a conference](https://www.mzv.cz/jnp/en/information_for_aliens/short_stay_visa/conference.html).

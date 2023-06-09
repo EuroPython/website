@@ -46,10 +46,12 @@ By running similar events in smaller conferences we have learned that the attend
 
 Projects that have shown interested in appearing in the mentored sprint:
 
+
 - Scikit Learn
 - Mu
 - PyScript
 - BeeWare
+
 
 ## GETTING INVOLVED ##
 *OPEN SOURCE PROJECTS AND MENTORS*

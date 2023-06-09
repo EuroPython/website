@@ -1,17 +1,19 @@
 import "../styles/main.css";
+import { Metadata } from "next";
 
-export const metadata = {
+import PlausibleProvider from "next-plausible";
+
+export const metadata: Metadata = {
+  title: {
+    default:
+      "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+    template: "%s | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+  },
   metadataBase: new URL("https://ep2023.europython.eu/"),
-  title:
-    "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
   description: "",
-  alternates: [
-    {
-      type: "application/rss+xml",
-      title: "EuroPython Blog RSS Feed",
-      href: "http://blog.europython.eu/rss",
-    },
-  ],
+  alternates: {
+    types: { "application/rss+xml": "http://blog.europython.eu/rss" },
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +28,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://use.typekit.net/rhp8qny.css"
         ></link>
+        <PlausibleProvider domain="ep2023.europython.eu" />
       </head>
       <body>{children}</body>
     </html>
