@@ -24,7 +24,7 @@ export const SessionSummary = ({
       slug: string;
     }[];
     type: string;
-    track: string;
+    track?: string;
     experience?: string;
   };
 }) => {
@@ -62,7 +62,7 @@ export const SessionSummary = ({
         <Tag>{session.type}</Tag>
         {session.experience && <Tag>{capitalize(session.experience)}</Tag>}
 
-        <Tag>{session.track}</Tag>
+        {session.track && <Tag>{session.track}</Tag>}
       </TagContainer>
     </div>
   );

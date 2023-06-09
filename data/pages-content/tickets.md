@@ -1,7 +1,11 @@
+---
+title: Tickets
+subtitle: Make new Python memories with us whether you are joining us in Prague or remotely!
+---
 # Tickets
+<h5>🆕 Remote Tickets Available NOW!</h5>
 
 <div style={{textAlign: "center"}}>
-**EuroPython 2023 Tickets Available NOW!**
 
   <ButtonLink href="https://tickets.europython.eu/">Beam me up to the ticket shop!</ButtonLink>
 </div>
@@ -23,9 +27,9 @@ The conference will follow this broad plan of events:
 We understand attendees have different needs, so we've created three types of
 ticket to give folks maximum flexibility and value for money:
 
-- **Conference Tickets**: Access to Conference & Sprint Weekend (19-23 July).
-  There will be limited access to specific sponsored/special workshops during
-  the Workshop/Tutorial Days (17-18 July).
+- **Conference Tickets** *(in-person & remote)*:
+  - **In-person**: Access to Conference & Sprint Weekend (19-23 July). There will be limited access to specific sponsored/special workshops during the Workshop/Tutorial Days (17-18 July).
+  - **Remote**: remote participation during the Conference Days (19-21 July): watch the live talks, keynotes & panels in all 6 tracks, engage in live text-based Q&A, and interact with speakers and in-person attendees in chat channels.
 - **Tutorial Tickets**: Access to Workshop/Tutorial Days (17-18 July) and the
   Sprint Weekend (22-23 July), but **NOT** the main conference (19-21 July).
 - **Combined Tickets**: Access to everything during the whole seven-day
@@ -35,7 +39,7 @@ ticket to give folks maximum flexibility and value for money:
 
 ## Which Ticket Tier Should I buy?
 
-Each of the three ticket types is available in three payment tiers.
+Each of the three ticket types is available in different payment tiers.
 
 We encourage and trust you to pick a fair ticket tier that fits your personal
 circumstance. The money you spend will be put straight back into the community
@@ -46,7 +50,7 @@ offered to the European Python community.
 
 - **Business Tickets**: if your company/business pays for you to attend, or if you use Python professionally. When you purchase a Business Ticket, you help us keep the conference affordable for everyone. Thank you!
 - **Personal Tickets**: if you enjoy Python as a hobbyist or use it as a freelancer.
-- **Education Tickets**: If you are a student, or a teacher working in the education sector (your main employment is at a school, college or university). We subsidise Education Tickets to make it accessible to everyone.
+- **Education Tickets** (only available for in-person tickets): If you are a student, or a teacher working in the education sector (your main employment is at a school, college or university). We subsidise Education Tickets to make it accessible to everyone.
 
 **Note**: If you need a proper VAT invoice listing your company's name, please
 purchase a Business Ticket. Personal Tickets do not include a company name. We
@@ -57,7 +61,7 @@ registration staff.
 
 ## Ticket Prices
 
-Regular tickets are available until **30 June 2023**, after which Late-bird rate applies. We strongly advise and greatly appreciate that you purchase your tickets early, to help us with the planning.
+Regular in-person tickets are available until **30 June 2023**, after which Late-bird rate applies. We strongly advise and greatly appreciate that you purchase your tickets early, to help us with the planning.
 
 ***Note: If you are a Czech company with a valid VAT ID, VAT will be reverse charged.***
 
@@ -90,9 +94,25 @@ When you buy a conference ticket, access to the [sprint weekend, 22-23 July](/sp
 
 Separately, registration to the sprint weekend alone will be made available at a later date. It will be free of charge & open to the public. Stay tuned for details!
 
+### Remote Tickets
+- 🆕 Remote Conference Only Business - €150
+- 🆕 Remote Conference Only Personal - €80
+
+*VAT for Remote Tickets: Remote Tickets are invoiced by the EuroPython Society (the EPS) and taxed in Sweden. Since the the EPS is a tax exempt non-profit, we do not charge VAT on the remote ticket invoices.
+
+#### Financial Aid for Remote Tickets
+If you cannot make it to Prague and struggle to afford the remote tickets, you are welcome to apply for Financial Aid for Remote Tickets. We want to interact with YOU at EuroPython 2023! Check out the [Financial Aid](/finaid) page for details.
+
+### Livestream-only Tickets
+We provide open and free access to the livestreams of our conference talks (19-21 July).
+
+You are not required to register a ticket to access these livestreams. If you would like an email reminder or receive up-to-date information about the conference, you are welcome to register for a free livestream-only ticket.
+
+Note: The free livestream-only ticket does not include support and you will be unable to interact with the speakers or other in-person audience. Consider getting a remote ticket instead.
+
 ### Volume Discount
 
- Is your company attending the conference as a team? We offer the following volume discount
+ Is your company attending the conference as a team? We offer the following volume discount for in-person tickets:
 
   - get 5 business tickets of any type for the price of 4
   - get 10 business tickets of any type for the price of 8

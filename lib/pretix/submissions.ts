@@ -61,6 +61,14 @@ const mapSession = (session: Result) => {
   const qaExp = answersByQuestion[qa.exp] as string | undefined;
   const qaTagline = answersByQuestion[qa.tagline] as string | undefined;
 
+  let sessionType = session.submission_type.en;
+
+  console.log(session.duration);
+
+  if (session.submission_type.en === "Sponsored" && session.duration === 30) {
+    sessionType = "Talk";
+  }
+
   return {
     id: session.code,
     code: session.code,
@@ -79,7 +87,7 @@ const mapSession = (session: Result) => {
     tagline: qaTagline,
     tags: session.tags,
     track: session.track?.en,
-    type: session.submission_type.en,
+    type: sessionType,
     length: qaLength,
     experience: qaExp,
     room: null,

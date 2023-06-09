@@ -126,7 +126,8 @@ export default async function SessionPage({
 
         <TagContainer className="mb-6">
           <Tag>{session.type}</Tag>
-          <Tag>{session.track}</Tag>
+
+          {session.track && <Tag>{session.track}</Tag>}
         </TagContainer>
 
         {session.slidesUrl && (
@@ -153,31 +154,35 @@ export default async function SessionPage({
 
       <Separator />
 
-      <article className="accent-left">
-        <Title level={2}>
-          The speaker{session.speakers.length > 1 ? "s" : ""}
-        </Title>
+      {session.speakers.length > 1 ? (
+        <>
+          <article className="accent-left">
+            <Title level={2}>
+              The speaker{session.speakers.length > 1 ? "s" : ""}
+            </Title>
 
-        {session.speakers.map((speaker) => (
-          <div key={speaker.code} className="mb-4">
-            <p className="mb-4">
-              <a
-                href={`/speaker/${speaker.slug}`}
-                className="text-4xl hover:text-primary-hover underline font-bold"
-              >
-                {speaker.name}
-              </a>
-            </p>
-            <Prose>
-              <ReactMarkdown components={components}>
-                {speaker.bio}
-              </ReactMarkdown>
-            </Prose>
-          </div>
-        ))}
-      </article>
+            {session.speakers.map((speaker) => (
+              <div key={speaker.code} className="mb-4">
+                <p className="mb-4">
+                  <a
+                    href={`/speaker/${speaker.slug}`}
+                    className="text-4xl hover:text-primary-hover underline font-bold"
+                  >
+                    {speaker.name}
+                  </a>
+                </p>
+                <Prose>
+                  <ReactMarkdown components={components}>
+                    {speaker.bio}
+                  </ReactMarkdown>
+                </Prose>
+              </div>
+            ))}
+          </article>
 
-      <Separator />
+          <Separator />
+        </>
+      ) : null}
 
       <section className="grid gap-6 md:grid-cols-2 accent-right">
         {sessionsInParallel.length ? (

@@ -11,7 +11,9 @@ subtitle:
 
 ### Due Dates of Deliverables
 <h5> Monday, June 12</h5>
-- [Sponsored Talk | Workshop/Tutorial | Poster Submission:](#sponsored-content)
+- [Sponsored Talk Submission:](#sponsored-content): (Keystone, Diamond, Platinum)
+- [Workshop/Tutorial Submission:](#sponsored-content): (Keystone)
+- [Poster Submission:](#sponsored-content): (Poster Add-on)
 - [Sponsor Logo Submission:](#sponsor-logo) (all sponsors)
 
 <h5> Monday, June 19</h5>
@@ -258,12 +260,12 @@ As part of your sponsorship package, it might include a sponsored talk,
 workshop/tutorial or poster session. You can find the details for each:
 
 - <b>Sponsored Talk</b>: a 30 min slot as part of the official conference
-  schedule during the Conference Days (19-21 July, 2023)
+  schedule during the Conference Days (19-21 July, 2023). *If you a Platinum, Diamond or Keystone sponsor or have purchased a sponsored talk, you will need to submit the information to us.*
 - <b>Sponsored Workshop/Tutorial</b>: a 180 min slot as part of the official
-  conference schedule during the Workshop/Tutorial Days (17-18 July, 2023)
+  conference schedule during the Workshop/Tutorial Days (17-18 July, 2023). *If you are a Keystone sponsor or have purchased a sponsored Workshop, you will need to submit the information to us.*
 - <b>Sponsored Poster</b>: the poster will be displayed on the poster wall
   during the Conference Days (19-21 July, 2023). A dedicated presentation slot will be allocated to
-  the presenter for targeted interactions.
+  the presenter for targeted interactions. *If you have purchased an add-on to deliver a Sponsored Poster, you will need to submit the information to us.*
 
 You can check out previous years’ lineup for inspiration:
 [2022 Programme](https://ep2022.europython.eu/schedule/),

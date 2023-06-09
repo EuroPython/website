@@ -104,6 +104,16 @@
       ]
     },
     {
+      "name": "Social Event Sponsor",
+      "sponsors": [
+        {
+          "name": "Kiwi.com",
+          "url": "https://jobs.kiwi.com/",
+          "logo": "/img/logos/sponsor_logos/Kiwi.com_SocialEventSponsor.svg"
+        }
+      ]
+    },
+    {
       "name": "Financial Aid",
       "sponsors": [
         {
@@ -120,7 +130,7 @@
           "name": "Sticker Mule",
           "url": "https://www.stickermule.com/eu/custom-stickers",
           "logo": "img/logos/sponsor_logos/stickermule.svg"
-      }]
-    }
-  ]
+        }
+      ]
+    }]
 }
