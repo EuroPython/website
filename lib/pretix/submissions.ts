@@ -75,7 +75,7 @@ const mapSession = (session: Result) => {
       slug: slugify(speaker.name),
     })),
     tags: session.tags,
-    track: session.track.en,
+    track: session.track?.en,
     type: session.submission_type.en,
     length: qaLength,
     experience: qaExp,

@@ -36,7 +36,7 @@ export const Sessions = ({
   };
 
   const filteredSessions = sessions.filter((session) => {
-    if (filters.track && filters.track !== session.track.toLowerCase()) {
+    if (filters.track && filters.track !== session.track?.toLowerCase()) {
       return false;
     }
     if (filters.type && filters.type !== session.type.toLowerCase()) {
@@ -64,7 +64,7 @@ export const Sessions = ({
               <option
                 key={track}
                 value={track}
-                selected={track.toLowerCase() === filters.track}
+                selected={track?.toLowerCase() === filters.track}
               >
                 {track}
               </option>
