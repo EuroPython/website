@@ -46,11 +46,10 @@ By running similar events in smaller conferences we have learned that the attend
 
 Projects that have shown interested in appearing in the mentored sprint:
 
-
-- Scikit Learn
-- Mu
-- PyScript
-- BeeWare
+- [Scikit Learn](https://scikit-learn.org/)
+- [Mu](https://codewith.mu/)
+- [PyScript](https://pyscript.net/)
+- [BeeWare](https://beeware.org/)
 
 
 ## GETTING INVOLVED ##
