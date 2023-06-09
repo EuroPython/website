@@ -50,6 +50,17 @@ module.exports = {
     ];
   },
 
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pretalx.com",
+        port: "",
+        pathname: "/media/**",
+      },
+    ],
+  },
+
   async headers() {
     return [
       {

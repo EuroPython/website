@@ -56,7 +56,7 @@ export const Keynoters = async () => {
     <section className="relative my-12 px-6">
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
-      <Title className="text-accent">
+      <Title className="text-primary">
         <Link href={"/keynoters"}>Keynote Speakers</Link>
       </Title>
 
