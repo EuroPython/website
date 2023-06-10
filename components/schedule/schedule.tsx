@@ -3,7 +3,8 @@ import { parseISO } from "date-fns";
 import { Datetime } from "../datetime";
 import { Break } from "./break";
 import { Session } from "./session";
-import { numberToTime } from "./time-helpers";
+import { numberToTime, timeToNumber } from "./time-helpers";
+import { Day } from "@/lib/pretix/schedule";
 import {
   Schedule as ScheduleType,
   Session as SessionType,
@@ -223,8 +224,9 @@ const Orphan = ({
   );
 };
 
-const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
-  const totalRooms = schedule.rooms.length;
+const ScheduleHeader = ({ schedule }: { schedule: Day }) => {
+  const rooms = Object.keys(schedule.rooms);
+  const totalRooms = rooms.length;
 
   return (
     <div className="hidden lg:contents headings font-bold text-body-light">
@@ -237,16 +239,16 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
       >
         Time
       </span>
-      {schedule.rooms.map((track, index) => (
+      {rooms.map((room, index) => (
         <span
           className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-text"
-          key={track}
+          key={room}
           style={{
             "--grid-row": `1 / ${HEADING_ROWS + 1}`,
             "--grid-column": `${index + 2}/${index + 3}`,
           }}
         >
-          {track}
+          {room}
         </span>
       ))}
       <span
@@ -262,81 +264,99 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleType }) => {
   );
 };
 
+const getDuration = (duration: string) => {
+  return duration.split(":").reduce((acc, curr, index) => {
+    if (index === 0) {
+      return acc + parseInt(curr) * 60;
+    }
+
+    return acc + parseInt(curr);
+  }, 0);
+};
+
 export const Schedule = ({
   schedule,
   dayType,
 }: {
-  schedule: ScheduleType;
+  schedule: Day;
   dayType: "Tutorials" | "Talks";
 }) => {
-  const totalRooms = schedule.rooms.length;
-  const { rowSizes, gridTemplateRows } = getGridMetrics(schedule, dayType);
-  const lastSession = schedule.slots[schedule.slots.length - 1];
-  const lastTime = lastSession.time + lastSession.duration;
+  const totalRooms = Object.keys(schedule.rooms).length;
+  const slots = Object.entries(schedule.rooms)
+    .map(([room, slots]) => {
+      return slots.map((slot) => {
+        return {
+          ...slot,
+          duration: getDuration(slot.duration),
+          room,
+        };
+      });
+    })
+    .flat();
+
+  const { rowSizes, gridTemplateRows } = getGridMetrics(slots, dayType);
+  const lastSession = slots[slots.length - 1];
+  // const lastTime = lastSession.time + lastSession.duration;
+  const lastTime = schedule.endsAt;
+
+  console.log(lastTime);
+
+  const times = Array.from(new Set(slots.map((slot) => slot.start))).sort(
+    (a, b) => timeToNumber(a) - timeToNumber(b)
+  );
+  const timesToIndex = Object.fromEntries(
+    times.map((time, index) => [time, index])
+  );
 
   return (
     <div>
       <div
         className="lg:grid gap-4 my-8 bg-text text-text-inverted"
         style={{
-          gridTemplateRows,
+          // gridTemplateRows,
           gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
         }}
       >
         <ScheduleHeader schedule={schedule} />
 
-        {schedule.slots.map((slot, index) => {
-          if (slot.type === "break") {
-            const row = getRowForTimeSlot({
-              index,
-              rowSizes,
-              duration: slot.duration,
-              slotDuration: slot.duration,
-            });
-
+        <ul className="contents">
+          {times.map((time, index) => {
             return (
-              <Break
-                title={slot.title}
-                time={slot.time}
-                key={index}
+              <li
                 style={{
-                  "--grid-row": `${row.start} / ${row.end}`,
-                  "--grid-column": `1 / ${totalRooms + 2}`,
+                  gridRowStart: index + 1 + HEADING_ROWS,
+                  gridRowEnd: index + 2 + HEADING_ROWS,
+                  gridColumn: "1 / 2",
                 }}
-              />
+              >
+                {time}
+              </li>
             );
-          }
+          })}
+        </ul>
 
-          if (slot.type === "orphan") {
-            const row = getRowForOrphan(
-              slot.session,
-              rowSizes,
-              schedule.slots,
-              dayType
-            );
-
-            return (
-              <Orphan
-                key={index}
-                session={slot.session}
-                rooms={schedule.rooms}
-                style={{
-                  "--grid-row": `${row.start} / ${row.end}`,
-                }}
-              />
-            );
-          }
-
+        {Object.entries(schedule.rooms).map(([room, slots], index) => {
           return (
-            <ScheduleSlot
-              slot={slot}
-              rooms={schedule.rooms}
-              index={index}
-              key={index}
-              rowSizes={rowSizes}
-            />
+            <ul className="contents">
+              {slots.map((slot) => {
+                return (
+                  <Session
+                    session={slot}
+                    style={{
+                      gridColumnStart: index + 2,
+                      gridColumnEnd: index + 3,
+                      gridRowStart: timesToIndex[slot.start] + 1 + HEADING_ROWS,
+                      gridRowEnd: timesToIndex[slot.start] + 2 + HEADING_ROWS,
+                    }}
+                  >
+                    {slot.title}
+                  </Session>
+                );
+              })}
+            </ul>
           );
         })}
+
         <Break
           title={"End of day"}
           time={lastTime}
@@ -366,28 +386,26 @@ const getRowSizeForSessionsSlot = (
 const getRowSizeForSlot = (
   slot: {
     duration: number;
-    type: string;
+    // type: string;
   },
   dayType: "Tutorials" | "Talks"
 ) => {
-  if (slot.type === "break") {
-    return getRowSizeForBreak(slot.duration);
-  }
+  // if (slot.type === "break") {
+  //   return getRowSizeForBreak(slot.duration);
+  // }
 
-  if (slot.type === "orphan") {
-    return 0;
-  }
+  // if (slot.type === "orphan") {
+  //   return 0;
+  // }
 
   return getRowSizeForSessionsSlot(slot.duration, dayType);
 };
 
 const getGridMetrics = (
-  schedule: ScheduleType,
+  slots: { duration: number }[],
   dayType: "Tutorials" | "Talks"
 ) => {
-  const rowSizes = schedule.slots.map((slot) =>
-    getRowSizeForSlot(slot, dayType)
-  );
+  const rowSizes = slots.map((slot) => getRowSizeForSlot(slot, dayType));
 
   // this also includes the rooms row
   const gridTemplateRows = [HEADING_ROWS]

@@ -61,8 +61,6 @@ const mapSession = (session: Result) => {
 
   let sessionType = session.submission_type.en;
 
-  console.log(session.duration);
-
   if (session.submission_type.en === "Sponsored" && session.duration === 30) {
     sessionType = "Talk";
   }

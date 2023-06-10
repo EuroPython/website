@@ -1,38 +1,35 @@
 import clsx from "clsx";
 import { Fragment } from "react";
-import { ICALLink } from "../ical-link";
-import { numberToTime } from "./time-helpers";
-import type { Session as SessionType } from "./types";
+// import { ICALLink } from "../ical-link";
+import { numberToTime, timeToNumber } from "./time-helpers";
 
-const getHeaderText = (session: SessionType) => {
-  if (session.type === "opening-session") {
-    return "Opening";
-  }
+import { RoomSession } from "@/lib/pretix/schedule";
 
-  if (session.type === "keynote") {
+const capitalizeFirst = (text: string) => {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+};
+
+const getHeaderText = (session: RoomSession) => {
+  const type = session.type?.toLowerCase();
+
+  if (type === "keynote") {
     return "Keynote";
   }
 
-  if (session.type === "lightning-talks") {
-    return "Lightning Talks";
+  if (session.experience) {
+    return capitalizeFirst(session.experience);
   }
 
-  if (session.type === "panel") {
-    return "Panel";
+  if (type === "sponsored") {
+    return "Talk";
   }
 
-  if (session.type === "registration") {
-    return "Registration";
+  if (session.type) {
+    return capitalizeFirst(session.type);
   }
-
-  if (session.audience) {
-    return session.audience;
-  }
-
-  return session.type;
 };
 
-const SessionHeader = ({ session }: { session: SessionType }) => {
+const SessionHeader = ({ session }: { session: RoomSession }) => {
   return (
     <header
       className={clsx(
@@ -40,14 +37,14 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
         "bg-secondary flex text-text justify-between text-xs py-2 px-3 font-bold leading-4",
         "lg:static lg:w-full lg:rounded-none lg:rounded-t-lg",
         {
-          "!bg-session-intermediate": session.audience === "intermediate",
-          "!bg-session-advanced": session.audience === "advanced",
-          "!bg-session-beginner": session.audience === "beginner",
+          "!bg-session-intermediate": session.experience === "intermediate",
+          "!bg-session-advanced": session.experience === "advanced",
+          "!bg-session-beginner": session.experience === "beginner",
           "!bg-secondary": [
             "keynote",
             "registration",
             "opening-session",
-          ].includes(session.type),
+          ].includes(session.type?.toLowerCase()),
         }
       )}
     >
@@ -60,12 +57,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
         {getHeaderText(session)}
       </p>
 
-      <p className="hidden lg:block">
-        {session.type === "poster" ? (
-          <>{numberToTime(session.time)} - </>
-        ) : null}
-        {session.duration}m
-      </p>
+      <p className="hidden lg:block">{timeToNumber(session.duration)}m</p>
     </header>
   );
 };
@@ -74,26 +66,26 @@ export const Session = ({
   session,
   style,
 }: {
-  session: SessionType;
+  session: RoomSession;
   style: React.CSSProperties;
 }) => {
-  const speakers = session.speakers;
+  const speakers = session.persons;
 
-  const nonEmptySpeakers = speakers.filter((speaker) => speaker.name);
+  const nonEmptySpeakers = speakers.filter((speaker) => speaker.public_name);
 
-  const roomsAndSpeakers = session.rooms.concat(
-    nonEmptySpeakers?.map((s) => s.name) || []
+  const roomsAndSpeakers = [session.room].concat(
+    nonEmptySpeakers?.map((s) => s.public_name) || []
   );
 
   return (
-    <div
+    <li
       className={clsx(
         "schedule-item",
         "rounded-lg bg-body-inverted text-secondary flex flex-col relative mb-4 mx-4",
         "min-h-[100px] pr-6 lg:pr-0 lg:mb-0 lg:mx-0"
       )}
       style={style}
-      id={session.id}
+      id={session.guid}
     >
       <SessionHeader session={session} />
 
@@ -106,7 +98,7 @@ export const Session = ({
         {session.start && session.end ? (
           <>
             {" "}
-            <ICALLink
+            {/* <ICALLink
               className="absolute bottom-2 right-8 lg:static"
               title={session.title}
               description={session.abstract}
@@ -114,7 +106,7 @@ export const Session = ({
               end={session.end}
               room={session.rooms.join(", ")}
               url={`https://ep2022.europython.eu/session/${session.slug}`}
-            />
+            /> */}
           </>
         ) : null}
       </p>
@@ -125,16 +117,16 @@ export const Session = ({
             <div>
               <span>
                 {nonEmptySpeakers.map((speaker, index) => (
-                  <Fragment key={speaker.name}>
+                  <Fragment key={speaker.public_name}>
                     {speaker.slug ? (
                       <a
                         className="text-text underline text-sm font-bold"
                         href={`/speaker/${speaker.slug}`}
                       >
-                        {speaker.name}
+                        {speaker.public_name}
                       </a>
                     ) : (
-                      speaker.name
+                      speaker.public_name
                     )}
                     {index < nonEmptySpeakers.length - 1 && ", "}
                   </Fragment>
@@ -147,6 +139,6 @@ export const Session = ({
       <div className="text-text text-sm font-bold mt-auto py-2 px-3 lg:hidden">
         {roomsAndSpeakers.join(", ")}
       </div>
-    </div>
+    </li>
   );
 };
