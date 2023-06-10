@@ -166,7 +166,7 @@ const transformSchedule = async (schedule?: Day) => {
   return { ...schedule, endsAt };
 };
 
-export const fetchSchedule = async (day: string) => {
+export const fetchSchedule = async (day?: string) => {
   // TODO: year from env/config?
   const response = await fetch(
     "https://program.europython.eu/europython-2023/schedule/export/schedule.json"
