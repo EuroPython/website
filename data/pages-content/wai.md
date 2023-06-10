@@ -45,23 +45,25 @@ Women in AI (WAI) is a nonprofit do-tank working towards inclusive AI that benef
 
 <font size="+2.5"><u><b>Hour Two</b></u></font>
 
-* 4. **(4) ML Workflow Overview** *(Immersive Hands-On Session)*
+*(Immersive Hands-On Session)*
+
+* 4. **(4) ML Workflow Overview**
   - Data Cleaning & Preparation
   - Data Splitting
-  - Feature Engineering (Correlation and Scaling)
+  - Feature Engineering
 
 * 5. **(5) Implementing a Regressor using Scikit Learn**
   - Linear Regression
   - Evaluation Techniques for Regression
 
-  <font size="+2.5"><u><b>Hour Three</b></u></font>
+<font size="+2.5"><u><b>Hour Three</b></u></font>
 
 *(Immersive Hands-on continued)*
 
-* 6. **(6) Implementing a Classifer using Scikit Learn**
+* 6. **(6) Implementing a Classifier using Scikit Learn**
   - Data Cleaning & Preparation
-  - Feature Engineering (Label/One-Hot Encoding)
-  - Logistic Regression and Decision Trees (*Note: to give a different flavour of classification since logistic regression will be similar to the previous one*)
+  - Feature Engineering
+  - Logistic Regression and Decision Trees
   - Evaluation Techniques for Classification
 
 * 6. **(7) Conclusion**
