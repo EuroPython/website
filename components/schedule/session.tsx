@@ -3,13 +3,13 @@ import { Fragment } from "react";
 // import { ICALLink } from "../ical-link";
 import { numberToTime, timeToNumber } from "./time-helpers";
 
-import { RoomSession } from "@/lib/pretix/schedule";
+import type { Session as SessionType } from "@/lib/pretix/schedule";
 
 const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
-const getHeaderText = (session: RoomSession) => {
+const getHeaderText = (session: SessionType) => {
   const type = session.type?.toLowerCase();
 
   if (type === "keynote") {
@@ -29,7 +29,7 @@ const getHeaderText = (session: RoomSession) => {
   }
 };
 
-const SessionHeader = ({ session }: { session: RoomSession }) => {
+const SessionHeader = ({ session }: { session: SessionType }) => {
   return (
     <header
       className={clsx(
@@ -57,7 +57,7 @@ const SessionHeader = ({ session }: { session: RoomSession }) => {
         {getHeaderText(session)}
       </p>
 
-      <p className="hidden lg:block">{timeToNumber(session.duration)}m</p>
+      <p className="hidden lg:block">{session.duration}m</p>
     </header>
   );
 };
@@ -66,7 +66,7 @@ export const Session = ({
   session,
   style,
 }: {
-  session: RoomSession;
+  session: SessionType;
   style: React.CSSProperties;
 }) => {
   const speakers = session.persons;

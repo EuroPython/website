@@ -1,4 +1,4 @@
-import { parse } from "date-fns";
+import { parse, parseISO } from "date-fns";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { fetchSpeakersWithConfirmedSubmissions } from "./speakers";
 import { timeToNumber } from "components/schedule/time-helpers";
@@ -103,6 +103,62 @@ export type TheAuditorium = {
   answers: any[];
 };
 
+export const transformSession = (
+  session: RoomSession,
+  codeToSubmission: {
+    [key: string]: {
+      experience?: string;
+    };
+  },
+  codeToSpeaker: {
+    [key: string]: {
+      slug: string;
+    };
+  }
+) => {
+  const start = timeToNumber(session.start);
+  const duration = timeToNumber(session.duration);
+
+  const end = start + duration;
+  let experience: string | undefined = undefined;
+
+  // parse https://program.europython.eu/europython-2023/talk/CRTSNK/
+  // if it exists
+  if (session.url) {
+    const urlPieces = session.url.split("/");
+    const code = urlPieces[urlPieces.length - 2];
+
+    const submission = codeToSubmission[code];
+
+    if (!submission) {
+      // TODO: keynotes?
+      console.log(`Couldn't find ${session.url}`);
+    } else {
+      experience = submission.experience;
+    }
+  }
+
+  const persons = session.persons.map((person) => {
+    const speaker = codeToSpeaker[person.code];
+
+    if (speaker) {
+      person.slug = speaker.slug;
+    }
+
+    return person;
+  });
+
+  return {
+    ...session,
+    start,
+    end,
+    experience,
+    persons,
+  };
+};
+
+export type Session = ReturnType<typeof transformSession>;
+
 const transformSchedule = async (schedule?: Day) => {
   if (!schedule) {
     return;
@@ -117,53 +173,24 @@ const transformSchedule = async (schedule?: Day) => {
     allSpeakers.map((speaker) => [speaker.code, speaker])
   );
 
-  Object.values(schedule.rooms).forEach((sessions) => {
-    sessions.forEach((session) => {
-      // add the end time here
-      // TODO: fix types
-      const start = timeToNumber(session.start);
-      const duration = timeToNumber(session.duration);
-      session.end = start + duration;
-
-      // parse https://program.europython.eu/europython-2023/talk/CRTSNK/
-      // if it exists
-      if (!session.url) {
-        return;
-      }
-
-      const urlPieces = session.url.split("/");
-      const code = urlPieces[urlPieces.length - 2];
-
-      const submission = codeToSubmission[code];
-
-      if (!submission) {
-        // TODO: keynotes?
-        console.log(`Couldn't find ${session.url}`);
-
-        return;
-      }
-
-      session.experience = submission.experience;
-
-      session.persons.forEach((person) => {
-        const speaker = codeToSpeaker[person.code];
-
-        if (speaker) {
-          person.slug = speaker.slug;
-        }
-      });
-
-      return session;
-    });
-  });
-
-  console.log(Object.values(schedule.rooms).flatMap((session) => session));
-
-  const endsAt = Math.max(
-    ...Object.values(schedule.rooms).flatMap((session) => session.end)
+  const rooms = Object.fromEntries(
+    Object.entries(schedule.rooms).map(([room, sessions]) => {
+      return [
+        room,
+        sessions.map((session) =>
+          transformSession(session, codeToSubmission, codeToSpeaker)
+        ),
+      ];
+    })
   );
 
-  return { ...schedule, endsAt };
+  const endsAt = Math.max(
+    ...Object.values(rooms).flatMap((sessions) =>
+      sessions.map((session) => session.end)
+    )
+  );
+
+  return { ...schedule, rooms, endsAt };
 };
 
 export const fetchSchedule = async (day?: string) => {

@@ -299,11 +299,7 @@ export const Schedule = ({
   // const lastTime = lastSession.time + lastSession.duration;
   const lastTime = schedule.endsAt;
 
-  console.log(lastTime);
-
-  const times = Array.from(new Set(slots.map((slot) => slot.start))).sort(
-    (a, b) => timeToNumber(a) - timeToNumber(b)
-  );
+  const times = Array.from(new Set(slots.map((slot) => slot.start)));
   const timesToIndex = Object.fromEntries(
     times.map((time, index) => [time, index])
   );
