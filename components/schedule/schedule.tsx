@@ -3,9 +3,8 @@ import { parseISO } from "date-fns";
 import { Datetime } from "../datetime";
 import { Break } from "./break";
 import { Session } from "./session";
-import { numberToTime, timeToNumber } from "./time-helpers";
+import { numberToTime } from "./time-helpers";
 import type { ScheduleDay } from "@/lib/pretix/schedule";
-import { Session as SessionType, TimeSlot } from "./types";
 
 const TalkTime = ({ time }: { time: number }) => {
   const timeAsString = numberToTime(time);
@@ -159,9 +158,7 @@ export const Schedule = ({
                           slot.duration / MINUTES_PER_ROW
                       ),
                     }}
-                  >
-                    {slot.title}
-                  </Session>
+                  />
                 );
               })}
             </ul>
