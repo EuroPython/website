@@ -4,10 +4,10 @@ import { fetchSpeakersWithConfirmedSubmissions } from "./speakers";
 import { timeToNumber } from "components/schedule/time-helpers";
 
 export type ScheduleResponse = {
-  schedule: Schedule;
+  schedule: APISchedule;
 };
 
-export type Schedule = {
+export type APISchedule = {
   version: string;
   base_url: string;
   conference: Conference;
@@ -153,17 +153,14 @@ export const transformSession = (
     start,
     end,
     experience,
+    duration,
     persons,
   };
 };
 
 export type Session = ReturnType<typeof transformSession>;
 
-const transformSchedule = async (schedule?: Day) => {
-  if (!schedule) {
-    return;
-  }
-
+const transformSchedule = async (schedule: Day) => {
   const allSubmissions = await fetchConfirmedSubmissions();
   const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
   const codeToSubmission = Object.fromEntries(
@@ -190,7 +187,29 @@ const transformSchedule = async (schedule?: Day) => {
     )
   );
 
-  return { ...schedule, rooms, endsAt };
+  const slots = Object.entries(schedule.rooms)
+    .map(([room, slots]) => {
+      return slots.map((slot) => {
+        return {
+          ...slot,
+          room,
+        };
+      });
+    })
+    .flat();
+
+  const times = Array.from(
+    new Set(
+      slots.map((slot) => ({
+        start: timeToNumber(slot.start),
+        duration: timeToNumber(slot.duration),
+      }))
+    )
+  );
+
+  // const times =
+
+  return { ...schedule, slots, rooms, endsAt, times };
 };
 
 export const fetchSchedule = async (day?: string) => {
@@ -216,12 +235,18 @@ export const fetchSchedule = async (day?: string) => {
       );
     });
 
-  const schedule = await transformSchedule(
-    conference.days.find((conferenceDay) => conferenceDay.date === day)
+  const daySchedule = conference.days.find(
+    (conferenceDay) => conferenceDay.date === day
   );
+  const schedule = daySchedule
+    ? await transformSchedule(daySchedule)
+    : undefined;
 
   return {
     schedule,
     days: sortedDays.map((day) => parse(day.date, "yyyy-MM-dd", new Date())),
   };
 };
+
+export type ScheduleDay = Awaited<ReturnType<typeof transformSchedule>>;
+export type Schedule = Awaited<ReturnType<typeof fetchSchedule>>;

@@ -45,13 +45,6 @@ body {
   grid-column: 1 / 4;
 }
 
-@media (min-width: 1024px) {
-  .schedule-item {
-    grid-row: var(--grid-row) !important;
-    grid-column: var(--grid-column) !important;
-  }
-}
-
 .prose :is(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none !important;
 }

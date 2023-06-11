@@ -54,7 +54,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
           "lg:static lg:rotate-0 lg:translate-x-0 lg:translate-y-0"
         )}
       >
-        {getHeaderText(session)}
+        {getHeaderText(session)} {numberToTime(session.start)}
       </p>
 
       <p className="hidden lg:block">{session.duration}m</p>
