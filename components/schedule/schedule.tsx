@@ -34,7 +34,6 @@ const TalkTime = ({ time }: { time: number }) => {
 
 const map = (
   value: number,
-
   from: { low: number; high: number },
   to: { low: number; high: number }
 ) => {
@@ -43,131 +42,20 @@ const map = (
   );
 };
 
-const ROW_HEIGHT = 5;
 const HEADING_ROWS = 2;
 const BREAK_ROWS = 3;
 const SESSION_ROWS = 6;
 const SESSION_ROWS_TUTORIALS = 3;
-
-const getColumnForSession = (session: { rooms: string[] }, rooms: string[]) => {
-  const roomIndexes = session.rooms.map((room) => rooms.indexOf(room)).sort();
-  const firstRoomIndex = roomIndexes[0];
-
-  // css grids are 1-indexed, plus we have the time column on the left
-  const start = 2 + firstRoomIndex;
-  const end = start + roomIndexes.length;
-
-  return { start, end };
-};
-
-const getRowForTimeSlot = ({
-  index,
-  rowSizes,
-  duration,
-}: {
-  index: number;
-  duration: number;
-  rowSizes: number[];
-}) => {
-  // css grids are 1-indexed, plus we have the rooms rows on the top
-  const start =
-    1 +
-    HEADING_ROWS +
-    rowSizes.slice(0, index).reduce((acc, curr) => acc + curr, 0);
-
-  const rowSize = rowSizes[index];
-
-  const end = start + rowSize;
-
-  return { start, end };
-};
-
-const getRowForOrphan = (
-  session: { time: number },
-  rowSizes: number[],
-  slots: TimeSlot[],
-  dayType: "Tutorials" | "Talks"
-) => {
-  const slotsBefore = slots.filter(
-    (slot) => slot.type !== "orphan" && slot.time < session.time
-  );
-  const slotsAfter = slots.filter(
-    (slot) => slot.type !== "orphan" && slot.time > session.time
-  );
-
-  const slotBefore = slotsBefore[slotsBefore.length - 1];
-  const slotBeforeIndex = slots.indexOf(slotBefore);
-
-  const timeDifferenceBefore = session.time - slotBefore.time;
-  const rowDifferenceBefore = Math.floor(
-    map(
-      timeDifferenceBefore,
-      { low: 0, high: slotBefore.duration },
-      { low: 0, high: getRowSizeForSlot(slotBefore, dayType) }
-    )
-  );
-
-  const start =
-    2 +
-    rowSizes.slice(0, slotBeforeIndex).reduce((acc, curr) => acc + curr, 0) +
-    rowDifferenceBefore;
-
-  const slotAfter = slotsAfter[0];
-  const slotAfterIndex = slots.indexOf(slotAfter);
-
-  const timeDifferenceAfter = slotAfter.time - session.time;
-  const rowDifferenceAfter = Math.floor(
-    map(
-      timeDifferenceAfter,
-      { low: 0, high: slotAfter.duration },
-      { low: 0, high: getRowSizeForSlot(slotAfter, dayType) }
-    )
-  );
-  const end =
-    2 +
-    rowSizes.slice(0, slotAfterIndex).reduce((acc, curr) => acc + curr, 0) +
-    rowDifferenceAfter;
-
-  return { start, end };
-};
-
-const Orphan = ({
-  session,
-  rooms,
-  style,
-}: {
-  session: SessionType;
-  rooms: string[];
-  style: React.CSSProperties;
-}) => {
-  const column = getColumnForSession(session, rooms);
-
-  return (
-    <div className="row row-orphan contents">
-      <div className="talk__time schedule-item">
-        <TalkTime time={session.time} />
-      </div>
-
-      <Session
-        key={session.id}
-        session={session}
-        style={{
-          "--grid-column": `${column.start} / ${column.end}`,
-          ...style,
-        }}
-      />
-    </div>
-  );
-};
+const ROW_HEIGHT = 20;
 
 const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
   const rooms = Object.keys(schedule.rooms);
   const totalRooms = rooms.length;
 
   return (
-    <div className="hidden lg:contents headings font-bold text-body-light">
+    <div className="hidden lg:contents headings font-bold text-primary">
       <span
-        className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-text"
+        className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-body-background"
         style={{
           "--grid-row": `1 / ${HEADING_ROWS + 1}`,
           "--grid-column": "1 / 2",
@@ -177,7 +65,7 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
       </span>
       {rooms.map((room, index) => (
         <span
-          className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-text"
+          className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-body-background"
           key={room}
           style={{
             "--grid-row": `1 / ${HEADING_ROWS + 1}`,
@@ -200,51 +88,10 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
   );
 };
 
-const MINUTES_PER_ROW = 2;
-const ROW_OFFSET = MINUTES_PER_ROW;
-
-function getSessionsWithRow<T>(
-  slots: (T & {
-    duration: number;
-  })[],
-  times: {
-    [key: string]: {
-      start: number;
-    };
-  }
-) {
-  let currentRow = 0;
-
-  return slots.map((slot) => {
-    const slotRows = Math.ceil(slot.duration / MINUTES_PER_ROW);
-
-    currentRow += slotRows;
-
-    return {
-      ...slot,
-      startRow: currentRow - slotRows,
-      endRow: currentRow,
-    };
-  });
-}
-
-function getTimesWithRow<T>(
-  times: (T & {
-    duration: number;
-  })[]
-) {
-  let currentRow = 0;
-
-  return times.map((time) => {
-    currentRow += MINUTES_PER_ROW * 10;
-
-    return {
-      ...time,
-      startRow: currentRow - MINUTES_PER_ROW * 10,
-      endRow: currentRow,
-    };
-  });
-}
+const MINUTES_PER_ROW = 5;
+// TODO: better way for this, this offset is to account
+// for the header (and +1 since css grids are 1-indexed)
+const ROW_OFFSET = 4;
 
 export const Schedule = ({
   schedule,
@@ -253,47 +100,33 @@ export const Schedule = ({
   schedule: ScheduleDay;
   dayType: "Tutorials" | "Talks";
 }) => {
-  const totalRooms = Object.keys(schedule.rooms).length;
-  const { times } = schedule;
+  const { grid } = schedule;
 
-  // const { rowSizes, gridTemplateRows } = getGridMetrics(slots, dayType);
   const lastTime = schedule.endsAt;
-
-  const totalMinutes = lastTime - times[0].start;
-  const totalRows = Math.ceil(totalMinutes / MINUTES_PER_ROW);
-
-  const timesWithRows = getTimesWithRow(times);
-  const timeToRow = timesWithRows.reduce((acc, curr) => {
-    return {
-      ...acc,
-      [curr.start]: curr,
-    };
-  }, {});
-
-  console.log(timeToRow);
 
   return (
     <div>
       <div
-        className="lg:grid gap-4 my-8 bg-text text-text-inverted"
+        className="lg:grid gap-4 my-8"
         style={{
-          gridTemplateRows: `repeat(${totalRows}, ${ROW_HEIGHT}px)`,
-          gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
+          gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
+          gridTemplateColumns: `5rem repeat(${schedule.totalRooms}, 1fr)`,
         }}
       >
         <ScheduleHeader schedule={schedule} />
 
         <ul className="contents">
-          {timesWithRows.map((time) => {
+          {Object.entries(grid.times).map(([time, { startRow, endRow }]) => {
+            console.log(time);
             return (
               <li
                 style={{
-                  gridRowStart: time.startRow + ROW_OFFSET,
-                  gridRowEnd: time.endRow + ROW_OFFSET,
+                  gridRowStart: startRow + ROW_OFFSET,
+                  gridRowEnd: endRow + ROW_OFFSET,
                   gridColumn: "1 / 2",
                 }}
               >
-                {numberToTime(time.start)}
+                {time}
               </li>
             );
           })}
@@ -302,15 +135,28 @@ export const Schedule = ({
         {Object.entries(schedule.rooms).map(([room, slots], index) => {
           return (
             <ul className="contents">
-              {getSessionsWithRow(slots, timeToRow).map((slot) => {
+              {slots.map((slot) => {
+                const start = numberToTime(slot.start);
+
+                const row = grid.times[start];
+
+                if (!row) {
+                  console.log("no row for", start);
+                  return null;
+                }
+
                 return (
                   <Session
                     session={slot}
                     style={{
                       gridColumnStart: index + 2,
                       gridColumnEnd: index + 3,
-                      gridRowStart: slot.startRow + ROW_OFFSET,
-                      gridRowEnd: slot.endRow + ROW_OFFSET,
+                      gridRowStart: row.startRow + ROW_OFFSET,
+                      gridRowEnd: Math.floor(
+                        row.startRow +
+                          ROW_OFFSET +
+                          slot.duration / MINUTES_PER_ROW
+                      ),
                     }}
                   >
                     {slot.title}
@@ -326,7 +172,7 @@ export const Schedule = ({
           time={lastTime}
           style={{
             // "--grid-row": `${rowSizes.length + 1} / ${rowSizes.length + 2}`,
-            "--grid-column": `1 / ${totalRooms + 2}`,
+            "--grid-column": `1 / ${schedule.totalRooms + 2}`,
           }}
         />
       </div>

@@ -1,7 +1,7 @@
 import { parse, parseISO } from "date-fns";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { fetchSpeakersWithConfirmedSubmissions } from "./speakers";
-import { timeToNumber } from "components/schedule/time-helpers";
+import { numberToTime, timeToNumber } from "components/schedule/time-helpers";
 
 export type ScheduleResponse = {
   schedule: APISchedule;
@@ -199,17 +199,51 @@ const transformSchedule = async (schedule: Day) => {
     .flat();
 
   const times = Array.from(
-    new Set(
-      slots.map((slot) => ({
-        start: timeToNumber(slot.start),
-        duration: timeToNumber(slot.duration),
-      }))
-    )
-  );
+    new Set(slots.map((slot) => timeToNumber(slot.start)))
+  ).sort((a, b) => a - b);
 
-  // const times =
+  const gridTimes: {
+    [time: string]: {
+      startRow: number;
+      endRow: number;
+    };
+  } = {};
 
-  return { ...schedule, slots, rooms, endsAt, times };
+  let currentStart = 0;
+  let totalRows = 0;
+
+  const MINUTES_PER_ROW = 5;
+
+  times.forEach((currentTime, index) => {
+    const time = numberToTime(currentTime);
+
+    const nextElement = times[index + 1];
+
+    if (nextElement !== undefined) {
+      const diff = nextElement - currentTime;
+
+      gridTimes[time] = {
+        startRow: currentStart,
+        endRow: currentStart + diff / MINUTES_PER_ROW,
+      };
+
+      currentStart = gridTimes[time].endRow;
+      totalRows = gridTimes[time].endRow;
+    } else {
+      // grid[time] = {start: 0, end: }
+    }
+  });
+
+  return {
+    ...schedule,
+    slots,
+    rooms,
+    endsAt,
+    grid: {
+      times: gridTimes,
+      rows: totalRows,
+    },
+  };
 };
 
 export const fetchSchedule = async (day?: string) => {
