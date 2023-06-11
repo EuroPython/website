@@ -30,12 +30,21 @@ const getHeaderText = (session: SessionType) => {
 };
 
 const SessionHeader = ({ session }: { session: SessionType }) => {
+  const hasBgColor = [
+    ["keynote", "registration", "opening-session"].includes(
+      session.type?.toLowerCase()
+    ),
+    session.experience === "beginner",
+    session.experience === "intermediate",
+    session.experience === "advanced",
+  ].some(Boolean);
+
   return (
     <header
       className={clsx(
-        "absolute right-0 top-0 bottom-0 w-5 rounded-r-lg whitespace-nowrap",
+        "absolute right-0 top-0 bottom-0 w-5whitespace-nowrap",
         "bg-secondary flex text-text justify-between text-xs py-2 px-3 font-bold leading-4",
-        "lg:static lg:w-full lg:rounded-none lg:rounded-t-lg",
+        "lg:static lg:w-full border-b-2",
         {
           "!bg-session-intermediate": session.experience === "intermediate",
           "!bg-session-advanced": session.experience === "advanced",
@@ -45,6 +54,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
             "registration",
             "opening-session",
           ].includes(session.type?.toLowerCase()),
+          "bg-session-none": !hasBgColor,
         }
       )}
     >
@@ -54,7 +64,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
           "lg:static lg:rotate-0 lg:translate-x-0 lg:translate-y-0"
         )}
       >
-        {getHeaderText(session)} {numberToTime(session.start)}
+        {getHeaderText(session)}
       </p>
 
       <p className="hidden lg:block">{session.duration}m</p>
@@ -80,9 +90,9 @@ export const Session = ({
   return (
     <li
       className={clsx(
-        "schedule-item",
-        "rounded-lg bg-body-inverted text-secondary flex flex-col relative mb-4 mx-4",
-        "min-h-[100px] pr-6 lg:pr-0 lg:mb-0 lg:mx-0"
+        "schedule-item bg-body-background mt-[2px] ml-[2px] border-b-2",
+        "text-black flex flex-col relative",
+        "min-h-[100px]"
       )}
       style={style}
       id={session.guid}

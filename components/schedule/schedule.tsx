@@ -32,25 +32,11 @@ const TalkTime = ({ time }: { time: number }) => {
   );
 };
 
-const map = (
-  value: number,
-  from: { low: number; high: number },
-  to: { low: number; high: number }
-) => {
-  return (
-    to.low + ((to.high - to.low) * (value - from.low)) / (from.high - from.low)
-  );
-};
-
 const HEADING_ROWS = 2;
-const BREAK_ROWS = 3;
-const SESSION_ROWS = 6;
-const SESSION_ROWS_TUTORIALS = 3;
-const ROW_HEIGHT = 20;
+const ROW_HEIGHT = 40;
 
 const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
   const rooms = Object.keys(schedule.rooms);
-  const totalRooms = rooms.length;
 
   return (
     <div className="hidden lg:contents headings font-bold text-primary">
@@ -75,27 +61,15 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
           {room}
         </span>
       ))}
-      <span
-        className="schedule-item bg-text sticky z-10 top-0 self-start"
-        style={{
-          "--grid-row": `1 / ${HEADING_ROWS + 1}`,
-          "--grid-column": `1 / ${totalRooms + 2}`,
-        }}
-      >
-        &nbsp;
-      </span>
     </div>
   );
 };
 
 const MINUTES_PER_ROW = 5;
-// TODO: better way for this, this offset is to account
-// for the header (and +1 since css grids are 1-indexed)
-const ROW_OFFSET = 4;
+const ROW_OFFSET = 1;
 
 export const Schedule = ({
   schedule,
-  dayType,
 }: {
   schedule: ScheduleDay;
   dayType: "Tutorials" | "Talks";
@@ -109,25 +83,52 @@ export const Schedule = ({
       <div
         className="lg:grid gap-4 my-8"
         style={{
-          gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
+          // gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
           gridTemplateColumns: `5rem repeat(${schedule.totalRooms}, 1fr)`,
         }}
       >
         <ScheduleHeader schedule={schedule} />
+      </div>
 
-        <ul className="contents">
+      <div
+        className="lg:grid my-8 border-b-2 border-r-2"
+        style={{
+          gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
+          gridTemplateColumns: `5rem repeat(${schedule.totalRooms}, 1fr)`,
+        }}
+      >
+        <ul className="contents divide-x-2 divide-y-2">
           {Object.entries(grid.times).map(([time, { startRow, endRow }]) => {
-            console.log(time);
+            const gridRowStart = startRow + ROW_OFFSET;
+            const gridRowEnd = endRow + ROW_OFFSET;
+
             return (
-              <li
-                style={{
-                  gridRowStart: startRow + ROW_OFFSET,
-                  gridRowEnd: endRow + ROW_OFFSET,
-                  gridColumn: "1 / 2",
-                }}
-              >
-                {time}
-              </li>
+              <>
+                <li
+                  style={{
+                    gridRowStart,
+                    gridRowEnd,
+                    gridColumn: "1 / 2",
+                  }}
+                  className="text-center p-1 font-bold border-l-2 border-t-2"
+                >
+                  {time}
+                </li>
+
+                {Object.keys(schedule.rooms).map((room, index) => {
+                  return (
+                    <li
+                      key={room}
+                      style={{
+                        gridRowStart,
+                        gridRowEnd,
+                        gridColumnStart: index + 2,
+                        gridColumnEnd: index + 3,
+                      }}
+                    ></li>
+                  );
+                })}
+              </>
             );
           })}
         </ul>
@@ -167,64 +168,15 @@ export const Schedule = ({
           );
         })}
 
-        <Break
+        {/* <Break
           title={"End of day"}
           time={lastTime}
           style={{
             // "--grid-row": `${rowSizes.length + 1} / ${rowSizes.length + 2}`,
             "--grid-column": `1 / ${schedule.totalRooms + 2}`,
           }}
-        />
+        /> */}
       </div>
     </div>
   );
-};
-
-const getRowSizeForBreak = (duration: number) => {
-  return Math.ceil(BREAK_ROWS * (duration / 30));
-};
-
-const getRowSizeForSessionsSlot = (
-  duration: number,
-  dayType: "Tutorials" | "Talks"
-) => {
-  const base = dayType === "Tutorials" ? SESSION_ROWS_TUTORIALS : SESSION_ROWS;
-
-  return Math.ceil(base * (duration / 30));
-};
-
-const getRowSizeForSlot = (
-  slot: {
-    duration: number;
-    // type: string;
-  },
-  dayType: "Tutorials" | "Talks"
-) => {
-  // if (slot.type === "break") {
-  //   return getRowSizeForBreak(slot.duration);
-  // }
-
-  // if (slot.type === "orphan") {
-  //   return 0;
-  // }
-
-  return getRowSizeForSessionsSlot(slot.duration, dayType);
-};
-
-const getGridMetrics = (
-  slots: { duration: number }[],
-  dayType: "Tutorials" | "Talks"
-) => {
-  const rowSizes = slots.map((slot) => getRowSizeForSlot(slot, dayType));
-
-  // this also includes the rooms row
-  const gridTemplateRows = [HEADING_ROWS]
-    .concat(rowSizes)
-    .filter((size) => size > 0)
-    .map((size) => {
-      return `repeat(${size}, ${ROW_HEIGHT}px)`;
-    })
-    .join(" ");
-
-  return { gridTemplateRows, rowSizes };
 };

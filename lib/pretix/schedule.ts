@@ -234,10 +234,13 @@ const transformSchedule = async (schedule: Day) => {
     }
   });
 
+  const totalRooms = Object.keys(schedule.rooms).length;
+
   return {
     ...schedule,
     slots,
     rooms,
+    totalRooms,
     endsAt,
     grid: {
       times: gridTimes,
