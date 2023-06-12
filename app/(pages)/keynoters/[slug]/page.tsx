@@ -69,9 +69,6 @@ export default async function SessionPage({
     throw notFound();
   }
 
-  // TODO: social card
-  //   const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?session=${session.code}`;
-  // TODO: once we have the start date and time
   const start = null;
 
   // @ts-ignore
