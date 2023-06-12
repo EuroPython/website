@@ -154,7 +154,7 @@ export default async function SessionPage({
 
       <Separator />
 
-      {session.speakers.length > 1 ? (
+      {session.speakers.length > 0 ? (
         <>
           <article className="accent-left">
             <Title level={2}>
