@@ -123,7 +123,7 @@ export const Session = ({
         </p>
 
         {nonEmptySpeakers.length ? (
-          <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-text border-t-[1px]">
+          <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-text border-t-[0.5px]">
             <>
               <div>
                 <span>
