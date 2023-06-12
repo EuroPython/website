@@ -44,7 +44,7 @@ EuroPython is one of the the biggest Python conference organized every year, tho
 
 By running similar events in smaller conferences we have learned that the attendees (and projects) get much more out of it by having maintainers, organizers, and attendees working together. This way the maintainers of a certain package can provide directed, effective and in-person mentoring to a group of individuals, and the attendees feel more confident and usually leave with a higher sense of accomplishment.
 
-Projects that have shown interested in appearing in the mentored sprint:
+Projects that have shown interest in appearing in the mentored sprint:
 
 - [Scikit Learn](https://scikit-learn.org/)
 - [Mu](https://codewith.mu/)
