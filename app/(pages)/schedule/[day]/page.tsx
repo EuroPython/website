@@ -5,6 +5,8 @@ import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import { SelectDay } from "./select-day";
 
+export const revalidate = 300;
+
 export default async function SchedulePage({
   params,
 }: {
