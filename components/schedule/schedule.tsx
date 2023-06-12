@@ -31,41 +31,46 @@ const TalkTime = ({ time }: { time: number }) => {
   );
 };
 
-const HEADING_ROWS = 2;
 const ROW_HEIGHT = 40;
+
+const MINUTES_PER_ROW = 5;
+const HEADING_ROWS = 1;
+const ROW_OFFSET = 1 + HEADING_ROWS;
 
 const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
   const rooms = Object.keys(schedule.rooms);
 
   return (
-    <div className="hidden lg:contents headings font-bold text-primary">
+    // <div className="hidden lg:contents headings divide-x-2 divide-black border-b-2">
+    <>
       <span
-        className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-body-background"
+        className="schedule-item border-l-2 border-t-2 border-b-2 font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
         style={{
-          "--grid-row": `1 / ${HEADING_ROWS + 1}`,
-          "--grid-column": "1 / 2",
+          gridRowStart: 1,
+          gridRowEnd: HEADING_ROWS + 1,
+          gridColumn: "1 / 2",
         }}
       >
         Time
       </span>
       {rooms.map((room, index) => (
         <span
-          className="schedule-item flex items-center justify-center px-2 py-4 sticky z-20 top-0 self-start bg-body-background"
+          className="schedule-item !border-b-2 font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
           key={room}
           style={{
-            "--grid-row": `1 / ${HEADING_ROWS + 1}`,
-            "--grid-column": `${index + 2}/${index + 3}`,
+            gridRowStart: 1,
+            gridRowEnd: HEADING_ROWS + 1,
+            gridColumnStart: index + 2,
+            gridColumnEnd: index + 3,
           }}
         >
           {room}
         </span>
       ))}
-    </div>
+    </>
+    // </div>
   );
 };
-
-const MINUTES_PER_ROW = 5;
-const ROW_OFFSET = 1;
 
 export const Schedule = ({
   schedule,
@@ -80,16 +85,6 @@ export const Schedule = ({
   return (
     <div>
       <div
-        className="lg:grid gap-4 my-8"
-        style={{
-          // gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
-          gridTemplateColumns: `5rem repeat(${schedule.totalRooms}, 1fr)`,
-        }}
-      >
-        <ScheduleHeader schedule={schedule} />
-      </div>
-
-      <div
         className="lg:grid my-8 border-b-2 border-r-2"
         style={{
           gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
@@ -97,45 +92,57 @@ export const Schedule = ({
         }}
       >
         <ul className="contents divide-x-2 divide-y-2">
-          {Object.entries(grid.times).map(([time, { startRow, endRow }]) => {
-            const gridRowStart = startRow + ROW_OFFSET;
-            const gridRowEnd = endRow + ROW_OFFSET;
+          <ScheduleHeader schedule={schedule} />
 
-            return (
-              <>
-                <li
-                  style={{
-                    gridRowStart,
-                    gridRowEnd,
-                    gridColumn: "1 / 2",
-                  }}
-                  className="text-center p-1 font-bold border-l-2 border-t-2"
-                >
-                  {time}
-                </li>
+          {Object.entries(grid.times).map(
+            ([time, { startRow, endRow }], index) => {
+              const gridRowStart = startRow + ROW_OFFSET;
+              const gridRowEnd = endRow + ROW_OFFSET;
 
-                {Object.keys(schedule.rooms).map((room, index) => {
-                  return (
-                    <li
-                      key={room}
-                      style={{
-                        gridRowStart,
-                        gridRowEnd,
-                        gridColumnStart: index + 2,
-                        gridColumnEnd: index + 3,
-                      }}
-                    ></li>
-                  );
-                })}
-              </>
-            );
-          })}
+              return (
+                <>
+                  <li
+                    style={{
+                      gridRowStart,
+                      gridRowEnd,
+                      gridColumn: "1 / 2",
+                    }}
+                    className={clsx(
+                      "text-center p-1 font-bold border-l-2 border-t-2",
+                      {
+                        "!border-t-0": index === 0,
+                      }
+                    )}
+                  >
+                    {time}
+                  </li>
+
+                  {Object.keys(schedule.rooms).map((room, roomIndex) => {
+                    return (
+                      <li
+                        key={room}
+                        style={{
+                          gridRowStart,
+                          gridRowEnd,
+                          gridColumnStart: roomIndex + 2,
+                          gridColumnEnd: roomIndex + 3,
+                        }}
+                        className={clsx({
+                          "!border-t-0": index === 0,
+                        })}
+                      ></li>
+                    );
+                  })}
+                </>
+              );
+            }
+          )}
         </ul>
 
-        {Object.entries(schedule.rooms).map(([room, slots], index) => {
+        {Object.entries(schedule.rooms).map(([room, slots], roomIndex) => {
           return (
             <ul className="contents">
-              {slots.map((slot) => {
+              {slots.map((slot, index) => {
                 const start = numberToTime(slot.start);
 
                 const row = grid.times[start];
@@ -145,12 +152,15 @@ export const Schedule = ({
                   return null;
                 }
 
+                const rowIndex = Object.values(grid.times).indexOf(row);
+
                 return (
                   <Session
                     session={slot}
                     style={{
-                      gridColumnStart: index + 2,
-                      gridColumnEnd: index + 3,
+                      marginTop: rowIndex === 0 ? -1 : undefined,
+                      gridColumnStart: roomIndex + 2,
+                      gridColumnEnd: roomIndex + 3,
                       gridRowStart: row.startRow + ROW_OFFSET,
                       gridRowEnd: Math.floor(
                         row.startRow +

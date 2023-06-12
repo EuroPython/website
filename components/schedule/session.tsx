@@ -42,7 +42,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
   return (
     <header
       className={clsx(
-        "absolute right-0 top-0 bottom-0 w-5whitespace-nowrap",
+        "absolute right-0 top-0 bottom-0",
         "bg-secondary flex text-text justify-between text-xs py-2 px-3 font-bold leading-4",
         "lg:static lg:w-full border-b-2",
         {
@@ -99,9 +99,11 @@ export const Session = ({
     >
       <SessionHeader session={session} />
 
-      <p className="font-bold text-sm lg:text-base py-2 px-3">
+      <p className="font-bold text-md lg:text-base py-2 px-3">
         {session.slug ? (
-          <a href={`/session/${session.slug}`}>{session.title}</a>
+          <a href={`/session/${session.slug}`} className="underline">
+            {session.title}
+          </a>
         ) : (
           session.title
         )}
@@ -130,7 +132,7 @@ export const Session = ({
                   <Fragment key={speaker.public_name}>
                     {speaker.slug ? (
                       <a
-                        className="text-text underline text-sm font-bold"
+                        className="text-text text-sm font-bold hover:underline"
                         href={`/speaker/${speaker.slug}`}
                       >
                         {speaker.public_name}
