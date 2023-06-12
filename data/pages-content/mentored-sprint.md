@@ -50,6 +50,7 @@ Projects that have shown interest in appearing in the mentored sprint:
 - [Mu](https://codewith.mu/)
 - [PyScript](https://pyscript.net/)
 - [BeeWare](https://beeware.org/)
+- [sktime](https://www.sktime.net/)
 
 
 ## GETTING INVOLVED ##
