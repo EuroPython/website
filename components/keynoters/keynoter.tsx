@@ -14,18 +14,18 @@ export const Keynoter = ({
   tagline?: string;
   picture: string;
 }) => (
-  <li className="max-w-md list-none">
-    <Link href={link} className="block w-full h-full relative group rounded-2xl overflow-clip">
-      <div className="relative aspect-[9/12]">
+  <li className="max-w-md list-none rounded-2xl overflow-clip flex group">
+    <Link href={link} className="block w-full h-full relative">
+      <div className="relative aspect-[9/12] overflow-clip">
         <Image
           src={picture}
           fill
           alt={`A photo of ${name}`}
-          className="object-cover "
+          className="object-cover group-hover:scale-105 transition-transform"
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 px-5 pt-2 pb-8 bg-keynoter-info rounded-t-none group-hover:opacity-80">
+      <div className="px-5 pt-2 pb-8 bg-keynoter-info rounded-t-none h-full group-hover:opacity-90">
         {placeholder ? (
           <p className="text-body-inverted font-bold">
             More keynoters coming soon
