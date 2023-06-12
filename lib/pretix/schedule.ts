@@ -174,9 +174,14 @@ const transformSchedule = async (schedule: Day) => {
     Object.entries(schedule.rooms).map(([room, sessions]) => {
       return [
         room,
-        sessions.map((session) =>
-          transformSession(session, codeToSubmission, codeToSpeaker)
-        ),
+        sessions
+          .filter(
+            ({ title }) =>
+              title.toLocaleLowerCase().includes("placeholder") === false
+          )
+          .map((session) =>
+            transformSession(session, codeToSubmission, codeToSpeaker)
+          ),
       ];
     })
   );

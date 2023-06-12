@@ -88,29 +88,28 @@ export const Session = ({
   );
 
   return (
-    <li
-      className={clsx(
-        "schedule-item bg-body-background mt-[2px] ml-[2px] border-b-2",
-        "text-black flex flex-col relative",
-        "min-h-[100px]"
-      )}
-      style={style}
-      id={session.guid}
-    >
-      <SessionHeader session={session} />
-
-      <p className="font-bold text-md lg:text-base py-2 px-3">
-        {session.slug ? (
-          <a href={`/session/${session.slug}`} className="underline">
-            {session.title}
-          </a>
-        ) : (
-          session.title
+    <li id={session.guid} className="contents">
+      <a
+        className={clsx(
+          "schedule-item bg-body-background mt-[2px] ml-[2px] border-b-2",
+          "text-black flex flex-col relative cursor-pointer hover:bg-white/40",
+          "min-h-[100px] block"
         )}
-        {session.start && session.end ? (
-          <>
-            {" "}
-            {/* <ICALLink
+        style={style}
+        href={`/session/${session.slug}`}
+      >
+        <SessionHeader session={session} />
+
+        <p className="font-bold text-md lg:text-base py-2 px-3">
+          {session.slug ? (
+            <a href={`/session/${session.slug}`}>{session.title}</a>
+          ) : (
+            session.title
+          )}
+          {session.start && session.end ? (
+            <>
+              {" "}
+              {/* <ICALLink
               className="absolute bottom-2 right-8 lg:static"
               title={session.title}
               description={session.abstract}
@@ -119,38 +118,39 @@ export const Session = ({
               room={session.rooms.join(", ")}
               url={`https://ep2022.europython.eu/session/${session.slug}`}
             /> */}
-          </>
-        ) : null}
-      </p>
+            </>
+          ) : null}
+        </p>
 
-      {nonEmptySpeakers.length ? (
-        <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-text border-t-[1px]">
-          <>
-            <div>
-              <span>
-                {nonEmptySpeakers.map((speaker, index) => (
-                  <Fragment key={speaker.public_name}>
-                    {speaker.slug ? (
-                      <a
-                        className="text-text text-sm font-bold hover:underline"
-                        href={`/speaker/${speaker.slug}`}
-                      >
-                        {speaker.public_name}
-                      </a>
-                    ) : (
-                      speaker.public_name
-                    )}
-                    {index < nonEmptySpeakers.length - 1 && ", "}
-                  </Fragment>
-                ))}
-              </span>
-            </div>
-          </>
+        {nonEmptySpeakers.length ? (
+          <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-text border-t-[1px]">
+            <>
+              <div>
+                <span>
+                  {nonEmptySpeakers.map((speaker, index) => (
+                    <Fragment key={speaker.public_name}>
+                      {speaker.slug ? (
+                        <a
+                          className="text-text text-sm font-bold hover:underline"
+                          href={`/speaker/${speaker.slug}`}
+                        >
+                          {speaker.public_name}
+                        </a>
+                      ) : (
+                        speaker.public_name
+                      )}
+                      {index < nonEmptySpeakers.length - 1 && ", "}
+                    </Fragment>
+                  ))}
+                </span>
+              </div>
+            </>
+          </div>
+        ) : null}
+        <div className="text-text text-sm font-bold mt-auto py-2 px-3 lg:hidden">
+          {roomsAndSpeakers.join(", ")}
         </div>
-      ) : null}
-      <div className="text-text text-sm font-bold mt-auto py-2 px-3 lg:hidden">
-        {roomsAndSpeakers.join(", ")}
-      </div>
+      </a>
     </li>
   );
 };
