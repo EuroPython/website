@@ -60,7 +60,7 @@ export const Keynoters = async () => {
         <Link href={"/keynoters"}>Keynote Speakers</Link>
       </Title>
 
-      <ul className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 auto-rows-[1fr] mt-12 mb-24 items-stretch">
+      <ul className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 auto-rows-[1fr] mt-12 mb-24 items-stretch">
         {keynoters.map((speaker, index) => (
           <Keynoter
             key={index}
