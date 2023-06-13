@@ -100,6 +100,9 @@ export const fetchAllSpeakers = async () => {
       headers: {
         Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       },
+      next: {
+        revalidate: 300,
+      },
     });
 
     if (!response.ok) {
@@ -141,7 +144,7 @@ export const fetchSpeakersWithConfirmedSubmissions = async () => {
   });
 };
 
-export const fetchSpeakerBySlug = cache(async (slug: string) => {
+export const fetchSpeakerBySlug = async (slug: string) => {
   const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
 
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
@@ -156,6 +159,9 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
       headers: {
         Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       },
+      next: {
+        revalidate: 300,
+      },
     }
   );
 
@@ -166,7 +172,7 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
   const speaker = (await response.json()) as Speaker;
 
   return mapSpeaker(speaker);
-});
+};
 
 export const fetchKeynoters = async () => {
   const submissions = await fetchKeynotes();
@@ -193,7 +199,7 @@ export const fetchKeynoters = async () => {
   });
 };
 
-export const fetchKeynoterBySlug = cache(async (slug: string) => {
+export const fetchKeynoterBySlug = async (slug: string) => {
   const allSpeakers = await fetchKeynoters();
 
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
@@ -208,6 +214,9 @@ export const fetchKeynoterBySlug = cache(async (slug: string) => {
       headers: {
         Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       },
+      next: {
+        revalidate: 300,
+      },
     }
   );
 
@@ -218,4 +227,4 @@ export const fetchKeynoterBySlug = cache(async (slug: string) => {
   const speaker = (await response.json()) as Speaker;
 
   return mapSpeaker(speaker);
-});
+};

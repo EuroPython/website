@@ -8,19 +8,13 @@ import {
   DefinitionTerm,
   DefinitionDescription,
 } from "components/definition-list/definition-list";
-import {
-  fetchConfirmedSubmissions,
-  fetchSubmissionBySlug,
-} from "@/lib/pretix/submissions";
+import { fetchSubmissionBySlug } from "@/lib/pretix/submissions";
 import { notFound } from "next/navigation";
 import { Datetime } from "components/datetime";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { components } from "components/mdx";
 
 import { Metadata } from "next";
-
-export const fetchCache = "force-cache";
-export const revalidate = 300; // 5 minutes
 
 export const generateMetadata = async ({
   params,

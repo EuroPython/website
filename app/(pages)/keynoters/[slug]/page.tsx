@@ -15,8 +15,6 @@ import { components } from "components/mdx";
 
 import { Metadata } from "next";
 
-export const revalidate = 300; // 5 minutes
-
 export const generateMetadata = async ({
   params,
 }: {

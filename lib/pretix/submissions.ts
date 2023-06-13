@@ -110,6 +110,9 @@ export const fetchConfirmedSubmissions = async () => {
       headers: {
         Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       },
+      next: {
+        revalidate: 300,
+      },
     });
 
     if (!response.ok) {

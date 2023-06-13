@@ -1,7 +1,4 @@
-import {
-  fetchSpeakersWithConfirmedSubmissions,
-  fetchSpeakerBySlug,
-} from "@/lib/pretix";
+import { fetchSpeakerBySlug } from "@/lib/pretix";
 import {
   DefinitionList,
   DefinitionTerm,
@@ -14,8 +11,6 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
 import { Metadata } from "next";
-
-export const revalidate = 300; // 5 minutes
 
 export const generateMetadata = async ({
   params,
