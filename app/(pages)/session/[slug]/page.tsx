@@ -19,8 +19,6 @@ import { components } from "components/mdx";
 
 import { Metadata } from "next";
 
-export const revalidate = 300; // 5 minutes
-
 export const generateMetadata = async ({
   params,
 }: {
@@ -45,13 +43,13 @@ export const generateMetadata = async ({
   return metadata;
 };
 
-// export async function generateStaticParams() {
-//   const submissions = await fetchConfirmedSubmissions();
+export async function generateStaticParams() {
+  const submissions = await fetchConfirmedSubmissions();
 
-//   return submissions.map((submission) => ({
-//     slug: submission.slug,
-//   }));
-// }
+  return submissions.map((submission) => ({
+    slug: submission.slug,
+  }));
+}
 
 export default async function SessionPage({
   params,
@@ -154,7 +152,7 @@ export default async function SessionPage({
 
       <Separator />
 
-      {session.speakers.length > 1 ? (
+      {session.speakers.length > 0 ? (
         <>
           <article className="accent-left">
             <Title level={2}>

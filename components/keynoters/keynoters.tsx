@@ -2,8 +2,9 @@ import { ButtonLink } from "components/button-link";
 import { Title } from "components/typography/title";
 import Link from "next/link";
 import { SVGProps } from "react";
-import keynoters from "../../data/keynoters.json";
+
 import { Keynoter } from "./keynoter";
+import { fetchKeynoters } from "@/lib/pretix/speakers";
 
 const Background = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -48,23 +49,25 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const Keynoters = () => {
+export const Keynoters = async () => {
+  const keynoters = await fetchKeynoters()
+
   return (
     <section className="relative my-12 px-6">
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
-      <Title>
-        <Link href={"/keynoters"}>Keynote speakers</Link>
+      <Title className="text-primary">
+        <Link href={"/keynoters"}>Keynote Speakers</Link>
       </Title>
 
-      <ul className="grid gap-6 grid-cols-2 md:grid-cols-4 auto-rows-[1fr] mt-12 mb-24">
+      <ul className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 auto-rows-[1fr] mt-12 mb-24 items-stretch">
         {keynoters.map((speaker, index) => (
           <Keynoter
             key={index}
             name={speaker.name}
-            tagline={speaker.tagline}
-            link={speaker.link}
-            picture={speaker.picture}
+            tagline={speaker.session.tagline}
+            link={`/keynoters/${speaker.slug}`}
+            picture={speaker.avatar}
             placeholder={false}
           />
         ))}
