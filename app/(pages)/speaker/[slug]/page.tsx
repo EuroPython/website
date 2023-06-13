@@ -1,4 +1,7 @@
-import { fetchSpeakerBySlug } from "@/lib/pretix";
+import {
+  fetchSpeakerBySlug,
+  fetchSpeakersWithConfirmedSubmissions,
+} from "@/lib/pretix";
 import {
   DefinitionList,
   DefinitionTerm,
@@ -28,13 +31,13 @@ export const generateMetadata = async ({
   };
 };
 
-// export async function generateStaticParams() {
-//   const speakers = await fetchSpeakersWithConfirmedSubmissions();
+export async function generateStaticParams() {
+  const speakers = await fetchSpeakersWithConfirmedSubmissions();
 
-//   return speakers.map((speaker) => ({
-//     slug: speaker.slug,
-//   }));
-// }
+  return speakers.map((speaker) => ({
+    slug: speaker.slug,
+  }));
+}
 
 const getAvatarUrl = (avatar: string) => {
   if (avatar.startsWith("https://www.gravatar.com/avatar/")) {
