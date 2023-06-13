@@ -368,6 +368,7 @@ export const OpenGraphImageKeynoter = ({
             height={600}
             src={avatar}
             style={{
+              objectFit: "cover",
               width: 320,
               height: 320,
               borderRadius: "100%",
