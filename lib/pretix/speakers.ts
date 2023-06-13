@@ -1,4 +1,4 @@
-import { fetchConfirmedSubmissions } from "./submissions";
+import { fetchConfirmedSubmissions, fetchKeynotes } from "./submissions";
 import { Answer } from "./types";
 import { slugify } from "./utils/slugify";
 import { cache } from "react";
@@ -100,6 +100,9 @@ export const fetchAllSpeakers = async () => {
       headers: {
         Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       },
+      next: {
+        revalidate: 300,
+      },
     });
 
     if (!response.ok) {
@@ -124,7 +127,9 @@ export const fetchAllSpeakers = async () => {
 };
 
 export const fetchSpeakersWithConfirmedSubmissions = async () => {
-  const submissions = await fetchConfirmedSubmissions();
+  const submissions = (
+    await Promise.all([fetchConfirmedSubmissions(), fetchKeynotes()])
+  ).flat();
 
   const allSpeakers = Array.from(
     new Set(submissions.map((submission) => submission.speakers).flat())
@@ -139,7 +144,7 @@ export const fetchSpeakersWithConfirmedSubmissions = async () => {
   });
 };
 
-export const fetchSpeakerBySlug = cache(async (slug: string) => {
+export const fetchSpeakerBySlug = async (slug: string) => {
   const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
 
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
@@ -154,6 +159,9 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
       headers: {
         Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       },
+      next: {
+        revalidate: 300,
+      },
     }
   );
 
@@ -164,4 +172,59 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
   const speaker = (await response.json()) as Speaker;
 
   return mapSpeaker(speaker);
-});
+};
+
+export const fetchKeynoters = async () => {
+  const submissions = await fetchKeynotes();
+
+  const allSpeakers = Array.from(
+    new Set(
+      submissions
+        .map((submission) =>
+          submission.speakers.flatMap((speaker) => ({
+            ...speaker,
+            session: submission,
+          }))
+        )
+        .flat()
+    )
+  );
+
+  const seen = new Set();
+
+  return allSpeakers.filter((speaker) => {
+    const duplicate = seen.has(speaker.code);
+    seen.add(speaker.code);
+    return !duplicate;
+  });
+};
+
+export const fetchKeynoterBySlug = async (slug: string) => {
+  const allSpeakers = await fetchKeynoters();
+
+  const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
+
+  if (!speakerInfo) {
+    throw new Error("Failed to find speaker in submissions");
+  }
+
+  const response = await fetch(
+    `https://pretalx.com/api/events/europython-2023/speakers/${speakerInfo.code}/`,
+    {
+      headers: {
+        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
+      },
+      next: {
+        revalidate: 300,
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch speaker");
+  }
+
+  const speaker = (await response.json()) as Speaker;
+
+  return mapSpeaker(speaker);
+};

@@ -134,3 +134,6 @@ out/
 node_modules/
 storybook-static/
 .vercel
+
+# Sentry Auth Token
+.sentryclirc

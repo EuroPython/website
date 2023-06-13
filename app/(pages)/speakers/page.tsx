@@ -4,8 +4,6 @@ import { Title } from "components/typography/title";
 import { fetchSpeakersWithConfirmedSubmissions } from "@/lib/pretix";
 import { Metadata } from "next";
 
-export const revalidate = 300; // 5 minutes
-
 export const metadata: Metadata = {
   title: "Speakers",
 };

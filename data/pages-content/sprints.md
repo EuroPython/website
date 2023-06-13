@@ -63,6 +63,10 @@ the love for coding, making and problem solving.
 
 <img src="/img/sprint_collection.png__2420x1619_q85_crop_subsampling-2_upscale.png" width="1210" height="808"   />
 
+## New to a "Sprint"?
+
+You may want to come to the [Mentored Sprint](/mentored-sprint) on Friday before going to the actually sprint! Mentored Sprint is tailed to beginners who have not contributed to open-source before. We will have mentors who will be there to help you and give you a head start of your contributing journey.
+
 ## Organising a Sprint
 
 **Sprint rooms**: we will have 11 rooms in total for the sprints, all of which
@@ -80,7 +84,7 @@ designated rooms that have sufficient space to accommodate the expected number
 of participants.
 
 - RB 103; occupancy: 15/24
-- RB 104; occupancy: 0/24
+- RB 104; occupancy: 12/24
 - RB 105; occupancy: 0/24
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
@@ -179,6 +183,19 @@ Please add your sprint here!
 - Links:
   - [CPython's Developer Guide](https://devguide.python.org/)
   - [Easy Issues](https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy)
+
+### sktime - ML/AI toolbox for time series!
+
+- Number of people: ~10 (2 organizers)
+- Room: RB 104
+- Python Level: any
+- Contact: sktime developers - meetup or help-desk on Discord
+  [sktime Discord](https://discord.com/invite/54ACzaFsn7)
+  [sktime Github](https://github.com/sktime/sktime)
+- Links:
+  - [sktime getting started with contributions](https://github.com/sktime/sktime/issues/1147)
+  - [Roadmap 2023-2024 issue](https://github.com/sktime/sktime/issues/4691)
+  - [Good first issues](https://github.com/sktime/sktime/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 <!-- ### EuroPython 2023 Example Project (copy this for your project)
 

@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { ReactNode } from "react";
 import { Footer } from "../footer";
 import { Header } from "../header";
-import { Meta } from "../meta";
 
 const LayoutContainer = ({ children }: { children: ReactNode }) => {
   return (
@@ -14,21 +13,13 @@ const LayoutContainer = ({ children }: { children: ReactNode }) => {
 
 export const Layout = ({
   children,
-  path,
-  title,
-  socialCardUrl,
   headerInverted = false,
 }: {
   children: ReactNode;
-  path?: string;
-  title?: string;
-  socialCardUrl?: string;
   headerInverted?: boolean;
 }) => {
   return (
     <>
-      <Meta path={path || ""} title={title} socialCardUrl={socialCardUrl} />
-
       <a href="#main-content" className="sr-only">
         Skip to main content
       </a>

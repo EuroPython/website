@@ -45,6 +45,10 @@
           "path": "/humble-data"
         },
         {
+          "name": "Women in AI Workshop",
+          "path": "/wai"
+        },
+        {
           "name": "PyLadies Snake Workshop",
           "path": "/pyladies-workshop"
         },
