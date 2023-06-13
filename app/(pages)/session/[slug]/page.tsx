@@ -8,7 +8,10 @@ import {
   DefinitionTerm,
   DefinitionDescription,
 } from "components/definition-list/definition-list";
-import { fetchSubmissionBySlug } from "@/lib/pretix/submissions";
+import {
+  fetchConfirmedSubmissions,
+  fetchSubmissionBySlug,
+} from "@/lib/pretix/submissions";
 import { notFound } from "next/navigation";
 import { Datetime } from "components/datetime";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
@@ -40,13 +43,13 @@ export const generateMetadata = async ({
   return metadata;
 };
 
-// export async function generateStaticParams() {
-//   const submissions = await fetchConfirmedSubmissions();
+export async function generateStaticParams() {
+  const submissions = await fetchConfirmedSubmissions();
 
-//   return submissions.map((submission) => ({
-//     slug: submission.slug,
-//   }));
-// }
+  return submissions.map((submission) => ({
+    slug: submission.slug,
+  }));
+}
 
 export default async function SessionPage({
   params,
