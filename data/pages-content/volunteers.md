@@ -17,7 +17,7 @@ We will also have a small number of perks for you, some small gifts to say "than
   - This is in person volunteering and would require you to be present at the venue.
   - While we strive to make the conference accessible to everyone, we cannot provide travel or accommodation support to volunteers.
   - To enter the conference you need a ticket.
-  - You can sign up to volunteer before purchasing a ticket. Do note, that while we do have a budget for allocating free tickets for volunteers, it is limited and we'll prioritise underrepresented groups. You can indicate whether you'd like to be considered for the free ticket in the form below.
+  - You are welcome to volunteer as much or as little as you want to, even if you already hold a ticket. However please note we will not be able to refund you for the ticket should you choose to volunteer for eight hours or more. We are unable to commit to that at this point.
 
 
 ## Perks for volunteers
