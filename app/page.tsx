@@ -15,6 +15,7 @@ import { HeroVenue } from "components/hero-section/hero-venue";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
 import { MDXRemote } from "components/mdx-remote/mdx-remote";
+import { Keynoters } from "components/keynoters/keynoters";
 
 export const metadata = {
   metadataBase: new URL("https://ep2023.europython.eu"),
@@ -86,9 +87,7 @@ export default async function IndexPage() {
         <HeroWithCTA
           ctaTitle="The Sprint Weekend is On"
           ctaButton={
-            <ButtonLink href="/sprints">
-              Submit your sprint now!
-            </ButtonLink>
+            <ButtonLink href="/sprints">Submit your sprint now!</ButtonLink>
           }
         >
           <Title>
@@ -106,6 +105,8 @@ export default async function IndexPage() {
           <MDXRemote {...venue.source} />
         </HeroVenue>
       </div>
+      {/* @ts-expect-error */}
+      <Keynoters />
 
       <Sponsors />
     </Layout>
