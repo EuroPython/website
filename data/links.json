@@ -16,6 +16,10 @@
           "path": "/speakers"
         },
         {
+          "name": "List of Keynote Speakers",
+          "path": "/keynoters"
+        },
+        {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
         }
