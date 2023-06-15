@@ -105,6 +105,11 @@
           "name": "Qt",
           "url": "https://qt.io/",
           "logo": "img/logos/sponsor_logos/Qt.svg"
+        },
+        {
+          "name": "Taipy",
+          "url": "https://www.taipy.io/",
+          "logo": "img/logos/sponsor_logos/taipy.svg"
         }
       ]
     },
