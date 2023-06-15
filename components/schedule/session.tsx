@@ -92,8 +92,9 @@ export const Session = ({
       <a
         className={clsx(
           "schedule-item bg-body-background mt-[2px] ml-[2px] border-b-2",
-          "text-black flex flex-col relative cursor-pointer hover:bg-white/40",
-          "min-h-[100px] block"
+          "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
+          "min-h-[100px] block",
+          { "opacity-20": session.type === "break" }
         )}
         style={style}
         href={`/session/${session.slug}`}

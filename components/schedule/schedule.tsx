@@ -143,6 +143,7 @@ export const Schedule = ({
           return (
             <ul className="contents">
               {slots.map((slot, index) => {
+                console.log("slot", slot.type);
                 const start = numberToTime(slot.start);
 
                 const row = grid.times[start];

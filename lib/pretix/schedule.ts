@@ -1,7 +1,8 @@
-import { parse, parseISO } from "date-fns";
+import { format, parse, parseISO } from "date-fns";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { fetchSpeakersWithConfirmedSubmissions } from "./speakers";
 import { numberToTime, timeToNumber } from "components/schedule/time-helpers";
+import { getScheduleBreaks } from "./schedule-breaks";
 
 export type ScheduleResponse = {
   schedule: APISchedule;
@@ -160,6 +161,11 @@ export const transformSession = (
 
 export type Session = ReturnType<typeof transformSession>;
 
+const datesAreOnSameDay = (first: Date, second: Date) =>
+  first.getFullYear() === second.getFullYear() &&
+  first.getMonth() === second.getMonth() &&
+  first.getDate() === second.getDate();
+
 const transformSchedule = async (schedule: Day) => {
   const allSubmissions = await fetchConfirmedSubmissions();
   const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
@@ -169,6 +175,11 @@ const transformSchedule = async (schedule: Day) => {
   const codeToSpeaker = Object.fromEntries(
     allSpeakers.map((speaker) => [speaker.code, speaker])
   );
+  const breaks = await getScheduleBreaks();
+
+  const dayBreaks = breaks.filter((breakItem) => {
+    return datesAreOnSameDay(breakItem.start, parseISO(schedule.date));
+  });
 
   const rooms = Object.fromEntries(
     Object.entries(schedule.rooms).map(([room, sessions]) => {
@@ -181,6 +192,45 @@ const transformSchedule = async (schedule: Day) => {
           )
           .map((session) =>
             transformSession(session, codeToSubmission, codeToSpeaker)
+          )
+          .concat(
+            dayBreaks.map((breakItem, index) => {
+              const start = timeToNumber(format(breakItem.start, "HH:mm"));
+              const end = timeToNumber(format(breakItem.end, "HH:mm"));
+              const duration = end - start;
+
+              console.log(breakItem.start);
+              console.log(breakItem.end);
+              console.log(duration);
+
+              return {
+                ...breakItem,
+                start,
+                end,
+                duration,
+                room: "break",
+                id: index,
+                guid: `${index}`,
+                logo: "",
+                date: breakItem.start.toISOString(),
+                slug: "",
+                url: "",
+                title: "Break " + duration,
+                subtitle: "",
+                track: "",
+                type: "break",
+                language: "",
+                abstract: "",
+                description: "",
+                recording_license: "",
+                do_not_record: true,
+                persons: [],
+                links: [],
+                attachments: [],
+                answers: [],
+                experience: undefined,
+              };
+            })
           ),
       ];
     })
@@ -201,11 +251,20 @@ const transformSchedule = async (schedule: Day) => {
         };
       });
     })
+
     .flat();
 
   const times = Array.from(
-    new Set(slots.map((slot) => timeToNumber(slot.start)))
+    new Set([
+      ...slots.map((slot) => timeToNumber(slot.start)),
+      ...dayBreaks.map((breakItem) =>
+        timeToNumber(format(breakItem.start, "HH:mm"))
+      ),
+    ])
   ).sort((a, b) => a - b);
+
+  console.log(dayBreaks.map((breakItem) => format(breakItem.start, "HH:mm")));
+  console.log(times);
 
   const gridTimes: {
     [time: string]: {
@@ -234,8 +293,6 @@ const transformSchedule = async (schedule: Day) => {
 
       currentStart = gridTimes[time].endRow;
       totalRows = gridTimes[time].endRow;
-    } else {
-      // grid[time] = {start: 0, end: }
     }
   });
 
@@ -244,6 +301,7 @@ const transformSchedule = async (schedule: Day) => {
   return {
     ...schedule,
     slots,
+    // TODO: add break slots to rooms
     rooms,
     totalRooms,
     endsAt,
