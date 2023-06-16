@@ -10,6 +10,9 @@ subtitle:
 
 
 ### Due Dates of Deliverables
+<h5> Variable Dates</h5>
+- [Parcel Delivery for Booth Items](#parcel): (all exhibitors wishing to ship exhibit items)
+
 <h5> Monday, June 12</h5>
 - [Sponsored Talk Submission:](#sponsored-content): (Keystone, Diamond, Platinum)
 - [Workshop/Tutorial Submission:](#sponsored-content): (Keystone)
@@ -192,7 +195,7 @@ surcharge will apply afterwards.**
 
 </details>
 
-<!-- <details>
+<details>
 <summary><h4 id="parcel">Parcel Delivery & Gifts</h4></summary>
 
 We aim to actively reduce the carbon footprint of the EuroPython conference
@@ -203,32 +206,27 @@ distribute them at your booth. We strongly encourage you to distribute gifts
 made of environmentally friendly materials, to focus on quality rather than
 quantity to reduce waste.
 
-Shipping and customs for your goods are handled by
-[DB Schenker](https://www.dbschenker.com/cz-en).
+Shipping your goods to the venue is exclusively handled by
+[DB Schenker](https://www.dbschenker.com/cz-en). Please get in touch with Martin ULIČNÝ from DB Schenker directly to discuss costs and shipping arrangement.
 
-**Contacts**:
+**Contact**:
 
-
-- Martin ULIČNÝ - martin.+420 242 405 160, +TBD (mobile)
+- Martin ULIČNÝ
+  - Tel: +420 242 405 160
+  - E-mail: martin.ulicny@dbschenker.com
 
 Here are shipping information provided by DB Schenker:
 
-- [Shipping Guidelines](TBD).
-  **Important: Please provide DB Schenker your Company name, point of contact name
-  and email.** Contact DB Schenker for Details.
+- [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/edit).
+  - **This is the [sample label](https://docs.google.com/document/d/1AnNPyK7D9cnEIhMXsAU2VK5-3mxaLEzs/edit) provided. Please contact DB Schenker for Details.**
 
-- [Freight Order link](TBD).
-- [Delivery address and Shipping Label](TBD).
+- [Shipping Quotes (.docx)](https://docs.google.com/document/d/1shj6VhH4Wu4y76m-b5AtLviYbQsVGJY5/edit).
+  - **Contact DB Schenker directly to discuss pricing and conditions**
 
-**Deadlines:**
+**Deadlines**
+- Deadlines are specified in [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/edit).
 
-- Deadline for orders: 2023-TBD
-- Deadline for receiving to the warehouse: 2023-TBD
-
-If you have any last-minute orders, please contact DB Schenker and keep them in
-the loop.
-
-</details> -->
+</details>
 
 <details>
   <summary><h4>Leads Collection</h4></summary>
