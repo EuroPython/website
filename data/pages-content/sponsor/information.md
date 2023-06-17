@@ -10,8 +10,8 @@ subtitle:
 
 
 ### Due Dates of Deliverables
-<h5> Variable Dates</h5>
-- [Parcel Delivery for Booth Items](#parcel): (all exhibitors wishing to ship exhibit items)
+<h5> Shipping Deadlines Outlined in Shipping Guidelines Below</h5>
+- [Parcel Delivery & Swag](#parcel): (all exhibitors who want to ship exhibit items)
 
 <h5> Monday, June 12</h5>
 - [Sponsored Talk Submission:](#sponsored-content): (Keystone, Diamond, Platinum)
@@ -196,7 +196,7 @@ surcharge will apply afterwards.**
 </details>
 
 <details>
-<summary><h4 id="parcel">Parcel Delivery & Gifts</h4></summary>
+<summary><h4 id="parcel">Parcel Delivery & Swag</h4></summary>
 
 We aim to actively reduce the carbon footprint of the EuroPython conference
 series. Throughout the planning of the much anticipated EuroPython Dublin, we
@@ -217,14 +217,14 @@ Shipping your goods to the venue is exclusively handled by
 
 Here are shipping information provided by DB Schenker:
 
-- [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/edit).
-  - **This is the [sample label](https://docs.google.com/document/d/1AnNPyK7D9cnEIhMXsAU2VK5-3mxaLEzs/edit) provided. Please contact DB Schenker for Details.**
+- [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/view).
+  - **This is the [sample label](https://docs.google.com/document/d/1AnNPyK7D9cnEIhMXsAU2VK5-3mxaLEzs/view) provided. Please contact DB Schenker for Details.**
 
-- [Shipping Quotes (.docx)](https://docs.google.com/document/d/1shj6VhH4Wu4y76m-b5AtLviYbQsVGJY5/edit).
+- [Shipping Quotes (.docx)](https://docs.google.com/document/d/1shj6VhH4Wu4y76m-b5AtLviYbQsVGJY5/view).
   - **Contact DB Schenker directly to discuss pricing and conditions**
 
 **Deadlines**
-- Deadlines are specified in [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/edit).
+- Deadlines are specified in [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/view).
 
 </details>
 
