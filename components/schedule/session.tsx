@@ -91,7 +91,7 @@ export const Session = ({
     <li id={session.guid} className="contents">
       <a
         className={clsx(
-          "schedule-item bg-body-background mt-[2px] ml-[2px] border-b-2",
+          "schedule-item bg-body-background mt-[2px] ml-[2px] outline-black outline-2 outline",
           "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
           "min-h-[100px] block",
           { "opacity-20": session.type === "break" }
