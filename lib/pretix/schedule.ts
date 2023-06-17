@@ -175,11 +175,6 @@ const transformSchedule = async (schedule: Day) => {
   const codeToSpeaker = Object.fromEntries(
     allSpeakers.map((speaker) => [speaker.code, speaker])
   );
-  const breaks = await getScheduleBreaks();
-
-  const dayBreaks = breaks.filter((breakItem) => {
-    return datesAreOnSameDay(breakItem.start, parseISO(schedule.date));
-  });
 
   const rooms = Object.fromEntries(
     Object.entries(schedule.rooms).map(([room, sessions]) => {
@@ -192,45 +187,6 @@ const transformSchedule = async (schedule: Day) => {
           )
           .map((session) =>
             transformSession(session, codeToSubmission, codeToSpeaker)
-          )
-          .concat(
-            dayBreaks.map((breakItem, index) => {
-              const start = timeToNumber(format(breakItem.start, "HH:mm"));
-              const end = timeToNumber(format(breakItem.end, "HH:mm"));
-              const duration = end - start;
-
-              console.log(breakItem.start);
-              console.log(breakItem.end);
-              console.log(duration);
-
-              return {
-                ...breakItem,
-                start,
-                end,
-                duration,
-                room: "break",
-                id: index,
-                guid: `${index}`,
-                logo: "",
-                date: breakItem.start.toISOString(),
-                slug: "",
-                url: "",
-                title: "Break " + duration,
-                subtitle: "",
-                track: "",
-                type: "break",
-                language: "",
-                abstract: "",
-                description: "",
-                recording_license: "",
-                do_not_record: true,
-                persons: [],
-                links: [],
-                attachments: [],
-                answers: [],
-                experience: undefined,
-              };
-            })
           ),
       ];
     })
@@ -255,16 +211,8 @@ const transformSchedule = async (schedule: Day) => {
     .flat();
 
   const times = Array.from(
-    new Set([
-      ...slots.map((slot) => timeToNumber(slot.start)),
-      ...dayBreaks.map((breakItem) =>
-        timeToNumber(format(breakItem.start, "HH:mm"))
-      ),
-    ])
+    new Set(slots.map((slot) => timeToNumber(slot.start)))
   ).sort((a, b) => a - b);
-
-  console.log(dayBreaks.map((breakItem) => format(breakItem.start, "HH:mm")));
-  console.log(times);
 
   const gridTimes: {
     [time: string]: {
@@ -342,8 +290,96 @@ export const fetchSchedule = async (day?: string) => {
     ? await transformSchedule(daySchedule)
     : undefined;
 
+  let dividedSchedule: any = [];
+
+  const rooms = Object.keys(schedule?.rooms ?? {});
+
+  const getSchedulePart = (
+    slots: {
+      start: string;
+    }[]
+  ) => {
+    //!aaaaaaaaaaaaaaaaaaa
+
+    const times = Array.from(
+      new Set(slots.map((slot: any) => timeToNumber(slot.start)))
+    ).sort((a, b) => a - b);
+
+    return { slots, type: "schedule", times };
+  };
+
+  if (schedule) {
+    // divide schedule based by breaks, assuming the first break
+    // is before the first slot
+
+    const breaks = await getScheduleBreaks();
+
+    const seen = new Set();
+
+    const dayBreaks = breaks
+      .filter((breakItem) => {
+        return datesAreOnSameDay(breakItem.start, parseISO(schedule.date));
+      })
+      .filter((breakItem) => {
+        console.log(breakItem);
+        if (seen.has(breakItem.start)) {
+          return false;
+        }
+
+        seen.add(breakItem.start);
+
+        return true;
+      });
+
+    const slots = schedule.slots;
+
+    const currentBreak = dayBreaks.shift()!;
+
+    const schedules = [];
+    let currentSlots: any = [];
+
+    schedules.push({
+      ...currentBreak,
+      type: "break",
+      title: currentBreak.description.en,
+    });
+
+    slots.forEach((slot) => {
+      const nextBreak = dayBreaks.shift();
+
+      if (nextBreak) {
+        const slotStart = timeToNumber(slot.start);
+        const breakStart = timeToNumber(format(nextBreak.start, "HH:mm"));
+
+        if (slotStart < breakStart) {
+          currentSlots.push(slot);
+        } else {
+          schedules.push(getSchedulePart(currentSlots));
+          schedules.push({
+            ...nextBreak,
+            title: nextBreak.description.en,
+            type: "break",
+          });
+          currentSlots = [];
+        }
+      } else {
+        currentSlots.push(slot);
+      }
+    });
+
+    if (currentSlots.length) {
+      schedules.push(getSchedulePart(currentSlots));
+    }
+
+    dividedSchedule = schedules;
+  }
+
   return {
     schedule,
+    dividedSchedule: {
+      parts: dividedSchedule,
+      rooms,
+    },
     days: sortedDays.map((day) => parse(day.date, "yyyy-MM-dd", new Date())),
   };
 };

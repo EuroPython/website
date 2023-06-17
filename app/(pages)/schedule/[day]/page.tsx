@@ -12,7 +12,7 @@ export default async function SchedulePage({
 }: {
   params: { day: string };
 }) {
-  const { schedule, days } = await fetchSchedule(params.day);
+  const { schedule, days, dividedSchedule } = await fetchSchedule(params.day);
 
   if (!schedule) {
     throw notFound();
@@ -27,7 +27,7 @@ export default async function SchedulePage({
       </article>
 
       <Fullbleed>
-        <Schedule schedule={schedule} dayType={"Talks"} />
+        <Schedule schedule={dividedSchedule} dayType={"Talks"} />
       </Fullbleed>
 
       <h1 className="highlighted">

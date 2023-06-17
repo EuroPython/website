@@ -1,11 +1,11 @@
-import { numberToTime, timeToNumber } from "./time-helpers";
+import { format } from "date-fns";
 
 export const Break = ({
   title,
   time,
   style,
 }: {
-  time: number;
+  time: Date;
   title: string;
   style?: React.CSSProperties;
 }) => {
@@ -14,7 +14,7 @@ export const Break = ({
       className="schedule-item flex items-center justify-center gap-2 font-bold bg-secondary-light min-h-[66px]"
       style={style}
     >
-      <span>{numberToTime(time)}</span>
+      <span>{format(time, "HH:mm")}</span>
       <span>{title}</span>
     </div>
   );

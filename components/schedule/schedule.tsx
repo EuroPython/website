@@ -37,11 +37,8 @@ const MINUTES_PER_ROW = 5;
 const HEADING_ROWS = 1;
 const ROW_OFFSET = 1 + HEADING_ROWS;
 
-const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
-  const rooms = Object.keys(schedule.rooms);
-
+const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
   return (
-    // <div className="hidden lg:contents headings divide-x-2 divide-black border-b-2">
     <>
       <span
         className="schedule-item border-l-2 border-t-2 border-b-2 font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
@@ -68,123 +65,152 @@ const ScheduleHeader = ({ schedule }: { schedule: ScheduleDay }) => {
         </span>
       ))}
     </>
-    // </div>
   );
+};
+
+const Sessions = ({ part }: { part: any }) => {
+  console.log("part", part.times);
+
+  return (
+    <div>
+      {part.times.map((time: number) => {
+        return <div>{numberToTime(time)}</div>;
+      })}
+
+      <div>
+        {part.slots.map((session: any) => {
+          return <div>{session.title}</div>;
+        })}
+      </div>
+    </div>
+  );
+
+  // return (
+  //   <div
+  //     className="lg:grid my-8 border-b-2 border-r-2"
+  //     style={{
+  //       gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
+  //       gridTemplateColumns: `5rem repeat(${schedule.totalRooms}, 1fr)`,
+  //     }}
+  //   >
+  //     <ul className="contents divide-x-2 divide-y-2">
+  //       {Object.entries(grid.times).map(
+  //         ([time, { startRow, endRow }], index) => {
+  //           const gridRowStart = startRow + ROW_OFFSET;
+  //           const gridRowEnd = endRow + ROW_OFFSET;
+
+  //           return (
+  //             <>
+  //               <li
+  //                 style={{
+  //                   gridRowStart,
+  //                   gridRowEnd,
+  //                   gridColumn: "1 / 2",
+  //                 }}
+  //                 className={clsx(
+  //                   "text-center p-1 font-bold border-l-2 border-t-2",
+  //                   {
+  //                     "!border-t-0": index === 0,
+  //                   }
+  //                 )}
+  //               >
+  //                 {time}
+  //               </li>
+
+  //               {Object.keys(schedule.rooms).map((room, roomIndex) => {
+  //                 return (
+  //                   <li
+  //                     key={room}
+  //                     style={{
+  //                       gridRowStart,
+  //                       gridRowEnd,
+  //                       gridColumnStart: roomIndex + 2,
+  //                       gridColumnEnd: roomIndex + 3,
+  //                     }}
+  //                     className={clsx({
+  //                       "!border-t-0": index === 0,
+  //                     })}
+  //                   ></li>
+  //                 );
+  //               })}
+  //             </>
+  //           );
+  //         }
+  //       )}
+  //     </ul>
+
+  //     {Object.entries(schedule.rooms).map(([room, slots], roomIndex) => {
+  //       return (
+  //         <ul className="contents">
+  //           {slots.map((slot, index) => {
+  //             console.log("slot", slot.type);
+  //             const start = numberToTime(slot.start);
+
+  //             const row = grid.times[start];
+
+  //             if (!row) {
+  //               console.log("no row for", start);
+  //               return null;
+  //             }
+
+  //             const rowIndex = Object.values(grid.times).indexOf(row);
+
+  //             return (
+  //               <Session
+  //                 session={slot}
+  //                 style={{
+  //                   marginTop: rowIndex === 0 ? -1 : undefined,
+  //                   gridColumnStart: roomIndex + 2,
+  //                   gridColumnEnd: roomIndex + 3,
+  //                   gridRowStart: row.startRow + ROW_OFFSET,
+  //                   gridRowEnd: Math.floor(
+  //                     row.startRow +
+  //                       ROW_OFFSET +
+  //                       slot.duration / MINUTES_PER_ROW
+  //                   ),
+  //                 }}
+  //               />
+  //             );
+  //           })}
+  //         </ul>
+  //       );
+  //     })}
+  //   </div>
+  // );
 };
 
 export const Schedule = ({
   schedule,
 }: {
-  schedule: ScheduleDay;
+  schedule: {
+    parts: {
+      type: "break" | "slots";
+    }[];
+    rooms: string[];
+  };
   dayType: "Tutorials" | "Talks";
 }) => {
-  const { grid } = schedule;
-
-  const lastTime = schedule.endsAt;
+  const rooms = schedule.rooms;
+  const totalRooms = rooms.length;
 
   return (
     <div>
       <div
-        className="lg:grid my-8 border-b-2 border-r-2"
+        className="lg:grid my-8 divide-x-2 divide-y-2  border-r-2 sticky top-0 bg-body-background z-10"
         style={{
-          gridTemplateRows: `repeat(${grid.rows}, ${ROW_HEIGHT}px)`,
-          gridTemplateColumns: `5rem repeat(${schedule.totalRooms}, 1fr)`,
+          gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
         }}
       >
-        <ul className="contents divide-x-2 divide-y-2">
-          <ScheduleHeader schedule={schedule} />
-
-          {Object.entries(grid.times).map(
-            ([time, { startRow, endRow }], index) => {
-              const gridRowStart = startRow + ROW_OFFSET;
-              const gridRowEnd = endRow + ROW_OFFSET;
-
-              return (
-                <>
-                  <li
-                    style={{
-                      gridRowStart,
-                      gridRowEnd,
-                      gridColumn: "1 / 2",
-                    }}
-                    className={clsx(
-                      "text-center p-1 font-bold border-l-2 border-t-2",
-                      {
-                        "!border-t-0": index === 0,
-                      }
-                    )}
-                  >
-                    {time}
-                  </li>
-
-                  {Object.keys(schedule.rooms).map((room, roomIndex) => {
-                    return (
-                      <li
-                        key={room}
-                        style={{
-                          gridRowStart,
-                          gridRowEnd,
-                          gridColumnStart: roomIndex + 2,
-                          gridColumnEnd: roomIndex + 3,
-                        }}
-                        className={clsx({
-                          "!border-t-0": index === 0,
-                        })}
-                      ></li>
-                    );
-                  })}
-                </>
-              );
-            }
-          )}
-        </ul>
-
-        {Object.entries(schedule.rooms).map(([room, slots], roomIndex) => {
-          return (
-            <ul className="contents">
-              {slots.map((slot, index) => {
-                console.log("slot", slot.type);
-                const start = numberToTime(slot.start);
-
-                const row = grid.times[start];
-
-                if (!row) {
-                  console.log("no row for", start);
-                  return null;
-                }
-
-                const rowIndex = Object.values(grid.times).indexOf(row);
-
-                return (
-                  <Session
-                    session={slot}
-                    style={{
-                      marginTop: rowIndex === 0 ? -1 : undefined,
-                      gridColumnStart: roomIndex + 2,
-                      gridColumnEnd: roomIndex + 3,
-                      gridRowStart: row.startRow + ROW_OFFSET,
-                      gridRowEnd: Math.floor(
-                        row.startRow +
-                          ROW_OFFSET +
-                          slot.duration / MINUTES_PER_ROW
-                      ),
-                    }}
-                  />
-                );
-              })}
-            </ul>
-          );
-        })}
-
-        {/* <Break
-          title={"End of day"}
-          time={lastTime}
-          style={{
-            // "--grid-row": `${rowSizes.length + 1} / ${rowSizes.length + 2}`,
-            "--grid-column": `1 / ${schedule.totalRooms + 2}`,
-          }}
-        /> */}
+        <ScheduleHeader rooms={rooms} />
       </div>
+
+      {schedule.parts.map((part, index) => {
+        if (part.type === "break") {
+          return <Break key={index} time={part.start} title={part.title} />;
+        }
+
+        return <Sessions key={index} part={part} />;
+      })}
     </div>
   );
 };
