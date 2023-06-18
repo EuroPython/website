@@ -13,7 +13,7 @@ export default async function SchedulePage({
 }: {
   params: { day: string };
 }) {
-  const schedule = await getSchedule();
+  const schedule = await getSchedule(params.day);
 
   if (!schedule) {
     throw notFound();
@@ -24,7 +24,7 @@ export default async function SchedulePage({
       <article className="accent-left">
         <Title highlighted>Schedule</Title>
 
-        {/* <SelectDay day={params.day} days={days} /> */}
+        <SelectDay day={params.day} days={schedule.days} />
       </article>
 
       <Fullbleed>

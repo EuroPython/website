@@ -3,7 +3,8 @@ import { Fragment } from "react";
 // import { ICALLink } from "../ical-link";
 import { numberToTime, timeToNumber } from "./time-helpers";
 
-import type { Session as SessionType } from "@/lib/pretix/schedule";
+import type { Session as SessionType } from "@/lib/pretalx/schedule";
+import { format, parseISO } from "date-fns";
 
 const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -79,17 +80,13 @@ export const Session = ({
   session: SessionType;
   style: React.CSSProperties;
 }) => {
-  const speakers = session.persons;
-
-  const nonEmptySpeakers = speakers.filter((speaker) => speaker.public_name);
-
   const roomsAndSpeakers = [session.room].concat(
-    nonEmptySpeakers?.map((s) => s.public_name) || []
+    session.speakers.map((speaker) => speaker.name) || []
   );
 
   return (
-    <li id={session.guid} className="contents">
-      <a
+    <li className="contents">
+      <div
         className={clsx(
           "schedule-item bg-body-background mt-[2px] ml-[2px] outline-black outline-2 outline",
           "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
@@ -97,16 +94,20 @@ export const Session = ({
           { "opacity-20": session.type === "break" }
         )}
         style={style}
-        href={`/session/${session.slug}`}
       >
         <SessionHeader session={session} />
 
-        <p className="font-bold text-md lg:text-base py-2 px-3">
-          {session.slug ? (
-            <a href={`/session/${session.slug}`}>{session.title}</a>
-          ) : (
-            session.title
-          )}
+        <a
+          className="font-bold text-md lg:text-base py-2 px-3 flex-1"
+          href={`/session/${session.slug}`}
+        >
+          <p>
+            {format(parseISO(session.start), "HH:mm") +
+              " - " +
+              format(parseISO(session.end), "HH:mm")}
+          </p>
+          {session.title}
+
           {session.start && session.end ? (
             <>
               {" "}
@@ -121,26 +122,26 @@ export const Session = ({
             /> */}
             </>
           ) : null}
-        </p>
+        </a>
 
-        {nonEmptySpeakers.length ? (
-          <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-text border-t-[0.5px]">
+        {session.speakers.length ? (
+          <div className="hidden lg:block py-2 mx-3 mb-4 border-text border-t-[0.5px]">
             <>
               <div>
                 <span>
-                  {nonEmptySpeakers.map((speaker, index) => (
-                    <Fragment key={speaker.public_name}>
+                  {session.speakers.map((speaker, index) => (
+                    <Fragment key={speaker.name}>
                       {speaker.slug ? (
                         <a
                           className="text-text text-sm font-bold hover:underline"
                           href={`/speaker/${speaker.slug}`}
                         >
-                          {speaker.public_name}
+                          {speaker.name}
                         </a>
                       ) : (
-                        speaker.public_name
+                        speaker.name
                       )}
-                      {index < nonEmptySpeakers.length - 1 && ", "}
+                      {index < session.speakers.length - 1 && ", "}
                     </Fragment>
                   ))}
                 </span>
@@ -151,7 +152,7 @@ export const Session = ({
         <div className="text-text text-sm font-bold mt-auto py-2 px-3 lg:hidden">
           {roomsAndSpeakers.join(", ")}
         </div>
-      </a>
+      </div>
     </li>
   );
 };

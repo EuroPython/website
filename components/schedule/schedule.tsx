@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Break } from "./break";
 import { Schedule as ScheduleType } from "@/lib/pretalx/schedule";
+import { Session } from "./session";
 
 const ROW_HEIGHT = 40;
 
@@ -12,7 +13,7 @@ const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
   return (
     <>
       <span
-        className="schedule-item border-l-2 border-t-2 border-b-2 font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
+        className="schedule-item font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
         style={{
           gridRowStart: 1,
           gridRowEnd: HEADING_ROWS + 1,
@@ -23,7 +24,7 @@ const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
       </span>
       {rooms.map((room, index) => (
         <span
-          className="schedule-item !border-b-2 font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
+          className="schedule-item font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
           key={room}
           style={{
             gridRowStart: 1,
@@ -53,7 +54,7 @@ export const Schedule = ({
       style={{
         gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
       }}
-      className="lg:grid my-8 divide-x-2 divide-y-2 border-r-2 sticky top-0 bg-body-background z-10"
+      className="lg:grid my-8 bg-body-background z-10"
     >
       <ScheduleHeader rooms={rooms} />
 
@@ -69,14 +70,20 @@ export const Schedule = ({
           );
         }
 
+        const sessions = row.type === "session" ? row.sessions : [];
+
         return (
           <div className="contents">
-            <div style={row.style}>{row.time}</div>
-            {row.sessions.map((session, index) => {
+            <div style={{ ...row.style, gridColumnStart: 1, gridColumnEnd: 2 }}>
+              {row.time}
+            </div>
+            {sessions.map((session, index) => {
               return (
-                <div style={{ ...row.style, ...session.style }}>
-                  {session.title}
-                </div>
+                <Session
+                  style={{ ...row.style, ...session.style }}
+                  key={index}
+                  session={session}
+                />
               );
             })}
           </div>
