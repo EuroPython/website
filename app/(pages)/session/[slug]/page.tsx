@@ -107,7 +107,7 @@ export default async function SessionPage({
             ) : null}
             <DefinitionTerm>Duration:</DefinitionTerm>
             <DefinitionDescription>
-              {session.duration} minutes
+            {session.duration * session.slot_count} minutes
             </DefinitionDescription>
           </DefinitionList>
         </header>

@@ -19,6 +19,7 @@ export type Result = {
   abstract: string;
   description: string;
   duration: number;
+  slot_count: number;
   do_not_record: boolean;
   is_featured: boolean;
   content_locale: string;
@@ -75,6 +76,7 @@ const mapSession = (session: Result) => {
     description: session.description,
     abstract: session.abstract,
     duration: session.duration,
+    slot_count: session.slot_count,
     speakers: session.speakers.map((speaker) => ({
       name: speaker.name,
       avatar: speaker.avatar,
