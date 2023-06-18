@@ -4,6 +4,7 @@ import { Schedule } from "components/schedule/schedule";
 import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import { SelectDay } from "./select-day";
+import { getSchedule } from "@/lib/pretalx/schedule";
 
 export const revalidate = 300;
 
@@ -12,7 +13,7 @@ export default async function SchedulePage({
 }: {
   params: { day: string };
 }) {
-  const { schedule, days, dividedSchedule } = await fetchSchedule(params.day);
+  const schedule = await getSchedule();
 
   if (!schedule) {
     throw notFound();
@@ -23,11 +24,11 @@ export default async function SchedulePage({
       <article className="accent-left">
         <Title highlighted>Schedule</Title>
 
-        <SelectDay day={params.day} days={days} />
+        {/* <SelectDay day={params.day} days={days} /> */}
       </article>
 
       <Fullbleed>
-        <Schedule schedule={dividedSchedule} dayType={"Talks"} />
+        <Schedule schedule={schedule} dayType={"Talks"} />
       </Fullbleed>
 
       <h1 className="highlighted">

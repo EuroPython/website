@@ -5,7 +5,7 @@ export const Break = ({
   time,
   style,
 }: {
-  time: Date;
+  time: string;
   title: string;
   style?: React.CSSProperties;
 }) => {
@@ -14,7 +14,7 @@ export const Break = ({
       className="schedule-item flex items-center justify-center gap-2 font-bold bg-secondary-light min-h-[66px]"
       style={style}
     >
-      <span>{format(time, "HH:mm")}</span>
+      <span>{time}</span>
       <span>{title}</span>
     </div>
   );
