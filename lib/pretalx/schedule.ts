@@ -7,8 +7,8 @@ import {
 } from "date-fns";
 import { Response } from "./schedule-types";
 import { timeToNumber } from "components/schedule/time-helpers";
-import { slugify } from "../pretix/utils/slugify";
-import { fetchConfirmedSubmissions } from "../pretix/submissions";
+import { slugify } from "./utils/slugify";
+import { fetchConfirmedSubmissions } from "./submissions";
 import next from "next/types";
 
 export type Schedule = {

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { SVGProps } from "react";
 
 import { Keynoter } from "./keynoter";
-import { fetchKeynoters } from "@/lib/pretix/speakers";
+import { fetchKeynoters } from "@/lib/pretalx/speakers";
 
 const Background = (props: SVGProps<SVGSVGElement>) => (
   <svg

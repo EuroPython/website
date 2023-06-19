@@ -1,4 +1,4 @@
-import { fetchConfirmedSubmissions } from "@/lib/pretix/submissions";
+import { fetchConfirmedSubmissions } from "@/lib/pretalx/submissions";
 import { Sessions } from "./sessions";
 
 import { Metadata } from "next";

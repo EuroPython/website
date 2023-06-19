@@ -1,5 +1,5 @@
 import { fetchConfirmedSubmissions, fetchKeynotes } from "./submissions";
-import { Answer } from "./types";
+import { Answer } from "../pretix/types";
 import { slugify } from "./utils/slugify";
 import { cache } from "react";
 

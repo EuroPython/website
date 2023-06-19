@@ -1,7 +1,7 @@
 import {
   fetchSpeakerBySlug,
   fetchSpeakersWithConfirmedSubmissions,
-} from "@/lib/pretix";
+} from "@/lib/pretalx";
 import {
   DefinitionList,
   DefinitionTerm,

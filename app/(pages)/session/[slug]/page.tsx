@@ -11,7 +11,7 @@ import {
 import {
   fetchConfirmedSubmissions,
   fetchSubmissionBySlug,
-} from "@/lib/pretix/submissions";
+} from "@/lib/pretalx/submissions";
 import { notFound } from "next/navigation";
 import { Datetime } from "components/datetime";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";

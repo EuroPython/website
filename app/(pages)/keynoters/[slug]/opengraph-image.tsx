@@ -1,4 +1,4 @@
-import { fetchKeynoteBySpeakerSlug } from "@/lib/pretix/submissions";
+import { fetchKeynoteBySpeakerSlug } from "@/lib/pretalx/submissions";
 import { OpenGraphImageKeynoter } from "components/opengraph-image/opengraph-image-keynoter";
 import { ImageResponse } from "next/server";
 

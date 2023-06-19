@@ -7,7 +7,7 @@ import {
   DefinitionTerm,
   DefinitionDescription,
 } from "components/definition-list/definition-list";
-import { fetchKeynoteBySpeakerSlug } from "@/lib/pretix/submissions";
+import { fetchKeynoteBySpeakerSlug } from "@/lib/pretalx/submissions";
 import { notFound } from "next/navigation";
 import { Datetime } from "components/datetime";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";

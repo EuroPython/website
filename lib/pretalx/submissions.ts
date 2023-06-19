@@ -1,4 +1,4 @@
-import { Answer } from "./types";
+import { Answer } from "../pretix/types";
 import { slugify } from "./utils/slugify";
 
 export type Root = {

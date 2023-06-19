@@ -5,7 +5,7 @@ import { Select } from "components/form/select";
 import { SessionSummary } from "components/session-summary/session-summary";
 import { Title } from "components/typography/title";
 import { useMemo, useState } from "react";
-import { Session } from "@/lib/pretix/submissions";
+import { Session } from "@/lib/pretalx/submissions";
 
 export const Sessions = ({
   sessions,
