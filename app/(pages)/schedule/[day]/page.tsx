@@ -31,11 +31,11 @@ export default async function SchedulePage({
         <Schedule schedule={schedule} dayType={"Talks"} />
       </Fullbleed>
 
-      <h1 className="highlighted">
+      <Title>
         <a href="#schedule-select" className="h1">
           Back to top
         </a>
-      </h1>
+      </Title>
 
       <div className="h-12"></div>
     </>

@@ -66,6 +66,9 @@ export const Schedule = ({
               title={row.title}
               time={row.time}
               style={row.style}
+              className={clsx("border-t-2 border-l-2 border-r-2", {
+                "border-b-2": index === schedule.rows.length - 1,
+              })}
             />
           );
         }
@@ -73,10 +76,28 @@ export const Schedule = ({
         const sessions = row.type === "session" ? row.sessions : [];
 
         return (
-          <div className="contents">
-            <div style={{ ...row.style, gridColumnStart: 1, gridColumnEnd: 2 }}>
-              {row.time}
+          <div className="contents divide-y-2 divide-x-2 divide-black">
+            <div
+              style={{ ...row.style, gridColumnStart: 1, gridColumnEnd: 2 }}
+              className="border-l-2 border-black border-t-2 text-center p-1 font-bold"
+            >
+              {sessions.length >= 1 ? row.time : <span>&nbsp;</span>}
             </div>
+            {new Array(rooms.length + 1).fill(null).map((_, index) => {
+              return (
+                <div
+                  className={clsx({
+                    "!border-r-2": index === totalRooms,
+                  })}
+                  style={{
+                    gridRowStart: row.style.gridRowStart,
+                    gridRowEnd: row.style.gridRowEnd + 1,
+                    gridColumnStart: index + 1,
+                    gridColumnEnd: index + 2,
+                  }}
+                ></div>
+              );
+            })}
             {sessions.map((session, index) => {
               return (
                 <Session

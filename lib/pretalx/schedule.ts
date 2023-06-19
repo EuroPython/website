@@ -164,8 +164,7 @@ export async function getSchedule(day: string) {
           title: slot.title,
           speakers: slot.speakers.map((speaker) => ({
             name: speaker.name,
-            // TODO: use our slug
-            slug: speaker.code,
+            slug: slugify(speaker.name),
           })),
           duration: slot.duration,
           room: slot.slot.room.en,
