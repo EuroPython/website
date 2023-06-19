@@ -46,7 +46,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
       className={clsx(
         "absolute right-0 top-0 bottom-0",
         "bg-secondary flex text-text justify-between text-xs py-2 px-3 font-bold leading-4",
-        "lg:static lg:w-full border-l-2 md:border-l-0 md:border-b-2",
+        "md:static md:w-full border-l-2 md:border-l-0 md:border-b-2",
         {
           "!bg-session-intermediate": session.experience === "intermediate",
           "!bg-session-advanced": session.experience === "advanced",
@@ -63,13 +63,13 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
       <p
         className={clsx(
           "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-90",
-          "lg:static lg:rotate-0 lg:translate-x-0 lg:translate-y-0"
+          "md:static md:rotate-0 md:translate-x-0 md:translate-y-0"
         )}
       >
         {getHeaderText(session)}
       </p>
 
-      <p className="hidden lg:block">{session.duration}m</p>
+      <p className="hidden md:block">{session.duration}m</p>
     </header>
   );
 };
@@ -101,7 +101,7 @@ export const Session = ({
         <SessionHeader session={session} />
 
         <a
-          className="font-bold text-md lg:text-base py-2 px-3 flex-1 max-w-md"
+          className="font-bold text-md md:text-base py-2 px-3 flex-1 max-w-md"
           href={`/session/${session.slug}`}
         >
           {DEBUG && (
@@ -117,7 +117,7 @@ export const Session = ({
             <>
               {" "}
               {/* <ICALLink
-              className="absolute bottom-2 right-8 lg:static"
+              className="absolute bottom-2 right-8 md:static"
               title={session.title}
               description={session.abstract}
               start={session.start}
@@ -130,7 +130,7 @@ export const Session = ({
         </a>
 
         {session.speakers.length ? (
-          <div className="hidden lg:block py-2 mx-3 mb-4 border-text border-t-[0.5px]">
+          <div className="hidden md:block py-2 mx-3 mb-4 border-text border-t-[0.5px]">
             <>
               <div>
                 <span>
@@ -154,7 +154,7 @@ export const Session = ({
             </>
           </div>
         ) : null}
-        <div className="text-text text-sm font-bold mt-auto py-2 px-3 lg:hidden">
+        <div className="text-text text-sm font-bold mt-auto py-2 px-3 md:hidden">
           {roomsAndSpeakers.join(", ")}
         </div>
       </div>

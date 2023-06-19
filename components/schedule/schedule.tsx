@@ -52,7 +52,7 @@ export const Schedule = ({
       style={{
         gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
       }}
-      className="md:grid my-8 bg-body-background z-10"
+      className="md:grid my-8 bg-body-background z-10 md:min-w-[1024px] md:pr-4"
     >
       <ScheduleHeader rooms={rooms} />
 
@@ -65,7 +65,7 @@ export const Schedule = ({
               time={row.time}
               style={row.style}
               className={clsx(
-                "border-2 mb-[-2px] md:mb-0 md:border-l-2 md:border-r-2",
+                "border-2 mb-[-2px] md:mb-0 md:border-0 md:border-l-2 md:border-r-2",
                 {
                   "md:border-t-2": rowIndex !== 0,
                   "md:border-t-0": rowIndex === 0,
@@ -114,7 +114,7 @@ export const Schedule = ({
             {sessions.map((session, index) => {
               return (
                 <div className="md:contents flex mb-[-2px] md:mb-0 ">
-                  <div className="border-2 flex justify-center p-2 w-[120px] items-center">
+                  <div className="md:hidden border-2 flex justify-center p-2 w-[120px] items-center">
                     {format(parseISO(session.start), "HH:mm")} -{" "}
                     {format(parseISO(session.end), "HH:mm")}
                   </div>
