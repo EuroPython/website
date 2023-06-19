@@ -52,7 +52,7 @@ export const Schedule = ({
       style={{
         gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
       }}
-      className="md:grid my-8 bg-body-background z-10 md:min-w-[1024px] md:pr-4"
+      className="md:grid my-8 bg-body-background z-10 md:min-w-[1024px] max-w-[1800px] md:mx-auto md:pr-4"
     >
       <ScheduleHeader rooms={rooms} />
 
