@@ -55,18 +55,18 @@ export const Schedule = ({
     >
       <ScheduleHeader rooms={rooms} />
 
-      {schedule.rows.map((row, index) => {
+      {schedule.rows.map((row, rowIndex) => {
         if (row.type === "break") {
           return (
             <Break
-              key={index}
+              key={rowIndex}
               title={row.title}
               time={row.time}
               style={row.style}
               className={clsx("border-l-2 border-r-2", {
-                "border-t-2": index !== 0,
-                "border-t-0": index === 0,
-                "border-b-2": index === schedule.rows.length - 1,
+                "border-t-2": rowIndex !== 0,
+                "border-t-0": rowIndex === 0,
+                "border-b-2": rowIndex === schedule.rows.length - 1,
               })}
             />
           );
@@ -78,7 +78,14 @@ export const Schedule = ({
           <div className="contents divide-y-2 divide-x-2 divide-black">
             <div
               style={{ ...row.style, gridColumnStart: 1, gridColumnEnd: 2 }}
-              className="border-l-2 border-black border-t-2 text-center p-1 font-bold"
+              className={clsx(
+                "border-l-2 border-black text-center p-1 font-bold",
+                {
+                  "!border-t-2": rowIndex !== 0,
+                  "!border-t-0": rowIndex === 0,
+                  "!border-b-2": rowIndex === schedule.rows.length - 1,
+                }
+              )}
             >
               {sessions.length >= 1 ? row.time : <span>&nbsp;</span>}
             </div>
@@ -87,6 +94,9 @@ export const Schedule = ({
                 <div
                   className={clsx({
                     "!border-r-2": index === totalRooms,
+                    "!border-t-2": rowIndex !== 0,
+                    "!border-t-0": rowIndex === 0,
+                    "!border-b-2": rowIndex === schedule.rows.length - 1,
                   })}
                   style={{
                     gridRowStart: row.style.gridRowStart,
@@ -103,6 +113,13 @@ export const Schedule = ({
                   style={{ ...row.style, ...session.style }}
                   key={index}
                   session={session}
+                  className={clsx("border-l-2", {
+                    "!border-r-2":
+                      session.style.gridColumnEnd === totalRooms + 2,
+                    "!border-t-2": rowIndex !== 0,
+                    "!border-t-0": rowIndex === 0,
+                    "!border-b-2": rowIndex === schedule.rows.length - 1,
+                  })}
                 />
               );
             })}

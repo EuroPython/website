@@ -77,9 +77,11 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
 export const Session = ({
   session,
   style,
+  className,
 }: {
   session: SessionType;
   style: React.CSSProperties;
+  className?: string;
 }) => {
   const roomsAndSpeakers = [session.room].concat(
     session.speakers.map((speaker) => speaker.name) || []
@@ -89,10 +91,10 @@ export const Session = ({
     <li className="contents">
       <div
         className={clsx(
-          "schedule-item bg-body-background mt-[2px] ml-[2px] outline-black outline-2 outline",
+          "bg-body-background",
           "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
           "min-h-[100px] block",
-          { "opacity-20": session.type === "break" }
+          className
         )}
         style={style}
       >
