@@ -176,7 +176,7 @@ export async function getSchedule(day: string) {
               name: speaker.name,
               slug: slugify(speaker.name),
             })),
-            duration: slot.duration,
+            duration: slot.duration * slot.slot_count,
             room: slot.slot.room.en,
             type: slot.submission_type.en,
             slug: slugify(slot.title),
