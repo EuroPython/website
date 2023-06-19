@@ -39,7 +39,7 @@ module.exports = {
       "session-beginner": "#63d451",
       "session-intermediate": "#ffcd45",
       "session-advanced": "#d34848",
-      "session-none": "#5d5dd8",
+      "session-none": "var(--color-secondary-light)",
 
       "sponsor-keystone": "#5c9f92",
       "sponsor-diamond": "#568497",
