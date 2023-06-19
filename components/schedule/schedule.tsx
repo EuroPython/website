@@ -2,10 +2,11 @@ import clsx from "clsx";
 import { Break } from "./break";
 import { Schedule as ScheduleType } from "@/lib/pretalx/schedule";
 import { Session } from "./session";
+import { format, parseISO } from "date-fns";
 
 const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
   return (
-    <div className="contents font-bold text-primary divide-x-2 divide-y-2 divide-black">
+    <div className="hidden md:contents font-bold text-primary divide-x-2 divide-y-2 divide-black">
       <span
         className="text-center sticky z-20 top-0 bg-body-background p-1 border-l-2 border-t-2 border-b-2 border-black"
         style={{
@@ -51,7 +52,7 @@ export const Schedule = ({
       style={{
         gridTemplateColumns: `5rem repeat(${totalRooms}, 1fr)`,
       }}
-      className="lg:grid my-8 bg-body-background z-10"
+      className="md:grid my-8 bg-body-background z-10"
     >
       <ScheduleHeader rooms={rooms} />
 
@@ -63,11 +64,14 @@ export const Schedule = ({
               title={row.title}
               time={row.time}
               style={row.style}
-              className={clsx("border-l-2 border-r-2", {
-                "border-t-2": rowIndex !== 0,
-                "border-t-0": rowIndex === 0,
-                "border-b-2": rowIndex === schedule.rows.length - 1,
-              })}
+              className={clsx(
+                "border-2 mb-[-2px] md:mb-0 md:border-l-2 md:border-r-2",
+                {
+                  "md:border-t-2": rowIndex !== 0,
+                  "md:border-t-0": rowIndex === 0,
+                  "md:border-b-2": rowIndex === schedule.rows.length - 1,
+                }
+              )}
             />
           );
         }
@@ -75,15 +79,15 @@ export const Schedule = ({
         const sessions = row.type === "session" ? row.sessions : [];
 
         return (
-          <div className="contents divide-y-2 divide-x-2 divide-black">
+          <div className="contents md:divide-y-2 md:divide-x-2 md:divide-black">
             <div
               style={{ ...row.style, gridColumnStart: 1, gridColumnEnd: 2 }}
               className={clsx(
-                "border-l-2 border-black text-center p-1 font-bold",
+                "md:border-l-2 border-black text-center p-1 font-bold hidden md:block",
                 {
-                  "!border-t-2": rowIndex !== 0,
-                  "!border-t-0": rowIndex === 0,
-                  "!border-b-2": rowIndex === schedule.rows.length - 1,
+                  "md:!border-t-2": rowIndex !== 0,
+                  "md:!border-t-0": rowIndex === 0,
+                  "md:!border-b-2": rowIndex === schedule.rows.length - 1,
                 }
               )}
             >
@@ -92,7 +96,7 @@ export const Schedule = ({
             {new Array(rooms.length + 1).fill(null).map((_, index) => {
               return (
                 <div
-                  className={clsx({
+                  className={clsx("hidden md:block", {
                     "!border-r-2": index === totalRooms,
                     "!border-t-2": rowIndex !== 0,
                     "!border-t-0": rowIndex === 0,
@@ -109,18 +113,28 @@ export const Schedule = ({
             })}
             {sessions.map((session, index) => {
               return (
-                <Session
-                  style={{ ...row.style, ...session.style }}
-                  key={index}
-                  session={session}
-                  className={clsx("border-l-2", {
-                    "!border-r-2":
-                      session.style.gridColumnEnd === totalRooms + 2,
-                    "!border-t-2": rowIndex !== 0,
-                    "!border-t-0": rowIndex === 0,
-                    "!border-b-2": rowIndex === schedule.rows.length - 1,
-                  })}
-                />
+                <div className="md:contents flex mb-[-2px] md:mb-0 ">
+                  <div className="border-2 flex justify-center p-2 w-[120px] items-center">
+                    {format(parseISO(session.start), "HH:mm")} -{" "}
+                    {format(parseISO(session.end), "HH:mm")}
+                  </div>
+
+                  <Session
+                    style={{ ...row.style, ...session.style }}
+                    key={index}
+                    session={session}
+                    className={clsx(
+                      "border-2 border-l-0 flex-1 md:border-0 md:border-l-2",
+                      {
+                        "md:!border-r-2":
+                          session.style.gridColumnEnd === totalRooms + 2,
+                        "md:!border-t-2": rowIndex !== 0,
+                        "md:!border-t-0": rowIndex === 0,
+                        "md:!border-b-2": rowIndex === schedule.rows.length - 1,
+                      }
+                    )}
+                  />
+                </div>
               );
             })}
           </div>

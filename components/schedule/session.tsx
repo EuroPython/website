@@ -46,7 +46,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
       className={clsx(
         "absolute right-0 top-0 bottom-0",
         "bg-secondary flex text-text justify-between text-xs py-2 px-3 font-bold leading-4",
-        "lg:static lg:w-full border-b-2",
+        "lg:static lg:w-full border-l-2 md:border-l-0 md:border-b-2",
         {
           "!bg-session-intermediate": session.experience === "intermediate",
           "!bg-session-advanced": session.experience === "advanced",
@@ -91,7 +91,7 @@ export const Session = ({
     <li className="contents">
       <div
         className={clsx(
-          "bg-body-background",
+          "bg-body-background pr-4 md:pr-0",
           "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
           "min-h-[100px] block",
           className
@@ -101,7 +101,7 @@ export const Session = ({
         <SessionHeader session={session} />
 
         <a
-          className="font-bold text-md lg:text-base py-2 px-3 flex-1"
+          className="font-bold text-md lg:text-base py-2 px-3 flex-1 max-w-md"
           href={`/session/${session.slug}`}
         >
           {DEBUG && (
