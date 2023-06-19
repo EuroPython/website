@@ -114,7 +114,7 @@ export const Schedule = ({
             {sessions.map((session, index) => {
               return (
                 <div className="md:contents flex mb-[-2px] md:mb-0 ">
-                  <div className="md:hidden border-2 flex justify-center p-2 w-[120px] items-center">
+                  <div className="md:hidden border-2 flex justify-center p-2 w-[120px] items-center font-bold text-sm">
                     {format(parseISO(session.start), "HH:mm")} -{" "}
                     {format(parseISO(session.end), "HH:mm")}
                   </div>
