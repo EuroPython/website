@@ -1,4 +1,3 @@
-import { fetchSchedule } from "@/lib/pretix/schedule";
 import { Fullbleed } from "components/layout/fullbleed";
 import { Schedule } from "components/schedule/schedule";
 import { Title } from "components/typography/title";

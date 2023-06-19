@@ -88,6 +88,27 @@ const getRooms = async () => {
 };
 
 // This API is not public, so it might change in the future
+export async function getScheduleDays() {
+  const response = await fetch(
+    "https://pretalx.com/api/events/europython-2023/schedules/latest/"
+  );
+
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+
+  const data = (await response.json()) as Response;
+
+  return Array.from(
+    new Set(
+      data.slots.map((item) => format(parseISO(item.slot.start), "yyyy-MM-dd"))
+    )
+  )
+    .map((day) => parseISO(day))
+    .sort((a, b) => a.getTime() - b.getTime());
+}
+
+// This API is not public, so it might change in the future
 export async function getSchedule(day: string) {
   const allSubmissions = await fetchConfirmedSubmissions();
 
