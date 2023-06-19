@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { Fragment } from "react";
 // import { ICALLink } from "../ical-link";
-import { numberToTime, timeToNumber } from "./time-helpers";
 
 import type { Session as SessionType } from "@/lib/pretalx/schedule";
 import { format, parseISO } from "date-fns";
@@ -9,6 +8,8 @@ import { format, parseISO } from "date-fns";
 const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
+
+const DEBUG = false;
 
 const getHeaderText = (session: SessionType) => {
   const type = session.type?.toLowerCase();
@@ -101,11 +102,13 @@ export const Session = ({
           className="font-bold text-md lg:text-base py-2 px-3 flex-1"
           href={`/session/${session.slug}`}
         >
-          <p>
-            {format(parseISO(session.start), "HH:mm") +
-              " - " +
-              format(parseISO(session.end), "HH:mm")}
-          </p>
+          {DEBUG && (
+            <p>
+              {format(parseISO(session.start), "HH:mm") +
+                " - " +
+                format(parseISO(session.end), "HH:mm")}
+            </p>
+          )}
           {session.title}
 
           {session.start && session.end ? (

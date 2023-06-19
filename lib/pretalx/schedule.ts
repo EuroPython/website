@@ -2,6 +2,7 @@ import { format, isSameDay, parseISO } from "date-fns";
 import { Response } from "./schedule-types";
 import { timeToNumber } from "components/schedule/time-helpers";
 import { slugify } from "../pretix/utils/slugify";
+import { fetchConfirmedSubmissions } from "../pretix/submissions";
 
 export type Schedule = {
   rooms: string[];
@@ -75,6 +76,12 @@ const getRooms = async () => {
 
 // This API is not public, so it might change in the future
 export async function getSchedule(day: string) {
+  const allSubmissions = await fetchConfirmedSubmissions();
+
+  const codeToSubmission = Object.fromEntries(
+    allSubmissions.map((submission) => [submission.code, submission])
+  );
+
   const response = await fetch(
     "https://pretalx.com/api/events/europython-2023/schedules/latest/"
   );
@@ -160,19 +167,24 @@ export async function getSchedule(day: string) {
       return {
         time,
         type: "session",
-        sessions: slots.map((slot) => ({
-          title: slot.title,
-          speakers: slot.speakers.map((speaker) => ({
-            name: speaker.name,
-            slug: slugify(speaker.name),
-          })),
-          duration: slot.duration,
-          room: slot.slot.room.en,
-          type: slot.submission_type.en,
-          slug: slugify(slot.title),
-          start: slot.slot.start,
-          end: slot.slot.end,
-        })),
+        sessions: slots.map((slot) => {
+          const submission = codeToSubmission[slot.code];
+
+          return {
+            title: slot.title,
+            speakers: slot.speakers.map((speaker) => ({
+              name: speaker.name,
+              slug: slugify(speaker.name),
+            })),
+            duration: slot.duration,
+            room: slot.slot.room.en,
+            type: slot.submission_type.en,
+            slug: slugify(slot.title),
+            start: slot.slot.start,
+            end: slot.slot.end,
+            experience: submission.experience,
+          };
+        }),
       } as Row;
     })
     .concat(
