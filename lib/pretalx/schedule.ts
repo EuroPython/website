@@ -55,9 +55,26 @@ type RowStyle = {
   gridRowEnd: number;
 };
 
+const getRooms = async () => {
+  // rooms in the schedule API are not ordered so we use the ones from the
+  // export API instead
+  const response = await fetch(
+    "https://program.europython.eu/europython-2023/schedule/export/schedule.json"
+  );
+
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+
+  const data = await response.json();
+
+  return data.schedule.conference.rooms.map(
+    (room: { name: string }) => room.name
+  ) as string[];
+};
+
 // This API is not public, so it might change in the future
 export async function getSchedule(day: string) {
-  console.log("day", day);
   const response = await fetch(
     "https://pretalx.com/api/events/europython-2023/schedules/latest/"
   );
@@ -69,6 +86,8 @@ export async function getSchedule(day: string) {
   const data = (await response.json()) as Response;
   const date = parseISO(day);
 
+  const orderedRooms = await getRooms();
+
   const days = Array.from(
     new Set(
       data.slots.map((item) => format(parseISO(item.slot.start), "yyyy-MM-dd"))
@@ -77,14 +96,17 @@ export async function getSchedule(day: string) {
     .map((day) => parseISO(day))
     .sort((a, b) => a.getTime() - b.getTime());
 
-  const items = data.slots.filter((item) =>
-    isSameDay(date, parseISO(item.slot.start))
-  );
+  const items = data.slots
+    .filter((item) => isSameDay(date, parseISO(item.slot.start)))
+    .filter((item) => !item.title.toLowerCase().includes("placeholder"));
   const breaks = data.breaks.filter((item) =>
     isSameDay(date, parseISO(item.start))
   );
 
-  const rooms = Array.from(new Set(items.flatMap((item) => item.slot.room.en)));
+  const roomsForDay = Array.from(
+    new Set(items.flatMap((item) => item.slot.room.en))
+  );
+  const rooms = orderedRooms.filter((room) => roomsForDay.includes(room));
 
   const getColumns = (room: string) => {
     const index = rooms.indexOf(room);
