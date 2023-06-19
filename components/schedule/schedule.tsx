@@ -3,20 +3,13 @@ import { Break } from "./break";
 import { Schedule as ScheduleType } from "@/lib/pretalx/schedule";
 import { Session } from "./session";
 
-const ROW_HEIGHT = 40;
-
-const MINUTES_PER_ROW = 5;
-const HEADING_ROWS = 1;
-const ROW_OFFSET = 1 + HEADING_ROWS;
-
 const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
   return (
-    <>
+    <div className="contents font-bold text-primary divide-x-2 divide-y-2 divide-black">
       <span
-        className="schedule-item font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
+        className="text-center sticky z-20 top-0 bg-body-background p-1 border-l-2 border-t-2 border-b-2 border-black"
         style={{
           gridRowStart: 1,
-          gridRowEnd: HEADING_ROWS + 1,
           gridColumn: "1 / 2",
         }}
       >
@@ -24,11 +17,15 @@ const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
       </span>
       {rooms.map((room, index) => (
         <span
-          className="schedule-item font-bold text-primary border-black flex items-center justify-center sticky z-20 top-0 self-start bg-body-background h-full"
+          className={clsx(
+            "text-center sticky z-20 top-0 bg-body-background p-1 !border-b-2",
+            {
+              "!border-r-2": index === rooms.length - 1,
+            }
+          )}
           key={room}
           style={{
             gridRowStart: 1,
-            gridRowEnd: HEADING_ROWS + 1,
             gridColumnStart: index + 2,
             gridColumnEnd: index + 3,
           }}
@@ -36,7 +33,7 @@ const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
           {room}
         </span>
       ))}
-    </>
+    </div>
   );
 };
 
@@ -66,7 +63,9 @@ export const Schedule = ({
               title={row.title}
               time={row.time}
               style={row.style}
-              className={clsx("border-t-2 border-l-2 border-r-2", {
+              className={clsx("border-l-2 border-r-2", {
+                "border-t-2": index !== 0,
+                "border-t-0": index === 0,
                 "border-b-2": index === schedule.rows.length - 1,
               })}
             />
