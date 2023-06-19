@@ -10,7 +10,7 @@ subtitle:
 
 **Description**: Python is the most popular language for Machine Learning. Women in AI is delighted to bring a half-day workshop for introducing the intuition behind machine learning along with a series of hands-on sessions to implement machine learning models using Pandas and Scikit-Learn Python libraries. This workshop is designed to explain concepts in byte-sized contents and focus primarily on Python programming.
 
-- **Who can join**: Anyone with a EuroPython 2023 [Conference Ticket or Combined Ticket](/tickets#ticket-types). Slots are available for 30 participants. We appreciate if you could register your interest in the form below to help us plan!
+- **Who can join**: Anyone with a EuroPython 2023 [Tutorial Ticket or Combined Ticket or In-Person Conference Tickets](/tickets#ticket-types). Slots are available for 30 participants. We appreciate if you could register your interest in the form below to help us plan!
 - **When**: 13:45–17:00, Monday 17 July
 - **Where**: [Prague Congress Centre (PCC)](/where#prague-congress-centre---conference-venue)), Room TBC
 - **What do you need to bring?**
