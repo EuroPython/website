@@ -28,7 +28,8 @@ We understand attendees have different needs, so we've created three types of
 ticket to give folks maximum flexibility and value for money:
 
 - **Conference Tickets** *(in-person & remote)*:
-  - **In-person**: Access to Conference & Sprint Weekend (19-23 July). There will be limited access to specific sponsored/special workshops during the Workshop/Tutorial Days (17-18 July).
+  - **In-person**: Access to Conference & Sprint Weekend (19-23 July).
+    - Limited access during the Workshop/Tutorial Days (17-18 July) to specific sponsored/special workshops is also included: [HumbleData Workshop](/humble-data), [Women In AI Workshop](/wai), [WASM Summit](/wasm), [Beginners' Day - PyLadies Snake Workshop](/pyladies-workshop) and [Trans*Code](/trans_code); all of the above special workshops and events require separate registration on their respective event page.
   - **Remote**: remote participation during the Conference Days (19-21 July): watch the live talks, keynotes & panels in all 6 tracks, engage in live text-based Q&A, and interact with speakers and in-person attendees in chat channels.
 - **Tutorial Tickets**: Access to Workshop/Tutorial Days (17-18 July) and the
   Sprint Weekend (22-23 July), but **NOT** the main conference (19-21 July).
