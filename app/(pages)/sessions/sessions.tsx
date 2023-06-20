@@ -49,6 +49,7 @@ export const Sessions = ({
 
     if (
       session.title.toLowerCase().includes("lightning talks") ||
+      session.title.toLowerCase().includes("poster session") ||
       session.title.toLowerCase().includes("sprint orientation")
     ) {
       return false;
