@@ -188,8 +188,8 @@ export async function getSchedule(day: string) {
   const sessionWithMultipleSlots: Session[] = [];
 
   const bareRows = Object.entries(slotsByTime)
-    .map(([time, slots]) => {
-      time = parseISO(time);
+    .map(([t, slots]) => {
+      const time = parseISO(t);
 
       if (slots.length === 0) {
         return {
@@ -230,8 +230,8 @@ export async function getSchedule(day: string) {
       } as Row;
     })
     .concat(
-      Object.entries(breaksByTime).map(([time, breaks]) => {
-        time = parseISO(time);
+      Object.entries(breaksByTime).map(([t, breaks]) => {
+        const time = parseISO(t);
 
         const duration = differenceInMinutes(
           parseISO(breaks[0].end),
@@ -251,7 +251,7 @@ export async function getSchedule(day: string) {
         return true;
       }
 
-      if (!breaksByTime[row.time]) {
+      if (!breaksByTime[row.time.toISOString()]) {
         return true;
       }
 

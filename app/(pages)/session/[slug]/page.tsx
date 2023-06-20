@@ -52,7 +52,13 @@ export async function generateStaticParams() {
   }));
 }
 
-const SessionNotes = ({ session }: { session: SessionType }) => {
+const SessionNotes = ({
+  session,
+}: {
+  session: {
+    type: string;
+  };
+}) => {
   if (session.type.toLowerCase() === "free workshop") {
     return (
       <p className="text-sm text-black font-normal m-0 decoration-current decoration-dotted">

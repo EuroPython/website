@@ -9,7 +9,7 @@ export const Break = ({
   className,
 }: {
   time: Date;
-  title: date;
+  title: string;
   style?: React.CSSProperties;
   className?: string;
 }) => {

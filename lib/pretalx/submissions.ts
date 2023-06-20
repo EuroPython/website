@@ -23,6 +23,7 @@ export type Result = {
   is_featured: boolean;
   content_locale: string;
   slot: Slot;
+  slot_count: number;
   image: string;
   answers: Answer[];
   notes: string;
