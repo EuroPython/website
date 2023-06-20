@@ -1,5 +1,6 @@
 import {
   addMinutes,
+  addDays,
   differenceInMinutes,
   format,
   isSameDay,
@@ -9,7 +10,6 @@ import { Response } from "./schedule-types";
 import { timeToNumber } from "components/schedule/time-helpers";
 import { slugify } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
-import next from "next/types";
 
 export type Schedule = {
   rooms: string[];
@@ -128,14 +128,6 @@ export async function getSchedule(day: string) {
   const date = parseISO(day);
 
   const orderedRooms = await getRooms();
-
-  const days = Array.from(
-    new Set(
-      data.slots.map((item) => format(parseISO(item.slot.start), "yyyy-MM-dd"))
-    )
-  )
-    .map((day) => parseISO(day))
-    .sort((a, b) => a.getTime() - b.getTime());
 
   const items = data.slots
     .filter((item) => isSameDay(date, parseISO(item.slot.start)))
@@ -299,8 +291,6 @@ export async function getSchedule(day: string) {
       };
 
       if (!nextRow) {
-        console.log("added slot at ", format(start, "HH:mm"), breakIndex);
-
         bareRows.splice(breakIndex + 1, 0, {
           time: format(start, "HH:mm"),
           type: "session",
@@ -312,8 +302,6 @@ export async function getSchedule(day: string) {
     }
   });
 
-  console.log(bareRows.map((row) => row.time));
-
   const rowTimeMap = Object.fromEntries(
     bareRows.map((row) => {
       const time = row.time;
@@ -323,8 +311,6 @@ export async function getSchedule(day: string) {
       return [time, currentRowMap - 1];
     })
   );
-
-  console.log(rowTimeMap);
 
   const rows = bareRows.map((row) => {
     if (row.type === "break") {
@@ -359,6 +345,28 @@ export async function getSchedule(day: string) {
     currentRow += 1;
 
     return row;
+  });
+
+  const days = Array.from(
+    new Set(
+      data.slots.map((item) => format(parseISO(item.slot.start), "yyyy-MM-dd"))
+    )
+  )
+    .map((day) => ({
+      date: parseISO(day),
+      type: "conference",
+    }))
+    .sort((a, b) => a.date.getTime() - b.date.getTime());
+
+  const lastDay = days[days.length - 1].date;
+
+  days.push({
+    date: addDays(lastDay, 1),
+    type: "sprints",
+  });
+  days.push({
+    date: addDays(lastDay, 2),
+    type: "sprints",
   });
 
   return {
