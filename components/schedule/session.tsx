@@ -94,6 +94,8 @@ const SessionNotes = ({ session }: { session: SessionType }) => {
       </p>
     );
   }
+
+  return null;
 };
 
 export const Session = ({
