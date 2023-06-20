@@ -150,7 +150,7 @@ export const fetchSpeakerBySlug = async (slug: string) => {
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
 
   if (!speakerInfo) {
-    throw new Error("Failed to find speaker in submissions");
+    return null;
   }
 
   const response = await fetch(

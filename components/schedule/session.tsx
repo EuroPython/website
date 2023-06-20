@@ -74,6 +74,28 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
   );
 };
 
+const SessionNotes = ({ session }: { session: SessionType }) => {
+  if (session.type.toLowerCase() === "free workshop") {
+    return (
+      <p className="text-[10px] font-normal italic m-0 leading-3 decoration-current decoration-dotted">
+        Free workshop
+        <br />
+        Registration needed
+      </p>
+    );
+  }
+
+  if (session.type.toLowerCase() === "conference workshop") {
+    return (
+      <p className="text-[10px] font-normal italic m-0 leading-3 decoration-current decoration-dotted">
+        Free for attendees
+        <br />
+        Registration needed
+      </p>
+    );
+  }
+};
+
 export const Session = ({
   session,
   style,
@@ -111,6 +133,8 @@ export const Session = ({
                 format(parseISO(session.end), "HH:mm")}
             </p>
           )}
+
+          <SessionNotes session={session} />
           {session.title}
 
           {session.start && session.end ? (
