@@ -133,12 +133,26 @@ export async function getSchedule(day: string) {
 
   const orderedRooms = await getRooms();
 
-  const items = data.slots
-    .filter((item) => isSameDay(date, parseISO(item.slot.start)))
+  const slots = data.slots.map((item) => ({
+    ...item,
+    slot: {
+      ...item.slot,
+      start: parseISO(item.slot.start),
+      end: parseISO(item.slot.end),
+    },
+  }));
+
+  const items = slots
+    .filter((item) => isSameDay(date, item.slot.start))
     .filter((item) => !item.title.toLowerCase().includes("placeholder"));
-  const breaks = data.breaks.filter((item) =>
-    isSameDay(date, parseISO(item.start))
-  );
+
+  const breaks = data.breaks
+    .map((item) => ({
+      ...item,
+      start: parseISO(item.start),
+      end: parseISO(item.end),
+    }))
+    .filter((item) => isSameDay(date, item.start));
 
   const roomsForDay = Array.from(
     new Set(items.flatMap((item) => item.slot.room.en))
@@ -154,14 +168,13 @@ export async function getSchedule(day: string) {
   };
 
   const slotsByTime = items.reduce((acc, item) => {
-    const time = item.slot.start;
-    const timeEnd = item.slot.end;
+    const time = item.slot.start.toISOString();
+    const timeEnd = addMinutes(item.slot.start, item.duration).toISOString();
 
     if (!acc[time]) {
       acc[time] = [];
     }
 
-    // remove this if it is in a break?
     if (!acc[timeEnd]) {
       acc[timeEnd] = [];
     }
@@ -172,7 +185,7 @@ export async function getSchedule(day: string) {
   }, {} as { [key: string]: typeof items });
 
   const breaksByTime = breaks.reduce((acc, item) => {
-    const time = item.start;
+    const time = item.start.toISOString();
 
     if (!acc[time]) {
       acc[time] = [];
@@ -204,7 +217,7 @@ export async function getSchedule(day: string) {
         sessions: slots.map((slot) => {
           const submission = codeToSubmission[slot.code];
 
-          const start = parseISO(slot.slot.start);
+          const start = slot.slot.start;
 
           const session = {
             title: slot.title,
@@ -356,9 +369,7 @@ export async function getSchedule(day: string) {
   });
 
   const days = Array.from(
-    new Set(
-      data.slots.map((item) => format(parseISO(item.slot.start), "yyyy-MM-dd"))
-    )
+    new Set(slots.map((item) => format(item.slot.start, "yyyy-MM-dd")))
   )
     .map((day) => ({
       date: parseISO(day),
