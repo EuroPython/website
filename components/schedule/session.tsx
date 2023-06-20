@@ -3,6 +3,7 @@ import { Fragment } from "react";
 
 import type { Session as SessionType } from "@/lib/pretalx/schedule";
 import { format, parseISO } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 
 const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -129,9 +130,8 @@ export const Session = ({
         >
           {DEBUG && (
             <p>
-              {format(session.start, "HH:mm") +
-                " - " +
-                format(session.end, "HH:mm")}
+              {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")} -
+              {formatInTimeZone(session.end, "Europe/Prague", "HH:mm")}
             </p>
           )}
 

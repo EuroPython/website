@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { format } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 
 export const Break = ({
   title,
@@ -21,7 +21,7 @@ export const Break = ({
       )}
       style={style}
     >
-      <span>{format(time, "HH:mm")}</span>
+      <span>{formatInTimeZone(time, "Europe/Prague", "HH:mm")}</span>
       <span>{title}</span>
     </div>
   );

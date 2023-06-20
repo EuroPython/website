@@ -3,6 +3,7 @@ import { Break } from "./break";
 import { Schedule as ScheduleType } from "@/lib/pretalx/schedule";
 import { Session } from "./session";
 import { format, parseISO } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 
 const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
   return (
@@ -92,7 +93,7 @@ export const Schedule = ({
               )}
             >
               {sessions.length >= 1 ? (
-                format(row.time, "HH:mm")
+                formatInTimeZone(row.time, "Europe/Prague", "HH:mm")
               ) : (
                 <span>&nbsp;</span>
               )}
@@ -119,8 +120,8 @@ export const Schedule = ({
               return (
                 <div className="md:contents flex mb-[-2px] md:mb-0 ">
                   <div className="md:hidden border-2 flex justify-center p-2 w-[120px] items-center font-bold text-sm">
-                    {format(session.start, "HH:mm")} -{" "}
-                    {format(session.end, "HH:mm")}
+                    {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")}-{" "}
+                    {formatInTimeZone(session.end, "Europe/Prague", "HH:mm")}
                   </div>
 
                   <Session
