@@ -3,9 +3,20 @@ import { Schedule } from "components/schedule/schedule";
 import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import { SelectDay } from "./select-day";
-import { getSchedule } from "@/lib/pretalx/schedule";
+import { getSchedule, getScheduleDays } from "@/lib/pretalx/schedule";
+import { format } from "date-fns";
 
 export const revalidate = 300;
+
+export async function generateStaticParams() {
+  const days = await getScheduleDays();
+
+  return days.map((day) => ({
+    params: {
+      day: format(day, "yyyy-MM-dd"),
+    },
+  }));
+}
 
 export default async function SchedulePage({
   params,
