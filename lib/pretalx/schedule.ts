@@ -265,7 +265,9 @@ export async function getSchedule(day: string) {
   sessionWithMultipleSlots.forEach((session) => {
     let start = parseISO(session.start);
 
-    for (let i = 0; i < session.slots; i++) {
+    // starting from one since we already have the first slot
+    // inside the schedule
+    for (let i = 1; i < session.slots; i++) {
       const end = addMinutes(start, session.duration / session.slots);
 
       const endString = format(end, "HH:mm");
