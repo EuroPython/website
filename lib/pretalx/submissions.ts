@@ -74,7 +74,7 @@ const mapSession = (session: Result) => {
     title: session.title,
     description: session.description,
     abstract: session.abstract,
-    duration: session.duration,
+    duration: session.duration * (session.slot_count || 1),
     speakers: session.speakers.map((speaker) => ({
       name: speaker.name,
       avatar: speaker.avatar,

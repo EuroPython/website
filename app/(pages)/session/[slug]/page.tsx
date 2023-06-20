@@ -3,6 +3,7 @@ import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
 import { Tag, TagContainer } from "components/tag/tag";
+import type { Session as SessionType } from "@/lib/pretalx/schedule";
 import {
   DefinitionList,
   DefinitionTerm,
@@ -51,6 +52,30 @@ export async function generateStaticParams() {
   }));
 }
 
+const SessionNotes = ({ session }: { session: SessionType }) => {
+  if (session.type.toLowerCase() === "free workshop") {
+    return (
+      <p className="text-sm text-black font-normal m-0 decoration-current decoration-dotted">
+        Free workshop
+        <br />
+        Registration needed
+      </p>
+    );
+  }
+
+  if (session.type.toLowerCase() === "conference workshop") {
+    return (
+      <p className="text-sm text-black font-normal m-0 decoration-current decoration-dotted">
+        Free for attendees
+        <br />
+        Registration needed
+      </p>
+    );
+  }
+
+  return null;
+};
+
 export default async function SessionPage({
   params,
 }: {
@@ -62,8 +87,6 @@ export default async function SessionPage({
     throw notFound();
   }
 
-  // TODO: social card
-  //   const socialCardUrl = `https://ep2022.europython.eu/api/social-cards/?session=${session.code}`;
   const speakers = session.speakers.map((speaker) => speaker.name).join(", ");
   // TODO: once we have the start date and time
   const start = null;
@@ -77,7 +100,11 @@ export default async function SessionPage({
     <>
       <article className="accent-left">
         <header className="mb-6">
-          <Title level={2}>{session.title}</Title>
+          <Title level={2}>
+            {session.title}
+            <SessionNotes session={session} />
+          </Title>
+
           <DefinitionList>
             {session.room ? (
               <>
