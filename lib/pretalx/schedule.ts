@@ -193,7 +193,6 @@ export async function getSchedule(day: string) {
 
       if (slots.length === 0) {
         return {
-          // TODO: time
           time,
           type: "empty",
         } as Row;
@@ -205,6 +204,8 @@ export async function getSchedule(day: string) {
         sessions: slots.map((slot) => {
           const submission = codeToSubmission[slot.code];
 
+          const start = parseISO(slot.slot.start);
+
           const session = {
             title: slot.title,
             speakers: slot.speakers.map((speaker) => ({
@@ -215,8 +216,8 @@ export async function getSchedule(day: string) {
             room: slot.slot.room.en,
             type: slot.submission_type.en,
             slug: slugify(slot.title),
-            start: parseISO(slot.slot.start),
-            end: parseISO(slot.slot.end),
+            start,
+            end: addMinutes(start, slot.duration),
             experience: submission.experience,
             slots: slot.slot_count,
           } as Session;
@@ -270,8 +271,6 @@ export async function getSchedule(day: string) {
     // inside the schedule
     for (let i = 1; i < session.slots; i++) {
       const end = addMinutes(start, session.duration / session.slots);
-
-      // const endString = format(end, "HH:mm");
 
       // this is a bit fragile, but it should work as usually sessions with
       // multiple slots are divided by breaks
