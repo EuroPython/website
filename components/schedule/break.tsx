@@ -1,13 +1,15 @@
 import clsx from "clsx";
 
+import { format } from "date-fns";
+
 export const Break = ({
   title,
   time,
   style,
   className,
 }: {
-  time: string;
-  title: string;
+  time: Date;
+  title: date;
   style?: React.CSSProperties;
   className?: string;
 }) => {
@@ -19,7 +21,7 @@ export const Break = ({
       )}
       style={style}
     >
-      <span>{time}</span>
+      <span>{format(time, "HH:mm")}</span>
       <span>{title}</span>
     </div>
   );

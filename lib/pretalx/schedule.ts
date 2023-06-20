@@ -4,6 +4,7 @@ import {
   differenceInMinutes,
   format,
   isSameDay,
+  isEqual,
   parseISO,
 } from "date-fns";
 import { Response } from "./schedule-types";
@@ -33,7 +34,7 @@ type SessionRow = {
 };
 
 type Row = {
-  time: string;
+  time: Date;
   type: "break" | "session" | "empty";
 } & (
   | BreakRow
@@ -56,8 +57,8 @@ export type Session = {
   experience: string;
   duration: number;
   slug: string;
-  start: string;
-  end: string;
+  start: Date;
+  end: Date;
   slots: number;
   isCopy?: boolean;
 };
@@ -153,8 +154,8 @@ export async function getSchedule(day: string) {
   };
 
   const slotsByTime = items.reduce((acc, item) => {
-    const time = format(parseISO(item.slot.start), "HH:mm");
-    const timeEnd = format(parseISO(item.slot.end), "HH:mm");
+    const time = item.slot.start;
+    const timeEnd = item.slot.end;
 
     if (!acc[time]) {
       acc[time] = [];
@@ -171,7 +172,7 @@ export async function getSchedule(day: string) {
   }, {} as { [key: string]: typeof items });
 
   const breaksByTime = breaks.reduce((acc, item) => {
-    const time = format(parseISO(item.start), "HH:mm");
+    const time = item.start;
 
     if (!acc[time]) {
       acc[time] = [];
@@ -188,8 +189,11 @@ export async function getSchedule(day: string) {
 
   const bareRows = Object.entries(slotsByTime)
     .map(([time, slots]) => {
+      time = parseISO(time);
+
       if (slots.length === 0) {
         return {
+          // TODO: time
           time,
           type: "empty",
         } as Row;
@@ -211,8 +215,8 @@ export async function getSchedule(day: string) {
             room: slot.slot.room.en,
             type: slot.submission_type.en,
             slug: slugify(slot.title),
-            start: slot.slot.start,
-            end: slot.slot.end,
+            start: parseISO(slot.slot.start),
+            end: parseISO(slot.slot.end),
             experience: submission.experience,
             slots: slot.slot_count,
           } as Session;
@@ -227,6 +231,8 @@ export async function getSchedule(day: string) {
     })
     .concat(
       Object.entries(breaksByTime).map(([time, breaks]) => {
+        time = parseISO(time);
+
         const duration = differenceInMinutes(
           parseISO(breaks[0].end),
           parseISO(breaks[0].start)
@@ -252,26 +258,26 @@ export async function getSchedule(day: string) {
       return false;
     })
     .sort((a, b) => {
-      return timeToNumber(a.time) - timeToNumber(b.time);
+      return a.time.getTime() - b.time.getTime();
     });
 
   let currentRowMap = 2;
 
   sessionWithMultipleSlots.forEach((session) => {
-    let start = parseISO(session.start);
+    let start = session.start;
 
     // starting from one since we already have the first slot
     // inside the schedule
     for (let i = 1; i < session.slots; i++) {
       const end = addMinutes(start, session.duration / session.slots);
 
-      const endString = format(end, "HH:mm");
+      // const endString = format(end, "HH:mm");
 
       // this is a bit fragile, but it should work as usually sessions with
       // multiple slots are divided by breaks
-      const row = bareRows.find(
-        (row) => row.type === "break" && row.time === endString
-      ) as BreakRow | undefined;
+      const row = bareRows.find((row) => {
+        return row.type === "break" && isEqual(row.time, end);
+      }) as BreakRow | undefined;
 
       if (!row) {
         console.log("no row found for", session.title);
@@ -283,19 +289,19 @@ export async function getSchedule(day: string) {
 
       // find the next row that has the same start time
       const nextRow = bareRows.find(
-        (row) => row.type === "session" && row.time === format(start, "HH:mm")
+        (row) => row.type === "session" && isEqual(row.time, start)
       ) as SessionRow | undefined;
 
       const newSession = {
         ...session,
-        start: start.toISOString(),
-        end: addMinutes(start, session.duration / session.slots).toISOString(),
+        start: start,
+        end: addMinutes(start, session.duration / session.slots),
         isCopy: true,
       };
 
       if (!nextRow) {
         bareRows.splice(breakIndex + 1, 0, {
-          time: format(start, "HH:mm"),
+          time: start,
           type: "session",
           sessions: [newSession],
         } as Row);
@@ -311,7 +317,7 @@ export async function getSchedule(day: string) {
 
       currentRowMap += 1;
 
-      return [time, currentRowMap - 1];
+      return [time.toISOString(), currentRowMap - 1];
     })
   );
 
@@ -320,19 +326,19 @@ export async function getSchedule(day: string) {
       row.style = {
         gridColumnStart: 1,
         gridColumnEnd: rooms.length + 2,
-        gridRowStart: rowTimeMap[row.time],
-        gridRowEnd: rowTimeMap[row.time] + 1,
+        gridRowStart: rowTimeMap[row.time.toISOString()],
+        gridRowEnd: rowTimeMap[row.time.toISOString()] + 1,
       };
     } else {
       row.style = {
-        gridRowStart: rowTimeMap[row.time],
-        gridRowEnd: rowTimeMap[row.time] + 1,
+        gridRowStart: rowTimeMap[row.time.toISOString()],
+        gridRowEnd: rowTimeMap[row.time.toISOString()] + 1,
       };
 
       if (row.type === "session") {
         row.sessions = row.sessions.map((session) => {
-          const start = format(parseISO(session.start), "HH:mm");
-          const end = format(parseISO(session.end), "HH:mm");
+          const start = session.start.toISOString();
+          const end = session.end.toISOString();
 
           session.style = {
             ...getColumns(session.room),

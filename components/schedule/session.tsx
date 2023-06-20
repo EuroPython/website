@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { Fragment } from "react";
-// import { ICALLink } from "../ical-link";
 
 import type { Session as SessionType } from "@/lib/pretalx/schedule";
 import { format, parseISO } from "date-fns";
@@ -9,7 +8,7 @@ const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
-const DEBUG = false;
+const DEBUG = true;
 
 const getHeaderText = (session: SessionType) => {
   const type = session.type?.toLowerCase();
@@ -130,29 +129,14 @@ export const Session = ({
         >
           {DEBUG && (
             <p>
-              {format(parseISO(session.start), "HH:mm") +
+              {format(session.start, "HH:mm") +
                 " - " +
-                format(parseISO(session.end), "HH:mm")}
+                format(session.end, "HH:mm")}
             </p>
           )}
 
           <SessionNotes session={session} />
           {session.title}
-
-          {session.start && session.end ? (
-            <>
-              {" "}
-              {/* <ICALLink
-              className="absolute bottom-2 right-8 md:static"
-              title={session.title}
-              description={session.abstract}
-              start={session.start}
-              end={session.end}
-              room={session.rooms.join(", ")}
-              url={`https://ep2022.europython.eu/session/${session.slug}`}
-            /> */}
-            </>
-          ) : null}
         </a>
 
         {session.speakers.length ? (

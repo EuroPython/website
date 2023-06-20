@@ -91,7 +91,11 @@ export const Schedule = ({
                 }
               )}
             >
-              {sessions.length >= 1 ? row.time : <span>&nbsp;</span>}
+              {sessions.length >= 1 ? (
+                format(row.time, "HH:mm")
+              ) : (
+                <span>&nbsp;</span>
+              )}
             </div>
             {new Array(rooms.length + 1).fill(null).map((_, index) => {
               return (
@@ -115,8 +119,8 @@ export const Schedule = ({
               return (
                 <div className="md:contents flex mb-[-2px] md:mb-0 ">
                   <div className="md:hidden border-2 flex justify-center p-2 w-[120px] items-center font-bold text-sm">
-                    {format(parseISO(session.start), "HH:mm")} -{" "}
-                    {format(parseISO(session.end), "HH:mm")}
+                    {format(session.start, "HH:mm")} -{" "}
+                    {format(session.end, "HH:mm")}
                   </div>
 
                   <Session
