@@ -42,6 +42,18 @@ export const Sessions = ({
     if (filters.type && filters.type !== session.type.toLowerCase()) {
       return false;
     }
+
+    if (session.type.toLowerCase() === "announcements") {
+      return false;
+    }
+
+    if (
+      session.title.toLowerCase().includes("lightning talks") ||
+      session.title.toLowerCase().includes("sprint orientation")
+    ) {
+      return false;
+    }
+
     return true;
   });
 

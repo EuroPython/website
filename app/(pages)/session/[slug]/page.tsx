@@ -139,15 +139,19 @@ export default async function SessionPage({
           </DefinitionList>
         </header>
 
-        <Title level={2} className="!mb-6">
-          Abstract
-        </Title>
+        {session.abstract && (
+          <>
+            <Title level={2} className="!mb-6">
+              Abstract
+            </Title>
 
-        <Prose>
-          <ReactMarkdown components={components}>
-            {session.abstract}
-          </ReactMarkdown>
-        </Prose>
+            <Prose>
+              <ReactMarkdown components={components}>
+                {session.abstract}
+              </ReactMarkdown>
+            </Prose>
+          </>
+        )}
 
         <TagContainer className="mb-6">
           <Tag>{session.type}</Tag>
