@@ -132,7 +132,7 @@ export const Schedule = ({
                       "border-2 border-l-0 flex-1 md:border-0 md:border-l-2",
                       {
                         "md:!border-r-2":
-                          session.style.gridColumnEnd === totalRooms + 2,
+                          session.style.gridColumnEnd >= totalRooms + 2,
                         "md:!border-t-2": rowIndex !== 0,
                         "md:!border-t-0": rowIndex === 0,
                         "md:!border-b-2": rowIndex === schedule.rows.length - 1,
