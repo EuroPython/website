@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { Fragment } from "react";
 
 import type { Session as SessionType } from "@/lib/pretalx/schedule";
-import { format, parseISO } from "date-fns";
 import { formatInTimeZone } from "date-fns-tz";
 
 const capitalizeFirst = (text: string) => {
@@ -117,7 +116,7 @@ export const Session = ({
         className={clsx(
           "bg-body-background pr-4 md:pr-0",
           "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
-          "min-h-[100px] block",
+          "min-h-[150px] block",
           className
         )}
         style={style}
@@ -126,7 +125,7 @@ export const Session = ({
 
         <a
           className="font-bold text-md md:text-base py-2 px-3 flex-1 max-w-md"
-          href={`/session/${session.slug}`}
+          href={session.href}
         >
           {DEBUG && (
             <p>

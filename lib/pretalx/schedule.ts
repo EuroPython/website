@@ -11,6 +11,7 @@ import { Response } from "./schedule-types";
 import { timeToNumber } from "components/schedule/time-helpers";
 import { slugify } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
+import { runSessionHacks } from "./hacks/sessions";
 
 export type Schedule = {
   rooms: string[];
@@ -57,6 +58,7 @@ export type Session = {
   experience: string;
   duration: number;
   slug: string;
+  href: string;
   start: Date;
   end: Date;
   slots: number;
@@ -229,6 +231,7 @@ export async function getSchedule(day: string) {
             room: slot.slot.room.en,
             type: slot.submission_type.en,
             slug: slugify(slot.title),
+            href: `/session/${slugify(slot.title)}`,
             start,
             end: addMinutes(start, slot.duration),
             experience: submission.experience,
@@ -357,6 +360,8 @@ export async function getSchedule(day: string) {
             gridRowStart: rowTimeMap[start],
             gridRowEnd: rowTimeMap[end],
           };
+
+          session = runSessionHacks(session);
 
           return session;
         });
