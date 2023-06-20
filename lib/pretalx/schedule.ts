@@ -250,10 +250,7 @@ export async function getSchedule(day: string) {
       Object.entries(breaksByTime).map(([t, breaks]) => {
         const time = parseISO(t);
 
-        const duration = differenceInMinutes(
-          parseISO(breaks[0].end),
-          parseISO(breaks[0].start)
-        );
+        const duration = differenceInMinutes(breaks[0].end, breaks[0].start);
 
         return {
           time,
