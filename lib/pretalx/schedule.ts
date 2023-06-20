@@ -14,7 +14,10 @@ import { fetchConfirmedSubmissions } from "./submissions";
 export type Schedule = {
   rooms: string[];
   rows: Row[];
-  days: Date[];
+  days: {
+    date: Date;
+    type: "sprints" | "conference";
+  }[];
 };
 
 type BreakRow = {

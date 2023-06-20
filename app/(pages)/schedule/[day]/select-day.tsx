@@ -19,7 +19,7 @@ export const SelectDay = ({
   const handleDaySelected = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const type = days.find(
       (day) => format(day.date, "yyyy-MM-dd") === event.target.value
-    ).type;
+    )!.type;
 
     if (type === "sprints") {
       router.push("/sprints");
