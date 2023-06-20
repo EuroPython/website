@@ -50,7 +50,7 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export const Keynoters = async () => {
-  const keynoters = await fetchKeynoters()
+  const keynoters = await fetchKeynoters();
 
   return (
     <section className="relative my-12 px-6">
@@ -77,9 +77,9 @@ export const Keynoters = async () => {
         <div className="text-center">
           <h3 className="font-bold text-3xl mb-4">
             <span className="text-body-light inline-block mr-2">#</span>
-            See all sessions
+            See schedule
           </h3>
-          <ButtonLink href="/sessions">Sessions</ButtonLink>
+          <ButtonLink href="/schedule">Schedule</ButtonLink>
         </div>
       </div>
     </section>
