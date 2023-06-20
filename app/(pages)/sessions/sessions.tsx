@@ -5,7 +5,7 @@ import { Select } from "components/form/select";
 import { SessionSummary } from "components/session-summary/session-summary";
 import { Title } from "components/typography/title";
 import { useMemo, useState } from "react";
-import { Session } from "@/lib/pretix/submissions";
+import { Session } from "@/lib/pretalx/submissions";
 
 export const Sessions = ({
   sessions,
@@ -42,6 +42,19 @@ export const Sessions = ({
     if (filters.type && filters.type !== session.type.toLowerCase()) {
       return false;
     }
+
+    if (session.type.toLowerCase() === "announcements") {
+      return false;
+    }
+
+    if (
+      session.title.toLowerCase().includes("lightning talks") ||
+      session.title.toLowerCase().includes("poster session") ||
+      session.title.toLowerCase().includes("sprint orientation")
+    ) {
+      return false;
+    }
+
     return true;
   });
 

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
-import { fetchSpeakersWithConfirmedSubmissions } from "@/lib/pretix";
+import { fetchSpeakersWithConfirmedSubmissions } from "@/lib/pretalx";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

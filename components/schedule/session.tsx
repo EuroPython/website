@@ -1,152 +1,172 @@
 import clsx from "clsx";
 import { Fragment } from "react";
-import { ICALLink } from "../ical-link";
-import { numberToTime } from "./time-helpers";
-import type { Session as SessionType } from "./types";
+
+import type { Session as SessionType } from "@/lib/pretalx/schedule";
+import { formatInTimeZone } from "date-fns-tz";
+
+const capitalizeFirst = (text: string) => {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+};
+
+const DEBUG = true;
 
 const getHeaderText = (session: SessionType) => {
-  if (session.type === "opening-session") {
-    return "Opening";
-  }
+  const type = session.type?.toLowerCase();
 
-  if (session.type === "keynote") {
+  if (type === "keynote") {
     return "Keynote";
   }
 
-  if (session.type === "lightning-talks") {
-    return "Lightning Talks";
+  if (session.experience) {
+    return capitalizeFirst(session.experience);
   }
 
-  if (session.type === "panel") {
-    return "Panel";
+  if (type === "sponsored") {
+    return "Talk";
   }
 
-  if (session.type === "registration") {
-    return "Registration";
+  if (session.type) {
+    return capitalizeFirst(session.type);
   }
-
-  if (session.audience) {
-    return session.audience;
-  }
-
-  return session.type;
 };
 
 const SessionHeader = ({ session }: { session: SessionType }) => {
+  const hasBgColor = [
+    ["keynote", "registration", "opening-session"].includes(
+      session.type?.toLowerCase()
+    ),
+    session.experience === "beginner",
+    session.experience === "intermediate",
+    session.experience === "advanced",
+  ].some(Boolean);
+
   return (
     <header
       className={clsx(
-        "absolute right-0 top-0 bottom-0 w-5 rounded-r-lg whitespace-nowrap",
+        "absolute right-0 top-0 bottom-0",
         "bg-secondary flex text-text justify-between text-xs py-2 px-3 font-bold leading-4",
-        "lg:static lg:w-full lg:rounded-none lg:rounded-t-lg",
+        "md:static md:w-full border-l-2 md:border-l-0 md:border-b-2",
         {
-          "!bg-session-intermediate": session.audience === "intermediate",
-          "!bg-session-advanced": session.audience === "advanced",
-          "!bg-session-beginner": session.audience === "beginner",
+          "!bg-session-intermediate": session.experience === "intermediate",
+          "!bg-session-advanced": session.experience === "advanced",
+          "!bg-session-beginner": session.experience === "beginner",
           "!bg-secondary": [
             "keynote",
             "registration",
             "opening-session",
-          ].includes(session.type),
+          ].includes(session.type?.toLowerCase()),
+          "bg-session-none": !hasBgColor,
         }
       )}
     >
       <p
         className={clsx(
           "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-90",
-          "lg:static lg:rotate-0 lg:translate-x-0 lg:translate-y-0"
+          "md:static md:rotate-0 md:translate-x-0 md:translate-y-0"
         )}
       >
         {getHeaderText(session)}
       </p>
 
-      <p className="hidden lg:block">
-        {session.type === "poster" ? (
-          <>{numberToTime(session.time)} - </>
-        ) : null}
-        {session.duration}m
-      </p>
+      <p className="hidden md:block">{session.duration / session.slots}m</p>
     </header>
   );
+};
+
+const SessionNotes = ({ session }: { session: SessionType }) => {
+  if (session.type.toLowerCase() === "free workshop") {
+    return (
+      <p className="text-[10px] font-normal italic m-0 leading-3 decoration-current decoration-dotted">
+        Free workshop
+        <br />
+        Registration needed
+      </p>
+    );
+  }
+
+  if (session.type.toLowerCase() === "conference workshop") {
+    return (
+      <p className="text-[10px] font-normal italic m-0 leading-3 decoration-current decoration-dotted">
+        Free for attendees
+        <br />
+        Registration needed
+      </p>
+    );
+  }
+
+  return null;
 };
 
 export const Session = ({
   session,
   style,
+  className,
 }: {
   session: SessionType;
   style: React.CSSProperties;
+  className?: string;
 }) => {
-  const speakers = session.speakers;
-
-  const nonEmptySpeakers = speakers.filter((speaker) => speaker.name);
-
-  const roomsAndSpeakers = session.rooms.concat(
-    nonEmptySpeakers?.map((s) => s.name) || []
+  const roomsAndSpeakers = [session.room].concat(
+    session.speakers.map((speaker) => speaker.name) || []
   );
 
   return (
-    <div
-      className={clsx(
-        "schedule-item",
-        "rounded-lg bg-body-inverted text-secondary flex flex-col relative mb-4 mx-4",
-        "min-h-[100px] pr-6 lg:pr-0 lg:mb-0 lg:mx-0"
-      )}
-      style={style}
-      id={session.id}
-    >
-      <SessionHeader session={session} />
-
-      <p className="font-bold text-sm lg:text-base py-2 px-3">
-        {session.slug ? (
-          <a href={`/session/${session.slug}`}>{session.title}</a>
-        ) : (
-          session.title
+    <li className="contents">
+      <div
+        className={clsx(
+          "bg-body-background pr-4 md:pr-0",
+          "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
+          "min-h-[150px] block",
+          className
         )}
-        {session.start && session.end ? (
-          <>
-            {" "}
-            <ICALLink
-              className="absolute bottom-2 right-8 lg:static"
-              title={session.title}
-              description={session.abstract}
-              start={session.start}
-              end={session.end}
-              room={session.rooms.join(", ")}
-              url={`https://ep2022.europython.eu/session/${session.slug}`}
-            />
-          </>
-        ) : null}
-      </p>
+        style={style}
+      >
+        <SessionHeader session={session} />
 
-      {nonEmptySpeakers.length ? (
-        <div className="hidden lg:block mt-auto py-2 mx-3 mb-4 border-text border-t-[1px]">
-          <>
-            <div>
-              <span>
-                {nonEmptySpeakers.map((speaker, index) => (
-                  <Fragment key={speaker.name}>
-                    {speaker.slug ? (
-                      <a
-                        className="text-text underline text-sm font-bold"
-                        href={`/speaker/${speaker.slug}`}
-                      >
-                        {speaker.name}
-                      </a>
-                    ) : (
-                      speaker.name
-                    )}
-                    {index < nonEmptySpeakers.length - 1 && ", "}
-                  </Fragment>
-                ))}
-              </span>
-            </div>
-          </>
+        <a
+          className="font-bold text-md md:text-base py-2 px-3 flex-1 max-w-md"
+          href={session.href}
+        >
+          {DEBUG && (
+            <p>
+              {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")} -
+              {formatInTimeZone(session.end, "Europe/Prague", "HH:mm")}
+            </p>
+          )}
+
+          <SessionNotes session={session} />
+          {session.title}
+        </a>
+
+        {session.speakers.length ? (
+          <div className="hidden md:block py-2 mx-3 mb-4 border-text border-t-[0.5px]">
+            <>
+              <div>
+                <span>
+                  {session.speakers.map((speaker, index) => (
+                    <Fragment key={speaker.name}>
+                      {speaker.slug ? (
+                        <a
+                          className="text-text text-sm font-bold hover:underline"
+                          href={`/speaker/${speaker.slug}`}
+                        >
+                          {speaker.name}
+                        </a>
+                      ) : (
+                        speaker.name
+                      )}
+                      {index < session.speakers.length - 1 && ", "}
+                    </Fragment>
+                  ))}
+                </span>
+              </div>
+            </>
+          </div>
+        ) : null}
+        <div className="text-text text-sm font-bold mt-auto py-2 px-3 md:hidden">
+          {roomsAndSpeakers.join(", ")}
         </div>
-      ) : null}
-      <div className="text-text text-sm font-bold mt-auto py-2 px-3 lg:hidden">
-        {roomsAndSpeakers.join(", ")}
       </div>
-    </div>
+    </li>
   );
 };

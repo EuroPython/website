@@ -1,4 +1,4 @@
-import { Answer } from "./types";
+import { Answer } from "../pretix/types";
 import { slugify } from "./utils/slugify";
 
 export type Root = {
@@ -23,6 +23,7 @@ export type Result = {
   is_featured: boolean;
   content_locale: string;
   slot: Slot;
+  slot_count: number;
   image: string;
   answers: Answer[];
   notes: string;
@@ -74,7 +75,7 @@ const mapSession = (session: Result) => {
     title: session.title,
     description: session.description,
     abstract: session.abstract,
-    duration: session.duration,
+    duration: session.duration * (session.slot_count || 1),
     speakers: session.speakers.map((speaker) => ({
       name: speaker.name,
       avatar: speaker.avatar,

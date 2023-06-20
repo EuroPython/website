@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/server";
 import { OpenGraphImageSession } from "components/opengraph-image/opengraph-image-session";
-import { fetchSubmissionBySlug } from "@/lib/pretix/submissions";
+import { fetchSubmissionBySlug } from "@/lib/pretalx/submissions";
 
 export const size = { width: 1200, height: 600 };
 export const contentType = "image/png";
