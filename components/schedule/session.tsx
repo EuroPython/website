@@ -69,7 +69,7 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
         {getHeaderText(session)}
       </p>
 
-      <p className="hidden md:block">{session.duration}m</p>
+      <p className="hidden md:block">{session.duration / session.slots}m</p>
     </header>
   );
 };
