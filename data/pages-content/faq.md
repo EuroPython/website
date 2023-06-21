@@ -22,6 +22,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-06-01</b>: [First-Time Speaker's Workshop](/mentorship#first-time-speaker-workshop---thursday-1-june-2023-1800-cest)</li>
 <li><b>2023-06-09</b>: <a href="/tickets#remote-tickets">Remote Tickets Sales</a> Starts </li>
 <li><b>2023-06-09</b>: <a href="/finaid">[Financial Aid for Remote Tickets](/finaid#-free-remote-ticket)</a> Starts </li>
+<li><b>2023-06-20</b>: [Schedule](/sessions) Published</li>
 </ul>
 
 <ul className="milestone-todo">
