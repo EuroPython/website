@@ -25,7 +25,7 @@ export const Keynoter = ({
         />
       </div>
 
-      <div className="px-5 pt-2 pb-8 bg-keynoter-info rounded-t-none h-full group-hover:opacity-90">
+      <div className="px-5 py-2 pb-4 bg-keynoter-info rounded-t-none h-full group-hover:opacity-90">
         {placeholder ? (
           <p className="text-body-inverted font-bold">
             More keynoters coming soon
@@ -34,7 +34,7 @@ export const Keynoter = ({
           <>
             <p className="text-body-inverted font-bold">{name}</p>
             {tagline ? (
-              <p className="text-body-light font-bold">{tagline}</p>
+              <p className="text-body-light font-bold text-sm">{tagline}</p>
             ) : null}
           </>
         )}
