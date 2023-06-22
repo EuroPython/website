@@ -143,6 +143,16 @@
       "name": "Supporters",
       "sponsors": [
         {
+          "name": "Evolabel",
+          "url": "https://www.evolabel.com/",
+          "logo": "img/logos/sponsor_logos/evolabel.svg"
+        },
+        {
+          "name": "Manning Publications",
+          "url": "http://mng.bz/vnWa",
+          "logo": "img/logos/sponsor_logos/manning.svg"
+        },
+        {
           "name": "Sticker Mule",
           "url": "https://www.stickermule.com/eu/custom-stickers",
           "logo": "img/logos/sponsor_logos/stickermule.svg"
