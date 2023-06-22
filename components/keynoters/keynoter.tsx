@@ -34,7 +34,7 @@ export const Keynoter = ({
           <>
             <p className="text-body-inverted font-bold">{name}</p>
             {tagline ? (
-              <p className="text-body-light font-bold text-sm">{tagline}</p>
+              <p className="text-body-light font-bold text-sm italic">{tagline}</p>
             ) : null}
           </>
         )}
