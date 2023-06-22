@@ -80,7 +80,13 @@
           "name": "Sonar",
           "url": "https://www.sonarsource.com/",
           "logo": "/img/logos/sponsor_logos/sonar.svg"
+        },
+        {
+          "name": "Picnic",
+          "url": "https://picnic.app/careers/",
+          "logo": "/img/logos/sponsor_logos/picnic.svg"
         }
+
       ]
     },
     {
