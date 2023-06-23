@@ -12,7 +12,7 @@
 Prague Pyvo is traditionally held on the third Wednesday of each month. The July edition will take place during EuroPython! Join us for our July Pyvo meetup in Prague, where we'll be hosting a delightful grill & chill session. We invite you to connect with the Czech local Python community in Prague, enjoy the perfect summer vibes of Prague and exchange knowledge and ideas!
 
 <div style={{textAlign: "center", marginBottom: 20}}>
-<ButtonLink href="https://www.meetup.com/pyvo-prague-python-meetup/events/nzltctyfckbzb/"> Register your interest now! </ButtonLink>
+<ButtonLink href="https://www.meetup.com/pyvo-prague-python-meetup/events/293781460/"> Register your interest now! </ButtonLink>
 </div>
 
 ## Event @ EuroPython
