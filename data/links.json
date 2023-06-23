@@ -61,7 +61,11 @@
           "path": "/pyladies-workshop"
         },
         {
-          "name": "PyLadies Social Event",
+          "name": "Pyvo Wednesday Meetup",
+          "path": "/pyvo-meetup"
+        },
+        {
+          "name": "PyLadies Friday Social",
           "path": "/pyladies-social-event"
         }
       ]
