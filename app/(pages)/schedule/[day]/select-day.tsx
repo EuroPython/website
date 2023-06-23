@@ -2,6 +2,7 @@
 
 import { Select } from "components/form/select";
 import { format, parseISO } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 import { useRouter } from "next/navigation";
 
 export const SelectDay = ({
@@ -18,7 +19,9 @@ export const SelectDay = ({
 
   const handleDaySelected = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const type = days.find(
-      (day) => format(day.date, "yyyy-MM-dd") === event.target.value
+      (day) =>
+        formatInTimeZone(day.date, "Europe/Prague", "yyyy-MM-dd") ===
+        event.target.value
     )!.type;
 
     if (type === "sprints") {
@@ -37,8 +40,12 @@ export const SelectDay = ({
       defaultValue={day}
     >
       {days.map(({ date, type }) => {
-        const isoDate = format(date, "yyyy-MM-dd");
-        const dateText = format(date, "eeee, do MMMM, yyyy");
+        const isoDate = formatInTimeZone(date, "Europe/Prague", "yyyy-MM-dd");
+        const dateText = formatInTimeZone(
+          date,
+          "Europe/Prague",
+          "eeee, do MMMM, yyyy"
+        );
 
         return (
           <option key={isoDate} value={isoDate}>

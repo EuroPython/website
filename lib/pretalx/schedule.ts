@@ -12,6 +12,7 @@ import { timeToNumber } from "components/schedule/time-helpers";
 import { slugify } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { runSessionHacks } from "./hacks/sessions";
+import { formatInTimeZone } from "date-fns-tz";
 
 export type Schedule = {
   rooms: string[];
@@ -107,7 +108,13 @@ export async function getScheduleDays() {
 
   return Array.from(
     new Set(
-      data.slots.map((item) => format(parseISO(item.slot.start), "yyyy-MM-dd"))
+      data.slots.map((item) =>
+        formatInTimeZone(
+          parseISO(item.slot.start),
+          "Europe/Prague",
+          "yyyy-MM-dd"
+        )
+      )
     )
   )
     .map((day) => parseISO(day))
@@ -371,7 +378,11 @@ export async function getSchedule(day: string) {
   });
 
   const days = Array.from(
-    new Set(slots.map((item) => format(item.slot.start, "yyyy-MM-dd")))
+    new Set(
+      slots.map((item) =>
+        formatInTimeZone(item.slot.start, "Europe/Prague", "yyyy-MM-dd")
+      )
+    )
   )
     .map((day) => ({
       date: parseISO(day),

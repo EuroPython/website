@@ -4,7 +4,7 @@ import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import { SelectDay } from "./select-day";
 import { getSchedule, getScheduleDays } from "@/lib/pretalx/schedule";
-import { format } from "date-fns";
+import { formatInTimeZone } from "date-fns-tz";
 
 export const revalidate = 300;
 
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
   return days.map((day) => ({
     params: {
-      day: format(day, "yyyy-MM-dd"),
+      day: formatInTimeZone(day, "Europe/Prague", "yyyy-MM-dd"),
     },
   }));
 }

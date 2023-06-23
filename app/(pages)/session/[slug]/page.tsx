@@ -1,9 +1,7 @@
-import { format } from "date-fns";
 import { Separator } from "components/separator/separator";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
 import { Tag, TagContainer } from "components/tag/tag";
-import type { Session as SessionType } from "@/lib/pretalx/schedule";
 import {
   DefinitionList,
   DefinitionTerm,
@@ -19,6 +17,7 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { components } from "components/mdx";
 
 import { Metadata } from "next";
+import { formatInTimeZone } from "date-fns-tz";
 
 export const generateMetadata = async ({
   params,
@@ -264,7 +263,7 @@ export default async function SessionPage({
 
           <a
             className="block text-6xl font-bold text-center hover:text-primary-hover mt-24 mb-12"
-            href={`/schedule/${format(start, "yyyy-MM-dd")}#${session.code}`}
+            href={`/schedule/${formatInTimeZone(start, "Europe/Prague", "yyyy-MM-dd")}#${session.code}`}
           >
             ← Back to schedule
           </a>
