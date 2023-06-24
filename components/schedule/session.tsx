@@ -111,7 +111,7 @@ export const Session = ({
   );
 
   return (
-    <li className="contents">
+    <li className="contents" id={session.code}>
       <div
         className={clsx(
           "bg-body-background pr-4 md:pr-0",

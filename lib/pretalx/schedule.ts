@@ -8,7 +8,6 @@ import {
   parseISO,
 } from "date-fns";
 import { Response } from "./schedule-types";
-import { timeToNumber } from "components/schedule/time-helpers";
 import { slugify } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { runSessionHacks } from "./hacks/sessions";
@@ -48,6 +47,7 @@ type Row = {
 );
 
 export type Session = {
+  code: string;
   title: string;
   speakers: {
     name: string;
@@ -229,6 +229,7 @@ export async function getSchedule(day: string) {
           const start = slot.slot.start;
 
           const session = {
+            code: slot.code,
             title: slot.title,
             speakers: slot.speakers.map((speaker) => ({
               name: speaker.name,
