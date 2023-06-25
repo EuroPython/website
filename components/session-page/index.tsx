@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Datetime } from "components/datetime";
 import {
   DefinitionList,
@@ -14,7 +15,11 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 // TODO: remove code duplication
 
-const getAvatarUrl = (avatar: string) => {
+const getAvatarUrl = (avatar: string | null) => {
+  if (!avatar) {
+    return null;
+  }
+
   if (avatar.startsWith("https://www.gravatar.com/avatar/")) {
     return `${avatar}?s=600`;
   }
@@ -172,36 +177,44 @@ export const SessionPage = ({
           The speaker{session.speakers.length > 1 ? "s" : ""}
         </Title>
 
-        {session.speakers.map((speaker) => (
-          <div
-            key={speaker.code}
-            className="mb-4 md:grid grid-cols-[260px_1fr] md:gap-6"
-          >
-            <div className="flex items-start mb-4">
-              <img
-                src={getAvatarUrl(speaker.avatar)}
-                alt={speaker.name}
-                className="w-full max-w-sm mb-12"
-              />
-            </div>
+        {session.speakers.map((speaker) => {
+          const avatar = getAvatarUrl(speaker.avatar);
 
-            <div>
-              <p className="mb-4">
-                <a
-                  href={`/speaker/${speaker.slug}`}
-                  className="text-4xl hover:text-primary-hover underline font-bold"
-                >
-                  {speaker.name}
-                </a>
-              </p>
-              <Prose>
-                <ReactMarkdown components={components}>
-                  {speaker.bio}
-                </ReactMarkdown>
-              </Prose>
+          return (
+            <div
+              key={speaker.code}
+              className={clsx("mb-4", {
+                "md:grid grid-cols-[260px_1fr] md:gap-6": !!avatar,
+              })}
+            >
+              {avatar && (
+                <div className="flex items-start mb-4">
+                  <img
+                    src={avatar}
+                    alt={speaker.name}
+                    className="w-full max-w-sm mb-12"
+                  />
+                </div>
+              )}
+
+              <div>
+                <p className="mb-4">
+                  <a
+                    href={`/speaker/${speaker.slug}`}
+                    className="text-4xl hover:text-primary-hover underline font-bold"
+                  >
+                    {speaker.name}
+                  </a>
+                </p>
+                <Prose>
+                  <ReactMarkdown components={components}>
+                    {speaker.bio}
+                  </ReactMarkdown>
+                </Prose>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </article>
 
       <section className="grid gap-6 md:grid-cols-2 accent-right">
