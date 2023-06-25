@@ -1,7 +1,6 @@
 import { fetchConfirmedSubmissions, fetchKeynotes } from "./submissions";
-import { Answer } from "../pretix/types";
+import { Answer } from "../pretalx/types";
 import { slugify } from "./utils/slugify";
-import { cache } from "react";
 
 type Availability = {
   id: number;
