@@ -1,152 +1,82 @@
 ---
 title: Virtual Swag
 subtitle: Check out the virtual swag from our sponsors!
-class: virtual-swag
 ---
 
-# Virtual Swag
+# Swag & Promotions
 
-Welcome to EuroPython 2022!
+Welcome to EuroPython 2023!
 
-Since we're running a hybrid conference in Dublin & Remotely, our sponsors have
-prepared virtual swag for you. Enjoy! 🐍 💝
-
-# Microsoft
-
-<a className="img" id="microsoft" target="_blank" href="https://azure.microsoft.com/free/python/">
-  <div className="logo">
-    <img src="/swag/microsoft.svg" width="337" height="71" />
-  </div>
-</a>
-
-<a className="img" target="_blank" href="/swag/Microsoft_swag.pdf">
-  <div>
-    <img src="/swag/Microsoft_swag.png" width="2250" height="2850" />
-  </div>
-</a>
-
-<a href="/swag/Microsoft_swag.pdf" target="_blank">Get your swag here</a>
+In celebration of EuroPython 2023 in Prague & Remotely, our sponsors have prepared virtual swag and promotions for you. Enjoy! 🐍 💝
 
 ---
-
-# Bloomberg
-
-<a className="img" id="bloomberg" target="_blank" href="https://bloomberg.com/company/tech-newsletter/?utm_medium=cto&utm_content=site-partner&utm_source=site-partner&utm_campaign=MKTG_2002TechEvent_EuroPython&tactic=616847">
-  <div className="logo">
-    <img src="/swag/bloomberg.svg" width="403" height="162" />
+<a className="img" id="sentry" target="_blank" href="https://sentry.io/signup">
+  <div className="logo" style={{marginBottom: 15}}>
+    <img src="/swag/sentry.svg" width="500" height="119" />
   </div>
 </a>
 
-<a className="img" target="_blank" href="/swag/Bloomberg_swag.pdf">
-  <div>
-    <img src="/swag/Bloomberg_swag.png" width="4800 " height="2700" />
-  </div>
-</a>
-
-<a href="/swag/Bloomberg_swag.pdf" target="_blank">Get your swag here</a>
+  <img src="/swag/sentry-swag-0.png" width="700" height="700" />
+  [Get your swag here](https://sentry.io/signup)
 
 ---
-
-# Numberly
 
 <a className="img" id="numberly" target="_blank" href="https://numberly.com/en/technology/">
-  <div className="logo">
-    <img src="/swag/numberly.svg" width="469" height="119" />
+  <div className="logo" style={{marginBottom: 15}}>
+    <img src="/swag/numberly.svg" width="500" height="119" />
   </div>
 </a>
 
-<a className="img" target="_blank" href="/swag/Numberly_swag.pdf">
-  <img src="/swag/Numberly_swag.png" width="2480" height="3508" />
-</a>
-
-<a href="/swag/Numberly_swag.pdf" target="_blank">Get your swag here</a>
-
+<div style={{marginBottom: 15}}>
+  <a className="img" target="_blank" href="/swag/numberly-swag.pdf">
+    <img src="/swag/numberly-swag-0.png" width="700" height="300" />
+  </a>
+</div>
+[Check out the opportunities here](/swag/numberly-swag.pdf)
 
 ---
 
-# Optum
-
-<a className="img" id="optum" target="_blank" href="https://optum.co/joinus">
-  <div className="logo">
-    <img src="/swag/optum.svg" width="708" height="205" />
-  </div>
-</a>
-<a className="img" target="_blank" href="/swag/Optum_swag.pdf">
-  <div>
-    <img src="/swag/Optum_swag.png" width="3508" height="2480" />
+<a className="img" id="Google Cloud" target="_blank" href="https://goo.gle/europython23">
+  <div className="logo" style={{marginBottom: 15}}>
+    <img src="/swag/googlecloud.svg" width="500" height="119" />
   </div>
 </a>
 
-<a href="/swag/Optum_swag.pdf" target="_blank">Get your swag here</a>
+<div style={{marginBottom: 15}}>
+  <a className="img" target="_blank" href="/swag/google-cloud-swag.pdf">
+    <img src="/swag/google-cloud-swag.png" width="700" height="300" />
+  </a>
+</div>
+[Get your swag here](https://goo.gle/europython23)
 
+---
+<a className="img" id="manning" target="_blank" href="http://mng.bz/vnWa">
+  <div className="logo" style={{marginBottom: 15}}>
+    <img src="/swag/manning.svg" width="500" height="119" />
+  </div>
+</a>
+
+Get 35% discount for all Manning products in all formats using the link below:
+
+<div style={{marginBottom: 15}}>
+    <img src="/swag/manning-swag.png" width="400" height="300" />
+</div>
+[Get your swag here](http://mng.bz/vnWa)
 
 ---
 
-# Google Cloud
-
-<a className="img" id="Google Cloud" target="_blank" href="https://cloud.google.com/developers/europython">
-  <div className="logo">
-    <img src="/swag/googlecloud.svg" width="2899" height="512" />
+<a className="img" id="oreilly" target="_blank" href="https://learning.oreilly.com/get-learning/?code=EUROPYTHON23">
+  <div className="logo" style={{marginBottom: 15}}>
+    <img src="/swag/OReilly.svg" width="300" height="119" />
   </div>
 </a>
 
-<br></br>
-<a href="https://cloud.google.com/developers/europython/" target="_blank">Get your swag here</a>
+**Get a free 30-day membership to O’Reilly**
+The tech and business learning platform you need to stay ahead
 
-
----
-
-# Hudson river trading
-
-<a className="img" id="hudson-river-trading" target="_blank" href="https://www.hudsonrivertrading.com/about/">
-  <div className="logo">
-    <img src="/swag/hudsonrivertrading.svg" width="192" height="149"/>
-  </div>
-</a>
-
-<br></br>
-<a href="https://www.hudsonrivertrading.com/about/" target="_blank">Get your swag here</a>
-
----
-
-# Sonar
-
-<a className="img" id="sonar" target="_blank" href="https://www.sonarsource.com/python/?utm_source=europython&utm_medium=event&utm_campaign=python&utm_content=python_ss">
-  <div className="logo">
-    <img src="/swag/sonar.svg" width="669" height="164" />
-  </div>
-</a>
-
-<br></br>
-<a href="https://www.sonarsource.com/python/?utm_source=europython&utm_medium=event&utm_campaign=python&utm_content=python_ss" target="_blank">Get your swag here</a>
-
----
-
-# Rapid Ratings
-
-<a className="img" id="rapidratings" target="_blank" href="https://www.rapidratings.com">
-  <div className="logo">
-    <img src="/swag/rapidratings.svg" width="708" height="205" />
-  </div>
-</a>
-<a className="img" target="_blank" href="/swag/rapidratings_swag.pdf">
-  <div>
-    <img src="/swag/rapidratings_swag.png" width="3508" height="2480" />
-  </div>
-</a>
-
-<a href="/swag/rapidratings_swag.pdf" target="_blank">Get your swag here</a>
-
-
----
-
-# Superblocks
-
-<a className="img" id="Superblocks" target="_blank" href="https://superblocks.com/win?referrer=europython">
-  <div className="logo">
-    <img src="/swag/superblocks.svg" width="60" height="30" />
-  </div>
-</a>
-
-<br></br>
-<a href="https://superblocks.com/win?referrer=europython" target="_blank">Get your swag here</a>
+- Unlimited access to 60K+ books, 30K+ hours of video, live online training courses, virtual tech conferences, interactive scenarios and sandboxes, and more
+- Trusted content from O’Reilly and nearly 200 publishing partners
+- Instant answers tech teams can put to work immediately
+<div style={{marginBottom: 15}}>
+</div>
+[Get your swag here](https://learning.oreilly.com/get-learning/?code=EUROPYTHON23)
