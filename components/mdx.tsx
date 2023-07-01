@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Map } from "./map";
 import { MapSprints } from "./map-for-sprints";
+import { MapSocial } from "./map-for-social";
 import { ButtonWithTitle } from "./button-with-title";
 import { SponsorTiers } from "./sponsor-tiers";
 import { BenefitItem, BenefitsList } from "./benefits-list";
@@ -91,6 +92,7 @@ export const components = {
   ),
   Map,
   MapSprints,
+  MapSocial,
   ButtonWithTitle,
   SponsorTiers,
 
