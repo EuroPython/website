@@ -314,7 +314,7 @@ We are a leading provider of smart charging solutions with many years of experie
   - You interact with peers and cross-functional colleagues to fullfil our joint mission towards #NorthStar
 </details>
 
-[Apply here](https://www.mobilityhouse.com/de_de/karriere) or contact Maren Lueess: maren.lueess@moblityhouse.com
+[Apply here](https://www.mobilityhouse.com/int_en/career/teamlead-technology-vgi-m-f-d-338.html) or contact Maren Lüeße: maren.lueess@moblityhouse.com
 
 <details>
   <summary><h4 id="mobility-house2-senior-software-engineer">(Senior) Software Engineer</h4></summary>
@@ -328,7 +328,7 @@ We are a leading provider of smart charging solutions with many years of experie
 
 </details>
 
-[Apply here](https://www.mobilityhouse.com/de_de/karriere) or contact Maren Lueess: maren.lueess@moblityhouse.com
+[Apply here](https://www.mobilityhouse.com/int_en/career/senior-software-engineer-m-w-d-341.html) or contact Maren Lüeße: maren.lueess@moblityhouse.com
 
 ## [Kiwi.com](https://jobs.kiwi.com/)
 Kiwi.com uncovers cheap travel options that others simply can't find.
