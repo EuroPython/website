@@ -45,8 +45,7 @@ Our social event sponsor, [Kiwi.com](https://jobs.kiwi.com) has organised a raff
   <img src="/img/photos/social_event_band_hazafele.JPG" width="500" height="100" />
 </div>
 
-The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (from the Hungarian translation On the way home) was formed in 2017 and from the beginning it mainly devoted itself to Gipsy and Hungarian folklore. Its founders were Šimon Jakubíček (double bass) and David Golas (guitar), they were later joined by Michal Grossmann (violin) and Marek Šnorich (accordion). The band's primary mission is to bring listeners closer to folk music, with which they don't usually just meet in everyday life; but they also play well-known melodies.
-
+The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (meaning 'On the Way Home' in Hungarian) was formed in 2017 and has been primarily dedicated to Gipsy and Hungarian folklore from the very beginning. Its founders were Šimon Jakubíček (double bass) and David Golas (guitar), they were later joined by Michal Grossmann (violin) and Marek Šnorich (accordion). The band's main goal is to introduce listeners to folk music, which they don't usually encounter in their everyday lives. Additionally, they also perform well-known melodies
 
 ### Food Selection
 The menu for the social event will be published soon!
