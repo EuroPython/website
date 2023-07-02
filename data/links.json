@@ -41,12 +41,8 @@
           "path": "/mentored-sprint"
         },
         {
-          "name": "Trans*Code",
-          "path": "/trans_code"
-        },
-        {
-          "name": "WASM Summit",
-          "path": "/wasm"
+          "name": "PyLadies Snake Workshop",
+          "path": "/pyladies-workshop"
         },
         {
           "name": "HumbleData Workshop",
@@ -57,12 +53,20 @@
           "path": "/wai"
         },
         {
-          "name": "PyLadies Snake Workshop",
-          "path": "/pyladies-workshop"
+          "name": "Trans*Code",
+          "path": "/trans_code"
+        },
+        {
+          "name": "WASM Summit",
+          "path": "/wasm"
         },
         {
           "name": "Pyvo Wednesday Meetup",
           "path": "/pyvo-meetup"
+        },
+        {
+          "name": "Thursday Social Event",
+          "path": "/social-event"
         },
         {
           "name": "PyLadies Friday Social",
