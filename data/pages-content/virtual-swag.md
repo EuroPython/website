@@ -56,7 +56,7 @@ In celebration of EuroPython 2023 in Prague & Remotely, our sponsors have prepar
   </div>
 </a>
 
-Get 35% discount for all Manning products in all formats using the discount below:
+Please use this promo code during checkout to receive a 35% discount on all Manning products in all formats:
 **ctweuropy23**
 
 [Get your swag here](http://mng.bz/vnWa)
