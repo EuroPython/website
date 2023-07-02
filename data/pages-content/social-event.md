@@ -31,7 +31,7 @@ Tickets for the social event will be available in our ticket shop soon! Remember
 - **Price**: To be announced
 - Schedule:
     - 19:00: Event starts - chat, laugh & enjoy food
-    - 20:30–21:30: Live folk Music by Hazafele
+    - 20:30–21:30: Live folk Music by [Hazafele](https://www.facebook.com/profile.php?id=100053175145125)
     - 22:00–23:30: Social continues
     - 23:30: Closing
 
@@ -41,8 +41,11 @@ Our social event sponsor, [Kiwi.com](https://jobs.kiwi.com) has organised a raff
 
 
 ### Live Folk Music ###
+<div style={{marginBottom: 15}}>
+  <img src="/img/photos/social_event_band_hazafele.JPG" width="500" height="100" />
+</div>
 
-The band Hazafele (from the Hungarian translation On the way home) was formed in 2017 and from the beginning it mainly devoted itself to Gipsy and Hungarian folklore. Its founders were Šimon Jakubíček (double bass) and David Golas (guitar), they were later joined by Michal Grossmann (violin) and Marek Šnorich (accordion). The band's primary mission is to bring listeners closer to folk music, with which they don't usually just meet in everyday life; but they also play well-known melodies.
+The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (from the Hungarian translation On the way home) was formed in 2017 and from the beginning it mainly devoted itself to Gipsy and Hungarian folklore. Its founders were Šimon Jakubíček (double bass) and David Golas (guitar), they were later joined by Michal Grossmann (violin) and Marek Šnorich (accordion). The band's primary mission is to bring listeners closer to folk music, with which they don't usually just meet in everyday life; but they also play well-known melodies.
 
 
 ### Food Selection
