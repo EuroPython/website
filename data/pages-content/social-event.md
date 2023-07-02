@@ -8,8 +8,7 @@ social_card: ep2023-social-event-sc.png
   <img src="/img/ep2023-social-event.png" />
 </div>
 
-There are venues that are nice. There are venues that are interesting. And then there are venues that have stories - such as the home of our social event venue, a 200-year-old deconsecrated former church [Sacre Coeur](https://www.sacrecoeur.cz/en). Join us on the evening of 20 July at for an evening gathering with food, chats and live folk music!
-
+There are nice venues, there are interesting venues, and then there are venues with stories to tell—like [Sacre Coeur](https://www.sacrecoeur.cz/en), the home of our social event, a 200-year-old deconsecrated former church. Join us on the evening of July 20th for a gathering filled with food, conversations, and live folk music!
 <MapSocial></MapSocial>
 
 <address>
