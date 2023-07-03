@@ -8,7 +8,7 @@ social_card: social-card-humble-data.png
 *WE ARE BACK!*
 Following the success of several Beginner's Data Workshop at PyCon US, Ghana, Namibia, Africa and PyData Global, we are glad to have it again at EuroPython!
 
-👉🏽 [APPLY HERE TO ATTEND THIS WORKSHOP](https://forms.gle/jFP1CCNSp91ekyi16) (application deadline is 3rd July, 2023) 👈
+👉🏽 [APPLY HERE TO ATTEND THIS WORKSHOP](https://forms.gle/jFP1CCNSp91ekyi16) (the application deadline is July 10th, 2023) 👈
 
 ## Learn Python for Data Science in the Workshop ##
 Would you like to learn to code but don’t know where to start? Would you like to take a peek at Data Science but are not sure how? Taking first steps are very hard. That is why we have decided to host a workshop to teach beginners how to start with Python and Data Science. Join and let's share our passion for the world of data science!
