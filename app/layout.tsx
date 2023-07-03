@@ -9,6 +9,12 @@ export const metadata: Metadata = {
       "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
     template: "%s | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
   },
+  twitter: {
+    title: {
+      default:  "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+      template: "%s | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+    },
+  },
   metadataBase: new URL("https://ep2023.europython.eu/"),
   description: "",
   alternates: {
