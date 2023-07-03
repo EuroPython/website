@@ -15,6 +15,10 @@ const getHeaderText = (session: SessionType) => {
     return "Keynote";
   }
 
+  if (type === "poster") {
+    return "Poster";
+  }
+
   if (session.experience) {
     return capitalizeFirst(session.experience);
   }
