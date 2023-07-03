@@ -28,7 +28,7 @@ export const Select = ({
           "block w-full bg-transparent text-lg h-16 py-2 pr-16 pl-4 border-[3px] border-primary appearance-none",
           "focus:outline-none focus:border-primary-active",
           {
-            "bg-text text-text-inverted font-bold rounded-xl !text-2xl !py-6 !pl-6 !h-24":
+            "bg-text font-bold rounded-xl !text-2xl !py-6 !pl-6 !h-24":
               variant === "rounded",
           },
           className

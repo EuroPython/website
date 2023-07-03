@@ -4,6 +4,10 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Schedule",
+          "path": "/schedule"
+        },
+        {
           "name": "List of Sessions",
           "path": "/sessions"
         },
@@ -14,6 +18,10 @@
         {
           "name": "List of Speakers",
           "path": "/speakers"
+        },
+        {
+          "name": "List of Keynote Speakers",
+          "path": "/keynoters"
         },
         {
           "name": "Speaker Mentorship",
@@ -33,6 +41,18 @@
           "path": "/mentored-sprint"
         },
         {
+          "name": "PyLadies Snake Workshop",
+          "path": "/pyladies-workshop"
+        },
+        {
+          "name": "HumbleData Workshop",
+          "path": "/humble-data"
+        },
+        {
+          "name": "Women in AI Workshop",
+          "path": "/wai"
+        },
+        {
           "name": "Trans*Code",
           "path": "/trans_code"
         },
@@ -41,12 +61,16 @@
           "path": "/wasm"
         },
         {
-          "name": "HumbleData Workshop",
-          "path": "/humble-data"
+          "name": "Pyvo Wednesday Meetup",
+          "path": "/pyvo-meetup"
         },
         {
-          "name": "PyLadies Snake Workshop",
-          "path": "/pyladies-workshop"
+          "name": "Thursday Social Event",
+          "path": "/social-event"
+        },
+        {
+          "name": "PyLadies Friday Social",
+          "path": "/pyladies-social-event"
         }
       ]
     },
@@ -64,6 +88,10 @@
         {
           "name": "Sprints Venue - VŠE",
           "path": "/where#vše---sprints-venue"
+        },
+        {
+          "name": "EuroPython 2023 Remote",
+          "path": "/remote"
         }
       ]
     },
@@ -88,12 +116,16 @@
           "path": "/faq"
         },
         {
-          "name": "Financial aid",
+          "name": "Financial Aid",
           "path": "/finaid"
         },
         {
           "name": "Visa Support Letter",
           "path": "/visa"
+        },
+        {
+          "name": "Volunteers",
+          "path": "/volunteers"
         }
       ]
     },
@@ -115,6 +147,10 @@
     {
       "name": "Contacts",
       "path": "/contacts"
+    },
+    {
+      "name": "Terms",
+      "path": "/terms"
     },
     {
       "name": "Privacy Policy",

@@ -64,11 +64,13 @@ Thank you, everyone who joined the session with your questions! You can view the
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HpSbrqmiSeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-### First-Time Speaker Workshop - Thursday 1 June 2023, 18.00 CEST
+### [COMPLETED] First-Time Speaker Workshop - Thursday 1 June 2023, 18.00 CEST
 
-In this workshop, we'll have experienced speakers from the EuroPython community to share their know-how on delivering an effective talk. We hope this will help you learn something meaningful about public speaking before your presentation at EuroPython 2023.
+Thank you, everyone who joined the session! It was, indeed, a very interesting discussion. The recording of the event is here:
 
-A recording of the session will be made available after the event.
+<div style={{display: "flex", justifyContent: "center", marginBottom: 20}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/79IaKHo7qEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## 3. Speaker Placement Programme
 

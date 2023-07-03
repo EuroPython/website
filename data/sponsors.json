@@ -53,7 +53,7 @@
         },
         {
           "name": "Sentry",
-          "url": "https://sentry.io/welcome?utm_medium=sponsored-event&utm_source=event&utm_campaign=event-europython-2023",
+          "url": "https://sentry.io/welcome/?utm_medium=sponsored-event&utm_source=event&utm_campaign=event-europython-2023",
           "logo": "/img/logos/sponsor_logos/sentry.svg"
         },
         {
@@ -80,7 +80,13 @@
           "name": "Sonar",
           "url": "https://www.sonarsource.com/",
           "logo": "/img/logos/sponsor_logos/sonar.svg"
+        },
+        {
+          "name": "Picnic",
+          "url": "https://picnic.app/careers/",
+          "logo": "/img/logos/sponsor_logos/picnic.svg"
         }
+
       ]
     },
     {
@@ -100,6 +106,26 @@
           "name": "Hudson River Trading",
           "url": "https://www.hudsonrivertrading.com/",
           "logo": "img/logos/sponsor_logos/hudsonrivertrading.svg"
+        },
+        {
+          "name": "Qt",
+          "url": "https://qt.io/",
+          "logo": "img/logos/sponsor_logos/Qt.svg"
+        },
+        {
+          "name": "Taipy",
+          "url": "https://www.taipy.io/",
+          "logo": "img/logos/sponsor_logos/taipy.svg"
+        }
+      ]
+    },
+    {
+      "name": "Social Event Sponsor",
+      "sponsors": [
+        {
+          "name": "Kiwi.com",
+          "url": "https://jobs.kiwi.com/",
+          "logo": "/img/logos/sponsor_logos/Kiwi.com_SocialEventSponsor.svg"
         }
       ]
     },
@@ -117,10 +143,35 @@
       "name": "Supporters",
       "sponsors": [
         {
+          "name": "Evolabel",
+          "url": "https://www.evolabel.com/",
+          "logo": "img/logos/sponsor_logos/evolabel.svg"
+        },
+        {
+          "name": "Pretalx",
+          "url": "https://pretalx.com/p/about/",
+          "logo": "img/logos/sponsor_logos/pretalx.svg"
+        },
+        {
+         "name": "1Password",
+         "url": "https://1password.com/",
+         "logo": "img/logos/sponsor_logos/1password_m30.svg"
+       },
+       {
+         "name": "O’Reilly ",
+         "url": "https://www.oreilly.com/",
+         "logo": "img/logos/sponsor_logos/OReilly.svg"
+       },
+        {
+          "name": "Manning Publications",
+          "url": "http://mng.bz/vnWa",
+          "logo": "img/logos/sponsor_logos/manning.svg"
+        },
+        {
           "name": "Sticker Mule",
           "url": "https://www.stickermule.com/eu/custom-stickers",
           "logo": "img/logos/sponsor_logos/stickermule.svg"
-      }]
-    }
-  ]
+        }
+      ]
+    }]
 }

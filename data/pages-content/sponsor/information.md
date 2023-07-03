@@ -10,8 +10,13 @@ subtitle:
 
 
 ### Due Dates of Deliverables
+<h5> Shipping Deadlines Outlined in Shipping Guidelines Below</h5>
+- [Parcel Delivery & Swag](#parcel): (all exhibitors who want to ship exhibit items)
+
 <h5> Monday, June 12</h5>
-- [Sponsored Talk | Workshop/Tutorial | Poster Submission:](#sponsored-content)
+- [Sponsored Talk Submission:](#sponsored-content): (Keystone, Diamond, Platinum)
+- [Workshop/Tutorial Submission:](#sponsored-content): (Keystone)
+- [Poster Submission:](#sponsored-content): (Poster Add-on)
 - [Sponsor Logo Submission:](#sponsor-logo) (all sponsors)
 
 <h5> Monday, June 19</h5>
@@ -190,8 +195,8 @@ surcharge will apply afterwards.**
 
 </details>
 
-<!-- <details>
-<summary><h4 id="parcel">Parcel Delivery & Gifts</h4></summary>
+<details>
+<summary><h4 id="parcel">Parcel Delivery & Swag</h4></summary>
 
 We aim to actively reduce the carbon footprint of the EuroPython conference
 series. Throughout the planning of the much anticipated EuroPython Dublin, we
@@ -201,32 +206,27 @@ distribute them at your booth. We strongly encourage you to distribute gifts
 made of environmentally friendly materials, to focus on quality rather than
 quantity to reduce waste.
 
-Shipping and customs for your goods are handled by
-[DB Schenker](https://www.dbschenker.com/cz-en).
+Shipping your goods to the venue is exclusively handled by
+[DB Schenker](https://www.dbschenker.com/cz-en). Please get in touch with Martin ULIČNÝ from DB Schenker directly to discuss costs and shipping arrangement.
 
-**Contacts**:
+**Contact**:
 
-
-- Martin ULIČNÝ - martin.+420 242 405 160, +TBD (mobile)
+- Martin ULIČNÝ
+  - Tel: +420 242 405 160
+  - E-mail: martin.ulicny@dbschenker.com
 
 Here are shipping information provided by DB Schenker:
 
-- [Shipping Guidelines](TBD).
-  **Important: Please provide DB Schenker your Company name, point of contact name
-  and email.** Contact DB Schenker for Details.
+- [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/view).
+  - **This is the [sample label](https://docs.google.com/document/d/1AnNPyK7D9cnEIhMXsAU2VK5-3mxaLEzs/view) provided. Please contact DB Schenker for Details.**
 
-- [Freight Order link](TBD).
-- [Delivery address and Shipping Label](TBD).
+- [Shipping Quotes (.docx)](https://docs.google.com/document/d/1shj6VhH4Wu4y76m-b5AtLviYbQsVGJY5/view).
+  - **Contact DB Schenker directly to discuss pricing and conditions**
 
-**Deadlines:**
+**Deadlines**
+- Deadlines are specified in [Shipping Guidelines & Address (.docx)](https://docs.google.com/document/d/1tgDfBikrFo1e9rtWWCNgNbe8q2I8mELl/view).
 
-- Deadline for orders: 2023-TBD
-- Deadline for receiving to the warehouse: 2023-TBD
-
-If you have any last-minute orders, please contact DB Schenker and keep them in
-the loop.
-
-</details> -->
+</details>
 
 <details>
   <summary><h4>Leads Collection</h4></summary>
@@ -258,12 +258,12 @@ As part of your sponsorship package, it might include a sponsored talk,
 workshop/tutorial or poster session. You can find the details for each:
 
 - <b>Sponsored Talk</b>: a 30 min slot as part of the official conference
-  schedule during the Conference Days (19-21 July, 2023)
+  schedule during the Conference Days (19-21 July, 2023). *If you a Platinum, Diamond or Keystone sponsor or have purchased a sponsored talk, you will need to submit the information to us.*
 - <b>Sponsored Workshop/Tutorial</b>: a 180 min slot as part of the official
-  conference schedule during the Workshop/Tutorial Days (17-18 July, 2023)
+  conference schedule during the Workshop/Tutorial Days (17-18 July, 2023). *If you are a Keystone sponsor or have purchased a sponsored Workshop, you will need to submit the information to us.*
 - <b>Sponsored Poster</b>: the poster will be displayed on the poster wall
   during the Conference Days (19-21 July, 2023). A dedicated presentation slot will be allocated to
-  the presenter for targeted interactions.
+  the presenter for targeted interactions. *If you have purchased an add-on to deliver a Sponsored Poster, you will need to submit the information to us.*
 
 You can check out previous years’ lineup for inspiration:
 [2022 Programme](https://ep2022.europython.eu/schedule/),

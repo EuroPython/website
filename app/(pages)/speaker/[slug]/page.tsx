@@ -1,7 +1,7 @@
 import {
-  fetchSpeakersWithConfirmedSubmissions,
   fetchSpeakerBySlug,
-} from "@/lib/pretix";
+  fetchSpeakersWithConfirmedSubmissions,
+} from "@/lib/pretalx";
 import {
   DefinitionList,
   DefinitionTerm,
@@ -14,8 +14,6 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
 import { Metadata } from "next";
-
-export const revalidate = 300; // 5 minutes
 
 export const generateMetadata = async ({
   params,
@@ -33,13 +31,13 @@ export const generateMetadata = async ({
   };
 };
 
-// export async function generateStaticParams() {
-//   const speakers = await fetchSpeakersWithConfirmedSubmissions();
+export async function generateStaticParams() {
+  const speakers = await fetchSpeakersWithConfirmedSubmissions();
 
-//   return speakers.map((speaker) => ({
-//     slug: speaker.slug,
-//   }));
-// }
+  return speakers.map((speaker) => ({
+    slug: speaker.slug,
+  }));
+}
 
 const getAvatarUrl = (avatar: string) => {
   if (avatar.startsWith("https://www.gravatar.com/avatar/")) {

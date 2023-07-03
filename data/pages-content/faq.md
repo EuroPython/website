@@ -17,12 +17,15 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-03-31</b>: [Sponsorship](/sponsor) Early Bird Discount Ends </li>
 <li><b>2023-04-14</b>: Community Voting ends </li>
 <li><b>2023-05-09</b>: [Sprints Venue & Info](/sprints) Announced </li>
-
+<li><b>2023-05-16</b>: [List of Session](/sessions) Published</li>
+<li><b>2023-05-21</b>: Financial Aid Programme Closes </li>
+<li><b>2023-06-01</b>: [First-Time Speaker's Workshop](/mentorship#first-time-speaker-workshop---thursday-1-june-2023-1800-cest)</li>
+<li><b>2023-06-09</b>: <a href="/tickets#remote-tickets">Remote Tickets Sales</a> Starts </li>
+<li><b>2023-06-09</b>: <a href="/finaid">[Financial Aid for Remote Tickets](/finaid#-free-remote-ticket)</a> Starts </li>
+<li><b>2023-06-20</b>: [Schedule](/schedule) Published</li>
 </ul>
 
 <ul className="milestone-todo">
-<li><b>The week of 2023-05-14</b>: List of Session Published</li>
-<li><b>2023-06-01</b>: First-Time Speaker's Workshop </li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
@@ -77,17 +80,47 @@ Email us at [programme@europython.eu](mailto:programme@europython.eu) to tell us
 
 A. Ticket sales are on sale now!
 
-We have put a lot of work in keeping the in-person ticket prices affordable. Check out our [tickets page](/tickets) for details. We also offer [volume discount](/tickets#volume-discount) for businesses.
+We have put a lot of work in keeping the ticket prices affordable. Check out our [tickets page](/tickets) for details. We also offer [volume discount](/tickets#volume-discount) for in-person business tickets.
 
 We encourage and trust you to pick a fair ticket tier that fits your personal circumstance. The money you spend will be put straight back to the community to support our diversity initiatives, Financial Aid Programme and other grants offered to the European Python community.
 
+## **Q. Can I attend EuroPython remotely?**
+
+A. Yes, remote tickets are on sale from **9th June 2023** onward. It is now possible to purchase a conference ticket (personal/ business) to participate in the conference from anywhere on the planet.
+
+Please check out our [Tickets page](/tickets) for more details.
+
+## **Q. What access does a remote ticket give me?**
+
+A. We strive make remote participation as interactive as possible! During the Conference Days (Wednesday-Friday), not only can you watch the live talks, keynotes & panels in all 6 tracks, engage in live text-based Q&A, and interact with speakers and other in-person attendees in chat channels.
+
+## **Q. How can I join after having bought a remote ticket?**
+
+A. We will send out an invite for you to join our dedicated discord server. Watch out for the email with the joining instructions a few days before the conference!
+
+## **Q. What is the difference between a remote ticket and livestream-only ticket**
+
+A. As per our tradition, we provide open and free access to the livestreams of our conference talks (19-21 July). You are not required to register a ticket, but you are welcome to if you would like an email reminder or receive up-to-date information about the conference.
+
+The free livestream-only ticket does not include support and you will be unable to interact with the speakers or other in-person audience. Consider getting a remote ticket instead.
+
+## **Q. Will the conference talks and tutorials be recorded?**
+
+A. Recordings of the talks will be made available on our YouTube channel a few months after the conference. Tutorials will only be delivered in-person and will not be recorded.
+
 ## **Q. Is there a Financial Aid Programme for EuroPython 2023?**
 
-A. Yes, our [Financial Aid Programme](/finaid) for in-person participation is open for application until 21 May. If you need help to attend the conference, you are most welcome to apply.
+A. Yes, our [Financial Aid Programme](/finaid) for in-person participation was open for application until 21 May. It is now closed after receiving record-high applications. We are very proud to be supporting so many Pythonistas to attend the conference. [Financial Aid for Remote Tickets](/finaid#-free-remote-ticket) is open on 9 June, together with remote ticket sales. If you need support to attend the conference remotely, make sure to apply by 9 July 2023.
 
 ## **Q. Do you provide childcare?**
 
-A: **Free Childcare** is available at the conference for those who need it. Please make sure to register a ticket for yourself and select how many children will require childcare at checkout. Unfortunately, we might not be able to provide childcare for the sprint weekend.
+A: **Free Childcare** is available at the conference for those who need it. [Susie's Babysitting](https://www.susies.cz/) will be providing the childcare services for us at the PCC venue. The services are suitable for babies, toddlers and young teens. The childcare professionals will be preparing different activities based for different age groups.
+
+Please make sure to register a ticket for yourself and select how many children will require childcare at checkout. If you are bringing your child who is interested in catching some of the conference talks, you can still register a childcare ticket if you need someone to look after them some of the time. Otherwise, the children need to be accompanied by you at all time during the conference; they do not need to register a separate ticket.
+
+We encourage you to keep in touch with us regarding the specifics of your childcare needs and we aim to provide the maximum flexibility for you. For any childcare related questions and clarifications, reach out to us at support@europython.eu.
+
+Unfortunately, we might not be able to provide childcare for the sprint weekend.
 
 ## **Q. Could you provide a visa support letter for my visa application?**
 A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. Please refer to the Ministry of Foreign Affairs of Czech Republic for information, including the application process for an [ Schengen visa for the purpose of “business” when attending a conference](https://www.mzv.cz/jnp/en/information_for_aliens/short_stay_visa/conference.html).

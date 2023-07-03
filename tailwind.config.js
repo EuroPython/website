@@ -36,9 +36,10 @@ module.exports = {
       "secondary-darkest": "var(--color-secondary-darkest)",
       "secondary-light": "var(--color-secondary-light)",
 
-      "session-beginner": "#3dae2b",
-      "session-intermediate": "#f7b500",
-      "session-advanced": "#ce3333",
+      "session-beginner": "#63d451",
+      "session-intermediate": "#ffcd45",
+      "session-advanced": "#d34848",
+      "session-none": "var(--color-secondary-light)",
 
       "sponsor-keystone": "#5c9f92",
       "sponsor-diamond": "#568497",

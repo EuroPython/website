@@ -198,7 +198,7 @@ export const SponsorTiers = () => {
           title="Bronze"
           price={2000}
           totalSlots={"limited"}
-          features={["Logo & recuriting ad on EuroPython website and more!"]}
+          features={["Logo & recruiting ad on EuroPython website and more!"]}
         />
 
         <SponsorTier
