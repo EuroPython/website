@@ -51,6 +51,7 @@ const mapSession = (session: Result) => {
     length: 2360,
     exp: 2363,
     tagline: 2645,
+    customRoom: 2700,
   };
 
   const answersByQuestion = session.answers.reduce((acc, answer) => {
@@ -61,6 +62,7 @@ const mapSession = (session: Result) => {
   const qaLength = answersByQuestion[qa.length] as string | undefined;
   const qaExp = answersByQuestion[qa.exp] as string | undefined;
   const qaTagline = answersByQuestion[qa.tagline] as string | undefined;
+  const qaCustomRoom = answersByQuestion[qa.customRoom] as string | undefined;
 
   let sessionType = session.submission_type.en;
 
@@ -90,6 +92,7 @@ const mapSession = (session: Result) => {
     length: qaLength,
     experience: qaExp,
     room: null,
+    customRoom: qaCustomRoom,
     slidesUrl: null,
   };
 };

@@ -54,6 +54,7 @@ export type Session = {
     slug: string;
   }[];
   room: string;
+  customRoom?: string | null;
   style: ColumnStyle & RowStyle;
   type: string;
   experience: string;
@@ -97,7 +98,12 @@ const getRooms = async () => {
 // This API is not public, so it might change in the future
 export async function getScheduleDays() {
   const response = await fetch(
-    "https://pretalx.com/api/events/europython-2023/schedules/latest/"
+    "https://pretalx.com/api/events/europython-2023/schedules/latest/",
+    {
+      headers: {
+        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
+      },
+    }
   );
 
   if (!response.ok) {
@@ -130,7 +136,12 @@ export async function getSchedule(day: string) {
   );
 
   const response = await fetch(
-    "https://pretalx.com/api/events/europython-2023/schedules/latest/"
+    "https://pretalx.com/api/events/europython-2023/schedules/latest/",
+    {
+      headers: {
+        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
+      },
+    }
   );
 
   if (!response.ok) {
@@ -244,6 +255,7 @@ export async function getSchedule(day: string) {
             end: addMinutes(start, slot.duration),
             experience: submission.experience,
             slots: slot.slot_count,
+            customRoom: submission.customRoom,
           } as Session;
 
           if (slot.slot_count > 1) {

@@ -8,8 +8,6 @@ const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
-const DEBUG = true;
-
 const getHeaderText = (session: SessionType) => {
   const type = session.type?.toLowerCase();
 
@@ -124,17 +122,21 @@ export const Session = ({
         <SessionHeader session={session} />
 
         <a
-          className="font-bold text-md md:text-base py-2 px-3 flex-1 max-w-md"
+          className="font-bold text-md md:text-base py-2 px-3 flex-1 max-w-md mb-1"
           href={session.href}
         >
-          {DEBUG && (
-            <p>
-              {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")} -
+          <SessionNotes session={session} />
+
+          <div className="2xl:flex justify-between text-sm mb-1">
+            {session.customRoom ? (
+              <div className="mb-1 2xl:mb-0">{session.customRoom}</div>
+            ) : null}
+            <p className="hidden md:block">
+              {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")} -{" "}
               {formatInTimeZone(session.end, "Europe/Prague", "HH:mm")}
             </p>
-          )}
+          </div>
 
-          <SessionNotes session={session} />
           {session.title}
         </a>
 
