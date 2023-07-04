@@ -83,7 +83,7 @@ recommended that sprint organisers prioritise proposing their sprints in already
 designated rooms that have sufficient space to accommodate the expected number
 of participants.
 
-- RB 103; occupancy: 15/24
+- RB 103; occupancy: 20/24
 - RB 104; occupancy: 12/24
 - RB 105; occupancy: 0/24
 - RB 106; occupancy: 0/24
@@ -183,6 +183,18 @@ Please add your sprint here!
 - Links:
   - [CPython's Developer Guide](https://devguide.python.org/)
   - [Easy Issues](https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy)
+
+### Typing PEPs
+Writing PEPs for the given Issues below. The organizer has never written [a PEP](https://peps.python.org/pep-0001/) but hopes that together with CPython developers in the same room we can bring the PEPs forward.
+
+- Number of people: ~5 (1 organiser)
+- Room: RB 113
+- Python Level: experience in typing recommended
+- Contact: Carli Freudenberg ([Email](mailto:kound+ep2023@posteo.de), [GitHub](https://github.com/CarliJoy))
+- Links:
+   - [Intersection Operator](https://github.com/python/typing/issues/213)
+   - [Not Operator](https://github.com/python/typing/issues/801)
+   - [copy_kwargs function](https://stackoverflow.com/questions/71968447/python-typing-copy-kwargs-from-one-function-to-another)
 
 ### sktime - ML/AI toolbox for time series!
 
