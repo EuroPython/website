@@ -38,7 +38,7 @@ If you have zero programming experience, this workshop is made for you! If you a
 ## HOW IS THIS POSSIBLE? ##
 This workshop is being run by data scientists and software engineers dedicated to the spirit of open source. Every day we benefit from the hard work of others when we use free open tools. This is our way of giving back. We thank EuroPython for their support in facilitating this workshop. ❤️
 
-If you would like to attend this workshop, [please apply here](https://forms.gle/jFP1CCNSp91ekyi16). Deadline: 3rd July, 2023.
+If you would like to attend this workshop, [please apply here](https://forms.gle/jFP1CCNSp91ekyi16). Deadline: 10th July, 2023.
 
 ## Mentors ##
 We are looking for volunteers to help mentor the attendees. There is no need to be an expert in programming, data science or Python – we are teaching the basics. But you do need:
