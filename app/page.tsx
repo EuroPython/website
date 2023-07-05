@@ -109,7 +109,7 @@ export default async function IndexPage() {
           <MDXRemote {...venue.source} />
         </HeroVenue>
       </div>
-      {/* @ts-expect-error */}
+
       <Keynoters />
 
       <Sponsors />
