@@ -102,4 +102,4 @@ to the conference and sprints venue via the public transport system.
 ## COVID Info
 
 For any COVID related information in Prague, please refer to our dedicate
-[COVID Info page](/covid-info) and the Czech Government's [COVID information portal](https://covid.gov.cz/en/).
+[COVID Info page](/#faq#covid-related-questions) and the Czech Government's [COVID information portal](https://covid.gov.cz/en/).
