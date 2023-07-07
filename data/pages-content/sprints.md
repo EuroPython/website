@@ -196,6 +196,20 @@ Please add your sprint here!
   - [sktime getting started with contributions](https://github.com/sktime/sktime/issues/1147)
   - [Roadmap 2023-2024 issue](https://github.com/sktime/sktime/issues/4691)
   - [Good first issues](https://github.com/sktime/sktime/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+ 
+### Lance - columnar format for multi-modal AI and billion-scale vector search
+
+- Number of people: ~10 (1 organizer)
+- Room: RB 105
+- Python Level: any
+- Rust Level: any
+- Contact: Lance developers - Github, Discord, or Email
+  [Lance Discord](https://discord.gg/zMM32dvNtd)
+  [Lance Github](https://github.com/lancedb/lance)
+  [Email](mailto:contact@lancedb.com)
+- Links:
+  - [Lance contributor guide](https://lancedb.github.io/lance/contributing.html)
+  - [Good first issues](https://github.com/lancedb/lance/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 <!-- ### EuroPython 2023 Example Project (copy this for your project)
 
