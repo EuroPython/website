@@ -120,12 +120,16 @@
           "path": "/finaid"
         },
         {
-          "name": "Visa Support Letter",
-          "path": "/visa"
-        },
-        {
           "name": "Volunteers",
           "path": "/volunteers"
+        },
+        {
+          "name": "Job Board",
+          "path": "/jobs-board"
+        },
+        {
+          "name": "Sponsor Swag & Promo",
+          "path": "/virtual-swag"
         }
       ]
     },
