@@ -171,8 +171,6 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
   - [Github](https://github.com/beeware)
   - [Good first issues](https://github.com/search?q=user%3Abeeware+label%3A%22good%20first%20issue%22+is%3Aissue+is%3Aopen&type=issues)
 
-Please add your sprint here!
-
 ### CPython Core (work on Python 3.13!)
 
 - Number of people: ~10 (2 organisers)
@@ -183,18 +181,6 @@ Please add your sprint here!
 - Links:
   - [CPython's Developer Guide](https://devguide.python.org/)
   - [Easy Issues](https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy)
-
-### Typing PEPs
-Writing PEPs for the given Issues below. The organizer has never written [a PEP](https://peps.python.org/pep-0001/) but hopes that together with CPython developers in the same room we can bring the PEPs forward.
-
-- Number of people: ~5 (1 organiser)
-- Room: RB 113
-- Python Level: experience in typing recommended
-- Contact: Carli Freudenberg ([Email](mailto:kound+ep2023@posteo.de), [GitHub](https://github.com/CarliJoy))
-- Links:
-   - [Intersection Operator](https://github.com/python/typing/issues/213)
-   - [Not Operator](https://github.com/python/typing/issues/801)
-   - [copy_kwargs function](https://stackoverflow.com/questions/71968447/python-typing-copy-kwargs-from-one-function-to-another)
 
 ### sktime - ML/AI toolbox for time series!
 
@@ -208,6 +194,20 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
   - [sktime getting started with contributions](https://github.com/sktime/sktime/issues/1147)
   - [Roadmap 2023-2024 issue](https://github.com/sktime/sktime/issues/4691)
   - [Good first issues](https://github.com/sktime/sktime/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+### Typing PEPs
+Writing PEPs for the given Issues below. The organizer has never written [a PEP](https://peps.python.org/pep-0001/) but hopes that together with CPython developers in the same room we can bring the PEPs forward.
+
+- Number of people: ~5 (1 organiser)
+- Room: RB 113
+- Python Level: experience in typing recommended
+- Contact: Carli Freudenberg ([Email](mailto:kound+ep2023@posteo.de), [GitHub](https://github.com/CarliJoy))
+- Links:
+   - [Intersection Operator](https://github.com/python/typing/issues/213)
+   - [Not Operator](https://github.com/python/typing/issues/801)
+   - [copy_kwargs function](https://stackoverflow.com/questions/71968447/python-typing-copy-kwargs-from-one-function-to-another)
+
+Please add your sprint here!
 
 <!-- ### EuroPython 2023 Example Project (copy this for your project)
 
