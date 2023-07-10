@@ -180,7 +180,7 @@ Temporal helps developers focus on the important things, like writing business l
 
 [Apply here](https://jobs.lever.co/temporal/ff1b33fe-fd12-4d8c-a266-4b1a83295182)
 
-## [arm]
+## [arm](https://www.arm.com/)
 **Piece Together The World’s Most Powerful Puzzle**
 
 This world has a design. It’s infinite yet discoverable. Small yet powerful. Our design engineers must all at once predict it and create it. From implementation of the most advanced CPU, GPU and HPC processors on the planet to dreaming up every eventuality that could put our SoC and system IP to the test, we puzzle over the biggest questions of our time. And microarchitect the future.
