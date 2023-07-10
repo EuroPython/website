@@ -175,10 +175,61 @@ Temporal helps developers focus on the important things, like writing business l
 <details>
   <summary><h4 id="temporal1-devrel-engineer"> Developer Relations Engineer</h4></summary>
 
-  The Developer Relations Engineer will be Temporal’s strongest connection into the community, through their code demos utilizing Temporal and adjacent technologies, sharing that story through written content and verbalizing through talks. You will be an integral part of the success of Temporal’s customer journey and life cycle. Your biggest allies will be in Developer Education and Engineering, while partnering with Marketing on how the story evolves.  
+  The Developer Relations Engineer will be Temporal’s strongest connection into the community, through their code demos utilizing Temporal and adjacent technologies, sharing that story through written content and verbalizing through talks. You will be an integral part of the success of Temporal’s customer journey and life cycle. Your biggest allies will be in Developer Education and Engineering, while partnering with Marketing on how the story evolves.
 </details>
 
 [Apply here](https://jobs.lever.co/temporal/ff1b33fe-fd12-4d8c-a266-4b1a83295182)
+
+## [arm]
+**Piece Together The World’s Most Powerful Puzzle**
+
+This world has a design. It’s infinite yet discoverable. Small yet powerful. Our design engineers must all at once predict it and create it. From implementation of the most advanced CPU, GPU and HPC processors on the planet to dreaming up every eventuality that could put our SoC and system IP to the test, we puzzle over the biggest questions of our time. And microarchitect the future.
+
+At Arm, you’re in a position to influence 95% of the world’s connected devices and all of their applications. Healthcare, infrastructure, virtual reality… you’ll affect hundreds, if not thousands of industries worldwide, racing towards new milestones in human endeavour.
+
+<details>
+  <summary><h4 id="arm1-compiler-engineer"> Compiler Engineer</h4></summary>
+
+  Arm Machine Learning (ML) Compilers team is looking for a software engineer who would build a range of innovative compiler solutions for a variety of markets.
+
+  You will apply your experience and insight within this domain to craft and optimise compilers for machine learning networks that target range of Arm’s CPUs, GPUs and NPUs.
+
+  If you are interested in this opportunity, make sure to apply soon! We look forward to receiving your application and welcoming you to Arm. You could be joining our highly motivated compiler team and have a marked impact on both strategy and implementation!
+
+  Responsibilities:
+  - Build, extend and collaborate on innovative ML compilation software projects, such as Apache TVM and IREE
+  - Work with other groups in Arm to expand support for Arm architecture and ecosystem
+</details>
+
+[Apply here](https://careers.arm.com/job/cambridge/compiler-engineer/33099/49643515840?utm_source=Euro%20Python%202023%20-%20Compiler%20Engineer%202023-8356&utm_medium=Euro%20Python%202023%20-%20Compiler%20Engineer%202023-8356&utm_campaign=Euro%20Python%202023%20-%20Compiler%20Engineer%202023-8356)
+
+<details>
+  <summary><h4 id="arm2-software-engineer"> Software Engineer</h4></summary>
+
+Do you want to help build tomorrow's solutions? This is an excellent opportunity to work in the Architecture and Future Technologies team in Arm's Development Solutions Group in Cambridge, UK. We investigate and prototype new tooling technologies to support Arm's evolving architecture and product roadmap. We find out how to help new features land successfully in the software ecosystem, and we feed back to architects and hardware design teams.
+
+Responsibilities:
+We create innovative solutions that help Arm's partners and the wider ecosystem run software efficiently on Arm. We also keep track of external trends in programming languages and frameworks, and seek to understand how they will impact on our development tools and on our architecture. Some of our investigations lead to new products or product features, or to open-source tools. Our team also regularly benefits from internships and graduate secondments, and there are opportunities for more experienced staff to supervise these.
+</details>
+
+[Apply here](https://careers.arm.com/job/cambridge/software-engineer/33099/49635415312?utm_source=Euro%20Python%202023%20-%20Software%20Engineer%202023-8210&utm_medium=Euro%20Python%202023%20-%20Software%20Engineer%202023-8210&utm_campaign=Euro%20Python%202023%20-%20Software%20Engineer%202023-8210)
+
+<details>
+  <summary><h4 id="arm3-gpu-compute-performance-analysis-engineer"> GPU Compute Performance Analysis Engineer</h4></summary>
+
+The GPU group writes the layer of the driver that implements the popular GPU compute APIs, such as OpenCL and Vulkan which provide massively parallel execution of general-purpose code on GPUs.
+Our many customers have performance-critical GPU compute use cases that include machine learning (ML), image processing & computer vision (CV), video encoding and decoding. Mobile devices are highly constrained environments, and our challenge is to provide this sophisticated functionality, while improving both dependability and efficiency.
+If you want to develop your skills and understanding in these technologies, this is the opportunity for you.
+
+Responsibilities:
+
+Performance analysis and optimization investigations of various benchmarks, analysing the results and identifying optimisation opportunities in the driver, compiler, and hardware architecture. New benchmarks and technologies will be added and evaluated for competitive performance comparisons. The team also assesses the performance of future GPUs for the latest use cases. You will work in a Linux environment, working on Arm-based targets including models, FPGAs and silicon from our partner companies (thereby covering past, present and future generations of our designs)
+
+As a member of an Agile team, you will have the chance to try your hand at different aspects of our work. Engineers grow their expertise through in-house and externally hosted training, and through peer code reviews. You will be working closely together with our community of engineering teams across Arm’s European design centers.
+</details>
+
+[Apply here](https://careers.arm.com/job/cambridge/gpu-compute-performance-analysis-engineer/33099/50689075872?utm_source=Euro%20Python%202023%20-%20GPU%20Compute%20Performance%20Analysis%20Engineer%202023-8450&utm_medium=Euro%20Python%202023%20-%20GPU%20Compute%20Performance%20Analysis%20Engineer%202023-8450&utm_campaign=Euro%20Python%202023%20-%20GPU%20Compute%20Performance%20Analysis%20Engineer%202023-8450)
+
 
 ## [Picnic Technologies](https://picnic.app/careers/)
 At Picnic, we’ve been revolutionizing the way people buy their groceries since 2015 – and we’ve come a long way since then. We provide our rapidly-growing customer base with an affordable and sustainable service through cutting-edge technology, efficient planning, and a fleet of electric vehicles.
