@@ -180,7 +180,7 @@ Temporal helps developers focus on the important things, like writing business l
 
 [Apply here](https://jobs.lever.co/temporal/ff1b33fe-fd12-4d8c-a266-4b1a83295182)
 
-## [arm](https://www.arm.com/)
+## [Arm](https://www.arm.com/)
 **Piece Together The World’s Most Powerful Puzzle**
 
 This world has a design. It’s infinite yet discoverable. Small yet powerful. Our design engineers must all at once predict it and create it. From implementation of the most advanced CPU, GPU and HPC processors on the planet to dreaming up every eventuality that could put our SoC and system IP to the test, we puzzle over the biggest questions of our time. And microarchitect the future.
@@ -209,6 +209,7 @@ At Arm, you’re in a position to influence 95% of the world’s connected devic
 Do you want to help build tomorrow's solutions? This is an excellent opportunity to work in the Architecture and Future Technologies team in Arm's Development Solutions Group in Cambridge, UK. We investigate and prototype new tooling technologies to support Arm's evolving architecture and product roadmap. We find out how to help new features land successfully in the software ecosystem, and we feed back to architects and hardware design teams.
 
 **Responsibilities:**
+
 We create innovative solutions that help Arm's partners and the wider ecosystem run software efficiently on Arm. We also keep track of external trends in programming languages and frameworks, and seek to understand how they will impact on our development tools and on our architecture. Some of our investigations lead to new products or product features, or to open-source tools. Our team also regularly benefits from internships and graduate secondments, and there are opportunities for more experienced staff to supervise these.
 </details>
 
@@ -221,7 +222,7 @@ The GPU group writes the layer of the driver that implements the popular GPU com
 Our many customers have performance-critical GPU compute use cases that include machine learning (ML), image processing & computer vision (CV), video encoding and decoding. Mobile devices are highly constrained environments, and our challenge is to provide this sophisticated functionality, while improving both dependability and efficiency.
 If you want to develop your skills and understanding in these technologies, this is the opportunity for you.
 
-Responsibilities:
+**Responsibilities:**
 
 Performance analysis and optimization investigations of various benchmarks, analysing the results and identifying optimisation opportunities in the driver, compiler, and hardware architecture. New benchmarks and technologies will be added and evaluated for competitive performance comparisons. The team also assesses the performance of future GPUs for the latest use cases. You will work in a Linux environment, working on Arm-based targets including models, FPGAs and silicon from our partner companies (thereby covering past, present and future generations of our designs)
 
