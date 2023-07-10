@@ -84,7 +84,7 @@ designated rooms that have sufficient space to accommodate the expected number
 of participants.
 
 - RB 103; occupancy: 20/24
-- RB 104; occupancy: 12/24
+- RB 104; occupancy: 23/24
 - RB 105; occupancy: 0/24
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
