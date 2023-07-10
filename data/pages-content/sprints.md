@@ -207,7 +207,7 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
    - [Not Operator](https://github.com/python/typing/issues/801)
    - [copy_kwargs function](https://stackoverflow.com/questions/71968447/python-typing-copy-kwargs-from-one-function-to-another)
 
-### pytorch - Tensors and Dynamic neural networks in Python
+### Pytorch - Tensors and Dynamic neural networks in Python
 
 - Number of people: ~10 (1 organizer)
 - Room: RB 104
