@@ -324,9 +324,7 @@ ad and pin it on the whiteboard yourself.
 <details>
   <summary><h4 id="recruiting-session">Recruiting session</h4></summary>
 
-The 45 min recruiting session will take place during one of the Conference Days
-(17-19 July). The exact details will be confirmed at a later date along with the
-conference schedule.
+The 45 min recruiting session will take place on 20 July at between 16:05-16:35 CEST in room South Hall 2A. You can refer to the [schedule](/schedule/2023-07-20) for more details.
 
 The recruiting session will give each sponsor a chance to give a 3 minute pitch,
 presenting their company and their job offers. Attendees can then go to your
