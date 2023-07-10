@@ -207,6 +207,24 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
    - [Not Operator](https://github.com/python/typing/issues/801)
    - [copy_kwargs function](https://stackoverflow.com/questions/71968447/python-typing-copy-kwargs-from-one-function-to-another)
 
+### pytorch - Tensors and Dynamic neural networks in Python
+
+- Number of people: ~10 (1 organizer)
+- Room: RB 104
+- Python Level: 2+ years of experience recommended and some C++ experience
+- Contact: Piotr Gryko ([Email](mailto:piotr.gryko@gmail.com)
+  [Pytorch Forum](https://discuss.pytorch.org/)
+  [pytorch Github](https://github.com/pytorch/pytorch)
+- Links:
+  - [Building from source using docker (recommended)] (https://github.com/cresset-template/cresset)
+  - [Building from source] (https://github.com/pytorch/pytorch#from-source)
+  - [Contributing docs] (https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md)
+  - [Issues](https://github.com/pytorch/pytorch/issues)
+  - [Good first issues](https://github.com/pytorch/pytorch/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- Additional comments:
+  Note, building pytorch is non trivial, and local builds are [broken for m1 macs](https://github.com/pytorch/pytorch/issues/82831). Please have a go trying to build pytorch before attending the hackathon
+
+
 Please add your sprint here!
 
 <!-- ### EuroPython 2023 Example Project (copy this for your project)
