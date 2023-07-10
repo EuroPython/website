@@ -212,7 +212,7 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Number of people: ~10 (1 organizer)
 - Room: RB 104
 - Python Level: 2+ years of experience recommended and some C++ experience
-- Contact: Piotr Gryko ([Email](mailto:piotr.gryko@gmail.com)
+- Contact: Piotr Gryko ([Email](mailto:piotr.gryko@gmail.com), [GitHub](https://github.com/pgryko))
   [Pytorch Forum](https://discuss.pytorch.org/)
   [pytorch Github](https://github.com/pytorch/pytorch)
 - Links:
