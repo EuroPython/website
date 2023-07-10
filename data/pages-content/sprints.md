@@ -90,7 +90,7 @@ of participants.
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
 - RB 113; occupancy: 20/24
-- RB 114; occupancy: 10/24
+- RB 114; occupancy: 16/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
 - RB 109; occupancy: 0/48
@@ -196,6 +196,19 @@ Please add your sprint here!
   - [sktime getting started with contributions](https://github.com/sktime/sktime/issues/1147)
   - [Roadmap 2023-2024 issue](https://github.com/sktime/sktime/issues/4691)
   - [Good first issues](https://github.com/sktime/sktime/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+ 
+### HoloViz Panel
+
+- You can contribute in many ways. See [Contributing.md](https://github.com/holoviz/panel/blob/main/CONTRIBUTING.MD).
+- You are also very welcome, if you want to learn Panel or build a data app using it.
+- Number of people: 1 maintainer + up to 5 participants: ~6
+- Room: RB 114
+- Python Level: any
+- Contact: https://www.linkedin.com/in/marcskovmadsen
+- Links:
+  - [Project home](https://panel.holoviz.org/)
+  - [Repository](https://github.com/holoviz/panel)
+  - [Good first issues](https://github.com/holoviz/panel/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 <!-- ### EuroPython 2023 Example Project (copy this for your project)
 
