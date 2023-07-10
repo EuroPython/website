@@ -208,7 +208,7 @@ At Arm, you’re in a position to influence 95% of the world’s connected devic
 
 Do you want to help build tomorrow's solutions? This is an excellent opportunity to work in the Architecture and Future Technologies team in Arm's Development Solutions Group in Cambridge, UK. We investigate and prototype new tooling technologies to support Arm's evolving architecture and product roadmap. We find out how to help new features land successfully in the software ecosystem, and we feed back to architects and hardware design teams.
 
-Responsibilities:
+**Responsibilities:**
 We create innovative solutions that help Arm's partners and the wider ecosystem run software efficiently on Arm. We also keep track of external trends in programming languages and frameworks, and seek to understand how they will impact on our development tools and on our architecture. Some of our investigations lead to new products or product features, or to open-source tools. Our team also regularly benefits from internships and graduate secondments, and there are opportunities for more experienced staff to supervise these.
 </details>
 
