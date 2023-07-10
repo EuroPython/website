@@ -196,7 +196,7 @@ At Arm, you’re in a position to influence 95% of the world’s connected devic
 
   If you are interested in this opportunity, make sure to apply soon! We look forward to receiving your application and welcoming you to Arm. You could be joining our highly motivated compiler team and have a marked impact on both strategy and implementation!
 
-  Responsibilities:
+  **Responsibilities:**
   - Build, extend and collaborate on innovative ML compilation software projects, such as Apache TVM and IREE
   - Work with other groups in Arm to expand support for Arm architecture and ecosystem
 </details>
