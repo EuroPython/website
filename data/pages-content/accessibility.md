@@ -55,7 +55,7 @@ Registration will be on the **1st Floor**
 
 <img src="https://drive.google.com/uc?export=view&id=19KO9xwwhI8a4vUTPMdr6rL3Pd-kXjzE1" alt="PCC first floor - floor plan"/>
 
-### Talks, Quiet Rooms and Child Care (2nd Floor)
+### Talks, Quiet Rooms and Childcare (2nd Floor)
 
 <img src="https://drive.google.com/uc?export=view&id=1R0x42wjP_02b1uWxhTg4K0XtoY72mN8n" alt="PCC second floor - floor plan"/>
 
