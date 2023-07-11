@@ -50,6 +50,33 @@ In celebration of EuroPython 2023 in Prague & Remotely, our sponsors have prepar
 [Get your swag here](https://goo.gle/europython23)
 
 ---
+<a className="img" id="JetBrains" target="_blank" href="https://www.jetbrains.com/pycharm">
+  <div className="logo" style={{marginBottom: 15}}>
+    <img src="/swag/jetbrains.svg" width="200" height="119" />
+  </div>
+</a>
+
+**Join the PyCharm and Django Software Foundation Campaign: Get PyCharm at a 30% Discount and Support Django!**
+
+Simplify your web development with PyCharm Professional and support the Django Software Foundation while you're at it.
+
+- With PyCharm Professional, you get:
+- The ability to [run tasks](https://www.jetbrains.com/help/pycharm/running-manage-py.html) of the `manage.py` utility inside the IDE.
+- The [run/debug configuration](https://www.jetbrains.com/help/pycharm/run-debug-configuration-django-server.html) for the Django server.
+- The [database management](https://www.jetbrains.com/help/pycharm/relational-databases.html) functionality.
+- An [HTTP Client](https://www.jetbrains.com/help/pycharm/http-client-in-product-code-editor.html).
+- Plenty of other smart features to help get your Django work done.
+
+Buy a new individual annual subscription for PyCharm Professional at a 30% discount, and all the proceeds will go to the Django Software Foundation.
+
+
+Let’s support Django together!
+
+P.S. You can use PyCharm Professional for data science too! 😃
+
+[Get 30% off PyCharm](https://jb.gg/c8b600)
+
+---
 <a className="img" id="manning" target="_blank" href="http://mng.bz/vnWa">
   <div className="logo" style={{marginBottom: 15}}>
     <img src="/swag/manning.svg" width="500" height="119" />
