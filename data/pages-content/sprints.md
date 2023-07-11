@@ -229,9 +229,9 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
   [Pytorch Forum](https://discuss.pytorch.org/)
   [pytorch Github](https://github.com/pytorch/pytorch)
 - Links:
-  - [Building from source using docker (recommended)] (https://github.com/cresset-template/cresset)
-  - [Building from source] (https://github.com/pytorch/pytorch#from-source)
-  - [Contributing docs] (https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md)
+  - [Building from source using docker (recommended)](https://github.com/cresset-template/cresset)
+  - [Building from source](https://github.com/pytorch/pytorch#from-source)
+  - [Contributing docs](https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md)
   - [Issues](https://github.com/pytorch/pytorch/issues)
   - [Good first issues](https://github.com/pytorch/pytorch/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 - Additional comments:
