@@ -66,7 +66,7 @@ Registration will be on the **1st Floor**
 Free childminding is available for attendees, you can request for this free onsite service when you register your [ticket](https://ep2023.europython.eu/tickets). If you have questions, please contact support@europython.eu.
 Childcare is on the 2nd Floor at Room 225.
 
-- Childcare is on the **2nd Floor** at **Room 225**.
+- Childcare is on the **2nd Floor** at **South Room 247 + 248 **.
 
 ---
 
