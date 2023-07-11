@@ -92,7 +92,7 @@ More information on how to get to the venue via https://ep2023.europython.eu/whe
 ---
 
 ## Social Events
-### PyLadies Lunche
+### PyLadies Lunch
 [PyLadies Lunch](https://ep2023.europython.eu/pyladies-lunch) will be held at **The Prague Congress Centre (PCC)**. This is also accessible by lifts. 
 
 Location of the lunch will be announced during the conference week.
