@@ -83,14 +83,14 @@ recommended that sprint organisers prioritise proposing their sprints in already
 designated rooms that have sufficient space to accommodate the expected number
 of participants.
 
-- RB 103; occupancy: 15/24
-- RB 104; occupancy: 12/24
+- RB 103; occupancy: 20/24
+- RB 104; occupancy: 23/24
 - RB 105; occupancy: 11/24
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
 - RB 113; occupancy: 20/24
-- RB 114; occupancy: 10/24
+- RB 114; occupancy: 16/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
 - RB 109; occupancy: 0/48
@@ -125,14 +125,20 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Contact: [Patrick Arminio](https://github.com/patrick91)
 - Links: https://github.com/strawberry-graphql
 
-### Textual
+### Textual – TUI framework
 
 - Number of people: ~5 (~4 contributors + 1 organiser)
 - Room: RB 103
-- Python Level: 1+ years of experience recommended
-- Contact: [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my
+- Python Level:
+  - 1+ years of experience recommended
+  - going over the [Textual tutorial](https://textual.textualize.io/tutorial/) beforehand is recommended
+- Contacts:
+  - [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my
   email address is my first name @textualize.io.
-- Links: https://github.com/textualize/textual
+  - [Textual Discord server](https://discord.gg/Enf6Z3qhVr)
+- Links:
+  - [GitHub repository](https://github.com/textualize/textual)
+  - [Issues for the sprint](https://github.com/Textualize/textual/issues/2923)
 
 ### Pyodide
 
@@ -171,8 +177,6 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
   - [Github](https://github.com/beeware)
   - [Good first issues](https://github.com/search?q=user%3Abeeware+label%3A%22good%20first%20issue%22+is%3Aissue+is%3Aopen&type=issues)
 
-Please add your sprint here!
-
 ### CPython Core (work on Python 3.13!)
 
 - Number of people: ~10 (2 organisers)
@@ -197,6 +201,48 @@ Please add your sprint here!
   - [Roadmap 2023-2024 issue](https://github.com/sktime/sktime/issues/4691)
   - [Good first issues](https://github.com/sktime/sktime/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
  
+### HoloViz Panel
+
+- You can contribute in many ways. See [Contributing.md](https://github.com/holoviz/panel/blob/main/CONTRIBUTING.MD).
+- You are also very welcome, if you want to learn Panel or build a data app using it.
+- Number of people: 1 maintainer + up to 5 participants: ~6
+- Room: RB 114
+- Python Level: any
+- Contact: https://www.linkedin.com/in/marcskovmadsen
+- Links:
+  - [Project home](https://panel.holoviz.org/)
+  - [Repository](https://github.com/holoviz/panel)
+  - [Good first issues](https://github.com/holoviz/panel/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+
+### Typing PEPs
+Writing PEPs for the given Issues below. The organizer has never written [a PEP](https://peps.python.org/pep-0001/) but hopes that together with CPython developers in the same room we can bring the PEPs forward.
+
+- Number of people: ~5 (1 organiser)
+- Room: RB 113
+- Python Level: experience in typing recommended
+- Contact: Carli Freudenberg ([Email](mailto:kound+ep2023@posteo.de), [GitHub](https://github.com/CarliJoy))
+- Links:
+   - [Intersection Operator](https://github.com/python/typing/issues/213)
+   - [Not Operator](https://github.com/python/typing/issues/801)
+   - [copy_kwargs function](https://stackoverflow.com/questions/71968447/python-typing-copy-kwargs-from-one-function-to-another)
+
+### Pytorch - Tensors and Dynamic neural networks in Python
+
+- Number of people: ~10 (1 organizer)
+- Room: RB 104
+- Python Level: 2+ years of experience recommended and some C++ experience
+- Contact: Piotr Gryko ([Email](mailto:piotr.gryko@gmail.com), [GitHub](https://github.com/pgryko))
+  [Pytorch Forum](https://discuss.pytorch.org/)
+  [pytorch Github](https://github.com/pytorch/pytorch)
+- Links:
+  - [Building from source using docker (recommended)](https://github.com/cresset-template/cresset)
+  - [Building from source](https://github.com/pytorch/pytorch#from-source)
+  - [Contributing docs](https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md)
+  - [Issues](https://github.com/pytorch/pytorch/issues)
+  - [Good first issues](https://github.com/pytorch/pytorch/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- Additional comments:
+  Note, building pytorch is non trivial, and local builds are [broken for m1 macs](https://github.com/pytorch/pytorch/issues/82831). Please have a go trying to build pytorch before attending the hackathon
+
 ### Lance - columnar format for AI
 
 - This sprint is for folks interested in better unstructured data management for ML/AI
@@ -212,6 +258,8 @@ Please add your sprint here!
 - Links:
   - [Lance contributor guide](https://lancedb.github.io/lance/contributing.html)
   - [Good first issues](https://github.com/lancedb/lance/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+Please add your sprint here!
 
 <!-- ### EuroPython 2023 Example Project (copy this for your project)
 
