@@ -85,7 +85,7 @@ of participants.
 
 - RB 103; occupancy: 15/24
 - RB 104; occupancy: 12/24
-- RB 105; occupancy: 0/24
+- RB 105; occupancy: 11/24
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
@@ -197,8 +197,10 @@ Please add your sprint here!
   - [Roadmap 2023-2024 issue](https://github.com/sktime/sktime/issues/4691)
   - [Good first issues](https://github.com/sktime/sktime/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
  
-### Lance - columnar format for multi-modal AI and billion-scale vector search
+### Lance - columnar format for AI
 
+- This sprint is for folks interested in better unstructured data management for ML/AI
+  and scalable vector search
 - Number of people: ~10 (1 organizer)
 - Room: RB 105
 - Python Level: any
