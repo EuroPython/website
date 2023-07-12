@@ -125,14 +125,20 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Contact: [Patrick Arminio](https://github.com/patrick91)
 - Links: https://github.com/strawberry-graphql
 
-### Textual
+### Textual – TUI framework
 
 - Number of people: ~5 (~4 contributors + 1 organiser)
 - Room: RB 103
-- Python Level: 1+ years of experience recommended
-- Contact: [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my
+- Python Level:
+  - 1+ years of experience recommended
+  - going over the [Textual tutorial](https://textual.textualize.io/tutorial/) beforehand is recommended
+- Contacts:
+  - [Rodrigo Girão Serrão](https://github.com/rodrigogiraoserrao), my
   email address is my first name @textualize.io.
-- Links: https://github.com/textualize/textual
+  - [Textual Discord server](https://discord.gg/Enf6Z3qhVr)
+- Links:
+  - [GitHub repository](https://github.com/textualize/textual)
+  - [Issues for the sprint](https://github.com/Textualize/textual/issues/2923)
 
 ### Pyodide
 
