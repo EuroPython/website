@@ -71,6 +71,10 @@
         {
           "name": "PyLadies Friday Social",
           "path": "/pyladies-social-event"
+        },
+        {
+          "name": "PyLadies Friday Lunch",
+          "path": "/pyladies-lunch"
         }
       ]
     },
