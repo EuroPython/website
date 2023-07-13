@@ -46,6 +46,8 @@ const SessionNotes = ({
 
 export const SessionPage = ({
   session,
+  sessionsAfter,
+  sessionsInParallel,
 }: {
   session: {
     title: string;
@@ -68,13 +70,15 @@ export const SessionPage = ({
     description?: string;
     slidesUrl?: string | null;
   };
+  sessionsAfter: {
+    title: string;
+    slug: string;
+  }[];
+  sessionsInParallel: {
+    title: string;
+    slug: string;
+  }[];
 }) => {
-  // TODO
-  // @ts-ignore
-  const sessionsAfter = [];
-  // @ts-ignore
-  const sessionsInParallel = [];
-
   return (
     <>
       <article className="accent-left">

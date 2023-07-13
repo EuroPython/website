@@ -1,4 +1,7 @@
-import { fetchKeynoteBySpeakerSlug } from "@/lib/pretalx/submissions";
+import {
+  fetchKeynoteBySpeakerSlug,
+  fetchSessionsInParallel,
+} from "@/lib/pretalx/submissions";
 import { notFound } from "next/navigation";
 import { SessionPage as SessionPageComponent } from "components/session-page";
 
@@ -42,6 +45,7 @@ export default async function SessionPage({
   params: { slug: string };
 }) {
   const session = await fetchKeynoteBySpeakerSlug(params.slug);
+  const sessionsInParallel = await fetchSessionsInParallel(params.slug);
 
   if (!session) {
     throw notFound();
@@ -49,7 +53,11 @@ export default async function SessionPage({
 
   return (
     <>
-      <SessionPageComponent session={session} />
+      <SessionPageComponent
+        session={session}
+        sessionsAfter={[]}
+        sessionsInParallel={sessionsInParallel}
+      />
       <div className="h-12"></div>
     </>
   );

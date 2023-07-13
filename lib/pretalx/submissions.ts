@@ -1,4 +1,4 @@
-import { parseISO } from "date-fns";
+import { isEqual, parseISO } from "date-fns";
 import { Answer } from "../pretalx/types";
 import { slugify } from "./utils/slugify";
 
@@ -191,5 +191,22 @@ export const fetchKeynoteBySpeakerSlug = async (slug: string) => {
 
   return allKeynotes.find((keynote) =>
     keynote.speakers.some((speaker) => speaker.slug === slug)
+  );
+};
+
+export const fetchSessionsInParallel = async (slug: string) => {
+  const confirmedSubmissions = await fetchConfirmedSubmissions();
+  const session = confirmedSubmissions.find((session) => session.slug === slug);
+
+  if (!session) {
+    return [];
+  }
+
+  return confirmedSubmissions.filter(
+    (s) =>
+      session.id != s.id &&
+      session.start &&
+      s.start &&
+      isEqual(s.start, session.start)
   );
 };
