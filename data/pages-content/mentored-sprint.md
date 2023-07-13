@@ -9,9 +9,9 @@ subtitle:
 ## TL;DR ##
 ✨ We are running mentored sprints for diverse community members at EuroPython this year ✨
 
-When: 21st July, 2023, during the main EuroPython conference (Time TBC) but you take as many breaks as you want.
+When: 21st July, 2023, during the main EuroPython conference (Time 10:30 - 13:00) but you take as many breaks as you want.
 
-Room: TBC
+Room: Open Space
 
 👉🏽 Apply to be a mentor on the day or feature your open source project: email [cheuk@europython.eu](mailto:cheuk@europython.eu)
 
@@ -60,7 +60,7 @@ The call for applications for projects will be open until the 8th of July 2022 a
 The call for contributors (individuals willing to participate in the sprint) will also open until the 8th of July 2022 11:69pm AoE and we encourage anyone interested to attend. If you are wondering if this event is for you: it definitely is and we would love to have you taking part in this sprint.
 
 *WHEN IS THE MENTORED SPRINT?*
-This mentored sprint will take place on Friday, 21st July, 2023 (Time and room TBC)
+This mentored sprint will take place on Friday, 21st July, 2023 (Time: 10:30 - 13:00 at Open Space)
 
 *GETTING IN TOUCH*
 If you would like to contact the organizers for any business related to the mentored sprints please send us an email to [cheuk@europython.eu](mailto:cheuk@europython.eu)
