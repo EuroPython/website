@@ -21,7 +21,7 @@ To help organisers plan the event, please RSVP via the link below.
 
 The PyLadies Lunch is a great opportunity for women attending the conference who love Python and meet other like-minded folks in a fun, relaxed environment.
 We would like to invite you to join us and make new friends (or catch up with familiar faces), share your experiences with folks from Ireland, Europe and afar.
-  - **Who**: Anyone who identifies as a woman who is attending EuroPython 2023
+  - **Who**: Anyone who identifies as a woman or nonbinary who is attending EuroPython 2023
   - **When**: Friday 21th July, 2022 (13:00 - 14:00 during Conference Lunch)
   - **Where**: Congress Hall Foyer 2C, Prague Congress Centre
   - **RSVP**: 19 July (Free but exclusive to conference attendees).
