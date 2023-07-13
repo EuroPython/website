@@ -14,6 +14,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
 import { Metadata } from "next";
+import { getAvatarUrl } from "helpers/get-avatar-url";
 
 export const generateMetadata = async ({
   params,
@@ -38,14 +39,6 @@ export async function generateStaticParams() {
     slug: speaker.slug,
   }));
 }
-
-const getAvatarUrl = (avatar: string) => {
-  if (avatar.startsWith("https://www.gravatar.com/avatar/")) {
-    return `${avatar}?s=600`;
-  }
-
-  return avatar;
-};
 
 export default async function SpeakerPage({
   params,
@@ -73,7 +66,7 @@ export default async function SpeakerPage({
         {speaker.avatar && (
           <div>
             <img
-              src={getAvatarUrl(speaker.avatar)}
+              src={getAvatarUrl(speaker.avatar!)}
               alt={speaker.name}
               className="w-full max-w-sm mb-12"
             />
