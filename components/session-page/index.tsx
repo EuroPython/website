@@ -64,9 +64,10 @@ export const SessionPage = ({
     title: string;
     code: string;
     room?: string | null;
-    start?: Date;
+    start: Date | null;
     duration: number;
     abstract?: string;
+    experience?: string;
     speakers: {
       name: string;
       avatar: string;
@@ -96,6 +97,14 @@ export const SessionPage = ({
             <SessionNotes session={session} />
           </Title>
           <DefinitionList>
+            {session.experience ? (
+              <>
+                <DefinitionTerm>Level:</DefinitionTerm>
+                <DefinitionDescription className="capitalize">
+                  {session.experience}
+                </DefinitionDescription>
+              </>
+            ) : null}
             {session.room ? (
               <>
                 <DefinitionTerm>Room:</DefinitionTerm>

@@ -25,8 +25,10 @@ export const DefinitionTerm = ({ children }: { children: React.ReactNode }) => {
 
 export const DefinitionDescription = ({
   children,
+  className,
 }: {
   children: React.ReactNode;
+  className?: string;
 }) => {
-  return <dd>{children}</dd>;
+  return <dd className={className}>{children}</dd>;
 };

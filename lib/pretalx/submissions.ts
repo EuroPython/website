@@ -1,3 +1,4 @@
+import { parseISO } from "date-fns";
 import { Answer } from "../pretalx/types";
 import { slugify } from "./utils/slugify";
 
@@ -42,8 +43,10 @@ export type Speaker = {
 export type Slot = {
   start: string;
   end: string;
-  room: string;
-  room_id: number;
+  room: {
+    en: string;
+  } | null;
+  room_id: number | null;
 };
 
 const mapSession = (session: Result) => {
@@ -91,9 +94,11 @@ const mapSession = (session: Result) => {
     type: sessionType,
     length: qaLength,
     experience: qaExp,
-    room: null,
-    customRoom: qaCustomRoom,
     slidesUrl: null,
+    start: session.slot?.start ? parseISO(session.slot.start) : null,
+    end: session.slot?.end ? parseISO(session.slot.end) : null,
+    room: session.slot?.room?.en,
+    customRoom: qaCustomRoom,
   };
 };
 
