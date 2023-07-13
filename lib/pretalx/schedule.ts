@@ -8,7 +8,7 @@ import {
   parseISO,
 } from "date-fns";
 import { Response } from "./schedule-types";
-import { slugify } from "./utils/slugify";
+import { slugify, slugifySession } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { runSessionHacks } from "./hacks/sessions";
 import { formatInTimeZone } from "date-fns-tz";
@@ -239,6 +239,8 @@ export async function getSchedule(day: string) {
 
           const start = slot.slot.start;
 
+          const slug = slugifySession({ title: slot.title, start });
+
           const session = {
             code: slot.code,
             title: slot.title,
@@ -249,8 +251,8 @@ export async function getSchedule(day: string) {
             duration: slot.duration * slot.slot_count,
             room: slot.slot.room.en,
             type: slot.submission_type.en,
-            slug: slugify(slot.title),
-            href: `/session/${slugify(slot.title)}`,
+            slug,
+            href: `/session/${slug}`,
             start,
             end: addMinutes(start, slot.duration),
             experience: submission.experience,

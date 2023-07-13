@@ -1,5 +1,6 @@
 import {
   fetchConfirmedSubmissions,
+  fetchSessionsAfter,
   fetchSessionsInParallel,
   fetchSubmissionBySlug,
 } from "@/lib/pretalx/submissions";
@@ -47,6 +48,7 @@ export default async function SessionPage({
 }) {
   const session = await fetchSubmissionBySlug(params.slug);
   const sessionsInParallel = await fetchSessionsInParallel(params.slug);
+  const sessionsAfter = await fetchSessionsAfter(params.slug);
 
   if (!session) {
     throw notFound();
@@ -56,7 +58,7 @@ export default async function SessionPage({
     <>
       <SessionPageComponent
         session={session}
-        sessionsAfter={[]}
+        sessionsAfter={sessionsAfter}
         sessionsInParallel={sessionsInParallel}
       />
     </>

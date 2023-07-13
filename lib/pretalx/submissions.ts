@@ -1,6 +1,6 @@
-import { isEqual, parseISO } from "date-fns";
+import { isAfter, isEqual, parseISO } from "date-fns";
 import { Answer } from "../pretalx/types";
-import { slugify } from "./utils/slugify";
+import { slugify, slugifySession } from "./utils/slugify";
 
 export type Root = {
   count: number;
@@ -73,10 +73,13 @@ const mapSession = (session: Result) => {
     sessionType = "Talk";
   }
 
+  const start = session.slot?.start ? parseISO(session.slot.start) : null;
+  const end = session.slot?.end ? parseISO(session.slot.end) : null;
+
   return {
     id: session.code,
     code: session.code,
-    slug: slugify(session.title),
+    slug: slugifySession({ title: session.title, start }),
     title: session.title,
     description: session.description,
     abstract: session.abstract,
@@ -95,8 +98,8 @@ const mapSession = (session: Result) => {
     length: qaLength,
     experience: qaExp,
     slidesUrl: null,
-    start: session.slot?.start ? parseISO(session.slot.start) : null,
-    end: session.slot?.end ? parseISO(session.slot.end) : null,
+    start,
+    end,
     room: session.slot?.room?.en,
     customRoom: qaCustomRoom,
   };
@@ -208,5 +211,37 @@ export const fetchSessionsInParallel = async (slug: string) => {
       session.start &&
       s.start &&
       isEqual(s.start, session.start)
+  );
+};
+
+export const fetchSessionsAfter = async (slug: string) => {
+  const confirmedSubmissions = await fetchConfirmedSubmissions();
+  const session = confirmedSubmissions.find((session) => session.slug === slug);
+
+  if (!session) {
+    return [];
+  }
+
+  if (!session.start) {
+    return [];
+  }
+
+  const allStartTimes = (
+    confirmedSubmissions.map((s) => s.start).filter(Boolean) as Date[]
+  ).sort((a, b) => a.getTime() - b.getTime());
+
+  console.log(allStartTimes);
+
+  const nextStartTime = allStartTimes.find((start) =>
+    isAfter(start, session.start!)
+  );
+
+  console.log(session.start, nextStartTime);
+  if (!nextStartTime) {
+    return [];
+  }
+
+  return confirmedSubmissions.filter(
+    (s) => s.start && isEqual(s.start, nextStartTime)
   );
 };
