@@ -230,13 +230,10 @@ export const fetchSessionsAfter = async (slug: string) => {
     confirmedSubmissions.map((s) => s.start).filter(Boolean) as Date[]
   ).sort((a, b) => a.getTime() - b.getTime());
 
-  console.log(allStartTimes);
-
   const nextStartTime = allStartTimes.find((start) =>
     isAfter(start, session.start!)
   );
 
-  console.log(session.start, nextStartTime);
   if (!nextStartTime) {
     return [];
   }
