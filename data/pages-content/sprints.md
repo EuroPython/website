@@ -85,7 +85,7 @@ of participants.
 
 - RB 103; occupancy: 20/24
 - RB 104; occupancy: 23/24
-- RB 105; occupancy: 0/24
+- RB 105; occupancy: 11/24
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
@@ -243,6 +243,21 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Additional comments:
   Note, building pytorch is non trivial, and local builds are [broken for m1 macs](https://github.com/pytorch/pytorch/issues/82831). Please have a go trying to build pytorch before attending the hackathon
 
+### Lance - columnar format for AI
+
+- This sprint is for folks interested in better unstructured data management for ML/AI
+  and scalable vector search
+- Number of people: ~10 (1 organizer)
+- Room: RB 105
+- Python Level: any
+- Rust Level: any
+- Contact: Lance developers - Github, Discord, or Email
+  [Lance Discord](https://discord.gg/zMM32dvNtd)
+  [Lance Github](https://github.com/lancedb/lance)
+  [Email](mailto:contact@lancedb.com)
+- Links:
+  - [Lance contributor guide](https://lancedb.github.io/lance/contributing.html)
+  - [Good first issues](https://github.com/lancedb/lance/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 Please add your sprint here!
 
