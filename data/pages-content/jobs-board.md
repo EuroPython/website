@@ -430,7 +430,7 @@ Our employees leave a truly green footprint. Join our unique team and make your 
   - With your convincing appearance and your open, friendly and constructive manner, you can score points with us in the team.
 
   **What you can expect:**
-  
+
   - You get the chance to work on meaningful projects in the field of renewable energies and to contribute your potential and ideas.
   - Your working day is full of variety, your job is challenging and your team is motivated.
   - Permanent employment contract - we are counting on you for the long term.
@@ -487,6 +487,7 @@ Apply via email: jobs@energymeteo.de
 
 <details>
   <summary><h4 id="energy-meteo3-system-administrator-python">system administrator Python</h4></summary>
+  
   We are looking for a system administrator Python (f/m/d) for our headquarter in Oldenburg, Germany as soon as possible.
 
   **Your task:**
