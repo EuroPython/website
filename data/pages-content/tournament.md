@@ -16,10 +16,8 @@ Conference attendees can participate in a tournament where they (either alone or
 
 ## Disclaimer
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/320px-Flag_of_Ukraine.svg.png" width="50" />
-
-The topic of the game is a sci-fi war on a foreign planet, set far in the future. We understand that the topic of war could upset some people with the unfortunate events that are currently going on in Ukraine. We do not want to promote war, and we fully support Ukraine in their hardship. Development of the game was started before the invasion of Ukraine, it is just a coincidence that this is the game that was ready for the conference.
-We just want to make a fun event for EuroPython participants, we do not want to offend anyone.
+The topic of the game is a sci-fi war on a foreign planet, set far in the future.
+We do not condone war and violence, we just want to make a fun event for EuroPython participants.
 
 ## How to participate?
 
