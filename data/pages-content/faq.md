@@ -23,6 +23,9 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-06-09</b>: <a href="/tickets#remote-tickets">Remote Tickets Sales</a> Starts </li>
 <li><b>2023-06-09</b>: <a href="/finaid">[Financial Aid for Remote Tickets](/finaid#-free-remote-ticket)</a> Starts </li>
 <li><b>2023-06-20</b>: [Schedule](/schedule) Published</li>
+<li><b>2023-07-14</b>: [Accessibility and Rooms Info Page](/accessibility) Published</li>
+
+
 </ul>
 
 <ul className="milestone-todo">
@@ -34,9 +37,11 @@ subtitle: Frequently Asked Questions about EuroPython
 A. EuroPython 2023 will be held on
 **17-23 July 2023**. Put the dates in your diary!
 
+- **Please refer to our [Accessibility Guide](/accessibility) to which rooms are in use in each location along with its accessibility information.**
+
 - **The in-person conference (17-21 July)** will be held at <b>[The Prague Congress Centre, the PCC](https://www.praguecc.cz/en/homepage)</b> in Prague, Czech Republic.
 
-- For the virtual conference, detailed instructions will be announced at a later time.
+- For the virtual conference, detailed instructions will be on discord.
 
 - **[Sprint Weekend(22-23 July)](/sprints)** will take place in Rajska Building (RB), [Žižkov Campus, VŠE](https://www.vse.cz/english/about-vse/profile/campus/) (Prague University of Economics and Business). The sprints will be free of charge and open to the public. If you are only attending the sprints, separate registration will be required and registration information will be made available later [here](/tickets#sprint-tickets).
 
