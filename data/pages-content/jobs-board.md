@@ -392,3 +392,135 @@ Kiwi.com uncovers cheap travel options that others simply can't find.
 </details>
 
 [Apply here](https://jobs.kiwi.com/jobs/senior-python-engineer-for-the-fintech-tribe-2/)
+
+## [energy&meteo systems GmbH](https://www.energymeteo.com/)
+Shape the energy turnaround with us!
+
+At energy & meteo systems, we do our best every day to efficiently integrate renewable energies into power grids and markets. As experts at the interface of meteorology and the energy industry, we provide our customers - electricity traders and grid operators worldwide - with pioneering solutions for the precise forecasting of fluctuating solar and wind power, thus enabling trading in renewable energies on the power exchanges and ensuring grid stability.
+
+Our employees leave a truly green footprint. Join our unique team and make your contribution to the energy transition!
+
+<details>
+  <summary><h4 id="energy-meteo1-full-stack-software-developer">Full Stack Software Developer</h4></summary>
+
+  We are looking for a full-stack software developer (f/m/d) for our headquarter in Oldenburg, Germany as soon as possible.
+
+  **Your task:**
+
+  We are technologically diverse. Python, Java and TypeScript are used as programming languages. You will develop software components for our SaaS products. Your possible areas of work could be:
+
+  - Infrastructure Tooling
+  - REST APIs (backend and frontend - API clients and web)
+  - GUI development for scientific applications and data visualization
+  - Database development and tuning
+  - Time series management
+  - Message queues / brokers (Kafka, RabbitMQ)
+  - Data pipelines
+  - Container Platform (Docker, Kubernetes)
+  - Microservices
+
+  **Your profile:**
+
+  You want to think and question, are willing to lend a hand and solve problems. These features make you stand out:
+
+  - You have completed a scientific degree in the field of computer science, software engineering, physics or mathematics or an apprenticeship as an IT specialist for application development (f/m/d) or have a comparable qualification - cross-entry is also possible.
+  - You are equally welcome as a career starter (f/m/d) or with professional experience.
+  -  You have experience in an object-oriented or multi-paradigm programming language such as Python or Java.
+  - You have the drive to build robust and secure software.
+  - With your convincing appearance and your open, friendly and constructive manner, you can score points with us in the team.
+
+  **What you can expect:**
+  
+  - You get the chance to work on meaningful projects in the field of renewable energies and to contribute your potential and ideas.
+  - Your working day is full of variety, your job is challenging and your team is motivated.
+  - Permanent employment contract - we are counting on you for the long term.
+  - Flexible working hours and the recording of every hour of overtime: You don't have to be on the spot at 7 o'clock in the morning. It is important to us that you show full commitment when you are there.
+  - Flat hierarchies and short decision-making processes - our leaders have open ears and doors.
+  - For the small break in between, there are drinks, organic fruit and snacks for free. For the big appetite, our in-house cafeteria awaits you with vegetarian, vegan and meat dishes made from regional products.
+  - The mood is also good outside our offices, e.g. at the annual company trip, team-building activities, Christmas parties, our monthly games night, and so on. Here we don't just talk about work.
+  - Other benefits: company pension scheme, bicycle leasing and bicycle vouchers or sports allowance.
+
+  You feel challenged and want to participate in shaping the energy transition with us?
+
+  Then apply by e-mail with your application documents: jobs@energymeteo.de
+
+</details>
+Apply via email: jobs@energymeteo.de
+
+<details>
+  <summary><h4 id="energy-meteo2-devops-engineer">DevOps Engineer</h4></summary>
+
+  We are looking for a DevOps Engineer (f/m/d) for our headquarter in Oldenburg, Germany as soon as possible.
+
+  **Your task:**
+
+  As a DevOps Engineer (f/m/d) you work between software development and IT operations. Your focus is on container-based infrastructures and their further development.
+
+  - You will manage our container-based infrastructures based on Docker and Kubernetes, which are constantly being expanded and improved.
+  - In doing so, you will use Infrastructure as a Code with Ansible, AWX, Rundeck and the like.
+  - You operate and develop existing process paths, which were realized with Build Pipelines and GitLab, on your own responsibility.
+
+  **Your profile:**
+
+  - You fit in just as well with a degree in (business) computer science or IT systems engineering as with an apprenticeship as an IT specialist for system integration (f/m/d) or you have a different IT background and have already worked as a cloud architect, system engineer, software developer (f/m/d) or similar.
+  -  Container platforms are definitely your world: you are experienced in development, operation and administration of containers using Kubernetes or Docker Swarm for automated deployment, scaling and management of applications.
+  - You are just as familiar with conceptual IT approaches such as Infrastructure as a Code as you are with open source web applications for configuration, e.g. Ansible, AWX, Rundeck, and the like.
+  - You are also experienced in the operation and optimization of databases, preferably MariaDB and database clusters such as Galera.
+  - You work independently as productive and structured as together with your team and always keep the goal in mind.
+
+  **What you can expect:**
+
+  - You get the chance to work on meaningful projects in the field of renewable energies and to contribute your potential and ideas.
+  - Your working day is full of variety, your job is challenging and your team is motivated.
+  - Permanent employment contract - we are counting on you for the long term.
+  - Flexible working hours and the recording of every hour of overtime: You don't have to be on the spot at 7 o'clock in the morning. It is important to us that you show full commitment when you are there.
+  - Flat hierarchies and short decision-making processes - our leaders have open ears and doors.
+  - For the small break in between, there are drinks, organic fruit and snacks for free. For the big appetite, our in-house cafeteria awaits you with vegetarian, vegan and meat dishes made from regional products.
+  - The mood is also good outside our offices, e.g. at the annual company trip, team-building activities, Christmas parties, our monthly games night, and so on. Here we don't just talk about work.
+  - Other benefits: company pension scheme, bicycle leasing and bicycle vouchers or sports allowance.
+
+  You feel challenged and want to participate in shaping the energy transition with us?
+  Then apply by e-mail with your application documents: jobs@energymeteo.de
+
+</details>
+Apply via email: jobs@energymeteo.de
+
+<details>
+  <summary><h4 id="energy-meteo3-system-administrator-python">system administrator Python</h4></summary>
+  We are looking for a system administrator Python (f/m/d) for our headquarter in Oldenburg, Germany as soon as possible.
+
+  **Your task:**
+
+  - As a technical contact person (f/m/d), you always have an open ear for our customers, e.g. when it comes to setting up wind and solar power forecasts or maintaining existing forecast portfolios according to customer requirements.
+  - You integrate new forecasting products into operations and make sure that everything runs smoothly.
+  - In addition, you develop individual software components for our forecasting products.
+  - As a system administrator (f/m/d) you are also responsible for the maintenance of web applications as well as for error analysis and debugging.
+  - Our customers can access their measurement and forecast data around the world and around the clock - to ensure this, you will take turns with your colleagues in our 24/7 on-call service.
+  - Alone on an island, it gets boring at some point, so you work with interdisciplinary teams consisting of method developers and meteorologists.
+
+  **Your profile:**
+
+  - You are just as welcome with a scientific degree in computer science, software engineering or mathematics as with training as an IT specialist for application development (f/m/d) or comparable.
+  - You also have professional experience in software development, e.g. as an application manager, integration engineer or software developer (f/m/d).
+  - You have profound knowledge of the programming language Python and are experienced in the Linux environment.
+  - Ideally, you are experienced with SQL, Bash, GitLab, Ansible and pytest or you want to expand your knowledge.
+  - You work independently, efficiently and goal-oriented as well as with a team at your side.
+  - You are communicative, approach other opinions with an open mind and appreciate the exchange of ideas beyond your IT horizon.
+  - Knowledge of renewable energies, energy markets and the power grid is an advantage - anything you don't know, you'll learn with us.
+
+  **What you can expect:**
+
+  - You get the chance to work on meaningful projects in the field of renewable energies and to contribute your potential and ideas.
+  - Your working day is full of variety, your job is challenging and your team is motivated.
+  - Permanent employment contract - we are counting on you for the long term.
+  - Flexible working hours and the recording of every hour of overtime: You don't have to be on the spot at 7 o'clock in the morning. It is important to us that you show full commitment when you are there.
+  - Flat hierarchies and short decision-making processes - our leaders have open ears and doors.
+  - For the small break in between, there are drinks, organic fruit and snacks for free. For the big appetite, our in-house cafeteria awaits you with vegetarian, vegan and meat dishes made from regional products.
+  - The mood is also good outside our offices, e.g. at the annual company trip, team-building activities, Christmas parties, our monthly games night, and so on. Here we don't just talk about work.
+  - Other benefits: company pension scheme, bicycle leasing and bicycle vouchers or sports allowance.
+
+  You feel challenged and want to participate in shaping the energy transition with us?
+  Then apply by e-mail with your application documents: jobs@energymeteo.de
+
+</details>
+Apply via email: jobs@energymeteo.de
