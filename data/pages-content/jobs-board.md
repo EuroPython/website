@@ -486,8 +486,8 @@ Apply via email: jobs@energymeteo.de
 Apply via email: jobs@energymeteo.de
 
 <details>
-  <summary><h4 id="energy-meteo3-system-administrator-python">system administrator Python</h4></summary>
-  
+  <summary><h4 id="energy-meteo3-system-administrator-python">System Administrator Python</h4></summary>
+
   We are looking for a system administrator Python (f/m/d) for our headquarter in Oldenburg, Germany as soon as possible.
 
   **Your task:**
