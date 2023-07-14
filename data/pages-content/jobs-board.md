@@ -425,7 +425,7 @@ Our employees leave a truly green footprint. Join our unique team and make your 
 
   - You have completed a scientific degree in the field of computer science, software engineering, physics or mathematics or an apprenticeship as an IT specialist for application development (f/m/d) or have a comparable qualification - cross-entry is also possible.
   - You are equally welcome as a career starter (f/m/d) or with professional experience.
-  -  You have experience in an object-oriented or multi-paradigm programming language such as Python or Java.
+  - You have experience in an object-oriented or multi-paradigm programming language such as Python or Java.
   - You have the drive to build robust and secure software.
   - With your convincing appearance and your open, friendly and constructive manner, you can score points with us in the team.
 
