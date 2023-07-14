@@ -120,6 +120,10 @@
           "path": "/faq"
         },
         {
+          "name": "Accessibility and Rooms",
+          "path": "/accessibility"
+        },
+        {
           "name": "Financial Aid",
           "path": "/finaid"
         },
