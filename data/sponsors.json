@@ -85,8 +85,12 @@
           "name": "Picnic",
           "url": "https://picnic.app/careers/",
           "logo": "/img/logos/sponsor_logos/picnic.svg"
+        },
+        {
+          "name": "Kiwi.com",
+          "url": "https://jobs.kiwi.com/",
+          "logo": "/img/logos/sponsor_logos/kiwi.svg"
         }
-
       ]
     },
     {
