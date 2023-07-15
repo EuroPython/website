@@ -24,7 +24,7 @@ We do not condone war and violence, we just want to make a fun event for EuroPyt
 - Register your team: fill in the form at https://forms.gle/v2s9oHZ1xLTUo5ov7 (30 spots available)
 - You will be given a private GH repository in the `europython2023gametournament` organisation
 - Read the game rules below and start working on your bot
-- Ask questions on the Discord channel #<PLACEHOLDER>
+- Ask questions on the Discord forum `ai-game-tournament`
 - Creating alliances is authorized (betrayals are also allowed!)
 - Once your bot is ready, make sure you copy it into the `main` branch of the repo you were given
 - Deadline is 15:00 on Friday July 21st
@@ -53,8 +53,8 @@ Preview
     <td>Time = 2min</td><td>Time = 4min</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/07e66dc0-ed5d-4e2b-91f6-b7302e1e0a4f" width="100%" /></td>
-    <td><img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/d1dd0cb0-2b6f-4904-ac99-f842b4771099" width="100%" /></td>
+    <td><img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/07e66dc0-ed5d-4e2b-91f6-b7302e1e0a4f" /></td>
+    <td><img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/d1dd0cb0-2b6f-4904-ac99-f842b4771099" /></td>
   </tr>
 </table>
 
@@ -96,12 +96,9 @@ Preview
 <table>
   <tr>
     <th></th>
-    <th>Tank &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/0be25f1b-9d14-4438-b5cb-3a355a6b088a" />
-</th>
-    <th>Ship &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/248ab310-2a53-4132-9179-b360ebbb45f4" />
-</th>
-    <th>Jet &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/594f9902-e848-465a-a5f2-5d9081d4b863" />
-</th>
+    <th>Tank &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/0be25f1b-9d14-4438-b5cb-3a355a6b088a" /></th>
+    <th>Ship &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/248ab310-2a53-4132-9179-b360ebbb45f4" /></th>
+    <th>Jet &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/594f9902-e848-465a-a5f2-5d9081d4b863" /></th>
   </tr>
   <tr>
     <td>Speed</td>
