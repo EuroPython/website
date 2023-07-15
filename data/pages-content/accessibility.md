@@ -139,3 +139,18 @@ A: We do not plan to have interpreters at the conference unless we are notified 
 - Volunteers to be aware if someone requires designated spaces when they enter the room
 - Able to assist and let folks know where lifts, accessible toilet facilities, childcare, and quiet rooms are.
 - What to do in case of fire alarms, sirens, fireworks, bells, etc. happen during the event, and guide guest safely out of the venue as well as inform updates on the situation
+
+---
+
+# Attributions
+
+Language was incorporated from the following:
+
+* PyConUS: https://us.pycon.org/2019/venue/accessibility/
+* IFLA is the International Federation of Library Associations and Institutions accessibility checklist:
+https://www.ifla.org/wp-content/uploads/2019/05/assets/lsn/publications/a_checklist_for_accessbiility_at_library_conferences_rev_2021.pdf
+* Cevents: Accessibility in Events: Tips and Best Practices (+ Checklist)
+https://www.cvent.com/uk/blog/events/accessible-events-tips-and-best-practices
+* Splash: How to Make Your Events More Accessible and Inclusive
+https://splashthat.com/blog/accessible-event-planning
+* Alterconf - accessibility info plus presentation guidelines for speakers: https://www.alterconf.com/
