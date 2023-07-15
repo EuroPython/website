@@ -43,16 +43,18 @@ export default async function SpeakersPage() {
             <Title level={2}>{letter}</Title>
 
             <ul className="pl-4">
-              {groups[letter].map((speaker) => (
-                <li key={speaker.code} className="mb-1">
-                  <a
-                    className="underline hover:text-primary-hover"
-                    href={`/speaker/${speaker.slug}`}
-                  >
-                    {speaker.name}
-                  </a>
-                </li>
-              ))}
+              {groups[letter]
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((speaker) => (
+                  <li key={speaker.code} className="mb-1">
+                    <a
+                      className="underline hover:text-primary-hover"
+                      href={`/speaker/${speaker.slug}`}
+                    >
+                      {speaker.name}
+                    </a>
+                  </li>
+                ))}
             </ul>
           </div>
 
