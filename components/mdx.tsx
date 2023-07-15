@@ -117,6 +117,18 @@ export const components = {
   Button,
   Note,
 
+  pre: ({ children, ...props }: any) => (
+    <pre {...props} className="p-3 bg-secondary-light text-[0.9em] [&>code]:p-0 rounded-xl">
+      {children}
+    </pre>
+  ),
+
+  code: ({ children, ...props }: any) => (
+    <code {...props} className="p-1 bg-secondary-light text-[0.9em]">
+      {children}
+    </code>
+  ),
+
   img: ({ src, alt, ...props }: any) => {
     props.objectFit = "contain";
 
