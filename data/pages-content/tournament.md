@@ -3,11 +3,11 @@ title: EuroPython 2023 AI game tournament
 subtitle: Participate in the EuroPython 2023 AI game tournament!
 ---
 
-## Register your team here https://forms.gle/v2s9oHZ1xLTUo5ov7 !
+## [Register your team here!](https://forms.gle/v2s9oHZ1xLTUo5ov7)
 
 ![supremacy](https://github.com/nvaytet/supremacy/assets/39047984/6e800f7c-6eb4-47d4-9621-1465aeaae879)
 
-# EuroPython 2023 AI game tournament
+# AI game tournament
 
 ## What is the tournament about?
 
@@ -96,45 +96,45 @@ Preview
 <table>
   <tr>
     <th></th>
-    <th>Tank &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/0be25f1b-9d14-4438-b5cb-3a355a6b088a" /></th>
-    <th>Ship &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/248ab310-2a53-4132-9179-b360ebbb45f4" /></th>
-    <th>Jet &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/594f9902-e848-465a-a5f2-5d9081d4b863" /></th>
+    <th style="border: 1px solid black; padding: 10px;">Tank &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/0be25f1b-9d14-4438-b5cb-3a355a6b088a" /></th>
+    <th style="border: 1px solid black; padding: 10px;">Ship &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/248ab310-2a53-4132-9179-b360ebbb45f4" /></th>
+    <th style="border: 1px solid black; padding: 10px;">Jet &nbsp;&nbsp;&nbsp; <img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/594f9902-e848-465a-a5f2-5d9081d4b863" /></th>
   </tr>
   <tr>
-    <td>Speed</td>
-    <td>10</td>
-    <td>5</td>
-    <td>20</td>
+    <td style="border: 1px solid black; padding: 10px;">Speed</td>
+    <td style="border: 1px solid black; padding: 10px;">10</td>
+    <td style="border: 1px solid black; padding: 10px;">5</td>
+    <td style="border: 1px solid black; padding: 10px;">20</td>
   </tr>
   <tr>
-    <td>Attack</td>
-    <td>20</td>
-    <td>10</td>
-    <td>30</td>
+    <td style="border: 1px solid black; padding: 10px;">Attack</td>
+    <td style="border: 1px solid black; padding: 10px;">20</td>
+    <td style="border: 1px solid black; padding: 10px;">10</td>
+    <td style="border: 1px solid black; padding: 10px;">30</td>
   </tr>
   <tr>
-    <td>Health</td>
-    <td>50</td>
-    <td>80</td>
-    <td>50</td>
+    <td style="border: 1px solid black; padding: 10px;">Health</td>
+    <td style="border: 1px solid black; padding: 10px;">50</td>
+    <td style="border: 1px solid black; padding: 10px;">80</td>
+    <td style="border: 1px solid black; padding: 10px;">50</td>
   </tr>
   <tr>
-    <td>Cost</td>
-    <td>500</td>
-    <td>2000</td>
-    <td>4000</td>
+    <td style="border: 1px solid black; padding: 10px;">Cost</td>
+    <td style="border: 1px solid black; padding: 10px;">500</td>
+    <td style="border: 1px solid black; padding: 10px;">2000</td>
+    <td style="border: 1px solid black; padding: 10px;">4000</td>
   </tr>
   <tr>
-    <td>Can travel</td>
-    <td>On land</td>
-    <td>On sea</td>
-    <td>Anywhere</td>
+    <td style="border: 1px solid black; padding: 10px;">Can travel</td>
+    <td style="border: 1px solid black; padding: 10px;">On land</td>
+    <td style="border: 1px solid black; padding: 10px;">On sea</td>
+    <td style="border: 1px solid black; padding: 10px;">Anywhere</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td>Can turn into base</td>
-    <td></td>
+    <td style="border: 1px solid black; padding: 10px;"></td>
+    <td style="border: 1px solid black; padding: 10px;"></td>
+    <td style="border: 1px solid black; padding: 10px;">Can turn into base</td>
+    <td style="border: 1px solid black; padding: 10px;"></td>
   </tr>
 </table>
 
