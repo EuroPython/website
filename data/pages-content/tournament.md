@@ -3,6 +3,12 @@ title: EuroPython 2023 AI game tournament
 subtitle: Participate in the EuroPython 2023 AI game tournament!
 ---
 
+<style>
+code{
+    background-color: lightgrey;
+}
+</style>
+
 ## [Register your team here!](https://forms.gle/v2s9oHZ1xLTUo5ov7)
 
 ![supremacy](https://github.com/nvaytet/supremacy/assets/39047984/6e800f7c-6eb4-47d4-9621-1465aeaae879)
@@ -34,15 +40,19 @@ We do not condone war and violence, we just want to make a fun event for EuroPyt
 
 Get started with:
 
-```
-conda create -n <NAME> -c conda-forge python=3.10
-conda activate <NAME>
-git clone git@github.com:europython2023gametournament/supremacy.git
-cd supremacy/
-python -m pip install .
-cd tests/
-python test.py
-```
+`conda create -n <NAME> -c conda-forge python=3.10`
+
+`conda activate <NAME>`
+
+`git clone git@github.com:europython2023gametournament/supremacy.git`
+
+`cd supremacy/`
+
+`python -m pip install .`
+
+`cd tests/`
+
+`python test.py`
 
 ## The game: Supremacy
 
