@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="flex flex-col items-stretch min-h-screen">
       <a href="#main-content" className="sr-only">
         Skip to main content
       </a>
@@ -26,7 +26,9 @@ export default function RootLayout({
 
       <LayoutContainer>{children}</LayoutContainer>
 
-      <Footer />
-    </>
+      <div className="mt-auto">
+        <Footer />
+      </div>
+    </div>
   );
 }
