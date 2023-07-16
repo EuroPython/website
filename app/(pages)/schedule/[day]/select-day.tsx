@@ -50,7 +50,7 @@ export const SelectDay = ({
         return (
           <option key={isoDate} value={isoDate}>
             {dateText}{" "}
-            {type === "sprints" ? "(sprints)" : `(${getDayType(isoDate)})`}
+            {type === "sprints" ? "(Sprints)" : `(${getDayType(isoDate)})`}
           </option>
         );
       })}
