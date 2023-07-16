@@ -22,7 +22,7 @@ The conference venue (The Prague Congress Centre) has childcare rooms; the sprin
 ## Dietary Requirements
 We aim to meet all dietary requirements, when you specify your dietary requirements during ticket registration.
 
-Menus and its dietary information will be displayed each day to accommodate your food restrictions. We will also a dietary station at the bar area on the second floor foyer - if you are coeliac, or needs to avoid any particular allergen, please come to the dietary station for food.   
+Menus and its dietary information will be displayed each day to accommodate your food restrictions. We will also have a dietary station at the bar area on the second floor foyer - if you are coeliac, or need to avoid any particular allergen, please come to the dietary station for food.   
 
 ## The Prague Congress Centre (The PCC)
 This is the main venue for EuroPython workshops and the main conference  (17th - 21st July). The venue is accessible for wheelchair users. Here’s general information on how to get to the venue.
@@ -110,7 +110,7 @@ Venue: [Hospůdka na Hradbách](https://www.prague.eu/en/object/food/304/hospudk
 Information about the Evening Social can be found here: https://ep2023.europython.eu/social-event
 
 ### Accessibility
-* Unfortunately for the wheelchairs that might be a problem as the space have a lot of stairs and no wheelchair access.
+* Unfortunately for the wheelchairs that might be a problem as the space has a lot of stairs and no wheelchair access.
 
 ### Quiet Room
 There is no dedicated Quiet Room. But the courtyard outside is a good place to relax.
