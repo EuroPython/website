@@ -129,7 +129,7 @@ export const fetchAllSpeakers = async () => {
     return !duplicate;
   });
 
-  return speakers.map(mapSpeaker);
+  return speakers.map((speaker) => mapSpeaker(speaker, []));
 };
 
 export const fetchSpeakersWithConfirmedSubmissions = async () => {
