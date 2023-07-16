@@ -1,8 +1,8 @@
 "use client";
 
 import { Select } from "components/form/select";
-import { format, parseISO } from "date-fns";
 import { formatInTimeZone } from "date-fns-tz";
+import { getDayType } from "components/schedule/schedule-utils";
 import { useRouter } from "next/navigation";
 
 export const SelectDay = ({
@@ -49,7 +49,8 @@ export const SelectDay = ({
 
         return (
           <option key={isoDate} value={isoDate}>
-            {dateText} {type === "sprints" ? "(sprints)" : null}
+            {dateText}{" "}
+            {type === "sprints" ? "(sprints)" : `(${getDayType(isoDate)})`}
           </option>
         );
       })}

@@ -244,4 +244,4 @@ export const getScheduleForDay = async ({
 };
 
 export const getDayType = (day: string) =>
-  ["2022-07-11", "2022-07-12"].includes(day) ? "Tutorials" : "Talks";
+  ["2023-07-17", "2023-07-18"].includes(day) ? "Tutorials" : "Talks";
