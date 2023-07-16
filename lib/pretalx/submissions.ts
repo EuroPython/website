@@ -76,6 +76,11 @@ const mapSession = (session: Result) => {
   const start = session.slot?.start ? parseISO(session.slot.start) : null;
   const end = session.slot?.end ? parseISO(session.slot.end) : null;
 
+  let room = session.slot?.room?.en;
+  if (session.title.toLowerCase().includes("registration")) {
+    room = "Registration hall";
+  }
+
   return {
     id: session.code,
     code: session.code,
@@ -100,7 +105,7 @@ const mapSession = (session: Result) => {
     slidesUrl: null,
     start,
     end,
-    room: session.slot?.room?.en,
+    room,
     customRoom: qaCustomRoom,
   };
 };

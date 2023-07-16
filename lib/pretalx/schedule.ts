@@ -249,7 +249,7 @@ export async function getSchedule(day: string) {
               slug: slugify(speaker.name),
             })),
             duration: slot.duration * slot.slot_count,
-            room: slot.slot.room.en,
+            room:  slot.slot.room.en,
             type: slot.submission_type.en,
             slug,
             href: `/session/${slug}`,
@@ -380,7 +380,7 @@ export async function getSchedule(day: string) {
             gridRowEnd: rowTimeMap[end],
           };
 
-          session = runSessionHacks(session);
+          session = runSessionHacks(session, rooms);
 
           return session;
         });

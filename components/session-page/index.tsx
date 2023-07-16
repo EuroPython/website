@@ -14,6 +14,10 @@ import { formatInTimeZone } from "date-fns-tz";
 import { getAvatarUrl } from "helpers/get-avatar-url";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
+const normalizeRoom = (room: string) => {
+  return room.replace(/\[|\]/g, "").toLowerCase();
+};
+
 const SessionNotes = ({
   session,
 }: {
@@ -64,6 +68,7 @@ export const SessionPage = ({
       slug: string;
       code: string;
     }[];
+    customRoom?: string | null;
     tags: string[];
     type: string;
     track?: string;
@@ -99,7 +104,9 @@ export const SessionPage = ({
             {session.room ? (
               <>
                 <DefinitionTerm>Room:</DefinitionTerm>
-                <DefinitionDescription>{session.room}</DefinitionDescription>
+                <DefinitionDescription className="capitalize">
+                  {normalizeRoom(session.customRoom || session.room)}
+                </DefinitionDescription>
               </>
             ) : null}
             {session.start ? (
