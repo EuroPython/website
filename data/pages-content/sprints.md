@@ -237,11 +237,12 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Links:
   - [Building from source using docker (recommended)](https://github.com/cresset-template/cresset)
   - [Building from source](https://github.com/pytorch/pytorch#from-source)
+  - [Building for M1/M2 macs](https://medium.com/@damian0815/how-to-debug-native-mps-operations-in-pytorch-f094b7f4e8f0)
   - [Contributing docs](https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md)
   - [Issues](https://github.com/pytorch/pytorch/issues)
   - [Good first issues](https://github.com/pytorch/pytorch/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 - Additional comments:
-  Note, building pytorch is non trivial, and local builds are [broken for m1 macs](https://github.com/pytorch/pytorch/issues/82831). Please have a go trying to build pytorch before attending the hackathon
+  Note, building pytorch is non trivial. Please have a go trying to build pytorch before attending the hackathon
 
 ### Lance - columnar format for AI
 
