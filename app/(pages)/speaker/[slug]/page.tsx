@@ -15,6 +15,7 @@ import ReactMarkdown from "react-markdown";
 
 import { Metadata } from "next";
 import { getAvatarUrl } from "helpers/get-avatar-url";
+import { Link } from "components/link/link";
 
 export const generateMetadata = async ({
   params,
@@ -137,6 +138,24 @@ export default async function SpeakerPage({
                 </>
               )}
             </DefinitionList>
+          </>
+        ) : null}
+
+        {speaker.sessions.length > 0 ? (
+          <>
+            <Title level={2}>Sessions:</Title>
+            <ul className="mb-4 pl-6 list-decimal">
+              {speaker.sessions.map((session) => (
+                <li className="mb-2 text-xl leading-snug">
+                  <Link
+                    href={`/session/${session.slug}`}
+                    className="font-semibold"
+                  >
+                    {session.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </>
         ) : null}
       </article>

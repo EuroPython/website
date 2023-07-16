@@ -52,7 +52,13 @@ const normalizeLinkedin = (linkedin?: string) => {
   return normalizeUrl(linkedin, "linkedin.com/in");
 };
 
-const mapSpeaker = (speaker: Speaker) => {
+const mapSpeaker = (
+  speaker: Speaker,
+  sessions: {
+    title: string;
+    slug: string;
+  }[]
+) => {
   const qa = {
     company: 2346,
     job: 2348,
@@ -77,6 +83,7 @@ const mapSpeaker = (speaker: Speaker) => {
     homepage: normalizeUrl(answersByQuestion[qa.homepage]),
     github: normalizeGithub(answersByQuestion[qa.github]),
     linkedin: normalizeLinkedin(answersByQuestion[qa.linkedin]),
+    sessions,
   };
 };
 
@@ -170,7 +177,13 @@ export const fetchSpeakerBySlug = async (slug: string) => {
 
   const speaker = (await response.json()) as Speaker;
 
-  return mapSpeaker(speaker);
+  const confirmedSubmissions = await fetchConfirmedSubmissions();
+
+  const submissions = confirmedSubmissions.filter((submission) =>
+    submission.speakers.some((speaker) => speaker.code === speakerInfo.code)
+  );
+
+  return mapSpeaker(speaker, submissions);
 };
 
 export const fetchKeynoters = async () => {
@@ -225,5 +238,11 @@ export const fetchKeynoterBySlug = async (slug: string) => {
 
   const speaker = (await response.json()) as Speaker;
 
-  return mapSpeaker(speaker);
+  const submissions = await fetchKeynotes();
+
+  const sessions = submissions.filter((submission) =>
+    submission.speakers.some((speaker) => speaker.code === speakerInfo.code)
+  );
+
+  return mapSpeaker(speaker, sessions);
 };
