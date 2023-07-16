@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { Break } from "./break";
 import { Schedule as ScheduleType } from "@/lib/pretalx/schedule";
 import { Session } from "./session";
-import { format, parseISO } from "date-fns";
 import { formatInTimeZone } from "date-fns-tz";
 
 const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {

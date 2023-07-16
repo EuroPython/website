@@ -27,6 +27,10 @@ const getHeaderText = (session: SessionType) => {
     return "Talk";
   }
 
+  if (session.title.toLowerCase().startsWith("registration")) {
+    return "Registration";
+  }
+
   if (session.type) {
     return capitalizeFirst(session.type);
   }
