@@ -2,7 +2,7 @@
 title: Venues
 ---
 
-- **The Tutorial and Conference days (17-21 July)**: at The Prague Congress Centre (the PCC).
+- **The Tutorial and Conference days (17-21 July)**: at The Prague Congress Centre (the PCC) - **use Entrance 5 to get in**.
 
 - **Sprints (22-23 July)**: at The Rajska Building (RB), Žižkov Campus, VŠE (Prague University of Economics and Business).
 

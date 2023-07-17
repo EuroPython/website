@@ -53,13 +53,17 @@ access by public transport from the city’s airport and all major rail and bus 
 <Map></Map>
 
 <address>
+**Entrance 5**
+
 Kongresové centrum Praha, a.s.<br/>
-5. května 1640/65, Nusle<br/>
 140 00 Prague 4, Czechia<br/>
 </address>
 
 ### Get to the Conference
-
+**IMPORTANT: use Entrance 5 of the building to get into the conference.**
+<div style={{marginBottom: 15}}>
+<img src="/img/photos/entrance5-pcc5.jpg"  />
+</div>
 You can find detailed information on how to get to the conference centre
 [via the venue's website](https://www.praguecc.cz/en/how-to-get-here) or
 with their

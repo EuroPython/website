@@ -37,8 +37,9 @@ The day kicks off with the people who have projects briefly describing their ide
 
 At EuroPython 2022 in Dublin last summer  Trans\*Code held its joyous return after the pandemic. This year, in collaboration with the trans/NB community in Czechia we will be back to continue building the tradition. The full day workshop/hackday will be open to all trans and non-binary folk, allies, coders, designers and visionaries of all sorts.
 
-- **When**: 18 July 2023
-- **Where**: Prague Congress Centre (PCC), Room TBC
+- **When**: 18 July 2023, from 09:30 - 17:00 (with coffee breaks and lunch in between; see [schedule](/session/transcode) for details.
+- **Where**: Prague Congress Centre (PCC), Room Club D
+
 
 
 #### Be Part of Trans*Code @ EuroPython ####
