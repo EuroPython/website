@@ -111,7 +111,7 @@ package.**
 <details>
   <summary><h4>Booth Build and Teardown</h4></summary>
 
-- Build Time: Tuesday 18 July. We hope to allow entrance after build on Tuesday. But if the build is delayed, sponsors are welcome to come in on Wednesday at 08:00.
+- Build Time: Tuesday 18 July. We expect the booth builders will finish the build by 17:00. Sponsors are welcome to come in to set up your booths, ideally between 17:00–18:00. If you need more time, we can try to accommodate. If you cannot come to the venue to set up on Tuesday, you are welcome to do so on Wednesday at 08:00. Please note that during the live event, schedule can change often fairly quickly - if anything changes, we will keep you updated in the sponsor-lounge channel on our Discord conference community. 
 - Teardown Time: Friday 16:00; nobody allowed after the teardown starts.
 
 </details>
