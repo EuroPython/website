@@ -75,6 +75,10 @@
         {
           "name": "PyLadies Friday Lunch",
           "path": "/pyladies-lunch"
+        },
+        {
+          "name": "AI game tournament",
+          "path": "/tournament"
         }
       ]
     },
