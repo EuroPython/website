@@ -60,6 +60,11 @@
           "name": "Temporal",
           "url": "https://temporal.io/",
           "logo": "/img/logos/sponsor_logos/temporal.svg"
+        },
+        {
+          "name": "Bloomberg",
+          "url": "http://techatbloomberg.com/python",
+          "logo": "img/logos/sponsor_logos/bloomberg.svg"
         }
       ]
     },
