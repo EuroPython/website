@@ -5,7 +5,7 @@ subtitle: Participate in the EuroPython 2023 AI game tournament!
 
 ## [Register your team here!](https://forms.gle/v2s9oHZ1xLTUo5ov7)
 
-![supremacy](https://github.com/europython2023gametournament/supremacy/assets/39047984/fd147b1a-252b-4aed-b949-e2cb943f80dd)
+<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/fd147b1a-252b-4aed-b949-e2cb943f80dd" />
 
 # AI game tournament
 
@@ -99,7 +99,7 @@ Preview
 - Bases that contain mines that are competing with others will have a “C” label
   on them:
 
-![Screenshot at 2023-06-22 21-58-52](https://github.com/europython2023gametournament/supremacy/assets/39047984/d4e96611-0e40-4364-8b07-afc8b5f64023)
+<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/d4e96611-0e40-4364-8b07-afc8b5f64023" />
 
 ## Fights
 
@@ -196,7 +196,7 @@ available to you at every time step and what methods can be called.
 - This is basically what defines which enemy bases and vehicles you get in your
   info every time step.
 
-![Screenshot at 2023-06-22 22-32-11](https://github.com/europython2023gametournament/supremacy/assets/39047984/350da216-3eb2-49d5-9f63-944a778ff766)
+<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/350da216-3eb2-49d5-9f63-944a778ff766" width="700px" height="362px" />
 
 ## Optimizing development
 
@@ -206,7 +206,8 @@ There are 3 ways you can speed up your development.
 
 Activate `high_contrast = True` to see the land borders better and competing
 areas for mines:
-![Screenshot at 2023-06-22 22-34-32](https://github.com/europython2023gametournament/supremacy/assets/39047984/9498479d-6a3b-440f-828e-289186b92bf1)
+
+<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/9498479d-6a3b-440f-828e-289186b92bf1" width="700px" height="362px" />
 
 ### 2. Crystal boost
 
