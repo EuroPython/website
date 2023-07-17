@@ -196,7 +196,7 @@ available to you at every time step and what methods can be called.
 - This is basically what defines which enemy bases and vehicles you get in your
   info every time step.
 
-<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/350da216-3eb2-49d5-9f63-944a778ff766" width="700" height="362" />
+<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/fe37e030-b9ef-43d8-8d60-138c3ddb7b45" />
 
 ## Optimizing development
 
@@ -207,7 +207,7 @@ There are 3 ways you can speed up your development.
 Activate `high_contrast = True` to see the land borders better and competing
 areas for mines:
 
-<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/9498479d-6a3b-440f-828e-289186b92bf1" width="700" height="362" />
+<img src="https://github.com/europython2023gametournament/supremacy/assets/39047984/762506cc-d444-439e-ab67-2701f91846d4" />
 
 ### 2. Crystal boost
 
