@@ -31,9 +31,6 @@ module.exports = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
-    outputFileTracingIncludes: {
-      "/": ["./social-cards/**/*"],
-    },
   },
   async redirects() {
     return [
