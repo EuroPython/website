@@ -1,8 +1,8 @@
 import { Title } from "components/typography/title";
-import { notFound } from "next/navigation";
-import { SelectRoom } from "./select-room";
-import { Metadata } from "next";
-import { YoutubeVideo } from "./youtube-video";
+// import { notFound } from "next/navigation";
+// import { SelectRoom } from "./select-room";
+// import { Metadata } from "next";
+// import { YoutubeVideo } from "./youtube-video";
 
 const live = {
   rooms: [
@@ -67,7 +67,7 @@ export default function LivePage({ params }: { params: { room: string } }) {
   const room = live.rooms.find((room) => room.slug === params.room);
 
   if (!room) {
-    throw notFound();
+    return "Room not found"
   }
 
   return (
