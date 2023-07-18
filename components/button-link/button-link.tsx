@@ -17,7 +17,8 @@ export const ButtonLink = ({
         "font-bold text-lg px-4 py-4 bg-button rounded-[60px] inline-block leading-4",
         "hover:bg-button-hover",
         {
-          "bg-secondary-darkest": secondary,
+          // yes, this is inverted :'D
+          "bg-primary text-white hover:bg-primary-hover": secondary,
           "text-text-inverted": !secondary,
           "text-text": secondary,
         }
