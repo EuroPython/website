@@ -3,6 +3,7 @@ import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import { SelectRoom } from "./select-room";
 import { Metadata } from "next";
+import { YoutubeVideo } from "./youtube-video";
 
 export const generateMetadata = async ({
   params,
@@ -39,13 +40,7 @@ export default function LivePage({ params }: { params: { room: string } }) {
     <>
       <Title>{room.name}</Title>
 
-      <iframe
-        id="ytplayer"
-        className="w-full h-full aspect-[16/9]"
-        width="640"
-        height="360"
-        src={`https://www.youtube.com/embed/${room.youtubeId}?autoplay=1&amp;origin=https://ep2023.europython.eu`}
-      ></iframe>
+      <YoutubeVideo youtubeId={room.youtubeId} />
 
       <div className="h-12" />
 
