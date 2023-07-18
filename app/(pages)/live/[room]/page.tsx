@@ -1,9 +1,43 @@
-import live from "../../../../data/live.json";
 import { Title } from "components/typography/title";
 import { notFound } from "next/navigation";
 import { SelectRoom } from "./select-room";
 import { Metadata } from "next";
 import { YoutubeVideo } from "./youtube-video";
+
+const live = {
+  rooms: [
+    {
+      name: "Forum",
+      slug: "forum",
+      youtubeId: "HHvm_TYhG14",
+    },
+    {
+      name: "North Hall",
+      slug: "north-hall",
+      youtubeId: "yQ09oXwBaUY",
+    },
+    {
+      name: "Terrace 2A",
+      slug: "terrace-2a",
+      youtubeId: "epINsTnV1Kw",
+    },
+    {
+      name: "Terrace 2B",
+      slug: "terrace-2b",
+      youtubeId: "5JuNAvheGvU",
+    },
+    {
+      name: "South Hall 2A",
+      slug: "south-hall-2a",
+      youtubeId: "E8KZF8PAwME",
+    },
+    {
+      name: "South Hall 2B",
+      slug: "south-hall-2b",
+      youtubeId: "WuLqtlDXqLQ",
+    },
+  ],
+};
 
 export const generateMetadata = async ({
   params,
