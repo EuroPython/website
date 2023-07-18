@@ -45,7 +45,7 @@ export default function LivePage({ params }: { params: { room: string } }) {
       <div className="h-12" />
 
       <Title>Change room:</Title>
-      <SelectRoom room={room} rooms={live.rooms} />
+      {/* <SelectRoom room={room} rooms={live.rooms} /> */}
 
       <div className="h-12" />
     </>
