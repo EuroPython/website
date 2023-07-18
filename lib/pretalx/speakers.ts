@@ -109,10 +109,6 @@ export const fetchAllSpeakers = async () => {
       },
     });
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch speakers");
-    }
-
     const data = (await response.json()) as Root;
 
     speakers = speakers.concat(data.results);
@@ -165,10 +161,6 @@ export const fetchSpeakerBySlug = async (slug: string) => {
       },
     }
   );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch speaker");
-  }
 
   const speaker = (await response.json()) as Speaker;
 
@@ -223,10 +215,6 @@ export const fetchKeynoterBySlug = async (slug: string) => {
       },
     }
   );
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch speaker");
-  }
 
   const speaker = (await response.json()) as Speaker;
 

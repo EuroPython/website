@@ -176,10 +176,6 @@ export const fetchKeynotes = async () => {
     },
   });
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch keynotes");
-  }
-
   const data = (await response.json()) as Root;
 
   return data.results.map(mapSession);

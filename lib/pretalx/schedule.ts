@@ -85,10 +85,6 @@ const getRooms = async () => {
     "https://program.europython.eu/europython-2023/schedule/export/schedule.json"
   );
 
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-
   const data = await response.json();
 
   return data.schedule.conference.rooms.map(
@@ -101,10 +97,6 @@ export async function getScheduleDays() {
   const response = await fetchWithToken(
     "https://pretalx.com/api/events/europython-2023/schedules/latest/"
   );
-
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
 
   const data = (await response.json()) as Response;
 
@@ -134,10 +126,6 @@ export async function getSchedule(day: string) {
   const response = await fetchWithToken(
     "https://pretalx.com/api/events/europython-2023/schedules/latest/"
   );
-
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
 
   const data = (await response.json()) as Response;
   const date = parseISO(day);
