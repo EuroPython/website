@@ -1,7 +1,4 @@
 // @ts-check
-
-const live = require("./data/live.json");
-
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -44,11 +41,6 @@ module.exports = {
         source: "/sponsor-information",
         destination: "/sponsor/information",
         permanent: true,
-      },
-      {
-        source: "/live",
-        destination: `/live/${live.rooms[0].slug}`,
-        permanent: false,
       },
     ];
   },
