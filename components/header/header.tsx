@@ -62,15 +62,16 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
       <div className="ml-auto flex items-center space-x-4">
         {!mobile ? (
           <>
-            <ButtonLink href="https://www.europython-society.org/coc/">
+            <ButtonLink
+              secondary
+              href="https://www.europython-society.org/coc/"
+            >
               <abbr title="Code of Conduct" className="no-underline lg:hidden">
                 CoC
               </abbr>
               <span className="hidden lg:inline">Code of Conduct</span>
             </ButtonLink>
-            {/* <ButtonLink variant="live" href="/live">
-              Live 📹
-            </ButtonLink> */}
+            <ButtonLink href="/live">Live 📺</ButtonLink>
           </>
         ) : null}
 
@@ -85,9 +86,11 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
 };
 
 export const Header = ({ inverted = false }: { inverted?: boolean }) => (
-  <header className={clsx("p-6 flex items-center relative z-40", {
-    "bg-primary": inverted,
-  })}>
+  <header
+    className={clsx("p-6 flex items-center relative z-40", {
+      "bg-primary": inverted,
+    })}
+  >
     <input
       type="checkbox"
       name="mobile-controls"
