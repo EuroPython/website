@@ -39,29 +39,29 @@ const live = {
   ],
 };
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: { room: string };
-}): Promise<Metadata> => {
-  const room = live.rooms.find((room) => room.slug === params.room);
+// export const generateMetadata = async ({
+//   params,
+// }: {
+//   params: { room: string };
+// }): Promise<Metadata> => {
+//   const room = live.rooms.find((room) => room.slug === params.room);
 
-  if (!room) {
-    throw notFound();
-  }
+//   if (!room) {
+//     throw notFound();
+//   }
 
-  const metadata: Metadata = {
-    title: `🔴 ${room.name} - Live`,
-    description: `Livestream for ${room.name}`,
-    twitter: {
-      card: "summary_large_image",
-      title: `🔴 ${room.name} - Live`,
-      description: `Livestream for ${room.name}`,
-    },
-  };
+//   const metadata: Metadata = {
+//     title: `🔴 ${room.name} - Live`,
+//     description: `Livestream for ${room.name}`,
+//     twitter: {
+//       card: "summary_large_image",
+//       title: `🔴 ${room.name} - Live`,
+//       description: `Livestream for ${room.name}`,
+//     },
+//   };
 
-  return metadata;
-};
+//   return metadata;
+// };
 
 export default function LivePage({ params }: { params: { room: string } }) {
   const room = live.rooms.find((room) => room.slug === params.room);
