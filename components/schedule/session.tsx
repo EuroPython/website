@@ -3,6 +3,7 @@ import { Fragment } from "react";
 
 import type { Session as SessionType } from "@/lib/pretalx/schedule";
 import { formatInTimeZone } from "date-fns-tz";
+import { isAfter, isBefore } from "date-fns";
 
 const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
@@ -116,13 +117,20 @@ export const Session = ({
     session.speakers.map((speaker) => speaker.name) || []
   );
 
+  const now = new Date();
+
+  const isLive = isBefore(session.start, now) && isAfter(session.end, now);
+
   return (
     <li className="contents" id={session.code}>
       <div
         className={clsx(
-          "bg-body-background pr-4 md:pr-0",
-          "text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
+          "pr-4 md:pr-0 text-black flex flex-col relative cursor-pointer hover:bg-[#faefe4]",
           "min-h-[150px] block",
+          {
+            "bg-[#ffdcdc]": isLive,
+            "bg-body-background": !isLive,
+          },
           className
         )}
         style={style}
@@ -145,7 +153,11 @@ export const Session = ({
             </p>
           </div>
 
-          {session.title}
+          <p>
+            {isLive ? <span className="text-[#ff0000]">🔴 </span> : null}
+
+            {session.title}
+          </p>
         </a>
 
         {session.speakers.length ? (
