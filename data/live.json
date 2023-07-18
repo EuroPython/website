@@ -1,34 +1,34 @@
 {
   "rooms": [
     {
-      "name": "The auditorium",
-      "slug": "auditorium",
-      "youtubeId": "EZCtpnc0IJA"
+      "name": "Forum",
+      "slug": "forum",
+      "youtubeId": "HHvm_TYhG14"
     },
     {
-      "name": "Liffey A",
-      "slug": "liffey-a",
-      "youtubeId": "_A-FVRbg7Qc"
+      "name": "North Hall",
+      "slug": "north-hall",
+      "youtubeId": "yQ09oXwBaUY"
     },
     {
-      "name": "Liffey B",
-      "slug": "liffey-b",
-      "youtubeId": "muEwpXcxSPA"
+      "name": "Terrace 2A",
+      "slug": "terrace-2a",
+      "youtubeId": "epINsTnV1Kw"
     },
     {
-      "name": "Liffey Hall 1",
-      "slug": "liffey-hall-1",
-      "youtubeId": "nFUIuGqWO38"
+      "name": "Terrace 2B",
+      "slug": "terrace-2b",
+      "youtubeId": "5JuNAvheGvU"
     },
     {
-      "name": "Liffey Hall 2",
-      "slug": "liffey-hall-2",
-      "youtubeId": "UCSi6Ih8X7Y"
+      "name": "South Hall 2A",
+      "slug": "south-hall-2a",
+      "youtubeId": "E8KZF8PAwME"
     },
     {
-      "name": "Wicklow Hall 1",
-      "slug": "wicklow-hall-1",
-      "youtubeId": "GHn5HCjCSEc"
+      "name": "South Hall 2B",
+      "slug": "south-hall-2b",
+      "youtubeId": "WuLqtlDXqLQ"
     }
   ]
 }
