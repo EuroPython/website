@@ -40,7 +40,7 @@ export default function LivePage({ params }: { params: { room: string } }) {
     <>
       <Title>{room.name}</Title>
 
-      <YoutubeVideo youtubeId={room.youtubeId} />
+      {/* <YoutubeVideo youtubeId={room.youtubeId} /> */}
 
       <div className="h-12" />
 
