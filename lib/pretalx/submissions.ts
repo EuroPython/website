@@ -1,6 +1,7 @@
 import { isAfter, isEqual, parseISO } from "date-fns";
 import { Answer } from "../pretalx/types";
 import { slugify, slugifySession } from "./utils/slugify";
+import { fetchWithToken } from "./utils/fetch";
 
 export type Root = {
   count: number;
@@ -123,18 +124,11 @@ export const fetchConfirmedSubmissions = async () => {
   let sessions: Result[] = [];
 
   while (url) {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-      },
+    const response = await fetchWithToken(url, {
       next: {
         revalidate: 300,
       },
     });
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch sessions");
-    }
 
     const data = (await response.json()) as Root;
 
@@ -176,10 +170,7 @@ export const fetchKeynotes = async () => {
   let url = `https://pretalx.com/api/events/europython-2023/submissions/?${qs}`;
 
   // there's only one page (keynotes are usually less than 10 :D)
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-    },
+  const response = await fetchWithToken(url, {
     next: {
       revalidate: 300,
     },

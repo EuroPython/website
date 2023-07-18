@@ -12,6 +12,7 @@ import { slugify, slugifySession } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { runSessionHacks } from "./hacks/sessions";
 import { formatInTimeZone } from "date-fns-tz";
+import { fetchWithToken } from "./utils/fetch";
 
 export type Schedule = {
   rooms: string[];
@@ -97,13 +98,8 @@ const getRooms = async () => {
 
 // This API is not public, so it might change in the future
 export async function getScheduleDays() {
-  const response = await fetch(
-    "https://pretalx.com/api/events/europython-2023/schedules/latest/",
-    {
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-      },
-    }
+  const response = await fetchWithToken(
+    "https://pretalx.com/api/events/europython-2023/schedules/latest/"
   );
 
   if (!response.ok) {
@@ -135,13 +131,8 @@ export async function getSchedule(day: string) {
     allSubmissions.map((submission) => [submission.code, submission])
   );
 
-  const response = await fetch(
-    "https://pretalx.com/api/events/europython-2023/schedules/latest/",
-    {
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-      },
-    }
+  const response = await fetchWithToken(
+    "https://pretalx.com/api/events/europython-2023/schedules/latest/"
   );
 
   if (!response.ok) {
@@ -249,7 +240,7 @@ export async function getSchedule(day: string) {
               slug: slugify(speaker.name),
             })),
             duration: slot.duration * slot.slot_count,
-            room:  slot.slot.room.en,
+            room: slot.slot.room.en,
             type: slot.submission_type.en,
             slug,
             href: `/session/${slug}`,

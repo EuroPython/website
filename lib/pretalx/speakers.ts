@@ -1,6 +1,7 @@
 import { fetchConfirmedSubmissions, fetchKeynotes } from "./submissions";
 import { Answer } from "../pretalx/types";
 import { slugify } from "./utils/slugify";
+import { fetchWithToken } from "./utils/fetch";
 
 type Availability = {
   id: number;
@@ -102,10 +103,7 @@ export const fetchAllSpeakers = async () => {
   let speakers: Speaker[] = [];
 
   while (url) {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-      },
+    const response = await fetchWithToken(url, {
       next: {
         revalidate: 300,
       },
@@ -159,12 +157,9 @@ export const fetchSpeakerBySlug = async (slug: string) => {
     return null;
   }
 
-  const response = await fetch(
+  const response = await fetchWithToken(
     `https://pretalx.com/api/events/europython-2023/speakers/${speakerInfo.code}/`,
     {
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-      },
       next: {
         revalidate: 300,
       },
@@ -220,12 +215,9 @@ export const fetchKeynoterBySlug = async (slug: string) => {
     throw new Error("Failed to find speaker in submissions");
   }
 
-  const response = await fetch(
+  const response = await fetchWithToken(
     `https://pretalx.com/api/events/europython-2023/speakers/${speakerInfo.code}/`,
     {
-      headers: {
-        Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-      },
       next: {
         revalidate: 300,
       },
