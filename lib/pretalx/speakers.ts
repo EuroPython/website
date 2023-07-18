@@ -88,44 +88,6 @@ const mapSpeaker = (
   };
 };
 
-// TODO: don't use this, it is slow and fetches all the speakers
-// not just the ones that have confirmed submissions
-export const fetchAllSpeakers = async () => {
-  const qs = new URLSearchParams({
-    limit: "100",
-    questions: "all",
-  });
-
-  let url:
-    | string
-    | null = `https://pretalx.com/api/events/europython-2023/speakers/?${qs}`;
-
-  let speakers: Speaker[] = [];
-
-  while (url) {
-    const response = await fetchWithToken(url, {
-      next: {
-        revalidate: 300,
-      },
-    });
-
-    const data = (await response.json()) as Root;
-
-    speakers = speakers.concat(data.results);
-
-    url = data.next;
-  }
-
-  const seen = new Set();
-  speakers = speakers.filter((speaker) => {
-    const duplicate = seen.has(speaker.code);
-    seen.add(speaker.code);
-    return !duplicate;
-  });
-
-  return speakers.map((speaker) => mapSpeaker(speaker, []));
-};
-
 export const fetchSpeakersWithConfirmedSubmissions = async () => {
   const submissions = (
     await Promise.all([fetchConfirmedSubmissions(), fetchKeynotes()])
