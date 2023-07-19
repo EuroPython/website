@@ -115,29 +115,9 @@ const mapSession = (session: Result) => {
 export type Session = ReturnType<typeof mapSession>;
 
 export const fetchConfirmedSubmissions = cache(async () => {
-  const qs = new URLSearchParams({
-    limit: "200",
-    state: "confirmed",
-    questions: "all",
-  });
-  let url = `https://pretalx.com/api/events/europython-2023/submissions/?${qs}`;
-
-  let sessions: Result[] = [];
-
-  while (url) {
-    const response = await fetchWithToken(url, {
-      next: {
-        revalidate: 300,
-      },
-    });
-
-    const data = (await response.json()) as Root;
-
-    sessions = sessions.concat(data.results);
-
-    url = data.next;
-  }
-
+  let sessions = await fetch(process.env.ALL_SUBMISSIONS_URL).then((res) =>
+    res.json()
+  );
   // remove duplicates by code
   const seen = new Set();
   sessions = sessions.filter((session) => {

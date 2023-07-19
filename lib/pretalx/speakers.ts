@@ -116,16 +116,13 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
     return null;
   }
 
-  const response = await fetchWithToken(
-    `https://pretalx.com/api/events/europython-2023/speakers/${speakerInfo.code}/`,
-    {
-      next: {
-        revalidate: 300,
-      },
-    }
+  const allSpeakersData = await fetch(process.env.ALL_SPEAKERS_URL).then(
+    (res) => res.json()
   );
 
-  const speaker = (await response.json()) as Speaker;
+  const speaker = allSpeakersData.find(
+    (speaker) => speaker.code === speakerInfo.code
+  );
 
   const confirmedSubmissions = await fetchConfirmedSubmissions();
 
