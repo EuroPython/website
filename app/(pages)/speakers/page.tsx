@@ -4,6 +4,8 @@ import { Title } from "components/typography/title";
 import { fetchSpeakersWithConfirmedSubmissions } from "@/lib/pretalx";
 import { Metadata } from "next";
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: "Speakers",
 };

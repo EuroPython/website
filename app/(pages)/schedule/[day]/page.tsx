@@ -23,7 +23,8 @@ export default async function SchedulePage({
 }: {
   params: { day: string };
 }) {
-  const schedule = await getSchedule(params.day);
+  // const schedule = await getSchedule(params.day);
+  const schedule = null;
 
   if (!schedule) {
     throw notFound();
@@ -34,6 +35,7 @@ export default async function SchedulePage({
       <article className="accent-left">
         <Title highlighted>Schedule</Title>
 
+        {/* @ts-ignore */}
         <SelectDay day={params.day} days={schedule.days} />
       </article>
 
