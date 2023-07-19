@@ -11,7 +11,6 @@ import { slugify, slugifySession } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { runSessionHacks } from "./hacks/sessions";
 import { formatInTimeZone } from "date-fns-tz";
-import { fetchWithToken } from "./utils/fetch";
 import { cache } from "react";
 
 export type Schedule = {
@@ -81,9 +80,7 @@ type RowStyle = {
 const getRooms = cache(async () => {
   // rooms in the schedule API are not ordered so we use the ones from the
   // export API instead
-  const response = await fetch(
-    "https://program.europython.eu/europython-2023/schedule/export/schedule.json"
-  );
+  const response = await fetch(process.env.SCHEDULE_EXPORT_URL!);
 
   const data = await response.json();
 
@@ -117,9 +114,7 @@ export const getSchedule = cache(async (day: string) => {
     allSubmissions.map((submission) => [submission.code, submission])
   );
 
-  const response = await fetchWithToken(
-    "https://pretalx.com/api/events/europython-2023/schedules/latest/"
-  );
+  const response = await fetch(process.env.LATEST_SCHEDULE_URL!);
 
   const data = (await response.json()) as Response;
   const date = parseISO(day);
