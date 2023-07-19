@@ -6,8 +6,6 @@ import { SelectDay } from "./select-day";
 import { getSchedule, getScheduleDays } from "@/lib/pretalx/schedule";
 import { formatInTimeZone } from "date-fns-tz";
 
-export const revalidate = 300;
-
 export async function generateStaticParams() {
   const days = await getScheduleDays();
 
