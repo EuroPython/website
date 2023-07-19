@@ -10,9 +10,7 @@ export const fetchWithToken: typeof fetch = async (url, options) => {
   });
 
   if (!response.ok) {
-    console.log(response.status, response.statusText);
-    console.log(await response.text());
-    throw new Error("Failed to fetch sessions");
+    throw new Error("Failed to fetch: " + response.status);
   }
 
   return response;
