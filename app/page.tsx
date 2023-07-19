@@ -15,7 +15,7 @@ import { HeroVenue } from "components/hero-section/hero-venue";
 import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
 import { MDXRemote } from "components/mdx-remote/mdx-remote";
-// import { Keynoters } from "components/keynoters/keynoters";
+import { Keynoters } from "components/keynoters/keynoters";
 
 export const metadata = {
   metadataBase: new URL("https://ep2023.europython.eu"),
@@ -110,7 +110,7 @@ export default async function IndexPage() {
         </HeroVenue>
       </div>
 
-      {/* <Keynoters /> */}
+      <Keynoters />
 
       <Sponsors />
     </Layout>
