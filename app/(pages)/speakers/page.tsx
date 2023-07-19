@@ -46,8 +46,8 @@ export default async function SpeakersPage() {
 
             <ul className="pl-4">
               {groups[letter]
-                .sort((a, b) => a.name.localeCompare(b.name))
-                .map((speaker) => (
+                .sort((a: any, b: any) => a.name.localeCompare(b.name))
+                .map((speaker: any) => (
                   <li key={speaker.code} className="mb-1">
                     <a
                       className="underline hover:text-primary-hover"

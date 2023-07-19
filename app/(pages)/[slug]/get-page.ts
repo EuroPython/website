@@ -16,6 +16,7 @@ export const getPage = async (parts: string[], shouldSerialize = true) => {
 
   if (shouldSerialize) {
     await import("lib/mdx-utils").then(async (lib) => {
+      // @ts-ignore
       mdxSource = await lib.serialize(content.toString());
     });
   }

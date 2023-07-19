@@ -115,9 +115,9 @@ const mapSession = (session: Result) => {
 export type Session = ReturnType<typeof mapSession>;
 
 export const fetchConfirmedSubmissions = cache(async () => {
-  let sessions: Result[] = await fetch(process.env.ALL_SUBMISSIONS_URL).then(
-    (res) => res.json()
-  );
+  let sessions = (await fetch(process.env.ALL_SUBMISSIONS_URL!).then((res) =>
+    res.json()
+  )) as Result[];
   // remove duplicates by code
   const seen = new Set();
   sessions = sessions.filter((session) => {

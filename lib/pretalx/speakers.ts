@@ -95,7 +95,7 @@ export const fetchSpeakersWithConfirmedSubmissions = cache(async () => {
   ).flat();
 
   const allSpeakers = Array.from(
-    new Set(submissions.map((submission) => submission.speakers).flat())
+    new Set(submissions.map((submission: any) => submission.speakers).flat())
   );
 
   const seen = new Set();
@@ -116,7 +116,7 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
     return null;
   }
 
-  const allSpeakersData = await fetch(process.env.ALL_SPEAKERS_URL).then(
+  const allSpeakersData = await fetch(process.env.ALL_SPEAKERS_URL!).then(
     (res) => res.json()
   );
 

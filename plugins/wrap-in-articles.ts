@@ -48,15 +48,18 @@ function transform(tree: Node) {
 
     if (matches("thematicBreak", child) || shouldNotWrap(child)) {
       currentArticle = null;
+      // @ts-ignore
       children.push(child);
     } else if (hasOnlyOneImage(child)) {
       currentArticle = null;
+      // @ts-ignore
       children.push(child.children[0]);
     } else if (
       !currentArticle ||
       isMainHeading(child) ||
       shouldNotWrap(child)
     ) {
+      // @ts-ignore
       currentArticle = {
         type: "section",
         children: [] as Node[],
@@ -68,10 +71,12 @@ function transform(tree: Node) {
         },
       };
       totalArticles += 1;
+      // @ts-ignore
       children.push(currentArticle);
     }
 
     if (currentArticle) {
+      // @ts-ignore
       currentArticle.children.push(child);
     }
   }
