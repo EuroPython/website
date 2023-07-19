@@ -4,9 +4,7 @@ export const fetchWithToken: typeof fetch = async (url, options) => {
       Authorization: `Token ${process.env.PRETALX_TOKEN}`,
       "User-Agent": "europython.io3",
     },
-    next: {
-      ...(options?.next || {}),
-    },
+    ...options,
   });
 
   if (!response.ok) {
