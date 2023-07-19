@@ -13,6 +13,7 @@ import { fetchConfirmedSubmissions } from "./submissions";
 import { runSessionHacks } from "./hacks/sessions";
 import { formatInTimeZone } from "date-fns-tz";
 import { fetchWithToken } from "./utils/fetch";
+import { cache } from "react";
 
 export type Schedule = {
   rooms: string[];
@@ -93,7 +94,7 @@ const getRooms = async () => {
 };
 
 // This API is not public, so it might change in the future
-export async function getScheduleDays() {
+export const getScheduleDays = cache(async () => {
   const response = await fetchWithToken(
     "https://pretalx.com/api/events/europython-2023/schedules/latest/"
   );
@@ -113,10 +114,10 @@ export async function getScheduleDays() {
   )
     .map((day) => parseISO(day))
     .sort((a, b) => a.getTime() - b.getTime());
-}
+});
 
 // This API is not public, so it might change in the future
-export async function getSchedule(day: string) {
+export const getSchedule = cache(async (day: string) => {
   const allSubmissions = await fetchConfirmedSubmissions();
 
   const codeToSubmission = Object.fromEntries(
@@ -400,4 +401,4 @@ export async function getSchedule(day: string) {
     rows,
     days,
   } as Schedule;
-}
+});
