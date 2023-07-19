@@ -2,7 +2,7 @@ export const fetchWithToken: typeof fetch = async (url, options) => {
   const response = await fetch(url, {
     headers: {
       Authorization: `Token ${process.env.PRETALX_TOKEN}`,
-      "User-Agent": "europython.io",
+      "User-Agent": "europython.io2",
     },
     next: {
       ...(options?.next || {}),
