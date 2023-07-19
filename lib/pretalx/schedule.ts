@@ -93,27 +93,21 @@ const getRooms = cache(async () => {
 });
 
 // This API is not public, so it might change in the future
-export const getScheduleDays = cache(async () => {
-  const response = await fetchWithToken(
-    "https://pretalx.com/api/events/europython-2023/schedules/latest/"
-  );
+export const getScheduleDays = async () => {
+  const days = [
+    "2023-07-17",
+    "2023-07-18",
+    "2023-07-19",
+    "2023-07-20",
+    "2023-07-21",
+    "2023-07-22",
+    "2023-07-23",
+  ];
 
-  const data = (await response.json()) as Response;
-
-  return Array.from(
-    new Set(
-      data.slots.map((item) =>
-        formatInTimeZone(
-          parseISO(item.slot.start),
-          "Europe/Prague",
-          "yyyy-MM-dd"
-        )
-      )
-    )
-  )
+  return days
     .map((day) => parseISO(day))
     .sort((a, b) => a.getTime() - b.getTime());
-});
+};
 
 // This API is not public, so it might change in the future
 export const getSchedule = cache(async (day: string) => {
