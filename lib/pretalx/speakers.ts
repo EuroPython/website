@@ -157,32 +157,3 @@ export const fetchKeynoters = cache(async () => {
     return !duplicate;
   });
 });
-
-export const fetchKeynoterBySlug = cache(async (slug: string) => {
-  const allSpeakers = await fetchKeynoters();
-
-  const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
-
-  if (!speakerInfo) {
-    throw new Error("Failed to find speaker in submissions");
-  }
-
-  const response = await fetchWithToken(
-    `https://pretalx.com/api/events/europython-2023/speakers/${speakerInfo.code}/`,
-    {
-      next: {
-        revalidate: 300,
-      },
-    }
-  );
-
-  const speaker = (await response.json()) as Speaker;
-
-  const submissions = await fetchKeynotes();
-
-  const sessions = submissions.filter((submission) =>
-    submission.speakers.some((speaker) => speaker.code === speakerInfo.code)
-  );
-
-  return mapSpeaker(speaker, sessions);
-});
