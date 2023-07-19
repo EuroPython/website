@@ -2,6 +2,7 @@ import { isAfter, isEqual, parseISO } from "date-fns";
 import { Answer } from "../pretalx/types";
 import { slugify, slugifySession } from "./utils/slugify";
 import { fetchWithToken } from "./utils/fetch";
+import { cache } from "react";
 
 export type Root = {
   count: number;
@@ -113,7 +114,7 @@ const mapSession = (session: Result) => {
 
 export type Session = ReturnType<typeof mapSession>;
 
-export const fetchConfirmedSubmissions = async () => {
+export const fetchConfirmedSubmissions = cache(async () => {
   const qs = new URLSearchParams({
     limit: "200",
     state: "confirmed",
@@ -151,15 +152,15 @@ export const fetchConfirmedSubmissions = async () => {
   );
 
   return sessions.map(mapSession);
-};
+});
 
-export const fetchSubmissionBySlug = async (slug: string) => {
+export const fetchSubmissionBySlug = cache(async (slug: string) => {
   const allSessions = await fetchConfirmedSubmissions();
 
   return allSessions.find((session) => session.slug === slug);
-};
+});
 
-export const fetchKeynotes = async () => {
+export const fetchKeynotes = cache(async () => {
   // https://pretalx.com/api/events/europython-2023/submissions/?content_locale=&submission_type=2752
   const qs = new URLSearchParams({
     limit: "200",
@@ -179,17 +180,17 @@ export const fetchKeynotes = async () => {
   const data = (await response.json()) as Root;
 
   return data.results.map(mapSession);
-};
+});
 
-export const fetchKeynoteBySpeakerSlug = async (slug: string) => {
+export const fetchKeynoteBySpeakerSlug = cache(async (slug: string) => {
   const allKeynotes = await fetchKeynotes();
 
   return allKeynotes.find((keynote) =>
     keynote.speakers.some((speaker) => speaker.slug === slug)
   );
-};
+});
 
-export const fetchSessionsInParallel = async (slug: string) => {
+export const fetchSessionsInParallel = cache(async (slug: string) => {
   const confirmedSubmissions = await fetchConfirmedSubmissions();
   const session = confirmedSubmissions.find((session) => session.slug === slug);
 
@@ -204,9 +205,9 @@ export const fetchSessionsInParallel = async (slug: string) => {
       s.start &&
       isEqual(s.start, session.start)
   );
-};
+});
 
-export const fetchSessionsAfter = async (slug: string) => {
+export const fetchSessionsAfter = cache(async (slug: string) => {
   const confirmedSubmissions = await fetchConfirmedSubmissions();
   const session = confirmedSubmissions.find((session) => session.slug === slug);
 
@@ -233,4 +234,4 @@ export const fetchSessionsAfter = async (slug: string) => {
   return confirmedSubmissions.filter(
     (s) => s.start && isEqual(s.start, nextStartTime)
   );
-};
+});

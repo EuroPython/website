@@ -2,6 +2,7 @@ import { fetchConfirmedSubmissions, fetchKeynotes } from "./submissions";
 import { Answer } from "../pretalx/types";
 import { slugify } from "./utils/slugify";
 import { fetchWithToken } from "./utils/fetch";
+import { cache } from "react";
 
 type Availability = {
   id: number;
@@ -88,7 +89,7 @@ const mapSpeaker = (
   };
 };
 
-export const fetchSpeakersWithConfirmedSubmissions = async () => {
+export const fetchSpeakersWithConfirmedSubmissions = cache(async () => {
   const submissions = (
     await Promise.all([fetchConfirmedSubmissions(), fetchKeynotes()])
   ).flat();
@@ -104,9 +105,9 @@ export const fetchSpeakersWithConfirmedSubmissions = async () => {
     seen.add(speaker.code);
     return !duplicate;
   });
-};
+});
 
-export const fetchSpeakerBySlug = async (slug: string) => {
+export const fetchSpeakerBySlug = cache(async (slug: string) => {
   const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
 
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
@@ -133,9 +134,9 @@ export const fetchSpeakerBySlug = async (slug: string) => {
   );
 
   return mapSpeaker(speaker, submissions);
-};
+});
 
-export const fetchKeynoters = async () => {
+export const fetchKeynoters = cache(async () => {
   const submissions = await fetchKeynotes();
 
   const allSpeakers = Array.from(
@@ -158,9 +159,9 @@ export const fetchKeynoters = async () => {
     seen.add(speaker.code);
     return !duplicate;
   });
-};
+});
 
-export const fetchKeynoterBySlug = async (slug: string) => {
+export const fetchKeynoterBySlug = cache(async (slug: string) => {
   const allSpeakers = await fetchKeynoters();
 
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
@@ -187,4 +188,4 @@ export const fetchKeynoterBySlug = async (slug: string) => {
   );
 
   return mapSpeaker(speaker, sessions);
-};
+});
