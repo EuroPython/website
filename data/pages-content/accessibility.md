@@ -16,13 +16,34 @@ For enquiries, visit our helpdesk at registration  or look for volunteers wearin
 
 At main talk rooms, enquire with the session chair before the talks about designated seating, maintaining clear pathways, or other needs.
 
+### Lift location
+For folks who need to use the lifts to access registration on the 1st floor (or conference on the 2nd floor).
+
+This is the EuroPython entrance.
+<img src="https://drive.google.com/uc?export=view&id=11x4YWXC2mny5WwSlZTtsV_wxBYglmrYo" alt="PCC Entrance" />
+
+Go through this and the inner doors. Keep on straight past the blue screen visible in the background of the 2nd picture.
+<img src="https://drive.google.com/uc?export=view&id=1ZTWRiL-RE3O9sVzA2jscpj5QydO7O_T3" alt="Inner door" />
+
+You get arrive at the corridor in 3rd picture.
+<img src="https://drive.google.com/uc?export=view&id=1iepSOXyAqYilwRv6U3l2l0iRe3RIw1I-" alt="Corridor after passing the blue display screens" />
+
+Go to the light at the end of the tunnel in 4th picture.
+<img src="https://drive.google.com/uc?export=view&id=1ORJUaB_fTmsC5e6bAdBWqfcG0q-mHAVB" alt="head to the end of the corridor" />
+
+In front of the staircase, turn left.
+<img src="https://drive.google.com/uc?export=view&id=18aNGblLJ0qaGASvJJfHMSSk-mXIkvgQj" alt="In front of the staircase turn left" />
+
+Keep walking until you see the mural and the lift is located there.
+<img src="https://drive.google.com/uc?export=view&id=1CjwVkEqYhZdcJ138hia5RRHNd5LsITwE" alt="Go on until you see the mural and you find the  lift there" />
+
 ## Feeding your child
 The conference venue (The Prague Congress Centre) has childcare rooms; the sprints venue (VŠE) has quiet rooms (see below for locations) - they can be used for you to breastfeed your child, should you prefer. Please note, there are no restrictions on where you can breastfeed your child - you are free and welcome to feed your young ones at any place you feel comforditable with.
 
 ## Dietary Requirements
 We aim to meet all dietary requirements, when you specify your dietary requirements during ticket registration.
 
-Menus and its dietary information will be displayed each day to accommodate your food restrictions. We will also have a dietary station at the bar area on the second floor foyer - if you are coeliac, or need to avoid any particular allergen, please come to the dietary station for food.   
+Menus and its dietary information will be displayed each day to accommodate your food restrictions. We will also have a dietary station at the bar area on the second floor foyer - if you are coeliac, or need to avoid any particular allergen, please come to the dietary station for food.
 
 ## The Prague Congress Centre (The PCC)
 This is the main venue for EuroPython workshops and the main conference  (17th - 21st July). The venue is accessible for wheelchair users. Here’s general information on how to get to the venue.
@@ -33,12 +54,12 @@ This is the main venue for EuroPython workshops and the main conference  (17th -
 * [How to get to the PCC](https://www.praguecc.cz/en/how-to-get-here)
 
 
-<img src="https://drive.google.com/uc?export=view&id=1XDf2GjB89WdweGwMUDsVU7Mj_MlaciNn" alt="PCC entrances map"/>
+<img src="https://drive.google.com/uc?export=view&id=1XDf2GjB89WdweGwMUDsVU7Mj_MlaciNn" alt="PCC entrances map" />
 
-<img src="https://drive.google.com/uc?export=view&id=1YpoWvBxPZMeSlyN0_tfdYXKna9J7yI_Z" alt="references to PCC entrances"/>
+<img src="https://drive.google.com/uc?export=view&id=1YpoWvBxPZMeSlyN0_tfdYXKna9J7yI_Z" alt="references to PCC entrances" />
 
 ### Parking at The PCC
-<img src="https://drive.google.com/uc?export=view&id=1Ytb3sfQt-2rqmFr5qjtvpOlrZdje8gNe" alt="PCC parking map"/>
+<img src="https://drive.google.com/uc?export=view&id=1Ytb3sfQt-2rqmFr5qjtvpOlrZdje8gNe" alt="PCC parking map" />
 
 Disabled parking is available at The PCC carpark, please find this information at https://www.praguecc.cz/en/parking-in-pcc.
 
@@ -48,7 +69,7 @@ Registration will be on the **1st Floor**
 - Staircase to the left and escalators to the right to the **1st Floor**, there will be signage to show you the way.
 - When you reach **1st Floor**, **Registration Desks** will be in front of the cloakroom on the Forum Hall Foyer.
 
-<img src="https://drive.google.com/uc?export=view&id=1VZoP85vXyNE8ih4Zw_nMXq8dD7p4b9G7" alt="PCC ground floor plan"/>
+<img src="https://drive.google.com/uc?export=view&id=1VZoP85vXyNE8ih4Zw_nMXq8dD7p4b9G7" alt="PCC ground floor plan" />
 
 #### Accessibility inside The PCC
 * The PCC is accessible for wheelchair users.
@@ -57,11 +78,11 @@ Registration will be on the **1st Floor**
 
 ### Tutorials - Club Rooms (1st Floor)
 
-<img src="https://drive.google.com/uc?export=view&id=19KO9xwwhI8a4vUTPMdr6rL3Pd-kXjzE1" alt="PCC first floor - floor plan"/>
+<img src="https://drive.google.com/uc?export=view&id=19KO9xwwhI8a4vUTPMdr6rL3Pd-kXjzE1" alt="PCC first floor - floor plan" />
 
 ### Talks, Quiet Rooms and Childcare (2nd Floor)
 
-<img src="https://drive.google.com/uc?export=view&id=1R0x42wjP_02b1uWxhTg4K0XtoY72mN8n" alt="PCC second floor - floor plan"/>
+<img src="https://drive.google.com/uc?export=view&id=1R0x42wjP_02b1uWxhTg4K0XtoY72mN8n" alt="PCC second floor - floor plan" />
 
 ### Quiet Room
 - If you feel overwhelmed and need a quiet space, you can find the quiet room on the **2nd Floor** at **South Room 223 and 224**.
@@ -78,9 +99,9 @@ Free childminding is available for attendees, you can request for this free onsi
 
 More information on how to get to the venue via [EuroPython 2023 Sprints Venue](/where#v%C5%A1e---sprints-venue)
 
-<img src="https://drive.google.com/uc?export=view&id=18v0oZDAmX1iaZVbGdMcwEmO3wIFMcA6O" alt="Žižkov Campus map"/>
+<img src="https://drive.google.com/uc?export=view&id=18v0oZDAmX1iaZVbGdMcwEmO3wIFMcA6O" alt="Žižkov Campus map" />
 
-<img src="https://drive.google.com/uc?export=view&id=13AMMkECXQonVkXr_XEFSBtFdbBVSQkas" alt="The Rajska Building map"/>
+<img src="https://drive.google.com/uc?export=view&id=13AMMkECXQonVkXr_XEFSBtFdbBVSQkas" alt="The Rajska Building map" />
 
 ### Accessibility
 * The University is completely accessible for wheelchair users.
