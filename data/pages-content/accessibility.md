@@ -19,23 +19,23 @@ At main talk rooms, enquire with the session chair before the talks about design
 ### Lift location
 For folks who need to use the lifts to access registration on the 1st floor (or conference on the 2nd floor).
 
-<img src="https://drive.google.com/uc?export=view&id=11x4YWXC2mny5WwSlZTtsV_wxBYglmrYo" alt="PCC Entrance">
 This is the EuroPython entrance. 
+<img src="https://drive.google.com/uc?export=view&id=11x4YWXC2mny5WwSlZTtsV_wxBYglmrYo" alt="PCC Entrance">
 
-<img src="https://drive.google.com/uc?export=view&id=1ZTWRiL-RE3O9sVzA2jscpj5QydO7O_T3" alt="Inner door">
 Go through this and the inner doors. Keep on straight past the blue screen visible in the background of the 2nd picturr.
+<img src="https://drive.google.com/uc?export=view&id=1ZTWRiL-RE3O9sVzA2jscpj5QydO7O_T3" alt="Inner door">
 
-<img src="https://drive.google.com/uc?export=view&id=1iepSOXyAqYilwRv6U3l2l0iRe3RIw1I-" alt="Corridor after passing the blue display screens">
 You get arrive at the corridor in 3rd picture.
+<img src="https://drive.google.com/uc?export=view&id=1iepSOXyAqYilwRv6U3l2l0iRe3RIw1I-" alt="Corridor after passing the blue display screens">
 
-<img src="https://drive.google.com/uc?export=view&id=1ORJUaB_fTmsC5e6bAdBWqfcG0q-mHAVB" alt="head to the end of the corridor">
 Go to the light at the end of the tunnel in 4th picture.
+<img src="https://drive.google.com/uc?export=view&id=1ORJUaB_fTmsC5e6bAdBWqfcG0q-mHAVB" alt="head to the end of the corridor">
 
-<img src="https://drive.google.com/uc?export=view&id=18aNGblLJ0qaGASvJJfHMSSk-mXIkvgQj" alt="In front of the staircase turn left">
 In front of the staircase, turn left.
+<img src="https://drive.google.com/uc?export=view&id=18aNGblLJ0qaGASvJJfHMSSk-mXIkvgQj" alt="In front of the staircase turn left">
 
-<img src="https://drive.google.com/uc?export=view&id=1CjwVkEqYhZdcJ138hia5RRHNd5LsITwE" alt="Go on until you see the mural and you find the lift there">
 Keep walking until you see the mural and the lift is located there. 
+<img src="https://drive.google.com/uc?export=view&id=1CjwVkEqYhZdcJ138hia5RRHNd5LsITwE" alt="Go on until you see the mural and you find the lift there">
 
 ## Feeding your child
 The conference venue (The Prague Congress Centre) has childcare rooms; the sprints venue (VŠE) has quiet rooms (see below for locations) - they can be used for you to breastfeed your child, should you prefer. Please note, there are no restrictions on where you can breastfeed your child - you are free and welcome to feed your young ones at any place you feel comforditable with.
