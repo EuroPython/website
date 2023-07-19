@@ -78,7 +78,7 @@ type RowStyle = {
   gridRowEnd: number;
 };
 
-const getRooms = async () => {
+const getRooms = cache(async () => {
   // rooms in the schedule API are not ordered so we use the ones from the
   // export API instead
   const response = await fetch(
@@ -90,7 +90,7 @@ const getRooms = async () => {
   return data.schedule.conference.rooms.map(
     (room: { name: string }) => room.name
   ) as string[];
-};
+});
 
 // This API is not public, so it might change in the future
 export const getScheduleDays = cache(async () => {
