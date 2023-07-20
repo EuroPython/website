@@ -48,9 +48,45 @@ Our social event sponsor, [Kiwi.com](https://jobs.kiwi.com) has organised a raff
 The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (meaning 'On the Way Home' in Hungarian) was formed in 2017 and has been primarily dedicated to Gipsy and Hungarian folklore from the very beginning. Its founders were Šimon Jakubíček (double bass) and David Golas (guitar), they were later joined by Michal Grossmann (violin) and Marek Šnorich (accordion). The band's main goal is to introduce listeners to folk music, which they don't usually encounter in their everyday lives. Additionally, they also perform well-known melodies
 
 ### Food Selection
-The menu for the social event will be published soon!
+#### Buffet
 
-<!-- *Please note the Sacre Coeur is a cashless venue and only accept card/ contactless payments.* -->
+- Mini burger with pulled pork, BBQ, fried onion, spinach (Gluten Free)
+
+- Chicken tortilla with vegetables (Gluten Free)
+
+- Burrito (Gluten Free)
+
+- Cheese variations (Vegetarian, Gluten Free)
+
+- Mexican avocado quacamole, cracker (Vegetarian/Vegan, Gluten Free)
+
+- Hummus, whole grain bread (Vegetarian, Vegan)
+
+- Caprese kaiserka (Vegetarian, Gluten Free)
+
+- Baked pumpkin salad, pomegranate, spinach and argula (Vegetarian, Vegan, Gluten Free)
+
+- Crudités vegetables (Vegetarian, Vegan, Gluten Free)
+
+- Fruit
+
+#### BAR
+
+You will get one free drink. Then you are welcome to buy more drinks at the bar.
+
+- Homemade lemon lemonade 0,4 l / 50 CZK
+- Homemade elderflower lemonade 0,4 l / 50 CZK
+
+- Draft Beer 0,4 l / 55 CZK
+
+- Pinot Gris semi-dry WW Argentina 0,2 l / 100 CZK
+- Blue Portugal dry RW Hungary 0,2 l / 100 CZK
+
+- Aperol Spritz 140 CZK
+- Gin & Tonic 140 CZK
+- Cuba Libre 140 CZK
+- Skinny Bitch 140 CZK
+
 ---
 <font size="+2.5">**Big THANK YOU to our...**</font>
 <a className="img" target="_blank" href="https://jobs.kiwi.com/">
