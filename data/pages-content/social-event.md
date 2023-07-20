@@ -50,35 +50,29 @@ The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (me
 ### Food Selection
 #### Buffet
 
-- Mini burger with pulled pork, BBQ, fried onion, spinach /GF/
+- Mini burger with pulled pork, BBQ, fried onion, spinach (Gluten Free)
 
-- Chicken tortilla with vegetables /GF/
+- Chicken tortilla with vegetables (Gluten Free)
 
-- Burrito /GF/
+- Burrito (Gluten Free)
 
-- Cheese variations /Veggie//GF/
+- Cheese variations (Vegetarian, Gluten Free)
 
-- Mexican avocado quacamole, cracker /Vege//Vegan/GF/ 200ks
+- Mexican avocado quacamole, cracker (Vegetarian/Vegan, Gluten Free)
 
-- Hummus, whole grain bread/Veggie//Vegan/
+- Hummus, whole grain bread (Vegetarian, Vegan)
 
-- Caprese kaiserka /Vege//GF/
+- Caprese kaiserka (Vegetarian, Gluten Free)
 
-- Baked pumpkin salad, pomegranate, spinach and argula /Vege//Vegan//GF/
+- Baked pumpkin salad, pomegranate, spinach and argula (Vegetarian, Vegan, Gluten Free)
 
-- Crudités vegetables /Veggie//Vegan//GF
+- Crudités vegetables (Vegetarian, Vegan, Gluten Free)
 
-- Fruit /Vege//Vegan//GF
-
-*/Vege/ vegetarian*
-
-*/Vegan/ vegan*
-
-*/GF/ gluten free*
+- Fruit
 
 #### BAR
 
-You will get one free drink. Then you are welcome to buy more drinks at the bar. 
+You will get one free drink. Then you are welcome to buy more drinks at the bar.
 
 - Homemade lemon lemonade 0,4 l / 50 CZK
 - Homemade elderflower lemonade 0,4 l / 50 CZK
