@@ -86,7 +86,7 @@ export default async function SpeakerPage({
         </Prose>
 
         {hasExtra ? (
-          <>
+          <div className="mb-4">
             <Title level={2}>More about the speaker</Title>
 
             <DefinitionList>
@@ -138,7 +138,7 @@ export default async function SpeakerPage({
                 </>
               )}
             </DefinitionList>
-          </>
+          </div>
         ) : null}
 
         {speaker.sessions.length > 0 ? (
