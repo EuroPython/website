@@ -34,7 +34,9 @@ const normalizeUrl = (url?: string, defaultDomain?: string) => {
   }
 
   const hasDefaultDomain =
-    defaultDomain && url.includes(`https://${defaultDomain}`);
+    defaultDomain &&
+    (url.includes(`https://${defaultDomain}`) ||
+      url.includes(`https://www.${defaultDomain}`));
   const hasNoDomain = !url.includes("/") && !defaultDomain;
 
   if (hasDefaultDomain || hasNoDomain) {
