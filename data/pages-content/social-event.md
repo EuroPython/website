@@ -48,9 +48,34 @@ Our social event sponsor, [Kiwi.com](https://jobs.kiwi.com) has organised a raff
 The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (meaning 'On the Way Home' in Hungarian) was formed in 2017 and has been primarily dedicated to Gipsy and Hungarian folklore from the very beginning. Its founders were Šimon Jakubíček (double bass) and David Golas (guitar), they were later joined by Michal Grossmann (violin) and Marek Šnorich (accordion). The band's main goal is to introduce listeners to folk music, which they don't usually encounter in their everyday lives. Additionally, they also perform well-known melodies
 
 ### Food Selection
-The menu for the social event will be published soon!
+#### Buffet
 
-<!-- *Please note the Sacre Coeur is a cashless venue and only accept card/ contactless payments.* -->
+- Mini burger with pulled pork, BBQ, fried onion, spinach /GF/
+
+- Chicken tortilla with vegetables /GF/
+
+- Burrito /GF/
+
+- Cheese variations /Veggie//GF/
+
+- Mexican avocado quacamole, cracker /Vege//Vegan/GF/ 200ks
+
+- Hummus, whole grain bread/Veggie//Vegan/
+
+- Caprese kaiserka /Vege//GF/ 
+
+- Baked pumpkin salad, pomegranate, spinach and argula /Vege//Vegan//GF/
+
+- Crudités vegetables /Veggie//Vegan//GF
+
+- Fruit /Vege//Vegan//GF
+
+*/Vege/ vegetarian*
+
+*/Vegan/ vegan*
+
+*/GF/ gluten free*
+
 ---
 <font size="+2.5">**Big THANK YOU to our...**</font>
 <a className="img" target="_blank" href="https://jobs.kiwi.com/">
