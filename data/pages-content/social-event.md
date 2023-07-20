@@ -62,7 +62,7 @@ The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (me
 
 - Hummus, whole grain bread/Veggie//Vegan/
 
-- Caprese kaiserka /Vege//GF/ 
+- Caprese kaiserka /Vege//GF/
 
 - Baked pumpkin salad, pomegranate, spinach and argula /Vege//Vegan//GF/
 
@@ -75,6 +75,23 @@ The band [Hazafele](https://www.facebook.com/profile.php?id=100053175145125) (me
 */Vegan/ vegan*
 
 */GF/ gluten free*
+
+#### BAR
+
+You will get one free drink. Then you are welcome to buy more drinks at the bar. 
+
+- Homemade lemon lemonade 0,4 l / 50 CZK
+- Homemade elderflower lemonade 0,4 l / 50 CZK
+
+- Draft Beer 0,4 l / 55 CZK
+
+- Pinot Gris semi-dry WW Argentina 0,2 l / 100 CZK
+- Blue Portugal dry RW Hungary 0,2 l / 100 CZK
+
+- Aperol Spritz 140 CZK
+- Gin & Tonic 140 CZK
+- Cuba Libre 140 CZK
+- Skinny Bitch 140 CZK
 
 ---
 <font size="+2.5">**Big THANK YOU to our...**</font>
