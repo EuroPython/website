@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SelectRoom } from "./select-room";
 import { Metadata } from "next";
 import { YoutubeVideo } from "./youtube-video";
+import { Link } from "components/link/link";
 
 export const generateMetadata = async ({
   params,
@@ -46,6 +47,14 @@ export default function LivePage({ params }: { params: { room: string } }) {
 
       <Title>Change room:</Title>
       <SelectRoom room={room} rooms={live.rooms} />
+
+      <div className="h-12" />
+
+      <Title>
+        <Link href="https://www.youtube.com/playlist?list=PL8uoeex94UhEGxPOetT3bpg8ibcxflh44">
+          Previous days playlist 📼
+        </Link>
+      </Title>
 
       <div className="h-12" />
     </>
