@@ -91,7 +91,7 @@ of participants.
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
-- RB 113; occupancy: 20/24
+- RB 113; occupancy: 24/24
 - RB 114; occupancy: 16/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
@@ -202,7 +202,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
   - [sktime getting started with contributions](https://github.com/sktime/sktime/issues/1147)
   - [Roadmap 2023-2024 issue](https://github.com/sktime/sktime/issues/4691)
   - [Good first issues](https://github.com/sktime/sktime/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
- 
+
 ### HoloViz Panel
 
 - You can contribute in many ways. See [Contributing.md](https://github.com/holoviz/panel/blob/main/CONTRIBUTING.MD).
@@ -262,7 +262,7 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
   - [Lance contributor guide](https://lancedb.github.io/lance/contributing.html)
   - [Good first issues](https://github.com/lancedb/lance/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
-### Patito – A data modelling layer built on top of polars and pydantic 
+### Patito – A data modelling layer built on top of polars and pydantic
 
 - Number of people: ~5 (~4 contributors + 1 organiser)
 - Room: RB 105
@@ -277,6 +277,17 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Links:
   - [GitHub repository](https://github.com/JakobGM/patito)
   - [Using Patito for DataFrame Validation](https://patito.readthedocs.io/en/latest/tutorial/dataframe-validation.html) - An introductory tutorial explaining the motivation behind the library.
+
+
+### qutebrowser: A keyboard-driven, vim-like browser based on Python and Qt
+
+qutebrowser is currently in one of its biggest transitions ([Qt 5 → Qt 6](https://github.com/qutebrowser/qutebrowser/issues/7202)), shortly before its major v3.0.0 release. I'm hoping to flip the switch to Qt 6 at the sprints and would love some help with the [remaining v3.0.0 issues](https://github.com/qutebrowser/qutebrowser/milestone/49)!
+
+- Number of people: ~4 (3 contributors + 1 organiser)
+- Room: RB 113
+- Python Level: any - I'm happy to mentor people (hence only ~3). It can be a challenging project, but newcomers welcome!
+- Contact: mail@qutebrowser.org / Florian Bruhin (@the_compiler) on Discord
+- Links: https://qutebrowser.org
 
 Please add your sprint here!
 
