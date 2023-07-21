@@ -92,7 +92,7 @@ of participants.
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
 - RB 113; occupancy: 24/24
-- RB 114; occupancy: 16/24
+- RB 114; occupancy: 19/24
 - RB 115; occupancy: 0/24
 - RB 116; occupancy: 0/24
 - RB 109; occupancy: 0/48
@@ -288,6 +288,15 @@ qutebrowser is currently in one of its biggest transitions ([Qt 5 → Qt 6](http
 - Python Level: any - I'm happy to mentor people (hence only ~3). It can be a challenging project, but newcomers welcome!
 - Contact: mail@qutebrowser.org / Florian Bruhin (@the_compiler) on Discord
 - Links: https://qutebrowser.org
+
+### CircuitPython
+
+- Number of people: 3 (2 contributors + 1 organisers)
+- Room: RB 114
+- Python Level: any
+- Contact: ep2023@dopieralski.pl
+- Links: https://circuitpython.org
+ 
 
 Please add your sprint here!
 
