@@ -87,7 +87,7 @@ of participants.
 
 - RB 103; occupancy: 20/24
 - RB 104; occupancy: 23/24
-- RB 105; occupancy: 11/24
+- RB 105; occupancy: 16/24
 - RB 106; occupancy: 0/24
 - RB 107; occupancy: 0/24
 - RB 112; occupancy: 0/24
@@ -261,6 +261,22 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Links:
   - [Lance contributor guide](https://lancedb.github.io/lance/contributing.html)
   - [Good first issues](https://github.com/lancedb/lance/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+### Patito – A data modelling layer built on top of polars and pydantic 
+
+- Number of people: ~5 (~4 contributors + 1 organiser)
+- Room: RB 105
+- Suggested tasks for the sprint:
+  - Make the Patito library compatible with [Pydantic 2.0](https://github.com/pydantic/pydantic/releases/tag/v2.0).
+  - Any issues reported to [the old repository](https://github.com/kolonialno/patito/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) that are not yet resolved.
+  - Try using Patito for your own code.
+- Python Level:
+  - Familiarity with either Pydantic or Polars is a plus if you want to work alone, otherwise you can pair with the organiser or another participant.
+- Contacts:
+  - Contact details are listed on my GitHub profile: [GitHub.com/JakobGM]](https://github.com/JakobGM).
+- Links:
+  - [GitHub repository](https://github.com/JakobGM/patito)
+  - [Using Patito for DataFrame Validation](https://patito.readthedocs.io/en/latest/tutorial/dataframe-validation.html) - An introductory tutorial explaining the motivation behind the library.
 
 Please add your sprint here!
 
