@@ -29,7 +29,9 @@ facilities but the sprints are organised by **YOU**. It is a great chance to
 contribute to open-source projects large and small, learn from each other, geek
 out and have fun. 🐍
 
-**When**: 22-23 July 2023
+Lunch and coffee will be provided.
+
+**When**: 22-23 July 2023 (09:30 - 17:00)
 
 **Where**: Rajska Building (RB),
 [Žižkov Campus, VŠE](https://www.vse.cz/english/about-vse/profile/campus/)
