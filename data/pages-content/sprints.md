@@ -167,7 +167,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 ### BeeWare (Briefcase, Toga and more)
 
 - Number of people: ~10 (1 organizer)
-- Room: RB 113
+- Room: RB 109 (moved from RB 113)
 - Python Level: any
 - Contact: Russell Keith-Magee ([Email](mailto:russell@beeware.org)
   [Github](https://github.com/freakboy3742)
