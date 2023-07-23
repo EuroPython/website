@@ -132,3 +132,16 @@ p.cross::after {
   font-size: 1.3em;
   margin-left: 0.4em;
 }
+
+.word-spacing-snug {
+  word-spacing: 0.375em;
+}
+
+.noise-bg {
+  background-image: url(/img/noise.svg);
+  background-size: 96px, 100%;
+  background-position: 50% 0;
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: soft-light, normal;
+  opacity: 0.2;
+}
