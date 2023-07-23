@@ -1,7 +1,7 @@
 import { Accent } from "components/accent";
 import Link from "next/link";
 
-const HeroMain = () => {
+export const HeroMain = () => {
   return (
     <svg
       width="933"

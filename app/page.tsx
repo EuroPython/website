@@ -16,6 +16,7 @@ import { Title } from "components/typography/title";
 import { Prose } from "components/prose/prose";
 import { MDXRemote } from "components/mdx-remote/mdx-remote";
 import { Keynoters } from "components/keynoters/keynoters";
+import { HeroCZ } from "components/hero/hero-cz";
 
 export const metadata = {
   metadataBase: new URL("https://ep2023.europython.eu"),
@@ -71,7 +72,7 @@ export default async function IndexPage() {
   return (
     <Layout headerInverted={true}>
       <Fullbleed>
-        <Hero />
+        <HeroCZ />
       </Fullbleed>
 
       <CardContainer>
