@@ -62,10 +62,10 @@ const HeroMain = ({ className }: { className: string }) => {
 };
 
 export const HeroCZ = () => (
-  <div>
+  <div className="relative top-[-145px] md:top-[-182px] pt-[145px] md:pt-[182px] min-h-screen">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute inset-0 z-10 w-full h-screen"
+      className="absolute inset-0 z-10 w-full h-full"
     >
       <style>
         {`.a,
@@ -155,11 +155,11 @@ export const HeroCZ = () => (
       />
     </svg>
 
-    <div className="absolute inset-0 z-10 w-full h-screen noise-bg" />
+    <div className="absolute inset-0 z-10 w-full h-full noise-bg" />
 
-    <div className="top-[-210px] relative pt-[250px] pb-[180px]">
+    <div className="pb-24">
       <div className="max-w-4xl lg:max-w-6xl mx-auto w-full relative z-10 px-4">
-        <Title className="text-white !mb-4">
+        <Title className="text-white !mb-12">
           Thanks for joining EuroPython!
         </Title>
         <Title level={2} className="text-white">
