@@ -13,7 +13,9 @@ export async function middleware(request: NextRequest) {
         formatInTimeZone(day, "Europe/Prague", "yyyy-MM-dd")
       );
 
-      let day = formattedDays.includes(today) ? today : days[0];
+      const firstDay = formattedDays[0];
+
+      let day = formattedDays.includes(today) ? today : firstDay;
 
       return NextResponse.redirect(new URL(`/schedule/${day}`, request.url));
     }
