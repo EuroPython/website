@@ -326,8 +326,8 @@ A big shoutout to **Shekhar** for his exceptional work in effectively coordinati
 - Shiva Bhusal
 - Luciana Claudia Martins Ferreira Diogenes
 - Henok Ejigu
-<!-- - FIXME - ask Shekhar -->
-
+- Shiva Bhusal,
+- M. Sadegh Salimi
 
 <ButtonWithTitle title="Want to join us & have fun organising future EuroPython?" text="Email us now at volunteers@europython.eu" href="mailto:volunteers@europython.eu" target="_blank"/>
 
