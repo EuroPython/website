@@ -5,7 +5,7 @@ subtitle: Thank you
 
 # Thank YOU
 
-The journey to Prague encompassed a full year of exploration, diligent effort, and unwavering dedication. Our exceptional team made it together with warmth, compassion, humour and creativity! A heartfelt appreciation extends to all those who was part of crafting EuroPython 2023 Prague & Remote.
+The journey to Prague encompassed a full year of exploration, diligent effort, and unwavering dedication. Our exceptional team made it together with warmth, compassion, humour and creativity! A heartfelt appreciation extends to all those who took part in crafting EuroPython 2023 Prague & Remote.
 
 EuroPython 2023 was organised entirely by a devoted group of volunteers, a tradition upheld since 2002. Without further ado, let us meet the fantastic humans who dedicated numerous hours and boundless affection into shaping EuroPython 2023!
 
@@ -55,7 +55,7 @@ As you peruse the (hopefully lucid but always witty) content on our website, blo
 
 ### Conference Designers
 
-Our logo, website assets, t-shirts, banners, badges, lanyards, and general aesthetics of EuroPython 2023 are created by our designers
+Our logo, website assets, t-shirts, banners, badges, lanyards, and general aesthetics of EuroPython 2023 were created by our designers
 - [Anastasia Santoro](https://www.linkedin.com/in/anastasia-santoro-ui-ux-designer-620316157/)
 - [Orlando Festa](https://www.linkedin.com/in/orlandofesta/)
 <!-- - FIXME - ask Patrick if we should put them down below in the Acknowledgement.  -->
@@ -67,7 +67,7 @@ And the rest of the assets, stickers and social cards were scrambled together wi
 
 ## Financial Aid team
 
-If you are one of the 107 people who participated EuroPython 2023 in Prague or remotely, you have surely exchanged many emails with some of our Financial Aid team members. From spreadsheet wizardry, to responding to countless
+If you are one of the 107 people who participated in EuroPython 2023 in Prague or remotely, you have surely exchanged many emails with some of our Financial Aid team members. From spreadsheet wizardry, to responding to countless
 emails and processing all the receipts, here are our kind and organised humans behind the Finaid team:
 
 - Sebastiaan Zeff
