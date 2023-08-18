@@ -228,14 +228,18 @@ And a big shoutout to our Humble Data Workshop mentors:
 
 
 ### [WASM Summit](/wasm)
- - Nicholas Tollervey
- - Roman Yurchak
+- Nicholas Tollervey
+- Roman Yurchak
+
+### [Beginners' Conference Orientation](/session/beginner-conference-orientation)
+- Cheuk Ting Ho
+- Martin Borus
 
 ### [Mentored Sprints](/mentored-sprint)
- - Cheuk Ting Ho
+- Cheuk Ting Ho
 
 ### [AI Game Tournament](/tournament)
-  - Neil Vaytet
+- Neil Vaytet
 
 ### Social Events Organisers
 
@@ -339,7 +343,6 @@ Big thanks to our AV team [Gonzo Design](https://www.gonzodesign.it/) who have
 been streaming, recording & editing our talks, and more importantly,
 experimenting with us since 2017! Here are the folks who helped us with
 streaming and the smooth hybrid experience:
-
 - Matteo Vanni
 - Consuelo Cipriani
 - Vincenzo Cicanese
@@ -353,7 +356,6 @@ streaming and the smooth hybrid experience:
 ### Conference Photographer
 
 The official EuroPython conference and social event photos (to be released) were taken by:
-
 - [ Braulio Lara](https://www.brauliolaraph.com/)
 
 ### Hazafele - Social Event Band
