@@ -183,8 +183,9 @@ All the sponsorship contacts, logistics & the exhibits are managed by the small 
 - Elisabetta Nova
 - Emma Delescolle
 - Leila Verhaegen
+- Lenka Králová
 
-And special thanks to Lenka Králová for the advice and promotion to the event.
+Extra shout-out and special thanks to Lenka Králová for the advice and promotion for the event in the Czech Republic!
 
 <!-- FIXME - ask Naomi if this intro of Lenka is suitable. -->
 
