@@ -104,7 +104,6 @@ The talk selection process was supported by our wonderful reviewers:
 - Alisa
 - Andrii Soldatenko
 - Christian Ledermann
-- Cristián Maureira-Fredes
 - Clinton Roy
 - Cosima Meyer
 - Cristián Maureira-Fredes
