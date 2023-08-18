@@ -120,6 +120,10 @@
       "name": "Info & Support",
       "items": [
         {
+          "name": "EuroPython 2023 Team",
+          "path": "/thankyou"
+        },
+        {
           "name": "FAQ",
           "path": "/faq"
         },
@@ -159,6 +163,10 @@
     {
       "name": "Call for Proposals",
       "path": "/cfp"
+    },
+    {
+      "name": "EuroPython 2023 Team",
+      "path": "/thankyou"
     },
     {
       "name": "Contacts",
