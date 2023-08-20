@@ -45,7 +45,7 @@ the EuroPython community remain a safe and friendly place:
 
 As you peruse the (hopefully lucid but always witty) content on our website, blog, newsletter, and social media, it was created by one of the wordsmiths/meme crafters from our Communications team:
 
-- sangarshanan
+- Sangarshanan
 - Vaibhav Srivastav (VB)
 - Diego Russo
 - Nicholas Tollervey
@@ -93,7 +93,6 @@ programme selection & scheduling are:
 
 - Theofanis Petkos
 - Diego Russo
-<!-- - FIXME - Ask Fanis if we are missing people. -->
 
 ### Programme Reviewers
 
@@ -101,7 +100,7 @@ The talk selection process was supported by our wonderful reviewers:
 
 - Agata Migalska
 - Alexander Hess
-- Alisa
+- Alisa Dammer
 - Andrii Soldatenko
 - Christian Ledermann
 - Clinton Roy
@@ -165,7 +164,6 @@ The registration discord bot was developed and deployed by:
 - Kasisnu Singh
 - Dhanshree Arora
 - Martin Borus
-<!-- - FIXME - Ask Artem if I am missing someone. -->
 
 You can check out our bot, reuse it and improve it here on our [Discord Repo](https://github.com/EuroPython/discord).
 
@@ -187,8 +185,6 @@ All the sponsorship contacts, logistics & the exhibits are managed by the small 
 
 Extra shout-out and special thanks to Lenka Králová for the advice and promotion for the event in the Czech Republic!
 
-<!-- FIXME - ask Naomi if this intro of Lenka is suitable. -->
-
 ### [Beginners' Day - PyLadies Snake Workshop](/pyladies-workshop)
 - Petr Viktorin
 - Karolina Surma
@@ -206,7 +202,7 @@ Our heartfelt thanks to the mentors of Snake Workshop:
 
 ### [Humble Data Workshop](/humble-data)
 - Laís Carvalho
-- Jodie  Burchell
+- Jodie Burchell
 - Cheuk Ting Ho
 
 And a big shoutout to our Humble Data Workshop mentors:
@@ -215,7 +211,7 @@ And a big shoutout to our Humble Data Workshop mentors:
 - Alexander Darby
 - Penelope Tollervey
 - Artem Kislovskiy
-<!-- - FIXME - ask Laís if we are missing anyone -->
+- Martin Borus
 
 ### [Women in AI Workshop](/wai)
 - Nabanita Roy  
@@ -246,7 +242,7 @@ And a big shoutout to our Humble Data Workshop mentors:
 
 #### [Thursday Social Event](/social-event)
 - Artem Kislovskiy
-- sangarshanan
+- Sangarshanan
 - Shekhar Koirala
 - Jakub Kanovics
 
@@ -375,6 +371,6 @@ We would like to thank the developers and companies behind the tools we use. The
   – special thanks to Raphael Michel & Martin Gross
 - [Pretalx](https://pretalx.com/p/about/) – special thanks to Tobias Kunze
 - [1Password](https://1password.com/)
-- [Zammad](https://zammad.com/en) (self-hosted)
+- [Zammad](https://zammad.com/en)
 - [Google Workspace](https://www.google.com/nonprofits/)
 - [Plausible](https://plausible.io/)
