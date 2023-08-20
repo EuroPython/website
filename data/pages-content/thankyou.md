@@ -178,7 +178,6 @@ All the sponsorship contacts, logistics & the exhibits are managed by the small 
 
 ### [Trans\*Code](/trans_code)
 - Naomi Ceder
-- Elisabetta Nova
 - Emma Delescolle
 - Leila Verhaegen
 - Lenka Králová
