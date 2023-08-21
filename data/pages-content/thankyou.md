@@ -311,7 +311,8 @@ Special thanks to **Theofanis, Cyril and Dhanshree** for their fantastic work in
 - Çağıl Uluşahin Sönmez
 - Svitlana Tuchyna
 - Chung-Fan Tsai
-<!-- - FIXME - ask Fanis and Cyril -->
+- Elisabetta Nova
+- Michael Tsadikov
 
 ### Remote Volunteers
 A big shoutout to **Shekhar** for his exceptional work in effectively coordinating with remote speakers and in organizing remote volunteers:
