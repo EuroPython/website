@@ -49,7 +49,7 @@ As you peruse the (hopefully lucid but always witty) content on our website, blo
 - Vaibhav Srivastav (VB)
 - Diego Russo
 - Nicholas Tollervey
-
+- Raquel Dou
 
 ## Design
 
@@ -312,7 +312,6 @@ Special thanks to **Theofanis, Cyril and Dhanshree** for their fantastic work in
 - Svitlana Tuchyna
 - Chung-Fan Tsai
 - Elisabetta Nova
-- Michael Tsadikov
 
 ### Remote Volunteers
 A big shoutout to **Shekhar** for his exceptional work in effectively coordinating with remote speakers and in organizing remote volunteers:
