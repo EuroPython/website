@@ -58,7 +58,6 @@ As you peruse the (hopefully lucid but always witty) content on our website, blo
 Our logo, website assets, t-shirts, banners, badges, lanyards, and general aesthetics of EuroPython 2023 were created by our designers
 - [Anastasia Santoro](https://www.linkedin.com/in/anastasia-santoro-ui-ux-designer-620316157/)
 - [Orlando Festa](https://www.linkedin.com/in/orlandofesta/)
-<!-- - FIXME - ask Patrick if we should put them down below in the Acknowledgement.  -->
 
 ### Design Team
 And the rest of the assets, stickers and social cards were scrambled together with love by our Design team.
@@ -334,10 +333,11 @@ streaming and the smooth hybrid experience:
 - Consuelo Cipriani
 - Vincenzo Cicanese
 - Simone Giorgi
-- Domenico Giovane
+- Claudio Cirri
 - Ambra Lorenzetti
 - Alessandro Arese Visconti
-<!-- - FIXME -->
+- Matteo Piccinini
+- Laura Pantaleo
 
 
 ### Conference Photographer
