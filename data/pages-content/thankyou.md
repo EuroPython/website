@@ -98,42 +98,34 @@ programme selection & scheduling are:
 
 The talk selection process was supported by our wonderful reviewers:
 
-- Agata Migalska
-- Alexander Hess
 - Alisa Dammer
-- Andrii Soldatenko
-- Christian Ledermann
-- Clinton Roy
-- Cosima Meyer
-- Cristián Maureira-Fredes
+- Artur Czepiel
+- Alexander Hess
+- Agata Migalska
 - Cyril Bitterich
+- Christian Ledermann
+- Cristián Maureira-Fredes
+- Cosima Meyer
+- Deborah Leem
 - David Seddon
 - David Vaz
-- Deborah Leem
-- Diego Russo
 - Ernesto Arbitrio
-- Gajendra Deshpande
 - Jiawei Wang
 - Lisa Carpenter
-- Manav Mehra
-- Maxim Danilov
 - Nabanita Roy
 - Nicholas Tollervey
-- nikkie
-- Pooja Gadige
 - Pratibha Jagnere
-- Radomir Dopieralski
 - Raghav Dave
+- Radomir Dopieralski
 - Richard Kellner
 - Roberto Polli
-- Sebastiaan Zeeff
-- Sebastian Witowski
-- Shagun Sodhani
 - Siddharth Gupta
+- Shagun Sodhani
+- Sebastian Witowski
+- Sebastiaan Zeeff
 - Tiago Montes
-- Valerio Maggio
-- Vincent Poulailleau
 - Vinícius Gubiani Ferreira
+- Valerio Maggio
 
 ## Operations Team
 
@@ -150,6 +142,7 @@ on-site volunteers, the Operations team have all covered. If you ever received a
 - Daksh P. Jain
 - Sebastiaan Zeeff
 - Cristián Maureira-Fredes
+- Laís Carvalho
 
 ### EuroPython 2023 Discord Team
 
@@ -220,8 +213,6 @@ And a big shoutout to our Humble Data Workshop mentors:
  And a huge thank you to the Women in AI team for your support through organising the workshop:
  - Dr. Alessandra Sala
  - Begüm Genç McEvoy
- <!-- - FIXME - ask Nabanita if we are missing anyone -->
-
 
 ### [WASM Summit](/wasm)
 - Nicholas Tollervey
