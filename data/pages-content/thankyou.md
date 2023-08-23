@@ -87,15 +87,18 @@ programme selection & scheduling are:
 - Diego Russo
 - Nicholas Tollervey
 - Cristián Maureira-Fredes
+- Raquel Dou
 
 ### [Speaker Mentorship Programme](/mentorship)
 
 - Theofanis Petkos
 - Diego Russo
 
-### Programme Reviewers
+### Community Voting Participants & Programme Reviewers
 
-The talk selection process was supported by our wonderful reviewers:
+A big thank you to over 300 individuals who took part in our community voting, significantly influencing the direction of our program.
+
+Alongside our fantastic community, the talk selection process was supported by our wonderful reviewers:
 
 - Alisa Dammer
 - Artur Czepiel
