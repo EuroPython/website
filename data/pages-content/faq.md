@@ -24,12 +24,14 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-06-09</b>: <a href="/finaid">[Financial Aid for Remote Tickets](/finaid#-free-remote-ticket)</a> Starts </li>
 <li><b>2023-06-20</b>: [Schedule](/schedule) Published</li>
 <li><b>2023-07-14</b>: [Accessibility and Rooms Info Page](/accessibility) Published</li>
+<li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
+<li><b>On and on forever</b>: Celebrate the [EuroPython 2023 Team](/thankyou)! 🎊 </li>
+
 
 
 </ul>
 
 <ul className="milestone-todo">
-<li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 </ul>
 
 ## **Q. When and where is EuroPython 2023 taking place?**
@@ -140,7 +142,7 @@ We are committed to making EuroPython sponsorship accessible to most organisatio
 
 ## **Q. How can I help you with the conference organisation?**
 
-A. The EuroPython conference is entirely run by volunteers and we always need some extra help. If you want to get involved, please email [volunteers@europython.eu](volunteers@europython.eu) and we are always happy for a chat!
+A. The EuroPython conference is entirely run by volunteers. These are everyone in the [EuroPython 2023 team](/thankyou) involved in the organisation for this year. We always need some extra help. If you want to get involved, please email [volunteers@europython.eu](volunteers@europython.eu) and we are always happy for a chat!
 
 ---
 
