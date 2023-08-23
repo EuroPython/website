@@ -159,6 +159,7 @@ The registration discord bot was developed and deployed by:
 - Kasisnu Singh
 - Dhanshree Arora
 - Martin Borus
+- Artur Czepiel
 
 You can check out our bot, reuse it and improve it here on our [Discord Repo](https://github.com/EuroPython/discord).
 
