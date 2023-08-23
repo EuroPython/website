@@ -90,9 +90,9 @@ export default async function IndexPage() {
 
       <div className="mt-40 px-6">
         <HeroWithCTA
-          ctaTitle="The Sprint Weekend is On"
+          ctaTitle="EuroPython 2023 Photos"
           ctaButton={
-            <ButtonLink href="/sprints">Submit your sprint now!</ButtonLink>
+            <ButtonLink href="https://www.flickr.com/photos/europython/collections/72157722021442529/">Savour the Highlights of EuroPython 2023</ButtonLink>
           }
         >
           <Title>

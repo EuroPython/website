@@ -120,12 +120,16 @@
       "name": "Info & Support",
       "items": [
         {
+          "name": "FAQ",
+          "path": "/faq"
+        },
+        {
           "name": "EuroPython 2023 Team",
           "path": "/thankyou"
         },
         {
-          "name": "FAQ",
-          "path": "/faq"
+          "name": "EuroPython 2023 Photos",
+          "path": "/photos"
         },
         {
           "name": "Accessibility and Rooms",
@@ -136,7 +140,7 @@
           "path": "/finaid"
         },
         {
-          "name": "Volunteers",
+          "name": "Volunteering",
           "path": "/volunteers"
         },
         {
@@ -167,6 +171,10 @@
     {
       "name": "EuroPython 2023 Team",
       "path": "/thankyou"
+    },
+    {
+      "name": "Conference Photos",
+      "path": "/photos"
     },
     {
       "name": "Contacts",
