@@ -66,7 +66,7 @@ And the rest of the assets, stickers and social cards were scrambled together wi
 
 ## Financial Aid team
 
-If you are one of the 107 people who participated in EuroPython 2023 in Prague or remotely, you have surely exchanged many emails with some of our Financial Aid team members. From spreadsheet wizardry, to responding to countless
+If you are one of the 210 people who participated in EuroPython 2023 in Prague or remotely, you have surely exchanged many emails with some of our Financial Aid team members. From spreadsheet wizardry, to responding to countless
 emails and processing all the receipts, here are our kind and organised humans behind the Finaid team:
 
 - Sebastiaan Zeff
@@ -313,7 +313,6 @@ A big shoutout to **Shekhar** for his exceptional work in effectively coordinati
 - Shiva Gaire
 - Daksh P. Jain
 - Kushal Gajurel
-- Shiva Bhusal
 - Luciana Claudia Martins Ferreira Diogenes
 - Henok Ejigu
 - Shiva Bhusal,
