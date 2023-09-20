@@ -89,7 +89,11 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
 };
 
 export const Header = ({ inverted = false }: { inverted?: boolean }) => (
-  <header className={clsx("p-6 flex items-center relative z-40")}>
+  <header
+    className={clsx("p-6 flex items-center relative z-40", {
+      "bg-primary": inverted,
+    })}
+  >
     <input
       type="checkbox"
       name="mobile-controls"

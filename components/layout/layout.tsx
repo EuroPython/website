@@ -24,7 +24,11 @@ export const Layout = ({
         Skip to main content
       </a>
       <Header inverted={headerInverted} />
-      <div className={clsx("h-12", {})}></div>
+      <div
+        className={clsx("h-12", {
+          "bg-primary": headerInverted,
+        })}
+      ></div>
 
       <LayoutContainer>{children}</LayoutContainer>
 
