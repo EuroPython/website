@@ -26,6 +26,7 @@ subtitle: Frequently Asked Questions about EuroPython
 <li><b>2023-07-14</b>: [Accessibility and Rooms Info Page](/accessibility) Published</li>
 <li><b>2023-07-17</b>: Together at EuroPython 2023! 🎊 </li>
 <li><b>2023-08-23</b>: [EuroPython 2023 Photos](/photos) Published</li>
+<li><b>2023-09-19</b>: [EuroPython 2023 Videos](https://www.youtube.com/playlist?list=PL8uoeex94UhFcwvAfWHybD7SfNgIUBRo-) Published</li>
 <li><b>On and on forever</b>: Celebrate the [EuroPython 2023 Team](/thankyou)! 🎊 </li>
 
 

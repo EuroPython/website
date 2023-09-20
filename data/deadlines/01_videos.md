@@ -1,7 +1,7 @@
 ---
-title: Livestream Catchup
+title: 2023 Videos
 subtitle: Celebrate Python
-url: /live
+url: https://www.youtube.com/playlist?list=PL8uoeex94UhFcwvAfWHybD7SfNgIUBRo-
 image: /images/cards/remote-23.jpg
 ---
-While waiting for the 2023 cut videos, catch up on 3-full-day EuroPython 2023 live stream from the playlist.
+Get ready to relive the magic of EuroPython! Enjoy 3 full days of inspiring videos – dive into the EuroPython 2023 playlist and experience the talent and love from our community!
