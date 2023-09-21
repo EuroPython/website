@@ -51,8 +51,14 @@ export default function LivePage({ params }: { params: { room: string } }) {
       <div className="h-12" />
 
       <Title>
+        <Link href="https://www.youtube.com/playlist?list=PL8uoeex94UhFcwvAfWHybD7SfNgIUBRo-">
+          Edited video playlist 📼
+        </Link>
+      </Title>
+
+      <Title>
         <Link href="https://www.youtube.com/playlist?list=PL8uoeex94UhEGxPOetT3bpg8ibcxflh44">
-          Previous days playlist 📼
+          Livestream playlist 📼
         </Link>
       </Title>
 
