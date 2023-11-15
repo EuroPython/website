@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 import { OpenGraphImageSession } from "components/opengraph-image/opengraph-image-session";
 import { fetchSubmissionBySlug } from "@/lib/pretalx/submissions";
 
