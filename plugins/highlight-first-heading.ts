@@ -10,7 +10,9 @@ function transform(tree: Node) {
 
   if (heading) {
     heading.data = heading.data || {};
+    // @ts-ignore
     heading.data.hProperties = heading.data.hProperties || {};
+    // @ts-ignore
     (heading.data.hProperties as any).className = "highlighted";
   }
 }

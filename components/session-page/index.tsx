@@ -12,7 +12,7 @@ import { TagContainer, Tag } from "components/tag/tag";
 import { Title } from "components/typography/title";
 import { formatInTimeZone } from "date-fns-tz";
 import { getAvatarUrl } from "helpers/get-avatar-url";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import ReactMarkdown from "react-markdown";
 
 const normalizeRoom = (room: string) => {
   return room.replace(/\[|\]/g, "").toLowerCase();
@@ -143,9 +143,7 @@ export const SessionPage = ({
             </Title>
 
             <Prose>
-              <ReactMarkdown components={components}>
-                {session.abstract}
-              </ReactMarkdown>
+              <ReactMarkdown components={components}>{session.abstract}</ReactMarkdown>
             </Prose>
 
             <TagContainer className="mb-6">
