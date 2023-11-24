@@ -1,0 +1,4149 @@
+{
+    "days": {
+        "2022-07-13": {
+            "rooms": [
+                "The Auditorium",
+                "Wicklow Hall 1",
+                "Liffey A",
+                "Liffey B",
+                "Liffey Hall 1",
+                "Liffey Hall 2",
+                "Forum"
+            ],
+            "talks": [
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Registration @ Ground Foyer",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "registration-ground-foyer",
+                    "speakers": [],
+                    "start_time": "08:00:00",
+                    "talk_id": "EVHW39",
+                    "time": "08:00:00",
+                    "type": "Registration",
+                    "title": "Registration @ Ground Foyer",
+                    "delivery": "",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Opening Session [in-person & remote]",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "opening-session-in-person-remote",
+                    "speakers": [],
+                    "start_time": "09:00:00",
+                    "talk_id": "UMU8GH",
+                    "time": "09:00:00",
+                    "type": "Opening Session",
+                    "title": "Opening Session [in-person & remote]",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Python's role in unlocking the secrets of the Universe with the James Webb Space Telescope",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "python-s-role-in-unlocking-the-secrets-of-the-universe-with-the-james-webb-space-telescope",
+                    "speakers": [
+                        "Dr. Patrick Kavanagh"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "KG3M3F",
+                    "time": "09:30:00",
+                    "type": "Keynote",
+                    "title": "Python's role in unlocking the secrets of the Universe with the James Webb Space Telescope",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "10:15:00",
+                    "talk_id": "",
+                    "time": "10:15:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "LocalStack: Turbocharging dev loops and team collaboration for cloud applications",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "localstack-turbocharging-dev-loops-and-team-collaboration-for-cloud-applications",
+                    "speakers": [
+                        "Waldemar Hummer"
+                    ],
+                    "start_time": "10:45:00",
+                    "talk_id": "3XNT9R",
+                    "time": "10:45:00",
+                    "type": "Talk",
+                    "title": "LocalStack: Turbocharging dev loops and team collaboration for cloud applications",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "An Introduction to Apache TVM",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "an-introduction-to-apache-tvm",
+                    "speakers": [
+                        "Leandro Nunes"
+                    ],
+                    "start_time": "10:45:00",
+                    "talk_id": "83QRQG",
+                    "time": "10:45:00",
+                    "type": "Talk",
+                    "title": "An Introduction to Apache TVM",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "The Design of Everyday APIs",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "the-design-of-everyday-apis",
+                    "speakers": [
+                        "Lynn Root"
+                    ],
+                    "start_time": "10:45:00",
+                    "talk_id": "8SJSVS",
+                    "time": "10:45:00",
+                    "type": "Talk",
+                    "title": "The Design of Everyday APIs",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Making Python better one error message at a time",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "making-python-better-one-error-message-at-a-time",
+                    "speakers": [
+                        "Pablo Galindo Salgado"
+                    ],
+                    "start_time": "10:45:00",
+                    "talk_id": "CJYTER",
+                    "time": "10:45:00",
+                    "type": "Talk",
+                    "title": "Making Python better one error message at a time",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Elephants, ibises and a more Pythonic way to work with databases",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "elephants-ibises-and-a-more-pythonic-way-to-work-with-databases",
+                    "speakers": [
+                        "Marlene Mhangami"
+                    ],
+                    "start_time": "10:45:00",
+                    "talk_id": "S9ANCN",
+                    "time": "10:45:00",
+                    "type": "Talk",
+                    "title": "Elephants, ibises and a more Pythonic way to work with databases",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Code coverage through unit tests running in sub-processes/threads: Locally and automated on GitHub",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "code-coverage-through-unit-tests-running-in-sub-processes-threads-locally-and-automated-on-github",
+                    "speakers": [
+                        "Saransh Chopra"
+                    ],
+                    "start_time": "10:45:00",
+                    "talk_id": "YC7KJU",
+                    "time": "10:45:00",
+                    "type": "Talk",
+                    "title": "Code coverage through unit tests running in sub-processes/threads: Locally and automated on GitHub",
+                    "delivery": "remote",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Python & Visual Studio Code - Revolutionizing the way you do data science",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "python-visual-studio-code-revolutionizing-the-way-you-do-data-science",
+                    "speakers": [
+                        "Jeffrey Mew"
+                    ],
+                    "start_time": "11:35:00",
+                    "talk_id": "DYDA3H",
+                    "time": "11:35:00",
+                    "type": "Sponsored Talk",
+                    "title": "Python & Visual Studio Code - Revolutionizing the way you do data science",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "From pip to poetry - Python (many) ways of packaging and publishing",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "from-pip-to-poetry-python-many-ways-of-packaging-and-publishing",
+                    "speakers": [
+                        "Vin\u00edcius Gubiani Ferreira"
+                    ],
+                    "start_time": "11:35:00",
+                    "talk_id": "G7MNXY",
+                    "time": "11:35:00",
+                    "type": "Talk",
+                    "title": "From pip to poetry - Python (many) ways of packaging and publishing",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Data Warehouses Meet Data Lakes",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "expert",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "data-warehouses-meet-data-lakes",
+                    "speakers": [
+                        "Mauro"
+                    ],
+                    "start_time": "11:35:00",
+                    "talk_id": "KMCFKN",
+                    "time": "11:35:00",
+                    "type": "Talk",
+                    "title": "Data Warehouses Meet Data Lakes",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Python Packaging Automation \u2014 Auto-Publish to PyPI via Pull Requests",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "python-packaging-automation-auto-publish-to-pypi-via-pull-requests",
+                    "speakers": [
+                        "Justin Mayer"
+                    ],
+                    "start_time": "11:35:00",
+                    "talk_id": "MADLNQ",
+                    "time": "11:35:00",
+                    "type": "Talk",
+                    "title": "Python Packaging Automation \u2014 Auto-Publish to PyPI via Pull Requests",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Using python to predict Asset price reversals.",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "using-python-to-predict-asset-price-reversals",
+                    "speakers": [
+                        "Niall O'Connor"
+                    ],
+                    "start_time": "11:35:00",
+                    "talk_id": "STQEKX",
+                    "time": "11:35:00",
+                    "type": "Sponsored Talk",
+                    "title": "Using python to predict Asset price reversals.",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "The beginner\u2019s data science project checklist",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "the-beginners-data-science-project-checklist",
+                    "speakers": [
+                        "Sara Iris Garcia"
+                    ],
+                    "start_time": "11:35:00",
+                    "talk_id": "ZYAD7Z",
+                    "time": "11:35:00",
+                    "type": "Talk",
+                    "title": "The beginner\u2019s data science project checklist",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "The intricate art of making your (internal) clients happy - the story from a Python-centered Infra team",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "the-intricate-art-of-making-your-internal-clients-happy-the-story-from-a-python-centered-infra-team",
+                    "speakers": [
+                        "Paulina Winkowska"
+                    ],
+                    "start_time": "12:10:00",
+                    "talk_id": "8KEVYF",
+                    "time": "12:10:00",
+                    "type": "Talk",
+                    "title": "The intricate art of making your (internal) clients happy - the story from a Python-centered Infra team",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Czech Drought Monitoring system \u2013 a journey from manual work to global drought monitoring and machine learning, powered by Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "czech-drought-monitoring-system-a-journey-from-manual-work-to-global-drought-monitoring-and-machine-learning-powered-by-python",
+                    "speakers": [
+                        "Monika Bl\u00e1hov\u00e1"
+                    ],
+                    "start_time": "12:10:00",
+                    "talk_id": "9LFFBL",
+                    "time": "12:10:00",
+                    "type": "Talk",
+                    "title": "Czech Drought Monitoring system \u2013 a journey from manual work to global drought monitoring and machine learning, powered by Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "CPython bugs & risky features",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "cpython-bugs-risky-features",
+                    "speakers": [
+                        "disconnect3d"
+                    ],
+                    "start_time": "12:10:00",
+                    "talk_id": "E7CX9K",
+                    "time": "12:10:00",
+                    "type": "Talk",
+                    "title": "CPython bugs & risky features",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Taking charge of your race conditions",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "taking-charge-of-your-race-conditions",
+                    "speakers": [
+                        "Borjan Tchakaloff"
+                    ],
+                    "start_time": "12:10:00",
+                    "talk_id": "N3HJ87",
+                    "time": "12:10:00",
+                    "type": "Talk",
+                    "title": "Taking charge of your race conditions",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Applying machine learning capabilities to wearable IoT devices for boxing technique management",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "applying-machine-learning-capabilities-to-wearable-iot-devices-for-boxing-technique-management",
+                    "speakers": [
+                        "Anthony I. Joseph"
+                    ],
+                    "start_time": "12:10:00",
+                    "talk_id": "NUF3K9",
+                    "time": "12:10:00",
+                    "type": "Talk",
+                    "title": "Applying machine learning capabilities to wearable IoT devices for boxing technique management",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "On the benefits of using workflows: insights from two software tools in the context of computational neuroscience",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Forum"
+                    ],
+                    "slug": "on-the-benefits-of-using-workflows-insights-from-two-software-tools-in-the-context-of-computational-neuroscience",
+                    "speakers": [
+                        "Aur\u00e9lien Jaquier"
+                    ],
+                    "start_time": "12:10:00",
+                    "talk_id": "QQJFSS",
+                    "time": "12:10:00",
+                    "type": "Poster",
+                    "title": "On the benefits of using workflows: insights from two software tools in the context of computational neuroscience",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Choosing the right database for your next project - Looking at options beyond PostgreSQL and MySQL",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "choosing-the-right-database-for-your-next-project-looking-at-options-beyond-postgresql-and-mysql",
+                    "speakers": [
+                        "Marc-Andre Lemburg"
+                    ],
+                    "start_time": "12:10:00",
+                    "talk_id": "YYQBM3",
+                    "time": "12:10:00",
+                    "type": "Talk",
+                    "title": "Choosing the right database for your next project - Looking at options beyond PostgreSQL and MySQL",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Lunch Break",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "13:00:00",
+                    "talk_id": "",
+                    "time": "13:00:00",
+                    "type": "",
+                    "title": "Lunch Break",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Managing the code quality of your project. Leave the past behind: Focus on new code.",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "managing-the-code-quality-of-your-project-leave-the-past-behind-focus-on-new-code",
+                    "speakers": [
+                        "Andrea Guarino"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "DSCHNK",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Managing the code quality of your project. Leave the past behind: Focus on new code.",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "I have to Confess, I still Love Pandas",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "i-have-to-confess-i-still-love-pandas",
+                    "speakers": [
+                        "Cheuk Ting Ho"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "HLYETC",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "I have to Confess, I still Love Pandas",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Protocols in Python: Why You Need Them",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "protocols-in-python-why-you-need-them",
+                    "speakers": [
+                        "Rogier van der Geer"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "L7PFLV",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Protocols in Python: Why You Need Them",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "The Geometry of the Universe",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Forum"
+                    ],
+                    "slug": "the-geometry-of-the-universe",
+                    "speakers": [
+                        "John Gill"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "LTMDS9",
+                    "time": "14:00:00",
+                    "type": "Poster",
+                    "title": "The Geometry of the Universe",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "How to craft awesome Machine Learning demos with Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "how-to-craft-awesome-machine-learning-demos-with-python",
+                    "speakers": [
+                        "Omar Sanseviero"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "NVKPEJ",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "How to craft awesome Machine Learning demos with Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Raise better errors with Exception Groups",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "raise-better-errors-with-exception-groups",
+                    "speakers": [
+                        "Or Chen"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "Q3FPVG",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Raise better errors with Exception Groups",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "CPython Developer Panel",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "cpython-developer-panel",
+                    "speakers": [
+                        "\u0141ukasz Langa",
+                        "Pablo Galindo Salgado",
+                        "Mark Shannon",
+                        "Steve Dower",
+                        "Irit Katriel",
+                        "Batuhan Taskaya",
+                        "Ken Jin"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "X3CQ77",
+                    "time": "14:00:00",
+                    "type": "Panel",
+                    "title": "CPython Developer Panel",
+                    "delivery": "in-person",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "PySnooper: Never use print for debugging again",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "pysnooper-never-use-print-for-debugging-again",
+                    "speakers": [
+                        "Ram Rachum"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "7DJJMK",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "PySnooper: Never use print for debugging again",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Dance with shadows: stubs, patch and mock",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "dance-with-shadows-stubs-patch-and-mock",
+                    "speakers": [
+                        "Mar\u00eda Andrea Vignau"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "AKJCWL",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Dance with shadows: stubs, patch and mock",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Protocols - Static duck typing for decoupled code",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "protocols-static-duck-typing-for-decoupled-code",
+                    "speakers": [
+                        "Ran Zvi"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "BL9NGV",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Protocols - Static duck typing for decoupled code",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Classifying LEGO Bricks with Machine Learning",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "classifying-lego-bricks-with-machine-learning",
+                    "speakers": [
+                        "Piotr Rybak"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "DZZ8X9",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Classifying LEGO Bricks with Machine Learning",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Event-driven microservices with Python and Apache Kafka",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "event-driven-microservices-with-python-and-apache-kafka",
+                    "speakers": [
+                        "Dave Klein"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "P3EYQE",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Event-driven microservices with Python and Apache Kafka",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "25",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "15:05:00",
+                    "talk_id": "",
+                    "time": "15:05:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "25"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Automate the Boring Stuff with Slackbot(ver.2)",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "automate-the-boring-stuff-with-slackbot-ver-2",
+                    "speakers": [
+                        "Takanori Suzuki"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "E73V8G",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Automate the Boring Stuff with Slackbot(ver.2)",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "My journey using Docker as a development tool",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "my-journey-using-docker-as-a-development-tool",
+                    "speakers": [
+                        "Haseeb Majid"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "NZJDKC",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "My journey using Docker as a development tool",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "HPy: a better C API for Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "expert",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "hpy-a-better-c-api-for-python",
+                    "speakers": [
+                        "Ronan Lamy"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "TF9Z8Q",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "HPy: a better C API for Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Making AI Happen at Your Company",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "making-ai-happen-at-your-company",
+                    "speakers": [
+                        "Alexander CS Hendorf"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "VFEVKR",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Making AI Happen at Your Company",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Property-based testing the Python way",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "property-based-testing-the-python-way",
+                    "speakers": [
+                        "Emma Saroyan"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "ZK7MVG",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Property-based testing the Python way",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "What happens when you import a module?",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "what-happens-when-you-import-a-module",
+                    "speakers": [
+                        "Reuven M. Lerner"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "ZV9Y8M",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "What happens when you import a module?",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Working with Audio in Python (feat. Pedalboard)",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "working-with-audio-in-python-feat-pedalboard",
+                    "speakers": [
+                        "Peter Sobot"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "39YWUH",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Working with Audio in Python (feat. Pedalboard)",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "When to refactor your code into generators and how",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "when-to-refactor-your-code-into-generators-and-how",
+                    "speakers": [
+                        "Jan-Hein B\u00fchrman"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "98XE8Q",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "When to refactor your code into generators and how",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Building a Just-in-Time Python FaaS Platform with Unikraft",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "building-a-just-in-time-python-faas-platform-with-unikraft",
+                    "speakers": [
+                        "Felipe Huici",
+                        "Alexander Jung"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "CQ7NBC",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Building a Just-in-Time Python FaaS Platform with Unikraft",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "How much time does it take to write tests? A case study",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "how-much-time-does-it-take-to-write-tests-a-case-study",
+                    "speakers": [
+                        "Antonis Christofides"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "HJWZ37",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "How much time does it take to write tests? A case study",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Music and Code",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "music-and-code",
+                    "speakers": [
+                        "Nicholas H.Tollervey"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "HWMZZG",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Music and Code",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Using Python to  manage Software Bill of Materials",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "using-python-to-manage-software-bill-of-materials",
+                    "speakers": [
+                        "Anthony Harrison"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "VAGHFS",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Using Python to  manage Software Bill of Materials",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Dodging AI Dystopia: you can't save the world alone",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "dodging-ai-dystopia-you-can-t-save-the-world-alone",
+                    "speakers": [
+                        "Dr. Nakeema Stefflbauer"
+                    ],
+                    "start_time": "16:55:00",
+                    "talk_id": "GN9FNF",
+                    "time": "16:55:00",
+                    "type": "Keynote",
+                    "title": "Dodging AI Dystopia: you can't save the world alone",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-13",
+                    "ev_custom": "Wednesday's Lightning Talks",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "wednesday-s-lightning-talks",
+                    "speakers": [],
+                    "start_time": "17:45:00",
+                    "talk_id": "CPYWPM",
+                    "time": "17:45:00",
+                    "type": "Lightning Talk",
+                    "title": "Wednesday's Lightning Talks",
+                    "delivery": "",
+                    "tt_duration": "45"
+                }
+            ]
+        },
+        "2022-07-12": {
+            "rooms": [
+                "Wicklow Hall 1",
+                "Wicklow Hall 2A",
+                "Wicklow Hall 2B",
+                "Liffey Hall 1",
+                "Liffey Hall 2",
+                "Liffey Meeting Room 2"
+            ],
+            "talks": [
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Python objects under the hood",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "python-objects-under-the-hood",
+                    "speakers": [
+                        "Rodrigo Gir\u00e3o Serr\u00e3o"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "3B9WHE",
+                    "time": "09:30:00",
+                    "type": "Tutorial",
+                    "title": "Python objects under the hood",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Trans*Code",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "trans-code",
+                    "speakers": [
+                        "Naomi Ceder"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "3ESVF7",
+                    "time": "09:30:00",
+                    "type": "Special Workshop",
+                    "title": "Trans*Code",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Picking What to Watch Next - build a recommendation system",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "picking-what-to-watch-next-build-a-recommendation-system",
+                    "speakers": [
+                        "Cheuk Ting Ho"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "DHHVHZ",
+                    "time": "09:30:00",
+                    "type": "Tutorial",
+                    "title": "Picking What to Watch Next - build a recommendation system",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Inspect and try to interpret your scikit-learn machine-learning models",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "inspect-and-try-to-interpret-your-scikit-learn-machine-learning-models",
+                    "speakers": [
+                        "Guillaume Lemaitre"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "KP9CPX",
+                    "time": "09:30:00",
+                    "type": "Tutorial",
+                    "title": "Inspect and try to interpret your scikit-learn machine-learning models",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Beyond the Basics: Data Visualization in Python",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "beyond-the-basics-data-visualization-in-python",
+                    "speakers": [
+                        "Stefanie Molin"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "LY3NUG",
+                    "time": "09:30:00",
+                    "type": "Tutorial",
+                    "title": "Beyond the Basics: Data Visualization in Python",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Beginners' Day - Humble Data",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Meeting Room 2"
+                    ],
+                    "slug": "beginners-day-humble-data",
+                    "speakers": [
+                        "La\u00eds Carvalho"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "XK833K",
+                    "time": "09:30:00",
+                    "type": "Special Workshop",
+                    "title": "Beginners' Day - Humble Data",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "15",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Wicklow Hall 1",
+                        "Wicklow Hall 2A",
+                        "Wicklow Hall 2B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Liffey Meeting Room 2"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "11:00:00",
+                    "talk_id": "",
+                    "time": "11:00:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "15"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Python objects under the hood",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "python-objects-under-the-hood",
+                    "speakers": [
+                        "Rodrigo Gir\u00e3o Serr\u00e3o"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "3B9WHE",
+                    "time": "11:15:00",
+                    "type": "Tutorial",
+                    "title": "Python objects under the hood",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Trans*Code",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "trans-code",
+                    "speakers": [
+                        "Naomi Ceder"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "3ESVF7",
+                    "time": "11:15:00",
+                    "type": "Special Workshop",
+                    "title": "Trans*Code",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Picking What to Watch Next - build a recommendation system",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "picking-what-to-watch-next-build-a-recommendation-system",
+                    "speakers": [
+                        "Cheuk Ting Ho"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "DHHVHZ",
+                    "time": "11:15:00",
+                    "type": "Tutorial",
+                    "title": "Picking What to Watch Next - build a recommendation system",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Inspect and try to interpret your scikit-learn machine-learning models",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "inspect-and-try-to-interpret-your-scikit-learn-machine-learning-models",
+                    "speakers": [
+                        "Guillaume Lemaitre"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "KP9CPX",
+                    "time": "11:15:00",
+                    "type": "Tutorial",
+                    "title": "Inspect and try to interpret your scikit-learn machine-learning models",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Beyond the Basics: Data Visualization in Python",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "beyond-the-basics-data-visualization-in-python",
+                    "speakers": [
+                        "Stefanie Molin"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "LY3NUG",
+                    "time": "11:15:00",
+                    "type": "Tutorial",
+                    "title": "Beyond the Basics: Data Visualization in Python",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Beginners' Day - Humble Data",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Meeting Room 2"
+                    ],
+                    "slug": "beginners-day-humble-data",
+                    "speakers": [
+                        "La\u00eds Carvalho"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "XK833K",
+                    "time": "11:15:00",
+                    "type": "Special Workshop",
+                    "title": "Beginners' Day - Humble Data",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Lunch Break",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Wicklow Hall 1",
+                        "Wicklow Hall 2A",
+                        "Wicklow Hall 2B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Liffey Meeting Room 2"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "12:30:00",
+                    "talk_id": "",
+                    "time": "12:30:00",
+                    "type": "",
+                    "title": "Lunch Break",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Trans*Code",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "trans-code",
+                    "speakers": [
+                        "Naomi Ceder"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "3ESVF7",
+                    "time": "13:45:00",
+                    "type": "Special Workshop",
+                    "title": "Trans*Code",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "How to setup your development workflow to keep your code clean",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "how-to-setup-your-development-workflow-to-keep-your-code-clean",
+                    "speakers": [
+                        "Guillaume Dequenne"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "B9WJUW",
+                    "time": "13:45:00",
+                    "type": "Tutorial",
+                    "title": "How to setup your development workflow to keep your code clean",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Build with Audio: The easy & hard way!",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "build-with-audio-the-easy-hard-way",
+                    "speakers": [
+                        "Vaibhav Srivastav"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "KM8Z88",
+                    "time": "13:45:00",
+                    "type": "Tutorial",
+                    "title": "Build with Audio: The easy & hard way!",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Norvig's lispy: beautiful and illuminating Python code",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "norvig-s-lispy-beautiful-and-illuminating-python-code",
+                    "speakers": [
+                        "Luciano Ramalho"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "M83YDN",
+                    "time": "13:45:00",
+                    "type": "Tutorial",
+                    "title": "Norvig's lispy: beautiful and illuminating Python code",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Data Validation for Data Science",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "data-validation-for-data-science",
+                    "speakers": [
+                        "Natan Mish"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "SMTMWT",
+                    "time": "13:45:00",
+                    "type": "Tutorial",
+                    "title": "Data Validation for Data Science",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Beginners' Day - Humble Data",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Meeting Room 2"
+                    ],
+                    "slug": "beginners-day-humble-data",
+                    "speakers": [
+                        "La\u00eds Carvalho"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "XK833K",
+                    "time": "13:45:00",
+                    "type": "Special Workshop",
+                    "title": "Beginners' Day - Humble Data",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "15",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Wicklow Hall 1",
+                        "Wicklow Hall 2A",
+                        "Wicklow Hall 2B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Liffey Meeting Room 2"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "15:15:00",
+                    "talk_id": "",
+                    "time": "15:15:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "15"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Trans*Code",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "trans-code",
+                    "speakers": [
+                        "Naomi Ceder"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "3ESVF7",
+                    "time": "15:30:00",
+                    "type": "Special Workshop",
+                    "title": "Trans*Code",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "How to setup your development workflow to keep your code clean",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "how-to-setup-your-development-workflow-to-keep-your-code-clean",
+                    "speakers": [
+                        "Guillaume Dequenne"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "B9WJUW",
+                    "time": "15:30:00",
+                    "type": "Tutorial",
+                    "title": "How to setup your development workflow to keep your code clean",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Build with Audio: The easy & hard way!",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "build-with-audio-the-easy-hard-way",
+                    "speakers": [
+                        "Vaibhav Srivastav"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "KM8Z88",
+                    "time": "15:30:00",
+                    "type": "Tutorial",
+                    "title": "Build with Audio: The easy & hard way!",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Norvig's lispy: beautiful and illuminating Python code",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "norvig-s-lispy-beautiful-and-illuminating-python-code",
+                    "speakers": [
+                        "Luciano Ramalho"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "M83YDN",
+                    "time": "15:30:00",
+                    "type": "Tutorial",
+                    "title": "Norvig's lispy: beautiful and illuminating Python code",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Data Validation for Data Science",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "data-validation-for-data-science",
+                    "speakers": [
+                        "Natan Mish"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "SMTMWT",
+                    "time": "15:30:00",
+                    "type": "Tutorial",
+                    "title": "Data Validation for Data Science",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-12",
+                    "ev_custom": "Beginners' Day - Humble Data",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Meeting Room 2"
+                    ],
+                    "slug": "beginners-day-humble-data",
+                    "speakers": [
+                        "La\u00eds Carvalho"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "XK833K",
+                    "time": "15:30:00",
+                    "type": "Special Workshop",
+                    "title": "Beginners' Day - Humble Data",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                }
+            ]
+        },
+        "2022-07-14": {
+            "rooms": [
+                "The Auditorium",
+                "Wicklow Hall 1",
+                "Liffey A",
+                "Liffey B",
+                "Liffey Hall 1",
+                "Liffey Hall 2",
+                "Forum"
+            ],
+            "talks": [
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Morning Announcement",
+                    "ev_duration": "15",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "morning-announcement",
+                    "speakers": [],
+                    "start_time": "09:00:00",
+                    "talk_id": "KJAB7A",
+                    "time": "09:00:00",
+                    "type": "Opening Session",
+                    "title": "Morning Announcement",
+                    "delivery": "in-person",
+                    "tt_duration": "15"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Killer Robots Considered Harmful",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "killer-robots-considered-harmful",
+                    "speakers": [
+                        "Laura Nolan"
+                    ],
+                    "start_time": "09:15:00",
+                    "talk_id": "X9URCX",
+                    "time": "09:15:00",
+                    "type": "Keynote",
+                    "title": "Killer Robots Considered Harmful",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "10:00:00",
+                    "talk_id": "",
+                    "time": "10:00:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Predicting urban heat islands in Calgary",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "predicting-urban-heat-islands-in-calgary",
+                    "speakers": [
+                        "Anand S"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "BVRBYQ",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "Predicting urban heat islands in Calgary",
+                    "delivery": "remote",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Developers Documentation: your secret weapon",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "developers-documentation-your-secret-weapon",
+                    "speakers": [
+                        "Fr\u00e9d\u00e9ric Harper"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "C9LDHB",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "Developers Documentation: your secret weapon",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "PyArrow and the future of data analytics",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "pyarrow-and-the-future-of-data-analytics",
+                    "speakers": [
+                        "Alessandro Molina"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "F9FURV",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "PyArrow and the future of data analytics",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Walk-through of Django internals",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "walk-through-of-django-internals",
+                    "speakers": [
+                        "Hitul Mistry"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "VUTSHW",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "Walk-through of Django internals",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Writing Faster Python 3",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "writing-faster-python-3",
+                    "speakers": [
+                        "Sebastian Witowski"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "WX9PBG",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "Writing Faster Python 3",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Forget Mono vs. Multi-Repo - Building Centralized Git Workflows with Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "forget-mono-vs-multi-repo-building-centralized-git-workflows-with-python",
+                    "speakers": [
+                        "Daniel Koch",
+                        ""
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "YBQYF3",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "Forget Mono vs. Multi-Repo - Building Centralized Git Workflows with Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Maps with Django",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "maps-with-django",
+                    "speakers": [
+                        "Paolo Melchiorre"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "F9M9BR",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Maps with Django",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "How we are making Python 3.11 faster",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "how-we-are-making-python-3-11-faster",
+                    "speakers": [
+                        "Mark Shannon"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "HAKFFR",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "How we are making Python 3.11 faster",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Creating the Next Generation of Billionaires - Part 4",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "creating-the-next-generation-of-billionaires-part-4",
+                    "speakers": [
+                        "Lilian"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "JBHNRE",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Creating the Next Generation of Billionaires - Part 4",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "A Tale of two Kitchens, hyper modernizing your codebase.",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "a-tale-of-two-kitchens-hyper-modernizing-your-codebase",
+                    "speakers": [
+                        "Christian Ledermann"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "KPW7X7",
+                    "time": "11:20:00",
+                    "type": "Sponsored Talk",
+                    "title": "A Tale of two Kitchens, hyper modernizing your codebase.",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Scaling scikit-learn: introducing new sets of computational routines",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "scaling-scikit-learn-introducing-new-sets-of-computational-routines",
+                    "speakers": [
+                        "Julien Jerphanion"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "ULWUP3",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Scaling scikit-learn: introducing new sets of computational routines",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "A Network Embeddings based Recommendation Model with multi-factor consideration",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "a-network-embeddings-based-recommendation-model-with-multi-factor-consideration",
+                    "speakers": [
+                        "ABHISHEK"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "XUCMH3",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "A Network Embeddings based Recommendation Model with multi-factor consideration",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Use animated charts to present & share your findings with ipyvizzu",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "use-animated-charts-to-present-share-your-findings-with-ipyvizzu",
+                    "speakers": [
+                        "Peter Vidos"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "8YX9RG",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Use animated charts to present & share your findings with ipyvizzu",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Sponsor Recruitment Session",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "sponsor-recruitment-session",
+                    "speakers": [],
+                    "start_time": "11:55:00",
+                    "talk_id": "FBRMPN",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Sponsor Recruitment Session",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Online voting system used for primary elections for the French Presidential, must be secure right ?",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "online-voting-system-used-for-primary-elections-for-the-french-presidential-must-be-secure-right",
+                    "speakers": [
+                        "Emmanuel Leblond"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "H79EHW",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Online voting system used for primary elections for the French Presidential, must be secure right ?",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "EModelRunner: a Python package to run online available biological neuron model implementations",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Forum"
+                    ],
+                    "slug": "emodelrunner-a-python-package-to-run-online-available-biological-neuron-model-implementations",
+                    "speakers": [
+                        "An\u0131l Tuncel"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "MZS3MM",
+                    "time": "11:55:00",
+                    "type": "Poster",
+                    "title": "EModelRunner: a Python package to run online available biological neuron model implementations",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "ShapePipe: A modular weak-lensing processing and analysis pipeline",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "shapepipe-a-modular-weak-lensing-processing-and-analysis-pipeline",
+                    "speakers": [
+                        "Samuel FARRENS"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "S8XSTF",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "ShapePipe: A modular weak-lensing processing and analysis pipeline",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Async Django",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "async-django",
+                    "speakers": [
+                        "Ivaylo Donchev"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "WWRGSS",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Async Django",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Revolutionizing Education: How Python is Essential Beyond Computer Science",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "revolutionizing-education-how-python-is-essential-beyond-computer-science",
+                    "speakers": [
+                        "Srivatsa Kundurthy"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "XSRUNF",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Revolutionizing Education: How Python is Essential Beyond Computer Science",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Lunch Break",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "13:00:00",
+                    "talk_id": "",
+                    "time": "13:00:00",
+                    "type": "",
+                    "title": "Lunch Break",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Self-explaining APIs",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "self-explaining-apis",
+                    "speakers": [
+                        "Roberto Polli"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "3U9T9S",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Self-explaining APIs",
+                    "delivery": "in-person",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Lessons learnt from building my own library",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "lessons-learnt-from-building-my-own-library",
+                    "speakers": [
+                        "Stephanos"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "8JSS8X",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Lessons learnt from building my own library",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "When gRPC met Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "when-grpc-met-python",
+                    "speakers": [
+                        "Sanket Singh"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "BLHK9U",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "When gRPC met Python",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Synergize AI and Domain Expertise - Explainability Check with Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "synergize-ai-and-domain-expertise-explainability-check-with-python",
+                    "speakers": [
+                        "Pranjal Biyani"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "CFRUXG",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Synergize AI and Domain Expertise - Explainability Check with Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Real-time browser-ready computer vision apps with Streamlit",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "real-time-browser-ready-computer-vision-apps-with-streamlit",
+                    "speakers": [
+                        "Yuichiro Tachibana"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "HN3NNP",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Real-time browser-ready computer vision apps with Streamlit",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Diversity & Inclusion in the Python Community Panel",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "diversity-inclusion-in-the-python-community-panel",
+                    "speakers": [
+                        "Tereza Iofciu",
+                        "Marlene Mhangami",
+                        "Naomi Ceder",
+                        "Nabanita Roy",
+                        "Iqbal Abdullah"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "P3EV3C",
+                    "time": "14:00:00",
+                    "type": "Panel",
+                    "title": "Diversity & Inclusion in the Python Community Panel",
+                    "delivery": "in-person",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "A Personal Brand? Surprise, you already have one!",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Forum"
+                    ],
+                    "slug": "a-personal-brand-surprise-you-already-have-one",
+                    "speakers": [
+                        "Fr\u00e9d\u00e9ric Harper"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "RMLCKR",
+                    "time": "14:00:00",
+                    "type": "Poster",
+                    "title": "A Personal Brand? Surprise, you already have one!",
+                    "delivery": "in-person",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Creating great user interfaces on Jupyter Notebooks with ipywidgets",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "creating-great-user-interfaces-on-jupyter-notebooks-with-ipywidgets",
+                    "speakers": [
+                        "Deborah Mesquita"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "8D9LD8",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Creating great user interfaces on Jupyter Notebooks with ipywidgets",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Open Science: Building Models LIke We Build Open-Source Software",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "open-science-building-models-like-we-build-open-source-software",
+                    "speakers": [
+                        "Steven Kolawole"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "RWKPFX",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Open Science: Building Models LIke We Build Open-Source Software",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Lint All the Things!",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "lint-all-the-things",
+                    "speakers": [
+                        "Luke Lee"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "SE83WQ",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Lint All the Things!",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "How I wrote a Python client for HTTP/3 proxies",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "how-i-wrote-a-python-client-for-http-3-proxies",
+                    "speakers": [
+                        "Miloslav Pojman"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "SHXRMJ",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "How I wrote a Python client for HTTP/3 proxies",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "25",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "15:05:00",
+                    "talk_id": "",
+                    "time": "15:05:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "25"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Managing complex data science experiment configurations with Hydra",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "managing-complex-data-science-experiment-configurations-with-hydra",
+                    "speakers": [
+                        "Michal Karzynski"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "3HCYQ9",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Managing complex data science experiment configurations with Hydra",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Memory Problems, Did Collector Forgot to Clean the Garbage?",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "memory-problems-did-collector-forgot-to-clean-the-garbage",
+                    "speakers": [
+                        "Pratibha Jagnere"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "7FNTEJ",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Memory Problems, Did Collector Forgot to Clean the Garbage?",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Common Python Mistakes with Kubernetes, How They Can Cause Vulnerabilities and How to Solve Them!",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "common-python-mistakes-with-kubernetes-how-they-can-cause-vulnerabilities-and-how-to-solve-them",
+                    "speakers": [
+                        "Flo Pachinger"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "JWUZ7E",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Common Python Mistakes with Kubernetes, How They Can Cause Vulnerabilities and How to Solve Them!",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Debugging asynchronous programs in Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "expert",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "debugging-asynchronous-programs-in-python",
+                    "speakers": [
+                        "Andrii Soldatenko"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "LCNBCC",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Debugging asynchronous programs in Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Scalpel: The Python Static Analysis Framework",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "scalpel-the-python-static-analysis-framework",
+                    "speakers": [
+                        "Jiawei Wang",
+                        "Li Li"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "NF9HFT",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Scalpel: The Python Static Analysis Framework",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Robyn: An async Python web framework with a Rust runtime",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "expert",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "robyn-an-async-python-web-framework-with-a-rust-runtime",
+                    "speakers": [
+                        "Sanskar Jethi"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "WFJ7XP",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Robyn: An async Python web framework with a Rust runtime",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Simple data validation and setting management with Pydantic",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "simple-data-validation-and-setting-management-with-pydantic",
+                    "speakers": [
+                        "Teddy Crepineau"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "9VWGLC",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Simple data validation and setting management with Pydantic",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Automate cleaning code in few easy steps!",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "automate-cleaning-code-in-few-easy-steps",
+                    "speakers": [
+                        "Ester Beltrami"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "BNJPUH",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Automate cleaning code in few easy steps!",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Let's talk about JWT",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "let-s-talk-about-jwt",
+                    "speakers": [
+                        "Jessica Temporal"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "JJQSXA",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Let's talk about JWT",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Build-A-Database with Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "build-a-database-with-python",
+                    "speakers": [
+                        "Sangarshanan"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "NL8HRY",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Build-A-Database with Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Is the news media polarized? Or are we being conditioned to think it is?",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "is-the-news-media-polarized-or-are-we-being-conditioned-to-think-it-is",
+                    "speakers": [
+                        "Aroma Rodrigues"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "QMZDVX",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Is the news media polarized? Or are we being conditioned to think it is?",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Correlating messy data with \"correlate\"",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "correlating-messy-data-with-correlate",
+                    "speakers": [
+                        "Larry Hastings"
+                    ],
+                    "start_time": "16:05:00",
+                    "talk_id": "ZSCTME",
+                    "time": "16:05:00",
+                    "type": "Talk",
+                    "title": "Correlating messy data with \"correlate\"",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-14",
+                    "ev_custom": "Thursday's Lightning Talks",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "thursday-s-lightning-talks",
+                    "speakers": [],
+                    "start_time": "16:40:00",
+                    "talk_id": "LCCECR",
+                    "time": "16:40:00",
+                    "type": "Lightning Talk",
+                    "title": "Thursday's Lightning Talks",
+                    "delivery": "",
+                    "tt_duration": "45"
+                }
+            ]
+        },
+        "2022-07-15": {
+            "rooms": [
+                "The Auditorium",
+                "Wicklow Hall 1",
+                "Liffey A",
+                "Liffey B",
+                "Liffey Hall 1",
+                "Liffey Hall 2",
+                "Forum"
+            ],
+            "talks": [
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Morning Announcement",
+                    "ev_duration": "15",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "morning-announcement",
+                    "speakers": [],
+                    "start_time": "09:00:00",
+                    "talk_id": "8LXW7T",
+                    "time": "09:00:00",
+                    "type": "Opening Session",
+                    "title": "Morning Announcement",
+                    "delivery": "in-person",
+                    "tt_duration": "15"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Multithreaded Python without the GIL",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "multithreaded-python-without-the-gil",
+                    "speakers": [
+                        "Sam Gross"
+                    ],
+                    "start_time": "09:15:00",
+                    "talk_id": "CEPSYS",
+                    "time": "09:15:00",
+                    "type": "Keynote",
+                    "title": "Multithreaded Python without the GIL",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "10:00:00",
+                    "talk_id": "",
+                    "time": "10:00:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Writing secure code in Python",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "writing-secure-code-in-python",
+                    "speakers": [
+                        "Yan Orestes"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "8JDRVD",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "Writing secure code in Python",
+                    "delivery": "remote",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "What transitioning from male to female taught me about leadership",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "what-transitioning-from-male-to-female-taught-me-about-leadership",
+                    "speakers": [
+                        "Ivett \u00d6rd\u00f6g"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "9QM8ZM",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "What transitioning from male to female taught me about leadership",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "AI for Content Moderation at PayPal",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "ai-for-content-moderation-at-paypal",
+                    "speakers": [
+                        "Raghotham Sripadraj",
+                        "Ryan Roggenkemper"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "CPNE9S",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "AI for Content Moderation at PayPal",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "How to embed a Python interpreter in an iOS app",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "expert",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "how-to-embed-a-python-interpreter-in-an-ios-app",
+                    "speakers": [
+                        "\u0141ukasz Langa"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "FZQGFP",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "How to embed a Python interpreter in an iOS app",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "`typing.Protocol`: type hints as Guido intended",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "typing-protocol-type-hints-as-guido-intended",
+                    "speakers": [
+                        "Luciano Ramalho"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "USWAD9",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "`typing.Protocol`: type hints as Guido intended",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Jupyter - Under the Hood",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "jupyter-under-the-hood",
+                    "speakers": [
+                        "Dhanshree Arora"
+                    ],
+                    "start_time": "10:30:00",
+                    "talk_id": "YMAR7H",
+                    "time": "10:30:00",
+                    "type": "Talk",
+                    "title": "Jupyter - Under the Hood",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Why is it slow? Strategies for solving performance problems",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "why-is-it-slow-strategies-for-solving-performance-problems",
+                    "speakers": [
+                        "Caleb Hattingh"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "87XUMG",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Why is it slow? Strategies for solving performance problems",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Mercury - Build & Share Data Apps from Jupyter Notebook",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "mercury-build-share-data-apps-from-jupyter-notebook",
+                    "speakers": [
+                        "Piotr P\u0142o\u0144ski"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "CJNVSR",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Mercury - Build & Share Data Apps from Jupyter Notebook",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Tales of Python Security",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "tales-of-python-security",
+                    "speakers": [
+                        "Steve Dower"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "GRG9SC",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Tales of Python Security",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "When Models Query Models",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "when-models-query-models",
+                    "speakers": [
+                        "Michal Maciejewski"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "S78FW7",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "When Models Query Models",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Super Search with OpenSearch and Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "super-search-with-opensearch-and-python",
+                    "speakers": [
+                        "Laysa Uchoa"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "YJYBHC",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Super Search with OpenSearch and Python",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Best practices to open source a product and creating a community around it",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "best-practices-to-open-source-a-product-and-creating-a-community-around-it",
+                    "speakers": [
+                        "Adrin Jalali"
+                    ],
+                    "start_time": "11:20:00",
+                    "talk_id": "ZGSULC",
+                    "time": "11:20:00",
+                    "type": "Talk",
+                    "title": "Best practices to open source a product and creating a community around it",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Leading & growing software teams",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "leading-growing-software-teams",
+                    "speakers": [
+                        "Radoslav Georgiev"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "GFGSGN",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Leading & growing software teams",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Machine Translation engines evaluation framework",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "machine-translation-engines-evaluation-framework",
+                    "speakers": [
+                        "Anton Masalovich",
+                        "Sahil Manchanda"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "HE98XH",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Machine Translation engines evaluation framework",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Game Development with CircuitPython",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "game-development-with-circuitpython",
+                    "speakers": [
+                        "Radomir Dopieralski"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "LLC3KD",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Game Development with CircuitPython",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Work in Progress: Implementing PEP 458 to Secure PyPI downloads",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "work-in-progress-implementing-pep-458-to-secure-pypi-downloads",
+                    "speakers": [
+                        "Kairo de Araujo",
+                        "Lukas P\u00fchringer"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "MBJUKF",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Work in Progress: Implementing PEP 458 to Secure PyPI downloads",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Applications of Python in Computational Chemistry and Material Design",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Forum"
+                    ],
+                    "slug": "applications-of-python-in-computational-chemistry-and-material-design",
+                    "speakers": [
+                        "Owain Beynon"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "MMWYWZ",
+                    "time": "11:55:00",
+                    "type": "Poster",
+                    "title": "Applications of Python in Computational Chemistry and Material Design",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Unfolding the paper windmills",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "unfolding-the-paper-windmills",
+                    "speakers": [
+                        "Mai Gim\u00e9nez"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "PQADBJ",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Unfolding the paper windmills",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Clean Architectures in Python",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "clean-architectures-in-python",
+                    "speakers": [
+                        "Leonardo Giordani"
+                    ],
+                    "start_time": "11:55:00",
+                    "talk_id": "TE7K7D",
+                    "time": "11:55:00",
+                    "type": "Talk",
+                    "title": "Clean Architectures in Python",
+                    "delivery": "in-person",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Lunch Break",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "13:00:00",
+                    "talk_id": "",
+                    "time": "13:00:00",
+                    "type": "",
+                    "title": "Lunch Break",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Saving Lives with Predictive Geo - AI",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "saving-lives-with-predictive-geo-ai",
+                    "speakers": [
+                        "Sumedh Ghatage"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "8RH3BC",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Saving Lives with Predictive Geo - AI",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Packaging security with Nix",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "packaging-security-with-nix",
+                    "speakers": [
+                        "Ryan Lahfa"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "9EH9PG",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Packaging security with Nix",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Dr. Jekyll & Mr. Hyde - transition from developer to manager without going crazy or becoming evil",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "dr-jekyll-mr-hyde-transition-from-developer-to-manager-without-going-crazy-or-becoming-evil",
+                    "speakers": [
+                        "Jakub Paczkowski"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "QJDCYS",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Dr. Jekyll & Mr. Hyde - transition from developer to manager without going crazy or becoming evil",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Education Panel",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "education-panel",
+                    "speakers": [
+                        "Chris Reina",
+                        "Kelly Schuster - Paredes",
+                        "Aim\u00e9e Fagan",
+                        "Keith Quille",
+                        "Sarah-Jayne Carey"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "QYRKGA",
+                    "time": "14:00:00",
+                    "type": "Panel",
+                    "title": "Education Panel",
+                    "delivery": "remote",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Rapid prototyping in BBC News with Python and AWS",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "rapid-prototyping-in-bbc-news-with-python-and-aws",
+                    "speakers": [
+                        "Ben Nuttall"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "SGP3PM",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Rapid prototyping in BBC News with Python and AWS",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Packaging Python in 2022",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "packaging-python-in-2022",
+                    "speakers": [
+                        "Jeremiah Paige"
+                    ],
+                    "start_time": "14:00:00",
+                    "talk_id": "VXJK3Z",
+                    "time": "14:00:00",
+                    "type": "Talk",
+                    "title": "Packaging Python in 2022",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Write Docs Devs Love: Ten Tricks To Level Up Your Tech Writing",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "write-docs-devs-love-ten-tricks-to-level-up-your-tech-writing",
+                    "speakers": [
+                        "Mason Egger"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "9PQZKF",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Write Docs Devs Love: Ten Tricks To Level Up Your Tech Writing",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Secure Python ML: The Major Security Flaws in the ML Lifecycle (and how to avoid them)",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "secure-python-ml-the-major-security-flaws-in-the-ml-lifecycle-and-how-to-avoid-them",
+                    "speakers": [
+                        "Alejandro Saucedo"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "BADDYW",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Secure Python ML: The Major Security Flaws in the ML Lifecycle (and how to avoid them)",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Try Something Different: Explore MicroPython! (a rough guide for newcomers)",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "try-something-different-explore-micropython-a-rough-guide-for-newcomers",
+                    "speakers": [
+                        "Andy Piper"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "GAVCZ8",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Try Something Different: Explore MicroPython! (a rough guide for newcomers)",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Native Packaging of GUI Apps on Windows and macOS",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "native-packaging-of-gui-apps-on-windows-and-macos",
+                    "speakers": [
+                        "Tiago Montes"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "PAXMHN",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Native Packaging of GUI Apps on Windows and macOS",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Automated Refactoring Large Python Codebases",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "automated-refactoring-large-python-codebases",
+                    "speakers": [
+                        "Jimmy Lai"
+                    ],
+                    "start_time": "14:35:00",
+                    "talk_id": "TXFX77",
+                    "time": "14:35:00",
+                    "type": "Talk",
+                    "title": "Automated Refactoring Large Python Codebases",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "25",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "The Auditorium",
+                        "Wicklow Hall 1",
+                        "Liffey A",
+                        "Liffey B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2",
+                        "Forum"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "15:05:00",
+                    "talk_id": "",
+                    "time": "15:05:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "25"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Python for Arts, Humanities and Social Sciences",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey A"
+                    ],
+                    "slug": "python-for-arts-humanities-and-social-sciences",
+                    "speakers": [
+                        "Arjumand Younus",
+                        "Dr. Muhammad Atif Qureshi"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "3ZGCQR",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Python for Arts, Humanities and Social Sciences",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Demystifying Python\u2019s Internals: Diving into CPython by implementing a pipe operator",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "demystifying-pythons-internals-diving-into-cpython-by-implementing-a-pipe-operator",
+                    "speakers": [
+                        "Sebastiaan Zeeff"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "7UYS9V",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Demystifying Python\u2019s Internals: Diving into CPython by implementing a pipe operator",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "How a popular MMORPG made me a better developer",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "how-a-popular-mmorpg-made-me-a-better-developer",
+                    "speakers": [
+                        "Valerie Shoskes"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "BZL7YY",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "How a popular MMORPG made me a better developer",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Build your own Playlist Recommender System with Python using your GDPR Data",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "build-your-own-playlist-recommender-system-with-python-using-your-gdpr-data",
+                    "speakers": [
+                        "Marcel Kurovski"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "JBTGFL",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Build your own Playlist Recommender System with Python using your GDPR Data",
+                    "delivery": "in-person",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "From circuit board design to finished product: the hobbyist\u2019s guide to hardware manufacturing",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "from-circuit-board-design-to-finished-product-the-hobbyists-guide-to-hardware-manufacturing",
+                    "speakers": [
+                        "Sebastian Roll"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "TDUFJ9",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "From circuit board design to finished product: the hobbyist\u2019s guide to hardware manufacturing",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Handling Errors the Graceful Way in Python",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Liffey B"
+                    ],
+                    "slug": "handling-errors-the-graceful-way-in-python",
+                    "speakers": [
+                        "Riya Bansal"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "WVFUYA",
+                    "time": "15:30:00",
+                    "type": "Talk",
+                    "title": "Handling Errors the Graceful Way in Python",
+                    "delivery": "remote",
+                    "tt_duration": "30"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Friday Lightning Talks",
+                    "ev_duration": "45",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "friday-lightning-talks",
+                    "speakers": [],
+                    "start_time": "16:05:00",
+                    "talk_id": "QPDML3",
+                    "time": "16:05:00",
+                    "type": "Lightning Talk",
+                    "title": "Friday Lightning Talks",
+                    "delivery": "",
+                    "tt_duration": "45"
+                },
+                {
+                    "day": "2022-07-15",
+                    "ev_custom": "Closing Session",
+                    "ev_duration": "30",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "The Auditorium"
+                    ],
+                    "slug": "closing-session",
+                    "speakers": [],
+                    "start_time": "16:55:00",
+                    "talk_id": "7C9GUJ",
+                    "time": "16:55:00",
+                    "type": "Closing Session",
+                    "title": "Closing Session",
+                    "delivery": "",
+                    "tt_duration": "30"
+                }
+            ]
+        },
+        "2022-07-11": {
+            "rooms": [
+                "Wicklow Hall 1",
+                "Wicklow Hall 2A",
+                "Wicklow Hall 2B",
+                "Liffey Hall 1",
+                "Liffey Hall 2"
+            ],
+            "talks": [
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Registration @ Ground Foyer",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "registration-ground-foyer",
+                    "speakers": [],
+                    "start_time": "08:30:00",
+                    "talk_id": "WSZFVR",
+                    "time": "08:30:00",
+                    "type": "Registration",
+                    "title": "Registration @ Ground Foyer",
+                    "delivery": "",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "[CANCELLED] Build your own linters",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "cancelled-build-your-own-linters",
+                    "speakers": [
+                        "Rahul Jha"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "JL7LBG",
+                    "time": "09:30:00",
+                    "type": "Tutorial",
+                    "title": "[CANCELLED] Build your own linters",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Three Musketeers: Sherlock Holmes, Mathematics and Python",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "three-musketeers-sherlock-holmes-mathematics-and-python",
+                    "speakers": [
+                        "Gajendra Deshpande"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "MWET9Y",
+                    "time": "09:30:00",
+                    "type": "Tutorial",
+                    "title": "Three Musketeers: Sherlock Holmes, Mathematics and Python",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Bulletproof Python \u2013 Property-Based Testing with Hypothesis",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "bulletproof-python-property-based-testing-with-hypothesis",
+                    "speakers": [
+                        "Michael Seifert"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "QKS7UE",
+                    "time": "09:30:00",
+                    "type": "Tutorial",
+                    "title": "Bulletproof Python \u2013 Property-Based Testing with Hypothesis",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Django Girls Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "django-girls-workshop",
+                    "speakers": [
+                        "Django Girls Dublin"
+                    ],
+                    "start_time": "09:30:00",
+                    "talk_id": "UL8E7F",
+                    "time": "09:30:00",
+                    "type": "Special Workshop",
+                    "title": "Django Girls Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Pew Pew Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "pew-pew-workshop",
+                    "speakers": [],
+                    "start_time": "09:30:00",
+                    "talk_id": "X8HJJ9",
+                    "time": "09:30:00",
+                    "type": "Special Workshop",
+                    "title": "Pew Pew Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "15",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Wicklow Hall 1",
+                        "Wicklow Hall 2A",
+                        "Wicklow Hall 2B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "11:00:00",
+                    "talk_id": "",
+                    "time": "11:00:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "15"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "[CANCELLED] Build your own linters",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "cancelled-build-your-own-linters",
+                    "speakers": [
+                        "Rahul Jha"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "JL7LBG",
+                    "time": "11:15:00",
+                    "type": "Tutorial",
+                    "title": "[CANCELLED] Build your own linters",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Three Musketeers: Sherlock Holmes, Mathematics and Python",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "three-musketeers-sherlock-holmes-mathematics-and-python",
+                    "speakers": [
+                        "Gajendra Deshpande"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "MWET9Y",
+                    "time": "11:15:00",
+                    "type": "Tutorial",
+                    "title": "Three Musketeers: Sherlock Holmes, Mathematics and Python",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Bulletproof Python \u2013 Property-Based Testing with Hypothesis",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "bulletproof-python-property-based-testing-with-hypothesis",
+                    "speakers": [
+                        "Michael Seifert"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "QKS7UE",
+                    "time": "11:15:00",
+                    "type": "Tutorial",
+                    "title": "Bulletproof Python \u2013 Property-Based Testing with Hypothesis",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Django Girls Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "django-girls-workshop",
+                    "speakers": [
+                        "Django Girls Dublin"
+                    ],
+                    "start_time": "11:15:00",
+                    "talk_id": "UL8E7F",
+                    "time": "11:15:00",
+                    "type": "Special Workshop",
+                    "title": "Django Girls Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Pew Pew Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "pew-pew-workshop",
+                    "speakers": [],
+                    "start_time": "11:15:00",
+                    "talk_id": "X8HJJ9",
+                    "time": "11:15:00",
+                    "type": "Special Workshop",
+                    "title": "Pew Pew Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Lunch Break",
+                    "ev_duration": "60",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Wicklow Hall 1",
+                        "Wicklow Hall 2A",
+                        "Wicklow Hall 2B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "12:30:00",
+                    "talk_id": "",
+                    "time": "12:30:00",
+                    "type": "",
+                    "title": "Lunch Break",
+                    "tt_duration": "60"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "TDD in Python with pytest",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "tdd-in-python-with-pytest",
+                    "speakers": [
+                        "Leonardo Giordani"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "BRSSQK",
+                    "time": "13:45:00",
+                    "type": "Tutorial",
+                    "title": "TDD in Python with pytest",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "How To Train Your Graphics Card (To Read)",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "how-to-train-your-graphics-card-to-read",
+                    "speakers": [
+                        "Matthew Carrigan"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "CXADJQ",
+                    "time": "13:45:00",
+                    "type": "Tutorial",
+                    "title": "How To Train Your Graphics Card (To Read)",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Build a production ready GraphQL API using Python",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "build-a-production-ready-graphql-api-using-python",
+                    "speakers": [
+                        "Patrick Arminio"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "DVDJWP",
+                    "time": "13:45:00",
+                    "type": "Tutorial",
+                    "title": "Build a production ready GraphQL API using Python",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Django Girls Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "django-girls-workshop",
+                    "speakers": [
+                        "Django Girls Dublin"
+                    ],
+                    "start_time": "13:45:00",
+                    "talk_id": "UL8E7F",
+                    "time": "13:45:00",
+                    "type": "Special Workshop",
+                    "title": "Django Girls Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Pew Pew Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "pew-pew-workshop",
+                    "speakers": [],
+                    "start_time": "13:45:00",
+                    "talk_id": "X8HJJ9",
+                    "time": "13:45:00",
+                    "type": "Special Workshop",
+                    "title": "Pew Pew Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Coffee Break",
+                    "ev_duration": "15",
+                    "event_id": "",
+                    "level": "",
+                    "rooms": [
+                        "Wicklow Hall 1",
+                        "Wicklow Hall 2A",
+                        "Wicklow Hall 2B",
+                        "Liffey Hall 1",
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "",
+                    "speaker": "",
+                    "start_time": "15:15:00",
+                    "talk_id": "",
+                    "time": "15:15:00",
+                    "type": "",
+                    "title": "Coffee Break",
+                    "tt_duration": "15"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "TDD in Python with pytest",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Wicklow Hall 2B"
+                    ],
+                    "slug": "tdd-in-python-with-pytest",
+                    "speakers": [
+                        "Leonardo Giordani"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "BRSSQK",
+                    "time": "15:30:00",
+                    "type": "Tutorial",
+                    "title": "TDD in Python with pytest",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "How To Train Your Graphics Card (To Read)",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 2A"
+                    ],
+                    "slug": "how-to-train-your-graphics-card-to-read",
+                    "speakers": [
+                        "Matthew Carrigan"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "CXADJQ",
+                    "time": "15:30:00",
+                    "type": "Tutorial",
+                    "title": "How To Train Your Graphics Card (To Read)",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Build a production ready GraphQL API using Python",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "some",
+                    "rooms": [
+                        "Wicklow Hall 1"
+                    ],
+                    "slug": "build-a-production-ready-graphql-api-using-python",
+                    "speakers": [
+                        "Patrick Arminio"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "DVDJWP",
+                    "time": "15:30:00",
+                    "type": "Tutorial",
+                    "title": "Build a production ready GraphQL API using Python",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Django Girls Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 1"
+                    ],
+                    "slug": "django-girls-workshop",
+                    "speakers": [
+                        "Django Girls Dublin"
+                    ],
+                    "start_time": "15:30:00",
+                    "talk_id": "UL8E7F",
+                    "time": "15:30:00",
+                    "type": "Special Workshop",
+                    "title": "Django Girls Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                },
+                {
+                    "day": "2022-07-11",
+                    "ev_custom": "Pew Pew Workshop",
+                    "ev_duration": "90",
+                    "event_id": "",
+                    "level": "none",
+                    "rooms": [
+                        "Liffey Hall 2"
+                    ],
+                    "slug": "pew-pew-workshop",
+                    "speakers": [],
+                    "start_time": "15:30:00",
+                    "talk_id": "X8HJJ9",
+                    "time": "15:30:00",
+                    "type": "Special Workshop",
+                    "title": "Pew Pew Workshop",
+                    "delivery": "in-person",
+                    "tt_duration": "90"
+                }
+            ]
+        }
+    },
+    "generated_at": "2022-10-15T11:01:33.801303"
+}

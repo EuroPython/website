@@ -127,8 +127,10 @@ export async function getStaticProps() {
     })
   );
 
+  // @ts-ignore
   const tracks = Array.from(new Set(sessions.map((session) => session.track)));
   const submissionTypes = Array.from(
+    // @ts-ignore
     new Set(sessions.map((session) => session.submission_type))
   );
   tracks.sort();

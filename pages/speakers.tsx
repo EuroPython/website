@@ -62,7 +62,7 @@ export default function SpeakersPage({ speakers }: { speakers: Speaker[] }) {
 }
 
 export async function getStaticProps() {
-  const uniq = (speakers: Speaker[]) => {
+  const uniq = (speakers: {slug: string, name: string}[]) => {
     const seen: { [key: string]: boolean } = {};
 
     return speakers.filter((item) =>
@@ -70,7 +70,7 @@ export async function getStaticProps() {
     );
   };
 
-  const speakers = uniq(await fetchSpeakers()).sort((a: Speaker, b: Speaker) =>
+  const speakers = uniq(await fetchSpeakers()).sort((a: {name: string}, b: {name: string}) =>
     a.name.localeCompare(b.name)
   );
 

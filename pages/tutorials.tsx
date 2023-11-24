@@ -107,6 +107,7 @@ export async function getStaticProps() {
     })
   );
 
+  // @ts-ignore
   const tracks = Array.from(new Set(sessions.map((session) => session.track)));
   tracks.sort();
 

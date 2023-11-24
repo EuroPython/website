@@ -1,7 +1,7 @@
-const API_URL = "https://programapi.europython.eu/sessions.json";
+import data from "./sessions_data.json"
+
+// original data was coming from https://programapi.europython.eu/sessions.json
 
 export const fetchSessions = async () => {
-  const response = await fetch(API_URL);
-
-  return await response.json();
+  return data;
 };
