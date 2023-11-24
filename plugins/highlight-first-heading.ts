@@ -1,4 +1,5 @@
 import { select } from "unist-util-select";
+// @ts-ignore
 import type { Node } from "unist";
 
 export function highlightFirstHeading() {

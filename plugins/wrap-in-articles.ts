@@ -2,6 +2,7 @@ import { findAfter } from "unist-util-find-after";
 import { visitParents } from "unist-util-visit-parents";
 import { is } from "unist-util-is";
 
+// @ts-ignore
 import type { Node, Parent } from "unist";
 import type { Heading } from "mdast";
 import { matches } from "unist-util-select";
