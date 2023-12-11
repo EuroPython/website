@@ -33,7 +33,6 @@ const securityHeaders = [
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    appDir: true,
     outputFileTracingIncludes: {
       "/": ["./social-cards/**/*"],
     },

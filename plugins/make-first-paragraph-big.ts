@@ -10,7 +10,9 @@ function transform(tree: Node) {
 
   if (paragraph) {
     paragraph.data = paragraph.data || {};
+    // @ts-ignore
     paragraph.data.hProperties = paragraph.data.hProperties || {};
+    // @ts-ignore
     (paragraph.data.hProperties as any).className = "large";
   }
 }

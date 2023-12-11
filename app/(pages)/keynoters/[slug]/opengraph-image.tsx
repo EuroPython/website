@@ -1,6 +1,6 @@
 import { fetchKeynoteBySpeakerSlug } from "@/lib/pretalx/submissions";
 import { OpenGraphImageKeynoter } from "components/opengraph-image/opengraph-image-keynoter";
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 600 };
 export const alt = "...";

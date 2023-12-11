@@ -1,7 +1,8 @@
 import path from "path";
-import { ImageResponse } from "next/server";
+
 import { promises as fs } from "fs";
 import { OpenGraphImage } from "components/opengraph-image/opengraph-image";
+import { ImageResponse } from "next/og";
 
 export const getImage = async ({
   page,
