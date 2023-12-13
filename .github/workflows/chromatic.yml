@@ -1,6 +1,9 @@
 name: "Chromatic"
 
-on: push
+on: 
+  push:
+    branches-ignore:
+      - 'dependabot/**'
 
 jobs:
   chromatic-deployment:
@@ -22,4 +25,3 @@ jobs:
         uses: chromaui/action@v10
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          skip: "dependabot/**"
