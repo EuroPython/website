@@ -149,7 +149,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Number of people: 2 maintainers + up to 8 participants: ~10
 - Room: RB 114
 - Python Level: any
-- Contact: Roman Yurchak rth.yurchak@gmail.com
+- Contact: Roman Yurchak
 - Links:
   - [Project home](https://github.com/pyodide/pyodide)
   - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
@@ -169,7 +169,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Number of people: ~10 (1 organizer)
 - Room: RB 109 (moved from RB 113)
 - Python Level: any
-- Contact: Russell Keith-Magee ([Email](mailto:russell@beeware.org)
+- Contact: Russell Keith-Magee
   [Github](https://github.com/freakboy3742)
   [Mastodon](https://cloudisland.nz/@freakboy3742))
 - Links:
@@ -184,7 +184,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Number of people: ~10 (2 organisers)
 - Room: RB 113
 - Python Level: 2+ years of experience recommended
-- Contact: Łukasz Langa ([Email](mailto:lukasz@langa.pl)
+- Contact: Łukasz Langa
   [GitHub](https://github.com/ambv/) [Mastodon](https://mastodon.social/@ambv/))
 - Links:
   - [CPython's Developer Guide](https://devguide.python.org/)
@@ -222,7 +222,7 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Number of people: ~5 (1 organiser)
 - Room: RB 113
 - Python Level: experience in typing recommended
-- Contact: Carli Freudenberg ([Email](mailto:kound+ep2023@posteo.de), [GitHub](https://github.com/CarliJoy))
+- Contact: Carli Freudenberg ([GitHub](https://github.com/CarliJoy))
 - Links:
    - [Intersection Operator](https://github.com/python/typing/issues/213)
    - [Not Operator](https://github.com/python/typing/issues/801)
@@ -233,7 +233,7 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Number of people: ~10 (1 organizer)
 - Room: RB 104
 - Python Level: 2+ years of experience recommended and some C++ experience
-- Contact: Piotr Gryko ([Email](mailto:piotr.gryko@gmail.com), [GitHub](https://github.com/pgryko))
+- Contact: Piotr Gryko ([GitHub](https://github.com/pgryko))
   [Pytorch Forum](https://discuss.pytorch.org/)
   [pytorch Github](https://github.com/pytorch/pytorch)
 - Links:
@@ -257,7 +257,6 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Contact: Lance developers - Github, Discord, or Email
   [Lance Discord](https://discord.gg/zMM32dvNtd)
   [Lance Github](https://github.com/lancedb/lance)
-  [Email](mailto:contact@lancedb.com)
 - Links:
   - [Lance contributor guide](https://lancedb.github.io/lance/contributing.html)
   - [Good first issues](https://github.com/lancedb/lance/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
@@ -286,7 +285,7 @@ qutebrowser is currently in one of its biggest transitions ([Qt 5 → Qt 6](http
 - Number of people: ~4 (3 contributors + 1 organiser)
 - Room: RB 113
 - Python Level: any - I'm happy to mentor people (hence only ~3). It can be a challenging project, but newcomers welcome!
-- Contact: mail@qutebrowser.org / Florian Bruhin (@the_compiler) on Discord
+- Contact: Florian Bruhin (@the_compiler) on Discord
 - Links: https://qutebrowser.org
 
 ### CircuitPython
@@ -294,9 +293,7 @@ qutebrowser is currently in one of its biggest transitions ([Qt 5 → Qt 6](http
 - Number of people: 3 (2 contributors + 1 organisers)
 - Room: RB 114
 - Python Level: any
-- Contact: ep2023@dopieralski.pl
 - Links: https://circuitpython.org
- 
 
 Please add your sprint here!
 
