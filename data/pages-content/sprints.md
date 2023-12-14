@@ -257,7 +257,6 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Contact: Lance developers - Github, Discord, or Email
   [Lance Discord](https://discord.gg/zMM32dvNtd)
   [Lance Github](https://github.com/lancedb/lance)
-  [Email](mailto&#58;contact&#64;lancedb.com)
 - Links:
   - [Lance contributor guide](https://lancedb.github.io/lance/contributing.html)
   - [Good first issues](https://github.com/lancedb/lance/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
@@ -286,7 +285,7 @@ qutebrowser is currently in one of its biggest transitions ([Qt 5 → Qt 6](http
 - Number of people: ~4 (3 contributors + 1 organiser)
 - Room: RB 113
 - Python Level: any - I'm happy to mentor people (hence only ~3). It can be a challenging project, but newcomers welcome!
-- Contact: mail&#64;qutebrowser.org / Florian Bruhin (@the_compiler) on Discord
+- Contact: Florian Bruhin (@the_compiler) on Discord
 - Links: https://qutebrowser.org
 
 ### CircuitPython
@@ -294,9 +293,7 @@ qutebrowser is currently in one of its biggest transitions ([Qt 5 → Qt 6](http
 - Number of people: 3 (2 contributors + 1 organisers)
 - Room: RB 114
 - Python Level: any
-- Contact: ep2023&#64;dopieralski.pl
 - Links: https://circuitpython.org
-
 
 Please add your sprint here!
 
@@ -305,6 +302,6 @@ Please add your sprint here!
 - Number of people: ?? (? contributors + ? organisers)
 - Room: RB ???
 - Python Level: any
-- Contact: programme&#64;europython
+- Contact: programme@europython
 - Links: https://your_project_url/README.src
  -->
