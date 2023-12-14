@@ -110,7 +110,7 @@ bottom of this page
    organising a sprint, be mindful of how many people you can accommodate.)
 
 If you have any questions, do not hesitate to reach out to us at
-programme&#64;europython.eu.
+programme@europython.eu.
 
 Once accepted and published, remember to announce it on the social channels too
 and tag us @EuroPython ([twitter](https://twitter.com/europython),
@@ -149,7 +149,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Number of people: 2 maintainers + up to 8 participants: ~10
 - Room: RB 114
 - Python Level: any
-- Contact: Roman Yurchak rth.yurchak@gmail.com
+- Contact: Roman Yurchak
 - Links:
   - [Project home](https://github.com/pyodide/pyodide)
   - [Pyodide contributing guidelines](https://pyodide.org/en/latest/development/contributing.html)
@@ -169,7 +169,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Number of people: ~10 (1 organizer)
 - Room: RB 109 (moved from RB 113)
 - Python Level: any
-- Contact: Russell Keith-Magee ([Email](mailto&#58;russell&#64;beeware.org)
+- Contact: Russell Keith-Magee
   [Github](https://github.com/freakboy3742)
   [Mastodon](https://cloudisland.nz/@freakboy3742))
 - Links:
@@ -184,7 +184,7 @@ and tag us @EuroPython ([twitter](https://twitter.com/europython),
 - Number of people: ~10 (2 organisers)
 - Room: RB 113
 - Python Level: 2+ years of experience recommended
-- Contact: Łukasz Langa ([Email](mailto&#58;lukasz&#64;langa.pl)
+- Contact: Łukasz Langa
   [GitHub](https://github.com/ambv/) [Mastodon](https://mastodon.social/@ambv/))
 - Links:
   - [CPython's Developer Guide](https://devguide.python.org/)
@@ -222,7 +222,7 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Number of people: ~5 (1 organiser)
 - Room: RB 113
 - Python Level: experience in typing recommended
-- Contact: Carli Freudenberg ([Email](mailto&#58;kound+ep2023&#64;posteo.de), [GitHub](https://github.com/CarliJoy))
+- Contact: Carli Freudenberg ([GitHub](https://github.com/CarliJoy))
 - Links:
    - [Intersection Operator](https://github.com/python/typing/issues/213)
    - [Not Operator](https://github.com/python/typing/issues/801)
@@ -233,7 +233,7 @@ Writing PEPs for the given Issues below. The organizer has never written [a PEP]
 - Number of people: ~10 (1 organizer)
 - Room: RB 104
 - Python Level: 2+ years of experience recommended and some C++ experience
-- Contact: Piotr Gryko ([Email](mailto&#58;piotr.gryko&#64;gmail.com), [GitHub](https://github.com/pgryko))
+- Contact: Piotr Gryko ([GitHub](https://github.com/pgryko))
   [Pytorch Forum](https://discuss.pytorch.org/)
   [pytorch Github](https://github.com/pytorch/pytorch)
 - Links:
