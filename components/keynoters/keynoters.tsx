@@ -79,7 +79,7 @@ export const Keynoters = async () => {
             <span className="text-body-light inline-block mr-2">#</span>
             See schedule
           </h3>
-          <ButtonLink href="/schedule">Schedule</ButtonLink>
+          <ButtonLink href="/schedule/2023-07-18">Schedule</ButtonLink>
         </div>
       </div>
     </section>
