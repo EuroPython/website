@@ -145,6 +145,9 @@ export const fetchSubmissionBySlug = async (slug: string) => {
 };
 
 export const fetchKeynotes = async () => {
+  if (process.env.ALL_SUBMISSIONS_URL === undefined) {
+    return [];
+  }
   // https://pretalx.com/api/events/europython-2023/submissions/?content_locale=&submission_type=2752
   const qs = new URLSearchParams({
     limit: "200",
