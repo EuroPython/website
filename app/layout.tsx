@@ -6,16 +6,17 @@ import PlausibleProvider from "next-plausible";
 export const metadata: Metadata = {
   title: {
     default:
-      "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
-    template: "%s | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+      "EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote",
+    template: "%s | July 8th-14th 2024 | Prague, Czech Republic & Remote",
   },
   twitter: {
     title: {
-      default:  "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
-      template: "%s | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+      default:
+        "EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote",
+      template: "%s | July 8th-14th 2024 | Prague, Czech Republic & Remote",
     },
   },
-  metadataBase: new URL("https://ep2023.europython.eu/"),
+  metadataBase: new URL("https://ep2024.europython.eu/"),
   description: "",
   alternates: {
     types: { "application/rss+xml": "http://blog.europython.eu/rss" },
@@ -34,7 +35,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://use.typekit.net/rhp8qny.css"
         ></link>
-        <PlausibleProvider domain="ep2023.europython.eu" />
+        <PlausibleProvider domain="ep2024.europython.eu" />
       </head>
       <body>{children}</body>
     </html>

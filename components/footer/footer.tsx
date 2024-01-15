@@ -4,9 +4,9 @@ import links from "../../data/links.json";
 
 export const Footer = () => (
   <Fullbleed className="bg-primary text-white">
-    <footer className="max-w-4xl lg:max-w-6xl mx-auto py-16 lg:grid grid-cols-2 px-6">
+    <footer className="max-w-4xl lg:max-w-6xl mx-auto py-16 lg:grid grid-cols-2 px-6 gap-60">
       <div>
-        <LogoExtended className="mb-12 max-w-full" />
+        <LogoExtended className="mb-12 max-w-full h-auto" />
 
         <nav className="mb-12">
           <h6 className="font-bold text-xl mb-6">Quicklinks</h6>
@@ -27,12 +27,7 @@ export const Footer = () => (
 
       <article className="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end">
         <div>
-          <img
-            width={444}
-            height={444}
-            src="/img/europythonlogo.png"
-            className="max-w-[100px]"
-          />
+          <img width={444} height={444} src="/img/europythonlogo.png" />
         </div>
         <div>
           <address className="not-italic mb-4">

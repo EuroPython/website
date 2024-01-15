@@ -18,13 +18,13 @@ import { MDXRemote } from "components/mdx-remote/mdx-remote";
 import { Keynoters } from "components/keynoters/keynoters";
 
 export const metadata = {
-  metadataBase: new URL("https://ep2023.europython.eu"),
+  metadataBase: new URL("https://ep2024.europython.eu"),
   title:
-    "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+    "EuroPython 2024 | July 8th-14rd 2024 | Prague, Czech Republic & Remote",
   description: "",
   twitter: {
     title:
-      "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+      "EuroPython 2024 | July 8th-14rd 2024 | Prague, Czech Republic & Remote",
   },
 };
 
@@ -74,6 +74,8 @@ export default async function IndexPage() {
         <Hero />
       </Fullbleed>
 
+      {/*
+
       <CardContainer>
         {deadlines.map(({ data, content }) => (
           <Card
@@ -87,11 +89,15 @@ export default async function IndexPage() {
         ))}
       </CardContainer>
 
-      <div className="mt-40 px-6">
+      */}
+
+      <div className="mt-40 px-6 pb-40">
         <HeroWithCTA
           ctaTitle="EuroPython 2023 Photos"
           ctaButton={
-            <ButtonLink href="https://www.flickr.com/photos/europython/collections/72157722021442529/">Savour the Highlights of EuroPython 2023</ButtonLink>
+            <ButtonLink href="https://www.flickr.com/photos/europython/collections/72157722021442529/">
+              Savour the Highlights of EuroPython 2023
+            </ButtonLink>
           }
         >
           <Title>
@@ -103,6 +109,7 @@ export default async function IndexPage() {
           </Prose>
         </HeroWithCTA>
       </div>
+      {/*
 
       <div className="mt-40 mb-40 px-6">
         <HeroVenue title={venue.data.title}>
@@ -113,6 +120,8 @@ export default async function IndexPage() {
       <Keynoters />
 
       <Sponsors />
+
+      */}
     </Layout>
   );
 }

@@ -8,6 +8,8 @@ import links from "../../data/links.json";
 
 import { NavItems } from "../nav-items";
 
+const IS_LIVE = false;
+
 const HeaderButton = ({
   children,
   href,
@@ -71,18 +73,24 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
               </abbr>
               <span className="hidden lg:inline">Code of Conduct</span>
             </ButtonLink>
-            <ButtonLink href="/live">
-              Live
-              <span className="hidden md:inline"> 📺</span>
-            </ButtonLink>
+            {IS_LIVE && (
+              <ButtonLink href="/live">
+                Live
+                <span className="hidden md:inline"> 📺</span>
+              </ButtonLink>
+            )}
           </>
         ) : null}
+
+        {/*
 
         <label htmlFor="nav_toggle" className="flex lg:hidden">
           <HeaderButton variant="menu">
             {mobile ? "Close Menu" : "Menu"}
           </HeaderButton>
         </label>
+
+        */}
       </div>
     </>
   );
@@ -102,7 +110,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
       aria-hidden="true"
     />
 
-    <HeaderLogo inverted={inverted} />
+    <HeaderLogoEPS />
 
     <nav className="mx-auto hidden lg:block">
       <NavItems items={links.header} inverted={inverted} />
