@@ -58,7 +58,7 @@ module.exports = {
 
   images: {
     // when using static export
-    unoptimized: true,
+    // unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
