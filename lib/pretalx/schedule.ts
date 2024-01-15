@@ -11,7 +11,6 @@ import { slugify, slugifySession } from "./utils/slugify";
 import { fetchConfirmedSubmissions } from "./submissions";
 import { runSessionHacks } from "./hacks/sessions";
 import { formatInTimeZone } from "date-fns-tz";
-import { cache } from "react";
 
 export type Schedule = {
   rooms: string[];
@@ -77,7 +76,7 @@ type RowStyle = {
   gridRowEnd: number;
 };
 
-const getRooms = cache(async () => {
+const getRooms = async () => {
   // rooms in the schedule API are not ordered so we use the ones from the
   // export API instead
   const response = await fetch(process.env.SCHEDULE_EXPORT_URL!);
@@ -87,7 +86,7 @@ const getRooms = cache(async () => {
   return data.schedule.conference.rooms.map(
     (room: { name: string }) => room.name
   ) as string[];
-});
+};
 
 // This API is not public, so it might change in the future
 export const getScheduleDays = async () => {
@@ -107,7 +106,7 @@ export const getScheduleDays = async () => {
 };
 
 // This API is not public, so it might change in the future
-export const getSchedule = cache(async (day: string) => {
+export const getSchedule = async (day: string) => {
   const allSubmissions = await fetchConfirmedSubmissions();
 
   const codeToSubmission = Object.fromEntries(
@@ -389,4 +388,4 @@ export const getSchedule = cache(async (day: string) => {
     rows,
     days,
   } as Schedule;
-});
+};

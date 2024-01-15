@@ -1,4 +1,7 @@
-import { fetchKeynoteBySpeakerSlug } from "@/lib/pretalx/submissions";
+import {
+  fetchConfirmedSubmissions,
+  fetchKeynoteBySpeakerSlug,
+} from "@/lib/pretalx/submissions";
 import { OpenGraphImageKeynoter } from "components/opengraph-image/opengraph-image-keynoter";
 import { ImageResponse } from "next/og";
 
@@ -19,4 +22,12 @@ export default async function og({ params }: { params: { slug: string } }) {
       />
     )
   );
+}
+
+export async function generateStaticParams() {
+  const submissions = await fetchConfirmedSubmissions();
+
+  return submissions.map((submission) => ({
+    slug: submission.slug,
+  }));
 }

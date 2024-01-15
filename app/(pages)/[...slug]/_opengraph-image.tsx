@@ -11,3 +11,7 @@ export default async function og({ params }: { params: { slug: string } }) {
   // @ts-ignore
   return getImage({ page });
 }
+
+export async function generateStaticParams() {
+  return [];
+}

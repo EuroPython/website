@@ -32,11 +32,15 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
+  output: "export",
+  trailingSlash: true,
+
   experimental: {
     outputFileTracingIncludes: {
       "/": ["./social-cards/**/*"],
     },
   },
+
   async redirects() {
     return [
       {
@@ -53,6 +57,8 @@ module.exports = {
   },
 
   images: {
+    // when using static export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

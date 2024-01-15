@@ -1,4 +1,5 @@
 import {
+  fetchConfirmedSubmissions,
   fetchKeynoteBySpeakerSlug,
   fetchSessionsInParallel,
 } from "@/lib/pretalx/submissions";
@@ -31,13 +32,13 @@ export const generateMetadata = async ({
   return metadata;
 };
 
-// export async function generateStaticParams() {
-//   const submissions = await fetchConfirmedSubmissions();
+export async function generateStaticParams() {
+  const submissions = await fetchConfirmedSubmissions();
 
-//   return submissions.map((submission) => ({
-//     slug: submission.slug,
-//   }));
-// }
+  return submissions.map((submission) => ({
+    slug: submission.slug,
+  }));
+}
 
 export default async function SessionPage({
   params,

@@ -91,7 +91,7 @@ const mapSpeaker = (
   };
 };
 
-export const fetchSpeakersWithConfirmedSubmissions = cache(async () => {
+export const fetchSpeakersWithConfirmedSubmissions = async () => {
   const submissions = (
     await Promise.all([fetchConfirmedSubmissions(), fetchKeynotes()])
   ).flat();
@@ -107,9 +107,9 @@ export const fetchSpeakersWithConfirmedSubmissions = cache(async () => {
     seen.add(speaker.code);
     return !duplicate;
   });
-});
+};
 
-export const fetchSpeakerBySlug = cache(async (slug: string) => {
+export const fetchSpeakerBySlug = async (slug: string) => {
   const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
 
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);
@@ -133,9 +133,9 @@ export const fetchSpeakerBySlug = cache(async (slug: string) => {
   );
 
   return mapSpeaker(speaker, submissions);
-});
+};
 
-export const fetchKeynoters = cache(async () => {
+export const fetchKeynoters = async () => {
   const submissions = await fetchKeynotes();
 
   const allSpeakers = Array.from(
@@ -158,4 +158,4 @@ export const fetchKeynoters = cache(async () => {
     seen.add(speaker.code);
     return !duplicate;
   });
-});
+};

@@ -66,3 +66,9 @@ export default function LivePage({ params }: { params: { room: string } }) {
     </>
   );
 }
+
+export async function generateStaticParams() {
+  return live.rooms.map((room) => {
+    return { room: room.slug };
+  });
+}

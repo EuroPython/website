@@ -16,3 +16,11 @@ export async function GET(
 
   return NextResponse.json({ session });
 }
+
+export const generateStaticParams = async () => {
+  const sessions = await fetchConfirmedSubmissions();
+
+  return sessions.map((session) => ({
+    code: session.code,
+  }));
+};

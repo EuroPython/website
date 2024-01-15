@@ -21,3 +21,7 @@ export default async function og({ params }: { params: { slug: string } }) {
     )
   );
 }
+
+export async function generateStaticParams() {
+  return [];
+}

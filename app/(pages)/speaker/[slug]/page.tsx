@@ -33,13 +33,13 @@ export const generateMetadata = async ({
   };
 };
 
-// export async function generateStaticParams() {
-//   const speakers = await fetchSpeakersWithConfirmedSubmissions();
+export async function generateStaticParams() {
+  const speakers = await fetchSpeakersWithConfirmedSubmissions();
 
-//   return speakers.map((speaker) => ({
-//     slug: speaker.slug,
-//   }));
-// }
+  return speakers.map((speaker) => ({
+    slug: speaker.slug,
+  }));
+}
 
 export default async function SpeakerPage({
   params,
