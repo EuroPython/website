@@ -110,6 +110,10 @@ export const fetchSpeakersWithConfirmedSubmissions = async () => {
 };
 
 export const fetchSpeakerBySlug = async (slug: string) => {
+  if (!process.env.ALL_SPEAKERS_URL) {
+    return null;
+  }
+
   const allSpeakers = await fetchSpeakersWithConfirmedSubmissions();
 
   const speakerInfo = allSpeakers.find((speaker) => speaker.slug === slug);

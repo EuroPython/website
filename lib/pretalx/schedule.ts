@@ -77,6 +77,9 @@ type RowStyle = {
 };
 
 const getRooms = async () => {
+  if (process.env.SCHEDULE_EXPORT_URL === undefined) {
+    return [];
+  }
   // rooms in the schedule API are not ordered so we use the ones from the
   // export API instead
   const response = await fetch(process.env.SCHEDULE_EXPORT_URL!);
@@ -107,6 +110,10 @@ export const getScheduleDays = async () => {
 
 // This API is not public, so it might change in the future
 export const getSchedule = async (day: string) => {
+  if (process.env.LATEST_SCHEDULE_URL === undefined) {
+    return null;
+  }
+
   const allSubmissions = await fetchConfirmedSubmissions();
 
   const codeToSubmission = Object.fromEntries(
