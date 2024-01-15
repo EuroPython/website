@@ -115,6 +115,10 @@ const mapSession = (session: Result) => {
 export type Session = ReturnType<typeof mapSession>;
 
 export const fetchConfirmedSubmissions = async () => {
+  if (process.env.ALL_SUBMISSIONS_URL === undefined) {
+    return [];
+  }
+
   let sessions = (await fetch(process.env.ALL_SUBMISSIONS_URL!).then((res) =>
     res.json()
   )) as Result[];
