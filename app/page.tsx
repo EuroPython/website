@@ -20,11 +20,11 @@ import { Keynoters } from "components/keynoters/keynoters";
 export const metadata = {
   metadataBase: new URL("https://ep2024.europython.eu"),
   title:
-    "EuroPython 2024 | July 8th-14rd 2024 | Prague, Czech Republic & Remote",
+    "EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote",
   description: "",
   twitter: {
     title:
-      "EuroPython 2024 | July 8th-14rd 2024 | Prague, Czech Republic & Remote",
+      "EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote",
   },
 };
 
