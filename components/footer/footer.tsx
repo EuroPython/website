@@ -15,7 +15,7 @@ export const Footer = () => (
             <li key={item.name} className="list-none">
               <a
                 href={item.path}
-                className="block font-bold text-5xl mb-4 hover:text-primary-hover"
+                className="block font-bold text-4xl md:text-5xl mb-4 hover:text-primary-hover"
               >
                 {item.name}
                 {item.path.startsWith("http") ? <span> ↗</span> : null}
@@ -27,7 +27,12 @@ export const Footer = () => (
 
       <article className="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end">
         <div>
-          <img width={444} height={444} src="/img/europythonlogo.png" />
+          <img
+            className="max-w-[200px] h-auto"
+            width={444}
+            height={444}
+            src="/img/europythonlogo.png"
+          />
         </div>
         <div>
           <address className="not-italic mb-4">

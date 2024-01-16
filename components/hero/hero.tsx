@@ -406,7 +406,7 @@ const Year = () => {
       width={1589}
       height={617}
       viewBox="0 0 1589 617"
-      className="absolute left-1/2 -translate-x-1/2 w-[120%] h-auto top-full translate-y-[-70%] max-w-[1600px]"
+      className="absolute left-1/2 -translate-x-1/2 w-[107%] h-auto top-full translate-y-[-70%] max-w-[1600px]"
     >
       <path
         fill="#FF8BA1"
@@ -418,7 +418,7 @@ const Year = () => {
 
 export const Hero = () => (
   <div className="bg-body-background overflow-hidden">
-    <div className="top-[-210px] relative pt-[250px] pb-[180px]">
+    <div className="top-[-210px] relative pt-[250px] pb-8 md:pb-[180px]">
       <div className="max-w-4xl lg:max-w-6xl mx-auto mb-16 w-full relative z-10 px-4">
         <HeroMain />
 
