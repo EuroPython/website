@@ -3,20 +3,12 @@
   ],
   "footer": [
     {
-      "name": "EuroPython 2023 Team",
-      "path": "/thankyou"
-    },
-    {
-      "name": "Conference Photos",
-      "path": "/photos"
+      "name": "2023 Photos",
+      "path": "https://ep2023.europython.eu/photos"
     },
     {
       "name": "Contacts",
       "path": "/contacts"
-    },
-    {
-      "name": "Terms",
-      "path": "/terms"
     },
     {
       "name": "Privacy Policy",

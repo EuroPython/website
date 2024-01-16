@@ -64,6 +64,13 @@ export const Footer = () => (
             <br />
             <a
               className="underline whitespace-nowrap"
+              href="https://fosstodon.org/@europython"
+            >
+              fosstodon.org/@europython <span> ↗</span>
+            </a>
+            <br />
+            <a
+              className="underline whitespace-nowrap"
               href="https://github.com/europython"
             >
               github.com/europython <span> ↗</span>
