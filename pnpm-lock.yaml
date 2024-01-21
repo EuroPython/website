@@ -95,8 +95,8 @@ devDependencies:
     specifier: ^7.23.7
     version: 7.23.7
   '@storybook/addon-actions':
-    specifier: ^7.6.7
-    version: 7.6.7
+    specifier: ^7.6.8
+    version: 7.6.8
   '@storybook/addon-essentials':
     specifier: ^7.6.7
     version: 7.6.7(@types/react@18.2.47)(react-dom@18.2.0)(react@18.3.0-next-992911981-20220718)
@@ -2748,6 +2748,17 @@ packages:
     resolution: {integrity: sha512-+6EZvhIeKEqG/RNsU3R5DxOrd60BL5GEvmzE2w60s2eKaNNxtyilDjiO1g4z2s2zDNyr7JL/Ft03pJ0Jgo0lew==}
     dependencies:
       '@storybook/core-events': 7.6.7
+      '@storybook/global': 5.0.0
+      '@types/uuid': 9.0.7
+      dequal: 2.0.3
+      polished: 4.2.2
+      uuid: 9.0.1
+    dev: true
+
+  /@storybook/addon-actions@7.6.8:
+    resolution: {integrity: sha512-/KQlr/nLsAazJuSVUoMjQdwAeeXkKEtElKdqXrqI1LVOi5a7kMgB+bmn9aKX+7VBQLfQ36Btyty+FaY7bRtehQ==}
+    dependencies:
+      '@storybook/core-events': 7.6.8
       '@storybook/global': 5.0.0
       '@types/uuid': 9.0.7
       dequal: 2.0.3
