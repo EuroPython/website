@@ -1,5 +1,14 @@
 {
   "header": [
+    {
+      "name": "Programme",
+      "items": [
+        {
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
+        }
+      ]
+    }
   ],
   "footer": [
     {
