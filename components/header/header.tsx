@@ -108,7 +108,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
 
     {/* <HeaderLogo inverted={inverted} /> */}
 
-    <nav className="mx-auto hidden lg:block">
+    <nav className="mr-auto hidden lg:block">
       <NavItems items={links.header} />
     </nav>
 
