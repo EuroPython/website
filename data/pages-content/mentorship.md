@@ -22,7 +22,7 @@ A mentee needing help with their proposal will be matched with an experienced me
 ## Mentors
 
 <div style={{textAlign: "center", marginBottom: 15}}>
-<ButtonWithTitle title="Mentor's Registration Form Open" text="Apply now if you are interested in becoming a Mentor" href="https://forms.gle/CjaWHxrpjqmZtmVC9" />
+<ButtonWithTitle title="Mentor's Registration Form Open" text="Apply now if you are interested in becoming a Mentor" href="https://forms.gle/YWrxdjtqW4nHzcmN8" />
 </div>
 
 We expect mentors to have past speaking experience at conferences similar to EuroPython.
