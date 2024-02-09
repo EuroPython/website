@@ -46,10 +46,10 @@ You are welcome to share your questions and ideas with our programme team at
 
 The conference will feature around 16 Tutorials/Workshops and 120 talk sessions:
 
-* **Tutorials/Workshops (17-18 July)**: hands-on **180-mins sessions** with
+* **Tutorials/Workshops (July 8th and 9th)**: hands-on **180-mins sessions** with
   40-100 people
 
-* **Talks (19-21 July)** : **30, 45, or 60-minute** : presentations of specific
+* **Talks (July 10th, until 12th)** : **30 or 45 minutes** : presentations of specific
   and general interest to the European Python community (including a dedicated
   PyData track)
 
@@ -57,7 +57,7 @@ You are also welcome to submit **posters** - printed in large formats. It is
 a graphical way to showcase your research, project or technology. Posters are
 exhibited at the conference, read at any time by participants, and can be
 discussed face-to-face with their authors during the poster sessions between
-19-21 July.
+July 10th until 12th.
 
 
 All Presentations will be designated the following levels:
