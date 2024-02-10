@@ -8,6 +8,15 @@
           "path": "/mentorship"
         }
       ]
+    },
+    {
+      "name": "Info & Support",
+      "items": [
+        {
+          "name": "Finantial Aid",
+          "path": "/finaid"
+        }
+      ]
     }
   ],
   "footer": [
