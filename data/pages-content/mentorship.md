@@ -15,7 +15,7 @@ At the moment we are looking for interested mentors who would like to help our m
 
 ## 1. One-to-One Mentorship Programme
 
-### Open between [Dates - TBA]
+### Open between 15 February - 26 February 2024
 
 A mentee needing help with their proposal will be matched with an experienced mentor. The mentor's job is to facilitate and support the mentee so they are able to contribute to EuroPython with confidence. A mentor serves as the guide, supporter and source of help to the mentee; they are not expected to tell the mentee what their contribution should be (that's for the mentee to decide).
 
@@ -46,7 +46,7 @@ If you require help contributing to EuroPython, especially if you are from an un
 
 ## 2. Workshops
 
-### Ask Me Anything about CFP Workshop - [Date TBA]
+### Ask Me Anything about CFP Workshop - Monday, 26 February, 18:30 CET
 
 An online session for people who have questions about the CfP (Call for Proposals) and need more information. The event has a public format. Every participant will have to register through a google form (TBC). Close to the date of the event we will share the event details via the registered email.
 
