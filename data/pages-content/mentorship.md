@@ -38,8 +38,8 @@ You will also be invited to join the panel of the Webinar Workshops.
 
 ## Mentee
 
-<div style={{textAlign: "center", marginBottom: 10}}>
-<Button>Form closed - Will be opened soon</Button>
+<div style={{textAlign: "center", marginBottom: 15}}>
+<ButtonWithTitle title="Mentee's Registration Form Open" text="Apply now if you are interested in becoming a Mentee" href="https://forms.gle/rNnNNurhntVWpmmKA" />
 </div>
 
 If you require help contributing to EuroPython, especially if you are from an underrepresented or a marginalised group in the tech industry, you are welcome to submit your application once the form is opened and become a mentee.
@@ -47,6 +47,10 @@ If you require help contributing to EuroPython, especially if you are from an un
 ## 2. Workshops
 
 ### Ask Me Anything about CFP Workshop - Monday, 26 February, 18:30 CET
+
+<div style={{textAlign: "center", marginBottom: 15}}>
+<ButtonWithTitle title="Ask me Anything for the CfP Form Open" text="Register now for the event" href="https://forms.gle/rNnNNurhntVWpmmKA" />
+</div>
 
 An online session for people who have questions about the CfP (Call for Proposals) and need more information. The event has a public format. Every participant will have to register through a google form (TBC). Close to the date of the event we will share the event details via the registered email.
 
