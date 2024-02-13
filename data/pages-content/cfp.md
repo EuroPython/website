@@ -46,10 +46,10 @@ You are welcome to share your questions and ideas with our programme team at
 
 The conference will feature around 16 tutorials/workshops and 120 talk sessions:
 
-* **Tutorials/Workshops (July 8th and 9th)**: hands-on **180-mins sessions** with
+* **Tutorials/Workshops (July 8th and 9th)**: hands-on **180 min sessions** with
   40-100 people
 
-* **Talks (July 10th, until 12th)** : **30 or 45 minutes** : presentations of specific
+* **Talks (July 10th, until 12th)** : **30 or 45 min** : presentations of specific
   and general interest to the European Python community (including a dedicated
   PyData track)
 
