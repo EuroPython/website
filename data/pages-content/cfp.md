@@ -30,7 +30,7 @@ If you’re thinking, “but they don’t mean me”, then we especially mean **
 * If you’re from a background which is well-represented in most Python groups,
   get involved - we want your help making a difference.
 
-* If you’re worried about not being technical enough, get involved - your fresh
+* If you’re worried about not having enough technical knowledge, get involved - your fresh
   perspective will be invaluable.
 
 * If you think you’re an imposter, join us - many of the EuroPython organisers
@@ -44,7 +44,7 @@ You are welcome to share your questions and ideas with our programme team at
 
 ## The Conference Format ##
 
-The conference will feature around 16 Tutorials/Workshops and 120 talk sessions:
+The conference will feature around 16 tutorials/workshops and 120 talk sessions:
 
 * **Tutorials/Workshops (July 8th and 9th)**: hands-on **180-mins sessions** with
   40-100 people
@@ -53,14 +53,14 @@ The conference will feature around 16 Tutorials/Workshops and 120 talk sessions:
   and general interest to the European Python community (including a dedicated
   PyData track)
 
-You are also welcome to submit **posters** - printed in large formats. It is
+You are also welcome to submit **posters**, which will be printed in large formats. It is
 a graphical way to showcase your research, project or technology. Posters are
-exhibited at the conference, read at any time by participants, and can be
+exhibited at the conference, can be read at any time by participants, and can be
 discussed face-to-face with their authors during the poster sessions between
-July 10th until 12th.
+July 10th and 12th.
 
 
-All Presentations will be designated the following levels:
+All presentations will be assigned one of the following levels:
 
 * **Beginner** - where the audience requires little or no previous knowledge to
   engage with the subject matter.
@@ -95,8 +95,8 @@ For ideas to contribute to the PyData track, take a look at PyData events:
 To ensure our programme reflects our diverse community, submissions go through
 three rounds of review and refinement before the final programme is announced:
 
-* **[Community voting](/voting)** (from March 8th, until Mach 15th): is open to
-  all 2015-2024 EuroPython conference ticket holders, and anyone who proposes
+* **[Community voting](/voting)** (from March 8th, until Mach 15th): a voting round open to
+  all 2015-2024 EuroPython conference ticket holders and anyone who proposes
   a talk for the 2024 conference. This helps us judge both the uniqueness,
   niche-ness, popularity and interestingness of each proposal.
 
@@ -116,13 +116,13 @@ three rounds of review and refinement before the final programme is announced:
 As in previous years, there will be a **Speaker Mentorship Programme** for
 anyone who needs help preparing their contribution. We focus on those for whom
 it might be their first time contributing to our conference, especially those
-from under-represented backgrounds. To this end we will match mentees with
+from under-represented backgrounds. To this end, we will match mentees with
 experienced and supportive mentors and run two workshops online: one close to
 the CFP closing date, focusing on improving your submissions; the other close
-to the conference date, helping you improve your talk.
+to the conference date, focusing on helping you improve your talk.
 
-Mentorship Programme sign-up has started on **January 23rd** and will remain
-open until TBD February. More details can be found on our [Mentorship
+Mentorship Programme sign-up is open too, and will remain
+open until the 27th of February. More details can be found on our [Mentorship
 page](/mentorship).
 
 ## Speaker Support
@@ -133,7 +133,7 @@ accepted workshop & tutorial organisers are eligible for a free Combined
 Ticket** (see details of the [ticket types](/tickets#ticket-types)). Travel and
 accommodation expenses will not be reimbursed,  but our [Financial Aid
 programme](/finaid) is open for applications, and we encourage speakers,
-especially those from under-represented backgrounds to apply.
+especially those from under-represented backgrounds, to apply.
 
 **Childcare**: We are excited to offer free childcare at the venue. During the
 conference hours, there will be a dedicated area with childcare professionals
