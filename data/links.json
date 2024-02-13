@@ -1,6 +1,19 @@
 {
   "header": [
     {
+      "name": "Info",
+      "items": [
+        {
+          "name": "FAQ",
+          "path": "/faq"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
+        }
+      ]
+    },
+    {
       "name": "Programme",
       "items": [
         {
