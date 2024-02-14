@@ -15,7 +15,7 @@ At the moment we are looking for interested mentors who would like to help our m
 
 ## 1. One-to-One Mentorship Programme
 
-### Open between [Dates - TBA]
+### Open until the 27th of February 2024
 
 A mentee needing help with their proposal will be matched with an experienced mentor. The mentor's job is to facilitate and support the mentee so they are able to contribute to EuroPython with confidence. A mentor serves as the guide, supporter and source of help to the mentee; they are not expected to tell the mentee what their contribution should be (that's for the mentee to decide).
 
@@ -38,15 +38,19 @@ You will also be invited to join the panel of the Webinar Workshops.
 
 ## Mentee
 
-<div style={{textAlign: "center", marginBottom: 10}}>
-<Button>Form closed - Will be opened soon</Button>
+<div style={{textAlign: "center", marginBottom: 15}}>
+<ButtonWithTitle title="Mentee's Registration Form Open" text="Apply now if you are interested in becoming a Mentee" href="https://forms.gle/rNnNNurhntVWpmmKA" />
 </div>
 
 If you require help contributing to EuroPython, especially if you are from an underrepresented or a marginalised group in the tech industry, you are welcome to submit your application once the form is opened and become a mentee.
 
 ## 2. Workshops
 
-### Ask Me Anything about CFP Workshop - [Date TBA]
+### Ask Me Anything about CFP Workshop - Monday, 26 February, 18:30 CET
+
+<div style={{textAlign: "center", marginBottom: 15}}>
+<ButtonWithTitle title="Ask me Anything for the CfP Form Open" text="Register now for the event" href="https://forms.gle/rNnNNurhntVWpmmKA" />
+</div>
 
 An online session for people who have questions about the CfP (Call for Proposals) and need more information. The event has a public format. Every participant will have to register through a google form (TBC). Close to the date of the event we will share the event details via the registered email.
 
