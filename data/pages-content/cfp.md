@@ -11,7 +11,7 @@ It will be running between
 **Wednesday, 14th February 2024** and **Wednesday, 6th March 2024**
 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 </div>
-
+ <ButtonLink href="https://program.europython.eu">Submit your proposal now!🐍</ButtonLink>
 ---
 
 EuroPython reflects the colourful and diverse backgrounds, cultures and
