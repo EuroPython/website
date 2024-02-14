@@ -23,7 +23,7 @@ A. The conference will be organised in three phases:
 
 A. The conference will feature around 20 hands-on tutorials & workshops, 120 talks and other interactive sessions. We aim to have a very diverse programme, covering the many different aspects of where and how Python solves problems or engages in interesting things.
 
-To get an idea of what to expect, have a look at the [EP2023's programme.](https://ep2023.europython.eu/schedule/)
+To get an idea of what to expect, have a look at the [EP2023's programme.](https://ep2023.europython.eu/schedule/2023-07-17/)
 
 To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting.
 
