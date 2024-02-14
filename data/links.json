@@ -23,6 +23,10 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
+        },
+        {
+          "name": "Call for Proposals",
+          "path": "/cfp"
         }
       ]
     }
