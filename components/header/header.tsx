@@ -126,7 +126,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
             {
               name: "Code of Conduct",
               path: "https://www.europython-society.org/coc/",
-            }
+            },
             /*
             {
               name: "Live 📺",
