@@ -1,7 +1,7 @@
 {
   "header": [
     {
-      "name": "Info",
+      "name": "Info & Support",
       "items": [
         {
           "name": "FAQ",
@@ -10,6 +10,10 @@
         {
           "name": "Visa Support Letter",
           "path": "/visa"
+        },
+        {
+          "name": "Financial Aid",
+          "path": "/finaid"
         }
       ]
     },
@@ -19,15 +23,6 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
-        }
-      ]
-    },
-    {
-      "name": "Info & Support",
-      "items": [
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
         }
       ]
     }

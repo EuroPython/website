@@ -82,7 +82,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
           </>
         ) : null}
 
-        {/*
+        {
 
         <label htmlFor="nav_toggle" className="flex lg:hidden">
           <HeaderButton variant="menu">
@@ -90,7 +90,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
           </HeaderButton>
         </label>
 
-        */}
+        }
       </div>
     </>
   );
@@ -127,6 +127,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
               name: "Code of Conduct",
               path: "https://www.europython-society.org/coc/",
             },
+            /*
             {
               name: "Live 📺",
               path: "/live",
@@ -134,7 +135,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
             {
               name: "Buy tickets",
               path: "/tickets",
-            },
+            }*/
             ...links.header,
           ]}
         />
