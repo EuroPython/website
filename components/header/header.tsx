@@ -82,7 +82,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
           </>
         ) : null}
 
-        {/*
+        {
 
         <label htmlFor="nav_toggle" className="flex lg:hidden">
           <HeaderButton variant="menu">
@@ -90,7 +90,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
           </HeaderButton>
         </label>
 
-        */}
+        }
       </div>
     </>
   );
