@@ -15,7 +15,7 @@ At the moment we are looking for interested mentors who would like to help our m
 
 ## 1. One-to-One Mentorship Programme
 
-### Open between 15 February - 26 February 2024
+### Open until the 27th of February 2024
 
 A mentee needing help with their proposal will be matched with an experienced mentor. The mentor's job is to facilitate and support the mentee so they are able to contribute to EuroPython with confidence. A mentor serves as the guide, supporter and source of help to the mentee; they are not expected to tell the mentee what their contribution should be (that's for the mentee to decide).
 
