@@ -10,8 +10,9 @@ subtitle: EuroPython Call for Proposals
 It will be running between
 **Wednesday, 14th February 2024** and **Wednesday, 6th March 2024**
 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
- <ButtonLink href="https://program.europython.eu">Submit your proposal now!🐍</ButtonLink>
- </div>
+
+<ButtonLink href="https://program.europython.eu">Submit your proposal now!🐍</ButtonLink>
+</div>
 ---
 
 EuroPython reflects the colourful and diverse backgrounds, cultures and
