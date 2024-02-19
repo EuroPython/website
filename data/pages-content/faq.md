@@ -28,3 +28,29 @@ To get an idea of what to expect, have a look at the [EP2023's programme.](https
 To select talks, we run a Call for Proposals (CFP). Talks are then curated based on the input from the community voting.
 
 We are always keen to hear new ideas on how to enrich the programme and other activities you are interested in participating during the conference. Share your thoughts with the programme team at [programme@europython.eu](mailto:programme@europython.eu).
+
+## **Q. When do you accept talk proposals?**
+
+A. The Call for Proposals (CFP) is currently opened and the dates are **14 February - 6 March 2024**. If you would like some help to submit your proposal, you can take a look to our [Speaker Mentorship Programme](/mentorship).
+
+## **Q. How do you review and select talks?**
+
+A. After Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. You can find the details about our selection process [here](/cfp#selection-process)
+
+## **Q. What support do you give to speakers?**
+A. Accepted speakers are eligible for a free Ticket; More details about the ticket types that speakers are eligible for will be announced soon. In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.
+
+We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. Check out our [Speaker Mentorship Programme](/mentorship) for details.
+
+Email us at [programme@europython.eu](mailto:programme@europython.eu) to tell us what other speaker support you might need!
+
+## **Q. When do ticket sales start and what are the ticket prices like?**
+
+A. Ticket sales will be open soon! Stay tuned for more announcements.
+
+## **Q. Is there a Financial Aid Programme for EuroPython 2024?**
+
+A. Yes, our [Financial Aid Programme](/finaid) will run this year too. More information and the timeline of our financial aid programme will be made available soon.
+
+## **Q. Could you provide a visa support letter for my visa application?**
+A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. More information about the process will be added once the ticket sales are open.
