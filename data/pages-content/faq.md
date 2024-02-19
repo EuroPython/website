@@ -38,7 +38,8 @@ A. The Call for Proposals (CFP) is currently opened and the dates are **14 Febru
 A. After Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. You can find the details about our selection process [here](/cfp#selection-process)
 
 ## **Q. What support do you give to speakers?**
-A. Accepted speakers are eligible for a free Ticket; More details about the ticket types that speakers are eligible for will be announced soon. In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.
+
+A. Accepted speakers are eligible for a free Ticket; more details about the ticket types that speakers are eligible for will be announced soon. In addition, speakers are encouraged to apply for additional [Financial Aid](/finaid), should there be a need.
 
 We give support to first-time speakers and actively encourage, accommodate and welcome the participation of those from under-represented groups in tech. Check out our [Speaker Mentorship Programme](/mentorship) for details.
 
