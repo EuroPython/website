@@ -31,7 +31,7 @@ We are always keen to hear new ideas on how to enrich the programme and other ac
 
 ## **Q. When do you accept talk proposals?**
 
-A. The Call for Proposals (CFP) is currently opened and the dates are **14 February - 6 March 2024**. If you would like some help to submit your proposal, you can take a look to our [Speaker Mentorship Programme](/mentorship).
+A. The [Call for Proposals (CFP)](/cfp) is currently opened and the dates are **14 February - 6 March 2024**. If you would like some help to submit your proposal, you can take a look to our [Speaker Mentorship Programme](/mentorship).
 
 ## **Q. How do you review and select talks?**
 
