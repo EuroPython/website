@@ -35,7 +35,7 @@ A. The [Call for Proposals (CFP)](/cfp) is currently opened and the dates are **
 
 ## **Q. How do you review and select talks?**
 
-A. After Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. You can find the details about our selection process [here](/cfp#selection-process)
+A. After Call for Proposals (CFP) finishes, submissions go through two rounds of review and refinement as we put together our programme. You can find the details about our selection process [here](/cfp#selection-process).
 
 ## **Q. What support do you give to speakers?**
 
