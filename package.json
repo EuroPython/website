@@ -1,5 +1,5 @@
 {
-  "name": "ep2022_website",
+  "name": "ep2024_website",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
     "fetch-cards": "ts-node-esm scripts/fetch-social-cards.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic"
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "@mdx-js/react": "^3.0.0",
@@ -73,5 +73,5 @@
   },
   "version": "",
   "readme": "ERROR: No README data found!",
-  "_id": "ep2022_website@"
+  "_id": "ep2024_website@"
 }
