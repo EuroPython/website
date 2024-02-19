@@ -54,4 +54,5 @@ A. Ticket sales will be open soon! Stay tuned for more announcements.
 A. Yes, our [Financial Aid Programme](/finaid) will run this year too. More information and the timeline of our financial aid programme will be made available soon.
 
 ## **Q. Could you provide a visa support letter for my visa application?**
+
 A. Yes. We have a dedicated [Visa Information Page](/visa) with details on how to obtain the support letter. More information about the process will be added once the ticket sales are open.
