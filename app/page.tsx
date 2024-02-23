@@ -74,8 +74,6 @@ export default async function IndexPage() {
         <Hero />
       </Fullbleed>
 
-      {/*
-
       <CardContainer>
         {deadlines.map(({ data, content }) => (
           <Card
@@ -88,8 +86,6 @@ export default async function IndexPage() {
           />
         ))}
       </CardContainer>
-
-      */}
 
       <div className="mt-40 px-6 pb-40">
         <HeroWithCTA
