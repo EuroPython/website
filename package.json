@@ -57,7 +57,7 @@
     "@types/glob": "^8.1.0",
     "@types/mdast": "^4.0.3",
     "@types/node": "20.10.6",
-    "@types/react": "18.2.47",
+    "@types/react": "18.2.59",
     "@types/slug": "^5.0.7",
     "autoprefixer": "^10.4.17",
     "axios": "^1.6.5",
