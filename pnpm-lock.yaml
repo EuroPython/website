@@ -95,8 +95,8 @@ devDependencies:
     specifier: ^7.23.7
     version: 7.23.7
   '@storybook/addon-actions':
-    specifier: ^7.6.8
-    version: 7.6.8
+    specifier: ^7.6.17
+    version: 7.6.17
   '@storybook/addon-essentials':
     specifier: ^7.6.7
     version: 7.6.7(@types/react@18.2.47)(react-dom@18.2.0)(react@18.3.0-next-992911981-20220718)
@@ -2744,10 +2744,10 @@ packages:
       '@sinonjs/commons': 1.8.6
     dev: false
 
-  /@storybook/addon-actions@7.6.7:
-    resolution: {integrity: sha512-+6EZvhIeKEqG/RNsU3R5DxOrd60BL5GEvmzE2w60s2eKaNNxtyilDjiO1g4z2s2zDNyr7JL/Ft03pJ0Jgo0lew==}
+  /@storybook/addon-actions@7.6.17:
+    resolution: {integrity: sha512-TBphs4v6LRfyTpFo/WINF0TkMaE3rrNog7wW5mbz6n0j8o53kDN4o9ZEcygSL5zQX43CAaghQTeDCss7ueG7ZQ==}
     dependencies:
-      '@storybook/core-events': 7.6.7
+      '@storybook/core-events': 7.6.17
       '@storybook/global': 5.0.0
       '@types/uuid': 9.0.7
       dequal: 2.0.3
@@ -2755,10 +2755,10 @@ packages:
       uuid: 9.0.1
     dev: true
 
-  /@storybook/addon-actions@7.6.8:
-    resolution: {integrity: sha512-/KQlr/nLsAazJuSVUoMjQdwAeeXkKEtElKdqXrqI1LVOi5a7kMgB+bmn9aKX+7VBQLfQ36Btyty+FaY7bRtehQ==}
+  /@storybook/addon-actions@7.6.7:
+    resolution: {integrity: sha512-+6EZvhIeKEqG/RNsU3R5DxOrd60BL5GEvmzE2w60s2eKaNNxtyilDjiO1g4z2s2zDNyr7JL/Ft03pJ0Jgo0lew==}
     dependencies:
-      '@storybook/core-events': 7.6.8
+      '@storybook/core-events': 7.6.7
       '@storybook/global': 5.0.0
       '@types/uuid': 9.0.7
       dequal: 2.0.3
@@ -3351,6 +3351,12 @@ packages:
 
   /@storybook/core-events@7.6.16:
     resolution: {integrity: sha512-mkBqzrbp6vmdjo0fBZGrFQQ4YdvMFxF6AesdKTf8EzPa69FoxnhQLrmQ4aXF+9vXkxfXVJF2HfpoTEdfqqAo+w==}
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: true
+
+  /@storybook/core-events@7.6.17:
+    resolution: {integrity: sha512-AriWMCm/k1cxlv10f+jZ1wavThTRpLaN3kY019kHWbYT9XgaSuLU67G7GPr3cGnJ6HuA6uhbzu8qtqVCd6OfXA==}
     dependencies:
       ts-dedent: 2.2.0
     dev: true
