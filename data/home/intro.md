@@ -9,7 +9,4 @@ the vibrant Bohemian city Prague. We'll be together, celebrating our shared pass
 Call for Proposals, Mentorship Programme, Financial Aid Programme
 will be starting in February 2024
 
-Want to contribute to EuroPython 2024?! Click on the link
-[https://bitly.ws/3cBDo](https://bitly.ws/3cBDo)
-
 If you have any questions, feel free to contact us at [helpdesk@europython.eu](mailto:helpdesk@europython.eu).
