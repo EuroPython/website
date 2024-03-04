@@ -51,7 +51,7 @@ If you require help contributing to EuroPython, especially if you are from an un
 Thank you, everyone who joined the session with your questions! You can view the recording of the session here:
 
 <div style={{display: "flex", justifyContent: "center", marginBottom: 20}}>
-<iframe width="560" height="315" src="https://youtu.be/EiCfmf6QVIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EiCfmf6QVIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ### First-Time Speaker Workshop - [Date TBA]
