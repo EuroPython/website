@@ -48,10 +48,10 @@ If you require help contributing to EuroPython, especially if you are from an un
 
 ### [COMPLETED] Ask Me Anything about CFP Workshop - Monday, 26 February, 18:30 CET
 
-Thank you, everyone who joined the session with your questions! The recording of the session will be uploaded soon.
+Thank you, everyone who joined the session with your questions! You can view the recording of the session here:
 
-<div style={{textAlign: "center", marginBottom: 10}}>
-<Button>Form closed - Thank you for your interest!</Button>
+<div style={{display: "flex", justifyContent: "center", marginBottom: 20}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HpSbrqmiSeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ### First-Time Speaker Workshop - [Date TBA]
