@@ -8,7 +8,7 @@ subtitle: EuroPython Call for Proposals
 **EuroPython 2024 Call for Proposals (CFP) is Open.**
 
 It will be running between
-**Wednesday, 14th February 2024** and **Wednesday, <s>6th</s> 13th, March 2024**
+**Wednesday, 14th February 2024** and **Wednesday,** <s>6th</s> **13th, March 2024**
 [Anywhere on Earth](https://en.wikipedia.org/wiki/Anywhere_on_Earth)
 
 <ButtonLink href="https://program.europython.eu">Submit your proposal now!🐍</ButtonLink>
