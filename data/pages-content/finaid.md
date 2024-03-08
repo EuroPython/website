@@ -25,7 +25,7 @@ You’ll find all the information you need to apply for such a grant below.
 </div>
 
 
-<!-- The EuroPython Society are sponsoring the Financial Aid Programme with <amount> this year. -->
+<!-- The EuroPython Society is sponsoring the Financial Aid Programme with <amount> this year. -->
 
 If you want to support EuroPython and its efforts to make EuroPython accessible
 to everyone, please consider sponsoring EuroPython by reaching out to
