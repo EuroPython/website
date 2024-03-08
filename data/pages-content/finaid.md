@@ -25,7 +25,7 @@ You’ll find all the information you need to apply for such a grant below.
 </div>
 
 
-<!-- The EuroPython Society is sponsoring the Financial Aid Programme with <amount> this year. -->
+The EuroPython Society is sponsoring the Financial Aid Programme with €25,000 this year.
 
 If you want to support EuroPython and its efforts to make EuroPython accessible
 to everyone, please consider sponsoring EuroPython by reaching out to
@@ -97,7 +97,7 @@ early.**
 <table className="mt-8 finaid-timeline">
 <tbody className="text-xl">
   <tr>
-    <td>6 March 2024</td>
+    <td>8 March 2024</td>
     <td></td>
     <td>Applications open</td>
   </tr>
@@ -112,7 +112,7 @@ early.**
     <td>Deadline for submitting first-round applications</td>
   </tr>
   <tr>
-    <td>19 May 2024</td>
+    <td>8 May 2024</td>
     <td>
       <img
         src="/img/accents/finaid-round1.svg"
