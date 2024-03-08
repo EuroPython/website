@@ -38,7 +38,7 @@ const HeaderButton = ({
   );
 };
 
-const HeaderLogo = ({ inverted = false }: { inverted?: boolean }) => {
+const HeaderLogo = ({ inverted = true }: { inverted?: boolean }) => {
   return (
     <a href="/">
       <Logo className="w-11 h-auto mr-4 block md:hidden" inverted={inverted} />
