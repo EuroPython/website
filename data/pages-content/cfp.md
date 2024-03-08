@@ -96,12 +96,12 @@ For ideas to contribute to the PyData track, take a look at PyData events:
 To ensure our programme reflects our diverse community, submissions go through
 three rounds of review and refinement before the final programme is announced:
 
-* **[Community voting]** (from March 8th, until March 15th): a voting round open to
+* **[Community voting]** (from March 15th, until March 22th): a voting round open to
   all 2015-2024 EuroPython conference ticket holders and anyone who proposes
   a talk for the 2024 conference. This helps us judge both the uniqueness,
   niche-ness, popularity and interestingness of each proposal.
 
-* **Panel feedback** (from March 8th, until March 15th): a diverse group of
+* **Panel feedback** (from March 15th, until March 22th): a diverse group of
   experienced reviewers refine and provide constructive feedback on submissions
   within their realm of expertise. This helps us to judge the balance, quality
   and diversity of our programme.
