@@ -225,7 +225,7 @@ In addition, please pay close attention to the following:
   options that allow you to cancel in case you can’t actually make it to the
   conference.
 - If you’ve applied for a grant or accepted a grant, but cannot make it to the
-  conference, please contact us at [finaid@europython.eu][email-finaid]. This
+  conference, please contact us at [finaid@europython.eu][email-finaid] as soon as possible. This
   allows us to reallocate your grant to someone else.
 
 ---
