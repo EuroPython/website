@@ -96,7 +96,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
   );
 };
 
-export const Header = ({ inverted = false }: { inverted?: boolean }) => (
+export const Header = ({ inverted = true }: { inverted?: boolean }) => (
   <header className={clsx("p-6 flex items-center relative z-40", {})}>
     <input
       type="checkbox"
@@ -106,7 +106,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
       aria-hidden="true"
     />
 
-    <HeaderLogo />
+    <HeaderLogo inverted={inverted} />
 
     <nav className="mr-auto hidden lg:block">
       <NavItems items={links.header} />
