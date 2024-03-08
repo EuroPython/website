@@ -20,10 +20,9 @@ You’ll find all the information you need to apply for such a grant below.
 
 <div className="finaid-sponsor">
   <a href="https://www.europython-society.org/" target="_blank">
-    <img src="/img/eps-logo-white.png" alt="Logo of the EuroPython Society" />
+    <img src="/img/eps-logo.png" alt="Logo of the EuroPython Society" />
   </a>
 </div>
-
 
 The EuroPython Society is sponsoring the Financial Aid Programme with €25,000 this year.
 
@@ -33,11 +32,9 @@ to everyone, please consider sponsoring EuroPython by reaching out to
 
 ---
 
-
 ## Grant Types
 
 You can apply for three different types of grants:
-
 
 1. **Free Ticket Voucher Grant:** Get a voucher for a free standard ticket for
    the in-person conference.
@@ -45,7 +42,6 @@ You can apply for three different types of grants:
    costs up to €400.
 3. **Visa Application Fee Grant:** Get reimbursed for the costs of a short-stay
    Schengen visa to the Czech Republic (up to €80).
-
 
 ## Grant Eligibility
 
@@ -64,7 +60,6 @@ for a grant:
    possible, and we especially want to help those from under-represented groups
    in tech feel welcomed, be present in and contribute to our community.
 
-
 ## How to apply
 
 You can apply for Financial Aid by filling out the
@@ -78,7 +73,6 @@ processing and Google Drive for storing the relevant information.
 
 For more details on our privacy policies, please see our
 [privacy policy][privacy-policy].
-
 
 ## Timeline
 
@@ -169,9 +163,10 @@ early.**
 </tbody>
 </table>
 
-[^round-1-vs-round-2]: If you've already applied for round 1, you don't have to
-reapply for round 2. Your application will automatically be considered for round
-2 if you did not receive a grant in round 1.
+[^round-1-vs-round-2]:
+    If you've already applied for round 1, you don't have to
+    reapply for round 2. Your application will automatically be considered for round
+    2 if you did not receive a grant in round 1.
 
 ---
 
@@ -187,7 +182,6 @@ reapply for round 2. Your application will automatically be considered for round
 
 - The Financial Aid Team may also make grant offers outside the two main rounds
   of selection.
-
 
 ### Free Ticket Voucher Grant
 
