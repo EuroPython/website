@@ -106,7 +106,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
       aria-hidden="true"
     />
 
-    {/* <HeaderLogo inverted={inverted} /> */}
+    <HeaderLogo />
 
     <nav className="mr-auto hidden lg:block">
       <NavItems items={links.header} />
