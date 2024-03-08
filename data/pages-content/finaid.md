@@ -210,7 +210,7 @@ In addition, please pay close attention to the following:
 - Reimbursements will be made **after** the conference via PayPal or bank
   transfer (SEPA and Swift). It’s not possible to be reimbursed before the
   conference or by other means, such as cash.
-- Note that we might experience difficulty transacting with certain  countries
+- Note that we might experience difficulty transacting with certain countries
   due to sanctions or international regulations.
 - Reimbursements will only be made after we’ve received your
   travel/accommodation receipts/invoices. The deadline to submit your
