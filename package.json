@@ -50,7 +50,7 @@
     "@storybook/addon-links": "^7.6.7",
     "@storybook/addons": "^7.6.7",
     "@storybook/blocks": "^7.6.8",
-    "@storybook/nextjs": "^7.6.7",
+    "@storybook/nextjs": "^8.0.0",
     "@storybook/react": "^7.6.16",
     "@storybook/testing-library": "^0.2.2",
     "@tailwindcss/typography": "^0.5.10",
