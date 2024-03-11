@@ -38,10 +38,10 @@ const HeaderButton = ({
   );
 };
 
-const HeaderLogo = ({ inverted = true }: { inverted?: boolean }) => {
+const HeaderLogo = ({ inverted = false }: { inverted?: boolean }) => {
   return (
     <a href="/">
-      <Logo className="w-11 h-auto mr-4 block md:hidden" inverted={inverted} />
+      <Logo className="w-11 h-auto mr-4 block md:hidden" />
       <Logo
         className="h-auto hidden md:block w-full pr-3 lg:pr-8"
         inverted={inverted}
@@ -96,7 +96,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
   );
 };
 
-export const Header = ({ inverted = true }: { inverted?: boolean }) => (
+export const Header = ({ inverted = false }: { inverted?: boolean }) => (
   <header className={clsx("p-6 flex items-center relative z-40", {})}>
     <input
       type="checkbox"
@@ -106,7 +106,7 @@ export const Header = ({ inverted = true }: { inverted?: boolean }) => (
       aria-hidden="true"
     />
 
-    <HeaderLogo inverted={inverted} />
+    <HeaderLogo />
 
     <nav className="mr-auto hidden lg:block">
       <NavItems items={links.header} />
