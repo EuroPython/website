@@ -1,6 +1,6 @@
 ---
 title: Financial Aid
-subtitle: Opens soon
+subtitle: Open until 21 April	
 url: /finaid
 image: /images/cards/finaid1.jpeg
 ---
