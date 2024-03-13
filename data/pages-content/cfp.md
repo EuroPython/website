@@ -13,6 +13,9 @@ It will be running between
 
 <ButtonLink href="https://program.europython.eu">Submit your proposal now!🐍</ButtonLink>
 </div>
+
+** 20:00:12UTC: We know that our CFP backend is currently down. We notified the team and hope it will be back online soon.**
+
 ---
 
 EuroPython reflects the colourful and diverse backgrounds, cultures and
