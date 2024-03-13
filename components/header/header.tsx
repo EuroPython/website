@@ -41,7 +41,7 @@ const HeaderButton = ({
 const HeaderLogo = ({ inverted = false }: { inverted?: boolean }) => {
   return (
     <a href="/">
-      <Logo className="w-11 h-auto mr-4 block md:hidden" inverted={inverted} />
+      <Logo className="w-11 h-auto mr-4 block md:hidden" />
       <Logo
         className="h-auto hidden md:block w-full pr-3 lg:pr-8"
         inverted={inverted}
@@ -106,7 +106,7 @@ export const Header = ({ inverted = false }: { inverted?: boolean }) => (
       aria-hidden="true"
     />
 
-    {/* <HeaderLogo inverted={inverted} /> */}
+    <HeaderLogo />
 
     <nav className="mr-auto hidden lg:block">
       <NavItems items={links.header} />
