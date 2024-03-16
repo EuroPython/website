@@ -1,10 +1,10 @@
-import { Separator } from "components/separator/separator";
+import { Separator } from "../separator/separator";
 import { Fragment } from "react";
 import sponsors from "../../data/sponsors.json";
-import { Fullbleed } from "components/layout/fullbleed";
+import { Fullbleed } from "../layout/fullbleed";
 
-import { ButtonLink } from "components/button-link";
-import { Title } from "components/typography/title";
+import { ButtonLink } from "../button-link";
+import { Title } from "../typography/title";
 import clsx from "clsx";
 
 type Sponsor = {

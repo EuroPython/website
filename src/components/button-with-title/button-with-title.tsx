@@ -1,5 +1,5 @@
-import { ButtonLink } from "components/button-link";
-import { Title } from "components/typography/title";
+import { ButtonLink } from "../button-link";
+import { Title } from "../typography/title";
 
 type Props = {
   title: string;
