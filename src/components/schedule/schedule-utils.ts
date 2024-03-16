@@ -1,5 +1,5 @@
 import { timeToNumber } from "./time-helpers";
-import { OrphanTimeSlot, Session, TimeSlot } from "./types";
+import type { OrphanTimeSlot, Session, TimeSlot } from "./types";
 
 const TYPES_MAP = {
   "Talk [in-person]": "talk",

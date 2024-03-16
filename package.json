@@ -22,10 +22,13 @@
     "astro": "^4.5.4",
     "astro-meta-tags": "^0.2.2",
     "clsx": "^2.1.0",
+    "date-fns-tz": "^2.0.1",
     "gray-matter": "^4.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icalendar-link": "^3.0.2",
     "tailwindcss": "^3.4.1",
+    "tweakpane": "^4.0.3",
     "typescript": "^5.4.2"
   }
 }

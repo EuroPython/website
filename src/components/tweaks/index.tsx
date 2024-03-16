@@ -47,7 +47,7 @@ const Tweaks = () => {
         })
       );
 
-      for (const [variable, value] of Object.entries(params)) {
+      for (const [variable, _] of Object.entries(params)) {
         const label = variable.replace("--color-", "").replace("-", " ");
 
         // @ts-ignore

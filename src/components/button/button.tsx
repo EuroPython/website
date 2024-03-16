@@ -9,7 +9,6 @@ export const Button = ({
   children: React.ReactNode;
   secondary?: boolean;
 }) => {
-
   return (
     <a
       className={clsx(
@@ -20,6 +19,7 @@ export const Button = ({
           "text-text": secondary,
         }
       )}
+      href={href}
     >
       {children}
     </a>

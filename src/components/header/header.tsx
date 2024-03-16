@@ -50,7 +50,7 @@ const HeaderLogo = ({ inverted = false }: { inverted?: boolean }) => {
   );
 };
 
-const HeaderLogoEPS = () => {
+export const HeaderLogoEPS = () => {
   return (
     <a href="/">
       <EPSLogo className="h-auto w-16 lg:w-32 pr-3 lg:pr-8" />
@@ -83,20 +83,18 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
         ) : null}
 
         {
-
-        <label htmlFor="nav_toggle" className="flex lg:hidden">
-          <HeaderButton variant="menu">
-            {mobile ? "Close Menu" : "Menu"}
-          </HeaderButton>
-        </label>
-
+          <label htmlFor="nav_toggle" className="flex lg:hidden">
+            <HeaderButton variant="menu">
+              {mobile ? "Close Menu" : "Menu"}
+            </HeaderButton>
+          </label>
         }
       </div>
     </>
   );
 };
 
-export const Header = ({ inverted = false }: { inverted?: boolean }) => (
+export const Header = ({}: { inverted?: boolean }) => (
   <header className={clsx("p-6 flex items-center relative z-40", {})}>
     <input
       type="checkbox"

@@ -1,9 +1,9 @@
-import { Prose } from "components/prose/prose";
-import { TagContainer, Tag } from "components/tag/tag";
-import { Title } from "components/typography/title";
-import ReactMarkdown from "react-markdown";
+import { Prose } from "../prose/prose";
+import { TagContainer, Tag } from "../tag/tag";
+import { Title } from "../typography/title";
+// import ReactMarkdown from "react-markdown";
 
-import { components } from "components/mdx";
+// import { components } from "../mdx";
 import { Fragment } from "react";
 
 const capitalize = (str: string) => {
@@ -53,9 +53,10 @@ export const SessionSummary = ({
       </p>
 
       <Prose>
-        <ReactMarkdown components={components}>
+        {/* TODO: reuse prose thingy */}
+        {/* <ReactMarkdown components={{}}> */}
           {session.abstract}
-        </ReactMarkdown>
+        {/* </ReactMarkdown> */}
       </Prose>
 
       <TagContainer>

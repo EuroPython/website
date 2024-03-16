@@ -1,6 +1,5 @@
 export const OpenGraphImageKeynoter = ({
   avatar,
-  tagline,
   name,
 }: {
   avatar: string;

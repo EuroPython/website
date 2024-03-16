@@ -1,8 +1,7 @@
 import clsx from "clsx";
-import { Title } from "components/typography/title";
+import { Title } from "../typography/title";
 
-import * as React from "react";
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 
 const Ribbon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -99,7 +98,6 @@ const SponsorTier = ({
           {totalSlots ? (
             <>
               <span>{totalSlots}</span> slot{totalSlots == 1 ? "" : "s"}{" "}
-
               available
             </>
           ) : (

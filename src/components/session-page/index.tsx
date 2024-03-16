@@ -1,18 +1,18 @@
 import clsx from "clsx";
-import { Datetime } from "components/datetime";
+import { Datetime } from "../datetime";
 import {
   DefinitionList,
   DefinitionTerm,
   DefinitionDescription,
-} from "components/definition-list/definition-list";
-import { components } from "components/mdx";
-import { Prose } from "components/prose/prose";
-import { Separator } from "components/separator/separator";
-import { TagContainer, Tag } from "components/tag/tag";
-import { Title } from "components/typography/title";
+} from "../definition-list/definition-list";
+
+import { Prose } from "../prose/prose";
+import { Separator } from "../separator/separator";
+import { TagContainer, Tag } from "../tag/tag";
+import { Title } from "../typography/title";
 import { formatInTimeZone } from "date-fns-tz";
-import { getAvatarUrl } from "helpers/get-avatar-url";
-import ReactMarkdown from "react-markdown";
+import { getAvatarUrl } from "../../lib/get-avatar-url";
+// import ReactMarkdown from "react-markdown";
 
 const normalizeRoom = (room: string) => {
   return room.replace(/\[|\]/g, "").toLowerCase();
@@ -143,7 +143,8 @@ export const SessionPage = ({
             </Title>
 
             <Prose>
-              <ReactMarkdown components={components}>{session.abstract}</ReactMarkdown>
+              TODO
+              {/* <ReactMarkdown components={components}>{session.abstract}</ReactMarkdown> */}
             </Prose>
 
             <TagContainer className="mb-6">
@@ -163,9 +164,9 @@ export const SessionPage = ({
                 </Title>
 
                 <Prose>
-                  <ReactMarkdown components={components}>
+                  {/* <ReactMarkdown components={components}> */}
                     {session.description}
-                  </ReactMarkdown>
+                  {/* </ReactMarkdown> */}
                 </Prose>
               </>
             ) : (
@@ -212,9 +213,9 @@ export const SessionPage = ({
                   </a>
                 </p>
                 <Prose>
-                  <ReactMarkdown components={components}>
+                  {/* <ReactMarkdown components={components}> */}
                     {speaker.bio}
-                  </ReactMarkdown>
+                  {/* </ReactMarkdown> */}
                 </Prose>
               </div>
             </div>

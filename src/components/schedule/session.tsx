@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { Fragment } from "react";
 
-import type { Session as SessionType } from "@/lib/pretalx/schedule";
 import { formatInTimeZone } from "date-fns-tz";
 import { isAfter, isBefore } from "date-fns";
 
@@ -9,7 +8,11 @@ const capitalizeFirst = (text: string) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
-const getHeaderText = (session: SessionType) => {
+const getHeaderText = (session: {
+  type: string;
+  experience: string;
+  title: string;
+}) => {
   const type = session.type?.toLowerCase();
 
   if (type === "keynote") {
@@ -37,7 +40,7 @@ const getHeaderText = (session: SessionType) => {
   }
 };
 
-const SessionHeader = ({ session }: { session: SessionType }) => {
+const SessionHeader = ({ session }: { session: any }) => {
   const hasBgColor = [
     ["keynote", "registration", "opening-session"].includes(
       session.type?.toLowerCase()
@@ -80,7 +83,15 @@ const SessionHeader = ({ session }: { session: SessionType }) => {
   );
 };
 
-const SessionNotes = ({ session }: { session: SessionType }) => {
+const SessionNotes = ({
+  session,
+}: {
+  session: {
+    type: string;
+    start: Date;
+    end: Date;
+  };
+}) => {
   if (session.type.toLowerCase() === "free workshop") {
     return (
       <p className="text-[10px] font-normal italic m-0 leading-3 decoration-current decoration-dotted">
@@ -109,12 +120,25 @@ export const Session = ({
   style,
   className,
 }: {
-  session: SessionType;
+  session: {
+    title: string;
+    code: string;
+    room?: string | null;
+    start: Date;
+    end: Date;
+    href: string;
+    speakers: {
+      name: string;
+      slug: string;
+    }[];
+    type: string;
+    customRoom?: string | null;
+  };
   style: React.CSSProperties;
   className?: string;
 }) => {
   const roomsAndSpeakers = [session.room].concat(
-    session.speakers.map((speaker) => speaker.name) || []
+    session.speakers.map((speaker: any) => speaker.name) || []
   );
 
   const now = new Date();
@@ -165,7 +189,7 @@ export const Session = ({
             <>
               <div>
                 <span>
-                  {session.speakers.map((speaker, index) => (
+                  {session.speakers.map((speaker: any, index: number) => (
                     <Fragment key={speaker.name}>
                       {speaker.slug ? (
                         <a

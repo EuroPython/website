@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { Break } from "./break";
-import { Schedule as ScheduleType } from "@/lib/pretalx/schedule";
 import { Session } from "./session";
 import { formatInTimeZone } from "date-fns-tz";
 
@@ -41,7 +40,36 @@ const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
 export const Schedule = ({
   schedule,
 }: {
-  schedule: ScheduleType;
+  schedule: {
+    rows: {
+      type: "session" | "break";
+      title: string;
+      time: Date;
+      style: {
+        gridRowStart: number;
+        gridRowEnd: number;
+      };
+      sessions: {
+        title: string;
+        start: Date;
+        end: Date;
+        room: string;
+        href: string;
+        speakers: {
+          name: string;
+          slug: string;
+        }[];
+        customRoom?: string;
+        style: {
+          gridColumnStart: number;
+          gridColumnEnd: number;
+        };
+        code: string;
+        type: string;
+      }[];
+    }[];
+    rooms: string[];
+  };
   dayType: "Tutorials" | "Talks";
 }) => {
   const rooms = schedule.rooms;

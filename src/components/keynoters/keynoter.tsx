@@ -1,6 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-
 export const Keynoter = ({
   name,
   tagline,
@@ -15,11 +12,10 @@ export const Keynoter = ({
   picture: string;
 }) => (
   <li className="max-w-md list-none rounded-2xl overflow-clip flex group">
-    <Link href={link} className="block w-full h-full relative">
+    <a href={link} className="block w-full h-full relative">
       <div className="relative aspect-[9/12] overflow-clip">
-        <Image
+        <img
           src={picture}
-          fill
           alt={`A photo of ${name}`}
           className="object-cover group-hover:scale-105 transition-transform"
         />
@@ -34,11 +30,13 @@ export const Keynoter = ({
           <>
             <p className="text-body-inverted font-bold">{name}</p>
             {tagline ? (
-              <p className="text-body-light font-bold text-sm italic">{tagline}</p>
+              <p className="text-body-light font-bold text-sm italic">
+                {tagline}
+              </p>
             ) : null}
           </>
         )}
       </div>
-    </Link>
+    </a>
   </li>
 );

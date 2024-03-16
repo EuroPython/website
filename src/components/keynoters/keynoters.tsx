@@ -1,10 +1,10 @@
-import { ButtonLink } from "components/button-link";
-import { Title } from "components/typography/title";
-import Link from "next/link";
-import { SVGProps } from "react";
+import { ButtonLink } from "../button-link";
+import { Title } from "../typography/title";
+
+import type { SVGProps } from "react";
 
 import { Keynoter } from "./keynoter";
-import { fetchKeynoters } from "@/lib/pretalx/speakers";
+
 
 const Background = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -50,18 +50,18 @@ const Background = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export const Keynoters = async () => {
-  const keynoters = await fetchKeynoters();
+  const keynoters = [] as any;
 
   return (
     <section className="relative my-12 px-6">
       <Background className="absolute top-0 left-0 w-full h-full -z-10" />
 
       <Title className="text-primary">
-        <Link href={"/keynoters"}>Keynote Speakers</Link>
+        <a href="/keynoters">Keynote Speakers</a>
       </Title>
 
       <ul className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 auto-rows-[1fr] mt-12 mb-24 items-stretch">
-        {keynoters.map((speaker, index) => (
+        {keynoters.map((speaker: any, index: number) => (
           <Keynoter
             key={index}
             name={speaker.name}
