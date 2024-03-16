@@ -37,15 +37,6 @@ export const HeroVenue = ({
           </Link>
         </div>
 
-        <div className="space-x-4">
-          <ButtonLink href="/where#v%C5%A1e---sprints-venue">
-            VŠE Sprints Venue
-          </ButtonLink>
-
-          <Link href="https://goo.gl/maps/2PbAF2KvGtUqLS9V9">
-            Get directions to the VŠE
-          </Link>
-        </div>
       </div>
     </article>
   );
