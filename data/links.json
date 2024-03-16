@@ -29,6 +29,15 @@
           "path": "/cfp"
         }
       ]
+    },
+    {
+      "name": "Registration",
+      "items": [
+        {
+          "name": "Tickets information",
+          "path": "/ticketsp"
+        }
+      ]
     }
   ],
   "footer": [
