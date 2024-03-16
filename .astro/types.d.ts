@@ -143,13 +143,6 @@ declare module 'astro:content' {
   collection: "deadlines";
   data: InferEntrySchema<"deadlines">
 } & { render(): Render[".mdx"] };
-"01_mentorship.mdx": {
-	id: "01_mentorship.mdx";
-  slug: "01_mentorship";
-  body: string;
-  collection: "deadlines";
-  data: InferEntrySchema<"deadlines">
-} & { render(): Render[".mdx"] };
 "02_finaid.mdx": {
 	id: "02_finaid.mdx";
   slug: "02_finaid";
@@ -194,9 +187,23 @@ declare module 'astro:content' {
   collection: "pages";
   data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
+"tickets.mdx": {
+	id: "tickets.mdx";
+  slug: "tickets";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".mdx"] };
 "visa.mdx": {
 	id: "visa.mdx";
   slug: "visa";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".mdx"] };
+"where.mdx": {
+	id: "where.mdx";
+  slug: "where";
   body: string;
   collection: "pages";
   data: InferEntrySchema<"pages">

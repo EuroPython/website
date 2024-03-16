@@ -6,6 +6,7 @@ import Prose from "../components/prose/prose.astro";
 import { ButtonLink } from "../components/button-link";
 import { Button } from "../components/button";
 import { Separator } from "../components/separator/separator";
+import { Map } from "../components/map";
 
 export async function getStaticPaths() {
   const posts = await getCollection("pages");
@@ -114,6 +115,7 @@ export const components = {
       components={{
         ButtonLink,
         Button,
+        Map,
         hr: Separator,
       }}
     />
