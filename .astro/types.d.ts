@@ -135,9 +135,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"deadline": {
-};
-"deadlines": {
+		"deadlines": {
 "00_cfp.mdx": {
 	id: "00_cfp.mdx";
   slug: "00_cfp";
@@ -159,8 +157,6 @@ declare module 'astro:content' {
   collection: "deadlines";
   data: InferEntrySchema<"deadlines">
 } & { render(): Render[".mdx"] };
-};
-"page": {
 };
 "pages": {
 "cfp.mdx": {
