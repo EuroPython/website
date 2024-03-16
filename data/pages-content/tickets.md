@@ -3,16 +3,10 @@ title: Tickets
 subtitle: Make new Python memories with us whether you are joining us in Prague or remotely!
 ---
 # Tickets
-<h5>🆕 Remote Tickets Available NOW!</h5>
-
-<div style={{textAlign: "center"}}>
-
-  <ButtonLink href="https://tickets.europython.eu/">Beam me up to the ticket shop!</ButtonLink>
-</div>
 
 ## The What, Where and When of EuroPython 2023
 
-EuroPython 2023 will be held on 17-23 July. In person, it will be held at
+EuroPython 2023 was held on 17-23 July. In person, it was held at
 the [Prague Congress Centre (PCC)](https://www.praguecc.cz/en/homepage), the Czech Republic.
 Details of how to participate remotely will be published soon.
 
