@@ -6,7 +6,6 @@ import {
   DefinitionDescription,
 } from "../definition-list/definition-list";
 
-import { Prose } from "../prose/prose";
 import { Separator } from "../separator/separator";
 import { TagContainer, Tag } from "../tag/tag";
 import { Title } from "../typography/title";
@@ -17,6 +16,9 @@ import { getAvatarUrl } from "../../lib/get-avatar-url";
 const normalizeRoom = (room: string) => {
   return room.replace(/\[|\]/g, "").toLowerCase();
 };
+const Prose = ({ children }: { children: React.ReactNode }) => (
+  <div className="prose">{children}</div>
+);
 
 const SessionNotes = ({
   session,
@@ -141,17 +143,14 @@ export const SessionPage = ({
             <Title level={2} className="!mb-6">
               Abstract
             </Title>
-
-            <Prose>
-              TODO
-              {/* <ReactMarkdown components={components}>{session.abstract}</ReactMarkdown> */}
-            </Prose>
-
+            {/* <Prose> */}
+            TODO
+            {/* <ReactMarkdown components={components}>{session.abstract}</ReactMarkdown> */}
+            {/* </Prose> */}
             <TagContainer className="mb-6">
               <Tag>{session.type}</Tag>
               {session.track && <Tag>{session.track}</Tag>}
             </TagContainer>
-
             {session.slidesUrl && (
               <a href={session.slidesUrl} className="button">
                 Download slides
@@ -165,7 +164,7 @@ export const SessionPage = ({
 
                 <Prose>
                   {/* <ReactMarkdown components={components}> */}
-                    {session.description}
+                  {session.description}
                   {/* </ReactMarkdown> */}
                 </Prose>
               </>
@@ -214,7 +213,7 @@ export const SessionPage = ({
                 </p>
                 <Prose>
                   {/* <ReactMarkdown components={components}> */}
-                    {speaker.bio}
+                  {speaker.bio}
                   {/* </ReactMarkdown> */}
                 </Prose>
               </div>

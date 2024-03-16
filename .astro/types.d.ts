@@ -135,7 +135,32 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"page": {
+		"deadline": {
+};
+"deadlines": {
+"00_cfp.mdx": {
+	id: "00_cfp.mdx";
+  slug: "00_cfp";
+  body: string;
+  collection: "deadlines";
+  data: InferEntrySchema<"deadlines">
+} & { render(): Render[".mdx"] };
+"01_mentorship.mdx": {
+	id: "01_mentorship.mdx";
+  slug: "01_mentorship";
+  body: string;
+  collection: "deadlines";
+  data: InferEntrySchema<"deadlines">
+} & { render(): Render[".mdx"] };
+"02_finaid.mdx": {
+	id: "02_finaid.mdx";
+  slug: "02_finaid";
+  body: string;
+  collection: "deadlines";
+  data: InferEntrySchema<"deadlines">
+} & { render(): Render[".mdx"] };
+};
+"page": {
 };
 "pages": {
 "cfp.mdx": {
@@ -143,42 +168,42 @@ declare module 'astro:content' {
   slug: "cfp";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 "contacts.mdx": {
 	id: "contacts.mdx";
   slug: "contacts";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 "faq.mdx": {
 	id: "faq.mdx";
   slug: "faq";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 "finaid.mdx": {
 	id: "finaid.mdx";
   slug: "finaid";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 "mentorship.mdx": {
 	id: "mentorship.mdx";
   slug: "mentorship";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 "visa.mdx": {
 	id: "visa.mdx";
   slug: "visa";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 };
 

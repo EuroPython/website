@@ -1,33 +1,19 @@
 ---
-import { Fullbleed } from "../components/layout/fullbleed";
-import { Hero } from "../components/hero";
-import Layout from "../layouts/Layout.astro";
-import path from "path";
-import fs from "fs/promises";
-import matter from "gray-matter";
+import { ButtonLink } from "../components/button-link";
 import { CardContainer } from "../components/card/card-container";
 import Card from "../components/card/card.astro";
+import { Hero } from "../components/hero";
 import HeroWithCTA from "../components/hero-section/hero-with-cta.astro";
-import { ButtonLink } from "../components/button-link";
-import { Title } from "../components/typography/title";
+import { Fullbleed } from "../components/layout/fullbleed";
 import Prose from "../components/prose/prose.astro";
+import { Title } from "../components/typography/title";
+import Layout from "../layouts/Layout.astro";
+
+import { getCollection } from "astro:content";
 
 import * as intro from "../data/home/intro.md";
 
-const basePath = path.join(process.cwd(), "src/data/deadlines");
-const paths = await fs.readdir(basePath);
-const deadlines = await Promise.all(
-  paths.map(async (filename) => {
-    const str = await fs.readFile(path.join(basePath, filename), "utf8");
-
-    const frontmatter = matter(str);
-
-    return {
-      content: frontmatter.content,
-      data: frontmatter.data,
-    };
-  })
-);
+const deadlines = await getCollection("deadlines");
 ---
 
 <Layout
@@ -40,13 +26,13 @@ const deadlines = await Promise.all(
 
   <CardContainer>
     {
-      deadlines.map(({ data, content }) => (
+      deadlines.map(({ data }) => (
         <Card
           image={data.image}
           url={data.url}
           title={data.title}
           subtitle={data.subtitle}
-          content={content}
+          content=""
         />
       ))
     }

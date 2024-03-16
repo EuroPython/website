@@ -1,4 +1,4 @@
-import { Prose } from "../prose/prose";
+// import { Prose } from "../prose/prose.astro";
 import { TagContainer, Tag } from "../tag/tag";
 import { Title } from "../typography/title";
 // import ReactMarkdown from "react-markdown";
@@ -52,12 +52,12 @@ export const SessionSummary = ({
         ))}
       </p>
 
-      <Prose>
+      {/* <Prose> */}
         {/* TODO: reuse prose thingy */}
         {/* <ReactMarkdown components={{}}> */}
           {session.abstract}
         {/* </ReactMarkdown> */}
-      </Prose>
+      {/* </Prose> */}
 
       <TagContainer>
         <Tag>{session.type}</Tag>
