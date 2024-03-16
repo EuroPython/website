@@ -105,14 +105,13 @@ export default async function IndexPage() {
           </Prose>
         </HeroWithCTA>
       </div>
-      {
 
       <div className="mt-40 mb-40 px-6">
         <HeroVenue title={venue.data.title}>
           <MDXRemote {...venue.source} />
         </HeroVenue>
       </div>
-      /*
+      {/*
 
       <Keynoters />
 
