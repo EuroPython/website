@@ -21,6 +21,7 @@ const { title, subtitle, content, url, image } = Astro.props;
       height={375}
       alt=""
       class="rounded-2xl aspect-[3/2] w-full"
+      loading="lazy"
     />
   </div>
   <h3 class="text-3xl font-bold mt-6 mb-4 text-primary">{title}</h3>
