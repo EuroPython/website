@@ -1,6 +1,19 @@
 {
   "header": [
     {
+      "name": "Programme",
+      "items": [
+        {
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
+        },
+        {
+          "name": "Call for Proposals",
+          "path": "/cfp"
+        }
+      ]
+    },
+    {
       "name": "Info & Support",
       "items": [
         {
@@ -18,24 +31,19 @@
       ]
     },
     {
-      "name": "Programme",
+      "name": "Prague & Venue",
       "items": [
         {
-          "name": "Speaker Mentorship",
-          "path": "/mentorship"
-        },
-        {
-          "name": "Call for Proposals",
-          "path": "/cfp"
+          "name": "Around Prague & PCC",
+          "path": "/where"
         }
       ]
-    },
     {
       "name": "Registration",
       "items": [
         {
           "name": "Tickets information",
-          "path": "/ticketsp"
+          "path": "/tickets"
         }
       ]
     }
