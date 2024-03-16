@@ -2,9 +2,11 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 
-import { Prose } from "../components/prose/prose";
+import Prose from "../components/prose/prose.astro";
 import { ButtonLink } from "../components/button-link";
 import { Button } from "../components/button";
+import { Separator } from "../components/separator/separator";
+
 export async function getStaticPaths() {
   const posts = await getCollection("pages");
   return posts.map((post) => ({
@@ -107,11 +109,12 @@ export const components = {
   },
 }; -->
 <Layout title={title} description={description}>
-  <Prose className="mx-auto pb-12 px-6">
+  <Prose class="mx-auto pb-12 px-6">
     <Content
       components={{
         ButtonLink,
         Button,
+        hr: Separator,
       }}
     />
   </Prose>

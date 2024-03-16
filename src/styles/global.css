@@ -74,6 +74,7 @@ img.findaid-accent-round-marker {
   min-width: 70px;
   padding: 0 10px;
   display: inline-block;
+  margin: 0;
 }
 
 table.finaid-timeline td {
