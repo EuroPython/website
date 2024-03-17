@@ -8,10 +8,11 @@ import Prose from "../components/prose/prose.astro";
 import { Title } from "../components/typography/title";
 import Layout from "../layouts/Layout.astro";
 import DeadlineCard from "../components/deadline-card.astro";
-
+import HeroVenue from "../components/hero-section/hero-venue.astro";
 import { getCollection } from "astro:content";
 
 import * as intro from "../data/home/intro.md";
+import * as venue from "../data/home/venue.mdx";
 
 const deadlines = await getCollection("deadlines");
 ---
@@ -46,5 +47,11 @@ const deadlines = await getCollection("deadlines");
         <intro.Content />
       </Prose>
     </HeroWithCTA>
+
+    <div class="mt-40 mb-40 px-6">
+      <HeroVenue title={venue.frontmatter.title}>
+        <venue.Content />
+      </HeroVenue>
+    </div>
   </div>
 </Layout>
