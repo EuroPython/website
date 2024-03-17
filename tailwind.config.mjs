@@ -54,7 +54,7 @@ export default {
 			fontFamily: {
 				system: ["system-ui", "sans-serif"],
 				title: [
-					'"Schibsted Grotesk"',
+					"Hanken Grotesk",
 					"-apple-system",
 					"BlinkMacSystemFont",
 					"Segoe UI",
