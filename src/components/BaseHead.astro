@@ -11,33 +11,13 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const { title, description, image = "/social-card.png" } = Astro.props;
 ---
-<!--
-export const metadata: Metadata = {
-  title: {
-    default:
-      "EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote",
-    template: "%s | July 8th-14th 2024 | Prague, Czech Republic & Remote",
-  },
-  twitter: {
-    title: {
-      default:
-        "EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote",
-      template: "%s | July 8th-14th 2024 | Prague, Czech Republic & Remote",
-    },
-  },
-  metadataBase: new URL("https://ep2024.europython.eu/"),
-  description: "",
-  alternates: {
-    types: { "application/rss+xml": "http://blog.europython.eu/rss" },
-  },
-}; -->
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
