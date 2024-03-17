@@ -42,7 +42,12 @@ const { title, description, image = "/social-card.png" } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<link rel="stylesheet" href="https://use.typekit.net/rhp8qny.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+  rel="stylesheet"
+/>
 
 <!-- In remembrance -->
 <meta http-equiv="X-Clacks-Overhead" content="GNU John Pinner" />
