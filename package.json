@@ -24,7 +24,7 @@
     "astro": "^4.5.5",
     "astro-meta-tags": "^0.2.2",
     "clsx": "^2.1.0",
-    "date-fns": "^3.5.0",
+    "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.1",
     "gray-matter": "^4.0.3",
     "react": "^18.2.0",
