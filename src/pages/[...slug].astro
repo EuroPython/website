@@ -7,6 +7,7 @@ import { ButtonLink } from "../components/button-link";
 import { Button } from "../components/button";
 import { Separator } from "../components/separator/separator";
 import { Map } from "../components/map";
+import { YouTube } from '@astro-community/astro-embed-youtube';
 
 export async function getStaticPaths() {
   const posts = await getCollection("pages");
@@ -116,6 +117,7 @@ export const components = {
         ButtonLink,
         Button,
         Map,
+        YouTube,
         hr: Separator,
       }}
     />
