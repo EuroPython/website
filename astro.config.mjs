@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
+import { h } from "hastscript";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
@@ -26,7 +27,10 @@ export default defineConfig({
       [
         rehypeAutolinkHeadings,
         {
-          behavior: "append",
+          behavior: "prepend",
+          content() {
+            return [h("span.heading-link", "#"), h("span.icon.icon-link")];
+          },
         },
       ],
     ],
