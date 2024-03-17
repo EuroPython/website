@@ -3,18 +3,21 @@ import Prose from "../prose/prose.astro";
 import { ButtonLink } from "../button-link";
 import { Link } from "../link/link";
 import { Title } from "../typography/title";
+import { Image } from "astro:assets";
 
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+
+import venueImage from "./venue-hero.jpg";
 ---
 
 <article class="lg:grid gap-12 grid-cols-2">
   <div class="relative hidden lg:block">
-    <img
-      src="/img/venue-hero.jpg"
+    <Image
+      src={venueImage}
       class="w-full h-auto"
       alt=""
       width={1200}
@@ -41,4 +44,3 @@ const { title } = Astro.props;
     </div>
   </div>
 </article>
-);
