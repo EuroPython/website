@@ -133,3 +133,26 @@ p.cross::after {
   font-size: 1.3em;
   margin-left: 0.4em;
 }
+
+.prose {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+
+    span.heading-link {
+      position: absolute;
+      left: -1em;
+      padding-right: 0.5rem;
+      color: var(--color-text);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
