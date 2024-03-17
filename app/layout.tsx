@@ -46,7 +46,7 @@ export default function RootLayout({
           EuroPython? Click here!
         </a>
 
-        <div className="">{children}</div>
+        <div className="pt-[40px]">{children}</div>
       </body>
     </html>
   );
