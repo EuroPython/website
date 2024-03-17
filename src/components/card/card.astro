@@ -5,12 +5,11 @@ import { Image } from "astro:assets";
 export interface Props {
   title: string;
   subtitle: string;
-  content: string;
   url: string;
   image: ImageMetadata;
 }
 
-const { title, subtitle, content, url, image } = Astro.props;
+const { title, subtitle, url, image } = Astro.props;
 ---
 
 <a href={url} class="block min-w-[250px] w-full md:w-[40%] lg:w-[30%]">
@@ -30,5 +29,7 @@ const { title, subtitle, content, url, image } = Astro.props;
   >
     {subtitle}
   </p>
-  <p class="text-lg">{content}</p>
+  <p class="text-lg">
+    <slot />
+  </p>
 </a>

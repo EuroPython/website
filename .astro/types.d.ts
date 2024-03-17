@@ -143,6 +143,13 @@ declare module 'astro:content' {
   collection: "deadlines";
   data: InferEntrySchema<"deadlines">
 } & { render(): Render[".mdx"] };
+"01_tickets.mdx": {
+	id: "01_tickets.mdx";
+  slug: "01_tickets";
+  body: string;
+  collection: "deadlines";
+  data: InferEntrySchema<"deadlines">
+} & { render(): Render[".mdx"] };
 "02_finaid.mdx": {
 	id: "02_finaid.mdx";
   slug: "02_finaid";

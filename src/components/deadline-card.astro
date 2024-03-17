@@ -1,0 +1,27 @@
+---
+import { getEntry } from "astro:content";
+import Card from "./card/card.astro";
+
+export interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+const deadline = await getEntry("deadlines", id);
+
+if (!deadline) {
+  throw new Error(`No deadline found with id ${id}`);
+}
+
+const { Content } = await deadline.render();
+---
+
+<Card
+  image={deadline.data.image}
+  title={deadline.data.title}
+  url={deadline.data.url}
+  subtitle={deadline.data.subtitle}
+>
+  <Content />
+</Card>

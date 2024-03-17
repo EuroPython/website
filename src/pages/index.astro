@@ -1,13 +1,13 @@
 ---
 import { ButtonLink } from "../components/button-link";
 import { CardContainer } from "../components/card/card-container";
-import Card from "../components/card/card.astro";
 import { Hero } from "../components/hero";
 import HeroWithCTA from "../components/hero-section/hero-with-cta.astro";
 import { Fullbleed } from "../components/layout/fullbleed";
 import Prose from "../components/prose/prose.astro";
 import { Title } from "../components/typography/title";
 import Layout from "../layouts/Layout.astro";
+import DeadlineCard from "../components/deadline-card.astro";
 
 import { getCollection } from "astro:content";
 
@@ -25,17 +25,7 @@ const deadlines = await getCollection("deadlines");
   </Fullbleed>
 
   <CardContainer>
-    {
-      deadlines.map(({ data }) => (
-        <Card
-          image={data.image}
-          url={data.url}
-          title={data.title}
-          subtitle={data.subtitle}
-          content=""
-        />
-      ))
-    }
+    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
   </CardContainer>
 
   <div class="mt-40 px-6 pb-40">
