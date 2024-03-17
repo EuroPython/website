@@ -48,11 +48,11 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0
   date-fns:
-    specifier: ^3.5.0
-    version: 3.5.0
+    specifier: ^2.30.0
+    version: 2.30.0
   date-fns-tz:
     specifier: ^2.0.1
-    version: 2.0.1(date-fns@3.5.0)
+    version: 2.0.1(date-fns@2.30.0)
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
@@ -532,6 +532,13 @@ packages:
       '@babel/helper-plugin-utils': 7.24.0
       '@babel/plugin-syntax-jsx': 7.23.3(@babel/core@7.24.0)
       '@babel/types': 7.24.0
+    dev: false
+
+  /@babel/runtime@7.24.0:
+    resolution: {integrity: sha512-Chk32uHMg6TnQdvw2e9IlqPpFX/6NLuK0Ys2PqLb7/gL5uFn9mXvK715FGLlOLQrcO4qIkNHkvPGktzzXexsFw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
     dev: false
 
   /@babel/template@7.24.0:
@@ -2189,16 +2196,19 @@ packages:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
     dev: false
 
-  /date-fns-tz@2.0.1(date-fns@3.5.0):
+  /date-fns-tz@2.0.1(date-fns@2.30.0):
     resolution: {integrity: sha512-fJCG3Pwx8HUoLhkepdsP7Z5RsucUi+ZBOxyM5d0ZZ6c4SdYustq0VMmOu6Wf7bli+yS/Jwp91TOCqn9jMcVrUA==}
     peerDependencies:
       date-fns: 2.x
     dependencies:
-      date-fns: 3.5.0
+      date-fns: 2.30.0
     dev: false
 
-  /date-fns@3.5.0:
-    resolution: {integrity: sha512-a+DwyXn7NOfdJireCzAA0B9p7jIXEu/Q9JKCyMYvH6+0vPUNbQceA0neXrdfJ/xzl3mhOh5vibQQ3936Tssm6A==}
+  /date-fns@2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
+    engines: {node: '>=0.11'}
+    dependencies:
+      '@babel/runtime': 7.24.0
     dev: false
 
   /debug@4.3.4:
@@ -4502,6 +4512,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+    dev: false
+
+  /regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
     dev: false
 
   /rehype-autolink-headings@7.1.0:
