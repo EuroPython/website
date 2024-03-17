@@ -40,12 +40,13 @@ export default function RootLayout({
       <body>
         <a
           href="https://europython.eu/"
-          className="text-center block p-2 bg-secondary text-white font-bold"
+          className="text-center px-2 bg-secondary text-white font-bold fixed top-0 w-full h-[40px] z-50 flex items-center justify-center"
         >
           This is the website for an older EuroPython. Looking for the latest
           EuroPython? Click here!
         </a>
-        {children}
+
+        <div className="">{children}</div>
       </body>
     </html>
   );
