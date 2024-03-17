@@ -1,6 +1,7 @@
 import { Fullbleed } from "../layout/fullbleed";
 import { LogoExtended } from "../logo/logo-extended";
 import links from "../../data/links.json";
+import { EPSLogo } from "../logo/eps-logo";
 
 export const Footer = () => (
   <Fullbleed className="bg-primary text-white">
@@ -27,12 +28,7 @@ export const Footer = () => (
 
       <article className="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end">
         <div>
-          <img
-            className="max-w-[200px] h-auto"
-            width={444}
-            height={444}
-            src="/img/europythonlogo.png"
-          />
+          <EPSLogo className="max-w-[200px] h-auto" />
         </div>
         <div>
           <address className="not-italic mb-4">
