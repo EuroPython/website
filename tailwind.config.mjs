@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 
 	theme: {
 		colors: {
@@ -54,7 +54,7 @@ export default {
 			fontFamily: {
 				system: ["system-ui", "sans-serif"],
 				title: [
-					"neue-haas-grotesk-display",
+					"Inter Variable",
 					"-apple-system",
 					"BlinkMacSystemFont",
 					"Segoe UI",
@@ -90,4 +90,4 @@ export default {
 		},
 	},
 	plugins: [require("@tailwindcss/typography")],
-}
+};
