@@ -1,1 +1,0 @@
-export { Accent } from "./accent";

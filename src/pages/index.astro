@@ -1,0 +1,57 @@
+---
+import { ButtonLink } from "../components/button-link";
+import { CardContainer } from "../components/card/card-container";
+import { Hero } from "../components/hero";
+import HeroWithCTA from "../components/hero-section/hero-with-cta.astro";
+import { Fullbleed } from "../components/layout/fullbleed";
+import Prose from "../components/prose/prose.astro";
+import { Title } from "../components/typography/title";
+import Layout from "../layouts/Layout.astro";
+import DeadlineCard from "../components/deadline-card.astro";
+import HeroVenue from "../components/hero-section/hero-venue.astro";
+import { getCollection } from "astro:content";
+
+import * as intro from "../data/home/intro.md";
+import * as venue from "../data/home/venue.mdx";
+
+const deadlines = await getCollection("deadlines");
+---
+
+<Layout
+  title="EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 8th-14th 2024."
+>
+  <Fullbleed>
+    <Hero />
+  </Fullbleed>
+
+  <CardContainer>
+    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
+  </CardContainer>
+
+  <div class="mt-40 px-6 pb-40">
+    <HeroWithCTA ctaTitle="EuroPython 2023 Photos">
+      <Title>
+        <!-- TODO: can we use text-wrap balance now? -->
+        <Fragment set:html={intro.frontmatter.title} />
+      </Title>
+
+      <ButtonLink
+        href="https://www.flickr.com/photos/europython/collections/72157722021442529/"
+        slot="cta"
+      >
+        Highlights of EuroPython 2023
+      </ButtonLink>
+
+      <Prose>
+        <intro.Content />
+      </Prose>
+    </HeroWithCTA>
+
+    <div class="mt-40 mb-40 px-6">
+      <HeroVenue title={venue.frontmatter.title}>
+        <venue.Content />
+      </HeroVenue>
+    </div>
+  </div>
+</Layout>

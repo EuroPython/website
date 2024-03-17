@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+export interface Props {
+  title: string;
+  subtitle: string;
+  url: string;
+  image: ImageMetadata;
+}
+
+const { title, subtitle, url, image } = Astro.props;
+---
+
+<a href={url} class="block min-w-[250px] w-full md:w-[40%] lg:w-[30%]">
+  <div class="relative w-full">
+    <Image
+      src={image}
+      width={600}
+      height={375}
+      alt=""
+      class="rounded-2xl aspect-[3/2] w-full"
+      loading="lazy"
+    />
+  </div>
+  <h3 class="text-3xl font-bold mt-6 mb-4 text-primary">{title}</h3>
+  <p
+    class="bg-secondary inline-block text-text-inverted font-extrabold px-4 py-2 text-lg mb-4 rounded-[30px]"
+  >
+    {subtitle}
+  </p>
+  <p class="text-lg">
+    <slot />
+  </p>
+</a>

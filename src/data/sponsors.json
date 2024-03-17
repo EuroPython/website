@@ -1,0 +1,191 @@
+{
+  "tiers": [
+    {
+      "name": "Keystone",
+      "sponsors": []
+    },
+    {
+      "name": "Diamond",
+      "sponsors": []
+    },
+    {
+      "name": "Platinum",
+      "sponsors": [
+        {
+          "name": "JetBrains",
+          "url": "https://www.jetbrains.com/pycharm",
+          "logo": "/img/logos/sponsor_logos/jetbrains.svg"
+        },
+        {
+          "name": "Kraken Technologies LTD",
+          "url": "https://octopusenergy.group/",
+          "logo": "/img/logos/sponsor_logos/KrakenV2_stacked_Dark_adobe_express.svg"
+        },
+        {
+          "name": "Microsoft",
+          "url": "https://learn.microsoft.com/en-us/azure/developer/python/",
+          "logo": "/img/logos/sponsor_logos/microsoft.svg"
+        },
+        {
+          "name": "Optiver",
+          "url": "https://optiver.com/",
+          "logo": "/img/logos/sponsor_logos/optiver.svg"
+        }
+      ]
+    },
+    {
+      "name": "Gold",
+      "sponsors": [
+        {
+          "name": "numberly",
+          "url": "https://numberly.com/en/",
+          "logo": "/img/logos/sponsor_logos/numberly.svg"
+        },
+        {
+          "name": "google cloud",
+          "url": "https://cloud.google.com/",
+          "logo": "/img/logos/sponsor_logos/googlecloud.svg"
+        },
+        {
+          "name": "arm",
+          "url": "https://www.arm.com/",
+          "logo": "/img/logos/sponsor_logos/arm.svg"
+        },
+        {
+          "name": "Sentry",
+          "url": "https://sentry.io/welcome/?utm_medium=sponsored-event&utm_source=event&utm_campaign=event-europython-2023",
+          "logo": "/img/logos/sponsor_logos/sentry.svg"
+        },
+        {
+          "name": "Temporal",
+          "url": "https://temporal.io/",
+          "logo": "/img/logos/sponsor_logos/temporal.svg"
+        },
+        {
+          "name": "Bloomberg",
+          "url": "http://techatbloomberg.com/python",
+          "logo": "img/logos/sponsor_logos/bloomberg.svg"
+        }
+      ]
+    },
+    {
+      "name": "Silver",
+      "sponsors": [
+        {
+          "name": "pretix",
+          "url": "https://pretix.eu/",
+          "logo": "/img/logos/sponsor_logos/pretix.svg"
+        },
+        {
+          "name": "The Mobility House",
+          "url": "https://www.mobilityhouse.com/",
+          "logo": "/img/logos/sponsor_logos/TMH_Logo_Black_Vertical.svg"
+        },
+        {
+          "name": "Sonar",
+          "url": "https://www.sonarsource.com/",
+          "logo": "/img/logos/sponsor_logos/sonar.svg"
+        },
+        {
+          "name": "Picnic",
+          "url": "https://picnic.app/careers/",
+          "logo": "/img/logos/sponsor_logos/picnic.svg"
+        },
+        {
+          "name": "Kiwi.com",
+          "url": "https://jobs.kiwi.com/",
+          "logo": "/img/logos/sponsor_logos/kiwi.svg"
+        }
+      ]
+    },
+    {
+      "name": "Bronze",
+      "sponsors": [
+        {
+          "name": "energy & meteo systems",
+          "url": "https://www.energymeteo.com/about_us/jobs.php",
+          "logo": "img/logos/sponsor_logos/emsys-logo-orange-black-rgb.svg"
+        },
+        {
+          "name": "SIG",
+          "url": "https://sig.com/",
+          "logo": "img/logos/sponsor_logos/sig.svg"
+        }
+      ]
+    },
+    {
+      "name": "Patron",
+      "sponsors": [
+        {
+          "name": "Hudson River Trading",
+          "url": "https://www.hudsonrivertrading.com/",
+          "logo": "img/logos/sponsor_logos/hudsonrivertrading.svg"
+        },
+        {
+          "name": "Qt",
+          "url": "https://qt.io/",
+          "logo": "img/logos/sponsor_logos/Qt.svg"
+        },
+        {
+          "name": "Taipy",
+          "url": "https://www.taipy.io/",
+          "logo": "img/logos/sponsor_logos/taipy.svg"
+        }
+      ]
+    },
+    {
+      "name": "Social Event Sponsor",
+      "sponsors": [
+        {
+          "name": "Kiwi.com",
+          "url": "https://jobs.kiwi.com/",
+          "logo": "/img/logos/sponsor_logos/Kiwi.com_SocialEventSponsor.svg"
+        }
+      ]
+    },
+    {
+      "name": "Financial Aid",
+      "sponsors": [
+        {
+          "name": "EuroPython Society",
+          "url": "https://www.europython-society.org/",
+          "logo": "/img/logos/sponsor_logos/EPS-Logo-with-Text-v3.svg"
+        }
+      ]
+    },
+    {
+      "name": "Supporters",
+      "sponsors": [
+        {
+          "name": "Evolabel",
+          "url": "https://www.evolabel.com/",
+          "logo": "img/logos/sponsor_logos/evolabel.svg"
+        },
+        {
+          "name": "Pretalx",
+          "url": "https://pretalx.com/p/about/",
+          "logo": "img/logos/sponsor_logos/pretalx.svg"
+        },
+        {
+         "name": "1Password",
+         "url": "https://1password.com/",
+         "logo": "img/logos/sponsor_logos/1password.svg"
+       },
+       {
+         "name": "O’Reilly ",
+         "url": "https://www.oreilly.com/",
+         "logo": "img/logos/sponsor_logos/OReilly.svg"
+       },
+        {
+          "name": "Manning Publications",
+          "url": "http://mng.bz/vnWa",
+          "logo": "img/logos/sponsor_logos/manning.svg"
+        },
+        {
+          "name": "Sticker Mule",
+          "url": "https://www.stickermule.com/eu/custom-stickers",
+          "logo": "img/logos/sponsor_logos/stickermule.svg"
+        }
+      ]
+    }]
+}
