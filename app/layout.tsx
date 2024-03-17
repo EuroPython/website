@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: {
-      default:  "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
+      default:
+        "EuroPython 2023 | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
       template: "%s | July 17th-23rd 2023 | Prague, Czech Republic & Remote",
     },
   },
@@ -36,7 +37,16 @@ export default function RootLayout({
         ></link>
         <PlausibleProvider domain="ep2023.europython.eu" />
       </head>
-      <body>{children}</body>
+      <body>
+        <a
+          href="https://europython.eu/"
+          className="text-center block p-2 bg-secondary text-white font-bold"
+        >
+          This is the website for an older EuroPython. Looking for the latest
+          EuroPython? Click here!
+        </a>
+        {children}
+      </body>
     </html>
   );
 }
