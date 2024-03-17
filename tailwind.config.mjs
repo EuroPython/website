@@ -54,7 +54,7 @@ export default {
 			fontFamily: {
 				system: ["system-ui", "sans-serif"],
 				title: [
-					"Roboto",
+					"Inter",
 					"-apple-system",
 					"BlinkMacSystemFont",
 					"Segoe UI",
