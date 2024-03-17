@@ -36,7 +36,15 @@ export default defineConfig({
     ],
   },
   site: "https://ep2024.europython.eu",
-  integrations: [mdx(), sitemap(), react(), tailwind(), metaTags()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    react(),
+    tailwind({
+      nesting: true,
+    }),
+    metaTags(),
+  ],
   output: "static",
   adapter: vercel(),
 });
