@@ -31,9 +31,8 @@ const deadlines = await getCollection("deadlines");
 
   <div class="mt-40 px-6 pb-40">
     <HeroWithCTA ctaTitle="EuroPython 2023 Photos">
-      <Title>
-        <!-- TODO: can we use text-wrap balance now? -->
-        <Fragment set:html={intro.frontmatter.title} />
+      <Title className="text-balance">
+        {intro.frontmatter.title}
       </Title>
 
       <ButtonLink
