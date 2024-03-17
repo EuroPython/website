@@ -11,6 +11,8 @@ import DeadlineCard from "../components/deadline-card.astro";
 import HeroVenue from "../components/hero-section/hero-venue.astro";
 import { getCollection } from "astro:content";
 
+import Accent from "../components/accent/2024.astro";
+
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/venue.mdx";
 
@@ -29,22 +31,33 @@ const deadlines = await getCollection("deadlines");
     {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
   </CardContainer>
 
-  <div class="mt-40 px-6 pb-40">
-    <HeroWithCTA ctaTitle="EuroPython 2023 Photos">
-      <Title className="text-balance">
+  <div class="mt-40 px-6 pb-40 overflow-visible">
+    <HeroWithCTA>
+      <Title className="mb-2">
         {intro.frontmatter.title}
       </Title>
-
-      <ButtonLink
-        href="https://www.flickr.com/photos/europython/collections/72157722021442529/"
-        slot="cta"
-      >
-        Highlights of EuroPython 2023
-      </ButtonLink>
-
       <Prose>
         <intro.Content />
       </Prose>
+
+      <div
+        slot="secondary"
+        class="flex flex-col items-center text-center relative"
+      >
+        <Accent
+          class="w-[250px] h-auto self-end absolute top-0 right-0 translate-x-14 hidden lg:block"
+        />
+
+        <Title level={3} className="font-bold text-3xl mb-4 mt-12 lg:mt-auto">
+          EuroPython 2023 Photos
+        </Title>
+
+        <ButtonLink
+          href="https://www.flickr.com/photos/europython/collections/72157722021442529/"
+        >
+          Highlights of EuroPython 2023
+        </ButtonLink>
+      </div>
     </HeroWithCTA>
 
     <div class="mt-40 mb-40 px-6">

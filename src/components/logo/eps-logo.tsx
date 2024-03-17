@@ -2,7 +2,7 @@ import * as React from "react";
 
 export const EPSLogo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
-    <svg viewBox="0 0 375 375" {...props}>
+    <svg viewBox="0 0 500 500" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
