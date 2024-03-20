@@ -7,8 +7,21 @@ Welcome to the repository for the EuroPython website! We use
 
 ## Setup 🛠️
 
+### Local dev env
+
 To get started, clone the repository and run `pnpm install` to fetch all the
 dependencies. Then, use `pnpm run dev` to start the development server.
+
+The website will be available at `http://localhost:4321`.
+
+### Docker
+
+If you want to run this in docker, run:
+
+```sh
+$ docker compose build
+$ docker compose up
+```
 
 The website will be available at `http://localhost:4321`.
 

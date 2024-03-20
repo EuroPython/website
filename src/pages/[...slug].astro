@@ -8,6 +8,10 @@ import { Button } from "../components/button";
 import { Separator } from "../components/separator/separator";
 import { Map } from "../components/map";
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import { BenefitItem } from "../components/benefits-list";
+import { ButtonWithTitle } from "../components/button-with-title";
+import { Note } from "../components/note";
+import { SponsorTiers } from "../components/sponsor-tiers";
 
 export async function getStaticPaths() {
   const posts = await getCollection("pages");
@@ -35,6 +39,10 @@ const description = post.data.subtitle;
         Button,
         Map,
         YouTube,
+        BenefitItem,
+        ButtonWithTitle,
+        Note,
+        SponsorTiers,
         hr: Separator,
       }}
     />
