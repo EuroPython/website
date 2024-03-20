@@ -208,6 +208,13 @@ declare module 'astro:content' {
   collection: "pages";
   data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
+"voting.mdx": {
+	id: "voting.mdx";
+  slug: "voting";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".mdx"] };
 "where.mdx": {
 	id: "where.mdx";
   slug: "where";
