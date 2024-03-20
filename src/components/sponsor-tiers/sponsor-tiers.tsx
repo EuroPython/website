@@ -61,9 +61,6 @@ const SponsorTier = ({
   price: number | string;
   features: string[];
 }) => {
-  // TODO: this component is inside a prose container, so we need to reset some styles
-  // we can use no-prose
-
   const formattedPrice =
     typeof price === "number"
       ? new Intl.NumberFormat("en", {
@@ -75,7 +72,7 @@ const SponsorTier = ({
       : price;
 
   return (
-    <div className="bg-white text-black rounded-2xl p-6 relative">
+    <div className="bg-white text-black rounded-2xl p-6 relative not-prose">
       <div className="h-[160px]">
         <Ribbon
           className={clsx("absolute right-6 -top-6", {
