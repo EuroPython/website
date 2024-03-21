@@ -27,9 +27,9 @@ export default defineConfig({
       [
         rehypeAutolinkHeadings,
         {
-          behavior: "prepend",
+          behavior: "append",
           content() {
-            return [h("span.heading-link", "#"), h("span.icon.icon-link")];
+            return [h("span.heading-link", "#")];
           },
         },
       ],
