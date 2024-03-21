@@ -151,8 +151,22 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum"
-        totalSlots={null}
+        totalSlots={3}
         price={17000}
+        features={[
+          "16 sqm booth in exhibit hall",
+          "6 complimentary session passes",
+          "PDF brochure on virtual swag webpage",
+          "Access to recruiting session",
+          "1 sponsored talk (30 minutes)",
+          "And more!",
+        ]}
+      />
+
+      <SponsorTier
+        title="Platinum X"
+        totalSlots={3}
+        price={14000}
         features={[
           "16 sqm booth in exhibit hall",
           "6 complimentary session passes",
@@ -188,21 +202,20 @@ export const SponsorTiers = () => {
         ]}
       />
 
-      <div className="space-y-10">
-        <SponsorTier
-          title="Bronze"
-          price={2000}
-          totalSlots={"limited"}
-          features={["Logo & recruiting ad on EuroPython website and more!"]}
-        />
+      <SponsorTier
+        title="Bronze"
+        price={2000}
+        totalSlots={"limited"}
+        features={["Logo & recruiting ad on EuroPython website and more!"]}
+      />
 
-        <SponsorTier
-          title="Patron"
-          price={1000}
-          totalSlots={"limited"}
-          features={["Logo on EuroPython website, welcome tweet and more!"]}
-        />
-      </div>
+      <SponsorTier
+        title="Patron"
+        price={1000}
+        totalSlots={"limited"}
+        features={["Logo on EuroPython website, welcome tweet and more!"]}
+      />
+
     </div>
   );
 };
