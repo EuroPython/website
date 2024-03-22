@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: ["bash", "-c"]
+    command: ["pnpm run dev --host 0.0.0.0"]
+    volumes:
+      - .:/app
+    ports:
+      - "4321:4321"
+    environment:
+      - ASTRO_TELEMETRY_DISABLED=1

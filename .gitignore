@@ -132,6 +132,7 @@ out/
 .next/
 .DS_Store
 node_modules/
+.pnpm-store/
 storybook-static/
 .vercel
 

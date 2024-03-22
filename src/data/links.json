@@ -44,6 +44,15 @@
       ]
     },
     {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsor"
+        }
+      ]
+    },
+    {
       "name": "Registration",
       "items": [
         {

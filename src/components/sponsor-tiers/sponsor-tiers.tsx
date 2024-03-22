@@ -61,9 +61,6 @@ const SponsorTier = ({
   price: number | string;
   features: string[];
 }) => {
-  // TODO: this component is inside a prose container, so we need to reset some styles
-  // we can use no-prose
-
   const formattedPrice =
     typeof price === "number"
       ? new Intl.NumberFormat("en", {
@@ -75,7 +72,7 @@ const SponsorTier = ({
       : price;
 
   return (
-    <div className="bg-white text-black rounded-2xl p-6 relative">
+    <div className="bg-white text-black rounded-2xl p-6 relative not-prose">
       <div className="h-[160px]">
         <Ribbon
           className={clsx("absolute right-6 -top-6", {
@@ -118,17 +115,17 @@ const SponsorTier = ({
 
 export const SponsorTiers = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
       <SponsorTier
         title="Keystone"
         totalSlots={1}
         price="Please ask"
         features={[
-          "Plenary room named after your company",
-          "central sizable booth in exhibit hall",
+          "Keynote (plenary) room named after your company",
+          "Central sizable booth in exhibit hall",
           "12 complimentary session passes",
-          "Advertisement on virtual swag webpage",
-          "One blog post on EuroPython's blog",
+          "Logo on room lecterns, banners, videos, website, signage",
+          "Blog post on conference website",
           "Access to recruiting session",
           "1 sponsored workshop (3 hours)",
           "1 sponsored talk (30 minutes)",
@@ -144,8 +141,8 @@ export const SponsorTiers = () => {
         features={[
           "30 sqm booth in exhibit hall",
           "8 complimentary session passes",
-          "Advertisement on virtual swag webpage",
-          "One blog post on EuroPython's blog",
+          "Logo on room lecterns, banners, videos, website, signage",
+          "Blog post on conference website",
           "Access to recruiting session",
           "1 sponsored talk (30 minutes)",
           "And more!",
@@ -154,11 +151,26 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum"
-        totalSlots={null}
+        totalSlots={3}
         price={17000}
         features={[
           "16 sqm booth in exhibit hall",
           "6 complimentary session passes",
+          "Logo on banners, videos, website, signage",
+          "PDF brochure on virtual swag webpage",
+          "Access to recruiting session",
+          "1 sponsored talk (30 minutes)",
+          "And more!",
+        ]}
+      />
+
+      <SponsorTier
+        title="Platinum X"
+        totalSlots={3}
+        price={14000}
+        features={[
+          "6 complimentary session passes",
+          "Logo on banners, videos, website, signage",
           "PDF brochure on virtual swag webpage",
           "Access to recruiting session",
           "1 sponsored talk (30 minutes)",
@@ -173,6 +185,7 @@ export const SponsorTiers = () => {
         features={[
           "9 sqm booth in exhibit hall",
           "3 complimentary session passes",
+          "Logo on banners, videos, website, signage",
           "PDF brochure on virtual swag webpage",
           "Access to recruiting session",
           "And more!",
@@ -186,26 +199,25 @@ export const SponsorTiers = () => {
         features={[
           "6 sqm booth in exhibit hall",
           "2 complimentary session passes",
-          "Logo on EuroPython website & signage",
+          "Logo on website, signage",
           "And more!",
         ]}
       />
 
-      <div className="space-y-10">
-        <SponsorTier
-          title="Bronze"
-          price={2000}
-          totalSlots={"limited"}
-          features={["Logo & recruiting ad on EuroPython website and more!"]}
-        />
+      <SponsorTier
+        title="Bronze"
+        price={2000}
+        totalSlots={"unlimited"}
+        features={["Logo & recruiting ad on EuroPython website and more!"]}
+      />
 
-        <SponsorTier
-          title="Patron"
-          price={1000}
-          totalSlots={"limited"}
-          features={["Logo on EuroPython website, welcome tweet and more!"]}
-        />
-      </div>
+      <SponsorTier
+        title="Patron"
+        price={1000}
+        totalSlots={"unlimited"}
+        features={["Logo on EuroPython website, welcome tweet and more!"]}
+      />
+
     </div>
   );
 };
