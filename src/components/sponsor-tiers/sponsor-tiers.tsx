@@ -121,11 +121,11 @@ export const SponsorTiers = () => {
         totalSlots={1}
         price="Please ask"
         features={[
-          "Plenary room named after your company",
-          "central sizable booth in exhibit hall",
+          "Keynote (plenary) room named after your company",
+          "Central sizable booth in exhibit hall",
           "12 complimentary session passes",
-          "Advertisement on virtual swag webpage",
-          "One blog post on EuroPython's blog",
+          "Logo on room lecterns, banners, videos, website, signage",
+          "Blog post on conference website",
           "Access to recruiting session",
           "1 sponsored workshop (3 hours)",
           "1 sponsored talk (30 minutes)",
@@ -141,8 +141,8 @@ export const SponsorTiers = () => {
         features={[
           "30 sqm booth in exhibit hall",
           "8 complimentary session passes",
-          "Advertisement on virtual swag webpage",
-          "One blog post on EuroPython's blog",
+          "Logo on room lecterns, banners, videos, website, signage",
+          "Blog post on conference website",
           "Access to recruiting session",
           "1 sponsored talk (30 minutes)",
           "And more!",
@@ -151,11 +151,12 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum"
-        totalSlots={3}
+        totalSlots={4}
         price={17000}
         features={[
           "16 sqm booth in exhibit hall",
           "6 complimentary session passes",
+          "Logo on banners, videos, website, signage",
           "PDF brochure on virtual swag webpage",
           "Access to recruiting session",
           "1 sponsored talk (30 minutes)",
@@ -165,11 +166,11 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum X"
-        totalSlots={3}
+        totalSlots={4}
         price={14000}
         features={[
-          "16 sqm booth in exhibit hall",
           "6 complimentary session passes",
+          "Logo on banners, videos, website, signage",
           "PDF brochure on virtual swag webpage",
           "Access to recruiting session",
           "1 sponsored talk (30 minutes)",
@@ -184,6 +185,7 @@ export const SponsorTiers = () => {
         features={[
           "9 sqm booth in exhibit hall",
           "3 complimentary session passes",
+          "Logo on banners, videos, website, signage",
           "PDF brochure on virtual swag webpage",
           "Access to recruiting session",
           "And more!",
@@ -197,7 +199,7 @@ export const SponsorTiers = () => {
         features={[
           "6 sqm booth in exhibit hall",
           "2 complimentary session passes",
-          "Logo on EuroPython website & signage",
+          "Logo on website, signage",
           "And more!",
         ]}
       />
@@ -205,14 +207,14 @@ export const SponsorTiers = () => {
       <SponsorTier
         title="Bronze"
         price={2000}
-        totalSlots={"limited"}
+        totalSlots={"unlimited"}
         features={["Logo & recruiting ad on EuroPython website and more!"]}
       />
 
       <SponsorTier
         title="Patron"
         price={1000}
-        totalSlots={"limited"}
+        totalSlots={"unlimited"}
         features={["Logo on EuroPython website, welcome tweet and more!"]}
       />
 
