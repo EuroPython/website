@@ -151,7 +151,7 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum"
-        totalSlots={4}
+        totalSlots={3}
         price={17000}
         features={[
           "16 sqm booth in exhibit hall",
@@ -166,7 +166,7 @@ export const SponsorTiers = () => {
 
       <SponsorTier
         title="Platinum X"
-        totalSlots={4}
+        totalSlots={3}
         price={14000}
         features={[
           "6 complimentary session passes",
