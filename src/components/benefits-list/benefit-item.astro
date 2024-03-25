@@ -1,0 +1,33 @@
+---
+export interface Props {
+  title: string;
+  icon: "award" | "headhunt" | "network" | "rocket" | "target" | "transfer";
+}
+
+import Award from "../icons/award.astro";
+import Headhunt from "../icons/headhunt.astro";
+import Network from "../icons/network.astro";
+import Rocket from "../icons/rocket.astro";
+import Target from "../icons/target.astro";
+import Transfer from "../icons/transfer.astro";
+
+const { icon, title } = Astro.props;
+
+const Icon = {
+  award: Award,
+  headhunt: Headhunt,
+  network: Network,
+  rocket: Rocket,
+  target: Target,
+  transfer: Transfer,
+}[icon];
+---
+
+<li class="grid max-w-full grid-cols-[3rem_1fr] gap-5 mb-8">
+  <Icon class="w-full h-auto block m-0 self-start" />
+  <div>
+    <h5 class="text-2xl
+    font-bold">{title}</h5>
+    <p><slot /></p>
+  </div>
+</li>

@@ -8,7 +8,8 @@ import { Button } from "../components/button";
 import { Separator } from "../components/separator/separator";
 import { Map } from "../components/map";
 import { YouTube } from '@astro-community/astro-embed-youtube';
-import { BenefitItem } from "../components/benefits-list";
+import BenefitsList from "../components/benefits-list/benefits-list.astro";
+import BenefitItem from "../components/benefits-list/benefit-item.astro";
 import { ButtonWithTitle } from "../components/button-with-title";
 import { Note } from "../components/note";
 import { SponsorTiers } from "../components/sponsor-tiers";
@@ -40,6 +41,7 @@ const description = post.data.subtitle;
         Map,
         YouTube,
         BenefitItem,
+        BenefitsList,
         ButtonWithTitle,
         Note,
         SponsorTiers,
