@@ -138,3 +138,4 @@ storybook-static/
 
 # Sentry Auth Token
 .sentryclirc
+.astro
