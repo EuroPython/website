@@ -27,8 +27,8 @@ dependencies:
     specifier: ^5.1.0
     version: 5.1.0(astro@4.5.5)(tailwindcss@3.4.1)
   '@astrojs/vercel':
-    specifier: ^7.3.6
-    version: 7.3.6(astro@4.5.5)(react@18.2.0)
+    specifier: ^7.4.0
+    version: 7.4.0(astro@4.5.5)(react@18.2.0)
   '@fontsource-variable/inter':
     specifier: ^5.0.17
     version: 5.0.17
@@ -309,13 +309,14 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@7.3.6(astro@4.5.5)(react@18.2.0):
-    resolution: {integrity: sha512-dQj3cvTOsgOj/V8EVya16X1L3PCJ9aw0rWCggsFcERI72qEDXctd7l+K/iZC1dOvsM3k6VhwiacwsETowsctAA==}
+  /@astrojs/vercel@7.4.0(astro@4.5.5)(react@18.2.0):
+    resolution: {integrity: sha512-KMCDCOV+UwsJnDX4Q/FE18S0+XwOlu3e6UA/Jr/v2vh0v24aDpkbA0L9DmV4c1ETHLY/vxfjey40gk30iSXNKw==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@vercel/analytics': 1.2.2(react@18.2.0)
+      '@vercel/edge': 1.1.1
       '@vercel/nft': 0.26.4
       astro: 4.5.5(typescript@5.4.2)
       esbuild: 0.19.12
@@ -1478,6 +1479,10 @@ packages:
     dependencies:
       react: 18.2.0
       server-only: 0.0.1
+    dev: false
+
+  /@vercel/edge@1.1.1:
+    resolution: {integrity: sha512-NtKiIbn9Cq6HWGy+qRudz28mz5nxfOJWls5Pnckjw1yCfSX8rhXdvY/il3Sy3Zd5n/sKCM2h7VSCCpJF/oaDrQ==}
     dev: false
 
   /@vercel/nft@0.26.4:
