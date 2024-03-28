@@ -17,7 +17,7 @@ export const Button = ({
           "bg-secondary-darkest": secondary,
           "text-text-inverted": !secondary,
           "text-text": secondary,
-        },
+        }
       )}
       href={href}
     >

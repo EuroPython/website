@@ -44,7 +44,7 @@ const Tweaks = () => {
               .getPropertyValue(variable)
               .trim(),
           ];
-        }),
+        })
       );
 
       for (const [variable, _] of Object.entries(params)) {

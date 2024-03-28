@@ -22,7 +22,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
             {
               "text-white": inverted,
               "text-primary": !inverted,
-            },
+            }
           )}
         >
           <a
@@ -30,7 +30,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
             className={clsx(
               "font-bold inline-block w-full text-3xl lg:text-base p-5 text-center",
               "lg:text-left lg:mt-4 lg:p-2 lg:px-5",
-              "lg:group-hover:bg-secondary lg:group-hover:rounded-[30px]",
+              "lg:group-hover:bg-secondary lg:group-hover:rounded-[30px]"
             )}
           >
             {item.name}
@@ -47,14 +47,14 @@ export const NavItems = ({ items, inverted = false }: Props) => {
                       "bg-secondary text-white block w-full font-bold text-center",
                       "lg:text-left lg:hover:bg-secondary-light",
                       "lg:first:rounded-t-[30px] lg:first:pt-2",
-                      "lg:last:rounded-b-[30px] lg:last:pb-2",
+                      "lg:last:rounded-b-[30px] lg:last:pb-2"
                     )}
                   >
                     <a
                       href={subItem.path || "#"}
                       className={clsx(
                         "block w-full font-bold text-center",
-                        "lg:text-left mb-[2px] p-2 lg:px-5",
+                        "lg:text-left mb-[2px] p-2 lg:px-5"
                       )}
                     >
                       {subItem.name}

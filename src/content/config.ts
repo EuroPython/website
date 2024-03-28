@@ -11,7 +11,7 @@ const pages = defineCollection({
 const deadlines = defineCollection({
   type: "content",
   schema: ({ image }) =>
-    z.object({
+  z.object({
       title: z.string(),
       subtitle: z.string(),
       url: z.string(),

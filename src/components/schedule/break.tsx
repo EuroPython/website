@@ -17,7 +17,7 @@ export const Break = ({
     <div
       className={clsx(
         "flex items-center justify-center gap-2 font-bold bg-secondary-light min-h-[66px]",
-        className,
+        className
       )}
       style={style}
     >
