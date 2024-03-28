@@ -21,7 +21,7 @@ export const ButtonLink = ({
           "bg-primary text-white hover:bg-primary-hover": secondary,
           "text-text-inverted": !secondary,
           "text-text": secondary,
-        }
+        },
       )}
       href={href}
     >

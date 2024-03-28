@@ -43,7 +43,7 @@ const getHeaderText = (session: {
 const SessionHeader = ({ session }: { session: any }) => {
   const hasBgColor = [
     ["keynote", "registration", "opening-session"].includes(
-      session.type?.toLowerCase()
+      session.type?.toLowerCase(),
     ),
     session.experience === "beginner",
     session.experience === "intermediate",
@@ -66,13 +66,13 @@ const SessionHeader = ({ session }: { session: any }) => {
             "opening-session",
           ].includes(session.type?.toLowerCase()),
           "bg-session-none": !hasBgColor,
-        }
+        },
       )}
     >
       <p
         className={clsx(
           "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-90",
-          "md:static md:rotate-0 md:translate-x-0 md:translate-y-0"
+          "md:static md:rotate-0 md:translate-x-0 md:translate-y-0",
         )}
       >
         {getHeaderText(session)}
@@ -138,7 +138,7 @@ export const Session = ({
   className?: string;
 }) => {
   const roomsAndSpeakers = [session.room].concat(
-    session.speakers.map((speaker: any) => speaker.name) || []
+    session.speakers.map((speaker: any) => speaker.name) || [],
   );
 
   const now = new Date();
@@ -155,7 +155,7 @@ export const Session = ({
             "bg-[#ffdcdc]": isLive,
             "bg-body-background": !isLive,
           },
-          className
+          className,
         )}
         style={style}
       >

@@ -32,7 +32,7 @@ const SponsorTier = ({ tier, top = false }: { tier: Tier; top?: boolean }) => {
           {
             "grid-cols-1 sm:grid-cols-2 md:grid-cols-3": !top,
             "grid-cols-1 sm:grid-cols-2 md:grid-cols-2": top,
-          }
+          },
         )}
       >
         {tier.sponsors.map((sponsor) => (
