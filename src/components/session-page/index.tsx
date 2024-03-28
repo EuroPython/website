@@ -270,7 +270,7 @@ export const SessionPage = ({
             href={`/schedule/${formatInTimeZone(
               session.start,
               "Europe/Prague",
-              "yyyy-MM-dd"
+              "yyyy-MM-dd",
             )}#${session.code}`}
           >
             ← Back to schedule

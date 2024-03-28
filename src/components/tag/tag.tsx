@@ -11,7 +11,7 @@ export const Tag = ({
     <span
       className={clsx(
         "inline-block bg-secondary text-body px-4 py-2 rounded-xl font-bold",
-        className
+        className,
       )}
     >
       {children}
