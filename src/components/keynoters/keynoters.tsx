@@ -5,7 +5,6 @@ import type { SVGProps } from "react";
 
 import { Keynoter } from "./keynoter";
 
-
 const Background = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 729 704"

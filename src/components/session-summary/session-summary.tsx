@@ -53,10 +53,10 @@ export const SessionSummary = ({
       </p>
 
       {/* <Prose> */}
-        {/* TODO: reuse prose thingy */}
-        {/* <ReactMarkdown components={{}}> */}
-          {session.abstract}
-        {/* </ReactMarkdown> */}
+      {/* TODO: reuse prose thingy */}
+      {/* <ReactMarkdown components={{}}> */}
+      {session.abstract}
+      {/* </ReactMarkdown> */}
       {/* </Prose> */}
 
       <TagContainer>

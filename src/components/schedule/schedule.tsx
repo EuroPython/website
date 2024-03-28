@@ -21,7 +21,7 @@ const ScheduleHeader = ({ rooms }: { rooms: string[] }) => {
             "text-center sticky z-20 top-0 bg-body-background p-1 !border-b-2",
             {
               "!border-r-2": index === rooms.length - 1,
-            }
+            },
           )}
           key={room}
           style={{
@@ -98,7 +98,7 @@ export const Schedule = ({
                   "md:border-t-2": rowIndex !== 0,
                   "md:border-t-0": rowIndex === 0,
                   "md:border-b-2": rowIndex === schedule.rows.length - 1,
-                }
+                },
               )}
             />
           );
@@ -116,7 +116,7 @@ export const Schedule = ({
                   "md:!border-t-2": rowIndex !== 0,
                   "md:!border-t-0": rowIndex === 0,
                   "md:!border-b-2": rowIndex === schedule.rows.length - 1,
-                }
+                },
               )}
             >
               {sessions.length >= 1 ? (
@@ -163,7 +163,7 @@ export const Schedule = ({
                         "md:!border-t-2": rowIndex !== 0,
                         "md:!border-t-0": rowIndex === 0,
                         "md:!border-b-2": rowIndex === schedule.rows.length - 1,
-                      }
+                      },
                     )}
                   />
                 </div>

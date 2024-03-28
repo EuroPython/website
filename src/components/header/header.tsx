@@ -29,7 +29,7 @@ const HeaderButton = ({
           "bg-primary": variant === "standard",
           "text-text-inverted": variant !== "live",
           "bg-red": variant === "live",
-        }
+        },
       )}
       href={href}
     >
