@@ -16,7 +16,11 @@ import Accent from "../components/accent/2024.astro";
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/venue.mdx";
 
-const deadlines = await getCollection("deadlines");
+let deadlines = await getCollection("deadlines");
+deadlines = deadlines
+  .sort((a, b) => a.slug.localeCompare(b.slug))
+  .reverse()
+  .slice(0, 3);
 ---
 
 <Layout
