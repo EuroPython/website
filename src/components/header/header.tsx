@@ -68,10 +68,10 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
               secondary
               href="https://www.europython-society.org/coc/"
             >
-              <abbr title="Code of Conduct" className="no-underline lg:hidden">
+              <abbr title="Code of Conduct" className="no-underline md:hidden">
                 CoC
               </abbr>
-              <span className="hidden lg:inline">Code of Conduct</span>
+              <span className="hidden md:inline">Code of Conduct</span>
             </ButtonLink>
             <ButtonLink href="/tickets" className="hidden md:block">
               <span>Tickets</span>
@@ -86,7 +86,7 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
         ) : null}
 
         {
-          <label htmlFor="nav_toggle" className="flex lg:hidden">
+          <label htmlFor="nav_toggle" className="flex xl:hidden">
             <HeaderButton variant="menu">
               {mobile ? "Close Menu" : "Menu"}
             </HeaderButton>
@@ -109,13 +109,13 @@ export const Header = ({}: { inverted?: boolean }) => (
 
     <HeaderLogo />
 
-    <nav className="mr-auto hidden lg:block">
+    <nav className="mr-auto hidden xl:block">
       <NavItems items={links.header} />
     </nav>
 
     <HeaderActions />
 
-    <div className="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block lg:peer-checked:hidden z-50 p-6">
+    <div className="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 p-6">
       <div className="flex items-center">
         <HeaderLogo />
         <HeaderActions mobile />
