@@ -3,11 +3,13 @@ import { clsx } from "clsx";
 export const ButtonLink = ({
   href,
   children,
+  className,
   secondary = false,
 }: {
   href: string;
   children: React.ReactNode;
   secondary?: boolean;
+  className?: string;
 }) => {
   const isExternal = href.startsWith("http");
 
@@ -21,7 +23,8 @@ export const ButtonLink = ({
           "bg-primary text-white hover:bg-primary-hover": secondary,
           "text-text-inverted": !secondary,
           "text-text": secondary,
-        }
+        },
+        className,
       )}
       href={href}
     >
