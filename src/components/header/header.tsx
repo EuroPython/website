@@ -74,7 +74,6 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
               <span className="hidden lg:inline">Code of Conduct</span>
             </ButtonLink>
           <ButtonLink href="/tickets">
-            Tickets
             <span className="hidden md:inline"> Tickets</span>
           </ButtonLink>
             {IS_LIVE && (
