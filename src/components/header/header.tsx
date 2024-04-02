@@ -29,7 +29,7 @@ const HeaderButton = ({
           "bg-primary": variant === "standard",
           "text-text-inverted": variant !== "live",
           "bg-red": variant === "live",
-        }
+        },
       )}
       href={href}
     >
@@ -73,9 +73,9 @@ const HeaderActions = ({ mobile = false }: { mobile?: boolean }) => {
               </abbr>
               <span className="hidden lg:inline">Code of Conduct</span>
             </ButtonLink>
-          <ButtonLink href="/tickets">
-            <span className="hidden md:inline"> Tickets</span>
-          </ButtonLink>
+            <ButtonLink href="/tickets" className="hidden md:block">
+              <span>Tickets</span>
+            </ButtonLink>
             {IS_LIVE && (
               <ButtonLink href="/live">
                 Live
@@ -133,10 +133,11 @@ export const Header = ({}: { inverted?: boolean }) => (
               name: "Live 📺",
               path: "/live",
             },
+            */
             {
               name: "Buy tickets",
               path: "/tickets",
-            }*/
+            },
             ...links.header,
           ]}
         />
