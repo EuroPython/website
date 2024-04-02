@@ -19,7 +19,7 @@ const AUDIENCE_MAP = {
 const convertTalk = (
   talk: any,
   sessions: any,
-  speakersByName: Record<string, { name: string; slug: string }>,
+  speakersByName: Record<string, { name: string; slug: string }>
 ): Session => {
   const time = timeToNumber(talk.time);
   const evDuration = parseInt(talk.ev_duration || "0", 10);
@@ -71,7 +71,7 @@ const convertTalk = (
         (speaker: string) =>
           speakersByName[speaker] || {
             name: speaker,
-          },
+          }
       )
     : [];
 
@@ -154,8 +154,8 @@ const getTimeslots = (sessions: Session[], rooms: string[]) => {
 
           return acc;
         },
-        {},
-      ),
+        {}
+      )
   );
 
   let breakSeen = false;
@@ -182,7 +182,7 @@ const getTimeslots = (sessions: Session[], rooms: string[]) => {
         const hasBreaksAfter = sessionsByTime
           .slice(index + 1)
           .some((timeslot) =>
-            timeslot.sessions.some((session) => session.type === "break"),
+            timeslot.sessions.some((session) => session.type === "break")
           );
 
         const isFirst = index === 0;
@@ -236,7 +236,7 @@ export const getScheduleForDay = async ({
   const currentDay = schedule.days[day];
   const rooms = currentDay.rooms;
   const talks = currentDay.talks.map((talk: any) =>
-    convertTalk(talk, sessions, speakersByName),
+    convertTalk(talk, sessions, speakersByName)
   );
   const slots = getTimeslots(talks, rooms);
 

@@ -217,6 +217,7 @@ export const SponsorTiers = () => {
         totalSlots={"unlimited"}
         features={["Logo on EuroPython website, welcome tweet and more!"]}
       />
+
     </div>
   );
 };
