@@ -18,7 +18,8 @@ const tiers = [
   "Silver",
   "Bronze",
   "Patron",
-];
+] as const;
+
 const sponsors = await getCollection("sponsors");
 
 let hasSponsors = false;
@@ -26,7 +27,7 @@ let hasSponsors = false;
 const sponsorTiers = tiers
   .map((tier) => {
     const tierSponsors = sponsors.filter(
-      (sponsor) => sponsor.data.tier === tier.toLowerCase(),
+      (sponsor) => sponsor.data.tier === tier,
     );
 
     if (tierSponsors.length > 0) {

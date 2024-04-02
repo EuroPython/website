@@ -1,5 +1,16 @@
 import { defineCollection, z } from "astro:content";
 
+const tiers = [
+  "Keystone",
+  "Diamond",
+  "Platinum",
+  "Platinum X",
+  "Gold",
+  "Silver",
+  "Bronze",
+  "Patron",
+] as const;
+
 const pages = defineCollection({
   type: "content",
   schema: z.object({
@@ -26,7 +37,7 @@ const sponsors = defineCollection({
       name: z.string(),
       url: z.string(),
       image: image(),
-      tier: z.enum(["gold", "silver", "bronze"]),
+      tier: z.enum(tiers),
     }),
 });
 
