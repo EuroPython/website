@@ -1,0 +1,91 @@
+---
+import { getCollection } from "astro:content";
+import { Separator } from "../separator/separator";
+import { Fragment } from "react";
+import { Fullbleed } from "../layout/fullbleed";
+
+import { ButtonLink } from "../button-link";
+import { Title } from "../typography/title";
+
+import SponsorTier from "./sponsor-tier.astro";
+
+const tiers = [
+  "Keystone",
+  "Diamond",
+  "Platinum",
+  "Platinum X",
+  "Gold",
+  "Silver",
+  "Bronze",
+  "Patron",
+];
+const sponsors = await getCollection("sponsors");
+
+let hasSponsors = false;
+
+const sponsorTiers = tiers
+  .map((tier) => {
+    const tierSponsors = sponsors.filter(
+      (sponsor) => sponsor.data.tier === tier.toLowerCase(),
+    );
+
+    if (tierSponsors.length > 0) {
+      hasSponsors = true;
+    }
+
+    return {
+      name: tier,
+      sponsors: tierSponsors,
+    };
+  })
+  .filter((tier) => tier.sponsors.length > 0);
+
+const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
+---
+
+<Fullbleed className="bg-white py-24 px-6">
+  <section class="max-w-4xl lg:max-w-6xl mx-auto mb-16">
+    <div>
+      <div class="flex gap-6">
+        <div class="max-w-[250px]">
+          <Title level={2}>Sponsors</Title>
+          {
+            hasSponsors ? (
+              <p>
+                EuroPython wouldn't be such an affordable event without help of
+                the sponsors. We'd like to thank all of them for their support.
+              </p>
+            ) : (
+              <p>
+                Sponsoring EuroPython guarantees you highly targeted visibility
+                and the opportunity to present yourself and your company to one
+                of the largest and most diverse Python communities in Europe and
+                beyond.
+              </p>
+            )
+          }
+
+          <div class="mt-4">
+            <ButtonLink href="/sponsor">Become a sponsor</ButtonLink>
+          </div>
+        </div>
+      </div>
+      {
+        topTier && topTier.sponsors.length > 0 && (
+          <SponsorTier tier={topTier} top={true} />
+        )
+      }
+    </div>
+
+    {sponsorTiers.length > 0 && <Separator light />}
+
+    {
+      sponsorTiers.map((tier, index) => (
+        <Fragment>
+          <SponsorTier tier={tier} top={tier.name === "Platinum"} />
+          {index !== sponsorTiers.length - 1 && <Separator light />}
+        </Fragment>
+      ))
+    }
+  </section>
+</Fullbleed>

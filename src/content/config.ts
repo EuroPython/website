@@ -19,4 +19,15 @@ const deadlines = defineCollection({
     }),
 });
 
-export const collections = { pages, deadlines };
+const sponsors = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      url: z.string(),
+      image: image(),
+      tier: z.enum(["gold", "silver", "bronze"]),
+    }),
+});
+
+export const collections = { pages, deadlines, sponsors };

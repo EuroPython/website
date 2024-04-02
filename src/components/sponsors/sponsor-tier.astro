@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+type Sponsor = Awaited<ReturnType<typeof getCollection<"sponsors">>>[0];
+
+export interface Props {
+  tier: {
+    name: string;
+    sponsors: Sponsor[];
+  };
+
+  top?: boolean;
+}
+
+const { tier, top } = Astro.props;
+---
+
+<div class="relative">
+  <h4 class="absolute w-10 font-bold top-0 bottom-0 font-title text-primary">
+    <span
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 block origin-center whitespace-nowrap"
+    >
+      {tier.name}
+    </span>
+  </h4>
+  <div
+    class:list={[
+      "grid gap-12 sm:gap-6 ml-12 items-center justify-items-center",
+      {
+        "grid-cols-1 sm:grid-cols-2 md:grid-cols-3": !top,
+        "grid-cols-1 sm:grid-cols-2 md:grid-cols-2": top,
+      },
+    ]}
+  >
+    {
+      tier.sponsors.map((sponsor) => (
+        <a href={sponsor.data.url} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={sponsor.data.image}
+            alt={sponsor.data.name}
+            class="max-w-[250px] max-h-[120px]"
+          />
+        </a>
+      ))
+    }
+  </div>
+</div>
