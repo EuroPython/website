@@ -10,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
 import DeadlineCard from "../components/deadline-card.astro";
 import HeroVenue from "../components/hero-section/hero-venue.astro";
 import { getCollection } from "astro:content";
-
+import Sponsors from "../components/sponsors/sponsors.astro";
 import Accent from "../components/accent/2024.astro";
 
 import * as intro from "../data/home/intro.md";
@@ -70,4 +70,6 @@ deadlines = deadlines
       </HeroVenue>
     </div>
   </div>
+
+  <Sponsors />
 </Layout>
