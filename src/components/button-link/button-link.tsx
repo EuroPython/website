@@ -24,7 +24,7 @@ export const ButtonLink = ({
           "text-text-inverted": !secondary,
           "text-text": secondary,
         },
-        className,
+        className
       )}
       href={href}
     >
