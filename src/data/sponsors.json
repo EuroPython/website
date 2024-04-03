@@ -167,15 +167,15 @@
           "logo": "img/logos/sponsor_logos/pretalx.svg"
         },
         {
-         "name": "1Password",
-         "url": "https://1password.com/",
-         "logo": "img/logos/sponsor_logos/1password.svg"
-       },
-       {
-         "name": "O’Reilly ",
-         "url": "https://www.oreilly.com/",
-         "logo": "img/logos/sponsor_logos/OReilly.svg"
-       },
+          "name": "1Password",
+          "url": "https://1password.com/",
+          "logo": "img/logos/sponsor_logos/1password.svg"
+        },
+        {
+          "name": "O’Reilly ",
+          "url": "https://www.oreilly.com/",
+          "logo": "img/logos/sponsor_logos/OReilly.svg"
+        },
         {
           "name": "Manning Publications",
           "url": "http://mng.bz/vnWa",
@@ -187,5 +187,6 @@
           "logo": "img/logos/sponsor_logos/stickermule.svg"
         }
       ]
-    }]
+    }
+  ]
 }

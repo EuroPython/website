@@ -14,6 +14,20 @@ dependencies. Then, use `pnpm run dev` to start the development server.
 
 The website will be available at `http://localhost:4321`.
 
+### Pre-commit Setup
+
+To ensure code quality and consistency, we use `pre-commit` hooks. Follow these
+steps to set up `pre-commit` on your local environment:
+
+1. Install `pre-commit`. You can follow the instructions from
+   [pre-commit.com](https://pre-commit.com/#install).
+2. Run `pre-commit install` in the root of your local repository.
+3. Now, `pre-commit` will run automatically on `git commit`. You can also run it
+   manually on all files using `pre-commit run --all-files`.
+
+This will help maintain a consistent coding style and catch common issues before
+submission.
+
 ### Docker
 
 If you want to run this in docker, run:
