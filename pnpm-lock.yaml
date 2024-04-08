@@ -51,11 +51,11 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0
   date-fns:
-    specifier: ^2.30.0
-    version: 2.30.0
+    specifier: ^3.6.0
+    version: 3.6.0
   date-fns-tz:
-    specifier: ^2.0.1
-    version: 2.0.1(date-fns@2.30.0)
+    specifier: ^3.0.0
+    version: 3.0.0(date-fns@3.6.0)
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
@@ -557,13 +557,6 @@ packages:
       '@babel/helper-plugin-utils': 7.24.0
       '@babel/plugin-syntax-jsx': 7.24.1(@babel/core@7.24.3)
       '@babel/types': 7.24.0
-    dev: false
-
-  /@babel/runtime@7.24.1:
-    resolution: {integrity: sha512-+BIznRzyqBf+2wCTxcKE3wDjfGeCoVE61KSHGpkzqrLi8qxqFwBeUFyId2cxkTmm55fzDGnm0+yCxaxygrLUnQ==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.14.1
     dev: false
 
   /@babel/template@7.24.0:
@@ -2443,19 +2436,17 @@ packages:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
     dev: false
 
-  /date-fns-tz@2.0.1(date-fns@2.30.0):
-    resolution: {integrity: sha512-fJCG3Pwx8HUoLhkepdsP7Z5RsucUi+ZBOxyM5d0ZZ6c4SdYustq0VMmOu6Wf7bli+yS/Jwp91TOCqn9jMcVrUA==}
+  /date-fns-tz@3.0.0(date-fns@3.6.0):
+    resolution: {integrity: sha512-YgRowJwvCAAjN1A5F2l1ZjnYKThX7YDq399qo+ThXFpeOqinN1u8SUqfM5IdRQSpai18Iy3EBMb6/CXTSnDstg==}
     peerDependencies:
-      date-fns: 2.x
+      date-fns: ^3.0.0
     dependencies:
-      date-fns: 2.30.0
+      date-fns: 3.6.0
+      lodash.clonedeep: 4.5.0
     dev: false
 
-  /date-fns@2.30.0:
-    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
-    engines: {node: '>=0.11'}
-    dependencies:
-      '@babel/runtime': 7.24.1
+  /date-fns@3.6.0:
+    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
     dev: false
 
   /debug@4.3.4:
@@ -3524,6 +3515,10 @@ packages:
 
   /lodash.castarray@4.4.0:
     resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+    dev: false
+
+  /lodash.clonedeep@4.5.0:
+    resolution: {integrity: sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==}
     dev: false
 
   /lodash.isplainobject@4.0.6:
@@ -4825,10 +4820,6 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
-    dev: false
-
-  /regenerator-runtime@0.14.1:
-    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
     dev: false
 
   /rehype-autolink-headings@7.1.0:
