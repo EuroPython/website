@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astro-community/astro-embed-youtube':
-    specifier: ^0.5.1
-    version: 0.5.1(astro@4.5.18)
+    specifier: ^0.5.2
+    version: 0.5.2(astro@4.5.18)
   '@astrojs/check':
     specifier: ^0.5.10
     version: 0.5.10(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.5)
@@ -116,8 +116,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: false
 
-  /@astro-community/astro-embed-youtube@0.5.1(astro@4.5.18):
-    resolution: {integrity: sha512-IvjCCpaNZD7xrcgD/WZIRlpRphAUlwOZtR0IOI0pSNijegPOBghygYHeU81WvRnK2Fwuw2RTmGo8PbVZ15wp1w==}
+  /@astro-community/astro-embed-youtube@0.5.2(astro@4.5.18):
+    resolution: {integrity: sha512-cckWcq7mFCmI6uPpIlRolSafSQRYZBOaxIc8DaCUh8+JQAtPF7O4EdpRpZBUcvbARrWEEyHJCWrt0XOGppMniw==}
     peerDependencies:
       astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta
     dependencies:
