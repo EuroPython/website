@@ -9,6 +9,8 @@ const tiers = [
   "Silver",
   "Bronze",
   "Patron",
+  "Financial Aid",
+  "Supporters",
 ] as const;
 
 const pages = defineCollection({
