@@ -1,0 +1,1870 @@
+---
+title: Sessions
+subtitle: Confirmed Talks, Tutorials and Posters
+---
+
+# Confirmed sessions
+
+IMPORTANT: This is not the final list of confirmed talks, and it might be changed.
+
+## **"SUN vs Me : Quest to Outwit the Blinding Sun and Snag Some Extra Z's"**
+
+* **vishrut kohli**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Join me on the journey of me trying to battle the Sun for a few more precious moments of shut-eye using MQTT and python. As a creature who adores city lights during the night but detests being rudely awakened by the blinding Sun, I embarked on a quest to automate my curtains using Raspberry Pi, stepper motors, light sensors and MQTT. From ingenious ideas to comical mishaps, and eventually stumbling upon a somewhat functional solution, this talk promises laughter, learning, and a peek into the thrillingly world of microprocessor programming with python.
+
+**Target Audience:**
+
+- Pythonistas with a penchant for puns and conquering the mundane with code.
+- Aspiring IoT alchemists seeking to turn sensor readings into automated gold (or at least, uninterrupted sleep).
+- Anyone who enjoys learning through laughter and the occasional "print('facepalm')".
+
+**Benefits for Attendees:**
+
+- Gain practical knowledge of **MQTT and its Pythonic potential**.
+- Learn to craft **multi-layered solutions** that combine sensors, user control, and API integration.
+- Embrace the **iterative nature of development** and learn to laugh at your code (trust me, it helps).
+</details>
+
+## **(Pre-)Commit to Better Code**
+
+* **Stefanie Molin**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+Maintaining code quality can be challenging, no matter the size of your project or number of contributors. Different team members may have different opinions on code styling and preferences for code structure, while solo contributors might find themselves spending a considerable amount of time making sure the code conforms to accepted conventions. However, manually inspecting and fixing issues in files is both tedious and error-prone. As such, computers are much more suited to this task than humans. Pre-commit hooks are a great way to have a computer handle this for you.
+
+Pre-commit hooks are code checks that run whenever you attempt to commit your changes with `git`. They can detect and, in some cases, automatically correct code-quality issues *before* they make it to your code base. In this tutorial, you will learn how to install and configure pre-commit hooks for your repository to ensure that only code that passes your checks makes it into your code base. We will also explore how to build custom pre-commit hooks for novel use cases.
+</details>
+
+## **... and justice for AIl**
+
+* **Martina Guttau-Zielke**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+„Everything’s science fiction until someone makes it science fact.“ - Marie Lu, Warcross
+
+We live in times that have quite a lot of those science facts- even if hoverboards sadly are not part of them- and now have to deal with this new world and all it’s changes for better or for worse. 
+There are unsettling deepfakes, stunning Cap-Set-Problem-solving language models and the question of artificial conscience. Developers might be able to navigate the turbulences of AI evolution, but are you brave enough to take on the quest of untangling the nebulous scriptures of law that are known to the chaotic neutral wordwizards of the council of Europa as the „AI Act“?
+
+Accompany me on a journey through the valleys of risk-based AI categories, over the sea of subsectional articles and to the top of mount ethic, as we strive to understand the possibilities the AI Act gives our bold heroes to defy the boundaries of innovation, protect the villagers of the EU and construct (legally) safe software.
+
+The Proposal for the European Artificial Intelligence Act takes 272 Pages of legalese to work through. 
+This talk will give a short overview of what the European AI Act is and about the purpose and necessity of a globally harmonised legal system. 
+Hopefully it will give an understanding about the main goals of the act, which are, spoiler alert, ensuring AI safety, the protection of fundamental rights, and legal clarity for businesses and developers (which is probably you).
+Let us discuss, how developers can shield fundamental rights by writing ethical AI Systems whilst navigating the regulatory landscape and staying tuned with legal development as well.
+</details>
+
+## **A Journey from Zero to Large Language Models in Python**
+
+* **Sanyam Bhutani**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+There are many tutorials teaching how to use LLMs, this one focusses on how to build such systems from scratch in Python using all Open Source models and frameworks:
+
+Large Language Models (LLMs) are still relatively new compared to ""Traditional ML"" techniques and have many new ideas as best practises that differ from training ML models.
+
+In this workshop, you will learn the tips and tricks of creating and fine-tuning LLMs along with implementing cutting edge ideas of building these systems from the best research papers.
+</details>
+
+## **A Tour of Synchronization Primitives in Python**
+
+* **Zach**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Whether using threads or task-based event loops, running code concurrently is not without its challenges. This talk takes a look at the features provided by the Python programming language to solve problems of synchronization when dealing with concurrently executing code.
+
+Together we will take a look at the synchronization classes and functions provided by the Python threading and asyncio modules, what problems they aim to solve, and how we might use them effectively in our own code.
+</details>
+
+## **Accelerating Python with Rust: The PyO3 Revolution**
+
+* **Roshan R Chandar**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Are you curious about integrating the high-performance and memory efficiency of Rust into your Python applications? Rust can significantly enhance the speed and efficiency of Python programs, and this integration is made seamless with PyO3.
+
+This presentation will delve into the capabilities of PyO3, a tool that allows the creation of native Python modules using Rust. With PyO3, importing Rust code as a Python module is straightforward. It offers seamless type conversion between Python and Rust and includes macros that simplify the process of exposing Rust functions to Python.
+
+Moreover, with the growing trend towards asynchronous programming, PyO3-asyncio emerges as a vital tool for those working with async functions in Python or looking to generate Python bindings for an async Rust library. It streamlines the task of translating async functions between Python and Rust. Furthermore, PyO3 facilitates easy implementation of parallelism within Rust code, enhancing performance and efficiency.
+</details>
+
+## **Adventures in not writing tests**
+
+* **Andy Fundinger**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Sometimes we write code that we don't expect to go to production; they are one-offs or analysis to understand our data. However, a good analysis may be worth repeating, and before we know it, the code that was never supposed to go to production is running every day and driving critical decisions – it is in production. Once our code is in production, we have to maintain it, and that means we need tests to ensure that changes made to the code while maintaining it do not change other behavior.
+
+Hypothesis is a Python library for creating inputs that are good for exercising code. Hypothesis tests create many different inputs for a single test case, with a special concentration on inputs that are likely to break your code. If the code was originally written to understand data, then new data we feed it over time could be very different from what was initially expected or planned for. With Hypothesis, we randomize our test outputs and they become just as unknown as our real-world outputs. Our tests then confirm certain properties to prove that the analysis was performed as expected.
+
+Ghostwriting is a feature of Hypothesis that writes tests based on the type hints in your code. This can not only save time, but also validate our type hints. The savings in time and toil can be significant, but the ghostwritten tests do also need some additions to truly test our code. We'll look at what is needed to both generate proper inputs and check our outputs.
+</details>
+
+## **Aggregating data in Django using database views**
+
+* **Mikuláš Poul**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Aggregating information is a common Django task, but using the aggregate method can be a bit cumbersome and in the case of large database tables, pretty slow as well. I will introduce the library django-pgviews-redux, which adds first-class support for database views (with Postgres), making that task much simpler.
+
+With that library, database views are wrapped around models, meaning you get many of the features you rely on with models for free, like querysets and filtering on those, admin, and any other feature which works with models. Defining a view is almost as simple as defining a model, by specifying what fields there are for the model and defining the SQL.
+
+This talk will walk through examples of aggregation in Django, and then show how one could simplify those examples using the library. Finally, we will get to materialized views as well, which stores the aggregation almost like a table in the database, providing big speed improvements on aggregation on large tables.
+</details>
+
+## **Aligning Models with RLHF**
+
+* **Axel Sirota**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+RLHF is a reinforcement learning process over which a pretrained or finetuned LLM is subject to a new round of training with a reward model that encompasses human feedback to ensure  the final LLM is "aligned", that means that is not subject to biases and is overall Helpful, Harmless and Honest. Learning  how to implement it and its intricacies of how it works, specially the PPO policy, can be tricky. 
+In this session we will explain the problem and solve it programatically with RLHF whowing how to implement it and sharing the code so you can test it afterwards!
+</details>
+
+## **Animations from first principles**
+
+* **Rodrigo Girão Serrão**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+How do you create an animation?
+
+What if you want to morph a circle into a figure eight?
+
+As it turns out, all you need is two or three functions and a loop!
+
+In this live-coded talk, we'll go over the basic concepts and code needed to create an animation _from first principles_.
+
+Because the talk presents the ideas and the code from first principles, you will be able to take the key concepts and build your own animations after!
+
+We'll start simple and build from there:
+
+ - How can you draw a circle if all you can do is colour single pixels?
+ - How can you animate the process of drawing a circle?
+ - How can you animate the process of drawing something other than a circle?
+ - How can you animate the process of morphing two figures?
+ - How do you add colour to your animations?
+
+This visually appealing talk will show you all of the code without skipping a single line and by the time we're done you'll be jumping in your seat to create your own animations!
+</details>
+
+## **Are LLMs smarter in some languages than others?**
+
+* **Pavel Král**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+Have you ever asked yourself if Large Language Models (LLMs) perform differently across various languages? I have.
+
+In this poster session, I will demonstrate how tokens, embeddings, and the LLMs themselves perform when utilized in 30 different languages. I will illustrate how languages influence pricing and various model characteristics.
+
+Spoiler:
+- The Greek language is the most expensive to process by most models.
+- Processing Asian languages on Gemini is cheaper.
+- You can save up to 15% of tokens by removing diacritics.
+</details>
+
+## **Autoinstrumentation Adventures: enhancing Python apps with OpenTelemetry**
+
+* **Israel Blancas**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Hey there, fellow Python enthusiasts! Are you ready to dive into the exciting world of application observability without getting your hands too dirty with complex instrumentation? If that sounds like a journey you'd be interested in, then you're in for a treat!
+
+Observability is that magical window into the inner workings of our applications, allowing us to understand what's happening under the hood, troubleshoot issues, and ensure everything is running smoothly. However, achieving this level of insight can sometimes feel like a daunting task. That's where OpenTelemetry comes into play, simplifying the entire process and making it accessible to everyone, not just the observability wizards.
+
+In our session, we'll start with the basics: what OpenTelemetry is and the problems it aims to solve (and those it doesn't). We'll demystify the concept of instrumentation—the process of embedding observability into your applications—and show you how OpenTelemetry makes this not only possible but painless.
+
+The heart of our talk will be focused on autoinstrumentation, a magical feature of OpenTelemetry that automates the task of adding observability to your Python projects. Imagine being able to get detailed insights into your application's performance and behavior without having to manually instrument every nook and cranny. Sounds like a dream, right?
+
+And because we believe in learning by doing, we'll walk you through a small but mighty demo. You'll see firsthand how effortlessly you can implement OpenTelemetry in your own Python applications, turning the daunting into the doable.
+</details>
+
+## **Automate Your Kitchen with Python & Applied AI**
+
+* **Sena Sahin**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Ever wished you had a smart fridge that both lists and alerts you with ingredients you have, to waste less food and make the best use of what you have through ingredient-recipe match?
+
+Bingo then that I'll share the story behind the creation of a Python-powered solution that maximizes ingredient usage, minimizes food waste by keeping track of your ingredients and streamlines the cooking process.😊💪
+
+Let's explore together, how snapping a photo of your fridge to generating recipe suggestions based on available ingredients, this project embodies the creativity, problem-solving, and excitement inherent in project development. 
+
+Join me as I recount the challenges, and lessons learned along the way, highlighting the transformative impact of project development on skill enhancement and contribution to boost the ways we think as developers. Whether you're a seasoned developer or a curious novice, this talk offers valuable insights into the joys and rewards of turning ideas into reality through coding.
+</details>
+
+## **Automatic trusted publishing with PyPI**
+
+* **Facundo Tuesca**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+PyPI added support for “Trusted Publishing” last year, allowing package maintainers to create releases directly from their GitHub Actions pipelines without having to worry about token management. Trusted Publishing removes long-lived API tokens from the equation, removing a threat vector for supply chain attacks.
+In this talk, we’ll go through the details of how this works, how maintainers can easily take advantage of it with minimal changes to their existing setup, and the ongoing effort in the last 12 months to add support for publishers other than GitHub, such as GitLab, Google, and ActiveState.
+</details>
+
+## **Automating Kubernetes with Python: A Symphony of Simplicity**
+
+* **Tushar Jayant**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In this session, we'll explore the dynamic synergy between Kubernetes and Python, providing a beginner-friendly guide for developers looking to dive into container orchestration. Say goodbye to complexity as we focus on practical details, demonstrating how Python can be a powerful ally in managing Kubernetes clusters.
+
+Aspiring Kubernetes enthusiasts will gain insights into leveraging Python for tasks such as cluster configuration, application deployment and resource management.
+
+This presentation serves as a comprehensive introduction for beginners, equipping them with the essential skills to navigate and harness the capabilities of Kubernetes using the Python programming language. From setting up your first cluster to deploying applications seamlessly, join us for a hands-on exploration of Kubernetes with Python.
+</details>
+
+## **Behind the Scenes of an Ads Prediction System**
+
+* **Bunmi Akinremi**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In this era of rapid technological advancement and AI, Ad prediction systems stand at the forefront of shaping online advertising, significantly impacting how content reaches its intended audience. In this session, I'll introduce the Ads prediction system from a user and algorithm view. We'll then walk through key concepts like targeting, bidding, ad ranking, click-through rate (CTR), and conversion rate. We'll deeply dive into connecting the dots, designing an ad prediction system, some ethical considerations, models, offline and online metrics, scaling and deployment decisions that enable handling high volumes of data and requests efficiently, and some case studies. 
+At the end of this session, attendees will comprehensively understand the end-to-end process of developing an ads prediction system.
+</details>
+
+## **Best practices for securely consuming open source in Python**
+
+* **Ciara Carey**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+The Python development landscape thrives on the extensive use of open-source libraries and frameworks. However, the growing prevalence of attacks targeting OSS underscores the need for robust security measures to consume open source. 
+
+In this talk, we'll examine how the Secure Supply Chain Consumption Framework (S2C2F) can guide organizations in securely consuming Python OSS, utilizing tools such as pip, artifact managment, sboms and Dependabot. 
+
+The S2C2F Framework was developed by Microsoft and later donated to the Open Source Security Foundation (OpenSSF). It provides a structured approach to enhancing the security of OSS consumption. 
+
+We'll provide an overview of its core principles and maturity levels and discuss practical strategies for implementing S2C2F principles within Python projects, including dependency management with pip, artifact management, sboms, signatures, deny rules, forking policies and automated security updates with Dependabot.
+
+The S2C2F is a pragmatic approach to securing how you consume OSS.
+ It emphasizes the fundamental principles of knowing your OSS, preventing the introduction of vulnerable packages, and maintaining robust patch management.
+
+You will come away from this talk with practical tips and best practices on how to securely consume open source in python.
+</details>
+
+## **Build the Right Thing, Win a Nobel Prize**
+
+* **Max Kahan**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Early in physicist Richard Feynman’s career, he worked on the top-secret Manhattan Project, stepping in for someone who lost sight of the overall goal. The original employee forgot what he should have built, and got fired! By contrast, Feynman’s ability to understand the big picture and create something valuable kept him in the job, and later on helped him to do the valuable research that earned him the 1965 Nobel Prize in Physics.
+
+Fast-forward to the present, where the issue of not “building the right thing” crops up all over software development. There are a whole host of reasons we may not end up delivering what our user, stakeholder or team actually needs from us.
+
+In this talk, I'll help you make sure that whatever you create is valuable - or at the very least, Nobel Prize-winning.
+</details>
+
+## **Building End-to-End Reliable RAG Applications**
+
+* **Bilge Yücel**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+Retrieval-Augmented Generation (RAG) presents an excellent approach to overcoming the limitations associated with Large Language Models (LLMs), such as hallucinations or issues related to the recency of their training data. However, relying solely on RAG is insufficient, particularly when dealing with domain-specific data or verifying a response's adequacy. Neglecting these scenarios can cost time, money, and customer satisfaction. That’s why, as you develop an application, it's crucial to evaluate your retrieval process, improve it with advanced techniques if necessary, and consider all edge cases, including handling out-of-domain queries, and implement fallback mechanisms. Thus, you ensure that your system is both resilient and flexible.
+This poster will explain some problems you may encounter in real life and which steps to take to build reliable and resilient RAG applications with the open source LLM framework Haystack that you can safely use in production
+</details>
+
+## **Building Event-Driven Python service using FastStream and AsyncAPI**
+
+* **Abhinand C**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In this talk, we dive into the world of Event Driven Architecture and Message Streaming, using Python and FastStream. 
+
+You'll learn to integrate FastStream, a python framework, into your projects and leverage AsyncAPI to define contracts for asynchronous communication and event streaming. Through practical examples and insights, you'll discover the art of building scalable, responsive Python applications that thrive in real-time environments.
+
+
+#### About AsyncAPI
+AsyncAPI is an open standard/specification and growing set of open-source tools to help developers define, build, and maintain asynchronous APIs and Event-Driven Architectures. It describes message-driven APIs in a machine-readable format, and is protocol-agnostic.
+
+#### About FastStream
+FastStream is a powerful and easy-to-use Python framework for building asynchronous services interacting with event streams such as Apache Kafka, RabbitMQ, NATS and Redis. FastStream simplifies the process of writing producers and consumers for message queues, handling all the parsing, networking and documentation generation automatically. FastStream provides unified API across multiple brokers, built-in Pydantic validations, automatic AsyncAPI documentation, FastAPI like Dependency Injection System, built-in support for test and extensions.
+</details>
+
+## **Building Scalable Multimodal Search Applications with Python**
+
+* **Zain Hasan**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Many real-world problems are inherently multimodal, from the communicative modalities humans use such as spoken language and gestures to the force, sensory, and visual sensors used in robotics. For machine learning models to address these problems and interact more naturally and wholistically with the world around them and ultimately be more general and powerful reasoning engines, we need them to understand data across all of its corresponding images, video, text, audio, and tactile representations.
+
+In this talk, Zain Hasan will discuss how we can use open-source multimodal embedding models in conjunction with large generative multimodal models that can that can see, hear, read, and feel data(!), to perform cross-modal search(searching audio with images, videos with text etc.) and multimodal retrieval augmented generation (MM-RAG) at the billion-object scale with the help of open source vector databases. I will also demonstrate, with live code demos, how being able to perform this cross-modal retrieval in real-time can enables users to use LLMs that can reason over their enterprise multimodal data. This talk will revolve around how we can scale the usage of multimodal embedding and generative models in production.
+</details>
+
+## **Caching for Jupyter Notebooks**
+
+* **Lauris Jullien**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Caching data and calculation results in jupyter notebooks is a great way to speed up development by making expensive cells easier to re-run.
+
+Data scientists and developers using notebooks on a daily basis, can improve their notebook workflow with low-effort changes in the notebook code, cut the time spent waiting and reduce context switches.
+
+This talk targets developers and data scientist of all experience levels and will cover:
+
+Why caching in notebooks?
+Setting up the context in which developers and data scientists use notebooks for exploratory work and how caching is relevant in it.
+
+What is caching
+Quick definition of caching, introducing the different types of persistence (in-memory, on disk, database, object storage …), cache invalidation strategies (parameters, code changes, ttl, …), with some cautionary comments about data security when caching protected data.
+
+Caching Techniques 
+Going through readily available options from the python standard library, and how to use them in notebooks. Introducing a few off-the-shelves options like ipython % magics, and cachetools.
+Showcasing how one would build their own mini-caching framework, that fits for their specific use case, using pandas and spark for the example
+Explaining when to stop trying to cache, and keeping the caching framework mini, what are the signs that caching went overboard.
+</details>
+
+## **Containerize your Python apps like it's 2024**
+
+* **Jan Smitka**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+There are a lot of resources on containerizing Python applications with Docker, but most are basic and outdated. Following them results in slow builds and potentially insecure applications. Let's see how we can build better containers using recent Docker features!
+
+This talk will show how to speed up your builds and make your images smaller and more secure. We'll use features such as multi-stage builds or cache mounts to build containers with Python apps. We will also discuss how to improve the security of your container.
+
+Tips from the talk are valid for applications of all sizes and kinds: from hobby projects to enterprises, from CLI tools to web applications and APIs. You will be able to apply them immediately after the talk.
+
+Basic knowledge of Docker and its key concepts (images, layers, Dockerfile commands) is required. You'll learn something new even if you have used Docker for some time.
+</details>
+
+## **Counting down for CRA - updates and expectations**
+
+* **Cheuk Ting Ho, Deb Nicholson**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+The EU Commission is likely to vote on the Cyber Resilience Act (CRA) later this year. The CRA is an ambitious step towards protecting consumers from software security issues by creating a new list of responsibilities for software developers and providers. The Act also creates a new category of actor known as an “Open Source Steward” which we think makes important allowances for public open source repositories like CPython and Python Package Index (PyPI.) Once the dust settles, everyone who makes software will need to consider the CRA’s mandates in their security roadmaps. 
+
+In this talk we will look at the timeline for the new legislation, any critical discussions happening around implementation and most importantly, the new responsibilities outlined by the CRA. We’ll also discuss what the PSF is doing for CPython and for PyPI and what each of us in the Python ecosystem might want to do to get ready for a new era of increased certainty – and liability – around security. 
+
+## Target audience
+
+Developers and maintainers whose project or product may be affected by the CRA. European legislation won’t just affect the European market, it will affect the software industry and the open source community globally as it is very hard to segregate one project or product from the EU market. So, this is for everyone in the Python community who shares their code with the world. 
+
+## Goal
+
+To educate the general public about CRA - how it can affect us and how to get ready for it. We also want to provide more information for the Python community about what has been done by the PSF regarding the CRA to reassure them that the Python community is aware and getting prepared for the CRA.
+</details>
+
+## **Creating Your Own Extensions for JupyterLab**
+
+* **Daniel Goldfarb**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Have you ever wished for a feature in Jupyter Notebooks or JupyterLab that wasn't already there?  Or perhaps you've found yourself doing complex or repetitive tasks and realized that you, and others, could benefit from integrating those tasks into JupyterLab?  This is your chance to learn how to add that feature, or integrate that task, yourself.
+
+JupyterLab enables you to work with Jupyter notebooks, text editors, terminals, and custom components in a flexible, integrated, and extensible manner.
+
+This is a practical tutorial about how to extend JupyterLab.  We focus on understanding the underlying extension support infrastructure, as we walk through a step-by-step example of creating an app in JupyterLab.  We will learn, among other things, how to launch that app from different places within JupyterLab, how to style our app, and how to pass parameters to our app to modify its behavior.
+
+Tutorial Requirements:
+- Attendees should have some familiarity with Jupyter Notebooks and/or JupyterLab.
+- Attendees must have solid experience with _any_ typical object-oriented programming language (i.e. a good understanding of classes, objects, and inheritance).
+- Attendees must have a laptop with miniconda installed and working. (conda, micromamba, or mamba environments also work). (See https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html )
+- Not required, but helpful, if attendees can install the following environment before the tutorial: 
+```shell
+    conda create -n jlx --override-channels --strict-channel-priority  \
+        -c conda-forge -c nodefaults \
+        jupyterlab=4 nodejs=18 git copier=7 jinja2-time
+```
+</details>
+
+## **Cython and the Limited API**
+
+* **David Woods**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Cython's Limited API support is finally approaching a usable state. As an example, it is possible to produce a working version of Cython by compiling it in Limited API mode.
+
+For users the main advantage is to be able to reduce the number of wheels/binaries they have to build in order to be compatible across a range of versions of Python. For Cython itself there is also an advantage in future-proofing: being able to produce simpler code that should continue to work even as the Python interpreter evolves and which is more likely to work with alternative Python implementations, as well as hopefully placating the unease some of the core Python developers have at Cython's use of Python internals (in non-limited API mode).
+
+This talk will start off by looking at the subject from the users' perspective:
+* Why you might want to use the Limited API (from Cython).
+* What kind of projects are likely to benefit from it (as far as it's ever possible to predict how people will use a tool...).
+* What you actually need to do to build a Cython module with the Limited API.
+* What the limitations and disadvantages are: there are some features that don't work, some features that only work in recent versions of Python, some speed costs, and complete forward-compatibility might not be all you hope it would be.
+
+When that "general interest" section is done, I plan to talk about some of the gory implementation details - what "creative" solutions have been employed to work around missing features or things the Limited API was never intended to do.
+</details>
+
+## **DBT & Python - How to write reusable and testable pipelines**
+
+* **Florian Stefan**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+The "data build tool" (DBT) was designed to unlock software engineering best practices for SQL-based data pipelines: pipelines as version controlled directed acyclic graphs (DAGs) consisting of testable and reusable nodes. With the increasing number of cloud data warehouses and data lakehouses that allow the native execution of Python code, DBT also added support for Python models.
+In this talk, I will explain how Flatiron Health uses DBT to improve and extend lives by learning from the experience of every person with cancer. We will discuss an example project setup that uses SQL as well as Python models. I will share our experiences with unit and data testing as well as with writing a reusable variable library.
+The talk is well-suited for anyone with prior data warehouse or data lakehouse experience who is curious how they can leverage DBT to write test-driven and reusable data piplines. The example project will use SQL, Python and Snowflake.
+</details>
+
+## **DFD(Documentation-First Development) with FastAPI**
+
+* **Taehyun Lee**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Many software engineers, particularly web developers, recognize the critical importance of documentation for efficient collaboration. Yet, the challenge of maintaining up-to-date documentation remains a pervasive issue, often due to human errors such as failing to update documentation after changes in the codebase.
+
+This presentation introduces the philosophy of Documentation-First Development (DFD), a methodology I advocate for that leverages the code-based OpenAPI documentation generation capabilities of the FastAPI framework. I will discuss methods to embody this philosophy, including the use of a sub-application pattern to segregate API documents and the application of generic types for crafting reusable custom response models. Additionally, I will address the limitations of traditional approaches to API documentation and demonstrate how FastAPI, in conjunction with Pydantic, offers a more effective solution by automatically keeping documentation synchronized with the code.
+
+This presentation aims to enlighten attendees on the benefits of the FastAPI framework and provide practical insights into creating precise and well-maintained API documentation. It is designed for audiences interested in enhancing their documentation practices and those curious about the advantages of employing FastAPI for web development projects.
+</details>
+
+## **Data Analysis, the Polars Way**
+
+* **Jan Pipek**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+When you take interesting data from public sources, when you install a highly efficient Python library for data analysis (polars), and you start asking fundamental questions, what can possibly go wrong?
+
+In this course, we will grab public data about the countries of the world and while playing with them, we will explore (a small subset of) what the polars library has to offer. While traditionally the first steps into data analysis are taken with pandas (a true hero in the Python data world), polars is a fresh newcomer that boasts high efficiency and clearly designed API - so why not start with it?
+
+You will learn how to:
+
+- load, manipulate and clean your data;
+- gather insights using grouping, aggregation and joining data from various sources;
+- understand and present you data visually.
+
+You should possess:
+
+- a modest knowledge of Python (functions, basic containers)
+- some familiarity with Jupyter (or some other) notebooks (recommended)
+- optionally some knowledge of pandas (not required at all)
+- a computer with a pre-installed virtual environment
+</details>
+
+## **Data pipelines with Celery: modular, signal-driven and manageable**
+
+* **Marin Aglić Čuvić**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Writing pipelines for processing large datasets has its challenges – processing data within an acceptable time frame, dealing with unreliable and rate-limited APIs, and unexpected failures that can cause data incompleteness. In this talk we’ll discuss how to design & implement modular, efficient, and manageable workflows with Celery, Redis, and signal-based triggering.
+
+We’ll begin by exploring the motivation behind segmenting pipelines into smaller, more manageable ones. The segmentation simplifies development, enhances fault tolerance, and improves modularity, making it easier to test and debug each component. By leveraging Redis as a data store and Celery’s signals, we introduce self-triggering (or looped) pipelines that efficiently manage data batches within API rate limits and system resource constraints. We will look at an example of how we did things in the past using periodic tasks and how this new approach, instead, simplifies and increases our data throughput and completeness. Additionally, this facilitates triggering pipelines with secondary benefits, such as persisting and reporting results, which allows analysis and insight into the processed data. This can help us tackle inaccuracies and optimise data handling in budget-sensitive environments.
+
+The talk offers the attendees a perspective on designing data pipelines in Celery that they may have not seen before. We will share the techniques for implementing more effective and maintainable data pipelines in their own projects.
+</details>
+
+## **Deadcode - a tool to find and fix unused (dead) Python code**
+
+* **Albertas Gimbutas**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+No longer needed code creates technical debt if it is not removed from the code base. Unused code has to be maintained, it complicates code base and increases cognitive load. It might even depend on no longer necessary dependencies with vulnerabilities and might increase attack surface. Therefore, removing dead code saves time, money and reduces security risks.
+
+Recently, Ruff has became a de facto linter, which provides almost all existing linting rules from other linters. However, it is only capable to detect locally unused Python code, which is only a tiny portion of unused code.
+
+Vulture is the best known tool for detecting globally unused Python code. However, its configuration is not very flexible and disabling false positives in a larger code base might require a lot of effort.
+Also, unused code detection is sometimes inaccurate, because scopes are not taken into account, when detecting unused code. 
+
+This presentation introduces a new Python package called `deadcode`, which tries to move globally unused Python code detection to the next level. First, it provides a large set of options to flexibly disable various types of false positives. Second, deadcode implements more rules for detecting unused code than Vulture. Third, an improved strategy which tracks scopes and namespaces into account is being used to 
+more accurately identify unused code items. Fourth, a --fix option is provided, which allows to automatically remove detected unused code items.
+
+In addition, an idea to prune Python code in order to reduce its size will be consider, which might be relevant when serving Python code in a browser.
+
+Lets make Python ecosystem even more awesome!
+</details>
+
+## **Deconstructing the text embedding models**
+
+* **Kacper Łukawski**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Selecting the optimal text embedding model is often guided by benchmarks such as the Massive Text Embedding Benchmark (MTEB). While choosing the best model from the leaderboard is a common practice, it may not always align perfectly with the unique characteristics of your specific dataset. This approach overlooks a crucial yet frequently underestimated element - the tokenizer.
+
+We will delve deep into the tokenizer's fundamental role, shedding light on its operations and introducing straightforward techniques to assess whether a particular model is suited to your data based solely on its tokenizer. We will explore the significance of the tokenizer in the fine-tuning process of embedding models and discuss strategic approaches to optimize its effectiveness.
+</details>
+
+## **Demystify Python Types for PEP 729**
+
+* **Kir Chou**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+[PEP 729 – Typing governance process](https://peps.python.org/pep-0729/) proposes a new way to govern the Python type system. The PEP was endorsed by maintainers of all major type checkers. This talk aims to guide audience to understand the reason more deeply of this new process after demystifying Python types.
+
+In this talk, the speaker will demystify python types from their theory to practice along with Python type systems. The theory includes the type theory by [Per Martin-Löf](https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f)'s and [gradual typing by Jeremy Siek](http://scheme2006.cs.uchicago.edu/13-siek.pdf), all theories will be explained with the Python code in the real world. The type systems targets all major type checkers and CPython. The comparison will be based on the research: [Python 3 Types in the Wild: A Tale of Two Type Systems](https://www.cs.rpi.edu/~milanova/docs/dls2020.pdf). The practice covers how a new specifications is done in type systems. In addition, the speaker will share their thoughts about the challenges behind the implementation, and connect the answer to the reason of the PEP 729.
+</details>
+
+## **Demystifying AsyncIO: Building Your Own Event Loop in Python**
+
+* **Arthur Pastel**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+**AsyncIO** has emerged as a vital tool in Python's ecosystem, particularly in web development, IO-bound tasks, and network programming. However, its internal mechanics often remain obscure, even to seasoned Python developers. This talk aims to demystify AsyncIO by guiding you through creating your own event loop in Python, culminating in running a FastAPI application with it.
+
+In this talk, we’ll build an event loop from scratch in Python, capable of running an HTTP server through a FastAPI application.
+
+**Plan:**
+
+- **Introduction to AsyncIO**
+- **Core Concepts:** Deep dive into Event loop, Futures, Tasks, and coroutines
+- **Hands-On Building:** Constructing an event loop from scratch
+    - Scheduling callbacks
+    - Executing tasks and coroutines
+    - Handling network calls
+- **Practical Application:** Running a FastAPI HTTP server with our loop
+- **Performance Insights:** Comparing our event loop with the fastest ones
+
+By the end of this talk, you'll be able to understand the internal workings of AsyncIO and create a basic event loop capable of running a FastAPI application.
+</details>
+
+## **Descriptors - Understanding and Modifying Python's Attribute Access**
+
+* **Mike Müller**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+Descriptors are advanced Python features.
+While it is possible to write Python programs without active knowledge of them,
+knowing more about them facilitates a deeper understanding of the language.
+With examples, you will learn how they work and how to write your own
+descriptors.
+Furthermore, you will understand when to use and when better not to use them.
+
+This tutorial is a systematic introduction to descriptors.
+It covers all relevant information with a focus on practical applications for
+common tasks.
+
+In hand-on sessions you will learn how to write your own descriptors that adapt
+attribute access to your needs.
+Use cases provide working code that can serve as a basis for your own solutions.
+You will gain a deeper understanding of more advanced concepts that can help
+to write better programs.
+</details>
+
+## **Diversity Project: Subtle Introduction of Data Science using Pyroid**
+
+* **Godfrey Akpojotor**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Python is a beautiful and unique programming language with a continuously increasing   community of users. Though there are various outstanding Python groups, however, the outreach of Python in low income economies is not yet plausible because of the cost of laptops, poor power supply and so on. A multifaceted project embarked on to abridge this gap is adopting Pyroid in Android phones as mobile mini-computational laboratory because of the low cost, low maintenance and low power requirement of these smartphones leading to their growing spread even in these low economies. One of the current project is developing computational Pyroid programmes for data science. Globally data science is lucrative and vast employer of labour that is advancing with increasing power of computing systems: this unfortunately will be alienating low income earners. This is why the purpose of this present talk which is aimed at diversity, accessibility, inclusivity and education is to introduce the foundation of data science using Pyroid by considering how to read data in a variety of formats, clean bad data, retrieve specific values, combine data from different sources and data visualization using the elementary examples we have developed. Indeed it is a crazy project because of the limitation in the computing capability of the Android phones, yet we have continued to promote a special enthusiastic group of smartphones Pythonistas in low income economies including internally displaced persons (IDPs). As in our previous projects, the presentation will make transition from Pyroid to Python straightforward.
+</details>
+
+## **Don't fix bad data, do this instead**
+
+* **Martina Ivanicova**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In a time where GenAI is quickly growing in popularity, along with prescriptive analytics and online ML models, the question is raised whether we still need to care about data quality? We strongly believe that the answer is yes, and even more so than before! 
+
+Our expectations of data are high, and this often leads to frustrations when reality does not meet these expectations. 
+
+In the pursuit of data quality, expectations must be grounded in reality. It is often the case that a gap exists between anticipated outcomes and the actual data reality, which leads to frustration and mistrust. 
+
+This talk delves into pragmatic strategies that can be employed to bridge this gap.  The talk  will discuss both the technical  (hard) and cultural  (soft) measures implemented to uphold these standards.
+
+Key Takeaways:
+1. Integration tests serve as a proactive barrier, preempting the violation of data contracts, unlike reactive data quality checks.
+2. Prioritisation is crucial; a product-centric mindset is key when evaluating the balance between resource investment and potential gain.
+3. Data quality management is requiring both hard and soft measures
+
+
+Are you a data scientist, software engineer, product manager, or data engineer? Join us in this discussion; data quality concerns us all.
+</details>
+
+## **Earth Observation through Large Vision Models**
+
+* **Mayank Khanduja**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Ever wondered how location planning is done to build city infrastructure? Or when there is a disaster, how do we determine the possible affected areas and send reinforcements there? We require overhead imagery for that, which we mainly obtain from satellites.
+European Space Agency has sent various satellites however, the dataset from these satellites is huge and may even contain multiple bands from the electromagnetic spectrum. Large AI models have a huge potential in this domain, if they are developed to work well with this dataset.
+There are a lot of transformer based pre-trained Large Vision models on platforms like HuggingFace, Kaggle, etc., but these models do not integrate well with a specific domain like satellite datasets, hence the need to train or fine-tune them. In this talk, we are going to have a hands-on mini-tutorial in Python on how we can access open satellite datasets, fine-tune various Vision Models and Multimodals on it, and examine the following applications:
+
+- Identify what lies below the clouds in satellite imagery using the Generative Vision model. 
+- Perform Zero-Shot object detection in satellite images with human language input using Multimodals.
+- Segment Roads, Vehicles, Buildings, etc., in a city using the Segmentation model. 
+- Obtain high-resolution satellite imagery from lower resolution using the SuperResolution model.
+</details>
+
+## **Effective Strategies for Disability Inclusion in Open Source Communities**
+
+* **Brayan Kai Mwanyumba**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In today's world, where disability affects a significant percentage of the population, it is crucial for open-source communities to address the challenges faced by persons with disabilities (PWDs) and work towards their inclusion. This talk will delve into practical measures such as referral programs, internal disability disclosures, and integrating disability into existing agendas rather than treating it as a separate issue. We will dive into disability mainstreaming with a focus on its role in promoting universal design and inclusivity. Attendees will gain insights into establishing disability mainstreaming committees, formulating action plans, implementing best practices, and monitoring and evaluating progress.
+</details>
+
+## **Enhancing Decorators with Type Annotations: Techniques and Best Practices**
+
+* **Koudai Aono**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Decorators are powerful, magical syntax sugar, offering a convenient way to wrap and enhance functions. But sometimes, it's not clear how to use a defined decorator.
+
+What arguments should we pass to a given decorator? What functions does it target? Does it change the return type of the wrapped function? Have you ever faced these questions?
+
+If proper type hints are defined for decorators, static type checkers like mypy and pyright IDEs will point out the errors in usage. Thus, guiding you on the right path by catching bugs earlier, reducing unnecessary debugging and unexpected runtime behaviour.
+
+This talk will step you through type definitions utilizing `typing.TypeVarTuple`, `typing.Protocol`, `typing.ParamSpec`, `typing.Concatenate`, `Type Parameter Syntax`, and more, all of which are practical to implement and can make your project robust!
+</details>
+
+## **Event Sourcing From The Ground Up**
+
+* **Sebastiaan Zeeff, Ravi Selker**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+We often think about data in terms of storing the current state of our models. If a chess player moves a piece, we update the state of the board and persist it. This makes it easy to query the current state of the game, but also poses some challenges: How do we know which moves led up to the current state? And how do we ensure that the state remains consistent, even in a distributed system?
+
+**Event Sourcing** takes a different approach to storing state. Instead of storing the current state as-is, we store the *sequence of events* that led to the current state. If we need to know the current state, we can replay this immutable record of events to reconstruct it. Not only does this give us an immutable audit log, this also promotes loose coupling and enables optimistic concurrency.
+
+In this tutorial, we are going to build an “Event Sourcing”-based backend for an in-browser game from the ground up. Rather than using a framework that abstracts away some of the core principles, we are going to implement the mechanisms ourselves to help us understand the core principles.
+
+### Outline
+- Introduction to Event Sourcing and Domain-Driven Design
+- Modeling the events in our game
+- Implementing our first events and our aggregate
+- Reconstructing state from events
+- Optimistic concurrency
+- Beyond this tutorial + Q&A
+
+### Audience & Preparation
+This tutorial is for you if you’re interested in Event Sourcing but don’t have any real experience with it yet. We do expect you to have at least an intermediate level in Python.
+
+Do make sure to bring your laptop, **with the following tools installed**:
+- Python 3.12
+- A container runtime (preferably Docker)
+- Git
+- Your favorite editor
+</details>
+
+## **Event Sourcing in production**
+
+* **Borjan Tchakaloff**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Event Sourcing (ES) is a powerful concept that lets you adapt your business logic without losing data and past states.
+Whether your domain understanding changes or new requirements land on your lap, there is a path forward.
+Join us as we talk about some real-world tactics we relied on to manage Event Sourcing in production.
+We will accumulate a handful of patterns throughout the talk that will hopefully help you avoid pitfalls and bottlenecks.
+
+Our use cases build on the `eventsourcing` library, a mature and well-rounded Python library that deserves more attention.
+We will tackle the three key aspects of a successful event-sourced application: evolution, projection, and runtime.
+
+Software does not run in a vacuum, models need to change and evolve to reflect the world they live in.
+ES records the evolution of how we abstract our domain, how we see things.
+Eventually these abstractions can become clumsy or simply inappropriate.
+We can deal with that without breaking stride (losing data).
+
+ES also gives us the ability to revisit our perspective and change how we present the application state — by creating new projections and replaying the history.
+We will look at how it offers a cheap way to support optimal read-models, which we can can tweak and rebuild in the blink of an eye.
+
+Finally, we will present how such a system actually runs in a typical web application.
+Whether in the request loop (synchronous), or through eventual consistency (asynchronous).
+As a single process, or distributed for parallel processing.
+
+---
+
+This talk assumes some familiarity with _Event Sourcing_ and its friends _Domain Driven Design_ (DDD) and _Command Query Responsibility Seggregation_ (CQRS).
+</details>
+
+## **FastAPI Internals**
+
+* **Marcelo Trylesinski**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+FastAPI became one of the most web frameworks in Python. It has an amazing documentation, and easy to use API, which made it very popular. It's easy to start, and as a developer you have a lot of power on what you can do. But... How does it work internally?
+
+In this talk, we will explore the internals of FastAPI. We'll explore the dependency injection system, what are the benefits, and limitations. We'll also see how the routing system works, when the middleware stack runs, how the request and response are handled in detail, how the OpenAPI schema is generated, and the differences between async and non-async endpoints, and how WebSockets fit in the whole picture. Furthermore, we'll also see how the dependencies Pydantic and Starlette help FastAPI on its job.
+
+At the end of this talk, the attendee will understand what's underneath of this very popular package.
+</details>
+
+## **FastUI - panacea or pipe dream?**
+
+* **Samuel Colvin**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Are web interfaces defined in Python a genius idea, a complete folly, or (like most technologies) a good fit for some use cases but not all?
+
+I'll give a brief tour of packages that let you build web interfaces by writing only Python, including Streamlit, Gradio, NiceGUI, reflex, Solara, dominate, ReactPy and FastUI (recently released by the Pydantic team).
+
+The main three questions I'll be asking are:
+
+1. Is building a web UI in Python really a good idea at all?
+2. What fundamental trade-offs are required to make such a tool successful?
+3. If someone can answer point 1 and 2, when's the right time to use these tools? 
+
+Over the last couple of years, lots of different libraries have emerged to let you develop web interfaces without getting your hands dirty with HTML, CSS, the JS ecosystem; but so far none have got as popular as "traditional" template rendering (Jinja, Django) or modern SPA frameworks like React.
+
+So are we at the dawn of a new way era — and one of these frameworks will become ubiquitous. Or is the whole idea that you can build such an interface without engaging with the fundamental technologies that power them mistaken?
+
+One important question is "what kind of interface are we aiming at?" If we are trying to give complete control over the browser, allowing Python developers to do everything raw JavaScript can do; our solution will look very different to something that is "just" trying to allow Python developers to plug common components together to build 80% of UIs with 20% of the effort.
+
+Looking at the question through this lens will help explain the design choices of the above libraries, and might even allow us to guess at which approaches will be most
+</details>
+
+## **Fine-tuning large models on local hardware**
+
+* **Benjamin Bossan**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Fine-tuning big neural nets like Large Language Models (LLMs) has traditionally been prohibitive due to high hardware requirements. However, Parameter-Efficient Fine-Tuning (PEFT) and quantization enable the training of large models on modest hardware. Thanks to the PEFT library and the Hugging Face ecosystem, these techniques are now accessible to a broad audience.
+
+Expect to learn:
+
+- what the challenges are of fine-tuning large models
+- what solutions have been proposed and how they work
+- practical examples of applying the PEFT library
+</details>
+
+## **Forecasting the future with EarthPT**
+
+* **Mike Smith**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+We introduce EarthPT -- an open source Earth Observation (EO) pretrained transformer written in Python and PyTorch. EarthPT is a 700 million parameter decoding transformer foundation model trained in an autoregressive self-supervised manner and developed specifically with EO use-cases in mind. 
+
+EarthPT is trained on time series derived from satellite imagery, and can accurately predict future pixel-level surface reflectances across the 400-2300 nm range well into the future. For example, forecasts of the evolution of the Normalised Difference Vegetation Index (NDVI) have a typical error of approximately 0.05 (over a natural range of -1 -> 1) at the pixel level over a five month test set horizon, out-performing simple phase-folded models based on historical averaging. We also demonstrate that embeddings learnt by EarthPT hold semantically meaningful information and could be exploited for downstream tasks such as highly granular, dynamic land use classification, crop yield, and drought prediction. 
+
+Excitingly, we note that the abundance of EO data provides us with -- in theory -- quadrillions of training tokens. Therefore, if we assume that EarthPT follows neural scaling laws akin to those derived for Large Language Models (LLMs), there is currently no data-imposed limit to scaling EarthPT and other similar ‘Large Observation Models.’
+
+EarthPT is released under the MIT licence here: https://github.com/aspiaspace/EarthPT.
+</details>
+
+## **From Diamonds to Mixins: Demystifying Multiple Inheritance in Python**
+
+* **Ariel Ortiz**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Most Python programmers are probably aware that Python supports multiple inheritance. However, few are likely to be aware of its implications and inner workings. This talk aims to shed light on this commonly overlooked topic. 
+
+In the first part of the talk we will start by reviewing the “diamond problem,” where a class inherits from two classes that have a common ancestor, and contrast how this issue is handled in Python compared to other object oriented languages. Next, we will discuss the Method Resolution Order (MRO) to see how Python determines the sequence in which classes are considered when searching for a method or attribute. We will also review the use of the `super()` function that allows a subclass to call a method from its superclass in a way that adheres to the MRO.
+
+During the second part of the talk, we will explore real-world scenarios related to the benefits,  problems, and alternatives of using multiple inheritance in our programs. We will dedicate some time to examining the concept of a _mixin_ and how to implement it effectively in Python. Finally, we will delve into the _Interface Segregation Principle_ and explore collaboration and composition as mechanisms for avoiding the pitfalls of inheritance in general.
+</details>
+
+## **From Text to Context: How We Introduced a Modern Hybrid Search**
+
+* **Ansgar Gruene, Dharin shah**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Customers only buy the products they are able to find. Improving the search functions on the website is crucial for user-friendliness.
+
+In our talk we present the lessons learnt from improving the search of our global online marketplace, which sells 20 million products per year. We moved from a traditional word-match based approach (BM25) to a modern hybrid solution that combines BM25 with a semantic vector model, an open-source language model that we fine-tuned to our domain.
+
+With numerous references to current literature, we will explain how we designed our new system and solved the multiple challenges we encountered on both the ML and engineering side (data pipeline encoding documents, live service encoding queries, integration with search engine). Our system is based on OpenSearch, the lessons can be applied to other search engines as well.
+
+In particular the presentation will cover:
+- Status and Short-Comings of our old Search
+- Introduction of Hybrid Search
+- Our Machine Learning Solution
+- Architecture and Implementation (with special consideration of latency)
+- Learnings and Next Steps
+</details>
+
+## **From zero to MLOps: An open source stack to fight spaghetti ML**
+
+* **Juan Luis Cano Rodríguez**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+The ecosystem of MLOps tools and platforms keeps growing by the year and it's difficult to stay up to date. Luckily our industry is now more mature and certain good practices are already well established, but it's still difficult for newcomers to navigate the complexity of production machine learning systems.
+
+What are the minimal pieces that you need to build your MLOps stack? Is there a way to avoid vendor lock-in by stitching open source components together? What are the pros and cons of this approach? What have we learned since 2015, when the seminal Google paper "Hidden Technical Debt in Machine Learning Systems" appeared?
+</details>
+
+## **Fundamentals of Retrieval Augmented Generation**
+
+* **Catalin**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Retrieval Augmented Generation (RAG) has emerged in recent years as a popular technique at the crossroads of Information Retrieval and Natural Language Generation. It represents a promising new approach that combines the strengths of both retrieval-based systems and generative AI models, aiming to address the limitations of each, while enhancing their overall performance on document intelligence tasks. This talk will introduce the key frameworks, methodologies and advancements in RAG, exploring its ability to empower Large Language Models with a deeper comprehension of context, by leveraging pre-existing knowledge from external corpora. We will review the theoretical foundations, practical applications, and technical challenges associated with RAG, showcasing its potential to impact various fields, such as document summarization or database management. Through this talk, attendees will gain insights into the most relevant topics related to RAG, including token embedding, vector indexing and semantic similarity search.
+</details>
+
+## **GPU Development in Python 101**
+
+* **Jacob Tomlinson**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+Since joining NVIDIA I’ve gotten to grips with the fundamentals of writing accelerated code in Python. I was amazed to discover that I didn’t need to learn C++ and I didn’t need new development tools. Writing GPU code in Python is easier today than ever, and in this tutorial, I will share what I’ve learned and how you can get started with accelerating your code.
+</details>
+
+## **GeoPandas 1.0 and beyond**
+
+* **Martin Fleischmann**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+GeoPandas is one of the core packages in the Python ecosystem to work with geospatial vector data. By combining the power of several open source geo tools (GEOS/Shapely, GDAL/pyogrio, PROJ/pyproj) and extending the pandas data analysis library to work with geographic objects, it is designed to make working with geospatial data in Python easier. Recently, the development that started more than ten years ago resulted in version 1.0.
+
+This talk will give an overview of what is new in GeoPandas 1.0 and of recent developments in the broader ecosystem of packages on which GeoPandas depends, or that extend GeoPandas. We will highlight some changes and new features in GeoPandas 1.0, such as the new default IO based on pyogrio, closer integration of Shapely 2.0 leading to a range of new methods, and the removal of other geometry engines and consequences of that. We will look at the journey of the GeoPandas from its start at SciPy 2013 to the current 1.0 and discuss the plans moving forward, covering support of spherical geometries, native support for GeoArrow, and more. You will get a sense of what is coming in future, where to help the development and how to prepare your code for upcoming changes.
+</details>
+
+## **How I used pgvector and PostgreSQL® to find pictures of me at a party**
+
+* **Tibs**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Nowadays, if you attend an event you're bound to end up with a catalogue of photographs to look at. Formal events are likely to have a professional photographer, and modern smartphones mean that it's easy to make a photographic record of just about any gathering. It can be fun to look through the pictures, to find yourself or your friends and family, but it can also be tedious.
+
+At our company get-together earlier in the year, the photographers did indeed take a lot of pictures. Afterwards the best of them were put up on our internal network - and like many people, I combed through them looking for those in which I appeared (yes, for vanity, but also with some amusement).
+
+In this talk, I'll explain how to automate finding the photographs I'm in (or at least, mostly so). I'll walk through Python code that extracts faces using OpenCV, calculates vector embeddings using imgbeddings and OpenAI, and stores them in PostgreSQL® using pgvector. Given all of that, I can then make an SQL query to find which pictures I'm in.
+
+Python is a good fit for data pipelines like this, as it has good bindings to machine learning packages, and excellent support for talking to PostgreSQL.
+
+You may be wondering why that sequence ends with PostgreSQL (and SQL) rather than something more machine learning specific. I'll talk about that as well, and in particular about how PostgreSQL allows us to cope when the amount of data gets too large to be handled locally, and how useful it is to be able to relate the similarity calculations to other columns in the database - in our case, perhaps including the image metadata.
+</details>
+
+## **How to Build a Python-to-C++ Compiler out of Spare Parts - and Why**
+
+* **Xavier Thompson**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+A frequent topic about Python is performance: its interpreted nature inhibits optimisations, and the famous GIL limits parallelism (for now!).
+
+Existing Python Compilers - Cython, Numba, Codon - focus mainly on compiling small, critical bits of code to achieve linear execution speedups. As for parallelism: parallel for-loops powered by OpenMP.
+
+To parallelize highly concurrent programs with concurrent I/O and concurrent tasks, we need more. A key difference is it requires compiling everything: as soon as the Python interpreter comes into play, the GIL will make parallelism collapse.
+
+We introduce Typon, a Python-to-C++ compiler with powerful concurrency primitives powered by a crazy homemade task scheduler. It can take untyped, idiomatic Python code and output C++ code fully independent of the Python interpreter. It also provides seamless to-and-from Python interoperability, for those cases where you really just need to import numpy.
+
+In this talk we'll recount our journey so far: why we think it's important, how we're making something new out of existing bits, what we've achieved. Along the way we might delve into fun details like type inference, concurrency primitives, and C++ pretending-to-be-Python.
+
+You'll come out of this talk with some cool insights into compiler design, concurrency, and the design of Python.
+
+Knowledge of C++ not required. Knowledge of Python language inner workings helpful.
+</details>
+
+## **How to deliver 3x faster with effective API design**
+
+* **Michal Cyprian**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In today's fast-paced world, the ability to deliver new features quickly is crucial for product-oriented companies. In this talk, we'll dive into architectural patterns that optimize the delivery of multiple client implementations in complex client-server architectures.
+
+The advent of the mobile age has dramatically altered the landscape of typical client-server models. Delivering a new feature on multiple platforms is complicated and time-consuming because it requires several engineering teams to communicate extensively and separately code and test the same feature in different languages for each platform. Let's see how architectural patterns known as Backend for Frontend (BFF) and Server-driven UI can help with solving these challenges and what the limitations are. We'll explore Python optimizations, caching strategies, and SQLAlchemy preloading techniques, which were crucial to the success of the case study I will share.
+
+This talk aims to provide you with an overview of useful architectural patterns, insights on how to implement and optimize them in Python, and strategies to make your product managers happy by shortening your time to production.
+</details>
+
+## **How to destroy the world using Python and a synthetic virus**
+
+* **Marina Moro López, Helena Gómez Pozo**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Would you believe us if we told you that we could create a potentially dangerous virus using Python? This is theoretically possible thanks to synthetic biology, the field of biotechnology that studies how to create and modify organisms. This discipline is used, for example, to genetically modify bacteria to produce the insulin that diabetics will later use. Obviously, such a powerful tool has its possible evil side, which is what we will explore in this talk. After a little biology and genetics class, we will explain a practical example of how to use synthetic biology through a Python script to modify an existing virus and turn it into a deadly one. Thus, you as an attendee will be able to see the potential of this field and how Python can make it easier, not only in the example of the evil virus, but also in other healthcare applications.
+</details>
+
+## **How to sell a big refactor or rewrite to the business?**
+
+* **Ivett Ördög**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In the world of software development, dealing with legacy code is often a necessary evil, especially for successful, fast-growing companies. The design stamina hypothesis suggests that legacy code is a sign of success, not failure. But how do we tackle this challenge smartly? This talk delves into the often-misunderstood realm of large-scale refactoring and rewrites, presenting a nuanced approach that contrasts with the traditional 'never rewrite' dogma.
+
+We'll delve into real-world case studies where companies have successfully navigated their technical debt, uncovering crucial insights. Specifically, we will identify two key properties of these successful rewrites that can make or break your efforts. Understanding these properties enables us to strategically manage technical debt without losing our competitive edge. This session is not just a theoretical discussion but a practical guide, concluding with a decision-making quadrant to help determine the most effective approach for your team's refactor or rewrite projects. Whether you're leading a team through growth or coaching developers on best practices, this talk will equip you with a deeper understanding and actionable insights into one of the most critical aspects of software development.
+</details>
+
+## **How we used vectorization for 1000x Python speedups (no C or Spark needed!)**
+
+* **Justine Wezenaar**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Want to make all your code faster? With matrices, library knowledge, and a sprinkle of creativity, you can consistently speed up multivariate Python functions by 1000x!
+
+Modal optimization requires simple axioms - arithmetic, checking a case, calling the right sklearn function, and so on. When that’s not sufficient, three core tricks - converting conditional logic to set theory, stacking vectors into a matrix, and shaping data to match library expectations - cover the vast majority of real world cases (90% of the ~400 functions we vectorized). 
+
+At Bloomberg, ESG (Environmental, Social, and Governance) Scores require complex computations on large data sets. Time-series computations are fundamental for Governance - one UDF infers board support for a policy from prior cyclical votes and other time offset inputs. By rewriting the pandas backfill as a series of reductions on a 4-tensor, we reduced the runtime from 45 minutes to 10 milliseconds! Analogously, due to real world complexity, finance UDFs can end up with 100+ if/else branches in one function. With a mix of De Morgan’s laws and sparse matrix representations, we simplified the cases and achieved 1000x+ speedups.
+
+We’ll conclude with a quick overview of cutting-edge tools, and hope you’ll leave with a concrete strategy for vectorizing financial models!
+</details>
+
+## **I reverse engineered a work of art, and this is what I learned**
+
+* **Yair Galler**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+This is the story of a weekend project which turned into a months long challenge. After coming across a photorealistic painting made entirely out of strings, I wanted to create one on my own. But how? I decided to reverse engineer the algorithm that computes which strings to stretch and in which order.
+
+In this talk, I will show how I created a Python algorithm that produces a beautiful work of art. I will cover topics such as greedy algorithms, image processing, color spaces, performance optimization and many other challenges that I encountered while cracking the algorithm. And of course, I'll show the resulting work of art!
+</details>
+
+## **Impersonation in Data Engineering: No More Credentials in Your Code!**
+
+* **Marian Špilka**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Imagine stepping into your dream job as a python data developer, ready to dive into coding and show your talent, only to run into missing database credentials that leave you idle for days due to slow interdepartmental communications and permission issues. Frustrating, right?
+
+In my talk, I'll showcase how we can make this whole process much easier. I’ll explain how using something called “Identity and Access Management” (IAM) lets everyone in a company, including machines, get to work without these annoying holdups. 
+
+Surprised to hear that a machine like Airflow can have its own identity? I'll explain how we use something known as Workload Identity as a crucial part in this ecosystem integrating Airflow within our infrastructure.
+
+A central pillar of the discussion will be the role of impersonation in our setup - how it ties together various elements to enable a harmonious, secure, and maintainable infrastructure. The resulting architecture not only fosters an improved developer experience, faster project delivery, increased productivity and transparency, but also serves as a foundation for more advanced concepts such as data mesh implementation.
+
+Join me in this talk to discover the synergy of IAM, Workload Identity, and impersonation. Let's equip you with a model that promotes easy team onboarding, transparent access management, and a secure, frustration-free workspace focused on delivery.
+
+  And for those interested in having their code perform consistently, whether on a local machine or in the cloud, I will share a small but powerful Docker hack to achieve things consistently no matter where your code is running.
+</details>
+
+## **Insights and Experiences of Packaging Python Binary Extensions**
+
+* **Goran Jelic-Cizmek**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In the domain of scientific and high-performance computing (HPC), software packages are primarily written in compiled languages such as C, C++, and Fortran, complemented by end-user APIs implemented in Python. Such packages frequently incorporate CPU-specific code (e.g. SIMD extensions) and utilise GPU-specific programming models, such as OpenMP and CUDA, to achieve enhanced performance. Despite the recent proliferation of build backends for creating pure Python packages, the distribution of Python packages containing binary extensions poses a unique set of challenges and currently lacks a standardised solution. In this talk, I will share insights and experiences gained from building portable and performant Python wheels for a set of computational neuroscience projects, aiming for compatibility and usage across a diverse of compute platforms, from desktop to large compute clusters.
+</details>
+
+## **Intellectual Property Law 101**
+
+* **Anwesha Das**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+"Oh, legal is boring," most developer community thinks in this line. Yes, it is boring, but it is essential at the same time. We will demystify certain basic legal concepts the developers need to know to secure them, their code, and, most importantly, the consequences of their steps. I will go through three fundamental pillars of Intellectual property laws: Trademark, Copyright, and Patent. The talk will include real-life examples of applying all of the above. This talk targets developers and not legal experts.
+</details>
+
+## **Invent with PyScript**
+
+* **Nicholas Tollervey, Joshua Lowe**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+_[PyScript](https://pyscript.net/) is a platform for Python in the browser_, enabled by [web-assembly](https://webassembly.org/). It brings the rich ecosystems of [CPython](https://python.org/) and [MicroPython](https://micropython.org) to the web. _[Invent](https://invent-framework.github.io/) is a PyScript based app creation framework with complementary browser based tooling_ and is designed to be easy to learn and use, no matter if you're a beginner or expert.
+
+This talk introduces Invent, explains how it was built on top of PyScript and describes the design and architecture decisions made to ensure Python and the browser complement each other. Invent apps work anywhere a browser works and by the end of this presentation you'll be armed with all you need to know to build, deploy and extend native Python based applications running atop PyScript on all manner of platforms (mobile, tablet, laptop, desktop, [web-enabled fridge](https://www.standard.co.uk/shopping/esbest/home-garden/kitchen-appliances/best-smart-fridges-b1002542.html), [car](https://www.youtube.com/watch?v=GkhbN9B9bbs), point of sale terminal... you name it, so long as there's a browser!).
+
+This talk will be fast-paced, technical, creative, full of possibilities, may include geese 🪿, _and will be a lot of geeky fun_. 
+
+By the end you'll ask yourself, "I wonder what I can invent?" and go create cool stuff in minutes.
+</details>
+
+## **Is RAG all you need? A look at the limits of retrieval augmented generation**
+
+* **Sara Zanzottera**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Retrieval-Augmented Generation (RAG) is a widely adopted technique to expand the knowledge of LLMs within a specific domain while mitigating hallucinations. However, it is not a silver bullet that is often claimed to be. A chatbot for developer documentation and one for medical advice may be based on the same architecture, but they have vastly different quality, transparency and consistency requirements. Getting RAG to work well on both can be far from trivial.
+
+In this talk we will first understand what RAG is, where it shines and why it works so well in these applications. Then we are going to see the most common failure modes and walk through a few of them to evaluate whether RAG is a suitable solution at all, how to improve the quality of the output, and when it's better to go for a different approach entirely.
+</details>
+
+## **Is it me or Python memory management?**
+
+* **Laysa Uchoa, Yuliia Barabash**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Have you ever wondered if Python memory management is playing tricks on you? Starting small, everything runs smoothly. But as your application scales, complexity grows, and memory issues rear their head. You ask yourself, "Is it me or Python memory management?"In this talk, we'll show you how Python memory works, provide tools to analyze memory usage and share practical optimization tips. Whether you're a seasoned Python developer or just starting on your Python journey, this talk is designed to provide you with techniques to overcome Python memory management challenges and write more efficient, memory-conscious code.
+</details>
+
+## **Keeping your projects nice and clean**
+
+* **Jan Musílek**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Keeping your projects nice and clean helps other to understand your code better and it's crucial when you're working in teams of more than a few people. How do you achieve that?
+
+I'll talk about selected quality control tools, autoformatters, CI, but also about conventions, review process and other details of how we tackle this problem in my workplace. I'll discuss how to introduce changes gradually and keep your repository style and quality checks in sync, even when you have dozens of them. And also about what happens when you overdo it and the tools that should make your life easier actually turn into the torturing machine.
+</details>
+
+## **Learn Python by Making a Console Game**
+
+* **Radomir Dopieralski, Ashish Gupta**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+You always wanted to learn programming, but setting it all up felt too intimidating, and the example code was boring? Why not try doing it with a handheld game console that already has everything installed, so you can just start writing the code right away without installing anything on your computer? And why not write some simple video games, like Snake, Tetris, or Flappy Bird? Thanks to the magic of CircuitPython you can now do that. We will walk you step by step through writing a simple video game on 8x8 pixel display. You will learn the basics of programming such as loops, conditionals, handling input and drawing to the screen, all without having to install anything on your laptop.
+</details>
+
+## **Learning to code in the age of AI**
+
+* **Sheena O'Connell**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Across the industry, programmers of all levels are embracing AI and LLMs. But: it's still worthwhile to learn the foundations of coding. And there's a risk: some learners are using AIs as footguns and limiting their own growth
+</details>
+
+## **Lies, damned lies and large language models**
+
+* **Jodie Burchell**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Would you like to use large language models (LLMs) in your own project, but are troubled by their tendency to frequently “hallucinate”, or produce incorrect information? Have you ever wondered if there was a way to easily measure an LLM’s hallucination rate, and compare this against other models? And would you like to learn how to help LLMs produce more accurate information?
+
+In this talk, we’ll have a look at some of the main reasons that hallucinations occur in LLMs, and then focus on how we can measure one specific type of hallucination: the tendency of models to regurgitate misinformation that they have learned from their training data. We’ll explore how we can easily measure this type of hallucination in LLMs using a dataset called TruthfulQA in conjunction with Python tooling including Hugging Face’s `datasets` and `transformers` packages, and the `langchain` package.
+
+We’ll end by looking at recent initiatives to reduce hallucinations in LLMs, using a technique called retrieval augmented generation (RAG). We’ll look at how and why RAG makes LLMs less likely to hallucinate, and how this can help make these models more reliable and usable in a range of contexts.
+</details>
+
+## **MLtraq: Track your AI experiments at hyperspeed**
+
+* **Michele Dallachiesa**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Every second spent waiting for initializations and obscure delays hindering high-frequency logging, further limited by what you can track, an experiment dies. Wouldn't it be nice to load and start tracking in nearly zero time? What if we could track more and faster, even handling arbitrarily large, complex Python objects with ease?
+
+In this talk, I will present the results of comparative benchmarks covering Weights & Biases, MLflow, FastTrackML, Neptune, Aim, Comet, and MLtraq. You will learn their strengths and weaknesses, what makes them slow and fast, and what sets MLtraq apart, making it 100x faster and capable of handling tens of thousands of experiments.
+
+The talk will be inspiring and useful for anyone interested in AI/ML experimentation and portable, safe serialization of Python objects.
+</details>
+
+## **Many ways to be a Python contributor**
+
+* **Paolo Melchiorre**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+There are many ways to **contribute** to **Python**, and in this talk, **newcomers** to the community will discover new ways to get involved in the Python community, and **community members** will get ideas for getting new people involved.
+</details>
+
+## **Mastering Design Patterns: Crafting Elegant Solutions with a Confidence**
+
+* **Petr Balogh**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Join us for an illuminating 30-minute journey into the world of design patterns at EuroPython 2024. Design patterns aren't just abstract concepts; they are the architectural blueprints that empower developers to create elegant and maintainable software solutions. In this session, we bridge the gap between theory and practice, offering practical insights for developers of all levels.
+
+We'll delve into a curated selection of design patterns, from foundational creational patterns to advanced behavioral patterns, showcasing their real-world applications and transformative impact on Python development. Through a blend of theory and practice, attendees will gain a comprehensive understanding of how to identify common design problems and apply appropriate patterns to solve them efficiently.
+
+Using engaging examples and hands-on exercises, we'll equip attendees with the knowledge and skills needed to architect cleaner, more maintainable codebases. Whether you're a seasoned veteran or a curious novice, this presentation offers a comprehensive roadmap for mastering Python design patterns and architecting software solutions with grace.
+</details>
+
+## **Migrating a Web Application from Flask to FastAPI: Avoiding Pitfalls**
+
+* **Jessica Temporal**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+Have you ever had to migrate code from one stack to another? Migrating stacks on an application can be a daunting task. The secret is to keep changes to a small size and watch out for blind copy-and-paste.
+
+Join me in this tutorial to learn the key differences between FastAPI and Flask plus how these differences will affect your stack migration.
+
+Learn by doing it: migrate a simple Flask application to FastAPI. Learn how templates work in each framework, how you can use routers to create more complex applications in both Flask and FastAPI, and finally some tips if you are considering migrating from one to the other and vice-versa.
+
+After this tutorial, you will feel confident to start your stack migrations between these two frameworks.
+</details>
+
+## **Move the Python ecosystem to the stable ABI**
+
+* **Victor Stinner**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+The Python C API is used to extend Python and make C libraries accessible in Python. The C API changes often forcing C extensions maintainers to update frequently their code. Also, new binary packages have to be build for each Python version. The stable ABI provides a more stable C API and only require to distribute a single binary package for all Python versions.
+</details>
+
+## **Multimedia processing with FFMpeg and Python**
+
+* **Michał Rokita**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Multimedia processing can be very complex, especially if you want to handle most of the available codecs and formats. Fortunately, we have FFMpeg - a "complete, cross-platform solution to record, convert and stream audio and video". It is a great tool, but its CLI is quite complex and challenging to master unless you use it on a daily basis. During this talk, I will tell you what FFmpeg is and how to use it in Python without hurting yourself.
+</details>
+
+## **NLP Application in Cases of Violence Against Women**
+
+* **Deborah Foroni**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Domestic violence is a widespread problem, one which demands attention and policy fixes. But available data is largely unstructured, making analysis difficult for both researchers and policy makers. In this talk, I'll show you how Python helped me to retrieve, structure, and classify violence victims' testimony. I'll show which APIs and libraries allowed me to retrieve the woman's testimony from YouTube, turn their speech into text, and then analyze the text itself. You'll come away knowing not just some new Python techniques, but also how those techniques can be used to improve our society.
+Outline:
+-Introduction (1m)
+- How to collect data from YouTube? (5m)
+     o   reason for collecting data using YouTube
+     o   keywords to find videos
+     o   YouTube API
+- How to transcribe audio to text? (5m)
+    o   Whisper API
+   o   how long it took
+   o   accuracy
+- Semantic analysis of testimony (10m)
+  o   BERTopic
+  o   Analysis of relevant words
+- How useful it is for analyzing unstructured data (10m)
+- Conclusion (2m)
+</details>
+
+## **Navigating Tech Leadership: Challenges and Strategies**
+
+* **Çağıl Uluşahin Sönmez**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Join us for a discussion on navigating tech leadership roles in the dynamic world of technology. 
+
+In this talk, we will explore the essence of managerial roles in the tech industry, examining the unique challenges faced by leaders at different levels. We'll discuss the critical decision every developer must make regarding balancing or giving up hands-on expertise with management responsibilities, as well as the challenges of transitioning from a primarily technical role to a managerial position.
+
+Additionally, we'll explore the challenges that managees may face when led by managers and tech leads who may lack management training or experience. We'll also discuss strategies for fostering a more inclusive and supportive engineering culture overall.
+
+Let's talk about management in tech from the perspective of a tech lead that identifies as a woman.
+</details>
+
+## **Neurodiversity in the IT industry. Why DO you need to know more about it?**
+
+* **Amelia Walter-Dzikowska**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Imagine discovering that your brain is equipped in a niche operation system, a one that occurs only in 10-15% of brains. No wonder the standard software does not suit your hardware and you keep encountering difficult situations… Once you discover it is just software incompatibility and you update the right app versions, the world starts being more comfortable! Unfortunately, few apps only have adapted versions.
+It is estimated that neuroatypical people constitute even up to 15-20% of the population. According to “the geek syndrome hypothesis” - autism, but also ADHD are likely to be common in people working in the IT industry. Neurodivergent people have a chance to become wonderful specialists and bring variety to the team thanks to a slightly different perception, special interests or ability to hyperfocus. Their presence can help introduce better practices such as clear communication and transparency. On the other hand, they are at risk of having various troubles in the world adapted to the neurotypical folk. 
+The author will present the current state of science on neurodiversity, the challenges faced by neurodivergent IT specialists and possible improvements to make the workplace more inclusive for everyone. As a neurodivergent advocate, an IT professional and a biologist with scientific mindset, she will combine her own life and career experience as a neuroatypical person with psychological knowledge which will create a unique perspective. The goal is to prove that neuroatypical people constitute a large part of the IT community and that even small actions can help meet their needs - and not only make their life easier, but also add more creativity to IT teams!
+</details>
+
+## **Nothing for Us, Without Us; Breaking Unconscious Bias in Building Products**
+
+* **Victor Ogunjobi**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Are we really building products that serve everyone, or just a selected few?
+
+As developers, we have responsibility to ensure that our products serve everyone, regardless of their background or identity. However, our unconscious bias often creeps into even the most well-intentioned projects and impacts the way we develop products or engage with communities, leading to unintentional exclusions.
+
+When I first designed a Speech-Text-Analytic app, my focus was to simplify business communication with transcribed audio and valuable insights. However, feedback from the community highlighted it had limitations for diverse users, including those with disabilities who faced inaccurate captions for audio content.
+
+This wake-up call prompted me to improve accessibility and user-friendliness for marginalized groups. And for the same reason, I'm making proactive steps to cater for the marginalized by integrating a feature that recognizes Nigerian native languages.
+
+As tech creators, we have the power to create change, but good intentions alone are not enough. This talk will offer strategies to address unconscious bias in product and community building, while avoiding common pitfalls. Attendees will learn to understand diverse needs & experiences for more inclusive environments.
+</details>
+
+## **Observability Matters: Empowering Python Developers with OpenTelemetry.**
+
+* **Yash Raj Verma**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Have you seen platforms like LinkedIn or Instagram experiencing downtime? We know how frustrating it might have felt for users, don't we? To tackle this challenge, engineering teams utilize a variety of tools and practices to thoroughly understand the unexpected behavior of the system by tracing potential bottlenecks. We are living in an ever-growing distributed world, where applications are often segmented into various microservices to enhance agility and performance. This often increases complexity, leading to inevitable issues such as errors and latency. In this dynamic software landscape, Observability is no longer a mere luxury; it is a necessity. Organizations initially gravitate towards a particular tool for its ease of use. Later, after investing a significant amount of time and finances, if they choose to migrate, vendor lock-in becomes a major concern as each tool adheres to its own standards.
+
+However, when we encounter the term observability, our initial instinct is usually to attribute it solely to SRE concerns. Upon closer examination, one may realize that actually implementing observability is, in essence, more aligned with the developer domain. During this session, we will discuss the importance of observability and related challenges from a developer's perspective. The discussion will cover typical architectures, ranging from the ease of instrumenting our Python code to further data processing and the seamless export of telemetry data for analysis. Attendees will gain a deeper understanding of the significance of observability and how integrating open-source frameworks like OpenTelemetry promotes effective observability in a vendor-neutral way.
+</details>
+
+## **One analysis a day keeps anomalies away!**
+
+* **madalina**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Ever felt like you’re navigating a data jungle, battling to survive the unexpected production problems that throw you off track? Well, you’re not alone. Staying on top of your data's health is not just smart – it's crucial. In this talk, I will share some Python tricks (methods and libraries) that you can use to defend from those wild data problems. Because let's face it, being able to effectively monitor your data, spot sneaky anomalies, and get to the bottom of them is the key to unlocking a buried treasure.
+
+First, I'll take you through the ins and outs of observability, highlighting its importance for managing both the inputs and outputs of machine learning models, as well as for overall data quality. We'll explore a range of techniques to detect anomalies, with a focus on multivariate time series data. We'll also cover how we can keep this process as computationally efficient as possible.
+
+But we won't stop at just finding these anomalies: we're on a mission to chase them down to their lair! The second part of the talk will equip you with the detective skills to perform root cause analysis and extract as much insights as possible. These discoveries can be an eye opener and the first step towards new projects and strategies. Next, we will also tackle distinguishing real anomalies from data evolution (or drift) and set up effective monitoring strategies to keep your data clean and insightful.
+
+If your interests lie in machine learning or you're simply keen on data quality, join me as we set off to unravel the mysteries of data observability. Let's learn how to keep data problems in check and when life gives you anomalies, turn them into business opportunities!
+</details>
+
+## **PEP 639 - Towards licensing standardization in Python packaging**
+
+* **Karolina Surma**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Declaring license metadata in Python packaging has got many pitfalls. The current standard doesn’t meet the needs of the wider public, including downstream packagers (e.g. Linux distributions). Trove classifiers are all but precise. Every build backend comes up with its own idea how to fill in the data in pyproject.toml or their custom formats. It comes hardly as a surprise that there’s an existing attempt to fix the landscape with standardization: PEP 639. In my talk I’ll outline what the proposal is about and how it’s been developing over the years. I’ll summarize the current state and the next steps. This includes the introduction of SPDX expresssion syntax, changes to the project metadata declaration, changes to the core metadata, improved glossary and some more.
+</details>
+
+## **PEP 683: Immortal Objects - A new approach for memory managing**
+
+* **Vinícius Gubiani Ferreira**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+For most people that use Python, worrying about memory is not an issue. But that's not the case when you have to handle a lot of requests on a large scale. So how do you reduce memory consumption without affecting the CPU?
+
+In this presentation I'll discuss about memory management in Python from the basics, where the necessity for PEP 683 came from, and the changes introduced by it. I also intend to discuss why this PEP is so important for the language, and what we'll be able to achieve with it in the future, such as changes to the GIL and true parallelism.
+
+The talk is targeted for folks who are intermediate/advanced pythonistas. People who are just starting with Python (maybe less than 1.5 years) may feel a bit lost. Even so, curious learners are more than welcome to join, and I'll try my best to make it easy for all audiences on this advanced topic.
+After this presentation, participants will learn a bit more about how memory management works under the hood in python, and how it may change in the next couple of years.
+</details>
+
+## **Parallelism, Concurrency, and AsyncIO: A Comprehensive Guide for Beginners**
+
+* **Neeraj Pandey, Manoj Pandey**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+This tutorial is crafted for those new to the concepts of concurrent programming, offering a deep dive into the intricacies of parallelism and concurrency in Python. We will cover basic threading and multiprocessing to the advanced asynchronous I/O capabilities of AsyncIO. 
+
+Async IO is a concurrent programming design that has received dedicated support in Python; whereas the package in the Python standard library asyncio provides a foundation and API for running and managing coroutines. Whether you're handling I/O-bound or CPU-bound tasks, this tutorial will equip you with the knowledge to write efficient, robust, and high-performing Python applications.
+</details>
+
+## **Profile, Optimize, Repeat: One Core Is All You Need™**
+
+* **Jonathan Striebel, Valentin Nieper**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Your data analysis pipeline works. Nice!
+Could it be faster? Probably.
+Do you need to parallelize? Not yet.
+
+Discover optimization steps that boost the performance of your data analysis pipeline on a single core, reducing time & costs.
+
+This walkthrough shows tools to identify bottlenecks via profiling, and strategies to mitigate those, demonstrating them in an example. To improve our memory and runtime performance we will use numpy, numba jit-ing and pybind11 extensions.
+</details>
+
+## **Profiling Python Code**
+
+* **Pavel Filonov**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+During my talk at python users group meetup about using Linux perf profiling in python 3.12 I asked the audience how they find performance issues in their Python code. Out of all respondents:
+ * More than half simply read the code and find issues with their eyes;
+ * 10% don't face such problems at all;
+ * The rest use various profilers.
+
+In this workshop, I would like to influence this distribution and for this.
+
+At the beginning, we will consider the application of CPU profiling to find bottlenecks. We will see how convenient it is to read information with a large volume of reports. How we can first localize to problematic functions, and then to specific lines of code. We will be helped by tools such as **pytest-benchmark**, **cProfile** and **line_profiler**.
+
+Next, it is worth separately considering the problem of memory consumption by our code in Python and looking for places where we do not release it with **memory_profiler** and **py-spy**.
+
+Each workshop block will be accompanied by an example and a practical task that you can solve on your laptop. And along the way, ask questions, share results, and discuss the topic of the workshop with other participants and the presenter.
+</details>
+
+## **Pytest Design Patterns**
+
+* **Miloslav Pojman**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Proper testing of your Python application doesn't require a rewrite into hexagonal architecture (whatever it means 🤷). In this session, we'll explore battle-tested techniques to enhance the maintainability of your test suite.
+
+- **Embracing Well-Known Patterns**: The test client or transaction-bound tests are well-established patterns originating from Django. We will explore how to extend these foundational practices within pytest.
+- **Employing Fixture Factories**: How to ensure that our test data clearly cover the intended scenarios? Unpack the utility of fixture factories, streamlining the setup process.
+- **Mocking without Monkey Patching**: Learn effective mocking, steering clear of the problematic practice of monkey patching. We'll explore strategies to achieve accurate testing using favorite frameworks and libraries.
+- **Covering More with Parametrized Fixtures**: Many developers are familiar with pytest fixtures and parametrized tests, but may not be aware of the power of their combination: parametrized fixtures. Discover how to easily build more comprehensive tests.
+- **Rethinking Test Categorization**: The traditional division into unit and integration tests often falls short in practical application. We'll check an alternative approach that can better align with real-world scenarios.
+
+The goal is not merely to report higher coverage but to have tests that can be trusted. By incorporating established patterns, you'll be empowered to focus on what truly matters.
+</details>
+
+## **Python in Parallel: Sub-Interpreters vs. NoGIL vs. Multiprocessing**
+
+* **Samet Yaslan**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In the realm of Python development, achieving parallelism and harnessing the full power of modern multi-core processors is challenging. Traditionally constrained by the Global Interpreter Lock (GIL), multi-threading was not useful for true parallelism in Python, hence developers turned into multi-processing. Now this is all changing with upcoming developments. 
+-	A new per-Interpreter GIL in Python 3.12 helps to facilitate true parallelism by opening up sub interpreters to run Python codes at the same time. In addition, it is going to be easier to use these features in Python 3.13 by having support for sub interpreters in the Stdlib.
+-	An upcoming compile option to disable-gil is opening a path to a world with NoGIL where Python threads can truly run in parallel. Which can potentially become the default in the upcoming years. 
+Multiprocessing, sub-interpreters and multi-threading without GIL are all different ways of facilitating multi-core parallelism in Python. Each of these approaches offers a unique pathway to parallel execution, but comes with its own set of trade-offs, complexities, and suitability for different types of problems. During this talk we will explore each of these options and asses their pros and cons.
+
+Whether you're building CPU-bound high throughput applications, IO-bound services, or simply curious about the future of parallel processing in Python, this talk will help you with the knowledge to make informed decisions and leverage Python's parallel computing capabilities.
+</details>
+
+## **Python on the Rocks: Crafting a Smooth Blend with RocksDB**
+
+* **Ria Bhatia**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+When it comes to selecting a high-performance database for your Python application, RocksDB emerges as a top contender, offering a lightweight and efficient solution. RocksDB brings a robust set of features to the table, but what lies beneath its surface? Let's dive into the world of RocksDB with Python, uncovering the mysteries of its internal workings and exploring the principles that make data storage and retrieval seamlessly efficient. Get ready to equip yourself with the knowledge to harness the full potential of RocksDB and elevate your Python applications to new heights.
+</details>
+
+## **RPA, TDD, and Embedded: A world glued together with Python!**
+
+* **Javier Alonso**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Do you know what *RPA* means? Or *TDD*? Or "embedded"? At least, for sure, you know what **Python** is 😉.
+
+"RPA" stands for "Robotic Process Automation", whereas "TDD" stands for "Test Driven Development". Those words usually refer to either the testing process or the automation of it. In the embedded world - the microcontroller one - it is usually easy to test features unitarily, but **hard to test them working within a bigger system**.
+
+Therefore... What is this everything about? In this talk [Robot Framework](https://robotframework.org/) is introduced as the tool to integrate almost everything! Firstly, [Robot Framework](https://robotframework.org/) is introduced: Explain its purpose, semantics, basic writing, etc. Then, we will dig a little into it and how to maximize its potential by tweaking the internal libraries and writing our own ones. Next, we will simulate a real embedded device which we require some integration testing: Exchange some messages, evaluate an external request, etc. And finally, we will glue all this together with [Robot Framework](https://robotframework.org/)!
+
+Sounds interesting, right? Jump into this initialization talk for you to get introduced - or acquire more knowledge - into the embedded and testing world.
+</details>
+
+## **Rapid Prototyping & Proof of Concepts: Django is all we need**
+
+* **Radoslav Georgiev**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In this modern day and age, 2 things are for certain:
+
+1. Time-to-market for our products & features matters.
+2. We can easily drown in complexity and be carried away by over-engineering.
+
+Having the ability to rapidly develop prototypes and proof of concepts is very powerful, because we can iterate towards the right thing, with code.
+
+We know that we can use Django for building mature & long-lasting applications.
+
+But what about building rapid prototypes and proof of concepts?
+
+In this talk, we’ll show that Django can do that job, reliably, as well.
+
+We’ll look at what Django & the rich 3rd party ecosystem has to offer us, when it comes to building rapid prototypes.
+
+We’ll focus on topics like:
+
+1. How to approach rapid prototyping with the correct mindset.
+2. Being quick with Django models.
+3. Realizing that types can be our friends.
+4. Realizing that Django admin may be all the UI we need (at least, in the beginning).
+5. Using HTMX where it makes sense.
+6. Components in Django templates are a good idea.
+
+The talk will be practical & pragmatic, with the aim to provide good examples, derived from experience, that’ll highlight the main topics and ideas.
+
+The talk is great for both beginners, as well as seasoned Django developers.
+
+The final goal is to give clear evidence, supported by examples, that we can use Django, reliably, to rapidly build prototypes & proof of concepts.
+
+It turns out that Django is all we need.
+</details>
+
+## **Rapid detection of red cell membrane defects leading to hemolytic anaemias**
+
+* **Tess Afanasyeva**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+Hemolytic anaemias are a group of disorders characterised by the loss of integrity of the red blood cell membrane that leads to premature RBC clearance. These conditions often are heterogeneous in the genetic causes, complicating diagnosis by high throughput DNA sequencing. We applied deep learning technologies to build a diagnostic tool for hemolytic anaemias. We used an Imaging Flow Cytometer to obtain images of red blood cell membranes for several hemolytic anaemias and then trained the deep neural network to distinguish the stages of the disease using Keras and TensorFlow. This project combines Python-based machine learning with socially viable healthcare applications.
+</details>
+
+## **Redun: Lazy Expressions for Efficient Reactive Python Workflows**
+
+* **Maciej Szymczak, Magdalena Borecka**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+The goal of redun is to provide the benefits of workflow engines for Python code in an easy and unintrusive way. Workflow engines can help run code faster by using parallel distributed execution, they can provide checkpointing for fast resuming of previously halted execution, they can reactively re-execute code based on changes in data or code, and can provide logging for data provenance.
+
+While there are lots of workflow engines available even for Python, redun differs by avoiding the need to restructure programs in terms of dataflow. In fact, we take the position that writing data flows directly is unnecessarily restrictive, and by doing so we lose abstractions we have come to rely on in most modern high-level languages (control flow, recursion, higher order functions, etc). redun’s key insight is that workflows can be expressed as lazy expressions, that are then evaluated by a scheduler that performs automatic parallelization, caching, and data provenance logging.
+
+redun’s key features are:
+- Workflows are defined by lazy expressions that when evaluated emit dynamic directed acyclic graphs (DAGs), enabling complex data flows.
+- Incremental computation that is reactive to both data changes as well as code changes.
+- Code and data changes are detected using hashing of in memory values, external data sources or source code of individual Python functions.
+- Workflow tasks can be executed on a variety of compute backends. (threads, processes, AWS and GCP batch jobs, Spark jobs, etc).
+- Past intermediate results are cached centrally and reused across workflows.
+
+Link to the code: https://github.com/insitro/redun/
+</details>
+
+## **SPy (Static Python) lang: fast as C, Pythonic as Python**
+
+* **Antonio Cuni**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+SPy is a brand new statically typed variant of Python which aim to get performance comparable to system languages such as C and C++, while preserving the "Pythonic feeling" of the language.
+
+The main idea behind SPy is that "modern Python" is actually a subset of Python:
+
+  - many of the most dynamic features of the language are considered bad practice and actively discouraged;
+
+  - the alway-increasingly adoption of typing leads to codebases which are largerly statically typed.
+
+However, these rules are not enforced by the language, and there are cases in which "breaking the rules" is actually useful and make the code easier/better/faster.
+
+From the point of view of language implementors, the VM cannot easily take advantage of the "mostly static" nature of programs because it has always to be ready for the generic case.
+
+SPy tries to reconcile these two sides:
+
+  - it uses a static type system which is designed specifically for safety and performance;
+
+  - the vast majority of "dynamic" feature of Python (like decorators, metaclasses, `__special_methods__`, ...) can be used at zero cost, since they are resolved at compile time by using meta-programming and partial evaluation techniques.
+
+This talk will present in the details the ideas behind SPy and its current status.
+</details>
+
+## **Scikit-LLM: Beginner Friendly NLP Using LLMs**
+
+* **Iryna Kondrashchenko, Oleh Kostromin**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+The instruction following and in-context learning capabilities of LLMs make them suitable for tackling many NLP tasks. In this talk, we will introduce [Scikit-LLM](https://github.com/iryna-kondr/scikit-llm "Scikit-LLM"), a rapidly growing, beginner-friendly library that abstracts the complexity of working with LLMs by providing a scikit-learn compatible API. We will showcase how Scikit-LLM can be utilized for solving text classification and text-to-text tasks, and will delve deeper into various methods to improve the model performance, such as prompting strategies and fine-tuning.
+</details>
+
+## **Shipping ready-to-run Python apps without the need to install Python**
+
+* **Marc-André Lemburg**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Have you ever wanted to ship a script or application to a friend or client, without requiring a specific Python installation or providing complex installation instructions ? Or you want to squeeze out that last bit of juice from your Docker Python image to speed up deployment. Then eGenix PyRun is for you.
+
+PyRun is an open source, Apache-licensed, compressed, single file Python compatible run-time, which fits into merely 5 MB on disk.
+
+It can be used to ship pure Python products as a single file on Unix platforms, create Python Docker images with very small footprint to speed up deployment, or as a neat venv replacement, truly isolating applications from any OS or other Python installations, giving you a predictable target for Python applications across Unix platforms.
+
+We have been using PyRun internally at eGenix for many years and open sourced it back in 2012. This year, we are moving the project to Github and relaunching it, in order to present it to the wider open source and Python community.
+
+The talk will go into details on how PyRun is built from the Python source tree, how to create your own single file Python apps, where it can be put to good use, the roadmap we have for PyRun and what its limitations are.
+</details>
+
+## **Social Media and Sentimental Analysis: CBN Currency Redesign Policy**
+
+* **Oladapo Kayode Abiodun, Akinbo Racheal Shade**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+The identification and measurement of an online audience through the social media platform capitalise on the tonality of emotions on the social media presence. The use of social media has become an unavoidable instrument in various sectors including currency redesign. On October 20, the most populous country and acclaimed Africa’s largest economy, Nigeria announced the plans to redesign 200, 500 and 1000 banknotes in replacement of the existing ones. Nigerian citizens expressed different opinions over social media in support of or understanding of the proposed plan and process. Research has shown that shared sentiments on social media can influence the opinions of others and thus the Central Bank of Nigeria's currency redesign policy. This study, therefore, aims to identify and analyse general sentiments towards the process of the currency redesign policy with the aim of determining the citizen's attitude towards the policy based on social media comments. Firstly, sentiment analysis will be performed on naira redesign-related posts from a selected social media using lexicon-based and supervised machine learning techniques with the aim of determining a summarised polarity percentage (i.e. negative or positive). The post will be collected between January and February 2023. In addition, the performance of the lexicon-based classifier and seven machine learning-based classifiers will be implemented and compared in order to use the best-performing classifier in determining the sentiment polarity of the post. Also, the thematic analysis on both positive and negative posts to further understand and reveal general views about the currency redesign policy.
+</details>
+
+## **State-of-the-art image generation for the masses with Diffusers**
+
+* **Sayak Paul**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+The talk "State-of-the-art image generation for the masses with Diffusers" will explore the diverse applications of the open-source Python library Diffusers in the image and video generation space. The talk will showcase how Diffusers, based on diffusion models, enables fast and high-quality image and video generation, making it accessible to a wide range of users. The presentation will cover various use cases, including image inpainting, image editing, and scene composition, demonstrating the capabilities of Diffusers in enabling users to create and edit photo-realistic images with minimum effort. The audience will gain insights into the potential of Diffusers in revolutionizing the way images and videos are generated and edited, making it a must-attend session for anyone interested in the latest advancements in this field.
+</details>
+
+## **Stop using setup.py!**
+
+* **Piotr Gnus**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+The new pyproject.toml file gains in popularity. Together with it, some changed to existing packaging tools are happening, especially to setuptools and distutils. The first one is moving away from setup.py support, and the other one was removed from stdlib and merged into the setuptools itself.
+
+But that change isn't scary or bad! Come to my poster and I'll show you how you can migrate away from setup.py while still using setuptools like nothing ever changed!
+</details>
+
+## **Streamlining Testing in a Large Python Codebase**
+
+* **Jimmy Lai**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Maintaining code quality through effective testing becomes increasingly challenging as codebases expand and developer teams grow. In our rapidly expanding codebase, we encountered common obstacles such as increasing test suite execution time, slow test coverage reporting and delayed test startup. By leveraging innovative strategies using open-source tools, we achieved remarkable enhancements in testing efficiency and code quality.
+Challenges Faced:
+- Test Suite Execution Time: The duration of test suite execution escalated significantly as we added more tests over time, hampering development speed.
+- Slow Test Startup: Complex test setup led to prolonged test startup times, impeding developer productivity.
+- Test Coverage Reporting Overhead: Coverage tools introduced substantial overhead and impacted test performance.
+
+Solutions Implemented:
+- Parallel Test Execution: We applied pytest-xdist to distribute tests across multiple runners, significantly reducing test suite execution time and enabling faster development iterations.
+- Optimized Test Startup: Pre-installing dependencies in a Docker image and utilizing Kubernetes for auto-scaling continuous integration runners helped expedite test startup times, improving developer efficiency. For local development, we used pytest-hot-reloading to reload tests fast after code editing.
+- Efficient Test Coverage Reporting: Customizing the coverage tool to collect data only on updated files of pull requests minimized overhead on test coverage reporting.
+As a result, in the past year, our test case volume increased by 8000, test coverage was elevated to 85%, and Continuous Integration (CI) test duration was maintained under 15 minute
+</details>
+
+## **Syft: Data Science in Python with privacy guarantees**
+
+* **Valerio Maggio**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In today's data-driven world, privacy stands as an essential requirements for the ethical and effective practice of data science. Moreover, the implementation of robust privacy guarantees in data analysis not only protects sensitive information, but also unlocks the potential for unprecedented democratisation of models and datasets. 
+
+[Syft](https://github.com/OpenMined/PySyft) is an open source stack that provides **secure** and **private** Data Science in Python. `Syft` decouples private data from model training, using techniques like [Federated Learning](https://blog.research.google/2017/04/federated-learning-collaborative.html), and [Encrypted Computation](https://en.wikipedia.org/wiki/Homomorphic_encryption). 
+Moreover, Syft provides a numpy-like interface to integrate with deep learning frameworks so that it is easier to replicate any existing workflows while using privacy-enhancing techniques.
+
+In the first part of my talk I will introduce PETs (Privacy Enhancing Technologies), and discuss OpenMined mission to democratise access to AI models and datasets. Afterwards, I will demonstrate how `PySyft` works, and how it can be used to run a machine learning experiments, with privacy guarantees.
+</details>
+
+## **Tackling Thread Safety in Python**
+
+* **Adarsh Divakaran, Jothir Adithyan**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Thread safety is often overlooked when we start with Python for developing simple scripts. But the hidden monster will be unleashed when we try to run non-thread safe code in a multithreaded setup. 
+
+We will discuss the problems which can happen when seemingly good code is run in a multithreaded environment. We will walk over the concept of race coditions, how Python’s GIL currently affects multithreading and will cover steps to fix thread unsafe code using synchronization primitives.
+</details>
+
+## **Tales from the abyss: some of the most obscure CPython bugs**
+
+* **Pablo Galindo Salgado**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Working on one of the major programming languages surely is a lot of fun but sometimes very weird things happen. In these moments Python stops behaving like Python and you enter a new dimension where everything is possible. And debugging what's going on in this new world of weirdness is quite a daunting task given the size of the CPython codebase. In this talk you will learn some of the most obscure, mind-bending and difficult bugs that we faced when developing CPython and how we solve them. You will also learn all the advanced tips and tricks that we used to slay these dragons so you can fight similar monsters in your own codebases or if you want to contribute to CPython itself!
+</details>
+
+## **Taming One Quadrillion Data Points with Apache Iceberg and Parquet**
+
+* **Gowthami Bhogireddy**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Bloomberg is a leading provider of financial data, with financial data spanning multiple decades. Handling and organizing these huge datasets can be challenging, with typical concerns including sluggish query performance, high storage costs, and data consistency problems.
+
+This talk will describe how Apache Iceberg and Parquet are the dynamic duo of big data management, offering ACID transactions, time travel, and columnar storage capabilities that enable lightning-fast query performance and seamless schema evolution for even our largest workloads. 
+
+The session will introduce Apache Iceberg, an open-source table format that enables incremental updates, versioning, and schema evolution. The discussion will then focus on Parquet files, which store data in a compressed and columnar format to enhance query performance and lower storage costs. Finally, the session will outline how our Enterprise Data Lake Applications engineering team has harnessed the capabilities of Apache Iceberg (especially PyIceberg) to revolutionize our data management and analytical processing workflows.
+
+Attendees will be able to apply the best practices discussed in the talk to build better infrastructure for their growing data demands and spur innovation within their organization.
+</details>
+
+## **Test java and C applications with python**
+
+* **Roberto Polli**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Did you know that Python can be used to test foreign code, such as Java and C?
+This enables writing tests for legacy code in a very few time, reducing development time and improving code coverage (e.g., using python frameworks to generate testcases for foreign code).
+If you have C and Java services that communicates over the network, you can use python as a glue to anticipate some integration tests directly in python.
+</details>
+
+## **The Imposter Staff Engineer’s Journey to Leadership**
+
+* **Manivannan Selvaraj**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+I, an undercover Imposter Syndrome sufferer, masquerade as a Staff Software Engineer amid an army of coding geniuses. Imagine you're playing a video game where you're pretending to be a powerful leader, but deep down, you're convinced you're not really good enough. That's my daily life as a staff software engineer leading a team, except it's not a game, and the 'quit' button doesn't work. In this talk, I'll tell you about my hilarious misadventures and unexpected triumphs in the rollercoaster ride of being a staff software engineer and how my team still manages to create cool things despite my 'imposter' moments.
+</details>
+
+## **The PyArrow revolution in Pandas**
+
+* **Reuven M. Lerner**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Pandas has long used NumPy for its back-end storage. But things are changing, and the future of Pandas will likely be tied closely with PyArrow. What are Arrow and PyArrow? How do they affect Pandas users today, and how will they affect us in the future? In this talk, I introduce PyArrow, tell you what it does, how we can already use it in our Pandas work, and whether that's a good idea.
+</details>
+
+## **The truth about objects**
+
+* **Naomi Ceder**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+"Everything in Python is an object." This is a profound truth about Python, but what does it mean? Is literally EVERYTHING an object? And what is an object anyway? Are objects the same as instances of a class? How do classes and types really work in Python? And what do metaclasses have to do with anything?
+
+In fact, the answers to these questions are probably not what you think they are - Python's approach to objects is different from most other languages in sometimes surprising ways. 
+
+This talk will use simple live coded examples to explore how objects work in Python and clear up several common misconceptions and misunderstandings about how objects and instances, classes and types, and metaclasses all work together. 
+
+Be warned - you are likely to be surprised when you learn the truth about objects in Python.
+</details>
+
+## **Unlock the Power of Dev Containers: Consistent Environments in Seconds!**
+
+* **Thomas Fraunholz**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+In this talk, we will explore the basic concepts of Dev Containers and demonstrate how they can support your everyday development as a Python programmer, data scientist, or machine learning engineer. With Dev Containers, you can build a consistent development environment in seconds, no matter where you are or what tools you use. And you know what? The Development Container Specification is even open source. Say goodbye to the hassle of setting up your development environment from scratch every time you start a new project!
+
+We will start with a basic example and discuss how to set up a consistent Python development environment, including best practices for package management and GPU support. After this talk, you will be able to leverage the advantages of Dev Containers, allowing you to work from anywhere and be ready in seconds.
+
+If you're tired of wasting time setting up your development environment and want to unlock the power of Dev Containers, then this talk is a must-attend for you!
+</details>
+
+## **Unlocking Mixture of Experts : From 1 Know-it-all to group of Jedi Masters**
+
+* **Pranjal Biyani**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Answer this : In critical domains like Healthcare would you prefer a Jack-of-all-trades OR one Yoda, the master? 
+
+Join me on an exhilarating journey as we delve deep into the Mixture of Experts (MoE) technique which is a practical and intuitive next-step to elevate predictive powers of generalised know-it-all models.
+
+A powerful approach to solve a variety of ML tasks, MoE operates on the principle of Divide and Conquer with some less obvious limitations, pros, and cons. You’ll go through a captivating exploration of insights, intuitive reasoning, solid mathematical underpinnings, and a treasure trove of interesting examples!
+
+We'll kick off by surveying the landscape, from ensemble models to stacked estimators, gradually ascending towards the pinnacle of MoE. Along the way, we'll explore challenges, alternative routes, and the crucial art of knowing when to wield the MoE magic—AND when to hold back. Brace yourselves for a business-oriented finale, where we discuss metrics around cost, latency, and throughput for MoE models. And fear not! We'll wrap up with an array of resources equipping you to dive headfirst into pre-trained MoE models, fine-tune them, or even forge your own from scratch. May the force of Experts be with you !"
+</details>
+
+## **VIRUS-MVP: using Dash and Plotly to visualize viral mutations by lineage**
+
+* **Ivan Gill**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+During the COVID-19 pandemic, public health researchers have tracked viral genomic mutations to better understand changes in disease severity and transmissibility. The mutation data is often inside large textual files, generated by bioinformatics workflows. Our team developed one such workflow in Python: nf-ncov-voc, which outputs large tabular datasets describing mutation frequencies and locations. To aid researchers in processing and analyzing the datasets, we also developed VIRUS-MVP: a web application that visually summarizes multiple nf-ncov-voc datasets in a single heatmap.
+
+Visually analyzing aggregated mutation data through VIRUS-MVP helps identify links between multiple mutations and distinct virus lineages, including lineages labeled as “variants of concern”. VIRUS-MVP has several interactive features to expedite these analyses, including the ability to jump across genes, search for mutations by name, and toggle mutations by frequency. VIRUS-MVP also annotates mutations with known functions impacting disease severity or transmissibility.
+
+We developed VIRUS-MVP using the Python libraries Plotly and Dash. We selected these libraries to streamline development efforts, as Plotly is a graphing library that draws interactive graphs with minimal code, and Dash is a web framework designed to serve Plotly graphs on a front-end interface. VIRUS-MVP and nf-ncov-voc are both virus-agnostic, but our initial priority was visualizing SARS-CoV-2 data. We deployed this prioritized instance as COVID-MVP at https://virusmvp.org/covid-mvp/, where the application is used by researchers from CoVaRR-Net. We are currently developing instances to also track Mpox and Influenza viruses.
+</details>
+
+## **What do lockfiles pin, *actually*? Let's dig in and get our hands dirty!**
+
+* **Sviatoslav Sydorenko (Святослав Сидоренко)**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+Reproducible dependency management across multiple environments is crucial yet often misunderstood. This hands-on workshop demystifies virtual environments, lockfiles, and how to avoid conflicts when a project needs different dependencies for tasks like testing, documentation, and production.
+
+You'll learn to maintain separate lockfiles per environment using pip's constraint files. Through live coding exercises, you'll set up a full-fledged GitHub project with GitHub Actions CI/CD pipelines that utilize tox/nox to run tests, build docs, and update lockfiles automatically.
+
+By the end, you'll have practiced implementing robust, reproducible environments tailored to each project context, ensuring seamless collaboration and deployment.
+
+Come and join a member of the PyPA and a seasoned contributor to the packaging ecosystem, including [`pip-tools`](https://pip-tools.rtfd.io), walk you through the intricacies of environment reproducibility.
+</details>
+
+## **When and how to start coding with kids**
+
+* **Anna-Lena Popkes**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Our world is driven by technology and there are many reasons to teach our kids how to code. For example, coding allows them to develop logical reasoning skills and teaches attention to detail. Allowing children to discover how much fun coding can be supports them in their development and opens many doors for their future.
+
+But when and how should we start coding with kids? This talk will approach the question from a scientific perspective, looking into how children's brains develop, how children learn and how to best teach them coding abilities. It will answer important questions like "At what age can a child start coding?" or "What are the benefits of learning to code?". It will also present possible starting points, like learning platforms or tutorials.
+</details>
+
+## **Which LLM said that? - watermarking generated text**
+
+* **Adam Kaczmarek**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+With the emergence of large generative language models there comes a problem of assigning the authorship of the AI-generated texts to its original source. This raises many concerns regarding eg. social engineering, fake news generation and cheating in many educational assignments. While there are several black-box methods for detecting if text was written by human or LLM they have significant issues. 
+
+I will discuss how by watermarking you can equip your LLM with a mechanism that undetectable to human eye can give you the means of verifying if it was the true source of a generated text.
+</details>
+
+## **Why communication is the best skill you can develop as a programmer**
+
+* **Miriam Forner**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+As engineers, aspiring or experienced, we can become so focused on growing our technical skills that we forget about the basics. The ability to communicate well can be seen as a skill needed by leaders, managers or client-facing colleagues, but in reality it forms the basis of the quality of our work. From understanding client requirements, to code reviews and even naming variables, communication is a fundamental part of our profession and something we could all benefit from being more conscious of.
+
+In this open-to-all-levels talk we’ll discuss in what situations we should pay closer attention to our style of communication, explore the role of empathy in writing and reviewing code and cover tips and tricks for both making yourself understood and better understanding others.
+</details>
+
+## **Writing Python like it's Rust - more robust code with type hints**
+
+* **Jakub Beránek**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+Using type hints in Python has many advantages, some of which might not be obvious at first. We will see that it allows us to explicitly encode invariants in our code, which reduces the amount of tests that we need to write, it improves development speed and maintainability, and perhaps most importantly, it can give us more confidence that our code does what we expect it to do.
+
+We will also go through code examples that will show us how to leverage typing in Python to design APIs that cannot be easily misused, to create robust programs that we can trust.
+
+Audience members are expected to be able to read and understand Python code.
+</details>
+
+## **Writing Python modules in Rust**
+
+* **Kushal Das**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+Over the years we have many Python extensions written in Rust, for performance, safety/security being the primary reason. This workshop is meant for Python programmers (who may never touched Rust before) to try out writing a fully working extension with various features.
+</details>
+
+## **Zero Trust APIs with Python**
+
+* **Jose Haro Peralta**
+* **Type:** Talk
+
+<details>
+<summary>Show abstract</summary>
+What does it take to deliver a properly secured API? When we think about API security, we first think of authentication and authorization. But there’s more to it. API security also includes protecting against SQL Injection attacks, Mass Assignment, Excessive Data Exposure, Server-Side Request Forgery (SSRS), and more.
+
+APIs are now the main attack vector on the Internet, and we gotta do something about it. Thankfully, Python boasts excellent libraries for API development, like FastAPI, the Django REST Framework, APIFlask, and more. When used properly, these libraries help us deliver secure APIs.
+
+In this talk, I’ll present a model of Zero Trust Security for APIs that applies robust data validation and sanitization across all data flows to help us deliver secure APIs. You’ll learn how your API design and implementation choices impact API security and how to discover and tackle vulnerabilities.
+
+We’ll walk through practical examples of SQL injection, mass assignment, big payload attacks, pagination attacks, and more. We’ll see how URL parameters and request payloads can become attack vectors when they’re not properly configured.
+
+You’ll also learn how to use tools like schemathesis and Spectral to automate and scale the process of detecting vulnerabilities in your APIs.
+
+By the end of this talk, you’ll be aware of the most important threats to our APIs and you’ll know how to discover and address them effectively. You’ll also get familiar with the concepts of API Security by Design, Shift-Left API Security, and Zero Trust APIs.
+</details>
+
+## **pytest tips and tricks for a better testsuite**
+
+* **Florian Bruhin**
+* **Type:** Tutorial
+
+<details>
+<summary>Show abstract</summary>
+pytest lets you write simple tests fast - but also scales to very complex scenarios: Beyond the basics of no-boilerplate test functions, this training will show various intermediate/advanced features, as well as gems and tricks.
+
+To attend this training, you should already be familiar with the pytest basics (e.g. writing test functions, parametrize, or what a fixture is) and want to learn how to take the next step to improve your test suites.
+
+If you're already familiar with things like fixture caching scopes, autouse, or using the built-in `tmp_path`/`monkeypatch`/... fixtures: There will probably be some slides about concepts you already know, but there are also various little hidden tricks and gems I'll be showing.
+</details>
+
+## **µDjango 2.0, an asynchronous microservices technique.**
+
+* **Maxim Danilov**
+* **Type:** Poster
+
+<details>
+<summary>Show abstract</summary>
+A standard Django project involves working with multiple files and folders from the start. Let's see how the work with a Django project changes itself when we have only one file in project. This solution automatically transforms Django into a microservice-oriented async framework with "batteries included” philosophy.
+</details>
+

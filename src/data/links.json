@@ -8,6 +8,10 @@
           "path": "/mentorship"
         },
         {
+          "name": "List of sessions",
+          "path": "/sessions"
+        },
+        {
           "name": "Call for Proposals",
           "path": "/cfp"
         },
