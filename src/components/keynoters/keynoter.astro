@@ -27,11 +27,12 @@ const {
 
 const placeholders = [Person1, Person2, Person3, Person4, Person5];
 
-const Placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+const Placeholder =
+  placeholders[Math.floor(Math.random() * placeholders.length)];
 ---
 
 <li class:list={["list-none rounded-2xl overflow-clip flex group", className]}>
-  <a href={link} class="block w-full h-full relative">
+  <a class="block w-full h-full relative">
     <div class="relative aspect-[9/10] overflow-clip">
       {
         image ? (
@@ -42,7 +43,7 @@ const Placeholder = placeholders[Math.floor(Math.random() * placeholders.length)
           />
         ) : (
           <div class="bg-keynoter-info w-full h-full group-hover:opacity-90">
-              <Placeholder />
+            <Placeholder />
           </div>
         )
       }
