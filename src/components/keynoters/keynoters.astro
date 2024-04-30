@@ -5,9 +5,9 @@ import Keynoter from "./keynoter.astro";
 
 import { getCollection } from "astro:content";
 
-const c = await getCollection("keynoters");
+const keynoters = await getCollection("keynoters");
 
-const keynoters = new Array(6).fill(c[0]);
+const placeholders = Math.max(0, 6 - keynoters.length);
 ---
 
 <section class="relative my-12 px-6">
@@ -98,6 +98,19 @@ const keynoters = new Array(6).fill(c[0]);
           ]}
         />
       ))
+    }
+    {
+      new Array(placeholders)
+        .fill(null)
+        .map((_, index) => (
+          <Keynoter
+            name=""
+            tagline=""
+            link=""
+            placeholder={true}
+            class:list={["w-full sm:w-[calc(50%-1rem)] md:w-[calc(30%-1rem)]"]}
+          />
+        ))
     }
   </ul>
 
