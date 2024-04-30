@@ -1,0 +1,51 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+export interface Props {
+  name: string;
+  tagline?: string;
+  image: ImageMetadata;
+  link: string;
+  placeholder?: boolean;
+  class?: string;
+}
+
+const {
+  link,
+  name,
+  tagline,
+  image,
+  placeholder,
+  class: className,
+} = Astro.props;
+---
+
+<li class:list={["list-none rounded-2xl overflow-clip flex group", className]}>
+  <a href={link} class="block w-full h-full relative">
+    <div class="relative aspect-[9/10] overflow-clip">
+      <Image
+        src={image}
+        alt={`A photo of ${name}`}
+        class="object-cover group-hover:scale-105 transition-transform h-full w-auto"
+      />
+    </div>
+
+    <div
+      class="px-5 py-2 pb-4 bg-keynoter-info rounded-t-none h-full group-hover:opacity-90"
+    >
+      {
+        placeholder ? (
+          <p class="text-body-inverted font-bold">More keynoters coming soon</p>
+        ) : (
+          <>
+            <p class="text-body-inverted font-bold">{name}</p>
+            {tagline ? (
+              <p class="text-body-light font-bold text-sm italic">{tagline}</p>
+            ) : null}
+          </>
+        )
+      }
+    </div>
+  </a>
+</li>

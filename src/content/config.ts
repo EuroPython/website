@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from "astro:content";
+import { defineCollection, z } from "astro:content";
 
 const tiers = [
   "Keystone",
@@ -43,6 +43,17 @@ const sponsors = defineCollection({
     }),
 });
 
+const keynoters = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      url: z.string(),
+      tagline: z.string().optional(),
+      image: image(),
+    }),
+});
+
 const speakers = defineCollection({
   type: "content",
   schema: z.object({
@@ -81,4 +92,4 @@ const sessions = defineCollection({
   }),
 });
 
-export const collections = { pages, deadlines, sponsors, sessions, speakers };
+export const collections = { pages, deadlines, sponsors, keynoters, sessions, speakers };

@@ -12,6 +12,7 @@ import HeroVenue from "../components/hero-section/hero-venue.astro";
 import { getCollection } from "astro:content";
 import Sponsors from "../components/sponsors/sponsors.astro";
 import Accent from "../components/accent/2024.astro";
+import Keynoters from "../components/keynoters/keynoters.astro";
 
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/venue.mdx";
@@ -70,6 +71,8 @@ deadlines = deadlines
       </HeroVenue>
     </div>
   </div>
+
+  <Keynoters />
 
   <Sponsors />
 </Layout>
