@@ -22,6 +22,15 @@
       ]
     },
     {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Django Girls Workshop",
+          "path": "https://djangogirls.org/en/prague/"
+        }
+      ]
+    },
+    {
       "name": "Info & Support",
       "items": [
         {
