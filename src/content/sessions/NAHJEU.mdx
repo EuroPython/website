@@ -1,0 +1,34 @@
+---
+code: NAHJEU
+delivery: in-person
+duration: '30'
+end: null
+level: intermediate
+next_talk_code: null
+prev_talk_code: null
+room: null
+slug: cython-and-the-limited-api
+speakers:
+- DMLAZT
+start: null
+state: confirmed
+submission_type: Talk
+talks_after: null
+talks_in_parallel: null
+title: Cython and the Limited API
+track: Python Internals & Ecosystem
+tweet: ''
+website_url: https://ep2024.europython.eu/session/cython-and-the-limited-api
+---
+
+Cython's Limited API support is finally approaching a usable state. As an example, it is possible to produce a working version of Cython by compiling it in Limited API mode.
+
+For users the main advantage is to be able to reduce the number of wheels/binaries they have to build in order to be compatible across a range of versions of Python. For Cython itself there is also an advantage in future-proofing: being able to produce simpler code that should continue to work even as the Python interpreter evolves and which is more likely to work with alternative Python implementations, as well as hopefully placating the unease some of the core Python developers have at Cython's use of Python internals (in non-limited API mode).
+
+This talk will start off by looking at the subject from the users' perspective:
+* Why you might want to use the Limited API (from Cython).
+* What kind of projects are likely to benefit from it (as far as it's ever possible to predict how people will use a tool...).
+* What you actually need to do to build a Cython module with the Limited API.
+* What the limitations and disadvantages are: there are some features that don't work, some features that only work in recent versions of Python, some speed costs, and complete forward-compatibility might not be all you hope it would be.
+
+When that "general interest" section is done, I plan to talk about some of the gory implementation details - what "creative" solutions have been employed to work around missing features or things the Limited API was never intended to do.

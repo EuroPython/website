@@ -1,0 +1,34 @@
+---
+code: 7CJVKM
+delivery: in-person
+duration: '30'
+end: null
+level: intermediate
+next_talk_code: null
+prev_talk_code: null
+room: null
+slug: streamlining-testing-in-a-large-python-codebase
+speakers:
+- 7DHKEF
+start: null
+state: confirmed
+submission_type: Talk
+talks_after: null
+talks_in_parallel: null
+title: Streamlining Testing in a Large Python Codebase
+track: DevOps and Infrastructure (Cloud & Hardware)
+tweet: ''
+website_url: https://ep2024.europython.eu/session/streamlining-testing-in-a-large-python-codebase
+---
+
+Maintaining code quality through effective testing becomes increasingly challenging as codebases expand and developer teams grow. In our rapidly expanding codebase, we encountered common obstacles such as increasing test suite execution time, slow test coverage reporting and delayed test startup. By leveraging innovative strategies using open-source tools, we achieved remarkable enhancements in testing efficiency and code quality.
+Challenges Faced:
+- Test Suite Execution Time: The duration of test suite execution escalated significantly as we added more tests over time, hampering development speed.
+- Slow Test Startup: Complex test setup led to prolonged test startup times, impeding developer productivity.
+- Test Coverage Reporting Overhead: Coverage tools introduced substantial overhead and impacted test performance.
+
+Solutions Implemented:
+- Parallel Test Execution: We applied pytest-xdist to distribute tests across multiple runners, significantly reducing test suite execution time and enabling faster development iterations.
+- Optimized Test Startup: Pre-installing dependencies in a Docker image and utilizing Kubernetes for auto-scaling continuous integration runners helped expedite test startup times, improving developer efficiency. For local development, we used pytest-hot-reloading to reload tests fast after code editing.
+- Efficient Test Coverage Reporting: Customizing the coverage tool to collect data only on updated files of pull requests minimized overhead on test coverage reporting.
+As a result, in the past year, our test case volume increased by 8000, test coverage was elevated to 85%, and Continuous Integration (CI) test duration was maintained under 15 minute

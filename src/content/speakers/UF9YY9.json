@@ -1,0 +1,12 @@
+{
+  "affiliation": "CodSpeed",
+  "avatar": "https://program.europython.eu/media/avatars/ppTwitter_7jRDDGe.png",
+  "biography": "Hi, I'm Arthur, a software engineer based in Paris 🇫🇷🥖\r\n\r\nI worked as an engineer in a few tech companies over the past years, mostly building software with Python, but I'm also passionate about (too ??) many other software fields.\r\n\r\nI'm an Open source enthusiast and love to contribute when possible. 2 years ago, I built ODMantic, an ODM for MongoDB & Python. It's a kind of ORM but built on top of Pydantic to provide a seamless model definition and integration with FastAPI.\r\n\r\nLast year, I founded CodSpeed, a Continuous Performance Analysis solution helping tech companies and Open-Source projects prevent performance issues directly in their CI pipelines.",
+  "code": "UF9YY9",
+  "homepage": null,
+  "mastodon": null,
+  "name": "Arthur Pastel",
+  "slug": "arthur-pastel",
+  "submissions": ["7XMZGV"],
+  "twitter": "@art049"
+}

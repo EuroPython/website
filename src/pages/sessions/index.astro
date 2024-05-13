@@ -1,0 +1,71 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/prose/prose.astro";
+
+const sessions = await getCollection("sessions");
+
+const allSpeakers = await getCollection("speakers");
+
+const speakers: Record<string, (typeof allSpeakers)[0]> = allSpeakers.reduce(
+  (acc, speaker) => ({
+    ...acc,
+    [speaker.id]: speaker,
+  }),
+  {},
+);
+
+const title = "Sessions";
+
+const description = "A list of all the sessions at the conference";
+---
+
+<Layout title={title} description={description}>
+  <div class="px-6">
+    <Prose>
+      <h1>Confirmed sessions</h1>
+      <p>
+        IMPORTANT: This is not the final list of confirmed talks, and it might
+        be changed.
+      </p>
+    </Prose>
+
+    <ol>
+      {
+        sessions.map((session) => (
+          <li class="mb-12">
+            <Prose>
+              <h1>
+                <a href={`/sessions/${session.slug}`} class="underline">
+                  {session.data.title}
+                </a>
+              </h1>
+            </Prose>
+
+            <dl class="grid grid-cols-[100px,1fr] gap-x-4">
+              <dt class="font-bold">Speakers</dt>
+              <dd>
+                <ul>
+                  {session.data.speakers.map((speaker, index) => (
+                    <li class="inline">
+                      <a
+                        href={`/speakers/${speakers[speaker.id].data.slug}`}
+                        class="underline"
+                      >
+                        {speakers[speaker.id].data.name}
+                      </a>
+                      {index < session.data.speakers.length - 1 ? ", " : ""}
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+              <dt class="font-bold">Type</dt>
+
+              <dd>{session.data.submission_type}</dd>
+            </dl>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</Layout>

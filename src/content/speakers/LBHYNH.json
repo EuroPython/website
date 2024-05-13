@@ -1,0 +1,12 @@
+{
+  "affiliation": "Red Hat",
+  "avatar": "https://program.europython.eu/media/avatars/2022_profile_hOU4JId.jpg",
+  "biography": "I am paid by Red Hat to maintain Python upstream (python.org) and downstream (RHEL and Fedora). Python core developer.",
+  "code": "LBHYNH",
+  "homepage": "https://vstinner.readthedocs.io/",
+  "mastodon": "https://mamot.fr/@vstinner",
+  "name": "Victor Stinner",
+  "slug": "victor-stinner",
+  "submissions": ["DEQKEY"],
+  "twitter": "VictorStinner"
+}

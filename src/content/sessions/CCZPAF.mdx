@@ -1,0 +1,28 @@
+---
+code: CCZPAF
+delivery: in-person
+duration: '30'
+end: null
+level: intermediate
+next_talk_code: null
+prev_talk_code: null
+room: null
+slug: adventures-in-not-writing-tests
+speakers:
+- WDWSNW
+start: null
+state: confirmed
+submission_type: Talk
+talks_after: null
+talks_in_parallel: null
+title: Adventures in not writing tests
+track: Software Engineering & Architecture
+tweet: ''
+website_url: https://ep2024.europython.eu/session/adventures-in-not-writing-tests
+---
+
+Sometimes we write code that we don't expect to go to production; they are one-offs or analysis to understand our data. However, a good analysis may be worth repeating, and before we know it, the code that was never supposed to go to production is running every day and driving critical decisions – it is in production. Once our code is in production, we have to maintain it, and that means we need tests to ensure that changes made to the code while maintaining it do not change other behavior.
+
+Hypothesis is a Python library for creating inputs that are good for exercising code. Hypothesis tests create many different inputs for a single test case, with a special concentration on inputs that are likely to break your code. If the code was originally written to understand data, then new data we feed it over time could be very different from what was initially expected or planned for. With Hypothesis, we randomize our test outputs and they become just as unknown as our real-world outputs. Our tests then confirm certain properties to prove that the analysis was performed as expected.
+
+Ghostwriting is a feature of Hypothesis that writes tests based on the type hints in your code. This can not only save time, but also validate our type hints. The savings in time and toil can be significant, but the ghostwritten tests do also need some additions to truly test our code. We'll look at what is needed to both generate proper inputs and check our outputs.
