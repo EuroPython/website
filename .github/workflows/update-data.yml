@@ -1,0 +1,43 @@
+name: Download data and create PR
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  run-script-and-create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install pipx
+        run: python3 -m pip install --user pipx
+
+      - name: Ensure pipx bin is on PATH
+        run: |
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          source $GITHUB_ENV
+
+      - name: Run download-data script
+        run: pipx run scripts/download-data.py
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Run pre-commit
+        run: pre-commit run --all-files
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff-index --quiet HEAD || (git commit -m "🆕 Update data" && git push origin main)
