@@ -1,0 +1,28 @@
+---
+code: PC3XVJ
+delivery: in-person
+duration: '30'
+end: null
+level: intermediate
+next_talk_code: null
+prev_talk_code: null
+room: null
+slug: data-pipelines-with-celery-modular-signal-driven-and-manageable
+speakers:
+- marin-aglic-cuvic
+start: null
+state: confirmed
+submission_type: Talk
+talks_after: null
+talks_in_parallel: null
+title: 'Data pipelines with Celery: modular, signal-driven and manageable'
+track: 'PyData: Data Engineering'
+tweet: ''
+website_url: https://ep2024.europython.eu/session/data-pipelines-with-celery-modular-signal-driven-and-manageable
+---
+
+Writing pipelines for processing large datasets has its challenges – processing data within an acceptable time frame, dealing with unreliable and rate-limited APIs, and unexpected failures that can cause data incompleteness. In this talk we’ll discuss how to design & implement modular, efficient, and manageable workflows with Celery, Redis, and signal-based triggering.
+
+We’ll begin by exploring the motivation behind segmenting pipelines into smaller, more manageable ones. The segmentation simplifies development, enhances fault tolerance, and improves modularity, making it easier to test and debug each component. By leveraging Redis as a data store and Celery’s signals, we introduce self-triggering (or looped) pipelines that efficiently manage data batches within API rate limits and system resource constraints. We will look at an example of how we did things in the past using periodic tasks and how this new approach, instead, simplifies and increases our data throughput and completeness. Additionally, this facilitates triggering pipelines with secondary benefits, such as persisting and reporting results, which allows analysis and insight into the processed data. This can help us tackle inaccuracies and optimise data handling in budget-sensitive environments.
+
+The talk offers the attendees a perspective on designing data pipelines in Celery that they may have not seen before. We will share the techniques for implementing more effective and maintainable data pipelines in their own projects.

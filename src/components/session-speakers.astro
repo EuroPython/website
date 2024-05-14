@@ -1,0 +1,26 @@
+---
+import type { ValidContentEntrySlug } from "astro:content";
+import { getEntries } from "astro:content";
+
+interface Props {
+  speakers: Array<{
+    slug: ValidContentEntrySlug<"speakers">;
+    collection: "speakers";
+  }>;
+}
+
+const { speakers: speakersEntries } = Astro.props;
+
+const speakers = await getEntries(speakersEntries);
+---
+
+{
+  speakers.map((speaker, index) => (
+    <span class="inline">
+      <a href={`/speaker/${speaker.slug}`} class="underline">
+        {speaker.data.name}
+      </a>
+      {index < speakers.length - 1 ? ", " : ""}
+    </span>
+  ))
+}
