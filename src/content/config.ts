@@ -44,7 +44,7 @@ const sponsors = defineCollection({
 });
 
 const speakers = defineCollection({
-  type: "data",
+  type: "content",
   schema: z.object({
     code: z.string(),
     name: z.string(),
