@@ -1,12 +1,7 @@
-name: Download data and create PR
+name: 🔄 Update data
 
 on:
-  push:
-    branches:
-      - main
-      - feature/update
-  schedule:
-    - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 jobs:
   udpate-data:
@@ -19,9 +14,6 @@ jobs:
       - name: Run download-data script
         run: pipx run scripts/download-data.py
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-
       - name: Install pre-commit
         run: pip install pre-commit
 
@@ -29,11 +21,9 @@ jobs:
         run: pre-commit run --all-files
         continue-on-error: true
 
-      # print if there's changes
-      - name: Check for changes
-        run: git status
-
-      # - name: Commit and push changes
-      #   run: |
-      #     git config --global user.name "github-actions[bot]"
-      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff-index --quiet HEAD || (git commit -m "🆕 Update data" && git push origin main)
