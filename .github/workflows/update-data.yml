@@ -9,7 +9,7 @@ on:
     - cron: "*/5 * * * *"
 
 jobs:
-  run-script-and-create-pr:
+  udpate_data:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,6 +27,11 @@ jobs:
 
       - name: Run pre-commit
         run: pre-commit run --all-files
+        continue-on-error: true
+
+      # print if there's changes
+      - name: Check for changes
+        run: git status
 
       # - name: Commit and push changes
       #   run: |
