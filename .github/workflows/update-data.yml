@@ -9,7 +9,7 @@ on:
     - cron: "*/5 * * * *"
 
 jobs:
-  udpate_data:
+  udpate-data:
     runs-on: ubuntu-latest
 
     steps:
