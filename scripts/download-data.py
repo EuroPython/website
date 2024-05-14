@@ -29,7 +29,9 @@ def write_mdx(data: dict[str, Any], output_dir: pathlib.Path, content_key: str) 
         filename = f"{key}.mdx"
         path = output_dir / filename
 
-        content = value.pop(content_key)
+        content = value.pop(content_key) or ""
+
+        content = content.replace("<3", "❤️")
 
         frontmatter = yaml.dump(value, sort_keys=True)
 
@@ -57,7 +59,8 @@ def download() -> None:
 
     for speaker in speakers.values():
         speaker["submissions"] = [
-            sessions[session_id]["slug"] for session_id in speaker.get("submissions", [])
+            sessions[session_id]["slug"]
+            for session_id in speaker.get("submissions", [])
         ]
 
     write_mdx(sessions, ROOT / "src/content/sessions", "abstract")

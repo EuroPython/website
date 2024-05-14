@@ -1,7 +1,7 @@
 ---
 code: ZWDDAT
 delivery: in-person
-duration: "45"
+duration: '45'
 end: null
 level: advanced
 next_talk_code: null
@@ -9,47 +9,34 @@ prev_talk_code: null
 room: null
 slug: spy-static-python-lang-fast-as-c-pythonic-as-python
 speakers:
-  - antonio-cuni
+- antonio-cuni
 start: null
 state: confirmed
 submission_type: Talk (long session)
 talks_after: null
 talks_in_parallel: null
-title: "SPy (Static Python) lang: fast as C, Pythonic as Python"
+title: 'SPy (Static Python) lang: fast as C, Pythonic as Python'
 track: Python Internals & Ecosystem
-tweet: ""
+tweet: ''
 website_url: https://ep2024.europython.eu/session/spy-static-python-lang-fast-as-c-pythonic-as-python
 ---
 
-SPy is a brand new statically typed variant of Python which aim to get
-performance comparable to system languages such as C and C++, while preserving
-the "Pythonic feeling" of the language.
+SPy is a brand new statically typed variant of Python which aim to get performance comparable to system languages such as C and C++, while preserving the "Pythonic feeling" of the language.
 
 The main idea behind SPy is that "modern Python" is actually a subset of Python:
 
-- many of the most dynamic features of the language are considered bad practice
-  and actively discouraged;
+  - many of the most dynamic features of the language are considered bad practice and actively discouraged;
 
-- the alway-increasingly adoption of typing leads to codebases which are
-  largerly statically typed.
+  - the alway-increasingly adoption of typing leads to codebases which are largerly statically typed.
 
-However, these rules are not enforced by the language, and there are cases in
-which "breaking the rules" is actually useful and make the code
-easier/better/faster.
+However, these rules are not enforced by the language, and there are cases in which "breaking the rules" is actually useful and make the code easier/better/faster.
 
-From the point of view of language implementors, the VM cannot easily take
-advantage of the "mostly static" nature of programs because it has always to be
-ready for the generic case.
+From the point of view of language implementors, the VM cannot easily take advantage of the "mostly static" nature of programs because it has always to be ready for the generic case.
 
 SPy tries to reconcile these two sides:
 
-- it uses a static type system which is designed specifically for safety and
-  performance;
+  - it uses a static type system which is designed specifically for safety and performance;
 
-- the vast majority of "dynamic" feature of Python (like decorators,
-  metaclasses, `__special_methods__`, ...) can be used at zero cost, since they
-  are resolved at compile time by using meta-programming and partial evaluation
-  techniques.
+  - the vast majority of "dynamic" feature of Python (like decorators, metaclasses, `__special_methods__`, ...) can be used at zero cost, since they are resolved at compile time by using meta-programming and partial evaluation techniques.
 
-This talk will present in the details the ideas behind SPy and its current
-status.
+This talk will present in the details the ideas behind SPy and its current status.
