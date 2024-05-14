@@ -49,7 +49,7 @@ const speakers = defineCollection({
     code: z.string(),
     name: z.string(),
     avatar: z.string(),
-    // submissions: z.array(reference("sessions")),
+    submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
     twitter: z.string().nullable(),

@@ -1,11 +1,12 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
+import type { getEntries } from "astro:content";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("sessions");
-  return blogEntries.map((entry) => ({
+  const entries = await getCollection("speakers");
+  return entries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
@@ -13,31 +14,106 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const sessions = await getEntries(entry.data.submissions);
+
+function normalizeTwitterHandle(handle, { onlyUsername = false } = {}) {
+  handle = handle.replace(/^https?:\/\/twitter.com\//, "");
+
+  const username = handle.replace(/^@/, "");
+
+  return onlyUsername ? `@${username} `: `https://twitter.com/${username}`;
+}
 ---
 
-<Layout title={entry.data.title} description={entry.data.tweet}>
+<Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
   <article class="mx-auto pb-12 px-6">
-    <h1
-      class="relative font-title text-text font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
+  <h1
+    class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-7xl"
+  >
+      {entry.data.name}
+  </h1>
+  <div>
+    <img
+      src={entry.data.avatar}
+      alt={entry.data.name}
+      class="w-full max-w-sm mb-12"
+    />
+  </div>
+  <h2
+    class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-5xl"
+  >
+    Biography
+  </h2>
+
+    <Prose><Content /></Prose>
+  <div class="mb-4">
+    <h2
+      class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-5xl"
     >
-      {entry.data.title}
-    </h1>
-    <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2 mb-6">
-      <dt class="font-bold">Level:</dt>
-      <dd class="capitalize">{entry.data.level}</dd>
-      {
-        entry.data.room && (
+      More about the speaker
+    </h2>
+    <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
+        {entry.data.affiliation && (
           <>
-            <dt class="font-bold">Room:</dt>
-            <dd class="capitalize">{entry.data.room}</dd>
+            <dt class="font-bold">Affiliation</dt>
+            <dd>{entry.data.affiliation}</dd>
           </>
-        )
-      }
-    <dt class="font-bold">Duration:</dt><dd>{entry.data.duration} minutes</dd>
+        )}
+        {entry.data.homepage && (
+          <>
+            <dt class="font-bold">Homepage</dt>
+            <dd>
+              <a
+                href={entry.data.homepage}
+                class="text-primary underline hover:text-primary-hover"
+                >{entry.data.homepage}</a
+              >
+            </dd>
+          </>
+        )}
+        {entry.data.mastodon && (
+          <>
+            <dt class="font-bold">Mastodon</dt>
+            <dd>
+              <a
+                href={entry.data.mastodon}
+                class="text-primary underline hover:text-primary-hover"
+                >{entry.data.mastodon}</a
+              >
+            </dd>
+          </>
+        )}
+        {entry.data.twitter && (
+          <>
+            <dt class="font-bold">Twitter</dt>
+            <dd>
+              <a
+                href={normalizeTwitterHandle(entry.data.twitter)}
+                class="text-primary underline hover:text-primary-hover"
+                >{normalizeTwitterHandle(entry.data.twitter, {onlyUsername: true})}</a
+              >
+            </dd>
+          </>
+        )}
     </dl>
-  <Prose>
-    <h2>Abstract</h2>
-    <Content />
-  </Prose>
-  </article>
+  </div>
+  <h2
+    class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-5xl"
+  >
+    Session{sessions.length > 1 ? "s" : ""}
+  </h2>
+  <ul class="mb-4 pl-6 list-decimal">
+{sessions.map((session) => (
+    <li class="mb-2 text-xl leading-snug">
+      <a
+        class="text-primary hover:text-primary-hover font-title underline font-semibold"
+href={`/session/${session.slug}`}
+>{session.data.title}</a>
+</li>
+))}
+  </ul>
+</article>
+
+
 </Layout>

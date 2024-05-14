@@ -8,7 +8,6 @@
 
 from typing import Any
 import httpx
-import json
 import pathlib
 import shutil
 import yaml
@@ -52,9 +51,13 @@ def download() -> None:
     sessions = download_data(SESSIONS_URL)
 
     for session in sessions.values():
-        speaker_ids = session.get("speakers", [])
         session["speakers"] = [
-            speakers[speaker_id]["slug"] for speaker_id in speaker_ids
+            speakers[speaker_id]["slug"] for speaker_id in session.get("speakers", [])
+        ]
+
+    for speaker in speakers.values():
+        speaker["submissions"] = [
+            sessions[session_id]["slug"] for session_id in speaker.get("submissions", [])
         ]
 
     write_mdx(sessions, ROOT / "src/content/sessions", "abstract")
