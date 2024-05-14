@@ -2,7 +2,6 @@
 import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
-import type { getEntries } from "astro:content";
 
 export async function getStaticPaths() {
   const entries = await getCollection("speakers");
@@ -17,103 +16,118 @@ const { Content } = await entry.render();
 
 const sessions = await getEntries(entry.data.submissions);
 
-function normalizeTwitterHandle(handle, { onlyUsername = false } = {}) {
+function normalizeTwitterHandle(handle: string, { onlyUsername = false } = {}) {
   handle = handle.replace(/^https?:\/\/twitter.com\//, "");
 
   const username = handle.replace(/^@/, "");
 
-  return onlyUsername ? `@${username} `: `https://twitter.com/${username}`;
+  return onlyUsername ? `@${username} ` : `https://twitter.com/${username}`;
 }
 ---
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
   <article class="mx-auto pb-12 px-6">
-  <h1
-    class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-7xl"
-  >
+    <h1
+      class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-7xl"
+    >
       {entry.data.name}
-  </h1>
-  <div>
-    <img
-      src={entry.data.avatar}
-      alt={entry.data.name}
-      class="w-full max-w-sm mb-12"
-    />
-  </div>
-  <h2
-    class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-5xl"
-  >
-    Biography
-  </h2>
+    </h1>
+    <div>
+      <img
+        src={entry.data.avatar}
+        alt={entry.data.name}
+        class="w-full max-w-sm mb-12"
+      />
+    </div>
+    <h2
+      class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
+    >
+      Biography
+    </h2>
 
     <Prose><Content /></Prose>
-  <div class="mb-4">
+    <div class="mb-4">
+      <h2
+        class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
+      >
+        More about the speaker
+      </h2>
+      <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
+        {
+          entry.data.affiliation && (
+            <>
+              <dt class="font-bold">Affiliation</dt>
+              <dd>{entry.data.affiliation}</dd>
+            </>
+          )
+        }
+        {
+          entry.data.homepage && (
+            <>
+              <dt class="font-bold">Homepage</dt>
+              <dd>
+                <a
+                  href={entry.data.homepage}
+                  class="text-primary underline hover:text-primary-hover"
+                >
+                  {entry.data.homepage}
+                </a>
+              </dd>
+            </>
+          )
+        }
+        {
+          entry.data.mastodon && (
+            <>
+              <dt class="font-bold">Mastodon</dt>
+              <dd>
+                <a
+                  href={entry.data.mastodon}
+                  class="text-primary underline hover:text-primary-hover"
+                >
+                  {entry.data.mastodon}
+                </a>
+              </dd>
+            </>
+          )
+        }
+        {
+          entry.data.twitter && (
+            <>
+              <dt class="font-bold">Twitter</dt>
+              <dd>
+                <a
+                  href={normalizeTwitterHandle(entry.data.twitter)}
+                  class="text-primary underline hover:text-primary-hover"
+                >
+                  {normalizeTwitterHandle(entry.data.twitter, {
+                    onlyUsername: true,
+                  })}
+                </a>
+              </dd>
+            </>
+          )
+        }
+      </dl>
+    </div>
     <h2
-      class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-5xl"
+      class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
     >
-      More about the speaker
+      Session{sessions.length > 1 ? "s" : ""}
     </h2>
-    <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
-        {entry.data.affiliation && (
-          <>
-            <dt class="font-bold">Affiliation</dt>
-            <dd>{entry.data.affiliation}</dd>
-          </>
-        )}
-        {entry.data.homepage && (
-          <>
-            <dt class="font-bold">Homepage</dt>
-            <dd>
-              <a
-                href={entry.data.homepage}
-                class="text-primary underline hover:text-primary-hover"
-                >{entry.data.homepage}</a
-              >
-            </dd>
-          </>
-        )}
-        {entry.data.mastodon && (
-          <>
-            <dt class="font-bold">Mastodon</dt>
-            <dd>
-              <a
-                href={entry.data.mastodon}
-                class="text-primary underline hover:text-primary-hover"
-                >{entry.data.mastodon}</a
-              >
-            </dd>
-          </>
-        )}
-        {entry.data.twitter && (
-          <>
-            <dt class="font-bold">Twitter</dt>
-            <dd>
-              <a
-                href={normalizeTwitterHandle(entry.data.twitter)}
-                class="text-primary underline hover:text-primary-hover"
-                >{normalizeTwitterHandle(entry.data.twitter, {onlyUsername: true})}</a
-              >
-            </dd>
-          </>
-        )}
-    </dl>
-  </div>
-  <h2
-    class="relative font-title text-primary font-bold mb-[0.6em] [&amp;>a]:border-0 [&amp;>a]:text-inherit text-5xl"
-  >
-    Session{sessions.length > 1 ? "s" : ""}
-  </h2>
-  <ul class="mb-4 pl-6 list-decimal">
-{sessions.map((session) => (
-    <li class="mb-2 text-xl leading-snug">
-      <a
-        class="text-primary hover:text-primary-hover font-title underline font-semibold"
-href={`/session/${session.slug}`}
->{session.data.title}</a>
-</li>
-))}
-  </ul>
-</article>
-
-
+    <ul class="mb-4 pl-6 list-decimal">
+      {
+        sessions.map((session) => (
+          <li class="mb-2 text-xl leading-snug">
+            <a
+              class="text-primary hover:text-primary-hover font-title underline font-semibold"
+              href={`/session/${session.slug}`}
+            >
+              {session.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
 </Layout>

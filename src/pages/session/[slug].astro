@@ -18,8 +18,8 @@ const { Content } = await entry.render();
 const speakers = await getEntries(entry.data.speakers);
 
 for (const speaker of speakers) {
+  // @ts-ignore
   speaker.Content = (await speaker.render()).Content;
-
 }
 ---
 
@@ -77,7 +77,10 @@ for (const speaker of speakers) {
                     </a>
                   </p>
 
-                  <Prose><speaker.Content /></Prose>
+                  {/* @ts-ignore */}
+                  <Prose>
+                    <speaker.Content />
+                  </Prose>
                 </div>
               </div>
             ))}

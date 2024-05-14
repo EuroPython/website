@@ -1,7 +1,7 @@
 ---
 code: LWSF9C
 delivery: in-person
-duration: '30'
+duration: "30"
 end: null
 level: intermediate
 next_talk_code: null
@@ -9,7 +9,7 @@ prev_talk_code: null
 room: null
 slug: deadcode-a-tool-to-find-and-fix-unused-dead-python-code
 speakers:
-- albertas-gimbutas
+  - albertas-gimbutas
 start: null
 state: confirmed
 submission_type: Talk
@@ -17,20 +17,36 @@ talks_after: null
 talks_in_parallel: null
 title: Deadcode - a tool to find and fix unused (dead) Python code
 track: Python Libraries & Tooling
-tweet: ''
+tweet: ""
 website_url: https://ep2024.europython.eu/session/deadcode-a-tool-to-find-and-fix-unused-dead-python-code
 ---
 
-No longer needed code creates technical debt if it is not removed from the code base. Unused code has to be maintained, it complicates code base and increases cognitive load. It might even depend on no longer necessary dependencies with vulnerabilities and might increase attack surface. Therefore, removing dead code saves time, money and reduces security risks.
+No longer needed code creates technical debt if it is not removed from the code
+base. Unused code has to be maintained, it complicates code base and increases
+cognitive load. It might even depend on no longer necessary dependencies with
+vulnerabilities and might increase attack surface. Therefore, removing dead code
+saves time, money and reduces security risks.
 
-Recently, Ruff has became a de facto linter, which provides almost all existing linting rules from other linters. However, it is only capable to detect locally unused Python code, which is only a tiny portion of unused code.
+Recently, Ruff has became a de facto linter, which provides almost all existing
+linting rules from other linters. However, it is only capable to detect locally
+unused Python code, which is only a tiny portion of unused code.
 
-Vulture is the best known tool for detecting globally unused Python code. However, its configuration is not very flexible and disabling false positives in a larger code base might require a lot of effort.
-Also, unused code detection is sometimes inaccurate, because scopes are not taken into account, when detecting unused code.
+Vulture is the best known tool for detecting globally unused Python code.
+However, its configuration is not very flexible and disabling false positives in
+a larger code base might require a lot of effort. Also, unused code detection is
+sometimes inaccurate, because scopes are not taken into account, when detecting
+unused code.
 
-This presentation introduces a new Python package called `deadcode`, which tries to move globally unused Python code detection to the next level. First, it provides a large set of options to flexibly disable various types of false positives. Second, deadcode implements more rules for detecting unused code than Vulture. Third, an improved strategy which tracks scopes and namespaces into account is being used to
-more accurately identify unused code items. Fourth, a --fix option is provided, which allows to automatically remove detected unused code items.
+This presentation introduces a new Python package called `deadcode`, which tries
+to move globally unused Python code detection to the next level. First, it
+provides a large set of options to flexibly disable various types of false
+positives. Second, deadcode implements more rules for detecting unused code than
+Vulture. Third, an improved strategy which tracks scopes and namespaces into
+account is being used to more accurately identify unused code items. Fourth, a
+--fix option is provided, which allows to automatically remove detected unused
+code items.
 
-In addition, an idea to prune Python code in order to reduce its size will be consider, which might be relevant when serving Python code in a browser.
+In addition, an idea to prune Python code in order to reduce its size will be
+consider, which might be relevant when serving Python code in a browser.
 
 Lets make Python ecosystem even more awesome!

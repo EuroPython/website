@@ -17,5 +17,5 @@ repos:
     hooks:
       - id: prettier
         args: ["--tab-width", "2", "--trailing-comma", "es5"]
-        exclude_types: ["mdx"]
+        additional_dependencies: ["prettier", "prettier-plugin-astro"]
         exclude: "pnpm-lock.yaml"
