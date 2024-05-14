@@ -48,9 +48,7 @@ const speakers = defineCollection({
   schema: z.object({
     code: z.string(),
     name: z.string(),
-    biography: z.string().nullable(),
     avatar: z.string(),
-    slug: z.string(),
     // submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),

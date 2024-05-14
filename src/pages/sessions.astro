@@ -5,18 +5,9 @@ import Prose from "../components/prose/prose.astro";
 import { Label } from "../components/form/label";
 import { Select } from "../components/form/select";
 import { Tag } from "../components/tag/tag";
+import SessionSpeakers from "../components/session-speakers.astro";
 
 const sessions = await getCollection("sessions");
-
-const allSpeakers = await getCollection("speakers");
-
-const speakers: Record<string, (typeof allSpeakers)[0]> = allSpeakers.reduce(
-  (acc, speaker) => ({
-    ...acc,
-    [speaker.id]: speaker,
-  }),
-  {},
-);
 
 const allTracks = Array.from(
   new Set(sessions.map((session) => session.data.track)),
@@ -26,6 +17,7 @@ const allTypes = Array.from(
   new Set(sessions.map((session) => session.data.submission_type)),
 ).sort();
 
+console.log(sessions[0]);
 const title = "Sessions";
 
 const description = "A list of all the sessions at the conference";
@@ -77,17 +69,7 @@ const description = "A list of all the sessions at the conference";
               <p>
                 <span class="sr-only">Speakers:</span>
 
-                {session.data.speakers.map((speaker, index) => (
-                  <span class="inline">
-                    <a
-                      href={`/speaker/${speakers[speaker.id].data.slug}`}
-                      class="underline"
-                    >
-                      {speakers[speaker.id].data.name}
-                    </a>
-                    {index < session.data.speakers.length - 1 ? ", " : ""}
-                  </span>
-                ))}
+                <SessionSpeakers speakers={session.data.speakers} />
               </p>
             </Prose>
 

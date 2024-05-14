@@ -52,7 +52,7 @@ def download() -> None:
     sessions = download_data(SESSIONS_URL)
 
     for session in sessions.values():
-        speaker_ids = session.get("speaker_ids", [])
+        speaker_ids = session.get("speakers", [])
         session["speakers"] = [
             speakers[speaker_id]["slug"] for speaker_id in speaker_ids
         ]
