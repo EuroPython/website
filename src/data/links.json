@@ -4,12 +4,24 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Speaker Mentorship",
-          "path": "/mentorship"
+          "name": "Overview",
+          "path": "/programme"
         },
         {
           "name": "List of sessions",
           "path": "/sessions"
+        },
+        {
+          "name": "Talks",
+          "path": "/talks"
+        },
+        {
+          "name": "Tutorials",
+          "path": "/tutorials"
+        },
+        {
+          "name": "Posters",
+          "path": "/posters"
         },
         {
           "name": "Call for Proposals",
@@ -18,6 +30,10 @@
         {
           "name": "Community Voting",
           "path": "/voting"
+        },
+        {
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
         }
       ]
     },
