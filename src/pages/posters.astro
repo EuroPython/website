@@ -84,34 +84,3 @@ const description = "A list of all the sessions at the conference";
     </ol>
   </div>
 </Layout>
-
-<script>
-  const forms = document.querySelectorAll("form.filter-sessions");
-
-  forms.forEach((form) => {
-    form.querySelectorAll("select").forEach((select) => {
-      select.addEventListener("change", () => {
-        // @ts-ignore
-        const track = form.querySelector("#track").value;
-        // @ts-ignore
-        const type = form.querySelector("#type").value;
-
-        document.querySelectorAll("ol.sessions > li").forEach((session) => {
-          const sessionTrack = session.getAttribute("data-track");
-          const sessionType = session.getAttribute("data-type");
-
-          if (
-            (track === "" || sessionTrack === track) &&
-            (type === "" || sessionType === type)
-          ) {
-            // @ts-ignore
-            session.style.display = "block";
-          } else {
-            // @ts-ignore
-            session.style.display = "none";
-          }
-        });
-      });
-    });
-  });
-</script>
