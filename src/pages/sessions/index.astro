@@ -2,6 +2,9 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
+import { Label } from "../../components/form/label";
+import { Select } from "../../components/form/select";
+import { Tag } from "../../components/tag/tag";
 
 const sessions = await getCollection("sessions");
 
@@ -14,6 +17,14 @@ const speakers: Record<string, (typeof allSpeakers)[0]> = allSpeakers.reduce(
   }),
   {},
 );
+
+const allTracks = Array.from(
+  new Set(sessions.map((session) => session.data.track)),
+).sort();
+
+const allTypes = Array.from(
+  new Set(sessions.map((session) => session.data.submission_type)),
+).sort();
 
 const title = "Sessions";
 
@@ -28,44 +39,112 @@ const description = "A list of all the sessions at the conference";
         IMPORTANT: This is not the final list of confirmed talks, and it might
         be changed.
       </p>
+
+      <h2>Filters</h2>
     </Prose>
 
-    <ol>
+    <form class="mb-12 filter-sessions">
+      <div class="mb-6">
+        <Label htmlFor="track">Track</Label>
+        <Select id="track" name="track">
+          <option value="">All</option>
+          {allTracks.map((track) => <option value={track}>{track}</option>)}
+        </Select>
+      </div>
+
+      <Label htmlFor="type">Submission Type</Label>
+      <Select id="type" name="type">
+        <option value="">All</option>
+        {allTypes.map((type) => <option value={type}>{type}</option>)}
+      </Select>
+    </form>
+
+    <ol class="sessions">
       {
         sessions.map((session) => (
-          <li class="mb-12">
+          <li
+            class="mb-12"
+            data-track={session.data.track}
+            data-type={session.data.submission_type}
+          >
             <Prose>
               <h1>
                 <a href={`/sessions/${session.slug}`} class="underline">
                   {session.data.title}
                 </a>
               </h1>
+
+              <p>
+                <span class="sr-only">Speakers:</span>
+
+                {session.data.speakers.map((speaker, index) => (
+                  <span class="inline">
+                    <a
+                      href={`/speakers/${speakers[speaker.id].data.slug}`}
+                      class="underline"
+                    >
+                      {speakers[speaker.id].data.name}
+                    </a>
+                    {index < session.data.speakers.length - 1 ? ", " : ""}
+                  </span>
+                ))}
+              </p>
             </Prose>
 
-            <dl class="grid grid-cols-[100px,1fr] gap-x-4">
-              <dt class="font-bold">Speakers</dt>
-              <dd>
-                <ul>
-                  {session.data.speakers.map((speaker, index) => (
-                    <li class="inline">
-                      <a
-                        href={`/speakers/${speakers[speaker.id].data.slug}`}
-                        class="underline"
-                      >
-                        {speakers[speaker.id].data.name}
-                      </a>
-                      {index < session.data.speakers.length - 1 ? ", " : ""}
-                    </li>
-                  ))}
-                </ul>
-              </dd>
-              <dt class="font-bold">Type</dt>
+            <ul class="space-x-2 capitalize">
+              <li class="inline-block">
+                <Tag>
+                  <span class="sr-only">Track:</span>
+                  {session.data.track}
+                </Tag>
+              </li>
 
-              <dd>{session.data.submission_type}</dd>
-            </dl>
+              <li class="inline-block">
+                <Tag>
+                  <span class="sr-only">Type:</span>
+                  {session.data.submission_type}
+                </Tag>
+              </li>
+
+              <li class="inline-block">
+                <Tag>
+                  <span class="sr-only">Level:</span>
+                  {session.data.level}
+                </Tag>
+              </li>
+            </ul>
           </li>
         ))
       }
     </ol>
   </div>
 </Layout>
+
+<script>
+  const forms = document.querySelectorAll("form.filter-sessions");
+
+  console.log(forms);
+
+  forms.forEach((form) => {
+    form.querySelectorAll("select").forEach((select) => {
+      select.addEventListener("change", () => {
+        const track = form.querySelector("#track").value;
+        const type = form.querySelector("#type").value;
+
+        document.querySelectorAll("ol.sessions > li").forEach((session) => {
+          const sessionTrack = session.getAttribute("data-track");
+          const sessionType = session.getAttribute("data-type");
+
+          if (
+            (track === "" || sessionTrack === track) &&
+            (type === "" || sessionType === type)
+          ) {
+            session.style.display = "block";
+          } else {
+            session.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
