@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import Prose from "../../components/prose/prose.astro";
-import { Label } from "../../components/form/label";
-import { Select } from "../../components/form/select";
-import { Tag } from "../../components/tag/tag";
+import Layout from "../layouts/Layout.astro";
+import Prose from "../components/prose/prose.astro";
+import { Label } from "../components/form/label";
+import { Select } from "../components/form/select";
+import { Tag } from "../components/tag/tag";
 
 const sessions = await getCollection("sessions");
 
