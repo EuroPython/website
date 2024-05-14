@@ -1,7 +1,7 @@
 ---
 code: U7UMBE
 delivery: in-person
-duration: '180'
+duration: "180"
 end: null
 level: intermediate
 next_talk_code: null
@@ -9,8 +9,8 @@ prev_talk_code: null
 room: null
 slug: event-sourcing-from-the-ground-up
 speakers:
-- ravi-selker
-- sebastiaan-zeeff
+  - ravi-selker
+  - sebastiaan-zeeff
 start: null
 state: confirmed
 submission_type: Tutorial
@@ -18,18 +18,32 @@ talks_after: null
 talks_in_parallel: null
 title: Event Sourcing From The Ground Up
 track: Software Engineering & Architecture
-tweet: Interested in Event Sourcing? Join the tutorial "Event Sourcing From The Ground
-  Up" at EuroPython 2024!
+tweet:
+  Interested in Event Sourcing? Join the tutorial "Event Sourcing From The
+  Ground Up" at EuroPython 2024!
 website_url: https://ep2024.europython.eu/session/event-sourcing-from-the-ground-up
 ---
 
-We often think about data in terms of storing the current state of our models. If a chess player moves a piece, we update the state of the board and persist it. This makes it easy to query the current state of the game, but also poses some challenges: How do we know which moves led up to the current state? And how do we ensure that the state remains consistent, even in a distributed system?
+We often think about data in terms of storing the current state of our models.
+If a chess player moves a piece, we update the state of the board and persist
+it. This makes it easy to query the current state of the game, but also poses
+some challenges: How do we know which moves led up to the current state? And how
+do we ensure that the state remains consistent, even in a distributed system?
 
-**Event Sourcing** takes a different approach to storing state. Instead of storing the current state as-is, we store the *sequence of events* that led to the current state. If we need to know the current state, we can replay this immutable record of events to reconstruct it. Not only does this give us an immutable audit log, this also promotes loose coupling and enables optimistic concurrency.
+**Event Sourcing** takes a different approach to storing state. Instead of
+storing the current state as-is, we store the _sequence of events_ that led to
+the current state. If we need to know the current state, we can replay this
+immutable record of events to reconstruct it. Not only does this give us an
+immutable audit log, this also promotes loose coupling and enables optimistic
+concurrency.
 
-In this tutorial, we are going to build an “Event Sourcing”-based backend for an in-browser game from the ground up. Rather than using a framework that abstracts away some of the core principles, we are going to implement the mechanisms ourselves to help us understand the core principles.
+In this tutorial, we are going to build an “Event Sourcing”-based backend for an
+in-browser game from the ground up. Rather than using a framework that abstracts
+away some of the core principles, we are going to implement the mechanisms
+ourselves to help us understand the core principles.
 
 ### Outline
+
 - Introduction to Event Sourcing and Domain-Driven Design
 - Modeling the events in our game
 - Implementing our first events and our aggregate
@@ -38,9 +52,13 @@ In this tutorial, we are going to build an “Event Sourcing”-based backend fo
 - Beyond this tutorial + Q&A
 
 ### Audience & Preparation
-This tutorial is for you if you’re interested in Event Sourcing but don’t have any real experience with it yet. We do expect you to have at least an intermediate level in Python.
+
+This tutorial is for you if you’re interested in Event Sourcing but don’t have
+any real experience with it yet. We do expect you to have at least an
+intermediate level in Python.
 
 Do make sure to bring your laptop, **with the following tools installed**:
+
 - Python 3.12
 - A container runtime (preferably Docker)
 - Git

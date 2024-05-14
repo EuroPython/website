@@ -2,7 +2,7 @@
 import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
-import type { getEntries } from "astro:content";
+import { Separator } from "../../components/separator/separator.tsx";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("sessions");
@@ -15,10 +15,12 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-
 const speakers = await getEntries(entry.data.speakers);
-console.log(speakers);
 
+for (const speaker of speakers) {
+  speaker.Content = (await speaker.render()).Content;
+
+}
 ---
 
 <Layout title={entry.data.title} description={entry.data.tweet}>
@@ -39,11 +41,49 @@ console.log(speakers);
           </>
         )
       }
-    <dt class="font-bold">Duration:</dt><dd>{entry.data.duration} minutes</dd>
+      <dt class="font-bold">Duration:</dt><dd>{entry.data.duration} minutes</dd>
     </dl>
     <Prose>
       <h2>Abstract</h2>
       <Content />
     </Prose>
+
+    <footer>
+      {
+        speakers && (
+          <>
+            <Separator />
+
+            <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+              The speaker{speakers.length > 1 ? "s" : ""}
+            </h2>
+
+            {speakers.map((speaker) => (
+              <div class="mb-4 md:grid grid-cols-[260px_1fr] md:gap-6">
+                <div class="flex items-start mb-4">
+                  <img
+                    src={speaker.data.avatar}
+                    alt={speaker.data.name}
+                    class="w-full max-w-sm mb-12"
+                  />
+                </div>
+                <div>
+                  <p class="mb-4">
+                    <a
+                      href={`/speaker/${speaker.slug}`}
+                      class="text-4xl hover:text-primary-hover underline font-bold"
+                    >
+                      {speaker.data.name}
+                    </a>
+                  </p>
+
+                  <Prose><speaker.Content /></Prose>
+                </div>
+              </div>
+            ))}
+          </>
+        )
+      }
+    </footer>
   </article>
 </Layout>
