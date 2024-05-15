@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 
 const tiers = [
   "Keystone",
@@ -92,4 +92,11 @@ const sessions = defineCollection({
   }),
 });
 
-export const collections = { pages, deadlines, sponsors, keynoters, sessions, speakers };
+export const collections = {
+  pages,
+  deadlines,
+  sponsors,
+  sessions,
+  speakers,
+  keynoters,
+};
