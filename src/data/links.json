@@ -4,10 +4,6 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Overview",
-          "path": "/programme"
-        },
-        {
           "name": "List of sessions",
           "path": "/sessions"
         },
