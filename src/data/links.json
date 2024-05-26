@@ -20,6 +20,10 @@
           "path": "/posters"
         },
         {
+          "name": "List of Keynote Speakers",
+          "path": "/keynoters"
+        },
+        {
           "name": "Call for Proposals",
           "path": "/cfp"
         },
