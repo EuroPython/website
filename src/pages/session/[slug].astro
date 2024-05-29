@@ -2,7 +2,7 @@
 import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
-import { Separator } from "../../components/separator/separator.tsx";
+import { Separator } from "../../components/separator/separator";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("sessions");
@@ -60,13 +60,23 @@ for (const speaker of speakers) {
 
             {speakers.map((speaker) => (
               <div class="mb-4 md:grid grid-cols-[260px_1fr] md:gap-6">
-                <div class="flex items-start mb-4">
-                  <img
-                    src={speaker.data.avatar}
-                    alt={speaker.data.name}
-                    class="w-full max-w-sm mb-12"
-                  />
-                </div>
+                {speaker.data.avatar ? (
+                  <div class="flex items-start mb-4">
+                    <img
+                      src={speaker.data.avatar}
+                      alt={speaker.data.name}
+                      class="w-full max-w-sm mb-12"
+                    />
+                  </div>
+                ) : (
+                  <div class="flex items-start mb-4 invisible">
+                    <img
+                      src=""
+                      alt=""
+                      class="w-full max-w-sm mb-12"
+                    />
+                  </div>
+                )}
                 <div>
                   <p class="mb-4">
                     <a
