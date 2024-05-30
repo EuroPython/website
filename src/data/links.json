@@ -47,7 +47,7 @@
         {
           "name": "Speakers' Dinner",
           "path": "/speakers-dinner"
-        }
+        },
         {
           "name": "WebAssembly Summit",
           "path": "/wasm"
