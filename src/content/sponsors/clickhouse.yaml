@@ -1,0 +1,4 @@
+name: ClickHouse
+url: https://www.clickhouse.com
+image: ./clickhouse.svg
+tier: Gold
