@@ -32,13 +32,15 @@ function normalizeTwitterHandle(handle: string, { onlyUsername = false } = {}) {
     >
       {entry.data.name}
     </h1>
-    <div>
-      <img
-        src={entry.data.avatar}
-        alt={entry.data.name}
-        class="w-full max-w-sm mb-12"
-      />
-    </div>
+    {entry.data.avatar && (
+      <div>
+        <img
+          src={entry.data.avatar}
+          alt={entry.data.name}
+          class="w-full max-w-sm mb-12"
+        />
+      </div>
+    )}
     <h2
       class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
     >
