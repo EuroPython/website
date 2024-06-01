@@ -58,6 +58,10 @@
           "path": "/faq"
         },
         {
+          "name": "Accessibility and Rooms",
+          "path": "/accessibility"
+        },
+        {
           "name": "Visa Support Letter",
           "path": "/visa"
         },
