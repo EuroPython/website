@@ -15,8 +15,8 @@ import yaml
 ROOT = pathlib.Path(__file__).parents[1]
 
 
-SESSIONS_URL = "https://programapi24.europython.eu/2024/sessions.json"
-SPEAKERS_URL = "https://programapi24.europython.eu/2024/speakers.json"
+SESSIONS_URL = "https://gist.githubusercontent.com/patrick91/6ef20d6612d708a516908ef11e3e4a31/raw/9831b417efe1810cba581396da0ebb2bd82befcb/sessions.json"
+SPEAKERS_URL = "https://gist.githubusercontent.com/patrick91/6ef20d6612d708a516908ef11e3e4a31/raw/9831b417efe1810cba581396da0ebb2bd82befcb/speakers.json"
 
 
 def write_mdx(data: dict[str, Any], output_dir: pathlib.Path, content_key: str) -> None:
@@ -61,6 +61,7 @@ def download() -> None:
         speaker["submissions"] = [
             sessions[session_id]["slug"]
             for session_id in speaker.get("submissions", [])
+            if session_id in sessions
         ]
 
     write_mdx(sessions, ROOT / "src/content/sessions", "abstract")

@@ -1,0 +1,12 @@
+---
+import { Schedule } from "../../components/schedule/schedule";
+import Layout from "../../layouts/Layout.astro";
+
+export const getStaticPaths = async () => {
+  return [{ params: { day: "about" } }];
+};
+---
+
+<Layout>
+  <Schedule />
+</Layout>

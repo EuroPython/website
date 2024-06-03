@@ -1,0 +1,40 @@
+---
+code: FFTHXB
+delivery: in-person
+duration: '30'
+end: '2023-07-19T11:15:00+02:00'
+level: intermediate
+next_talk: PNVM3S
+prev_talk: null
+resources: null
+room: Terrace 2B
+slug: python-linters-at-scale
+speakers:
+- jimmy-lai
+start: '2023-07-19T10:45:00+02:00'
+state: confirmed
+submission_type: Talk
+talks_after:
+- RAXZVW
+- PMNVR3
+- BCDBBR
+- PNVM3S
+- LLHGKF
+- H3TBAP
+talks_before:
+- C7SMXT
+talks_in_parallel:
+- HSPJMX
+- C3GDXY
+- HMJU9J
+- D88LXE
+- UVUXFQ
+title: Python Linters at Scale
+track: DevOps (2023)
+tweet: ''
+website_url: https://ep2023.europython.eu/session/python-linters-at-scale
+---
+
+Black, Flake8, isort, and Mypy are useful Python linters but it’s challenging to use them effectively at scale in the case of multiple codebases, in a large codebase, or with many developers. Linter analysis on large codebases is slow. Linters may slow down developers by asking them to fix trivial issues. Running linters in distributed CI jobs makes it hard to understand the overall developer experience.
+
+In this talk, we'll walk you through solving those scaling problems using a reusable linter framework that releases new linter updates automatically, reuses consistent configurations, runs linters on only updated code to speedup runtime, collects logs and metrics to provide observability, and builds auto fixes for common linter issues. Our linter runs are fast and scalable. Every week, they run 10k times on multiple millions of lines of code in over 25 codebases, generating 25k suggestions for more than 200 developers. Its autofixes also save 20 hours of developer time every week.

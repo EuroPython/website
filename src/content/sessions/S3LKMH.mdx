@@ -1,0 +1,48 @@
+---
+code: S3LKMH
+delivery: in-person
+duration: '30'
+end: '2023-07-20T11:50:00+02:00'
+level: intermediate
+next_talk: TN3EXR
+prev_talk: 7KAKAG
+resources: null
+room: Terrace 2A
+slug: instrumenting-cpython-with-ebpf
+speakers:
+- furkan-taha-onder
+start: '2023-07-20T11:20:00+02:00'
+state: confirmed
+submission_type: Talk
+talks_after:
+- W8J9MF
+- TN3EXR
+- ZPH9PC
+- SG3NQB
+- EAPRY9
+- HL8XCC
+talks_before:
+- ZUSHKU
+- SDEUCB
+- U9SNQ7
+- 7KAKAG
+- WUPCGU
+- ZCXMQK
+talks_in_parallel:
+- UD3GZD
+- B3MU99
+- XLLSWL
+- BMYYTX
+- RGRQVQ
+- TYTBKX
+title: Instrumenting CPython with eBPF
+track: Python Internals & Ecosystem (2023)
+tweet: Let's look at the eBPF technology and how it can be used to instrument CPython!
+website_url: https://ep2023.europython.eu/session/instrumenting-cpython-with-ebpf
+---
+
+eBPF is a amazing technology that can run sandboxed programs in a privileged context such as the operating system kernel. But are eBPF programs limited to the operating system kernel? eBPF programs have fast access to resources like memory. These programs can access the memory of running Python applications very faster, allowing you to instrument Python processes with low overhead!
+
+In my presentation, I will show how Python's internal structure supports instrumentation through the use of eBPF. Following that, we'll experiment with eBPF and other modern techniques to instrumenting the Python applications. I'll explain explain why eBPF is more appropriate and efficient technology for instrumentation. By the end of the session, we will have developed an eBPF-based simple tracing tool for instrumenting Python applications.
+
+After this presentation, you will better understand how eBPF can help you in the instrumentation of Python applications.
