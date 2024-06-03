@@ -16,12 +16,48 @@ const { Content } = await entry.render();
 
 const sessions = await getEntries(entry.data.submissions);
 
-function normalizeTwitterHandle(handle: string, { onlyUsername = false } = {}) {
-  handle = handle.replace(/^https?:\/\/twitter.com\//, "");
+// Get @username from Twitter URL
+function getTwitterUsername(url: string): string | undefined {
+  const username = url.split("/").pop();
+  return (username ?? url).startsWith("@") ? username : `@${username}`;
+}
 
-  const username = handle.replace(/^@/, "");
+// Get @username@instance.tld from Mastodon URL
+function getMastodonUsername(url: string): string | null {
+    const match = url.match(/https?:\/\/([^\/]+)\/@([^\/]+)(\/|\?|$)/);
+    return match ? `@${match[2]}@${match[1]}` : null;
+}
 
-  return onlyUsername ? `@${username} ` : `https://twitter.com/${username}`;
+// Get in/username from LinkedIn URL
+function getLinkedInUsername(url: string): string | null {
+    const match = url.match(/https?:\/\/([^\/]+)\/in\/([^\/]+)(\/|\?|$)/);
+    return match ? `in/${match[2]}` : null;
+}
+
+// Get Git hosting service from URL
+function getGitHosting(url: string): string | undefined {
+    const urlWithProtocol = ensureHttps(url);
+    try {
+        const hostname = new URL(urlWithProtocol).hostname;
+        if (hostname.includes('github.com')) return 'GitHub';
+        if (hostname.includes('gitlab.com')) return 'GitLab';
+    } catch {
+        return undefined;
+    }
+    return undefined;
+}
+
+function isUrl(str: string): boolean {
+    str = ensureHttps(str);
+    const regex = /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)*(\?.*)?$/;
+    return regex.test(str);
+}
+
+function ensureHttps(str: string): string {
+    if (!/^https?:\/\//i.test(str)) {
+        return `https://${str}`;
+    }
+    return str;
 }
 ---
 
@@ -32,6 +68,7 @@ function normalizeTwitterHandle(handle: string, { onlyUsername = false } = {}) {
     >
       {entry.data.name}
     </h1>
+
     {entry.data.avatar && (
       <div>
         <img
@@ -41,77 +78,114 @@ function normalizeTwitterHandle(handle: string, { onlyUsername = false } = {}) {
         />
       </div>
     )}
-    <h2
-      class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
-    >
-      Biography
-    </h2>
 
-    <Prose><Content /></Prose>
-    <div class="mb-4">
-      <h2
-        class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
-      >
-        More about the speaker
-      </h2>
-      <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
-        {
-          entry.data.affiliation && (
+    {entry.body ? (
+      <>
+        <h2
+          class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
+        >
+          Biography
+        </h2>
+        <Prose><Content /></Prose>
+      </>
+    ) : null}
+
+    {entry.data.affiliation || entry.data.homepage || entry.data.gitx || entry.data.linkedin_url || entry.data.mastodon_url || entry.data.twitter_url ? (
+      <div class="mb-4">
+        <h2
+          class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
+        >
+          More about the speaker
+        </h2>
+        <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
+          {entry.data.affiliation && (
             <>
               <dt class="font-bold">Affiliation</dt>
               <dd>{entry.data.affiliation}</dd>
             </>
-          )
-        }
-        {
-          entry.data.homepage && (
+          )}
+
+          {entry.data.homepage && (
             <>
               <dt class="font-bold">Homepage</dt>
               <dd>
+                {isUrl(entry.data.homepage) ? (
+                  <a
+                    href={entry.data.homepage}
+                    class="text-primary underline hover:text-primary-hover"
+                  >
+                    {entry.data.homepage}
+                  </a>
+                ) : (
+                  <span>{entry.data.homepage}</span>
+                )}
+              </dd>
+            </>
+          )}
+
+          {entry.data.gitx && (
+            <>
+              <dt class="font-bold">{getGitHosting(entry.data.gitx) ?? "Git"}</dt>
+              <dd>
+                {isUrl(entry.data.gitx) ? (
+                  <a
+                    href={entry.data.gitx}
+                    class="text-primary underline hover:text-primary-hover"
+                  >
+                    {entry.data.gitx}
+                  </a>
+                ) : (
+                  <span>{entry.data.gitx}</span>
+                )}
+              </dd>
+            </>
+          )}
+
+          {entry.data.linkedin_url && (
+            <>
+              <dt class="font-bold">LinkedIn</dt>
+              <dd>
                 <a
-                  href={entry.data.homepage}
+                  href={entry.data.linkedin_url}
                   class="text-primary underline hover:text-primary-hover"
                 >
-                  {entry.data.homepage}
+                  {getLinkedInUsername(entry.data.linkedin_url)}
                 </a>
               </dd>
             </>
-          )
-        }
-        {
-          entry.data.mastodon && (
+          )}
+
+          {entry.data.mastodon_url && (
             <>
               <dt class="font-bold">Mastodon</dt>
               <dd>
                 <a
-                  href={entry.data.mastodon}
+                  href={entry.data.mastodon_url}
                   class="text-primary underline hover:text-primary-hover"
                 >
-                  {entry.data.mastodon}
+                  {getMastodonUsername(entry.data.mastodon_url)}
                 </a>
               </dd>
             </>
-          )
-        }
-        {
-          entry.data.twitter && (
+          )}
+
+          {entry.data.twitter_url && (
             <>
-              <dt class="font-bold">Twitter</dt>
+              <dt class="font-bold">Twitter / X</dt>
               <dd>
                 <a
-                  href={normalizeTwitterHandle(entry.data.twitter)}
+                  href={entry.data.twitter_url}
                   class="text-primary underline hover:text-primary-hover"
                 >
-                  {normalizeTwitterHandle(entry.data.twitter, {
-                    onlyUsername: true,
-                  })}
+                  {getTwitterUsername(entry.data.twitter_url)}
                 </a>
               </dd>
             </>
-          )
-        }
-      </dl>
-    </div>
+          )}
+        </dl>
+      </div>
+    ) : null}
+
     <h2
       class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
     >
