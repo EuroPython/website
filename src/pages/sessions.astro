@@ -10,14 +10,17 @@ import SessionSpeakers from "../components/session-speakers.astro";
 const sessions = await getCollection("sessions");
 
 const allTracks = Array.from(
-  new Set(sessions.map((session) => session.data.track)),
+  new Set(sessions.map((session) => session.data.track).filter((track) => track))
 ).sort();
 
 const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.submission_type)),
+  new Set(sessions.map((session) => session.data.submission_type).filter((type) => type))
 ).sort();
 
-console.log(sessions[0]);
+const allLevels = Array.from(
+  new Set(sessions.map((session) => session.data.level).filter((level) => level))
+).sort();
+
 const title = "Sessions";
 
 const description = "A list of all the sessions at the conference";
@@ -26,7 +29,15 @@ const description = "A list of all the sessions at the conference";
 <Layout title={title} description={description}>
   <div class="px-6">
     <Prose>
-      <h1>List of all confirmed sessions</h1>
+      <h1>Sessions</h1>
+
+      <p>
+        Here you can find a list of all the sessions at the conference.
+      </p>
+
+      <p>
+        You can filter the sessions by track, type, and level.
+      </p>
 
       <h2>Filters</h2>
     </Prose>
@@ -40,12 +51,28 @@ const description = "A list of all the sessions at the conference";
         </Select>
       </div>
 
-      <Label htmlFor="type">Session type</Label>
-      <Select id="type" name="type">
-        <option value="">All</option>
-        {allTypes.map((type) => <option value={type}>{type}</option>)}
-      </Select>
+      <div class="mb-6">
+        <Label htmlFor="type">Session type</Label>
+        <Select id="type" name="type">
+          <option value="">All</option>
+          {allTypes.map((type) => <option value={type}>{type}</option>)}
+        </Select>
+      </div>
+
+      <div class="mb-6">
+        <Label htmlFor="level">Level</Label>
+        <Select id="level" name="level">
+          <option value="">All</option>
+          {allLevels.map((level) => <option value={level}>{level}</option>)}
+        </Select>
+      </div>
+
+      <button type="button" id="reset-filters" class="btn underline font-bold hover:text-primary-hover">Reset Filters</button>
     </form>
+
+    <Prose>
+      <h2>List of Sessions</h2>
+    </Prose>
 
     <ol class="sessions">
       {
@@ -54,6 +81,7 @@ const description = "A list of all the sessions at the conference";
             class="mb-12"
             data-track={session.data.track}
             data-type={session.data.submission_type}
+            data-level={session.data.level}
           >
             <Prose>
               <h4>
@@ -71,28 +99,32 @@ const description = "A list of all the sessions at the conference";
 
             <ul class="space-x-2 capitalize">
 
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Type:</span>
-                  {session.data.submission_type}
-                </Tag>
-              </li>
+              {session.data.submission_type && (
+                <li class="inline-block">
+                  <Tag>
+                    <span class="sr-only">Type:</span>
+                    {session.data.submission_type}
+                  </Tag>
+                </li>
+              )}
 
+              {session.data.track && (
+                <li class="inline-block">
+                  <Tag>
+                    <span class="sr-only">Track:</span>
+                    {session.data.track}
+                  </Tag>
+                </li>
+              )}
 
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Track:</span>
-                  {session.data.track}
-                </Tag>
-              </li>
-
-
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Level:</span>
-                  {session.data.level}
-                </Tag>
-              </li>
+              {session.data.level && (
+                <li class="inline-block">
+                  <Tag>
+                    <span class="sr-only">Level:</span>
+                    {session.data.level}
+                  </Tag>
+                </li>
+              )}
             </ul>
           </li>
         ))
@@ -104,30 +136,47 @@ const description = "A list of all the sessions at the conference";
 <script>
   const forms = document.querySelectorAll("form.filter-sessions");
 
+  function filterSessions() {
+    forms.forEach((form) => {
+      // @ts-ignore
+      const track = form.querySelector("#track").value;
+      // @ts-ignore
+      const type = form.querySelector("#type").value;
+      // @ts-ignore
+      const level = form.querySelector("#level").value;
+
+
+      document.querySelectorAll("ol.sessions > li").forEach((session) => {
+        const sessionTrack = session.getAttribute("data-track");
+        const sessionType = session.getAttribute("data-type");
+        const sessionLevel = session.getAttribute("data-level");
+
+        if (
+          (track === "" || sessionTrack === track) &&
+          (type === "" || sessionType === type) &&
+          (level === "" || sessionLevel === level)
+        ) {
+          // @ts-ignore
+          session.style.display = "block";
+        } else {
+          // @ts-ignore
+          session.style.display = "none";
+        }
+      });
+    });
+  }
+
   forms.forEach((form) => {
     form.querySelectorAll("select").forEach((select) => {
-      select.addEventListener("change", () => {
-        // @ts-ignore
-        const track = form.querySelector("#track").value;
-        // @ts-ignore
-        const type = form.querySelector("#type").value;
+      select.addEventListener("change", filterSessions);
+    });
 
-        document.querySelectorAll("ol.sessions > li").forEach((session) => {
-          const sessionTrack = session.getAttribute("data-track");
-          const sessionType = session.getAttribute("data-type");
-
-          if (
-            (track === "" || sessionTrack === track) &&
-            (type === "" || sessionType === type)
-          ) {
-            // @ts-ignore
-            session.style.display = "block";
-          } else {
-            // @ts-ignore
-            session.style.display = "none";
-          }
-        });
+    const resetButton = form.querySelector("#reset-filters");
+    resetButton?.addEventListener("click", () => {
+      form.querySelectorAll("select").forEach((select) => {
+        select.value = "";
       });
+      filterSessions();
     });
   });
 </script>

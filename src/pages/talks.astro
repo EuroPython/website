@@ -11,16 +11,16 @@ const sessions = await getCollection("sessions");
 const talks = sessions.filter(s => s.data.submission_type.substr(0,4) === "Talk");
 
 const allTracks = Array.from(
-  new Set(sessions.map((session) => session.data.track)),
+  new Set(talks.map((talk) => talk.data.track).filter((track) => track))
 ).sort();
 
-const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.submission_type)),
+const allLevels = Array.from(
+  new Set(talks.map((talk) => talk.data.level).filter((level) => level))
 ).sort();
 
-const title = "Sessions";
+const title = "Talks";
 
-const description = "A list of all the sessions at the conference";
+const description = "A list of all the talks at the conference";
 ---
 
 <Layout title={title} description={description}>
@@ -33,11 +33,34 @@ const description = "A list of all the sessions at the conference";
       </p>
 
       <p>
-      Below there is a list of all proposals that were accepted from our <a href="/cfp">CFP</a>.
+      Below there is a list of all the talks that were accepted from our <a href="/cfp">CFP</a>.
       </p>
 
-      <h2>List of talks</h2>
+      <h2>Filters</h2>
+    </Prose>
 
+    <form class="mb-12 filter-sessions">
+      <div class="mb-6">
+        <Label htmlFor="track">Track</Label>
+        <Select id="track" name="track">
+          <option value="">All</option>
+          {allTracks.map((track) => <option value={track}>{track}</option>)}
+        </Select>
+      </div>
+
+      <div class="mb-6">
+        <Label htmlFor="level">Level</Label>
+        <Select id="level" name="level">
+          <option value="">All</option>
+          {allLevels.map((level) => <option value={level}>{level}</option>)}
+        </Select>
+      </div>
+
+      <button type="button" id="reset-filters" class="btn underline font-bold hover:text-primary-hover">Reset Filters</button>
+    </form>
+
+    <Prose>
+      <h2>List of Talks</h2>
     </Prose>
 
     <ol class="sessions">
@@ -46,7 +69,7 @@ const description = "A list of all the sessions at the conference";
           <li
             class="mb-12"
             data-track={session.data.track}
-            data-type={session.data.submission_type}
+            data-level={session.data.level}
           >
             <Prose>
               <h4>
@@ -63,19 +86,23 @@ const description = "A list of all the sessions at the conference";
             </Prose>
 
             <ul class="space-x-2 capitalize">
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Track:</span>
-                  {session.data.track}
-                </Tag>
-              </li>
+              {session.data.track && (
+                <li class="inline-block">
+                  <Tag>
+                    <span class="sr-only">Track:</span>
+                    {session.data.track}
+                  </Tag>
+                </li>
+              )}
 
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Level:</span>
-                  {session.data.level}
-                </Tag>
-              </li>
+              {session.data.level && (
+                <li class="inline-block">
+                  <Tag>
+                    <span class="sr-only">Level:</span>
+                    {session.data.level}
+                  </Tag>
+                </li>
+              )}
             </ul>
           </li>
         ))
@@ -83,3 +110,47 @@ const description = "A list of all the sessions at the conference";
     </ol>
   </div>
 </Layout>
+
+<script>
+  const forms = document.querySelectorAll("form.filter-sessions");
+
+  function filterSessions() {
+    forms.forEach((form) => {
+      // @ts-ignore
+      const track = form.querySelector("#track").value;
+      // @ts-ignore
+      const level = form.querySelector("#level").value;
+
+
+      document.querySelectorAll("ol.sessions > li").forEach((session) => {
+        const sessionTrack = session.getAttribute("data-track");
+        const sessionLevel = session.getAttribute("data-level");
+
+        if (
+          (track === "" || sessionTrack === track) &&
+          (level === "" || sessionLevel === level)
+        ) {
+          // @ts-ignore
+          session.style.display = "block";
+        } else {
+          // @ts-ignore
+          session.style.display = "none";
+        }
+      });
+    });
+  }
+
+  forms.forEach((form) => {
+    form.querySelectorAll("select").forEach((select) => {
+      select.addEventListener("change", filterSessions);
+    });
+
+    const resetButton = form.querySelector("#reset-filters");
+    resetButton?.addEventListener("click", () => {
+      form.querySelectorAll("select").forEach((select) => {
+        select.value = "";
+      });
+      filterSessions();
+    });
+  });
+</script>

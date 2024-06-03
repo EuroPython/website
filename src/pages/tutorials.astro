@@ -11,16 +11,16 @@ const sessions = await getCollection("sessions");
 const tutorials = sessions.filter(s => s.data.submission_type === "Tutorial");
 
 const allTracks = Array.from(
-  new Set(sessions.map((session) => session.data.track)),
+  new Set(tutorials.map((session) => session.data.track).filter((track) => track))
 ).sort();
 
-const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.submission_type)),
+const allLevels = Array.from(
+  new Set(tutorials.map((session) => session.data.level).filter((level) => level))
 ).sort();
 
-const title = "Sessions";
+const title = "Tutorials";
 
-const description = "A list of all the sessions at the conference";
+const description = "A list of all the tutorials at the conference";
 ---
 
 <Layout title={title} description={description}>
@@ -33,11 +33,11 @@ const description = "A list of all the sessions at the conference";
       </p>
 
       <p>
-      Our Programme team selected 16 best proposals submitted through our CfP.
+      Our Programme team selected 16 best proposals submitted through our <a href="/cfp">CFP</a>.
       </p>
 
       <p>
-      Tutorials will take place in Club Rooms of the PCC on the first floor.
+      Tutorials will take place in <a href="/accessibility#tutorials---club-rooms-1st-floor">Club Rooms</a> of the <a href="http://localhost:4321/accessibility#the-prague-congress-centre-the-pcc">PCC (Prague Congress Centre)</a> on the first floor.
       If you have trouble finding specific rooms, please check with the registration desk on the first floor.
       </p>
 
@@ -48,8 +48,31 @@ const description = "A list of all the sessions at the conference";
       Access to each tutorial room is on a first-come, first-served basis. Other than having a compatible ticket type, no other registration is required.
       </p>
 
-      <h2>List of tutorials</h2>
+      <h2>Filters</h2>
+    </Prose>
 
+    <form class="mb-12 filter-sessions">
+      <div class="mb-6">
+        <Label htmlFor="track">Track</Label>
+        <Select id="track" name="track">
+          <option value="">All</option>
+          {allTracks.map((track) => <option value={track}>{track}</option>)}
+        </Select>
+      </div>
+
+      <div class="mb-6">
+        <Label htmlFor="level">Level</Label>
+        <Select id="level" name="level">
+          <option value="">All</option>
+          {allLevels.map((level) => <option value={level}>{level}</option>)}
+        </Select>
+      </div>
+
+      <button type="button" id="reset-filters" class="btn underline font-bold hover:text-primary-hover">Reset Filters</button>
+    </form>
+
+    <Prose>
+      <h2>List of Tutorials</h2>
     </Prose>
 
     <ol class="sessions">
@@ -75,19 +98,23 @@ const description = "A list of all the sessions at the conference";
             </Prose>
 
             <ul class="space-x-2 capitalize">
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Track:</span>
-                  {session.data.track}
-                </Tag>
-              </li>
+              {session.data.track && (
+                <li class="inline-block">
+                  <Tag>
+                    <span class="sr-only">Track:</span>
+                    {session.data.track}
+                  </Tag>
+                </li>
+              )}
 
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Level:</span>
-                  {session.data.level}
-                </Tag>
-              </li>
+              {session.data.level && (
+                <li class="inline-block">
+                  <Tag>
+                    <span class="sr-only">Level:</span>
+                    {session.data.level}
+                  </Tag>
+                </li>
+              )}
             </ul>
           </li>
         ))
@@ -95,3 +122,47 @@ const description = "A list of all the sessions at the conference";
     </ol>
   </div>
 </Layout>
+
+<script>
+  const forms = document.querySelectorAll("form.filter-sessions");
+
+  function filterSessions() {
+    forms.forEach((form) => {
+      // @ts-ignore
+      const track = form.querySelector("#track").value;
+      // @ts-ignore
+      const level = form.querySelector("#level").value;
+
+
+      document.querySelectorAll("ol.sessions > li").forEach((session) => {
+        const sessionTrack = session.getAttribute("data-track");
+        const sessionLevel = session.getAttribute("data-level");
+
+        if (
+          (track === "" || sessionTrack === track) &&
+          (level === "" || sessionLevel === level)
+        ) {
+          // @ts-ignore
+          session.style.display = "block";
+        } else {
+          // @ts-ignore
+          session.style.display = "none";
+        }
+      });
+    });
+  }
+
+  forms.forEach((form) => {
+    form.querySelectorAll("select").forEach((select) => {
+      select.addEventListener("change", filterSessions);
+    });
+
+    const resetButton = form.querySelector("#reset-filters");
+    resetButton?.addEventListener("click", () => {
+      form.querySelectorAll("select").forEach((select) => {
+        select.value = "";
+      });
+      filterSessions();
+    });
+  });
+</script>

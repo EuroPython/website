@@ -4,7 +4,7 @@
       "name": "Programme",
       "items": [
         {
-          "name": "List of sessions",
+          "name": "List of Sessions",
           "path": "/sessions"
         },
         {
@@ -20,16 +20,12 @@
           "path": "/posters"
         },
         {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "List of Keynote Speakers",
           "path": "/keynoters"
-        },
-        {
-          "name": "Call for Proposals",
-          "path": "/cfp"
-        },
-        {
-          "name": "Community Voting",
-          "path": "/voting"
         },
         {
           "name": "Speaker Mentorship",
