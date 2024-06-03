@@ -8,7 +8,7 @@ import { Tag } from "../components/tag/tag";
 import SessionSpeakers from "../components/session-speakers.astro";
 
 const sessions = await getCollection("sessions");
-const talks = sessions.filter(s => s.data.submission_type.substr(0,4) === "Talk");
+const talks = sessions.filter(s => s.data.submission_type.substring(0,4) === "Talk");
 
 const allTracks = Array.from(
   new Set(talks.map((talk) => talk.data.track).filter((track) => track))
