@@ -6,6 +6,7 @@ import { Label } from "../components/form/label";
 import { Select } from "../components/form/select";
 import { Tag } from "../components/tag/tag";
 import SessionSpeakers from "../components/session-speakers.astro";
+import { Separator } from "../components/separator/separator";
 
 const sessions = await getCollection("sessions");
 const talks = sessions.filter(s => s.data.submission_type.substring(0,4) === "Talk");
@@ -29,7 +30,7 @@ const description = "A list of all the talks at the conference";
       <h1>Talks</h1>
 
       <p>
-      From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel tracks
+      From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel tracks.
       </p>
 
       <p>
@@ -60,54 +61,70 @@ const description = "A list of all the talks at the conference";
     </form>
 
     <Prose>
-      <h2>List of Talks</h2>
+      <h2>List of Talks by Track</h2>
     </Prose>
 
-    <ol class="sessions">
-      {
-        talks.map((session) => (
-          <li
-            class="mb-12"
-            data-track={session.data.track}
-            data-level={session.data.level}
-          >
+    {
+      allTracks.map((track, index) => {
+        const filteredSessions = talks.filter((session) => session.data.track === track);
+
+        if (filteredSessions.length === 0) return null;
+
+        return (
+          <div class="track-group" data-track={track}>
             <Prose>
-              <h4>
-                <a href={`/session/${session.slug}`} class="underline">
-                  {session.data.title}
-                </a>
-              </h4>
-
-              <p>
-                <span class="sr-only">Speakers:</span>
-
-                <SessionSpeakers speakers={session.data.speakers} />
-              </p>
+              <h3>{track}</h3>
             </Prose>
+            <ol class="sessions">
+              {
+                filteredSessions.map((session) => (
+                  <li
+                    class="mb-12"
+                    data-track={session.data.track}
+                    data-level={session.data.level}
+                  >
+                    <Prose>
+                      <h4>
+                        <a href={`/session/${session.slug}`} class="underline">
+                          {session.data.title}
+                        </a>
+                      </h4>
 
-            <ul class="space-x-2 capitalize">
-              {session.data.track && (
-                <li class="inline-block">
-                  <Tag>
-                    <span class="sr-only">Track:</span>
-                    {session.data.track}
-                  </Tag>
-                </li>
-              )}
+                      <p>
+                        <span class="sr-only">Speakers:</span>
 
-              {session.data.level && (
-                <li class="inline-block">
-                  <Tag>
-                    <span class="sr-only">Level:</span>
-                    {session.data.level}
-                  </Tag>
-                </li>
-              )}
-            </ul>
-          </li>
-        ))
-      }
-    </ol>
+                        <SessionSpeakers speakers={session.data.speakers} />
+                      </p>
+                    </Prose>
+
+                    <ul class="space-x-2 capitalize">
+                      {session.data.track && (
+                        <li class="inline-block">
+                          <Tag>
+                            <span class="sr-only">Track:</span>
+                            {session.data.track}
+                          </Tag>
+                        </li>
+                      )}
+
+                      {session.data.level && (
+                        <li class="inline-block">
+                          <Tag>
+                            <span class="sr-only">Level:</span>
+                            {session.data.level}
+                          </Tag>
+                        </li>
+                      )}
+                    </ul>
+                  </li>
+                ))
+              }
+            </ol>
+            {index !== allTracks.length - 1 ? <Separator /> : <div class="mb-20" />}
+          </div>
+        );
+      })
+    }
   </div>
 </Layout>
 
@@ -120,7 +137,6 @@ const description = "A list of all the talks at the conference";
       const track = form.querySelector("#track").value;
       // @ts-ignore
       const level = form.querySelector("#level").value;
-
 
       document.querySelectorAll("ol.sessions > li").forEach((session) => {
         const sessionTrack = session.getAttribute("data-track");
@@ -135,6 +151,17 @@ const description = "A list of all the talks at the conference";
         } else {
           // @ts-ignore
           session.style.display = "none";
+        }
+      });
+
+      document.querySelectorAll("div.track-group").forEach((group) => {
+        const visibleSessions = group.querySelectorAll("ol.sessions > li:not([style*='display: none'])").length;
+        if (visibleSessions === 0) {
+          // @ts-ignore
+          group.style.display = "none";
+        } else {
+          // @ts-ignore
+          group.style.display = "block";
         }
       });
     });
@@ -153,4 +180,6 @@ const description = "A list of all the talks at the conference";
       filterSessions();
     });
   });
+
+  filterSessions();
 </script>
