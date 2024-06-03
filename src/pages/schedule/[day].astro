@@ -1,12 +1,70 @@
 ---
 import { Schedule } from "../../components/schedule/schedule";
 import Layout from "../../layouts/Layout.astro";
+import { getSchedule } from "./get-schedule";
 
 export const getStaticPaths = async () => {
   return [{ params: { day: "about" } }];
 };
+
+const schedule = await getSchedule();
+
+const timeToRow = {
+  "09:00": 2,
+  "10:00": 60 / 5 + 2,
+};
 ---
 
-<Layout>
-  <Schedule />
+<Layout title="Schedule" description="The schedule for the conference">
+  <div class="schedule">
+    <div class="break">break</div>
+    <div class="break" style="--grid-row:26">break</div>
+
+    <div
+      class="session"
+      style={{
+        "--start": timeToRow["09:00"],
+        "--end": timeToRow["10:00"],
+      }}
+    >
+      <h2>Opening</h2>
+      <p>Opening remarks and introduction to the conference</p>
+    </div>
+  </div>
+
+  <div class="h-12"></div>
 </Layout>
+
+<style>
+  .schedule {
+    --break: 60px;
+    --minute: 4px;
+    --5min: calc(var(--minute) * 5);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:
+      var(--break)
+      /* every slot is divided into 5 minute rows */
+      repeat(12, var(--5min))
+      repeat(12, var(--5min))
+      var(--break);
+  }
+
+  .break {
+    grid-column: 1 / -1;
+    grid-row: var(--grid-row, 1);
+    background: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .session {
+    grid-column: 1 / -1;
+    grid-row: var(--start) / var(--end);
+    background: var(--color-secondary);
+    padding: 1rem;
+  }
+</style>
