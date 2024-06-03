@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import { Title } from "components/typography/title";
 
-import * as React from "react";
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 
 const Ribbon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -62,9 +61,6 @@ const SponsorTier = ({
   price: number | string;
   features: string[];
 }) => {
-  // TODO: this component is inside a prose container, so we need to reset some styles
-  // we can use no-prose
-
   const formattedPrice =
     typeof price === "number"
       ? new Intl.NumberFormat("en", {
@@ -76,7 +72,7 @@ const SponsorTier = ({
       : price;
 
   return (
-    <div className="bg-white text-black rounded-2xl p-6 relative">
+    <div className="bg-white text-black rounded-2xl p-6 relative not-prose z-0">
       <div className="h-[160px]">
         <Ribbon
           className={clsx("absolute right-6 -top-6", {
@@ -88,6 +84,7 @@ const SponsorTier = ({
             "text-sponsor-bronze": title === "Bronze",
             "text-sponsor-patron": title === "Patron",
           })}
+          style={{ zIndex: -1 }}
         />
 
         <Title level={3} className="mt-0 !mb-2">
@@ -99,7 +96,6 @@ const SponsorTier = ({
           {totalSlots ? (
             <>
               <span>{totalSlots}</span> slot{totalSlots == 1 ? "" : "s"}{" "}
-
               available
             </>
           ) : (
@@ -120,7 +116,7 @@ const SponsorTier = ({
 
 export const SponsorTiers = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
       <SponsorTier
         title="Keystone"
         totalSlots={1}
@@ -193,7 +189,6 @@ export const SponsorTiers = () => {
         ]}
       />
 
-      <div className="space-y-10">
         <SponsorTier
           title="Bronze"
           price={2000}
@@ -201,13 +196,12 @@ export const SponsorTiers = () => {
           features={["Logo & recruiting ad on EuroPython website and more!"]}
         />
 
-        <SponsorTier
-          title="Patron"
-          price={1000}
-          totalSlots={"limited"}
-          features={["Logo on EuroPython website, welcome tweet and more!"]}
-        />
-      </div>
+      <SponsorTier
+        title="Patron"
+        price={1000}
+        totalSlots={"limited"}
+        features={["Logo on EuroPython website, welcome tweet and more!"]}
+      />
     </div>
   );
 };
