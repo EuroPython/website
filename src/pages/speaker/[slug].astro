@@ -111,7 +111,7 @@ function ensureHttps(str: string): string {
               <dd>
                 {isUrl(entry.data.homepage) ? (
                   <a
-                    href={entry.data.homepage}
+                    href={ensureHttps(entry.data.homepage)}
                     class="text-primary underline hover:text-primary-hover"
                   >
                     {entry.data.homepage}
@@ -129,7 +129,7 @@ function ensureHttps(str: string): string {
               <dd>
                 {isUrl(entry.data.gitx) ? (
                   <a
-                    href={entry.data.gitx}
+                    href={ensureHttps(entry.data.gitx)}
                     class="text-primary underline hover:text-primary-hover"
                   >
                     {entry.data.gitx}
