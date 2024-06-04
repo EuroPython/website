@@ -63,18 +63,10 @@ const speakers = defineCollection({
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
-<<<<<<< HEAD
-    twitter_url: z.string().nullable(),
-    mastodon_url: z.string().nullable(),
-||||||| 2121512
-    twitter: z.string().nullable(),
-    mastodon: z.string().nullable(),
-=======
     gitx: z.string().nullable(),
     linkedin_url: z.string().url().nullable(),
     mastodon_url: z.string().url().nullable(),
     twitter_url: z.string().url().nullable(),
->>>>>>> main
   }),
 });
 
@@ -89,31 +81,17 @@ const sessions = defineCollection({
     state: z.enum(["confirmed"]),
     tweet: z.string(),
     duration: z.string(),
-    level: z.enum(["beginner", "intermediate", "advanced", ""]),
-    delivery: z.enum(["in-person", "remote", ""]),
+    level: z.enum(["beginner", "intermediate", "advanced"]),
+    delivery: z.enum(["in-person", "remote"]),
     room: z.string().nullable(),
     start: z.string().nullable(),
     end: z.string().nullable(),
-<<<<<<< HEAD
-    talks_in_parallel: z.array(z.string()).nullable(),
-    talks_after: z.array(z.string()).nullable(),
-    next_talk: z.string().nullable(),
-    prev_talk: z.string().nullable(),
-    website_url: z.string().url(),
-||||||| 2121512
-    talks_in_parallel: z.string().nullable(),
-    talks_after: z.string().nullable(),
-    next_talk_code: z.string().nullable(),
-    prev_talk_code: z.string().nullable(),
-    website_url: z.string().url(),
-=======
     website_url: z.string().url(),
     talks_in_parallel: z.string().nullable(),
     talks_after: z.string().nullable(),
     talks_before: z.string().nullable(),
     next_talk: z.string().nullable(),
     prev_talk: z.string().nullable(),
->>>>>>> main
   }),
 });
 
