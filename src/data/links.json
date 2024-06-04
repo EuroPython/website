@@ -51,6 +51,10 @@
         {
           "name": "WebAssembly Summit",
           "path": "/wasm"
+        },
+        {
+          "name": "C API Summit",
+          "path": "/capi"
         }
       ]
     },
