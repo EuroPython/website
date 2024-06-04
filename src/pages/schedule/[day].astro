@@ -9,62 +9,195 @@ export const getStaticPaths = async () => {
 
 const schedule = await getSchedule();
 
-const timeToRow = {
-  "09:00": 2,
-  "10:00": 60 / 5 + 2,
+const HEADER_OFFSET = 2;
+
+// prettier-ignore
+const sessions = [
+  { type: "break", start: "09:00", end: "10:00", title: "Registration" },
+  { type: "session", start: "10:00", end: "11:00", title: "Opening", description: "Opening remarks and introduction to the conference", rooms: ["Room 1", "Room 2", "Room 3"], },
+  { type: "session", start: "11:00", end: "12:00", title: "Keynote", description: "Keynote speaker", rooms: ["Room 1", "Room 2", "Room 3"], },
+  { type: "break", start: "12:00", end: "13:00", title: "Lunch" },
+  { type: "session", start: "13:00", end: "13:30", title: "Session 1", rooms: ["Room 1"]},
+  { type: "session", start: "13:00", end: "13:30", title: "Session 2", rooms: ["Room 2"]},
+  { type: "session", start: "13:00", end: "13:30", title: "Session 3", rooms: ["Room 3"]},
+  { type: "session", start: "13:30", end: "14:00", title: "Session 4", rooms: ["Room 1"]},
+  { type: "session", start: "13:30", end: "14:00", title: "Session 5", rooms: ["Room 2"]},
+  { type: "session", start: "13:30", end: "14:00", title: "Session 6", rooms: ["Room 3"]},
+  { type: "break", start: "14:00", end: "14:30", title: "Break" },
+  { type: "session", start: "14:30", end: "15:00", title: "Session 7", rooms: ["Room 1"]},
+  { type: "session", start: "14:30", end: "15:00", title: "Session 8", rooms: ["Room 2"]},
+  { type: "session", start: "14:30", end: "15:00", title: "Session 9", rooms: ["Room 3"]},
+  { type: "session", start: "15:00", end: "15:30", title: "Session 10", rooms: ["Room 1"]},
+  { type: "session", start: "15:00", end: "15:30", title: "Session 11", rooms: ["Room 2"]},
+  { type: "session", start: "15:00", end: "15:30", title: "Session 12", rooms: ["Room 3"]},
+  { type: "break", start: "15:30", end: "16:00", title: "Break" },
+  { type: "session", start: "16:00", end: "16:30", title: "Session 13", rooms: ["Room 1"]},
+  { type: "session", start: "16:00", end: "16:30", title: "Session 14", rooms: ["Room 2"]},
+  { type: "session", start: "16:00", end: "16:30", title: "Session 15", rooms: ["Room 3"]},
+] as const;
+
+const slots = [
+  { start: "09:00", end: "09:30", type: "break" },
+  { start: "09:30", end: "10:00", type: "break" },
+  { start: "10:00", end: "10:30", type: "session" },
+  { start: "10:30", end: "11:00", type: "session" },
+  { start: "11:00", end: "11:30", type: "session" },
+  { start: "11:30", end: "12:00", type: "session" },
+  { start: "12:00", end: "12:30", type: "lunch" },
+  { start: "12:30", end: "13:00", type: "lunch" },
+  { start: "13:00", end: "13:30", type: "session" },
+  { start: "13:30", end: "14:00", type: "session" },
+  { start: "14:00", end: "14:30", type: "break" },
+  { start: "14:30", end: "15:00", type: "session" },
+  { start: "15:00", end: "15:30", type: "session" },
+  { start: "15:30", end: "16:00", type: "break" },
+  { start: "16:00", end: "16:30", type: "session" },
+];
+
+const gridRows = [
+  // header row
+  "var(--header-height)",
+];
+
+let row = 2;
+
+const timeToRow: { [key: string]: number } = {};
+
+for (const slot of slots) {
+  const start = slot.start;
+
+  timeToRow[start] = row;
+
+  if (slot.type === "break") {
+    gridRows.push(`var(--break)`);
+    row += 1;
+  } else if (slot.type === "lunch") {
+    gridRows.push(`var(--lunch)`);
+    row += 1;
+  } else {
+    gridRows.push(`repeat(6, var(--5min))`);
+    row += 6;
+  }
+}
+
+timeToRow["16:30"] = row;
+
+const ROOMS = ["Room 1", "Room 2", "Room 3"];
+
+const getColStart = ({
+  type,
+  rooms,
+}:
+  | {
+      type: "break";
+      rooms: undefined;
+    }
+  | { type: "session"; rooms: string[] }) => {
+  if (type === "break") {
+    return 2;
+  }
+
+  const indexes = rooms.map((room) => ROOMS.indexOf(room));
+  return Math.min(...indexes) + 2;
+};
+
+const getColEnd = ({
+  type,
+  rooms,
+}:
+  | {
+      type: "break";
+      rooms: undefined;
+    }
+  | { type: "session"; rooms: string[] }) => {
+  if (type === "break") {
+    return -1;
+  }
+
+  const indexes = rooms.map((room) => ROOMS.indexOf(room));
+  return Math.max(...indexes) + 3;
 };
 ---
 
 <Layout title="Schedule" description="The schedule for the conference">
-  <div class="schedule">
-    <div class="break">break</div>
-    <div class="break" style="--grid-row:26">break</div>
+  <div class="schedule" style={{ gridTemplateRows: gridRows.join(" ") }}>
+    <header>
+      <div>time</div>
+      {ROOMS.map((room) => <h1>{room}</h1>)}
+    </header>
 
-    <div
-      class="session"
-      style={{
-        "--start": timeToRow["09:00"],
-        "--end": timeToRow["10:00"],
-      }}
-    >
-      <h2>Opening</h2>
-      <p>Opening remarks and introduction to the conference</p>
-    </div>
+    {
+      slots.map((slot) => (
+        <div
+          class="time"
+          style={{
+            "--start": timeToRow[slot.start],
+            "--end": timeToRow[slot.end],
+          }}
+        >
+          <h2>{slot.start}</h2>
+        </div>
+      ))
+    }
+
+    {
+      sessions.map((session) => (
+        <div
+          class={session.type}
+          style={{
+            "--start": timeToRow[session.start],
+            "--end": timeToRow[session.end],
+            "--col-start": getColStart(session),
+            "--col-end": getColEnd(session),
+          }}
+        >
+          <h2>
+            {session.start} {session.title}
+          </h2>
+          {session.description && <p>{session.description}</p>}
+        </div>
+      ))
+    }
+    <div class="h-12"></div>
   </div>
 
-  <div class="h-12"></div>
+  <style>
+    .schedule {
+      --header-height: 60px;
+      --break: 30px;
+      --lunch: 90px;
+      --minute: 4px;
+      --5min: calc(var(--minute) * 5);
+
+      display: grid;
+      grid-template-columns: 100px repeat(3, 1fr);
+
+      header {
+        display: contents;
+
+        > * {
+          grid-row: 1;
+        }
+      }
+    }
+
+    .session,
+    .time,
+    .break {
+      grid-row: var(--start) / var(--end);
+      grid-column: var(--col-start) / var(--col-end);
+    }
+
+    .time {
+      padding: 0;
+    }
+
+    .break {
+      background: var(--color-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  </style>
 </Layout>
-
-<style>
-  .schedule {
-    --break: 60px;
-    --minute: 4px;
-    --5min: calc(var(--minute) * 5);
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:
-      var(--break)
-      /* every slot is divided into 5 minute rows */
-      repeat(12, var(--5min))
-      repeat(12, var(--5min))
-      var(--break);
-  }
-
-  .break {
-    grid-column: 1 / -1;
-    grid-row: var(--grid-row, 1);
-    background: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-
-  .session {
-    grid-column: 1 / -1;
-    grid-row: var(--start) / var(--end);
-    background: var(--color-secondary);
-    padding: 1rem;
-  }
-</style>
