@@ -55,7 +55,8 @@
         {
           "name": "C API Summit",
           "path": "/capi"
-        }
+        },
+        { "name": "Humble Data", "path": "/humble-data" }
       ]
     },
     {
