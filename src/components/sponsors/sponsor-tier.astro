@@ -35,7 +35,7 @@ const { tier, top } = Astro.props;
   >
     {
       tier.sponsors.map((sponsor) => (
-        <a href={sponsor.data.url} target="_blank" rel="noopener noreferrer">
+        <a href={sponsor.data.url} target="_blank" rel="noopener noreferrer" class="pb-8">
           <Image
             src={sponsor.data.image}
             alt={sponsor.data.name}
