@@ -2,8 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Tag } from "../components/tag/tag";
-import SessionSpeakers from "../components/session-speakers.astro";
+import ListSessions from "../components/sessions/list-sessions.astro";
 
 const sessions = await getCollection("sessions");
 const tutorials = sessions.filter(s => s.data.submission_type === "Tutorial");
@@ -41,46 +40,6 @@ const description = "A list of all the tutorials at the conference";
       <h2>List of Tutorials</h2>
     </Prose>
 
-    <ol class="sessions">
-      {
-        tutorials.map((session) => (
-          <li class="mb-12">
-            <Prose>
-              <h4>
-                <a href={`/session/${session.slug}`} class="underline">
-                  {session.data.title}
-                </a>
-              </h4>
-
-              <p>
-                <span class="sr-only">Speakers:</span>
-
-                <SessionSpeakers speakers={session.data.speakers} />
-              </p>
-            </Prose>
-
-            <ul class="space-x-2 capitalize">
-              {session.data.track && (
-                <li class="inline-block">
-                  <Tag>
-                    <span class="sr-only">Track:</span>
-                    {session.data.track}
-                  </Tag>
-                </li>
-              )}
-
-              {session.data.level && (
-                <li class="inline-block">
-                  <Tag>
-                    <span class="sr-only">Level:</span>
-                    {session.data.level}
-                  </Tag>
-                </li>
-              )}
-            </ul>
-          </li>
-        ))
-      }
-    </ol>
+    <ListSessions sessions={tutorials} />
   </div>
 </Layout>

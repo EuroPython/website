@@ -2,14 +2,12 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Label } from "../components/form/label";
-import { Select } from "../components/form/select";
-import { Tag } from "../components/tag/tag";
-import SessionSpeakers from "../components/session-speakers.astro";
+import Filter from "../components/sessions/filter.astro";
+import ListSessions from "../components/sessions/list-sessions.astro";
 import { Separator } from "../components/separator/separator";
 
 const sessions = await getCollection("sessions");
-const talks = sessions.filter(s => s.data.submission_type.substring(0,4) === "Talk");
+const talks = sessions.filter(s => s.data.submission_type.substring(0, 4) === "Talk");
 
 const allTracks = Array.from(
   new Set(talks.map((talk) => talk.data.track).filter((track) => track))
@@ -28,158 +26,31 @@ const description = "A list of all the talks at the conference";
   <div class="px-6">
     <Prose>
       <h1>Talks</h1>
-
-      <p>
-      From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel tracks.
-      </p>
-
-      <p>
-      Below there is a list of all the talks that were accepted from our <a href="/cfp">CFP</a>.
-      </p>
-
+      <p>From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel tracks.</p>
+      <p>Below there is a list of all the talks that were accepted from our <a href="/cfp">CFP</a>.</p>
       <h2>Filters</h2>
     </Prose>
 
-    <form class="mb-12 filter-sessions">
-      <div class="mb-6">
-        <Label htmlFor="track">Track</Label>
-        <Select id="track" name="track">
-          <option value="">All</option>
-          {allTracks.map((track) => <option value={track}>{track}</option>)}
-        </Select>
-      </div>
-
-      <div class="mb-6">
-        <Label htmlFor="level">Level</Label>
-        <Select id="level" name="level">
-          <option value="">All</option>
-          {allLevels.map((level) => <option value={level}>{level}</option>)}
-        </Select>
-      </div>
-
-      <button type="button" id="reset-filters" class="btn underline font-bold hover:text-primary-hover">Reset Filters</button>
-    </form>
+    <Filter allTracks={allTracks} allLevels={allLevels} />
 
     <Prose>
       <h2>List of Talks by Track</h2>
     </Prose>
 
-    {
-      allTracks.map((track, index) => {
-        const filteredSessions = talks.filter((session) => session.data.track === track);
+    {allTracks.map((track, index) => {
+      const filteredSessions = talks.filter((session) => session.data.track === track);
 
-        if (filteredSessions.length === 0) return null;
+      if (filteredSessions.length === 0) return null;
 
-        return (
-          <div class="track-group" data-track={track}>
-            <Prose>
-              <h3>{track}</h3>
-            </Prose>
-            <ol class="sessions">
-              {
-                filteredSessions.map((session) => (
-                  <li
-                    class="mb-12"
-                    data-track={session.data.track}
-                    data-level={session.data.level}
-                  >
-                    <Prose>
-                      <h4>
-                        <a href={`/session/${session.slug}`} class="underline">
-                          {session.data.title}
-                        </a>
-                      </h4>
-
-                      <p>
-                        <span class="sr-only">Speakers:</span>
-
-                        <SessionSpeakers speakers={session.data.speakers} />
-                      </p>
-                    </Prose>
-
-                    <ul class="space-x-2 capitalize">
-                      {session.data.track && (
-                        <li class="inline-block">
-                          <Tag>
-                            <span class="sr-only">Track:</span>
-                            {session.data.track}
-                          </Tag>
-                        </li>
-                      )}
-
-                      {session.data.level && (
-                        <li class="inline-block">
-                          <Tag>
-                            <span class="sr-only">Level:</span>
-                            {session.data.level}
-                          </Tag>
-                        </li>
-                      )}
-                    </ul>
-                  </li>
-                ))
-              }
-            </ol>
-            {index !== allTracks.length - 1 ? <Separator /> : <div class="mb-20" />}
-          </div>
-        );
-      })
-    }
+      return (
+        <div class="track-group" data-track={track}>
+          <Prose>
+            <h3>{track}</h3>
+          </Prose>
+          <ListSessions sessions={filteredSessions} />
+          {index !== allTracks.length - 1 ? <Separator /> : <div class="mb-20" />}
+        </div>
+      );
+    })}
   </div>
 </Layout>
-
-<script>
-  const forms = document.querySelectorAll("form.filter-sessions");
-
-  function filterSessions() {
-    forms.forEach((form) => {
-      // @ts-ignore
-      const track = form.querySelector("#track").value;
-      // @ts-ignore
-      const level = form.querySelector("#level").value;
-
-      document.querySelectorAll("ol.sessions > li").forEach((session) => {
-        const sessionTrack = session.getAttribute("data-track");
-        const sessionLevel = session.getAttribute("data-level");
-
-        if (
-          (track === "" || sessionTrack === track) &&
-          (level === "" || sessionLevel === level)
-        ) {
-          // @ts-ignore
-          session.style.display = "block";
-        } else {
-          // @ts-ignore
-          session.style.display = "none";
-        }
-      });
-
-      document.querySelectorAll("div.track-group").forEach((group) => {
-        const visibleSessions = group.querySelectorAll("ol.sessions > li:not([style*='display: none'])").length;
-        if (visibleSessions === 0) {
-          // @ts-ignore
-          group.style.display = "none";
-        } else {
-          // @ts-ignore
-          group.style.display = "block";
-        }
-      });
-    });
-  }
-
-  forms.forEach((form) => {
-    form.querySelectorAll("select").forEach((select) => {
-      select.addEventListener("change", filterSessions);
-    });
-
-    const resetButton = form.querySelector("#reset-filters");
-    resetButton?.addEventListener("click", () => {
-      form.querySelectorAll("select").forEach((select) => {
-        select.value = "";
-      });
-      filterSessions();
-    });
-  });
-
-  filterSessions();
-</script>
