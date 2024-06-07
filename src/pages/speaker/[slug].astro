@@ -91,6 +91,7 @@ function ensureHttps(str: string): string {
     ) : null}
 
     {entry.data.affiliation || entry.data.homepage || entry.data.gitx || entry.data.linkedin_url || entry.data.mastodon_url || entry.data.twitter_url ? (
+      <br />
       <div class="mb-4">
         <h2
           class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
@@ -185,6 +186,8 @@ function ensureHttps(str: string): string {
         </dl>
       </div>
     ) : null}
+
+    <br />
 
     <h2
       class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
