@@ -9,8 +9,6 @@ export const getStaticPaths = async () => {
 
 const schedule = await getSchedule();
 
-const HEADER_OFFSET = 2;
-
 // prettier-ignore
 const sessions = [
   { type: "break", start: "09:00", end: "10:00", title: "Registration" },
@@ -18,10 +16,9 @@ const sessions = [
   { type: "session", start: "11:00", end: "12:00", title: "Keynote", description: "Keynote speaker", rooms: ["Room 1", "Room 2", "Room 3"], },
   { type: "break", start: "12:00", end: "13:00", title: "Lunch" },
   { type: "session", start: "13:00", end: "13:30", title: "Session 1", rooms: ["Room 1"]},
-  { type: "session", start: "13:00", end: "13:30", title: "Session 2", rooms: ["Room 2"]},
+  { type: "session", start: "13:00", end: "13:55", title: "Session 2", rooms: ["Room 2"]},
   { type: "session", start: "13:00", end: "13:30", title: "Session 3", rooms: ["Room 3"]},
   { type: "session", start: "13:30", end: "14:00", title: "Session 4", rooms: ["Room 1"]},
-  { type: "session", start: "13:30", end: "14:00", title: "Session 5", rooms: ["Room 2"]},
   { type: "session", start: "13:30", end: "14:00", title: "Session 6", rooms: ["Room 3"]},
   { type: "break", start: "14:00", end: "14:30", title: "Break" },
   { type: "session", start: "14:30", end: "15:00", title: "Session 7", rooms: ["Room 1"]},
@@ -31,14 +28,15 @@ const sessions = [
   { type: "session", start: "15:00", end: "15:30", title: "Session 11", rooms: ["Room 2"]},
   { type: "session", start: "15:00", end: "15:30", title: "Session 12", rooms: ["Room 3"]},
   { type: "break", start: "15:30", end: "16:00", title: "Break" },
-  { type: "session", start: "16:00", end: "16:30", title: "Session 13", rooms: ["Room 1"]},
-  { type: "session", start: "16:00", end: "16:30", title: "Session 14", rooms: ["Room 2"]},
+  { type: "session", start: "16:00", end: "16:25", title: "Session 13", rooms: ["Room 1"]},
+  { type: "session", start: "16:00", end: "16:20", title: "Session 14", rooms: ["Room 2"]},
   { type: "session", start: "16:00", end: "16:30", title: "Session 15", rooms: ["Room 3"]},
+  // special event for testing
+  { type: "session", start: "11:45", end: "12:20", title: "Special Event", rooms: ["Room 3"]},
 ] as const;
 
 const slots = [
-  { start: "09:00", end: "09:30", type: "break" },
-  { start: "09:30", end: "10:00", type: "break" },
+  { start: "09:00", end: "10:00", type: "break" },
   { start: "10:00", end: "10:30", type: "session" },
   { start: "10:30", end: "11:00", type: "session" },
   { start: "11:00", end: "11:30", type: "session" },
@@ -63,36 +61,57 @@ let row = 2;
 
 const timeToRow: { [key: string]: number } = {};
 
+const timeToNumber = (time: string) => {
+  const [hours, minutes] = time.split(":").map(Number);
+  return hours * 60 + minutes;
+};
+
+const numberToTime = (number: number) => {
+  const hours = Math.floor(number / 60);
+  const minutes = number % 60;
+  return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+};
+
 for (const slot of slots) {
   const start = slot.start;
 
-  timeToRow[start] = row;
+  let size = `var(--5min)`;
 
   if (slot.type === "break") {
-    gridRows.push(`var(--break)`);
-    row += 1;
+    size = `var(--break)`;
   } else if (slot.type === "lunch") {
-    gridRows.push(`var(--lunch)`);
+    size = `var(--lunch)`;
+  }
+
+  gridRows.push(`repeat(6, ${size})`);
+
+  let currentTime = timeToNumber(start);
+
+  for (let i = 0; i < 6; i++) {
+    const time = numberToTime(currentTime);
+    timeToRow[time] = row;
     row += 1;
-  } else {
-    gridRows.push(`repeat(6, var(--5min))`);
-    row += 6;
+    currentTime += 5;
   }
 }
 
 timeToRow["16:30"] = row;
 
+console.log(timeToRow);
+
 const ROOMS = ["Room 1", "Room 2", "Room 3"];
 
-const getColStart = ({
-  type,
-  rooms,
-}:
-  | {
-      type: "break";
-      rooms: undefined;
-    }
-  | { type: "session"; rooms: string[] }) => {
+type Break = {
+  type: "break";
+  rooms: undefined;
+};
+
+type Session = {
+  type: "session";
+  rooms: string[];
+};
+
+const getColStart = ({ type, rooms }: Break | Session) => {
   if (type === "break") {
     return 2;
   }
@@ -101,15 +120,7 @@ const getColStart = ({
   return Math.min(...indexes) + 2;
 };
 
-const getColEnd = ({
-  type,
-  rooms,
-}:
-  | {
-      type: "break";
-      rooms: undefined;
-    }
-  | { type: "session"; rooms: string[] }) => {
+const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
   if (type === "break") {
     return -1;
   }
@@ -163,9 +174,9 @@ const getColEnd = ({
 
   <style>
     .schedule {
-      --header-height: 60px;
-      --break: 30px;
-      --lunch: 90px;
+      --header-height: 30px;
+      --break: 4px;
+      --lunch: 8px;
       --minute: 4px;
       --5min: calc(var(--minute) * 5);
 
@@ -198,6 +209,10 @@ const getColEnd = ({
       justify-content: center;
       align-items: center;
       color: white;
+    }
+
+    .session {
+      border: 2px solid var(--color-primary);
     }
   </style>
 </Layout>
