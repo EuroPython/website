@@ -108,12 +108,9 @@ const slots = Object.entries(sessionsByTime)
     return { start: time, end: sessions[0].end, type: type };
   });
 
-const gridRows = [
-  // header row
-  "var(--header-height)",
-];
+const gridRows = [];
 
-let row = 2;
+let row = 1;
 
 const timeToRow: { [key: string]: number } = {};
 
@@ -132,17 +129,15 @@ for (let i = 0; i < slots.length; i++) {
   const sizeInMinutes = nextTime - currentTime;
   const size = sizeInMinutes / 5;
 
-  let sizeValue = `var(--5min)`;
+  let sizeValue = `repeat( ${size}, fit-content(200px))`;
 
   if (current.type === "break") {
-    sizeValue = `var(--break)`;
-  } else if (current.type === "lunch") {
-    sizeValue = `var(--lunch)`;
+    sizeValue = `repeat(${size}, var(--break))`;
   } else if (current.type === "room-change") {
-    sizeValue = `var(--room-change)`;
+    sizeValue = `repeat(${size}, var(--room-change))`;
   }
 
-  gridRows.push(`repeat(auto-fill, ${size}, ${sizeValue})`);
+  gridRows.push(sizeValue);
 
   for (let i = 0; i < size; i++) {
     const time = numberToTime(currentTime + i * 5);
@@ -183,102 +178,144 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
 ---
 
 <Layout title="Schedule" description="The schedule for the conference">
-  <div class="schedule" style={{ gridTemplateRows: gridRows.join(" ") }}>
-    <header>
-      <div>time</div>
-      {ROOMS.map((room) => <div>{room}</div>)}
+  <div class="full-bleed">
+    <header class="schedule-container">
+      <div
+        class="schedule"
+        style={{
+          gridTemplateColumns: `6ch repeat(${ROOMS.length}, minmax(200px, 1fr))`,
+        }}
+      >
+        <div>time</div>
+        {ROOMS.map((room) => <div>{room}</div>)}
+      </div>
     </header>
 
-    {
-      slots.map((slot) => (
-        <div class="slot">
-          <div
-            class="time"
-            style={{
-              "--start": timeToRow[slot.start],
-              "--end": timeToRow[slot.end],
-            }}
-          >
-            <h2>{slot.start}</h2>
-          </div>
+    <div class="schedule-container">
+      <div
+        class="schedule"
+        style={{
+          gridTemplateRows: gridRows.join(" "),
+          gridTemplateColumns: `6ch repeat(${ROOMS.length}, minmax(200px, 1fr))`,
+        }}
+      >
+        {
+          slots.map((slot) => (
+            <div class="slot">
+              <div
+                class="time"
+                style={{
+                  "--start": timeToRow[slot.start],
+                  "--end": timeToRow[slot.end],
+                }}
+              >
+                <h2>{slot.start}</h2>
+              </div>
 
-          {sessionsByTime[slot.start].map((session) => {
-            const style = {
-              "--start": timeToRow[session.start],
-              "--end": timeToRow[session.end],
-              "--col-start": getColStart(session),
-              "--col-end": getColEnd(session),
-            };
-            if (session.type === "room-change" || session.type === "break") {
-              return (
-                <Break
-                  title={session.title}
-                  time={session.start}
-                  style={style}
-                />
-              );
-            }
+              {sessionsByTime[slot.start].map((session) => {
+                const style = {
+                  "--start": timeToRow[session.start],
+                  "--end": timeToRow[session.end],
+                  "--col-start": getColStart(session),
+                  "--col-end": getColEnd(session),
+                };
+                if (
+                  session.type === "room-change" ||
+                  session.type === "break"
+                ) {
+                  return (
+                    <Break
+                      title={session.title}
+                      time={session.start}
+                      style={style}
+                    />
+                  );
+                }
 
-            return <Session session={session} style={style} />;
-          })}
-        </div>
-      ))
-    }
-
-    <div class="h-12"></div>
-  </div>
-
-  <style>
-    .schedule {
-      --header-height: 30px;
-      --break: 8px;
-      --lunch: 8px;
-      --minute: 4px;
-      --room-change: calc(var(--minute) * 8);
-      --5min: calc(var(--minute) * 5);
-
-      display: grid;
-      gap: 2px;
-      grid-template-columns: 100px repeat(3, 1fr);
-
-      header {
-        display: contents;
-
-        > * {
-          grid-row: 1;
+                return <Session session={session} style={style} />;
+              })}
+            </div>
+          ))
         }
-      }
-    }
 
-    .slot {
-      display: contents;
-    }
-
-    :global(.session),
-    .time,
-    .room-change,
-    :global(.break) {
-      grid-row: var(--start) / var(--end);
-      grid-column: var(--col-start) / var(--col-end);
-    }
-
-    :global(.session),
-    .time,
-    :global(.break),
-    .room-change,
-    header > div {
-      outline: 2px solid var(--color-primary);
-    }
-
-    .time {
-      padding: 0;
-      grid-column: 1 / 2;
-    }
-
-    pre {
-      max-height: 400px;
-      overflow: auto;
-      border: 1px solid var(--color-primary);
-    }
-  </style>
+        <div class="h-12"></div>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  :global(body) {
+    overflow-x: hidden;
+  }
+  .schedule-container {
+    overflow-x: auto;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--color-body-background);
+  }
+
+  .schedule {
+    --header-height: 30px;
+    --break: 8px;
+    --lunch: 8px;
+    --minute: 4px;
+    --room-change: calc(var(--minute) * 8);
+    --5min: calc(var(--minute) * 5);
+
+    display: grid;
+    gap: 2px;
+  }
+
+  .slot {
+    display: contents;
+  }
+
+  :global(.session),
+  .time,
+  .room-change,
+  :global(.break) {
+    grid-row: var(--start) / var(--end);
+    grid-column: var(--col-start) / var(--col-end);
+  }
+
+  :global(.session),
+  .time,
+  :global(.break),
+  .room-change,
+  header,
+  header > div > div {
+    outline: 2px solid var(--color-primary);
+  }
+
+  .time {
+    padding: 0;
+    grid-column: 1 / 2;
+  }
+
+  pre {
+    max-height: 400px;
+    overflow: auto;
+    border: 1px solid var(--color-primary);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const containers = document.querySelectorAll(".schedule-container");
+
+    function syncScroll(event: any) {
+      const other =
+        containers[0] === event.target ? containers[1] : containers[0];
+      other.scrollTop = event.target.scrollTop;
+      other.scrollLeft = event.target.scrollLeft;
+    }
+
+    containers.forEach((container) => {
+      container.addEventListener("scroll", syncScroll);
+    });
+  });
+</script>
