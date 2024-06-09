@@ -101,9 +101,7 @@ for (let i = 0; i < slots.length; i++) {
   let sizeValue = `var(--5min)`;
 
   if (current.type === "break") {
-    // TODO: breaks are smaller than I expected, so maybe
-    // we don't need a custom size?
-    // sizeValue = `var(--break)`;
+    sizeValue = `var(--break)`;
   } else if (current.type === "lunch") {
     sizeValue = `var(--lunch)`;
   }
@@ -158,42 +156,43 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
   <div class="schedule" style={{ gridTemplateRows: gridRows.join(" ") }}>
     <header>
       <div>time</div>
-      {ROOMS.map((room) => <h1>{room}</h1>)}
+      {ROOMS.map((room) => <div>{room}</div>)}
     </header>
 
     {
       slots.map((slot) => (
-        <div
-          class="time"
-          style={{
-            "--start": timeToRow[slot.start],
-            "--end": timeToRow[slot.end],
-          }}
-        >
-          <h2>{slot.start}</h2>
+        <div class="slot">
+          <div
+            class="time"
+            style={{
+              "--start": timeToRow[slot.start],
+              "--end": timeToRow[slot.end],
+            }}
+          >
+            <h2>{slot.start}</h2>
+          </div>
+
+          {sessionsByTime[slot.start].map((session) => (
+            <div
+              class={session.type}
+              style={{
+                "--start": timeToRow[session.start],
+                "--end": timeToRow[session.end],
+                "--col-start": getColStart(session),
+                "--col-end": getColEnd(session),
+              }}
+            >
+              <h2>
+                {session.start} - {session.end}
+                <div>{session.title}</div>
+              </h2>
+              {session.description && <p>{session.description}</p>}
+            </div>
+          ))}
         </div>
       ))
     }
 
-    {
-      sessions.map((session) => (
-        <div
-          class={session.type}
-          style={{
-            "--start": timeToRow[session.start],
-            "--end": timeToRow[session.end],
-            "--col-start": getColStart(session),
-            "--col-end": getColEnd(session),
-          }}
-        >
-          <h2>
-            {session.start} - {session.end}
-            <div>{session.title}</div>
-          </h2>
-          {session.description && <p>{session.description}</p>}
-        </div>
-      ))
-    }
     <div class="h-12"></div>
   </div>
 
@@ -204,12 +203,13 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
   <style>
     .schedule {
       --header-height: 30px;
-      --break: 4px;
+      --break: 6x;
       --lunch: 8px;
       --minute: 4px;
       --5min: calc(var(--minute) * 5);
 
       display: grid;
+      gap: 2px;
       grid-template-columns: 100px repeat(3, 1fr);
 
       header {
@@ -221,11 +221,22 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
       }
     }
 
+    .slot {
+      display: contents;
+    }
+
     .session,
     .time,
     .break {
       grid-row: var(--start) / var(--end);
       grid-column: var(--col-start) / var(--col-end);
+    }
+
+    .session,
+    .time,
+    .break,
+    header > div {
+      outline: 2px solid var(--color-primary);
     }
 
     .time {
@@ -242,7 +253,6 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
     }
 
     .session {
-      border: 2px solid var(--color-primary);
       background: var(--color-secondary);
     }
 
