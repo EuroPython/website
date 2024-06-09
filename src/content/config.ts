@@ -100,47 +100,27 @@ const days = defineCollection({
   schema: z.object({
     rooms: z.array(z.string()),
     events: z.array(
-      z.union([
-        z.object({
-          event_type: z.string(),
-          title: z.string(),
-          duration: z.number(),
-          start: z.string(),
-          rooms: z.array(z.string()),
-        }),
-        z.object({
-          rooms: z.array(z.string()),
-          event_type: z.string(),
-          code: z.string(),
-          title: z.string(),
-          session_type: z.string(),
-          speakers: z.array(z.unknown()),
-          tweet: z.string(),
-          level: z.string(),
-          start: z.string(),
-          website_url: z.string(),
-          duration: z.number(),
-        }),
-        z.object({
-          event_type: z.string(),
-          code: z.string(),
-          title: z.string(),
-          session_type: z.string(),
-          speakers: z.array(
+      z.object({
+        rooms: z.array(z.string()),
+        event_type: z.string(),
+        code: z.string().optional(),
+        title: z.string(),
+        session_type: z.string().optional(), // why?
+        speakers: z
+          .array(
             z.object({
               code: z.string(),
               name: z.string(),
               website_url: z.string(),
             })
-          ),
-          tweet: z.string(),
-          level: z.string(),
-          rooms: z.array(z.string()),
-          start: z.string(),
-          website_url: z.string(),
-          duration: z.number(),
-        }),
-      ])
+          )
+          .optional(),
+        tweet: z.string().optional().nullable(),
+        level: z.string().optional().nullable(),
+        start: z.string(),
+        website_url: z.string().optional().nullable(),
+        duration: z.number(),
+      })
     ),
   }),
 });

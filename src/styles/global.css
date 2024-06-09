@@ -17,6 +17,11 @@
   --color-body-background: #f2e3d2;
   --color-hero-primary: #4b5cba;
   --color-hero-secondary: #b5682b;
+
+  --color-session-neutral: #ffc2cc;
+  --color-session-beginner: #63d452;
+  --color-session-intermediate: #ffcd45;
+  --color-session-advanced: #d34847;
 }
 
 .tp-dfwv {
