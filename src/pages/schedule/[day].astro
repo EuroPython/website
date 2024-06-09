@@ -3,6 +3,16 @@ import { getEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { addMinutes, format, parseISO } from "date-fns";
 
+const timeToNumber = (time: string) => {
+  const [hours, minutes] = time.split(":").map(Number);
+  return hours * 60 + minutes;
+};
+
+const numberToTime = (number: number) => {
+  const hours = Math.floor(number / 60);
+  const minutes = number % 60;
+  return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+};
 export const getStaticPaths = async () => {
   const days = await getCollection("days");
 
@@ -46,19 +56,55 @@ sessions.forEach((session) => {
   sessionsByTime[session.start].push(session);
 });
 
-const slots = Object.entries(sessionsByTime).map(([time, sessions]) => {
-  let type: "session" | "break" | "lunch" = "session";
+const sessionAndTimes = Object.entries(sessionsByTime);
 
-  if (sessions.every((session) => session.type === "break")) {
-    type = "break";
+for (let i = 0; i < sessionAndTimes.length - 1; i++) {
+  const [, sessions] = sessionAndTimes[i];
+  const [nextTime] = sessionAndTimes[i + 1];
 
-    if (sessions[0].title.toLowerCase().includes("lunch")) {
-      type = "lunch";
+  const endTimes = sessions.map((session) => timeToNumber(session.end));
+  const endTime = Math.max(...endTimes);
+  const nextStartTime = timeToNumber(nextTime);
+
+  if (nextStartTime !== endTime) {
+    const duration = nextStartTime - endTime;
+
+    if (duration === 5) {
+      const roomChangeTime = numberToTime(endTime);
+      sessionsByTime[roomChangeTime] = [
+        {
+          title: "Room Change",
+          start: roomChangeTime,
+          duration: 5,
+          end: numberToTime(endTime + 5),
+          type: "room-change",
+          event_type: "room-change",
+          rooms: day.data.rooms.sort(),
+        },
+      ];
     }
-  }
 
-  return { start: time, end: sessions[0].end, type: type };
-});
+    console.log("Missing session", nextTime, duration);
+  }
+}
+
+const slots = Object.entries(sessionsByTime)
+  .sort()
+  .map(([time, sessions]) => {
+    let type: "session" | "break" | "lunch" | "room-change" = "session";
+
+    if (sessions.every((session) => session.type === "break")) {
+      type = "break";
+
+      if (sessions[0].title.toLowerCase().includes("lunch")) {
+        type = "lunch";
+      }
+    } else if (sessions.every((session) => session.type === "room-change")) {
+      type = "room-change";
+    }
+
+    return { start: time, end: sessions[0].end, type: type };
+  });
 
 const gridRows = [
   // header row
@@ -68,17 +114,6 @@ const gridRows = [
 let row = 2;
 
 const timeToRow: { [key: string]: number } = {};
-
-const timeToNumber = (time: string) => {
-  const [hours, minutes] = time.split(":").map(Number);
-  return hours * 60 + minutes;
-};
-
-const numberToTime = (number: number) => {
-  const hours = Math.floor(number / 60);
-  const minutes = number % 60;
-  return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
-};
 
 for (let i = 0; i < slots.length; i++) {
   const current = slots[i];
@@ -90,13 +125,10 @@ for (let i = 0; i < slots.length; i++) {
     nextTime = timeToNumber(next.start);
   } else {
     nextTime = timeToNumber(current.end);
-    console.log(current.end);
   }
 
   const sizeInMinutes = nextTime - currentTime;
   const size = sizeInMinutes / 5;
-
-  console.log(current, next, size, sizeInMinutes);
 
   let sizeValue = `var(--5min)`;
 
@@ -104,6 +136,8 @@ for (let i = 0; i < slots.length; i++) {
     sizeValue = `var(--break)`;
   } else if (current.type === "lunch") {
     sizeValue = `var(--lunch)`;
+  } else if (current.type === "room-change") {
+    sizeValue = `var(--5min)`;
   }
 
   gridRows.push(`repeat(${size}, ${sizeValue})`);
@@ -118,8 +152,6 @@ for (let i = 0; i < slots.length; i++) {
     timeToRow[numberToTime(nextTime)] = row;
   }
 }
-
-console.log(timeToRow);
 
 const ROOMS = day.data.rooms.sort();
 
@@ -183,7 +215,6 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
               }}
             >
               <h2>
-                {session.start} - {session.end}
                 <div>{session.title}</div>
               </h2>
               {session.description && <p>{session.description}</p>}
@@ -227,6 +258,7 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
 
     .session,
     .time,
+    .room-change,
     .break {
       grid-row: var(--start) / var(--end);
       grid-column: var(--col-start) / var(--col-end);
@@ -235,6 +267,7 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
     .session,
     .time,
     .break,
+    .room-change,
     header > div {
       outline: 2px solid var(--color-primary);
     }
