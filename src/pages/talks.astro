@@ -2,21 +2,13 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Label } from "../components/form/label";
-import { Select } from "../components/form/select";
 import { Tag } from "../components/tag/tag";
 import SessionSpeakers from "../components/session-speakers.astro";
 
 const sessions = await getCollection("sessions");
-const talks = sessions.filter(s => s.data.submission_type.substr(0,4) === "Talk");
-
-const allTracks = Array.from(
-  new Set(sessions.map((session) => session.data.track)),
-).sort();
-
-const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.submission_type)),
-).sort();
+const talks = sessions.filter(
+  (s) => s.data.session_type.substring(0, 4) === "Talk",
+);
 
 const title = "Sessions";
 
@@ -29,15 +21,17 @@ const description = "A list of all the sessions at the conference";
       <h1>Talks</h1>
 
       <p>
-      From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel tracks
+        From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel
+        tracks
       </p>
 
       <p>
-      Below there is a list of all proposals that were accepted from our <a href="/cfp">CFP</a>.
+        Below there is a list of all proposals that were accepted from our <a
+          href="/cfp">CFP</a
+        >.
       </p>
 
       <h2>List of talks</h2>
-
     </Prose>
 
     <ol class="sessions">
@@ -46,7 +40,7 @@ const description = "A list of all the sessions at the conference";
           <li
             class="mb-12"
             data-track={session.data.track}
-            data-type={session.data.submission_type}
+            data-type={session.data.session_type}
           >
             <Prose>
               <h4>

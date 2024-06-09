@@ -275,7 +275,7 @@ const getSessionStyle = (session: any) => {
                   );
                 }
 
-                return <Session session={session} style={style} />;
+                return <Session session={session as any} style={style} />;
               })}
             </div>
           ))

@@ -14,10 +14,9 @@ const allTracks = Array.from(
 ).sort();
 
 const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.submission_type)),
+  new Set(sessions.map((session) => session.data.session_type)),
 ).sort();
 
-console.log(sessions[0]);
 const title = "Sessions";
 
 const description = "A list of all the sessions at the conference";
@@ -53,7 +52,7 @@ const description = "A list of all the sessions at the conference";
           <li
             class="mb-12"
             data-track={session.data.track}
-            data-type={session.data.submission_type}
+            data-type={session.data.session_type}
           >
             <Prose>
               <h4>
@@ -70,14 +69,12 @@ const description = "A list of all the sessions at the conference";
             </Prose>
 
             <ul class="space-x-2 capitalize">
-
               <li class="inline-block">
                 <Tag>
                   <span class="sr-only">Type:</span>
-                  {session.data.submission_type}
+                  {session.data.session_type}
                 </Tag>
               </li>
-
 
               <li class="inline-block">
                 <Tag>
@@ -85,7 +82,6 @@ const description = "A list of all the sessions at the conference";
                   {session.data.track}
                 </Tag>
               </li>
-
 
               <li class="inline-block">
                 <Tag>

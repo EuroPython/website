@@ -2,21 +2,11 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Label } from "../components/form/label";
-import { Select } from "../components/form/select";
 import { Tag } from "../components/tag/tag";
 import SessionSpeakers from "../components/session-speakers.astro";
 
 const sessions = await getCollection("sessions");
-const tutorials = sessions.filter(s => s.data.submission_type === "Tutorial");
-
-const allTracks = Array.from(
-  new Set(sessions.map((session) => session.data.track)),
-).sort();
-
-const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.submission_type)),
-).sort();
+const tutorials = sessions.filter((s) => s.data.session_type === "Tutorial");
 
 const title = "Sessions";
 
@@ -29,27 +19,30 @@ const description = "A list of all the sessions at the conference";
       <h1>Tutorials</h1>
 
       <p>
-      The first two days of EuroPython (Monday, July 8th, and Tuesday, July 9th) are dedicated to tutorials. Each Tutorial is a 3-hour long session, made up of two 90-minute segments, separated by a short break.
+        The first two days of EuroPython (Monday, July 8th, and Tuesday, July
+        9th) are dedicated to tutorials. Each Tutorial is a 3-hour long session,
+        made up of two 90-minute segments, separated by a short break.
       </p>
 
       <p>
-      Our Programme team selected 16 best proposals submitted through our CfP.
+        Our Programme team selected 16 best proposals submitted through our CfP.
       </p>
 
       <p>
-      Tutorials will take place in Club Rooms of the PCC on the first floor.
-      If you have trouble finding specific rooms, please check with the registration desk on the first floor.
+        Tutorials will take place in Club Rooms of the PCC on the first floor.
+        If you have trouble finding specific rooms, please check with the
+        registration desk on the first floor.
       </p>
 
-
       <p>
-      To attend a tutorial you need a separate <a href="/tickets#tutorial-tickets">Tutorial</a> or a <a href="/tickets#combined-tickets">Combined</a> ticket.
-
-      Access to each tutorial room is on a first-come, first-served basis. Other than having a compatible ticket type, no other registration is required.
+        To attend a tutorial you need a separate <a
+          href="/tickets#tutorial-tickets">Tutorial</a
+        > or a <a href="/tickets#combined-tickets">Combined</a> ticket. Access to
+        each tutorial room is on a first-come, first-served basis. Other than having
+        a compatible ticket type, no other registration is required.
       </p>
 
       <h2>List of tutorials</h2>
-
     </Prose>
 
     <ol class="sessions">
@@ -58,7 +51,7 @@ const description = "A list of all the sessions at the conference";
           <li
             class="mb-12"
             data-track={session.data.track}
-            data-type={session.data.submission_type}
+            data-type={session.data.session_type}
           >
             <Prose>
               <h4>

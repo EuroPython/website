@@ -2,21 +2,11 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Label } from "../components/form/label";
-import { Select } from "../components/form/select";
 import { Tag } from "../components/tag/tag";
 import SessionSpeakers from "../components/session-speakers.astro";
 
 const sessions = await getCollection("sessions");
-const posters = sessions.filter(s => s.data.submission_type === "Poster");
-
-const allTracks = Array.from(
-  new Set(sessions.map((session) => session.data.track)),
-).sort();
-
-const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.submission_type)),
-).sort();
+const posters = sessions.filter((s) => s.data.session_type === "Poster");
 
 const title = "Sessions";
 
@@ -29,16 +19,18 @@ const description = "A list of all the sessions at the conference";
       <h1>Posters</h1>
 
       <p>
-      During the lunch breaks on Wednesday, Thursday and Friday, we will host {posters.length} poster sessions. You can see them all below.
+        During the lunch breaks on Wednesday, Thursday and Friday, we will host {
+          posters.length
+        } poster sessions. You can see them all below.
       </p>
 
       <p>
-      The Posters will be available throughout the entire event. If you want to talk to the author of the poster, please visit the expo area during the scheduled poster session.
+        The Posters will be available throughout the entire event. If you want
+        to talk to the author of the poster, please visit the expo area during
+        the scheduled poster session.
       </p>
 
-
       <h2>List of posters</h2>
-
     </Prose>
 
     <ol class="sessions">
@@ -47,7 +39,7 @@ const description = "A list of all the sessions at the conference";
           <li
             class="mb-12"
             data-track={session.data.track}
-            data-type={session.data.submission_type}
+            data-type={session.data.session_type}
           >
             <Prose>
               <h4>
