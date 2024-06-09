@@ -82,9 +82,9 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
           rooms: day.data.rooms.sort(),
         },
       ];
+    } else {
+      console.warn("Missing room change", endTime, nextStartTime, duration);
     }
-
-    console.log("Missing session", nextTime, duration);
   }
 }
 
