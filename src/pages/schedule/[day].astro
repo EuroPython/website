@@ -71,21 +71,28 @@ sessions.forEach((session) => {
   sessionsByTime[session.start].push(session);
 });
 
-const sessionAndTimes = Object.entries(sessionsByTime);
+const sessionAndTimes = Object.entries(sessionsByTime).sort(([a], [b]) => {
+  return timeToNumber(a) - timeToNumber(b);
+});
 
 for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   const [, sessions] = sessionAndTimes[i];
-  const [nextTime] = sessionAndTimes[i + 1];
+  const [nextTime, nextSessions] = sessionAndTimes[i + 1];
 
   const endTimes = sessions.map((session) => timeToNumber(session.end));
   const endTime = Math.max(...endTimes);
   const nextStartTime = timeToNumber(nextTime);
+
+  if (nextSessions.some((session) => session.type === "break")) {
+    continue;
+  }
 
   if (nextStartTime !== endTime) {
     const duration = nextStartTime - endTime;
 
     if (duration === 5) {
       const roomChangeTime = numberToTime(endTime);
+
       sessionsByTime[roomChangeTime] = [
         {
           title: "Room Change",
@@ -118,7 +125,7 @@ const slots = Object.entries(sessionsByTime)
       type = "room-change";
     }
 
-    return { start: time, end: sessions[0].end, type: type };
+    return { start: time, end: sessions[0].end, type: type, sessions };
   });
 
 const gridRows = [];
@@ -157,10 +164,19 @@ for (let i = 0; i < slots.length; i++) {
     timeToRow[time] = row;
     row += 1;
   }
+}
 
-  if (!next) {
-    timeToRow[numberToTime(nextTime)] = row;
-  }
+// add missing times
+const lastSlot = slots[slots.length - 1];
+const lastTime = Math.max(
+  ...lastSlot.sessions.map((session) => timeToNumber(session.end)),
+);
+const currentTime = timeToNumber(lastSlot.end);
+
+for (let i = currentTime; i <= lastTime; i += 5) {
+  const time = numberToTime(i);
+  timeToRow[time] = row;
+  row += 1;
 }
 
 type Break = {
@@ -189,6 +205,22 @@ const getColEnd = ({ type, rooms }: Break | Session) => {
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
   return Math.max(...indexes) + 3;
+};
+
+const getSessionStyle = (session: any) => {
+  const style = {
+    "--start": timeToRow[session.start],
+    "--end": timeToRow[session.end],
+    "--col-start": getColStart(session),
+    "--col-end": getColEnd(session),
+  };
+
+  if (!style["--end"]) {
+    console.log(session);
+    throw new Error(`Session ${session.title} is missing an end time`);
+  }
+
+  return style;
 };
 ---
 
@@ -228,12 +260,8 @@ const getColEnd = ({ type, rooms }: Break | Session) => {
               </div>
 
               {sessionsByTime[slot.start].map((session) => {
-                const style = {
-                  "--start": timeToRow[session.start],
-                  "--end": timeToRow[session.end],
-                  "--col-start": getColStart(session),
-                  "--col-end": getColEnd(session),
-                };
+                const style = getSessionStyle(session);
+
                 if (
                   session.type === "room-change" ||
                   session.type === "break"
@@ -315,6 +343,7 @@ const getColEnd = ({ type, rooms }: Break | Session) => {
     padding: 8px;
     grid-column: 1 / 2;
     font-weight: bold;
+    outline: none;
   }
 
   pre {
