@@ -25,6 +25,19 @@ export const getStaticPaths = async () => {
 
 const day = await getEntry("days", Astro.params.day);
 
+// make sure to always have `Main Hall A|B|C` as the last rooms
+const ROOMS = day.data.rooms.sort((a, b) => {
+  if (a === "Main Hall A" || a === "Main Hall B" || a === "Main Hall C") {
+    return 1;
+  }
+
+  if (b === "Main Hall A" || b === "Main Hall B" || b === "Main Hall C") {
+    return -1;
+  }
+
+  return a.localeCompare(b);
+});
+
 const sessions = day.data.events
   .map((event) => {
     const startTime = parseISO(event.start);
@@ -81,7 +94,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
           end: numberToTime(endTime + 5),
           type: "room-change",
           event_type: "room-change",
-          rooms: day.data.rooms.sort(),
+          rooms: ROOMS,
         },
       ];
     } else {
@@ -150,8 +163,6 @@ for (let i = 0; i < slots.length; i++) {
   }
 }
 
-const ROOMS = day.data.rooms.sort();
-
 type Break = {
   type: "break" | "room-change";
   rooms: string[];
@@ -186,7 +197,7 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
           gridTemplateColumns: `6ch repeat(${ROOMS.length}, minmax(200px, 1fr))`,
         }}
       >
-        <div>time</div>
+        <div>Time</div>
         {ROOMS.map((room) => <div>{room}</div>)}
       </div>
     </header>
@@ -256,6 +267,10 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
     position: sticky;
     top: 0;
     background: var(--color-body-background);
+
+    > div > div {
+      padding: 8px;
+    }
   }
 
   .schedule {
@@ -292,7 +307,7 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
   }
 
   .time {
-    padding: 0;
+    padding: 8px;
     grid-column: 1 / 2;
   }
 
