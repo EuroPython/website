@@ -182,7 +182,11 @@ const getColStart = ({ type, rooms }: Break | Session) => {
   return Math.min(...indexes) + 2;
 };
 
-const getColEnd = ({ rooms }: Break | Session): number | "span" => {
+const getColEnd = ({ type, rooms }: Break | Session) => {
+  if (["room-change", "break"].includes(type)) {
+    return -1;
+  }
+
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
   return Math.max(...indexes) + 3;
 };
