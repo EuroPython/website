@@ -31,6 +31,18 @@ for (const speaker of speakers) {
       {entry.data.title}
     </h1>
     <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2 mb-6">
+      {
+        entry.data.track && (
+          <>
+            <dt class="font-bold">Track:</dt>
+            <dd class="capitalize">{entry.data.track}</dd>
+          </>
+        )
+      }
+
+      <dt class="font-bold">Type:</dt>
+      <dd class="capitalize">{entry.data.submission_type}</dd>
+
       <dt class="font-bold">Level:</dt>
       <dd class="capitalize">{entry.data.level}</dd>
       {
