@@ -1,0 +1,51 @@
+---
+code: KVNTFE
+delivery: in-person
+duration: '60'
+end: '2024-07-12T14:00:00+02:00'
+level: intermediate
+next_session: null
+prev_session: null
+resources: null
+room: Main Hall C
+session_type: Poster
+sessions_after:
+- 8FKHES
+- HZSGYK
+- LXYWXR
+- KDH3J3
+- ZXXDBV
+- QS8KJY
+sessions_before:
+- 7XMZGV
+- MAHYVG
+- 9VFEQE
+- XPXYWD
+- QZAG8P
+- XYXR3L
+sessions_in_parallel:
+- JRGVQM
+- JJAKNR
+slug: redun-lazy-expressions-for-efficient-reactive-python-workflows
+speakers:
+- maciej-szymczak
+- magdalena-borecka
+start: '2024-07-12T13:00:00+02:00'
+title: 'Redun: Lazy Expressions for Efficient Reactive Python Workflows'
+track: Python Libraries & Tooling
+tweet: ''
+website_url: https://ep2024.europython.eu/session/redun-lazy-expressions-for-efficient-reactive-python-workflows
+---
+
+The goal of redun is to provide the benefits of workflow engines for Python code in an easy and unintrusive way. Workflow engines can help run code faster by using parallel distributed execution, they can provide checkpointing for fast resuming of previously halted execution, they can reactively re-execute code based on changes in data or code, and can provide logging for data provenance.
+
+While there are lots of workflow engines available even for Python, redun differs by avoiding the need to restructure programs in terms of dataflow. In fact, we take the position that writing data flows directly is unnecessarily restrictive, and by doing so we lose abstractions we have come to rely on in most modern high-level languages (control flow, recursion, higher order functions, etc). redun’s key insight is that workflows can be expressed as lazy expressions, that are then evaluated by a scheduler that performs automatic parallelization, caching, and data provenance logging.
+
+redun’s key features are:
+- Workflows are defined by lazy expressions that when evaluated emit dynamic directed acyclic graphs (DAGs), enabling complex data flows.
+- Incremental computation that is reactive to both data changes as well as code changes.
+- Code and data changes are detected using hashing of in memory values, external data sources or source code of individual Python functions.
+- Workflow tasks can be executed on a variety of compute backends. (threads, processes, AWS and GCP batch jobs, Spark jobs, etc).
+- Past intermediate results are cached centrally and reused across workflows.
+
+Link to the code: https://github.com/insitro/redun/

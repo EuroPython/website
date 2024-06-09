@@ -1,0 +1,50 @@
+---
+code: 8FKHES
+delivery: in-person
+duration: '30'
+end: '2024-07-12T14:30:00+02:00'
+level: intermediate
+next_session: 89RTNU
+prev_session: 9VFEQE
+resources: null
+room: Forum Hall
+session_type: Talk
+sessions_after:
+- 89RTNU
+- FYHQUE
+- M9TMMQ
+- N7ZC9X
+- WBFDNJ
+- ZBBNS9
+sessions_before:
+- KVNTFE
+- JRGVQM
+- JJAKNR
+- 7XMZGV
+- MAHYVG
+- 9VFEQE
+- XPXYWD
+- QZAG8P
+- XYXR3L
+sessions_in_parallel:
+- HZSGYK
+- LXYWXR
+- KDH3J3
+- ZXXDBV
+- QS8KJY
+slug: python-in-parallel-sub-interpreters-vs-nogil-vs-multiprocessing
+speakers:
+- samet-yaslan
+start: '2024-07-12T14:00:00+02:00'
+title: 'Python in Parallel: Sub-Interpreters vs. NoGIL vs. Multiprocessing'
+track: Python Internals & Ecosystem
+tweet: ''
+website_url: https://ep2024.europython.eu/session/python-in-parallel-sub-interpreters-vs-nogil-vs-multiprocessing
+---
+
+In the realm of Python development, achieving parallelism and harnessing the full power of modern multi-core processors is challenging. Traditionally constrained by the Global Interpreter Lock (GIL), multi-threading was not useful for true parallelism in Python, hence developers turned into multi-processing. Now this is all changing with upcoming developments.
+-	A new per-Interpreter GIL in Python 3.12 helps to facilitate true parallelism by opening up sub interpreters to run Python codes at the same time. In addition, it is going to be easier to use these features in Python 3.13 by having support for sub interpreters in the Stdlib.
+-	An upcoming compile option to disable-gil is opening a path to a world with NoGIL where Python threads can truly run in parallel. Which can potentially become the default in the upcoming years.
+Multiprocessing, sub-interpreters and multi-threading without GIL are all different ways of facilitating multi-core parallelism in Python. Each of these approaches offers a unique pathway to parallel execution, but comes with its own set of trade-offs, complexities, and suitability for different types of problems. During this talk we will explore each of these options and asses their pros and cons.
+
+Whether you're building CPU-bound high throughput applications, IO-bound services, or simply curious about the future of parallel processing in Python, this talk will help you with the knowledge to make informed decisions and leverage Python's parallel computing capabilities.

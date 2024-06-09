@@ -8,6 +8,7 @@
 
 from typing import Any
 import httpx
+import json
 import pathlib
 import shutil
 import yaml
@@ -15,8 +16,9 @@ import yaml
 ROOT = pathlib.Path(__file__).parents[1]
 
 
-SESSIONS_URL = "https://gist.githubusercontent.com/patrick91/6ef20d6612d708a516908ef11e3e4a31/raw/9831b417efe1810cba581396da0ebb2bd82befcb/sessions.json"
-SPEAKERS_URL = "https://gist.githubusercontent.com/patrick91/6ef20d6612d708a516908ef11e3e4a31/raw/9831b417efe1810cba581396da0ebb2bd82befcb/speakers.json"
+SESSIONS_URL = "https://programapi24.europython.eu/2024/sessions.json"
+SPEAKERS_URL = "https://programapi24.europython.eu/2024/speakers.json"
+SCHEDULE_DATA = "https://gist.githubusercontent.com/egeakman/565193c49df6b66e803a5d62c258bd9a/raw/de98936c89e17c9c208adc9e4f1e73c65dae73e1/schedule.json"
 
 
 def write_mdx(data: dict[str, Any], output_dir: pathlib.Path, content_key: str) -> None:
@@ -51,6 +53,7 @@ def download_data(url: str) -> dict[str, Any]:
 def download() -> None:
     speakers = download_data(SPEAKERS_URL)
     sessions = download_data(SESSIONS_URL)
+    schedule = download_data(SCHEDULE_DATA)
 
     for session in sessions.values():
         session["speakers"] = [
@@ -66,6 +69,11 @@ def download() -> None:
 
     write_mdx(sessions, ROOT / "src/content/sessions", "abstract")
     write_mdx(speakers, ROOT / "src/content/speakers", "biography")
+
+    for day, data in schedule["days"].items():
+        path = ROOT / f"src/content/days/{day}.json"
+        with path.open("w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
 
 
 download()

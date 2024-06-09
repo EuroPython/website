@@ -1,0 +1,55 @@
+---
+code: U7UMBE
+delivery: in-person
+duration: '180'
+end: '2024-07-08T11:00:00+02:00'
+level: intermediate
+next_session: AVNAPX
+prev_session: null
+resources: null
+room: Club H
+session_type: Tutorial
+sessions_after:
+- AVNAPX
+- SAWP3R
+- RZCCLV
+sessions_before: []
+sessions_in_parallel:
+- NVWSXS
+- X99G8E
+- WJPJG9
+- QLNGZU
+slug: event-sourcing-from-the-ground-up
+speakers:
+- ravi-selker
+- sebastiaan-zeeff
+start: '2024-07-08T09:30:00+02:00'
+title: Event Sourcing From The Ground Up
+track: Software Engineering & Architecture
+tweet: Interested in Event Sourcing? Join the tutorial "Event Sourcing From The Ground
+  Up" at EuroPython 2024!
+website_url: https://ep2024.europython.eu/session/event-sourcing-from-the-ground-up
+---
+
+We often think about data in terms of storing the current state of our models. If a chess player moves a piece, we update the state of the board and persist it. This makes it easy to query the current state of the game, but also poses some challenges: How do we know which moves led up to the current state? And how do we ensure that the state remains consistent, even in a distributed system?
+
+**Event Sourcing** takes a different approach to storing state. Instead of storing the current state as-is, we store the *sequence of events* that led to the current state. If we need to know the current state, we can replay this immutable record of events to reconstruct it. Not only does this give us an immutable audit log, this also promotes loose coupling and enables optimistic concurrency.
+
+In this tutorial, we are going to build an “Event Sourcing”-based backend for an in-browser game from the ground up. Rather than using a framework that abstracts away some of the core principles, we are going to implement the mechanisms ourselves to help us understand the core principles.
+
+### Outline
+- Introduction to Event Sourcing and Domain-Driven Design
+- Modeling the events in our game
+- Implementing our first events and our aggregate
+- Reconstructing state from events
+- Optimistic concurrency
+- Beyond this tutorial + Q&A
+
+### Audience & Preparation
+This tutorial is for you if you’re interested in Event Sourcing but don’t have any real experience with it yet. We do expect you to have at least an intermediate level in Python.
+
+Do make sure to bring your laptop, **with the following tools installed**:
+- Python 3.12
+- A container runtime (preferably Docker)
+- Git
+- Your favorite editor

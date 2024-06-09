@@ -1,0 +1,56 @@
+---
+code: U9MDSV
+delivery: in-person
+duration: '30'
+end: '2024-07-11T15:05:00+02:00'
+level: advanced
+next_session: N3R9HN
+prev_session: 9G8GWM
+resources: null
+room: Forum Hall
+session_type: Talk
+sessions_after:
+- PKJ38J
+- KUABAE
+- 9DSSHZ
+- N3R9HN
+- RBBU3M
+- UY8ZWT
+sessions_before:
+- ALVMH3
+- EN98JL
+- FLJFEG
+- 9G8GWM
+- KLXQAM
+- BUH9SD
+- KXF8JY
+- VFMXAD
+- CEW8S9
+sessions_in_parallel:
+- 7F87N3
+- K7ZHBG
+- LEXULB
+- 8MGKUK
+slug: how-to-build-a-python-to-c-compiler-out-of-spare-parts-and-why
+speakers:
+- xavier-thompson
+start: '2024-07-11T14:35:00+02:00'
+title: How to Build a Python-to-C++ Compiler out of Spare Parts - and Why
+track: Python Internals & Ecosystem
+tweet: ''
+website_url: https://ep2024.europython.eu/session/how-to-build-a-python-to-c-compiler-out-of-spare-parts-and-why
+---
+
+A frequent topic about Python is performance: its interpreted nature inhibits optimisations, and the famous GIL limits parallelism (for now!).
+
+Existing Python Compilers - Cython, Numba, Codon - focus mainly on compiling small, critical bits of code to achieve linear execution speedups. As for parallelism: parallel for-loops powered by OpenMP.
+
+To parallelize highly concurrent programs with concurrent I/O and concurrent tasks, we need more. A key difference is it requires compiling everything: as soon as the Python interpreter comes into play, the GIL will make parallelism collapse.
+
+We introduce Typon, a Python-to-C++ compiler with powerful concurrency primitives powered by a crazy homemade task scheduler. It can take untyped, idiomatic Python code and output C++ code fully independent of the Python interpreter. It also provides seamless to-and-from Python interoperability, for those cases where you really just need to import numpy.
+
+In this talk we'll recount our journey so far: why we think it's important, how we're making something new out of existing bits, what we've achieved. Along the way we might delve into fun details like type inference, concurrency primitives, and C++ pretending-to-be-Python.
+
+You'll come out of this talk with some cool insights into compiler design, concurrency, and the design of Python.
+
+Knowledge of C++ not required. Knowledge of Python language inner workings helpful.

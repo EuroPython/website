@@ -1,56 +1,64 @@
 ---
-import { Schedule } from "../../components/schedule/schedule";
+import { getEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import { getSchedule } from "./get-schedule";
+import { addMinutes, format, parseISO } from "date-fns";
 
 export const getStaticPaths = async () => {
-  return [{ params: { day: "about" } }];
+  const days = await getCollection("days");
+
+  return days.map((day) => {
+    return { params: { day: day.id } };
+  });
 };
 
-const schedule = await getSchedule();
+const day = await getEntry("days", Astro.params.day);
 
-// prettier-ignore
-const sessions = [
-  { type: "break", start: "09:00", end: "10:00", title: "Registration" },
-  { type: "session", start: "10:00", end: "11:00", title: "Opening", description: "Opening remarks and introduction to the conference", rooms: ["Room 1", "Room 2", "Room 3"], },
-  { type: "session", start: "11:00", end: "12:00", title: "Keynote", description: "Keynote speaker", rooms: ["Room 1", "Room 2", "Room 3"], },
-  { type: "break", start: "12:00", end: "13:00", title: "Lunch" },
-  { type: "session", start: "13:00", end: "13:30", title: "Session 1", rooms: ["Room 1"]},
-  { type: "session", start: "13:00", end: "13:55", title: "Session 2", rooms: ["Room 2"]},
-  { type: "session", start: "13:00", end: "13:30", title: "Session 3", rooms: ["Room 3"]},
-  { type: "session", start: "13:30", end: "14:00", title: "Session 4", rooms: ["Room 1"]},
-  { type: "session", start: "13:30", end: "14:00", title: "Session 6", rooms: ["Room 3"]},
-  { type: "break", start: "14:00", end: "14:30", title: "Break" },
-  { type: "session", start: "14:30", end: "15:00", title: "Session 7", rooms: ["Room 1"]},
-  { type: "session", start: "14:30", end: "15:00", title: "Session 8", rooms: ["Room 2"]},
-  { type: "session", start: "14:30", end: "15:00", title: "Session 9", rooms: ["Room 3"]},
-  { type: "session", start: "15:00", end: "15:30", title: "Session 10", rooms: ["Room 1"]},
-  { type: "session", start: "15:00", end: "15:30", title: "Session 11", rooms: ["Room 2"]},
-  { type: "session", start: "15:00", end: "15:30", title: "Session 12", rooms: ["Room 3"]},
-  { type: "break", start: "15:30", end: "16:00", title: "Break" },
-  { type: "session", start: "16:00", end: "16:25", title: "Session 13", rooms: ["Room 1"]},
-  { type: "session", start: "16:00", end: "16:20", title: "Session 14", rooms: ["Room 2"]},
-  { type: "session", start: "16:00", end: "16:30", title: "Session 15", rooms: ["Room 3"]},
-  // special event for testing
-  { type: "session", start: "11:45", end: "12:20", title: "Special Event", rooms: ["Room 3"]},
-] as const;
+const sessions = day.data.events
+  .map((event) => {
+    const startTime = parseISO(event.start);
+    const start = format(startTime, "HH:mm");
 
-const slots = [
-  { start: "09:00", end: "10:00", type: "break" },
-  { start: "10:00", end: "10:30", type: "session" },
-  { start: "10:30", end: "11:00", type: "session" },
-  { start: "11:00", end: "11:30", type: "session" },
-  { start: "11:30", end: "12:00", type: "session" },
-  { start: "12:00", end: "12:30", type: "lunch" },
-  { start: "12:30", end: "13:00", type: "lunch" },
-  { start: "13:00", end: "13:30", type: "session" },
-  { start: "13:30", end: "14:00", type: "session" },
-  { start: "14:00", end: "14:30", type: "break" },
-  { start: "14:30", end: "15:00", type: "session" },
-  { start: "15:00", end: "15:30", type: "session" },
-  { start: "15:30", end: "16:00", type: "break" },
-  { start: "16:00", end: "16:30", type: "session" },
-];
+    let duration = event.duration;
+
+    // round to the nearest 5 minutes
+    duration = Math.ceil(duration / 5) * 5;
+
+    const end = format(addMinutes(startTime, duration), "HH:mm");
+
+    return {
+      ...event,
+      start,
+      end,
+      type: event.event_type,
+    };
+  })
+  .sort((a, b) => {
+    return a.start.localeCompare(b.start);
+  });
+
+const sessionsByTime: { [key: string]: Array<(typeof sessions)[0]> } = {};
+
+sessions.forEach((session) => {
+  if (!sessionsByTime[session.start]) {
+    sessionsByTime[session.start] = [];
+  }
+
+  sessionsByTime[session.start].push(session);
+});
+
+const slots = Object.entries(sessionsByTime).map(([time, sessions]) => {
+  let type: "session" | "break" | "lunch" = "session";
+
+  if (sessions.every((session) => session.type === "break")) {
+    type = "break";
+
+    if (sessions[0].title.toLowerCase().includes("lunch")) {
+      type = "lunch";
+    }
+  }
+
+  return { start: time, end: sessions[0].end, type: type };
+});
 
 const gridRows = [
   // header row
@@ -72,34 +80,50 @@ const numberToTime = (number: number) => {
   return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
 };
 
-for (const slot of slots) {
-  const start = slot.start;
+for (let i = 0; i < slots.length; i++) {
+  const current = slots[i];
+  const next = slots[i + 1];
 
-  let size = `var(--5min)`;
-
-  if (slot.type === "break") {
-    size = `var(--break)`;
-  } else if (slot.type === "lunch") {
-    size = `var(--lunch)`;
+  const currentTime = timeToNumber(current.start);
+  let nextTime;
+  if (next) {
+    nextTime = timeToNumber(next.start);
+  } else {
+    nextTime = timeToNumber(current.end);
+    console.log(current.end);
   }
 
-  gridRows.push(`repeat(6, ${size})`);
+  const sizeInMinutes = nextTime - currentTime;
+  const size = sizeInMinutes / 5;
 
-  let currentTime = timeToNumber(start);
+  console.log(current, next, size, sizeInMinutes);
 
-  for (let i = 0; i < 6; i++) {
-    const time = numberToTime(currentTime);
+  let sizeValue = `var(--5min)`;
+
+  if (current.type === "break") {
+    // TODO: breaks are smaller than I expected, so maybe
+    // we don't need a custom size?
+    // sizeValue = `var(--break)`;
+  } else if (current.type === "lunch") {
+    sizeValue = `var(--lunch)`;
+  }
+
+  gridRows.push(`repeat(${size}, ${sizeValue})`);
+
+  for (let i = 0; i < size; i++) {
+    const time = numberToTime(currentTime + i * 5);
     timeToRow[time] = row;
     row += 1;
-    currentTime += 5;
+  }
+
+  if (!next) {
+    timeToRow[numberToTime(nextTime)] = row;
   }
 }
 
-timeToRow["16:30"] = row;
-
 console.log(timeToRow);
 
-const ROOMS = ["Room 1", "Room 2", "Room 3"];
+const ROOMS = day.data.rooms.sort();
 
 type Break = {
   type: "break";
@@ -112,18 +136,18 @@ type Session = {
 };
 
 const getColStart = ({ type, rooms }: Break | Session) => {
-  if (type === "break") {
-    return 2;
-  }
+  // if (type === "break") {
+  //   return 2;
+  // }
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
   return Math.min(...indexes) + 2;
 };
 
 const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
-  if (type === "break") {
-    return -1;
-  }
+  // if (type === "break") {
+  //   return -1;
+  // }
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
   return Math.max(...indexes) + 3;
@@ -163,7 +187,8 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
           }}
         >
           <h2>
-            {session.start} {session.title}
+            {session.start} - {session.end}
+            <div>{session.title}</div>
           </h2>
           {session.description && <p>{session.description}</p>}
         </div>
@@ -171,6 +196,10 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
     }
     <div class="h-12"></div>
   </div>
+
+  <pre>{JSON.stringify(sessions, null, 2)}</pre>
+  <pre>{JSON.stringify(sessionsByTime, null, 2)}</pre>
+  <pre>{JSON.stringify(slots, null, 2)}</pre>
 
   <style>
     .schedule {
@@ -201,6 +230,7 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
 
     .time {
       padding: 0;
+      grid-column: 1 / 2;
     }
 
     .break {
@@ -213,6 +243,13 @@ const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
 
     .session {
       border: 2px solid var(--color-primary);
+      background: var(--color-secondary);
+    }
+
+    pre {
+      max-height: 400px;
+      overflow: auto;
+      border: 1px solid var(--color-primary);
     }
   </style>
 </Layout>

@@ -1,0 +1,47 @@
+---
+code: UR9KUK
+delivery: in-person
+duration: '180'
+end: '2024-07-09T15:15:00+02:00'
+level: intermediate
+next_session: null
+prev_session: V3C9ED
+resources: null
+room: Club H
+session_type: Tutorial
+sessions_after: []
+sessions_before:
+- V3C9ED
+- XLXNGG
+- 77T3JS
+- BCCBHN
+- Q8GTA3
+- WZGEEZ
+sessions_in_parallel:
+- CL3NZ9
+- LKJU9G
+- CXLQLX
+- 98KBZM
+slug: profiling-python-code
+speakers:
+- pavel-filonov
+start: '2024-07-09T13:45:00+02:00'
+title: Profiling Python Code
+track: Python Libraries & Tooling
+tweet: From my survey more then 50% of python developers do not use profiling. I want
+  to influence this distribution with my workshop
+website_url: https://ep2024.europython.eu/session/profiling-python-code
+---
+
+During my talk at python users group meetup about using Linux perf profiling in python 3.12 I asked the audience how they find performance issues in their Python code. Out of all respondents:
+ * More than half simply read the code and find issues with their eyes;
+ * 10% don't face such problems at all;
+ * The rest use various profilers.
+
+In this workshop, I would like to influence this distribution and for this.
+
+At the beginning, we will consider the application of CPU profiling to find bottlenecks. We will see how convenient it is to read information with a large volume of reports. How we can first localize to problematic functions, and then to specific lines of code. We will be helped by tools such as **pytest-benchmark**, **cProfile** and **line_profiler**.
+
+Next, it is worth separately considering the problem of memory consumption by our code in Python and looking for places where we do not release it with **memory_profiler** and **py-spy**.
+
+Each workshop block will be accompanied by an example and a practical task that you can solve on your laptop. And along the way, ask questions, share results, and discuss the topic of the workshop with other participants and the presenter.

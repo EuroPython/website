@@ -1,0 +1,540 @@
+{
+  "rooms": ["Club C", "Club H", "Club B", "Club E", "Club A", "Club D"],
+  "events": [
+    {
+      "event_type": "break",
+      "title": "Coffee Break",
+      "duration": 15,
+      "rooms": ["Club H", "Club A", "Club E", "Club B", "Club C", "Club D"],
+      "start": "2024-07-09T11:00:00+02:00"
+    },
+    {
+      "event_type": "break",
+      "title": "Lunch",
+      "duration": 60,
+      "rooms": ["Club H", "Club B", "Club A", "Club E", "Club C", "Club D"],
+      "start": "2024-07-09T12:45:00+02:00"
+    },
+    {
+      "event_type": "break",
+      "title": "Coffee Break",
+      "duration": 15,
+      "rooms": ["Club B", "Club E", "Club C", "Club H", "Club A", "Club D"],
+      "start": "2024-07-09T15:15:00+02:00"
+    },
+    {
+      "event_type": "session",
+      "code": "V3C9ED",
+      "title": "pytest tips and tricks for a better testsuite",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "HZMBBH",
+          "name": "Florian Bruhin",
+          "website_url": "https://ep2024.europython.eu/speaker/florian-bruhin"
+        }
+      ],
+      "tweet": "The #pytest tool presents a rapid and simple way to write tests for your Python code. This training gives an introduction with exercises to some distinguishing features.",
+      "level": "intermediate",
+      "rooms": ["Club H"],
+      "start": "2024-07-09T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/pytest-tips-and-tricks-for-a-better-testsuite",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "V3C9ED",
+      "title": "pytest tips and tricks for a better testsuite",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "HZMBBH",
+          "name": "Florian Bruhin",
+          "website_url": "https://ep2024.europython.eu/speaker/florian-bruhin"
+        }
+      ],
+      "tweet": "The #pytest tool presents a rapid and simple way to write tests for your Python code. This training gives an introduction with exercises to some distinguishing features.",
+      "level": "intermediate",
+      "rooms": ["Club H"],
+      "start": "2024-07-09T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/pytest-tips-and-tricks-for-a-better-testsuite",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "XLXNGG",
+      "title": "GPU Development in Python 101",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "EE7H7J",
+          "name": "Jacob Tomlinson",
+          "website_url": "https://ep2024.europython.eu/speaker/jacob-tomlinson"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-09T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/gpu-development-in-python-101",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "XLXNGG",
+      "title": "GPU Development in Python 101",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "EE7H7J",
+          "name": "Jacob Tomlinson",
+          "website_url": "https://ep2024.europython.eu/speaker/jacob-tomlinson"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-09T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/gpu-development-in-python-101",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "77T3JS",
+      "title": "WASM Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "BQVLYL",
+          "name": "Nicholas Tollervey",
+          "website_url": "https://ep2024.europython.eu/speaker/nicholas-tollervey"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-09T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/wasm-summit",
+      "duration": 22
+    },
+    {
+      "event_type": "session",
+      "code": "77T3JS",
+      "title": "WASM Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "BQVLYL",
+          "name": "Nicholas Tollervey",
+          "website_url": "https://ep2024.europython.eu/speaker/nicholas-tollervey"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-09T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/wasm-summit",
+      "duration": 22
+    },
+    {
+      "event_type": "session",
+      "code": "77T3JS",
+      "title": "WASM Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "BQVLYL",
+          "name": "Nicholas Tollervey",
+          "website_url": "https://ep2024.europython.eu/speaker/nicholas-tollervey"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/wasm-summit",
+      "duration": 22
+    },
+    {
+      "event_type": "session",
+      "code": "77T3JS",
+      "title": "WASM Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "BQVLYL",
+          "name": "Nicholas Tollervey",
+          "website_url": "https://ep2024.europython.eu/speaker/nicholas-tollervey"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-09T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/wasm-summit",
+      "duration": 22
+    },
+    {
+      "event_type": "session",
+      "code": "BCCBHN",
+      "title": "Learn Python by Making a Console Game",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CPYQCK",
+          "name": "Ashish Gupta",
+          "website_url": "https://ep2024.europython.eu/speaker/ashish-gupta"
+        },
+        {
+          "code": "CSLXTY",
+          "name": "Radomir Dopieralski",
+          "website_url": "https://ep2024.europython.eu/speaker/radomir-dopieralski"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club B"],
+      "start": "2024-07-09T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/learn-python-by-making-a-console-game",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "BCCBHN",
+      "title": "Learn Python by Making a Console Game",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CPYQCK",
+          "name": "Ashish Gupta",
+          "website_url": "https://ep2024.europython.eu/speaker/ashish-gupta"
+        },
+        {
+          "code": "CSLXTY",
+          "name": "Radomir Dopieralski",
+          "website_url": "https://ep2024.europython.eu/speaker/radomir-dopieralski"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club B"],
+      "start": "2024-07-09T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/learn-python-by-making-a-console-game",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "Q8GTA3",
+      "title": "Descriptors - Understanding and Modifying Python's Attribute Access",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "9KSJ3K",
+          "name": "Mike M\u00fcller",
+          "website_url": "https://ep2024.europython.eu/speaker/mike-muller"
+        }
+      ],
+      "tweet": "Learn how descriptors work and for what they can be used. Customizing attribute access can be useful.",
+      "level": "advanced",
+      "rooms": ["Club E"],
+      "start": "2024-07-09T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/descriptors-understanding-and-modifying-python-s-attribute-access",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "Q8GTA3",
+      "title": "Descriptors - Understanding and Modifying Python's Attribute Access",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "9KSJ3K",
+          "name": "Mike M\u00fcller",
+          "website_url": "https://ep2024.europython.eu/speaker/mike-muller"
+        }
+      ],
+      "tweet": "Learn how descriptors work and for what they can be used. Customizing attribute access can be useful.",
+      "level": "advanced",
+      "rooms": ["Club E"],
+      "start": "2024-07-09T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/descriptors-understanding-and-modifying-python-s-attribute-access",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "WZGEEZ",
+      "title": "Humble Data",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "PXQBU9",
+          "name": "Jodie Burchell",
+          "website_url": "https://ep2024.europython.eu/speaker/jodie-burchell"
+        }
+      ],
+      "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/humble-data",
+      "duration": 45
+    },
+    {
+      "event_type": "session",
+      "code": "WZGEEZ",
+      "title": "Humble Data",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "PXQBU9",
+          "name": "Jodie Burchell",
+          "website_url": "https://ep2024.europython.eu/speaker/jodie-burchell"
+        }
+      ],
+      "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/humble-data",
+      "duration": 45
+    },
+    {
+      "event_type": "session",
+      "code": "WZGEEZ",
+      "title": "Humble Data",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "PXQBU9",
+          "name": "Jodie Burchell",
+          "website_url": "https://ep2024.europython.eu/speaker/jodie-burchell"
+        }
+      ],
+      "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/humble-data",
+      "duration": 45
+    },
+    {
+      "event_type": "session",
+      "code": "WZGEEZ",
+      "title": "Humble Data",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "PXQBU9",
+          "name": "Jodie Burchell",
+          "website_url": "https://ep2024.europython.eu/speaker/jodie-burchell"
+        }
+      ],
+      "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/humble-data",
+      "duration": 45
+    },
+    {
+      "event_type": "session",
+      "code": "CL3NZ9",
+      "title": "Data Analysis, the Polars Way",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CKX3LQ",
+          "name": "Jan Pipek",
+          "website_url": "https://ep2024.europython.eu/speaker/jan-pipek"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/data-analysis-the-polars-way",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "CL3NZ9",
+      "title": "Data Analysis, the Polars Way",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CKX3LQ",
+          "name": "Jan Pipek",
+          "website_url": "https://ep2024.europython.eu/speaker/jan-pipek"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-09T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/data-analysis-the-polars-way",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "LKJU9G",
+      "title": "Maths in Motion: Python-Powered Modelling for Real-World Phenomena",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "DJUD9D",
+          "name": "Gurjot Singh",
+          "website_url": "https://ep2024.europython.eu/speaker/gurjot-singh"
+        },
+        {
+          "code": "XNNGCH",
+          "name": "Thomas Gregory",
+          "website_url": "https://ep2024.europython.eu/speaker/thomas-gregory"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club B"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/maths-in-motion-python-powered-modelling-for-real-world-phenomena",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "LKJU9G",
+      "title": "Maths in Motion: Python-Powered Modelling for Real-World Phenomena",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "DJUD9D",
+          "name": "Gurjot Singh",
+          "website_url": "https://ep2024.europython.eu/speaker/gurjot-singh"
+        },
+        {
+          "code": "XNNGCH",
+          "name": "Thomas Gregory",
+          "website_url": "https://ep2024.europython.eu/speaker/thomas-gregory"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club B"],
+      "start": "2024-07-09T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/maths-in-motion-python-powered-modelling-for-real-world-phenomena",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "UR9KUK",
+      "title": "Profiling Python Code",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CEWJRR",
+          "name": "Pavel Filonov",
+          "website_url": "https://ep2024.europython.eu/speaker/pavel-filonov"
+        }
+      ],
+      "tweet": "From my survey more then 50% of python developers do not use profiling. I want to influence this distribution with my workshop",
+      "level": "intermediate",
+      "rooms": ["Club H"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/profiling-python-code",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "UR9KUK",
+      "title": "Profiling Python Code",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CEWJRR",
+          "name": "Pavel Filonov",
+          "website_url": "https://ep2024.europython.eu/speaker/pavel-filonov"
+        }
+      ],
+      "tweet": "From my survey more then 50% of python developers do not use profiling. I want to influence this distribution with my workshop",
+      "level": "intermediate",
+      "rooms": ["Club H"],
+      "start": "2024-07-09T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/profiling-python-code",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "CXLQLX",
+      "title": "Migrating a Web Application from Flask to FastAPI: Avoiding Pitfalls",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "SHLWHX",
+          "name": "Jessica Temporal",
+          "website_url": "https://ep2024.europython.eu/speaker/jessica-temporal"
+        }
+      ],
+      "tweet": "Learn the differences between Flask and FastAPI by migrating a Flask web app to FastAPI.",
+      "level": "intermediate",
+      "rooms": ["Club E"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/migrating-a-web-application-from-flask-to-fastapi-avoiding-pitfalls",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "CXLQLX",
+      "title": "Migrating a Web Application from Flask to FastAPI: Avoiding Pitfalls",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "SHLWHX",
+          "name": "Jessica Temporal",
+          "website_url": "https://ep2024.europython.eu/speaker/jessica-temporal"
+        }
+      ],
+      "tweet": "Learn the differences between Flask and FastAPI by migrating a Flask web app to FastAPI.",
+      "level": "intermediate",
+      "rooms": ["Club E"],
+      "start": "2024-07-09T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/migrating-a-web-application-from-flask-to-fastapi-avoiding-pitfalls",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "98KBZM",
+      "title": "Women in AI",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "SCZGH7",
+          "name": "Nabanita Roy",
+          "website_url": "https://ep2024.europython.eu/speaker/nabanita-roy"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/women-in-ai",
+      "duration": 45
+    },
+    {
+      "event_type": "session",
+      "code": "98KBZM",
+      "title": "Women in AI",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "SCZGH7",
+          "name": "Nabanita Roy",
+          "website_url": "https://ep2024.europython.eu/speaker/nabanita-roy"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/women-in-ai",
+      "duration": 45
+    }
+  ]
+}
