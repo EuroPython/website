@@ -1,4 +1,6 @@
 ---
+import Speakers from "./speakers.astro";
+
 export interface Props {
   style: any;
   session: {
@@ -7,6 +9,7 @@ export interface Props {
     end: string;
     description?: string;
     level?: "intermediate" | "advanced" | "beginner" | "";
+    speakers?: { code: string }[];
   };
 }
 
@@ -32,7 +35,13 @@ const { style, session } = Astro.props;
     <time>{session.end}</time>
   </div>
   <h2>{session.title}</h2>
-  <footer>Fake Speakers</footer>
+  {
+    session.speakers && session.speakers.length > 0 && (
+      <footer>
+        <Speakers speakers={session.speakers} />
+      </footer>
+    )
+  }
 </div>
 
 <style>
