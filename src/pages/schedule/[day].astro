@@ -1,6 +1,8 @@
 ---
 import { getEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import Break from "../../components/schedule/break.astro";
+import Session from "../../components/schedule/session.astro";
 import { addMinutes, format, parseISO } from "date-fns";
 
 const timeToNumber = (time: string) => {
@@ -137,10 +139,10 @@ for (let i = 0; i < slots.length; i++) {
   } else if (current.type === "lunch") {
     sizeValue = `var(--lunch)`;
   } else if (current.type === "room-change") {
-    sizeValue = `var(--5min)`;
+    sizeValue = `var(--room-change)`;
   }
 
-  gridRows.push(`repeat(${size}, ${sizeValue})`);
+  gridRows.push(`repeat(auto-fill, ${size}, ${sizeValue})`);
 
   for (let i = 0; i < size; i++) {
     const time = numberToTime(currentTime + i * 5);
@@ -200,22 +202,25 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
             <h2>{slot.start}</h2>
           </div>
 
-          {sessionsByTime[slot.start].map((session) => (
-            <div
-              class={session.type}
-              style={{
-                "--start": timeToRow[session.start],
-                "--end": timeToRow[session.end],
-                "--col-start": getColStart(session),
-                "--col-end": getColEnd(session),
-              }}
-            >
-              <h2>
-                <div>{session.title}</div>
-              </h2>
-              {session.description && <p>{session.description}</p>}
-            </div>
-          ))}
+          {sessionsByTime[slot.start].map((session) => {
+            const style = {
+              "--start": timeToRow[session.start],
+              "--end": timeToRow[session.end],
+              "--col-start": getColStart(session),
+              "--col-end": getColEnd(session),
+            };
+            if (session.type === "room-change" || session.type === "break") {
+              return (
+                <Break
+                  title={session.title}
+                  time={session.start}
+                  style={style}
+                />
+              );
+            }
+
+            return <Session session={session} style={style} />;
+          })}
         </div>
       ))
     }
@@ -223,16 +228,13 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
     <div class="h-12"></div>
   </div>
 
-  <pre>{JSON.stringify(sessions, null, 2)}</pre>
-  <pre>{JSON.stringify(sessionsByTime, null, 2)}</pre>
-  <pre>{JSON.stringify(slots, null, 2)}</pre>
-
   <style>
     .schedule {
       --header-height: 30px;
       --break: 8px;
       --lunch: 8px;
       --minute: 4px;
+      --room-change: calc(var(--minute) * 8);
       --5min: calc(var(--minute) * 5);
 
       display: grid;
@@ -252,17 +254,17 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
       display: contents;
     }
 
-    .session,
+    :global(.session),
     .time,
     .room-change,
-    .break {
+    :global(.break) {
       grid-row: var(--start) / var(--end);
       grid-column: var(--col-start) / var(--col-end);
     }
 
-    .session,
+    :global(.session),
     .time,
-    .break,
+    :global(.break),
     .room-change,
     header > div {
       outline: 2px solid var(--color-primary);
@@ -271,18 +273,6 @@ const getColEnd = ({ rooms }: Break | Session): number | "span" => {
     .time {
       padding: 0;
       grid-column: 1 / 2;
-    }
-
-    .break {
-      background: var(--color-primary);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-    }
-
-    .session {
-      background: var(--color-secondary);
     }
 
     pre {
