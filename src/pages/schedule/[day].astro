@@ -156,8 +156,8 @@ for (let i = 0; i < slots.length; i++) {
 const ROOMS = day.data.rooms.sort();
 
 type Break = {
-  type: "break";
-  rooms: undefined;
+  type: "break" | "room-change";
+  rooms: string[];
 };
 
 type Session = {
@@ -166,19 +166,15 @@ type Session = {
 };
 
 const getColStart = ({ type, rooms }: Break | Session) => {
-  // if (type === "break") {
-  //   return 2;
-  // }
+  if (["room-change", "break"].includes(type)) {
+    return 1;
+  }
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
   return Math.min(...indexes) + 2;
 };
 
-const getColEnd = ({ type, rooms }: Break | Session): number | "span" => {
-  // if (type === "break") {
-  //   return -1;
-  // }
-
+const getColEnd = ({ rooms }: Break | Session): number | "span" => {
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
   return Math.max(...indexes) + 3;
 };
