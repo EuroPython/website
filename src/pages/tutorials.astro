@@ -7,7 +7,6 @@ import SessionSpeakers from "../components/session-speakers.astro";
 
 const sessions = await getCollection("sessions");
 const tutorials = sessions.filter((s) => s.data.session_type === "Tutorial");
-
 const title = "Sessions";
 
 const description = "A list of all the sessions at the conference";

@@ -20,16 +20,12 @@
           "path": "/posters"
         },
         {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "List of Keynote Speakers",
           "path": "/keynoters"
-        },
-        {
-          "name": "Call for Proposals",
-          "path": "/cfp"
-        },
-        {
-          "name": "Community Voting",
-          "path": "/voting"
         },
         {
           "name": "Speaker Mentorship",
@@ -51,6 +47,10 @@
         {
           "name": "WebAssembly Summit",
           "path": "/wasm"
+        },
+        {
+          "name": "C API Summit",
+          "path": "/capi"
         }
       ]
     },
