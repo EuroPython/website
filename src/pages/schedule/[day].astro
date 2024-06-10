@@ -291,43 +291,21 @@ const getSessionStyle = (session: any) => {
   :global(body) {
     overflow-x: hidden;
   }
-  .schedule-container {
-    overflow-x: auto;
-  }
-
-  header {
-    position: sticky;
-    top: 0;
-    background: var(--color-body-background);
-    font-weight: bold;
-
-    > div > div {
-      padding: 8px;
-    }
-  }
 
   .schedule {
-    --header-height: 30px;
-    --break: 8px;
-    --lunch: 8px;
-    --minute: 4px;
-    --room-change: calc(var(--minute) * 8);
-    --5min: calc(var(--minute) * 5);
-
-    display: grid;
-    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
   }
 
   .slot {
     display: contents;
   }
 
-  :global(.session),
-  .time,
-  .room-change,
-  :global(.break) {
-    grid-row: var(--start) / var(--end);
-    grid-column: var(--col-start) / var(--col-end);
+  header,
+  .time {
+    display: none;
   }
 
   :global(.session),
@@ -339,17 +317,54 @@ const getSessionStyle = (session: any) => {
     outline: 2px solid var(--color-primary);
   }
 
-  .time {
-    padding: 8px;
-    grid-column: 1 / 2;
-    font-weight: bold;
-    outline: none;
-  }
+  @media screen and (min-width: 640px) {
+    .schedule-container {
+      overflow-x: auto;
+    }
 
-  pre {
-    max-height: 400px;
-    overflow: auto;
-    border: 1px solid var(--color-primary);
+    .time,
+    header {
+      display: block;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--color-body-background);
+      font-weight: bold;
+
+      > div > div {
+        padding: 8px;
+      }
+    }
+
+    .schedule {
+      --header-height: 30px;
+      --break: 8px;
+      --lunch: 8px;
+      --minute: 4px;
+      --room-change: calc(var(--minute) * 8);
+      --5min: calc(var(--minute) * 5);
+
+      display: grid;
+      gap: 2px;
+      padding: 0;
+    }
+
+    :global(.session),
+    .time,
+    .room-change,
+    :global(.break) {
+      grid-row: var(--start) / var(--end);
+      grid-column: var(--col-start) / var(--col-end);
+    }
+
+    .time {
+      padding: 8px;
+      grid-column: 1 / 2;
+      font-weight: bold;
+      outline: none;
+    }
   }
 </style>
 
