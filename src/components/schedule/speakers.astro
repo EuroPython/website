@@ -13,9 +13,9 @@ const speakersByCode = Object.fromEntries(
   allSpeakers.map((speaker) => [speaker.data.code, speaker]),
 );
 
-const speakers = Astro.props.speakers.map(
-  (speaker) => speakersByCode[speaker.code],
-);
+const speakers = Astro.props.speakers
+  .map((speaker) => speakersByCode[speaker.code])
+  .filter(Boolean);
 ---
 
 {
