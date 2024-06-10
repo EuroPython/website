@@ -226,7 +226,7 @@ const getSessionStyle = (session: any) => {
 
 <Layout title="Schedule" description="The schedule for the conference">
   <div class="full-bleed">
-    <header class="schedule-container">
+    <header class="schedule-container header">
       <div
         class="schedule"
         style={{
@@ -320,6 +320,10 @@ const getSessionStyle = (session: any) => {
   @media screen and (min-width: 640px) {
     .schedule-container {
       overflow-x: auto;
+    }
+
+    .schedule-container.header {
+      overflow-x: hidden;
     }
 
     .time,
