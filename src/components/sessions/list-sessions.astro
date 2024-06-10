@@ -1,0 +1,74 @@
+---
+const { sessions } = Astro.props;
+import Prose from "../prose/prose.astro";
+import { Tag } from "../tag/tag";
+import SessionSpeakers from "../session-speakers.astro";
+import type { ValidContentEntrySlug } from "astro:content";
+
+type Session = {
+  data: {
+    title: string;
+    speakers: Array<{
+      collection: "speakers";
+      slug: ValidContentEntrySlug<"speakers">;
+    }>;
+    submission_type: string;
+    track: string;
+    level: string;
+  };
+  slug: string;
+};
+---
+
+<ol class="sessions">
+  {
+    sessions.map((session: Session) => (
+      <li
+        class="mb-12"
+        data-track={session.data.track}
+        data-type={session.data.submission_type}
+        data-level={session.data.level}
+      >
+        <Prose>
+          <h4>
+            <a href={`/session/${session.slug}`} class="underline">
+              {session.data.title}
+            </a>
+          </h4>
+          <p>
+            <span class="sr-only">Speakers:</span>
+            {/* @ts-ignore */}
+            <SessionSpeakers speakers={session.data.speakers} />
+          </p>
+        </Prose>
+
+        <ul class="space-x-2 capitalize">
+          {session.data.submission_type && (
+            <li class="inline-block">
+              <Tag>
+                <span class="sr-only">Type:</span>
+                {session.data.submission_type}
+              </Tag>
+            </li>
+          )}
+          {session.data.track && (
+            <li class="inline-block">
+              <Tag>
+                <span class="sr-only">Track:</span>
+                {session.data.track}
+              </Tag>
+            </li>
+          )}
+          {session.data.level && (
+            <li class="inline-block">
+              <Tag>
+                <span class="sr-only">Level:</span>
+                {session.data.level}
+              </Tag>
+            </li>
+          )}
+        </ul>
+      </li>
+    ))
+  }
+</ol>

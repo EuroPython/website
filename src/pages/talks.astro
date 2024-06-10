@@ -2,78 +2,54 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Tag } from "../components/tag/tag";
-import SessionSpeakers from "../components/session-speakers.astro";
+import Filter from "../components/sessions/filter.astro";
+import ListSessions from "../components/sessions/list-sessions.astro";
+import { Separator } from "../components/separator/separator";
 
 const sessions = await getCollection("sessions");
-const talks = sessions.filter(
-  (s) => s.data.session_type.substr(0, 4) === "Talk",
-);
+const talks = sessions.filter(s => s.data.session_type.substring(0, 4) === "Talk");
 
-const title = "Sessions";
+const allTracks = Array.from(
+  new Set(talks.map((talk) => talk.data.track).filter((track) => track))
+).sort();
 
-const description = "A list of all the sessions at the conference";
+const allLevels = Array.from(
+  new Set(talks.map((talk) => talk.data.level).filter((level) => level))
+).sort();
+
+const title = "Talks";
+const description = "A list of all the talks at the conference";
 ---
 
 <Layout title={title} description={description}>
   <div class="px-6">
     <Prose>
       <h1>Talks</h1>
-
-      <p>
-        From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel
-        tracks
-      </p>
-
-      <p>
-        Below there is a list of all proposals that were accepted from our <a
-          href="/cfp">CFP</a
-        >.
-      </p>
-
-      <h2>List of talks</h2>
+      <p>From Wednesday to Friday you can enjoy {talks.length} talks in 6 parallel tracks.</p>
+      <p>Below there is a list of all the talks that were accepted from our <a href="/cfp">CFP</a>.</p>
+      <h2>Filters</h2>
     </Prose>
 
-    <ol class="sessions">
-      {
-        talks.map((session) => (
-          <li
-            class="mb-12"
-            data-track={session.data.track}
-            data-type={session.data.session_type}
-          >
-            <Prose>
-              <h4>
-                <a href={`/session/${session.slug}`} class="underline">
-                  {session.data.title}
-                </a>
-              </h4>
+    <Filter allTracks={allTracks} allLevels={allLevels} />
 
-              <p>
-                <span class="sr-only">Speakers:</span>
+    <Prose>
+      <h2>List of Talks by Track</h2>
+    </Prose>
 
-                <SessionSpeakers speakers={session.data.speakers} />
-              </p>
-            </Prose>
+    {allTracks.map((track, index) => {
+      const filteredSessions = talks.filter((session) => session.data.track === track);
 
-            <ul class="space-x-2 capitalize">
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Track:</span>
-                  {session.data.track}
-                </Tag>
-              </li>
+      if (filteredSessions.length === 0) return null;
 
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Level:</span>
-                  {session.data.level}
-                </Tag>
-              </li>
-            </ul>
-          </li>
-        ))
-      }
-    </ol>
+      return (
+        <div class="track-group" data-track={track}>
+          <Prose>
+            <h3>{track}</h3>
+          </Prose>
+          <ListSessions sessions={filteredSessions} />
+          {index !== allTracks.length - 1 ? <Separator /> : <div class="mb-20" />}
+        </div>
+      );
+    })}
   </div>
 </Layout>

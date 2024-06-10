@@ -2,14 +2,13 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Tag } from "../components/tag/tag";
-import SessionSpeakers from "../components/session-speakers.astro";
+import ListSessions from "../components/sessions/list-sessions.astro";
 
 const sessions = await getCollection("sessions");
-const tutorials = sessions.filter((s) => s.data.session_type === "Tutorial");
-const title = "Sessions";
+const tutorials = sessions.filter(s => s.data.session_type === "Tutorial");
 
-const description = "A list of all the sessions at the conference";
+const title = "Tutorials";
+const description = "A list of all the tutorials at the conference";
 ---
 
 <Layout title={title} description={description}>
@@ -18,72 +17,28 @@ const description = "A list of all the sessions at the conference";
       <h1>Tutorials</h1>
 
       <p>
-        The first two days of EuroPython (Monday, July 8th, and Tuesday, July
-        9th) are dedicated to tutorials. Each Tutorial is a 3-hour long session,
-        made up of two 90-minute segments, separated by a short break.
+      The first two days of EuroPython (Monday, July 8th, and Tuesday, July 9th) are dedicated to tutorials. Each Tutorial is a 3-hour long session, made up of two 90-minute segments, separated by a short break.
       </p>
 
       <p>
-        Our Programme team selected 16 best proposals submitted through our CfP.
+      Our Programme team selected 16 best proposals submitted through our <a href="/cfp">CFP</a>.
       </p>
 
       <p>
-        Tutorials will take place in Club Rooms of the PCC on the first floor.
-        If you have trouble finding specific rooms, please check with the
-        registration desk on the first floor.
+      Tutorials will take place in <a href="/accessibility#tutorials---club-rooms-1st-floor">Club Rooms</a> of the <a href="http://localhost:4321/accessibility#the-prague-congress-centre-the-pcc">PCC (Prague Congress Centre)</a> on the first floor.
+      If you have trouble finding specific rooms, please check with the registration desk on the first floor.
       </p>
+
 
       <p>
-        To attend a tutorial you need a separate <a
-          href="/tickets#tutorial-tickets">Tutorial</a
-        > or a <a href="/tickets#combined-tickets">Combined</a> ticket. Access to
-        each tutorial room is on a first-come, first-served basis. Other than having
-        a compatible ticket type, no other registration is required.
+      To attend a tutorial you need a separate <a href="/tickets#tutorial-tickets">Tutorial</a> or a <a href="/tickets#combined-tickets">Combined</a> ticket.
+
+      Access to each tutorial room is on a first-come, first-served basis. Other than having a compatible ticket type, no other registration is required.
       </p>
 
-      <h2>List of tutorials</h2>
+      <h2>List of Tutorials</h2>
     </Prose>
 
-    <ol class="sessions">
-      {
-        tutorials.map((session) => (
-          <li
-            class="mb-12"
-            data-track={session.data.track}
-            data-type={session.data.session_type}
-          >
-            <Prose>
-              <h4>
-                <a href={`/session/${session.slug}`} class="underline">
-                  {session.data.title}
-                </a>
-              </h4>
-
-              <p>
-                <span class="sr-only">Speakers:</span>
-
-                <SessionSpeakers speakers={session.data.speakers} />
-              </p>
-            </Prose>
-
-            <ul class="space-x-2 capitalize">
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Track:</span>
-                  {session.data.track}
-                </Tag>
-              </li>
-
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Level:</span>
-                  {session.data.level}
-                </Tag>
-              </li>
-            </ul>
-          </li>
-        ))
-      }
-    </ol>
+    <ListSessions sessions={tutorials} />
   </div>
 </Layout>
