@@ -4,6 +4,7 @@ import Speakers from "./speakers.astro";
 export interface Props {
   style: any;
   session: {
+    slug?: string;
     title: string;
     start: string;
     end: string;
@@ -16,7 +17,7 @@ export interface Props {
 const { style, session } = Astro.props;
 ---
 
-<div class="session" style={style}>
+<a href={session.slug && `${session.slug}`} class="session" style={style}>
   <header class:list={[session.level]}>
     {
       session.level && (
@@ -42,7 +43,7 @@ const { style, session } = Astro.props;
       </footer>
     )
   }
-</div>
+</a>
 
 <style>
   .session {
@@ -50,6 +51,14 @@ const { style, session } = Astro.props;
     display: flex;
     flex-direction: column;
     background-color: var(--color-body-background);
+  }
+
+  .session[href]:not([href=""]):hover {
+    background-color: color-mix(
+      in srgb,
+      var(--color-body-background),
+      white 40%
+    );
   }
 
   .time,
