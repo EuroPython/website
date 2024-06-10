@@ -12,7 +12,7 @@ type Session = {
       collection: "speakers";
       slug: ValidContentEntrySlug<"speakers">;
     }>;
-    submission_type: string;
+    session_type: string;
     track: string;
     level: string;
   };
@@ -26,7 +26,7 @@ type Session = {
       <li
         class="mb-12"
         data-track={session.data.track}
-        data-type={session.data.submission_type}
+        data-type={session.data.session_type}
         data-level={session.data.level}
       >
         <Prose>
@@ -43,11 +43,11 @@ type Session = {
         </Prose>
 
         <ul class="space-x-2 capitalize">
-          {session.data.submission_type && (
+          {session.data.session_type && (
             <li class="inline-block">
               <Tag>
                 <span class="sr-only">Type:</span>
-                {session.data.submission_type}
+                {session.data.session_type}
               </Tag>
             </li>
           )}
