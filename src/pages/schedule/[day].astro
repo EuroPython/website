@@ -280,10 +280,9 @@ const getSessionStyle = (session: any) => {
             </div>
           ))
         }
-
-        <div class="h-12"></div>
       </div>
     </div>
+    <div class="h-12"></div>
   </div>
 </Layout>
 
@@ -320,10 +319,12 @@ const getSessionStyle = (session: any) => {
   @media screen and (min-width: 640px) {
     .schedule-container {
       overflow-x: auto;
+      padding-bottom: 2px;
     }
 
     .schedule-container.header {
       overflow-x: hidden;
+      padding-bottom: 0;
     }
 
     .time,
