@@ -32,13 +32,15 @@ const { style, session } = Astro.props;
       )
     }
   </header>
+
   <div class="time">
     <span class="sr-only">Session start:</span>
     <time>{session.start}</time>
-    -
+    <span class="minus">-</span>
     <span class="sr-only">Session end:</span>
     <time>{session.end}</time>
   </div>
+
   <h2>{session.title}</h2>
   {
     session.speakers && session.speakers.length > 0 && (
@@ -52,9 +54,54 @@ const { style, session } = Astro.props;
 <style>
   .session {
     font-weight: bold;
-    display: flex;
+    display: grid;
     flex-direction: column;
     background-color: var(--color-body-background);
+
+    grid-template-areas:
+      "header header"
+      "time title"
+      "time footer";
+
+    grid-template-columns: 60px 1fr;
+
+    @media screen and (min-width: 640px) {
+      display: flex;
+    }
+  }
+
+  .session > header {
+    grid-area: header;
+  }
+
+  @media screen and (max-width: 639px) {
+    .session > .time {
+      grid-area: time;
+      padding-block: 8px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid var(--color-text);
+      gap: 4px;
+
+      & .minus {
+        display: none;
+      }
+    }
+
+    .session > h2 {
+      grid-area: title;
+      padding-block: 8px;
+    }
+
+    .session > footer {
+      grid-area: footer;
+    }
+
+    .session > div {
+      display: flex;
+    }
   }
 
   .session[href]:not([href=""]):hover {
