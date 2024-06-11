@@ -3,9 +3,14 @@ import { getEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Break from "../../components/schedule/break.astro";
 import Session from "../../components/schedule/session.astro";
-import { addMinutes, format, parseISO } from "date-fns";
+import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
 import { Title } from "../../components/typography/title";
 import { Select } from "../../components/form/select";
+import { formatInTimeZone } from "date-fns-tz";
+
+const format = (date: Date, format: string) => {
+  return formatInTimeZone(date, "Europe/Prague", format);
+};
 
 const timeToNumber = (time: string) => {
   const [hours, minutes] = time.split(":").map(Number);
@@ -44,35 +49,38 @@ const ROOMS = day.data.rooms.sort((a, b) => {
 
 const sessions = day.data.events
   .map((event) => {
-    const startTime = parseISO(event.start);
-    const start = format(startTime, "HH:mm");
+    const start = parseISO(event.start);
+    const startTime = format(start, "HH:mm");
 
     let duration = event.duration;
 
     // round to the nearest 5 minutes
     duration = Math.ceil(duration / 5) * 5;
 
-    const end = format(addMinutes(startTime, duration), "HH:mm");
+    const end = addMinutes(start, duration);
+    const endTime = format(end, "HH:mm");
 
     return {
       ...event,
       start,
+      startTime,
       end,
+      endTime,
       type: event.event_type,
     };
   })
   .sort((a, b) => {
-    return a.start.localeCompare(b.start);
+    return a.start.getTime() - b.start.getTime();
   });
 
 const sessionsByTime: { [key: string]: Array<(typeof sessions)[0]> } = {};
 
 sessions.forEach((session) => {
-  if (!sessionsByTime[session.start]) {
-    sessionsByTime[session.start] = [];
+  if (!sessionsByTime[session.startTime]) {
+    sessionsByTime[session.startTime] = [];
   }
 
-  sessionsByTime[session.start].push(session);
+  sessionsByTime[session.startTime].push(session);
 });
 
 const sessionAndTimes = Object.entries(sessionsByTime).sort(([a], [b]) => {
@@ -81,35 +89,40 @@ const sessionAndTimes = Object.entries(sessionsByTime).sort(([a], [b]) => {
 
 for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   const [, sessions] = sessionAndTimes[i];
-  const [nextTime, nextSessions] = sessionAndTimes[i + 1];
+  const [, nextSessions] = sessionAndTimes[i + 1];
 
-  const endTimes = sessions.map((session) => timeToNumber(session.end));
-  const endTime = Math.max(...endTimes);
-  const nextStartTime = timeToNumber(nextTime);
+  const ends = sessions.map((session) => session.end);
+  const end = new Date(Math.max(...ends.map((end) => end.getTime())));
+  const nextStart = nextSessions[0].start;
 
   if (nextSessions.some((session) => session.type === "break")) {
     continue;
   }
 
-  if (nextStartTime !== endTime) {
-    const duration = nextStartTime - endTime;
+  if (nextStart !== end) {
+    const duration = differenceInMinutes(nextStart, end);
 
     if (duration === 5) {
-      const roomChangeTime = numberToTime(endTime);
+      const roomChangeStart = end;
+      const roomChangeTime = format(roomChangeStart, "HH:mm");
+      const roomChangeEnd = addMinutes(roomChangeStart, 5);
+      const roomChangeEndTime = format(roomChangeEnd, "HH:mm");
 
       sessionsByTime[roomChangeTime] = [
         {
           title: "Room Change",
-          start: roomChangeTime,
+          start: roomChangeStart,
+          startTime: roomChangeTime,
+          end: roomChangeEnd,
+          endTime: roomChangeEndTime,
           duration: 5,
-          end: numberToTime(endTime + 5),
           type: "room-change",
           event_type: "room-change",
           rooms: ROOMS,
         },
       ];
     } else {
-      console.warn("Missing room change", endTime, nextStartTime, duration);
+      console.warn("Missing room change", end, nextStart, duration);
     }
   }
 }
@@ -129,7 +142,14 @@ const slots = Object.entries(sessionsByTime)
       type = "room-change";
     }
 
-    return { start: time, end: sessions[0].end, type: type, sessions };
+    return {
+      start: sessions[0].start,
+      startTime: sessions[0].startTime,
+      end: sessions[0].end,
+      endTime: sessions[0].endTime,
+      type: type,
+      sessions,
+    };
   });
 
 const gridRows = [];
@@ -142,12 +162,12 @@ for (let i = 0; i < slots.length; i++) {
   const current = slots[i];
   const next = slots[i + 1];
 
-  const currentTime = timeToNumber(current.start);
+  const currentTime = timeToNumber(current.startTime);
   let nextTime;
   if (next) {
-    nextTime = timeToNumber(next.start);
+    nextTime = timeToNumber(next.startTime);
   } else {
-    nextTime = timeToNumber(current.end);
+    nextTime = timeToNumber(current.endTime);
   }
 
   const sizeInMinutes = nextTime - currentTime;
@@ -173,9 +193,9 @@ for (let i = 0; i < slots.length; i++) {
 // add missing times
 const lastSlot = slots[slots.length - 1];
 const lastTime = Math.max(
-  ...lastSlot.sessions.map((session) => timeToNumber(session.end)),
+  ...lastSlot.sessions.map((session) => timeToNumber(session.endTime)),
 );
-const currentTime = timeToNumber(lastSlot.end);
+const currentTime = timeToNumber(lastSlot.endTime);
 
 for (let i = currentTime; i <= lastTime; i += 5) {
   const time = numberToTime(i);
@@ -213,8 +233,8 @@ const getColEnd = ({ type, rooms }: Break | Session) => {
 
 const getSessionStyle = (session: any) => {
   const style = {
-    "--start": timeToRow[session.start],
-    "--end": timeToRow[session.end],
+    "--start": timeToRow[session.startTime],
+    "--end": timeToRow[session.endTime],
     "--col-start": getColStart(session),
     "--col-end": getColEnd(session),
   };
@@ -228,14 +248,18 @@ const getSessionStyle = (session: any) => {
 };
 ---
 
-<Layout title="Schedule" description="The schedule for the conference">
+<Layout
+  title=`Schedule - ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
+  description=`Schedule for ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
+>
   <div class="px-6">
     <Title>Schedule</Title>
 
     <Select id="schedule-select" name="schedule-select">
       {
         days.map((day) => {
-          const dateText = format(day.id, "eeee, do MMMM, yyyy");
+          const date = parseISO(day.id);
+          const dateText = format(date, "eeee, do MMMM, yyyy");
 
           return (
             <option value={day.id} selected={day.id === Astro.params.day}>
@@ -276,14 +300,14 @@ const getSessionStyle = (session: any) => {
               <div
                 class="time"
                 style={{
-                  "--start": timeToRow[slot.start],
-                  "--end": timeToRow[slot.end],
+                  "--start": timeToRow[slot.startTime],
+                  "--end": timeToRow[slot.endTime],
                 }}
               >
-                <h2>{slot.start}</h2>
+                <h2>{format(slot.start, "HH:mm")}</h2>
               </div>
 
-              {sessionsByTime[slot.start].map((session) => {
+              {sessionsByTime[slot.startTime].map((session) => {
                 const style = getSessionStyle(session);
 
                 if (
@@ -293,13 +317,13 @@ const getSessionStyle = (session: any) => {
                   return (
                     <Break
                       title={session.title}
-                      time={session.start}
+                      time={session.startTime}
                       style={style}
                     />
                   );
                 }
 
-                return <Session session={session as any} style={style} />;
+                return <Session session={session} style={style} />;
               })}
             </div>
           ))
