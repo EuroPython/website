@@ -252,7 +252,7 @@ const getSessionStyle = (session: any) => {
       <div
         class="schedule"
         style={{
-          gridTemplateColumns: `6ch repeat(${ROOMS.length}, minmax(200px, 1fr))`,
+          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(200px, 1fr))`,
         }}
       >
         <div>Time</div>
@@ -265,7 +265,7 @@ const getSessionStyle = (session: any) => {
         class="schedule"
         style={{
           gridTemplateRows: gridRows.join(" "),
-          gridTemplateColumns: `6ch repeat(${ROOMS.length}, minmax(200px, 1fr))`,
+          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(200px, 1fr))`,
         }}
       >
         {
@@ -311,6 +311,10 @@ const getSessionStyle = (session: any) => {
 <style>
   :global(body) {
     overflow-x: hidden;
+  }
+
+  :global(select) {
+    font-weight: bold;
   }
 
   .schedule {
