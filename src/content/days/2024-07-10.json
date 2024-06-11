@@ -1,14 +1,14 @@
 {
   "rooms": [
-    "Forum Hall",
-    "Main Hall A",
-    "South Hall 2B",
-    "Terrace 2A",
-    "South Hall 2A",
     "Main Hall C",
-    "Main Hall B",
+    "Terrace 2A",
     "Terrace 2B",
-    "North Hall"
+    "Forum Hall",
+    "South Hall 2A",
+    "North Hall",
+    "Main Hall A",
+    "Main Hall B",
+    "South Hall 2B"
   ],
   "events": [
     {
@@ -16,12 +16,12 @@
       "title": "Coffee Break",
       "duration": 30,
       "rooms": [
-        "North Hall",
-        "South Hall 2A",
-        "Terrace 2B",
         "Forum Hall",
         "South Hall 2B",
-        "Terrace 2A"
+        "South Hall 2A",
+        "Terrace 2A",
+        "Terrace 2B",
+        "North Hall"
       ],
       "start": "2024-07-10T10:15:00+02:00"
     },
@@ -30,12 +30,12 @@
       "title": "Lunch",
       "duration": 60,
       "rooms": [
-        "North Hall",
         "Forum Hall",
-        "Terrace 2B",
-        "Terrace 2A",
+        "South Hall 2B",
         "South Hall 2A",
-        "South Hall 2B"
+        "Terrace 2A",
+        "North Hall",
+        "Terrace 2B"
       ],
       "start": "2024-07-10T13:00:00+02:00"
     },
@@ -51,18 +51,33 @@
       "title": "Coffee Break",
       "duration": 25,
       "rooms": [
-        "Terrace 2A",
-        "Forum Hall",
+        "North Hall",
         "South Hall 2A",
-        "Terrace 2B",
         "South Hall 2B",
-        "North Hall"
+        "Forum Hall",
+        "Terrace 2B",
+        "Terrace 2A"
       ],
       "start": "2024-07-10T15:05:00+02:00"
     },
     {
       "event_type": "session",
+      "code": "TZWRJN",
+      "slug": "wednesday-registration-welcome-forum-hall-foyer-1st-floor",
+      "title": "Wednesday Registration & Welcome @ Forum Hall Foyer 1st Floor",
+      "session_type": "Announcements",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "start": "2024-07-10T08:00:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/wednesday-registration-welcome-forum-hall-foyer-1st-floor",
+      "duration": 30
+    },
+    {
+      "event_type": "session",
       "code": "HFKHBF",
+      "slug": "opening-session",
       "title": "Opening Session",
       "session_type": "Announcements",
       "speakers": [],
@@ -76,6 +91,7 @@
     {
       "event_type": "session",
       "code": "DU7PRD",
+      "slug": "keynote-placeholder",
       "title": "Keynote Placeholder",
       "session_type": "Keynote",
       "speakers": [],
@@ -89,17 +105,20 @@
     {
       "event_type": "session",
       "code": "GHYHAE",
+      "slug": "from-text-to-context-how-we-introduced-a-modern-hybrid-search",
       "title": "From Text to Context: How We Introduced a Modern Hybrid Search",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "CNDARF",
           "name": "Ansgar Gruene",
+          "slug": "ansgar-gruene",
           "website_url": "https://ep2024.europython.eu/speaker/ansgar-gruene"
         },
         {
           "code": "WEWNJK",
           "name": "Dharin shah",
+          "slug": "dharin-shah",
           "website_url": "https://ep2024.europython.eu/speaker/dharin-shah"
         }
       ],
@@ -113,12 +132,14 @@
     {
       "event_type": "session",
       "code": "3XXR79",
+      "slug": "learning-to-code-in-the-age-of-ai",
       "title": "Learning to code in the age of AI",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "GZHPTE",
           "name": "Sheena O'Connell",
+          "slug": "sheena-o-connell",
           "website_url": "https://ep2024.europython.eu/speaker/sheena-o-connell"
         }
       ],
@@ -132,12 +153,14 @@
     {
       "event_type": "session",
       "code": "ZWDDAT",
+      "slug": "spy-static-python-lang-fast-as-c-pythonic-as-python",
       "title": "SPy (Static Python) lang: fast as C, Pythonic as Python",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
+          "slug": "antonio-cuni",
           "website_url": "https://ep2024.europython.eu/speaker/antonio-cuni"
         }
       ],
@@ -151,12 +174,14 @@
     {
       "event_type": "session",
       "code": "HBM9ZK",
+      "slug": "animations-from-first-principles",
       "title": "Animations from first principles",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "BLNV7P",
           "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
+          "slug": "rodrigo-girao-serrao",
           "website_url": "https://ep2024.europython.eu/speaker/rodrigo-girao-serrao"
         }
       ],
@@ -170,17 +195,20 @@
     {
       "event_type": "session",
       "code": "DMV8BL",
+      "slug": "profile-optimize-repeat-one-core-is-all-you-needtm",
       "title": "Profile, Optimize, Repeat: One Core Is All You Need\u2122",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "BBXVHQ",
           "name": "Valentin Nieper",
+          "slug": "valentin-nieper",
           "website_url": "https://ep2024.europython.eu/speaker/valentin-nieper"
         },
         {
           "code": "YWKXWU",
           "name": "Jonathan Striebel",
+          "slug": "jonathan-striebel",
           "website_url": "https://ep2024.europython.eu/speaker/jonathan-striebel"
         }
       ],
@@ -194,12 +222,14 @@
     {
       "event_type": "session",
       "code": "C9KSKY",
+      "slug": "how-to-sell-a-big-refactor-or-rewrite-to-the-business",
       "title": "How to sell a big refactor or rewrite to the business?",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "9SYDFX",
           "name": "Ivett \u00d6rd\u00f6g",
+          "slug": "ivett-ordog",
           "website_url": "https://ep2024.europython.eu/speaker/ivett-ordog"
         }
       ],
@@ -213,12 +243,14 @@
     {
       "event_type": "session",
       "code": "PC3XVJ",
+      "slug": "data-pipelines-with-celery-modular-signal-driven-and-manageable",
       "title": "Data pipelines with Celery: modular, signal-driven and manageable",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "VUZ9LU",
           "name": "Marin Agli\u0107 \u010cuvi\u0107",
+          "slug": "marin-aglic-cuvic",
           "website_url": "https://ep2024.europython.eu/speaker/marin-aglic-cuvic"
         }
       ],
@@ -232,12 +264,14 @@
     {
       "event_type": "session",
       "code": "WP8MXM",
+      "slug": "building-scalable-multimodal-search-applications-with-python",
       "title": "Building Scalable Multimodal Search Applications with Python",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "XDWZ8P",
           "name": "Zain Hasan",
+          "slug": "zain-hasan",
           "website_url": "https://ep2024.europython.eu/speaker/zain-hasan"
         }
       ],
@@ -251,12 +285,14 @@
     {
       "event_type": "session",
       "code": "P93P8V",
+      "slug": "aggregating-data-in-django-using-database-views",
       "title": "Aggregating data in Django using database views",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "TDUUPM",
           "name": "Mikul\u00e1\u0161 Poul",
+          "slug": "mikulas-poul",
           "website_url": "https://ep2024.europython.eu/speaker/mikulas-poul"
         }
       ],
@@ -270,12 +306,14 @@
     {
       "event_type": "session",
       "code": "K9AHYT",
+      "slug": "fastapi-internals",
       "title": "FastAPI Internals",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "BGPPXA",
           "name": "Marcelo Trylesinski",
+          "slug": "marcelo-trylesinski",
           "website_url": "https://ep2024.europython.eu/speaker/marcelo-trylesinski"
         }
       ],
@@ -289,12 +327,14 @@
     {
       "event_type": "session",
       "code": "HUKDBU",
+      "slug": "sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s",
       "title": "\"SUN vs Me : Quest to Outwit the Blinding Sun and Snag Some Extra Z's\"",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "MGQCUC",
           "name": "vishrut kohli",
+          "slug": "vishrut-kohli",
           "website_url": "https://ep2024.europython.eu/speaker/vishrut-kohli"
         }
       ],
@@ -308,12 +348,14 @@
     {
       "event_type": "session",
       "code": "NKBKYC",
+      "slug": "from-built-in-concurrency-primitives-to-large-scale-distributed-computing",
       "title": "From built-in concurrency primitives to large scale distributed computing",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "BLWEQ9",
           "name": "Jakub Urban",
+          "slug": "jakub-urban",
           "website_url": "https://ep2024.europython.eu/speaker/jakub-urban"
         }
       ],
@@ -327,12 +369,14 @@
     {
       "event_type": "session",
       "code": "A3EWQU",
+      "slug": "state-of-the-art-image-generation-for-the-masses-with-diffusers",
       "title": "State-of-the-art image generation for the masses with Diffusers",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "JJLYHF",
           "name": "Sayak Paul",
+          "slug": "sayak-paul",
           "website_url": "https://ep2024.europython.eu/speaker/sayak-paul"
         }
       ],
@@ -346,12 +390,14 @@
     {
       "event_type": "session",
       "code": "GVKEAK",
+      "slug": "dfd-documentation-first-development-with-fastapi",
       "title": "DFD(Documentation-First Development) with FastAPI",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "RVFLYU",
           "name": "Taehyun Lee",
+          "slug": "taehyun-lee",
           "website_url": "https://ep2024.europython.eu/speaker/taehyun-lee"
         }
       ],
@@ -365,12 +411,14 @@
     {
       "event_type": "session",
       "code": "7DF7VC",
+      "slug": "deconstructing-the-text-embedding-models",
       "title": "Deconstructing the text embedding models",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "H3RSTE",
           "name": "Kacper \u0141ukawski",
+          "slug": "kacper-lukawski",
           "website_url": "https://ep2024.europython.eu/speaker/kacper-lukawski"
         }
       ],
@@ -384,12 +432,14 @@
     {
       "event_type": "session",
       "code": "G3PHLZ",
+      "slug": "demystify-python-types-for-pep-729",
       "title": "Demystify Python Types for PEP 729",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "XKDR9U",
           "name": "Kir Chou",
+          "slug": "kir-chou",
           "website_url": "https://ep2024.europython.eu/speaker/kir-chou"
         }
       ],
@@ -403,12 +453,14 @@
     {
       "event_type": "session",
       "code": "JFFDLS",
+      "slug": "and-justice-for-ail",
       "title": "... and justice for AIl",
       "session_type": "Talk (long session)",
       "speakers": [
         {
           "code": "ECLXGR",
           "name": "Martina Guttau-Zielke",
+          "slug": "martina-guttau-zielke",
           "website_url": "https://ep2024.europython.eu/speaker/martina-guttau-zielke"
         }
       ],
@@ -422,12 +474,14 @@
     {
       "event_type": "session",
       "code": "LYNADL",
+      "slug": "rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias",
       "title": "Rapid detection of red cell membrane defects leading to hemolytic anaemias",
       "session_type": "Poster",
       "speakers": [
         {
           "code": "FNMQXB",
           "name": "Tess Afanasyeva",
+          "slug": "tess-afanasyeva",
           "website_url": "https://ep2024.europython.eu/speaker/tess-afanasyeva"
         }
       ],
@@ -441,12 +495,14 @@
     {
       "event_type": "session",
       "code": "TLHPWB",
+      "slug": "stop-using-setup-py",
       "title": "Stop using setup.py!",
       "session_type": "Poster",
       "speakers": [
         {
           "code": "A7Q3CY",
           "name": "Piotr Gnus",
+          "slug": "piotr-gnus",
           "website_url": "https://ep2024.europython.eu/speaker/piotr-gnus"
         }
       ],
@@ -460,12 +516,14 @@
     {
       "event_type": "session",
       "code": "A3E3XE",
+      "slug": "building-end-to-end-reliable-rag-applications",
       "title": "Building End-to-End Reliable RAG Applications",
       "session_type": "Poster",
       "speakers": [
         {
           "code": "PVSNUG",
           "name": "Bilge Y\u00fccel",
+          "slug": "bilge-yucel",
           "website_url": "https://ep2024.europython.eu/speaker/bilge-yucel"
         }
       ],
@@ -479,12 +537,14 @@
     {
       "event_type": "session",
       "code": "B8SZMM",
+      "slug": "geopandas-1-0-and-beyond",
       "title": "GeoPandas 1.0 and beyond",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "NN8GFM",
           "name": "Martin Fleischmann",
+          "slug": "martin-fleischmann",
           "website_url": "https://ep2024.europython.eu/speaker/martin-fleischmann"
         }
       ],
@@ -498,12 +558,14 @@
     {
       "event_type": "session",
       "code": "QPPRQQ",
+      "slug": "zero-trust-apis-with-python",
       "title": "Zero Trust APIs with Python",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "YRPTZY",
           "name": "Jose Haro Peralta",
+          "slug": "jose-haro-peralta",
           "website_url": "https://ep2024.europython.eu/speaker/jose-haro-peralta"
         }
       ],
@@ -517,12 +579,14 @@
     {
       "event_type": "session",
       "code": "7Z8LFA",
+      "slug": "writing-python-like-it-s-rust-more-robust-code-with-type-hints",
       "title": "Writing Python like it's Rust - more robust code with type hints",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "3HJ8ME",
           "name": "Jakub Ber\u00e1nek",
+          "slug": "jakub-beranek",
           "website_url": "https://ep2024.europython.eu/speaker/jakub-beranek"
         }
       ],
@@ -536,12 +600,14 @@
     {
       "event_type": "session",
       "code": "7GRP3T",
+      "slug": "the-art-of-the-pull-request",
       "title": "The Art of the Pull Request",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "CZLRNY",
           "name": "Ben Lomax",
+          "slug": "ben-lomax",
           "website_url": "https://ep2024.europython.eu/speaker/ben-lomax"
         }
       ],
@@ -554,13 +620,42 @@
     },
     {
       "event_type": "session",
+      "code": "H8Z37Q",
+      "slug": "from-pandas-to-production-elt-with-dlt",
+      "title": "From Pandas to production: ELT with dlt",
+      "session_type": "Sponsored",
+      "speakers": [
+        {
+          "code": "3RZLNH",
+          "name": "Violetta",
+          "slug": "violetta",
+          "website_url": "https://ep2024.europython.eu/speaker/violetta"
+        },
+        {
+          "code": "YPDD8Z",
+          "name": "Adrian Brudaru",
+          "slug": "adrian-brudaru",
+          "website_url": "https://ep2024.europython.eu/speaker/adrian-brudaru"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["North Hall"],
+      "start": "2024-07-10T14:00:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt",
+      "duration": 30
+    },
+    {
+      "event_type": "session",
       "code": "LWSF9C",
+      "slug": "deadcode-a-tool-to-find-and-fix-unused-dead-python-code",
       "title": "Deadcode - a tool to find and fix unused (dead) Python code",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "K8XYZX",
           "name": "Albertas Gimbutas",
+          "slug": "albertas-gimbutas",
           "website_url": "https://ep2024.europython.eu/speaker/albertas-gimbutas"
         }
       ],
@@ -574,12 +669,14 @@
     {
       "event_type": "session",
       "code": "TBBKAM",
+      "slug": "encrypted-computing-in-python-using-openfhe",
       "title": "\u200b\u200bEncrypted computing in Python using OpenFHE",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "QCRLAF",
           "name": "Sukanya Mandal",
+          "slug": "sukanya-mandal",
           "website_url": "https://ep2024.europython.eu/speaker/sukanya-mandal"
         }
       ],
@@ -593,12 +690,14 @@
     {
       "event_type": "session",
       "code": "VBHMEL",
+      "slug": "unlocking-mixture-of-experts-from-1-know-it-all-to-group-of-jedi-masters",
       "title": "Unlocking Mixture of Experts : From 1 Know-it-all to group of Jedi Masters",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "CCZUDR",
           "name": "Pranjal Biyani",
+          "slug": "pranjal-biyani",
           "website_url": "https://ep2024.europython.eu/speaker/pranjal-biyani"
         }
       ],
@@ -612,12 +711,14 @@
     {
       "event_type": "session",
       "code": "KV3DHG",
+      "slug": "the-pyarrow-revolution-in-pandas",
       "title": "The PyArrow revolution in Pandas",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "VZM8L3",
           "name": "Reuven M. Lerner",
+          "slug": "reuven-m-lerner",
           "website_url": "https://ep2024.europython.eu/speaker/reuven-m-lerner"
         }
       ],
@@ -631,12 +732,14 @@
     {
       "event_type": "session",
       "code": "LDUPVK",
+      "slug": "accelerating-python-with-rust-the-pyo3-revolution",
       "title": "Accelerating Python with Rust: The PyO3 Revolution",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "7KXBK3",
           "name": "Roshan R Chandar",
+          "slug": "roshan-r-chandar",
           "website_url": "https://ep2024.europython.eu/speaker/roshan-r-chandar"
         }
       ],
@@ -650,12 +753,14 @@
     {
       "event_type": "session",
       "code": "TTN3RZ",
+      "slug": "event-sourcing-in-production",
       "title": "Event Sourcing in production",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "8LC3YQ",
           "name": "Borjan Tchakaloff",
+          "slug": "borjan-tchakaloff",
           "website_url": "https://ep2024.europython.eu/speaker/borjan-tchakaloff"
         }
       ],
@@ -669,17 +774,20 @@
     {
       "event_type": "session",
       "code": "ZSBJNR",
+      "slug": "invent-with-pyscript",
       "title": "Invent with PyScript",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "BQVLYL",
           "name": "Nicholas Tollervey",
+          "slug": "nicholas-tollervey",
           "website_url": "https://ep2024.europython.eu/speaker/nicholas-tollervey"
         },
         {
           "code": "G7GCFL",
           "name": "Joshua Lowe",
+          "slug": "joshua-lowe",
           "website_url": "https://ep2024.europython.eu/speaker/joshua-lowe"
         }
       ],
@@ -693,12 +801,14 @@
     {
       "event_type": "session",
       "code": "UPWH7Z",
+      "slug": "keeping-your-projects-nice-and-clean",
       "title": "Keeping your projects nice and clean",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "FWGLE3",
           "name": "Jan Mus\u00edlek",
+          "slug": "jan-musilek",
           "website_url": "https://ep2024.europython.eu/speaker/jan-musilek"
         }
       ],
@@ -712,12 +822,14 @@
     {
       "event_type": "session",
       "code": "QQMDWQ",
+      "slug": "the-rise-of-the-yaml-engineer",
       "title": "The rise of the YAML engineer",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "9S3Z87",
           "name": "Matthieu Caneill",
+          "slug": "matthieu-caneill",
           "website_url": "https://ep2024.europython.eu/speaker/matthieu-caneill"
         }
       ],
@@ -731,12 +843,14 @@
     {
       "event_type": "session",
       "code": "NMBFTX",
+      "slug": "designing-config-files-the-conflicting-needs-of-programmers-and-users",
       "title": "Designing Config Files: The Conflicting Needs of Programmers and Users",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "GYETSD",
           "name": "Steven Pool",
+          "slug": "steven-pool",
           "website_url": "https://ep2024.europython.eu/speaker/steven-pool"
         }
       ],
@@ -750,12 +864,14 @@
     {
       "event_type": "session",
       "code": "SYKBQB",
+      "slug": "automate-your-kitchen-with-python-applied-ai",
       "title": "Automate Your Kitchen with Python & Applied AI",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "KVWBAJ",
           "name": "Sena Sahin",
+          "slug": "sena-sahin",
           "website_url": "https://ep2024.europython.eu/speaker/sena-sahin"
         }
       ],
@@ -769,12 +885,14 @@
     {
       "event_type": "session",
       "code": "NNWTXP",
+      "slug": "i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned",
       "title": "I reverse engineered a work of art, and this is what I learned",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "VCGHPN",
           "name": "Yair Galler",
+          "slug": "yair-galler",
           "website_url": "https://ep2024.europython.eu/speaker/yair-galler"
         }
       ],
@@ -788,12 +906,14 @@
     {
       "event_type": "session",
       "code": "CVXAB7",
+      "slug": "enhancing-decorators-with-type-annotations-techniques-and-best-practices",
       "title": "Enhancing Decorators with Type Annotations: Techniques and Best Practices",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "BPFJEJ",
           "name": "Koudai Aono",
+          "slug": "koudai-aono",
           "website_url": "https://ep2024.europython.eu/speaker/koudai-aono"
         }
       ],
@@ -807,12 +927,14 @@
     {
       "event_type": "session",
       "code": "TAW7PN",
+      "slug": "impersonation-in-data-engineering-no-more-credentials-in-your-code",
       "title": "Impersonation in Data Engineering: No More Credentials in Your Code!",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "HGKR9V",
           "name": "Marian \u0160pilka",
+          "slug": "marian-spilka",
           "website_url": "https://ep2024.europython.eu/speaker/marian-spilka"
         }
       ],
@@ -826,12 +948,14 @@
     {
       "event_type": "session",
       "code": "SNZ9HV",
+      "slug": "how-to-deliver-3x-faster-with-effective-api-design",
       "title": "How to deliver 3x faster with effective API design",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "R3AGHS",
           "name": "Michal Cyprian",
+          "slug": "michal-cyprian",
           "website_url": "https://ep2024.europython.eu/speaker/michal-cyprian"
         }
       ],
@@ -845,12 +969,14 @@
     {
       "event_type": "session",
       "code": "T3QAPN",
+      "slug": "build-the-right-thing-win-a-nobel-prize",
       "title": "Build the Right Thing, Win a Nobel Prize",
       "session_type": "Talk",
       "speakers": [
         {
           "code": "JQ3MRZ",
           "name": "Max Kahan",
+          "slug": "max-kahan",
           "website_url": "https://ep2024.europython.eu/speaker/max-kahan"
         }
       ],
@@ -864,6 +990,7 @@
     {
       "event_type": "session",
       "code": "HAEWRZ",
+      "slug": "lightening-talks-wednesday",
       "title": "Lightening talks Wednesday",
       "session_type": "Talk",
       "speakers": [],

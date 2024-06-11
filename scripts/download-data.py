@@ -18,7 +18,7 @@ ROOT = pathlib.Path(__file__).parents[1]
 
 SESSIONS_URL = "https://programapi24.europython.eu/2024/sessions.json"
 SPEAKERS_URL = "https://programapi24.europython.eu/2024/speakers.json"
-SCHEDULE_DATA = "https://gist.githubusercontent.com/egeakman/565193c49df6b66e803a5d62c258bd9a/raw/de98936c89e17c9c208adc9e4f1e73c65dae73e1/schedule.json"
+SCHEDULE_DATA = "https://programapi24.europython.eu/2024/schedule.json"
 
 
 def write_mdx(data: dict[str, Any], output_dir: pathlib.Path, content_key: str) -> None:
