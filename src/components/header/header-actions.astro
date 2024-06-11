@@ -1,0 +1,42 @@
+---
+import { ButtonLink } from "../button-link";
+import HeaderButton from "./header-button.astro";
+
+export interface Props {
+  mobile?: boolean;
+}
+
+const { mobile = false }: Props = Astro.props;
+
+const IS_LIVE = false;
+---
+
+<div class="ml-auto flex items-center space-x-4">
+  {
+    !mobile ? (
+      <>
+        <ButtonLink secondary href="https://www.europython-society.org/coc/">
+          <abbr title="Code of Conduct" class="no-underline md:hidden">
+            CoC
+          </abbr>
+          <span class="hidden md:inline">Code of Conduct</span>
+        </ButtonLink>
+        <ButtonLink href="/tickets" className="hidden md:block">
+          <span>Tickets</span>
+        </ButtonLink>
+        {IS_LIVE && (
+          <ButtonLink href="/live">
+            Live
+            <span class="hidden md:inline"> 📺</span>
+          </ButtonLink>
+        )}
+      </>
+    ) : null
+  }
+
+  <label for="nav_toggle" class="flex xl:hidden">
+    <HeaderButton variant="menu">
+      {mobile ? "Close Menu" : "Menu"}
+    </HeaderButton>
+  </label>
+</div>

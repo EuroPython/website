@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+
+interface Props {
+  speakers: Array<{
+    code: string;
+  }>;
+}
+
+const allSpeakers = await getCollection("speakers");
+
+const speakersByCode = Object.fromEntries(
+  allSpeakers.map((speaker) => [speaker.data.code, speaker]),
+);
+
+const speakers = Astro.props.speakers
+  .map((speaker) => speakersByCode[speaker.code])
+  .filter(Boolean);
+---
+
+{
+  speakers.map((speaker, index) => (
+    <span class="inline">
+      {speaker.data.name}
+      {index < speakers.length - 1 ? ", " : ""}
+    </span>
+  ))
+}

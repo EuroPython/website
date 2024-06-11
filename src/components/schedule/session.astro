@@ -1,0 +1,103 @@
+---
+import Speakers from "./speakers.astro";
+
+export interface Props {
+  style: any;
+  session: {
+    slug?: string;
+    title: string;
+    start: string;
+    end: string;
+    description?: string;
+    level?: "intermediate" | "advanced" | "beginner" | "";
+    speakers?: { code: string }[];
+  };
+}
+
+const { style, session } = Astro.props;
+---
+
+<a href={session.slug && `${session.slug}`} class="session" style={style}>
+  <header class:list={[session.level]}>
+    {
+      session.level && (
+        <>
+          <span class="sr-only">Session level:</span>
+          {session.level}
+        </>
+      )
+    }
+  </header>
+  <div class="time">
+    <span class="sr-only">Session start:</span>
+    <time>{session.start}</time>
+    -
+    <span class="sr-only">Session end:</span>
+    <time>{session.end}</time>
+  </div>
+  <h2>{session.title}</h2>
+  {
+    session.speakers && session.speakers.length > 0 && (
+      <footer>
+        <Speakers speakers={session.speakers} />
+      </footer>
+    )
+  }
+</a>
+
+<style>
+  .session {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-body-background);
+  }
+
+  .session[href]:not([href=""]):hover {
+    background-color: color-mix(
+      in srgb,
+      var(--color-body-background),
+      white 40%
+    );
+  }
+
+  .time,
+  footer {
+    font-size: 0.9em;
+  }
+
+  header,
+  .time,
+  footer,
+  h2 {
+    padding: 0.2em 0.5em;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  footer {
+    border-top: 1px solid var(--color-text);
+    margin-top: auto;
+  }
+
+  header {
+    background-color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    text-transform: capitalize;
+    font-size: 0.8em;
+  }
+
+  header.beginner {
+    background-color: var(--color-session-beginner);
+  }
+
+  header.intermediate {
+    background-color: var(--color-session-intermediate);
+  }
+
+  header.advanced {
+    background-color: var(--color-session-advanced);
+  }
+</style>

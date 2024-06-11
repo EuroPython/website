@@ -8,6 +8,7 @@
 
 from typing import Any
 import httpx
+import json
 import pathlib
 import shutil
 import yaml
@@ -17,6 +18,7 @@ ROOT = pathlib.Path(__file__).parents[1]
 
 SESSIONS_URL = "https://programapi24.europython.eu/2024/sessions.json"
 SPEAKERS_URL = "https://programapi24.europython.eu/2024/speakers.json"
+SCHEDULE_DATA = "https://programapi24.europython.eu/2024/schedule.json"
 
 
 def write_mdx(data: dict[str, Any], output_dir: pathlib.Path, content_key: str) -> None:
@@ -51,6 +53,7 @@ def download_data(url: str) -> dict[str, Any]:
 def download() -> None:
     speakers = download_data(SPEAKERS_URL)
     sessions = download_data(SESSIONS_URL)
+    schedule = download_data(SCHEDULE_DATA)
 
     for session in sessions.values():
         session["speakers"] = [
@@ -61,10 +64,16 @@ def download() -> None:
         speaker["submissions"] = [
             sessions[session_id]["slug"]
             for session_id in speaker.get("submissions", [])
+            if session_id in sessions
         ]
 
     write_mdx(sessions, ROOT / "src/content/sessions", "abstract")
     write_mdx(speakers, ROOT / "src/content/speakers", "biography")
+
+    for day, data in schedule["days"].items():
+        path = ROOT / f"src/content/days/{day}.json"
+        with path.open("w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
 
 
 download()

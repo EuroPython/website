@@ -1,0 +1,522 @@
+{
+  "rooms": ["Club B", "Club H", "Club C", "Club A", "Club D", "Club E"],
+  "events": [
+    {
+      "event_type": "break",
+      "title": "Coffee Break",
+      "duration": 15,
+      "rooms": ["Club D", "Club H", "Club A", "Club B", "Club C", "Club E"],
+      "start": "2024-07-08T11:00:00+02:00"
+    },
+    {
+      "event_type": "break",
+      "title": "Lunch",
+      "duration": 60,
+      "rooms": ["Club A", "Club H", "Club B", "Club C", "Club D", "Club E"],
+      "start": "2024-07-08T12:45:00+02:00"
+    },
+    {
+      "event_type": "break",
+      "title": "Coffee Break",
+      "duration": 15,
+      "rooms": ["Club B", "Club H", "Club C", "Club E", "Club A", "Club D"],
+      "start": "2024-07-08T15:15:00+02:00"
+    },
+    {
+      "event_type": "session",
+      "code": "AB3FCD",
+      "slug": "monday-registration-welcome-forum-hall-foyer-1st-floor",
+      "title": "Monday Registration & Welcome @ Forum Hall Foyer 1st Floor",
+      "session_type": "Announcements",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club A"],
+      "start": "2024-07-08T08:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/monday-registration-welcome-forum-hall-foyer-1st-floor",
+      "duration": 30
+    },
+    {
+      "event_type": "session",
+      "code": "NVWSXS",
+      "slug": "a-journey-from-zero-to-large-language-models-in-python",
+      "title": "A Journey from Zero to Large Language Models in Python",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "MHPHE3",
+          "name": "Sanyam Bhutani",
+          "slug": "sanyam-bhutani",
+          "website_url": "https://ep2024.europython.eu/speaker/sanyam-bhutani"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-08T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/a-journey-from-zero-to-large-language-models-in-python",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "NVWSXS",
+      "slug": "a-journey-from-zero-to-large-language-models-in-python",
+      "title": "A Journey from Zero to Large Language Models in Python",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "MHPHE3",
+          "name": "Sanyam Bhutani",
+          "slug": "sanyam-bhutani",
+          "website_url": "https://ep2024.europython.eu/speaker/sanyam-bhutani"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-08T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/a-journey-from-zero-to-large-language-models-in-python",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "X99G8E",
+      "slug": "writing-python-modules-in-rust",
+      "title": "Writing Python modules in Rust",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CXYAXB",
+          "name": "Kushal Das",
+          "slug": "kushal-das",
+          "website_url": "https://ep2024.europython.eu/speaker/kushal-das"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club E"],
+      "start": "2024-07-08T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/writing-python-modules-in-rust",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "X99G8E",
+      "slug": "writing-python-modules-in-rust",
+      "title": "Writing Python modules in Rust",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CXYAXB",
+          "name": "Kushal Das",
+          "slug": "kushal-das",
+          "website_url": "https://ep2024.europython.eu/speaker/kushal-das"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club E"],
+      "start": "2024-07-08T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/writing-python-modules-in-rust",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "U7UMBE",
+      "slug": "event-sourcing-from-the-ground-up",
+      "title": "Event Sourcing From The Ground Up",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "AU3L9P",
+          "name": "Ravi Selker",
+          "slug": "ravi-selker",
+          "website_url": "https://ep2024.europython.eu/speaker/ravi-selker"
+        },
+        {
+          "code": "UPWXFZ",
+          "name": "Sebastiaan Zeeff",
+          "slug": "sebastiaan-zeeff",
+          "website_url": "https://ep2024.europython.eu/speaker/sebastiaan-zeeff"
+        }
+      ],
+      "tweet": "Interested in Event Sourcing? Join the tutorial \"Event Sourcing From The Ground Up\" at EuroPython 2024!",
+      "level": "intermediate",
+      "rooms": ["Club H"],
+      "start": "2024-07-08T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/event-sourcing-from-the-ground-up",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "U7UMBE",
+      "slug": "event-sourcing-from-the-ground-up",
+      "title": "Event Sourcing From The Ground Up",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "AU3L9P",
+          "name": "Ravi Selker",
+          "slug": "ravi-selker",
+          "website_url": "https://ep2024.europython.eu/speaker/ravi-selker"
+        },
+        {
+          "code": "UPWXFZ",
+          "name": "Sebastiaan Zeeff",
+          "slug": "sebastiaan-zeeff",
+          "website_url": "https://ep2024.europython.eu/speaker/sebastiaan-zeeff"
+        }
+      ],
+      "tweet": "Interested in Event Sourcing? Join the tutorial \"Event Sourcing From The Ground Up\" at EuroPython 2024!",
+      "level": "intermediate",
+      "rooms": ["Club H"],
+      "start": "2024-07-08T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/event-sourcing-from-the-ground-up",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "WJPJG9",
+      "slug": "c-api-summit",
+      "title": "C API Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "QMAPYZ",
+          "name": "Antonio Cuni",
+          "slug": "antonio-cuni",
+          "website_url": "https://ep2024.europython.eu/speaker/antonio-cuni"
+        },
+        {
+          "code": "SCAGQW",
+          "name": "Petr Viktorin",
+          "slug": "petr-viktorin",
+          "website_url": "https://ep2024.europython.eu/speaker/petr-viktorin"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-08T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/c-api-summit",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "WJPJG9",
+      "slug": "c-api-summit",
+      "title": "C API Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "QMAPYZ",
+          "name": "Antonio Cuni",
+          "slug": "antonio-cuni",
+          "website_url": "https://ep2024.europython.eu/speaker/antonio-cuni"
+        },
+        {
+          "code": "SCAGQW",
+          "name": "Petr Viktorin",
+          "slug": "petr-viktorin",
+          "website_url": "https://ep2024.europython.eu/speaker/petr-viktorin"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-08T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/c-api-summit",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "WJPJG9",
+      "slug": "c-api-summit",
+      "title": "C API Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "QMAPYZ",
+          "name": "Antonio Cuni",
+          "slug": "antonio-cuni",
+          "website_url": "https://ep2024.europython.eu/speaker/antonio-cuni"
+        },
+        {
+          "code": "SCAGQW",
+          "name": "Petr Viktorin",
+          "slug": "petr-viktorin",
+          "website_url": "https://ep2024.europython.eu/speaker/petr-viktorin"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-08T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/c-api-summit",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "WJPJG9",
+      "slug": "c-api-summit",
+      "title": "C API Summit",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "QMAPYZ",
+          "name": "Antonio Cuni",
+          "slug": "antonio-cuni",
+          "website_url": "https://ep2024.europython.eu/speaker/antonio-cuni"
+        },
+        {
+          "code": "SCAGQW",
+          "name": "Petr Viktorin",
+          "slug": "petr-viktorin",
+          "website_url": "https://ep2024.europython.eu/speaker/petr-viktorin"
+        }
+      ],
+      "tweet": "",
+      "level": "advanced",
+      "rooms": ["Club D"],
+      "start": "2024-07-08T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/c-api-summit",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "QLNGZU",
+      "slug": "what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
+      "title": "What do lockfiles pin, *actually*? Let's dig in and get our hands dirty!",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "AWKFRJ",
+          "name": "Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e)",
+          "slug": "sviatoslav-sydorenko-sviatoslav-sidorenko",
+          "website_url": "https://ep2024.europython.eu/speaker/sviatoslav-sydorenko-sviatoslav-sidorenko"
+        }
+      ],
+      "tweet": "Workshop: Reproducible Python dep mgmt across envs (test, docs, prod)  Set up GitHub proj w/ Actions using tox/nox:  Run tests Build docs Update lockfiles Learn constraints, avoid conflicts. Practice robust env setup.",
+      "level": "intermediate",
+      "rooms": ["Club B"],
+      "start": "2024-07-08T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "QLNGZU",
+      "slug": "what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
+      "title": "What do lockfiles pin, *actually*? Let's dig in and get our hands dirty!",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "AWKFRJ",
+          "name": "Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e)",
+          "slug": "sviatoslav-sydorenko-sviatoslav-sidorenko",
+          "website_url": "https://ep2024.europython.eu/speaker/sviatoslav-sydorenko-sviatoslav-sidorenko"
+        }
+      ],
+      "tweet": "Workshop: Reproducible Python dep mgmt across envs (test, docs, prod)  Set up GitHub proj w/ Actions using tox/nox:  Run tests Build docs Update lockfiles Learn constraints, avoid conflicts. Practice robust env setup.",
+      "level": "intermediate",
+      "rooms": ["Club B"],
+      "start": "2024-07-08T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "HXXKM3",
+      "slug": "django-girls-workshop",
+      "title": "Django Girls Workshop",
+      "session_type": "Conference Workshop",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-08T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/django-girls-workshop",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "HXXKM3",
+      "slug": "django-girls-workshop",
+      "title": "Django Girls Workshop",
+      "session_type": "Conference Workshop",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-08T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/django-girls-workshop",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "HXXKM3",
+      "slug": "django-girls-workshop",
+      "title": "Django Girls Workshop",
+      "session_type": "Conference Workshop",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-08T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/django-girls-workshop",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "HXXKM3",
+      "slug": "django-girls-workshop",
+      "title": "Django Girls Workshop",
+      "session_type": "Conference Workshop",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-08T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/django-girls-workshop",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "AVNAPX",
+      "slug": "parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
+      "title": "Parallelism, Concurrency, and AsyncIO: A Comprehensive Guide for Beginners",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CHHWUG",
+          "name": "Neeraj Pandey",
+          "slug": "neeraj-pandey",
+          "website_url": "https://ep2024.europython.eu/speaker/neeraj-pandey"
+        },
+        {
+          "code": "DSKWCM",
+          "name": "Manoj Pandey",
+          "slug": "manoj-pandey",
+          "website_url": "https://ep2024.europython.eu/speaker/manoj-pandey"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club H"],
+      "start": "2024-07-08T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "AVNAPX",
+      "slug": "parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
+      "title": "Parallelism, Concurrency, and AsyncIO: A Comprehensive Guide for Beginners",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "CHHWUG",
+          "name": "Neeraj Pandey",
+          "slug": "neeraj-pandey",
+          "website_url": "https://ep2024.europython.eu/speaker/neeraj-pandey"
+        },
+        {
+          "code": "DSKWCM",
+          "name": "Manoj Pandey",
+          "slug": "manoj-pandey",
+          "website_url": "https://ep2024.europython.eu/speaker/manoj-pandey"
+        }
+      ],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Club H"],
+      "start": "2024-07-08T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "SAWP3R",
+      "slug": "pre-commit-to-better-code",
+      "title": "(Pre-)Commit to Better Code",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "9WJJPL",
+          "name": "Stefanie Molin",
+          "slug": "stefanie-molin",
+          "website_url": "https://ep2024.europython.eu/speaker/stefanie-molin"
+        }
+      ],
+      "tweet": "Want to write cleaner code with less effort? Pre-commit hooks make it easy to improve and maintain code quality. In this workshop, you will learn how to set them up on your own repos + how to build your own hooks.",
+      "level": "intermediate",
+      "rooms": ["Club E"],
+      "start": "2024-07-08T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/pre-commit-to-better-code",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "SAWP3R",
+      "slug": "pre-commit-to-better-code",
+      "title": "(Pre-)Commit to Better Code",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "9WJJPL",
+          "name": "Stefanie Molin",
+          "slug": "stefanie-molin",
+          "website_url": "https://ep2024.europython.eu/speaker/stefanie-molin"
+        }
+      ],
+      "tweet": "Want to write cleaner code with less effort? Pre-commit hooks make it easy to improve and maintain code quality. In this workshop, you will learn how to set them up on your own repos + how to build your own hooks.",
+      "level": "intermediate",
+      "rooms": ["Club E"],
+      "start": "2024-07-08T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/pre-commit-to-better-code",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "RZCCLV",
+      "slug": "from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
+      "title": "From zero to MLOps: An open source stack to fight spaghetti ML",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "UBESRJ",
+          "name": "Juan Luis Cano Rodr\u00edguez",
+          "slug": "juan-luis-cano-rodriguez",
+          "website_url": "https://ep2024.europython.eu/speaker/juan-luis-cano-rodriguez"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-08T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "RZCCLV",
+      "slug": "from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
+      "title": "From zero to MLOps: An open source stack to fight spaghetti ML",
+      "session_type": "Tutorial",
+      "speakers": [
+        {
+          "code": "UBESRJ",
+          "name": "Juan Luis Cano Rodr\u00edguez",
+          "slug": "juan-luis-cano-rodriguez",
+          "website_url": "https://ep2024.europython.eu/speaker/juan-luis-cano-rodriguez"
+        }
+      ],
+      "tweet": "",
+      "level": "intermediate",
+      "rooms": ["Club A"],
+      "start": "2024-07-08T15:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
+      "duration": 90
+    }
+  ]
+}

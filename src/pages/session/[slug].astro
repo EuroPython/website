@@ -3,6 +3,7 @@ import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
 import { Separator } from "../../components/separator/separator";
+import { formatInTimeZone } from "date-fns-tz";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("sessions");
@@ -53,6 +54,20 @@ for (const speaker of speakers) {
           </>
         )
       }
+      {
+        entry.data.start && (
+          <>
+            <dt class="font-bold">Start:</dt>
+            <dd>
+              {formatInTimeZone(
+                entry.data.start,
+                "Europe/Prague",
+                "HH:mm 'on' dd MMMM yyyy",
+              )}
+            </dd>
+          </>
+        )
+      }
       <dt class="font-bold">Duration:</dt><dd>{entry.data.duration} minutes</dd>
     </dl>
     <Prose>
@@ -82,11 +97,7 @@ for (const speaker of speakers) {
                   </div>
                 ) : (
                   <div class="flex items-start mb-4 invisible">
-                    <img
-                      src=""
-                      alt=""
-                      class="w-full max-w-sm mb-12"
-                    />
+                    <img src="" alt="" class="w-full max-w-sm mb-12" />
                   </div>
                 )}
                 <div>
