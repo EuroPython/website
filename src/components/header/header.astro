@@ -8,9 +8,7 @@ import { getCollection } from "astro:content";
 
 const days = await getCollection("days");
 
-const links = JSON.parse(
-  await fs.readFile(new URL("../../data/links.json", import.meta.url), "utf-8"),
-);
+const links = JSON.parse(await fs.readFile("./src/data/links.json", "utf-8"));
 
 // big assumption that programme is the first section
 
