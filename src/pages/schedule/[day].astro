@@ -229,21 +229,23 @@ const getSessionStyle = (session: any) => {
 ---
 
 <Layout title="Schedule" description="The schedule for the conference">
-  <Title>Schedule</Title>
+  <div class="px-6">
+    <Title>Schedule</Title>
 
-  <Select id="schedule-select" name="schedule-select">
-    {
-      days.map((day) => {
-        const dateText = format(day.id, "eeee, do MMMM, yyyy");
+    <Select id="schedule-select" name="schedule-select">
+      {
+        days.map((day) => {
+          const dateText = format(day.id, "eeee, do MMMM, yyyy");
 
-        return (
-          <option value={day.id} selected={day.id === Astro.params.day}>
-            {dateText}
-          </option>
-        );
-      })
-    }
-  </Select>
+          return (
+            <option value={day.id} selected={day.id === Astro.params.day}>
+              {dateText}
+            </option>
+          );
+        })
+      }
+    </Select>
+  </div>
 
   <div class="h-12"></div>
 
@@ -321,7 +323,7 @@ const getSessionStyle = (session: any) => {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 8px;
+    @apply px-6;
   }
 
   .slot {
