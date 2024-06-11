@@ -4,6 +4,8 @@ import Layout from "../../layouts/Layout.astro";
 import Break from "../../components/schedule/break.astro";
 import Session from "../../components/schedule/session.astro";
 import { addMinutes, format, parseISO } from "date-fns";
+import { Title } from "../../components/typography/title";
+import { Select } from "../../components/form/select";
 
 const timeToNumber = (time: string) => {
   const [hours, minutes] = time.split(":").map(Number);
@@ -15,6 +17,7 @@ const numberToTime = (number: number) => {
   const minutes = number % 60;
   return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
 };
+
 export const getStaticPaths = async () => {
   const days = await getCollection("days");
 
@@ -23,6 +26,7 @@ export const getStaticPaths = async () => {
   });
 };
 
+const days = await getCollection("days");
 const day = await getEntry("days", Astro.params.day);
 
 // make sure to always have `Main Hall A|B|C` as the last rooms
@@ -225,6 +229,24 @@ const getSessionStyle = (session: any) => {
 ---
 
 <Layout title="Schedule" description="The schedule for the conference">
+  <Title>Schedule</Title>
+
+  <Select id="schedule-select" name="schedule-select">
+    {
+      days.map((day) => {
+        const dateText = format(day.id, "eeee, do MMMM, yyyy");
+
+        return (
+          <option value={day.id} selected={day.id === Astro.params.day}>
+            {dateText}
+          </option>
+        );
+      })
+    }
+  </Select>
+
+  <div class="h-12"></div>
+
   <div class="full-bleed">
     <header class="schedule-container header">
       <div
@@ -388,4 +410,12 @@ const getSessionStyle = (session: any) => {
       container.addEventListener("scroll", syncScroll);
     });
   });
+
+  document
+    .getElementById("schedule-select")!
+    .addEventListener("change", (event) => {
+      // @ts-ignore
+      const day = event.target!.value;
+      window.location.href = `/schedule/${day}`;
+    });
 </script>
