@@ -2,15 +2,13 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Tag } from "../components/tag/tag";
-import SessionSpeakers from "../components/session-speakers.astro";
+import ListSessions from "../components/sessions/list-sessions.astro";
 
 const sessions = await getCollection("sessions");
 const posters = sessions.filter((s) => s.data.session_type === "Poster");
 
-const title = "Sessions";
-
-const description = "A list of all the sessions at the conference";
+const title = "Posters";
+const description = "A list of all the posters at the conference";
 ---
 
 <Layout title={title} description={description}>
@@ -30,49 +28,9 @@ const description = "A list of all the sessions at the conference";
         the scheduled poster session.
       </p>
 
-      <h2>List of posters</h2>
+      <h2>List of Posters</h2>
     </Prose>
 
-    <ol class="sessions">
-      {
-        posters.map((session) => (
-          <li
-            class="mb-12"
-            data-track={session.data.track}
-            data-type={session.data.session_type}
-          >
-            <Prose>
-              <h4>
-                <a href={`/session/${session.slug}`} class="underline">
-                  {session.data.title}
-                </a>
-              </h4>
-
-              <p>
-                <span class="sr-only">Speakers:</span>
-
-                <SessionSpeakers speakers={session.data.speakers} />
-              </p>
-            </Prose>
-
-            <ul class="space-x-2 capitalize">
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Track:</span>
-                  {session.data.track}
-                </Tag>
-              </li>
-
-              <li class="inline-block">
-                <Tag>
-                  <span class="sr-only">Level:</span>
-                  {session.data.level}
-                </Tag>
-              </li>
-            </ul>
-          </li>
-        ))
-      }
-    </ol>
+    <ListSessions sessions={posters} />
   </div>
 </Layout>

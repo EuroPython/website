@@ -1,0 +1,95 @@
+---
+const { allTracks, allTypes, allLevels } = Astro.props;
+import { Label } from "../form/label";
+import { Select } from "../form/select";
+---
+
+<form class="mb-12 filter-sessions">
+  {allTracks && allTracks.length > 0 && (
+    <div class="mb-6">
+      <Label htmlFor="track">Track</Label>
+      <Select id="track" name="track">
+        <option value="">All</option>
+        {allTracks.map((track: string) => <option value={track}>{track}</option>)}
+      </Select>
+    </div>
+  )}
+
+  {allTypes && allTypes.length > 0 && (
+    <div class="mb-6">
+      <Label htmlFor="type">Session type</Label>
+      <Select id="type" name="type">
+        <option value="">All</option>
+        {allTypes.map((type: string) => <option value={type}>{type}</option>)}
+      </Select>
+    </div>
+  )}
+
+  {allLevels && allLevels.length > 0 && (
+    <div class="mb-6">
+      <Label htmlFor="level">Level</Label>
+      <Select id="level" name="level">
+        <option value="">All</option>
+        {allLevels.map((level: string) => <option value={level}>{level}</option>)}
+      </Select>
+    </div>
+  )}
+
+  <button type="button" id="reset-filters" class="btn underline font-bold hover:text-primary-hover">Reset Filters</button>
+</form>
+
+<script>
+  const forms = document.querySelectorAll<HTMLFormElement>("form.filter-sessions");
+
+  function filterSessions() {
+    forms.forEach((form) => {
+      const trackSelect = form.querySelector<HTMLSelectElement>("#track");
+      const typeSelect = form.querySelector<HTMLSelectElement>("#type");
+      const levelSelect = form.querySelector<HTMLSelectElement>("#level");
+
+      const track = trackSelect ? trackSelect.value : "";
+      const type = typeSelect ? typeSelect.value : "";
+      const level = levelSelect ? levelSelect.value : "";
+
+      document.querySelectorAll("ol.sessions > li").forEach((session) => {
+        const sessionTrack = session.getAttribute("data-track");
+        const sessionType = session.getAttribute("data-type");
+        const sessionLevel = session.getAttribute("data-level");
+
+        const trackMatch = track === "" || sessionTrack === track;
+        const typeMatch = type === "" || sessionType === type;
+        const levelMatch = level === "" || sessionLevel === level;
+
+        if (trackMatch && typeMatch && levelMatch) {
+          (session as HTMLElement).style.display = "block";
+        } else {
+          (session as HTMLElement).style.display = "none";
+        }
+      });
+
+      document.querySelectorAll("div.track-group").forEach((group) => {
+        const visibleSessions = group.querySelectorAll("ol.sessions > li:not([style*='display: none'])").length;
+
+        if (visibleSessions === 0) {
+          (group as HTMLElement).style.display = "none";
+        } else {
+          (group as HTMLElement).style.display = "block";
+        }
+      });
+    });
+  }
+
+  forms.forEach((form) => {
+    form.querySelectorAll("select").forEach((select) => {
+      select.addEventListener("change", filterSessions);
+    });
+
+    const resetButton = form.querySelector<HTMLButtonElement>("#reset-filters");
+    resetButton?.addEventListener("click", () => {
+      form.querySelectorAll("select").forEach((select) => {
+        (select as HTMLSelectElement).value = "";
+      });
+      filterSessions();
+    });
+  });
+</script>

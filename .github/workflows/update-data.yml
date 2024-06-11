@@ -25,5 +25,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin
+          git checkout ${{ github.ref_name }}
           git add .
-          git diff-index --quiet HEAD || (git commit -m "🆕 Update data" && git push origin main)
+          git diff-index --quiet HEAD || (git commit -m "🆕 Update data" && git push origin ${{ github.ref_name }})
