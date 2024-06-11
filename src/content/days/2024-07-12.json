@@ -1,14 +1,14 @@
 {
   "rooms": [
-    "Main Hall A",
-    "South Hall 2A",
+    "South Hall 2B",
+    "Terrace 2A",
     "North Hall",
     "Forum Hall",
+    "Main Hall B",
+    "South Hall 2A",
+    "Main Hall A",
     "Terrace 2B",
-    "South Hall 2B",
-    "Main Hall C",
-    "Terrace 2A",
-    "Main Hall B"
+    "Main Hall C"
   ],
   "events": [
     {
@@ -16,12 +16,12 @@
       "title": "Coffee Break",
       "duration": 30,
       "rooms": [
-        "South Hall 2B",
         "Terrace 2A",
-        "Terrace 2B",
+        "South Hall 2B",
         "Forum Hall",
+        "South Hall 2A",
         "North Hall",
-        "South Hall 2A"
+        "Terrace 2B"
       ],
       "start": "2024-07-12T10:15:00+02:00"
     },
@@ -31,11 +31,11 @@
       "duration": 60,
       "rooms": [
         "Terrace 2A",
-        "South Hall 2A",
-        "Terrace 2B",
-        "South Hall 2B",
         "Forum Hall",
-        "North Hall"
+        "Terrace 2B",
+        "South Hall 2A",
+        "North Hall",
+        "South Hall 2B"
       ],
       "start": "2024-07-12T13:00:00+02:00"
     },
@@ -44,12 +44,12 @@
       "title": "Coffee Break",
       "duration": 30,
       "rooms": [
-        "Terrace 2A",
-        "South Hall 2A",
-        "Forum Hall",
         "South Hall 2B",
-        "Terrace 2B",
-        "North Hall"
+        "Forum Hall",
+        "South Hall 2A",
+        "Terrace 2A",
+        "North Hall",
+        "Terrace 2B"
       ],
       "start": "2024-07-12T15:20:00+02:00"
     },
@@ -80,6 +80,20 @@
       "start": "2024-07-12T09:15:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/friday-s-morning-announcement",
       "duration": 15
+    },
+    {
+      "event_type": "session",
+      "code": "3U9ZVR",
+      "slug": "keynote-mai",
+      "title": "Keynote (Mai)",
+      "session_type": "Keynote",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "start": "2024-07-12T09:30:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/keynote-mai",
+      "duration": 45
     },
     {
       "event_type": "session",
@@ -755,6 +769,20 @@
       "start": "2024-07-12T14:00:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/observability-matters-empowering-python-developers-with-opentelemetry",
       "duration": 30
+    },
+    {
+      "event_type": "session",
+      "code": "LEMZSB",
+      "slug": "keynote-lukasz",
+      "title": "Keynote (\u0141ukasz)",
+      "session_type": "Keynote",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "start": "2024-07-12T14:35:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/keynote-lukasz",
+      "duration": 45
     },
     {
       "event_type": "session",
