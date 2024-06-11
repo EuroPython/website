@@ -1,25 +1,25 @@
 {
-  "rooms": ["Club B", "Club H", "Club C", "Club A", "Club D", "Club E"],
+  "rooms": ["Club H", "Club D", "Club A", "Club B", "Club C", "Club E"],
   "events": [
     {
       "event_type": "break",
       "title": "Coffee Break",
       "duration": 15,
-      "rooms": ["Club D", "Club H", "Club A", "Club B", "Club C", "Club E"],
+      "rooms": ["Club B", "Club C", "Club H", "Club A", "Club E", "Club D"],
       "start": "2024-07-08T11:00:00+02:00"
     },
     {
       "event_type": "break",
       "title": "Lunch",
       "duration": 60,
-      "rooms": ["Club A", "Club H", "Club B", "Club C", "Club D", "Club E"],
+      "rooms": ["Club A", "Club H", "Club D", "Club B", "Club C", "Club E"],
       "start": "2024-07-08T12:45:00+02:00"
     },
     {
       "event_type": "break",
       "title": "Coffee Break",
       "duration": 15,
-      "rooms": ["Club B", "Club H", "Club C", "Club E", "Club A", "Club D"],
+      "rooms": ["Club D", "Club C", "Club B", "Club E", "Club H", "Club A"],
       "start": "2024-07-08T15:15:00+02:00"
     },
     {
