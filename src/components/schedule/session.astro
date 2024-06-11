@@ -17,7 +17,11 @@ export interface Props {
 const { style, session } = Astro.props;
 ---
 
-<a href={session.slug && `${session.slug}`} class="session" style={style}>
+<a
+  href={session.slug && `/session/${session.slug}`}
+  class="session"
+  style={style}
+>
   <header class:list={[session.level]}>
     {
       session.level && (

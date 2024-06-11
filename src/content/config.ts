@@ -105,6 +105,7 @@ const days = defineCollection({
         event_type: z.string(),
         code: z.string().optional(),
         title: z.string(),
+        slug: z.string().optional(),
         session_type: z.string().optional(), // why?
         speakers: z
           .array(
