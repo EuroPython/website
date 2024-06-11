@@ -1,25 +1,25 @@
 {
-  "rooms": ["Club C", "Club H", "Club D", "Club B", "Club E", "Club A"],
+  "rooms": ["Club B", "Club H", "Club A", "Club D", "Club E", "Club C"],
   "events": [
     {
       "event_type": "break",
       "title": "Coffee Break",
       "duration": 15,
-      "rooms": ["Club B", "Club A", "Club D", "Club H", "Club C", "Club E"],
+      "rooms": ["Club E", "Club D", "Club B", "Club H", "Club A", "Club C"],
       "start": "2024-07-09T11:00:00+02:00"
     },
     {
       "event_type": "break",
       "title": "Lunch",
       "duration": 60,
-      "rooms": ["Club D", "Club A", "Club C", "Club H", "Club B", "Club E"],
+      "rooms": ["Club E", "Club D", "Club H", "Club C", "Club A", "Club B"],
       "start": "2024-07-09T12:45:00+02:00"
     },
     {
       "event_type": "break",
       "title": "Coffee Break",
       "duration": 15,
-      "rooms": ["Club B", "Club C", "Club E", "Club D", "Club A", "Club H"],
+      "rooms": ["Club E", "Club C", "Club B", "Club H", "Club A", "Club D"],
       "start": "2024-07-09T15:15:00+02:00"
     },
     {
@@ -339,6 +339,48 @@
       "level": "beginner",
       "rooms": ["Club C"],
       "start": "2024-07-09T11:15:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/humble-data",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "WZGEEZ",
+      "slug": "humble-data",
+      "title": "Humble Data",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "PXQBU9",
+          "name": "Jodie Burchell",
+          "slug": "jodie-burchell",
+          "website_url": "https://ep2024.europython.eu/speaker/jodie-burchell"
+        }
+      ],
+      "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T13:45:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/humble-data",
+      "duration": 90
+    },
+    {
+      "event_type": "session",
+      "code": "WZGEEZ",
+      "slug": "humble-data",
+      "title": "Humble Data",
+      "session_type": "Conference Workshop",
+      "speakers": [
+        {
+          "code": "PXQBU9",
+          "name": "Jodie Burchell",
+          "slug": "jodie-burchell",
+          "website_url": "https://ep2024.europython.eu/speaker/jodie-burchell"
+        }
+      ],
+      "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
+      "level": "beginner",
+      "rooms": ["Club C"],
+      "start": "2024-07-09T15:30:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/humble-data",
       "duration": 90
     },

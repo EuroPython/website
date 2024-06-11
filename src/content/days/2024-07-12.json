@@ -1,14 +1,14 @@
 {
   "rooms": [
-    "Main Hall C",
-    "Terrace 2A",
-    "Terrace 2B",
-    "Forum Hall",
+    "Main Hall A",
     "South Hall 2A",
     "North Hall",
-    "Main Hall A",
-    "Main Hall B",
-    "South Hall 2B"
+    "Forum Hall",
+    "Terrace 2B",
+    "South Hall 2B",
+    "Main Hall C",
+    "Terrace 2A",
+    "Main Hall B"
   ],
   "events": [
     {
@@ -16,12 +16,12 @@
       "title": "Coffee Break",
       "duration": 30,
       "rooms": [
-        "Terrace 2A",
-        "North Hall",
         "South Hall 2B",
-        "South Hall 2A",
+        "Terrace 2A",
+        "Terrace 2B",
         "Forum Hall",
-        "Terrace 2B"
+        "North Hall",
+        "South Hall 2A"
       ],
       "start": "2024-07-12T10:15:00+02:00"
     },
@@ -30,12 +30,12 @@
       "title": "Lunch",
       "duration": 60,
       "rooms": [
-        "North Hall",
         "Terrace 2A",
-        "Forum Hall",
         "South Hall 2A",
+        "Terrace 2B",
         "South Hall 2B",
-        "Terrace 2B"
+        "Forum Hall",
+        "North Hall"
       ],
       "start": "2024-07-12T13:00:00+02:00"
     },
@@ -45,11 +45,11 @@
       "duration": 30,
       "rooms": [
         "Terrace 2A",
-        "North Hall",
-        "South Hall 2B",
         "South Hall 2A",
         "Forum Hall",
-        "Terrace 2B"
+        "South Hall 2B",
+        "Terrace 2B",
+        "North Hall"
       ],
       "start": "2024-07-12T15:20:00+02:00"
     },
@@ -885,15 +885,15 @@
     {
       "event_type": "session",
       "code": "CWDS3S",
-      "slug": "lightening-talks-friday",
-      "title": "Lightening talks Friday",
+      "slug": "lightning-talks-friday",
+      "title": "Lightning talks Friday",
       "session_type": "Talk",
       "speakers": [],
       "tweet": "",
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "start": "2024-07-12T16:25:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/lightening-talks-friday",
+      "website_url": "https://ep2024.europython.eu/session/lightning-talks-friday",
       "duration": 30
     }
   ]

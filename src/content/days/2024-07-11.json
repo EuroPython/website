@@ -1,14 +1,14 @@
 {
   "rooms": [
-    "Main Hall C",
-    "Terrace 2A",
-    "Terrace 2B",
-    "Forum Hall",
+    "Main Hall A",
     "South Hall 2A",
     "North Hall",
-    "Main Hall A",
-    "Main Hall B",
-    "South Hall 2B"
+    "Forum Hall",
+    "Terrace 2B",
+    "South Hall 2B",
+    "Main Hall C",
+    "Terrace 2A",
+    "Main Hall B"
   ],
   "events": [
     {
@@ -17,11 +17,11 @@
       "duration": 30,
       "rooms": [
         "Terrace 2B",
-        "Forum Hall",
         "North Hall",
-        "Terrace 2A",
+        "Forum Hall",
+        "South Hall 2A",
         "South Hall 2B",
-        "South Hall 2A"
+        "Terrace 2A"
       ],
       "start": "2024-07-11T10:00:00+02:00"
     },
@@ -30,21 +30,14 @@
       "title": "Lunch",
       "duration": 60,
       "rooms": [
-        "Terrace 2B",
-        "Terrace 2A",
         "Forum Hall",
-        "South Hall 2B",
+        "Terrace 2B",
+        "North Hall",
         "South Hall 2A",
-        "North Hall"
+        "South Hall 2B",
+        "Terrace 2A"
       ],
       "start": "2024-07-11T13:00:00+02:00"
-    },
-    {
-      "event_type": "break",
-      "title": "Blocker for Panel",
-      "duration": 60,
-      "rooms": ["South Hall 2B"],
-      "start": "2024-07-11T14:00:00+02:00"
     },
     {
       "event_type": "break",
@@ -52,9 +45,9 @@
       "duration": 25,
       "rooms": [
         "South Hall 2A",
-        "South Hall 2B",
-        "Forum Hall",
         "Terrace 2B",
+        "Forum Hall",
+        "South Hall 2B",
         "North Hall",
         "Terrace 2A"
       ],
@@ -1074,15 +1067,15 @@
     {
       "event_type": "session",
       "code": "ZC37JC",
-      "slug": "lightening-talks-thursday",
-      "title": "Lightening talks Thursday",
+      "slug": "lightning-talks-thursday",
+      "title": "Lightning talks Thursday",
       "session_type": "Talk",
       "speakers": [],
       "tweet": "",
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "start": "2024-07-11T17:45:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/lightening-talks-thursday",
+      "website_url": "https://ep2024.europython.eu/session/lightning-talks-thursday",
       "duration": 30
     }
   ]

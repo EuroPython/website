@@ -1,14 +1,14 @@
 {
   "rooms": [
-    "Main Hall C",
-    "Terrace 2A",
-    "Terrace 2B",
-    "Forum Hall",
+    "Main Hall A",
     "South Hall 2A",
     "North Hall",
-    "Main Hall A",
-    "Main Hall B",
-    "South Hall 2B"
+    "Forum Hall",
+    "Terrace 2B",
+    "South Hall 2B",
+    "Main Hall C",
+    "Terrace 2A",
+    "Main Hall B"
   ],
   "events": [
     {
@@ -16,12 +16,12 @@
       "title": "Coffee Break",
       "duration": 30,
       "rooms": [
-        "Forum Hall",
         "South Hall 2B",
+        "Forum Hall",
         "South Hall 2A",
         "Terrace 2A",
-        "Terrace 2B",
-        "North Hall"
+        "North Hall",
+        "Terrace 2B"
       ],
       "start": "2024-07-10T10:15:00+02:00"
     },
@@ -31,32 +31,25 @@
       "duration": 60,
       "rooms": [
         "Forum Hall",
-        "South Hall 2B",
         "South Hall 2A",
-        "Terrace 2A",
         "North Hall",
+        "South Hall 2B",
+        "Terrace 2A",
         "Terrace 2B"
       ],
       "start": "2024-07-10T13:00:00+02:00"
     },
     {
       "event_type": "break",
-      "title": "Blocker for Panel",
-      "duration": 60,
-      "rooms": ["South Hall 2A"],
-      "start": "2024-07-10T14:00:00+02:00"
-    },
-    {
-      "event_type": "break",
       "title": "Coffee Break",
       "duration": 25,
       "rooms": [
-        "North Hall",
-        "South Hall 2A",
-        "South Hall 2B",
-        "Forum Hall",
+        "Terrace 2A",
         "Terrace 2B",
-        "Terrace 2A"
+        "South Hall 2B",
+        "North Hall",
+        "Forum Hall",
+        "South Hall 2A"
       ],
       "start": "2024-07-10T15:05:00+02:00"
     },
@@ -627,9 +620,9 @@
       "speakers": [
         {
           "code": "3RZLNH",
-          "name": "Violetta",
-          "slug": "violetta",
-          "website_url": "https://ep2024.europython.eu/speaker/violetta"
+          "name": "Violetta Mishechkina",
+          "slug": "violetta-mishechkina",
+          "website_url": "https://ep2024.europython.eu/speaker/violetta-mishechkina"
         },
         {
           "code": "YPDD8Z",
@@ -643,6 +636,20 @@
       "rooms": ["North Hall"],
       "start": "2024-07-10T14:00:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt",
+      "duration": 30
+    },
+    {
+      "event_type": "session",
+      "code": "8NYTHE",
+      "slug": "discussion-panel-tbd",
+      "title": "Discussion Panel TBD",
+      "session_type": "Panel",
+      "speakers": [],
+      "tweet": "",
+      "level": "beginner",
+      "rooms": ["South Hall 2A"],
+      "start": "2024-07-10T14:00:00+02:00",
+      "website_url": "https://ep2024.europython.eu/session/discussion-panel-tbd",
       "duration": 30
     },
     {
@@ -990,15 +997,15 @@
     {
       "event_type": "session",
       "code": "HAEWRZ",
-      "slug": "lightening-talks-wednesday",
-      "title": "Lightening talks Wednesday",
+      "slug": "lightning-talks-wednesday",
+      "title": "Lightning talks Wednesday",
       "session_type": "Talk",
       "speakers": [],
       "tweet": "",
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "start": "2024-07-10T17:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/lightening-talks-wednesday",
+      "website_url": "https://ep2024.europython.eu/session/lightning-talks-wednesday",
       "duration": 45
     }
   ]
