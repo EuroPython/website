@@ -3,10 +3,14 @@ import { getEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Break from "../../components/schedule/break.astro";
 import Session from "../../components/schedule/session.astro";
-import { addMinutes, differenceInMinutes, format, parseISO } from "date-fns";
+import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
 import { Title } from "../../components/typography/title";
 import { Select } from "../../components/form/select";
 import { formatInTimeZone } from "date-fns-tz";
+
+const format = (date: Date, format: string) => {
+  return formatInTimeZone(date, "Europe/Prague", format);
+};
 
 const timeToNumber = (time: string) => {
   const [hours, minutes] = time.split(":").map(Number);
@@ -85,7 +89,7 @@ const sessionAndTimes = Object.entries(sessionsByTime).sort(([a], [b]) => {
 
 for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   const [, sessions] = sessionAndTimes[i];
-  const [nextTime, nextSessions] = sessionAndTimes[i + 1];
+  const [, nextSessions] = sessionAndTimes[i + 1];
 
   const ends = sessions.map((session) => session.end);
   const end = new Date(Math.max(...ends.map((end) => end.getTime())));
@@ -244,14 +248,18 @@ const getSessionStyle = (session: any) => {
 };
 ---
 
-<Layout title="Schedule" description="The schedule for the conference">
+<Layout
+  title=`Schedule - ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
+  description=`Schedule for ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
+>
   <div class="px-6">
     <Title>Schedule</Title>
 
     <Select id="schedule-select" name="schedule-select">
       {
         days.map((day) => {
-          const dateText = format(day.id, "eeee, do MMMM, yyyy");
+          const date = parseISO(day.id);
+          const dateText = format(date, "eeee, do MMMM, yyyy");
 
           return (
             <option value={day.id} selected={day.id === Astro.params.day}>
@@ -296,9 +304,7 @@ const getSessionStyle = (session: any) => {
                   "--end": timeToRow[slot.endTime],
                 }}
               >
-                <h2>
-                  {formatInTimeZone(slot.start, "Europe/Prague", "HH:mm")}
-                </h2>
+                <h2>{format(slot.start, "HH:mm")}</h2>
               </div>
 
               {sessionsByTime[slot.startTime].map((session) => {
