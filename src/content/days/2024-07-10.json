@@ -1,14 +1,12 @@
 {
   "rooms": [
-    "South Hall 2B",
-    "Terrace 2A",
-    "North Hall",
+    "Exhibit Hall",
     "Forum Hall",
-    "Main Hall B",
     "South Hall 2A",
-    "Main Hall A",
-    "Terrace 2B",
-    "Main Hall C"
+    "North Hall",
+    "Terrace 2A",
+    "South Hall 2B",
+    "Terrace 2B"
   ],
   "events": [
     {
@@ -17,11 +15,11 @@
       "duration": 30,
       "rooms": [
         "Forum Hall",
-        "South Hall 2A",
+        "South Hall 2B",
         "Terrace 2A",
-        "North Hall",
+        "South Hall 2A",
         "Terrace 2B",
-        "South Hall 2B"
+        "North Hall"
       ],
       "start": "2024-07-10T10:15:00+02:00"
     },
@@ -30,12 +28,12 @@
       "title": "Lunch",
       "duration": 60,
       "rooms": [
+        "Forum Hall",
         "Terrace 2B",
         "South Hall 2A",
+        "Terrace 2A",
         "South Hall 2B",
-        "Forum Hall",
-        "North Hall",
-        "Terrace 2A"
+        "North Hall"
       ],
       "start": "2024-07-10T13:00:00+02:00"
     },
@@ -44,12 +42,12 @@
       "title": "Coffee Break",
       "duration": 25,
       "rooms": [
-        "South Hall 2B",
-        "Terrace 2B",
-        "South Hall 2A",
         "Forum Hall",
+        "South Hall 2A",
         "North Hall",
-        "Terrace 2A"
+        "South Hall 2B",
+        "Terrace 2A",
+        "Terrace 2B"
       ],
       "start": "2024-07-10T15:05:00+02:00"
     },
@@ -65,7 +63,7 @@
       "rooms": ["Forum Hall"],
       "start": "2024-07-10T08:00:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/wednesday-registration-welcome-forum-hall-foyer-1st-floor",
-      "duration": 30
+      "duration": 60
     },
     {
       "event_type": "session",
@@ -480,7 +478,7 @@
       ],
       "tweet": "",
       "level": "beginner",
-      "rooms": ["Main Hall C"],
+      "rooms": ["Exhibit Hall"],
       "start": "2024-07-10T13:00:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias",
       "duration": 60
@@ -501,7 +499,7 @@
       ],
       "tweet": "",
       "level": "intermediate",
-      "rooms": ["Main Hall B"],
+      "rooms": ["Exhibit Hall"],
       "start": "2024-07-10T13:00:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/stop-using-setup-py",
       "duration": 60
@@ -522,7 +520,7 @@
       ],
       "tweet": "",
       "level": "intermediate",
-      "rooms": ["Main Hall A"],
+      "rooms": ["Exhibit Hall"],
       "start": "2024-07-10T13:00:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/building-end-to-end-reliable-rag-applications",
       "duration": 60
