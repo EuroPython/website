@@ -1,11 +1,9 @@
 ---
-const availableDays = [
-  new Date('2024-07-08'),
-  new Date('2024-07-09'),
-  new Date('2024-07-10'),
-  new Date('2024-07-11'),
-  new Date('2024-07-12')
-];
+import { getCollection } from "astro:content";
+
+const days = await getCollection("days");
+
+const availableDays = days.map((day) => new Date(day.id));
 ---
 
 <script type="module" define:vars={{ availableDays }}>
