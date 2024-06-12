@@ -238,7 +238,9 @@ const getColStart = ({ type, rooms, sessionType, slug }: Session) => {
     return 3 + index;
   }
 
-  const indexes = rooms.map((room) => ROOMS.indexOf(room));
+  const indexes = rooms
+    .map((room) => ROOMS.indexOf(room))
+    .filter((index) => index >= 0);
   return Math.min(...indexes) + 2;
 };
 
