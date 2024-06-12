@@ -86,6 +86,11 @@ const sessionAndTimes = Object.entries(sessionsByTime).sort(([a], [b]) => {
   return timeToNumber(a) - timeToNumber(b);
 });
 
+// storing some time slots to skip, I don't like it, but it's the easiest way to hide some
+// gaps in the schedule
+
+const timesToSkip: Array<string> = [];
+
 for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   const [, sessions] = sessionAndTimes[i];
   const [, nextSessions] = sessionAndTimes[i + 1];
@@ -94,9 +99,9 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   const end = new Date(Math.max(...ends.map((end) => end.getTime())));
   const nextStart = nextSessions[0].start;
 
-  if (nextSessions.some((session) => session.type === "break")) {
-    continue;
-  }
+  const hasBreakAfter = nextSessions.some(
+    (session) => session.type === "break",
+  );
 
   if (nextStart !== end) {
     const duration = differenceInMinutes(nextStart, end);
@@ -106,6 +111,12 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
       const roomChangeTime = format(roomChangeStart, "HH:mm");
       const roomChangeEnd = addMinutes(roomChangeStart, 5);
       const roomChangeEndTime = format(roomChangeEnd, "HH:mm");
+
+      if (hasBreakAfter) {
+        timesToSkip.push(roomChangeTime);
+
+        continue;
+      }
 
       sessionsByTime[roomChangeTime] = [
         {
@@ -164,7 +175,9 @@ for (let i = 0; i < slots.length; i++) {
   const next = slots[i + 1];
 
   const currentTime = timeToNumber(current.startTime);
+
   let nextTime;
+
   if (next) {
     nextTime = timeToNumber(next.startTime);
   } else {
@@ -186,8 +199,12 @@ for (let i = 0; i < slots.length; i++) {
 
   for (let i = 0; i < size; i++) {
     const time = numberToTime(currentTime + i * 5);
+
     timeToRow[time] = row;
-    row += 1;
+
+    if (!timesToSkip.includes(time)) {
+      row += 1;
+    }
   }
 }
 
