@@ -12,7 +12,7 @@ export const Tag = ({ children, className, href }: TagProps) => {
     <TagElement
       className={clsx(
         "inline-block bg-secondary text-body px-4 py-2 rounded-xl font-bold",
-        "underline hover:bg-primary hover:text-white transition-colors",
+        "hover:bg-primary hover:text-white transition-colors",
         "duration-200 ease-in-out cursor-pointer",
         className
       )}
