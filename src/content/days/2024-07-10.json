@@ -1,139 +1,77 @@
 {
-  "rooms": [
-    "Terrace 2B",
-    "South Hall 2B",
-    "North Hall",
-    "Exhibit Hall",
-    "Forum Hall",
-    "South Hall 2A",
-    "Terrace 2A"
-  ],
   "events": [
     {
-      "event_type": "break",
-      "title": "Coffee Break",
-      "duration": 30,
-      "rooms": [
-        "Forum Hall",
-        "South Hall 2B",
-        "Terrace 2A",
-        "South Hall 2A",
-        "Terrace 2B",
-        "North Hall"
-      ],
-      "start": "2024-07-10T10:15:00+02:00"
-    },
-    {
-      "event_type": "break",
-      "title": "Lunch",
+      "code": "TZWRJN",
       "duration": 60,
+      "event_type": "session",
+      "level": "beginner",
       "rooms": [
+        "Exhibit Hall",
         "Forum Hall",
-        "Terrace 2B",
-        "South Hall 2A",
-        "Terrace 2A",
-        "South Hall 2B",
-        "North Hall"
-      ],
-      "start": "2024-07-10T13:00:00+02:00"
-    },
-    {
-      "event_type": "break",
-      "title": "Coffee Break",
-      "duration": 25,
-      "rooms": [
-        "Forum Hall",
-        "South Hall 2A",
         "North Hall",
+        "South Hall 2A",
         "South Hall 2B",
         "Terrace 2A",
         "Terrace 2B"
       ],
-      "start": "2024-07-10T15:05:00+02:00"
-    },
-    {
-      "event_type": "session",
-      "code": "TZWRJN",
+      "session_type": "Announcements",
       "slug": "wednesday-registration-welcome-forum-hall-foyer-1st-floor",
-      "title": "Wednesday Registration & Welcome @ Forum Hall Foyer 1st Floor",
-      "session_type": "Announcements",
       "speakers": [],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": [
-        "Terrace 2B",
-        "South Hall 2B",
-        "North Hall",
-        "Exhibit Hall",
-        "Terrace 2A",
-        "South Hall 2A",
-        "Forum Hall"
-      ],
       "start": "2024-07-10T08:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/wednesday-registration-welcome-forum-hall-foyer-1st-floor",
-      "duration": 60
+      "title": "Wednesday Registration & Welcome @ Forum Hall Foyer 1st Floor",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/wednesday-registration-welcome-forum-hall-foyer-1st-floor"
     },
     {
-      "event_type": "session",
       "code": "HFKHBF",
-      "slug": "opening-session",
-      "title": "Opening Session",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
       "session_type": "Announcements",
+      "slug": "opening-session",
       "speakers": [],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["Forum Hall"],
       "start": "2024-07-10T09:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/opening-session",
-      "duration": 30
+      "title": "Opening Session",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/opening-session"
     },
     {
-      "event_type": "session",
       "code": "QPSVRA",
-      "slug": "keynote-anna",
-      "title": "Keynote (Anna)",
-      "session_type": "Keynote",
-      "speakers": [],
-      "tweet": "",
+      "duration": 45,
+      "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
+      "session_type": "Keynote",
+      "slug": "keynote-anna",
+      "speakers": [],
       "start": "2024-07-10T09:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/keynote-anna",
-      "duration": 45
-    },
-    {
-      "event_type": "session",
-      "code": "GHYHAE",
-      "slug": "from-text-to-context-how-we-introduced-a-modern-hybrid-search",
-      "title": "From Text to Context: How We Introduced a Modern Hybrid Search",
-      "session_type": "Talk (long session)",
-      "speakers": [
-        {
-          "code": "CNDARF",
-          "name": "Ansgar Gruene",
-          "slug": "ansgar-gruene",
-          "website_url": "https://ep2024.europython.eu/speaker/ansgar-gruene"
-        },
-        {
-          "code": "WEWNJK",
-          "name": "Dharin shah",
-          "slug": "dharin-shah",
-          "website_url": "https://ep2024.europython.eu/speaker/dharin-shah"
-        }
-      ],
+      "title": "Keynote (Anna)",
       "tweet": "",
-      "level": "intermediate",
-      "rooms": ["North Hall"],
-      "start": "2024-07-10T10:45:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/from-text-to-context-how-we-introduced-a-modern-hybrid-search",
-      "duration": 45
+      "website_url": "https://ep2024.europython.eu/session/keynote-anna"
     },
     {
-      "event_type": "session",
+      "duration": 30,
+      "event_type": "break",
+      "rooms": [
+        "Forum Hall",
+        "North Hall",
+        "South Hall 2A",
+        "South Hall 2B",
+        "Terrace 2A",
+        "Terrace 2B"
+      ],
+      "start": "2024-07-10T10:15:00+02:00",
+      "title": "Coffee Break"
+    },
+    {
       "code": "3XXR79",
-      "slug": "learning-to-code-in-the-age-of-ai",
-      "title": "Learning to code in the age of AI",
+      "duration": 45,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Terrace 2B"],
       "session_type": "Talk (long session)",
+      "slug": "learning-to-code-in-the-age-of-ai",
       "speakers": [
         {
           "code": "GZHPTE",
@@ -142,61 +80,40 @@
           "website_url": "https://ep2024.europython.eu/speaker/sheena-o-connell"
         }
       ],
+      "start": "2024-07-10T10:45:00+02:00",
+      "title": "Learning to code in the age of AI",
       "tweet": "Across the industry, programmers of all levels are embracing AI and LLMs. But: it's still worthwhile to learn the foundations of coding. And there's a risk: some learners are using AIs as footguns and limiting their own",
-      "level": "beginner",
-      "rooms": ["Terrace 2B"],
-      "start": "2024-07-10T10:45:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/learning-to-code-in-the-age-of-ai",
-      "duration": 45
+      "website_url": "https://ep2024.europython.eu/session/learning-to-code-in-the-age-of-ai"
     },
     {
+      "code": "C9KSKY",
+      "duration": 45,
       "event_type": "session",
-      "code": "ZWDDAT",
-      "slug": "spy-static-python-lang-fast-as-c-pythonic-as-python",
-      "title": "SPy (Static Python) lang: fast as C, Pythonic as Python",
+      "level": "intermediate",
+      "rooms": ["South Hall 2A"],
       "session_type": "Talk (long session)",
+      "slug": "how-to-sell-a-big-refactor-or-rewrite-to-the-business",
       "speakers": [
         {
-          "code": "QMAPYZ",
-          "name": "Antonio Cuni",
-          "slug": "antonio-cuni",
-          "website_url": "https://ep2024.europython.eu/speaker/antonio-cuni"
+          "code": "9SYDFX",
+          "name": "Ivett \u00d6rd\u00f6g",
+          "slug": "ivett-ordog",
+          "website_url": "https://ep2024.europython.eu/speaker/ivett-ordog"
         }
       ],
+      "start": "2024-07-10T10:45:00+02:00",
+      "title": "How to sell a big refactor or rewrite to the business?",
       "tweet": "",
-      "level": "advanced",
-      "rooms": ["Forum Hall"],
-      "start": "2024-07-10T10:45:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/spy-static-python-lang-fast-as-c-pythonic-as-python",
-      "duration": 45
+      "website_url": "https://ep2024.europython.eu/session/how-to-sell-a-big-refactor-or-rewrite-to-the-business"
     },
     {
-      "event_type": "session",
-      "code": "HBM9ZK",
-      "slug": "animations-from-first-principles",
-      "title": "Animations from first principles",
-      "session_type": "Talk (long session)",
-      "speakers": [
-        {
-          "code": "BLNV7P",
-          "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
-          "slug": "rodrigo-girao-serrao",
-          "website_url": "https://ep2024.europython.eu/speaker/rodrigo-girao-serrao"
-        }
-      ],
-      "tweet": "Join Rodrigo \ud83d\udc0d\ud83d\ude80 and learn how to create colourful animations from first principles in Python.",
-      "level": "advanced",
-      "rooms": ["South Hall 2B"],
-      "start": "2024-07-10T10:45:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/animations-from-first-principles",
-      "duration": 45
-    },
-    {
-      "event_type": "session",
       "code": "DMV8BL",
-      "slug": "profile-optimize-repeat-one-core-is-all-you-needtm",
-      "title": "Profile, Optimize, Repeat: One Core Is All You Need\u2122",
+      "duration": 45,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
       "session_type": "Talk (long session)",
+      "slug": "profile-optimize-repeat-one-core-is-all-you-needtm",
       "speakers": [
         {
           "code": "BBXVHQ",
@@ -211,124 +128,88 @@
           "website_url": "https://ep2024.europython.eu/speaker/jonathan-striebel"
         }
       ],
+      "start": "2024-07-10T10:45:00+02:00",
+      "title": "Profile, Optimize, Repeat: One Core Is All You Need\u2122",
       "tweet": "Profile, optimize, repeat, one core is all you need\u2122! Discover handy tools for your optimization cycle!",
-      "level": "intermediate",
-      "rooms": ["Terrace 2A"],
-      "start": "2024-07-10T10:45:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/profile-optimize-repeat-one-core-is-all-you-needtm",
-      "duration": 45
+      "website_url": "https://ep2024.europython.eu/session/profile-optimize-repeat-one-core-is-all-you-needtm"
     },
     {
+      "code": "GHYHAE",
+      "duration": 45,
       "event_type": "session",
-      "code": "C9KSKY",
-      "slug": "how-to-sell-a-big-refactor-or-rewrite-to-the-business",
-      "title": "How to sell a big refactor or rewrite to the business?",
-      "session_type": "Talk (long session)",
-      "speakers": [
-        {
-          "code": "9SYDFX",
-          "name": "Ivett \u00d6rd\u00f6g",
-          "slug": "ivett-ordog",
-          "website_url": "https://ep2024.europython.eu/speaker/ivett-ordog"
-        }
-      ],
-      "tweet": "",
       "level": "intermediate",
-      "rooms": ["South Hall 2A"],
-      "start": "2024-07-10T10:45:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/how-to-sell-a-big-refactor-or-rewrite-to-the-business",
-      "duration": 45
-    },
-    {
-      "event_type": "session",
-      "code": "PC3XVJ",
-      "slug": "data-pipelines-with-celery-modular-signal-driven-and-manageable",
-      "title": "Data pipelines with Celery: modular, signal-driven and manageable",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "VUZ9LU",
-          "name": "Marin Agli\u0107 \u010cuvi\u0107",
-          "slug": "marin-aglic-cuvic",
-          "website_url": "https://ep2024.europython.eu/speaker/marin-aglic-cuvic"
-        }
-      ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["Terrace 2A"],
-      "start": "2024-07-10T11:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/data-pipelines-with-celery-modular-signal-driven-and-manageable",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "WP8MXM",
-      "slug": "building-scalable-multimodal-search-applications-with-python",
-      "title": "Building Scalable Multimodal Search Applications with Python",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "XDWZ8P",
-          "name": "Zain Hasan",
-          "slug": "zain-hasan",
-          "website_url": "https://ep2024.europython.eu/speaker/zain-hasan"
-        }
-      ],
-      "tweet": "We will discuss how we can use open-source multimodal embedding models in conjunction with large generative multimodal models that can see, hear, read, and feel data(!), to perform cross-modal search and multimodal RAG a",
-      "level": "beginner",
       "rooms": ["North Hall"],
-      "start": "2024-07-10T11:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/building-scalable-multimodal-search-applications-with-python",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "P93P8V",
-      "slug": "aggregating-data-in-django-using-database-views",
-      "title": "Aggregating data in Django using database views",
-      "session_type": "Talk",
+      "session_type": "Talk (long session)",
+      "slug": "from-text-to-context-how-we-introduced-a-modern-hybrid-search",
       "speakers": [
         {
-          "code": "TDUUPM",
-          "name": "Mikul\u00e1\u0161 Poul",
-          "slug": "mikulas-poul",
-          "website_url": "https://ep2024.europython.eu/speaker/mikulas-poul"
-        }
-      ],
-      "tweet": "Tired of cumbersome data aggregations using Django? Utilise all that databases give you, like views!",
-      "level": "intermediate",
-      "rooms": ["South Hall 2A"],
-      "start": "2024-07-10T11:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/aggregating-data-in-django-using-database-views",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "K9AHYT",
-      "slug": "fastapi-internals",
-      "title": "FastAPI Internals",
-      "session_type": "Talk",
-      "speakers": [
+          "code": "CNDARF",
+          "name": "Ansgar Gruene",
+          "slug": "ansgar-gruene",
+          "website_url": "https://ep2024.europython.eu/speaker/ansgar-gruene"
+        },
         {
-          "code": "BGPPXA",
-          "name": "Marcelo Trylesinski",
-          "slug": "marcelo-trylesinski",
-          "website_url": "https://ep2024.europython.eu/speaker/marcelo-trylesinski"
+          "code": "WEWNJK",
+          "name": "Dharin shah",
+          "slug": "dharin-shah",
+          "website_url": "https://ep2024.europython.eu/speaker/dharin-shah"
         }
       ],
+      "start": "2024-07-10T10:45:00+02:00",
+      "title": "From Text to Context: How We Introduced a Modern Hybrid Search",
       "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/from-text-to-context-how-we-introduced-a-modern-hybrid-search"
+    },
+    {
+      "code": "HBM9ZK",
+      "duration": 45,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["South Hall 2B"],
+      "session_type": "Talk (long session)",
+      "slug": "animations-from-first-principles",
+      "speakers": [
+        {
+          "code": "BLNV7P",
+          "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
+          "slug": "rodrigo-girao-serrao",
+          "website_url": "https://ep2024.europython.eu/speaker/rodrigo-girao-serrao"
+        }
+      ],
+      "start": "2024-07-10T10:45:00+02:00",
+      "title": "Animations from first principles",
+      "tweet": "Join Rodrigo \ud83d\udc0d\ud83d\ude80 and learn how to create colourful animations from first principles in Python.",
+      "website_url": "https://ep2024.europython.eu/session/animations-from-first-principles"
+    },
+    {
+      "code": "ZWDDAT",
+      "duration": 45,
+      "event_type": "session",
       "level": "advanced",
       "rooms": ["Forum Hall"],
-      "start": "2024-07-10T11:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/fastapi-internals",
-      "duration": 30
+      "session_type": "Talk (long session)",
+      "slug": "spy-static-python-lang-fast-as-c-pythonic-as-python",
+      "speakers": [
+        {
+          "code": "QMAPYZ",
+          "name": "Antonio Cuni",
+          "slug": "antonio-cuni",
+          "website_url": "https://ep2024.europython.eu/speaker/antonio-cuni"
+        }
+      ],
+      "start": "2024-07-10T10:45:00+02:00",
+      "title": "SPy (Static Python) lang: fast as C, Pythonic as Python",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/spy-static-python-lang-fast-as-c-pythonic-as-python"
     },
     {
-      "event_type": "session",
       "code": "HUKDBU",
-      "slug": "sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s",
-      "title": "\"SUN vs Me : Quest to Outwit the Blinding Sun and Snag Some Extra Z's\"",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2B"],
       "session_type": "Talk",
+      "slug": "sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s",
       "speakers": [
         {
           "code": "MGQCUC",
@@ -337,82 +218,103 @@
           "website_url": "https://ep2024.europython.eu/speaker/vishrut-kohli"
         }
       ],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["South Hall 2B"],
       "start": "2024-07-10T11:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s",
-      "duration": 30
+      "title": "\"SUN vs Me : Quest to Outwit the Blinding Sun and Snag Some Extra Z's\"",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s"
     },
     {
+      "code": "K9AHYT",
+      "duration": 30,
       "event_type": "session",
-      "code": "NKBKYC",
-      "slug": "from-built-in-concurrency-primitives-to-large-scale-distributed-computing",
-      "title": "From built-in concurrency primitives to large scale distributed computing",
-      "session_type": "Talk (long session)",
+      "level": "advanced",
+      "rooms": ["Forum Hall"],
+      "session_type": "Talk",
+      "slug": "fastapi-internals",
       "speakers": [
         {
-          "code": "BLWEQ9",
-          "name": "Jakub Urban",
-          "slug": "jakub-urban",
-          "website_url": "https://ep2024.europython.eu/speaker/jakub-urban"
+          "code": "BGPPXA",
+          "name": "Marcelo Trylesinski",
+          "slug": "marcelo-trylesinski",
+          "website_url": "https://ep2024.europython.eu/speaker/marcelo-trylesinski"
         }
       ],
+      "start": "2024-07-10T11:35:00+02:00",
+      "title": "FastAPI Internals",
       "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/fastapi-internals"
+    },
+    {
+      "code": "P93P8V",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Talk",
+      "slug": "aggregating-data-in-django-using-database-views",
+      "speakers": [
+        {
+          "code": "TDUUPM",
+          "name": "Mikul\u00e1\u0161 Poul",
+          "slug": "mikulas-poul",
+          "website_url": "https://ep2024.europython.eu/speaker/mikulas-poul"
+        }
+      ],
+      "start": "2024-07-10T11:35:00+02:00",
+      "title": "Aggregating data in Django using database views",
+      "tweet": "Tired of cumbersome data aggregations using Django? Utilise all that databases give you, like views!",
+      "website_url": "https://ep2024.europython.eu/session/aggregating-data-in-django-using-database-views"
+    },
+    {
+      "code": "PC3XVJ",
+      "duration": 30,
+      "event_type": "session",
       "level": "intermediate",
       "rooms": ["Terrace 2A"],
-      "start": "2024-07-10T12:10:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/from-built-in-concurrency-primitives-to-large-scale-distributed-computing",
-      "duration": 45
-    },
-    {
-      "event_type": "session",
-      "code": "A3EWQU",
-      "slug": "state-of-the-art-image-generation-for-the-masses-with-diffusers",
-      "title": "State-of-the-art image generation for the masses with Diffusers",
-      "session_type": "Talk (long session)",
+      "session_type": "Talk",
+      "slug": "data-pipelines-with-celery-modular-signal-driven-and-manageable",
       "speakers": [
         {
-          "code": "JJLYHF",
-          "name": "Sayak Paul",
-          "slug": "sayak-paul",
-          "website_url": "https://ep2024.europython.eu/speaker/sayak-paul"
+          "code": "VUZ9LU",
+          "name": "Marin Agli\u0107 \u010cuvi\u0107",
+          "slug": "marin-aglic-cuvic",
+          "website_url": "https://ep2024.europython.eu/speaker/marin-aglic-cuvic"
         }
       ],
+      "start": "2024-07-10T11:35:00+02:00",
+      "title": "Data pipelines with Celery: modular, signal-driven and manageable",
       "tweet": "",
-      "level": "intermediate",
-      "rooms": ["Terrace 2B"],
-      "start": "2024-07-10T12:10:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/state-of-the-art-image-generation-for-the-masses-with-diffusers",
-      "duration": 45
+      "website_url": "https://ep2024.europython.eu/session/data-pipelines-with-celery-modular-signal-driven-and-manageable"
     },
     {
+      "code": "WP8MXM",
+      "duration": 30,
       "event_type": "session",
-      "code": "GVKEAK",
-      "slug": "dfd-documentation-first-development-with-fastapi",
-      "title": "DFD(Documentation-First Development) with FastAPI",
-      "session_type": "Talk (long session)",
+      "level": "beginner",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "building-scalable-multimodal-search-applications-with-python",
       "speakers": [
         {
-          "code": "RVFLYU",
-          "name": "Taehyun Lee",
-          "slug": "taehyun-lee",
-          "website_url": "https://ep2024.europython.eu/speaker/taehyun-lee"
+          "code": "XDWZ8P",
+          "name": "Zain Hasan",
+          "slug": "zain-hasan",
+          "website_url": "https://ep2024.europython.eu/speaker/zain-hasan"
         }
       ],
-      "tweet": "DFD(Documentation-first development) with FastAPI based on source codes that enhances development experience and productivity",
-      "level": "beginner",
-      "rooms": ["South Hall 2A"],
-      "start": "2024-07-10T12:10:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/dfd-documentation-first-development-with-fastapi",
-      "duration": 45
+      "start": "2024-07-10T11:35:00+02:00",
+      "title": "Building Scalable Multimodal Search Applications with Python",
+      "tweet": "We will discuss how we can use open-source multimodal embedding models in conjunction with large generative multimodal models that can see, hear, read, and feel data(!), to perform cross-modal search and multimodal RAG a",
+      "website_url": "https://ep2024.europython.eu/session/building-scalable-multimodal-search-applications-with-python"
     },
     {
-      "event_type": "session",
       "code": "7DF7VC",
-      "slug": "deconstructing-the-text-embedding-models",
-      "title": "Deconstructing the text embedding models",
+      "duration": 45,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["North Hall"],
       "session_type": "Talk (long session)",
+      "slug": "deconstructing-the-text-embedding-models",
       "speakers": [
         {
           "code": "H3RSTE",
@@ -421,19 +323,40 @@
           "website_url": "https://ep2024.europython.eu/speaker/kacper-lukawski"
         }
       ],
-      "tweet": "Tokenizers are the most underrated parts of not only LLMs but also text embedding models used to build semantic search apps, i.e., RAG. @LukawskiKacper will describe their crucial role and show how to control them!",
-      "level": "advanced",
-      "rooms": ["North Hall"],
       "start": "2024-07-10T12:10:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/deconstructing-the-text-embedding-models",
-      "duration": 45
+      "title": "Deconstructing the text embedding models",
+      "tweet": "Tokenizers are the most underrated parts of not only LLMs but also text embedding models used to build semantic search apps, i.e., RAG. @LukawskiKacper will describe their crucial role and show how to control them!",
+      "website_url": "https://ep2024.europython.eu/session/deconstructing-the-text-embedding-models"
     },
     {
+      "code": "A3EWQU",
+      "duration": 45,
       "event_type": "session",
-      "code": "G3PHLZ",
-      "slug": "demystify-python-types-for-pep-729",
-      "title": "Demystify Python Types for PEP 729",
+      "level": "intermediate",
+      "rooms": ["Terrace 2B"],
       "session_type": "Talk (long session)",
+      "slug": "state-of-the-art-image-generation-for-the-masses-with-diffusers",
+      "speakers": [
+        {
+          "code": "JJLYHF",
+          "name": "Sayak Paul",
+          "slug": "sayak-paul",
+          "website_url": "https://ep2024.europython.eu/speaker/sayak-paul"
+        }
+      ],
+      "start": "2024-07-10T12:10:00+02:00",
+      "title": "State-of-the-art image generation for the masses with Diffusers",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/state-of-the-art-image-generation-for-the-masses-with-diffusers"
+    },
+    {
+      "code": "G3PHLZ",
+      "duration": 45,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Forum Hall"],
+      "session_type": "Talk (long session)",
+      "slug": "demystify-python-types-for-pep-729",
       "speakers": [
         {
           "code": "XKDR9U",
@@ -442,19 +365,40 @@
           "website_url": "https://ep2024.europython.eu/speaker/kir-chou"
         }
       ],
-      "tweet": "Have you heard about PEP 729 which proposes a new way to govern the Python's type specifications? Let's dive deep together into the type systems together in EuroPython 2024!",
-      "level": "intermediate",
-      "rooms": ["Forum Hall"],
       "start": "2024-07-10T12:10:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/demystify-python-types-for-pep-729",
-      "duration": 45
+      "title": "Demystify Python Types for PEP 729",
+      "tweet": "Have you heard about PEP 729 which proposes a new way to govern the Python's type specifications? Let's dive deep together into the type systems together in EuroPython 2024!",
+      "website_url": "https://ep2024.europython.eu/session/demystify-python-types-for-pep-729"
     },
     {
+      "code": "GVKEAK",
+      "duration": 45,
       "event_type": "session",
-      "code": "JFFDLS",
-      "slug": "and-justice-for-ail",
-      "title": "... and justice for AIl",
+      "level": "beginner",
+      "rooms": ["South Hall 2A"],
       "session_type": "Talk (long session)",
+      "slug": "dfd-documentation-first-development-with-fastapi",
+      "speakers": [
+        {
+          "code": "RVFLYU",
+          "name": "Taehyun Lee",
+          "slug": "taehyun-lee",
+          "website_url": "https://ep2024.europython.eu/speaker/taehyun-lee"
+        }
+      ],
+      "start": "2024-07-10T12:10:00+02:00",
+      "title": "DFD(Documentation-First Development) with FastAPI",
+      "tweet": "DFD(Documentation-first development) with FastAPI based on source codes that enhances development experience and productivity",
+      "website_url": "https://ep2024.europython.eu/session/dfd-documentation-first-development-with-fastapi"
+    },
+    {
+      "code": "JFFDLS",
+      "duration": 45,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2B"],
+      "session_type": "Talk (long session)",
+      "slug": "and-justice-for-ail",
       "speakers": [
         {
           "code": "ECLXGR",
@@ -463,61 +407,54 @@
           "website_url": "https://ep2024.europython.eu/speaker/martina-guttau-zielke"
         }
       ],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["South Hall 2B"],
       "start": "2024-07-10T12:10:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/and-justice-for-ail",
-      "duration": 45
+      "title": "... and justice for AIl",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/and-justice-for-ail"
     },
     {
+      "code": "NKBKYC",
+      "duration": 45,
       "event_type": "session",
-      "code": "LYNADL",
-      "slug": "rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias",
-      "title": "Rapid detection of red cell membrane defects leading to hemolytic anaemias",
-      "session_type": "Poster",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Talk (long session)",
+      "slug": "from-built-in-concurrency-primitives-to-large-scale-distributed-computing",
       "speakers": [
         {
-          "code": "FNMQXB",
-          "name": "Tess Afanasyeva",
-          "slug": "tess-afanasyeva",
-          "website_url": "https://ep2024.europython.eu/speaker/tess-afanasyeva"
+          "code": "BLWEQ9",
+          "name": "Jakub Urban",
+          "slug": "jakub-urban",
+          "website_url": "https://ep2024.europython.eu/speaker/jakub-urban"
         }
       ],
+      "start": "2024-07-10T12:10:00+02:00",
+      "title": "From built-in concurrency primitives to large scale distributed computing",
       "tweet": "",
-      "level": "beginner",
-      "rooms": ["Exhibit Hall"],
+      "website_url": "https://ep2024.europython.eu/session/from-built-in-concurrency-primitives-to-large-scale-distributed-computing"
+    },
+    {
+      "duration": 60,
+      "event_type": "break",
+      "rooms": [
+        "Forum Hall",
+        "North Hall",
+        "South Hall 2A",
+        "South Hall 2B",
+        "Terrace 2A",
+        "Terrace 2B"
+      ],
       "start": "2024-07-10T13:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias",
-      "duration": 60
+      "title": "Lunch"
     },
     {
+      "code": "A3E3XE",
+      "duration": 60,
       "event_type": "session",
-      "code": "TLHPWB",
-      "slug": "stop-using-setup-py",
-      "title": "Stop using setup.py!",
-      "session_type": "Poster",
-      "speakers": [
-        {
-          "code": "A7Q3CY",
-          "name": "Piotr Gnus",
-          "slug": "piotr-gnus",
-          "website_url": "https://ep2024.europython.eu/speaker/piotr-gnus"
-        }
-      ],
-      "tweet": "",
       "level": "intermediate",
       "rooms": ["Exhibit Hall"],
-      "start": "2024-07-10T13:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/stop-using-setup-py",
-      "duration": 60
-    },
-    {
-      "event_type": "session",
-      "code": "A3E3XE",
-      "slug": "building-end-to-end-reliable-rag-applications",
-      "title": "Building End-to-End Reliable RAG Applications",
       "session_type": "Poster",
+      "slug": "building-end-to-end-reliable-rag-applications",
       "speakers": [
         {
           "code": "PVSNUG",
@@ -526,82 +463,61 @@
           "website_url": "https://ep2024.europython.eu/speaker/bilge-yucel"
         }
       ],
+      "start": "2024-07-10T13:00:00+02:00",
+      "title": "Building End-to-End Reliable RAG Applications",
       "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/building-end-to-end-reliable-rag-applications"
+    },
+    {
+      "code": "LYNADL",
+      "duration": 60,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Exhibit Hall"],
+      "session_type": "Poster",
+      "slug": "rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias",
+      "speakers": [
+        {
+          "code": "FNMQXB",
+          "name": "Tess Afanasyeva",
+          "slug": "tess-afanasyeva",
+          "website_url": "https://ep2024.europython.eu/speaker/tess-afanasyeva"
+        }
+      ],
+      "start": "2024-07-10T13:00:00+02:00",
+      "title": "Rapid detection of red cell membrane defects leading to hemolytic anaemias",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias"
+    },
+    {
+      "code": "TLHPWB",
+      "duration": 60,
+      "event_type": "session",
       "level": "intermediate",
       "rooms": ["Exhibit Hall"],
+      "session_type": "Poster",
+      "slug": "stop-using-setup-py",
+      "speakers": [
+        {
+          "code": "A7Q3CY",
+          "name": "Piotr Gnus",
+          "slug": "piotr-gnus",
+          "website_url": "https://ep2024.europython.eu/speaker/piotr-gnus"
+        }
+      ],
       "start": "2024-07-10T13:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/building-end-to-end-reliable-rag-applications",
-      "duration": 60
-    },
-    {
-      "event_type": "session",
-      "code": "B8SZMM",
-      "slug": "geopandas-1-0-and-beyond",
-      "title": "GeoPandas 1.0 and beyond",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "NN8GFM",
-          "name": "Martin Fleischmann",
-          "slug": "martin-fleischmann",
-          "website_url": "https://ep2024.europython.eu/speaker/martin-fleischmann"
-        }
-      ],
+      "title": "Stop using setup.py!",
       "tweet": "",
-      "level": "intermediate",
-      "rooms": ["Terrace 2A"],
-      "start": "2024-07-10T14:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/geopandas-1-0-and-beyond",
-      "duration": 30
+      "website_url": "https://ep2024.europython.eu/session/stop-using-setup-py"
     },
     {
-      "event_type": "session",
-      "code": "QPPRQQ",
-      "slug": "zero-trust-apis-with-python",
-      "title": "Zero Trust APIs with Python",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "YRPTZY",
-          "name": "Jose Haro Peralta",
-          "slug": "jose-haro-peralta",
-          "website_url": "https://ep2024.europython.eu/speaker/jose-haro-peralta"
-        }
-      ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["South Hall 2B"],
-      "start": "2024-07-10T14:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/zero-trust-apis-with-python",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "7Z8LFA",
-      "slug": "writing-python-like-it-s-rust-more-robust-code-with-type-hints",
-      "title": "Writing Python like it's Rust - more robust code with type hints",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "3HJ8ME",
-          "name": "Jakub Ber\u00e1nek",
-          "slug": "jakub-beranek",
-          "website_url": "https://ep2024.europython.eu/speaker/jakub-beranek"
-        }
-      ],
-      "tweet": "The many benefits of type hints in Python: leveraging types to gain more confidence in the correctness of our code and to improve development speed.",
-      "level": "intermediate",
-      "rooms": ["Forum Hall"],
-      "start": "2024-07-10T14:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/writing-python-like-it-s-rust-more-robust-code-with-type-hints",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
       "code": "7GRP3T",
-      "slug": "the-art-of-the-pull-request",
-      "title": "The Art of the Pull Request",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2B"],
       "session_type": "Talk",
+      "slug": "the-art-of-the-pull-request",
       "speakers": [
         {
           "code": "CZLRNY",
@@ -610,19 +526,75 @@
           "website_url": "https://ep2024.europython.eu/speaker/ben-lomax"
         }
       ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["Terrace 2B"],
       "start": "2024-07-10T14:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/the-art-of-the-pull-request",
-      "duration": 30
+      "title": "The Art of the Pull Request",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/the-art-of-the-pull-request"
     },
     {
+      "code": "7Z8LFA",
+      "duration": 30,
       "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Forum Hall"],
+      "session_type": "Talk",
+      "slug": "writing-python-like-it-s-rust-more-robust-code-with-type-hints",
+      "speakers": [
+        {
+          "code": "3HJ8ME",
+          "name": "Jakub Ber\u00e1nek",
+          "slug": "jakub-beranek",
+          "website_url": "https://ep2024.europython.eu/speaker/jakub-beranek"
+        }
+      ],
+      "start": "2024-07-10T14:00:00+02:00",
+      "title": "Writing Python like it's Rust - more robust code with type hints",
+      "tweet": "The many benefits of type hints in Python: leveraging types to gain more confidence in the correctness of our code and to improve development speed.",
+      "website_url": "https://ep2024.europython.eu/session/writing-python-like-it-s-rust-more-robust-code-with-type-hints"
+    },
+    {
+      "code": "8NYTHE",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Panel",
+      "slug": "discussion-panel-tbd",
+      "speakers": [],
+      "start": "2024-07-10T14:00:00+02:00",
+      "title": "Discussion Panel TBD",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/discussion-panel-tbd"
+    },
+    {
+      "code": "B8SZMM",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Talk",
+      "slug": "geopandas-1-0-and-beyond",
+      "speakers": [
+        {
+          "code": "NN8GFM",
+          "name": "Martin Fleischmann",
+          "slug": "martin-fleischmann",
+          "website_url": "https://ep2024.europython.eu/speaker/martin-fleischmann"
+        }
+      ],
+      "start": "2024-07-10T14:00:00+02:00",
+      "title": "GeoPandas 1.0 and beyond",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/geopandas-1-0-and-beyond"
+    },
+    {
       "code": "H8Z37Q",
-      "slug": "from-pandas-to-production-elt-with-dlt",
-      "title": "From Pandas to production: ELT with dlt",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["North Hall"],
       "session_type": "Sponsored",
+      "slug": "from-pandas-to-production-elt-with-dlt",
       "speakers": [
         {
           "code": "3RZLNH",
@@ -637,96 +609,40 @@
           "website_url": "https://ep2024.europython.eu/speaker/adrian-brudaru"
         }
       ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["North Hall"],
       "start": "2024-07-10T14:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt",
-      "duration": 30
+      "title": "From Pandas to production: ELT with dlt",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt"
     },
     {
+      "code": "QPPRQQ",
+      "duration": 30,
       "event_type": "session",
-      "code": "8NYTHE",
-      "slug": "discussion-panel-tbd",
-      "title": "Discussion Panel TBD",
-      "session_type": "Panel",
-      "speakers": [],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["South Hall 2A"],
-      "start": "2024-07-10T14:00:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/discussion-panel-tbd",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "LWSF9C",
-      "slug": "deadcode-a-tool-to-find-and-fix-unused-dead-python-code",
-      "title": "Deadcode - a tool to find and fix unused (dead) Python code",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "K8XYZX",
-          "name": "Albertas Gimbutas",
-          "slug": "albertas-gimbutas",
-          "website_url": "https://ep2024.europython.eu/speaker/albertas-gimbutas"
-        }
-      ],
-      "tweet": "",
       "level": "intermediate",
       "rooms": ["South Hall 2B"],
-      "start": "2024-07-10T14:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/deadcode-a-tool-to-find-and-fix-unused-dead-python-code",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "TBBKAM",
-      "slug": "encrypted-computing-in-python-using-openfhe",
-      "title": "\u200b\u200bEncrypted computing in Python using OpenFHE",
       "session_type": "Talk",
+      "slug": "zero-trust-apis-with-python",
       "speakers": [
         {
-          "code": "QCRLAF",
-          "name": "Sukanya Mandal",
-          "slug": "sukanya-mandal",
-          "website_url": "https://ep2024.europython.eu/speaker/sukanya-mandal"
+          "code": "YRPTZY",
+          "name": "Jose Haro Peralta",
+          "slug": "jose-haro-peralta",
+          "website_url": "https://ep2024.europython.eu/speaker/jose-haro-peralta"
         }
       ],
+      "start": "2024-07-10T14:00:00+02:00",
+      "title": "Zero Trust APIs with Python",
       "tweet": "",
-      "level": "advanced",
-      "rooms": ["North Hall"],
-      "start": "2024-07-10T14:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/encrypted-computing-in-python-using-openfhe",
-      "duration": 30
+      "website_url": "https://ep2024.europython.eu/session/zero-trust-apis-with-python"
     },
     {
-      "event_type": "session",
-      "code": "VBHMEL",
-      "slug": "unlocking-mixture-of-experts-from-1-know-it-all-to-group-of-jedi-masters",
-      "title": "Unlocking Mixture of Experts : From 1 Know-it-all to group of Jedi Masters",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "CCZUDR",
-          "name": "Pranjal Biyani",
-          "slug": "pranjal-biyani",
-          "website_url": "https://ep2024.europython.eu/speaker/pranjal-biyani"
-        }
-      ],
-      "tweet": "At almost equal expense, who'd you hire : A group of experts OR one fairly knowledgeable associate ?",
-      "level": "intermediate",
-      "rooms": ["Terrace 2B"],
-      "start": "2024-07-10T14:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/unlocking-mixture-of-experts-from-1-know-it-all-to-group-of-jedi-masters",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
       "code": "KV3DHG",
-      "slug": "the-pyarrow-revolution-in-pandas",
-      "title": "The PyArrow revolution in Pandas",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
       "session_type": "Talk",
+      "slug": "the-pyarrow-revolution-in-pandas",
       "speakers": [
         {
           "code": "VZM8L3",
@@ -735,19 +651,19 @@
           "website_url": "https://ep2024.europython.eu/speaker/reuven-m-lerner"
         }
       ],
-      "tweet": "Do you use Pandas? Here's what you need to know about PyArrow",
-      "level": "intermediate",
-      "rooms": ["Terrace 2A"],
       "start": "2024-07-10T14:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/the-pyarrow-revolution-in-pandas",
-      "duration": 30
+      "title": "The PyArrow revolution in Pandas",
+      "tweet": "Do you use Pandas? Here's what you need to know about PyArrow",
+      "website_url": "https://ep2024.europython.eu/session/the-pyarrow-revolution-in-pandas"
     },
     {
-      "event_type": "session",
       "code": "LDUPVK",
-      "slug": "accelerating-python-with-rust-the-pyo3-revolution",
-      "title": "Accelerating Python with Rust: The PyO3 Revolution",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
       "session_type": "Talk",
+      "slug": "accelerating-python-with-rust-the-pyo3-revolution",
       "speakers": [
         {
           "code": "7KXBK3",
@@ -756,19 +672,159 @@
           "website_url": "https://ep2024.europython.eu/speaker/roshan-r-chandar"
         }
       ],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["Forum Hall"],
       "start": "2024-07-10T14:35:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/accelerating-python-with-rust-the-pyo3-revolution",
-      "duration": 30
+      "title": "Accelerating Python with Rust: The PyO3 Revolution",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/accelerating-python-with-rust-the-pyo3-revolution"
     },
     {
+      "code": "LWSF9C",
+      "duration": 30,
       "event_type": "session",
-      "code": "TTN3RZ",
-      "slug": "event-sourcing-in-production",
-      "title": "Event Sourcing in production",
+      "level": "intermediate",
+      "rooms": ["South Hall 2B"],
       "session_type": "Talk",
+      "slug": "deadcode-a-tool-to-find-and-fix-unused-dead-python-code",
+      "speakers": [
+        {
+          "code": "K8XYZX",
+          "name": "Albertas Gimbutas",
+          "slug": "albertas-gimbutas",
+          "website_url": "https://ep2024.europython.eu/speaker/albertas-gimbutas"
+        }
+      ],
+      "start": "2024-07-10T14:35:00+02:00",
+      "title": "Deadcode - a tool to find and fix unused (dead) Python code",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/deadcode-a-tool-to-find-and-fix-unused-dead-python-code"
+    },
+    {
+      "code": "TBBKAM",
+      "duration": 30,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "encrypted-computing-in-python-using-openfhe",
+      "speakers": [
+        {
+          "code": "QCRLAF",
+          "name": "Sukanya Mandal",
+          "slug": "sukanya-mandal",
+          "website_url": "https://ep2024.europython.eu/speaker/sukanya-mandal"
+        }
+      ],
+      "start": "2024-07-10T14:35:00+02:00",
+      "title": "\u200b\u200bEncrypted computing in Python using OpenFHE",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/encrypted-computing-in-python-using-openfhe"
+    },
+    {
+      "code": "VBHMEL",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "unlocking-mixture-of-experts-from-1-know-it-all-to-group-of-jedi-masters",
+      "speakers": [
+        {
+          "code": "CCZUDR",
+          "name": "Pranjal Biyani",
+          "slug": "pranjal-biyani",
+          "website_url": "https://ep2024.europython.eu/speaker/pranjal-biyani"
+        }
+      ],
+      "start": "2024-07-10T14:35:00+02:00",
+      "title": "Unlocking Mixture of Experts : From 1 Know-it-all to group of Jedi Masters",
+      "tweet": "At almost equal expense, who'd you hire : A group of experts OR one fairly knowledgeable associate ?",
+      "website_url": "https://ep2024.europython.eu/session/unlocking-mixture-of-experts-from-1-know-it-all-to-group-of-jedi-masters"
+    },
+    {
+      "duration": 25,
+      "event_type": "break",
+      "rooms": [
+        "Forum Hall",
+        "North Hall",
+        "South Hall 2A",
+        "South Hall 2B",
+        "Terrace 2A",
+        "Terrace 2B"
+      ],
+      "start": "2024-07-10T15:05:00+02:00",
+      "title": "Coffee Break"
+    },
+    {
+      "code": "NMBFTX",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Talk",
+      "slug": "designing-config-files-the-conflicting-needs-of-programmers-and-users",
+      "speakers": [
+        {
+          "code": "GYETSD",
+          "name": "Steven Pool",
+          "slug": "steven-pool",
+          "website_url": "https://ep2024.europython.eu/speaker/steven-pool"
+        }
+      ],
+      "start": "2024-07-10T15:30:00+02:00",
+      "title": "Designing Config Files: The Conflicting Needs of Programmers and Users",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/designing-config-files-the-conflicting-needs-of-programmers-and-users"
+    },
+    {
+      "code": "QQMDWQ",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "the-rise-of-the-yaml-engineer",
+      "speakers": [
+        {
+          "code": "9S3Z87",
+          "name": "Matthieu Caneill",
+          "slug": "matthieu-caneill",
+          "website_url": "https://ep2024.europython.eu/speaker/matthieu-caneill"
+        }
+      ],
+      "start": "2024-07-10T15:30:00+02:00",
+      "title": "The rise of the YAML engineer",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/the-rise-of-the-yaml-engineer"
+    },
+    {
+      "code": "SYKBQB",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "automate-your-kitchen-with-python-applied-ai",
+      "speakers": [
+        {
+          "code": "KVWBAJ",
+          "name": "Sena Sahin",
+          "slug": "sena-sahin",
+          "website_url": "https://ep2024.europython.eu/speaker/sena-sahin"
+        }
+      ],
+      "start": "2024-07-10T15:30:00+02:00",
+      "title": "Automate Your Kitchen with Python & Applied AI",
+      "tweet": "Join me in this delicious adventure where we're reflecting on developing a kitchen project with Python, gain insights into the iterative process of problem-solving",
+      "website_url": "https://ep2024.europython.eu/session/automate-your-kitchen-with-python-applied-ai"
+    },
+    {
+      "code": "TTN3RZ",
+      "duration": 30,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Talk",
+      "slug": "event-sourcing-in-production",
       "speakers": [
         {
           "code": "8LC3YQ",
@@ -777,19 +833,40 @@
           "website_url": "https://ep2024.europython.eu/speaker/borjan-tchakaloff"
         }
       ],
-      "tweet": "Lessons learnt from running Event Sourcing in production: patterns and pitfalls",
-      "level": "advanced",
-      "rooms": ["South Hall 2A"],
       "start": "2024-07-10T15:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/event-sourcing-in-production",
-      "duration": 30
+      "title": "Event Sourcing in production",
+      "tweet": "Lessons learnt from running Event Sourcing in production: patterns and pitfalls",
+      "website_url": "https://ep2024.europython.eu/session/event-sourcing-in-production"
     },
     {
+      "code": "UPWH7Z",
+      "duration": 30,
       "event_type": "session",
-      "code": "ZSBJNR",
-      "slug": "invent-with-pyscript",
-      "title": "Invent with PyScript",
+      "level": "beginner",
+      "rooms": ["South Hall 2B"],
       "session_type": "Talk",
+      "slug": "keeping-your-projects-nice-and-clean",
+      "speakers": [
+        {
+          "code": "FWGLE3",
+          "name": "Jan Mus\u00edlek",
+          "slug": "jan-musilek",
+          "website_url": "https://ep2024.europython.eu/speaker/jan-musilek"
+        }
+      ],
+      "start": "2024-07-10T15:30:00+02:00",
+      "title": "Keeping your projects nice and clean",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/keeping-your-projects-nice-and-clean"
+    },
+    {
+      "code": "ZSBJNR",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Forum Hall"],
+      "session_type": "Talk",
+      "slug": "invent-with-pyscript",
       "speakers": [
         {
           "code": "BQVLYL",
@@ -804,124 +881,19 @@
           "website_url": "https://ep2024.europython.eu/speaker/joshua-lowe"
         }
       ],
+      "start": "2024-07-10T15:30:00+02:00",
+      "title": "Invent with PyScript",
       "tweet": "Get loosey goosey about Python app development in the browser with Invent and PyScript.",
-      "level": "intermediate",
-      "rooms": ["Forum Hall"],
-      "start": "2024-07-10T15:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/invent-with-pyscript",
-      "duration": 30
+      "website_url": "https://ep2024.europython.eu/session/invent-with-pyscript"
     },
     {
-      "event_type": "session",
-      "code": "UPWH7Z",
-      "slug": "keeping-your-projects-nice-and-clean",
-      "title": "Keeping your projects nice and clean",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "FWGLE3",
-          "name": "Jan Mus\u00edlek",
-          "slug": "jan-musilek",
-          "website_url": "https://ep2024.europython.eu/speaker/jan-musilek"
-        }
-      ],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["South Hall 2B"],
-      "start": "2024-07-10T15:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/keeping-your-projects-nice-and-clean",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "QQMDWQ",
-      "slug": "the-rise-of-the-yaml-engineer",
-      "title": "The rise of the YAML engineer",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "9S3Z87",
-          "name": "Matthieu Caneill",
-          "slug": "matthieu-caneill",
-          "website_url": "https://ep2024.europython.eu/speaker/matthieu-caneill"
-        }
-      ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["Terrace 2B"],
-      "start": "2024-07-10T15:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/the-rise-of-the-yaml-engineer",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "NMBFTX",
-      "slug": "designing-config-files-the-conflicting-needs-of-programmers-and-users",
-      "title": "Designing Config Files: The Conflicting Needs of Programmers and Users",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "GYETSD",
-          "name": "Steven Pool",
-          "slug": "steven-pool",
-          "website_url": "https://ep2024.europython.eu/speaker/steven-pool"
-        }
-      ],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["Terrace 2A"],
-      "start": "2024-07-10T15:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/designing-config-files-the-conflicting-needs-of-programmers-and-users",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "SYKBQB",
-      "slug": "automate-your-kitchen-with-python-applied-ai",
-      "title": "Automate Your Kitchen with Python & Applied AI",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "KVWBAJ",
-          "name": "Sena Sahin",
-          "slug": "sena-sahin",
-          "website_url": "https://ep2024.europython.eu/speaker/sena-sahin"
-        }
-      ],
-      "tweet": "Join me in this delicious adventure where we're reflecting on developing a kitchen project with Python, gain insights into the iterative process of problem-solving",
-      "level": "beginner",
-      "rooms": ["North Hall"],
-      "start": "2024-07-10T15:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/automate-your-kitchen-with-python-applied-ai",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
-      "code": "NNWTXP",
-      "slug": "i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned",
-      "title": "I reverse engineered a work of art, and this is what I learned",
-      "session_type": "Talk",
-      "speakers": [
-        {
-          "code": "VCGHPN",
-          "name": "Yair Galler",
-          "slug": "yair-galler",
-          "website_url": "https://ep2024.europython.eu/speaker/yair-galler"
-        }
-      ],
-      "tweet": "The story of how I reverse engineered a image processing algorithm that takes an image and tells you how to draw it in a way that you've never seen before.",
-      "level": "beginner",
-      "rooms": ["Terrace 2B"],
-      "start": "2024-07-10T16:05:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned",
-      "duration": 30
-    },
-    {
-      "event_type": "session",
       "code": "CVXAB7",
-      "slug": "enhancing-decorators-with-type-annotations-techniques-and-best-practices",
-      "title": "Enhancing Decorators with Type Annotations: Techniques and Best Practices",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["South Hall 2A"],
       "session_type": "Talk",
+      "slug": "enhancing-decorators-with-type-annotations-techniques-and-best-practices",
       "speakers": [
         {
           "code": "BPFJEJ",
@@ -930,40 +902,40 @@
           "website_url": "https://ep2024.europython.eu/speaker/koudai-aono"
         }
       ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["South Hall 2A"],
       "start": "2024-07-10T16:05:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/enhancing-decorators-with-type-annotations-techniques-and-best-practices",
-      "duration": 30
+      "title": "Enhancing Decorators with Type Annotations: Techniques and Best Practices",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/enhancing-decorators-with-type-annotations-techniques-and-best-practices"
     },
     {
+      "code": "NNWTXP",
+      "duration": 30,
       "event_type": "session",
-      "code": "TAW7PN",
-      "slug": "impersonation-in-data-engineering-no-more-credentials-in-your-code",
-      "title": "Impersonation in Data Engineering: No More Credentials in Your Code!",
+      "level": "beginner",
+      "rooms": ["Terrace 2B"],
       "session_type": "Talk",
+      "slug": "i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned",
       "speakers": [
         {
-          "code": "HGKR9V",
-          "name": "Marian \u0160pilka",
-          "slug": "marian-spilka",
-          "website_url": "https://ep2024.europython.eu/speaker/marian-spilka"
+          "code": "VCGHPN",
+          "name": "Yair Galler",
+          "slug": "yair-galler",
+          "website_url": "https://ep2024.europython.eu/speaker/yair-galler"
         }
       ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["North Hall"],
       "start": "2024-07-10T16:05:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/impersonation-in-data-engineering-no-more-credentials-in-your-code",
-      "duration": 30
+      "title": "I reverse engineered a work of art, and this is what I learned",
+      "tweet": "The story of how I reverse engineered a image processing algorithm that takes an image and tells you how to draw it in a way that you've never seen before.",
+      "website_url": "https://ep2024.europython.eu/session/i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned"
     },
     {
-      "event_type": "session",
       "code": "SNZ9HV",
-      "slug": "how-to-deliver-3x-faster-with-effective-api-design",
-      "title": "How to deliver 3x faster with effective API design",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Forum Hall"],
       "session_type": "Talk",
+      "slug": "how-to-deliver-3x-faster-with-effective-api-design",
       "speakers": [
         {
           "code": "R3AGHS",
@@ -972,19 +944,19 @@
           "website_url": "https://ep2024.europython.eu/speaker/michal-cyprian"
         }
       ],
-      "tweet": "",
-      "level": "intermediate",
-      "rooms": ["Forum Hall"],
       "start": "2024-07-10T16:05:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/how-to-deliver-3x-faster-with-effective-api-design",
-      "duration": 30
+      "title": "How to deliver 3x faster with effective API design",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/how-to-deliver-3x-faster-with-effective-api-design"
     },
     {
-      "event_type": "session",
       "code": "T3QAPN",
-      "slug": "build-the-right-thing-win-a-nobel-prize",
-      "title": "Build the Right Thing, Win a Nobel Prize",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2B"],
       "session_type": "Talk",
+      "slug": "build-the-right-thing-win-a-nobel-prize",
       "speakers": [
         {
           "code": "JQ3MRZ",
@@ -993,40 +965,68 @@
           "website_url": "https://ep2024.europython.eu/speaker/max-kahan"
         }
       ],
-      "tweet": "Not \u201cbuilding the right thing\u201d is an issue that crops up all over software development. In this talk, I'll help you ensure that what you create is valuable - or at the very least, Nobel Prize-winning.",
-      "level": "beginner",
-      "rooms": ["South Hall 2B"],
       "start": "2024-07-10T16:05:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/build-the-right-thing-win-a-nobel-prize",
-      "duration": 30
+      "title": "Build the Right Thing, Win a Nobel Prize",
+      "tweet": "Not \u201cbuilding the right thing\u201d is an issue that crops up all over software development. In this talk, I'll help you ensure that what you create is valuable - or at the very least, Nobel Prize-winning.",
+      "website_url": "https://ep2024.europython.eu/session/build-the-right-thing-win-a-nobel-prize"
     },
     {
+      "code": "TAW7PN",
+      "duration": 30,
       "event_type": "session",
-      "code": "WQGUTP",
-      "slug": "keynote-carol",
-      "title": "Keynote (Carol)",
-      "session_type": "Keynote",
-      "speakers": [],
-      "tweet": "",
-      "level": "beginner",
-      "rooms": ["Forum Hall"],
-      "start": "2024-07-10T16:40:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/keynote-carol",
-      "duration": 45
-    },
-    {
-      "event_type": "session",
-      "code": "HAEWRZ",
-      "slug": "lightning-talks-wednesday",
-      "title": "Lightning talks Wednesday",
+      "level": "intermediate",
+      "rooms": ["North Hall"],
       "session_type": "Talk",
-      "speakers": [],
+      "slug": "impersonation-in-data-engineering-no-more-credentials-in-your-code",
+      "speakers": [
+        {
+          "code": "HGKR9V",
+          "name": "Marian \u0160pilka",
+          "slug": "marian-spilka",
+          "website_url": "https://ep2024.europython.eu/speaker/marian-spilka"
+        }
+      ],
+      "start": "2024-07-10T16:05:00+02:00",
+      "title": "Impersonation in Data Engineering: No More Credentials in Your Code!",
       "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/impersonation-in-data-engineering-no-more-credentials-in-your-code"
+    },
+    {
+      "code": "WQGUTP",
+      "duration": 45,
+      "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
+      "session_type": "Keynote",
+      "slug": "keynote-carol",
+      "speakers": [],
+      "start": "2024-07-10T16:40:00+02:00",
+      "title": "Keynote (Carol)",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/keynote-carol"
+    },
+    {
+      "code": "HAEWRZ",
+      "duration": 45,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "session_type": "Talk",
+      "slug": "lightning-talks-wednesday",
+      "speakers": [],
       "start": "2024-07-10T17:30:00+02:00",
-      "website_url": "https://ep2024.europython.eu/session/lightning-talks-wednesday",
-      "duration": 45
+      "title": "Lightning talks Wednesday",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/lightning-talks-wednesday"
     }
+  ],
+  "rooms": [
+    "Exhibit Hall",
+    "Forum Hall",
+    "North Hall",
+    "South Hall 2A",
+    "South Hall 2B",
+    "Terrace 2A",
+    "Terrace 2B"
   ]
 }
