@@ -34,18 +34,12 @@ export const getStaticPaths = async () => {
 const days = await getCollection("days");
 const day = await getEntry("days", Astro.params.day);
 
-// make sure to always have `Main Hall A|B|C` as the last rooms
-const ROOMS = day.data.rooms.sort((a, b) => {
-  if (a === "Main Hall A" || a === "Main Hall B" || a === "Main Hall C") {
-    return 1;
-  }
+const ROOMS = day.data.rooms.filter(
+  (room) => room.toLowerCase() !== "exhibit hall",
+);
 
-  if (b === "Main Hall A" || b === "Main Hall B" || b === "Main Hall C") {
-    return -1;
-  }
-
-  return a.localeCompare(b);
-});
+// hack for posters :)
+const posters: Array<string> = [];
 
 const sessions = day.data.events
   .map((event) => {
@@ -60,12 +54,17 @@ const sessions = day.data.events
     const end = addMinutes(start, duration);
     const endTime = format(end, "HH:mm");
 
+    if (event.session_type === "Poster") {
+      posters.push(event.slug!);
+    }
+
     return {
       ...event,
       start,
       startTime,
       end,
       endTime,
+      sessionType: event.session_type?.toLowerCase(),
       type: event.event_type,
     };
   })
@@ -118,6 +117,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
           duration: 5,
           type: "room-change",
           event_type: "room-change",
+          sessionType: undefined,
           rooms: ROOMS,
         },
       ];
@@ -129,15 +129,16 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
 
 const slots = Object.entries(sessionsByTime)
   .sort()
-  .map(([time, sessions]) => {
+  .map(([, sessions]) => {
     let type: "session" | "break" | "lunch" | "room-change" = "session";
 
     if (sessions.every((session) => session.type === "break")) {
       type = "break";
-
-      if (sessions[0].title.toLowerCase().includes("lunch")) {
-        type = "lunch";
-      }
+    } else if (
+      // on some days we have lunch and posters in parallel :')
+      sessions.some((session) => session.title.toLowerCase().includes("lunch"))
+    ) {
+      type = "lunch";
     } else if (sessions.every((session) => session.type === "room-change")) {
       type = "room-change";
     }
@@ -173,7 +174,7 @@ for (let i = 0; i < slots.length; i++) {
   const sizeInMinutes = nextTime - currentTime;
   const size = sizeInMinutes / 5;
 
-  let sizeValue = `repeat( ${size}, fit-content(200px))`;
+  let sizeValue = `repeat(${size}, fit-content(200px))`;
 
   if (current.type === "break") {
     sizeValue = `repeat(${size}, var(--break))`;
@@ -203,28 +204,35 @@ for (let i = currentTime; i <= lastTime; i += 5) {
   row += 1;
 }
 
-type Break = {
-  type: "break" | "room-change";
-  rooms: string[];
-};
-
 type Session = {
-  type: "session";
+  type: "break" | "room-change" | "session";
+  slug?: string;
+  sessionType: string;
   rooms: string[];
 };
 
-const getColStart = ({ type, rooms }: Break | Session) => {
+const getColStart = ({ type, rooms, sessionType, slug }: Session) => {
   if (["room-change", "break"].includes(type)) {
     return 1;
+  }
+
+  if (sessionType === "poster") {
+    const index = posters.indexOf(slug!);
+    return 3 + index;
   }
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
   return Math.min(...indexes) + 2;
 };
 
-const getColEnd = ({ type, rooms }: Break | Session) => {
+const getColEnd = ({ type, rooms, sessionType, slug }: Session) => {
   if (["room-change", "break"].includes(type)) {
     return -1;
+  }
+
+  if (sessionType === "poster") {
+    const index = posters.indexOf(slug!);
+    return 4 + index;
   }
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
