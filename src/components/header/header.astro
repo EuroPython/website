@@ -4,22 +4,7 @@ import { NavItems } from "../nav-items";
 import HeaderActions from "./header-actions.astro";
 import HeaderLogo from "./header-logo.astro";
 
-import { getCollection } from "astro:content";
-
-const days = await getCollection("days");
-
 const links = JSON.parse(await fs.readFile("./src/data/links.json", "utf-8"));
-
-// big assumption that programme is the first section
-
-links.header[0].items = [
-  {
-    name: "Schedule",
-    path: `/schedule/${days[0].id}`,
-  },
-
-  ...links.header[0].items,
-];
 ---
 
 <header class="p-6 flex items-center relative z-40">
