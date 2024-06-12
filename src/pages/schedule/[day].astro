@@ -13,6 +13,7 @@ const format = (date: Date, format: string) => {
 };
 
 const timeToNumber = (time: string) => {
+  if (!time) return 0;
   const [hours, minutes] = time.split(":").map(Number);
   return hours * 60 + minutes;
 };
@@ -66,6 +67,8 @@ const sessions = day.data.events
       endTime,
       sessionType: event.session_type?.toLowerCase(),
       type: event.event_type,
+      visualEnd: end,
+      visualEndTime: endTime,
     };
   })
   .sort((a, b) => {
@@ -95,10 +98,17 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   const nextStart = nextSessions[0].start;
 
   if (nextSessions.some((session) => session.type === "break")) {
+    // If the next session is a break, visually extend the current session to the break without modifying the actual end time
+    const breakStart = nextStart;
+    const breakStartTime = format(breakStart, "HH:mm");
+    sessions.forEach((session) => {
+      session.visualEnd = breakStart;
+      session.visualEndTime = breakStartTime;
+    });
     continue;
   }
 
-  if (nextStart !== end) {
+  if (nextStart.getTime() !== end.getTime()) {
     const duration = differenceInMinutes(nextStart, end);
 
     if (duration === 5) {
@@ -119,6 +129,8 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
           event_type: "room-change",
           sessionType: undefined,
           rooms: ROOMS,
+          visualEnd: roomChangeEnd,
+          visualEndTime: roomChangeEndTime,
         },
       ];
     } else {
@@ -148,6 +160,8 @@ const slots = Object.entries(sessionsByTime)
       startTime: sessions[0].startTime,
       end: sessions[0].end,
       endTime: sessions[0].endTime,
+      visualEnd: sessions[0].visualEnd || sessions[0].end,
+      visualEndTime: sessions[0].visualEndTime || sessions[0].endTime,
       type: type,
       sessions,
     };
@@ -168,7 +182,7 @@ for (let i = 0; i < slots.length; i++) {
   if (next) {
     nextTime = timeToNumber(next.startTime);
   } else {
-    nextTime = timeToNumber(current.endTime);
+    nextTime = timeToNumber(current.visualEndTime);
   }
 
   const sizeInMinutes = nextTime - currentTime;
@@ -194,9 +208,9 @@ for (let i = 0; i < slots.length; i++) {
 // add missing times
 const lastSlot = slots[slots.length - 1];
 const lastTime = Math.max(
-  ...lastSlot.sessions.map((session) => timeToNumber(session.endTime)),
+  ...lastSlot.sessions.map((session) => timeToNumber(session.visualEndTime)),
 );
-const currentTime = timeToNumber(lastSlot.endTime);
+const currentTime = timeToNumber(lastSlot.visualEndTime);
 
 for (let i = currentTime; i <= lastTime; i += 5) {
   const time = numberToTime(i);
@@ -242,7 +256,7 @@ const getColEnd = ({ type, rooms, sessionType, slug }: Session) => {
 const getSessionStyle = (session: any) => {
   const style = {
     "--start": timeToRow[session.startTime],
-    "--end": timeToRow[session.endTime],
+    "--end": timeToRow[session.visualEndTime],
     "--col-start": getColStart(session),
     "--col-end": getColEnd(session),
   };
@@ -257,8 +271,8 @@ const getSessionStyle = (session: any) => {
 ---
 
 <Layout
-  title=`Schedule - ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
-  description=`Schedule for ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
+  title={`Schedule - ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`}
+  description={`Schedule for ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`}
 >
   <div class="px-6">
     <Title>Schedule</Title>
@@ -309,7 +323,7 @@ const getSessionStyle = (session: any) => {
                 class="time"
                 style={{
                   "--start": timeToRow[slot.startTime],
-                  "--end": timeToRow[slot.endTime],
+                  "--end": timeToRow[slot.visualEndTime],
                 }}
               >
                 <h2>{format(slot.start, "HH:mm")}</h2>
@@ -437,11 +451,12 @@ const getSessionStyle = (session: any) => {
   document.addEventListener("DOMContentLoaded", function () {
     const containers = document.querySelectorAll(".schedule-container");
 
-    function syncScroll(event: any) {
+    function syncScroll(event: Event) {
+      const target = event.target as HTMLElement;
       const other =
-        containers[0] === event.target ? containers[1] : containers[0];
-      other.scrollTop = event.target.scrollTop;
-      other.scrollLeft = event.target.scrollLeft;
+        containers[0] === target ? containers[1] : containers[0];
+      other.scrollTop = target.scrollTop;
+      other.scrollLeft = target.scrollLeft;
     }
 
     containers.forEach((container) => {
@@ -449,11 +464,12 @@ const getSessionStyle = (session: any) => {
     });
   });
 
-  document
-    .getElementById("schedule-select")!
-    .addEventListener("change", (event) => {
-      // @ts-ignore
-      const day = event.target!.value;
-      window.location.href = `/schedule/${day}`;
-    });
+const scheduleSelect = document.getElementById("schedule-select");
+
+if (scheduleSelect) {
+  scheduleSelect.addEventListener("change", (event) => {
+    const day = (event.target as HTMLSelectElement).value;
+    window.location.href = `/schedule/${day}`;
+  });
+}
 </script>
