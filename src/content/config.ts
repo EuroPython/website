@@ -80,6 +80,9 @@ const sessions = defineCollection({
     track: z.string().nullable(),
     state: z.enum(["confirmed"]).optional().nullable(),
     tweet: z.string(),
+    resources: z
+      .array(z.object({ resource: z.string().url(), description: z.string() }))
+      .nullable(),
     duration: z.string(),
     level: z.enum(["beginner", "intermediate", "advanced"]),
     delivery: z.enum(["in-person", "remote"]),
