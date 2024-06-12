@@ -33,3 +33,8 @@ const availableDays = [
   const redirectUrl = `/schedule/${new Date(closestDate).toISOString().slice(0, 10)}`;
   window.location.href = redirectUrl;
 </script>
+
+<noscript>
+  <!-- Fallback for users with JavaScript disabled, what a shame :D -->
+  <meta http-equiv="refresh" content="0;url=/schedule/2024-07-08">
+</noscript>
