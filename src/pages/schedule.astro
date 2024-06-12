@@ -1,0 +1,35 @@
+---
+const availableDays = [
+  new Date('2024-07-08'),
+  new Date('2024-07-09'),
+  new Date('2024-07-10'),
+  new Date('2024-07-11'),
+  new Date('2024-07-12')
+];
+---
+
+<script type="module" define:vars={{ availableDays }}>
+  // Return timestamp of date without time
+  function normalizeDate(date) {
+    date = new Date(date);
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();
+  }
+
+  const currentDate = normalizeDate(new Date());
+
+  let closestDate = availableDays[0];
+  let minDiff = Math.abs(normalizeDate(closestDate) - currentDate);
+
+  for (let i = 1; i < availableDays.length; i++) {
+    const normalizedDate = normalizeDate(availableDays[i]);
+    const diff = Math.abs(normalizedDate - currentDate);
+
+    if (diff < minDiff) {
+      closestDate = availableDays[i];
+      minDiff = diff;
+    }
+  }
+
+  const redirectUrl = `/schedule/${new Date(closestDate).toISOString().slice(0, 10)}`;
+  window.location.href = redirectUrl;
+</script>
