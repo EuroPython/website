@@ -1,12 +1,12 @@
 {
   "rooms": [
+    "Terrace 2B",
+    "South Hall 2B",
+    "North Hall",
     "Exhibit Hall",
     "Forum Hall",
     "South Hall 2A",
-    "North Hall",
-    "Terrace 2A",
-    "South Hall 2B",
-    "Terrace 2B"
+    "Terrace 2A"
   ],
   "events": [
     {
@@ -60,7 +60,15 @@
       "speakers": [],
       "tweet": "",
       "level": "beginner",
-      "rooms": ["Forum Hall"],
+      "rooms": [
+        "Terrace 2B",
+        "South Hall 2B",
+        "North Hall",
+        "Exhibit Hall",
+        "Terrace 2A",
+        "South Hall 2A",
+        "Forum Hall"
+      ],
       "start": "2024-07-10T08:00:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/wednesday-registration-welcome-forum-hall-foyer-1st-floor",
       "duration": 60

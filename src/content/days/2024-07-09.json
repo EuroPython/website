@@ -1,5 +1,5 @@
 {
-  "rooms": ["Club B", "Club A", "Club C", "Club D", "Club H", "Club E"],
+  "rooms": ["Club B", "Club D", "Club A", "Club E", "Club H", "Club C"],
   "events": [
     {
       "event_type": "break",
@@ -31,7 +31,7 @@
       "speakers": [],
       "tweet": "",
       "level": "beginner",
-      "rooms": ["Club A"],
+      "rooms": ["Club B", "Club D", "Club A", "Club E", "Club H", "Club C"],
       "start": "2024-07-09T08:30:00+02:00",
       "website_url": "https://ep2024.europython.eu/session/tuesday-registration-welcome-forum-hall-foyer-1st-floor",
       "duration": 60
