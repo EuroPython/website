@@ -34,9 +34,9 @@ export const getStaticPaths = async () => {
 const days = await getCollection("days");
 const day = await getEntry("days", Astro.params.day);
 
-const ROOMS = day.data.rooms.filter(
-  (room) => room.toLowerCase() !== "exhibit hall",
-);
+const ROOMS = day.data.rooms
+  .filter((room) => room.toLowerCase() !== "exhibit hall")
+  .sort();
 
 // hack for posters :)
 const posters: Array<string> = [];
