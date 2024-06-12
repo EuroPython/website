@@ -70,10 +70,35 @@ for (const speaker of speakers) {
       }
       <dt class="font-bold">Duration:</dt><dd>{entry.data.duration} minutes</dd>
     </dl>
+
     <Prose>
       <h2>Abstract</h2>
       <Content />
     </Prose>
+
+    {
+      entry.data.resources && (
+        <>
+          <br />
+
+          <Prose>
+            <h2>Resources</h2>
+          </Prose>
+
+          <ul class="list-disc">
+            {
+              entry.data.resources.map((resource) => (
+                <li>
+                  <a href={resource.resource} class="text-xl hover:text-primary-hover underline font-bold">
+                    {resource.description}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </>
+      )
+    }
 
     <footer>
       {
