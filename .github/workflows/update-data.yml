@@ -2,6 +2,8 @@ name: 🔄 Update data
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"
 
 jobs:
   update-data:
@@ -21,11 +23,15 @@ jobs:
         run: pre-commit run --all-files
         continue-on-error: true
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin
-          git checkout ${{ github.ref_name }}
-          git add .
-          git diff-index --quiet HEAD || (git commit -m "🆕 Update data" && git push origin ${{ github.ref_name }})
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          author:
+            github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          committer:
+            github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          commit-message: "🆕 Update data"
+          title: "🆕 Update data"
+          body: "🆕 Update data"
+          branch: "update-data"
+          labels: "update-data"
