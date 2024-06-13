@@ -96,8 +96,20 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   const [, nextSessions] = sessionAndTimes[i + 1];
 
   const ends = sessions.map((session) => session.end);
-  const end = new Date(Math.max(...ends.map((end) => end.getTime())));
   const nextStart = nextSessions[0].start;
+
+  const end = new Date(
+    Math.max(
+      ...ends
+        .filter(
+          // skip talks than end after the next start,
+          // this is for events that span for multiple slots
+          // (like a sponsor fair)
+          (end) => end.getTime() <= nextStart.getTime(),
+        )
+        .map((end) => end.getTime()),
+    ),
+  );
 
   const hasBreakAfter = nextSessions.some(
     (session) => session.type === "break",
@@ -267,7 +279,6 @@ const getSessionStyle = (session: any) => {
   };
 
   if (!style["--end"]) {
-    console.log(session);
     throw new Error(`Session ${session.title} is missing an end time`);
   }
 
@@ -384,6 +395,11 @@ const getSessionStyle = (session: any) => {
   header,
   .time {
     display: none;
+  }
+
+  :global(.session) {
+    position: relative;
+    z-index: 10;
   }
 
   :global(.session),
