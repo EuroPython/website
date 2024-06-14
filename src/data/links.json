@@ -49,6 +49,10 @@
           "path": "/speakers-dinner"
         },
         {
+          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "path": "/pyladies-events"
+        },
+        {
           "name": "WebAssembly Summit",
           "path": "/wasm"
         },
