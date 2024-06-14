@@ -38,8 +38,20 @@ const ROOMS = day.data.rooms
   .filter((room) => room.toLowerCase() !== "exhibit hall")
   .sort();
 
+type ScheduleSession = {
+  title: string;
+  start: Date;
+  startTime: string;
+  end: Date;
+  endTime: string;
+  duration: number;
+  sessionType?: string;
+  type: string;
+  rooms: string[];
+};
+
 // hack for posters :)
-const posters: Array<string> = [];
+const posters: Array<ScheduleSession> = [];
 
 const sessions = day.data.events
   .map((event) => {
@@ -54,11 +66,7 @@ const sessions = day.data.events
     const end = addMinutes(start, duration);
     const endTime = format(end, "HH:mm");
 
-    if (event.session_type === "Poster") {
-      posters.push(event.slug!);
-    }
-
-    return {
+    const session: ScheduleSession = {
       ...event,
       start,
       startTime,
@@ -67,10 +75,16 @@ const sessions = day.data.events
       sessionType: event.session_type?.toLowerCase(),
       type: event.event_type,
     };
+
+    if (session.sessionType === "poster") {
+      posters.push(session);
+    }
+
+    return session;
   })
   .sort((a, b) => {
-    return a.start.getTime() - b.start.getTime();
-  });
+    return a!.start.getTime() - b!.start.getTime();
+  }) as Array<ScheduleSession>;
 
 const sessionsByTime: { [key: string]: Array<(typeof sessions)[0]> } = {};
 
@@ -139,7 +153,6 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
           endTime: roomChangeEndTime,
           duration: 5,
           type: "room-change",
-          event_type: "room-change",
           sessionType: undefined,
           rooms: ROOMS,
         },
@@ -240,14 +253,9 @@ type Session = {
   rooms: string[];
 };
 
-const getColStart = ({ type, rooms, sessionType, slug }: Session) => {
+const getColStart = ({ type, rooms }: Session) => {
   if (["room-change", "break"].includes(type)) {
     return 1;
-  }
-
-  if (sessionType === "poster") {
-    const index = posters.indexOf(slug!);
-    return 3 + index;
   }
 
   const indexes = rooms
@@ -256,14 +264,9 @@ const getColStart = ({ type, rooms, sessionType, slug }: Session) => {
   return Math.min(...indexes) + 2;
 };
 
-const getColEnd = ({ type, rooms, sessionType, slug }: Session) => {
+const getColEnd = ({ type, rooms }: Session) => {
   if (["room-change", "break"].includes(type)) {
     return -1;
-  }
-
-  if (sessionType === "poster") {
-    const index = posters.indexOf(slug!);
-    return 4 + index;
   }
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
@@ -366,6 +369,30 @@ const getSessionStyle = (session: any) => {
             </div>
           ))
         }
+
+        {
+          posters.length > 0 ? (
+            // big assumption here, that all posters start at the same
+            // time, we should add a check for that
+            <div
+              class="posters"
+              style={{
+                "--start": timeToRow[posters[0].startTime],
+                "--end": timeToRow[posters[0].endTime],
+              }}
+            >
+              <h2>Posters ({posters[0].rooms.join(", ")})</h2>
+
+              <div>
+                {posters.map((session) => {
+                  const style = {};
+
+                  return <Session session={session} style={style} />;
+                })}
+              </div>
+            </div>
+          ) : null
+        }
       </div>
     </div>
     <div class="h-12"></div>
@@ -411,6 +438,10 @@ const getSessionStyle = (session: any) => {
     outline: 2px solid var(--color-primary);
   }
 
+  .posters {
+    display: none;
+  }
+
   @media screen and (min-width: 640px) {
     .schedule-container {
       overflow-x: auto;
@@ -454,6 +485,7 @@ const getSessionStyle = (session: any) => {
 
     :global(.session),
     .time,
+    .posters,
     .room-change,
     :global(.break) {
       grid-row: var(--start) / var(--end);
@@ -465,6 +497,37 @@ const getSessionStyle = (session: any) => {
       grid-column: 1 / 2;
       font-weight: bold;
       outline: none;
+    }
+
+    :global(.session.poster) {
+      display: none;
+    }
+
+    .posters {
+      grid-column: 3 / 6;
+      position: relative;
+      display: block;
+
+      h2 {
+        background: var(--color-primary);
+        color: var(--color-text-inverted);
+        padding: 4px 8px;
+        outline: 2px solid var(--color-primary);
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+
+      > div {
+        display: flex;
+
+        & > :global(*) {
+          flex: 1;
+        }
+      }
+
+      & :global(.session.poster) {
+        display: flex;
+      }
     }
   }
 </style>

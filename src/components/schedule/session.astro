@@ -21,12 +21,20 @@ const { style, session } = Astro.props;
 
 <a
   href={session.slug && `/session/${session.slug}`}
-  class="session"
+  class:list={["session", session.level, session.sessionType]}
   style={style}
 >
-  <header class:list={[session.level]}>
+  <header>
     {
-      session.level && (
+      session.sessionType === "poster" && (
+        <>
+          <span class="sr-only">Session type:</span>
+          Poster
+        </>
+      )
+    }
+    {
+      session.sessionType !== "poster" && session.level && (
         <>
           <span class="sr-only">Session level:</span>
           {session.level}
@@ -145,15 +153,19 @@ const { style, session } = Astro.props;
     font-size: 0.8em;
   }
 
-  header.beginner {
+  .beginner header {
     background-color: var(--color-session-beginner);
   }
 
-  header.intermediate {
+  .intermediate header {
     background-color: var(--color-session-intermediate);
   }
 
-  header.advanced {
+  .advanced header {
     background-color: var(--color-session-advanced);
+  }
+
+  .poster header {
+    background-color: var(--color-secondary);
   }
 </style>
