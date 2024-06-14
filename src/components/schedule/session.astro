@@ -21,7 +21,7 @@ const { style, session } = Astro.props;
 
 <a
   href={session.slug && `/session/${session.slug}`}
-  class="session"
+  class:list={["session", session.level, session.sessionType]}
   style={style}
 >
   <header class:list={[session.level]}>
