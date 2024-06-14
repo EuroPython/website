@@ -253,14 +253,9 @@ type Session = {
   rooms: string[];
 };
 
-const getColStart = ({ type, rooms, sessionType, slug }: Session) => {
+const getColStart = ({ type, rooms }: Session) => {
   if (["room-change", "break"].includes(type)) {
     return 1;
-  }
-
-  if (sessionType === "poster") {
-    const index = posters.indexOf(slug!);
-    return 3 + index;
   }
 
   const indexes = rooms
@@ -269,14 +264,9 @@ const getColStart = ({ type, rooms, sessionType, slug }: Session) => {
   return Math.min(...indexes) + 2;
 };
 
-const getColEnd = ({ type, rooms, sessionType, slug }: Session) => {
+const getColEnd = ({ type, rooms }: Session) => {
   if (["room-change", "break"].includes(type)) {
     return -1;
-  }
-
-  if (sessionType === "poster") {
-    const index = posters.indexOf(slug!);
-    return 4 + index;
   }
 
   const indexes = rooms.map((room) => ROOMS.indexOf(room));
@@ -381,7 +371,7 @@ const getSessionStyle = (session: any) => {
         }
 
         {
-          posters ? (
+          posters.length > 0 ? (
             // big assumption here, that all posters start at the same
             // time, we should add a check for that
             <div
