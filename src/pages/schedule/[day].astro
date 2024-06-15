@@ -508,7 +508,13 @@ const getSessionStyle = (session: any) => {
       position: relative;
       display: block;
 
-      h2 {
+      &::after {
+        content: "";
+        display: block;
+      }
+
+      h2,
+      &::after {
         background: var(--color-primary);
         color: var(--color-text-inverted);
         padding: 4px 8px;
