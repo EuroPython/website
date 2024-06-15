@@ -107,27 +107,6 @@
       "website_url": "https://ep2024.europython.eu/session/insights-and-experiences-of-packaging-python-binary-extensions"
     },
     {
-      "code": "HX9ZWH",
-      "duration": 30,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["South Hall 2A"],
-      "session_type": "Talk",
-      "slug": "building-event-driven-python-service-using-faststream-and-asyncapi",
-      "speakers": [
-        {
-          "code": "MZUEG3",
-          "name": "Abhinand C",
-          "slug": "abhinand-c",
-          "website_url": "https://ep2024.europython.eu/speaker/abhinand-c"
-        }
-      ],
-      "start": "2024-07-12T10:45:00+02:00",
-      "title": "Building Event-Driven Python service using FastStream and AsyncAPI",
-      "tweet": "Unlock the power of AsyncAPI and FastStream in revolutionizing event-driven Python apps. Learn about Event-Driven Architectures, stream processing, and seamless integration with FastStream's Unified API.",
-      "website_url": "https://ep2024.europython.eu/session/building-event-driven-python-service-using-faststream-and-asyncapi"
-    },
-    {
       "code": "KBZTFP",
       "duration": 30,
       "event_type": "session",
@@ -189,6 +168,27 @@
       "title": "Fundamentals of Retrieval Augmented Generation",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/fundamentals-of-retrieval-augmented-generation"
+    },
+    {
+      "code": "ZBBNS9",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Sponsored",
+      "slug": "lessons-learned-from-maintaining-open-source-python-projects",
+      "speakers": [
+        {
+          "code": "EGPZKP",
+          "name": "Bernat Gabor",
+          "slug": "bernat-gabor",
+          "website_url": "https://ep2024.europython.eu/speaker/bernat-gabor"
+        }
+      ],
+      "start": "2024-07-12T10:45:00+02:00",
+      "title": "Lessons learned from maintaining open-source Python projects",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/lessons-learned-from-maintaining-open-source-python-projects"
     },
     {
       "code": "833AAG",
@@ -824,6 +824,27 @@
       "website_url": "https://ep2024.europython.eu/session/taming-one-quadrillion-data-points-with-apache-iceberg-and-parquet"
     },
     {
+      "code": "HX9ZWH",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "building-event-driven-python-service-using-faststream-and-asyncapi",
+      "speakers": [
+        {
+          "code": "MZUEG3",
+          "name": "Abhinand C",
+          "slug": "abhinand-c",
+          "website_url": "https://ep2024.europython.eu/speaker/abhinand-c"
+        }
+      ],
+      "start": "2024-07-12T15:50:00+02:00",
+      "title": "Building Event-Driven Python service using FastStream and AsyncAPI",
+      "tweet": "Unlock the power of AsyncAPI and FastStream in revolutionizing event-driven Python apps. Learn about Event-Driven Architectures, stream processing, and seamless integration with FastStream's Unified API.",
+      "website_url": "https://ep2024.europython.eu/session/building-event-driven-python-service-using-faststream-and-asyncapi"
+    },
+    {
       "code": "M9TMMQ",
       "duration": 30,
       "event_type": "session",
@@ -887,29 +908,8 @@
       "website_url": "https://ep2024.europython.eu/session/how-i-used-pgvector-and-postgresql-r-to-find-pictures-of-me-at-a-party"
     },
     {
-      "code": "ZBBNS9",
-      "duration": 30,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["Terrace 2B"],
-      "session_type": "Sponsored",
-      "slug": "lessons-learned-from-maintaining-open-source-python-projects",
-      "speakers": [
-        {
-          "code": "EGPZKP",
-          "name": "Bernat Gabor",
-          "slug": "bernat-gabor",
-          "website_url": "https://ep2024.europython.eu/speaker/bernat-gabor"
-        }
-      ],
-      "start": "2024-07-12T15:50:00+02:00",
-      "title": "Lessons learned from maintaining open-source Python projects",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/lessons-learned-from-maintaining-open-source-python-projects"
-    },
-    {
       "code": "CWDS3S",
-      "duration": 30,
+      "duration": 45,
       "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
@@ -920,6 +920,34 @@
       "title": "Lightning talks Friday",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/lightning-talks-friday"
+    },
+    {
+      "code": "QVFRR7",
+      "duration": 20,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "session_type": "Announcements",
+      "slug": "sprint-orientation",
+      "speakers": [],
+      "start": "2024-07-12T17:10:00+02:00",
+      "title": "Sprint orientation",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/sprint-orientation"
+    },
+    {
+      "code": "T98SBK",
+      "duration": 20,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "session_type": "Announcements",
+      "slug": "closing-session",
+      "speakers": [],
+      "start": "2024-07-12T17:30:00+02:00",
+      "title": "Closing Session",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/closing-session"
     }
   ],
   "rooms": [
