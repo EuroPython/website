@@ -117,6 +117,14 @@ const { style, session } = Astro.props;
     }
   }
 
+  .session[href]:focus {
+    background-color: color-mix(
+      in srgb,
+      var(--color-body-background),
+      white 70%
+    );
+  }
+
   .session[href]:not([href=""]):hover {
     background-color: color-mix(
       in srgb,
