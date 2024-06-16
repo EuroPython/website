@@ -288,7 +288,7 @@ const getSessionStyle = (session: any) => {
   return style;
 };
 
-const sortSessionByRooms = (a: Session, b: Session) => {
+const sortSessionByRooms = (a: ScheduleSession, b: ScheduleSession) => {
   const aIndex = ROOMS.indexOf(a.rooms[0]);
   const bIndex = ROOMS.indexOf(b.rooms[0]);
 
