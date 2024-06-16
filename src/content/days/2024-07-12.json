@@ -43,12 +43,19 @@
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "session_type": "Keynote",
-      "slug": "keynote-mai",
-      "speakers": [],
+      "slug": "healthy-code-for-healthy-teams-or-the-other-way-around",
+      "speakers": [
+        {
+          "code": "8L79Y8",
+          "name": "Mai Gim\u00e9nez",
+          "slug": "mai-gimenez",
+          "website_url": "https://ep2024.europython.eu/speaker/mai-gimenez"
+        }
+      ],
       "start": "2024-07-12T09:30:00+02:00",
-      "title": "Keynote (Mai)",
+      "title": "Healthy code for healthy teams (or the other way around)",
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/keynote-mai"
+      "website_url": "https://ep2024.europython.eu/session/healthy-code-for-healthy-teams-or-the-other-way-around"
     },
     {
       "duration": 30,
@@ -189,6 +196,27 @@
       "title": "Lessons learned from maintaining open-source Python projects",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/lessons-learned-from-maintaining-open-source-python-projects"
+    },
+    {
+      "code": "39V7BK",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Sponsored",
+      "slug": "edges-of-python-three-radical-python-hacks-for-fun-and-profit",
+      "speakers": [
+        {
+          "code": "PMTLCY",
+          "name": "Elvis Pranskevichus",
+          "slug": "elvis-pranskevichus",
+          "website_url": "https://ep2024.europython.eu/speaker/elvis-pranskevichus"
+        }
+      ],
+      "start": "2024-07-12T11:20:00+02:00",
+      "title": "Edges of Python: Three Radical Python Hacks for Fun and Profit",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/edges-of-python-three-radical-python-hacks-for-fun-and-profit"
     },
     {
       "code": "833AAG",
