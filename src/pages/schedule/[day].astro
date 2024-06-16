@@ -287,6 +287,23 @@ const getSessionStyle = (session: any) => {
 
   return style;
 };
+
+const sortSessionByRooms = (a: ScheduleSession, b: ScheduleSession) => {
+  const aIndex = ROOMS.indexOf(a.rooms[0]);
+  const bIndex = ROOMS.indexOf(b.rooms[0]);
+
+  return aIndex - bIndex;
+};
+
+const postersByTime: { [key: string]: Array<ScheduleSession> } = {};
+
+posters.forEach((poster) => {
+  if (!postersByTime[poster.startTime]) {
+    postersByTime[poster.startTime] = [];
+  }
+
+  postersByTime[poster.startTime].push(poster);
+});
 ---
 
 <Layout
@@ -348,50 +365,50 @@ const getSessionStyle = (session: any) => {
                 <h2>{format(slot.start, "HH:mm")}</h2>
               </div>
 
-              {sessionsByTime[slot.startTime].map((session) => {
-                const style = getSessionStyle(session);
+              {sessionsByTime[slot.startTime]
+                .sort(sortSessionByRooms)
+                .map((session) => {
+                  const style = getSessionStyle(session);
 
-                if (
-                  session.type === "room-change" ||
-                  session.type === "break"
-                ) {
-                  return (
-                    <Break
-                      title={session.title}
-                      time={session.startTime}
-                      style={style}
-                    />
-                  );
-                }
-
-                return <Session session={session} style={style} />;
-              })}
-            </div>
-          ))
-        }
-
-        {
-          posters.length > 0 ? (
-            // big assumption here, that all posters start at the same
-            // time, we should add a check for that
-            <div
-              class="posters"
-              style={{
-                "--start": timeToRow[posters[0].startTime],
-                "--end": timeToRow[posters[0].endTime],
-              }}
-            >
-              <h2>Posters ({posters[0].rooms.join(", ")})</h2>
-
-              <div>
-                {posters.map((session) => {
-                  const style = {};
+                  if (
+                    session.type === "room-change" ||
+                    session.type === "break"
+                  ) {
+                    return (
+                      <Break
+                        title={session.title}
+                        time={session.startTime}
+                        style={style}
+                      />
+                    );
+                  }
 
                   return <Session session={session} style={style} />;
                 })}
-              </div>
+
+              {postersByTime[slot.startTime] && (
+                // big assumption here, that all posters start at the same
+                // time, we should add a check for that
+                <div
+                  class="posters"
+                  style={{
+                    "--start": timeToRow[posters[0].startTime],
+                    "--end": timeToRow[posters[0].endTime],
+                  }}
+                >
+                  <h2>Posters ({posters[0].rooms.join(", ")})</h2>
+
+                  <div>
+                    {posters.map((session) => {
+                      const style = {};
+
+                      return <Session session={session} style={style} />;
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
-          ) : null
+          ))
         }
       </div>
     </div>
