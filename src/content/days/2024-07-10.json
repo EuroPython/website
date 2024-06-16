@@ -992,18 +992,46 @@
       "website_url": "https://ep2024.europython.eu/session/impersonation-in-data-engineering-no-more-credentials-in-your-code"
     },
     {
+      "code": "U3JZZP",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Sponsored",
+      "slug": "the-role-of-c-in-the-python-ecosystem-the-case-of-the-qt-framework",
+      "speakers": [
+        {
+          "code": "JYPKC9",
+          "name": "Cristi\u00e1n Maureira-Fredes",
+          "slug": "cristian-maureira-fredes",
+          "website_url": "https://ep2024.europython.eu/speaker/cristian-maureira-fredes"
+        }
+      ],
+      "start": "2024-07-10T16:05:00+02:00",
+      "title": "The role of C++ in the Python ecosystem: the case of the Qt framework",
+      "tweet": "Python \ud83d\udc9a C++, and the Qt Project knows it. Join us on this session to learn about the relevance of C++ in the Python ecosystem.",
+      "website_url": "https://ep2024.europython.eu/session/the-role-of-c-in-the-python-ecosystem-the-case-of-the-qt-framework"
+    },
+    {
       "code": "WQGUTP",
       "duration": 45,
       "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "session_type": "Keynote",
-      "slug": "keynote-carol",
-      "speakers": [],
+      "slug": "embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software",
+      "speakers": [
+        {
+          "code": "HBHXB3",
+          "name": "Carol Willing",
+          "slug": "carol-willing",
+          "website_url": "https://ep2024.europython.eu/speaker/carol-willing"
+        }
+      ],
       "start": "2024-07-10T16:40:00+02:00",
-      "title": "Keynote (Carol)",
+      "title": "Embracing Python, AI, and Heuristics: Optimal Paths for Impactful Software",
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/keynote-carol"
+      "website_url": "https://ep2024.europython.eu/session/embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software"
     },
     {
       "code": "HAEWRZ",
