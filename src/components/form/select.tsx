@@ -19,7 +19,7 @@ export const Select = ({
         defaultValue={defaultValue}
         className={clsx(
           "block w-full bg-transparent text-lg h-16 py-2 pr-16 pl-4 border-[3px] border-primary appearance-none",
-          "focus:outline-none focus:border-primary-active"
+          "focus:outline-none focus:border-black focus-visible:bg-white"
         )}
       >
         {children}
