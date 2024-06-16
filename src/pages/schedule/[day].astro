@@ -294,6 +294,16 @@ const sortSessionByRooms = (a: ScheduleSession, b: ScheduleSession) => {
 
   return aIndex - bIndex;
 };
+
+const postersByTime: { [key: string]: Array<ScheduleSession> } = {};
+
+posters.forEach((poster) => {
+  if (!postersByTime[poster.startTime]) {
+    postersByTime[poster.startTime] = [];
+  }
+
+  postersByTime[poster.startTime].push(poster);
+});
 ---
 
 <Layout
@@ -375,32 +385,30 @@ const sortSessionByRooms = (a: ScheduleSession, b: ScheduleSession) => {
 
                   return <Session session={session} style={style} />;
                 })}
+
+              {postersByTime[slot.startTime] && (
+                // big assumption here, that all posters start at the same
+                // time, we should add a check for that
+                <div
+                  class="posters"
+                  style={{
+                    "--start": timeToRow[posters[0].startTime],
+                    "--end": timeToRow[posters[0].endTime],
+                  }}
+                >
+                  <h2>Posters ({posters[0].rooms.join(", ")})</h2>
+
+                  <div>
+                    {posters.map((session) => {
+                      const style = {};
+
+                      return <Session session={session} style={style} />;
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           ))
-        }
-
-        {
-          posters.length > 0 ? (
-            // big assumption here, that all posters start at the same
-            // time, we should add a check for that
-            <div
-              class="posters"
-              style={{
-                "--start": timeToRow[posters[0].startTime],
-                "--end": timeToRow[posters[0].endTime],
-              }}
-            >
-              <h2>Posters ({posters[0].rooms.join(", ")})</h2>
-
-              <div>
-                {posters.map((session) => {
-                  const style = {};
-
-                  return <Session session={session} style={style} />;
-                })}
-              </div>
-            </div>
-          ) : null
         }
       </div>
     </div>
