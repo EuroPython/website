@@ -287,6 +287,13 @@ const getSessionStyle = (session: any) => {
 
   return style;
 };
+
+const sortSessionByRooms = (a: Session, b: Session) => {
+  const aIndex = ROOMS.indexOf(a.rooms[0]);
+  const bIndex = ROOMS.indexOf(b.rooms[0]);
+
+  return aIndex - bIndex;
+};
 ---
 
 <Layout
@@ -348,24 +355,26 @@ const getSessionStyle = (session: any) => {
                 <h2>{format(slot.start, "HH:mm")}</h2>
               </div>
 
-              {sessionsByTime[slot.startTime].map((session) => {
-                const style = getSessionStyle(session);
+              {sessionsByTime[slot.startTime]
+                .sort(sortSessionByRooms)
+                .map((session) => {
+                  const style = getSessionStyle(session);
 
-                if (
-                  session.type === "room-change" ||
-                  session.type === "break"
-                ) {
-                  return (
-                    <Break
-                      title={session.title}
-                      time={session.startTime}
-                      style={style}
-                    />
-                  );
-                }
+                  if (
+                    session.type === "room-change" ||
+                    session.type === "break"
+                  ) {
+                    return (
+                      <Break
+                        title={session.title}
+                        time={session.startTime}
+                        style={style}
+                      />
+                    );
+                  }
 
-                return <Session session={session} style={style} />;
-              })}
+                  return <Session session={session} style={style} />;
+                })}
             </div>
           ))
         }
