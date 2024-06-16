@@ -17,6 +17,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
       {items.map((item) => (
         <li
           key={item.name}
+          tabIndex={0}
           className={clsx(
             "border-b border-border-secondary-dark xl:border-0 group",
             {
@@ -30,7 +31,8 @@ export const NavItems = ({ items, inverted = false }: Props) => {
             className={clsx(
               "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center",
               "xl:text-left xl:p-2 xl:px-5",
-              "xl:group-hover:bg-secondary xl:group-hover:rounded-[30px]"
+              "xl:group-hover:bg-secondary xl:group-hover:rounded-[30px]",
+              "xl:group-focus-within:bg-secondary xl:group-focus-within:rounded-[30px]"
             )}
           >
             {item.name}
@@ -38,7 +40,12 @@ export const NavItems = ({ items, inverted = false }: Props) => {
           </a>
 
           {item.items ? (
-            <div className="xl:hidden xl:group-hover:block xl:absolute z-50">
+            <div
+              className={clsx(
+                "xl:hidden xl:group-hover:block xl:absolute z-50",
+                "xl:group-focus-within:block"
+              )}
+            >
               <ul className="mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px]">
                 {item.items.map((subItem) => (
                   <li
