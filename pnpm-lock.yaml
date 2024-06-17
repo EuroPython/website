@@ -27,8 +27,8 @@ dependencies:
     specifier: ^5.1.0
     version: 5.1.0(astro@4.10.2)(tailwindcss@3.4.4)
   '@astrojs/vercel':
-    specifier: ^7.7.0
-    version: 7.7.0(astro@4.10.2)(react@18.3.1)
+    specifier: ^7.7.1
+    version: 7.7.1(astro@4.10.2)(react@18.3.1)
   '@fontsource-variable/inter':
     specifier: ^5.0.18
     version: 5.0.18
@@ -310,8 +310,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@7.7.0(astro@4.10.2)(react@18.3.1):
-    resolution: {integrity: sha512-VX74OqFDDKH2uYpnbN4FZ5BrJZRzLcbGz2H6JOAIdqm+Q/ZcfFn9WC41QxHVtp1JcwX5QKHeEgbqiCNYnnUt9A==}
+  /@astrojs/vercel@7.7.1(astro@4.10.2)(react@18.3.1):
+    resolution: {integrity: sha512-FXh2IxLQ7GOl5w+1uUuSO5AO0fwlZWDjwEZ5NdEOAoWfFW0QeOR+LILbccjIuWKdugEJknAT4XxwQvsmVMh+8A==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
@@ -2745,7 +2745,7 @@ packages:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.5
+      micromatch: 4.0.7
     dev: false
 
   /fast-xml-parser@4.4.0:
@@ -3347,7 +3347,7 @@ packages:
       '@types/stack-utils': 2.0.3
       chalk: 4.1.2
       graceful-fs: 4.2.11
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       pretty-format: 27.5.1
       slash: 3.0.0
       stack-utils: 2.0.6
@@ -4090,14 +4090,6 @@ packages:
       micromark-util-types: 2.0.0
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /micromatch@4.0.5:
-    resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
-    engines: {node: '>=8.6'}
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
     dev: false
 
   /micromatch@4.0.7:
