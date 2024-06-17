@@ -626,7 +626,7 @@
     },
     {
       "code": "8NYTHE",
-      "duration": 30,
+      "duration": 60,
       "event_type": "session",
       "level": "beginner",
       "rooms": ["South Hall 2A"],
@@ -893,7 +893,7 @@
       "slug": "event-sourcing-in-production",
       "speakers": [
         {
-          "avatar": "",
+          "avatar": "https://program.europython.eu/media/avatars/Borjan-square_sL3AMa2.jpg",
           "code": "8LC3YQ",
           "name": "Borjan Tchakaloff",
           "slug": "borjan-tchakaloff",
