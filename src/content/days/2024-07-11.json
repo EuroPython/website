@@ -19,6 +19,7 @@
       "speakers": [],
       "start": "2024-07-11T08:15:00+02:00",
       "title": "Thursday Registration & Welcome @ Forum Hall Foyer 1st Floor",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/thursday-registration-welcome-forum-hall-foyer-1st-floor"
     },
@@ -33,6 +34,7 @@
       "speakers": [],
       "start": "2024-07-11T09:00:00+02:00",
       "title": "Thursday's Morning Announcement",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/thursday-s-morning-announcement"
     },
@@ -46,6 +48,7 @@
       "slug": "why-should-we-all-be-hyped-about-inclusive-leadership",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/DSC01436_XYwYOjf.jpg",
           "code": "NMACLQ",
           "name": "Tereza Iofciu",
           "slug": "tereza-iofciu",
@@ -54,6 +57,7 @@
       ],
       "start": "2024-07-11T09:15:00+02:00",
       "title": "Why should we all be hyped about inclusive leadership?",
+      "track": "Education, Community & Diversity",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/why-should-we-all-be-hyped-about-inclusive-leadership"
     },
@@ -81,6 +85,7 @@
       "slug": "rapid-prototyping-proof-of-concepts-django-is-all-we-need",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/rado_I79wz8p.jpg",
           "code": "GLMZDC",
           "name": "Radoslav Georgiev",
           "slug": "radoslav-georgiev",
@@ -89,6 +94,7 @@
       ],
       "start": "2024-07-11T10:30:00+02:00",
       "title": "Rapid Prototyping & Proof of Concepts: Django is all we need",
+      "track": "Python Libraries & Tooling",
       "tweet": "We know Django is great for building mature & long-lasting applications.  In this talk, we'll show that Django's actually also great for rapid prototyping & building proof of concepts.",
       "website_url": "https://ep2024.europython.eu/session/rapid-prototyping-proof-of-concepts-django-is-all-we-need"
     },
@@ -102,6 +108,7 @@
       "slug": "when-and-how-to-start-coding-with-kids",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_2806_ILNuZhJ.jpg",
           "code": "9CX9CB",
           "name": "Anna-Lena Popkes",
           "slug": "anna-lena-popkes",
@@ -110,6 +117,7 @@
       ],
       "start": "2024-07-11T10:30:00+02:00",
       "title": "When and how to start coding with kids",
+      "track": "Education, Community & Diversity",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/when-and-how-to-start-coding-with-kids"
     },
@@ -123,6 +131,7 @@
       "slug": "a-tour-of-synchronization-primitives-in-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/wheat_fields_ZViZhn3.jpg",
           "code": "UXJ3ZR",
           "name": "Zach Muncaster",
           "slug": "zach-muncaster",
@@ -131,6 +140,7 @@
       ],
       "start": "2024-07-11T10:30:00+02:00",
       "title": "A Tour of Synchronization Primitives in Python",
+      "track": "Python Libraries & Tooling",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/a-tour-of-synchronization-primitives-in-python"
     },
@@ -144,6 +154,7 @@
       "slug": "unlock-the-power-of-dev-containers-consistent-environments-in-seconds",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Logo_tS4YI84.png",
           "code": "F8ANLQ",
           "name": "Thomas Fraunholz",
           "slug": "thomas-fraunholz",
@@ -152,6 +163,7 @@
       ],
       "start": "2024-07-11T10:30:00+02:00",
       "title": "Unlock the Power of Dev Containers: Consistent Environments in Seconds!",
+      "track": "DevOps and Infrastructure (Cloud & Hardware)",
       "tweet": "Unlock the Power of Dev Containers: Build a Consistent Python Development Environment in Seconds!  Say goodbye to the hassle of setting up your development environment from scratch every time you start a new project!",
       "website_url": "https://ep2024.europython.eu/session/unlock-the-power-of-dev-containers-consistent-environments-in-seconds"
     },
@@ -165,6 +177,7 @@
       "slug": "compiledpoem-py-teaching-about-diversity-and-python-through-poem",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/soraya-foto_FL6oC44.jpeg",
           "code": "EL3KUC",
           "name": "Soraya Roberta",
           "slug": "soraya-roberta",
@@ -173,6 +186,7 @@
       ],
       "start": "2024-07-11T10:30:00+02:00",
       "title": "CompiledPoem.py: Teaching about diversity and Python through poem",
+      "track": "Education, Community & Diversity",
       "tweet": "Is it possible to learn Python programming through poetry? In this talk, you will learn how to teach conditional and looping structures in Python with diversity, for example.",
       "website_url": "https://ep2024.europython.eu/session/compiledpoem-py-teaching-about-diversity-and-python-through-poem"
     },
@@ -186,6 +200,7 @@
       "slug": "is-rag-all-you-need-a-look-at-the-limits-of-retrieval-augmented-generation",
       "speakers": [
         {
+          "avatar": "",
           "code": "3WVLQA",
           "name": "Sara Zanzottera",
           "slug": "sara-zanzottera",
@@ -194,6 +209,7 @@
       ],
       "start": "2024-07-11T10:30:00+02:00",
       "title": "Is RAG all you need? A look at the limits of retrieval augmented generation",
+      "track": "PyData: LLMs",
       "tweet": "Improving your LLM's output with RAG feels like \u2728 magic \u2728: effective, cheap, easy to implement. But when it doesn't work, do you know how to fix it? \ud83e\ude7a Let's explore the limits of this amazing LLM technique \ud83e\udded",
       "website_url": "https://ep2024.europython.eu/session/is-rag-all-you-need-a-look-at-the-limits-of-retrieval-augmented-generation"
     },
@@ -207,6 +223,7 @@
       "slug": "fastui-panacea-or-pipe-dream",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/SamuelColvin-030-Edit-extended_6sJz7qu.jpg",
           "code": "ZG8GYN",
           "name": "Samuel Colvin",
           "slug": "samuel-colvin",
@@ -215,6 +232,7 @@
       ],
       "start": "2024-07-11T11:20:00+02:00",
       "title": "FastUI - panacea or pipe dream?",
+      "track": "Web technologies",
       "tweet": "FastUI - panacea or pipe dream? Are web interfaces defined in Python a genius idea, a complete folly, or (like most technologies) a good fit for some use cases but not all?",
       "website_url": "https://ep2024.europython.eu/session/fastui-panacea-or-pipe-dream"
     },
@@ -228,6 +246,7 @@
       "slug": "forecasting-the-future-with-earthpt",
       "speakers": [
         {
+          "avatar": "",
           "code": "7AP3GR",
           "name": "Mike Smith",
           "slug": "mike-smith",
@@ -236,6 +255,7 @@
       ],
       "start": "2024-07-11T11:20:00+02:00",
       "title": "Forecasting the future with EarthPT",
+      "track": "PyData: LLMs",
       "tweet": "EarthPT is a time series earth observation foundation model trained on TBs of satellite imagery.  It can predict future satellite observations and produces embeddings that can be used downstream.",
       "website_url": "https://ep2024.europython.eu/session/forecasting-the-future-with-earthpt"
     },
@@ -249,6 +269,7 @@
       "slug": "dbt-python-how-to-write-reusable-and-testable-pipelines",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Profilbild_6ynfZj8.jpg",
           "code": "BYLZXE",
           "name": "Florian Stefan",
           "slug": "florian-stefan",
@@ -257,6 +278,7 @@
       ],
       "start": "2024-07-11T11:20:00+02:00",
       "title": "DBT & Python - How to write reusable and testable pipelines",
+      "track": "PyData: Data Engineering",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/dbt-python-how-to-write-reusable-and-testable-pipelines"
     },
@@ -270,6 +292,7 @@
       "slug": "best-practices-for-securely-consuming-open-source-in-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Ciara_Rectangle_Background_1_OW89AQG.jpg",
           "code": "NB37WS",
           "name": "Ciara Carey",
           "slug": "ciara-carey",
@@ -278,6 +301,7 @@
       ],
       "start": "2024-07-11T11:20:00+02:00",
       "title": "Best practices for securely consuming open source in Python",
+      "track": "Security",
       "tweet": "Learn how to enhance Python OSS security with the Secure Supply Chain Consumption Framework (S2C2F)",
       "website_url": "https://ep2024.europython.eu/session/best-practices-for-securely-consuming-open-source-in-python"
     },
@@ -291,6 +315,7 @@
       "slug": "containerize-your-python-apps-like-it-s-2024",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/eb0bff082cda1e26c1d204ab3c0628fc_iBEHKJl.jpg",
           "code": "7FCECA",
           "name": "Jan Smitka",
           "slug": "jan-smitka",
@@ -299,6 +324,7 @@
       ],
       "start": "2024-07-11T11:20:00+02:00",
       "title": "Containerize your Python apps like it's 2024",
+      "track": "DevOps and Infrastructure (Cloud & Hardware)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/containerize-your-python-apps-like-it-s-2024"
     },
@@ -312,6 +338,7 @@
       "slug": "effective-strategies-for-disability-inclusion-in-open-source-communities",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/BrayanKaiMwanyumba_2_8yYUqlz.jpg",
           "code": "VULLQE",
           "name": "Brayan Kai Mwanyumba",
           "slug": "brayan-kai-mwanyumba",
@@ -320,6 +347,7 @@
       ],
       "start": "2024-07-11T11:20:00+02:00",
       "title": "Effective Strategies for Disability Inclusion in Open Source Communities",
+      "track": "Education, Community & Diversity",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/effective-strategies-for-disability-inclusion-in-open-source-communities"
     },
@@ -333,12 +361,14 @@
       "slug": "counting-down-for-cra-updates-and-expectations",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_1037_vjqZpqv.jpg",
           "code": "8EGVC9",
           "name": "Cheuk Ting Ho",
           "slug": "cheuk-ting-ho",
           "website_url": "https://ep2024.europython.eu/speaker/cheuk-ting-ho"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/20190601_DebatMeowWolf_0aCwZC4.jpg",
           "code": "XCKH3F",
           "name": "Deb Nicholson",
           "slug": "deb-nicholson",
@@ -347,6 +377,7 @@
       ],
       "start": "2024-07-11T11:55:00+02:00",
       "title": "Counting down for CRA - updates and expectations",
+      "track": "Security",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/counting-down-for-cra-updates-and-expectations"
     },
@@ -360,6 +391,7 @@
       "slug": "don-t-fix-bad-data-do-this-instead",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/profil_foto_v4ODfYr.jpg",
           "code": "VAZHQJ",
           "name": "Martina Ivanicova",
           "slug": "martina-ivanicova",
@@ -368,6 +400,7 @@
       ],
       "start": "2024-07-11T11:55:00+02:00",
       "title": "Don't fix bad data, do this instead",
+      "track": "PyData: Data Engineering",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/don-t-fix-bad-data-do-this-instead"
     },
@@ -381,6 +414,7 @@
       "slug": "nlp-application-in-cases-of-violence-against-women",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_20230818_205116_PFN5Cmx.jpg",
           "code": "VBJYJQ",
           "name": "Deborah Foroni",
           "slug": "deborah-foroni",
@@ -389,6 +423,7 @@
       ],
       "start": "2024-07-11T11:55:00+02:00",
       "title": "NLP Application in Cases of Violence Against Women",
+      "track": "PyData: Research & Applications",
       "tweet": "Using ML & NLP to analyze domestic violence against women. Techniques like WHISPER & BERTopic extract semantic patterns from audio, aiding policy-making",
       "website_url": "https://ep2024.europython.eu/session/nlp-application-in-cases-of-violence-against-women"
     },
@@ -402,6 +437,7 @@
       "slug": "why-communication-is-the-best-skill-you-can-develop-as-a-programmer",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Profile_pic_AkoVCDE.jpg",
           "code": "WPUWNJ",
           "name": "Miriam Forner",
           "slug": "miriam-forner",
@@ -410,8 +446,32 @@
       ],
       "start": "2024-07-11T11:55:00+02:00",
       "title": "Why communication is the best skill you can develop as a programmer",
+      "track": "Career, Life, Health",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/why-communication-is-the-best-skill-you-can-develop-as-a-programmer"
+    },
+    {
+      "code": "QQMDWQ",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Talk",
+      "slug": "the-rise-of-the-yaml-engineer",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_20230510_201639_484_izRPs7h.jpg",
+          "code": "9S3Z87",
+          "name": "Matthieu Caneill",
+          "slug": "matthieu-caneill",
+          "website_url": "https://ep2024.europython.eu/speaker/matthieu-caneill"
+        }
+      ],
+      "start": "2024-07-11T11:55:00+02:00",
+      "title": "The rise of the YAML engineer",
+      "track": "PyData: Data Engineering",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/the-rise-of-the-yaml-engineer"
     },
     {
       "code": "RSRDBM",
@@ -423,6 +483,7 @@
       "slug": "lies-damned-lies-and-large-language-models",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/BK7A9876_korr_sRGB_8_1000x1500px_b_NbNTtra.jpg",
           "code": "PXQBU9",
           "name": "Jodie Burchell",
           "slug": "jodie-burchell",
@@ -431,29 +492,9 @@
       ],
       "start": "2024-07-11T11:55:00+02:00",
       "title": "Lies, damned lies and large language models",
+      "track": "PyData: LLMs",
       "tweet": "Want to use LLMs, but are troubled by their tendency to hallucinate? Find out how to both measure and moderate hallucinations in Python in this talk.",
       "website_url": "https://ep2024.europython.eu/session/lies-damned-lies-and-large-language-models"
-    },
-    {
-      "code": "X7GUSW",
-      "duration": 30,
-      "event_type": "session",
-      "level": "advanced",
-      "rooms": ["South Hall 2A"],
-      "session_type": "Talk",
-      "slug": "enterprise-python-software-that-lives-long-and-prosper",
-      "speakers": [
-        {
-          "code": "EU8HKQ",
-          "name": "Alvaro Duran",
-          "slug": "alvaro-duran",
-          "website_url": "https://ep2024.europython.eu/speaker/alvaro-duran"
-        }
-      ],
-      "start": "2024-07-11T11:55:00+02:00",
-      "title": "Enterprise Python: Software That Lives Long And Prosper",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/enterprise-python-software-that-lives-long-and-prosper"
     },
     {
       "code": "CEW8S9",
@@ -465,6 +506,7 @@
       "slug": "nothing-for-us-without-us-breaking-unconscious-bias-in-building-products",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG-20220514-WA0040_1_tHP9ax7.jpg",
           "code": "XZ9GLY",
           "name": "Victor Ogunjobi",
           "slug": "victor-ogunjobi",
@@ -473,6 +515,7 @@
       ],
       "start": "2024-07-11T12:30:00+02:00",
       "title": "Nothing for Us, Without Us; Breaking Unconscious Bias in Building Products",
+      "track": "Education, Community & Diversity",
       "tweet": "Are our products truly inclusive? Unconscious bias often taints well-intentioned projects, causing unintended exclusions. This talk offers ideas for inclusive product and community design. #UnconsciousBias #TechEthics",
       "website_url": "https://ep2024.europython.eu/session/nothing-for-us-without-us-breaking-unconscious-bias-in-building-products"
     },
@@ -486,6 +529,7 @@
       "slug": "fine-tuning-large-models-on-local-hardware",
       "speakers": [
         {
+          "avatar": "",
           "code": "XU3THC",
           "name": "Benjamin Bossan",
           "slug": "benjamin-bossan",
@@ -494,6 +538,7 @@
       ],
       "start": "2024-07-11T12:30:00+02:00",
       "title": "Fine-tuning large models on local hardware",
+      "track": "PyData: LLMs",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/fine-tuning-large-models-on-local-hardware"
     },
@@ -507,12 +552,14 @@
       "slug": "scikit-llm-beginner-friendly-nlp-using-llms",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/1690214871456_5rntTSG.jpeg",
           "code": "EACXYX",
           "name": "Iryna Kondrashchenko",
           "slug": "iryna-kondrashchenko",
           "website_url": "https://ep2024.europython.eu/speaker/iryna-kondrashchenko"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/Screenshot_from_2024-01-06_14-54-25_EhAyTJE.png",
           "code": "NWAQCX",
           "name": "Oleh Kostromin",
           "slug": "oleh-kostromin",
@@ -521,6 +568,7 @@
       ],
       "start": "2024-07-11T12:30:00+02:00",
       "title": "Scikit-LLM: Beginner Friendly NLP Using LLMs",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/scikit-llm-beginner-friendly-nlp-using-llms"
     },
@@ -534,12 +582,14 @@
       "slug": "how-to-destroy-the-world-using-python-and-a-synthetic-virus",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/FA1FB7D4-D554-4926-BC9C-57A844913FC1_1_105_c_tblqr5D.jpeg",
           "code": "CV8T7R",
           "name": "Helena G\u00f3mez Pozo",
           "slug": "helena-gomez-pozo",
           "website_url": "https://ep2024.europython.eu/speaker/helena-gomez-pozo"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/profilepic_SmZtRQ4.jpg",
           "code": "TDTD3R",
           "name": "Marina Moro L\u00f3pez",
           "slug": "marina-moro-lopez",
@@ -548,6 +598,7 @@
       ],
       "start": "2024-07-11T12:30:00+02:00",
       "title": "How to destroy the world using Python and a synthetic virus",
+      "track": "~ None of these topics",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/how-to-destroy-the-world-using-python-and-a-synthetic-virus"
     },
@@ -561,6 +612,7 @@
       "slug": "pep-639-towards-licensing-standardization-in-python-packaging",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/DSC00168_VxtmhL5.JPG",
           "code": "FYYBAE",
           "name": "Karolina Surma",
           "slug": "karolina-surma",
@@ -569,6 +621,7 @@
       ],
       "start": "2024-07-11T12:30:00+02:00",
       "title": "PEP 639 - Towards licensing standardization in Python packaging",
+      "track": "Python Libraries & Tooling",
       "tweet": "Which way will Python package licensing go? Hopefully the one set by PEP 639",
       "website_url": "https://ep2024.europython.eu/session/pep-639-towards-licensing-standardization-in-python-packaging"
     },
@@ -582,6 +635,7 @@
       "slug": "logger-info-f-don-t-give-all-your-secrets-away",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Tamar_vdbbMhX.jpeg",
           "code": "AJMVF3",
           "name": "Tamar Galer",
           "slug": "tamar-galer",
@@ -590,6 +644,7 @@
       ],
       "start": "2024-07-11T12:30:00+02:00",
       "title": "logger.info(f\"Don't Give all your {secrets} away\")",
+      "track": "Security",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/logger-info-f-don-t-give-all-your-secrets-away"
     },
@@ -617,6 +672,7 @@
       "slug": "mdjango-2-0-an-asynchronous-microservices-technique",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/04_2024_n0zKcnP.jpg",
           "code": "TJSMCP",
           "name": "Maxim Danilov",
           "slug": "maxim-danilov",
@@ -625,6 +681,7 @@
       ],
       "start": "2024-07-11T13:00:00+02:00",
       "title": "\u00b5Django 2.0, an asynchronous microservices technique.",
+      "track": "Web technologies",
       "tweet": "Django - the new trend in creating asynchronous Python microservices or the oldest one.",
       "website_url": "https://ep2024.europython.eu/session/mdjango-2-0-an-asynchronous-microservices-technique"
     },
@@ -638,6 +695,7 @@
       "slug": "contributing-to-onnx-how-you-can-improve-machine-learning-interoperability",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/michal.karzynski_8sqgZB4.jpg",
           "code": "RMHTBJ",
           "name": "Micha\u0142 Karzy\u0144ski",
           "slug": "michal-karzynski",
@@ -646,6 +704,7 @@
       ],
       "start": "2024-07-11T13:00:00+02:00",
       "title": "Contributing to ONNX: How you can improve Machine Learning interoperability",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/contributing-to-onnx-how-you-can-improve-machine-learning-interoperability"
     },
@@ -659,6 +718,7 @@
       "slug": "are-llms-smarter-in-some-languages-than-others",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/1db8269d2442d7241778e8103c67d020_mxoopCD.jpg",
           "code": "MTEUCU",
           "name": "Pavel Kr\u00e1l",
           "slug": "pavel-kral",
@@ -667,6 +727,7 @@
       ],
       "start": "2024-07-11T13:00:00+02:00",
       "title": "Are LLMs smarter in some languages than others?",
+      "track": "PyData: LLMs",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/are-llms-smarter-in-some-languages-than-others"
     },
@@ -681,6 +742,7 @@
       "speakers": [],
       "start": "2024-07-11T14:00:00+02:00",
       "title": "Sponsor Highlight & Recruitment Fair",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/sponsor-highlight-recruitment-fair"
     },
@@ -694,12 +756,14 @@
       "slug": "is-it-me-or-python-memory-management",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Screenshot_2024-03-04_at_23.34.30_xlVdm5L.png",
           "code": "Z8HXML",
           "name": "Yuliia Barabash",
           "slug": "yuliia-barabash",
           "website_url": "https://ep2024.europython.eu/speaker/yuliia-barabash"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/DSC_0672_1_E78vryU.jpg",
           "code": "ZLLVEH",
           "name": "Laysa Uchoa",
           "slug": "laysa-uchoa",
@@ -708,6 +772,7 @@
       ],
       "start": "2024-07-11T14:00:00+02:00",
       "title": "Is it me or Python memory management?",
+      "track": "Python Internals & Ecosystem",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/is-it-me-or-python-memory-management"
     },
@@ -721,6 +786,7 @@
       "slug": "multimedia-processing-with-ffmpeg-and-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/prof_lCHNRNw.jpg",
           "code": "GV9BKJ",
           "name": "Micha\u0142 Rokita",
           "slug": "michal-rokita",
@@ -729,6 +795,7 @@
       ],
       "start": "2024-07-11T14:00:00+02:00",
       "title": "Multimedia processing with FFMpeg and Python",
+      "track": "Python Libraries & Tooling",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/multimedia-processing-with-ffmpeg-and-python"
     },
@@ -742,6 +809,7 @@
       "slug": "python-on-the-rocks-crafting-a-smooth-blend-with-rocksdb",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Screenshot_2023-12-14-16-55-28-806_com.whatsapp2_KA54SNX.jpg",
           "code": "AFAAPF",
           "name": "Ria Bhatia",
           "slug": "ria-bhatia",
@@ -750,6 +818,7 @@
       ],
       "start": "2024-07-11T14:00:00+02:00",
       "title": "Python on the Rocks: Crafting a Smooth Blend with RocksDB",
+      "track": "Software Engineering & Architecture",
       "tweet": "When it comes to selecting a high-performance database for your application, RocksDB emerges as a top contender, offering a lightweight and efficient solution. But is happening under the hood?",
       "website_url": "https://ep2024.europython.eu/session/python-on-the-rocks-crafting-a-smooth-blend-with-rocksdb"
     },
@@ -763,6 +832,7 @@
       "slug": "syft-data-science-in-python-with-privacy-guarantees",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/me_QNWdYHe_DcLJyWY.jpg",
           "code": "S3GNBU",
           "name": "Valerio Maggio",
           "slug": "valerio-maggio",
@@ -771,6 +841,7 @@
       ],
       "start": "2024-07-11T14:00:00+02:00",
       "title": "Syft: Data Science in Python with privacy guarantees",
+      "track": "PyData: Machine Learning, Stats",
       "tweet": "Privacy guarantees is an essential requirement for ethical data science, but also unlocks unprecedented access to ai and models. Come to my talk to discover all about Syft for private and secure data science in Python.",
       "website_url": "https://ep2024.europython.eu/session/syft-data-science-in-python-with-privacy-guarantees"
     },
@@ -784,6 +855,7 @@
       "slug": "mastering-design-patterns-crafting-elegant-solutions-with-a-confidence",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/1516094037699_WeDLyX9.jpeg",
           "code": "GKGSN7",
           "name": "Petr Balogh",
           "slug": "petr-balogh",
@@ -792,6 +864,7 @@
       ],
       "start": "2024-07-11T14:35:00+02:00",
       "title": "Mastering Design Patterns: Crafting Elegant Solutions with a Confidence",
+      "track": "Software Engineering & Architecture",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/mastering-design-patterns-crafting-elegant-solutions-with-a-confidence"
     },
@@ -805,6 +878,7 @@
       "slug": "behind-the-scenes-of-an-ads-prediction-system",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Bunmi_Akinremi_TOpAUKC.jpg",
           "code": "KYPBD3",
           "name": "Bunmi Akinremi",
           "slug": "bunmi-akinremi",
@@ -813,6 +887,7 @@
       ],
       "start": "2024-07-11T14:35:00+02:00",
       "title": "Behind the Scenes of an Ads Prediction System",
+      "track": "PyData: Machine Learning, Stats",
       "tweet": "Learn all about ads prediction systems at #EuroPython2024!  From key concepts to system design, learn how these algorithms shape online advertising and its ethical implications.",
       "website_url": "https://ep2024.europython.eu/session/behind-the-scenes-of-an-ads-prediction-system"
     },
@@ -826,6 +901,7 @@
       "slug": "intellectual-property-law-101",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/d3da8160dd1848c1194e15df4fb1051c_bFs9Mv0.jpg",
           "code": "XXDZKP",
           "name": "Anwesha Das",
           "slug": "anwesha-das",
@@ -834,6 +910,7 @@
       ],
       "start": "2024-07-11T14:35:00+02:00",
       "title": "Intellectual Property Law 101",
+      "track": "~ None of these topics",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/intellectual-property-law-101"
     },
@@ -847,6 +924,7 @@
       "slug": "how-to-build-a-python-to-c-compiler-out-of-spare-parts-and-why",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/xavier_portrait_t2glHMd.jpg",
           "code": "WAVEWK",
           "name": "Xavier Thompson",
           "slug": "xavier-thompson",
@@ -855,6 +933,7 @@
       ],
       "start": "2024-07-11T14:35:00+02:00",
       "title": "How to Build a Python-to-C++ Compiler out of Spare Parts - and Why",
+      "track": "Python Internals & Ecosystem",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/how-to-build-a-python-to-c-compiler-out-of-spare-parts-and-why"
     },
@@ -882,6 +961,7 @@
       "slug": "caching-for-jupyter-notebooks",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/portrait_2_2_MQ08u6U.jpg",
           "code": "RMFBSX",
           "name": "Lauris Jullien",
           "slug": "lauris-jullien",
@@ -890,6 +970,7 @@
       ],
       "start": "2024-07-11T15:30:00+02:00",
       "title": "Caching for Jupyter Notebooks",
+      "track": "PyData: Software Packages & Jupyter",
       "tweet": "10X your workflow by caching your Jupyter Notebook outputs.  Developers and data scientists, no more waiting around for your expensive cells to re-run.",
       "website_url": "https://ep2024.europython.eu/session/caching-for-jupyter-notebooks"
     },
@@ -903,6 +984,7 @@
       "slug": "many-ways-to-be-a-python-contributor",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/52487760478_283a36a901_o-min_JhQ67nS.jpg",
           "code": "BGLPFA",
           "name": "Paolo Melchiorre",
           "slug": "paolo-melchiorre",
@@ -911,6 +993,7 @@
       ],
       "start": "2024-07-11T15:30:00+02:00",
       "title": "Many ways to be a Python contributor",
+      "track": "Education, Community & Diversity",
       "tweet": "There are many ways to contribute to Python or one of its packages or frameworks, and we will see some of them together.",
       "website_url": "https://ep2024.europython.eu/session/many-ways-to-be-a-python-contributor"
     },
@@ -924,6 +1007,7 @@
       "slug": "shipping-ready-to-run-python-apps-without-the-need-to-install-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/mal-business-2-170x170_VPXpWrX.jpg",
           "code": "QYTJB9",
           "name": "Marc-Andr\u00e9 Lemburg",
           "slug": "marc-andre-lemburg",
@@ -932,6 +1016,7 @@
       ],
       "start": "2024-07-11T15:30:00+02:00",
       "title": "Shipping ready-to-run Python apps without the need to install Python",
+      "track": "Python Libraries & Tooling",
       "tweet": "Learn about PyRun, your friendly and lean, open source, single file 5 MB Python runtime.",
       "website_url": "https://ep2024.europython.eu/session/shipping-ready-to-run-python-apps-without-the-need-to-install-python"
     },
@@ -945,6 +1030,7 @@
       "slug": "rpa-tdd-and-embedded-a-world-glued-together-with-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/me-MkIII_3uUT4Lq.png",
           "code": "PCANRA",
           "name": "Javier Alonso",
           "slug": "javier-alonso",
@@ -953,6 +1039,7 @@
       ],
       "start": "2024-07-11T15:30:00+02:00",
       "title": "RPA, TDD, and Embedded: A world glued together with Python!",
+      "track": "Testing and QA",
       "tweet": "Are you curious about the embedded world? Have you ever wondered how is a microcontroller tested? Discover the magic of Robot Framework for testing real hardware!",
       "website_url": "https://ep2024.europython.eu/session/rpa-tdd-and-embedded-a-world-glued-together-with-python"
     },
@@ -966,6 +1053,7 @@
       "slug": "mastering-generative-ai-tools-and-techniques-with-vs-code-github-azure",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Profile_small_qVJUTKd.jpg",
           "code": "FLJEJZ",
           "name": "Leo Yao",
           "slug": "leo-yao",
@@ -974,6 +1062,7 @@
       ],
       "start": "2024-07-11T15:30:00+02:00",
       "title": "Mastering Generative AI: Tools and Techniques with VS Code, GitHub, Azure",
+      "track": "PyData: LLMs",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/mastering-generative-ai-tools-and-techniques-with-vs-code-github-azure"
     },
@@ -987,6 +1076,7 @@
       "slug": "pydantic-logfire-uncomplicated-observability",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/SamuelColvin-030-Edit-extended_6sJz7qu.jpg",
           "code": "ZG8GYN",
           "name": "Samuel Colvin",
           "slug": "samuel-colvin",
@@ -995,6 +1085,7 @@
       ],
       "start": "2024-07-11T15:30:00+02:00",
       "title": "Pydantic Logfire \u2014 Uncomplicated Observability",
+      "track": "DevOps and Infrastructure (Cloud & Hardware)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/pydantic-logfire-uncomplicated-observability"
     },
@@ -1008,6 +1099,7 @@
       "slug": "creating-your-own-extensions-for-jupyterlab",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/GoldfarbPyConIsrael2019_4icaND5.jpg",
           "code": "KKEMDU",
           "name": "Daniel Goldfarb",
           "slug": "daniel-goldfarb",
@@ -1016,6 +1108,7 @@
       ],
       "start": "2024-07-11T16:05:00+02:00",
       "title": "Creating Your Own Extensions for JupyterLab",
+      "track": "PyData: Research & Applications",
       "tweet": "Learn to add features to JupyterLab by creating your own JupyterLab extensions.",
       "website_url": "https://ep2024.europython.eu/session/creating-your-own-extensions-for-jupyterlab"
     },
@@ -1029,6 +1122,7 @@
       "slug": "python-unplugged-mining-for-hidden-batteries",
       "speakers": [
         {
+          "avatar": "",
           "code": "AB7CEZ",
           "name": "Torsten Zielke",
           "slug": "torsten-zielke",
@@ -1037,6 +1131,7 @@
       ],
       "start": "2024-07-11T16:05:00+02:00",
       "title": "Python Unplugged: Mining for Hidden 'Batteries",
+      "track": "Python Internals & Ecosystem",
       "tweet": "Ever explored the hidden gems in Python's standard library? Our #EuroPython talk unveils lesser-known 'batteries' like the new batch function, unique collections, and more! Dive into Python's treasure trove with us! #\ud83d\udc0d",
       "website_url": "https://ep2024.europython.eu/session/python-unplugged-mining-for-hidden-batteries"
     },
@@ -1050,6 +1145,7 @@
       "slug": "how-we-used-vectorization-for-1000x-python-speedups-no-c-or-spark-needed",
       "speakers": [
         {
+          "avatar": "",
           "code": "XRZT3B",
           "name": "Justine Wezenaar",
           "slug": "justine-wezenaar",
@@ -1058,6 +1154,7 @@
       ],
       "start": "2024-07-11T16:05:00+02:00",
       "title": "How we used vectorization for 1000x Python speedups (no C or Spark needed!)",
+      "track": "PyData: Machine Learning, Stats",
       "tweet": "Want to make all your code faster? With matrices, library knowledge, and a sprinkle of creativity, you can consistently speed up multivariate Python functions by 1000x!",
       "website_url": "https://ep2024.europython.eu/session/how-we-used-vectorization-for-1000x-python-speedups-no-c-or-spark-needed"
     },
@@ -1071,6 +1168,7 @@
       "slug": "mutation-testing-in-python-with-cosmic-ray",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Bingham_Austin_YRLez6W.jpg",
           "code": "DFWKSC",
           "name": "Austin Bingham",
           "slug": "austin-bingham",
@@ -1079,6 +1177,7 @@
       ],
       "start": "2024-07-11T16:05:00+02:00",
       "title": "Mutation Testing in Python with Cosmic Ray",
+      "track": "Testing and QA",
       "tweet": "Learn how to perform mutation testing in Python with Cosmic Ray.",
       "website_url": "https://ep2024.europython.eu/session/mutation-testing-in-python-with-cosmic-ray"
     },
@@ -1092,6 +1191,7 @@
       "slug": "earth-observation-through-large-vision-models",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/mayank_photo_uRbqmT3.jpg",
           "code": "PRFLCZ",
           "name": "Mayank Khanduja",
           "slug": "mayank-khanduja",
@@ -1100,6 +1200,7 @@
       ],
       "start": "2024-07-11T16:05:00+02:00",
       "title": "Earth Observation through Large Vision Models",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/earth-observation-through-large-vision-models"
     },
@@ -1113,6 +1214,7 @@
       "slug": "autoinstrumentation-adventures-enhancing-python-apps-with-opentelemetry",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/photo_2021-09-16_00-24-05_oyaFtl3_NlPNas4.jpg",
           "code": "BMMZFS",
           "name": "Israel Blancas",
           "slug": "israel-blancas",
@@ -1121,6 +1223,7 @@
       ],
       "start": "2024-07-11T16:05:00+02:00",
       "title": "Autoinstrumentation Adventures: enhancing Python apps with OpenTelemetry",
+      "track": "Python Libraries & Tooling",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/autoinstrumentation-adventures-enhancing-python-apps-with-opentelemetry"
     },
@@ -1135,6 +1238,7 @@
       "speakers": [],
       "start": "2024-07-11T16:55:00+02:00",
       "title": "Keynote (Armin)",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/keynote-armin"
     },
@@ -1149,6 +1253,7 @@
       "speakers": [],
       "start": "2024-07-11T17:45:00+02:00",
       "title": "Lightning talks Thursday",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/lightning-talks-thursday"
     }
