@@ -11,6 +11,7 @@
       "speakers": [],
       "start": "2024-07-09T08:30:00+02:00",
       "title": "Tuesday Registration & Welcome @ Forum Hall Foyer 1st Floor",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/tuesday-registration-welcome-forum-hall-foyer-1st-floor"
     },
@@ -24,6 +25,7 @@
       "slug": "wasm-summit",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
           "code": "BQVLYL",
           "name": "Nicholas Tollervey",
           "slug": "nicholas-tollervey",
@@ -32,6 +34,7 @@
       ],
       "start": "2024-07-09T09:30:00+02:00",
       "title": "WASM Summit",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/wasm-summit"
     },
@@ -45,12 +48,14 @@
       "slug": "learn-python-by-making-a-console-game",
       "speakers": [
         {
+          "avatar": "",
           "code": "CPYQCK",
           "name": "Ashish Gupta",
           "slug": "ashish-gupta",
           "website_url": "https://ep2024.europython.eu/speaker/ashish-gupta"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/gogles-big_OCjYWs4.jpg",
           "code": "CSLXTY",
           "name": "Radomir Dopieralski",
           "slug": "radomir-dopieralski",
@@ -59,6 +64,7 @@
       ],
       "start": "2024-07-09T09:30:00+02:00",
       "title": "Learn Python by Making a Console Game",
+      "track": "Education, Community & Diversity",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/learn-python-by-making-a-console-game"
     },
@@ -72,6 +78,7 @@
       "slug": "descriptors-understanding-and-modifying-python-s-attribute-access",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/4f3782b004830f622e19029e5f7fc146_PDHIz3h.jpg",
           "code": "9KSJ3K",
           "name": "Mike M\u00fcller",
           "slug": "mike-muller",
@@ -80,6 +87,7 @@
       ],
       "start": "2024-07-09T09:30:00+02:00",
       "title": "Descriptors - Understanding and Modifying Python's Attribute Access",
+      "track": "Python Internals & Ecosystem",
       "tweet": "Learn how descriptors work and for what they can be used. Customizing attribute access can be useful.",
       "website_url": "https://ep2024.europython.eu/session/descriptors-understanding-and-modifying-python-s-attribute-access"
     },
@@ -93,6 +101,7 @@
       "slug": "pytest-tips-and-tricks-for-a-better-testsuite",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/square-1kpx_pfnPej4.jpg",
           "code": "HZMBBH",
           "name": "Florian Bruhin",
           "slug": "florian-bruhin",
@@ -101,6 +110,7 @@
       ],
       "start": "2024-07-09T09:30:00+02:00",
       "title": "pytest tips and tricks for a better testsuite",
+      "track": "Testing and QA",
       "tweet": "The #pytest tool presents a rapid and simple way to write tests for your Python code. This training gives an introduction with exercises to some distinguishing features.",
       "website_url": "https://ep2024.europython.eu/session/pytest-tips-and-tricks-for-a-better-testsuite"
     },
@@ -114,6 +124,7 @@
       "slug": "humble-data",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/BK7A9876_korr_sRGB_8_1000x1500px_b_NbNTtra.jpg",
           "code": "PXQBU9",
           "name": "Jodie Burchell",
           "slug": "jodie-burchell",
@@ -122,6 +133,7 @@
       ],
       "start": "2024-07-09T09:30:00+02:00",
       "title": "Humble Data",
+      "track": null,
       "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
       "website_url": "https://ep2024.europython.eu/session/humble-data"
     },
@@ -135,6 +147,7 @@
       "slug": "gpu-development-in-python-101",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/profile-2024_x1uY6kh.png",
           "code": "EE7H7J",
           "name": "Jacob Tomlinson",
           "slug": "jacob-tomlinson",
@@ -143,6 +156,7 @@
       ],
       "start": "2024-07-09T09:30:00+02:00",
       "title": "GPU Development in Python 101",
+      "track": "PyData: Software Packages & Jupyter",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/gpu-development-in-python-101"
     },
@@ -163,6 +177,7 @@
       "slug": "wasm-summit",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
           "code": "BQVLYL",
           "name": "Nicholas Tollervey",
           "slug": "nicholas-tollervey",
@@ -171,6 +186,7 @@
       ],
       "start": "2024-07-09T11:15:00+02:00",
       "title": "WASM Summit",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/wasm-summit"
     },
@@ -184,12 +200,14 @@
       "slug": "learn-python-by-making-a-console-game",
       "speakers": [
         {
+          "avatar": "",
           "code": "CPYQCK",
           "name": "Ashish Gupta",
           "slug": "ashish-gupta",
           "website_url": "https://ep2024.europython.eu/speaker/ashish-gupta"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/gogles-big_OCjYWs4.jpg",
           "code": "CSLXTY",
           "name": "Radomir Dopieralski",
           "slug": "radomir-dopieralski",
@@ -198,6 +216,7 @@
       ],
       "start": "2024-07-09T11:15:00+02:00",
       "title": "Learn Python by Making a Console Game",
+      "track": "Education, Community & Diversity",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/learn-python-by-making-a-console-game"
     },
@@ -211,6 +230,7 @@
       "slug": "descriptors-understanding-and-modifying-python-s-attribute-access",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/4f3782b004830f622e19029e5f7fc146_PDHIz3h.jpg",
           "code": "9KSJ3K",
           "name": "Mike M\u00fcller",
           "slug": "mike-muller",
@@ -219,6 +239,7 @@
       ],
       "start": "2024-07-09T11:15:00+02:00",
       "title": "Descriptors - Understanding and Modifying Python's Attribute Access",
+      "track": "Python Internals & Ecosystem",
       "tweet": "Learn how descriptors work and for what they can be used. Customizing attribute access can be useful.",
       "website_url": "https://ep2024.europython.eu/session/descriptors-understanding-and-modifying-python-s-attribute-access"
     },
@@ -232,6 +253,7 @@
       "slug": "pytest-tips-and-tricks-for-a-better-testsuite",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/square-1kpx_pfnPej4.jpg",
           "code": "HZMBBH",
           "name": "Florian Bruhin",
           "slug": "florian-bruhin",
@@ -240,6 +262,7 @@
       ],
       "start": "2024-07-09T11:15:00+02:00",
       "title": "pytest tips and tricks for a better testsuite",
+      "track": "Testing and QA",
       "tweet": "The #pytest tool presents a rapid and simple way to write tests for your Python code. This training gives an introduction with exercises to some distinguishing features.",
       "website_url": "https://ep2024.europython.eu/session/pytest-tips-and-tricks-for-a-better-testsuite"
     },
@@ -253,6 +276,7 @@
       "slug": "humble-data",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/BK7A9876_korr_sRGB_8_1000x1500px_b_NbNTtra.jpg",
           "code": "PXQBU9",
           "name": "Jodie Burchell",
           "slug": "jodie-burchell",
@@ -261,6 +285,7 @@
       ],
       "start": "2024-07-09T11:15:00+02:00",
       "title": "Humble Data",
+      "track": null,
       "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
       "website_url": "https://ep2024.europython.eu/session/humble-data"
     },
@@ -274,6 +299,7 @@
       "slug": "gpu-development-in-python-101",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/profile-2024_x1uY6kh.png",
           "code": "EE7H7J",
           "name": "Jacob Tomlinson",
           "slug": "jacob-tomlinson",
@@ -282,6 +308,7 @@
       ],
       "start": "2024-07-09T11:15:00+02:00",
       "title": "GPU Development in Python 101",
+      "track": "PyData: Software Packages & Jupyter",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/gpu-development-in-python-101"
     },
@@ -302,6 +329,7 @@
       "slug": "wasm-summit",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
           "code": "BQVLYL",
           "name": "Nicholas Tollervey",
           "slug": "nicholas-tollervey",
@@ -310,6 +338,7 @@
       ],
       "start": "2024-07-09T13:45:00+02:00",
       "title": "WASM Summit",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/wasm-summit"
     },
@@ -323,6 +352,7 @@
       "slug": "data-analysis-the-polars-way",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_3812-Edit_xAWUaIr.jpg",
           "code": "CKX3LQ",
           "name": "Jan Pipek",
           "slug": "jan-pipek",
@@ -331,6 +361,7 @@
       ],
       "start": "2024-07-09T13:45:00+02:00",
       "title": "Data Analysis, the Polars Way",
+      "track": "PyData: Software Packages & Jupyter",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/data-analysis-the-polars-way"
     },
@@ -344,6 +375,7 @@
       "slug": "migrating-a-web-application-from-flask-to-fastapi-avoiding-pitfalls",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/profile-jt_1IH04iP.png",
           "code": "SHLWHX",
           "name": "Jessica Temporal",
           "slug": "jessica-temporal",
@@ -352,6 +384,7 @@
       ],
       "start": "2024-07-09T13:45:00+02:00",
       "title": "Migrating a Web Application from Flask to FastAPI: Avoiding Pitfalls",
+      "track": "Web technologies",
       "tweet": "Learn the differences between Flask and FastAPI by migrating a Flask web app to FastAPI.",
       "website_url": "https://ep2024.europython.eu/session/migrating-a-web-application-from-flask-to-fastapi-avoiding-pitfalls"
     },
@@ -365,12 +398,14 @@
       "slug": "maths-in-motion-python-powered-modelling-for-real-world-phenomena",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/GurjotSingh_001_sxMYPRZ.jpg",
           "code": "DJUD9D",
           "name": "Gurjot Singh",
           "slug": "gurjot-singh",
           "website_url": "https://ep2024.europython.eu/speaker/gurjot-singh"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/WhatsApp_Image_2023-04-17_at_08.46.21_NCv6Tmx.jpeg",
           "code": "XNNGCH",
           "name": "Thomas Gregory",
           "slug": "thomas-gregory",
@@ -379,6 +414,7 @@
       ],
       "start": "2024-07-09T13:45:00+02:00",
       "title": "Maths in Motion: Python-Powered Modelling for Real-World Phenomena",
+      "track": "~ None of these topics",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/maths-in-motion-python-powered-modelling-for-real-world-phenomena"
     },
@@ -392,6 +428,7 @@
       "slug": "profiling-python-code",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/PavelFilonov_xSGmZCl.png",
           "code": "CEWJRR",
           "name": "Pavel Filonov",
           "slug": "pavel-filonov",
@@ -400,6 +437,7 @@
       ],
       "start": "2024-07-09T13:45:00+02:00",
       "title": "Profiling Python Code",
+      "track": "Python Libraries & Tooling",
       "tweet": "From my survey more then 50% of python developers do not use profiling. I want to influence this distribution with my workshop",
       "website_url": "https://ep2024.europython.eu/session/profiling-python-code"
     },
@@ -413,6 +451,7 @@
       "slug": "humble-data",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/BK7A9876_korr_sRGB_8_1000x1500px_b_NbNTtra.jpg",
           "code": "PXQBU9",
           "name": "Jodie Burchell",
           "slug": "jodie-burchell",
@@ -421,6 +460,7 @@
       ],
       "start": "2024-07-09T13:45:00+02:00",
       "title": "Humble Data",
+      "track": null,
       "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
       "website_url": "https://ep2024.europython.eu/session/humble-data"
     },
@@ -441,6 +481,7 @@
       "slug": "wasm-summit",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
           "code": "BQVLYL",
           "name": "Nicholas Tollervey",
           "slug": "nicholas-tollervey",
@@ -449,6 +490,7 @@
       ],
       "start": "2024-07-09T15:30:00+02:00",
       "title": "WASM Summit",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/wasm-summit"
     },
@@ -462,6 +504,7 @@
       "slug": "data-analysis-the-polars-way",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_3812-Edit_xAWUaIr.jpg",
           "code": "CKX3LQ",
           "name": "Jan Pipek",
           "slug": "jan-pipek",
@@ -470,6 +513,7 @@
       ],
       "start": "2024-07-09T15:30:00+02:00",
       "title": "Data Analysis, the Polars Way",
+      "track": "PyData: Software Packages & Jupyter",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/data-analysis-the-polars-way"
     },
@@ -483,6 +527,7 @@
       "slug": "migrating-a-web-application-from-flask-to-fastapi-avoiding-pitfalls",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/profile-jt_1IH04iP.png",
           "code": "SHLWHX",
           "name": "Jessica Temporal",
           "slug": "jessica-temporal",
@@ -491,6 +536,7 @@
       ],
       "start": "2024-07-09T15:30:00+02:00",
       "title": "Migrating a Web Application from Flask to FastAPI: Avoiding Pitfalls",
+      "track": "Web technologies",
       "tweet": "Learn the differences between Flask and FastAPI by migrating a Flask web app to FastAPI.",
       "website_url": "https://ep2024.europython.eu/session/migrating-a-web-application-from-flask-to-fastapi-avoiding-pitfalls"
     },
@@ -504,12 +550,14 @@
       "slug": "maths-in-motion-python-powered-modelling-for-real-world-phenomena",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/GurjotSingh_001_sxMYPRZ.jpg",
           "code": "DJUD9D",
           "name": "Gurjot Singh",
           "slug": "gurjot-singh",
           "website_url": "https://ep2024.europython.eu/speaker/gurjot-singh"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/WhatsApp_Image_2023-04-17_at_08.46.21_NCv6Tmx.jpeg",
           "code": "XNNGCH",
           "name": "Thomas Gregory",
           "slug": "thomas-gregory",
@@ -518,6 +566,7 @@
       ],
       "start": "2024-07-09T15:30:00+02:00",
       "title": "Maths in Motion: Python-Powered Modelling for Real-World Phenomena",
+      "track": "~ None of these topics",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/maths-in-motion-python-powered-modelling-for-real-world-phenomena"
     },
@@ -531,6 +580,7 @@
       "slug": "profiling-python-code",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/PavelFilonov_xSGmZCl.png",
           "code": "CEWJRR",
           "name": "Pavel Filonov",
           "slug": "pavel-filonov",
@@ -539,6 +589,7 @@
       ],
       "start": "2024-07-09T15:30:00+02:00",
       "title": "Profiling Python Code",
+      "track": "Python Libraries & Tooling",
       "tweet": "From my survey more then 50% of python developers do not use profiling. I want to influence this distribution with my workshop",
       "website_url": "https://ep2024.europython.eu/session/profiling-python-code"
     },
@@ -552,6 +603,7 @@
       "slug": "humble-data",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/BK7A9876_korr_sRGB_8_1000x1500px_b_NbNTtra.jpg",
           "code": "PXQBU9",
           "name": "Jodie Burchell",
           "slug": "jodie-burchell",
@@ -560,6 +612,7 @@
       ],
       "start": "2024-07-09T15:30:00+02:00",
       "title": "Humble Data",
+      "track": null,
       "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
       "website_url": "https://ep2024.europython.eu/session/humble-data"
     }
