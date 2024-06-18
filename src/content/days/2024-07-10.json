@@ -19,6 +19,7 @@
       "speakers": [],
       "start": "2024-07-10T08:00:00+02:00",
       "title": "Wednesday Registration & Welcome @ Forum Hall Foyer 1st Floor",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/wednesday-registration-welcome-forum-hall-foyer-1st-floor"
     },
@@ -33,6 +34,7 @@
       "speakers": [],
       "start": "2024-07-10T09:00:00+02:00",
       "title": "Opening Session",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/opening-session"
     },
@@ -47,6 +49,7 @@
       "speakers": [],
       "start": "2024-07-10T09:30:00+02:00",
       "title": "Keynote (Anna)",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/keynote-anna"
     },
@@ -74,6 +77,7 @@
       "slug": "learning-to-code-in-the-age-of-ai",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/PXL_20220202_063143310_vOk18MH.jpg",
           "code": "GZHPTE",
           "name": "Sheena O'Connell",
           "slug": "sheena-o-connell",
@@ -82,6 +86,7 @@
       ],
       "start": "2024-07-10T10:45:00+02:00",
       "title": "Learning to code in the age of AI",
+      "track": "Software Engineering & Architecture",
       "tweet": "Across the industry, programmers of all levels are embracing AI and LLMs. But: it's still worthwhile to learn the foundations of coding. And there's a risk: some learners are using AIs as footguns and limiting their own",
       "website_url": "https://ep2024.europython.eu/session/learning-to-code-in-the-age-of-ai"
     },
@@ -95,6 +100,7 @@
       "slug": "how-to-sell-a-big-refactor-or-rewrite-to-the-business",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/DSC_2275_VN94PyO.jpg",
           "code": "9SYDFX",
           "name": "Ivett \u00d6rd\u00f6g",
           "slug": "ivett-ordog",
@@ -103,6 +109,7 @@
       ],
       "start": "2024-07-10T10:45:00+02:00",
       "title": "How to sell a big refactor or rewrite to the business?",
+      "track": "Software Engineering & Architecture",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/how-to-sell-a-big-refactor-or-rewrite-to-the-business"
     },
@@ -116,12 +123,14 @@
       "slug": "profile-optimize-repeat-one-core-is-all-you-needtm",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/ich_jbJLWp2.jpg",
           "code": "BBXVHQ",
           "name": "Valentin Nieper",
           "slug": "valentin-nieper",
           "website_url": "https://ep2024.europython.eu/speaker/valentin-nieper"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/profile_cropped_bw_97GMX9a.jpg",
           "code": "YWKXWU",
           "name": "Jonathan Striebel",
           "slug": "jonathan-striebel",
@@ -130,6 +139,7 @@
       ],
       "start": "2024-07-10T10:45:00+02:00",
       "title": "Profile, Optimize, Repeat: One Core Is All You Need\u2122",
+      "track": "PyData: Data Engineering",
       "tweet": "Profile, optimize, repeat, one core is all you need\u2122! Discover handy tools for your optimization cycle!",
       "website_url": "https://ep2024.europython.eu/session/profile-optimize-repeat-one-core-is-all-you-needtm"
     },
@@ -143,12 +153,14 @@
       "slug": "from-text-to-context-how-we-introduced-a-modern-hybrid-search",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/AnsgarProfilePictureGYG2018MID_AGPP0LB.jpg",
           "code": "CNDARF",
           "name": "Ansgar Gruene",
           "slug": "ansgar-gruene",
           "website_url": "https://ep2024.europython.eu/speaker/ansgar-gruene"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/1000031486_Hy1Eo0N.jpg",
           "code": "WEWNJK",
           "name": "Dharin shah",
           "slug": "dharin-shah",
@@ -157,6 +169,7 @@
       ],
       "start": "2024-07-10T10:45:00+02:00",
       "title": "From Text to Context: How We Introduced a Modern Hybrid Search",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/from-text-to-context-how-we-introduced-a-modern-hybrid-search"
     },
@@ -170,6 +183,7 @@
       "slug": "animations-from-first-principles",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/rgs_square_pMKs1bG.jpg",
           "code": "BLNV7P",
           "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
           "slug": "rodrigo-girao-serrao",
@@ -178,6 +192,7 @@
       ],
       "start": "2024-07-10T10:45:00+02:00",
       "title": "Animations from first principles",
+      "track": "Arts, Crafts Culture & Demos",
       "tweet": "Join Rodrigo \ud83d\udc0d\ud83d\ude80 and learn how to create colourful animations from first principles in Python.",
       "website_url": "https://ep2024.europython.eu/session/animations-from-first-principles"
     },
@@ -191,6 +206,7 @@
       "slug": "spy-static-python-lang-fast-as-c-pythonic-as-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/cdc3cafa377f0e0e93fc69636021ef65_Uf9XcVF.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -199,6 +215,7 @@
       ],
       "start": "2024-07-10T10:45:00+02:00",
       "title": "SPy (Static Python) lang: fast as C, Pythonic as Python",
+      "track": "Python Internals & Ecosystem",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/spy-static-python-lang-fast-as-c-pythonic-as-python"
     },
@@ -212,6 +229,7 @@
       "slug": "sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/dp_ebJUhlq.jpeg",
           "code": "MGQCUC",
           "name": "vishrut kohli",
           "slug": "vishrut-kohli",
@@ -220,6 +238,7 @@
       ],
       "start": "2024-07-10T11:35:00+02:00",
       "title": "\"SUN vs Me : Quest to Outwit the Blinding Sun and Snag Some Extra Z's\"",
+      "track": "Makers, Microcontrollers and IoT",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s"
     },
@@ -233,6 +252,7 @@
       "slug": "fastapi-internals",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/gxssyo64_400x400_UWBnBAf.jpg",
           "code": "BGPPXA",
           "name": "Marcelo Trylesinski",
           "slug": "marcelo-trylesinski",
@@ -241,8 +261,32 @@
       ],
       "start": "2024-07-10T11:35:00+02:00",
       "title": "FastAPI Internals",
+      "track": "Web technologies",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/fastapi-internals"
+    },
+    {
+      "code": "LDUPVK",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "accelerating-python-with-rust-the-pyo3-revolution",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/overview_image_46514765_618317_VN0Q3iZ.png",
+          "code": "7KXBK3",
+          "name": "Roshan R Chandar",
+          "slug": "roshan-r-chandar",
+          "website_url": "https://ep2024.europython.eu/speaker/roshan-r-chandar"
+        }
+      ],
+      "start": "2024-07-10T11:35:00+02:00",
+      "title": "Accelerating Python with Rust: The PyO3 Revolution",
+      "track": "Python Libraries & Tooling",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/accelerating-python-with-rust-the-pyo3-revolution"
     },
     {
       "code": "P93P8V",
@@ -254,6 +298,7 @@
       "slug": "aggregating-data-in-django-using-database-views",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/120862698_10219640284332728_910766720099219908_n_VFpwzLs.jpg",
           "code": "TDUUPM",
           "name": "Mikul\u00e1\u0161 Poul",
           "slug": "mikulas-poul",
@@ -262,6 +307,7 @@
       ],
       "start": "2024-07-10T11:35:00+02:00",
       "title": "Aggregating data in Django using database views",
+      "track": "Web technologies",
       "tweet": "Tired of cumbersome data aggregations using Django? Utilise all that databases give you, like views!",
       "website_url": "https://ep2024.europython.eu/session/aggregating-data-in-django-using-database-views"
     },
@@ -275,6 +321,7 @@
       "slug": "data-pipelines-with-celery-modular-signal-driven-and-manageable",
       "speakers": [
         {
+          "avatar": "",
           "code": "VUZ9LU",
           "name": "Marin Agli\u0107 \u010cuvi\u0107",
           "slug": "marin-aglic-cuvic",
@@ -283,6 +330,7 @@
       ],
       "start": "2024-07-10T11:35:00+02:00",
       "title": "Data pipelines with Celery: modular, signal-driven and manageable",
+      "track": "PyData: Data Engineering",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/data-pipelines-with-celery-modular-signal-driven-and-manageable"
     },
@@ -296,6 +344,7 @@
       "slug": "building-scalable-multimodal-search-applications-with-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Zain_Hasan_headshot_1dWWkI1.jpg",
           "code": "XDWZ8P",
           "name": "Zain Hasan",
           "slug": "zain-hasan",
@@ -304,6 +353,7 @@
       ],
       "start": "2024-07-10T11:35:00+02:00",
       "title": "Building Scalable Multimodal Search Applications with Python",
+      "track": "PyData: Research & Applications",
       "tweet": "We will discuss how we can use open-source multimodal embedding models in conjunction with large generative multimodal models that can see, hear, read, and feel data(!), to perform cross-modal search and multimodal RAG a",
       "website_url": "https://ep2024.europython.eu/session/building-scalable-multimodal-search-applications-with-python"
     },
@@ -317,6 +367,7 @@
       "slug": "deconstructing-the-text-embedding-models",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/DSC_1400_300_square_iw3favM.jpg",
           "code": "H3RSTE",
           "name": "Kacper \u0141ukawski",
           "slug": "kacper-lukawski",
@@ -325,6 +376,7 @@
       ],
       "start": "2024-07-10T12:10:00+02:00",
       "title": "Deconstructing the text embedding models",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "Tokenizers are the most underrated parts of not only LLMs but also text embedding models used to build semantic search apps, i.e., RAG. @LukawskiKacper will describe their crucial role and show how to control them!",
       "website_url": "https://ep2024.europython.eu/session/deconstructing-the-text-embedding-models"
     },
@@ -338,6 +390,7 @@
       "slug": "state-of-the-art-image-generation-for-the-masses-with-diffusers",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/e041d9365863d211e7cded4b128fb2c0_0mUNoVg.jpg",
           "code": "JJLYHF",
           "name": "Sayak Paul",
           "slug": "sayak-paul",
@@ -346,6 +399,7 @@
       ],
       "start": "2024-07-10T12:10:00+02:00",
       "title": "State-of-the-art image generation for the masses with Diffusers",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/state-of-the-art-image-generation-for-the-masses-with-diffusers"
     },
@@ -359,6 +413,7 @@
       "slug": "demystify-python-types-for-pep-729",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/PyCon_US_selfie_sGzgapq.jpeg",
           "code": "XKDR9U",
           "name": "Kir Chou",
           "slug": "kir-chou",
@@ -367,6 +422,7 @@
       ],
       "start": "2024-07-10T12:10:00+02:00",
       "title": "Demystify Python Types for PEP 729",
+      "track": "Python Internals & Ecosystem",
       "tweet": "Have you heard about PEP 729 which proposes a new way to govern the Python's type specifications? Let's dive deep together into the type systems together in EuroPython 2024!",
       "website_url": "https://ep2024.europython.eu/session/demystify-python-types-for-pep-729"
     },
@@ -380,6 +436,7 @@
       "slug": "dfd-documentation-first-development-with-fastapi",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Main_Profile_VKtr0RW.jpeg",
           "code": "RVFLYU",
           "name": "Taehyun Lee",
           "slug": "taehyun-lee",
@@ -388,6 +445,7 @@
       ],
       "start": "2024-07-10T12:10:00+02:00",
       "title": "DFD(Documentation-First Development) with FastAPI",
+      "track": "Web technologies",
       "tweet": "DFD(Documentation-first development) with FastAPI based on source codes that enhances development experience and productivity",
       "website_url": "https://ep2024.europython.eu/session/dfd-documentation-first-development-with-fastapi"
     },
@@ -401,6 +459,7 @@
       "slug": "and-justice-for-ail",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Bewerbungsbild_2024_c1214fr.jpg",
           "code": "ECLXGR",
           "name": "Martina Guttau-Zielke",
           "slug": "martina-guttau-zielke",
@@ -409,6 +468,7 @@
       ],
       "start": "2024-07-10T12:10:00+02:00",
       "title": "... and justice for AIl",
+      "track": "Ethics, Philosophy & Politics",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/and-justice-for-ail"
     },
@@ -422,6 +482,7 @@
       "slug": "from-built-in-concurrency-primitives-to-large-scale-distributed-computing",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/profil_ju_IMG_8102_1_ckFI61i.jpeg",
           "code": "BLWEQ9",
           "name": "Jakub Urban",
           "slug": "jakub-urban",
@@ -430,6 +491,7 @@
       ],
       "start": "2024-07-10T12:10:00+02:00",
       "title": "From built-in concurrency primitives to large scale distributed computing",
+      "track": "PyData: Data Engineering",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/from-built-in-concurrency-primitives-to-large-scale-distributed-computing"
     },
@@ -457,6 +519,7 @@
       "slug": "building-end-to-end-reliable-rag-applications",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/headshot_EAa6B7u.jpg",
           "code": "PVSNUG",
           "name": "Bilge Y\u00fccel",
           "slug": "bilge-yucel",
@@ -465,6 +528,7 @@
       ],
       "start": "2024-07-10T13:00:00+02:00",
       "title": "Building End-to-End Reliable RAG Applications",
+      "track": "PyData: LLMs",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/building-end-to-end-reliable-rag-applications"
     },
@@ -478,6 +542,7 @@
       "slug": "rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/photo_own_croped_5gtMslD.jpg",
           "code": "FNMQXB",
           "name": "Tess Afanasyeva",
           "slug": "tess-afanasyeva",
@@ -486,6 +551,7 @@
       ],
       "start": "2024-07-10T13:00:00+02:00",
       "title": "Rapid detection of red cell membrane defects leading to hemolytic anaemias",
+      "track": "PyData: Machine Learning, Stats",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias"
     },
@@ -499,6 +565,7 @@
       "slug": "stop-using-setup-py",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/piotr_QRIgPbJ.jpg",
           "code": "A7Q3CY",
           "name": "Piotr Gnus",
           "slug": "piotr-gnus",
@@ -507,6 +574,7 @@
       ],
       "start": "2024-07-10T13:00:00+02:00",
       "title": "Stop using setup.py!",
+      "track": "Python Libraries & Tooling",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/stop-using-setup-py"
     },
@@ -520,6 +588,7 @@
       "slug": "the-art-of-the-pull-request",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG-20230319-WA0011_FPa3b6Y.jpeg",
           "code": "CZLRNY",
           "name": "Ben Lomax",
           "slug": "ben-lomax",
@@ -528,6 +597,7 @@
       ],
       "start": "2024-07-10T14:00:00+02:00",
       "title": "The Art of the Pull Request",
+      "track": "Software Engineering & Architecture",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/the-art-of-the-pull-request"
     },
@@ -541,6 +611,7 @@
       "slug": "writing-python-like-it-s-rust-more-robust-code-with-type-hints",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/kuba_NsMw534.png",
           "code": "3HJ8ME",
           "name": "Jakub Ber\u00e1nek",
           "slug": "jakub-beranek",
@@ -549,12 +620,13 @@
       ],
       "start": "2024-07-10T14:00:00+02:00",
       "title": "Writing Python like it's Rust - more robust code with type hints",
+      "track": "Software Engineering & Architecture",
       "tweet": "The many benefits of type hints in Python: leveraging types to gain more confidence in the correctness of our code and to improve development speed.",
       "website_url": "https://ep2024.europython.eu/session/writing-python-like-it-s-rust-more-robust-code-with-type-hints"
     },
     {
       "code": "8NYTHE",
-      "duration": 30,
+      "duration": 60,
       "event_type": "session",
       "level": "beginner",
       "rooms": ["South Hall 2A"],
@@ -563,6 +635,7 @@
       "speakers": [],
       "start": "2024-07-10T14:00:00+02:00",
       "title": "Discussion Panel TBD",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/discussion-panel-tbd"
     },
@@ -576,6 +649,7 @@
       "slug": "geopandas-1-0-and-beyond",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/2019_des_sq_web_small_UNza8hK.jpg",
           "code": "NN8GFM",
           "name": "Martin Fleischmann",
           "slug": "martin-fleischmann",
@@ -584,35 +658,32 @@
       ],
       "start": "2024-07-10T14:00:00+02:00",
       "title": "GeoPandas 1.0 and beyond",
+      "track": "PyData: Software Packages & Jupyter",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/geopandas-1-0-and-beyond"
     },
     {
-      "code": "H8Z37Q",
+      "code": "M9TMMQ",
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
       "rooms": ["North Hall"],
-      "session_type": "Sponsored",
-      "slug": "from-pandas-to-production-elt-with-dlt",
+      "session_type": "Talk",
+      "slug": "one-analysis-a-day-keeps-anomalies-away",
       "speakers": [
         {
-          "code": "3RZLNH",
-          "name": "Violetta Mishechkina",
-          "slug": "violetta-mishechkina",
-          "website_url": "https://ep2024.europython.eu/speaker/violetta-mishechkina"
-        },
-        {
-          "code": "YPDD8Z",
-          "name": "Adrian Brudaru",
-          "slug": "adrian-brudaru",
-          "website_url": "https://ep2024.europython.eu/speaker/adrian-brudaru"
+          "avatar": "https://program.europython.eu/media/avatars/2024-06-17-20-52-23-662_W2e1c1U.jpg",
+          "code": "L9HKCJ",
+          "name": "Madalina Ciortan",
+          "slug": "madalina-ciortan",
+          "website_url": "https://ep2024.europython.eu/speaker/madalina-ciortan"
         }
       ],
       "start": "2024-07-10T14:00:00+02:00",
-      "title": "From Pandas to production: ELT with dlt",
+      "title": "One analysis a day keeps anomalies away!",
+      "track": "PyData: Machine Learning, Stats",
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt"
+      "website_url": "https://ep2024.europython.eu/session/one-analysis-a-day-keeps-anomalies-away"
     },
     {
       "code": "QPPRQQ",
@@ -624,6 +695,7 @@
       "slug": "zero-trust-apis-with-python",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/8c7cbcbb2300732700ae07c355bea321_KNq5p02.jpg",
           "code": "YRPTZY",
           "name": "Jose Haro Peralta",
           "slug": "jose-haro-peralta",
@@ -632,8 +704,32 @@
       ],
       "start": "2024-07-10T14:00:00+02:00",
       "title": "Zero Trust APIs with Python",
+      "track": "Security",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/zero-trust-apis-with-python"
+    },
+    {
+      "code": "7XMZGV",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Forum Hall"],
+      "session_type": "Talk",
+      "slug": "demystifying-asyncio-building-your-own-event-loop-in-python",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/ppTwitter_7jRDDGe.png",
+          "code": "UF9YY9",
+          "name": "Arthur Pastel",
+          "slug": "arthur-pastel",
+          "website_url": "https://ep2024.europython.eu/speaker/arthur-pastel"
+        }
+      ],
+      "start": "2024-07-10T14:35:00+02:00",
+      "title": "Demystifying AsyncIO: Building Your Own Event Loop in Python",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "Explore AsyncIO's core by building a custom event loop in Python to power a FastAPI application, unveiling the internal mechanics behind Python's asynchronous programming.",
+      "website_url": "https://ep2024.europython.eu/session/demystifying-asyncio-building-your-own-event-loop-in-python"
     },
     {
       "code": "KV3DHG",
@@ -645,6 +741,7 @@
       "slug": "the-pyarrow-revolution-in-pandas",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/reuven-new-headshot_srjlhGN.jpg",
           "code": "VZM8L3",
           "name": "Reuven M. Lerner",
           "slug": "reuven-m-lerner",
@@ -653,29 +750,9 @@
       ],
       "start": "2024-07-10T14:35:00+02:00",
       "title": "The PyArrow revolution in Pandas",
+      "track": "PyData: Software Packages & Jupyter",
       "tweet": "Do you use Pandas? Here's what you need to know about PyArrow",
       "website_url": "https://ep2024.europython.eu/session/the-pyarrow-revolution-in-pandas"
-    },
-    {
-      "code": "LDUPVK",
-      "duration": 30,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["Forum Hall"],
-      "session_type": "Talk",
-      "slug": "accelerating-python-with-rust-the-pyo3-revolution",
-      "speakers": [
-        {
-          "code": "7KXBK3",
-          "name": "Roshan R Chandar",
-          "slug": "roshan-r-chandar",
-          "website_url": "https://ep2024.europython.eu/speaker/roshan-r-chandar"
-        }
-      ],
-      "start": "2024-07-10T14:35:00+02:00",
-      "title": "Accelerating Python with Rust: The PyO3 Revolution",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/accelerating-python-with-rust-the-pyo3-revolution"
     },
     {
       "code": "LWSF9C",
@@ -687,6 +764,7 @@
       "slug": "deadcode-a-tool-to-find-and-fix-unused-dead-python-code",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/avatar_smiling_head_yXn1h5n.jpg",
           "code": "K8XYZX",
           "name": "Albertas Gimbutas",
           "slug": "albertas-gimbutas",
@@ -695,6 +773,7 @@
       ],
       "start": "2024-07-10T14:35:00+02:00",
       "title": "Deadcode - a tool to find and fix unused (dead) Python code",
+      "track": "Python Libraries & Tooling",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/deadcode-a-tool-to-find-and-fix-unused-dead-python-code"
     },
@@ -708,6 +787,7 @@
       "slug": "encrypted-computing-in-python-using-openfhe",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/email1709810642622sukanyamandal_3t7fRvP.jpeg",
           "code": "QCRLAF",
           "name": "Sukanya Mandal",
           "slug": "sukanya-mandal",
@@ -716,6 +796,7 @@
       ],
       "start": "2024-07-10T14:35:00+02:00",
       "title": "\u200b\u200bEncrypted computing in Python using OpenFHE",
+      "track": "PyData: Research & Applications",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/encrypted-computing-in-python-using-openfhe"
     },
@@ -729,6 +810,7 @@
       "slug": "unlocking-mixture-of-experts-from-1-know-it-all-to-group-of-jedi-masters",
       "speakers": [
         {
+          "avatar": "",
           "code": "CCZUDR",
           "name": "Pranjal Biyani",
           "slug": "pranjal-biyani",
@@ -737,6 +819,7 @@
       ],
       "start": "2024-07-10T14:35:00+02:00",
       "title": "Unlocking Mixture of Experts : From 1 Know-it-all to group of Jedi Masters",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "At almost equal expense, who'd you hire : A group of experts OR one fairly knowledgeable associate ?",
       "website_url": "https://ep2024.europython.eu/session/unlocking-mixture-of-experts-from-1-know-it-all-to-group-of-jedi-masters"
     },
@@ -764,6 +847,7 @@
       "slug": "designing-config-files-the-conflicting-needs-of-programmers-and-users",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_20230827_164738_VIbffcI.jpg",
           "code": "GYETSD",
           "name": "Steven Pool",
           "slug": "steven-pool",
@@ -772,29 +856,9 @@
       ],
       "start": "2024-07-10T15:30:00+02:00",
       "title": "Designing Config Files: The Conflicting Needs of Programmers and Users",
+      "track": "Software Engineering & Architecture",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/designing-config-files-the-conflicting-needs-of-programmers-and-users"
-    },
-    {
-      "code": "QQMDWQ",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["Terrace 2B"],
-      "session_type": "Talk",
-      "slug": "the-rise-of-the-yaml-engineer",
-      "speakers": [
-        {
-          "code": "9S3Z87",
-          "name": "Matthieu Caneill",
-          "slug": "matthieu-caneill",
-          "website_url": "https://ep2024.europython.eu/speaker/matthieu-caneill"
-        }
-      ],
-      "start": "2024-07-10T15:30:00+02:00",
-      "title": "The rise of the YAML engineer",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/the-rise-of-the-yaml-engineer"
     },
     {
       "code": "SYKBQB",
@@ -806,6 +870,7 @@
       "slug": "automate-your-kitchen-with-python-applied-ai",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/1690376591161_RjWaV73.jpeg",
           "code": "KVWBAJ",
           "name": "Sena Sahin",
           "slug": "sena-sahin",
@@ -814,6 +879,7 @@
       ],
       "start": "2024-07-10T15:30:00+02:00",
       "title": "Automate Your Kitchen with Python & Applied AI",
+      "track": "PyData: Deep Learning, NLP, CV",
       "tweet": "Join me in this delicious adventure where we're reflecting on developing a kitchen project with Python, gain insights into the iterative process of problem-solving",
       "website_url": "https://ep2024.europython.eu/session/automate-your-kitchen-with-python-applied-ai"
     },
@@ -827,6 +893,7 @@
       "slug": "event-sourcing-in-production",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Borjan-square_sL3AMa2.jpg",
           "code": "8LC3YQ",
           "name": "Borjan Tchakaloff",
           "slug": "borjan-tchakaloff",
@@ -835,6 +902,7 @@
       ],
       "start": "2024-07-10T15:30:00+02:00",
       "title": "Event Sourcing in production",
+      "track": "Software Engineering & Architecture",
       "tweet": "Lessons learnt from running Event Sourcing in production: patterns and pitfalls",
       "website_url": "https://ep2024.europython.eu/session/event-sourcing-in-production"
     },
@@ -848,6 +916,7 @@
       "slug": "keeping-your-projects-nice-and-clean",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/08a3919d9f7f16d31dc71ade4db10aac_zR5d9bP.jpg",
           "code": "FWGLE3",
           "name": "Jan Mus\u00edlek",
           "slug": "jan-musilek",
@@ -856,8 +925,32 @@
       ],
       "start": "2024-07-10T15:30:00+02:00",
       "title": "Keeping your projects nice and clean",
+      "track": "Python Libraries & Tooling",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/keeping-your-projects-nice-and-clean"
+    },
+    {
+      "code": "X7GUSW",
+      "duration": 30,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "enterprise-python-software-that-lives-long-and-prosper",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/speaker-pic_KRkwzgM.jpg",
+          "code": "EU8HKQ",
+          "name": "Alvaro Duran",
+          "slug": "alvaro-duran",
+          "website_url": "https://ep2024.europython.eu/speaker/alvaro-duran"
+        }
+      ],
+      "start": "2024-07-10T15:30:00+02:00",
+      "title": "Enterprise Python: Software That Lives Long And Prosper",
+      "track": "Software Engineering & Architecture",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/enterprise-python-software-that-lives-long-and-prosper"
     },
     {
       "code": "ZSBJNR",
@@ -869,12 +962,14 @@
       "slug": "invent-with-pyscript",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
           "code": "BQVLYL",
           "name": "Nicholas Tollervey",
           "slug": "nicholas-tollervey",
           "website_url": "https://ep2024.europython.eu/speaker/nicholas-tollervey"
         },
         {
+          "avatar": "https://program.europython.eu/media/avatars/318e025f2c36f1b25e0720d8055626c5_55n4SL3.jpg",
           "code": "G7GCFL",
           "name": "Joshua Lowe",
           "slug": "joshua-lowe",
@@ -883,6 +978,7 @@
       ],
       "start": "2024-07-10T15:30:00+02:00",
       "title": "Invent with PyScript",
+      "track": "Python Libraries & Tooling",
       "tweet": "Get loosey goosey about Python app development in the browser with Invent and PyScript.",
       "website_url": "https://ep2024.europython.eu/session/invent-with-pyscript"
     },
@@ -896,6 +992,7 @@
       "slug": "enhancing-decorators-with-type-annotations-techniques-and-best-practices",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/1623257808998_LsMvU8V.jpg",
           "code": "BPFJEJ",
           "name": "Koudai Aono",
           "slug": "koudai-aono",
@@ -904,6 +1001,7 @@
       ],
       "start": "2024-07-10T16:05:00+02:00",
       "title": "Enhancing Decorators with Type Annotations: Techniques and Best Practices",
+      "track": "Python Internals & Ecosystem",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/enhancing-decorators-with-type-annotations-techniques-and-best-practices"
     },
@@ -917,6 +1015,7 @@
       "slug": "i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/Headshot_qTUo1Bv.png",
           "code": "VCGHPN",
           "name": "Yair Galler",
           "slug": "yair-galler",
@@ -925,6 +1024,7 @@
       ],
       "start": "2024-07-10T16:05:00+02:00",
       "title": "I reverse engineered a work of art, and this is what I learned",
+      "track": "Arts, Crafts Culture & Demos",
       "tweet": "The story of how I reverse engineered a image processing algorithm that takes an image and tells you how to draw it in a way that you've never seen before.",
       "website_url": "https://ep2024.europython.eu/session/i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned"
     },
@@ -938,6 +1038,7 @@
       "slug": "how-to-deliver-3x-faster-with-effective-api-design",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/577AA1D3-F361-4F3F-9A9F-C3FA05418688_KbiWs6E.JPG",
           "code": "R3AGHS",
           "name": "Michal Cyprian",
           "slug": "michal-cyprian",
@@ -946,6 +1047,7 @@
       ],
       "start": "2024-07-10T16:05:00+02:00",
       "title": "How to deliver 3x faster with effective API design",
+      "track": "Web technologies",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/how-to-deliver-3x-faster-with-effective-api-design"
     },
@@ -959,6 +1061,7 @@
       "slug": "build-the-right-thing-win-a-nobel-prize",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/pycon_uk_profile_pic_under_10mb_IHYslfb.png",
           "code": "JQ3MRZ",
           "name": "Max Kahan",
           "slug": "max-kahan",
@@ -967,6 +1070,7 @@
       ],
       "start": "2024-07-10T16:05:00+02:00",
       "title": "Build the Right Thing, Win a Nobel Prize",
+      "track": "Career, Life, Health",
       "tweet": "Not \u201cbuilding the right thing\u201d is an issue that crops up all over software development. In this talk, I'll help you ensure that what you create is valuable - or at the very least, Nobel Prize-winning.",
       "website_url": "https://ep2024.europython.eu/session/build-the-right-thing-win-a-nobel-prize"
     },
@@ -980,6 +1084,7 @@
       "slug": "impersonation-in-data-engineering-no-more-credentials-in-your-code",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/avatar_bgYNeZr.png",
           "code": "HGKR9V",
           "name": "Marian \u0160pilka",
           "slug": "marian-spilka",
@@ -988,8 +1093,32 @@
       ],
       "start": "2024-07-10T16:05:00+02:00",
       "title": "Impersonation in Data Engineering: No More Credentials in Your Code!",
+      "track": "PyData: Data Engineering",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/impersonation-in-data-engineering-no-more-credentials-in-your-code"
+    },
+    {
+      "code": "U3JZZP",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Sponsored",
+      "slug": "the-role-of-c-in-the-python-ecosystem-the-case-of-the-qt-framework",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/profile_large_hWzvvJp.JPG",
+          "code": "JYPKC9",
+          "name": "Cristi\u00e1n Maureira-Fredes",
+          "slug": "cristian-maureira-fredes",
+          "website_url": "https://ep2024.europython.eu/speaker/cristian-maureira-fredes"
+        }
+      ],
+      "start": "2024-07-10T16:05:00+02:00",
+      "title": "The role of C++ in the Python ecosystem: the case of the Qt framework",
+      "track": "Python Libraries & Tooling",
+      "tweet": "Python \ud83d\udc9a C++, and the Qt Project knows it. Join us on this session to learn about the relevance of C++ in the Python ecosystem.",
+      "website_url": "https://ep2024.europython.eu/session/the-role-of-c-in-the-python-ecosystem-the-case-of-the-qt-framework"
     },
     {
       "code": "WQGUTP",
@@ -998,12 +1127,21 @@
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "session_type": "Keynote",
-      "slug": "keynote-carol",
-      "speakers": [],
+      "slug": "embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/carol_2XdXiWK.webp",
+          "code": "HBHXB3",
+          "name": "Carol Willing",
+          "slug": "carol-willing",
+          "website_url": "https://ep2024.europython.eu/speaker/carol-willing"
+        }
+      ],
       "start": "2024-07-10T16:40:00+02:00",
-      "title": "Keynote (Carol)",
+      "title": "Embracing Python, AI, and Heuristics: Optimal Paths for Impactful Software",
+      "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/keynote-carol"
+      "website_url": "https://ep2024.europython.eu/session/embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software"
     },
     {
       "code": "HAEWRZ",
@@ -1016,6 +1154,7 @@
       "speakers": [],
       "start": "2024-07-10T17:30:00+02:00",
       "title": "Lightning talks Wednesday",
+      "track": null,
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/lightning-talks-wednesday"
     }
