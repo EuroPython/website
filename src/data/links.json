@@ -45,22 +45,25 @@
           "path": "https://djangogirls.org/en/prague/"
         },
         {
-          "name": "Speakers' Dinner",
-          "path": "/speakers-dinner"
+          "name": "C API Summit",
+          "path": "/capi"
         },
         {
-          "name": "PyLadies Events—Lunch, Workshops & Networking",
-          "path": "/pyladies-events"
+          "name": "Humble Data",
+          "path": "/humble-data"
         },
         {
           "name": "WebAssembly Summit",
           "path": "/wasm"
         },
         {
-          "name": "C API Summit",
-          "path": "/capi"
+          "name": "Speakers' Dinner",
+          "path": "/speakers-dinner"
         },
-        { "name": "Humble Data", "path": "/humble-data" }
+        {
+          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "path": "/pyladies-events"
+        }
       ]
     },
     {
