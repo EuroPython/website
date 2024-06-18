@@ -53,6 +53,10 @@
           "path": "/pyladies-events"
         },
         {
+          "name": "PyLadies Social Event",
+          "path": "/pyladies-social"
+        },
+        {
           "name": "WebAssembly Summit",
           "path": "/wasm"
         },
