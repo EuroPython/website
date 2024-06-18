@@ -50,7 +50,8 @@
         },
         {
           "name": "Humble Data",
-          "path": "/humble-data" },
+          "path": "/humble-data"
+        },
         {
           "name": "WebAssembly Summit",
           "path": "/wasm"
