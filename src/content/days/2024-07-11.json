@@ -1250,19 +1250,27 @@
       "website_url": "https://ep2024.europython.eu/session/autoinstrumentation-adventures-enhancing-python-apps-with-opentelemetry"
     },
     {
-      "code": "YSEXNU",
+      "code": "PGLRZK",
       "duration": 45,
       "event_type": "session",
-      "level": "beginner",
+      "level": "intermediate",
       "rooms": ["Forum Hall"],
       "session_type": "Keynote",
-      "slug": "keynote-armin",
-      "speakers": [],
+      "slug": "the-catch-in-rye-seeding-change-and-lessons-learned",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/20191213_SentryIO_JL_002_onkt3Mq.jpeg",
+          "code": "KV9HUP",
+          "name": "Armin Ronacher",
+          "slug": "armin-ronacher",
+          "website_url": "https://ep2024.europython.eu/speaker/armin-ronacher"
+        }
+      ],
       "start": "2024-07-11T16:55:00+02:00",
-      "title": "Keynote (Armin)",
-      "track": null,
+      "title": "The Catch in Rye: Seeding Change and Lessons Learned",
+      "track": "Python Libraries & Tooling",
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/keynote-armin"
+      "website_url": "https://ep2024.europython.eu/session/the-catch-in-rye-seeding-change-and-lessons-learned"
     },
     {
       "code": "ZC37JC",
