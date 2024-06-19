@@ -19,11 +19,7 @@ export interface Props {
 const { style, session } = Astro.props;
 ---
 
-<a
-  href={session.slug && `/session/${session.slug}`}
-  class:list={["session", session.level, session.sessionType]}
-  style={style}
->
+<div class:list={["session", session.level, session.sessionType]} style={style}>
   <header>
     {
       session.sessionType === "poster" && (
@@ -62,7 +58,10 @@ const { style, session } = Astro.props;
       </footer>
     )
   }
-</a>
+  <a href={session.slug && `/session/${session.slug}`} class="read-more">
+    <span class="sr-only">Read more</span>
+  </a>
+</div>
 
 <style>
   .session {
@@ -70,6 +69,7 @@ const { style, session } = Astro.props;
     display: grid;
     flex-direction: column;
     background-color: var(--color-body-background);
+    position: relative;
 
     grid-template-areas:
       "header header"
@@ -85,6 +85,20 @@ const { style, session } = Astro.props;
 
   .session > header {
     grid-area: header;
+  }
+
+  .read-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  footer :global(a) {
+    position: relative;
+    z-index: 2;
   }
 
   @media screen and (max-width: 639px) {
@@ -117,7 +131,7 @@ const { style, session } = Astro.props;
     }
   }
 
-  .session[href]:focus {
+  .session:has(.read-more[href]:focus) {
     background-color: color-mix(
       in srgb,
       var(--color-body-background),
@@ -125,7 +139,7 @@ const { style, session } = Astro.props;
     );
   }
 
-  .session[href]:not([href=""]):hover {
+  .session:has(.read-more[href]:not([href=""]):hover) {
     background-color: color-mix(
       in srgb,
       var(--color-body-background),
