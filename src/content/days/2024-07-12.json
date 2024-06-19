@@ -481,6 +481,29 @@
       "website_url": "https://ep2024.europython.eu/session/tales-from-the-abyss-some-of-the-most-obscure-cpython-bugs"
     },
     {
+      "code": "YEKGCH",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Sponsored",
+      "slug": "chdb-the-blazing-fast-sql-engine-for-data-science",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/%E5%A4%B4%E5%83%8F_whiteBg_AfkdArZ.png",
+          "code": "TX8FQG",
+          "name": "Auxten Wang",
+          "slug": "auxten-wang",
+          "website_url": "https://ep2024.europython.eu/speaker/auxten-wang"
+        }
+      ],
+      "start": "2024-07-12T11:55:00+02:00",
+      "title": "chDB: The Blazing Fast SQL Engine for Data Science",
+      "track": "PyData: Machine Learning, Stats",
+      "tweet": "Explore chDB: a high-performance SQL engine powered by ClickHouse. It supports diverse formats, streaming platforms, integrates seamlessly with Python libraries, and accelerates data-driven applications. #Python #SQL",
+      "website_url": "https://ep2024.europython.eu/session/chdb-the-blazing-fast-sql-engine-for-data-science"
+    },
+    {
       "code": "9VFEQE",
       "duration": 30,
       "event_type": "session",
