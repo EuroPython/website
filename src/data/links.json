@@ -63,6 +63,10 @@
         {
           "name": "PyLadies Events—Lunch, Workshops & Networking",
           "path": "/pyladies-events"
+        },
+        {
+          "name": "PyLadies Social Event",
+          "path": "/pyladies-social"
         }
       ]
     },
