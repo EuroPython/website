@@ -527,6 +527,29 @@
       "website_url": "https://ep2024.europython.eu/session/async-await-mastering-python-s-time-bending-tricks"
     },
     {
+      "code": "GP8AMS",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Talk",
+      "slug": "those-annotations-can-have-things-other-than-typing",
+      "speakers": [
+        {
+          "avatar": "",
+          "code": "BM73DH",
+          "name": "Mattijs Ugen",
+          "slug": "mattijs-ugen",
+          "website_url": "https://ep2024.europython.eu/speaker/mattijs-ugen"
+        }
+      ],
+      "start": "2024-07-12T12:30:00+02:00",
+      "title": "Those annotations can have things other than typing?!",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/those-annotations-can-have-things-other-than-typing"
+    },
+    {
       "code": "MAHYVG",
       "duration": 30,
       "event_type": "session",
@@ -831,35 +854,6 @@
       "website_url": "https://ep2024.europython.eu/session/neurodiversity-in-the-it-industry-why-do-you-need-to-know-more-about-it"
     },
     {
-      "code": "LEMZSB",
-      "duration": 45,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["Forum Hall"],
-      "session_type": "Keynote",
-      "slug": "keynote-lukasz",
-      "speakers": [],
-      "start": "2024-07-12T14:35:00+02:00",
-      "title": "Keynote (\u0141ukasz)",
-      "track": null,
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/keynote-lukasz"
-    },
-    {
-      "duration": 30,
-      "event_type": "break",
-      "rooms": [
-        "Forum Hall",
-        "North Hall",
-        "South Hall 2A",
-        "South Hall 2B",
-        "Terrace 2A",
-        "Terrace 2B"
-      ],
-      "start": "2024-07-12T15:20:00+02:00",
-      "title": "Coffee Break"
-    },
-    {
       "code": "89RTNU",
       "duration": 30,
       "event_type": "session",
@@ -876,7 +870,7 @@
           "website_url": "https://ep2024.europython.eu/speaker/naomi-ceder"
         }
       ],
-      "start": "2024-07-12T15:50:00+02:00",
+      "start": "2024-07-12T14:35:00+02:00",
       "title": "The truth about objects",
       "track": "Python Internals & Ecosystem",
       "tweet": "",
@@ -899,7 +893,7 @@
           "website_url": "https://ep2024.europython.eu/speaker/gowthami-bhogireddy"
         }
       ],
-      "start": "2024-07-12T15:50:00+02:00",
+      "start": "2024-07-12T14:35:00+02:00",
       "title": "Taming One Quadrillion Data Points with Apache Iceberg and Parquet",
       "track": "PyData: Data Engineering",
       "tweet": "Join @TechAtBloomberg's Gowthami Bhogireddy at #EuroPython2024 to learn how her team unleashed the dynamic duo of #bigdata management \u2013 #ApacheIceberg & #Parquet \u2013 to handle one quadrillion data points!",
@@ -929,7 +923,7 @@
           "website_url": "https://ep2024.europython.eu/speaker/adrian-brudaru"
         }
       ],
-      "start": "2024-07-12T15:50:00+02:00",
+      "start": "2024-07-12T14:35:00+02:00",
       "title": "From Pandas to production: ELT with dlt",
       "track": "PyData: Data Engineering",
       "tweet": "",
@@ -952,7 +946,7 @@
           "website_url": "https://ep2024.europython.eu/speaker/abhinand-c"
         }
       ],
-      "start": "2024-07-12T15:50:00+02:00",
+      "start": "2024-07-12T14:35:00+02:00",
       "title": "Building Event-Driven Python service using FastStream and AsyncAPI",
       "track": "Python Libraries & Tooling",
       "tweet": "Unlock the power of AsyncAPI and FastStream in revolutionizing event-driven Python apps. Learn about Event-Driven Architectures, stream processing, and seamless integration with FastStream's Unified API.",
@@ -975,7 +969,7 @@
           "website_url": "https://ep2024.europython.eu/speaker/ariel-ortiz"
         }
       ],
-      "start": "2024-07-12T15:50:00+02:00",
+      "start": "2024-07-12T14:35:00+02:00",
       "title": "From Diamonds to Mixins: Demystifying Multiple Inheritance in Python",
       "track": "Python Internals & Ecosystem",
       "tweet": "",
@@ -998,22 +992,51 @@
           "website_url": "https://ep2024.europython.eu/speaker/tibs"
         }
       ],
-      "start": "2024-07-12T15:50:00+02:00",
+      "start": "2024-07-12T14:35:00+02:00",
       "title": "How I used pgvector and PostgreSQL\u00ae to find pictures of me at a party",
       "track": "Python Libraries & Tooling",
       "tweet": "How I used PostgreSQL\u00ae (and pgvector) to find pictures of me at a party",
       "website_url": "https://ep2024.europython.eu/session/how-i-used-pgvector-and-postgresql-r-to-find-pictures-of-me-at-a-party"
     },
     {
-      "code": "CWDS3S",
+      "duration": 30,
+      "event_type": "break",
+      "rooms": [
+        "Forum Hall",
+        "North Hall",
+        "South Hall 2A",
+        "South Hall 2B",
+        "Terrace 2A",
+        "Terrace 2B"
+      ],
+      "start": "2024-07-12T15:05:00+02:00",
+      "title": "Coffee Break"
+    },
+    {
+      "code": "LEMZSB",
       "duration": 45,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "session_type": "Keynote",
+      "slug": "keynote-lukasz",
+      "speakers": [],
+      "start": "2024-07-12T15:35:00+02:00",
+      "title": "Keynote (\u0141ukasz)",
+      "track": null,
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/keynote-lukasz"
+    },
+    {
+      "code": "CWDS3S",
+      "duration": 50,
       "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "session_type": "Talk",
       "slug": "lightning-talks-friday",
       "speakers": [],
-      "start": "2024-07-12T16:25:00+02:00",
+      "start": "2024-07-12T16:20:00+02:00",
       "title": "Lightning talks Friday",
       "track": null,
       "tweet": "",
