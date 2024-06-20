@@ -550,29 +550,6 @@
       "website_url": "https://ep2024.europython.eu/session/diversity-project-subtle-introduction-of-data-science-using-pyroid"
     },
     {
-      "code": "QZAG8P",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["Terrace 2A"],
-      "session_type": "Talk",
-      "slug": "blender-from-zero-to-addon-in-30-mins",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/2020OliverReischl_sSfGYao.jpg",
-          "code": "LUJRLV",
-          "name": "Oliver Reischl",
-          "slug": "oliver-reischl",
-          "website_url": "https://ep2024.europython.eu/speaker/oliver-reischl"
-        }
-      ],
-      "start": "2024-07-12T12:30:00+02:00",
-      "title": "Blender - From zero to addon in 30 mins",
-      "track": "~ None of these topics",
-      "tweet": "If you hate repeating tasks in Blender, there is nothing more useful than a proper Addon. I'll show you how one can easily",
-      "website_url": "https://ep2024.europython.eu/session/blender-from-zero-to-addon-in-30-mins"
-    },
-    {
       "code": "XPXYWD",
       "duration": 30,
       "event_type": "session",
