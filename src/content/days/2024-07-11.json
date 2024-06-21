@@ -1154,7 +1154,7 @@
       "start": "2024-07-11T16:05:00+02:00",
       "title": "Python Unplugged: Mining for Hidden 'Batteries",
       "track": "Python Internals & Ecosystem",
-      "tweet": "Ever explored the hidden gems in Python's standard library? Our #EuroPython talk unveils lesser-known 'batteries' like the new batch function, unique collections, and more! Dive into Python's treasure trove with us! #\ud83d\udc0d",
+      "tweet": "Ever explored the hidden gems in Python's standard library? My #EuroPython talk unveils lesser-known 'batteries' like the new batch function, unique collections, and more! Dive into Python's treasure trove with us! #\ud83d\udc0d",
       "website_url": "https://ep2024.europython.eu/session/python-unplugged-mining-for-hidden-batteries"
     },
     {
@@ -1168,6 +1168,13 @@
       "speakers": [
         {
           "avatar": "",
+          "code": "XESDB9",
+          "name": "Jonathan Hollenbeck",
+          "slug": "jonathan-hollenbeck",
+          "website_url": "https://ep2024.europython.eu/speaker/jonathan-hollenbeck"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/IMG_8845_J5UxDcz.jpg",
           "code": "XRZT3B",
           "name": "Justine Wezenaar",
           "slug": "justine-wezenaar",
