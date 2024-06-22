@@ -76,29 +76,6 @@
       "title": "Coffee Break"
     },
     {
-      "code": "7CJVKM",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["North Hall"],
-      "session_type": "Talk",
-      "slug": "streamlining-testing-in-a-large-python-codebase",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/profile_picture_202105_HCxWsMb.jpg",
-          "code": "7DHKEF",
-          "name": "Jimmy Lai",
-          "slug": "jimmy-lai",
-          "website_url": "https://ep2024.europython.eu/speaker/jimmy-lai"
-        }
-      ],
-      "start": "2024-07-12T10:45:00+02:00",
-      "title": "Streamlining Testing in a Large Python Codebase",
-      "track": "DevOps and Infrastructure (Cloud & Hardware)",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/streamlining-testing-in-a-large-python-codebase"
-    },
-    {
       "code": "HSZBDG",
       "duration": 30,
       "event_type": "session",
@@ -143,6 +120,29 @@
       "track": "Python Internals & Ecosystem",
       "tweet": "PEP 683: Immortal Objects - A new approach for memory managing",
       "website_url": "https://ep2024.europython.eu/session/pep-683-immortal-objects-a-new-approach-for-memory-managing"
+    },
+    {
+      "code": "LXYWXR",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "test-java-and-c-applications-with-python",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/c6c5e33601dc00f6dc863f768e8e5687_buJezj1.jpg",
+          "code": "VST3SV",
+          "name": "Roberto Polli",
+          "slug": "roberto-polli",
+          "website_url": "https://ep2024.europython.eu/speaker/roberto-polli"
+        }
+      ],
+      "start": "2024-07-12T10:45:00+02:00",
+      "title": "Test java and C applications with python",
+      "track": "Testing and QA",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/test-java-and-c-applications-with-python"
     },
     {
       "code": "NAHJEU",
@@ -527,29 +527,6 @@
       "website_url": "https://ep2024.europython.eu/session/async-await-mastering-python-s-time-bending-tricks"
     },
     {
-      "code": "GP8AMS",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["South Hall 2A"],
-      "session_type": "Talk",
-      "slug": "those-annotations-can-have-things-other-than-typing",
-      "speakers": [
-        {
-          "avatar": "",
-          "code": "BM73DH",
-          "name": "Mattijs Ugen",
-          "slug": "mattijs-ugen",
-          "website_url": "https://ep2024.europython.eu/speaker/mattijs-ugen"
-        }
-      ],
-      "start": "2024-07-12T12:30:00+02:00",
-      "title": "Those annotations can have things other than typing?!",
-      "track": "Python Internals & Ecosystem",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/those-annotations-can-have-things-other-than-typing"
-    },
-    {
       "code": "MAHYVG",
       "duration": 30,
       "event_type": "session",
@@ -716,6 +693,29 @@
       "website_url": "https://ep2024.europython.eu/session/redun-lazy-expressions-for-efficient-reactive-python-workflows"
     },
     {
+      "code": "7CJVKM",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "streamlining-testing-in-a-large-python-codebase",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/profile_picture_202105_HCxWsMb.jpg",
+          "code": "7DHKEF",
+          "name": "Jimmy Lai",
+          "slug": "jimmy-lai",
+          "website_url": "https://ep2024.europython.eu/speaker/jimmy-lai"
+        }
+      ],
+      "start": "2024-07-12T14:00:00+02:00",
+      "title": "Streamlining Testing in a Large Python Codebase",
+      "track": "DevOps and Infrastructure (Cloud & Hardware)",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/streamlining-testing-in-a-large-python-codebase"
+    },
+    {
       "code": "8FKHES",
       "duration": 30,
       "event_type": "session",
@@ -771,7 +771,7 @@
       "slug": "mltraq-track-your-ai-experiments-at-hyperspeed",
       "speakers": [
         {
-          "avatar": "",
+          "avatar": "https://program.europython.eu/media/avatars/me-squared_q05d7Iv.jpg",
           "code": "ZKDDFP",
           "name": "Michele Dallachiesa",
           "slug": "michele-dallachiesa",
@@ -783,29 +783,6 @@
       "track": "PyData: Research & Applications",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/mltraq-track-your-ai-experiments-at-hyperspeed"
-    },
-    {
-      "code": "LXYWXR",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["Terrace 2B"],
-      "session_type": "Talk",
-      "slug": "test-java-and-c-applications-with-python",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/c6c5e33601dc00f6dc863f768e8e5687_buJezj1.jpg",
-          "code": "VST3SV",
-          "name": "Roberto Polli",
-          "slug": "roberto-polli",
-          "website_url": "https://ep2024.europython.eu/speaker/roberto-polli"
-        }
-      ],
-      "start": "2024-07-12T14:00:00+02:00",
-      "title": "Test java and C applications with python",
-      "track": "Testing and QA",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/test-java-and-c-applications-with-python"
     },
     {
       "code": "QS8KJY",
@@ -900,36 +877,6 @@
       "website_url": "https://ep2024.europython.eu/session/taming-one-quadrillion-data-points-with-apache-iceberg-and-parquet"
     },
     {
-      "code": "H8Z37Q",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["North Hall"],
-      "session_type": "Sponsored",
-      "slug": "from-pandas-to-production-elt-with-dlt",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/Team_photo_Violetta_1_vRKT7Wy.jpeg",
-          "code": "3RZLNH",
-          "name": "Violetta Mishechkina",
-          "slug": "violetta-mishechkina",
-          "website_url": "https://ep2024.europython.eu/speaker/violetta-mishechkina"
-        },
-        {
-          "avatar": "https://program.europython.eu/media/avatars/0_36TwAGp.jpeg",
-          "code": "YPDD8Z",
-          "name": "Adrian Brudaru",
-          "slug": "adrian-brudaru",
-          "website_url": "https://ep2024.europython.eu/speaker/adrian-brudaru"
-        }
-      ],
-      "start": "2024-07-12T14:35:00+02:00",
-      "title": "From Pandas to production: ELT with dlt",
-      "track": "PyData: Data Engineering",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt"
-    },
-    {
       "code": "HX9ZWH",
       "duration": 30,
       "event_type": "session",
@@ -974,6 +921,29 @@
       "track": "Python Internals & Ecosystem",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/from-diamonds-to-mixins-demystifying-multiple-inheritance-in-python"
+    },
+    {
+      "code": "TBBKAM",
+      "duration": 30,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "encrypted-computing-in-python-using-openfhe",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/email1709810642622sukanyamandal_3t7fRvP.jpeg",
+          "code": "QCRLAF",
+          "name": "Sukanya Mandal",
+          "slug": "sukanya-mandal",
+          "website_url": "https://ep2024.europython.eu/speaker/sukanya-mandal"
+        }
+      ],
+      "start": "2024-07-12T14:35:00+02:00",
+      "title": "\u200b\u200bEncrypted computing in Python using OpenFHE",
+      "track": "PyData: Research & Applications",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/encrypted-computing-in-python-using-openfhe"
     },
     {
       "code": "WBFDNJ",

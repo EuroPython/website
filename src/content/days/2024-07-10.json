@@ -46,7 +46,15 @@
       "rooms": ["Forum Hall"],
       "session_type": "Keynote",
       "slug": "keynote-anna",
-      "speakers": [],
+      "speakers": [
+        {
+          "avatar": "",
+          "code": "MGUHMW",
+          "name": "Anna P\u0159istoupilov\u00e1",
+          "slug": "anna-pristoupilova",
+          "website_url": "https://ep2024.europython.eu/speaker/anna-pristoupilova"
+        }
+      ],
       "start": "2024-07-10T09:30:00+02:00",
       "title": "Keynote (Anna)",
       "track": null,
@@ -732,6 +740,36 @@
       "website_url": "https://ep2024.europython.eu/session/demystifying-asyncio-building-your-own-event-loop-in-python"
     },
     {
+      "code": "H8Z37Q",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["North Hall"],
+      "session_type": "Sponsored",
+      "slug": "from-pandas-to-production-elt-with-dlt",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/Team_photo_Violetta_1_vRKT7Wy.jpeg",
+          "code": "3RZLNH",
+          "name": "Violetta Mishechkina",
+          "slug": "violetta-mishechkina",
+          "website_url": "https://ep2024.europython.eu/speaker/violetta-mishechkina"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/0_36TwAGp.jpeg",
+          "code": "YPDD8Z",
+          "name": "Adrian Brudaru",
+          "slug": "adrian-brudaru",
+          "website_url": "https://ep2024.europython.eu/speaker/adrian-brudaru"
+        }
+      ],
+      "start": "2024-07-10T14:35:00+02:00",
+      "title": "From Pandas to production: ELT with dlt",
+      "track": "PyData: Data Engineering",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt"
+    },
+    {
       "code": "KV3DHG",
       "duration": 30,
       "event_type": "session",
@@ -776,29 +814,6 @@
       "track": "Python Libraries & Tooling",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/deadcode-a-tool-to-find-and-fix-unused-dead-python-code"
-    },
-    {
-      "code": "TBBKAM",
-      "duration": 30,
-      "event_type": "session",
-      "level": "advanced",
-      "rooms": ["North Hall"],
-      "session_type": "Talk",
-      "slug": "encrypted-computing-in-python-using-openfhe",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/email1709810642622sukanyamandal_3t7fRvP.jpeg",
-          "code": "QCRLAF",
-          "name": "Sukanya Mandal",
-          "slug": "sukanya-mandal",
-          "website_url": "https://ep2024.europython.eu/speaker/sukanya-mandal"
-        }
-      ],
-      "start": "2024-07-10T14:35:00+02:00",
-      "title": "\u200b\u200bEncrypted computing in Python using OpenFHE",
-      "track": "PyData: Research & Applications",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/encrypted-computing-in-python-using-openfhe"
     },
     {
       "code": "VBHMEL",

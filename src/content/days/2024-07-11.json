@@ -325,7 +325,7 @@
       "start": "2024-07-11T11:20:00+02:00",
       "title": "Containerize your Python apps like it's 2024",
       "track": "DevOps and Infrastructure (Cloud & Hardware)",
-      "tweet": "",
+      "tweet": "Practical tips for creating production-ready Docker images for your Python applications. Make your builds faster and containers smaller and more secure!",
       "website_url": "https://ep2024.europython.eu/session/containerize-your-python-apps-like-it-s-2024"
     },
     {
