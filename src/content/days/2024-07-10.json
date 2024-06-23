@@ -39,29 +39,6 @@
       "website_url": "https://ep2024.europython.eu/session/opening-session"
     },
     {
-      "code": "QPSVRA",
-      "duration": 45,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["Forum Hall"],
-      "session_type": "Keynote",
-      "slug": "keynote-anna",
-      "speakers": [
-        {
-          "avatar": "",
-          "code": "MGUHMW",
-          "name": "Anna P\u0159istoupilov\u00e1",
-          "slug": "anna-pristoupilova",
-          "website_url": "https://ep2024.europython.eu/speaker/anna-pristoupilova"
-        }
-      ],
-      "start": "2024-07-10T09:30:00+02:00",
-      "title": "Keynote (Anna)",
-      "track": null,
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/keynote-anna"
-    },
-    {
       "duration": 30,
       "event_type": "break",
       "rooms": [
