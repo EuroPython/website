@@ -65,8 +65,12 @@
           "path": "/pyladies-events"
         },
         {
-          "name": "PyLadies Social Event",
+          "name": "PyLadies Wednesday Social",
           "path": "/pyladies-social"
+        },
+        {
+          "name": "Thursday Social Event",
+          "path": "/social-event"
         }
       ]
     },
