@@ -39,6 +39,29 @@
       "website_url": "https://ep2024.europython.eu/session/opening-session"
     },
     {
+      "code": "WQGUTP",
+      "duration": 45,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Forum Hall"],
+      "session_type": "Keynote",
+      "slug": "embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/carol_2XdXiWK.webp",
+          "code": "HBHXB3",
+          "name": "Carol Willing",
+          "slug": "carol-willing",
+          "website_url": "https://ep2024.europython.eu/speaker/carol-willing"
+        }
+      ],
+      "start": "2024-07-10T09:30:00+02:00",
+      "title": "Embracing Python, AI, and Heuristics: Optimal Paths for Impactful Software",
+      "track": null,
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software"
+    },
+    {
       "duration": 30,
       "event_type": "break",
       "rooms": [
@@ -147,7 +170,7 @@
         {
           "avatar": "https://program.europython.eu/media/avatars/Screenshot_2024-06-19_at_5.34.56PM_5pshx3O.png",
           "code": "WEWNJK",
-          "name": "Dharin shah",
+          "name": "Dharin Shah",
           "slug": "dharin-shah",
           "website_url": "https://ep2024.europython.eu/speaker/dharin-shah"
         }
@@ -1113,27 +1136,27 @@
       "website_url": "https://ep2024.europython.eu/session/the-role-of-c-in-the-python-ecosystem-the-case-of-the-qt-framework"
     },
     {
-      "code": "WQGUTP",
+      "code": "CLNN9A",
       "duration": 45,
       "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "session_type": "Keynote",
-      "slug": "embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software",
+      "slug": "deciphering-the-mysteries-of-human-genomes",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/carol_2XdXiWK.webp",
-          "code": "HBHXB3",
-          "name": "Carol Willing",
-          "slug": "carol-willing",
-          "website_url": "https://ep2024.europython.eu/speaker/carol-willing"
+          "avatar": "",
+          "code": "HUVVLU",
+          "name": "Anna P\u0159istoupilov\u00e1",
+          "slug": "anna-pristoupilova",
+          "website_url": "https://ep2024.europython.eu/speaker/anna-pristoupilova"
         }
       ],
-      "start": "2024-07-10T16:40:00+02:00",
-      "title": "Embracing Python, AI, and Heuristics: Optimal Paths for Impactful Software",
-      "track": null,
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software"
+      "start": "2024-07-10T16:35:00+02:00",
+      "title": "Deciphering the mysteries of human genomes",
+      "track": "Career, Life, Health",
+      "tweet": "Discover the secrets of human genomes! Join this talk in which we will explore the interface between biology, technology and medicine, in the context of the research of rare genetic diseases.",
+      "website_url": "https://ep2024.europython.eu/session/deciphering-the-mysteries-of-human-genomes"
     },
     {
       "code": "HAEWRZ",
