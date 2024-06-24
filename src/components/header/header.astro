@@ -1,0 +1,57 @@
+---
+import { promises as fs } from "fs";
+import { NavItems } from "../nav-items";
+import HeaderActions from "./header-actions.astro";
+import HeaderLogo from "./header-logo.astro";
+
+const links = JSON.parse(await fs.readFile("./src/data/links.json", "utf-8"));
+---
+
+<header class="p-6 flex items-center relative z-40">
+  <input
+    type="checkbox"
+    name="mobile-controls"
+    id="nav_toggle"
+    class="hidden peer"
+    aria-hidden="true"
+  />
+
+  <HeaderLogo />
+
+  <nav class="mr-auto hidden xl:block">
+    <NavItems items={links.header} />
+  </nav>
+
+  <HeaderActions />
+
+  <div
+    class="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 p-6"
+  >
+    <div class="flex items-center">
+      <HeaderLogo />
+      <HeaderActions mobile />
+    </div>
+
+    <nav class="mt-8">
+      <NavItems
+        items={[
+          {
+            name: "Code of Conduct",
+            path: "https://www.europython-society.org/coc/",
+          },
+          /*
+            {
+              name: "Live 📺",
+              path: "/live",
+            },
+            */
+          {
+            name: "Buy tickets",
+            path: "/tickets",
+          },
+          ...links.header,
+        ]}
+      />
+    </nav>
+  </div>
+</header>

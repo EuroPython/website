@@ -80,6 +80,9 @@ const sessions = defineCollection({
     track: z.string().nullable(),
     state: z.enum(["confirmed"]).optional().nullable(),
     tweet: z.string(),
+    resources: z
+      .array(z.object({ resource: z.string().url(), description: z.string() }))
+      .nullable(),
     duration: z.string(),
     level: z.enum(["beginner", "intermediate", "advanced"]),
     delivery: z.enum(["in-person", "remote"]),
@@ -95,7 +98,39 @@ const sessions = defineCollection({
   }),
 });
 
+const days = defineCollection({
+  type: "data",
+  schema: z.object({
+    rooms: z.array(z.string()),
+    events: z.array(
+      z.object({
+        rooms: z.array(z.string()),
+        event_type: z.string(),
+        code: z.string().optional(),
+        title: z.string(),
+        slug: z.string().optional(),
+        session_type: z.string().optional(), // why?
+        speakers: z
+          .array(
+            z.object({
+              code: z.string(),
+              name: z.string(),
+              website_url: z.string(),
+            })
+          )
+          .optional(),
+        tweet: z.string().optional().nullable(),
+        level: z.string().optional().nullable(),
+        start: z.string(),
+        website_url: z.string().optional().nullable(),
+        duration: z.number(),
+      })
+    ),
+  }),
+});
+
 export const collections = {
+  days,
   pages,
   deadlines,
   sponsors,

@@ -3,6 +3,7 @@ import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
 import { Separator } from "../../components/separator/separator";
+import { formatInTimeZone } from "date-fns-tz";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("sessions");
@@ -25,11 +26,14 @@ for (const speaker of speakers) {
 
 <Layout title={entry.data.title} description={entry.data.tweet}>
   <article class="mx-auto pb-12 px-6">
-    <h1
-      class="relative font-title text-text font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
-    >
-      {entry.data.title}
-    </h1>
+    <Prose>
+      <h1
+        class="relative font-title text-text font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit  text-pretty"
+      >
+        {entry.data.title}
+      </h1>
+    </Prose>
+
     <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2 mb-6">
       {
         entry.data.track && (
@@ -53,12 +57,53 @@ for (const speaker of speakers) {
           </>
         )
       }
+      {
+        entry.data.start && (
+          <>
+            <dt class="font-bold">Start:</dt>
+            <dd>
+              {formatInTimeZone(
+                entry.data.start,
+                "Europe/Prague",
+                "HH:mm 'on' dd MMMM yyyy",
+              )}
+            </dd>
+          </>
+        )
+      }
       <dt class="font-bold">Duration:</dt><dd>{entry.data.duration} minutes</dd>
     </dl>
+
     <Prose>
       <h2>Abstract</h2>
+
       <Content />
     </Prose>
+
+    {
+      entry.data.resources && (
+        <>
+          <br />
+
+          <Prose>
+            <h2>Resources</h2>
+          </Prose>
+
+          <ul class="list-disc">
+            {entry.data.resources.map((resource) => (
+              <li>
+                <a
+                  href={resource.resource}
+                  class="text-xl hover:text-primary-hover underline font-bold"
+                >
+                  {resource.description}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
 
     <footer>
       {
@@ -82,11 +127,7 @@ for (const speaker of speakers) {
                   </div>
                 ) : (
                   <div class="flex items-start mb-4 invisible">
-                    <img
-                      src=""
-                      alt=""
-                      class="w-full max-w-sm mb-12"
-                    />
+                    <img src="" alt="" class="w-full max-w-sm mb-12" />
                   </div>
                 )}
                 <div>

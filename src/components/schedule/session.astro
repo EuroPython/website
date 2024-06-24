@@ -1,0 +1,193 @@
+---
+import { formatInTimeZone } from "date-fns-tz";
+import Speakers from "./speakers.astro";
+
+export interface Props {
+  style: any;
+  session: {
+    slug?: string;
+    title: string;
+    start: Date;
+    end: Date;
+    description?: string;
+    level?: string | null;
+    speakers?: { code: string }[];
+    sessionType?: string;
+  };
+}
+
+const { style, session } = Astro.props;
+---
+
+<div class:list={["session", session.level, session.sessionType]} style={style}>
+  <header>
+    {
+      session.sessionType === "poster" && (
+        <>
+          <span class="sr-only">Session type:</span>
+          Poster
+        </>
+      )
+    }
+    {
+      session.sessionType !== "poster" && session.level && (
+        <>
+          <span class="sr-only">Session level:</span>
+          {session.level}
+        </>
+      )
+    }
+  </header>
+
+  <div class="time">
+    <span class="sr-only">Session start:</span>
+    <time>
+      {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")}
+    </time>
+
+    <span class="minus">-</span>
+    <span class="sr-only">Session end:</span>
+    <time>{formatInTimeZone(session.end, "Europe/Prague", "HH:mm")}</time>
+  </div>
+
+  <h2>{session.title}</h2>
+  {
+    session.speakers && session.speakers.length > 0 && (
+      <footer>
+        <Speakers speakers={session.speakers} />
+      </footer>
+    )
+  }
+  <a href={session.slug && `/session/${session.slug}`} class="read-more">
+    <span class="sr-only">Read more</span>
+  </a>
+</div>
+
+<style>
+  .session {
+    font-weight: bold;
+    display: grid;
+    flex-direction: column;
+    background-color: var(--color-body-background);
+    position: relative;
+
+    grid-template-areas:
+      "header header"
+      "time title"
+      "time footer";
+
+    grid-template-columns: 60px 1fr;
+
+    @media screen and (min-width: 640px) {
+      display: flex;
+    }
+  }
+
+  .session > header {
+    grid-area: header;
+  }
+
+  .read-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  footer :global(a) {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 639px) {
+    .session > .time {
+      grid-area: time;
+      padding-block: 8px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid var(--color-text);
+      gap: 4px;
+
+      & .minus {
+        display: none;
+      }
+    }
+
+    .session > h2 {
+      grid-area: title;
+      padding-block: 8px;
+    }
+
+    .session > footer {
+      grid-area: footer;
+    }
+
+    .session > div {
+      display: flex;
+    }
+  }
+
+  .session:has(.read-more[href]:focus) {
+    background-color: color-mix(
+      in srgb,
+      var(--color-body-background),
+      white 70%
+    );
+  }
+
+  .session:has(.read-more[href]:not([href=""]):hover) {
+    background-color: color-mix(
+      in srgb,
+      var(--color-body-background),
+      white 40%
+    );
+  }
+
+  .time,
+  footer {
+    font-size: 0.9em;
+  }
+
+  header,
+  .time,
+  footer,
+  h2 {
+    padding: 0.2em 0.5em;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  footer {
+    border-top: 1px solid var(--color-text);
+    margin-top: auto;
+  }
+
+  header {
+    background-color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    text-transform: capitalize;
+    font-size: 0.8em;
+  }
+
+  .beginner header {
+    background-color: var(--color-session-beginner);
+  }
+
+  .intermediate header {
+    background-color: var(--color-session-intermediate);
+  }
+
+  .advanced header {
+    background-color: var(--color-session-advanced);
+  }
+
+  .poster header {
+    background-color: var(--color-secondary);
+  }
+</style>

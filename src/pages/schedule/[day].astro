@@ -1,0 +1,581 @@
+---
+import { getEntry, getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Break from "../../components/schedule/break.astro";
+import Session from "../../components/schedule/session.astro";
+import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
+import { Title } from "../../components/typography/title";
+import { Select } from "../../components/form/select";
+import { formatInTimeZone } from "date-fns-tz";
+
+const format = (date: Date, format: string) => {
+  return formatInTimeZone(date, "Europe/Prague", format);
+};
+
+const timeToNumber = (time: string) => {
+  const [hours, minutes] = time.split(":").map(Number);
+  return hours * 60 + minutes;
+};
+
+const numberToTime = (number: number) => {
+  const hours = Math.floor(number / 60);
+  const minutes = number % 60;
+  return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+};
+
+export const getStaticPaths = async () => {
+  const days = await getCollection("days");
+
+  return days.map((day) => {
+    return { params: { day: day.id } };
+  });
+};
+
+const days = await getCollection("days");
+const day = await getEntry("days", Astro.params.day);
+
+const ROOMS = day.data.rooms
+  .filter((room) => room.toLowerCase() !== "exhibit hall")
+  .sort();
+
+type ScheduleSession = {
+  title: string;
+  start: Date;
+  startTime: string;
+  end: Date;
+  endTime: string;
+  duration: number;
+  sessionType?: string;
+  type: string;
+  rooms: string[];
+};
+
+// hack for posters :)
+const posters: Array<ScheduleSession> = [];
+
+const sessions = day.data.events
+  .map((event) => {
+    const start = parseISO(event.start);
+    const startTime = format(start, "HH:mm");
+
+    let duration = event.duration;
+
+    // round to the nearest 5 minutes
+    duration = Math.ceil(duration / 5) * 5;
+
+    const end = addMinutes(start, duration);
+    const endTime = format(end, "HH:mm");
+
+    const session: ScheduleSession = {
+      ...event,
+      start,
+      startTime,
+      end,
+      endTime,
+      sessionType: event.session_type?.toLowerCase(),
+      type: event.event_type,
+    };
+
+    if (session.sessionType === "poster") {
+      posters.push(session);
+    }
+
+    return session;
+  })
+  .sort((a, b) => {
+    return a!.start.getTime() - b!.start.getTime();
+  }) as Array<ScheduleSession>;
+
+const sessionsByTime: { [key: string]: Array<(typeof sessions)[0]> } = {};
+
+sessions.forEach((session) => {
+  if (!sessionsByTime[session.startTime]) {
+    sessionsByTime[session.startTime] = [];
+  }
+
+  sessionsByTime[session.startTime].push(session);
+});
+
+const sessionAndTimes = Object.entries(sessionsByTime).sort(([a], [b]) => {
+  return timeToNumber(a) - timeToNumber(b);
+});
+
+// storing some time slots to skip, I don't like it, but it's the easiest way to hide some
+// gaps in the schedule
+
+const timesToSkip: Array<string> = [];
+
+for (let i = 0; i < sessionAndTimes.length - 1; i++) {
+  const [, sessions] = sessionAndTimes[i];
+  const [, nextSessions] = sessionAndTimes[i + 1];
+
+  const ends = sessions.map((session) => session.end);
+  const nextStart = nextSessions[0].start;
+
+  const end = new Date(
+    Math.max(
+      ...ends
+        .filter(
+          // skip talks than end after the next start,
+          // this is for events that span for multiple slots
+          // (like a sponsor fair)
+          (end) => end.getTime() <= nextStart.getTime(),
+        )
+        .map((end) => end.getTime()),
+    ),
+  );
+
+  const hasBreakAfter = nextSessions.some(
+    (session) => session.type === "break",
+  );
+
+  if (nextStart !== end) {
+    const duration = differenceInMinutes(nextStart, end);
+
+    if (duration === 5) {
+      const roomChangeStart = end;
+      const roomChangeTime = format(roomChangeStart, "HH:mm");
+      const roomChangeEnd = addMinutes(roomChangeStart, 5);
+      const roomChangeEndTime = format(roomChangeEnd, "HH:mm");
+
+      if (hasBreakAfter) {
+        timesToSkip.push(roomChangeTime);
+
+        continue;
+      }
+
+      sessionsByTime[roomChangeTime] = [
+        {
+          title: "Room Change",
+          start: roomChangeStart,
+          startTime: roomChangeTime,
+          end: roomChangeEnd,
+          endTime: roomChangeEndTime,
+          duration: 5,
+          type: "room-change",
+          sessionType: undefined,
+          rooms: ROOMS,
+        },
+      ];
+    } else {
+      console.warn("Missing room change", end, nextStart, duration);
+    }
+  }
+}
+
+const slots = Object.entries(sessionsByTime)
+  .sort()
+  .map(([, sessions]) => {
+    let type: "session" | "break" | "lunch" | "room-change" = "session";
+
+    if (sessions.every((session) => session.type === "break")) {
+      type = "break";
+    } else if (
+      // on some days we have lunch and posters in parallel :')
+      sessions.some((session) => session.title.toLowerCase().includes("lunch"))
+    ) {
+      type = "lunch";
+    } else if (sessions.every((session) => session.type === "room-change")) {
+      type = "room-change";
+    }
+
+    return {
+      start: sessions[0].start,
+      startTime: sessions[0].startTime,
+      end: sessions[0].end,
+      endTime: sessions[0].endTime,
+      type: type,
+      sessions,
+    };
+  });
+
+const gridRows = [];
+
+let row = 1;
+
+const timeToRow: { [key: string]: number } = {};
+
+for (let i = 0; i < slots.length; i++) {
+  const current = slots[i];
+  const next = slots[i + 1];
+
+  const currentTime = timeToNumber(current.startTime);
+
+  let nextTime;
+
+  if (next) {
+    nextTime = timeToNumber(next.startTime);
+  } else {
+    nextTime = timeToNumber(current.endTime);
+  }
+
+  const sizeInMinutes = nextTime - currentTime;
+  const size = sizeInMinutes / 5;
+
+  let sizeValue = `repeat(${size}, fit-content(200px))`;
+
+  if (current.type === "break") {
+    sizeValue = `repeat(${size}, var(--break))`;
+  } else if (current.type === "room-change") {
+    sizeValue = `repeat(${size}, var(--room-change))`;
+  }
+
+  gridRows.push(sizeValue);
+
+  for (let i = 0; i < size; i++) {
+    const time = numberToTime(currentTime + i * 5);
+
+    timeToRow[time] = row;
+
+    if (!timesToSkip.includes(time)) {
+      row += 1;
+    }
+  }
+}
+
+// add missing times
+const lastSlot = slots[slots.length - 1];
+const lastTime = Math.max(
+  ...lastSlot.sessions.map((session) => timeToNumber(session.endTime)),
+);
+const currentTime = timeToNumber(lastSlot.endTime);
+
+for (let i = currentTime; i <= lastTime; i += 5) {
+  const time = numberToTime(i);
+  timeToRow[time] = row;
+  row += 1;
+}
+
+type Session = {
+  type: "break" | "room-change" | "session";
+  slug?: string;
+  sessionType: string;
+  rooms: string[];
+};
+
+const getColStart = ({ type, rooms }: Session) => {
+  if (["room-change", "break"].includes(type)) {
+    return 1;
+  }
+
+  const indexes = rooms
+    .map((room) => ROOMS.indexOf(room))
+    .filter((index) => index >= 0);
+  return Math.min(...indexes) + 2;
+};
+
+const getColEnd = ({ type, rooms }: Session) => {
+  if (["room-change", "break"].includes(type)) {
+    return -1;
+  }
+
+  const indexes = rooms.map((room) => ROOMS.indexOf(room));
+  return Math.max(...indexes) + 3;
+};
+
+const getSessionStyle = (session: any) => {
+  const style = {
+    "--start": timeToRow[session.startTime],
+    "--end": timeToRow[session.endTime],
+    "--col-start": getColStart(session),
+    "--col-end": getColEnd(session),
+  };
+
+  if (!style["--end"]) {
+    throw new Error(`Session ${session.title} is missing an end time`);
+  }
+
+  return style;
+};
+
+const sortSessionByRooms = (a: ScheduleSession, b: ScheduleSession) => {
+  const aIndex = ROOMS.indexOf(a.rooms[0]);
+  const bIndex = ROOMS.indexOf(b.rooms[0]);
+
+  return aIndex - bIndex;
+};
+
+const postersByTime: { [key: string]: Array<ScheduleSession> } = {};
+
+posters.forEach((poster) => {
+  if (!postersByTime[poster.startTime]) {
+    postersByTime[poster.startTime] = [];
+  }
+
+  postersByTime[poster.startTime].push(poster);
+});
+---
+
+<Layout
+  title=`Schedule - ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
+  description=`Schedule for ${format(parseISO(Astro.params.day), "eeee, do MMMM, yyyy")}`
+>
+  <div class="px-6">
+    <Title>Schedule</Title>
+
+    <Select id="schedule-select" name="schedule-select">
+      {
+        days.map((day) => {
+          const date = parseISO(day.id);
+          const dateText = format(date, "eeee, do MMMM, yyyy");
+
+          return (
+            <option value={day.id} selected={day.id === Astro.params.day}>
+              {dateText}
+            </option>
+          );
+        })
+      }
+    </Select>
+  </div>
+
+  <div class="h-12"></div>
+
+  <div class="full-bleed">
+    <header class="schedule-container header">
+      <div
+        class="schedule"
+        style={{
+          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(200px, 1fr))`,
+        }}
+      >
+        <div>Time</div>
+        {ROOMS.map((room) => <div>{room}</div>)}
+      </div>
+    </header>
+
+    <div class="schedule-container">
+      <div
+        class="schedule"
+        style={{
+          gridTemplateRows: gridRows.join(" "),
+          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(200px, 1fr))`,
+        }}
+      >
+        {
+          slots.map((slot) => (
+            <div class="slot">
+              <div
+                class="time"
+                style={{
+                  "--start": timeToRow[slot.startTime],
+                  "--end": timeToRow[slot.endTime],
+                }}
+              >
+                <h2>{format(slot.start, "HH:mm")}</h2>
+              </div>
+
+              {sessionsByTime[slot.startTime]
+                .sort(sortSessionByRooms)
+                .map((session) => {
+                  const style = getSessionStyle(session);
+
+                  if (
+                    session.type === "room-change" ||
+                    session.type === "break"
+                  ) {
+                    return (
+                      <Break
+                        title={session.title}
+                        time={session.startTime}
+                        style={style}
+                      />
+                    );
+                  }
+
+                  return <Session session={session} style={style} />;
+                })}
+
+              {postersByTime[slot.startTime] && (
+                // big assumption here, that all posters start at the same
+                // time, we should add a check for that
+                <div
+                  class="posters"
+                  style={{
+                    "--start": timeToRow[posters[0].startTime],
+                    "--end": timeToRow[posters[0].endTime],
+                  }}
+                >
+                  <h2>Posters ({posters[0].rooms.join(", ")})</h2>
+
+                  <div>
+                    {posters.map((session) => {
+                      const style = {};
+
+                      return <Session session={session} style={style} />;
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="h-12"></div>
+  </div>
+</Layout>
+
+<style>
+  :global(body) {
+    overflow-x: hidden;
+  }
+
+  :global(select) {
+    font-weight: bold;
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @apply px-6;
+  }
+
+  .slot {
+    display: contents;
+  }
+
+  header,
+  .time {
+    display: none;
+  }
+
+  :global(.session) {
+    position: relative;
+    z-index: 10;
+  }
+
+  :global(.session),
+  .time,
+  :global(.break),
+  .room-change,
+  header,
+  header > div > div {
+    outline: 2px solid var(--color-primary);
+  }
+
+  .posters {
+    display: none;
+  }
+
+  @media screen and (min-width: 640px) {
+    .schedule-container {
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .schedule-container.header {
+      overflow-x: hidden;
+      padding-bottom: 0;
+    }
+
+    .time,
+    header {
+      display: block;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--color-body-background);
+      font-weight: bold;
+      z-index: 20;
+
+      > div > div {
+        padding: 8px;
+      }
+    }
+
+    .schedule {
+      --header-height: 30px;
+      --break: 8px;
+      --lunch: 8px;
+      --minute: 4px;
+      --room-change: calc(var(--minute) * 8);
+      --5min: calc(var(--minute) * 5);
+
+      display: grid;
+      gap: 2px;
+      padding: 0;
+    }
+
+    :global(.session),
+    .time,
+    .posters,
+    .room-change,
+    :global(.break) {
+      grid-row: var(--start) / var(--end);
+      grid-column: var(--col-start) / var(--col-end);
+    }
+
+    .time {
+      padding: 8px;
+      grid-column: 1 / 2;
+      font-weight: bold;
+      outline: none;
+    }
+
+    :global(.session.poster) {
+      display: none;
+    }
+
+    .posters {
+      grid-column: 3 / 6;
+      position: relative;
+      display: block;
+
+      &::after {
+        content: "";
+        display: block;
+      }
+
+      h2,
+      &::after {
+        background: var(--color-primary);
+        color: var(--color-text-inverted);
+        padding: 4px 8px;
+        outline: 2px solid var(--color-primary);
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+
+      > div {
+        display: flex;
+
+        & > :global(*) {
+          flex: 1;
+        }
+      }
+
+      & :global(.session.poster) {
+        display: flex;
+      }
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const containers = document.querySelectorAll(".schedule-container");
+
+    function syncScroll(event: any) {
+      const other =
+        containers[0] === event.target ? containers[1] : containers[0];
+      other.scrollTop = event.target.scrollTop;
+      other.scrollLeft = event.target.scrollLeft;
+    }
+
+    containers.forEach((container) => {
+      container.addEventListener("scroll", syncScroll);
+    });
+  });
+
+  document
+    .getElementById("schedule-select")!
+    .addEventListener("change", (event) => {
+      // @ts-ignore
+      const day = event.target!.value;
+      window.location.href = `/schedule/${day}`;
+    });
+</script>
