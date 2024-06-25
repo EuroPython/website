@@ -92,6 +92,10 @@
         {
           "name": "Volunteering",
           "path": "/volunteers"
+        },
+        {
+          "name": "Job Board",
+          "path": "/jobs-board"
         }
       ]
     },
