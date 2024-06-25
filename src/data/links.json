@@ -92,6 +92,10 @@
         {
           "name": "Volunteering",
           "path": "/volunteers"
+        },
+        {
+          "name": "Sponsor Swag & Promo",
+          "path": "/virtual-swag"
         }
       ]
     },
