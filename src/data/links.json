@@ -4,6 +4,10 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Overview",
+          "path": "/programme"
+        },
+        {
           "name": "Schedule",
           "path": "/schedule"
         },
