@@ -95,7 +95,7 @@
         },
         {
           "name": "Job Board",
-          "path": "/jobs-board"
+          "path": "/job-board"
         }
       ]
     },
