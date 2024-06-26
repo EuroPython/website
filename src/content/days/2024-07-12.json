@@ -256,7 +256,7 @@
       "start": "2024-07-12T11:20:00+02:00",
       "title": "You are sharing your code wrong (and what to do about it)",
       "track": "Python Internals & Ecosystem",
-      "tweet": "",
+      "tweet": "learn how and why to give your users a package, not a puzzle",
       "website_url": "https://ep2024.europython.eu/session/you-are-sharing-your-code-wrong-and-what-to-do-about-it"
     },
     {
@@ -525,6 +525,29 @@
       "track": "Python Internals & Ecosystem",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/async-await-mastering-python-s-time-bending-tricks"
+    },
+    {
+      "code": "GP8AMS",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Talk",
+      "slug": "those-annotations-can-have-things-other-than-typing",
+      "speakers": [
+        {
+          "avatar": "",
+          "code": "BM73DH",
+          "name": "Mattijs Ugen",
+          "slug": "mattijs-ugen",
+          "website_url": "https://ep2024.europython.eu/speaker/mattijs-ugen"
+        }
+      ],
+      "start": "2024-07-12T12:30:00+02:00",
+      "title": "Those annotations can have things other than typing?!",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/those-annotations-can-have-things-other-than-typing"
     },
     {
       "code": "MAHYVG",
@@ -998,6 +1021,13 @@
       "website_url": "https://ep2024.europython.eu/session/keynote-lukasz"
     },
     {
+      "duration": 5,
+      "event_type": "break",
+      "rooms": ["Forum Hall"],
+      "start": "2024-07-12T16:20:00+02:00",
+      "title": "Setup for lightning talks"
+    },
+    {
       "code": "CWDS3S",
       "duration": 50,
       "event_type": "session",
@@ -1006,7 +1036,7 @@
       "session_type": "Talk",
       "slug": "lightning-talks-friday",
       "speakers": [],
-      "start": "2024-07-12T16:20:00+02:00",
+      "start": "2024-07-12T16:25:00+02:00",
       "title": "Lightning talks Friday",
       "track": null,
       "tweet": "",
@@ -1021,7 +1051,7 @@
       "session_type": "Announcements",
       "slug": "sprint-orientation",
       "speakers": [],
-      "start": "2024-07-12T17:10:00+02:00",
+      "start": "2024-07-12T17:15:00+02:00",
       "title": "Sprint orientation",
       "track": null,
       "tweet": "",
@@ -1036,7 +1066,7 @@
       "session_type": "Announcements",
       "slug": "closing-session",
       "speakers": [],
-      "start": "2024-07-12T17:30:00+02:00",
+      "start": "2024-07-12T17:35:00+02:00",
       "title": "Closing Session",
       "track": null,
       "tweet": "",
