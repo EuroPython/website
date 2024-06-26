@@ -131,6 +131,10 @@
         {
           "name": "Tickets information",
           "path": "/tickets"
+        },
+        {
+          "name": "Remote tickets information",
+          "path": "/remote"
         }
       ]
     }
