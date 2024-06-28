@@ -228,29 +228,6 @@
       "website_url": "https://ep2024.europython.eu/session/spy-static-python-lang-fast-as-c-pythonic-as-python"
     },
     {
-      "code": "HUKDBU",
-      "duration": 30,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["South Hall 2B"],
-      "session_type": "Talk",
-      "slug": "sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/dp_ebJUhlq.jpeg",
-          "code": "MGQCUC",
-          "name": "vishrut kohli",
-          "slug": "vishrut-kohli",
-          "website_url": "https://ep2024.europython.eu/speaker/vishrut-kohli"
-        }
-      ],
-      "start": "2024-07-10T11:35:00+02:00",
-      "title": "\"SUN vs Me : Quest to Outwit the Blinding Sun and Snag Some Extra Z's\"",
-      "track": "Makers, Microcontrollers and IoT",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/sun-vs-me-quest-to-outwit-the-blinding-sun-and-snag-some-extra-z-s"
-    },
-    {
       "code": "K9AHYT",
       "duration": 30,
       "event_type": "session",
@@ -1065,29 +1042,6 @@
       "track": "Web technologies",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/how-to-deliver-3x-faster-with-effective-api-design"
-    },
-    {
-      "code": "T3QAPN",
-      "duration": 30,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["South Hall 2B"],
-      "session_type": "Talk",
-      "slug": "build-the-right-thing-win-a-nobel-prize",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/pycon_uk_profile_pic_under_10mb_IHYslfb.png",
-          "code": "JQ3MRZ",
-          "name": "Max Kahan",
-          "slug": "max-kahan",
-          "website_url": "https://ep2024.europython.eu/speaker/max-kahan"
-        }
-      ],
-      "start": "2024-07-10T16:05:00+02:00",
-      "title": "Build the Right Thing, Win a Nobel Prize",
-      "track": "Career, Life, Health",
-      "tweet": "Not \u201cbuilding the right thing\u201d is an issue that crops up all over software development. In this talk, I'll help you ensure that what you create is valuable - or at the very least, Nobel Prize-winning.",
-      "website_url": "https://ep2024.europython.eu/session/build-the-right-thing-win-a-nobel-prize"
     },
     {
       "code": "TAW7PN",
