@@ -78,7 +78,7 @@
       "slug": "descriptors-understanding-and-modifying-python-s-attribute-access",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/4f3782b004830f622e19029e5f7fc146_PDHIz3h.jpg",
+          "avatar": "https://program.europython.eu/media/avatars/4f3782b004830f622e19029e5f7fc146_41xklgK.jpg",
           "code": "9KSJ3K",
           "name": "Mike M\u00fcller",
           "slug": "mike-muller",
@@ -230,7 +230,7 @@
       "slug": "descriptors-understanding-and-modifying-python-s-attribute-access",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/4f3782b004830f622e19029e5f7fc146_PDHIz3h.jpg",
+          "avatar": "https://program.europython.eu/media/avatars/4f3782b004830f622e19029e5f7fc146_41xklgK.jpg",
           "code": "9KSJ3K",
           "name": "Mike M\u00fcller",
           "slug": "mike-muller",
@@ -615,6 +615,29 @@
       "track": null,
       "tweet": "Are you interested in Data Science and want to try it out with Python but not sure how? Join us for the HumbleData workshop as part of the EuroPython Prague! https://ep2024.europython.eu/humble-data",
       "website_url": "https://ep2024.europython.eu/session/humble-data"
+    },
+    {
+      "code": "PEPTQM",
+      "duration": 45,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["Club B"],
+      "session_type": "Talk (long session)",
+      "slug": "beginner-conference-orientation",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/linkedin_mborus_1700141767314_hEzZlJY.jpg",
+          "code": "GULHDK",
+          "name": "Martin Borus",
+          "slug": "martin-borus",
+          "website_url": "https://ep2024.europython.eu/speaker/martin-borus"
+        }
+      ],
+      "start": "2024-07-09T17:10:00+02:00",
+      "title": "Beginner Conference Orientation",
+      "track": null,
+      "tweet": "First time at a conference? Don't know what this is all about? Come join us for a free overview!",
+      "website_url": "https://ep2024.europython.eu/session/beginner-conference-orientation"
     }
   ],
   "rooms": ["Club A", "Club B", "Club C", "Club D", "Club E", "Club H"]

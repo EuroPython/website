@@ -497,29 +497,6 @@
       "website_url": "https://ep2024.europython.eu/session/lies-damned-lies-and-large-language-models"
     },
     {
-      "code": "CEW8S9",
-      "duration": 30,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["South Hall 2B"],
-      "session_type": "Talk",
-      "slug": "nothing-for-us-without-us-breaking-unconscious-bias-in-building-products",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/IMG-20220514-WA0040_1_tHP9ax7.jpg",
-          "code": "XZ9GLY",
-          "name": "Victor Ogunjobi",
-          "slug": "victor-ogunjobi",
-          "website_url": "https://ep2024.europython.eu/speaker/victor-ogunjobi"
-        }
-      ],
-      "start": "2024-07-11T12:30:00+02:00",
-      "title": "Nothing for Us, Without Us; Breaking Unconscious Bias in Building Products",
-      "track": "Education, Community & Diversity",
-      "tweet": "Are our products truly inclusive? Unconscious bias often taints well-intentioned projects, causing unintended exclusions. This talk offers ideas for inclusive product and community design. #UnconsciousBias #TechEthics",
-      "website_url": "https://ep2024.europython.eu/session/nothing-for-us-without-us-breaking-unconscious-bias-in-building-products"
-    },
-    {
       "code": "DNYFYG",
       "duration": 30,
       "event_type": "session",
