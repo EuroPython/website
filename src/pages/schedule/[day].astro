@@ -382,10 +382,22 @@ posters.forEach((poster) => {
                       />
                     );
                   }
-
-                  return <Session session={session} style={style} />;
-                })}
-
+                // If session.rooms has more than one value, do not display the room name
+                if (session.rooms.length > 1) {
+                  return (
+                    <div class="session-wrapper">
+                      <Session session={session} style={style} />
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div class="session-wrapper">
+                      <div class="session-room-name">{session.rooms}</div>
+                      <Session session={session} style={style} />
+                    </div>
+                  );
+                }
+              })}
               {postersByTime[slot.startTime] && (
                 // big assumption here, that all posters start at the same
                 // time, we should add a check for that
@@ -458,6 +470,7 @@ posters.forEach((poster) => {
   .posters {
     display: none;
   }
+
 
   @media screen and (min-width: 640px) {
     .schedule-container {
@@ -553,6 +566,30 @@ posters.forEach((poster) => {
       }
     }
   }
+
+  .session-wrapper {
+    display: contents;
+  }
+
+  .session-room-name {
+    display: none;
+    font-weight: bold;
+    padding: 4px 8px;
+    background: var(--color-primary);
+    color: var(--color-text-inverted);
+  }
+
+  @media screen and (max-width: 639px) {
+    .session-room-name {
+      display: block;
+      grid-column: span 1;
+    }
+
+    .session {
+      grid-column: span 1;
+    }
+  }
+
 </style>
 
 <script>
