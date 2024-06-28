@@ -104,9 +104,9 @@
         {
           "name": "Job Board",
           "path": "/job-board"
-        }, 
-        
-        { 
+        },
+
+        {
           "name": "Sponsor Swag & Promo",
           "path": "/virtual-swag"
         }
