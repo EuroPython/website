@@ -13,10 +13,15 @@ export interface Props {
     level?: string | null;
     speakers?: { code: string }[];
     sessionType?: string;
+    rooms: string[];
   };
 }
 
 const { style, session } = Astro.props;
+
+const hasRoom = session.rooms.length === 1;
+const hasSpeakers = session.speakers && session.speakers.length > 0;
+const hasFooter = hasRoom || hasSpeakers;
 ---
 
 <div class:list={["session", session.level, session.sessionType]} style={style}>
@@ -51,13 +56,26 @@ const { style, session } = Astro.props;
   </div>
 
   <h2>{session.title}</h2>
+
   {
-    session.speakers && session.speakers.length > 0 && (
-      <footer>
-        <Speakers speakers={session.speakers} />
+    hasFooter && (
+      <footer class:list={{ "has-room": hasRoom, "has-speakers": hasSpeakers }}>
+        {session.rooms.length === 1 && (
+          <div class="room-info">
+            <span class="sr-only">Room:</span>
+            {session.rooms && session.rooms.join(", ")}
+            {hasSpeakers && <span aria-hidden="true"> • </span>}
+          </div>
+        )}
+        {session.speakers && session.speakers.length > 0 && (
+          <>
+            <Speakers speakers={session.speakers} />
+          </>
+        )}
       </footer>
     )
   }
+
   <a href={session.slug && `/session/${session.slug}`} class="read-more">
     <span class="sr-only">Read more</span>
   </a>
@@ -80,6 +98,14 @@ const { style, session } = Astro.props;
 
     @media screen and (min-width: 640px) {
       display: flex;
+    }
+  }
+
+  .room-info {
+    display: inline;
+
+    @media screen and (min-width: 640px) {
+      display: none;
     }
   }
 
@@ -163,7 +189,7 @@ const { style, session } = Astro.props;
     margin-bottom: 1em;
   }
 
-  footer {
+  footer.has-speakers {
     border-top: 1px solid var(--color-text);
     margin-top: auto;
   }
