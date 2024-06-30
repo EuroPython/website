@@ -210,11 +210,17 @@ for (let i = 0; i < slots.length; i++) {
   }
 
   const sizeInMinutes = nextTime - currentTime;
-  const size = sizeInMinutes / 5;
+  let size = sizeInMinutes / 5;
 
   let sizeValue = `repeat(${size}, fit-content(200px))`;
 
   if (current.type === "break") {
+    // we might have some "breaks" that are quite short, for example
+    // a time to setup the lighting talks, which lasts only 5 minutes
+    // so we give the row a minimum size of 3, so we never have
+    // visually small breaks :)
+    size = Math.max(3, size);
+
     sizeValue = `repeat(${size}, var(--break))`;
   } else if (current.type === "room-change") {
     sizeValue = `repeat(${size}, var(--room-change))`;
