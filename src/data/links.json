@@ -45,6 +45,10 @@
       "name": "Events",
       "items": [
         {
+          "name": "Sprint Weekend",
+          "path": "/sprints"
+        },
+        {
           "name": "Django Girls Workshop",
           "path": "https://djangogirls.org/en/prague/"
         },
