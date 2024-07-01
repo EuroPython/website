@@ -65,6 +65,10 @@
           "path": "/session/webassembly-summit"
         },
         {
+          "name": "PyGameZero Workshop (Wednesday)",
+          "path": "/pygamezero"
+        },
+        {
           "name": "Speakers' Dinner",
           "path": "/speakers-dinner"
         },
