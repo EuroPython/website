@@ -54,7 +54,7 @@
         },
         {
           "name": "C API Summit",
-          "path": "/capi"
+          "path": "/session/c-api-summit"
         },
         {
           "name": "Humble Data",
@@ -62,7 +62,7 @@
         },
         {
           "name": "WebAssembly Summit",
-          "path": "/wasm"
+          "path": "/session/wasm-summit"
         },
         {
           "name": "Speakers' Dinner",
