@@ -22,7 +22,7 @@
       "level": "advanced",
       "rooms": ["Club D"],
       "session_type": "Conference Workshop",
-      "slug": "wasm-summit",
+      "slug": "webassembly-summit",
       "speakers": [
         {
           "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
@@ -33,10 +33,10 @@
         }
       ],
       "start": "2024-07-09T09:30:00+02:00",
-      "title": "WASM Summit",
+      "title": "WebAssembly Summit",
       "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/wasm-summit"
+      "website_url": "https://ep2024.europython.eu/session/webassembly-summit"
     },
     {
       "code": "BCCBHN",
@@ -174,7 +174,7 @@
       "level": "advanced",
       "rooms": ["Club D"],
       "session_type": "Conference Workshop",
-      "slug": "wasm-summit",
+      "slug": "webassembly-summit",
       "speakers": [
         {
           "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
@@ -185,10 +185,10 @@
         }
       ],
       "start": "2024-07-09T11:15:00+02:00",
-      "title": "WASM Summit",
+      "title": "WebAssembly Summit",
       "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/wasm-summit"
+      "website_url": "https://ep2024.europython.eu/session/webassembly-summit"
     },
     {
       "code": "BCCBHN",
@@ -326,7 +326,7 @@
       "level": "advanced",
       "rooms": ["Club D"],
       "session_type": "Conference Workshop",
-      "slug": "wasm-summit",
+      "slug": "webassembly-summit",
       "speakers": [
         {
           "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
@@ -337,10 +337,10 @@
         }
       ],
       "start": "2024-07-09T13:45:00+02:00",
-      "title": "WASM Summit",
+      "title": "WebAssembly Summit",
       "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/wasm-summit"
+      "website_url": "https://ep2024.europython.eu/session/webassembly-summit"
     },
     {
       "code": "CL3NZ9",
@@ -478,7 +478,7 @@
       "level": "advanced",
       "rooms": ["Club D"],
       "session_type": "Conference Workshop",
-      "slug": "wasm-summit",
+      "slug": "webassembly-summit",
       "speakers": [
         {
           "avatar": "https://program.europython.eu/media/avatars/avatar_large_FOn6ad4.jpg",
@@ -489,10 +489,10 @@
         }
       ],
       "start": "2024-07-09T15:30:00+02:00",
-      "title": "WASM Summit",
+      "title": "WebAssembly Summit",
       "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/wasm-summit"
+      "website_url": "https://ep2024.europython.eu/session/webassembly-summit"
     },
     {
       "code": "CL3NZ9",
