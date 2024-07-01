@@ -57,12 +57,12 @@
           "path": "/wasm"
         },
         {
-          "name": "Speakers' Dinner",
-          "path": "/speakers-dinner"
-        },
-        {
           "name": "PyGameZero Workshop (Wednesday)",
           "path": "/pygamezero"
+        },
+        {
+          "name": "Speakers' Dinner",
+          "path": "/speakers-dinner"
         },
         {
           "name": "PyLadies Events—Lunch, Workshops & Networking",
