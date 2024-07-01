@@ -274,6 +274,29 @@
       "website_url": "https://ep2024.europython.eu/session/accelerating-python-with-rust-the-pyo3-revolution"
     },
     {
+      "code": "LEXULB",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2B"],
+      "session_type": "Talk",
+      "slug": "intellectual-property-law-101",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/d3da8160dd1848c1194e15df4fb1051c_bFs9Mv0.jpg",
+          "code": "XXDZKP",
+          "name": "Anwesha Das",
+          "slug": "anwesha-das",
+          "website_url": "https://ep2024.europython.eu/speaker/anwesha-das"
+        }
+      ],
+      "start": "2024-07-10T11:35:00+02:00",
+      "title": "Intellectual Property Law 101",
+      "track": "~ None of these topics",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/intellectual-property-law-101"
+    },
+    {
       "code": "P93P8V",
       "duration": 30,
       "event_type": "session",
