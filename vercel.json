@@ -1,3 +1,10 @@
 {
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/europython",
+      "permanent": true
+    }
+  ]
 }
