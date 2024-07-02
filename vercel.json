@@ -3,8 +3,8 @@
   "redirects": [
     {
       "source": "/discord",
-      "destination": "https://discord.gg/europython",
-      "permanent": true
+      "destination": "https://discord.gg/rx7h8hzFye",
+      "permanent": false
     }
   ]
 }
