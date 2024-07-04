@@ -880,13 +880,13 @@
       "code": "FYHQUE",
       "duration": 30,
       "event_type": "session",
-      "level": "intermediate",
+      "level": "beginner",
       "rooms": ["Terrace 2A"],
       "session_type": "Talk",
-      "slug": "taming-one-quadrillion-data-points-with-apache-iceberg-and-parquet",
+      "slug": "exploring-apache-iceberg-a-modern-data-lake-stack",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/profile_XVnASKs.jpg",
+          "avatar": "https://program.europython.eu/media/avatars/img1_LkiB1Bi.jpg",
           "code": "NA8E8D",
           "name": "Gowthami Bhogireddy",
           "slug": "gowthami-bhogireddy",
@@ -894,10 +894,10 @@
         }
       ],
       "start": "2024-07-12T14:35:00+02:00",
-      "title": "Taming One Quadrillion Data Points with Apache Iceberg and Parquet",
+      "title": "Exploring Apache Iceberg : A Modern Data Lake Stack",
       "track": "PyData: Data Engineering",
       "tweet": "Join @TechAtBloomberg's Gowthami Bhogireddy at #EuroPython2024 to learn how her team unleashed the dynamic duo of #bigdata management \u2013 #ApacheIceberg & #Parquet \u2013 to handle one quadrillion data points!",
-      "website_url": "https://ep2024.europython.eu/session/taming-one-quadrillion-data-points-with-apache-iceberg-and-parquet"
+      "website_url": "https://ep2024.europython.eu/session/exploring-apache-iceberg-a-modern-data-lake-stack"
     },
     {
       "code": "HX9ZWH",
