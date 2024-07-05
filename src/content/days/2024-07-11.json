@@ -888,7 +888,7 @@
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
-      "rooms": ["North Hall"],
+      "rooms": ["Terrace 2B"],
       "session_type": "Talk",
       "slug": "behind-the-scenes-of-an-ads-prediction-system",
       "speakers": [
@@ -941,7 +941,7 @@
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
-      "rooms": ["Terrace 2B"],
+      "rooms": ["North Hall"],
       "session_type": "Talk",
       "slug": "pythons-journey-from-upstream-to-enterprise",
       "speakers": [
