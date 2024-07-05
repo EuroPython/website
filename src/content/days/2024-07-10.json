@@ -1090,6 +1090,29 @@
       "website_url": "https://ep2024.europython.eu/session/impersonation-in-data-engineering-no-more-credentials-in-your-code"
     },
     {
+      "code": "TPNQRM",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["South Hall 2B"],
+      "session_type": "Talk",
+      "slug": "how-we-sped-up-numpys-string-operations-for-numpy-2-0",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/_DSF4665_cropped-min_N6pvoQR.jpg",
+          "code": "FRXXAQ",
+          "name": "Lysandros Nikolaou",
+          "slug": "lysandros-nikolaou",
+          "website_url": "https://ep2024.europython.eu/speaker/lysandros-nikolaou"
+        }
+      ],
+      "start": "2024-07-10T16:05:00+02:00",
+      "title": "How we sped up NumPy\u2019s string operations for NumPy 2.0",
+      "track": "Python Libraries & Tooling",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/how-we-sped-up-numpys-string-operations-for-numpy-2-0"
+    },
+    {
       "code": "U3JZZP",
       "duration": 30,
       "event_type": "session",
