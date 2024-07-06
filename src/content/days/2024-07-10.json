@@ -639,13 +639,49 @@
       "level": "beginner",
       "rooms": ["South Hall 2A"],
       "session_type": "Panel",
-      "slug": "discussion-panel-tbd",
-      "speakers": [],
+      "slug": "cpython-core-development-panel",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/carol_2XdXiWK.webp",
+          "code": "HBHXB3",
+          "name": "Carol Willing",
+          "slug": "carol-willing",
+          "website_url": "https://ep2024.europython.eu/speaker/carol-willing"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/2022_profile_hOU4JId.jpg",
+          "code": "LBHYNH",
+          "name": "Victor Stinner",
+          "slug": "victor-stinner",
+          "website_url": "https://ep2024.europython.eu/speaker/victor-stinner"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/77c28d84086eaacc4f606416ea70434d_iz2nSan.jpg",
+          "code": "NLHSWB",
+          "name": "Pablo Galindo Salgado",
+          "slug": "pablo-galindo-salgado",
+          "website_url": "https://ep2024.europython.eu/speaker/pablo-galindo-salgado"
+        },
+        {
+          "avatar": "",
+          "code": "SCAGQW",
+          "name": "Petr Viktorin",
+          "slug": "petr-viktorin",
+          "website_url": "https://ep2024.europython.eu/speaker/petr-viktorin"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/%C5%81ukasz_Langa_Portret_2021.10_Prawy_profil_VNI4Aj1.jpeg",
+          "code": "YFCVFV",
+          "name": "\u0141ukasz Langa",
+          "slug": "lukasz-langa",
+          "website_url": "https://ep2024.europython.eu/speaker/lukasz-langa"
+        }
+      ],
       "start": "2024-07-10T14:00:00+02:00",
-      "title": "Discussion Panel TBD",
+      "title": "CPython Core Development Panel",
       "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/discussion-panel-tbd"
+      "website_url": "https://ep2024.europython.eu/session/cpython-core-development-panel"
     },
     {
       "code": "B8SZMM",

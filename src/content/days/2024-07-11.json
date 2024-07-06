@@ -852,13 +852,56 @@
       "level": "beginner",
       "rooms": ["South Hall 2B"],
       "session_type": "Panel",
-      "slug": "discussion-panel-ii-tbd",
-      "speakers": [],
+      "slug": "open-source-sustainability-panel",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/20191213_SentryIO_JL_002_onkt3Mq.jpeg",
+          "code": "KV9HUP",
+          "name": "Armin Ronacher",
+          "slug": "armin-ronacher",
+          "website_url": "https://ep2024.europython.eu/speaker/armin-ronacher"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/me-2023_IjHoFqZ.jpg",
+          "code": "QQSVVM",
+          "name": "\u00c7a\u011f\u0131l Ulu\u015fahin S\u00f6nmez",
+          "slug": "cagil-ulusahin-sonmez",
+          "website_url": "https://ep2024.europython.eu/speaker/cagil-ulusahin-sonmez"
+        },
+        {
+          "avatar": "",
+          "code": "TMLKKK",
+          "name": "Artur Czepiel",
+          "slug": "artur-czepiel",
+          "website_url": "https://ep2024.europython.eu/speaker/artur-czepiel"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/20190601_DebatMeowWolf_0aCwZC4.jpg",
+          "code": "XCKH3F",
+          "name": "Deb Nicholson",
+          "slug": "deb-nicholson",
+          "website_url": "https://ep2024.europython.eu/speaker/deb-nicholson"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/d3da8160dd1848c1194e15df4fb1051c_bFs9Mv0.jpg",
+          "code": "XXDZKP",
+          "name": "Anwesha Das",
+          "slug": "anwesha-das",
+          "website_url": "https://ep2024.europython.eu/speaker/anwesha-das"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/SamuelColvin-030-Edit-extended_6sJz7qu.jpg",
+          "code": "ZG8GYN",
+          "name": "Samuel Colvin",
+          "slug": "samuel-colvin",
+          "website_url": "https://ep2024.europython.eu/speaker/samuel-colvin"
+        }
+      ],
       "start": "2024-07-11T14:00:00+02:00",
-      "title": "Discussion Panel II TBD",
+      "title": "Open Source Sustainability Panel",
       "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/discussion-panel-ii-tbd"
+      "website_url": "https://ep2024.europython.eu/session/open-source-sustainability-panel"
     },
     {
       "code": "7F87N3",
