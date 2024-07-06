@@ -573,6 +573,29 @@
       "website_url": "https://ep2024.europython.eu/session/diversity-project-subtle-introduction-of-data-science-using-pyroid"
     },
     {
+      "code": "PYV9VD",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2A"],
+      "session_type": "Talk",
+      "slug": "start-strong",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/pyconua.jpg",
+          "code": "ECALAF",
+          "name": "Honza Kr\u00e1l",
+          "slug": "honza-kral",
+          "website_url": "https://ep2024.europython.eu/speaker/honza-kral"
+        }
+      ],
+      "start": "2024-07-12T12:30:00+02:00",
+      "title": "Start strong!",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/start-strong"
+    },
+    {
       "code": "XPXYWD",
       "duration": 30,
       "event_type": "session",
@@ -894,7 +917,7 @@
         }
       ],
       "start": "2024-07-12T14:35:00+02:00",
-      "title": "Exploring Apache Iceberg : A Modern Data Lake Stack",
+      "title": "Exploring Apache Iceberg: A Modern Data Lake Stack",
       "track": "PyData: Data Engineering",
       "tweet": "Join @TechAtBloomberg's Gowthami Bhogireddy at #EuroPython2024 to learn how her team unleashed the dynamic duo of #bigdata management \u2013 #ApacheIceberg & #Parquet \u2013 to handle one quadrillion data points!",
       "website_url": "https://ep2024.europython.eu/session/exploring-apache-iceberg-a-modern-data-lake-stack"
