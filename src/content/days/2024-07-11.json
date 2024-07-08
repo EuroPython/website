@@ -836,7 +836,7 @@
       "level": "intermediate",
       "rooms": ["North Hall"],
       "session_type": "Talk",
-      "slug": "syft-data-science-in-python-with-privacy-guarantees",
+      "slug": "pysyft-data-science-on-data-you-are-not-allowed-to-see",
       "speakers": [
         {
           "avatar": "https://program.europython.eu/media/avatars/me_QNWdYHe_DcLJyWY.jpg",
@@ -847,10 +847,10 @@
         }
       ],
       "start": "2024-07-11T14:00:00+02:00",
-      "title": "Syft: Data Science in Python with privacy guarantees",
+      "title": "PySyft: Data Science on data you are not allowed to see",
       "track": "PyData: Machine Learning, Stats",
       "tweet": "Privacy guarantees is an essential requirement for ethical data science, but also unlocks unprecedented access to ai and models. Come to my talk to discover all about Syft for private and secure data science in Python.",
-      "website_url": "https://ep2024.europython.eu/session/syft-data-science-in-python-with-privacy-guarantees"
+      "website_url": "https://ep2024.europython.eu/session/pysyft-data-science-on-data-you-are-not-allowed-to-see"
     },
     {
       "code": "Y3YDNQ",
