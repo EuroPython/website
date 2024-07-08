@@ -637,7 +637,7 @@
       "duration": 60,
       "event_type": "session",
       "level": "beginner",
-      "rooms": ["South Hall 2A"],
+      "rooms": ["South Hall 2B"],
       "session_type": "Panel",
       "slug": "cpython-core-development-panel",
       "speakers": [
@@ -734,7 +734,7 @@
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
-      "rooms": ["South Hall 2B"],
+      "rooms": ["South Hall 2A"],
       "session_type": "Talk",
       "slug": "zero-trust-apis-with-python",
       "speakers": [
@@ -833,7 +833,7 @@
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
-      "rooms": ["South Hall 2B"],
+      "rooms": ["South Hall 2A"],
       "session_type": "Talk",
       "slug": "deadcode-a-tool-to-find-and-fix-unused-dead-python-code",
       "speakers": [
