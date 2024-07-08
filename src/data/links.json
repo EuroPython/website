@@ -53,6 +53,10 @@
           "path": "/session/c-api-summit"
         },
         {
+          "name": "PyBurger",
+          "path": "/pyburger"
+        },
+        {
           "name": "Humble Data",
           "path": "/humble-data"
         },
