@@ -3,7 +3,7 @@ name: 🔄 Update data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "*/30  * * * *"
 
 jobs:
   update-data:
