@@ -65,6 +65,10 @@
           "path": "/session/webassembly-summit"
         },
         {
+          "name": "AI Game Tournament",
+          "path": "/aitournament"
+        },
+        {
           "name": "PyGameZero Workshop (Wednesday)",
           "path": "/pygamezero"
         },
