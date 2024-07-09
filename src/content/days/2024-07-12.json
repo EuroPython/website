@@ -76,29 +76,6 @@
       "title": "Coffee Break"
     },
     {
-      "code": "7CJVKM",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["North Hall"],
-      "session_type": "Talk",
-      "slug": "streamlining-testing-in-a-large-python-codebase",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/profile_picture_202105_HCxWsMb.jpg",
-          "code": "7DHKEF",
-          "name": "Jimmy Lai",
-          "slug": "jimmy-lai",
-          "website_url": "https://ep2024.europython.eu/speaker/jimmy-lai"
-        }
-      ],
-      "start": "2024-07-12T10:45:00+02:00",
-      "title": "Streamlining Testing in a Large Python Codebase",
-      "track": "DevOps and Infrastructure (Cloud & Hardware)",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/streamlining-testing-in-a-large-python-codebase"
-    },
-    {
       "code": "HSZBDG",
       "duration": 30,
       "event_type": "session",
@@ -143,6 +120,29 @@
       "track": "Python Internals & Ecosystem",
       "tweet": "PEP 683: Immortal Objects - A new approach for memory managing",
       "website_url": "https://ep2024.europython.eu/session/pep-683-immortal-objects-a-new-approach-for-memory-managing"
+    },
+    {
+      "code": "LXYWXR",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "test-java-and-c-applications-with-python",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/c6c5e33601dc00f6dc863f768e8e5687_buJezj1.jpg",
+          "code": "VST3SV",
+          "name": "Roberto Polli",
+          "slug": "roberto-polli",
+          "website_url": "https://ep2024.europython.eu/speaker/roberto-polli"
+        }
+      ],
+      "start": "2024-07-12T10:45:00+02:00",
+      "title": "Test java and C applications with python",
+      "track": "Testing and QA",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/test-java-and-c-applications-with-python"
     },
     {
       "code": "NAHJEU",
@@ -256,7 +256,7 @@
       "start": "2024-07-12T11:20:00+02:00",
       "title": "You are sharing your code wrong (and what to do about it)",
       "track": "Python Internals & Ecosystem",
-      "tweet": "",
+      "tweet": "learn how and why to give your users a package, not a puzzle",
       "website_url": "https://ep2024.europython.eu/session/you-are-sharing-your-code-wrong-and-what-to-do-about-it"
     },
     {
@@ -414,7 +414,7 @@
       "slug": "which-llm-said-that-watermarking-generated-text",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/af94505adbb81b3e2260c0a8250f2f45_WCzPpL2.jpg",
+          "avatar": "https://program.europython.eu/media/avatars/20150509kama1_2_QgxLswu.jpg",
           "code": "T7ZJJ8",
           "name": "Adam Kaczmarek",
           "slug": "adam-kaczmarek",
@@ -531,12 +531,12 @@
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
-      "rooms": ["South Hall 2A"],
+      "rooms": ["Terrace 2A"],
       "session_type": "Talk",
       "slug": "those-annotations-can-have-things-other-than-typing",
       "speakers": [
         {
-          "avatar": "",
+          "avatar": "https://program.europython.eu/media/avatars/5df49f48206535d945e55aa4f9db75a0_5XthRtf.jpg",
           "code": "BM73DH",
           "name": "Mattijs Ugen",
           "slug": "mattijs-ugen",
@@ -550,27 +550,50 @@
       "website_url": "https://ep2024.europython.eu/session/those-annotations-can-have-things-other-than-typing"
     },
     {
-      "code": "MAHYVG",
+      "code": "PYV9VD",
       "duration": 30,
       "event_type": "session",
       "level": "beginner",
-      "rooms": ["Terrace 2B"],
+      "rooms": ["South Hall 2A"],
       "session_type": "Talk",
-      "slug": "diversity-project-subtle-introduction-of-data-science-using-pyroid",
+      "slug": "start-strong",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/f10760171352672fa48c6534b17e46d8_4aYHWZC.jpg",
-          "code": "WSSS9L",
-          "name": "Godfrey Akpojotor",
-          "slug": "godfrey-akpojotor",
-          "website_url": "https://ep2024.europython.eu/speaker/godfrey-akpojotor"
+          "avatar": "https://program.europython.eu/media/avatars/pyconua.jpg",
+          "code": "ECALAF",
+          "name": "Honza Kr\u00e1l",
+          "slug": "honza-kral",
+          "website_url": "https://ep2024.europython.eu/speaker/honza-kral"
         }
       ],
       "start": "2024-07-12T12:30:00+02:00",
-      "title": "Diversity Project: Subtle Introduction of Data Science using Pyroid",
+      "title": "Start strong!",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/start-strong"
+    },
+    {
+      "code": "XLGEHC",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "effective-strategies-for-disability-inclusion-in-open-source-communities",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/BrayanKaiMwanyumba_2_8yYUqlz.jpg",
+          "code": "VULLQE",
+          "name": "Brayan Kai Mwanyumba",
+          "slug": "brayan-kai-mwanyumba",
+          "website_url": "https://ep2024.europython.eu/speaker/brayan-kai-mwanyumba"
+        }
+      ],
+      "start": "2024-07-12T12:30:00+02:00",
+      "title": "Effective Strategies for Disability Inclusion in Open Source Communities",
       "track": "Education, Community & Diversity",
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/diversity-project-subtle-introduction-of-data-science-using-pyroid"
+      "website_url": "https://ep2024.europython.eu/session/effective-strategies-for-disability-inclusion-in-open-source-communities"
     },
     {
       "code": "XPXYWD",
@@ -716,6 +739,29 @@
       "website_url": "https://ep2024.europython.eu/session/redun-lazy-expressions-for-efficient-reactive-python-workflows"
     },
     {
+      "code": "7CJVKM",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2B"],
+      "session_type": "Talk",
+      "slug": "streamlining-testing-in-a-large-python-codebase",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/profile_picture_202105_HCxWsMb.jpg",
+          "code": "7DHKEF",
+          "name": "Jimmy Lai",
+          "slug": "jimmy-lai",
+          "website_url": "https://ep2024.europython.eu/speaker/jimmy-lai"
+        }
+      ],
+      "start": "2024-07-12T14:00:00+02:00",
+      "title": "Streamlining Testing in a Large Python Codebase",
+      "track": "DevOps and Infrastructure (Cloud & Hardware)",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/streamlining-testing-in-a-large-python-codebase"
+    },
+    {
       "code": "8FKHES",
       "duration": 30,
       "event_type": "session",
@@ -771,7 +817,7 @@
       "slug": "mltraq-track-your-ai-experiments-at-hyperspeed",
       "speakers": [
         {
-          "avatar": "",
+          "avatar": "https://program.europython.eu/media/avatars/1697198843516_tpKQTVL.jpeg",
           "code": "ZKDDFP",
           "name": "Michele Dallachiesa",
           "slug": "michele-dallachiesa",
@@ -783,29 +829,6 @@
       "track": "PyData: Research & Applications",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/mltraq-track-your-ai-experiments-at-hyperspeed"
-    },
-    {
-      "code": "LXYWXR",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["Terrace 2B"],
-      "session_type": "Talk",
-      "slug": "test-java-and-c-applications-with-python",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/c6c5e33601dc00f6dc863f768e8e5687_buJezj1.jpg",
-          "code": "VST3SV",
-          "name": "Roberto Polli",
-          "slug": "roberto-polli",
-          "website_url": "https://ep2024.europython.eu/speaker/roberto-polli"
-        }
-      ],
-      "start": "2024-07-12T14:00:00+02:00",
-      "title": "Test java and C applications with python",
-      "track": "Testing and QA",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/test-java-and-c-applications-with-python"
     },
     {
       "code": "QS8KJY",
@@ -840,7 +863,7 @@
       "slug": "neurodiversity-in-the-it-industry-why-do-you-need-to-know-more-about-it",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/por_w6xuqa3.png",
+          "avatar": "https://program.europython.eu/media/avatars/portrait_j5jZzuI.jpg",
           "code": "9DPWBC",
           "name": "Amelia Walter-Dzikowska",
           "slug": "amelia-walter-dzikowska",
@@ -848,7 +871,7 @@
         }
       ],
       "start": "2024-07-12T14:00:00+02:00",
-      "title": "Neurodiversity in the IT industry. Why DO you need to know more about it?",
+      "title": "Neurodiversity in the IT industry. Why do YOU need to know more about it?",
       "track": "Education, Community & Diversity",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/neurodiversity-in-the-it-industry-why-do-you-need-to-know-more-about-it"
@@ -880,13 +903,13 @@
       "code": "FYHQUE",
       "duration": 30,
       "event_type": "session",
-      "level": "intermediate",
+      "level": "beginner",
       "rooms": ["Terrace 2A"],
       "session_type": "Talk",
-      "slug": "taming-one-quadrillion-data-points-with-apache-iceberg-and-parquet",
+      "slug": "exploring-apache-iceberg-a-modern-data-lake-stack",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/profile_XVnASKs.jpg",
+          "avatar": "https://program.europython.eu/media/avatars/img1_LkiB1Bi.jpg",
           "code": "NA8E8D",
           "name": "Gowthami Bhogireddy",
           "slug": "gowthami-bhogireddy",
@@ -894,40 +917,10 @@
         }
       ],
       "start": "2024-07-12T14:35:00+02:00",
-      "title": "Taming One Quadrillion Data Points with Apache Iceberg and Parquet",
+      "title": "Exploring Apache Iceberg: A Modern Data Lake Stack",
       "track": "PyData: Data Engineering",
       "tweet": "Join @TechAtBloomberg's Gowthami Bhogireddy at #EuroPython2024 to learn how her team unleashed the dynamic duo of #bigdata management \u2013 #ApacheIceberg & #Parquet \u2013 to handle one quadrillion data points!",
-      "website_url": "https://ep2024.europython.eu/session/taming-one-quadrillion-data-points-with-apache-iceberg-and-parquet"
-    },
-    {
-      "code": "H8Z37Q",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["North Hall"],
-      "session_type": "Sponsored",
-      "slug": "from-pandas-to-production-elt-with-dlt",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/Team_photo_Violetta_1_vRKT7Wy.jpeg",
-          "code": "3RZLNH",
-          "name": "Violetta Mishechkina",
-          "slug": "violetta-mishechkina",
-          "website_url": "https://ep2024.europython.eu/speaker/violetta-mishechkina"
-        },
-        {
-          "avatar": "https://program.europython.eu/media/avatars/0_36TwAGp.jpeg",
-          "code": "YPDD8Z",
-          "name": "Adrian Brudaru",
-          "slug": "adrian-brudaru",
-          "website_url": "https://ep2024.europython.eu/speaker/adrian-brudaru"
-        }
-      ],
-      "start": "2024-07-12T14:35:00+02:00",
-      "title": "From Pandas to production: ELT with dlt",
-      "track": "PyData: Data Engineering",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/from-pandas-to-production-elt-with-dlt"
+      "website_url": "https://ep2024.europython.eu/session/exploring-apache-iceberg-a-modern-data-lake-stack"
     },
     {
       "code": "HX9ZWH",
@@ -976,6 +969,29 @@
       "website_url": "https://ep2024.europython.eu/session/from-diamonds-to-mixins-demystifying-multiple-inheritance-in-python"
     },
     {
+      "code": "TBBKAM",
+      "duration": 30,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "encrypted-computing-in-python-using-openfhe",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/email1709810642622sukanyamandal_3t7fRvP.jpeg",
+          "code": "QCRLAF",
+          "name": "Sukanya Mandal",
+          "slug": "sukanya-mandal",
+          "website_url": "https://ep2024.europython.eu/speaker/sukanya-mandal"
+        }
+      ],
+      "start": "2024-07-12T14:35:00+02:00",
+      "title": "\u200b\u200bEncrypted computing in Python using OpenFHE",
+      "track": "PyData: Research & Applications",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/encrypted-computing-in-python-using-openfhe"
+    },
+    {
       "code": "WBFDNJ",
       "duration": 30,
       "event_type": "session",
@@ -1013,19 +1029,34 @@
       "title": "Coffee Break"
     },
     {
-      "code": "LEMZSB",
+      "code": "N9VDEQ",
       "duration": 45,
       "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
       "session_type": "Keynote",
-      "slug": "keynote-lukasz",
-      "speakers": [],
+      "slug": "live-coding-music-with-pyrepl-in-python-3-13",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/%C5%81ukasz_Langa_Portret_2021.10_Prawy_profil_VNI4Aj1.jpeg",
+          "code": "YFCVFV",
+          "name": "\u0141ukasz Langa",
+          "slug": "lukasz-langa",
+          "website_url": "https://ep2024.europython.eu/speaker/lukasz-langa"
+        }
+      ],
       "start": "2024-07-12T15:35:00+02:00",
-      "title": "Keynote (\u0141ukasz)",
-      "track": null,
+      "title": "Live coding music with PyREPL in Python 3.13",
+      "track": "Arts, Crafts Culture & Demos",
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/keynote-lukasz"
+      "website_url": "https://ep2024.europython.eu/session/live-coding-music-with-pyrepl-in-python-3-13"
+    },
+    {
+      "duration": 5,
+      "event_type": "break",
+      "rooms": ["Forum Hall"],
+      "start": "2024-07-12T16:20:00+02:00",
+      "title": "Setup for lightning talks"
     },
     {
       "code": "CWDS3S",
@@ -1036,7 +1067,7 @@
       "session_type": "Talk",
       "slug": "lightning-talks-friday",
       "speakers": [],
-      "start": "2024-07-12T16:20:00+02:00",
+      "start": "2024-07-12T16:25:00+02:00",
       "title": "Lightning talks Friday",
       "track": null,
       "tweet": "",
@@ -1051,7 +1082,7 @@
       "session_type": "Announcements",
       "slug": "sprint-orientation",
       "speakers": [],
-      "start": "2024-07-12T17:10:00+02:00",
+      "start": "2024-07-12T17:15:00+02:00",
       "title": "Sprint orientation",
       "track": null,
       "tweet": "",
@@ -1066,7 +1097,7 @@
       "session_type": "Announcements",
       "slug": "closing-session",
       "speakers": [],
-      "start": "2024-07-12T17:30:00+02:00",
+      "start": "2024-07-12T17:35:00+02:00",
       "title": "Closing Session",
       "track": null,
       "tweet": "",

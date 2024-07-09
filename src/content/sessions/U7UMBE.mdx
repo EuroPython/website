@@ -11,12 +11,13 @@ room: Club H
 session_type: Tutorial
 sessions_after:
 - AVNAPX
+- JZ9FXH
 - RZCCLV
 - SAWP3R
 sessions_before: []
 sessions_in_parallel:
+- FMHCT8
 - HXXKM3
-- NVWSXS
 - QLNGZU
 - WJPJG9
 - X99G8E
@@ -36,14 +37,14 @@ We often think about data in terms of storing the current state of our models. I
 
 **Event Sourcing** takes a different approach to storing state. Instead of storing the current state as-is, we store the *sequence of events* that led to the current state. If we need to know the current state, we can replay this immutable record of events to reconstruct it. Not only does this give us an immutable audit log, this also promotes loose coupling and enables optimistic concurrency.
 
-In this tutorial, we are going to build an “Event Sourcing”-based backend for an in-browser game from the ground up. Rather than using a framework that abstracts away some of the core principles, we are going to implement the mechanisms ourselves to help us understand the core principles.
+In this tutorial, we are going to build an “Event Sourcing”-based backend for a simple Connect 4 game. Rather than using a framework that abstracts away some of the core principles, we are going to implement the mechanisms ourselves to help us understand the core principles.
 
 ### Outline
 - Introduction to Event Sourcing and Domain-Driven Design
 - Modeling the events in our game
 - Implementing our first events and our aggregate
 - Reconstructing state from events
-- Optimistic concurrency
+- Persisting the events
 - Beyond this tutorial + Q&A
 
 ### Audience & Preparation
@@ -51,6 +52,8 @@ This tutorial is for you if you’re interested in Event Sourcing but don’t ha
 
 Do make sure to bring your laptop, **with the following tools installed**:
 - Python 3.12
-- A container runtime (preferably Docker)
+- Docker (free-to-use for educational purposes)
 - Git
 - Your favorite editor
+
+After you've installed everything on your laptop, clone [the repository](https://github.com/Ordina-Group/python-event-sourcing-tutorial) and follow the instructions in the README.md to set up the project.

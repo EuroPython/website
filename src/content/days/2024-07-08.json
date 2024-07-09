@@ -16,6 +16,29 @@
       "website_url": "https://ep2024.europython.eu/session/monday-registration-welcome-forum-hall-foyer-1st-floor"
     },
     {
+      "code": "FMHCT8",
+      "duration": 90,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["Club A"],
+      "session_type": "Tutorial",
+      "slug": "pointers-in-python",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/photo_ani3EAy.png",
+          "code": "SR9UDD",
+          "name": "Yan Yanchii",
+          "slug": "yan-yanchii",
+          "website_url": "https://ep2024.europython.eu/speaker/yan-yanchii"
+        }
+      ],
+      "start": "2024-07-08T09:30:00+02:00",
+      "title": "Pointers in Python",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/pointers-in-python"
+    },
+    {
       "code": "HXXKM3",
       "duration": 90,
       "event_type": "session",
@@ -29,29 +52,6 @@
       "track": "Web technologies",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
-    },
-    {
-      "code": "NVWSXS",
-      "duration": 90,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["Club A"],
-      "session_type": "Tutorial",
-      "slug": "a-journey-from-zero-to-large-language-models-in-python",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/OzE5gWmZ_400x400-3_zZlciVI.jpg",
-          "code": "MHPHE3",
-          "name": "Sanyam Bhutani",
-          "slug": "sanyam-bhutani",
-          "website_url": "https://ep2024.europython.eu/speaker/sanyam-bhutani"
-        }
-      ],
-      "start": "2024-07-08T09:30:00+02:00",
-      "title": "A Journey from Zero to Large Language Models in Python",
-      "track": "PyData: LLMs",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/a-journey-from-zero-to-large-language-models-in-python"
     },
     {
       "code": "QLNGZU",
@@ -167,6 +167,29 @@
       "title": "Coffee Break"
     },
     {
+      "code": "FMHCT8",
+      "duration": 90,
+      "event_type": "session",
+      "level": "advanced",
+      "rooms": ["Club A"],
+      "session_type": "Tutorial",
+      "slug": "pointers-in-python",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/photo_ani3EAy.png",
+          "code": "SR9UDD",
+          "name": "Yan Yanchii",
+          "slug": "yan-yanchii",
+          "website_url": "https://ep2024.europython.eu/speaker/yan-yanchii"
+        }
+      ],
+      "start": "2024-07-08T11:15:00+02:00",
+      "title": "Pointers in Python",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "",
+      "website_url": "https://ep2024.europython.eu/session/pointers-in-python"
+    },
+    {
       "code": "HXXKM3",
       "duration": 90,
       "event_type": "session",
@@ -180,29 +203,6 @@
       "track": "Web technologies",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
-    },
-    {
-      "code": "NVWSXS",
-      "duration": 90,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["Club A"],
-      "session_type": "Tutorial",
-      "slug": "a-journey-from-zero-to-large-language-models-in-python",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/OzE5gWmZ_400x400-3_zZlciVI.jpg",
-          "code": "MHPHE3",
-          "name": "Sanyam Bhutani",
-          "slug": "sanyam-bhutani",
-          "website_url": "https://ep2024.europython.eu/speaker/sanyam-bhutani"
-        }
-      ],
-      "start": "2024-07-08T11:15:00+02:00",
-      "title": "A Journey from Zero to Large Language Models in Python",
-      "track": "PyData: LLMs",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/a-journey-from-zero-to-large-language-models-in-python"
     },
     {
       "code": "QLNGZU",
@@ -363,6 +363,29 @@
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
     },
     {
+      "code": "JZ9FXH",
+      "duration": 90,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Club B"],
+      "session_type": "Tutorial",
+      "slug": "reinventing-the-itertools-wheel-for-fun-and-profit",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/rgs_square_pMKs1bG.jpg",
+          "code": "BLNV7P",
+          "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
+          "slug": "rodrigo-girao-serrao",
+          "website_url": "https://ep2024.europython.eu/speaker/rodrigo-girao-serrao"
+        }
+      ],
+      "start": "2024-07-08T13:45:00+02:00",
+      "title": "Reinventing the `itertools` wheel for fun and profit",
+      "track": "Python Libraries & Tooling",
+      "tweet": "Join Rodrigo \ud83d\udc0d\ud83d\ude80 in reinventing the wheel by implementing `itertools` \u2692\ufe0f in Python and learn more about Python along the way!",
+      "website_url": "https://ep2024.europython.eu/session/reinventing-the-itertools-wheel-for-fun-and-profit"
+    },
+    {
       "code": "RZCCLV",
       "duration": 90,
       "event_type": "session",
@@ -489,6 +512,29 @@
       "track": "Web technologies",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
+    },
+    {
+      "code": "JZ9FXH",
+      "duration": 90,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Club B"],
+      "session_type": "Tutorial",
+      "slug": "reinventing-the-itertools-wheel-for-fun-and-profit",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/rgs_square_pMKs1bG.jpg",
+          "code": "BLNV7P",
+          "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
+          "slug": "rodrigo-girao-serrao",
+          "website_url": "https://ep2024.europython.eu/speaker/rodrigo-girao-serrao"
+        }
+      ],
+      "start": "2024-07-08T15:30:00+02:00",
+      "title": "Reinventing the `itertools` wheel for fun and profit",
+      "track": "Python Libraries & Tooling",
+      "tweet": "Join Rodrigo \ud83d\udc0d\ud83d\ude80 in reinventing the wheel by implementing `itertools` \u2692\ufe0f in Python and learn more about Python along the way!",
+      "website_url": "https://ep2024.europython.eu/session/reinventing-the-itertools-wheel-for-fun-and-profit"
     },
     {
       "code": "RZCCLV",

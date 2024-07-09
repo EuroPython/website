@@ -11,14 +11,15 @@ room: Club E
 session_type: Tutorial
 sessions_after: []
 sessions_before:
+- FMHCT8
 - HXXKM3
-- NVWSXS
 - QLNGZU
 - U7UMBE
 - WJPJG9
 - X99G8E
 sessions_in_parallel:
 - AVNAPX
+- JZ9FXH
 - RZCCLV
 slug: pre-commit-to-better-code
 speakers:
@@ -34,4 +35,17 @@ website_url: https://ep2024.europython.eu/session/pre-commit-to-better-code
 
 Maintaining code quality can be challenging, no matter the size of your project or number of contributors. Different team members may have different opinions on code styling and preferences for code structure, while solo contributors might find themselves spending a considerable amount of time making sure the code conforms to accepted conventions. However, manually inspecting and fixing issues in files is both tedious and error-prone. As such, computers are much more suited to this task than humans. Pre-commit hooks are a great way to have a computer handle this for you.
 
-Pre-commit hooks are code checks that run whenever you attempt to commit your changes with `git`. They can detect and, in some cases, automatically correct code-quality issues *before* they make it to your code base. In this tutorial, you will learn how to install and configure pre-commit hooks for your repository to ensure that only code that passes your checks makes it into your code base. We will also explore how to build custom pre-commit hooks for novel use cases.
+Pre-commit hooks are code checks that run whenever you attempt to commit your changes with Git. They can detect and, in some cases, automatically correct code-quality issues *before* they make it to your code base. In this tutorial, you will learn how to install and configure pre-commit hooks for your repository to ensure that only code that passes your checks makes it into your code base. We will also explore how to build custom pre-commit hooks for novel use cases.
+
+## Prerequisites
+- Comfort writing Python code and working with Git on the command line using basic commands (e.g., clone, status, diff, add, commit, and push)
+- Have Python and Git installed on your computers, as well as a text editor for writing code (e.g., Visual Studio Code)
+
+## Prepare for the workshop
+1. Fork and clone [this repository](https://github.com/stefmolin/pre-commit-workshop) (will be public closer to the event).
+2. Create a virtual environment for this workshop using whichever tool you prefer.
+3. Run `pip install pre-commit` (or equivalent) in your activated virtual environment.
+4. Brainstorm some ideas for your hook.
+
+## Feedback?
+Let me know what you thought by filling out [this feedback form](https://stefaniemolin.com/feedback/).

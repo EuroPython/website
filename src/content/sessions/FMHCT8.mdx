@@ -1,0 +1,44 @@
+---
+code: FMHCT8
+delivery: in-person
+duration: '180'
+end: '2024-07-08T11:00:00+02:00'
+level: advanced
+next_session: RZCCLV
+prev_session: null
+resources: null
+room: Club A
+session_type: Tutorial
+sessions_after:
+- AVNAPX
+- JZ9FXH
+- RZCCLV
+- SAWP3R
+sessions_before: []
+sessions_in_parallel:
+- HXXKM3
+- QLNGZU
+- U7UMBE
+- WJPJG9
+- X99G8E
+slug: pointers-in-python
+speakers:
+- yan-yanchii
+start: '2024-07-08T09:30:00+02:00'
+title: Pointers in Python
+track: Python Internals & Ecosystem
+tweet: ''
+website_url: https://ep2024.europython.eu/session/pointers-in-python
+---
+
+Remember pointers from C/C++? Why don’t we add them to Python? Make any Python object mutable by manipulating it directly in memory through the pointer as you would do in C/C++. Why do this? Well, pointers have no use in Python, but the point is not implementation itself, but all the internal parts of Python programming language that you will touch while implementing it. What you will learn:
+
+- How to add new piece of syntax to Python. We will implement `&` and `*` (address of and dereference) operators just like in C/C++.
+- How to add custom builtin object. Adding new syntax has to do something, right? In our case it will operate on new `pointer` builtin object.
+- Internal layout of Python objects.
+- How to make our `pointer` object behave well. Everything in Python is an object and every object internally has to make sure it’s lifecycle does not cause any issues and your program works in a predictable way.
+- How to do something with new object. Having new syntax and object is cool, but it has to interact with other objects somehow. Remember double underscore methods like `__add__` and `__eq__`? We will see how they are implemented internally and our object will have them.
+- How Python objects are garbage collected. Our `pointer` object will cover all ways Python objects can be garbage collected and all tricky parts of this process. These involve reference counting and tracing garbage collector for cyclic objects.
+- And many more.
+
+Optional: to minimise chances of inconsistencies, it is recommended to have Docker installed

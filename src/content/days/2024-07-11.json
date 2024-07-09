@@ -99,6 +99,36 @@
       "website_url": "https://ep2024.europython.eu/session/rapid-prototyping-proof-of-concepts-django-is-all-we-need"
     },
     {
+      "code": "DMV8BL",
+      "duration": 45,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Talk (long session)",
+      "slug": "profile-optimize-repeat-one-core-is-all-you-needtm",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/ich_jbJLWp2.jpg",
+          "code": "BBXVHQ",
+          "name": "Valentin Nieper",
+          "slug": "valentin-nieper",
+          "website_url": "https://ep2024.europython.eu/speaker/valentin-nieper"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/profile_cropped_bw_97GMX9a.jpg",
+          "code": "YWKXWU",
+          "name": "Jonathan Striebel",
+          "slug": "jonathan-striebel",
+          "website_url": "https://ep2024.europython.eu/speaker/jonathan-striebel"
+        }
+      ],
+      "start": "2024-07-11T10:30:00+02:00",
+      "title": "Profile, Optimize, Repeat: One Core Is All You Need\u2122",
+      "track": "PyData: Data Engineering",
+      "tweet": "Profile, optimize, repeat, one core is all you need\u2122! Discover handy tools for your optimization cycle!",
+      "website_url": "https://ep2024.europython.eu/session/profile-optimize-repeat-one-core-is-all-you-needtm"
+    },
+    {
       "code": "K3CJUX",
       "duration": 45,
       "event_type": "session",
@@ -191,29 +221,6 @@
       "website_url": "https://ep2024.europython.eu/session/compiledpoem-py-teaching-about-diversity-and-python-through-poem"
     },
     {
-      "code": "VDDTBS",
-      "duration": 45,
-      "event_type": "session",
-      "level": "advanced",
-      "rooms": ["Terrace 2A"],
-      "session_type": "Talk (long session)",
-      "slug": "is-rag-all-you-need-a-look-at-the-limits-of-retrieval-augmented-generation",
-      "speakers": [
-        {
-          "avatar": "",
-          "code": "3WVLQA",
-          "name": "Sara Zanzottera",
-          "slug": "sara-zanzottera",
-          "website_url": "https://ep2024.europython.eu/speaker/sara-zanzottera"
-        }
-      ],
-      "start": "2024-07-11T10:30:00+02:00",
-      "title": "Is RAG all you need? A look at the limits of retrieval augmented generation",
-      "track": "PyData: LLMs",
-      "tweet": "Improving your LLM's output with RAG feels like \u2728 magic \u2728: effective, cheap, easy to implement. But when it doesn't work, do you know how to fix it? \ud83e\ude7a Let's explore the limits of this amazing LLM technique \ud83e\udded",
-      "website_url": "https://ep2024.europython.eu/session/is-rag-all-you-need-a-look-at-the-limits-of-retrieval-augmented-generation"
-    },
-    {
       "code": "BUT9E7",
       "duration": 30,
       "event_type": "session",
@@ -258,6 +265,36 @@
       "track": "PyData: LLMs",
       "tweet": "EarthPT is a time series earth observation foundation model trained on TBs of satellite imagery.  It can predict future satellite observations and produces embeddings that can be used downstream.",
       "website_url": "https://ep2024.europython.eu/session/forecasting-the-future-with-earthpt"
+    },
+    {
+      "code": "NKFDPW",
+      "duration": 30,
+      "event_type": "session",
+      "level": "beginner",
+      "rooms": ["South Hall 2B"],
+      "session_type": "Talk",
+      "slug": "graalpy-a-fast-python-implementation",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/Fdw3-IqZ_400x400_K2lfEGK.jpg",
+          "code": "G9FNPT",
+          "name": "\u0160t\u011bp\u00e1n \u0160indel\u00e1\u0159",
+          "slug": "stepan-sindelar",
+          "website_url": "https://ep2024.europython.eu/speaker/stepan-sindelar"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/neues_foto_5_-_Copy_VyjluSp.jpg",
+          "code": "RB9MRK",
+          "name": "Tim Felgentreff",
+          "slug": "tim-felgentreff",
+          "website_url": "https://ep2024.europython.eu/speaker/tim-felgentreff"
+        }
+      ],
+      "start": "2024-07-11T11:20:00+02:00",
+      "title": "GraalPy - A Fast Python Implementation",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "GraalPy, the fast @GraalVM-based implementation of Python is ready for you! And it might just make your programs run faster or your integration with other languages leaner :)",
+      "website_url": "https://ep2024.europython.eu/session/graalpy-a-fast-python-implementation"
     },
     {
       "code": "R3P9UX",
@@ -325,31 +362,8 @@
       "start": "2024-07-11T11:20:00+02:00",
       "title": "Containerize your Python apps like it's 2024",
       "track": "DevOps and Infrastructure (Cloud & Hardware)",
-      "tweet": "",
+      "tweet": "Practical tips for creating production-ready Docker images for your Python applications. Make your builds faster and containers smaller and more secure!",
       "website_url": "https://ep2024.europython.eu/session/containerize-your-python-apps-like-it-s-2024"
-    },
-    {
-      "code": "XLGEHC",
-      "duration": 30,
-      "event_type": "session",
-      "level": "intermediate",
-      "rooms": ["South Hall 2B"],
-      "session_type": "Talk",
-      "slug": "effective-strategies-for-disability-inclusion-in-open-source-communities",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/BrayanKaiMwanyumba_2_8yYUqlz.jpg",
-          "code": "VULLQE",
-          "name": "Brayan Kai Mwanyumba",
-          "slug": "brayan-kai-mwanyumba",
-          "website_url": "https://ep2024.europython.eu/speaker/brayan-kai-mwanyumba"
-        }
-      ],
-      "start": "2024-07-11T11:20:00+02:00",
-      "title": "Effective Strategies for Disability Inclusion in Open Source Communities",
-      "track": "Education, Community & Diversity",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/effective-strategies-for-disability-inclusion-in-open-source-communities"
     },
     {
       "code": "A3QRK3",
@@ -497,27 +511,27 @@
       "website_url": "https://ep2024.europython.eu/session/lies-damned-lies-and-large-language-models"
     },
     {
-      "code": "CEW8S9",
+      "code": "DH3AE7",
       "duration": 30,
       "event_type": "session",
-      "level": "beginner",
+      "level": "intermediate",
       "rooms": ["South Hall 2B"],
       "session_type": "Talk",
-      "slug": "nothing-for-us-without-us-breaking-unconscious-bias-in-building-products",
+      "slug": "an-alternative-view-on-the-openapi-documentation",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/IMG-20220514-WA0040_1_tHP9ax7.jpg",
-          "code": "XZ9GLY",
-          "name": "Victor Ogunjobi",
-          "slug": "victor-ogunjobi",
-          "website_url": "https://ep2024.europython.eu/speaker/victor-ogunjobi"
+          "avatar": "https://program.europython.eu/media/avatars/04_2024_n0zKcnP.jpg",
+          "code": "TJSMCP",
+          "name": "Maxim Danilov",
+          "slug": "maxim-danilov",
+          "website_url": "https://ep2024.europython.eu/speaker/maxim-danilov"
         }
       ],
       "start": "2024-07-11T12:30:00+02:00",
-      "title": "Nothing for Us, Without Us; Breaking Unconscious Bias in Building Products",
-      "track": "Education, Community & Diversity",
-      "tweet": "Are our products truly inclusive? Unconscious bias often taints well-intentioned projects, causing unintended exclusions. This talk offers ideas for inclusive product and community design. #UnconsciousBias #TechEthics",
-      "website_url": "https://ep2024.europython.eu/session/nothing-for-us-without-us-breaking-unconscious-bias-in-building-products"
+      "title": "An alternative view on the OpenAPI documentation.",
+      "track": "Web technologies",
+      "tweet": "An alternative way to automatically generate OpenAPI documentation for your project.",
+      "website_url": "https://ep2024.europython.eu/session/an-alternative-view-on-the-openapi-documentation"
     },
     {
       "code": "DNYFYG",
@@ -829,7 +843,7 @@
       "level": "intermediate",
       "rooms": ["North Hall"],
       "session_type": "Talk",
-      "slug": "syft-data-science-in-python-with-privacy-guarantees",
+      "slug": "pysyft-data-science-on-data-you-are-not-allowed-to-see",
       "speakers": [
         {
           "avatar": "https://program.europython.eu/media/avatars/me_QNWdYHe_DcLJyWY.jpg",
@@ -840,10 +854,10 @@
         }
       ],
       "start": "2024-07-11T14:00:00+02:00",
-      "title": "Syft: Data Science in Python with privacy guarantees",
+      "title": "PySyft: Data Science on data you are not allowed to see",
       "track": "PyData: Machine Learning, Stats",
       "tweet": "Privacy guarantees is an essential requirement for ethical data science, but also unlocks unprecedented access to ai and models. Come to my talk to discover all about Syft for private and secure data science in Python.",
-      "website_url": "https://ep2024.europython.eu/session/syft-data-science-in-python-with-privacy-guarantees"
+      "website_url": "https://ep2024.europython.eu/session/pysyft-data-science-on-data-you-are-not-allowed-to-see"
     },
     {
       "code": "Y3YDNQ",
@@ -852,13 +866,56 @@
       "level": "beginner",
       "rooms": ["South Hall 2B"],
       "session_type": "Panel",
-      "slug": "discussion-panel-ii-tbd",
-      "speakers": [],
+      "slug": "open-source-sustainability-panel",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/20191213_SentryIO_JL_002_onkt3Mq.jpeg",
+          "code": "KV9HUP",
+          "name": "Armin Ronacher",
+          "slug": "armin-ronacher",
+          "website_url": "https://ep2024.europython.eu/speaker/armin-ronacher"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/me-2023_IjHoFqZ.jpg",
+          "code": "QQSVVM",
+          "name": "\u00c7a\u011f\u0131l Ulu\u015fahin S\u00f6nmez",
+          "slug": "cagil-ulusahin-sonmez",
+          "website_url": "https://ep2024.europython.eu/speaker/cagil-ulusahin-sonmez"
+        },
+        {
+          "avatar": "",
+          "code": "TMLKKK",
+          "name": "Artur Czepiel",
+          "slug": "artur-czepiel",
+          "website_url": "https://ep2024.europython.eu/speaker/artur-czepiel"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/20190601_DebatMeowWolf_0aCwZC4.jpg",
+          "code": "XCKH3F",
+          "name": "Deb Nicholson",
+          "slug": "deb-nicholson",
+          "website_url": "https://ep2024.europython.eu/speaker/deb-nicholson"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/d3da8160dd1848c1194e15df4fb1051c_bFs9Mv0.jpg",
+          "code": "XXDZKP",
+          "name": "Anwesha Das",
+          "slug": "anwesha-das",
+          "website_url": "https://ep2024.europython.eu/speaker/anwesha-das"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/SamuelColvin-030-Edit-extended_6sJz7qu.jpg",
+          "code": "ZG8GYN",
+          "name": "Samuel Colvin",
+          "slug": "samuel-colvin",
+          "website_url": "https://ep2024.europython.eu/speaker/samuel-colvin"
+        }
+      ],
       "start": "2024-07-11T14:00:00+02:00",
-      "title": "Discussion Panel II TBD",
+      "title": "Open Source Sustainability Panel",
       "track": null,
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/discussion-panel-ii-tbd"
+      "website_url": "https://ep2024.europython.eu/session/open-source-sustainability-panel"
     },
     {
       "code": "7F87N3",
@@ -888,7 +945,7 @@
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
-      "rooms": ["North Hall"],
+      "rooms": ["Terrace 2B"],
       "session_type": "Talk",
       "slug": "behind-the-scenes-of-an-ads-prediction-system",
       "speakers": [
@@ -905,29 +962,6 @@
       "track": "PyData: Machine Learning, Stats",
       "tweet": "Learn all about ads prediction systems at #EuroPython2024!  From key concepts to system design, learn how these algorithms shape online advertising and its ethical implications.",
       "website_url": "https://ep2024.europython.eu/session/behind-the-scenes-of-an-ads-prediction-system"
-    },
-    {
-      "code": "LEXULB",
-      "duration": 30,
-      "event_type": "session",
-      "level": "beginner",
-      "rooms": ["Terrace 2B"],
-      "session_type": "Talk",
-      "slug": "intellectual-property-law-101",
-      "speakers": [
-        {
-          "avatar": "https://program.europython.eu/media/avatars/d3da8160dd1848c1194e15df4fb1051c_bFs9Mv0.jpg",
-          "code": "XXDZKP",
-          "name": "Anwesha Das",
-          "slug": "anwesha-das",
-          "website_url": "https://ep2024.europython.eu/speaker/anwesha-das"
-        }
-      ],
-      "start": "2024-07-11T14:35:00+02:00",
-      "title": "Intellectual Property Law 101",
-      "track": "~ None of these topics",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/intellectual-property-law-101"
     },
     {
       "code": "U9MDSV",
@@ -958,6 +992,29 @@
       "track": "Python Internals & Ecosystem",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/how-to-build-a-python-to-c-compiler-out-of-spare-parts-and-why"
+    },
+    {
+      "code": "VXUKR3",
+      "duration": 30,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["North Hall"],
+      "session_type": "Talk",
+      "slug": "pythons-journey-from-upstream-to-enterprise",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/f74810f0515dfe77b61801c1526c8a76_h8TeN5q.jpg",
+          "code": "VPRECE",
+          "name": "Lum\u00edr Balhar",
+          "slug": "lumir-balhar",
+          "website_url": "https://ep2024.europython.eu/speaker/lumir-balhar"
+        }
+      ],
+      "start": "2024-07-11T14:35:00+02:00",
+      "title": "Python\u2019s Journey: From Upstream to Enterprise",
+      "track": "Python Internals & Ecosystem",
+      "tweet": "Python\u2019s Journey: From first alpha release upstream, through Fedora Linux to Enterprise",
+      "website_url": "https://ep2024.europython.eu/session/pythons-journey-from-upstream-to-enterprise"
     },
     {
       "duration": 25,
@@ -1230,7 +1287,7 @@
       "start": "2024-07-11T16:05:00+02:00",
       "title": "Earth Observation through Large Vision Models",
       "track": "PyData: Deep Learning, NLP, CV",
-      "tweet": "",
+      "tweet": "Discover how Vision-Language and Generative Vision Models can be used for Earth Observation",
       "website_url": "https://ep2024.europython.eu/session/earth-observation-through-large-vision-models"
     },
     {
