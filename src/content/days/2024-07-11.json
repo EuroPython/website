@@ -99,6 +99,36 @@
       "website_url": "https://ep2024.europython.eu/session/rapid-prototyping-proof-of-concepts-django-is-all-we-need"
     },
     {
+      "code": "DMV8BL",
+      "duration": 45,
+      "event_type": "session",
+      "level": "intermediate",
+      "rooms": ["Terrace 2A"],
+      "session_type": "Talk (long session)",
+      "slug": "profile-optimize-repeat-one-core-is-all-you-needtm",
+      "speakers": [
+        {
+          "avatar": "https://program.europython.eu/media/avatars/ich_jbJLWp2.jpg",
+          "code": "BBXVHQ",
+          "name": "Valentin Nieper",
+          "slug": "valentin-nieper",
+          "website_url": "https://ep2024.europython.eu/speaker/valentin-nieper"
+        },
+        {
+          "avatar": "https://program.europython.eu/media/avatars/profile_cropped_bw_97GMX9a.jpg",
+          "code": "YWKXWU",
+          "name": "Jonathan Striebel",
+          "slug": "jonathan-striebel",
+          "website_url": "https://ep2024.europython.eu/speaker/jonathan-striebel"
+        }
+      ],
+      "start": "2024-07-11T10:30:00+02:00",
+      "title": "Profile, Optimize, Repeat: One Core Is All You Need\u2122",
+      "track": "PyData: Data Engineering",
+      "tweet": "Profile, optimize, repeat, one core is all you need\u2122! Discover handy tools for your optimization cycle!",
+      "website_url": "https://ep2024.europython.eu/session/profile-optimize-repeat-one-core-is-all-you-needtm"
+    },
+    {
       "code": "K3CJUX",
       "duration": 45,
       "event_type": "session",
@@ -189,29 +219,6 @@
       "track": "Education, Community & Diversity",
       "tweet": "Is it possible to learn Python programming through poetry? In this talk, you will learn how to teach conditional and looping structures in Python with diversity, for example.",
       "website_url": "https://ep2024.europython.eu/session/compiledpoem-py-teaching-about-diversity-and-python-through-poem"
-    },
-    {
-      "code": "VDDTBS",
-      "duration": 45,
-      "event_type": "session",
-      "level": "advanced",
-      "rooms": ["Terrace 2A"],
-      "session_type": "Talk (long session)",
-      "slug": "is-rag-all-you-need-a-look-at-the-limits-of-retrieval-augmented-generation",
-      "speakers": [
-        {
-          "avatar": "",
-          "code": "3WVLQA",
-          "name": "Sara Zanzottera",
-          "slug": "sara-zanzottera",
-          "website_url": "https://ep2024.europython.eu/speaker/sara-zanzottera"
-        }
-      ],
-      "start": "2024-07-11T10:30:00+02:00",
-      "title": "Is RAG all you need? A look at the limits of retrieval augmented generation",
-      "track": "PyData: LLMs",
-      "tweet": "Improving your LLM's output with RAG feels like \u2728 magic \u2728: effective, cheap, easy to implement. But when it doesn't work, do you know how to fix it? \ud83e\ude7a Let's explore the limits of this amazing LLM technique \ud83e\udded",
-      "website_url": "https://ep2024.europython.eu/session/is-rag-all-you-need-a-look-at-the-limits-of-retrieval-augmented-generation"
     },
     {
       "code": "BUT9E7",
