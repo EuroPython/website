@@ -6,12 +6,15 @@ import { Separator } from "../../components/separator/separator";
 import { formatInTimeZone } from "date-fns-tz";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("sessions");
-  return blogEntries.map((entry) => ({
+  const sessions = await getCollection("sessions");
+  return sessions.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
 }
+
+// Fetch the collection of sessions
+const sessions = await getCollection("sessions");
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
@@ -22,134 +25,172 @@ for (const speaker of speakers) {
   // @ts-ignore
   speaker.Content = (await speaker.render()).Content;
 }
+
+// Resolve session codes to session data
+const resolveSessions = (codes: string[]) => codes.map(code => sessions.find(s => s?.data?.code === code));
+
+// Filter out sessions with room "Exhibit Hall"
+const filteredSessions = sessions.filter(s => s?.data?.room !== "Exhibit Hall");
+
+const parallelSessions = resolveSessions(entry.data.sessions_in_parallel ?? []).filter(s => s?.data?.room !== "Exhibit Hall");
+const sameRoomNextSession = filteredSessions.find(s => s?.data?.code === entry.data.next_session);
+const nextSessionsInAllRooms = resolveSessions(entry.data.sessions_after ?? []).filter(s => s?.data?.room !== "Exhibit Hall");
+
+// Ensure sameRoomNextSession appears first in nextSessionsInAllRooms if it exists
+const nextSessionsOrdered = sameRoomNextSession
+  ? [sameRoomNextSession, ...nextSessionsInAllRooms.filter(s => s !== sameRoomNextSession)]
+  : nextSessionsInAllRooms;
 ---
 
 <Layout title={entry.data.title} description={entry.data.tweet}>
   <article class="mx-auto pb-12 px-6">
     <Prose>
       <h1
-        class="relative font-title text-text font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit  text-pretty"
+        class="relative font-title text-text font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-pretty"
       >
         {entry.data.title}
       </h1>
     </Prose>
 
     <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2 mb-6">
-      {
-        entry.data.track && (
-          <>
-            <dt class="font-bold">Track:</dt>
-            <dd class="capitalize">{entry.data.track}</dd>
-          </>
-        )
-      }
-
+      {entry.data.track && (
+        <>
+          <dt class="font-bold">Track:</dt>
+          <dd class="capitalize">{entry.data.track}</dd>
+        </>
+      )}
       <dt class="font-bold">Type:</dt>
       <dd class="capitalize">{entry.data.session_type}</dd>
-
       <dt class="font-bold">Level:</dt>
       <dd class="capitalize">{entry.data.level}</dd>
-      {
-        entry.data.room && (
-          <>
-            <dt class="font-bold">Room:</dt>
-            <dd class="capitalize">{entry.data.room}</dd>
-          </>
-        )
-      }
-      {
-        entry.data.start && (
-          <>
-            <dt class="font-bold">Start:</dt>
-            <dd>
-              {formatInTimeZone(
-                entry.data.start,
-                "Europe/Prague",
-                "HH:mm 'on' dd MMMM yyyy",
-              )}
-            </dd>
-          </>
-        )
-      }
-      <dt class="font-bold">Duration:</dt><dd>{entry.data.duration} minutes</dd>
+      {entry.data.room && (
+        <>
+          <dt class="font-bold">Room:</dt>
+          <dd class="capitalize">{entry.data.room}</dd>
+        </>
+      )}
+      {entry.data.start && (
+        <>
+          <dt class="font-bold">Start:</dt>
+          <dd>
+            {formatInTimeZone(entry.data.start, "Europe/Prague", "HH:mm 'on' dd MMMM yyyy")}
+          </dd>
+        </>
+      )}
+      <dt class="font-bold">Duration:</dt>
+      <dd>{entry.data.duration} minutes</dd>
     </dl>
 
     <Prose>
       <h2>Abstract</h2>
-
       <Content />
     </Prose>
 
-    {
-      entry.data.resources && (
-        <>
-          <br />
-
-          <Prose>
-            <h2>Resources</h2>
-          </Prose>
-
-          <ul class="list-disc">
-            {entry.data.resources.map((resource) => (
-              <li>
-                <a
-                  href={resource.resource}
-                  class="text-xl hover:text-primary-hover underline font-bold"
-                >
-                  {resource.description}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </>
-      )
-    }
+    {entry.data.resources && (
+      <>
+        <br />
+        <Prose>
+          <h2>Resources</h2>
+        </Prose>
+        <ul class="list-disc">
+          {entry.data.resources.map((resource: { resource: string, description: string }) => (
+            <li>
+              <a
+                href={resource.resource}
+                class="text-xl hover:text-primary-hover underline font-bold"
+              >
+                {resource.description}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
 
     <footer>
-      {
-        speakers.length > 0 && (
-          <>
-            <Separator />
-
-            <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
-              The speaker{speakers.length > 1 ? "s" : ""}
-            </h2>
-
-            {speakers.map((speaker) => (
-              <div class="mb-4 md:grid grid-cols-[260px_1fr] md:gap-6">
-                {speaker.data.avatar ? (
-                  <div class="flex items-start mb-4">
-                    <img
-                      src={speaker.data.avatar}
-                      alt={speaker.data.name}
-                      class="w-full max-w-sm mb-12"
-                    />
-                  </div>
-                ) : (
-                  <div class="flex items-start mb-4 invisible">
-                    <img src="" alt="" class="w-full max-w-sm mb-12" />
-                  </div>
-                )}
-                <div>
-                  <p class="mb-4">
-                    <a
-                      href={`/speaker/${speaker.slug}`}
-                      class="text-4xl hover:text-primary-hover underline font-bold"
-                    >
-                      {speaker.data.name}
-                    </a>
-                  </p>
-
-                  <Prose>
-                    {/* @ts-ignore */}
-                    <speaker.Content />
-                  </Prose>
+      {speakers.length > 0 && (
+        <>
+          <Separator />
+          <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+            The speaker{speakers.length > 1 ? "s" : ""}
+          </h2>
+          {speakers.map((speaker) => (
+            <div class="md:grid grid-cols-[260px_1fr] md:gap-6">
+              {speaker.data.avatar ? (
+                <div class="flex items-start">
+                  <img
+                    src={speaker.data.avatar}
+                    alt={speaker.data.name}
+                    class="w-full max-w-sm mb-12"
+                  />
                 </div>
+              ) : (
+                <div class="flex items-start mb-4 invisible">
+                  <img src="" alt="" class="w-full max-w-sm mb-12" />
+                </div>
+              )}
+              <div>
+                <p class="mb-4">
+                  <a
+                    href={`/speaker/${speaker.slug}`}
+                    class="text-4xl hover:text-primary-hover underline font-bold"
+                  >
+                    {speaker.data.name}
+                  </a>
+                </p>
+                <Prose>
+                  {/* @ts-ignore */}
+                  <speaker.Content />
+                </Prose>
               </div>
-            ))}
-          </>
-        )
-      }
+            </div>
+          ))}
+        </>
+      )}
+
+      {(parallelSessions?.length ?? 0) > 0 || (nextSessionsInAllRooms?.length ?? 0) > 0 ? (
+        <>
+          <Separator />
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {(parallelSessions?.length ?? 0) > 0 && (
+              <div>
+                <Prose>
+                  <h3>Sessions at the same time</h3>
+                </Prose>
+                <ul class="list-disc">
+                  {parallelSessions.map((session: any) => (
+                    <li>
+                      <Prose>
+                        <a href={`/session/${session.slug}`}>{session.data.title}</a>
+                      </Prose>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {(nextSessionsInAllRooms?.length ?? 0) > 0 && (
+              <div>
+                <Prose>
+                  <h3>After this session</h3>
+                  <ul class="list-disc">
+                    {nextSessionsOrdered.map((session: any) => (
+                      <li>
+                        <a
+                          href={`/session/${session.slug}`}
+                          class={`${session === sameRoomNextSession ? 'text-primary font-bold' : ''}`}
+                        >
+                          {session.data.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </Prose>
+              </div>
+            )}
+          </div>
+        </>
+      ) : null}
     </footer>
   </article>
 </Layout>
