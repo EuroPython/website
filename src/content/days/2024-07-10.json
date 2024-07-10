@@ -635,6 +635,13 @@
       "slug": "cpython-core-development-panel",
       "speakers": [
         {
+          "avatar": "https://program.europython.eu/media/avatars/_DSF4665_cropped-min_N6pvoQR.jpg",
+          "code": "FRXXAQ",
+          "name": "Lysandros Nikolaou",
+          "slug": "lysandros-nikolaou",
+          "website_url": "https://ep2024.europython.eu/speaker/lysandros-nikolaou"
+        },
+        {
           "avatar": "https://program.europython.eu/media/avatars/carol_2XdXiWK.webp",
           "code": "HBHXB3",
           "name": "Carol Willing",
@@ -654,6 +661,13 @@
           "name": "Pablo Galindo Salgado",
           "slug": "pablo-galindo-salgado",
           "website_url": "https://ep2024.europython.eu/speaker/pablo-galindo-salgado"
+        },
+        {
+          "avatar": "",
+          "code": "NPC3QX",
+          "name": "Hugo van Kemenade",
+          "slug": "hugo-van-kemenade",
+          "website_url": "https://ep2024.europython.eu/speaker/hugo-van-kemenade"
         },
         {
           "avatar": "",
