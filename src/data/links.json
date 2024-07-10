@@ -157,7 +157,8 @@
     {
       "name": "Registration",
       "items": [
-        { "name": "Discord Server",
+        {
+          "name": "Discord Server",
           "path": "https://ep2024.europython.eu/discord"
         },
         {
