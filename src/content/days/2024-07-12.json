@@ -831,27 +831,27 @@
       "website_url": "https://ep2024.europython.eu/session/mltraq-track-your-ai-experiments-at-hyperspeed"
     },
     {
-      "code": "QS8KJY",
+      "code": "YMMFGD",
       "duration": 30,
       "event_type": "session",
       "level": "intermediate",
       "rooms": ["North Hall"],
       "session_type": "Talk",
-      "slug": "observability-matters-empowering-python-developers-with-opentelemetry",
+      "slug": "a-tale-of-scaling-observability",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/Picture400_g2MXOv2.jpg",
-          "code": "ULG79T",
-          "name": "Yash Raj Verma",
-          "slug": "yash-raj-verma",
-          "website_url": "https://ep2024.europython.eu/speaker/yash-raj-verma"
+          "avatar": "https://program.europython.eu/media/avatars/1516868105949_Aavng5Y.jpg",
+          "code": "YLDGBX",
+          "name": "Toomas Ormisson",
+          "slug": "toomas-ormisson",
+          "website_url": "https://ep2024.europython.eu/speaker/toomas-ormisson"
         }
       ],
       "start": "2024-07-12T14:00:00+02:00",
-      "title": "Observability Matters: Empowering Python Developers with OpenTelemetry.",
+      "title": "A Tale of Scaling Observability",
       "track": "DevOps and Infrastructure (Cloud & Hardware)",
-      "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/observability-matters-empowering-python-developers-with-opentelemetry"
+      "tweet": "A Tale of Scaling Observability Beyond Processing 50TB of Telemetry a Day",
+      "website_url": "https://ep2024.europython.eu/session/a-tale-of-scaling-observability"
     },
     {
       "code": "ZXXDBV",
