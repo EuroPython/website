@@ -973,13 +973,6 @@
       "slug": "how-to-build-a-python-to-c-compiler-out-of-spare-parts-and-why",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/DSCF1681_crop_28SxFzE.jpg",
-          "code": "PCJHVS",
-          "name": "Tom Niget",
-          "slug": "tom-niget",
-          "website_url": "https://ep2024.europython.eu/speaker/tom-niget"
-        },
-        {
           "avatar": "https://program.europython.eu/media/avatars/xavier_portrait_t2glHMd.jpg",
           "code": "WAVEWK",
           "name": "Xavier Thompson",
