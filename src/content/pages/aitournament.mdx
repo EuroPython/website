@@ -5,15 +5,18 @@ subtitle:
   You like Games and Python? this challenge is for you!
 ---
 
+import { Image } from 'astro:assets';
+import packt from '../sponsors/packt.png';
+import numberly from '../sponsors/numberly.svg';
+import aitournament from './images/aigametournament.png';
+
 # AI Game Tournament
-
-
 
 <div class="text-center">
     <ButtonLink href="https://forms.gle/TosuLTY1zo59FNSz5">Registration From</ButtonLink>
 </div>
 
-![](./images/aigametournament.png)
+<Image src={aitournament} alt="AI Game Tournament" width={1600} />
 
 We have created a video game that is designed to be played by a small python program, rather than a human.
 Conference attendees can participate in a tournament where they (either alone or in a team) can submit a bot that will play the game,.
@@ -72,4 +75,9 @@ Big thanks to [Packt](https://www.packtpub.com/en-cz) and [Numberly](https://num
 
 Massive thanks to Cristian and Artur for helping me make this happen :pray:
 
-<img src="../sponsors/packt.png" width="40%" alt="Packt"> &nbsp;&nbsp; <img src="../sponsors/numberly.svg" width="40%" alt="Packt">
+<div class="grid grid-cols-2 gap-4 items-center">
+
+  <Image src={packt} alt="Packt" width={800} />
+  <Image src={numberly} alt="Numberly" width={800} />
+
+</div>
