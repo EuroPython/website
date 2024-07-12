@@ -814,7 +814,7 @@
       "level": "intermediate",
       "rooms": ["Terrace 2A"],
       "session_type": "Talk",
-      "slug": "mltraq-track-your-ai-experiments-at-hyperspeed",
+      "slug": "mltraq-track-your-ml-ai-experiments-at-hyperspeed",
       "speakers": [
         {
           "avatar": "https://program.europython.eu/media/avatars/1697198843516_tpKQTVL.jpeg",
@@ -825,10 +825,10 @@
         }
       ],
       "start": "2024-07-12T14:00:00+02:00",
-      "title": "MLtraq: Track your AI experiments at hyperspeed",
+      "title": "MLtraq: Track your ML/AI experiments at hyperspeed",
       "track": "PyData: Research & Applications",
       "tweet": "",
-      "website_url": "https://ep2024.europython.eu/session/mltraq-track-your-ai-experiments-at-hyperspeed"
+      "website_url": "https://ep2024.europython.eu/session/mltraq-track-your-ml-ai-experiments-at-hyperspeed"
     },
     {
       "code": "YMMFGD",
