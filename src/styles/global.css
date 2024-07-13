@@ -171,6 +171,12 @@ p.cross::after {
     }
   }
 
+  /* Breaking all links because we sometimes have very long links that break mobile */
+
+  a {
+    word-break: break-word;
+  }
+
   h1,
   h2,
   h3,
