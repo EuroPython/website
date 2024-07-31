@@ -88,8 +88,8 @@ const placeholders = Math.max(0, 6 - keynoters.length);
       keynoters.map((keynoter, index) => (
         <Keynoter
           name={keynoter.data.name}
+          slug={keynoter.slug}
           tagline={keynoter.data.tagline}
-          link={`/keynoters/${keynoter.slug}`}
           image={keynoter.data.image}
           placeholder={false}
           class:list={[
@@ -105,8 +105,8 @@ const placeholders = Math.max(0, 6 - keynoters.length);
         .map((_, index) => (
           <Keynoter
             name=""
+            slug=""
             tagline=""
-            link=""
             placeholder={true}
             class:list={["w-full sm:w-[calc(50%-1rem)] md:w-[calc(30%-1rem)]"]}
           />

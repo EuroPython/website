@@ -9,16 +9,16 @@ import Person5 from "../placeholders/person-5.astro";
 
 export interface Props {
   name: string;
+  slug: string;
   tagline?: string;
   image?: ImageMetadata;
-  link: string;
   placeholder?: boolean;
   class?: string;
 }
 
 const {
-  link,
   name,
+  slug,
   tagline,
   image,
   placeholder,
@@ -32,7 +32,7 @@ const Placeholder =
 ---
 
 <li class:list={["list-none rounded-2xl overflow-clip flex group", className]}>
-  <a class="block w-full h-full relative">
+  <a class="block w-full h-full relative" href={`/speaker/${slug}`}>
     <div class="relative aspect-[9/10] overflow-clip">
       {
         image ? (
