@@ -48,7 +48,6 @@ const keynoters = defineCollection({
   schema: ({ image }) =>
     z.object({
       name: z.string(),
-      url: z.string(),
       tagline: z.string().optional(),
       image: image(),
     }),
