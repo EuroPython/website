@@ -22,12 +22,3 @@ export const Tag = ({ children, className, href }: TagProps) => {
     </TagElement>
   );
 };
-
-interface TagContainerProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export const TagContainer = ({ children, className }: TagContainerProps) => {
-  return <div className={clsx("space-x-2", className)}>{children}</div>;
-};
