@@ -1079,7 +1079,7 @@
       "event_type": "session",
       "level": "beginner",
       "rooms": ["Forum Hall"],
-      "session_type": "Announcements",
+      "session_type": "Talk",
       "slug": "sprint-orientation",
       "speakers": [],
       "start": "2024-07-12T17:15:00+02:00",
