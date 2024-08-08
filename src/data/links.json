@@ -102,6 +102,10 @@
           "path": "/faq"
         },
         {
+          "name": "EuroPython 2024 Team",
+          "path": "/thank-you"
+        },
+        {
           "name": "Accessibility and Rooms",
           "path": "/accessibility"
         },
