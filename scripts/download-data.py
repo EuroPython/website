@@ -16,9 +16,9 @@ import yaml
 ROOT = pathlib.Path(__file__).parents[1]
 
 
-SESSIONS_URL = "https://gist.githubusercontent.com/egeakman/cfcdc4c06497945dd88a981e912849e3/raw/c8394edf1d6c873323d9a602035e9c2782edc5c7/sessions.json"
-SPEAKERS_URL = "https://gist.githubusercontent.com/egeakman/d57119da59ee49d16a1c5d425b073463/raw/dd26645859f7733ceed542782b8f141df08da951/speakers.json"
-SCHEDULE_DATA = "https://gist.githubusercontent.com/egeakman/4d45050d7e0c483092d2337c3f0fbee5/raw/1affcfe69d8de77f60913091c652625d152a43b3/schedule.json"
+SESSIONS_URL = "https://programapi24.europython.eu/2024/sessions.json"
+SPEAKERS_URL = "https://programapi24.europython.eu/2024/speakers.json"
+SCHEDULE_DATA = "https://programapi24.europython.eu/2024/schedule.json"
 
 
 def write_mdx(data: dict[str, Any], output_dir: pathlib.Path, content_key: str) -> None:
