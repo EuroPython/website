@@ -110,10 +110,6 @@
           "path": "/photos"
         },
         {
-          "name": "Diversity & Inclusion",
-          "path": "/diversity"
-        },
-        {
           "name": "Accessibility and Rooms",
           "path": "/accessibility"
         },
