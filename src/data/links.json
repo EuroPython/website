@@ -106,6 +106,10 @@
           "path": "/thank-you"
         },
         {
+          "name": "EuroPython 2024 Photos",
+          "path": "/photos"
+        },
+        {
           "name": "Accessibility and Rooms",
           "path": "/accessibility"
         },
