@@ -110,6 +110,10 @@
           "path": "/photos"
         },
         {
+          "name": "2023 Recordings",
+          "path": "https://www.youtube.com/playlist?list="
+        },
+        {
           "name": "Accessibility and Rooms",
           "path": "/accessibility"
         },
