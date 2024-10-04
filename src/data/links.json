@@ -102,16 +102,16 @@
           "path": "/faq"
         },
         {
-          "name": "EuroPython 2024 Team",
+          "name": "Team",
           "path": "/thank-you"
         },
         {
-          "name": "EuroPython 2024 Photos",
+          "name": "Photos",
           "path": "/photos"
         },
         {
-          "name": "2024 Recordings",
-          "path": "https://www.youtube.com/playlist?list="
+          "name": "Recordings",
+          "path": "https://www.youtube.com/playlist?list=PL8uoeex94UhE1CbtkDK4hevp2lBif57Nq"
         },
         {
           "name": "Accessibility and Rooms",
