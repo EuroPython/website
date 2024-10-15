@@ -89,6 +89,7 @@ const sessions = defineCollection({
     start: z.string().nullable(),
     end: z.string().nullable(),
     website_url: z.string().url(),
+    youtube_url: z.string().url().nullable(),
     sessions_in_parallel: z.array(z.string()).nullable(),
     sessions_after: z.array(z.string()).nullable(),
     sessions_before: z.array(z.string()).nullable(),
