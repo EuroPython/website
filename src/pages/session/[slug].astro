@@ -4,6 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
 import { Separator } from "../../components/separator/separator";
 import { formatInTimeZone } from "date-fns-tz";
+import { YouTube } from "@astro-community/astro-embed-youtube";
 
 export async function getStaticPaths() {
   const sessions = await getCollection("sessions");
@@ -85,6 +86,13 @@ const nextSessionsOrdered = sameRoomNextSession
       <h2>Abstract</h2>
       <Content />
     </Prose>
+
+    {entry.data.youtube_url && (
+      <Prose>
+        <h2>Recording</h2>
+        <YouTube id={entry.data.youtube_url} />
+      </Prose>
+    )}
 
     {entry.data.resources && (
       <>
