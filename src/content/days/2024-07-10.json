@@ -635,13 +635,6 @@
       "slug": "cpython-core-development-panel",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/FRXXAQ_XuMpTEq.jpg",
-          "code": "FRXXAQ",
-          "name": "Lysandros Nikolaou",
-          "slug": "lysandros-nikolaou",
-          "website_url": "https://ep2024.europython.eu/speaker/lysandros-nikolaou"
-        },
-        {
           "avatar": "https://program.europython.eu/media/avatars/HBHXB3_fd2bdRz.webp",
           "code": "HBHXB3",
           "name": "Carol Willing",
