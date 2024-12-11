@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #151f38; /* Updated Primary Color */
-  --color-primary-hover: #7a7ebd; /* Updated Secondary Color */
-  --color-primary-active: #7a7ebd; /* Aligning with the Secondary */
-  --color-button: #ee714b; /* Updated Accent Color */
-  --color-button-hover: #fabc1b; /* Updated for Button Hover */
-  --color-secondary: #151f38; /* Aligning with Primary */
-  --color-secondary-dark: #f5e5d6; /* Updated Background Color */
-  --color-secondary-darkest: white; /* Updated Secondary Background */
-  --color-secondary-light: #7a7ebd; /* Updated for Secondary Light */
-  --color-text: #151f38; /* Updated Text Color */
-  --color-text-inverted: white; /* Updated Inverted Text Color */
-  --color-body-background: #f7e7d6; /* Updated Body Background Color */
-  --color-hero-primary: #151f38; /* Aligning with Primary */
-  --color-hero-secondary: #fabc1b; /* Updated Secondary Accent */
+  --color-primary: #151f38;
+  --color-primary-hover: #7a7ebd;
+  --color-primary-active: #7a7ebd;
+  --color-button: #ee714b;
+  --color-button-hover: #fabc1b;
+  --color-secondary: #151f38;
+  --color-secondary-dark: #f5e5d6;
+  --color-secondary-darkest: white;
+  --color-secondary-light: #7a7ebd;
+  --color-text: #151f38;
+  --color-text-inverted: white;
+  --color-body-background: #f7e7d6;
+  --color-hero-primary: #151f38;
+  --color-hero-secondary: #fabc1b;
 
-  --color-session-neutral: #f5e5d6; /* Matching Neutral Background */
-  --color-session-beginner: #151f38; /* Matching Primary */
-  --color-session-intermediate: #7a7ebd; /* Matching Secondary */
-  --color-session-advanced: #ee714b; /* Matching Button Color */
+  --color-session-neutral: #f5e5d6;
+  --color-session-beginner: #151f38;
+  --color-session-intermediate: #7a7ebd;
+  --color-session-advanced: #ee714b;
 }
 
 .tp-dfwv {
