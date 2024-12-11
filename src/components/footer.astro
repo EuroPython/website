@@ -4,8 +4,6 @@ import { Fullbleed } from "./layout/fullbleed";
 import { LogoExtended } from "./logo/logo-extended";
 import links from "../data/links.json";
 import { EPSLogo } from "./logo/eps-logo";
-
-import VercelLogo from "./vercel-logo.astro";
 ---
 
 <Fullbleed className="bg-primary text-white">
@@ -13,8 +11,6 @@ import VercelLogo from "./vercel-logo.astro";
     class="max-w-4xl lg:max-w-6xl mx-auto py-16 lg:grid grid-cols-2 px-6 gap-60"
   >
     <div>
-      <LogoExtended className="mb-12 max-w-full h-auto" />
-
       <nav class="mb-12">
         <h6 class="font-bold text-xl mb-6">Quicklinks</h6>
 
@@ -53,6 +49,12 @@ import VercelLogo from "./vercel-logo.astro";
         <p class="mb-4">
           <a
             class="underline whitespace-nowrap"
+            href="https://europython-society.org"
+          >
+            europython-society.org <span> ↗</span>
+          </a>
+          <a
+            class="underline whitespace-nowrap"
             href="https://blog.europython.eu"
           >
             blog.europython.eu <span> ↗</span>
@@ -86,14 +88,6 @@ import VercelLogo from "./vercel-logo.astro";
             github.com/europython <span> ↗</span>
           </a>
         </p>
-
-        <div id="powered-by-vercel">
-          <a
-            href="https://vercel.com/?utm_source=europython-2024&utm_campaign=oss"
-          >
-            <VercelLogo />
-          </a>
-        </div>
       </div>
     </article>
   </footer>

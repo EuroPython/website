@@ -1,40 +1,30 @@
 ---
 import { ButtonLink } from "../components/button-link";
 import { CardContainer } from "../components/card/card-container";
-import { Hero } from "../components/hero";
+import Hero from "../components/hero/hero.astro";
 import HeroWithCTA from "../components/hero-section/hero-with-cta.astro";
 import { Fullbleed } from "../components/layout/fullbleed";
 import Prose from "../components/prose/prose.astro";
 import { Title } from "../components/typography/title";
 import Layout from "../layouts/Layout.astro";
 import DeadlineCard from "../components/deadline-card.astro";
-import HeroVenue from "../components/hero-section/hero-venue.astro";
 import { getCollection } from "astro:content";
 import Sponsors from "../components/sponsors/sponsors.astro";
-import Accent from "../components/accent/2024.astro";
+import Accent from "../components/accent/accent.astro";
+import Prague from "../components/hero-section/prague.astro";
 import Keynoters from "../components/keynoters/keynoters.astro";
 
 import * as intro from "../data/home/intro.md";
-import * as venue from "../data/home/venue.mdx";
-
-let deadlines = await getCollection("deadlines");
-deadlines = deadlines
-  .sort((a, b) => a.slug.localeCompare(b.slug))
-  .reverse()
-  .slice(0, 3);
+import * as venue from "../data/home/prague.mdx";
 ---
 
 <Layout
-  title="EuroPython 2024 | July 8th-14th 2024 | Prague, Czech Republic & Remote"
-  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 8th-14th 2024."
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
   <Fullbleed>
     <Hero />
   </Fullbleed>
-
-  <CardContainer>
-    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
-  </CardContainer>
 
   <div class="mt-40 px-6 pb-40 overflow-visible">
     <HeroWithCTA>
@@ -49,30 +39,13 @@ deadlines = deadlines
         slot="secondary"
         class="flex flex-col items-center text-center relative"
       >
-        <Accent
-          class="w-[250px] h-auto self-end absolute top-0 right-0 translate-x-14 hidden lg:block"
-        />
-
-        <Title level={3} className="font-bold text-3xl mb-4 mt-12 lg:mt-auto">
-          Conference photos
-        </Title>
-
-        <ButtonLink
-          href="/photos"
-        >
-          Enjoy the Captured Moments
-        </ButtonLink>
+        <Accent />
       </div>
     </HeroWithCTA>
-
-    <div class="mt-40 mb-40 px-6">
-      <HeroVenue title={venue.frontmatter.title}>
-        <venue.Content />
-      </HeroVenue>
-    </div>
   </div>
 
-  <Keynoters />
-
-  <Sponsors />
+  <div class="mb-40">
+    <Prague title={venue.frontmatter.title}>
+      <venue.Content />
+  </div>
 </Layout>

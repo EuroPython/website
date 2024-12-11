@@ -11,15 +11,15 @@ export interface Props {
 
 const { title } = Astro.props;
 
-import venueImage from "./venue-hero.jpg";
+import venueImage from "./prague.png";
 ---
 
 <article class="lg:grid gap-12 grid-cols-2">
   <div class="relative hidden lg:block">
     <Image
       src={venueImage}
-      class="w-full h-auto"
-      alt=""
+      class="w-full h-auto border-4 border-white rounded-lg shadow-lg"
+      alt="Beautiful view of Prague"
       width={1200}
       height={900}
     />
@@ -32,22 +32,14 @@ import venueImage from "./venue-hero.jpg";
     </Prose>
 
     <div class="space-x-4 mb-5">
-      <ButtonLink href="/where#prague-congress-centre---conference-venue">
-        PCC Conference Venue
+      <ButtonLink href="/where">
+        Where is EuroPython?
       </ButtonLink>
-      <Link
-        href="https://goo.gl/maps/S13ZYR1ktN7ebwyP7"
-      >
-        Get directions to the PCC
-      </Link>
     </div>
     <div class="space-x-12">
-      <ButtonLink href="/sprints#location-of-the-sprints-venue">
-        VŠE Sprints Venue
+      <ButtonLink href="/explore">
+        Explore Prague
       </ButtonLink>
-      <Link href="https://goo.gl/maps/2PbAF2KvGtUqLS9V9">
-          Get directions to the VŠE
-      </Link>
     </div>
   </div>
 </article>

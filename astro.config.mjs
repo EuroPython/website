@@ -35,7 +35,7 @@ export default defineConfig({
       ],
     ],
   },
-  site: "https://ep2024.europython.eu",
+  site: "https://ep2025.europython.eu",
   integrations: [
     mdx(),
     sitemap(),
