@@ -16,6 +16,12 @@ import Keynoters from "../components/keynoters/keynoters.astro";
 
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/prague.mdx";
+
+let deadlines = await getCollection("deadlines");
+deadlines = deadlines
+  .sort((a, b) => a.slug.localeCompare(b.slug))
+  .reverse()
+  .slice(0, 3);
 ---
 
 <Layout
@@ -25,6 +31,10 @@ import * as venue from "../data/home/prague.mdx";
   <Fullbleed>
     <Hero />
   </Fullbleed>
+
+  <CardContainer>
+    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
+  </CardContainer>
 
   <div class="mt-40 px-6 pb-40 overflow-visible">
     <HeroWithCTA>
