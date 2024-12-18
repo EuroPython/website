@@ -5,13 +5,16 @@ export const ButtonLink = ({
   children,
   className,
   secondary = false,
+  isExternal,
 }: {
   href: string;
   children: React.ReactNode;
   secondary?: boolean;
   className?: string;
+  isExternal?: boolean; // Make isExternal an optional parameter
 }) => {
-  const isExternal = href.startsWith("http");
+  // default isExternal to href.startsWith("http") if not directly provided
+  const resolvedIsExternal = isExternal ?? href.startsWith("http");
 
   return (
     <a
@@ -30,7 +33,7 @@ export const ButtonLink = ({
     >
       {children}
 
-      {isExternal && (
+      {resolvedIsExternal && (
         <span className="inline-block ml-1 font-system text-lg leading-4">
           ↗
         </span>
