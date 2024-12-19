@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astro-community/astro-embed-youtube':
         specifier: ^0.5.6
-        version: 0.5.6(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))
+        version: 0.5.6(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))
       '@astrojs/check':
         specifier: ^0.8.3
         version: 0.8.3(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@astrojs/mdx':
         specifier: ^3.1.9
-        version: 3.1.9(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))
+        version: 3.1.9(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))
       '@astrojs/react':
         specifier: ^3.6.3
         version: 3.6.3(@types/react-dom@18.3.5(@types/react@18.3.16))(@types/react@18.3.16)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -25,10 +25,10 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: ^5.1.3
-        version: 5.1.3(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.16)
+        version: 5.1.3(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.16)
       '@astrojs/vercel':
         specifier: ^7.8.2
-        version: 7.8.2(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))(react@18.3.1)(rollup@4.28.1)
+        version: 7.8.2(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))(react@18.3.1)(rollup@4.28.1)
       '@fontsource-variable/inter':
         specifier: ^5.1.0
         version: 5.1.0
@@ -43,10 +43,10 @@ importers:
         version: 18.3.5(@types/react@18.3.16)
       astro:
         specifier: ^4.16.17
-        version: 4.16.17(rollup@4.28.1)(typescript@5.7.2)
+        version: 4.16.18(rollup@4.28.1)(typescript@5.7.2)
       astro-meta-tags:
         specifier: ^0.3.1
-        version: 0.3.1(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))
+        version: 0.3.1(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -932,8 +932,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0 || ^5.0.0-beta.0
 
-  astro@4.16.17:
-    resolution: {integrity: sha512-OuD+BP7U6OqQLKtZ/FJkU2S+TOlifxS/OKUbZOb5p6y+LLBa1J3zHRJrIl7DUSq6eXY+9wSWwbJpD9JS+lqhxA==}
+  astro@4.16.18:
+    resolution: {integrity: sha512-G7zfwJt9BDHEZwlaLNvjbInIw2hPryyD654314KV/XT34pJU6SfN1S+mWa8RAkALcZNJnJXCJmT3JXLQStD3Lw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2657,9 +2657,9 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@astro-community/astro-embed-youtube@0.5.6(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))':
+  '@astro-community/astro-embed-youtube@0.5.6(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))':
     dependencies:
-      astro: 4.16.17(rollup@4.28.1)(typescript@5.7.2)
+      astro: 4.16.18(rollup@4.28.1)(typescript@5.7.2)
       lite-youtube-embed: 0.3.3
 
   '@astrojs/check@0.8.3(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)':
@@ -2729,12 +2729,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.9(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))':
+  '@astrojs/mdx@3.1.9(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))':
     dependencies:
       '@astrojs/markdown-remark': 5.3.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 4.16.17(rollup@4.28.1)(typescript@5.7.2)
+      astro: 4.16.18(rollup@4.28.1)(typescript@5.7.2)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       gray-matter: 4.0.3
@@ -2779,9 +2779,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.1
 
-  '@astrojs/tailwind@5.1.3(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.16)':
+  '@astrojs/tailwind@5.1.3(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))(tailwindcss@3.4.16)':
     dependencies:
-      astro: 4.16.17(rollup@4.28.1)(typescript@5.7.2)
+      astro: 4.16.18(rollup@4.28.1)(typescript@5.7.2)
       autoprefixer: 10.4.20(postcss@8.4.49)
       postcss: 8.4.49
       postcss-load-config: 4.0.2(postcss@8.4.49)
@@ -2801,13 +2801,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@7.8.2(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2))(react@18.3.1)(rollup@4.28.1)':
+  '@astrojs/vercel@7.8.2(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2))(react@18.3.1)(rollup@4.28.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.4.2
       '@vercel/analytics': 1.4.1(react@18.3.1)
       '@vercel/edge': 1.1.3
       '@vercel/nft': 0.27.9(rollup@4.28.1)
-      astro: 4.16.17(rollup@4.28.1)(typescript@5.7.2)
+      astro: 4.16.18(rollup@4.28.1)(typescript@5.7.2)
       esbuild: 0.21.5
       fast-glob: 3.3.2
       web-vitals: 3.5.2
@@ -3541,11 +3541,11 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-meta-tags@0.3.1(astro@4.16.17(rollup@4.28.1)(typescript@5.7.2)):
+  astro-meta-tags@0.3.1(astro@4.16.18(rollup@4.28.1)(typescript@5.7.2)):
     dependencies:
-      astro: 4.16.17(rollup@4.28.1)(typescript@5.7.2)
+      astro: 4.16.18(rollup@4.28.1)(typescript@5.7.2)
 
-  astro@4.16.17(rollup@4.28.1)(typescript@5.7.2):
+  astro@4.16.18(rollup@4.28.1)(typescript@5.7.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
