@@ -13,7 +13,7 @@
   --color-secondary-darkest: white;
   --color-secondary-light: #7a7ebd;
   --color-text: #151f38;
-  --color-text-inverted: white;
+  --color-text-inverted: edd9db;
   --color-body-background: #f5e5d6;
   --color-hero-primary: #151f38;
   --color-hero-secondary: #fabc1b;
@@ -105,7 +105,7 @@ ul.list-disc li::before {
   display: inline-block;
   width: 25px;
   height: 20px;
-  background-image: url(/img/list-item.svg);
+  /*background-image: url(/img/list-item.svg);*/
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;

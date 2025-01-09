@@ -31,8 +31,8 @@ export const NavItems = ({ items, inverted = false }: Props) => {
             className={clsx(
               "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center",
               "xl:text-left xl:p-2 xl:px-5",
-              "xl:group-hover:bg-secondary xl:group-hover:rounded-[30px]",
-              "xl:group-focus-within:bg-secondary xl:group-focus-within:rounded-[30px]"
+              "xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white",
+              "xl:group-focus-within:bg-secondary xl:group-focus-within:rounded-[30px] xl:group-focus-within:text-white"
             )}
           >
             {item.name}
