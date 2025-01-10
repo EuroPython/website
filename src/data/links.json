@@ -8,6 +8,9 @@
           "path": "/programme/tracks"
         },
         {
+          "name": "Selection Process",
+          "path": "/programme/selection"
+        },
           "name": "Mentorship",
           "path": "/programme/mentorship"
         },
