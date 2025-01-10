@@ -10,6 +10,10 @@
         {
           "name": "Mentorship",
           "path": "/programme/mentorship"
+        },
+        {
+          "name": "Call for Proposals",
+          "path": "/programme/cfp"
         }
       ]
     },
