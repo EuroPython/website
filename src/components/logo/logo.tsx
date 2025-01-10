@@ -287,14 +287,7 @@ const LogoInverted = ({ className }: { className?: string }) => {
   );
 };
 
-export const Logo = ({
-  className,
-
-}: {
-  className?: string;
-}) => {
-
-
+export const Logo = ({ className }: { className?: string }) => {
   return (
     <svg
       id="a"
