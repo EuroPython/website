@@ -4,139 +4,8 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Overview",
-          "path": "/programme"
-        },
-        {
-          "name": "Schedule",
-          "path": "/schedule"
-        },
-        {
-          "name": "List of sessions",
-          "path": "/sessions"
-        },
-        {
-          "name": "Talks",
-          "path": "/talks"
-        },
-        {
-          "name": "Tutorials",
-          "path": "/tutorials"
-        },
-        {
-          "name": "Posters",
-          "path": "/posters"
-        },
-        {
-          "name": "List of Speakers",
-          "path": "/speakers"
-        },
-        {
-          "name": "List of Keynote Speakers",
-          "path": "/keynoters"
-        },
-        {
-          "name": "Speaker Mentorship",
-          "path": "/mentorship"
-        }
-      ]
-    },
-    {
-      "name": "Events",
-      "items": [
-        {
-          "name": "Django Girls Workshop",
-          "path": "https://djangogirls.org/en/prague/"
-        },
-        {
-          "name": "C API Summit",
-          "path": "/session/c-api-summit"
-        },
-        {
-          "name": "PyBurger",
-          "path": "/pyburger"
-        },
-        {
-          "name": "Humble Data",
-          "path": "/humble-data"
-        },
-        {
-          "name": "WebAssembly Summit",
-          "path": "/session/webassembly-summit"
-        },
-        {
-          "name": "AI Game Tournament",
-          "path": "/aitournament"
-        },
-        {
-          "name": "PyGameZero Workshop (Wednesday)",
-          "path": "/pygamezero"
-        },
-        {
-          "name": "Speakers' Dinner",
-          "path": "/speakers-dinner"
-        },
-        {
-          "name": "PyLadies Events—Lunch, Workshops & Networking",
-          "path": "/pyladies-events"
-        },
-        {
-          "name": "PyLadies Wednesday Social",
-          "path": "/pyladies-social"
-        },
-        {
-          "name": "Thursday Social Event",
-          "path": "/social-event"
-        },
-        {
-          "name": "Sprint Weekend",
-          "path": "/sprints"
-        }
-      ]
-    },
-    {
-      "name": "Info & Support",
-      "items": [
-        {
-          "name": "FAQ",
-          "path": "/faq"
-        },
-        {
-          "name": "Team",
-          "path": "/thank-you"
-        },
-        {
-          "name": "Photos",
-          "path": "/photos"
-        },
-        {
-          "name": "Recordings",
-          "path": "https://www.youtube.com/playlist?list=PL8uoeex94UhE1CbtkDK4hevp2lBif57Nq"
-        },
-        {
-          "name": "Accessibility and Rooms",
-          "path": "/accessibility"
-        },
-        {
-          "name": "Visa Support Letter",
-          "path": "/visa"
-        },
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Volunteering",
-          "path": "/volunteers"
-        },
-        {
-          "name": "Job Board",
-          "path": "/job-board"
-        },
-
-        {
-          "name": "Sponsor Swag & Promo",
-          "path": "/virtual-swag"
+          "name": "Tracks",
+          "path": "/programme/tracks"
         }
       ]
     },
@@ -154,32 +23,11 @@
       ]
     },
     {
-      "name": "Sponsorship",
+      "name": "Info & Support",
       "items": [
         {
-          "name": "Sponsor Packages",
-          "path": "/sponsor"
-        },
-        {
-          "name": "Sponsor Information",
-          "path": "/sponsor/information"
-        }
-      ]
-    },
-    {
-      "name": "Registration",
-      "items": [
-        {
-          "name": "Discord Server",
-          "path": "https://ep2024.europython.eu/discord"
-        },
-        {
-          "name": "Tickets information",
-          "path": "/tickets"
-        },
-        {
-          "name": "Remote tickets information",
-          "path": "/remote"
+          "name": "FAQ",
+          "path": "/faq"
         }
       ]
     }

@@ -19,9 +19,9 @@
   --color-hero-secondary: #fabc1b;
 
   --color-session-neutral: #f5e5d6;
-  --color-session-beginner: #151f38;
-  --color-session-intermediate: #7a7ebd;
-  --color-session-advanced: #ee714b;
+  --color-session-beginner: #63d452;
+  --color-session-intermediate: #ffcd45;
+  --color-session-advanced: #d34847;
 }
 
 .tp-dfwv {
@@ -105,7 +105,7 @@ ul.list-disc li::before {
   display: inline-block;
   width: 25px;
   height: 20px;
-  background-image: url(/img/list-item.svg);
+  /*background-image: url(/img/list-item.svg);*/
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
