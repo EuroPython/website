@@ -6,6 +6,10 @@
         {
           "name": "Tracks",
           "path": "/programme/tracks"
+        },
+        {
+          "name": "Call for Proposals",
+          "path": "/programme/cfp"
         }
       ]
     },
