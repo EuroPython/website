@@ -6,6 +6,10 @@
         {
           "name": "Tracks",
           "path": "/programme/tracks"
+        },
+        {
+          "name": "Selection Process",
+          "path": "/programme/selection"
         }
       ]
     },
