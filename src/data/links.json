@@ -6,12 +6,12 @@
         {
           "name": "Tracks",
           "path": "/programme/tracks"
+        },
+        {
+          "name": "Mentorship",
+          "path": "/programme/mentorship"
         }
       ]
-    },
-    {
-      "name": "Mentorship",
-      "path": "/mentorship"
     },
     {
       "name": "Prague & Venue",
