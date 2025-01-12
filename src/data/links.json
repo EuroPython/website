@@ -6,6 +6,18 @@
         {
           "name": "Tracks",
           "path": "/programme/tracks"
+        },
+        {
+          "name": "Selection Process",
+          "path": "/programme/selection"
+        },
+        {
+          "name": "Speaker Mentorship",
+          "path": "/programme/mentorship"
+        },
+        {
+          "name": "Call for Proposals",
+          "path": "/programme/cfp"
         }
       ]
     },
