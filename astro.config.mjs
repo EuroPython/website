@@ -9,8 +9,6 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 
-import vercel from "@astrojs/vercel/static";
-
 // https://astro.build/config
 export default defineConfig({
   markdown: {
@@ -46,5 +44,4 @@ export default defineConfig({
     metaTags(),
   ],
   output: "static",
-  adapter: vercel(),
 });
