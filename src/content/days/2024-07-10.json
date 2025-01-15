@@ -48,7 +48,7 @@
       "slug": "embracing-python-ai-and-heuristics-optimal-paths-for-impactful-software",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/HBHXB3_fd2bdRz.webp",
+          "avatar": "https://pretalx.com/media/avatars/HBHXB3_fd2bdRz.webp",
           "code": "HBHXB3",
           "name": "Carol Willing",
           "slug": "carol-willing",
@@ -85,7 +85,7 @@
       "slug": "learning-to-code-in-the-age-of-ai",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/GZHPTE_XDsXdMF.jpg",
+          "avatar": "https://pretalx.com/media/avatars/GZHPTE_XDsXdMF.jpg",
           "code": "GZHPTE",
           "name": "Sheena O'Connell",
           "slug": "sheena-o-connell",
@@ -108,7 +108,7 @@
       "slug": "how-to-sell-a-big-refactor-or-rewrite-to-the-business",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/9SYDFX_LLVG1DX.jpg",
+          "avatar": "https://pretalx.com/media/avatars/9SYDFX_LLVG1DX.jpg",
           "code": "9SYDFX",
           "name": "Ivett \u00d6rd\u00f6g",
           "slug": "ivett-ordog",
@@ -131,14 +131,14 @@
       "slug": "from-text-to-context-how-we-introduced-a-modern-hybrid-search",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/CNDARF_C0fLyqK.jpg",
+          "avatar": "https://pretalx.com/media/avatars/CNDARF_C0fLyqK.jpg",
           "code": "CNDARF",
           "name": "Ansgar Gruene",
           "slug": "ansgar-gruene",
           "website_url": "https://ep2024.europython.eu/speaker/ansgar-gruene"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/WEWNJK_5afLZM9.png",
+          "avatar": "https://pretalx.com/media/avatars/WEWNJK_5afLZM9.png",
           "code": "WEWNJK",
           "name": "Dharin Shah",
           "slug": "dharin-shah",
@@ -161,7 +161,7 @@
       "slug": "animations-from-first-principles",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/BLNV7P_bI8IutA.jpg",
+          "avatar": "https://pretalx.com/media/avatars/BLNV7P_bI8IutA.jpg",
           "code": "BLNV7P",
           "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
           "slug": "rodrigo-girao-serrao",
@@ -207,7 +207,7 @@
       "slug": "spy-static-python-lang-fast-as-c-pythonic-as-python",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -230,7 +230,7 @@
       "slug": "fastapi-internals",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/BGPPXA_cQSA7jj.jpg",
+          "avatar": "https://pretalx.com/media/avatars/BGPPXA_NWOExjq.JPG",
           "code": "BGPPXA",
           "name": "Marcelo Trylesinski",
           "slug": "marcelo-trylesinski",
@@ -253,7 +253,7 @@
       "slug": "accelerating-python-with-rust-the-pyo3-revolution",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/7KXBK3_pY0HcVh.png",
+          "avatar": "https://pretalx.com/media/avatars/7KXBK3_pY0HcVh.png",
           "code": "7KXBK3",
           "name": "Roshan R Chandar",
           "slug": "roshan-r-chandar",
@@ -276,7 +276,7 @@
       "slug": "intellectual-property-law-101",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/XXDZKP_MGbtKKe.jpg",
+          "avatar": "https://pretalx.com/media/avatars/XXDZKP_MGbtKKe.jpg",
           "code": "XXDZKP",
           "name": "Anwesha Das",
           "slug": "anwesha-das",
@@ -299,7 +299,7 @@
       "slug": "aggregating-data-in-django-using-database-views",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/TDUUPM_6LJy7B0.jpg",
+          "avatar": "https://pretalx.com/media/avatars/TDUUPM_6LJy7B0.jpg",
           "code": "TDUUPM",
           "name": "Mikul\u00e1\u0161 Poul",
           "slug": "mikulas-poul",
@@ -345,7 +345,7 @@
       "slug": "building-scalable-multimodal-search-applications-with-python",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/XDWZ8P_1zW11nz.jpg",
+          "avatar": "https://pretalx.com/media/avatars/XDWZ8P_1zW11nz.jpg",
           "code": "XDWZ8P",
           "name": "Zain Hasan",
           "slug": "zain-hasan",
@@ -368,7 +368,7 @@
       "slug": "deconstructing-the-text-embedding-models",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/H3RSTE_qsyggPK.jpg",
+          "avatar": "https://pretalx.com/media/avatars/H3RSTE_qsyggPK.jpg",
           "code": "H3RSTE",
           "name": "Kacper \u0141ukawski",
           "slug": "kacper-lukawski",
@@ -391,7 +391,7 @@
       "slug": "state-of-the-art-image-generation-for-the-masses-with-diffusers",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/JJLYHF_WCMJV7d.jpg",
+          "avatar": "https://pretalx.com/media/avatars/JJLYHF_WCMJV7d.jpg",
           "code": "JJLYHF",
           "name": "Sayak Paul",
           "slug": "sayak-paul",
@@ -414,7 +414,7 @@
       "slug": "demystify-python-types-for-pep-729",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/XKDR9U_xprzyTj.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/XKDR9U_xprzyTj.jpeg",
           "code": "XKDR9U",
           "name": "Kir Chou",
           "slug": "kir-chou",
@@ -437,7 +437,7 @@
       "slug": "dfd-documentation-first-development-with-fastapi",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/RVFLYU_gv28NOK.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/RVFLYU_gv28NOK.jpeg",
           "code": "RVFLYU",
           "name": "Taehyun Lee",
           "slug": "taehyun-lee",
@@ -460,7 +460,7 @@
       "slug": "and-justice-for-ail",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/ECLXGR_WB5sOEU.jpg",
+          "avatar": "https://pretalx.com/media/avatars/ECLXGR_WB5sOEU.jpg",
           "code": "ECLXGR",
           "name": "Martina Guttau-Zielke",
           "slug": "martina-guttau-zielke",
@@ -483,7 +483,7 @@
       "slug": "from-built-in-concurrency-primitives-to-large-scale-distributed-computing",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/BLWEQ9_afNpKeT.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/BLWEQ9_afNpKeT.jpeg",
           "code": "BLWEQ9",
           "name": "Jakub Urban",
           "slug": "jakub-urban",
@@ -520,7 +520,7 @@
       "slug": "building-end-to-end-reliable-rag-applications",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/PVSNUG_e8eYgZh.jpg",
+          "avatar": "https://pretalx.com/media/avatars/PVSNUG_e8eYgZh.jpg",
           "code": "PVSNUG",
           "name": "Bilge Y\u00fccel",
           "slug": "bilge-yucel",
@@ -543,7 +543,7 @@
       "slug": "rapid-detection-of-red-cell-membrane-defects-leading-to-hemolytic-anaemias",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/FNMQXB_ib4sDL5.jpg",
+          "avatar": "https://pretalx.com/media/avatars/FNMQXB_ib4sDL5.jpg",
           "code": "FNMQXB",
           "name": "Tess Afanasyeva",
           "slug": "tess-afanasyeva",
@@ -566,7 +566,7 @@
       "slug": "stop-using-setup-py",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/A7Q3CY_OnpsXBC.jpg",
+          "avatar": "https://pretalx.com/media/avatars/A7Q3CY_OnpsXBC.jpg",
           "code": "A7Q3CY",
           "name": "Piotr Gnus",
           "slug": "piotr-gnus",
@@ -589,7 +589,7 @@
       "slug": "the-art-of-the-pull-request",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/CZLRNY_SWwtZmD.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/CZLRNY_SWwtZmD.jpeg",
           "code": "CZLRNY",
           "name": "Ben Lomax",
           "slug": "ben-lomax",
@@ -612,7 +612,7 @@
       "slug": "writing-python-like-it-s-rust-more-robust-code-with-type-hints",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/3HJ8ME_7zMCmlL.png",
+          "avatar": "https://pretalx.com/media/avatars/3HJ8ME_7zMCmlL.png",
           "code": "3HJ8ME",
           "name": "Jakub Ber\u00e1nek",
           "slug": "jakub-beranek",
@@ -635,21 +635,21 @@
       "slug": "cpython-core-development-panel",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/HBHXB3_fd2bdRz.webp",
+          "avatar": "https://pretalx.com/media/avatars/HBHXB3_fd2bdRz.webp",
           "code": "HBHXB3",
           "name": "Carol Willing",
           "slug": "carol-willing",
           "website_url": "https://ep2024.europython.eu/speaker/carol-willing"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/LBHYNH_6Eh1Aha.jpg",
+          "avatar": "https://pretalx.com/media/avatars/LBHYNH_6Eh1Aha.jpg",
           "code": "LBHYNH",
           "name": "Victor Stinner",
           "slug": "victor-stinner",
           "website_url": "https://ep2024.europython.eu/speaker/victor-stinner"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/NLHSWB_umWpyZ6.jpg",
+          "avatar": "https://pretalx.com/media/avatars/NLHSWB_umWpyZ6.jpg",
           "code": "NLHSWB",
           "name": "Pablo Galindo Salgado",
           "slug": "pablo-galindo-salgado",
@@ -670,7 +670,7 @@
           "website_url": "https://ep2024.europython.eu/speaker/petr-viktorin"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/YFCVFV_Zst0peg.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/YFCVFV_u12puJq.jpg",
           "code": "YFCVFV",
           "name": "\u0141ukasz Langa",
           "slug": "lukasz-langa",
@@ -693,7 +693,7 @@
       "slug": "geopandas-1-0-and-beyond",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/NN8GFM_rtrrsmv.jpg",
+          "avatar": "https://pretalx.com/media/avatars/NN8GFM_rtrrsmv.jpg",
           "code": "NN8GFM",
           "name": "Martin Fleischmann",
           "slug": "martin-fleischmann",
@@ -716,7 +716,7 @@
       "slug": "one-analysis-a-day-keeps-anomalies-away",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/L9HKCJ_QQvCcS9.jpg",
+          "avatar": "https://pretalx.com/media/avatars/L9HKCJ_QQvCcS9.jpg",
           "code": "L9HKCJ",
           "name": "Madalina Ciortan",
           "slug": "madalina-ciortan",
@@ -739,7 +739,7 @@
       "slug": "zero-trust-apis-with-python",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/YRPTZY_vpeaeOZ.jpg",
+          "avatar": "https://pretalx.com/media/avatars/YRPTZY_vpeaeOZ.jpg",
           "code": "YRPTZY",
           "name": "Jose Haro Peralta",
           "slug": "jose-haro-peralta",
@@ -762,7 +762,7 @@
       "slug": "demystifying-asyncio-building-your-own-event-loop-in-python",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/UF9YY9_rHnFtpk.png",
+          "avatar": "https://pretalx.com/media/avatars/UF9YY9_TnmJ1wK.jpg",
           "code": "UF9YY9",
           "name": "Arthur Pastel",
           "slug": "arthur-pastel",
@@ -785,14 +785,14 @@
       "slug": "from-pandas-to-production-elt-with-dlt",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/3RZLNH_5MUPvA1.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/3RZLNH_5MUPvA1.jpeg",
           "code": "3RZLNH",
           "name": "Violetta Mishechkina",
           "slug": "violetta-mishechkina",
           "website_url": "https://ep2024.europython.eu/speaker/violetta-mishechkina"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/YPDD8Z_1Vopdbv.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/YPDD8Z_1Vopdbv.jpeg",
           "code": "YPDD8Z",
           "name": "Adrian Brudaru",
           "slug": "adrian-brudaru",
@@ -815,7 +815,7 @@
       "slug": "the-pyarrow-revolution-in-pandas",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/VZM8L3_K3BCzbP.jpg",
+          "avatar": "https://pretalx.com/media/avatars/VZM8L3_K3BCzbP.jpg",
           "code": "VZM8L3",
           "name": "Reuven M. Lerner",
           "slug": "reuven-m-lerner",
@@ -838,7 +838,7 @@
       "slug": "deadcode-a-tool-to-find-and-fix-unused-dead-python-code",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/K8XYZX_pjBB8qh.jpg",
+          "avatar": "https://pretalx.com/media/avatars/K8XYZX_pjBB8qh.jpg",
           "code": "K8XYZX",
           "name": "Albertas Gimbutas",
           "slug": "albertas-gimbutas",
@@ -898,7 +898,7 @@
       "slug": "designing-config-files-the-conflicting-needs-of-programmers-and-users",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/GYETSD_2WRzxiZ.jpg",
+          "avatar": "https://pretalx.com/media/avatars/GYETSD_2WRzxiZ.jpg",
           "code": "GYETSD",
           "name": "Steven Pool",
           "slug": "steven-pool",
@@ -921,7 +921,7 @@
       "slug": "automate-your-kitchen-with-python-applied-ai",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/KVWBAJ_dK2QrzR.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/KVWBAJ_dK2QrzR.jpeg",
           "code": "KVWBAJ",
           "name": "Sena Sahin",
           "slug": "sena-sahin",
@@ -944,7 +944,7 @@
       "slug": "event-sourcing-in-production",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/8LC3YQ_0YynGPr.jpg",
+          "avatar": "https://pretalx.com/media/avatars/8LC3YQ_0YynGPr.jpg",
           "code": "8LC3YQ",
           "name": "Borjan Tchakaloff",
           "slug": "borjan-tchakaloff",
@@ -967,7 +967,7 @@
       "slug": "keeping-your-projects-nice-and-clean",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/FWGLE3_ut4z3AX.jpg",
+          "avatar": "https://pretalx.com/media/avatars/FWGLE3_ut4z3AX.jpg",
           "code": "FWGLE3",
           "name": "Jan Mus\u00edlek",
           "slug": "jan-musilek",
@@ -990,7 +990,7 @@
       "slug": "enterprise-python-software-that-lives-long-and-prosper",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/EU8HKQ_Yx4IAlX.jpg",
+          "avatar": "https://pretalx.com/media/avatars/EU8HKQ_Yx4IAlX.jpg",
           "code": "EU8HKQ",
           "name": "Alvaro Duran",
           "slug": "alvaro-duran",
@@ -1013,14 +1013,14 @@
       "slug": "invent-with-pyscript",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/BQVLYL_toXTM3O.jpg",
+          "avatar": "https://pretalx.com/media/avatars/BQVLYL_toXTM3O.jpg",
           "code": "BQVLYL",
           "name": "Nicholas Tollervey",
           "slug": "nicholas-tollervey",
           "website_url": "https://ep2024.europython.eu/speaker/nicholas-tollervey"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/G7GCFL_oS3SykB.jpg",
+          "avatar": "https://pretalx.com/media/avatars/G7GCFL_oS3SykB.jpg",
           "code": "G7GCFL",
           "name": "Joshua Lowe",
           "slug": "joshua-lowe",
@@ -1043,7 +1043,7 @@
       "slug": "enhancing-decorators-with-type-annotations-techniques-and-best-practices",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/BPFJEJ_nLBJXXt.jpg",
+          "avatar": "https://pretalx.com/media/avatars/BPFJEJ_nLBJXXt.jpg",
           "code": "BPFJEJ",
           "name": "Koudai Aono",
           "slug": "koudai-aono",
@@ -1066,7 +1066,7 @@
       "slug": "i-reverse-engineered-a-work-of-art-and-this-is-what-i-learned",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/VCGHPN_UnwFADV.png",
+          "avatar": "https://pretalx.com/media/avatars/VCGHPN_UnwFADV.png",
           "code": "VCGHPN",
           "name": "Yair Galler",
           "slug": "yair-galler",
@@ -1089,7 +1089,7 @@
       "slug": "how-to-deliver-3x-faster-with-effective-api-design",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/R3AGHS_9mmPbUA.JPG",
+          "avatar": "https://pretalx.com/media/avatars/R3AGHS_9mmPbUA.JPG",
           "code": "R3AGHS",
           "name": "Michal Cyprian",
           "slug": "michal-cyprian",
@@ -1112,7 +1112,7 @@
       "slug": "impersonation-in-data-engineering-no-more-credentials-in-your-code",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/HGKR9V_3lZao24.png",
+          "avatar": "https://pretalx.com/media/avatars/HGKR9V_3lZao24.png",
           "code": "HGKR9V",
           "name": "Marian \u0160pilka",
           "slug": "marian-spilka",
@@ -1135,7 +1135,7 @@
       "slug": "how-we-sped-up-numpys-string-operations-for-numpy-2-0",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/FRXXAQ_XuMpTEq.jpg",
+          "avatar": "https://pretalx.com/media/avatars/FRXXAQ_XuMpTEq.jpg",
           "code": "FRXXAQ",
           "name": "Lysandros Nikolaou",
           "slug": "lysandros-nikolaou",
@@ -1158,7 +1158,7 @@
       "slug": "the-role-of-c-in-the-python-ecosystem-the-case-of-the-qt-framework",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/JYPKC9_Fsf26Fi.JPG",
+          "avatar": "https://pretalx.com/media/avatars/JYPKC9_Fsf26Fi.JPG",
           "code": "JYPKC9",
           "name": "Cristi\u00e1n Maureira-Fredes",
           "slug": "cristian-maureira-fredes",
@@ -1181,7 +1181,7 @@
       "slug": "deciphering-the-mysteries-of-human-genomes",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/HUVVLU_4xMIKCP.jpg",
+          "avatar": "https://pretalx.com/media/avatars/HUVVLU_4xMIKCP.jpg",
           "code": "HUVVLU",
           "name": "Anna P\u0159istoupilov\u00e1",
           "slug": "anna-pristoupilova",

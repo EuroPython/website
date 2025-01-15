@@ -25,7 +25,7 @@
       "slug": "pointers-in-python",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/SR9UDD_SfhFlTM.png",
+          "avatar": "https://pretalx.com/media/avatars/SR9UDD_SfhFlTM.png",
           "code": "SR9UDD",
           "name": "Yan Yanchii",
           "slug": "yan-yanchii",
@@ -63,7 +63,7 @@
       "slug": "what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/AWKFRJ_8YWWoT5.jpg",
+          "avatar": "https://pretalx.com/media/avatars/AWKFRJ_8YWWoT5.jpg",
           "code": "AWKFRJ",
           "name": "Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e)",
           "slug": "sviatoslav-sydorenko-sviatoslav-sidorenko",
@@ -86,14 +86,14 @@
       "slug": "event-sourcing-from-the-ground-up",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/AU3L9P_8IVikmH.jpg",
+          "avatar": "https://pretalx.com/media/avatars/AU3L9P_8IVikmH.jpg",
           "code": "AU3L9P",
           "name": "Ravi Selker",
           "slug": "ravi-selker",
           "website_url": "https://ep2024.europython.eu/speaker/ravi-selker"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/UPWXFZ_8SUI4OW.jpg",
+          "avatar": "https://pretalx.com/media/avatars/UPWXFZ_8SUI4OW.jpg",
           "code": "UPWXFZ",
           "name": "Sebastiaan Zeeff",
           "slug": "sebastiaan-zeeff",
@@ -116,7 +116,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -146,7 +146,7 @@
       "slug": "writing-python-modules-in-rust",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/CXYAXB_1uePQoM.jpg",
+          "avatar": "https://pretalx.com/media/avatars/CXYAXB_1uePQoM.jpg",
           "code": "CXYAXB",
           "name": "Kushal Das",
           "slug": "kushal-das",
@@ -176,7 +176,7 @@
       "slug": "pointers-in-python",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/SR9UDD_SfhFlTM.png",
+          "avatar": "https://pretalx.com/media/avatars/SR9UDD_SfhFlTM.png",
           "code": "SR9UDD",
           "name": "Yan Yanchii",
           "slug": "yan-yanchii",
@@ -214,7 +214,7 @@
       "slug": "what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/AWKFRJ_8YWWoT5.jpg",
+          "avatar": "https://pretalx.com/media/avatars/AWKFRJ_8YWWoT5.jpg",
           "code": "AWKFRJ",
           "name": "Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e)",
           "slug": "sviatoslav-sydorenko-sviatoslav-sidorenko",
@@ -237,14 +237,14 @@
       "slug": "event-sourcing-from-the-ground-up",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/AU3L9P_8IVikmH.jpg",
+          "avatar": "https://pretalx.com/media/avatars/AU3L9P_8IVikmH.jpg",
           "code": "AU3L9P",
           "name": "Ravi Selker",
           "slug": "ravi-selker",
           "website_url": "https://ep2024.europython.eu/speaker/ravi-selker"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/UPWXFZ_8SUI4OW.jpg",
+          "avatar": "https://pretalx.com/media/avatars/UPWXFZ_8SUI4OW.jpg",
           "code": "UPWXFZ",
           "name": "Sebastiaan Zeeff",
           "slug": "sebastiaan-zeeff",
@@ -267,7 +267,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -297,7 +297,7 @@
       "slug": "writing-python-modules-in-rust",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/CXYAXB_1uePQoM.jpg",
+          "avatar": "https://pretalx.com/media/avatars/CXYAXB_1uePQoM.jpg",
           "code": "CXYAXB",
           "name": "Kushal Das",
           "slug": "kushal-das",
@@ -327,14 +327,14 @@
       "slug": "parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/CHHWUG_piXbGly.JPG",
+          "avatar": "https://pretalx.com/media/avatars/CHHWUG_piXbGly.JPG",
           "code": "CHHWUG",
           "name": "Neeraj Pandey",
           "slug": "neeraj-pandey",
           "website_url": "https://ep2024.europython.eu/speaker/neeraj-pandey"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/DSKWCM_U1Qmyus.JPG",
+          "avatar": "https://pretalx.com/media/avatars/DSKWCM_U1Qmyus.JPG",
           "code": "DSKWCM",
           "name": "Manoj Pandey",
           "slug": "manoj-pandey",
@@ -372,7 +372,7 @@
       "slug": "reinventing-the-itertools-wheel-for-fun-and-profit",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/BLNV7P_bI8IutA.jpg",
+          "avatar": "https://pretalx.com/media/avatars/BLNV7P_bI8IutA.jpg",
           "code": "BLNV7P",
           "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
           "slug": "rodrigo-girao-serrao",
@@ -395,7 +395,7 @@
       "slug": "from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/UBESRJ_kx1iIYS.png",
+          "avatar": "https://pretalx.com/media/avatars/UBESRJ_kx1iIYS.png",
           "code": "UBESRJ",
           "name": "Juan Luis Cano Rodr\u00edguez",
           "slug": "juan-luis-cano-rodriguez",
@@ -418,7 +418,7 @@
       "slug": "pre-commit-to-better-code",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/9WJJPL_BtRuJ8z.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/9WJJPL_BtRuJ8z.jpeg",
           "code": "9WJJPL",
           "name": "Stefanie Molin",
           "slug": "stefanie-molin",
@@ -441,7 +441,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -478,14 +478,14 @@
       "slug": "parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/CHHWUG_piXbGly.JPG",
+          "avatar": "https://pretalx.com/media/avatars/CHHWUG_piXbGly.JPG",
           "code": "CHHWUG",
           "name": "Neeraj Pandey",
           "slug": "neeraj-pandey",
           "website_url": "https://ep2024.europython.eu/speaker/neeraj-pandey"
         },
         {
-          "avatar": "https://program.europython.eu/media/avatars/DSKWCM_U1Qmyus.JPG",
+          "avatar": "https://pretalx.com/media/avatars/DSKWCM_U1Qmyus.JPG",
           "code": "DSKWCM",
           "name": "Manoj Pandey",
           "slug": "manoj-pandey",
@@ -523,7 +523,7 @@
       "slug": "reinventing-the-itertools-wheel-for-fun-and-profit",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/BLNV7P_bI8IutA.jpg",
+          "avatar": "https://pretalx.com/media/avatars/BLNV7P_bI8IutA.jpg",
           "code": "BLNV7P",
           "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
           "slug": "rodrigo-girao-serrao",
@@ -546,7 +546,7 @@
       "slug": "from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/UBESRJ_kx1iIYS.png",
+          "avatar": "https://pretalx.com/media/avatars/UBESRJ_kx1iIYS.png",
           "code": "UBESRJ",
           "name": "Juan Luis Cano Rodr\u00edguez",
           "slug": "juan-luis-cano-rodriguez",
@@ -569,7 +569,7 @@
       "slug": "pre-commit-to-better-code",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/9WJJPL_BtRuJ8z.jpeg",
+          "avatar": "https://pretalx.com/media/avatars/9WJJPL_BtRuJ8z.jpeg",
           "code": "9WJJPL",
           "name": "Stefanie Molin",
           "slug": "stefanie-molin",
@@ -592,7 +592,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://program.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
