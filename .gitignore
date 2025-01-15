@@ -134,7 +134,6 @@ out/
 node_modules/
 .pnpm-store/
 storybook-static/
-.vercel
 
 # Sentry Auth Token
 .sentryclirc
