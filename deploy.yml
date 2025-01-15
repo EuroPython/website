@@ -1,0 +1,72 @@
+- name: Deploy content to static server
+  hosts: all
+  vars:
+    branch_list:
+      - ep2024
+      - ep2025
+    branch_name:
+      "{{ lookup('pipe', 'git rev-parse --abbrev-ref HEAD') | trim }}"
+    sanitized_branch_name:
+      "{{ branch_name | regex_replace('[^a-zA-Z0-9_-]', '_') }}"
+    remote_base_path: "/home/{{ ansible_user }}/content"
+
+  tasks:
+    - name: Generate UUID for temp directory
+      set_fact:
+        unique_id: "{{ lookup('pipe', 'uuidgen') }}"
+
+    - name: Define and trim deploy path
+      set_fact:
+        deploy_path: >-
+          {{
+            (
+              remote_base_path + '/europython_websites/' + branch_name
+              if branch_name in branch_list else
+              remote_base_path + '/previews/' + sanitized_branch_name
+            ) | trim
+          }}
+        temp_dir:
+          "{{ remote_base_path }}/temp/temp_{{ sanitized_branch_name }}_{{
+          unique_id }}"
+
+    - name: Show deployment configuration
+      debug:
+        msg:
+          - "Branch Name: '{{ branch_name }}'"
+          - "Sanitized Branch Name: '{{ sanitized_branch_name }}'"
+          - "Remote Base Path: '{{ remote_base_path }}'"
+          - "Deploy Path: '{{ deploy_path }}'"
+          - "Temp Dir: '{{ temp_dir }}'"
+
+    - name: Ensure the temporary destination directory exists
+      file:
+        path: "{{ temp_dir }}"
+        state: directory
+
+    - name: Synchronize local files to remote temporary directory
+      synchronize:
+        src: dist/
+        dest: "{{ temp_dir }}/"
+        mode: push
+        rsync_opts:
+          - "--delete"
+
+    - name: Ensure temporary directory is populated
+      shell: test "$(ls -A {{ temp_dir }})"
+      register: temp_dir_check
+      failed_when: temp_dir_check.rc != 0
+
+    - name: Copy files from temporary directory to deployment directory
+      shell: rsync -a --delete {{ temp_dir }}/ {{ deploy_path }}/
+
+    - name: Verify deployment success
+      shell: |
+        if [ ! -d "{{ deploy_path }}" ] || [ -z "$(ls -A {{ deploy_path }})" ]; then
+          exit 1
+        fi
+      register: target_dir_check
+      failed_when: target_dir_check.rc != 0
+
+    - name: Confirm deployment success
+      debug:
+        msg: "Files successfully deployed to '{{ deploy_path }}/'."
