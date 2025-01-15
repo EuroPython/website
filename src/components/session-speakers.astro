@@ -1,17 +1,16 @@
 ---
-import type { ValidContentEntrySlug } from "astro:content";
 import { getEntries } from "astro:content";
 
 interface Props {
   speakers: Array<{
-    slug: ValidContentEntrySlug<"speakers">;
+    slug: string;
     collection: "speakers";
   }>;
 }
 
 const { speakers: speakersEntries } = Astro.props;
 
-const speakers = await getEntries(speakersEntries);
+const speakers = await getEntries(speakersEntries.map(entry => ({ collection: entry.collection, id: entry.slug })));
 ---
 
 {
