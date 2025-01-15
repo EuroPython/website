@@ -3,14 +3,13 @@ const { sessions } = Astro.props;
 import Prose from "../prose/prose.astro";
 import { Tag } from "../tag/tag";
 import SessionSpeakers from "../session-speakers.astro";
-import type { ValidContentEntrySlug } from "astro:content";
 
 type Session = {
   data: {
     title: string;
     speakers: Array<{
       collection: "speakers";
-      slug: ValidContentEntrySlug<"speakers">;
+      slug: string;
     }>;
     session_type: string;
     track: string;
