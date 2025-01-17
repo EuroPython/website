@@ -25,8 +25,7 @@
               remote_base_path + '/previews/' + sanitized_branch_name
             ) | trim
           }}
-        temp_dir:
-          "{{ remote_base_path }}/temp/{{ unique_id }}"
+        temp_dir: "{{ remote_base_path }}/temp/{{ unique_id }}"
 
     - name: Show deployment configuration
       ansible.builtin.debug:
@@ -49,7 +48,7 @@
         src: dist/
         dest: "{{ deploy_path }}/"
         mode: push
-        checksum: true 
+        checksum: true
         delete: true
 
     - name: Verify deployment success
