@@ -53,10 +53,10 @@
         delete: true
 
     - name: Verify deployment success
-      shell: |
-        if [ ! -d "{{ deploy_path }}" ] || [ -z "$(ls -A {{ deploy_path }})" ]; then
-          exit 1
-        fi
+      ansible.builtin.find:
+        paths: "{{ deploy_path }}"
+        recurse: true
+        age: -1d
       register: target_dir_check
       failed_when: target_dir_check.matched == 0
 
