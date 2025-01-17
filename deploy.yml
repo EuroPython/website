@@ -42,6 +42,8 @@
       file:
         path: "{{ temp_dir }}"
         state: directory
+        recurse: true
+        mode: 750
 
     - name: Synchronize local files to remote temporary directory
       synchronize:
