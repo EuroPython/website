@@ -39,7 +39,7 @@
           - "Temp Dir: '{{ temp_dir }}'"
 
     - name: Ensure the temporary destination directory exists
-      file:
+      ansible.builtin.file:
         path: "{{ temp_dir }}"
         state: directory
         recurse: true
