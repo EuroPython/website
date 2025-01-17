@@ -30,7 +30,7 @@
           unique_id }}"
 
     - name: Show deployment configuration
-      debug:
+      ansible.builtin.debug:
         msg:
           - "Branch Name: '{{ branch_name }}'"
           - "Sanitized Branch Name: '{{ sanitized_branch_name }}'"
