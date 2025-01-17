@@ -13,7 +13,7 @@
   tasks:
     - name: Generate UUID for temp directory
       ansible.builtin.set_fact:
-        unique_id: "{{ lookup('pipe', 'uuidgen') }}"
+        unique_id: "{{ ansible_date_time.iso8601_micro | to_uuid }}"
 
     - name: Define and trim deploy path
       ansible.builtin.set_fact:
