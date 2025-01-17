@@ -58,7 +58,7 @@
           exit 1
         fi
       register: target_dir_check
-      failed_when: target_dir_check.rc != 0
+      failed_when: target_dir_check.matched == 0
 
     - name: Confirm deployment success
       debug:
