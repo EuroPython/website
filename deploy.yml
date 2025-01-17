@@ -26,8 +26,7 @@
             ) | trim
           }}
         temp_dir:
-          "{{ remote_base_path }}/temp/temp_{{ sanitized_branch_name }}_{{
-          unique_id }}"
+          "{{ remote_base_path }}/temp/{{ unique_id }}"
 
     - name: Show deployment configuration
       ansible.builtin.debug:
