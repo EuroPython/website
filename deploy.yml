@@ -50,6 +50,7 @@
         src: dist/
         dest: "{{ temp_dir }}/"
         mode: push
+        checksum: true 
         delete: true
 
     - name: Verify deployment success
