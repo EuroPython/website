@@ -52,14 +52,6 @@
         mode: push
         delete: true
 
-    - name: Ensure temporary directory is populated
-      shell: test "$(ls -A {{ temp_dir }})"
-      register: temp_dir_check
-      failed_when: temp_dir_check.rc != 0
-
-    - name: Copy files from temporary directory to deployment directory
-      shell: rsync -a --delete {{ temp_dir }}/ {{ deploy_path }}/
-
     - name: Verify deployment success
       shell: |
         if [ ! -d "{{ deploy_path }}" ] || [ -z "$(ls -A {{ deploy_path }})" ]; then
