@@ -16,7 +16,7 @@
         unique_id: "{{ lookup('pipe', 'uuidgen') }}"
 
     - name: Define and trim deploy path
-      set_fact:
+      ansible.builtin.set_fact:
         deploy_path: >-
           {{
             (
