@@ -48,7 +48,7 @@
     - name: Synchronize local files to remote temporary directory
       ansible.posix.synchronize:
         src: dist/
-        dest: "{{ temp_dir }}/"
+        dest: "{{ deploy_path }}/"
         mode: push
         checksum: true 
         delete: true
