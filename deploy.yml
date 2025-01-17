@@ -50,8 +50,7 @@
         src: dist/
         dest: "{{ temp_dir }}/"
         mode: push
-        rsync_opts:
-          - "--delete"
+        delete: true
 
     - name: Ensure temporary directory is populated
       shell: test "$(ls -A {{ temp_dir }})"
