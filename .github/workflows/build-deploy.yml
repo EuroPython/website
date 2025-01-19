@@ -6,6 +6,7 @@ on:
     branches:
       - ep2024
       - ep2025
+      - deployment-simpler
 
 jobs:
   deploy:
@@ -27,19 +28,10 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-          cache: "pip"
-
-      - name: Install Ansible
-        run: pip install ansible
+        run: make install
 
       - name: Build the website
-        run: pnpm build
+        run: make build
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.0
@@ -47,8 +39,4 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
       - name: Deploy to server
-        env:
-          SSH_USERNAME: ${{ secrets.DEPLOY_SSH_USERNAME }}
-          INVENTORY: ${{ secrets.DEPLOY_INVENTORY }}
-        run: |
-          ansible-playbook -u $SSH_USERNAME -i "$INVENTORY" deploy.yml
+        run: make deploy
