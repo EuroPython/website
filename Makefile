@@ -24,7 +24,7 @@ FORCE_DEPLOY ?= false
 ifeq ($(SAFE_BRANCH), ep2025)
 	RELEASES_DIR := $(VPS_PROD_PATH)/releases
 else
-	RELEASES_DIR := $(VPS_PROD_PATH)/preview/$(SAFE_BRANCH)/releases
+	RELEASES_DIR := $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 endif
 
 TARGET := $(RELEASES_DIR)/$(TIMESTAMP)
