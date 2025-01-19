@@ -38,5 +38,8 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
+      - name: ssh keyscan
+        run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
+
       - name: Deploy to server
         run: make deploy
