@@ -45,4 +45,4 @@ jobs:
         run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
 
       - name: Deploy to server
-        run: make deploy
+        run: make deploy FORCE_DEPLOY=true
