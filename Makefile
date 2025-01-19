@@ -21,9 +21,9 @@ SAFE_BRANCH := $(shell echo "$(BRANCH)" | sed 's/[^A-Za-z0-9._-]/-/g')
 
 # TODO: update this to the prod branches
 ifeq ($(SAFE_BRANCH), deployment-simpler)
-	RELEASES_DIR := $(VPS_PATH)/releases
+	RELEASES_DIR := $(VPS_PROD_PATH)/releases
 else
-	RELEASES_DIR := $(VPS_PATH)/preview/$(SAFE_BRANCH)/releases
+	RELEASES_DIR := $(VPS_PROD_PATH)/preview/$(SAFE_BRANCH)/releases
 endif
 
 TARGET := $(RELEASES_DIR)/$(TIMESTAMP)
