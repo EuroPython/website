@@ -45,6 +45,8 @@ clean:
 build:
 	# TODO: update this to just `pnpm build` after resolving the astro-check warnings
 	pnpm run astro build
+	# NOTE: also let's find a better way to do this :D
+	find ./dist/_astro/ -iname '*.jpg' -delete
 
 deploy:
 	@echo "\n\n**** Deploying branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
