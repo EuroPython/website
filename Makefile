@@ -9,8 +9,8 @@ REMOTE_CMD=ssh $(VPS_USER)@$(VPS_HOST)
 
 # Variables for build/deploy
 # ==========================
-export TIMESTAMP := $(shell date +%Y%m%d%H%M%S)
-export GIT_VERSION := $(shell git rev-parse --short HEAD)
+export TIMESTAMP ?= $(shell date +%Y%m%d%H%M%S)
+export GIT_VERSION ?= $(shell git rev-parse --short HEAD)
 
 # Variables for deploy
 # ====================
