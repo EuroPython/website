@@ -20,16 +20,11 @@ BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 SAFE_BRANCH := $(shell echo "$(BRANCH)" | sed 's/[^A-Za-z0-9._-]/-/g')
 FORCE_DEPLOY ?= false
 
-# TODO: update this to the prod branches
-ifeq ($(SAFE_BRANCH), ep2025)
-	RELEASES_DIR := $(VPS_PROD_PATH)/releases
-else
-	RELEASES_DIR := $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
-endif
-
-TARGET := $(RELEASES_DIR)/$(TIMESTAMP)
-
 .PHONY: build deploy dev clean install
+
+
+safe_branch:
+	@echo $(SAFE_BRANCH)
 
 pre:
 	npm install -g pnpm
@@ -54,9 +49,20 @@ build:
 
 ifeq ($(FORCE_DEPLOY), true)
 deploy:
+	RELEASES_DIR := $(VPS_PROD_PATH)/releases
+	TARGET := $(RELEASES_DIR)/$(TIMESTAMP)
 	@echo "\n\n**** Deploying branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
 	$(REMOTE_CMD) "mkdir -p $(TARGET)"
 	rsync -avz --delete ./dist/ $(VPS_USER)@$(VPS_HOST):$(TARGET)/
 	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current"
 	@echo "\n\n**** Deployment complete.\n\n"
 endif
+
+preview:
+	RELEASES_DIR := $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
+	TARGET := $(RELEASES_DIR)/$(TIMESTAMP)
+	@echo "\n\n**** Deploying preview of a branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
+	$(REMOTE_CMD) "mkdir -p $(TARGET)"
+	rsync -avz --delete ./dist/ $(VPS_USER)@$(VPS_HOST):$(TARGET)/
+	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current"
+	@echo "\n\n**** Preview complete.\n\n"
