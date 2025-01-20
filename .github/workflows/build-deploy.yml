@@ -4,9 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - ep2024
       - ep2025
-      - deployment-simpler
 
 jobs:
   deploy:
