@@ -27,6 +27,9 @@ jobs:
           BRANCH_NAME=$(make safe_branch)
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
 
+      - name: ssh keyscan
+        run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
+
       - name: Upload preview
         run: make preview
 
