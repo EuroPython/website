@@ -49,7 +49,7 @@ jobs:
         run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
 
       - name: Upload preview
-        run: make preview
+        run: make preview BRANCH=$GITHUB_BRANCH_NAME
 
       - name: Update PR Comment
         uses: actions/github-script@v6
