@@ -11,7 +11,6 @@ jobs:
       PREVIEW_HOSTNAME: ep-preview.click
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
