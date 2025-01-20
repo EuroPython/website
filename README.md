@@ -70,5 +70,3 @@ import image from "./image.jpg";
 
 <Image src={image} width={500} />;
 ```
-
-.
