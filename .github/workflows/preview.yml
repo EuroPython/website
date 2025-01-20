@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PREVIEW_HOSTNAME: ep-preview.click
+      GITHUB_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
 
     steps:
       - name: Checkout
@@ -41,7 +42,7 @@ jobs:
 
       - name: Get current branch name
         run: |
-          BRANCH_NAME=$(make safe_branch)
+          BRANCH_NAME=$(make safe_branch BRANCH=$GITHUB_BRANCH_NAME)
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
 
       - name: ssh keyscan
