@@ -2,10 +2,10 @@
 title: EuroPython is back in Prague for 2025
 ---
 
-* 1500 partcipants
-* 200 sessions
-* 200 speakers
-* Social events
+- 1500 partcipants
+- 200 sessions
+- 200 speakers
+- Social events
 
 A week of all things Python:
 
