@@ -37,11 +37,6 @@ export default defineConfig({
     ],
   },
   site: "https://ep2025.europython.eu",
-  integrations: [
-    mdx(),
-    sitemap(),
-    react(),
-    metaTags(),
-  ],
+  integrations: [mdx(), sitemap(), react(), metaTags()],
   output: "static",
 });
