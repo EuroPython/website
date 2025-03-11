@@ -8,6 +8,7 @@ import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
+import pagefind from "astro-pagefind";
 
 // https://astro.build/config
 export default defineConfig({
@@ -42,6 +43,7 @@ export default defineConfig({
       nesting: true,
     }),
     metaTags(),
+    pagefind(),
   ],
   output: "static",
 });

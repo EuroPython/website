@@ -1,6 +1,7 @@
 ---
 import ButtonLink from "../button-link/button-link.astro";
 import HeaderButton from "./header-button.astro";
+import Search from "astro-pagefind/components/Search";
 
 export interface Props {
   mobile?: boolean;
@@ -12,6 +13,13 @@ const IS_LIVE = false;
 ---
 
 <div class="ml-auto flex items-center space-x-4">
+  <Search id="search" className="pagefind-ui" uiOptions={{ 
+
+      showImages: false,
+      translations: {
+        zero_results: "Couldn't find [SEARCH_TERM]"
+      }
+    }} />
   {
     !mobile ? (
       <>
@@ -40,3 +48,120 @@ const IS_LIVE = false;
     </HeaderButton>
   </label>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchContainer = document.querySelector(".pagefind-ui");
+    const searchClear = document.querySelector(".pagefind-ui__search-clear");
+    const searchInput = searchContainer?.querySelector("input");
+    let selectedIndex = -1;
+
+    function updateSelection() {
+        const results = searchContainer?.querySelectorAll(".pagefind-ui__result");
+        if (!results) return;
+
+        results.forEach((result, index) => {
+            if (index === selectedIndex) {
+                result.classList.add("selected");
+                result.scrollIntoView({ block: "nearest", behavior: "smooth" });
+            } else {
+                result.classList.remove("selected");
+            }
+        });
+    }
+
+    document.addEventListener("keydown", function (event) {
+        if (!searchContainer || !searchInput) return;
+
+        const results = searchContainer.querySelectorAll(".pagefind-ui__result");
+        if (document.activeElement === searchInput) {
+            if (event.key === "ArrowDown") {
+                event.preventDefault();
+                selectedIndex = (selectedIndex + 1) % results.length;
+                updateSelection();
+            } else if (event.key === "ArrowUp") {
+                event.preventDefault();
+                selectedIndex = (selectedIndex - 1 + results.length) % results.length;
+                updateSelection();
+            } else if (event.key === "Enter" && selectedIndex >= 0) {
+                event.preventDefault();
+                results[selectedIndex].querySelector("a")?.click();
+            }
+        }
+    });
+
+    // Reset selection when the search query changes
+    searchInput?.addEventListener("input", function () {
+        selectedIndex = -1;
+    });
+
+});
+</script>
+<style is:global>
+ .pagefind-ui__result.selected {
+     background-color: #f5f5f5;
+     background-image: linear-gradient(to right, #3684B6 7px, transparent 5px);
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+}
+ .pagefind-ui__drawer {
+}
+ .pagefind-ui__message {
+     margin: 1em;
+}
+ .pagefind-ui__result mark {
+     background: #F9EB5D;
+     background-image: linear-gradient(to right, #F9EB5D 10%, #FCF4A7 100%);
+     margin: 4px;
+     padding-right: 6px;
+     padding-left: 6px;
+     padding-top: 2px;
+     padding-bottom: 2px;
+     color: #000000;
+     font-family: monospace;
+     border-radius: 4px;
+}
+ .pagefind-ui {
+     --pagefind-ui-scale: 1;
+     --pagefind-ui-primary: #141f36;
+     --pagefind-ui-text: black;
+     --pagefind-ui-border: #d8d8d8;
+     --pagefind-ui-border-width: 2px;
+     --pagefind-ui-border-radius: 0;
+     width: 50%;
+}
+ .pagefind-ui.yellow {
+     --pagefind-ui-background: #efc302;
+}
+ .pagefind-ui.red {
+     --pagefind-ui-background: #ffb9bb;
+     width: 50%;
+}
+ .pagefind-ui .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
+     position: absolute;
+     left: auto;
+     right: 0;
+     margin-top: 0px;
+     width:50vw;
+     z-index: 9999;
+     overflow-y: auto;
+     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+     border-bottom-right-radius: var(--pagefind-ui-border-radius);
+     border-bottom-left-radius: var(--pagefind-ui-border-radius);
+     background-color: var(--pagefind-ui-background);
+}
+ .pagefind-ui__result{
+     padding: 0 2em 1em !important;
+}
+ .pagefind-ui .pagefind-ui__result-link {
+     color: var(--pagefind-ui-primary);
+}
+ .pagefind-ui .pagefind-ui__result-excerpt {
+     color: var(--pagefind-ui-text);
+}
+ @media (max-width: 1280px) {
+     .pagefind-ui {
+         display:none;
+    }
+}
+ 
+</style>
