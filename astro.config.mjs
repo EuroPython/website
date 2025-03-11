@@ -3,7 +3,7 @@ import mdx from "@astrojs/mdx";
 import { h } from "hastscript";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -11,6 +11,9 @@ import metaTags from "astro-meta-tags";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+  },
   markdown: {
     remarkPlugins: [
       [
@@ -38,9 +41,6 @@ export default defineConfig({
     mdx(),
     sitemap(),
     react(),
-    tailwind({
-      nesting: true,
-    }),
     metaTags(),
   ],
   output: "static",

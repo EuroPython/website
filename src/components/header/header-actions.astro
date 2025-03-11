@@ -7,8 +7,6 @@ export interface Props {
 }
 
 const { mobile = false }: Props = Astro.props;
-
-const IS_LIVE = false;
 ---
 
 <div class="ml-auto flex items-center space-x-4">
@@ -24,12 +22,6 @@ const IS_LIVE = false;
         <ButtonLink url="https://voting.europython.eu" className="hidden md:block">
           <span>Community vote</span>
         </ButtonLink>
-        {IS_LIVE && (
-          <ButtonLink url="/live">
-            Live
-            <span class="hidden md:inline"> 📺</span>
-          </ButtonLink>
-        )}
       </>
     ) : null
   }

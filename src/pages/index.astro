@@ -14,6 +14,8 @@ import Prague from "../components/hero-section/prague.astro";
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/prague.mdx";
 
+import "../styles/global.css";
+
 let deadlines = await getCollection("deadlines");
 deadlines = deadlines
   .sort((a, b) => a.slug.localeCompare(b.slug))
