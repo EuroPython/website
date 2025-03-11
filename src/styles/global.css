@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
+/* Primary and Secondary Colors */
 @theme {
   --color-primary: #151f38;
   --color-primary-hover: #7a7ebd;
   --color-primary-active: #7a7ebd;
-  --color-button: #ee714b;
-  --color-button-hover: #fabc1b;
+
   --color-secondary: #151f38;
   --color-secondary-dark: #f5e5d6;
   --color-secondary-darkest: white;
   --color-secondary-light: #7a7ebd;
+  
+  --color-button: #ee714b;
+  --color-button-hover: #fabc1b;
+
+  --color-body-background: #f5e5d6;
+  --color-body-inverted: #001c13;
+  --color-body-light: #888;
+}
+
+/* Text & Hero Colors */
+@theme {
   --color-text: #151f38;
   --color-text-inverted: white;
-  --color-body-background: #f5e5d6;
   --color-hero-primary: #151f38;
   --color-hero-secondary: #fabc1b;
-  
+}
+
+/* Session Colors */
+@theme {
   --color-session-neutral: #f5e5d6;
-  --color-session-beginner: #63d452;
+  --color-session-beginner: #63d451;
   --color-session-intermediate: #ffcd45;
-  --color-session-advanced: #d34847;
-  
+  --color-session-advanced: #d34848;
+  --color-session-none: var(--color-secondary-light);
+}
+
+/* Sponsor Colors */
+@theme {
   --color-sponsor-keystone: #5c9f92;
   --color-sponsor-diamond: #568497;
   --color-sponsor-platinum: #6b6c6e;
@@ -30,6 +47,18 @@
   --color-sponsor-patron: #a11217;
 }
 
+/* Extra Colors */
+@theme {
+  --color-red: #ce3333;
+  --color-keynoter-info: hsla(0, 0%, 100%, 0.85);
+}
+
+/* Aspect Ratios */
+@theme {
+  --aspect-ratio-hero: 2.4380530973;
+}
+
+/* Fonts */
 @theme {
   --font-system: system-ui, sans-serif;
   --font-title: "Inter Variable", -apple-system, BlinkMacSystemFont, Segoe UI, 
@@ -40,10 +69,7 @@
                Segoe UI Emoji, Segoe UI Symbol;
 }
 
-@theme {
-  --aspect-ratio-hero: 2.4380530973;
-}
-
+/* Typography */
 @theme {
   --tw-prose-headings: var(--color-text-inverted);
 }
@@ -57,10 +83,7 @@ body {
 
 .layout-wrapper {
   display: grid;
-  grid-template-columns:
-    1fr
-    min(1150px, 100%)
-    1fr;
+  grid-template-columns: 1fr min(1150px, 100%) 1fr;
 }
 
 .layout-wrapper > * {
@@ -72,6 +95,7 @@ body {
   grid-column: 1 / 4;
 }
 
+/* Typography */
 .prose {
   color: var(--color-text);
 }
@@ -82,6 +106,20 @@ body {
 
 .prose :is(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none !important;
+}
+
+.prose p a, 
+.prose li a, 
+.prose blockquote a, 
+.prose span a {
+  color: var(--color-primary);
+}
+
+.prose p a:hover, 
+.prose li a:hover, 
+.prose blockquote a:hover, 
+.prose span a:hover {
+  color: var(--color-primary-hover);
 }
 
 ul.milestone-done li {
@@ -207,12 +245,7 @@ p.cross::after {
     word-break: break-word;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     font-family: var(--font-display);
     line-height: 1.25;
