@@ -172,12 +172,12 @@ const formatPrice = (price: number | string) => {
     <p class="text-xl mt-2">Ideal for companies seeking high brand visibility and strong participant engagement</p>
     <p class="text-xl mt-[-10px] mb-12 font-bold italic">Packages without booth space available at a discounted rate</p>
   </div>
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-2 lg:gap-10 gap-10">
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-2 lg:gap-10">
 
   {tiers
     .filter(tier => tier.title === "Silver" || tier.title === "Platinum" || tier.title === "Gold")
-    .sort((a, b) => {
-      const order = { "Silver": 1, "Platinum": 2, "Gold": 3 };
+    .sort((a: SponsorTierProps, b: SponsorTierProps) => {
+      const order: { [key: string]: number } = { "Silver": 1, "Platinum": 2, "Gold": 3 };
       return order[a.title] - order[b.title];
     })
     .map((tier) => (
@@ -227,7 +227,7 @@ const formatPrice = (price: number | string) => {
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
     {tiers.filter(tier => tier.title === "Diamond" || tier.title === "Keystone")
     .sort((a, b) => {
-      const order = { "Diamond": 1, "Keystone": 2};
+      const order: { [key: string]: number } = { "Diamond": 1, "Keystone": 2 };
       return order[a.title] - order[b.title];
     })
 
@@ -279,7 +279,7 @@ const formatPrice = (price: number | string) => {
 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-9 lg:gap-10 w-full md:w-5/6 lg:w-5/6 mx-auto">
     {tiers.filter(tier => tier.title === "Patron" || tier.title === "Bronze")
     .sort((a, b) => {
-      const order = { "Patron": 1, "Bronze": 2};
+      const order: { [key: string]: number }  = { "Patron": 1, "Bronze": 2};
       return order[a.title] - order[b.title];
     })
     .map((tier) => (
