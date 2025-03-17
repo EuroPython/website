@@ -22,14 +22,14 @@ const tiers: TicketTierProps[] = [
     personalPrice: 200,
     businessPrice: 400,
     features: [
-      "Access to two full days of workshops and tutorials across six parallel tracks (July 14-15)",
-      "Access to Sprint Weekend (19-20 July)",
-      "Light lunch provided each day",
-      "Break refreshments (coffee, tea, water, and more)",
-      "Access to in-person networking opportunities during the tutorial days",
-      "Access to free childcare if needed",
-      "Conference T-shirt included",
-      "<strong>Does NOT include</strong> the main Conference Days"
+      { text: "Access to two full days of workshops and tutorials across six parallel tracks (July 14-15)" },
+      { text: "Access to Sprint Weekend (19-20 July)" },
+      { text: "Light lunch provided each day" },
+      { text: "Break refreshments (coffee, tea, water, and more)" },
+      { text: "Access to in-person networking opportunities during the tutorial days" },
+      { text: "Access to free childcare if needed" },
+      { text: "Conference T-shirt included" },
+      { text: "<strong>Does NOT include</strong> the main Conference Days", icon: "❌" }, // Explicitly setting an "X"
     ],
   },
   {
@@ -40,19 +40,19 @@ const tiers: TicketTierProps[] = [
     latePersonalPrice: 675,
     lateBusinessPrice: 1200,
     features: [
-      "<strong>Access to ALL conference dates (14-20 July)</strong>",
-      "Access to two full days of workshops and tutorials across six parallel tracks (July 14-15)",
-      "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
-      "Access to open spaces throughout the three conference days",
-      "Access to Sprint Weekend (19-20 July)",
-      "Access to sponsor booths with opportunities to connect with sponsoring companies",
-      "Limited access to specific sponsored workshops",
-      "Light lunch provided each day",
-      "Break refreshments (coffee, tea, water, and more)",
-      "Access to in-person networking opportunities throughout the entire conference",
-      "Access to free childcare if needed",
-      "Conference T-shirt included",
-      "<strong>Limited to only 300, due to tutorial capacity</strong>"
+      { text: "<strong>Access to ALL conference dates (14-20 July)</strong>" },
+      { text: "Access to two full days of workshops and tutorials across six parallel tracks (July 14-15)" },
+      { text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>" },
+      { text: "Access to open spaces throughout the three conference days" },
+      { text: "Access to Sprint Weekend (19-20 July)" },
+      { text: "Access to sponsor booths with opportunities to connect with sponsoring companies" },
+      { text: "Limited access to specific sponsored workshops" },
+      { text: "Light lunch provided each day" },
+      { text: "Break refreshments (coffee, tea, water, and more)" },
+      { text: "Access to in-person networking opportunities throughout the entire conference" },
+      { text: "Access to free childcare if needed" },
+      { text: "Conference T-shirt included" },
+      { text: "<strong>Limited to only 300, due to tutorial capacity</strong>", icon: "⚠️" },
     ],
   },
   {
@@ -63,16 +63,16 @@ const tiers: TicketTierProps[] = [
     latePersonalPrice: 450,
     lateBusinessPrice: 750,
     features: [
-      "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
-      "Access to open spaces throughout the three conference days",
-      "Access to Sprint Weekend (19-20 July)",
-      "Access to sponsor booths with opportunities to connect with sponsoring companies",
-      "Limited access to specific sponsored workshops",
-      "Light lunch provided each day",
-      "Break refreshments (coffee, tea, water, and more)",
-      "Access to in-person networking opportunities during the main conference days",
-      "Access to free childcare if needed",
-      "Conference T-shirt included",
+      { text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>" },
+      { text: "Access to open spaces throughout the three conference days" },
+      { text: "Access to Sprint Weekend (19-20 July)" },
+      { text: "Access to sponsor booths with opportunities to connect with sponsoring companies" },
+      { text: "Limited access to specific sponsored workshops" },
+      { text: "Light lunch provided each day" },
+      { text: "Break refreshments (coffee, tea, water, and more)" },
+      { text: "Access to in-person networking opportunities during the main conference days" },
+      { text: "Access to free childcare if needed" },
+      { text: "Conference T-shirt included" },
     ],
   }
 ];
@@ -117,8 +117,10 @@ const formatPrice = (price: number | string) => {
         <ul class="text-base list-none pl-0">
           {tier.features.map((feature) => (
             <li class="flex items-start">
-              <span class="flex-shrink-0 w-6">✔️</span>
-              <span set:html={feature}></span>
+              <span class="flex-shrink-0 w-6">
+                {feature.icon ? feature.icon : "✔️"}
+              </span>
+              <span set:html={feature.text}></span>
             </li>
           ))}
         </ul>
