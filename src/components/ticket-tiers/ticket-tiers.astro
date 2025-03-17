@@ -22,28 +22,14 @@ const tiers: TicketTierProps[] = [
     personalPrice: 200,
     businessPrice: 400,
     features: [
-      "Access to Workshop/Tutorial Days (14-15 July)",
+      "Access to two full days of workshops and tutorials across six parallel tracks (July 14-15)",
       "Access to Sprint Weekend (19-20 July)",
-      "<strong>Does NOT include</strong> the main Conference Days",
-      "Break refreshments and light lunch included",
-      "Free childcare available if needed",
-      "T-shirt"
-    ],
-  },
-  {
-    title: "Conference Only",
-    educationPrice: 135,
-    personalPrice: 300,
-    businessPrice: 500,
-    latePersonalPrice: 450,
-    lateBusinessPrice: 750,
-    features: [
-      "<strong>Access to Conference Days (16-18 July)</strong>",
-      "Access to Sprint Weekend (19-20 July)",
-      "Limited access to specific sponsored workshops",
-      "Break refreshments and light lunch included",
-      "Free childcare available if needed",
-      "T-shirt"
+      "Light lunch provided each day",
+      "Break refreshments (coffee, tea, water, and more)",
+      "Access to in-person networking opportunities during the tutorial days",
+      "Access to free childcare if needed",
+      "Conference T-shirt included",
+      "<strong>Does NOT include</strong> the main Conference Days"
     ],
   },
   {
@@ -55,16 +41,42 @@ const tiers: TicketTierProps[] = [
     lateBusinessPrice: 1200,
     features: [
       "<strong>Access to ALL conference dates (14-20 July)</strong>",
-      "Workshop/Tutorial Days (14-15 July)",
-      "Conference Days (16-18 July)",
-      "Sprint Weekend (19-20 July)",
-      "Break refreshments and light lunch included",
-      "Free childcare available if needed",
-      "T-shirt",
-      "<strong>Limited to only 300, due to Tutorial capacity</strong>"
+      "Access to two full days of workshops and tutorials across six parallel tracks (July 14-15)",
+      "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
+      "Access to open spaces throughout the three conference days",
+      "Access to Sprint Weekend (19-20 July)",
+      "Access to sponsor booths with opportunities to connect with sponsoring companies",
+      "Limited access to specific sponsored workshops",
+      "Light lunch provided each day",
+      "Break refreshments (coffee, tea, water, and more)",
+      "Access to in-person networking opportunities throughout the entire conference",
+      "Access to free childcare if needed",
+      "Conference T-shirt included",
+      "<strong>Limited to only 300, due to tutorial capacity</strong>"
     ],
   },
+  {
+    title: "Conference Only",
+    educationPrice: 135,
+    personalPrice: 300,
+    businessPrice: 500,
+    latePersonalPrice: 450,
+    lateBusinessPrice: 750,
+    features: [
+      "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
+      "Access to open spaces throughout the three conference days",
+      "Access to Sprint Weekend (19-20 July)",
+      "Access to sponsor booths with opportunities to connect with sponsoring companies",
+      "Limited access to specific sponsored workshops",
+      "Light lunch provided each day",
+      "Break refreshments (coffee, tea, water, and more)",
+      "Access to in-person networking opportunities during the main conference days",
+      "Access to free childcare if needed",
+      "Conference T-shirt included",
+    ],
+  }
 ];
+
 
 const formatPrice = (price: number | string) => {
   if (typeof price === "string") return price;
@@ -78,12 +90,6 @@ const formatPrice = (price: number | string) => {
 ---
 
 <div class="ticket-tiers-container">
-  <div class="text-center mb-8">
-    <h2 class="text-3xl font-bold">Ticket Types</h2>
-    <p class="text-xl mt-2">Choose the ticket that best fits your conference needs</p>
-    <p class="text-xl mt-[-10px] mb-12 font-bold italic">Regular tickets available until 27 June 2025, after which Late-bird rates apply</p>
-  </div>
-
   <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-6 lg:gap-10">
     {tiers.map((tier) => (
       <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
@@ -119,78 +125,6 @@ const formatPrice = (price: number | string) => {
       </div>
     ))}
   </div>
-
-  <div class="text-center mb-8 mt-16">
-    <h2 class="text-3xl font-bold">Remote Tickets</h2>
-    <p class="text-xl mt-2 mb-12">For those who cannot attend in person but want to participate virtually</p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-9 lg:gap-10 w-full md:w-5/6 lg:w-3/4 mx-auto">
-    <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-      <div class="h-[160px]">
-        <Title level={3} className="mt-0 !mb-2">
-          Remote Personal
-        </Title>
-        <div class="font-bold text-3xl">€80</div>
-        <div class="text-xl mt-4">Conference days only</div>
-      </div>
-
-      <p class="font-bold text-base">This ticket includes:</p>
-      <ul class="text-base list-none pl-0">
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Remote participation for Conference Days (16-18 July)</span>
-        </li>
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Watch live talks, keynotes & panels in all 6 tracks</span>
-        </li>
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Live text-based Q&A</span>
-        </li>
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Interact with speakers and attendees in chat channels</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-      <div class="h-[160px]">
-        <Title level={3} className="mt-0 !mb-2">
-          Remote Business
-        </Title>
-        <div class="font-bold text-3xl">€150</div>
-        <div class="text-xl mt-4">Conference days only</div>
-      </div>
-
-      <p class="font-bold text-base">This ticket includes:</p>
-      <ul class="text-base list-none pl-0">
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Remote participation for Conference Days (16-18 July)</span>
-        </li>
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Watch live talks, keynotes & panels in all 6 tracks</span>
-        </li>
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Live text-based Q&A</span>
-        </li>
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span>Interact with speakers and attendees in chat channels</span>
-        </li>
-        <li class="flex items-start">
-          <span class="flex-shrink-0 w-6">✔️</span>
-          <span><strong>Proper VAT invoice listing company name</strong></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 <style is:global>
   .ticket-tiers-container {
