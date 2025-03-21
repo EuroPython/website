@@ -1,0 +1,26 @@
+---
+import ButtonLink from "../button-link/button-link.astro";
+import { Title } from "../typography/title";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  buttonText?: string;
+  buttonUrl?: string;
+}
+
+const { title, subtitle, buttonText, buttonUrl } = Astro.props;
+---
+
+<div class="py-12 text-center">
+  <Title level={1} className="mb-4">{title}</Title>
+  <p class="text-2xl max-w-3xl mx-auto mb-8">{subtitle}</p>
+
+  {buttonText && buttonUrl && (
+    <div class="mt-8">
+      <ButtonLink url={buttonUrl}>{buttonText}</ButtonLink>
+    </div>
+  )}
+
+  <slot />
+</div>
