@@ -1,6 +1,6 @@
 ---
 import { CardContainer } from "../components/card/card-container";
-import Hero from "../components/hero/hero.astro";
+import Hero from "../components/hero2/hero.astro";
 import HeroWithCTA from "../components/hero-section/hero-with-cta.astro";
 import { Fullbleed } from "../components/layout/fullbleed";
 import Prose from "../components/prose/prose.astro";
@@ -25,10 +25,9 @@ deadlines = deadlines
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-  <Fullbleed>
     <Hero />
-  </Fullbleed>
 
+  <h2 class="text-7xl text-center m-16">Updates</h3>
   <CardContainer>
     {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
   </CardContainer>
