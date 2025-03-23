@@ -52,6 +52,10 @@
         {
           "name": "Sponsor Packages",
           "path": "/sponsorship/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsorship/information"
         }
       ]
     },
