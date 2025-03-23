@@ -33,24 +33,6 @@ deadlines = deadlines
   </CardContainer>
 
   <div class="mt-40 px-6 pb-40 overflow-visible">
-    <HeroWithCTA>
-      <Title className="mb-2">
-        {intro.frontmatter.title}
-      </Title>
-      <Prose>
-        <intro.Content />
-      </Prose>
-
-      <div
-        slot="secondary"
-        class="flex flex-col items-center text-center relative"
-      >
-        <Accent />
-      </div>
-    </HeroWithCTA>
-  </div>
-
-  <div class="mb-40">
     <Prague title={venue.frontmatter.title}>
       <venue.Content />
   </div>
