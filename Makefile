@@ -42,8 +42,7 @@ check:
 	pnpm run astro check
 
 build:
-	# TODO: update this to just `pnpm build` after resolving the astro-check warnings
-	pnpm run astro build
+	pnpm build
 	# NOTE: also let's find a better way to do this :D
 	find ./dist/_astro/ -iname '*.jpg' -delete
 

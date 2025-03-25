@@ -5,6 +5,11 @@ interface Props {
   ticketShopLink: string;
 }
 
+interface Feature {
+  text: string;
+  icon?: string;
+}
+
 interface TicketTierProps {
   title: string;
   educationPrice: number | string;
@@ -12,7 +17,7 @@ interface TicketTierProps {
   businessPrice: number | string;
   lateBusinessPrice?: number | string;
   latePersonalPrice?: number | string;
-  features: string[];
+  features: Feature[];
 }
 
 const tiers: TicketTierProps[] = [
