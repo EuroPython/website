@@ -1,0 +1,19 @@
+name: Read the Docs PR preview
+on:
+  pull_request_target:
+    types:
+      - opened
+
+permissions:
+  pull-requests: write
+
+jobs:
+  documentation-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: readthedocs/actions/preview@v1
+        with:
+          project-slug: "ep-website-demo"
+          single-version: "true"
+          message-template: "🖼️ Preview available 🖼️ : {docs-pr-index-url}"
