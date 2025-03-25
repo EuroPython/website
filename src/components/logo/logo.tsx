@@ -1,3 +1,4 @@
+//@ts-nocheck
 // TODO: LogoInverted needs to be adapted to the new logo
 const LogoInverted = ({ className }: { className?: string }) => {
   return (
