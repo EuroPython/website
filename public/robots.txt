@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /_astro/
-Disallow: /*?
-Allow: /
-
-Sitemap: https://ep2025.europython.eu/sitemap-index.xml
