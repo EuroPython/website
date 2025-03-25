@@ -1,7 +1,6 @@
 name: Read the Docs PR preview
 on:
-  pull_request:
-  push:
+  pull_request_target:
 
 permissions:
   pull-requests: write
