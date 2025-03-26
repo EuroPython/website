@@ -66,28 +66,20 @@ const socialLinks = [
     if (!(input instanceof HTMLInputElement)) return;
 
     const email = input.value.trim();
-    if (!email) return alert("Please enter a valid email");
+    if (!email) return;
 
     try {
-      const result = await fetch(
-        "https://blog.europython.eu/members/api/send-magic-link/",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, emailType: "subscribe" })
-        }
-      );
+      const result = await fetch("https://blog.europython.eu/members/api/send-magic-link/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, emailType: "subscribe" })
+      });
 
       const r = await result.text();
-      if (r !== "Created.") {
-        alert("Something went wrong");
-      } else {
-        alert("Check your inbox!");
+      if (r === "Created.") {
         input.value = "";
       }
     } catch (e) {
-      console.error(e);
-      alert("Network error");
     }
   }
 </script>
