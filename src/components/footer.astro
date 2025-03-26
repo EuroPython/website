@@ -10,18 +10,20 @@ const gitVersion = import.meta.env.GIT_VERSION;
 
 <Fullbleed className="bg-primary text-white">
   <footer
-    class="max-w-4xl lg:max-w-6xl mx-auto py-16 lg:grid grid-cols-2 px-6 gap-60"
+    class="max-w-4xl lg:max-w-6xl mx-auto py-6 px-4 text-sm lg:grid grid-cols-2 gap-12"
   >
     <div>
-      <nav class="mb-12">
-        <h6 class="font-bold text-xl mb-6">Quicklinks</h6>
+      <nav class="mb-8">
+        <h6 class="font-bold text-xs uppercase tracking-widest mb-4 text-gray-300">
+          Quicklinks
+        </h6>
 
         {
           links.footer.map((item) => (
             <li class="list-none">
               <a
                 href={item.path}
-                class="block font-bold text-4xl md:text-5xl mb-4 hover:text-primary-hover"
+                class="block text-sm mb-2 hover:text-primary-hover"
               >
                 {item.name}
                 {item.path.startsWith("http") ? <span> ↗</span> : null}
@@ -33,13 +35,13 @@ const gitVersion = import.meta.env.GIT_VERSION;
     </div>
 
     <article
-      class="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end"
+      class="flex flex-col lg:flex-row self-center gap-6 justify-end"
     >
       <div>
-        <EPSLogo className="max-w-[200px] h-auto w-full" />
+        <EPSLogo className="max-w-[160px] h-auto w-full" />
       </div>
       <div>
-        <address class="not-italic mb-4">
+        <address class="not-italic mb-2 leading-relaxed text-xs">
           EuroPython Society (EPS)
           <br />Ramnebacken 45
           <br />
@@ -48,39 +50,12 @@ const gitVersion = import.meta.env.GIT_VERSION;
           Sweden
         </address>
 
-        <p class="mb-4">
+        <p class="mb-2 text-xs">
           <a
             class="underline whitespace-nowrap"
             href="https://europython-society.org"
           >
             europython-society.org <span> ↗</span>
-          </a>
-          <a
-            class="underline whitespace-nowrap"
-            href="https://blog.europython.eu"
-          >
-            blog.europython.eu <span> ↗</span>
-          </a>
-          <br />
-          <a
-            class="underline whitespace-nowrap"
-            href="https://fosstodon.org/@europython"
-          >
-            fosstodon.org/@europython <span> ↗</span>
-          </a>
-          <br />
-          <a
-            class="underline whitespace-nowrap"
-            href="https://linkedin.com/company/europython"
-          >
-            linkedin.com/company/europython <span> ↗</span>
-          </a>
-          <br />
-          <a
-            class="underline whitespace-nowrap"
-            href="https://bsky.app/profile/europython.eu"
-          >
-            bsky.app/profile/europython.eu <span> ↗</span>
           </a>
           <br />
           <a
@@ -89,20 +64,12 @@ const gitVersion = import.meta.env.GIT_VERSION;
           >
             github.com/europython <span> ↗</span>
           </a>
-          <br />
-          <a
-            class="underline whitespace-nowrap"
-            href="https://twitter.com/europython"
-          >
-            twitter.com/europython <span> ↗</span>
-          </a>
         </p>
 
-        <p class="mb-4" style="color: rgba(255, 255, 255, 0.4)">
+        <p class="mb-2 text-[10px] text-white/40">
           version: {gitVersion} @ {buildTimestamp}
         </p>
       </div>
     </article>
-
   </footer>
 </Fullbleed>
