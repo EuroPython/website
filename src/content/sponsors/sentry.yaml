@@ -1,0 +1,4 @@
+name: Sentry
+url: https://sentry.io/welcome
+image: ./sentry.svg
+tier: Silver
