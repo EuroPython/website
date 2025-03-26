@@ -43,7 +43,7 @@ export default defineConfig({
     "/rust-summit/": "/programme/rust-summit/",
     "/sponsor/": "/sponsorship/sponsor/",
     "/voting/": "/programme/voting/",
-    "/programme/wasm-summit/": "/programme/wasm-summit/",
+    "/wasm-summit/": "/programme/wasm-summit/",
   },
   integrations: [
     mdx(),
