@@ -10,6 +10,7 @@ import DeadlineCard from "../components/deadline-card.astro";
 import { getCollection } from "astro:content";
 import Accent from "../components/accent/accent.astro";
 import Prague from "../components/hero-section/prague.astro";
+import SocialSubscribe from '../components/social/SocialSubscribe.astro';
 
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/prague.mdx";
@@ -32,8 +33,10 @@ deadlines = deadlines
     {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
   </CardContainer>
 
-  <div class="mt-40 px-6 pb-40 overflow-visible">
-    <Prague title={venue.frontmatter.title}>
-      <venue.Content />
+<Fullbleed>
+  <div class="mt-32 w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-08 px-4 text-center">
+    <SocialSubscribe />
   </div>
+</Fullbleed>
+
 </Layout>
