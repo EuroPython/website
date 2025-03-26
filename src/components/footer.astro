@@ -10,7 +10,7 @@ const gitVersion = import.meta.env.GIT_VERSION;
 
 <Fullbleed className="bg-primary text-white">
   <footer
-    class="max-w-4xl lg:max-w-6xl mx-auto py-6 px-4 text-sm lg:grid grid-cols-2 gap-12"
+    class="max-w-4xl lg:max-w-6xl mx-auto py-6 px-4 text-sm grid grid-cols-1 lg:grid-cols-2 gap-12 text-center lg:text-left"
   >
     <div>
       <nav class="mb-8">
@@ -34,42 +34,43 @@ const gitVersion = import.meta.env.GIT_VERSION;
       </nav>
     </div>
 
-    <article
-      class="flex flex-col lg:flex-row self-center gap-6 justify-end"
-    >
-      <div>
-        <EPSLogo className="max-w-[160px] h-auto w-full" />
-      </div>
-      <div>
-        <address class="not-italic mb-2 leading-relaxed text-xs">
-          EuroPython Society (EPS)
-          <br />Ramnebacken 45
-          <br />
-          424 38 Agnesberg
-          <br />
-          Sweden
-        </address>
+  <article
+    class="flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left gap-6 justify-end"
+  >
+    <div>
+      <EPSLogo className="max-w-[160px] h-auto w-full mx-auto lg:mx-0" />
+    </div>
+    <div>
+      <address class="not-italic mb-2 leading-relaxed text-xs">
+        EuroPython Society (EPS)
+        <br />Ramnebacken 45
+        <br />
+        424 38 Agnesberg
+        <br />
+        Sweden
+      </address>
 
-        <p class="mb-2 text-xs">
-          <a
-            class="underline whitespace-nowrap"
-            href="https://europython-society.org"
-          >
-            europython-society.org <span> ↗</span>
-          </a>
-          <br />
-          <a
-            class="underline whitespace-nowrap"
-            href="https://github.com/europython"
-          >
-            github.com/europython <span> ↗</span>
-          </a>
-        </p>
+      <p class="mb-2 text-xs">
+        <a
+          class="underline whitespace-nowrap"
+          href="https://europython-society.org"
+        >
+          europython-society.org <span> ↗</span>
+        </a>
+        <br />
+        <a
+          class="underline whitespace-nowrap"
+          href="https://github.com/europython"
+        >
+          github.com/europython <span> ↗</span>
+        </a>
+      </p>
 
-        <p class="mb-2 text-[10px] text-white/40">
-          version: {gitVersion} @ {buildTimestamp}
-        </p>
-      </div>
-    </article>
+      <p class="mb-2 text-[10px] text-white/40">
+        version: {gitVersion} @ {buildTimestamp}
+      </p>
+    </div>
+  </article>
+
   </footer>
 </Fullbleed>
