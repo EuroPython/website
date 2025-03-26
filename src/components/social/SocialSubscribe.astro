@@ -34,7 +34,7 @@ const socialLinks = [
   </p>
 
   <form
-    onsubmit="handleSubscribe(event)"
+    id="subscribeForm"
     class="flex flex-col sm:flex-row justify-center items-center gap-4"
   >
     <input
@@ -56,7 +56,10 @@ const socialLinks = [
 </div>
 
 <script>
-  async function handleSubscribe(event) {
+  const form = document.getElementById("subscribeForm");
+  form?.addEventListener("submit", handleSubscribe);
+
+  async function handleSubscribe(event: SubmitEvent) {
     event.preventDefault();
 
     const input = document.getElementById("emailInput");
