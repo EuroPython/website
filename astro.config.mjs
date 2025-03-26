@@ -1,6 +1,5 @@
-
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import { h } from "hastscript";
@@ -20,12 +19,12 @@ const __dirname = dirname(__filename); // @type-check enabled!
 export default defineConfig({
   vite: {
     define: {
-      'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
+      "process.env.VITE_BUILD_TIME": JSON.stringify(new Date().toISOString()),
     },
     resolve: {
       alias: {
-        '$': path.resolve(__dirname, './src')
-      }
+        $: path.resolve(__dirname, "./src"),
+      },
     },
   },
   markdown: {
@@ -63,6 +62,6 @@ export default defineConfig({
   ],
   output: "static",
   build: {
-    minify: true
+    minify: true,
   },
 });
