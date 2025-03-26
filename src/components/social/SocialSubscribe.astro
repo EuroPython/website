@@ -9,7 +9,6 @@ const socialLinks = [
 ];
 ---
 
-<!-- Same background and structure as your other bluebox sections -->
 <div class="w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-20 px-4 text-center relative z-10">
   <h1 class="text-4xl md:text-6xl font-bold mb-10 leading-tight text-[#17223A]">
     Follow us<br />for updates
@@ -53,10 +52,18 @@ const socialLinks = [
     </button>
   </form>
 
+  <p
+    id="subscribeMessage"
+    class="hidden mt-4 text-green-600 text-lg font-medium transition-opacity duration-500 opacity-0"
+  >
+    Please check your email to confirm. 📬
+  </p>
 </div>
 
 <script>
   const form = document.getElementById("subscribeForm");
+  const message = document.getElementById("subscribeMessage");
+
   form?.addEventListener("submit", handleSubscribe);
 
   async function handleSubscribe(event: SubmitEvent) {
@@ -78,8 +85,16 @@ const socialLinks = [
       const r = await result.text();
       if (r === "Created.") {
         input.value = "";
+
+        message?.classList.remove("hidden");
+        setTimeout(() => message?.classList.add("opacity-100"), 50);
+
+        setTimeout(() => {
+          message?.classList.remove("opacity-100");
+          setTimeout(() => message?.classList.add("hidden"), 500);
+        }, 5000);
       }
-    } catch (e) {
+    } catch {
     }
   }
 </script>
