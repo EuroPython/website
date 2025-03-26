@@ -5,7 +5,7 @@ import heroImage from "./conference_photo.jpg";
 import IconWithLabel from "./icon-label.astro";
 import ButtonLink from "../../components/button-link/button-link.astro";
 
-import HeaderLogo from "..//header/header-logo.astro";
+import HeaderLogo from "../header/header-logo.astro";
 const action1 = "https://ep2025.europython.eu/tickets";
 const action2 = "https://ep2025.europython.eu/sponsorship/sponsor/";
 ---
@@ -89,7 +89,7 @@ const action2 = "https://ep2025.europython.eu/sponsorship/sponsor/";
         EuroPython
       </h1>
     </div>
-    <p class="max-w-2xl mx-40 text-center text-lg text-gray-700 mt-2">
+    <p class="max-w-2xl mx-10 md:mx-40 text-center text-lg text-gray-700 mt-2">
       Discover the latest Python trends, learn from 180+ expert speakers, network with fellow developers, enjoy social events, and explore open spaces to spark new ideas.
     </p>
   </div>
@@ -116,14 +116,12 @@ const action2 = "https://ep2025.europython.eu/sponsorship/sponsor/";
       </ButtonLink>
     </div>
     <div class="btn-outline">
-      <ButtonLink
-      secondary
-        url={action2}
-          className="outline-solid outline bg-transparent rounded-xlborder text-xl text-secondary outline-secondary"
-        isExternal={true}
-      >
-        Call for Sponsors
-      </ButtonLink>
+<a class="font-bold text-lg px-4 py-4 bg-button rounded-[10px] inline-block leading-4 hover:bg-button-hover not-prose outline-solid outline bg-transparent rounded-xlborder text-xl text-secondary outline-secondary text-black
+          " href="{action2}"> 
+Call for Sponsors
+ <span class="inline-block ml-1 font-system text-lg leading-4" >
+↗
+</span></a>
     </div>
   </div>
 </div>
@@ -230,8 +228,6 @@ const action2 = "https://ep2025.europython.eu/sponsorship/sponsor/";
     .bluebox {
       background-color: #d4d5e5;
       z-index: -2;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
     }
     .bluebox-shift {
       position: relative;
