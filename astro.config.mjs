@@ -49,7 +49,7 @@ export default defineConfig({
       ],
     ],
   },
-  site: "https://ep2025.europython.eu",
+  site: process.env.SITE_URL || "https://ep2025.europython.eu",
   redirects: {
     "/c-api-summit/": "/programme/c-api-summit/",
     "/programme/cfp/": "/programme/cfp/",
