@@ -47,8 +47,34 @@
       ]
     },
     {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsorship/information"
+        }
+      ]
+    },
+    {
+      "name": "Registration",
+      "items": [
+        {
+          "name": "Tickets information",
+          "path": "/tickets"
+        }
+      ]
+    },
+    {
       "name": "Info & Support",
       "items": [
+        {
+          "name": "Code of Conduct",
+          "path": "https://www.europython-society.org/coc/"
+        },
         {
           "name": "FAQ",
           "path": "/faq"

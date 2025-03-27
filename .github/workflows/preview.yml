@@ -33,10 +33,10 @@ jobs:
         run: make install
 
       - name: Build the website
-        run: make build
+        run: make build PREVIEW=true
 
       - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.9.0
+        uses: webfactory/ssh-agent@v0.9.1
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
@@ -52,11 +52,11 @@ jobs:
         run: make preview BRANCH=$GITHUB_BRANCH_NAME
 
       - name: Update PR Comment
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         if: github.event_name == 'pull_request'
 
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.COMMENT_TOKEN }}
           script: |
             console.log("Hello world!");
             const pr_id = ${{ github.event.number }};

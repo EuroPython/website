@@ -27,7 +27,10 @@ export const NavItems = ({ items, inverted = false }: Props) => {
           )}
         >
           <a
-            href={item.path}
+            href={item.path || "#"}
+            aria-haspopup="true"
+            role="button"
+            rel="nofollow"
             className={clsx(
               "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center",
               "xl:text-left xl:p-2 xl:px-5",
@@ -59,6 +62,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
                   >
                     <a
                       href={subItem.path || "#"}
+                      role="button"
                       className={clsx(
                         "block w-full font-bold text-center",
                         "xl:text-left mb-[2px] p-2 xl:px-5"
