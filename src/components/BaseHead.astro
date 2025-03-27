@@ -41,11 +41,16 @@ const { title, description, image = "/social-card.png" } = Astro.props;
 <meta property="og:image" content={new URL(image, Astro.url)} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.url)} />
 <meta name="twitter:site" content="@europython" />
+
+<meta http-equiv="X-Clacks-Overhead" content="GNU John Pinner" />
+<meta http-equiv="X-Clacks-Overhead" content="GNU Rob Collins" />
+<meta http-equiv="X-Clacks-Overhead" content="GNU Oier Etxaniz" />
+<meta http-equiv="X-Clacks-Overhead" content="GNU Russel Winder" />
 
 <script defer is:inline data-domain="ep2025.europython.eu" src="https://plausible.io/js/script.js"></script>
