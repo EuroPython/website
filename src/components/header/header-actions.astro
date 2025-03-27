@@ -23,14 +23,8 @@ const IS_LIVE = false;
   {
     !mobile ? (
       <>
-        <ButtonLink secondary url="https://www.europython-society.org/coc/">
-          <abbr title="Code of Conduct" class="no-underline md:hidden">
-            CoC
-          </abbr>
-          <span class="hidden md:inline">Code of Conduct</span>
-        </ButtonLink>
-        <ButtonLink url="https://ep2025.europython.eu/tickets" className="hidden md:block">
-          <span>Tickets</span>
+        <ButtonLink url="/tickets" className="hidden md:block">
+          <span>Register Now! 🎟️</span>
         </ButtonLink>
         {IS_LIVE && (
           <ButtonLink url="/live">
