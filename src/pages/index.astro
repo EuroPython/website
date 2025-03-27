@@ -1,11 +1,11 @@
 ---
 import { CardContainer } from "../components/card/card-container";
-import Hero from "../components/hero/hero.astro";
+import Hero from "../components/hero2/hero.astro";
 import HeroWithCTA from "../components/hero-section/hero-with-cta.astro";
 import { Fullbleed } from "../components/layout/fullbleed";
 import Prose from "../components/prose/prose.astro";
 import { Title } from "../components/typography/title";
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/HomePageLayout.astro";
 import DeadlineCard from "../components/deadline-card.astro";
 import { getCollection } from "astro:content";
 import Accent from "../components/accent/accent.astro";
@@ -26,33 +26,14 @@ deadlines = deadlines
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-  <Fullbleed>
     <Hero />
-  </Fullbleed>
 
+  <h2 class="text-7xl text-center m-16">Updates</h3>
   <CardContainer>
     {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
   </CardContainer>
 
   <div class="mt-40 px-6 pb-40 overflow-visible">
-    <HeroWithCTA>
-      <Title className="mb-2">
-        {intro.frontmatter.title}
-      </Title>
-      <Prose>
-        <intro.Content />
-      </Prose>
-
-      <div
-        slot="secondary"
-        class="flex flex-col items-center text-center relative"
-      >
-        <Accent />
-      </div>
-    </HeroWithCTA>
-  </div>
-
-  <div class="mb-40">
     <Prague title={venue.frontmatter.title}>
       <venue.Content />
   </div>
