@@ -116,7 +116,7 @@ const days = defineCollection({
               code: z.string(),
               name: z.string(),
               website_url: z.string(),
-            })
+            }),
           )
           .optional(),
         tweet: z.string().optional().nullable(),
@@ -124,7 +124,7 @@ const days = defineCollection({
         start: z.string(),
         website_url: z.string().optional().nullable(),
         duration: z.number(),
-      })
+      }),
     ),
   }),
 });

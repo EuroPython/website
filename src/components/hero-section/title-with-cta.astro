@@ -16,11 +16,13 @@ const { title, subtitle, buttonText, buttonUrl } = Astro.props;
   <Title level={1} className="mb-4">{title}</Title>
   <p class="text-2xl max-w-3xl mx-auto mb-8">{subtitle}</p>
 
-  {buttonText && buttonUrl && (
-    <div class="mt-8">
-      <ButtonLink url={buttonUrl}>{buttonText}</ButtonLink>
-    </div>
-  )}
+  {
+    buttonText && buttonUrl && (
+      <div class="mt-8">
+        <ButtonLink url={buttonUrl}>{buttonText}</ButtonLink>
+      </div>
+    )
+  }
 
   <slot />
 </div>

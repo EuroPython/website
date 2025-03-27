@@ -44,7 +44,9 @@ type Session = {
         <ul class="space-y-2 md:space-y-0 md:space-x-2 md:flex capitalize">
           {session.data.session_type && (
             <li class="md:inline-block">
-              <Tag href={`/sessions?type=${encodeURIComponent(session.data.session_type)}`}>
+              <Tag
+                href={`/sessions?type=${encodeURIComponent(session.data.session_type)}`}
+              >
                 <span class="sr-only">Type:</span>
                 {session.data.session_type}
               </Tag>
@@ -52,7 +54,9 @@ type Session = {
           )}
           {session.data.track && (
             <li class="md:inline-block">
-              <Tag href={`/sessions?track=${encodeURIComponent(session.data.track)}`}>
+              <Tag
+                href={`/sessions?track=${encodeURIComponent(session.data.track)}`}
+              >
                 <span class="sr-only">Track:</span>
                 {session.data.track}
               </Tag>
@@ -60,7 +64,9 @@ type Session = {
           )}
           {session.data.level && (
             <li class="md:inline-block">
-              <Tag href={`/sessions?level=${encodeURIComponent(session.data.level)}`}>
+              <Tag
+                href={`/sessions?level=${encodeURIComponent(session.data.level)}`}
+              >
                 <span class="sr-only">Level:</span>
                 {session.data.level}
               </Tag>

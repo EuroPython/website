@@ -27,20 +27,36 @@ const tiers: TicketTierProps[] = [
     personalPrice: 200,
     businessPrice: 400,
     features: [
-      { text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)" },
-      { text: "<strong>Does NOT include</strong> access to three days of talks across six parallel tracks with 130+ talks (16-18 July)", icon: "❌" },
-      { text: "<strong>Does NOT include</strong> access to open spaces throughout the three conference days", icon: "❌" },
-      { text: "<strong>Does NOT include</strong> access to sponsor booths with opportunities to connect with sponsoring companies", icon: "❌" },
+      {
+        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)",
+      },
+      {
+        text: "<strong>Does NOT include</strong> access to three days of talks across six parallel tracks with 130+ talks (16-18 July)",
+        icon: "❌",
+      },
+      {
+        text: "<strong>Does NOT include</strong> access to open spaces throughout the three conference days",
+        icon: "❌",
+      },
+      {
+        text: "<strong>Does NOT include</strong> access to sponsor booths with opportunities to connect with sponsoring companies",
+        icon: "❌",
+      },
       { text: "Access to Sprint Weekend (19-20 July)" },
       { text: "Light lunch provided each day" },
       { text: "Break refreshments (coffee, tea, water, and more)" },
-      { text: "Access to in-person networking opportunities during the tutorial days" },
+      {
+        text: "Access to in-person networking opportunities during the tutorial days",
+      },
       { text: "Access to free childcare if needed" },
       { text: "Conference T-shirt included" },
-      { text: "<strong>Limited to only 300, due to tutorial capacity</strong>", icon: "⚠️" },
+      {
+        text: "<strong>Limited to only 300, due to tutorial capacity</strong>",
+        icon: "⚠️",
+      },
     ],
   },
-    {
+  {
     title: "Conference Only",
     educationPrice: 135,
     personalPrice: 300,
@@ -48,16 +64,25 @@ const tiers: TicketTierProps[] = [
     latePersonalPrice: 450,
     lateBusinessPrice: 750,
     features: [
-      { text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)", icon: "❌" },
-      { text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>" },
+      {
+        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)",
+        icon: "❌",
+      },
+      {
+        text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
+      },
       { text: "Access to open spaces throughout the three conference days" },
       { text: "Access to Sprint Weekend (19-20 July)" },
-      { text: "Access to sponsor booths with opportunities to connect with sponsoring companies" },
+      {
+        text: "Access to sponsor booths with opportunities to connect with sponsoring companies",
+      },
       { text: "Access to Sprint Weekend (19-20 July)" },
       { text: "Limited access to specific sponsored workshops" },
       { text: "Light lunch provided each day" },
       { text: "Break refreshments (coffee, tea, water, and more)" },
-      { text: "Access to in-person networking opportunities during the main conference days" },
+      {
+        text: "Access to in-person networking opportunities during the main conference days",
+      },
       { text: "Access to free childcare if needed" },
       { text: "Conference T-shirt included" },
     ],
@@ -70,22 +95,32 @@ const tiers: TicketTierProps[] = [
     latePersonalPrice: 675,
     lateBusinessPrice: 1200,
     features: [
-      { text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)" },
-      { text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>" },
+      {
+        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)",
+      },
+      {
+        text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
+      },
       { text: "Access to open spaces throughout the three conference days" },
-      { text: "Access to sponsor booths with opportunities to connect with sponsoring companies" },
+      {
+        text: "Access to sponsor booths with opportunities to connect with sponsoring companies",
+      },
       { text: "Access to Sprint Weekend (19-20 July)" },
       { text: "Limited access to specific sponsored workshops" },
       { text: "Light lunch provided each day" },
       { text: "Break refreshments (coffee, tea, water, and more)" },
-      { text: "Access to in-person networking opportunities throughout the entire conference" },
+      {
+        text: "Access to in-person networking opportunities throughout the entire conference",
+      },
       { text: "Access to free childcare if needed" },
       { text: "Conference T-shirt included" },
-      { text: "<strong>Limited to only 300, due to tutorial capacity</strong>", icon: "⚠️" },
+      {
+        text: "<strong>Limited to only 300, due to tutorial capacity</strong>",
+        icon: "⚠️",
+      },
     ],
   },
 ];
-
 
 const formatPrice = (price: number | string) => {
   if (typeof price === "string") return price;
@@ -99,59 +134,73 @@ const formatPrice = (price: number | string) => {
 ---
 
 <div class="ticket-tiers-container">
-  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-6 lg:gap-10">
-    {tiers.map((tier) => (
-      <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-        <div>
-          <Title level={3} className="mt-0 !mb-2">
-            {tier.title}
-          </Title>
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-6 lg:gap-10"
+  >
+    {
+      tiers.map((tier) => (
+        <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
+          <div>
+            <Title level={3} className="mt-0 !mb-2">
+              {tier.title}
+            </Title>
 
-          <div class="mt-4 space-y-2">
-            <div>
-              <div class="font-bold text-lg">
-                Education:
-                <span class="text-xl ml-1">{formatPrice(tier.educationPrice)}</span>
+            <div class="mt-4 space-y-2">
+              <div>
+                <div class="font-bold text-lg">
+                  Education:
+                  <span class="text-xl ml-1">
+                    {formatPrice(tier.educationPrice)}
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <div>
-              <div class="font-bold text-lg">
-                Personal:
-                <span class="text-xl ml-1">{formatPrice(tier.personalPrice)}</span>
+              <div>
+                <div class="font-bold text-lg">
+                  Personal:
+                  <span class="text-xl ml-1">
+                    {formatPrice(tier.personalPrice)}
+                  </span>
+                </div>
+                {tier.latePersonalPrice && (
+                  <div class="text-sm font-normal ml-1">
+                    (Late personal: {formatPrice(tier.latePersonalPrice)})
+                  </div>
+                )}
               </div>
-              {tier.latePersonalPrice && (
-                <div class="text-sm font-normal ml-1">(Late personal: {formatPrice(tier.latePersonalPrice)})</div>
-              )}
-            </div>
 
-            <div>
-              <div class="font-bold text-lg">
-                Business:
-                <span class="text-xl ml-1">{formatPrice(tier.businessPrice)} (+ VAT)</span>
+              <div>
+                <div class="font-bold text-lg">
+                  Business:
+                  <span class="text-xl ml-1">
+                    {formatPrice(tier.businessPrice)} (+ VAT)
+                  </span>
+                </div>
+                {tier.lateBusinessPrice && (
+                  <div class="text-sm font-normal ml-1">
+                    (Late business: {formatPrice(tier.lateBusinessPrice)} + VAT)
+                  </div>
+                )}
               </div>
-              {tier.lateBusinessPrice && (
-                <div class="text-sm font-normal ml-1">(Late business: {formatPrice(tier.lateBusinessPrice)} + VAT)</div>
-              )}
             </div>
           </div>
-        </div>
 
-        <div class="mt-6">
-          <p class="font-bold text-base">This ticket includes:</p>
-          <ul class="text-base list-none pl-0">
-            {tier.features.map((feature) => (
-              <li class="flex items-start">
-                <span class="flex-shrink-0 w-6">
-                  {feature.icon ? feature.icon : "✔️"}
-                </span>
-                <span set:html={feature.text}></span>
-              </li>
-            ))}
-          </ul>
+          <div class="mt-6">
+            <p class="font-bold text-base">This ticket includes:</p>
+            <ul class="text-base list-none pl-0">
+              {tier.features.map((feature) => (
+                <li class="flex items-start">
+                  <span class="flex-shrink-0 w-6">
+                    {feature.icon ? feature.icon : "✔️"}
+                  </span>
+                  <span set:html={feature.text} />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </div>
 

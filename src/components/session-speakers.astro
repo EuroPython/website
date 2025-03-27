@@ -10,7 +10,12 @@ interface Props {
 
 const { speakers: speakersEntries } = Astro.props;
 
-const speakers = await getEntries(speakersEntries.map(entry => ({ collection: entry.collection, id: entry.slug })));
+const speakers = await getEntries(
+  speakersEntries.map((entry) => ({
+    collection: entry.collection,
+    id: entry.slug,
+  })),
+);
 ---
 
 {

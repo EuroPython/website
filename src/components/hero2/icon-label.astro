@@ -4,23 +4,19 @@ const { icon, label } = Astro.props;
 const iconPath = `/icons/${icon}.svg`;
 ---
 
-<!--<div class="flex items-center space-x-3">-->
-  <!-- Circle with SVG Icon -->
-  <!--<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">-->
-  <!--  <img src={iconPath} alt={label} class="w-6 h-6" />-->
-  <!--</div>-->
-
-   <div class="flex items-center space-x-3 px-6">
-        <div class="w-20 h-20 flex items-center justify-center rounded-full bg-[#D4D5E4]">
-          <img src={iconPath} alt={label} class="w-10 h-10" />
-        </div>
-        <!--<span class="text-lg font-medium text-[#7B7EB9]">Label</span>-->
-        <span class="text-xl font-medium text-[#7B7EB9]">{label}</span>
-    </div>
+<!--<div class="flex items-center space-x-3">--><!-- Circle with SVG Icon --><!--<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">--><!--  <img src={iconPath} alt={label} class="w-6 h-6" />--><!--</div>-->
+<div class="flex items-center space-x-3 px-6">
+  <div
+    class="w-20 h-20 flex items-center justify-center rounded-full bg-[#D4D5E4]"
+  >
+    <img src={iconPath} alt={label} class="w-10 h-10" />
+  </div>
+  <!--<span class="text-lg font-medium text-[#7B7EB9]">Label</span>-->
+  <span class="text-xl font-medium text-[#7B7EB9]">{label}</span>
+</div>
 <!--</div>-->
-    <style>
-
-      div div {
-        /*background-color: red;*/
-      }
-    </style>
+<style>
+  div div {
+    /*background-color: red;*/
+  }
+</style>
