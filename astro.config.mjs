@@ -35,6 +35,16 @@ export default defineConfig({
     ],
   },
   site: "https://ep2025.europython.eu",
+  redirects: {
+    "/c-api-summit/": "/programme/c-api-summit/",
+    "/programme/cfp/": "/programme/cfp/",
+    "/planning/": "https://forms.gle/riw6CvML8ck94A4V9",
+    "/reviewers/": "https://forms.gle/4GTJjwZ1nHBGetM18",
+    "/rust-summit/": "/programme/rust-summit/",
+    "/sponsor/": "/sponsorship/sponsor/",
+    "/voting/": "/programme/voting/",
+    "/wasm-summit/": "/programme/wasm-summit/",
+  },
   integrations: [
     mdx(),
     sitemap(),
