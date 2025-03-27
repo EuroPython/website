@@ -23,7 +23,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
             {
               "text-white": inverted,
               "text-primary": !inverted,
-            },
+            }
           )}
         >
           <a
@@ -35,7 +35,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
               "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center",
               "xl:text-left xl:p-2 xl:px-5",
               "xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white",
-              "xl:group-focus-within:bg-secondary xl:group-focus-within:rounded-[30px] xl:group-focus-within:text-white",
+              "xl:group-focus-within:bg-secondary xl:group-focus-within:rounded-[30px] xl:group-focus-within:text-white"
             )}
           >
             {item.name}
@@ -46,7 +46,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
             <div
               className={clsx(
                 "xl:hidden xl:group-hover:block xl:absolute z-50",
-                "xl:group-focus-within:block",
+                "xl:group-focus-within:block"
               )}
             >
               <ul className="mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px]">
@@ -57,7 +57,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
                       "bg-secondary text-white block w-full font-bold text-center",
                       "xl:text-left xl:hover:bg-secondary-light",
                       "xl:first:rounded-t-[30px] xl:first:pt-2",
-                      "xl:last:rounded-b-[30px] xl:last:pb-2",
+                      "xl:last:rounded-b-[30px] xl:last:pb-2"
                     )}
                   >
                     <a
@@ -65,7 +65,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
                       role="button"
                       className={clsx(
                         "block w-full font-bold text-center",
-                        "xl:text-left mb-[2px] p-2 xl:px-5",
+                        "xl:text-left mb-[2px] p-2 xl:px-5"
                       )}
                     >
                       {subItem.name}
