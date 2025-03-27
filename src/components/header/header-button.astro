@@ -18,7 +18,9 @@ const { href, variant = "standard" } = Astro.props;
       "bg-red": variant === "live",
     },
   ]}
-  href={href}
+
+  role="button"
+  href={href || "#"}
 >
   <slot />
 </a>
