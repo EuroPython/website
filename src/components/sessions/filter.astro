@@ -47,19 +47,14 @@ import { Select } from "../form/select";
     )
   }
 
-  <button
-    type="button"
-    id="reset-filters"
-    class="btn underline font-bold hover:text-primary-hover"
+  <button type="button" id="reset-filters" class="btn underline font-bold hover:text-primary-hover"
     >Reset Filters</button
   >
 </form>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const forms = document.querySelectorAll<HTMLFormElement>(
-      "form.filter-sessions",
-    );
+    const forms = document.querySelectorAll<HTMLFormElement>("form.filter-sessions");
 
     function getUrlParams() {
       const params = new URLSearchParams(window.location.search);
@@ -135,7 +130,7 @@ import { Select } from "../form/select";
 
         document.querySelectorAll("div.track-group").forEach((group) => {
           const visibleSessions = group.querySelectorAll(
-            "ol.sessions > li:not([style*='display: none'])",
+            "ol.sessions > li:not([style*='display: none'])"
           ).length;
 
           if (visibleSessions === 0) {
@@ -157,8 +152,7 @@ import { Select } from "../form/select";
         select.addEventListener("change", filterSessions);
       });
 
-      const resetButton =
-        form.querySelector<HTMLButtonElement>("#reset-filters");
+      const resetButton = form.querySelector<HTMLButtonElement>("#reset-filters");
       resetButton?.addEventListener("click", () => {
         form.querySelectorAll("select").forEach((select) => {
           (select as HTMLSelectElement).value = "";

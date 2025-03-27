@@ -5,24 +5,26 @@ const {
   class: className = "",
   size = "", // Default size (Tailwind)
   label = "",
-  role = "img"
+  role = "img",
 } = Astro.props;
 ---
 
-{svg ? (
-  <svg
-    class={`${size} ${className}`}
-    aria-label={label || undefined}
-    role={label ? role : "presentation"}
-    aria-hidden={!label}
-  >
-    <use href={`#${name}`} />
-  </svg>
-) : (
-  <i
-    class={`fa-solid fa-${name} ${size} ${className}`}
-    aria-label={label || undefined}
-    role={label ? role : "presentation"}
-    aria-hidden={!label}
-  ></i>
-)}
+{
+  svg ? (
+    <svg
+      class={`${size} ${className}`}
+      aria-label={label || undefined}
+      role={label ? role : "presentation"}
+      aria-hidden={!label}
+    >
+      <use href={`#${name}`} />
+    </svg>
+  ) : (
+    <i
+      class={`fa-solid fa-${name} ${size} ${className}`}
+      aria-label={label || undefined}
+      role={label ? role : "presentation"}
+      aria-hidden={!label}
+    />
+  )
+}

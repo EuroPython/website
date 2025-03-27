@@ -40,10 +40,7 @@ const LogoInverted = ({ className }: { className?: string }) => {
         d="M81.0365 32.2883C81.044 32.3199 81.0514 32.3496 81.0588 32.3812L81.0365 32.3868L66.4058 23.2207H71.7961C77.6343 23.2207 80.0443 28.1521 81.0365 32.2883Z"
         fill="#0009E7"
       />
-      <path
-        d="M81.0365 32.3868H66.4058V30.904V23.2207L81.0365 32.3868Z"
-        fill="#FF8B9D"
-      />
+      <path d="M81.0365 32.3868H66.4058V30.904V23.2207L81.0365 32.3868Z" fill="#FF8B9D" />
       <path
         d="M66.4058 45.0796H73.9274C69.7727 45.0796 66.4058 47.4059 66.4058 50.273V45.0796Z"
         fill="#0009E7"
@@ -124,10 +121,7 @@ const LogoInverted = ({ className }: { className?: string }) => {
         d="M52.0963 39.4012H43.562V30.8892H43.6308C43.6308 35.5753 47.4157 39.3752 52.0963 39.4012Z"
         fill="#FFB340"
       />
-      <path
-        d="M51.665 55.9663V61.2285H47.9878V61.208L51.665 55.9663Z"
-        fill="#0009E7"
-      />
+      <path d="M51.665 55.9663V61.2285H47.9878V61.208L51.665 55.9663Z" fill="#0009E7" />
       <path
         d="M51.6648 55.8455V55.9662L47.9876 61.208V61.2284H47.9263V55.9588V55.8455H51.6648Z"
         fill="white"
@@ -164,18 +158,12 @@ const LogoInverted = ({ className }: { className?: string }) => {
         d="M43.5618 30.8894V39.4014H39.71L34.9067 30.8894L34.9105 30.8838H43.5581L43.5618 30.8894Z"
         fill="#FF0000"
       />
-      <path
-        d="M43.5619 23.2524V30.8837H43.5582L39.2529 23.2524H43.5619Z"
-        fill="#0009E7"
-      />
+      <path d="M43.5619 23.2524V30.8837H43.5582L39.2529 23.2524H43.5619Z" fill="#0009E7" />
       <path
         d="M43.5618 10.4426V17.6573H23.2842V11.3698C23.2842 8.42658 23.7115 6.72641 24.7577 5.4982C26.0007 4.04144 28.3382 3.05292 32.1176 2.38586C35.0014 1.87488 38.2587 1.59802 41.5401 1.5813H41.8319C42.4097 1.5813 42.9876 1.58873 43.5618 1.60545V10.4426ZM34.3715 10.0933C34.3715 7.95648 32.6602 6.21729 30.5661 6.21729C28.472 6.21729 26.7607 7.95648 26.7607 10.0933C26.7607 12.2301 28.4646 13.9452 30.5661 13.9452C32.6676 13.9452 34.3715 12.2227 34.3715 10.0933Z"
         fill="white"
       />
-      <path
-        d="M39.2526 23.2524L43.5578 30.8837H34.9102L39.2154 23.2524H39.2526Z"
-        fill="white"
-      />
+      <path d="M39.2526 23.2524L43.5578 30.8837H34.9102L39.2154 23.2524H39.2526Z" fill="white" />
       <path
         d="M40.4401 61.2082V61.2286H40.4383H37.7291H36.6812V61.2082L40.3639 55.959H40.4401V61.2082Z"
         fill="#0009E7"
@@ -236,14 +224,8 @@ const LogoInverted = ({ className }: { className?: string }) => {
         d="M26.2493 30.8894L21.4461 39.4014H17.5942V30.8894L17.598 30.8838H26.2456L26.2493 30.8894Z"
         fill="#FF0000"
       />
-      <path
-        d="M21.9406 23.2524L26.2458 30.8837H17.5981L21.9034 23.2524H21.9406Z"
-        fill="white"
-      />
-      <path
-        d="M21.9032 23.2524L17.598 30.8837H17.5942V23.2524H21.9032Z"
-        fill="#0009E7"
-      />
+      <path d="M21.9406 23.2524L26.2458 30.8837H17.5981L21.9034 23.2524H21.9406Z" fill="white" />
+      <path d="M21.9032 23.2524L17.598 30.8837H17.5942V23.2524H21.9032Z" fill="#0009E7" />
       <path
         d="M17.5943 53.5767V61.2619H12.204C6.49956 61.2619 4.06915 56.5515 3.03418 52.4767L3.61019 51.8301H17.5943V53.5767Z"
         fill="#FFB340"
@@ -418,63 +400,15 @@ export const Logo = ({ className }: { className?: string }) => {
         </g>
       </g>
       <g id="g50">
-        <circle
-          id="circle23"
-          cx={197.9}
-          cy={319.38}
-          r={49.5}
-          className="st16"
-        />
+        <circle id="circle23" cx={197.9} cy={319.38} r={49.5} className="st16" />
         <g id="g49">
-          <circle
-            id="circle24"
-            cx={197.91}
-            cy={319.38}
-            r={15.11}
-            className="st15"
-          />
-          <circle
-            id="circle25"
-            cx={197.91}
-            cy={281.98}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle26"
-            cx={197.91}
-            cy={356.79}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle27"
-            cx={179.21}
-            cy={286.99}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle28"
-            cx={216.61}
-            cy={351.77}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle29"
-            cx={165.52}
-            cy={300.68}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle30"
-            cx={230.3}
-            cy={338.07}
-            r={8.53}
-            className="st14"
-          />
+          <circle id="circle24" cx={197.91} cy={319.38} r={15.11} className="st15" />
+          <circle id="circle25" cx={197.91} cy={281.98} r={8.53} className="st14" />
+          <circle id="circle26" cx={197.91} cy={356.79} r={8.53} className="st14" />
+          <circle id="circle27" cx={179.21} cy={286.99} r={8.53} className="st14" />
+          <circle id="circle28" cx={216.61} cy={351.77} r={8.53} className="st14" />
+          <circle id="circle29" cx={165.52} cy={300.68} r={8.53} className="st14" />
+          <circle id="circle30" cx={230.3} cy={338.07} r={8.53} className="st14" />
           <circle
             id="circle31"
             cx={160.5}
@@ -483,154 +417,31 @@ export const Logo = ({ className }: { className?: string }) => {
             className="st14"
             transform="rotate(-85.93 160.52 319.383)"
           />
-          <circle
-            id="circle32"
-            cx={235.31}
-            cy={319.38}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle33"
-            cx={165.52}
-            cy={338.07}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle34"
-            cx={230.3}
-            cy={300.68}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle35"
-            cx={179.21}
-            cy={351.77}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle36"
-            cx={216.61}
-            cy={286.99}
-            r={8.53}
-            className="st14"
-          />
-          <circle
-            id="circle37"
-            cx={197.91}
-            cy={297.21}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle38"
-            cx={197.91}
-            cy={341.55}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle39"
-            cx={186.81}
-            cy={300.17}
-            r={5.06}
-            className="st13"
-          />
+          <circle id="circle32" cx={235.31} cy={319.38} r={8.53} className="st14" />
+          <circle id="circle33" cx={165.52} cy={338.07} r={8.53} className="st14" />
+          <circle id="circle34" cx={230.3} cy={300.68} r={8.53} className="st14" />
+          <circle id="circle35" cx={179.21} cy={351.77} r={8.53} className="st14" />
+          <circle id="circle36" cx={216.61} cy={286.99} r={8.53} className="st14" />
+          <circle id="circle37" cx={197.91} cy={297.21} r={5.06} className="st13" />
+          <circle id="circle38" cx={197.91} cy={341.55} r={5.06} className="st13" />
+          <circle id="circle39" cx={186.81} cy={300.17} r={5.06} className="st13" />
           <path
             id="path39"
             d="M206.85 323.65c0 4.47-4 8.08-8.94 8.08-4.94 0-8.94-3.62-8.94-8.08s17.88-4.47 17.88 0z"
             className="st13"
           />
-          <circle
-            id="circle40"
-            cx={208.99}
-            cy={338.58}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle41"
-            cx={178.71}
-            cy={308.29}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle42"
-            cx={217.12}
-            cy={330.47}
-            r={5.06}
-            className="st13"
-          />
-          <ellipse
-            id="ellipse42"
-            cx={192.17}
-            cy={318.48}
-            className="st13"
-            rx={2.15}
-            ry={4.29}
-          />
-          <ellipse
-            id="ellipse43"
-            cx={197.91}
-            cy={317.65}
-            className="st13"
-            rx={2.15}
-            ry={4.29}
-          />
-          <ellipse
-            id="ellipse44"
-            cx={203.65}
-            cy={318.48}
-            className="st13"
-            rx={2.15}
-            ry={4.29}
-          />
-          <circle
-            id="circle44"
-            cx={220.07}
-            cy={319.38}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle45"
-            cx={175.75}
-            cy={319.38}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle46"
-            cx={178.71}
-            cy={330.47}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle47"
-            cx={217.12}
-            cy={308.29}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle48"
-            cx={186.81}
-            cy={338.58}
-            r={5.06}
-            className="st13"
-          />
-          <circle
-            id="circle49"
-            cx={208.99}
-            cy={300.17}
-            r={5.06}
-            className="st13"
-          />
+          <circle id="circle40" cx={208.99} cy={338.58} r={5.06} className="st13" />
+          <circle id="circle41" cx={178.71} cy={308.29} r={5.06} className="st13" />
+          <circle id="circle42" cx={217.12} cy={330.47} r={5.06} className="st13" />
+          <ellipse id="ellipse42" cx={192.17} cy={318.48} className="st13" rx={2.15} ry={4.29} />
+          <ellipse id="ellipse43" cx={197.91} cy={317.65} className="st13" rx={2.15} ry={4.29} />
+          <ellipse id="ellipse44" cx={203.65} cy={318.48} className="st13" rx={2.15} ry={4.29} />
+          <circle id="circle44" cx={220.07} cy={319.38} r={5.06} className="st13" />
+          <circle id="circle45" cx={175.75} cy={319.38} r={5.06} className="st13" />
+          <circle id="circle46" cx={178.71} cy={330.47} r={5.06} className="st13" />
+          <circle id="circle47" cx={217.12} cy={308.29} r={5.06} className="st13" />
+          <circle id="circle48" cx={186.81} cy={338.58} r={5.06} className="st13" />
+          <circle id="circle49" cx={208.99} cy={300.17} r={5.06} className="st13" />
         </g>
       </g>
       <g id="g57">
@@ -1013,11 +824,7 @@ export const Logo = ({ className }: { className?: string }) => {
         }}
       />
       <g id="g122">
-        <path
-          id="rect120"
-          d="M270.57 89.55h27.3v27.3h-27.3z"
-          className="st12"
-        />
+        <path id="rect120" d="M270.57 89.55h27.3v27.3h-27.3z" className="st12" />
         <path
           id="path121"
           d="M288.85 89.55h-18.28v14.29c1.54.61 3.21.94 4.96.94 7.42 0 13.43-6.02 13.43-13.43 0-.61-.04-1.21-.11-1.79z"
@@ -1070,21 +877,11 @@ export const Logo = ({ className }: { className?: string }) => {
             fill: "#f4e4d5",
           }}
         />
-        <path
-          id="rect126"
-          d="M297.87 62.37h16.52v16.52h-16.52z"
-          className="st14"
-        />
+        <path id="rect126" d="M297.87 62.37h16.52v16.52h-16.52z" className="st14" />
       </g>
       <circle id="circle4" cx={301.76} cy={177.03} r={45.62} className="st0" />
       <g id="g25">
-        <circle
-          id="circle126"
-          cx={301.76}
-          cy={177.03}
-          r={49.5}
-          className="st16"
-        />
+        <circle id="circle126" cx={301.76} cy={177.03} r={49.5} className="st16" />
         <g
           id="g132"
           clipPath="url(#clippath-4)"

@@ -37,9 +37,6 @@ importers:
       "@types/react-dom":
         specifier: ^19.0.4
         version: 19.0.4(@types/react@19.0.12)
-      astro:
-        specifier: ^5.1.6
-        version: 5.5.2(jiti@1.21.7)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
       astro-delete-unused-images:
         specifier: ^1.0.3
         version: 1.0.3
@@ -89,8 +86,11 @@ importers:
         specifier: ^5.7.3
         version: 5.8.2
     devDependencies:
+      astro:
+        specifier: ^5.5.2
+        version: 5.5.2(jiti@1.21.7)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
       prettier:
-        specifier: ^3.4.2
+        specifier: ^3.5.3
         version: 3.5.3
       prettier-plugin-astro:
         specifier: ^0.14.1
@@ -1500,8 +1500,7 @@ packages:
       {
         integrity: sha512-SOTJxB8mqxe/KEYEJiLIot0YULiCffyfTEclwmdeaASitDJ7eLM/KYrJ9sx3U5hq9GVI17Z4Y0P/1T2aQ0ZN3A==,
       }
-    engines:
-      { node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: ">=9.6.5", pnpm: ">=7.1.0" }
+    engines: { node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: ">=9.6.5", pnpm: ">=7.1.0" }
     hasBin: true
 
   autoprefixer@10.4.21:

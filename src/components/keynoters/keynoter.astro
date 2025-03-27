@@ -17,25 +17,15 @@ export interface Props {
   class?: string;
 }
 
-const {
-  name,
-  slug,
-  tagline,
-  image,
-  placeholder,
-  order,
-  class: className,
-} = Astro.props;
+const { name, slug, tagline, image, placeholder, order, class: className } = Astro.props;
 
 const placeholders = [Person1, Person2, Person3, Person4, Person5];
 
-const Placeholder =
-  placeholders[Math.floor(Math.random() * placeholders.length)];
-
+const Placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
 ---
 
 <li class:list={["list-none rounded-2xl overflow-clip flex group", className]}>
-  <a class="block w-full h-full relative " >
+  <a class="block w-full h-full relative">
     <div class="relative aspect-[9/10] overflow-clip">
       {
         image ? (
@@ -53,18 +43,14 @@ const Placeholder =
       }
     </div>
 
-    <div
-      class="px-5 py-2 pb-4 bg-keynoter-info rounded-t-none h-full "
-    >
+    <div class="px-5 py-2 pb-4 bg-keynoter-info rounded-t-none h-full">
       {
         placeholder ? (
           <p class="text-body-inverted ">More keynoters coming soon</p>
         ) : (
           <>
             <p class="text-[#17223A] font-bold">{name}</p>
-            {tagline ? (
-              <p class="text-secondary-hover text-lg italic">{tagline}</p>
-            ) : null}
+            {tagline ? <p class="text-secondary-hover text-lg italic">{tagline}</p> : null}
           </>
         )
       }

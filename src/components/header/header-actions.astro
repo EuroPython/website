@@ -27,7 +27,9 @@ const IS_LIVE = false;
   {
     !mobile ? (
       <>
-      <Button url="/tickets" icon="ticket">Register Now!</Button>
+        <Button url="/tickets" icon="ticket">
+          Register Now!
+        </Button>
         {IS_LIVE && <Button url="/live">Live</Button>}
       </>
     ) : null
@@ -116,7 +118,7 @@ const IS_LIVE = false;
     --pagefind-ui-border: #d8d8d8;
     --pagefind-ui-border-width: 2px;
     --pagefind-ui-border-radius: 0;
-    width:50%;
+    width: 50%;
     min-width: 10vw;
   }
   .pagefind-ui.yellow {

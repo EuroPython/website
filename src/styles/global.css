@@ -201,11 +201,7 @@ p.cross::after {
     --slope: (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) /
       (var(--max-vw) - var(--min-vw));
 
-    font-size: clamp(
-      var(--min-fs-rem),
-      var(--min-fs-rem) + var(--slope),
-      var(--max-fs-rem)
-    );
+    font-size: clamp(var(--min-fs-rem), var(--min-fs-rem) + var(--slope), var(--max-fs-rem));
   }
 
   h1 {

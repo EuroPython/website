@@ -16,6 +16,27 @@ repos:
     rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
-        args: ["--tab-width", "2", "--trailing-comma", "es5"]
+        args:
+          [
+            "--tab-width",
+            "2",
+            "--trailing-comma",
+            "es5",
+            "--print-width",
+            "100",
+            "--bracket-same-line",
+            "true",
+          ]
         additional_dependencies: ["prettier", "prettier-plugin-astro"]
         exclude: "pnpm-lock.yaml"
+        files: \.(astro|mdx|md|yml|yaml|ts|js|mjs)$
+
+  - repo: local
+    hooks:
+      - id: astro-check
+        name: astro check
+        entry: astro check
+        language: node
+        files: "^(?:public|src)/.+|astro\\.config\\.mjs|tsconfig\\.json"
+        pass_filenames: false
+        additional_dependencies: ["astro", "@astrojs/check"]

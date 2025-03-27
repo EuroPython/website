@@ -119,15 +119,13 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
           // skip talks than end after the next start,
           // this is for events that span for multiple slots
           // (like a sponsor fair)
-          (end) => end.getTime() <= nextStart.getTime(),
+          (end) => end.getTime() <= nextStart.getTime()
         )
-        .map((end) => end.getTime()),
-    ),
+        .map((end) => end.getTime())
+    )
   );
 
-  const hasBreakAfter = nextSessions.some(
-    (session) => session.type === "break",
-  );
+  const hasBreakAfter = nextSessions.some((session) => session.type === "break");
 
   if (nextStart !== end) {
     const duration = differenceInMinutes(nextStart, end);
@@ -241,9 +239,7 @@ for (let i = 0; i < slots.length; i++) {
 
 // add missing times
 const lastSlot = slots[slots.length - 1];
-const lastTime = Math.max(
-  ...lastSlot.sessions.map((session) => timeToNumber(session.endTime)),
-);
+const lastTime = Math.max(...lastSlot.sessions.map((session) => timeToNumber(session.endTime)));
 const currentTime = timeToNumber(lastSlot.endTime);
 
 for (let i = currentTime; i <= lastTime; i += 5) {
@@ -264,9 +260,7 @@ const getColStart = ({ type, rooms }: Session) => {
     return 1;
   }
 
-  const indexes = rooms
-    .map((room) => ROOMS.indexOf(room))
-    .filter((index) => index >= 0);
+  const indexes = rooms.map((room) => ROOMS.indexOf(room)).filter((index) => index >= 0);
   return Math.min(...indexes) + 2;
 };
 
@@ -371,26 +365,15 @@ posters.forEach((poster) => {
                 <h2>{format(slot.start, "HH:mm")}</h2>
               </div>
 
-              {sessionsByTime[slot.startTime]
-                .sort(sortSessionByRooms)
-                .map((session) => {
-                  const style = getSessionStyle(session);
+              {sessionsByTime[slot.startTime].sort(sortSessionByRooms).map((session) => {
+                const style = getSessionStyle(session);
 
-                  if (
-                    session.type === "room-change" ||
-                    session.type === "break"
-                  ) {
-                    return (
-                      <Break
-                        title={session.title}
-                        time={session.startTime}
-                        style={style}
-                      />
-                    );
-                  }
+                if (session.type === "room-change" || session.type === "break") {
+                  return <Break title={session.title} time={session.startTime} style={style} />;
+                }
 
-                  return <Session session={session} style={style} />;
-                })}
+                return <Session session={session} style={style} />;
+              })}
 
               {postersByTime[slot.startTime] && (
                 // big assumption here, that all posters start at the same
@@ -566,8 +549,7 @@ posters.forEach((poster) => {
     const containers = document.querySelectorAll(".schedule-container");
 
     function syncScroll(event: any) {
-      const other =
-        containers[0] === event.target ? containers[1] : containers[0];
+      const other = containers[0] === event.target ? containers[1] : containers[0];
       other.scrollTop = event.target.scrollTop;
       other.scrollLeft = event.target.scrollLeft;
     }
@@ -577,11 +559,9 @@ posters.forEach((poster) => {
     });
   });
 
-  document
-    .getElementById("schedule-select")!
-    .addEventListener("change", (event) => {
-      // @ts-ignore
-      const day = event.target!.value;
-      window.location.href = `/schedule/${day}`;
-    });
+  document.getElementById("schedule-select")!.addEventListener("change", (event) => {
+    // @ts-ignore
+    const day = event.target!.value;
+    window.location.href = `/schedule/${day}`;
+  });
 </script>

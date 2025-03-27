@@ -10,15 +10,8 @@ export interface Props {
   isExternal?: boolean;
 }
 
-const {
-  url,
-  className = "",
-  secondary = false,
-  disabled = false,
-  isExternal,
-} = Astro.props;
-const resolvedIsExternal =
-  isExternal !== undefined ? isExternal : url?.startsWith("http");
+const { url, className = "", secondary = false, disabled = false, isExternal } = Astro.props;
+const resolvedIsExternal = isExternal !== undefined ? isExternal : url?.startsWith("http");
 ---
 
 <a
@@ -31,9 +24,5 @@ const resolvedIsExternal =
 >
   <slot />
 
-  {
-    resolvedIsExternal && (
-      <span class="inline-block ml-1 font-system text-lg leading-4">↗</span>
-    )
-  }
+  {resolvedIsExternal && <span class="inline-block ml-1 font-system text-lg leading-4">↗</span>}
 </a>

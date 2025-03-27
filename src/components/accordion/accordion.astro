@@ -27,9 +27,7 @@ const { title, id } = Astro.props;
   document.addEventListener("DOMContentLoaded", () => {
     const hash = window.location.hash.substring(1); // Remove #
     if (hash) {
-      const details = document.getElementById(
-        hash,
-      ) as HTMLDetailsElement | null;
+      const details = document.getElementById(hash) as HTMLDetailsElement | null;
       if (details) {
         details.open = true;
       }

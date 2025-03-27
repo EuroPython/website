@@ -49,8 +49,7 @@ function getGitHosting(url: string): string | undefined {
 
 function isUrl(str: string): boolean {
   str = ensureHttps(str);
-  const regex =
-    /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)*(\?.*)?$/;
+  const regex = /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)*(\?.*)?$/;
   return regex.test(str);
 }
 
@@ -73,11 +72,7 @@ function ensureHttps(str: string): string {
     {
       entry.data.avatar && (
         <div>
-          <img
-            src={entry.data.avatar}
-            alt={entry.data.name}
-            class="w-full max-w-sm mb-12"
-          />
+          <img src={entry.data.avatar} alt={entry.data.name} class="w-full max-w-sm mb-12" />
         </div>
       )
     }
@@ -134,9 +129,7 @@ function ensureHttps(str: string): string {
 
             {entry.data.gitx && (
               <>
-                <dt class="font-bold">
-                  {getGitHosting(entry.data.gitx) ?? "Git"}
-                </dt>
+                <dt class="font-bold">{getGitHosting(entry.data.gitx) ?? "Git"}</dt>
                 <dd>
                   {isUrl(entry.data.gitx) ? (
                     <a

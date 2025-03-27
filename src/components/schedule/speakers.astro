@@ -10,7 +10,7 @@ interface Props {
 const allSpeakers = await getCollection("speakers");
 
 const speakersByCode = Object.fromEntries(
-  allSpeakers.map((speaker) => [speaker.data.code, speaker]),
+  allSpeakers.map((speaker) => [speaker.data.code, speaker])
 );
 
 const speakers = Astro.props.speakers

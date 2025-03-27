@@ -1,9 +1,8 @@
 ---
-
 import { CardContainer } from "@components/card/card-container";
 import { Title } from "@components/typography/title";
 import DeadlineCard from "@components/deadline-card.astro";
-import Headline from "@ui/Headline.astro"
+import Headline from "@ui/Headline.astro";
 import { getCollection } from "astro:content";
 
 let deadlines = await getCollection("deadlines");
@@ -11,11 +10,11 @@ deadlines = deadlines
   .sort((a, b) => a.slug.localeCompare(b.slug))
   .reverse()
   .slice(0, 3);
-
 ---
-  <section class="prose-xl m-0 my-12 p-0">
-    <Headline id="updates" title="Updates" />
-    <CardContainer>
-      {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
-    </CardContainer>
-  </section>
+
+<section class="prose-xl m-0 my-12 p-0">
+  <Headline id="updates" title="Updates" />
+  <CardContainer>
+    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
+  </CardContainer>
+</section>

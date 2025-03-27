@@ -32,26 +32,19 @@ const resolveSessions = (codes: string[]) =>
   codes.map((code) => sessions.find((s) => s?.data?.code === code));
 
 // Filter out sessions with room "Exhibit Hall"
-const filteredSessions = sessions.filter(
-  (s) => s?.data?.room !== "Exhibit Hall",
-);
+const filteredSessions = sessions.filter((s) => s?.data?.room !== "Exhibit Hall");
 
-const parallelSessions = resolveSessions(
-  entry.data.sessions_in_parallel ?? [],
-).filter((s) => s?.data?.room !== "Exhibit Hall");
-const sameRoomNextSession = filteredSessions.find(
-  (s) => s?.data?.code === entry.data.next_session,
+const parallelSessions = resolveSessions(entry.data.sessions_in_parallel ?? []).filter(
+  (s) => s?.data?.room !== "Exhibit Hall"
 );
-const nextSessionsInAllRooms = resolveSessions(
-  entry.data.sessions_after ?? [],
-).filter((s) => s?.data?.room !== "Exhibit Hall");
+const sameRoomNextSession = filteredSessions.find((s) => s?.data?.code === entry.data.next_session);
+const nextSessionsInAllRooms = resolveSessions(entry.data.sessions_after ?? []).filter(
+  (s) => s?.data?.room !== "Exhibit Hall"
+);
 
 // Ensure sameRoomNextSession appears first in nextSessionsInAllRooms if it exists
 const nextSessionsOrdered = sameRoomNextSession
-  ? [
-      sameRoomNextSession,
-      ...nextSessionsInAllRooms.filter((s) => s !== sameRoomNextSession),
-    ]
+  ? [sameRoomNextSession, ...nextSessionsInAllRooms.filter((s) => s !== sameRoomNextSession)]
   : nextSessionsInAllRooms;
 ---
 
@@ -91,11 +84,7 @@ const nextSessionsOrdered = sameRoomNextSession
           <>
             <dt class="font-bold">Start:</dt>
             <dd>
-              {formatInTimeZone(
-                entry.data.start,
-                "Europe/Prague",
-                "HH:mm 'on' dd MMMM yyyy",
-              )}
+              {formatInTimeZone(entry.data.start, "Europe/Prague", "HH:mm 'on' dd MMMM yyyy")}
             </dd>
           </>
         )
@@ -126,18 +115,16 @@ const nextSessionsOrdered = sameRoomNextSession
             <h2>Resources</h2>
           </Prose>
           <ul class="list-disc">
-            {entry.data.resources.map(
-              (resource: { resource: string; description: string }) => (
-                <li>
-                  <a
-                    href={resource.resource}
-                    class="text-xl hover:text-primary-hover underline font-bold"
-                  >
-                    {resource.description}
-                  </a>
-                </li>
-              ),
-            )}
+            {entry.data.resources.map((resource: { resource: string; description: string }) => (
+              <li>
+                <a
+                  href={resource.resource}
+                  class="text-xl hover:text-primary-hover underline font-bold"
+                >
+                  {resource.description}
+                </a>
+              </li>
+            ))}
           </ul>
         </>
       )
@@ -187,8 +174,7 @@ const nextSessionsOrdered = sameRoomNextSession
       }
 
       {
-        (parallelSessions?.length ?? 0) > 0 ||
-        (nextSessionsInAllRooms?.length ?? 0) > 0 ? (
+        (parallelSessions?.length ?? 0) > 0 || (nextSessionsInAllRooms?.length ?? 0) > 0 ? (
           <>
             <Separator />
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -201,9 +187,7 @@ const nextSessionsOrdered = sameRoomNextSession
                     {parallelSessions.map((session: any) => (
                       <li>
                         <Prose>
-                          <a href={`/session/${session.slug}`}>
-                            {session.data.title}
-                          </a>
+                          <a href={`/session/${session.slug}`}>{session.data.title}</a>
                         </Prose>
                       </li>
                     ))}

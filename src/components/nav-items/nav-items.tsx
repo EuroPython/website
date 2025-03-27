@@ -18,13 +18,10 @@ export const NavItems = ({ items, inverted = false }: Props) => {
         <li
           key={item.name}
           tabIndex={0}
-          className={clsx(
-            "border-b border-border-secondary-dark xl:border-0 group",
-            {
-              "text-white": inverted,
-              "text-primary": !inverted,
-            }
-          )}
+          className={clsx("border-b border-border-secondary-dark xl:border-0 group", {
+            "text-white": inverted,
+            "text-primary": !inverted,
+          })}
         >
           <a
             href={item.path || "#"}
@@ -69,9 +66,7 @@ export const NavItems = ({ items, inverted = false }: Props) => {
                       )}
                     >
                       {subItem.name}
-                      {subItem.path?.startsWith("http") ? (
-                        <span> ↗</span>
-                      ) : null}
+                      {subItem.path?.startsWith("http") ? <span> ↗</span> : null}
                     </a>
                   </li>
                 ))}

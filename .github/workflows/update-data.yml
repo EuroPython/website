@@ -26,10 +26,8 @@ jobs:
       - name: Open pull request
         uses: peter-evans/create-pull-request@v6
         with:
-          author:
-            github-actions[bot] <github-actions[bot]@users.noreply.github.com>
-          committer:
-            github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           commit-message: "🆕 Update data"
           title: "🆕 Update data"
           body: "🆕 Update data"

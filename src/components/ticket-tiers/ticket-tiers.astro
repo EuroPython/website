@@ -146,18 +146,14 @@ const formatPrice = (price: number | string) => {
               <div>
                 <div class="font-bold text-lg">
                   Education:
-                  <span class="text-xl ml-1">
-                    {formatPrice(tier.educationPrice)}
-                  </span>
+                  <span class="text-xl ml-1">{formatPrice(tier.educationPrice)}</span>
                 </div>
               </div>
 
               <div>
                 <div class="font-bold text-lg">
                   Personal:
-                  <span class="text-xl ml-1">
-                    {formatPrice(tier.personalPrice)}
-                  </span>
+                  <span class="text-xl ml-1">{formatPrice(tier.personalPrice)}</span>
                 </div>
                 {tier.latePersonalPrice && (
                   <div class="text-sm font-normal ml-1">
@@ -169,9 +165,7 @@ const formatPrice = (price: number | string) => {
               <div>
                 <div class="font-bold text-lg">
                   Business:
-                  <span class="text-xl ml-1">
-                    {formatPrice(tier.businessPrice)} (+ VAT)
-                  </span>
+                  <span class="text-xl ml-1">{formatPrice(tier.businessPrice)} (+ VAT)</span>
                 </div>
                 {tier.lateBusinessPrice && (
                   <div class="text-sm font-normal ml-1">
@@ -187,9 +181,7 @@ const formatPrice = (price: number | string) => {
             <ul class="text-base list-none pl-0">
               {tier.features.map((feature) => (
                 <li class="flex items-start">
-                  <span class="flex-shrink-0 w-6">
-                    {feature.icon ? feature.icon : "✔️"}
-                  </span>
+                  <span class="flex-shrink-0 w-6">{feature.icon ? feature.icon : "✔️"}</span>
                   <span set:html={feature.text} />
                 </li>
               ))}

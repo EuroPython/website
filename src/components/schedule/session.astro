@@ -158,19 +158,11 @@ const hasFooter = hasRoom || hasSpeakers;
   }
 
   .session:has(.read-more[href]:focus) {
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 70%
-    );
+    background-color: color-mix(in srgb, var(--color-body-background), white 70%);
   }
 
   .session:has(.read-more[href]:not([href=""]):hover) {
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 40%
-    );
+    background-color: color-mix(in srgb, var(--color-body-background), white 40%);
   }
 
   .time,

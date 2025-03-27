@@ -22,7 +22,7 @@ const { title, subtitle, url, image } = Astro.props;
         src={image}
         width={600}
         height={375}
-          alt=`Card image - ${title}`
+        alt=`Card image - ${title}`
         class="not-prose rounded-xl aspect-[3/2] w-full"
         loading="lazy"
       />
@@ -30,7 +30,7 @@ const { title, subtitle, url, image } = Astro.props;
   </a>
   <div class="flex items-center flex-col flex-grow mb-2">
     <a href={url} class="block hover:underline">
-      <h3 >{title}</h3>
+      <h3>{title}</h3>
     </a>
     <slot />
   </div>
