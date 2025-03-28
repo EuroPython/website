@@ -41,6 +41,9 @@ importers:
       astro:
         specifier: ^5.1.6
         version: 5.5.2(jiti@1.21.7)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
+      astro-delete-unused-images:
+        specifier: ^1.0.3
+        version: 1.0.3
       astro-meta-tags:
         specifier: ^0.3.1
         version: 0.3.1(astro@5.5.2(jiti@1.21.7)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0))
@@ -913,6 +916,9 @@ packages:
   astring@1.9.0:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
+
+  astro-delete-unused-images@1.0.3:
+    resolution: {integrity: sha512-PRWirHqeTeJ5IAH0jdy/f2NyfgeclCjjwaz0JcjP/5uFcZqPTeSZQbn2HedV4cBWLCyPAj/ago9nieDGnmvRcQ==}
 
   astro-meta-tags@0.3.1:
     resolution: {integrity: sha512-6g/SfAVTV7BsGlfWU+s/Kvo6atyn9DpfI7Dq3fE/ck3ppfg30aoeT2Uxu7UH4yla3QXAUWaJIher7fGjewf0ew==}
@@ -3439,6 +3445,8 @@ snapshots:
   array-iterate@2.0.1: {}
 
   astring@1.9.0: {}
+
+  astro-delete-unused-images@1.0.3: {}
 
   astro-meta-tags@0.3.1(astro@5.5.2(jiti@1.21.7)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)):
     dependencies:
