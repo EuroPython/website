@@ -5,7 +5,24 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "paths": {
-      "$*": ["src/*"]
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@ui/*": [
+        "src/components/ui/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@i18n/*": [
+        "src/i18n/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ]
     }
   }
 }
