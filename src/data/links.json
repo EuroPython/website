@@ -60,8 +60,21 @@
       ]
     },
     {
+      "name": "Registration",
+      "items": [
+        {
+          "name": "Tickets information",
+          "path": "/tickets"
+        }
+      ]
+    },
+    {
       "name": "Info & Support",
       "items": [
+        {
+          "name": "Code of Conduct",
+          "path": "https://www.europython-society.org/coc/"
+        },
         {
           "name": "FAQ",
           "path": "/faq"
@@ -69,6 +82,10 @@
         {
           "name": "Financial Aid",
           "path": "/finaid"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
         }
       ]
     }
