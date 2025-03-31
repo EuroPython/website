@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   documentation-links:
+    if: github.event.pull_request.head.repo.fork == true
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
