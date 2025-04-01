@@ -1,7 +1,7 @@
 ---
 import { Title } from "../typography/title";
 import Ribbon from "./ribbon.astro";
-import ButtonLink from "../button-link/button-link.astro"
+import ButtonLink from "../button-link/button-link.astro";
 
 interface Props {
   signupLink: string;
@@ -22,16 +22,16 @@ const tiers: SponsorTierProps[] = [
     slotsLeft: "Exclusive",
     price: "Custom Pricing",
     features: [
-  `<span style="font-size: 1.2rem; margin-top: 5;">Everything in the Diamond tier, plus <strong>white glove bespoke customisation tailored specifically to your needs</strong>.</span><br><br>`,
+      `<span style="font-size: 1.2rem; margin-top: 5;">Everything in the Diamond tier, plus <strong>white glove bespoke customisation tailored specifically to your needs</strong>.</span><br><br>`,
 
-  `<span style="font-size: 1.2rem; margin-top: 5;">We’re happy to walk you through <strong>every step</strong> to create a sponsorship experience that’s <strong>uniquely yours</strong>, with <strong>full support to bring your vision to life</strong>.</span>`,
-  ],
+      `<span style="font-size: 1.2rem; margin-top: 5;">We’re happy to walk you through <strong>every step</strong> to create a sponsorship experience that’s <strong>uniquely yours</strong>, with <strong>full support to bring your vision to life</strong>.</span>`,
+    ],
   },
   {
     title: "Diamond",
     slotsLeft: "2",
     price: 30_000,
-features: [
+    features: [
       "<strong>Extra large</strong> booth in exhibit hall",
       "<strong>10</strong> conference tickets (€5000 value)",
       "<strong>10</strong> remote tickets (€1500 value)",
@@ -66,7 +66,7 @@ features: [
       "<strong>Large</strong> booth in exhibit hall",
       "<strong>6</strong> conference tickets (€3000 value)",
       "<strong>6</strong> remote tickets (€900 value)",
-       "<strong>6</strong> conference vouchers with 30% discount (€900 value)",
+      "<strong>6</strong> conference vouchers with 30% discount (€900 value)",
       "Video ad(s) (silent) on venue digital signage",
       "<strong>1 technical talk slot (30 min)</strong>",
       "<strong>Unlimited</strong> job postings on website",
@@ -124,22 +124,23 @@ features: [
     title: "Bronze",
     price: 2_000,
     slotsLeft: "unlimited",
-   features: [
+    features: [
       "<strong>1 conference ticket (€500 value)</strong>",
       "1 remote ticket (€150 value)",
       "Logo on website and signage",
       "Welcome post on EuroPython social media",
     ],
-      },
+  },
   {
     title: "Patron",
     price: 1_000,
     slotsLeft: "unlimited",
-   features: [
+    features: [
       "1 remote ticket (€150 value)",
       "Logo on website and signage",
       "Welcome post on EuroPython social media",
-    ],  },
+    ],
+  },
 ];
 
 const getRibbonClass = (title: string) => {
@@ -169,159 +170,187 @@ const formatPrice = (price: number | string) => {
 <div class="sponsor-tiers-container">
   <div class="text-center mb-8">
     <h2 class="text-3xl font-bold">Most Popular Options</h2>
-    <p class="text-xl mt-2">Ideal for companies seeking high brand visibility and strong participant engagement</p>
-    <p class="text-xl mt-[-10px] mb-12 font-bold italic">Packages without booth space available at a discounted rate</p>
+    <p class="text-xl mt-2">
+      Ideal for companies seeking high brand visibility and strong participant
+      engagement
+    </p>
+    <p class="text-xl mt-[-10px] mb-12 font-bold italic">
+      Packages without booth space available at a discounted rate
+    </p>
   </div>
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-2 lg:gap-10">
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-2 lg:gap-10"
+  >
+    {
+      tiers
+        .filter(
+          (tier) =>
+            tier.title === "Silver" ||
+            tier.title === "Platinum" ||
+            tier.title === "Gold",
+        )
+        .sort((a: SponsorTierProps, b: SponsorTierProps) => {
+          const order: { [key: string]: number } = {
+            Silver: 1,
+            Platinum: 2,
+            Gold: 3,
+          };
+          return order[a.title] - order[b.title];
+        })
+        .map((tier) => (
+          <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
+            <div class="h-[160px]">
+              <Ribbon
+                className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
+                style={{ zIndex: "-1", top: "-55px" }}
+              />
+              <Title level={3} className="mt-0 !mb-2">
+                {tier.title}
+              </Title>
+              <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
+              <div class="text-xl mt-4">
+                {tier.slotsLeft ? (
+                  <>
+                    <span>{tier.slotsLeft}</span> slot
+                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                  </>
+                ) : (
+                  <>Fully booked</>
+                )}
+              </div>
+            </div>
 
-  {tiers
-    .filter(tier => tier.title === "Silver" || tier.title === "Platinum" || tier.title === "Gold")
-    .sort((a: SponsorTierProps, b: SponsorTierProps) => {
-      const order: { [key: string]: number } = { "Silver": 1, "Platinum": 2, "Gold": 3 };
-      return order[a.title] - order[b.title];
-    })
-    .map((tier) => (
-      <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-        <div class="h-[160px]">
-          <Ribbon
-            className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
-             style={{ zIndex: "-1", top: "-55px" }}
-          />
-          <Title level={3} className="mt-0 !mb-2">
-            {tier.title}
-          </Title>
-          <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
-          <div class="text-xl mt-4">
-            {tier.slotsLeft ? (
-              <>
-                <span>{tier.slotsLeft}</span> slot{tier.slotsLeft == 1 ? "" : "s"}{" "}
-                remaining
-              </>
-            ) : (
-              <>Fully booked</>
-            )}
+            <p class="font-bold text-base">This tier includes:</p>
+            <ul class="text-base list-none pl-0">
+              {tier.features.map((feature) => (
+                <li class="flex items-start">
+                  <span class="flex-shrink-0 w-6">✔️</span>
+                  <span set:html={feature} />
+                </li>
+              ))}
+            </ul>
+            <div class="absolute bottom-4 right-4">
+              <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
+            </div>
           </div>
-        </div>
-
-        <p class="font-bold text-base">This tier includes:</p>
-        <ul class="text-base list-none pl-0">
-          {tier.features.map((feature) => (
-            <li class="flex items-start">
-              <span class="flex-shrink-0 w-6">✔️</span>
-              <span set:html={feature}></span>
-            </li>
-          ))}
-        </ul>
-      <div class="absolute bottom-4 right-4">
-        <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
-      </div>
-
-      </div>
-    ))}
+        ))
+    }
   </div>
 
   <div class="text-center mb-8 mt-16">
     <h2 class="text-3xl font-bold">Major Supporters</h2>
-    <p class="text-xl mt-2 mb-12">Unique sponsorship tiers designed to make your company stand out from the rest</p>
+    <p class="text-xl mt-2 mb-12">
+      Unique sponsorship tiers designed to make your company stand out from the
+      rest
+    </p>
   </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-    {tiers.filter(tier => tier.title === "Diamond" || tier.title === "Keystone")
-    .sort((a, b) => {
-      const order: { [key: string]: number } = { "Diamond": 1, "Keystone": 2 };
-      return order[a.title] - order[b.title];
-    })
+    {
+      tiers
+        .filter((tier) => tier.title === "Diamond" || tier.title === "Keystone")
+        .sort((a, b) => {
+          const order: { [key: string]: number } = { Diamond: 1, Keystone: 2 };
+          return order[a.title] - order[b.title];
+        })
 
-    .map((tier) => (
-      <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-        <div class="h-[160px]">
-          <Ribbon
-            className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
-            style={{ zIndex: "-1", top: "-55px"}}
-          />
-          <Title level={3} className="mt-0 !mb-2">
-            {tier.title}
-          </Title>
-          <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
-          <div class="text-xl">
-            {tier.slotsLeft === "Exclusive" ? (
-              <>Exclusive</>
-            ) : tier.slotsLeft ? (
-              <>
-                <span>{tier.slotsLeft}</span> slot{tier.slotsLeft == 1 ? "" : "s"}{" "}
-                remaining
-              </>
-            ) : (
-              <>Fully booked</>
-            )}
+        .map((tier) => (
+          <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
+            <div class="h-[160px]">
+              <Ribbon
+                className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
+                style={{ zIndex: "-1", top: "-55px" }}
+              />
+              <Title level={3} className="mt-0 !mb-2">
+                {tier.title}
+              </Title>
+              <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
+              <div class="text-xl">
+                {tier.slotsLeft === "Exclusive" ? (
+                  <>Exclusive</>
+                ) : tier.slotsLeft ? (
+                  <>
+                    <span>{tier.slotsLeft}</span> slot
+                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                  </>
+                ) : (
+                  <>Fully booked</>
+                )}
+              </div>
+            </div>
+
+            <p class="font-bold text-base">This tier includes:</p>
+            <ul class="text-base list-none pl-0">
+              {tier.features.map((feature) => (
+                <li class="flex items-start">
+                  <span class="flex-shrink-0 w-6">✔️</span>
+                  <span set:html={feature} />
+                </li>
+              ))}
+            </ul>
+            <div class="absolute bottom-4 right-4">
+              <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
+            </div>
           </div>
-        </div>
-
-        <p class="font-bold text-base">This tier includes:</p>
-        <ul class="text-base list-none pl-0">
-          {tier.features.map((feature) => (
-            <li class="flex items-start">
-              <span class="flex-shrink-0 w-6">✔️</span>
-              <span set:html={feature}></span>
-            </li>
-          ))}
-        </ul>
-      <div class="absolute bottom-4 right-4">
-        <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
-      </div>
-      </div>
-    ))}
+        ))
+    }
   </div>
 
   <div class="text-center mb-8 mt-16">
     <h2 class="text-3xl font-bold">Starter Tiers</h2>
-    <p class="text-xl mt-2 mb-12">Perfect opportunity for companies with more modest budgets</p>
+    <p class="text-xl mt-2 mb-12">
+      Perfect opportunity for companies with more modest budgets
+    </p>
   </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-9 lg:gap-10 w-full md:w-5/6 lg:w-5/6 mx-auto">
-    {tiers.filter(tier => tier.title === "Patron" || tier.title === "Bronze")
-    .sort((a, b) => {
-      const order: { [key: string]: number }  = { "Patron": 1, "Bronze": 2};
-      return order[a.title] - order[b.title];
-    })
-    .map((tier) => (
-      <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-        <div class="h-[160px]">
-          <Ribbon
-            className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
-            style={{ zIndex: "-1", top: "-55px" }}
-          />
-          <Title level={3} className="mt-0 !mb-2">
-            {tier.title}
-          </Title>
-          <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
-          <div class="text-xl">
-            {tier.slotsLeft ? (
-              <>
-                <span>{tier.slotsLeft}</span> slot{tier.slotsLeft == 1 ? "" : "s"}{" "}
-                remaining
-              </>
-            ) : (
-              <>Fully booked</>
-            )}
-          </div>
-        </div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-9 lg:gap-10 w-full md:w-5/6 lg:w-5/6 mx-auto"
+  >
+    {
+      tiers
+        .filter((tier) => tier.title === "Patron" || tier.title === "Bronze")
+        .sort((a, b) => {
+          const order: { [key: string]: number } = { Patron: 1, Bronze: 2 };
+          return order[a.title] - order[b.title];
+        })
+        .map((tier) => (
+          <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
+            <div class="h-[160px]">
+              <Ribbon
+                className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
+                style={{ zIndex: "-1", top: "-55px" }}
+              />
+              <Title level={3} className="mt-0 !mb-2">
+                {tier.title}
+              </Title>
+              <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
+              <div class="text-xl">
+                {tier.slotsLeft ? (
+                  <>
+                    <span>{tier.slotsLeft}</span> slot
+                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                  </>
+                ) : (
+                  <>Fully booked</>
+                )}
+              </div>
+            </div>
 
-        <p class="font-bold text-base">This tier includes:</p>
-        <ul class="text-base list-none pl-0">
-          {tier.features.map((feature) => (
-            <li class="flex items-start">
-              <span class="flex-shrink-0 w-6">✔️</span>
-              <span set:html={feature}></span>
-            </li>
-          ))}
-        </ul>
-      <div class="absolute bottom-4 right-4">
-        <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
-      </div>
-      </div>
-    ))}
+            <p class="font-bold text-base">This tier includes:</p>
+            <ul class="text-base list-none pl-0">
+              {tier.features.map((feature) => (
+                <li class="flex items-start">
+                  <span class="flex-shrink-0 w-6">✔️</span>
+                  <span set:html={feature} />
+                </li>
+              ))}
+            </ul>
+            <div class="absolute bottom-4 right-4">
+              <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
+            </div>
+          </div>
+        ))
+    }
   </div>
 </div>
-
 
 <style is:global>
   .sponsor-tiers-container {
