@@ -24,40 +24,41 @@ function getTwitterUsername(url: string): string | undefined {
 
 // Get @username@instance.tld from Mastodon URL
 function getMastodonUsername(url: string): string | null {
-    const match = url.match(/https?:\/\/([^\/]+)\/@([^\/]+)(\/|\?|$)/);
-    return match ? `@${match[2]}@${match[1]}` : null;
+  const match = url.match(/https?:\/\/([^\/]+)\/@([^\/]+)(\/|\?|$)/);
+  return match ? `@${match[2]}@${match[1]}` : null;
 }
 
 // Get in/username from LinkedIn URL
 function getLinkedInUsername(url: string): string | null {
-    const match = url.match(/https?:\/\/([^\/]+)\/in\/([^\/]+)(\/|\?|$)/);
-    return match ? `in/${match[2]}` : null;
+  const match = url.match(/https?:\/\/([^\/]+)\/in\/([^\/]+)(\/|\?|$)/);
+  return match ? `in/${match[2]}` : null;
 }
 
 // Get Git hosting service from URL
 function getGitHosting(url: string): string | undefined {
-    const urlWithProtocol = ensureHttps(url);
-    try {
-        const hostname = new URL(urlWithProtocol).hostname;
-        if (hostname.includes('github.com')) return 'GitHub';
-        if (hostname.includes('gitlab.com')) return 'GitLab';
-    } catch {
-        return undefined;
-    }
+  const urlWithProtocol = ensureHttps(url);
+  try {
+    const hostname = new URL(urlWithProtocol).hostname;
+    if (hostname.includes("github.com")) return "GitHub";
+    if (hostname.includes("gitlab.com")) return "GitLab";
+  } catch {
     return undefined;
+  }
+  return undefined;
 }
 
 function isUrl(str: string): boolean {
-    str = ensureHttps(str);
-    const regex = /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)*(\?.*)?$/;
-    return regex.test(str);
+  str = ensureHttps(str);
+  const regex =
+    /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)*(\?.*)?$/;
+  return regex.test(str);
 }
 
 function ensureHttps(str: string): string {
-    if (!/^https?:\/\//i.test(str)) {
-        return `https://${str}`;
-    }
-    return str;
+  if (!/^https?:\/\//i.test(str)) {
+    return `https://${str}`;
+  }
+  return str;
 }
 ---
 
@@ -69,123 +70,133 @@ function ensureHttps(str: string): string {
       {entry.data.name}
     </h1>
 
-    {entry.data.avatar && (
-      <div>
-        <img
-          src={entry.data.avatar}
-          alt={entry.data.name}
-          class="w-full max-w-sm mb-12"
-        />
-      </div>
-    )}
+    {
+      entry.data.avatar && (
+        <div>
+          <img
+            src={entry.data.avatar}
+            alt={entry.data.name}
+            class="w-full max-w-sm mb-12"
+          />
+        </div>
+      )
+    }
 
-    {entry.body ? (
-      <>
-        <h2
-          class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
-        >
-          Biography
-        </h2>
-        <Prose><Content /></Prose>
-      </>
-    ) : null}
+    {
+      entry.body ? (
+        <>
+          <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+            Biography
+          </h2>
+          <Prose>
+            <Content />
+          </Prose>
+        </>
+      ) : null
+    }
 
-    {entry.data.affiliation || entry.data.homepage || entry.data.gitx || entry.data.linkedin_url || entry.data.mastodon_url || entry.data.twitter_url ? (
-      <br />
-      <div class="mb-4">
-        <h2
-          class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
-        >
-          More about the speaker
-        </h2>
-        <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
-          {entry.data.affiliation && (
-            <>
-              <dt class="font-bold">Affiliation</dt>
-              <dd>{entry.data.affiliation}</dd>
-            </>
-          )}
+    {
+      entry.data.affiliation ||
+      entry.data.homepage ||
+      entry.data.gitx ||
+      entry.data.linkedin_url ||
+      entry.data.mastodon_url ||
+      entry.data.twitter_url ? (
+        <div class="mb-4">
+          <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+            More about the speaker
+          </h2>
+          <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
+            {entry.data.affiliation && (
+              <>
+                <dt class="font-bold">Affiliation</dt>
+                <dd>{entry.data.affiliation}</dd>
+              </>
+            )}
 
-          {entry.data.homepage && (
-            <>
-              <dt class="font-bold">Homepage</dt>
-              <dd>
-                {isUrl(entry.data.homepage) ? (
+            {entry.data.homepage && (
+              <>
+                <dt class="font-bold">Homepage</dt>
+                <dd>
+                  {isUrl(entry.data.homepage) ? (
+                    <a
+                      href={ensureHttps(entry.data.homepage)}
+                      class="text-primary underline hover:text-primary-hover"
+                    >
+                      {entry.data.homepage}
+                    </a>
+                  ) : (
+                    <span>{entry.data.homepage}</span>
+                  )}
+                </dd>
+              </>
+            )}
+
+            {entry.data.gitx && (
+              <>
+                <dt class="font-bold">
+                  {getGitHosting(entry.data.gitx) ?? "Git"}
+                </dt>
+                <dd>
+                  {isUrl(entry.data.gitx) ? (
+                    <a
+                      href={ensureHttps(entry.data.gitx)}
+                      class="text-primary underline hover:text-primary-hover"
+                    >
+                      {entry.data.gitx}
+                    </a>
+                  ) : (
+                    <span>{entry.data.gitx}</span>
+                  )}
+                </dd>
+              </>
+            )}
+
+            {entry.data.linkedin_url && (
+              <>
+                <dt class="font-bold">LinkedIn</dt>
+                <dd>
                   <a
-                    href={ensureHttps(entry.data.homepage)}
+                    href={entry.data.linkedin_url}
                     class="text-primary underline hover:text-primary-hover"
                   >
-                    {entry.data.homepage}
+                    {getLinkedInUsername(entry.data.linkedin_url)}
                   </a>
-                ) : (
-                  <span>{entry.data.homepage}</span>
-                )}
-              </dd>
-            </>
-          )}
+                </dd>
+              </>
+            )}
 
-          {entry.data.gitx && (
-            <>
-              <dt class="font-bold">{getGitHosting(entry.data.gitx) ?? "Git"}</dt>
-              <dd>
-                {isUrl(entry.data.gitx) ? (
+            {entry.data.mastodon_url && (
+              <>
+                <dt class="font-bold">Mastodon</dt>
+                <dd>
                   <a
-                    href={ensureHttps(entry.data.gitx)}
+                    href={entry.data.mastodon_url}
                     class="text-primary underline hover:text-primary-hover"
                   >
-                    {entry.data.gitx}
+                    {getMastodonUsername(entry.data.mastodon_url)}
                   </a>
-                ) : (
-                  <span>{entry.data.gitx}</span>
-                )}
-              </dd>
-            </>
-          )}
+                </dd>
+              </>
+            )}
 
-          {entry.data.linkedin_url && (
-            <>
-              <dt class="font-bold">LinkedIn</dt>
-              <dd>
-                <a
-                  href={entry.data.linkedin_url}
-                  class="text-primary underline hover:text-primary-hover"
-                >
-                  {getLinkedInUsername(entry.data.linkedin_url)}
-                </a>
-              </dd>
-            </>
-          )}
-
-          {entry.data.mastodon_url && (
-            <>
-              <dt class="font-bold">Mastodon</dt>
-              <dd>
-                <a
-                  href={entry.data.mastodon_url}
-                  class="text-primary underline hover:text-primary-hover"
-                >
-                  {getMastodonUsername(entry.data.mastodon_url)}
-                </a>
-              </dd>
-            </>
-          )}
-
-          {entry.data.twitter_url && (
-            <>
-              <dt class="font-bold">Twitter / X</dt>
-              <dd>
-                <a
-                  href={entry.data.twitter_url}
-                  class="text-primary underline hover:text-primary-hover"
-                >
-                  {getTwitterUsername(entry.data.twitter_url)}
-                </a>
-              </dd>
-            </>
-          )}
-        </dl>
-      </div>
-    ) : null}
+            {entry.data.twitter_url && (
+              <>
+                <dt class="font-bold">Twitter / X</dt>
+                <dd>
+                  <a
+                    href={entry.data.twitter_url}
+                    class="text-primary underline hover:text-primary-hover"
+                  >
+                    {getTwitterUsername(entry.data.twitter_url)}
+                  </a>
+                </dd>
+              </>
+            )}
+          </dl>
+        </div>
+      ) : null
+    }
 
     <br />
 

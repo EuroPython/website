@@ -13,29 +13,29 @@ const { title, description } = Astro.props;
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "publisher": {
+  publisher: {
     "@type": "Organization",
-    "name": "EuroPython 2025",
-    "url": "https://ep2025.europython.eu/",
-    "logo": {
+    name: "EuroPython 2025",
+    url: "https://ep2025.europython.eu/",
+    logo: {
       "@type": "ImageObject",
-      "url": "https://ep2025.europython.eu/_astro/hero.BAlu7uXS_rd8vG.svg",
-      "width": 1686,
-      "height": 888
-    }
+      url: "https://ep2025.europython.eu/_astro/hero.BAlu7uXS_rd8vG.svg",
+      width: 1686,
+      height: 888,
+    },
   },
-  "url": "https://ep2025.europython.eu/",
-  "image": {
+  url: "https://ep2025.europython.eu/",
+  image: {
     "@type": "ImageObject",
-    "url": "https://ep2025.europython.eu/_astro/hero.BAlu7uXS_rd8vG.svg",
-    "width": 1686,
-    "height": 888
+    url: "https://ep2025.europython.eu/_astro/hero.BAlu7uXS_rd8vG.svg",
+    width: 1686,
+    height: 888,
   },
-  "mainEntityOfPage": {
+  mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://ep2025.europython.eu/"
+    "@id": "https://ep2025.europython.eu/",
   },
-  "description": description
+  description: description,
 });
 ---
 
@@ -43,7 +43,7 @@ const jsonLd = JSON.stringify({
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
-    <script type="application/ld+json" is:inline set:html={jsonLd}></script>
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
   </head>
 
   <div class="flex flex-col items-stretch min-h-screen">

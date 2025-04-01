@@ -8,7 +8,7 @@ const { className, style } = Astro.props;
 ---
 
 <svg
-  class={`ribbon-svg ${className || ''}
+  class={`ribbon-svg ${className || ""}
     w-[80px] h-[200px] md:w-[60px] md:right-[-5px] lg:w-[80px] lg:right-[-6px] top-[-16px] absolute
     transform-origin-[top_right] transition-all duration-300 ease-in-out`}
   viewBox="0 0 105 180"
@@ -18,8 +18,8 @@ const { className, style } = Astro.props;
 >
   <defs>
     <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="overlay">
-      <stop stop-color="#ffffff" offset="0%" stop-opacity={0.4} />
-      <stop stop-color="#ffffff" offset="80%" stop-opacity={0} />
+      <stop stop-color="#ffffff" offset="0%" stop-opacity={0.4}></stop>
+      <stop stop-color="#ffffff" offset="80%" stop-opacity={0}></stop>
     </linearGradient>
   </defs>
 
@@ -30,8 +30,7 @@ const { className, style } = Astro.props;
           <g id="Silver-Tag" transform="translate(278.000000, 10.000000)">
             <polygon
               id="Rectangle"
-              points="0 0 95 0 95 200 47.5 164.192211 0 200"
-            />
+              points="0 0 95 0 95 200 47.5 164.192211 0 200"></polygon>
           </g>
         </g>
       </g>
@@ -43,11 +42,11 @@ const { className, style } = Astro.props;
             <g id="Silver-Tag" transform="translate(278.000000, 10.000000)">
               <polygon
                 id="Rectangle"
-                points="0 0 95 0 95 200 47.5 164.192211 0 200"
-              />
+                points="0 0 95 0 95 200 47.5 164.192211 0 200"></polygon>
             </g>
           </g>
         </g>
       </g>
     </g>
-  </svg>
+  </g>
+</svg>

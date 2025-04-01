@@ -5,49 +5,68 @@ import { Select } from "../form/select";
 ---
 
 <form class="mb-12 filter-sessions">
-  {allTracks && allTracks.length > 0 && (
-    <div class="mb-6">
-      <Label htmlFor="track">Track</Label>
-      <Select id="track" name="track">
-        <option value="">All</option>
-        {allTracks.map((track: string) => <option value={track}>{track}</option>)}
-      </Select>
-    </div>
-  )}
+  {
+    allTracks && allTracks.length > 0 && (
+      <div class="mb-6">
+        <Label htmlFor="track">Track</Label>
+        <Select id="track" name="track">
+          <option value="">All</option>
+          {allTracks.map((track: string) => (
+            <option value={track}>{track}</option>
+          ))}
+        </Select>
+      </div>
+    )
+  }
 
-  {allTypes && allTypes.length > 0 && (
-    <div class="mb-6">
-      <Label htmlFor="type">Session type</Label>
-      <Select id="type" name="type">
-        <option value="">All</option>
-        {allTypes.map((type: string) => <option value={type}>{type}</option>)}
-      </Select>
-    </div>
-  )}
+  {
+    allTypes && allTypes.length > 0 && (
+      <div class="mb-6">
+        <Label htmlFor="type">Session type</Label>
+        <Select id="type" name="type">
+          <option value="">All</option>
+          {allTypes.map((type: string) => (
+            <option value={type}>{type}</option>
+          ))}
+        </Select>
+      </div>
+    )
+  }
 
-  {allLevels && allLevels.length > 0 && (
-    <div class="mb-6">
-      <Label htmlFor="level">Level</Label>
-      <Select id="level" name="level">
-        <option value="">All</option>
-        {allLevels.map((level: string) => <option value={level}>{level}</option>)}
-      </Select>
-    </div>
-  )}
+  {
+    allLevels && allLevels.length > 0 && (
+      <div class="mb-6">
+        <Label htmlFor="level">Level</Label>
+        <Select id="level" name="level">
+          <option value="">All</option>
+          {allLevels.map((level: string) => (
+            <option value={level}>{level}</option>
+          ))}
+        </Select>
+      </div>
+    )
+  }
 
-  <button type="button" id="reset-filters" class="btn underline font-bold hover:text-primary-hover">Reset Filters</button>
+  <button
+    type="button"
+    id="reset-filters"
+    class="btn underline font-bold hover:text-primary-hover"
+    >Reset Filters</button
+  >
 </form>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const forms = document.querySelectorAll<HTMLFormElement>("form.filter-sessions");
+    const forms = document.querySelectorAll<HTMLFormElement>(
+      "form.filter-sessions",
+    );
 
     function getUrlParams() {
       const params = new URLSearchParams(window.location.search);
       return {
         track: params.get("track") || "",
         type: params.get("type") || "",
-        level: params.get("level") || ""
+        level: params.get("level") || "",
       };
     }
 
@@ -79,8 +98,10 @@ import { Select } from "../form/select";
       }
 
       const queryString = params.toString();
-      const newUrl = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
-      window.history.pushState({}, '', newUrl);
+      const newUrl = queryString
+        ? `${window.location.pathname}?${queryString}`
+        : window.location.pathname;
+      window.history.pushState({}, "", newUrl);
     }
 
     function filterSessions() {
@@ -113,7 +134,9 @@ import { Select } from "../form/select";
         });
 
         document.querySelectorAll("div.track-group").forEach((group) => {
-          const visibleSessions = group.querySelectorAll("ol.sessions > li:not([style*='display: none'])").length;
+          const visibleSessions = group.querySelectorAll(
+            "ol.sessions > li:not([style*='display: none'])",
+          ).length;
 
           if (visibleSessions === 0) {
             (group as HTMLElement).style.display = "none";
@@ -134,7 +157,8 @@ import { Select } from "../form/select";
         select.addEventListener("change", filterSessions);
       });
 
-      const resetButton = form.querySelector<HTMLButtonElement>("#reset-filters");
+      const resetButton =
+        form.querySelector<HTMLButtonElement>("#reset-filters");
       resetButton?.addEventListener("click", () => {
         form.querySelectorAll("select").forEach((select) => {
           (select as HTMLSelectElement).value = "";

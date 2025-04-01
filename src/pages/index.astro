@@ -26,9 +26,9 @@ deadlines = deadlines
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-    <Hero />
+  <Hero />
 
-  <h2 class="text-7xl text-center m-16">Updates</h3>
+  <h2 class="text-7xl text-center m-16">Updates</h2>
   <CardContainer>
     {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
   </CardContainer>
@@ -36,6 +36,7 @@ deadlines = deadlines
   <div class="mt-40 px-6 pb-40 overflow-visible">
     <Prague title={venue.frontmatter.title}>
       <venue.Content />
+    </Prague>
   </div>
-    <Sponsors />
+  <Sponsors />
 </Layout>
