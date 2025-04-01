@@ -27,7 +27,7 @@ export const Title = ({
           "text-lg md:text-2xl": level === 5,
           "text-lg md:text-xl": level === 6,
         },
-        className,
+        className
       )}
       {...props}
     >
