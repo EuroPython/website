@@ -11,6 +11,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
+import deleteUnusedImages from "astro-delete-unused-images";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename); // @type-check enabled!
@@ -69,6 +70,7 @@ export default defineConfig({
     }),
     metaTags(),
     pagefind(),
+    deleteUnusedImages(),
   ],
   output: "static",
   build: {
