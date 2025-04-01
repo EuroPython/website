@@ -1474,7 +1474,10 @@ packages:
     hasBin: true
 
   astro-delete-unused-images@1.0.3:
-    resolution: {integrity: sha512-PRWirHqeTeJ5IAH0jdy/f2NyfgeclCjjwaz0JcjP/5uFcZqPTeSZQbn2HedV4cBWLCyPAj/ago9nieDGnmvRcQ==}
+    resolution:
+      {
+        integrity: sha512-PRWirHqeTeJ5IAH0jdy/f2NyfgeclCjjwaz0JcjP/5uFcZqPTeSZQbn2HedV4cBWLCyPAj/ago9nieDGnmvRcQ==,
+      }
 
   astro-meta-tags@0.3.1:
     resolution:

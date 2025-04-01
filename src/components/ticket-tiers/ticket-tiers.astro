@@ -135,12 +135,13 @@ const formatPrice = (price: number | string) => {
 
 <div class="ticket-tiers-container">
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-6 lg:gap-10">
-    {tiers.map((tier) => (
-      <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-        <div>
-          <Title level={3} className="mt-0 !mb-2">
-            {tier.title}
-          </Title>
+    {
+      tiers.map((tier) => (
+        <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
+          <div>
+            <Title level={3} className="mt-0 !mb-2">
+              {tier.title}
+            </Title>
             <div class="mt-4 space-y-2">
               <div>
                 <div class="font-bold text-lg">

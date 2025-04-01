@@ -27,21 +27,23 @@ const { title, id } = Astro.props;
   document.addEventListener("DOMContentLoaded", () => {
     const hash = window.location.hash.substring(1); // Remove #
     if (hash) {
-      const details = document.getElementById(hash) as HTMLDetailsElement | null;
+      const details = document.getElementById(
+        hash,
+      ) as HTMLDetailsElement | null;
       if (details) {
         details.open = true;
       }
     }
 
     // Update the URL when a detail is toggled
-    const detailsElements = document.querySelectorAll('details');
+    const detailsElements = document.querySelectorAll("details");
     detailsElements.forEach((details) => {
-      details.addEventListener('toggle', () => {
+      details.addEventListener("toggle", () => {
         const id = details.id;
         if (details.open) {
-          window.history.pushState(null, '', `#${id}`);
+          window.history.pushState(null, "", `#${id}`);
         } else {
-          window.history.pushState(null, '', window.location.pathname); // Remove the hash
+          window.history.pushState(null, "", window.location.pathname); // Remove the hash
         }
       });
     });
