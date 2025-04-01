@@ -16,7 +16,7 @@ export const Link = ({
     <a
       className={clsx(
         "text-primary hover:text-primary-hover font-title font-bold underline",
-        className
+        className,
       )}
       href={href}
       {...props}
