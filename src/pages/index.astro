@@ -10,6 +10,7 @@ import DeadlineCard from "../components/deadline-card.astro";
 import { getCollection } from "astro:content";
 import Accent from "../components/accent/accent.astro";
 import Prague from "../components/hero-section/prague.astro";
+import Sponsors from "../components/sponsors/sponsors.astro";
 
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/prague.mdx";
@@ -36,4 +37,5 @@ deadlines = deadlines
     <Prague title={venue.frontmatter.title}>
       <venue.Content />
   </div>
+    <Sponsors />
 </Layout>
