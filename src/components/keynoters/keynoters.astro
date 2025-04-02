@@ -1,7 +1,7 @@
 ---
 import ButtonLink from "../button-link/button-link.astro";
-import { Title } from "../typography/title";
 import Keynoter from "./keynoter.astro";
+import Headline from "@ui/Headline.astro"
 
 import { getCollection } from "astro:content";
 
@@ -10,7 +10,7 @@ const keynoters = await getCollection("keynoters");
 const placeholders = Math.max(0, 6 - keynoters.length);
 ---
 
-<section class="relative my-12 px-6">
+<section class="prose-xl relative my-12 px-6">
   <svg viewBox="0 0 729 704" class="absolute top-0 left-0 w-full h-full -z-10">
     <g
       stroke="none"
@@ -79,9 +79,7 @@ const placeholders = Math.max(0, 6 - keynoters.length);
     </g>
   </svg>
 
-  <Title className="text-primary">
-    <a href="/keynoters">Keynote Speakers</a>
-  </Title>
+  <Headline id="keynoters" title="Keynote Speakers" />
 
   <ul class="mt-12 mb-24 flex gap-6 flex-wrap">
     {
