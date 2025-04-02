@@ -1,9 +1,9 @@
 ---
-import Prague from "@components/hero-section/prague.astro";
+import PragueComponent from "@components/hero-section/prague.astro";
 import * as venue from "../../data/home/prague.mdx";
 ---
   <div class="mt-2 px-6 pb-40 overflow-visible">
-    <Prague title={venue.frontmatter.title}>
+    <PragueComponent title={venue.frontmatter.title}>
       <venue.Content />
-    </Prague>
+    </PragueComponent>
   </div>
