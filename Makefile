@@ -31,6 +31,8 @@ pre:
 
 install:
 	pnpm install
+	[ "$(PREVIEW)" = "true" ] && pnpm update_data || true
+	pnpm generate_content
 
 dev:
 	pnpm dev

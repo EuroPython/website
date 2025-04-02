@@ -2,15 +2,16 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "strictNullChecks": true,
+    "noImplicitAny": false,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@ui/*": ["src/components/ui/*"],
-      "@assets/*": ["src/assets/*"],
-      "@i18n/*": ["src/i18n/*"],
-      "@src/*": ["src/*"]
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@ui/*": ["./src/components/ui/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@i18n/*": ["./src/i18n/*"],
+      "@src/*": ["./src/*"]
     }
   }
 }
