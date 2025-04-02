@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
 
 const keynoters = await getCollection("keynoters");
 
-const placeholders = Math.max(0, 6 - keynoters.length);
+const placeholders = Math.max(0, 3 - keynoters.length);
 ---
 
 <section class="prose-xl relative my-12 px-6">
@@ -17,11 +17,11 @@ const placeholders = Math.max(0, 6 - keynoters.length);
       stroke-width={1}
       fill="none"
       fill-rule="evenodd"
-      opacity={0.4}
+      opacity={0.1}
     >
       <g
         transform="translate(-297.000000, -4131.000000)"
-        class="fill-hero-primary"
+        class="fill-secondary-light"
       >
         <g transform="translate(81.000000, 3688.000000)">
           <g transform="translate(216.000000, 443.000000)">
@@ -125,3 +125,6 @@ const placeholders = Math.max(0, 6 - keynoters.length);
     </div>
   </div>
 </section>
+<style>
+  .fill-hero-primary {}
+</style>
