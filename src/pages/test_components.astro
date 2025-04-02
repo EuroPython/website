@@ -1,0 +1,24 @@
+
+---
+import Layout from "../layouts/HomePageLayout.astro";
+import Button from "@ui/Button.astro";
+import Headline from "@ui/Headline.astro"
+---
+
+<Layout
+  title=""
+  description=""
+>
+
+<Headline as="h1" id="components" title="Example components" />
+<section class="prose-xl my-10">
+    <Headline id="button" title="Button" />
+    <div class="grid gap-2 w-[200px]">
+      <Button>Primary Button</Button>
+      <Button secondary>Secondary Button</Button>
+      <Button outline>Outline Button</Button>
+      <Button disabled>Disabled Button</Button>
+      <Button url="/about">Internal Link</Button>
+      <Button url="https://example.com">External Link</Button>
+</section>
+</Layout>

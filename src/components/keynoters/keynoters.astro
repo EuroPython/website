@@ -1,7 +1,7 @@
 ---
-import ButtonLink from "../button-link/button-link.astro";
 import Keynoter from "./keynoter.astro";
 import Headline from "@ui/Headline.astro"
+import Button from "@ui/Button.astro";
 
 import { getCollection } from "astro:content";
 
@@ -118,7 +118,7 @@ const placeholders = Math.max(0, 6 - keynoters.length);
         <span class="text-body-light inline-block mr-2">#</span>
         See other sessions
       </h3>
-      <ButtonLink url="/sessions">List of Sessions</ButtonLink>
+      <Button url="/sessions">List of Sessions</Button>
     </div>
   </div>
 </section>

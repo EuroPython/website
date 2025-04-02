@@ -1,5 +1,6 @@
 ---
 import ButtonLink from "../button-link/button-link.astro";
+import Button from "@ui/Button.astro";
 import HeaderButton from "./header-button.astro";
 import Search from "astro-pagefind/components/Search";
 
@@ -26,15 +27,8 @@ const IS_LIVE = false;
   {
     !mobile ? (
       <>
-        <ButtonLink url="/tickets" className="hidden md:block">
-          <span>Register Now! 🎟️</span>
-        </ButtonLink>
-        {IS_LIVE && (
-          <ButtonLink url="/live">
-            Live
-            <span class="hidden md:inline"> 📺</span>
-          </ButtonLink>
-        )}
+        <Button url="/tickets">Register Now! 🎟️</Button>
+        {IS_LIVE && <Button url="/live">Live 📺</Button>}
       </>
     ) : null
   }
