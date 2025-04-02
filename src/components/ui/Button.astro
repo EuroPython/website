@@ -1,16 +1,16 @@
 ---
 import Icon from "@ui/Icon.astro";
 
-const { 
-  url, 
-  class: className = "", 
-  secondary = false, 
-  outline = false, 
-  disabled = false, 
-  isExternal, 
-  icon, 
-  iconSvg = false, 
-  iconRight = false 
+const {
+  url,
+  class: className = "",
+  secondary = false,
+  outline = false,
+  disabled = false,
+  isExternal,
+  icon,
+  iconSvg = false,
+  iconRight = false
 } = Astro.props;
 
 const resolvedIsExternal = isExternal ?? url?.startsWith("http");
