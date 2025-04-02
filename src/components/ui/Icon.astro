@@ -1,0 +1,28 @@
+---
+const { 
+  name,      
+  svg = false, 
+  class: className = "", 
+  size = "w-5 h-5", // Default size (Tailwind)
+  label = "", 
+  role = "img"
+} = Astro.props;
+---
+
+{svg ? (
+  <svg 
+    class={`${size} ${className}`} 
+    aria-label={label || undefined} 
+    role={label ? role : "presentation"} 
+    aria-hidden={!label}
+  >
+    <use href={`#${name}`} />
+  </svg>
+) : (
+  <i 
+    class={`fa-solid fa-${name} ${size} ${className}`} 
+    aria-label={label || undefined} 
+    role={label ? role : "presentation"} 
+    aria-hidden={!label}
+  ></i>
+)}

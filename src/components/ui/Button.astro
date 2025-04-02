@@ -1,11 +1,16 @@
 ---
-const {
-  url,
-  class: className = "",
-  secondary = false,
-  outline = false,
-  disabled = false,
-  isExternal
+import Icon from "@ui/Icon.astro";
+
+const { 
+  url, 
+  class: className = "", 
+  secondary = false, 
+  outline = false, 
+  disabled = false, 
+  isExternal, 
+  icon, 
+  iconSvg = false, 
+  iconRight = false 
 } = Astro.props;
 
 const resolvedIsExternal = isExternal ?? url?.startsWith("http");
@@ -15,6 +20,8 @@ const primaryClasses = "bg-button text-text-inverted hover:bg-button-hover borde
 const secondaryClasses = "bg-primary text-white hover:bg-primary-hover border-transparent";
 const outlineClasses = "border-gray-500 text-gray-700 hover:bg-gray-100 hover:bg-button-hover";
 const disabledClasses = "opacity-50 pointer-events-none";
+const iconClasses = "pl-2 w-5 h-5";
+
 ---
 
 {url ? (
@@ -27,7 +34,9 @@ const disabledClasses = "opacity-50 pointer-events-none";
     aria-disabled={disabled}
     {...(resolvedIsExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
   >
+    {!iconRight && icon && <Icon name={icon} svg={iconSvg} class={iconClasses} />}
     <slot />
+    {iconRight && icon && <Icon name={icon} svg={iconSvg} class={iconClasses} />}
     {resolvedIsExternal && <span class="ml-1 text-lg leading-4">↗</span>}
   </a>
 ) : (
@@ -39,6 +48,8 @@ const disabledClasses = "opacity-50 pointer-events-none";
     disabled={disabled}
     aria-disabled={disabled}
   >
+    {!iconRight && icon && <Icon name={icon} svg={iconSvg} class={iconClasses} />}
     <slot />
+    {iconRight && icon && <Icon name={icon} svg={iconSvg} class={iconClasses} />}
   </button>
 )}

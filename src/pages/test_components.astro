@@ -3,6 +3,7 @@
 import Layout from "../layouts/HomePageLayout.astro";
 import Button from "@ui/Button.astro";
 import Headline from "@ui/Headline.astro"
+import Icon from "@ui/Icon.astro"
 ---
 
 <Layout
@@ -20,5 +21,19 @@ import Headline from "@ui/Headline.astro"
       <Button disabled>Disabled Button</Button>
       <Button url="/about">Internal Link</Button>
       <Button url="https://example.com">External Link</Button>
+    </div>
+</section>
+
+
+<Headline as="h1" id="components" title="Example components" />
+<section class="prose-xl my-10">
+    <Headline id="button" title="Button" />
+    <div class="grid gap-2 w-[200px]">
+      <Icon name="check" />
+      <Icon name="times" size="w-4 h-4" />
+      <Icon name="cog" size="w-8 h-8" />
+      <Button icon="arrow-right" iconRight={true} size="w-6 h-6">Next</Button>
+
+    </div>
 </section>
 </Layout>

@@ -1,6 +1,6 @@
 ---
 import Keynoter from "./keynoter.astro";
-import Headline from "@ui/Headline.astro"
+import Headline from "@ui/Headline.astro";
 import Button from "@ui/Button.astro";
 
 import { getCollection } from "astro:content";
@@ -83,19 +83,22 @@ const placeholders = Math.max(0, 6 - keynoters.length);
 
   <ul class="p-0 mt-12 flex gap-6 flex-wrap">
     {
-      keynoters.map((keynoter, index) => (
-        <Keynoter
-          name={keynoter.data.name}
-          slug={keynoter.slug}
-          tagline={keynoter.data.tagline}
-          image={keynoter.data.image}
-          placeholder={false}
-          class:list={[
-            "w-full sm:w-[calc(50%-1rem)] md:w-[calc(30%-1rem)]",
-            { "md:ml-[10%]": index === 0 },
-          ]}
-        />
-      ))
+      keynoters
+        .sort((a, b) => a.data.order - b.data.order)
+        .map((keynoter, index) => (
+          <Keynoter
+            name={keynoter.data.name}
+            slug={keynoter.slug}
+            tagline={keynoter.data.tagline}
+            image={keynoter.data.image}
+            placeholder={false}
+            order={keynoter.data.order}
+            class:list={[
+              "w-full sm:w-[calc(50%-1rem)] md:w-[calc(30%-1rem)]",
+              { "md:ml-[10%]": index === 0 },
+            ]}
+          />
+        ))
     }
     {
       new Array(placeholders)
@@ -118,7 +121,7 @@ const placeholders = Math.max(0, 6 - keynoters.length);
         <span class="text-body-light inline-block mr-2">#</span>
         See other sessions
       </h3>
-      <Button url="/sessions">List of Sessions</Button>
+      <Button url="/programme/sessions">See sessions preview</Button>
     </div>
   </div>
 </section>

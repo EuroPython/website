@@ -13,6 +13,7 @@ export interface Props {
   tagline?: string;
   image?: ImageMetadata;
   placeholder?: boolean;
+  order?: number;
   class?: string;
 }
 
@@ -22,6 +23,7 @@ const {
   tagline,
   image,
   placeholder,
+  order,
   class: className,
 } = Astro.props;
 
