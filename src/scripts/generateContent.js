@@ -38,7 +38,9 @@ function loadJsonData(filename, directory = "src/data") {
 
 function generateContent() {
   const files = ["speakers", "sessions", "schedule"];
-  if (files.some((file) => !fs.existsSync(path.join("src/data", `${file}.json`)))) {
+  if (
+    files.some((file) => !fs.existsSync(path.join("src/data", `${file}.json`)))
+  ) {
     console.log("Nothing to generate. Missing data.");
     return;
   }
