@@ -11,6 +11,7 @@ import { getCollection } from "astro:content";
 import Accent from "../components/accent/accent.astro";
 import Prague from "../components/hero-section/prague.astro";
 import Sponsors from "../components/sponsors/sponsors.astro";
+import KeynotersComponent from "../components/keynoters/keynoters.astro";
 
 import * as intro from "../data/home/intro.md";
 import * as venue from "../data/home/prague.mdx";
@@ -33,6 +34,7 @@ deadlines = deadlines
     {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
   </CardContainer>
 
+    <KeynotersComponent />
   <div class="mt-40 px-6 pb-40 overflow-visible">
     <Prague title={venue.frontmatter.title}>
       <venue.Content />
