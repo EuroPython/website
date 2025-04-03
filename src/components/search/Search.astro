@@ -1,0 +1,197 @@
+---
+import SearchComponent from "astro-pagefind/components/Search";
+import Button from "@ui/Button.astro";
+---
+
+<div class="search-wrapper hidden" style="display: none;">
+
+  <div class="w-full flex items-center justify-between z-40 h-0 md:h-[85px] m-auto ">
+    <h2 class="text-black text-4xl ml-10 top-[46px] md:top-[85px]">Search<h2/>
+    <Button
+      icon="close"
+      iconSize="fa-xl"
+      class="search-close w-[3em] h-[3em] top-[46px] md:top-[85px]"
+    />
+  </div>
+
+  <div class="modal__overlay"></div>
+  <SearchComponent
+    id="search"
+    className="pagefind-ui"
+    uiOptions={{
+      showImages: false,
+      translations: {
+        zero_results: "Couldn't find [SEARCH_TERM]",
+      },
+    }}
+  />
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const searchWrapper = document.querySelector(".search-wrapper") as HTMLElement | null;
+  const searchContainer = document.querySelector(".pagefind-ui") as HTMLElement | null;
+  const searchInput = searchContainer?.querySelector("input") as HTMLInputElement | null;
+  const closeButton = document.querySelector(".search-close") as HTMLElement | null;
+  const searchButton = document.getElementById("searchButton") as HTMLElement | null;
+
+  let selectedIndex = -1;
+
+  function openSearch() {
+    if (searchWrapper) {
+      searchWrapper.style.display = "block";
+      if (searchInput) {
+        searchInput.value = "Tips";
+        const inputEvent = new Event("input", { bubbles: true });
+        searchInput.dispatchEvent(inputEvent);
+        setTimeout(() => {
+          searchInput.value = "";
+          searchInput.placeholder = "Tips for You";
+        }, 100);
+        searchInput.focus();
+      }
+    }
+  }
+
+  function closeSearch() {
+    if (searchWrapper) {
+      searchWrapper.style.display = "none";
+      selectedIndex = -1;
+    }
+  }
+
+  function updateSelection() {
+    const results = searchContainer?.querySelectorAll(".pagefind-ui__result");
+    if (!results) return;
+
+    results.forEach((result, index) => {
+      if (result instanceof HTMLElement) {
+        if (index === selectedIndex) {
+          result.classList.add("selected");
+          result.scrollIntoView({ block: "nearest", behavior: "smooth" });
+        } else {
+          result.classList.remove("selected");
+        }
+      }
+    });
+  }
+
+  function makeResultsClickable() {
+    const results = searchContainer?.querySelectorAll(".pagefind-ui__result");
+    if (!results) return;
+
+    results.forEach((result) => {
+      const link = result.querySelector(".pagefind-ui__result-link") as HTMLAnchorElement | null;
+      if (link && !result.hasAttribute("data-clickable")) {
+        if (result instanceof HTMLElement) {
+          result.style.cursor = "pointer";
+          result.addEventListener("click", (e) => {
+            if (!(e.target instanceof HTMLElement) || !e.target.closest("a")) {
+              link.click();
+            }
+          });
+          result.setAttribute("data-clickable", "true");
+        }
+      }
+    });
+  }
+
+  if (searchButton && searchWrapper) {
+    searchButton.addEventListener("click", openSearch);
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (!searchContainer || !searchInput) return;
+
+    const results = searchContainer.querySelectorAll(".pagefind-ui__result");
+
+    if (event.ctrlKey && event.key === "k") {
+      event.preventDefault();
+      openSearch();
+    } else if (event.key === "Escape") {
+      closeSearch();
+    } else if (document.activeElement === searchInput) {
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        selectedIndex = (selectedIndex + 1) % results.length;
+        updateSelection();
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        selectedIndex = (selectedIndex - 1 + results.length) % results.length;
+        updateSelection();
+      } else if (event.key === "Enter") {
+        event.preventDefault();
+        if (results.length > 0) {
+          const indexToOpen = selectedIndex === -1 ? 0 : selectedIndex;
+          const link = results[indexToOpen]?.querySelector("a") as HTMLAnchorElement | null;
+          link?.click();
+        }
+      }
+    }
+  });
+
+  const resultsObserver = new MutationObserver(() => {
+    const results = searchContainer?.querySelectorAll(".pagefind-ui__result");
+    if (results && results.length > 0) {
+      selectedIndex = 0;
+      updateSelection();
+      makeResultsClickable();
+    }
+  });
+
+  if (searchContainer) {
+    resultsObserver.observe(searchContainer, {
+      childList: true,
+      subtree: true,
+    });
+  }
+
+  closeButton?.addEventListener("click", closeSearch);
+});
+</script>
+
+<style>
+  .search-wrapper div{
+    max-width: calc(48rem + 8vw);
+  }
+  .search-wrapper h2 {
+    position: relative;
+    left: -12px;
+    z-index:100;
+  }
+  .modal__overlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    box-sizing: border-box;
+    display: none;
+    transition: opacity ease-out 0.2s;
+    background: rgba(37,40,43,0.9);
+    z-index: 100;
+  }
+
+  .search-wrapper :global(.search-close) {
+    position: relative;
+    left: -12px;
+    margin: 0;
+    border: 0;
+    transition: opacity ease-out 0.2s;
+    z-index: 10;
+  }
+
+</style>
