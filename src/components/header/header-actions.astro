@@ -27,8 +27,8 @@ const IS_LIVE = false;
   {
     !mobile ? (
       <>
-        <Button url="/tickets">Register Now! 🎟️</Button>
-        {IS_LIVE && <Button url="/live">Live 📺</Button>}
+      <Button url="/tickets" icon="ticket">Register Now!</Button>
+        {IS_LIVE && <Button url="/live">Live</Button>}
       </>
     ) : null
   }

@@ -10,7 +10,7 @@ const {
   isExternal,
   icon,
   iconSvg = false,
-  iconRight = false
+  iconRight = true 
 } = Astro.props;
 
 const resolvedIsExternal = isExternal ?? url?.startsWith("http");
@@ -37,7 +37,7 @@ const iconClasses = "mx-2 ";
     {!iconRight && icon && <Icon name={icon} svg={iconSvg} class={iconClasses} />}
     <slot />
     {iconRight && icon && <Icon name={icon} svg={iconSvg} class={iconClasses} />}
-    {resolvedIsExternal && <span class="ml-1 text-lg leading-4">↗</span>}
+    {resolvedIsExternal && <Icon name="external-link" svg={iconSvg} class={iconClasses} />}
   </a>
 ) : (
   <button
