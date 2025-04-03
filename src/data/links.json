@@ -4,6 +4,10 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Sessions Previews",
+          "path": "/programme/sessions"
+        },
+        {
           "name": "Tracks",
           "path": "/programme/tracks"
         },
