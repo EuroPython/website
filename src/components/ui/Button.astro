@@ -10,7 +10,7 @@ const {
   isExternal,
   icon,
   iconSvg = false,
-  iconRight = true 
+  iconRight = true
 } = Astro.props;
 
 const resolvedIsExternal = isExternal ?? url?.startsWith("http");
