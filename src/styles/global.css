@@ -60,10 +60,12 @@ body {
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:hover {
   text-decoration: underline !important;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, text-decoration-thickness 0.2s;
-  color:#151f38;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    text-decoration-thickness 0.2s;
+  color: #151f38;
 }
-
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:focus {
   outline: 4px solid #0073e6;
