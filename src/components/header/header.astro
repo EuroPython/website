@@ -7,7 +7,7 @@ import HeaderLogo from "./header-logo.astro";
 const links = JSON.parse(await fs.readFile("./src/data/links.json", "utf-8"));
 ---
 
-<header class="p-6 flex items-center relative z-40">
+<header class="p-6 flex items-center justify-between relative z-40">
   <input
     type="checkbox"
     name="mobile-controls"
@@ -18,7 +18,7 @@ const links = JSON.parse(await fs.readFile("./src/data/links.json", "utf-8"));
 
   <HeaderLogo />
 
-  <nav class="mr-auto hidden xl:block">
+  <nav class="hidden xl:block">
     <NavItems items={links.header} />
   </nav>
 
