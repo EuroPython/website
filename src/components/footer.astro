@@ -15,20 +15,21 @@ const gitVersion = import.meta.env.GIT_VERSION;
     <div>
       <nav class="mb-12">
         <h6 class="font-bold text-xl mb-6">Quicklinks</h6>
-
-        {
-          links.footer.map((item) => (
-            <li class="list-none">
-              <a
-                href={item.path}
-                class="block font-bold text-4xl md:text-5xl mb-4 hover:text-primary-hover"
-              >
-                {item.name}
-                {item.path.startsWith("http") ? <span> ↗</span> : null}
-              </a>
-            </li>
-          ))
-        }
+        <ul>
+          {
+            links.footer.map((item) => (
+              <li class="list-none">
+                <a
+                  href={item.path}
+                  class="block font-bold text-4xl md:text-5xl mb-4 hover:text-primary-hover"
+                >
+                  {item.name}
+                  {item.path.startsWith("http") ? <span> ↗</span> : null}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </nav>
     </div>
 
@@ -36,7 +37,7 @@ const gitVersion = import.meta.env.GIT_VERSION;
       class="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end"
     >
       <div>
-        <EPSLogo className="max-w-[200px] h-auto w-full" />
+        <EPSLogo className="max-w-[100px] lg:max-w-[200px] h-auto w-full" />
       </div>
       <div>
         <address class="not-italic mb-4">
@@ -97,9 +98,11 @@ const gitVersion = import.meta.env.GIT_VERSION;
             twitter.com/europython <span> ↗</span>
           </a>
         </p>
-          <p class="mb-4" style="color: rgba(255, 255, 255, 0.4)">version: {gitVersion} @ {buildTimestamp}</p>
+
+        <p class="mb-4" style="color: rgba(255, 255, 255, 0.4)">
+          version: {gitVersion} @ {buildTimestamp}
+        </p>
       </div>
     </article>
-
   </footer>
 </Fullbleed>
