@@ -50,6 +50,7 @@ const keynoters = defineCollection({
       name: z.string(),
       tagline: z.string().optional(),
       image: image(),
+      order: z.number(),
     }),
 });
 

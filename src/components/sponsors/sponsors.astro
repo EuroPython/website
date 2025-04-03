@@ -3,9 +3,9 @@ import { getCollection } from "astro:content";
 import { Separator } from "../separator/separator";
 import { Fragment } from "react";
 import { Fullbleed } from "../layout/fullbleed";
+import Headline from "@ui/Headline.astro"
 
-import ButtonLink from "../button-link/button-link.astro";
-import { Title } from "../typography/title";
+import Button from "@ui/Button.astro";
 
 import SponsorTier from "./sponsor-tier.astro";
 
@@ -48,19 +48,17 @@ const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
 
 <Fullbleed className="bg-white py-24 px-6">
   <section class="max-w-4xl lg:max-w-6xl mx-auto mb-16">
+          <Headline id="sponsors" title="Sponsors" />
     <div>
-      <div class="flex gap-6">
-        <div class="max-w-[1000px]">
-          <Title level={2}>Sponsors</Title>
           {
             hasSponsors ? (
-              <p>
+              <p class="text-center">
                 EuroPython wouldn't be such an affordable event without the help
                 of the sponsors. We'd like to thank all of them for their
                 support.
               </p>
             ) : (
-              <p>
+              <p class="text-center">
                 Sponsoring EuroPython guarantees you highly targeted visibility
                 and the opportunity to present yourself and your company to one
                 of the largest and most diverse Python communities in Europe and
@@ -69,10 +67,8 @@ const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
             )
           }
 
-          <div class="mt-4">
-            <ButtonLink url="/sponsor">Become a sponsor</ButtonLink>
-          </div>
-        </div>
+          <div class="mt-4 text-center">
+            <Button url="/sponsor">Become a sponsor</Button>
       </div>
       {
         topTier && topTier.sponsors.length > 0 && (
