@@ -24,7 +24,13 @@ export default defineConfig({
     },
     resolve: {
       alias: {
-        $: path.resolve(__dirname, "./src"),
+        "@components": path.resolve("./src/components"),
+        "@sections": path.resolve("./src/components/sections"),
+        "@layouts": path.resolve("./src/layouts"),
+        "@ui": path.resolve("./src/components/ui"),
+        "@assets": path.resolve("./src/assets"),
+        "@i18n": path.resolve("./src/i18n"),
+        "@src": path.resolve("./src"),
       },
     },
   },

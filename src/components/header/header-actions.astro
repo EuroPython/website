@@ -1,5 +1,6 @@
 ---
 import ButtonLink from "../button-link/button-link.astro";
+import Button from "@ui/Button.astro";
 import HeaderButton from "./header-button.astro";
 import Search from "astro-pagefind/components/Search";
 
@@ -12,7 +13,7 @@ const { mobile = false }: Props = Astro.props;
 const IS_LIVE = false;
 ---
 
-<div class="ml-auto flex items-center space-x-4">
+<div class="flex items-center justify-end gap-2 w-1/3">
   <Search
     id="search"
     className="pagefind-ui"
@@ -26,15 +27,8 @@ const IS_LIVE = false;
   {
     !mobile ? (
       <>
-        <ButtonLink url="/tickets" className="hidden md:block">
-          <span>Register Now! 🎟️</span>
-        </ButtonLink>
-        {IS_LIVE && (
-          <ButtonLink url="/live">
-            Live
-            <span class="hidden md:inline"> 📺</span>
-          </ButtonLink>
-        )}
+      <Button url="/tickets" icon="ticket">Register Now!</Button>
+        {IS_LIVE && <Button url="/live">Live</Button>}
       </>
     ) : null
   }
@@ -122,7 +116,8 @@ const IS_LIVE = false;
     --pagefind-ui-border: #d8d8d8;
     --pagefind-ui-border-width: 2px;
     --pagefind-ui-border-radius: 0;
-    width: 50%;
+    width:50%;
+    min-width: 10vw;
   }
   .pagefind-ui.yellow {
     --pagefind-ui-background: #efc302;

@@ -1,0 +1,16 @@
+---
+const { as = "h2", id, title, href} = Astro.props;
+const Tag = as;
+const Title = title;
+const isAnchor = !!id;
+const isLink = !!href;
+---
+
+<Tag id={isAnchor ? id : undefined} class={`m-5 py-2 text-center font-bold text-6xl`}>
+  {isAnchor && (
+    <a href={`#${id}`} aria-label={`Jump to ${id}`}>
+      {Title}
+    </a>
+  )}
+  {isLink && <a aria-label="Read more about {Title}" href={href} class="hover:underline">{Title}</a> }
+</Tag>

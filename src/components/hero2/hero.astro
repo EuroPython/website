@@ -1,13 +1,13 @@
 ---
+import { Logo } from "../logo";
 import { Image } from "astro:assets";
 import heroImage from "./conference_photo.jpg";
 
 import IconWithLabel from "./icon-label.astro";
-import ButtonLink from "../../components/button-link/button-link.astro";
+import Button from "@ui/Button.astro";
 
-import HeaderLogo from "../header/header-logo.astro";
-const action1 = "https://ep2025.europython.eu/tickets";
-const action2 = "https://ep2025.europython.eu/sponsorship/sponsor/";
+const action1 = "/tickets";
+const action2 = "/sponsorship/sponsor/";
 ---
 
 <div
@@ -80,16 +80,16 @@ const action2 = "https://ep2025.europython.eu/sponsorship/sponsor/";
       ></svg
     >
   </div>
-  <div class="relative z-10 text-center">
-    <div class="flex items-center space-x-3 p-10 md:mt-20">
-      <div class="w-25 h-25 flex items-center justify-center">
-        <HeaderLogo />
+  <div class="prose-xl relative z-10 text-center">
+    <div class="flex items-center space-x-3 p-10 md:mt-20 justify-center">
+      <div class="w-200 h-200 flex items-center justify-center">
+        <Logo className="h-full block md:w-full lg:w-[200px] pr-3 lg:pr-8" />
       </div>
-      <h1 class="text-5xl md:text-9xl m-0 font-bold text-[#17223A]">
+      <h1 class="text-5xl md:text-8xl lg:text-9xl m-0 font-bold text-[#17223A]">
         EuroPython
       </h1>
     </div>
-    <p class="max-w-2xl mx-10 md:mx-40 text-center text-lg text-gray-700 mt-2">
+    <p class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 mt-2">
       Discover the latest Python trends, learn from 180+ expert speakers,
       network with fellow developers, enjoy social events, and explore open
       spaces to spark new ideas.
@@ -106,27 +106,12 @@ const action2 = "https://ep2025.europython.eu/sponsorship/sponsor/";
   </div>
 
   <!-- Second 2x1 Grid with Action Buttons -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
+  <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
     <div>
-      <ButtonLink
-        secondary
-        url={action1}
-        className="mb-4 rounded-lg text-xl"
-        isExternal={true}
-      >
-        Register Now
-      </ButtonLink>
+      <Button secondary url={action1}> Register Now </Button>
     </div>
     <div class="btn-outline">
-      <a
-        class="font-bold text-lg px-4 py-4 bg-button rounded-[10px] inline-block leading-4 hover:bg-button-hover not-prose outline-solid outline bg-transparent rounded-xlborder text-xl text-secondary outline-secondary text-black"
-        href={action2}
-      >
-        Call for Sponsors
-        <span class="inline-block ml-1 font-system text-lg leading-4">
-          ↗
-        </span></a
-      >
+      <Button outline url={action2}> Call for Sponsors </Button>
     </div>
   </div>
 </div>
