@@ -7,7 +7,7 @@ export interface Props {
 const { title, id } = Astro.props;
 ---
 
-<details class="group mb-4" id={id} data-faq>
+<details class="group mb-4 md:w-[65ch]" id={id} data-faq>
   <summary
     aria-expanded="false"
     aria-controls={id}
@@ -23,9 +23,6 @@ const { title, id } = Astro.props;
   </div>
 </details>
 <style>
-  details {
-    width:65ch;
-  }
   .arrow {
     font-size:25px;
     line-height: 1.25;
