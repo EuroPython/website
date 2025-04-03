@@ -52,19 +52,10 @@ body {
 
 .prose :is(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none !important;
-  background-image: linear-gradient(45deg, #151f38, #7a7ebd);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:hover {
   text-decoration: underline !important;
-  transition:
-    color 0.2s ease-in-out,
-    background-color 0.2s ease-in-out,
-    text-decoration-thickness 0.2s;
-  color: #151f38;
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:focus {
