@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
 
 const keynoters = await getCollection("keynoters");
 
-const placeholders = Math.max(0, 3 - keynoters.length);
+const placeholders = Math.max(0, 5 - keynoters.length);
 ---
 
 <section class="prose-xl relative my-12 px-6">
@@ -81,7 +81,7 @@ const placeholders = Math.max(0, 3 - keynoters.length);
 
   <Headline id="keynoters" title="Keynote Speakers" />
 
-  <ul class="p-0 mt-12 flex gap-6 flex-wrap">
+  <ul class="p-0 mt-12 flex gap-6 flex-wrap justify-center">
     {
       keynoters
         .sort((a, b) => a.data.order - b.data.order)
@@ -115,7 +115,7 @@ const placeholders = Math.max(0, 3 - keynoters.length);
     }
   </ul>
 
-  <div class="flex items-end flex-col pr-6">
+  <div class="flex items-center flex-col pr-6">
     <div class="text-center">
       <h3 class="font-bold text-3xl mb-4">
         <span class="text-body-light inline-block mr-2">#</span>
