@@ -22,7 +22,7 @@ const { title, subtitle, url, image } = Astro.props;
         src={image}
         width={600}
         height={375}
-        alt=""
+          alt=`Card image - ${title}`
         class="not-prose rounded-xl aspect-[3/2] w-full"
         loading="lazy"
       />
