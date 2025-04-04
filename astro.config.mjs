@@ -48,10 +48,7 @@ export default defineConfig({
       [
         rehypeAutolinkHeadings,
         {
-          behavior: "append",
-          content() {
-            return [h("span.heading-link", "#")];
-          },
+          behavior: "wrap",
         },
       ],
     ],
