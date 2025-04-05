@@ -48,10 +48,7 @@ export default defineConfig({
       [
         rehypeAutolinkHeadings,
         {
-          behavior: "append",
-          content() {
-            return [h("span.heading-link", "#")];
-          },
+          behavior: "wrap",
         },
       ],
     ],
@@ -59,7 +56,7 @@ export default defineConfig({
   site: process.env.SITE_URL || "https://ep2025.europython.eu",
   redirects: {
     "/c-api-summit/": "/programme/c-api-summit/",
-    "/programme/cfp/": "/programme/cfp/",
+    "/cfp/": "/programme/cfp/",
     "/planning/": "https://forms.gle/riw6CvML8ck94A4V9",
     "/reviewers/": "https://forms.gle/4GTJjwZ1nHBGetM18",
     "/rust-summit/": "/programme/rust-summit/",
