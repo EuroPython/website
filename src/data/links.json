@@ -38,15 +38,15 @@
       ]
     },
     {
-      "name": "Venue & Prague",
+      "name": "Prague & Venue",
       "items": [
         {
-          "name": "Venue",
-          "path": "/venue"
+          "name": "Prague",
+          "path": "/explore"
         },
         {
-          "name": "Prague",
-          "path": "/prague"
+          "name": "Venue",
+          "path": "/where"
         }
       ]
     },
