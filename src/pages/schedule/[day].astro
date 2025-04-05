@@ -189,7 +189,7 @@ const slots = Object.entries(sessionsByTime)
     };
   });
 
-const gridRows = [];
+const gridRows: string[] = [];
 
 let row = 1;
 
@@ -201,7 +201,7 @@ for (let i = 0; i < slots.length; i++) {
 
   const currentTime = timeToNumber(current.startTime);
 
-  let nextTime;
+  let nextTime: number;
 
   if (next) {
     nextTime = timeToNumber(next.startTime);
