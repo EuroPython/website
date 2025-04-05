@@ -1,40 +1,14 @@
 ---
-import Prose from "../prose/prose.astro";
 import Button from "@ui/Button.astro";
-import { Title } from "../typography/title";
-import { Image } from "astro:assets";
-
-export interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
-
-import venueImage from "./prague.png";
+import venueImage from "./prague3.jpg";
 ---
-
-<article class="lg:grid gap-12 grid-cols-2">
-  <div class="relative hidden lg:block">
-    <Image
-      src={venueImage}
-      class="w-full h-auto border-4 border-white rounded-lg shadow-lg"
-      alt="Beautiful view of Prague"
-      width={1200}
-      height={900}
-    />
-  </div>
-  <div class="flex flex-col justify-center">
-    <Title level={2}>{title}</Title>
-
-    <Prose>
-      <slot />
-    </Prose>
-
-    <div class="space-x-4 mb-5">
-      <Button url="/where"> Where is EuroPython? </Button>
-    </div>
-    <div class="space-x-12">
-      <Button url="/explore"> Explore Prague </Button>
-    </div>
-  </div>
+<article class="relative w-full h-[400px] md:h-[500px] bg-[#f5e5d6]">
+  <!-- Background image is grayscale, boosted in contrast/brightness, 
+       and blended with the background, all in beige tones. -->
+  <div
+    class="absolute inset-0 bg-cover bg-center
+            filter grayscale brightness-110 contrast-150
+            mix-blend-multiply opacity-30"
+    style={`background-image: url(${venueImage.src});`}
+  />
 </article>

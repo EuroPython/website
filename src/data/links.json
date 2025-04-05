@@ -38,15 +38,15 @@
       ]
     },
     {
-      "name": "Prague & Venue",
+      "name": "Venue & Prague",
       "items": [
         {
-          "name": "Around Prague & PCC",
-          "path": "/where"
+          "name": "Venue",
+          "path": "/venue"
         },
         {
-          "name": "Exploring Prague",
-          "path": "/explore"
+          "name": "Prague",
+          "path": "/prague"
         }
       ]
     },
