@@ -1,4 +1,31 @@
 import { defineCollection, reference, z } from "astro:content";
+import fs from "fs/promises";
+import path from "path";
+
+const CACHE_DIR = ".cache/data";
+
+async function ensureCacheDir() {
+  await fs.mkdir(CACHE_DIR, { recursive: true });
+}
+
+async function fetchWithCache(url: string, filename: string): Promise<Buffer> {
+  const filePath = path.join(CACHE_DIR, filename);
+
+  try {
+    // Return cached if available
+    const data = await fs.readFile(filePath);
+    console.log(`Fetch from cache: ${filePath}`);
+    return data;
+  } catch {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Failed to fetch: ${url}`);
+
+    const arrayBuffer = await res.arrayBuffer();
+    const buffer: Buffer = Buffer.from(arrayBuffer);
+    await fs.writeFile(filePath, new Uint8Array(buffer));
+    return buffer;
+  }
+}
 
 const tiers = [
   "Keystone",
@@ -54,12 +81,67 @@ const keynoters = defineCollection({
     }),
 });
 
+// Shared data fetching function
+async function getCollectionsData() {
+  // Only fetch if not already cached
+  await ensureCacheDir();
+
+  const speakersBuffer = await fetchWithCache(
+    "https://gist.github.com/egeakman/469f9abb23a787df16d8787f438dfdb6/raw/62d2b7e77c1b078a0e27578c72598a505f9fafbf/speakers.json",
+    "speakers.json"
+  );
+
+  const sessionsBuffer = await fetchWithCache(
+    "https://gist.githubusercontent.com/egeakman/eddfb15f32ae805e8cfb4c5856ae304b/raw/466f8c20c17a9f6c5875f973acaec60e4e4d0fae/sessions.json",
+    "sessions.json"
+  );
+
+  const cachedSpeakersData = JSON.parse(speakersBuffer.toString("utf-8"));
+  const cachedSessionsData = JSON.parse(sessionsBuffer.toString("utf-8"));
+
+  // Create indexed versions for efficient lookups
+  const speakersById = Object.entries(cachedSpeakersData).reduce(
+    (acc, [id, speaker]: [string, any]) => {
+      acc[id] = { id, ...speaker };
+      return acc;
+    },
+    {} as Record<string, any>
+  );
+
+  const sessionsById = Object.entries(cachedSessionsData).reduce(
+    (acc, [id, session]: [string, any]) => {
+      acc[id] = { id, ...session };
+      return acc;
+    },
+    {} as Record<string, any>
+  );
+
+  return {
+    speakersData: cachedSpeakersData,
+    sessionsData: cachedSessionsData,
+    speakersById,
+    sessionsById,
+  };
+}
+
 const speakers = defineCollection({
-  type: "content",
+  loader: async (): Promise<any> => {
+    const { speakersData, sessionsById } = await getCollectionsData();
+
+    return Object.values(speakersData).map((speaker: any) => ({
+      id: speaker.slug,
+      ...speaker,
+      submissions: (speaker.submissions || [])
+        .filter((sessionId: string) => sessionId in sessionsById)
+        .map((sessionId: string) => sessionsById[sessionId].slug),
+    }));
+  },
   schema: z.object({
     code: z.string(),
     name: z.string(),
+    slug: z.string(),
     avatar: z.string(),
+    biography: z.string().nullable(),
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
@@ -71,10 +153,22 @@ const speakers = defineCollection({
 });
 
 const sessions = defineCollection({
-  type: "content",
+  loader: async (): Promise<any> => {
+    const { sessionsData, speakersById } = await getCollectionsData();
+
+    return Object.values(sessionsData).map((session: any) => ({
+      id: session.slug,
+      ...session,
+      speakers: (session.speakers || [])
+        .filter((speakerId: string) => speakerId in speakersById)
+        .map((speakerId: string) => speakersById[speakerId].slug),
+    }));
+  },
   schema: z.object({
     code: z.string(),
     title: z.string(),
+    slug: z.string(),
+    abstract: z.string().nullable(),
     speakers: z.array(reference("speakers")),
     session_type: z.string(),
     track: z.string().nullable(),
@@ -85,7 +179,7 @@ const sessions = defineCollection({
       .nullable(),
     duration: z.string(),
     level: z.enum(["beginner", "intermediate", "advanced"]),
-    delivery: z.enum(["in-person", "remote"]),
+    delivery: z.enum(["in-person", "remote", ""]),
     room: z.string().nullable(),
     start: z.string().nullable(),
     end: z.string().nullable(),

@@ -6,7 +6,7 @@ const isAnchor = !!id;
 const isLink = !!href;
 ---
 
-<Tag id={isAnchor ? id : undefined} class={`m-5 py-2 text-center font-bold text-6xl`}>
+<Tag id={isAnchor ? id : undefined} class={`m-5 py-2 font-bold max-w-[90vw]`}>
   {isAnchor && (
     <a href={`#${id}`} aria-label={`Jump to ${id}`}>
       {Title}
@@ -14,3 +14,29 @@ const isLink = !!href;
   )}
   {isLink && <a aria-label="Read more about {Title}" href={href} class="hover:underline">{Title}</a> }
 </Tag>
+
+<style>
+h1 {
+  font-size: calc(1.9rem + 1.5vw + 0.8vh);
+}
+
+h2 {
+  font-size: calc(1.75rem + 1.5vw + 0.8vh);
+}
+
+h3 {
+  font-size: calc(1.5rem + 1.2vw + 0.6vh);
+}
+
+h4 {
+  font-size: calc(1.25rem + 1vw + 0.4vh);
+}
+
+h5 {
+  font-size: calc(1rem + 0.8vw + 0.3vh);
+}
+
+h6 {
+  font-size: calc(0.875rem + 0.6vw + 0.2vh);
+}
+</style>

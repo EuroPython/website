@@ -5,7 +5,7 @@
       "items": [
         {
           "name": "Sessions Previews",
-          "path": "/programme/sessions"
+          "path": "/sessions"
         },
         {
           "name": "Tracks",
@@ -18,6 +18,10 @@
         {
           "name": "Community Voting",
           "path": "/programme/voting"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
         },
         {
           "name": "Speaker Mentorship",

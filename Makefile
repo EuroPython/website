@@ -19,9 +19,9 @@ BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
 # Replace "/" and other non-alphanumeric characters with "-"
 SAFE_BRANCH := $(shell echo "$(BRANCH)" | sed 's/[^A-Za-z0-9-]/-/g')
 FORCE_DEPLOY ?= false
+SITE_URL ?= "https://$(SAFE_BRANCH).ep-preview.click"
 
 .PHONY: build deploy dev clean install
-
 
 safe_branch:
 	@echo $(SAFE_BRANCH)
@@ -47,6 +47,7 @@ build:
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)
 preview:
+	@echo "Preview site URL: $(SITE_URL)"  # Output preview URL
 	echo $(TARGET)
 	@echo "\n\n**** Deploying preview of a branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
 	$(REMOTE_CMD) "mkdir -p $(TARGET)"
