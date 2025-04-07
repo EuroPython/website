@@ -1,8 +1,6 @@
-import path, { dirname } from "path";
-import { fileURLToPath } from "url";
+import path from "path";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
-import { h } from "hastscript";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
@@ -13,9 +11,6 @@ import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename); // @type-check enabled!
-
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -24,6 +19,7 @@ export default defineConfig({
     },
     resolve: {
       alias: {
+        "@data": path.resolve("./src/data"),
         "@components": path.resolve("./src/components"),
         "@sections": path.resolve("./src/components/sections"),
         "@layouts": path.resolve("./src/layouts"),
@@ -79,5 +75,8 @@ export default defineConfig({
   output: "static",
   build: {
     minify: true,
+  },
+  experimental: {
+    svg: true,
   },
 });
