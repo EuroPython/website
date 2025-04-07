@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "pnpm generate_content && astro check && astro build && pnpm pagefind --site dist",
-    "update_data": "NODE_TLS_REJECT_UNAUTHORIZED=0 node src/scripts/fetchData.js",
-    "generate_content": "node src/scripts/generateContent.js",
+    "build": "astro check && astro build && pnpm pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write --plugin=prettier-plugin-astro ."

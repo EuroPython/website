@@ -15,7 +15,6 @@ export async function getStaticPaths() {
 }
 
 const {entry} = Astro.props;
-
 const sessions = await getEntries(entry.data.submissions);
 
 // Get @username from Twitter URL

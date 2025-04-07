@@ -55,8 +55,64 @@ const keynoters = defineCollection({
     }),
 });
 
+// Cache for fetched data to prevent duplicate network requests
+let cachedSpeakersData: any = null;
+let cachedSessionsData: any = null;
+
+// Shared data fetching function
+async function getCollectionsData() {
+  // Only fetch if not already cached
+  if (!cachedSpeakersData || !cachedSessionsData) {
+    const [speakersResponse, sessionsResponse] = await Promise.all([
+      fetch(
+        "https://gist.github.com/egeakman/469f9abb23a787df16d8787f438dfdb6/raw/62d2b7e77c1b078a0e27578c72598a505f9fafbf/speakers.json"
+      ),
+      fetch(
+        "https://gist.githubusercontent.com/egeakman/eddfb15f32ae805e8cfb4c5856ae304b/raw/466f8c20c17a9f6c5875f973acaec60e4e4d0fae/sessions.json"
+      ),
+    ]);
+
+    cachedSpeakersData = await speakersResponse.json();
+    cachedSessionsData = await sessionsResponse.json();
+  }
+
+  // Create indexed versions for efficient lookups
+  const speakersById = Object.entries(cachedSpeakersData).reduce(
+    (acc, [id, speaker]: [string, any]) => {
+      acc[id] = { id, ...speaker };
+      return acc;
+    },
+    {} as Record<string, any>
+  );
+
+  const sessionsById = Object.entries(cachedSessionsData).reduce(
+    (acc, [id, session]: [string, any]) => {
+      acc[id] = { id, ...session };
+      return acc;
+    },
+    {} as Record<string, any>
+  );
+
+  return {
+    speakersData: cachedSpeakersData,
+    sessionsData: cachedSessionsData,
+    speakersById,
+    sessionsById,
+  };
+}
+
 const speakers = defineCollection({
-  loader: file("src/content/speakers/data.json"),
+  loader: async (): Promise<any> => {
+    const { speakersData, sessionsById } = await getCollectionsData();
+
+    return Object.values(speakersData).map((speaker: any) => ({
+      id: speaker.slug,
+      ...speaker,
+      submissions: (speaker.submissions || [])
+        .filter((sessionId: string) => sessionId in sessionsById)
+        .map((sessionId: string) => sessionsById[sessionId].slug),
+    }));
+  },
   schema: z.object({
     code: z.string(),
     name: z.string(),
@@ -74,7 +130,17 @@ const speakers = defineCollection({
 });
 
 const sessions = defineCollection({
-  loader: file("src/content/sessions/data.json"),
+  loader: async (): Promise<any> => {
+    const { sessionsData, speakersById } = await getCollectionsData();
+
+    return Object.values(sessionsData).map((session: any) => ({
+      id: session.slug,
+      ...session,
+      speakers: (session.speakers || [])
+        .filter((speakerId: string) => speakerId in speakersById)
+        .map((speakerId: string) => speakersById[speakerId].slug),
+    }));
+  },
   schema: z.object({
     code: z.string(),
     title: z.string(),

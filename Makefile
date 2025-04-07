@@ -31,8 +31,6 @@ pre:
 
 install:
 	pnpm install
-	pnpm update_data
-	pnpm generate_content
 
 dev:
 	pnpm dev

@@ -60,7 +60,6 @@ export default defineConfig({
     "/sponsor/": "/sponsorship/sponsor/",
     "/voting/": "/programme/voting/",
     "/wasm-summit/": "/programme/wasm-summit/",
-    "/sessions/": "/programme/sessions/",
   },
   integrations: [
     mdx(),
