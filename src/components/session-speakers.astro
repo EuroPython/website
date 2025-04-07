@@ -21,7 +21,7 @@ const speakers = await getEntries(
 {
   speakers.map((speaker, index) => (
     <span class="inline">
-      <a href={`/speaker/${speaker.slug}`} class="underline">
+      <a href={`/speaker/${speaker.id}`} class="underline">
         {speaker.data.name}
       </a>
       {index < speakers.length - 1 ? ", " : ""}

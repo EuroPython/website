@@ -2,17 +2,19 @@
 import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
+import { Picture } from "astro:assets";
+import { getEntry, render } from 'astro:content';
+import Markdown from "@ui/Markdown.astro";
 
 export async function getStaticPaths() {
   const entries = await getCollection("speakers");
   return entries.map((entry) => ({
-    params: { slug: entry.slug },
+  params: { slug: entry.id},
     props: { entry },
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const {entry} = Astro.props;
 
 const sessions = await getEntries(entry.data.submissions);
 
@@ -50,16 +52,17 @@ function getGitHosting(url: string): string | undefined {
 function isUrl(str: string): boolean {
   str = ensureHttps(str);
   const regex =
-    /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)*(\?.*)?$/;
+    /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)$/;
   return regex.test(str);
 }
 
 function ensureHttps(str: string): string {
   if (!/^https?:\/\//i.test(str)) {
-    return `https://${str}`;
+    return 'https://' + str;
   }
   return str;
 }
+
 ---
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
@@ -71,25 +74,27 @@ function ensureHttps(str: string): string {
     </h1>
 
     {
-      entry.data.avatar && (
-        <div>
-          <img
+      (entry.data.avatar &&
+        <div class="border-4 border-white rounded-lg shadow-lg inline-block mb-10">
+          <Picture
             src={entry.data.avatar}
             alt={entry.data.name}
-            class="w-full max-w-sm mb-12"
+            inferSize={true}
+            class="max-w-[240px] sm:max-w-[540px] xl:max-w-[720px]  max-h-[240px] sm:max-h-[540px] xl:max-h-[720px] object-scale-down"
           />
         </div>
       )
     }
 
+
     {
-      entry.body ? (
+      entry.data.biography ? (
         <>
           <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
             Biography
           </h2>
           <Prose>
-            <Content />
+            <Markdown content={entry.data.biography} />
           </Prose>
         </>
       ) : null
@@ -211,7 +216,7 @@ function ensureHttps(str: string): string {
           <li class="mb-2 text-xl leading-snug">
             <a
               class="text-primary hover:text-primary-hover font-title underline font-semibold"
-              href={`/session/${session.slug}`}
+              href={`/session/${session.id}`}
             >
               {session.data.title}
             </a>

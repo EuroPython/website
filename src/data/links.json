@@ -20,6 +20,10 @@
           "path": "/programme/voting"
         },
         {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "Speaker Mentorship",
           "path": "/programme/mentorship"
         },

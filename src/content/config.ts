@@ -1,4 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
+import { file } from "astro/loaders";
 
 const tiers = [
   "Keystone",
@@ -55,11 +56,13 @@ const keynoters = defineCollection({
 });
 
 const speakers = defineCollection({
-  type: "content",
+  loader: file("src/content/speakers/data.json"),
   schema: z.object({
     code: z.string(),
     name: z.string(),
+    slug: z.string(),
     avatar: z.string(),
+    biography: z.string().nullable(),
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
@@ -71,10 +74,12 @@ const speakers = defineCollection({
 });
 
 const sessions = defineCollection({
-  type: "content",
+  loader: file("src/content/sessions/data.json"),
   schema: z.object({
     code: z.string(),
     title: z.string(),
+    slug: z.string(),
+    abstract: z.string().nullable(),
     speakers: z.array(reference("speakers")),
     session_type: z.string(),
     track: z.string().nullable(),
@@ -85,7 +90,7 @@ const sessions = defineCollection({
       .nullable(),
     duration: z.string(),
     level: z.enum(["beginner", "intermediate", "advanced"]),
-    delivery: z.enum(["in-person", "remote"]),
+    delivery: z.enum(["in-person", "remote", ""]),
     room: z.string().nullable(),
     start: z.string().nullable(),
     end: z.string().nullable(),

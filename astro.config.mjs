@@ -1,4 +1,5 @@
-import path from "path";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -76,7 +77,11 @@ export default defineConfig({
   build: {
     minify: true,
   },
+  image: {
+    experimentalLayout: "responsive",
+  },
   experimental: {
+    responsiveImages: true,
     svg: true,
   },
 });
