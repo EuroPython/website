@@ -5,6 +5,7 @@ import Prose from "../../components/prose/prose.astro";
 import { Picture } from "astro:assets";
 import { getEntry, render } from 'astro:content';
 import Markdown from "@ui/Markdown.astro";
+import Headline from "@ui/Headline.astro";
 
 export async function getStaticPaths() {
   const entries = await getCollection("speakers");
@@ -15,6 +16,8 @@ export async function getStaticPaths() {
 }
 
 const {entry} = Astro.props;
+console.log(entry.data.avatar);
+
 const sessions = await getEntries(entry.data.submissions);
 
 // Get @username from Twitter URL
@@ -65,12 +68,8 @@ function ensureHttps(str: string): string {
 ---
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
-  <article class="mx-auto pb-12 px-6">
-    <h1
-      class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-7xl"
-    >
-      {entry.data.name}
-    </h1>
+  <article class="pb-12 px-6">
+    <Headline as="h1" id="speaker" title={entry.data.name} />
 
     {
       (entry.data.avatar &&
@@ -79,7 +78,9 @@ function ensureHttps(str: string): string {
             src={entry.data.avatar}
             alt={entry.data.name}
             inferSize={true}
-            class="max-w-[240px] sm:max-w-[540px] xl:max-w-[720px]  max-h-[240px] sm:max-h-[540px] xl:max-h-[720px] object-scale-down"
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            class="max-w-[240px] sm:max-w-[540px] xl:max-w-[620px]  max-h-[240px] sm:max-h-[440px] xl:max-h-[440px] object-scale-down"
           />
         </div>
       )

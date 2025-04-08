@@ -5,7 +5,7 @@
       "items": [
         {
           "name": "Sessions Previews",
-          "path": "/programme/sessions"
+          "path": "/sessions"
         },
         {
           "name": "Tracks",
