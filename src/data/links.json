@@ -90,6 +90,10 @@
         {
           "name": "Visa Support Letter",
           "path": "/visa"
+        },
+        {
+          "name": "Childcare",
+          "path": "/childcare"
         }
       ]
     }
