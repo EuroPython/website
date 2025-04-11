@@ -141,10 +141,4 @@ storybook-static/
 .astro
 
 # EuroPython website
-src/content/speakers
-src/content/sessions
 src/content/days
-src/data/speakers.json
-src/data/sessions.json
-src/data/schedule.json
-public/cache/
