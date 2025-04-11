@@ -1,24 +1,19 @@
 ---
-import Hero from "../components/hero2/hero.astro";
-import Layout from "../layouts/HomePageLayout.astro";
-import DeadlineCard from "../components/deadline-card.astro";
 import { getCollection } from "astro:content";
-import Accent from "../components/accent/accent.astro";
-import Prague from "../components/hero-section/prague.astro";
-import SocialSubscribe from '../components/social/SocialSubscribe.astro';
 
-import * as intro from "../data/home/intro.md";
-import * as venue from "../data/home/prague.mdx";
+import Layout from "@layouts/HomePageLayout.astro";
+import Hero from "@components/hero2/hero.astro";
+import Keynoters from "@components/keynoters/keynoters.astro";
+import Updates from "@sections/updates.astro";
+import Prague from "@sections/prague.astro";
+import Sponsors from "@components/sponsors/sponsors.astro";
+import Subscribe from "@sections/subscribe.astro";
 
 let deadlines = await getCollection("deadlines");
 deadlines = deadlines
   .sort((a, b) => a.slug.localeCompare(b.slug))
   .reverse()
   .slice(0, 3);
-import Sponsors from "../components/sponsors/sponsors.astro";
-import KeynotersComponent from "../components/keynoters/keynoters.astro";
-import Updates from "@sections/updates.astro";
-import Prague from "@sections/prague.astro";
 ---
 
 <Layout
@@ -26,17 +21,9 @@ import Prague from "@sections/prague.astro";
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
   <Hero />
-
   <Updates />
-
-  <KeynotersComponent />
+  <Keynoters />
   <Prague />
-
-<Fullbleed>
-  <div class="mt-32 w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-08 px-4 text-center">
-    <SocialSubscribe />
-  </div>
-</Fullbleed>
-
   <Sponsors />
+  <Subscribe />
 </Layout>
