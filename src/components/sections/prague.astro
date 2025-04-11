@@ -1,0 +1,63 @@
+---
+import Button from "@ui/Button.astro";
+import { Title } from "@components/typography/title";
+import { Image } from "astro:assets";
+import pragueImage from "@assets/prague2.jpg";
+import Logo from "@assets/prague.svg";
+import Headline from "@ui/Headline.astro";
+---
+
+<div class="mt-12">
+  <Headline id="prague" title="Prague & Venue" />
+</div>
+
+<article class="lg:grid gap-12 grid-cols-2 items-center">
+  <div class="relative hidden lg:block">
+    <Image
+      src={pragueImage}
+      class="w-full h-auto border-4 border-white rounded-lg shadow-lg"
+      alt="Beautiful view of Prague"
+      width={1200}
+      height={900}
+    />
+  </div>
+
+<div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+  <p class="mt-4 mb-8">
+    EuroPython 2025 returns to one of Europe’s most picturesque cities!
+    Join us at the Prague Congress Centre, just steps away from the
+    historic Vyšehrad Castle and its scenic views of the city.
+  </p>
+
+  <div class="flex w-full justify-evenly items-center">
+    <Button url="/explore">About Prague</Button>
+    <Button url="/where">About Venue</Button>
+  </div>
+
+  </div>
+</article>
+
+
+<div class="city full-bleed" id="one">
+  <Logo />
+</div>
+
+<style>
+  article {
+    position: relative;
+    top: 20vh;
+    margin-top: -20vh;
+    z-index: 10;
+  }
+  .city {
+    position: relative;
+    top: 0;
+    width: 100vw;
+  }
+  .city svg {
+    width: 100vw;
+    position: relative;
+    bottom: -4px;
+    z-index: -1;
+  }
+</style>

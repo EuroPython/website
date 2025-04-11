@@ -1,5 +1,5 @@
 ---
-import type React from 'react';
+import type React from "react";
 
 export interface Props {
   url?: string;
@@ -10,8 +10,15 @@ export interface Props {
   isExternal?: boolean;
 }
 
-const { url, className = "", secondary = false, disabled = false, isExternal} = Astro.props;
-const resolvedIsExternal = isExternal !== undefined ? isExternal : url?.startsWith("http");
+const {
+  url,
+  className = "",
+  secondary = false,
+  disabled = false,
+  isExternal,
+} = Astro.props;
+const resolvedIsExternal =
+  isExternal !== undefined ? isExternal : url?.startsWith("http");
 ---
 
 <a
@@ -24,9 +31,9 @@ const resolvedIsExternal = isExternal !== undefined ? isExternal : url?.startsWi
 >
   <slot />
 
-  {resolvedIsExternal && (
-    <span class="inline-block ml-1 font-system text-lg leading-4">
-      ↗
-    </span>
-  )}
+  {
+    resolvedIsExternal && (
+      <span class="inline-block ml-1 font-system text-lg leading-4">↗</span>
+    )
+  }
 </a>

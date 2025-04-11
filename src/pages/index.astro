@@ -1,10 +1,5 @@
 ---
-import { CardContainer } from "../components/card/card-container";
 import Hero from "../components/hero2/hero.astro";
-import HeroWithCTA from "../components/hero-section/hero-with-cta.astro";
-import { Fullbleed } from "../components/layout/fullbleed";
-import Prose from "../components/prose/prose.astro";
-import { Title } from "../components/typography/title";
 import Layout from "../layouts/HomePageLayout.astro";
 import DeadlineCard from "../components/deadline-card.astro";
 import { getCollection } from "astro:content";
@@ -20,18 +15,22 @@ deadlines = deadlines
   .sort((a, b) => a.slug.localeCompare(b.slug))
   .reverse()
   .slice(0, 3);
+import Sponsors from "../components/sponsors/sponsors.astro";
+import KeynotersComponent from "../components/keynoters/keynoters.astro";
+import Updates from "@sections/updates.astro";
+import Prague from "@sections/prague.astro";
 ---
 
 <Layout
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-    <Hero />
+  <Hero />
 
-  <h2 class="text-7xl text-center m-16">Updates</h3>
-  <CardContainer>
-    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
-  </CardContainer>
+  <Updates />
+
+  <KeynotersComponent />
+  <Prague />
 
 <Fullbleed>
   <div class="mt-32 w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-08 px-4 text-center">
@@ -39,4 +38,5 @@ deadlines = deadlines
   </div>
 </Fullbleed>
 
+  <Sponsors />
 </Layout>

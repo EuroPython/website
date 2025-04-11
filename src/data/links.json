@@ -4,6 +4,10 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Sessions Previews",
+          "path": "/programme/sessions"
+        },
+        {
           "name": "Tracks",
           "path": "/programme/tracks"
         },
@@ -37,12 +41,12 @@
       "name": "Prague & Venue",
       "items": [
         {
-          "name": "Around Prague & PCC",
-          "path": "/where"
+          "name": "Prague",
+          "path": "/explore"
         },
         {
-          "name": "Exploring Prague",
-          "path": "/explore"
+          "name": "Venue",
+          "path": "/where"
         }
       ]
     },
@@ -82,6 +86,14 @@
         {
           "name": "Financial Aid",
           "path": "/finaid"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
+        },
+        {
+          "name": "Childcare",
+          "path": "/childcare"
         }
       ]
     }

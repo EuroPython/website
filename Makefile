@@ -43,8 +43,6 @@ check:
 
 build:
 	pnpm build
-	# NOTE: also let's find a better way to do this :D
-	find ./dist/_astro/ -iname '*.jpg' -delete
 
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)

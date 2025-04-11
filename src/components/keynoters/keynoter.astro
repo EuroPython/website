@@ -13,6 +13,7 @@ export interface Props {
   tagline?: string;
   image?: ImageMetadata;
   placeholder?: boolean;
+  order?: number;
   class?: string;
 }
 
@@ -22,6 +23,7 @@ const {
   tagline,
   image,
   placeholder,
+  order,
   class: className,
 } = Astro.props;
 
@@ -29,10 +31,11 @@ const placeholders = [Person1, Person2, Person3, Person4, Person5];
 
 const Placeholder =
   placeholders[Math.floor(Math.random() * placeholders.length)];
+
 ---
 
 <li class:list={["list-none rounded-2xl overflow-clip flex group", className]}>
-  <a class="block w-full h-full relative" href={`/speaker/${slug}`}>
+  <a class="block w-full h-full relative " >
     <div class="relative aspect-[9/10] overflow-clip">
       {
         image ? (
@@ -43,7 +46,7 @@ const Placeholder =
             class="object-cover group-hover:scale-105 transition-transform h-full w-full"
           />
         ) : (
-          <div class="bg-keynoter-info w-full h-full group-hover:opacity-90">
+          <div class="bg-keynoter-info w-full h-full mt-10">
             <Placeholder />
           </div>
         )
@@ -51,16 +54,16 @@ const Placeholder =
     </div>
 
     <div
-      class="px-5 py-2 pb-4 bg-keynoter-info rounded-t-none h-full group-hover:opacity-90"
+      class="px-5 py-2 pb-4 bg-keynoter-info rounded-t-none h-full "
     >
       {
         placeholder ? (
-          <p class="text-body-inverted font-bold">More keynoters coming soon</p>
+          <p class="text-body-inverted ">More keynoters coming soon</p>
         ) : (
           <>
-            <p class="text-body-inverted font-bold">{name}</p>
+            <p class="text-[#17223A] font-bold">{name}</p>
             {tagline ? (
-              <p class="text-body-light font-bold text-sm italic">{tagline}</p>
+              <p class="text-secondary-hover text-lg italic">{tagline}</p>
             ) : null}
           </>
         )

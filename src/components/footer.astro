@@ -18,19 +18,19 @@ const gitVersion = import.meta.env.GIT_VERSION;
           Quicklinks
         </h6>
         <ul>
-        {
-          links.footer.map((item) => (
-            <li class="list-none">
-              <a
-                href={item.path}
-                class="block text-sm mb-2 hover:text-primary-hover"
-              >
-                {item.name}
-                {item.path.startsWith("http") ? <span> ↗</span> : null}
-              </a>
-            </li>
-          ))
-        }
+          {
+            links.footer.map((item) => (
+              <li class="list-none">
+                <a
+                  href={item.path}
+                  class="block font-bold text-4xl md:text-5xl mb-4 hover:text-primary-hover"
+                >
+                  {item.name}
+                  {item.path.startsWith("http") ? <span> ↗</span> : null}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </div>
