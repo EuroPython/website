@@ -1,10 +1,19 @@
 ---
-import Hero from "../components/hero2/hero.astro";
-import Layout from "../layouts/HomePageLayout.astro";
-import Sponsors from "../components/sponsors/sponsors.astro";
-import KeynotersComponent from "../components/keynoters/keynoters.astro";
+import { getCollection } from "astro:content";
+
+import Layout from "@layouts/HomePageLayout.astro";
+import Hero from "@components/hero2/hero.astro";
+import Keynoters from "@components/keynoters/keynoters.astro";
 import Updates from "@sections/updates.astro";
 import Prague from "@sections/prague.astro";
+import Sponsors from "@components/sponsors/sponsors.astro";
+import Subscribe from "@sections/subscribe.astro";
+
+let deadlines = await getCollection("deadlines");
+deadlines = deadlines
+  .sort((a, b) => a.slug.localeCompare(b.slug))
+  .reverse()
+  .slice(0, 3);
 ---
 
 <Layout
@@ -13,11 +22,9 @@ import Prague from "@sections/prague.astro";
 >
 
   <Hero />
-
   <Updates />
-
-  <KeynotersComponent />
+  <Keynoters />
   <Prague />
-
   <Sponsors />
+  <Subscribe />
 </Layout>

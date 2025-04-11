@@ -15,6 +15,7 @@ import Button from "@ui/Button.astro";
   </div>
 
   <div class="modal__overlay"></div>
+
   <SearchComponent
     id="search"
     className="pagefind-ui"
@@ -150,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<style>
+<style is:global>
   .search-wrapper div{
     max-width: calc(48rem + 8vw);
   }
