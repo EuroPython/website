@@ -1,19 +1,20 @@
 ---
 import SearchComponent from "astro-pagefind/components/Search";
 import Button from "@ui/Button.astro";
+
 ---
 
 <div class="search-wrapper hidden" style="display: none;">
 
-  <div class="w-full flex items-center justify-between z-40 h-0 md:h-[85px] m-auto ">
+  <div class="search-header flex items-center justify-between z-40 h-0 md:h-[85px] m-auto ">
     <h2 class="text-black text-4xl ml-10 top-[46px] md:top-[85px]">Search<h2/>
     <Button
+      id="search-close"
       icon="close"
       iconSize="fa-xl"
-      class="search-close w-[3em] h-[3em] top-[46px] md:top-[85px]"
+      class="w-[3em] h-[3em] top-[46px] md:top-[85px]"
     />
   </div>
-
   <div class="modal__overlay"></div>
 
   <SearchComponent
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchWrapper = document.querySelector(".search-wrapper") as HTMLElement | null;
   const searchContainer = document.querySelector(".pagefind-ui") as HTMLElement | null;
   const searchInput = searchContainer?.querySelector("input") as HTMLInputElement | null;
-  const closeButton = document.querySelector(".search-close") as HTMLElement | null;
+  const closeButton = document.querySelector("#search-close") as HTMLElement | null;
   const searchButton = document.getElementById("searchButton") as HTMLElement | null;
 
   let selectedIndex = -1;
@@ -150,49 +151,3 @@ document.addEventListener("DOMContentLoaded", function () {
   closeButton?.addEventListener("click", closeSearch);
 });
 </script>
-
-<style is:global>
-  .search-wrapper div{
-    max-width: calc(48rem + 8vw);
-  }
-  .search-wrapper h2 {
-    position: relative;
-    left: -12px;
-    z-index:100;
-  }
-  .modal__overlay {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .search-wrapper {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 500;
-    box-sizing: border-box;
-    display: none;
-    transition: opacity ease-out 0.2s;
-    background: rgba(37,40,43,0.9);
-    z-index: 100;
-  }
-
-  .search-wrapper :global(.search-close) {
-    position: relative;
-    left: -12px;
-    margin: 0;
-    border: 0;
-    transition: opacity ease-out 0.2s;
-    z-index: 10;
-  }
-
-</style>
