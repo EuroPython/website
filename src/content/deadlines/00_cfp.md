@@ -1,7 +1,7 @@
 ---
 title: Call for Proposals
 subtitle: Extended until February 3rd
-url: /programme/cfp
+url: /cfp
 image: "./cfp.jpg"
 ---
 
