@@ -60,6 +60,8 @@ export default defineConfig({
     "/voting/": "/programme/voting/",
     "/wasm-summit/": "/programme/wasm-summit/",
     "/sessions/": "/programme/sessions/",
+    "/explore": "/prague",
+    "/where": "/venue",
   },
   integrations: [
     mdx(),
