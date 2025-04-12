@@ -108,7 +108,7 @@
   box-sizing: border-box;
   display: none;
   transition: opacity ease-out 0.2s;
-  background: rgba(37, 40, 43, 0.9);
+  background: rgba(116, 116, 116, 0.9);
   z-index: 100;
 }
 
