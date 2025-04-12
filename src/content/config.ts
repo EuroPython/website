@@ -87,7 +87,7 @@ async function getCollectionsData() {
   await ensureCacheDir();
 
   const speakersBuffer = await fetchWithCache(
-    "https://gist.github.com/egeakman/469f9abb23a787df16d8787f438dfdb6/raw/62d2b7e77c1b078a0e27578c72598a505f9fafbf/speakers.json",
+    "https://gist.githubusercontent.com/nikoshell/d8efd41f90961cc6298519c0eec04843/raw/d13a7b1d35f61be1773404e7faf8395dd4862313/speakers.json",
     "speakers.json"
   );
 
@@ -148,6 +148,7 @@ const speakers = defineCollection({
     gitx: z.string().nullable(),
     linkedin_url: z.string().url().nullable(),
     mastodon_url: z.string().url().nullable(),
+    bluesky_url: z.string().url().nullable(),
     twitter_url: z.string().url().nullable(),
   }),
 });

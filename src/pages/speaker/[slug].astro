@@ -38,6 +38,12 @@ function getTwitterUsername(url: string): string | undefined {
   return (username ?? url).startsWith("@") ? username : `@${username}`;
 }
 
+// Get @username from Twitter URL
+function getBlueskyUsername(url: string): string | undefined {
+  const username = url.split("/").pop();
+  return (username ?? url).startsWith("@") ? username : `@${username}`;
+}
+
 // Get @username@instance.tld from Mastodon URL
 function getMastodonUsername(url: string): string | null {
   const match = url.match(/https?:\/\/([^\/]+)\/@([^\/]+)(\/|\?|$)/);
@@ -193,6 +199,19 @@ function getGitHosting(url: string): string | undefined {
                     class="text-primary underline hover:text-primary-hover"
                   >
                     {getTwitterUsername(entry.data.twitter_url)}
+                  </a>
+                </dd>
+              </>
+            )}
+            {entry.data.bluesky_url && (
+              <>
+                <dt class="font-bold">Bluesky</dt>
+                <dd>
+                  <a
+                    href={entry.data.bluesky_url}
+                    class="text-primary underline hover:text-primary-hover"
+                  >
+                    {getBlueskyUsername(entry.data.bluesky_url)}
                   </a>
                 </dd>
               </>
