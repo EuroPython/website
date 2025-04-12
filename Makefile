@@ -6,6 +6,7 @@ VPS_HOST  ?= static.europython.eu
 VPS_PROD_PATH  ?= /home/static_content_user/content/europython_websites/ep2025
 VPS_PREVIEW_PATH  ?= /home/static_content_user/content/previews
 REMOTE_CMD=ssh $(VPS_USER)@$(VPS_HOST)
+SITE_URL ?= "https://$(SAFE_BRANCH).ep-preview.click"
 
 # Variables for build/deploy
 # ==========================
@@ -47,6 +48,7 @@ build:
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)
 preview:
+	@echo "Preview site URL: $(SITE_URL)"
 	echo $(TARGET)
 	@echo "\n\n**** Deploying preview of a branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
 	$(REMOTE_CMD) "mkdir -p $(TARGET)"
