@@ -42,11 +42,11 @@
       "items": [
         {
           "name": "Prague",
-          "path": "/explore"
+          "path": "/prague"
         },
         {
           "name": "Venue",
-          "path": "/where"
+          "path": "/venue"
         }
       ]
     },
