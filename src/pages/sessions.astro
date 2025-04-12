@@ -2,100 +2,42 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
-import { Separator } from "../components/separator/separator";
+import Filter from "../components/sessions/filter.astro";
+import ListSessions from "../components/sessions/list-sessions.astro";
 
-// Fetch all speaker entries
-const sessionsCollection = await getCollection("sessions");
+const sessions = await getCollection("sessions");
 
-// Define the type for the groups object
-type Session = {
-  id: string;
-  data: {
-    title: string;
-    session_type: string;
-  };
-};
+const allTracks = Array.from(
+  new Set(sessions.map((session) => session.data.track).filter((track) => track))
+).sort();
 
-type Groups = {
-  [key: string]: Session[];
-};
+const allTypes = Array.from(
+  new Set(sessions.map((session) => session.data.session_type).filter((type) => type))
+).sort();
 
-const groups: Groups = sessionsCollection
-  .filter((session: Session) => !!session.data.session_type)
-  .reduce((acc: Groups, session: Session) => {
-    const sessionType = session.data.session_type;
-    if (!acc[sessionType]) {
-      acc[sessionType] = [];
-    }
-    acc[sessionType].push(session);
-    return acc;
-  }, {} as Groups);
-
-// Sort session types alphabetically
-const sessionTypes = Object.keys(groups).sort((a, b) => a.localeCompare(b));
+const allLevels = Array.from(
+  new Set(sessions.map((session) => session.data.level).filter((level) => level))
+).sort();
 
 const title = "Sessions";
-
-const description =
-  "List of all confirmed sessions for the conference, sorted by session type.";
+const description = "A list of all the sessions at the conference";
 ---
 
 <Layout title={title} description={description}>
   <div class="px-6">
     <Prose>
       <h1>Sessions</h1>
-      <p>
-        Check out all the sessions at the conference. You can filter them by track, type, and level.
-      </p>
-
-
-    <h2 class="text-4xl">Go to session type:</h2>
-    <div class="text-2xl mb-6">
-      <ul>
-      {
-        sessionTypes.map((sessionType) => (
-          <li class="mr-2">
-            <a href={`#session-type-${sessionType}`}>{sessionType}</a>
-          </li>
-        ))
-      }
-      </ul>
-    </div>
-
-    <ol class="sessions">
-      {
-        sessionTypes.map((sessionType, index) => (
-          <>
-            <div id={`session-type-${sessionType}`}>
-              <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-4xl">
-                {sessionType}
-              </h2>
-
-              <ul class="pl-4">
-                {groups[sessionType]
-                  .sort((a, b) => a.data.title.localeCompare(b.data.title))
-                  .map((session) => (
-                    <li {...{ key: session.id }} class="mb-1">
-                      <a
-                        class="underline hover:text-primary-hover"
-                        href={`/session/${session.id}`}
-                      >
-                        {session.data.title}
-                      </a>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-
-            {index !== sessionTypes.length - 1 ? (
-              <Separator />
-            ) : (
-              <div class="mb-20" />
-            )}
-          </>
-        ))
-      }
-    </ol>
+      <p>Here you can find a list of all the sessions at the conference.</p>
+      <p>You can filter the sessions by track, type, and level.</p>
+      <h2>Filters</h2>
     </Prose>
+
+    <Filter allTracks={allTracks} allTypes={allTypes} allLevels={allLevels} />
+
+    <Prose>
+      <h2>List of Sessions</h2>
+    </Prose>
+
+    <ListSessions sessions={sessions} />
   </div>
 </Layout>

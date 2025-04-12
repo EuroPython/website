@@ -3,7 +3,7 @@ import { getEntries } from "astro:content";
 
 interface Props {
   speakers: Array<{
-    slug: string;
+    id: string;
     collection: "speakers";
   }>;
 }
@@ -13,7 +13,7 @@ const { speakers: speakersEntries } = Astro.props;
 const speakers = await getEntries(
   speakersEntries.map((entry) => ({
     collection: entry.collection,
-    id: entry.slug,
+    id: entry.id,
   })),
 );
 ---
