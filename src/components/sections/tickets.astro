@@ -1,0 +1,66 @@
+---
+import Button from "@ui/Button.astro";
+import Headline from "@ui/Headline.astro";
+---
+
+<section class="bluebox full-bleed prose-xl relative py-12 px-6">
+<article class="lg:grid gap-12 relative flex flex-col items-center justify-center">
+<div class="mt-12">
+  <Headline id="tickets" title="Tickets" />
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+  <div class="bg-white text-black p-6 rounded-lg shadow-md">
+    <h3 class="text-xl font-bold mb-2">🛠️ Tutorial Only</h3>
+    <p>14–15 July</p>
+    <p class="text-lg font-semibold mt-2">From €100</p>
+    <ul class="mt-2 space-y-1 text-left list-disc list-inside">
+      <li>✔️ Workshops & tutorials</li>
+      <li>✔️ Sprint Weekend</li>
+      <li>❌ Conference talks</li>
+    </ul>
+  </div>
+
+  <div class="bg-white text-black p-6 rounded-lg shadow-md">
+    <h3 class="text-xl font-bold mb-2">🎤 Conference Only</h3>
+    <p>16–18 July</p>
+    <p class="text-lg font-semibold mt-2">From €135</p>
+    <ul class="mt-2 space-y-1 text-left list-disc list-inside">
+      <li>✔️ 130+ talks & networking</li>
+      <li>✔️ Sponsor booths</li>
+      <li>❌ Tutorials</li>
+    </ul>
+  </div>
+
+  <div class="bg-white text-black p-6 rounded-lg shadow-md border-2 border-primary">
+    <h3 class="text-xl font-bold mb-2">🧠 Combined (All Access)</h3>
+    <p>14–18 July</p>
+    <p class="text-lg font-semibold mt-2">From €210</p>
+    <ul class="mt-2 space-y-1 text-left list-disc list-inside">
+      <li>✔️ Tutorials + Talks + Sprints</li>
+      <li>✔️ All networking & extras</li>
+      <li>⚠️ Limited to 300!</li>
+    </ul>
+  </div>
+</div>
+
+<br />
+
+<div class="bg-white text-black p-6 rounded-lg shadow-md">
+  <p>✅ All tickets include: lunch, refreshments, childcare (18mo+), and a conference T-shirt.</p>
+  <p class="mt-2">🔗 <a href="/tickets" class="text-primary hover:text-primary-hover underline">View Full Ticket Info</a></p>
+</div>
+
+<div class="text-center mt-6">
+  <Button url="https://tickets.europython.eu/">Buy Your Ticket</Button>
+</div>
+</article>
+</section>
+
+
+<style>
+  .bluebox {
+     background-color:#d4d5e5;;
+  }
+</style>

@@ -8,6 +8,7 @@ import Updates from "@sections/updates.astro";
 import Prague from "@sections/prague.astro";
 import Sponsors from "@components/sponsors/sponsors.astro";
 import Subscribe from "@sections/subscribe.astro";
+import Tickets from "@components/sections/tickets.astro";
 
 let deadlines = await getCollection("deadlines");
 deadlines = deadlines
@@ -23,6 +24,7 @@ deadlines = deadlines
   <Hero />
   <Updates />
   <Keynoters />
+  <Tickets />
   <Prague />
   <Sponsors />
   <Subscribe />
