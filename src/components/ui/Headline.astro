@@ -1,12 +1,14 @@
 ---
-const { as = "h2", id, title, href} = Astro.props;
+const { as = "h2", id, title, href, center} = Astro.props;
 const Tag = as;
 const Title = title;
 const isAnchor = !!id;
 const isLink = !!href;
+const isCenter = center ? "text-center" : "";
+
 ---
 
-<Tag id={isAnchor ? id : undefined} class={`m-5 py-2 font-bold max-w-[90vw]`}>
+<Tag id={isAnchor ? id : undefined} class={`${isCenter} $m-5 py-2 font-bold max-w-[90vw]`}>
   {isAnchor && (
     <a href={`#${id}`} aria-label={`Jump to ${id}`}>
       {Title}
