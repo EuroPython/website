@@ -4,7 +4,7 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Sessions Previews",
+          "name": "List of Sessions",
           "path": "/sessions"
         },
         {
