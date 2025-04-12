@@ -1,31 +1,8 @@
 import { defineCollection, reference, z } from "astro:content";
-import fs from "fs/promises";
-import path from "path";
+import { loadData } from "../utils/dataLoader";
 
-const CACHE_DIR = ".cache/data";
-
-async function ensureCacheDir() {
-  await fs.mkdir(CACHE_DIR, { recursive: true });
-}
-
-async function fetchWithCache(url: string, filename: string): Promise<Buffer> {
-  const filePath = path.join(CACHE_DIR, filename);
-
-  try {
-    // Return cached if available
-    const data = await fs.readFile(filePath);
-    console.log(`Fetch from cache: ${filePath}`);
-    return data;
-  } catch {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Failed to fetch: ${url}`);
-
-    const arrayBuffer = await res.arrayBuffer();
-    const buffer: Buffer = Buffer.from(arrayBuffer);
-    await fs.writeFile(filePath, new Uint8Array(buffer));
-    return buffer;
-  }
-}
+const mode = import.meta.env.MODE;
+console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
 
 const tiers = [
   "Keystone",
@@ -83,24 +60,11 @@ const keynoters = defineCollection({
 
 // Shared data fetching function
 async function getCollectionsData() {
-  // Only fetch if not already cached
-  await ensureCacheDir();
-
-  const speakersBuffer = await fetchWithCache(
-    "https://gist.githubusercontent.com/nikoshell/d8efd41f90961cc6298519c0eec04843/raw/d13a7b1d35f61be1773404e7faf8395dd4862313/speakers.json",
-    "speakers.json"
-  );
-
-  const sessionsBuffer = await fetchWithCache(
-    "https://gist.githubusercontent.com/egeakman/eddfb15f32ae805e8cfb4c5856ae304b/raw/466f8c20c17a9f6c5875f973acaec60e4e4d0fae/sessions.json",
-    "sessions.json"
-  );
-
-  const cachedSpeakersData = JSON.parse(speakersBuffer.toString("utf-8"));
-  const cachedSessionsData = JSON.parse(sessionsBuffer.toString("utf-8"));
+  const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
+  const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
 
   // Create indexed versions for efficient lookups
-  const speakersById = Object.entries(cachedSpeakersData).reduce(
+  const speakersById = Object.entries(speakersData).reduce(
     (acc, [id, speaker]: [string, any]) => {
       acc[id] = { id, ...speaker };
       return acc;
@@ -108,7 +72,7 @@ async function getCollectionsData() {
     {} as Record<string, any>
   );
 
-  const sessionsById = Object.entries(cachedSessionsData).reduce(
+  const sessionsById = Object.entries(sessionsData).reduce(
     (acc, [id, session]: [string, any]) => {
       acc[id] = { id, ...session };
       return acc;
@@ -117,8 +81,8 @@ async function getCollectionsData() {
   );
 
   return {
-    speakersData: cachedSpeakersData,
-    sessionsData: cachedSessionsData,
+    speakersData,
+    sessionsData,
     speakersById,
     sessionsById,
   };
