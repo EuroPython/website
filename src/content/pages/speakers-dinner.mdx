@@ -4,6 +4,9 @@ url: /speakers-dinner
 subtitle:
   We're happy to invite all speakers to our special Speakers' Dinner!
 ---
+import { Image } from "astro:assets";
+
+import manesImage from "./images/manes.jpg";
 
 # Speakers' Dinner
 We are excited to announce a special Speakers' Dinner! This exclusive event is for speakers only, providing an opportunity to meet and mingle before the main conference days.
@@ -20,7 +23,13 @@ Masarykovo nábř. 250/1 <br/>
 
 </address>
 
-![](./images/manes.jpg)
+
+<Image
+  src={manesImage}
+  width="1200"
+  class="w-full h-auto border-4 border-white rounded-lg shadow-lg"
+  alt="Mánes Restaurant"
+/>
 
 ## How to get there?
 * Take trams 2, 5, 9, 13, 15, 17, 18, 19, 22, 24, or 27 to Jiráskovo náměstí station. From there it is a 2-minute walk to the restaurant.
