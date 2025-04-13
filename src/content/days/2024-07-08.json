@@ -25,7 +25,7 @@
       "slug": "pointers-in-python",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/SR9UDD_SfhFlTM.png",
+          "avatar": "https://programme.europython.eu/media/avatars/SR9UDD_SfhFlTM.png",
           "code": "SR9UDD",
           "name": "Yan Yanchii",
           "slug": "yan-yanchii",
@@ -34,7 +34,7 @@
       ],
       "start": "2024-07-08T09:30:00+02:00",
       "title": "Pointers in Python",
-      "track": "Python Internals & Ecosystem",
+      "track": "Python Internals & Ecosystem (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/pointers-in-python"
     },
@@ -49,7 +49,7 @@
       "speakers": [],
       "start": "2024-07-08T09:30:00+02:00",
       "title": "Django Girls Workshop",
-      "track": "Web technologies",
+      "track": "Web technologies (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
     },
@@ -63,7 +63,7 @@
       "slug": "what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/AWKFRJ_8YWWoT5.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/AWKFRJ_8YWWoT5.jpg",
           "code": "AWKFRJ",
           "name": "Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e)",
           "slug": "sviatoslav-sydorenko-sviatoslav-sidorenko",
@@ -72,7 +72,7 @@
       ],
       "start": "2024-07-08T09:30:00+02:00",
       "title": "What do lockfiles pin, *actually*? Let's dig in and get our hands dirty!",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "Workshop: Reproducible Python dep mgmt across envs (test, docs, prod)  Set up GitHub proj w/ Actions using tox/nox:  Run tests Build docs Update lockfiles Learn constraints, avoid conflicts. Practice robust env setup.",
       "website_url": "https://ep2024.europython.eu/session/what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty"
     },
@@ -86,14 +86,14 @@
       "slug": "event-sourcing-from-the-ground-up",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/AU3L9P_8IVikmH.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/AU3L9P_8IVikmH.jpg",
           "code": "AU3L9P",
           "name": "Ravi Selker",
           "slug": "ravi-selker",
           "website_url": "https://ep2024.europython.eu/speaker/ravi-selker"
         },
         {
-          "avatar": "https://pretalx.com/media/avatars/UPWXFZ_8SUI4OW.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/UPWXFZ_8SUI4OW.jpg",
           "code": "UPWXFZ",
           "name": "Sebastiaan Zeeff",
           "slug": "sebastiaan-zeeff",
@@ -102,7 +102,7 @@
       ],
       "start": "2024-07-08T09:30:00+02:00",
       "title": "Event Sourcing From The Ground Up",
-      "track": "Software Engineering & Architecture",
+      "track": "Software Engineering & Architecture (2024)",
       "tweet": "Interested in Event Sourcing? Join the tutorial \"Event Sourcing From The Ground Up\" at EuroPython 2024!",
       "website_url": "https://ep2024.europython.eu/session/event-sourcing-from-the-ground-up"
     },
@@ -116,7 +116,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -146,7 +146,7 @@
       "slug": "writing-python-modules-in-rust",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/CXYAXB_1uePQoM.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/CXYAXB_1uePQoM.jpg",
           "code": "CXYAXB",
           "name": "Kushal Das",
           "slug": "kushal-das",
@@ -155,7 +155,7 @@
       ],
       "start": "2024-07-08T09:30:00+02:00",
       "title": "Writing Python modules in Rust",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/writing-python-modules-in-rust"
     },
@@ -176,7 +176,7 @@
       "slug": "pointers-in-python",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/SR9UDD_SfhFlTM.png",
+          "avatar": "https://programme.europython.eu/media/avatars/SR9UDD_SfhFlTM.png",
           "code": "SR9UDD",
           "name": "Yan Yanchii",
           "slug": "yan-yanchii",
@@ -185,7 +185,7 @@
       ],
       "start": "2024-07-08T11:15:00+02:00",
       "title": "Pointers in Python",
-      "track": "Python Internals & Ecosystem",
+      "track": "Python Internals & Ecosystem (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/pointers-in-python"
     },
@@ -200,7 +200,7 @@
       "speakers": [],
       "start": "2024-07-08T11:15:00+02:00",
       "title": "Django Girls Workshop",
-      "track": "Web technologies",
+      "track": "Web technologies (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
     },
@@ -214,7 +214,7 @@
       "slug": "what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/AWKFRJ_8YWWoT5.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/AWKFRJ_8YWWoT5.jpg",
           "code": "AWKFRJ",
           "name": "Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e)",
           "slug": "sviatoslav-sydorenko-sviatoslav-sidorenko",
@@ -223,7 +223,7 @@
       ],
       "start": "2024-07-08T11:15:00+02:00",
       "title": "What do lockfiles pin, *actually*? Let's dig in and get our hands dirty!",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "Workshop: Reproducible Python dep mgmt across envs (test, docs, prod)  Set up GitHub proj w/ Actions using tox/nox:  Run tests Build docs Update lockfiles Learn constraints, avoid conflicts. Practice robust env setup.",
       "website_url": "https://ep2024.europython.eu/session/what-do-lockfiles-pin-actually-let-s-dig-in-and-get-our-hands-dirty"
     },
@@ -237,14 +237,14 @@
       "slug": "event-sourcing-from-the-ground-up",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/AU3L9P_8IVikmH.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/AU3L9P_8IVikmH.jpg",
           "code": "AU3L9P",
           "name": "Ravi Selker",
           "slug": "ravi-selker",
           "website_url": "https://ep2024.europython.eu/speaker/ravi-selker"
         },
         {
-          "avatar": "https://pretalx.com/media/avatars/UPWXFZ_8SUI4OW.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/UPWXFZ_8SUI4OW.jpg",
           "code": "UPWXFZ",
           "name": "Sebastiaan Zeeff",
           "slug": "sebastiaan-zeeff",
@@ -253,7 +253,7 @@
       ],
       "start": "2024-07-08T11:15:00+02:00",
       "title": "Event Sourcing From The Ground Up",
-      "track": "Software Engineering & Architecture",
+      "track": "Software Engineering & Architecture (2024)",
       "tweet": "Interested in Event Sourcing? Join the tutorial \"Event Sourcing From The Ground Up\" at EuroPython 2024!",
       "website_url": "https://ep2024.europython.eu/session/event-sourcing-from-the-ground-up"
     },
@@ -267,7 +267,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -297,7 +297,7 @@
       "slug": "writing-python-modules-in-rust",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/CXYAXB_1uePQoM.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/CXYAXB_1uePQoM.jpg",
           "code": "CXYAXB",
           "name": "Kushal Das",
           "slug": "kushal-das",
@@ -306,7 +306,7 @@
       ],
       "start": "2024-07-08T11:15:00+02:00",
       "title": "Writing Python modules in Rust",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/writing-python-modules-in-rust"
     },
@@ -327,14 +327,14 @@
       "slug": "parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/CHHWUG_piXbGly.JPG",
+          "avatar": "https://programme.europython.eu/media/avatars/CHHWUG_2wXI35k.JPG",
           "code": "CHHWUG",
           "name": "Neeraj Pandey",
           "slug": "neeraj-pandey",
           "website_url": "https://ep2024.europython.eu/speaker/neeraj-pandey"
         },
         {
-          "avatar": "https://pretalx.com/media/avatars/DSKWCM_U1Qmyus.JPG",
+          "avatar": "https://programme.europython.eu/media/avatars/DSKWCM_U1Qmyus.JPG",
           "code": "DSKWCM",
           "name": "Manoj Pandey",
           "slug": "manoj-pandey",
@@ -343,7 +343,7 @@
       ],
       "start": "2024-07-08T13:45:00+02:00",
       "title": "Parallelism, Concurrency, and AsyncIO: A Comprehensive Guide for Beginners",
-      "track": "Python Internals & Ecosystem",
+      "track": "Python Internals & Ecosystem (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners"
     },
@@ -358,7 +358,7 @@
       "speakers": [],
       "start": "2024-07-08T13:45:00+02:00",
       "title": "Django Girls Workshop",
-      "track": "Web technologies",
+      "track": "Web technologies (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
     },
@@ -372,7 +372,7 @@
       "slug": "reinventing-the-itertools-wheel-for-fun-and-profit",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/BLNV7P_bI8IutA.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/BLNV7P_bI8IutA.jpg",
           "code": "BLNV7P",
           "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
           "slug": "rodrigo-girao-serrao",
@@ -381,7 +381,7 @@
       ],
       "start": "2024-07-08T13:45:00+02:00",
       "title": "Reinventing the `itertools` wheel for fun and profit",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "Join Rodrigo \ud83d\udc0d\ud83d\ude80 in reinventing the wheel by implementing `itertools` \u2692\ufe0f in Python and learn more about Python along the way!",
       "website_url": "https://ep2024.europython.eu/session/reinventing-the-itertools-wheel-for-fun-and-profit"
     },
@@ -395,7 +395,7 @@
       "slug": "from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/UBESRJ_kx1iIYS.png",
+          "avatar": "https://programme.europython.eu/media/avatars/UBESRJ_kx1iIYS.png",
           "code": "UBESRJ",
           "name": "Juan Luis Cano Rodr\u00edguez",
           "slug": "juan-luis-cano-rodriguez",
@@ -404,7 +404,7 @@
       ],
       "start": "2024-07-08T13:45:00+02:00",
       "title": "From zero to MLOps: An open source stack to fight spaghetti ML",
-      "track": "PyData: Data Engineering",
+      "track": "PyData: Data Engineering (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml"
     },
@@ -418,7 +418,7 @@
       "slug": "pre-commit-to-better-code",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/9WJJPL_BtRuJ8z.jpeg",
+          "avatar": "https://programme.europython.eu/media/avatars/9WJJPL_BtRuJ8z.jpeg",
           "code": "9WJJPL",
           "name": "Stefanie Molin",
           "slug": "stefanie-molin",
@@ -427,7 +427,7 @@
       ],
       "start": "2024-07-08T13:45:00+02:00",
       "title": "(Pre-)Commit to Better Code",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "Want to write cleaner code with less effort? Pre-commit hooks make it easy to improve and maintain code quality. In this workshop, you will learn how to set them up on your own repos + how to build your own hooks.",
       "website_url": "https://ep2024.europython.eu/session/pre-commit-to-better-code"
     },
@@ -441,7 +441,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
@@ -478,14 +478,14 @@
       "slug": "parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/CHHWUG_piXbGly.JPG",
+          "avatar": "https://programme.europython.eu/media/avatars/CHHWUG_2wXI35k.JPG",
           "code": "CHHWUG",
           "name": "Neeraj Pandey",
           "slug": "neeraj-pandey",
           "website_url": "https://ep2024.europython.eu/speaker/neeraj-pandey"
         },
         {
-          "avatar": "https://pretalx.com/media/avatars/DSKWCM_U1Qmyus.JPG",
+          "avatar": "https://programme.europython.eu/media/avatars/DSKWCM_U1Qmyus.JPG",
           "code": "DSKWCM",
           "name": "Manoj Pandey",
           "slug": "manoj-pandey",
@@ -494,7 +494,7 @@
       ],
       "start": "2024-07-08T15:30:00+02:00",
       "title": "Parallelism, Concurrency, and AsyncIO: A Comprehensive Guide for Beginners",
-      "track": "Python Internals & Ecosystem",
+      "track": "Python Internals & Ecosystem (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/parallelism-concurrency-and-asyncio-a-comprehensive-guide-for-beginners"
     },
@@ -509,7 +509,7 @@
       "speakers": [],
       "start": "2024-07-08T15:30:00+02:00",
       "title": "Django Girls Workshop",
-      "track": "Web technologies",
+      "track": "Web technologies (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/django-girls-workshop"
     },
@@ -523,7 +523,7 @@
       "slug": "reinventing-the-itertools-wheel-for-fun-and-profit",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/BLNV7P_bI8IutA.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/BLNV7P_bI8IutA.jpg",
           "code": "BLNV7P",
           "name": "Rodrigo Gir\u00e3o Serr\u00e3o",
           "slug": "rodrigo-girao-serrao",
@@ -532,7 +532,7 @@
       ],
       "start": "2024-07-08T15:30:00+02:00",
       "title": "Reinventing the `itertools` wheel for fun and profit",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "Join Rodrigo \ud83d\udc0d\ud83d\ude80 in reinventing the wheel by implementing `itertools` \u2692\ufe0f in Python and learn more about Python along the way!",
       "website_url": "https://ep2024.europython.eu/session/reinventing-the-itertools-wheel-for-fun-and-profit"
     },
@@ -546,7 +546,7 @@
       "slug": "from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/UBESRJ_kx1iIYS.png",
+          "avatar": "https://programme.europython.eu/media/avatars/UBESRJ_kx1iIYS.png",
           "code": "UBESRJ",
           "name": "Juan Luis Cano Rodr\u00edguez",
           "slug": "juan-luis-cano-rodriguez",
@@ -555,7 +555,7 @@
       ],
       "start": "2024-07-08T15:30:00+02:00",
       "title": "From zero to MLOps: An open source stack to fight spaghetti ML",
-      "track": "PyData: Data Engineering",
+      "track": "PyData: Data Engineering (2024)",
       "tweet": "",
       "website_url": "https://ep2024.europython.eu/session/from-zero-to-mlops-an-open-source-stack-to-fight-spaghetti-ml"
     },
@@ -569,7 +569,7 @@
       "slug": "pre-commit-to-better-code",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/9WJJPL_BtRuJ8z.jpeg",
+          "avatar": "https://programme.europython.eu/media/avatars/9WJJPL_BtRuJ8z.jpeg",
           "code": "9WJJPL",
           "name": "Stefanie Molin",
           "slug": "stefanie-molin",
@@ -578,7 +578,7 @@
       ],
       "start": "2024-07-08T15:30:00+02:00",
       "title": "(Pre-)Commit to Better Code",
-      "track": "Python Libraries & Tooling",
+      "track": "Python Libraries & Tooling (2024)",
       "tweet": "Want to write cleaner code with less effort? Pre-commit hooks make it easy to improve and maintain code quality. In this workshop, you will learn how to set them up on your own repos + how to build your own hooks.",
       "website_url": "https://ep2024.europython.eu/session/pre-commit-to-better-code"
     },
@@ -592,7 +592,7 @@
       "slug": "c-api-summit",
       "speakers": [
         {
-          "avatar": "https://pretalx.com/media/avatars/QMAPYZ_ptOqadh.jpg",
+          "avatar": "https://programme.europython.eu/media/avatars/QMAPYZ_ptOqadh.jpg",
           "code": "QMAPYZ",
           "name": "Antonio Cuni",
           "slug": "antonio-cuni",
