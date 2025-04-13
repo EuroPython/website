@@ -38,7 +38,7 @@ function getTwitterUsername(url: string): string | undefined {
   return (username ?? url).startsWith("@") ? username : `@${username}`;
 }
 
-// Get @username from Twitter URL
+// Get @username from BlueSky URL
 function getBlueskyUsername(url: string): string | undefined {
   const username = url.split("/").pop();
   return (username ?? url).startsWith("@") ? username : `@${username}`;
