@@ -38,10 +38,15 @@ function getTwitterUsername(url: string): string | undefined {
   return (username ?? url).startsWith("@") ? username : `@${username}`;
 }
 
-// Get @username from BlueSky URL
 function getBlueskyUsername(url: string): string | undefined {
-  const username = url.split("/").pop();
-  return (username ?? url).startsWith("@") ? username : `@${username}`;
+  const username = url.split("/").pop()?.replace(/^@/, "");
+  return username ? `@${username}` : undefined;
+}
+
+function getBlueskyProfileLink(username: string): string {
+  // Remove any leading @ if present
+  const cleanUsername = username.replace(/^@/, "");
+  return `https://bsky.app/profile/${cleanUsername}`;
 }
 
 // Get @username@instance.tld from Mastodon URL
@@ -208,7 +213,7 @@ function getGitHosting(url: string): string | undefined {
                 <dt class="font-bold">Bluesky</dt>
                 <dd>
                   <a
-                    href={entry.data.bluesky_url}
+                    href={getBlueskyProfileLink(getBlueskyUsername(entry.data.bluesky_url) as string)}
                     class="text-primary underline hover:text-primary-hover"
                   >
                     {getBlueskyUsername(entry.data.bluesky_url)}
