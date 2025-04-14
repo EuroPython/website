@@ -8,6 +8,10 @@
           "path": "/sessions"
         },
         {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "Tracks",
           "path": "/programme/tracks"
         },
@@ -18,10 +22,6 @@
         {
           "name": "Community Voting",
           "path": "/programme/voting"
-        },
-        {
-          "name": "List of Speakers",
-          "path": "/speakers"
         },
         {
           "name": "Speaker Mentorship",

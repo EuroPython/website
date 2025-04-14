@@ -61,6 +61,7 @@ export default defineConfig({
     "/sponsor/": "/sponsorship/sponsor/",
     "/voting/": "/programme/voting/",
     "/wasm-summit/": "/programme/wasm-summit/",
+    "/programme/sessions/": "/sessions/",
   },
   integrations: [
     preload(),

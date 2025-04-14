@@ -74,7 +74,7 @@ const nextSessionsOrdered = sameRoomNextSession
       <dd class="capitalize">{entry.data.session_type}</dd>
       <dt class="font-bold">Level:</dt>
       <dd class="capitalize">{entry.data.level}</dd>
-      {
+      <!-- {
         entry.data.room && (
           <>
             <dt class="font-bold">Room:</dt>
@@ -95,7 +95,7 @@ const nextSessionsOrdered = sameRoomNextSession
             </dd>
           </>
         )
-      }
+      } -->
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
@@ -185,7 +185,7 @@ const nextSessionsOrdered = sameRoomNextSession
         )
       }
 
-      {
+      <!-- {
         (parallelSessions?.length ?? 0) > 0 ||
         (nextSessionsInAllRooms?.length ?? 0) > 0 ? (
           <>
@@ -232,7 +232,7 @@ const nextSessionsOrdered = sameRoomNextSession
             </div>
           </>
         ) : null
-      }
+      } -->
     </footer>
   </article>
 </Layout>

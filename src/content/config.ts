@@ -109,7 +109,7 @@ const speakers = defineCollection({
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
-    gitx: z.string().nullable(),
+    gitx_url: z.string().url().nullable(),
     linkedin_url: z.string().url().nullable(),
     mastodon_url: z.string().url().nullable(),
     bluesky_url: z.string().url().nullable(),
