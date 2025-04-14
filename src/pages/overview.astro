@@ -1,0 +1,218 @@
+---
+import { getCollection } from "astro:content";
+import Logo from '@components/hero/hero2.svg'
+
+import Layout from "@layouts/HomePageLayout.astro";
+
+let deadlines = await getCollection("deadlines");
+deadlines = deadlines
+  .sort((a, b) => a.slug.localeCompare(b.slug))
+  .reverse()
+  .slice(0, 3);
+---
+
+<Layout
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
+>
+  <div class="events-container">
+    <div class="header">
+      <div class="logo-container">
+        <Logo class="w-full h-full"/>
+      </div>
+    </div>
+
+    <div class="decorative-border"></div>
+
+    <div class="events-grid">
+      <div class="event-category">
+        <h3>Talks, Tutorials & Posters</h3>
+        <ul class="event-list">
+          <li>119 talks</li>
+          <li>6 keynotes</li>
+          <li>16 tutorials</li>
+          <li>10 posters</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Summits</h3>
+        <ul class="event-list">
+          <li>C API summit</li>
+          <li>WASM summit</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>PyLadies Sessions</h3>
+        <ul class="event-list">
+          <li>#IAmRemarkable workshop</li>
+          <li>Meet & Greet with PyLadies</li>
+          <li>Modern self-defense</li>
+          <li>PyLadies Lunch</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Beginner Tutorials</h3>
+        <ul class="event-list">
+          <li>Django Girls</li>
+          <li>Humble Data</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Community Organizers' Sessions</h3>
+        <ul class="event-list">
+          <li>Django Software Foundation</li>
+          <li>Python Events Organizers</li>
+          <li>EuroPython Society</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Social Events</h3>
+        <ul class="event-list">
+          <li>Speakers' dinner</li>
+          <li>Main social event</li>
+          <li>Boat cruise</li>
+          <li>PyBurger</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Sprints</h3>
+        <ul class="event-list">
+          <li>10+ open-source projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="decorative-border"></div>
+  </div>
+</Layout>
+
+<style>
+    :root {
+      --primary-blue: #3A4CA3;
+      --accent-pink: #EE9BA8;
+      --bg-cream: #F7F1E6;
+      --text-dark: #333;
+    }
+
+    .events-container {
+      /*max-width: 1000px;*/
+      margin: 0 auto;
+      padding: 2rem;
+      /*background-color: var(--bg-cream);*/
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      background-color: var(--primary-blue);
+      border-radius: 12px;
+      display: grid;
+      grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+      padding: 10px;
+    }
+
+    .logo-item {
+      border-radius: 50%;
+      margin: 2px;
+    }
+
+    .logo-text {
+      color: var(--primary-blue);
+      font-weight: bold;
+    }
+
+    .logo-text h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      line-height: 1.1;
+    }
+
+    .logo-text .dates {
+      font-size: 1rem;
+    }
+
+    .page-title {
+      color: var(--primary-blue);
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .event-category {
+      margin-bottom: 2rem;
+    }
+
+    .event-category h3 {
+      color: var(--primary-blue);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 4px solid var(--accent-pink);
+      padding-bottom: 5px;
+    }
+
+    .event-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .event-list li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .event-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-pink);
+      font-weight: bold;
+    }
+
+    .decorative-border {
+      height: 15px;
+      background-image: linear-gradient(90deg, #FF6B6B 10%, #FFD166 10%, #FFD166 20%, #06D6A0 20%, #06D6A0 30%, #118AB2 30%, #118AB2 40%, #073B4C 40%, #073B4C 50%, #FF6B6B 50%, #FF6B6B 60%, #FFD166 60%, #FFD166 70%, #06D6A0 70%, #06D6A0 80%, #118AB2 80%, #118AB2 90%, #073B4C 90%);
+      margin: 20px 0;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo-container {
+        margin-bottom: 1rem;
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+</style>
