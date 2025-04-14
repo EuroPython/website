@@ -8,6 +8,10 @@
           "path": "/sessions"
         },
         {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "Tracks",
           "path": "/programme/tracks"
         },

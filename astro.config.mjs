@@ -20,6 +20,7 @@ export default defineConfig({
     },
     resolve: {
       alias: {
+        "@utils": path.resolve("./src/utils"),
         "@data": path.resolve("./src/data"),
         "@components": path.resolve("./src/components"),
         "@sections": path.resolve("./src/components/sections"),
@@ -60,6 +61,7 @@ export default defineConfig({
     "/sponsor/": "/sponsorship/sponsor/",
     "/voting/": "/programme/voting/",
     "/wasm-summit/": "/programme/wasm-summit/",
+    "/programme/sessions/": "/sessions/",
   },
   integrations: [
     preload(),

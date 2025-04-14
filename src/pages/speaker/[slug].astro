@@ -38,10 +38,15 @@ function getTwitterUsername(url: string): string | undefined {
   return (username ?? url).startsWith("@") ? username : `@${username}`;
 }
 
-// Get @username from Twitter URL
 function getBlueskyUsername(url: string): string | undefined {
-  const username = url.split("/").pop();
-  return (username ?? url).startsWith("@") ? username : `@${username}`;
+  const username = url.split("/").pop()?.replace(/^@/, "");
+  return username ? `@${username}` : undefined;
+}
+
+function getBlueskyProfileLink(username: string): string {
+  // Remove any leading @ if present
+  const cleanUsername = username.replace(/^@/, "");
+  return `https://bsky.app/profile/${cleanUsername}`;
 }
 
 // Get @username@instance.tld from Mastodon URL
@@ -53,7 +58,14 @@ function getMastodonUsername(url: string): string | null {
 // Get in/username from LinkedIn URL
 function getLinkedInUsername(url: string): string | null {
   const match = url.match(/https?:\/\/([^\/]+)\/in\/([^\/]+)(\/|\?|$)/);
-  return match ? `in/${match[2]}` : null;
+  if (match) {
+    try {
+      return `in/${decodeURIComponent(match[2])}`;
+    } catch {
+      return `in/${match[2]}`;
+    }
+  }
+  return null;
 }
 
 // Get Git hosting service from URL
@@ -80,7 +92,7 @@ function getGitHosting(url: string): string | undefined {
                   <div class="flex items-start">
                     <div class="border-4 border-white rounded-lg shadow-lg inline-block mb-10">
           <Image
-          src={entry.data.avatar}
+            src={entry.data.avatar}
             alt={entry.data.name}
             height={400}
             width={600}
@@ -108,7 +120,7 @@ function getGitHosting(url: string): string | undefined {
     {
       entry.data.affiliation ||
       entry.data.homepage ||
-      entry.data.gitx ||
+      entry.data.gitx_url ||
       entry.data.linkedin_url ||
       entry.data.mastodon_url ||
       entry.data.twitter_url ? (
@@ -142,22 +154,18 @@ function getGitHosting(url: string): string | undefined {
               </>
             )}
 
-            {entry.data.gitx && (
+            {entry.data.gitx_url && (
               <>
                 <dt class="font-bold">
-                  {getGitHosting(entry.data.gitx) ?? "Git"}
+                  {getGitHosting(entry.data.gitx_url) ?? "Git"}
                 </dt>
                 <dd>
-                  {isUrl(entry.data.gitx) ? (
-                    <a
-                      href={ensureHttps(entry.data.gitx)}
-                      class="text-primary underline hover:text-primary-hover"
-                    >
-                      {entry.data.gitx}
-                    </a>
-                  ) : (
-                    <span>{entry.data.gitx}</span>
-                  )}
+                  <a
+                    href={ensureHttps(entry.data.gitx_url)}
+                    class="text-primary underline hover:text-primary-hover"
+                  >
+                    {entry.data.gitx_url}
+                  </a>
                 </dd>
               </>
             )}
@@ -208,7 +216,7 @@ function getGitHosting(url: string): string | undefined {
                 <dt class="font-bold">Bluesky</dt>
                 <dd>
                   <a
-                    href={entry.data.bluesky_url}
+                    href={getBlueskyProfileLink(getBlueskyUsername(entry.data.bluesky_url) as string)}
                     class="text-primary underline hover:text-primary-hover"
                   >
                     {getBlueskyUsername(entry.data.bluesky_url)}
