@@ -85,7 +85,7 @@ const placeholders = Math.max(0, 5 - keynoters.length);
     {
       keynoters
         .sort((a, b) => a.data.order - b.data.order)
-        .map((keynoter, index) => (
+        .map((keynoter, _index) => (
           <Keynoter
             name={keynoter.data.name}
             slug={keynoter.slug}
@@ -95,7 +95,6 @@ const placeholders = Math.max(0, 5 - keynoters.length);
             order={keynoter.data.order}
             class:list={[
               "w-full sm:w-[calc(50%-1rem)] md:w-[calc(30%-1rem)]",
-              { "md:ml-[10%]": index === 0 },
             ]}
           />
         ))
