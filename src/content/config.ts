@@ -1,4 +1,8 @@
 import { defineCollection, reference, z } from "astro:content";
+import { loadData } from "../utils/dataLoader";
+
+const mode = import.meta.env.MODE;
+console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
 
 const tiers = [
   "Keystone",
@@ -54,27 +58,82 @@ const keynoters = defineCollection({
     }),
 });
 
+// Shared data fetching function
+async function getCollectionsData() {
+  const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
+  const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
+
+  // Create indexed versions for efficient lookups
+  const speakersById = Object.entries(speakersData).reduce(
+    (acc, [id, speaker]: [string, any]) => {
+      acc[id] = { id, ...speaker };
+      return acc;
+    },
+    {} as Record<string, any>
+  );
+
+  const sessionsById = Object.entries(sessionsData).reduce(
+    (acc, [id, session]: [string, any]) => {
+      acc[id] = { id, ...session };
+      return acc;
+    },
+    {} as Record<string, any>
+  );
+
+  return {
+    speakersData,
+    sessionsData,
+    speakersById,
+    sessionsById,
+  };
+}
+
 const speakers = defineCollection({
-  type: "content",
+  loader: async (): Promise<any> => {
+    const { speakersData, sessionsById } = await getCollectionsData();
+
+    return Object.values(speakersData).map((speaker: any) => ({
+      id: speaker.slug,
+      ...speaker,
+      submissions: (speaker.submissions || [])
+        .filter((sessionId: string) => sessionId in sessionsById)
+        .map((sessionId: string) => sessionsById[sessionId].slug),
+    }));
+  },
   schema: z.object({
     code: z.string(),
     name: z.string(),
+    slug: z.string(),
     avatar: z.string(),
+    biography: z.string().nullable(),
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
-    gitx: z.string().nullable(),
+    gitx_url: z.string().url().nullable(),
     linkedin_url: z.string().url().nullable(),
     mastodon_url: z.string().url().nullable(),
+    bluesky_url: z.string().url().nullable(),
     twitter_url: z.string().url().nullable(),
   }),
 });
 
 const sessions = defineCollection({
-  type: "content",
+  loader: async (): Promise<any> => {
+    const { sessionsData, speakersById } = await getCollectionsData();
+
+    return Object.values(sessionsData).map((session: any) => ({
+      id: session.slug,
+      ...session,
+      speakers: (session.speakers || [])
+        .filter((speakerId: string) => speakerId in speakersById)
+        .map((speakerId: string) => speakersById[speakerId].slug),
+    }));
+  },
   schema: z.object({
     code: z.string(),
     title: z.string(),
+    slug: z.string(),
+    abstract: z.string().nullable(),
     speakers: z.array(reference("speakers")),
     session_type: z.string(),
     track: z.string().nullable(),
@@ -85,7 +144,7 @@ const sessions = defineCollection({
       .nullable(),
     duration: z.string(),
     level: z.enum(["beginner", "intermediate", "advanced"]),
-    delivery: z.enum(["in-person", "remote"]),
+    delivery: z.enum(["in-person", "remote", ""]),
     room: z.string().nullable(),
     start: z.string().nullable(),
     end: z.string().nullable(),
