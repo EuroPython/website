@@ -128,6 +128,7 @@ dmypy.json
 .pyre/
 
 .vscode/
+.idea/
 out/
 .next/
 .DS_Store
@@ -138,3 +139,6 @@ storybook-static/
 # Sentry Auth Token
 .sentryclirc
 .astro
+
+# EuroPython website
+src/content/days

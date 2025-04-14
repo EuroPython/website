@@ -10,6 +10,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
+import preload from "astro-preload";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +20,7 @@ export default defineConfig({
     },
     resolve: {
       alias: {
+        "@utils": path.resolve("./src/utils"),
         "@data": path.resolve("./src/data"),
         "@components": path.resolve("./src/components"),
         "@sections": path.resolve("./src/components/sections"),
@@ -59,9 +61,10 @@ export default defineConfig({
     "/sponsor/": "/sponsorship/sponsor/",
     "/voting/": "/programme/voting/",
     "/wasm-summit/": "/programme/wasm-summit/",
-    "/sessions/": "/programme/sessions/",
+    "/programme/sessions/": "/sessions/",
   },
   integrations: [
+    preload(),
     mdx(),
     sitemap(),
     react(),
@@ -75,6 +78,10 @@ export default defineConfig({
   output: "static",
   build: {
     minify: true,
+  },
+  image: {
+    remotePatterns: [{ protocol: "https" }],
+    domains: ["programme.europython.eu", "placehold.co"],
   },
   experimental: {
     svg: true,
