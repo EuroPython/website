@@ -53,11 +53,6 @@ export default defineConfig({
   redirects: {
     "/planning/": "https://forms.gle/riw6CvML8ck94A4V9",
     "/reviewers/": "https://forms.gle/4GTJjwZ1nHBGetM18",
-    "/programme/cfp/": "/cfp/",
-    "/programme/c-api-summit/": "/c-api-summit/",
-    "/programme/rust-summit/": "/rust-summit/",
-    "/programme/voting/": "/voting/",
-    "/programme/wasm-summit/": "/wasm-summit/",
     "/sessions/": "/sessions/",
     "/sponsor/": "/sponsorship/sponsor/",
   },
