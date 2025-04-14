@@ -1,0 +1,46 @@
+---
+import Button from '@ui/Button.astro';
+const { id = 'modal', open = false } = Astro.props;
+---
+
+<div
+  id={id}
+  class={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${
+    open ? 'opacity-100 visible bg-black/50' : 'opacity-0 invisible'
+  }`}
+  data-modal-wrapper
+>
+  <div
+    class="relative bg-white dark:bg-gray-800 p-6 lg:rounded-2xl lg:shadow-xl lg:max-w-4xl lg:mx-4 h-full lg:h-[80vh] w-full lg:w-[70vw] max-h-full overflow-y-auto"
+  >
+    <Button
+      id="search-close"
+      clear
+      icon="close"
+      iconSize="fa-xl"
+      data-close-modal
+      class="w-[3em] h-[3em] absolute top-4 right-4 text-primary hover:text-black "
+    />
+    <slot />
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-open-modal]').forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = document.getElementById(button.dataset.openModal);
+        modal?.classList.remove('opacity-0', 'invisible');
+        modal?.classList.add('opacity-100', 'visible');
+      });
+    });
+
+    document.querySelectorAll('[data-close-modal]').forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = button.closest('[data-modal-wrapper]');
+        modal?.classList.remove('opacity-100', 'visible');
+        modal?.classList.add('opacity-0', 'invisible');
+      });
+    });
+  });
+</script>

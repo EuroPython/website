@@ -1,23 +1,13 @@
 ---
 import SearchComponent from "astro-pagefind/components/Search";
 import Button from "@ui/Button.astro";
+import Modal from "@components/Modal.astro";
 
 ---
 
-<div class="search-wrapper hidden" style="display: none;">
 
-  <div class="search-header flex items-center justify-between z-40 h-0 md:h-[85px] m-auto ">
-    <h2 class="text-black text-4xl ml-10 top-[46px] md:top-[85px]">Search<h2/>
-    <Button
-      id="search-close"
-      clear
-      icon="close"
-      iconSize="fa-xl"
-      class="w-[3em] h-[3em] top-[46px] md:top-[85px]"
-    />
-  </div>
-  <div class="modal__overlay"></div>
-
+<Modal id="modal-search">
+  <h2 class="text-xl font-bold mb-2 py-2">Search</h2>
   <SearchComponent
     id="search"
     className="pagefind-ui"
@@ -28,21 +18,24 @@ import Button from "@ui/Button.astro";
       },
     }}
   />
+  </div>
 </div>
+</Modal>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const searchWrapper = document.querySelector(".search-wrapper") as HTMLElement | null;
   const searchContainer = document.querySelector(".pagefind-ui") as HTMLElement | null;
   const searchInput = searchContainer?.querySelector("input") as HTMLInputElement | null;
-  const closeButton = document.querySelector("#search-close") as HTMLElement | null;
   const searchButton = document.getElementById("searchButton") as HTMLElement | null;
+  const openModal = document.querySelector('[data-open-modal="modal-search"]') as HTMLElement;
+  const closeButton = document.querySelector('#search-close') as HTMLElement | null;
 
   let selectedIndex = -1;
 
   function openSearch() {
-    if (searchWrapper) {
-      searchWrapper.style.display = "block";
+    console.log("open");
+    openModal.click();
       if (searchInput) {
         searchInput.value = "Tips";
         const inputEvent = new Event("input", { bubbles: true });
@@ -53,15 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 100);
         searchInput.focus();
       }
-    }
   }
 
-  function closeSearch() {
-    if (searchWrapper) {
-      searchWrapper.style.display = "none";
-      selectedIndex = -1;
-    }
-  }
+function closeSearch() {
+  closeButton?.click();
+}
 
   function updateSelection() {
     const results = searchContainer?.querySelectorAll(".pagefind-ui__result");
@@ -99,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (searchButton && searchWrapper) {
+  if (searchButton) {
     searchButton.addEventListener("click", openSearch);
   }
 
