@@ -20,7 +20,7 @@ const speakers = Astro.props.speakers
 
 {
   speakers.map((speaker, index) => (
-    <a href={`/speaker/${speaker.slug}`} class="inline">
+    <a href={`/speaker/${speaker.id}`} class="inline">
       {speaker.data.name}
       {index < speakers.length - 1 ? ", " : ""}
     </a>

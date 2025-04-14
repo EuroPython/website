@@ -53,6 +53,9 @@ importers:
       astro-pagefind:
         specifier: ^1.8.1
         version: 1.8.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
+      astro-preload:
+        specifier: ^1.1.2
+        version: 1.1.2
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -65,6 +68,12 @@ importers:
       hastscript:
         specifier: ^9.0.0
         version: 9.0.1
+      js-yaml:
+        specifier: ^4.1.0
+        version: 4.1.0
+      marked:
+        specifier: ^15.0.7
+        version: 15.0.7
       pagefind:
         specifier: ^1.3.0
         version: 1.3.0
@@ -93,6 +102,9 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
     devDependencies:
+      '@types/js-yaml':
+        specifier: ^4.0.9
+        version: 4.0.9
       prettier:
         specifier: ^3.4.2
         version: 3.5.3
@@ -1167,6 +1179,9 @@ packages:
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
+  '@types/js-yaml@4.0.9':
+    resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
+
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
 
@@ -1305,6 +1320,9 @@ packages:
     resolution: {integrity: sha512-Nfo1TdlEHdkXTiI0KpimLqX6awK3qWTil7IOJvk5Q8x+0VBTpIEp9QvGgoAxXDe3upAHLVsg4y7U1uUPm7GC9w==}
     peerDependencies:
       astro: ^2.0.4 || ^3 || ^4 || ^5
+
+  astro-preload@1.1.2:
+    resolution: {integrity: sha512-96UHdATRp/K8iVysylYu0V5QMD3FXBqqj2+cUwHOmc0/+lstY5Xnb+A5UgmecbrfHpwMws5SQaOYZ1c63cQu/A==}
 
   astro@5.5.2:
     resolution: {integrity: sha512-SOTJxB8mqxe/KEYEJiLIot0YULiCffyfTEclwmdeaASitDJ7eLM/KYrJ9sx3U5hq9GVI17Z4Y0P/1T2aQ0ZN3A==}
@@ -1883,6 +1901,11 @@ packages:
 
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
+
+  marked@15.0.7:
+    resolution: {integrity: sha512-dgLIeKGLx5FwziAnsk4ONoGwHwGPJzselimvlVskE9XLN4Orv9u2VA3GWw/lYUqjfA0rUT/6fqKwfZJapP9BEg==}
+    engines: {node: '>= 18'}
+    hasBin: true
 
   mdast-util-definitions@6.0.0:
     resolution: {integrity: sha512-scTllyX6pnYNZH/AIp/0ePz6s4cZtARxImwoPJ7kS42n+MnVsI4XbnG6d4ibehRIldYMWM2LD7ImQblVhUejVQ==}
@@ -3967,6 +3990,8 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
+  '@types/js-yaml@4.0.9': {}
+
   '@types/mdast@4.0.4':
     dependencies:
       '@types/unist': 3.0.3
@@ -4118,6 +4143,8 @@ snapshots:
       astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)
       pagefind: 1.3.0
       sirv: 3.0.1
+
+  astro-preload@1.1.2: {}
 
   astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0):
     dependencies:
@@ -4862,6 +4889,8 @@ snapshots:
   markdown-extensions@2.0.0: {}
 
   markdown-table@3.0.4: {}
+
+  marked@15.0.7: {}
 
   mdast-util-definitions@6.0.0:
     dependencies:
