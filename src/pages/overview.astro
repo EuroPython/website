@@ -1,25 +1,15 @@
 ---
-import { getCollection } from "astro:content";
-import Logo from '@components/hero/hero2.svg'
 
-import Layout from "@layouts/HomePageLayout.astro";
+import Layout from "../layouts/Layout.astro";
 
-let deadlines = await getCollection("deadlines");
-deadlines = deadlines
-  .sort((a, b) => a.slug.localeCompare(b.slug))
-  .reverse()
-  .slice(0, 3);
 ---
 
 <Layout
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-  <div class="events-container">
+  <div class="events-container w-full">
     <div class="header">
-      <div class="logo-container">
-        <Logo class="w-full h-full"/>
-      </div>
     </div>
 
     <div class="decorative-border"></div>
@@ -114,42 +104,6 @@ deadlines = deadlines
       margin-bottom: 2rem;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo {
-      width: 100px;
-      height: 100px;
-      background-color: var(--primary-blue);
-      border-radius: 12px;
-      display: grid;
-      grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-      padding: 10px;
-    }
-
-    .logo-item {
-      border-radius: 50%;
-      margin: 2px;
-    }
-
-    .logo-text {
-      color: var(--primary-blue);
-      font-weight: bold;
-    }
-
-    .logo-text h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      line-height: 1.1;
-    }
-
-    .logo-text .dates {
-      font-size: 1rem;
-    }
-
     .page-title {
       color: var(--primary-blue);
       font-size: 1.8rem;
@@ -195,8 +149,9 @@ deadlines = deadlines
     }
 
     .decorative-border {
-      height: 15px;
-      background-image: linear-gradient(90deg, #FF6B6B 10%, #FFD166 10%, #FFD166 20%, #06D6A0 20%, #06D6A0 30%, #118AB2 30%, #118AB2 40%, #073B4C 40%, #073B4C 50%, #FF6B6B 50%, #FF6B6B 60%, #FFD166 60%, #FFD166 70%, #06D6A0 70%, #06D6A0 80%, #118AB2 80%, #118AB2 90%, #073B4C 90%);
+      height: 32px;
+      background-image: url('/hr.png');
+
       margin: 20px 0;
       border-radius: 3px;
     }
