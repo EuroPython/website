@@ -22,6 +22,7 @@ import Icon from "@ui/Icon.astro"
     <div class="grid gap-2 w-[200px]">
       <Button>Primary Button</Button>
       <Button secondary>Secondary Button</Button>
+      <Button clear>Clear Button</Button>
       <Button outline>Outline Button</Button>
       <Button disabled>Disabled Button</Button>
       <Button url="/about">Internal Link</Button>
@@ -42,6 +43,10 @@ import Icon from "@ui/Icon.astro"
       <Button icon="arrow-right" iconRight={true} >Next</Button>
       <Button icon="arrow-left" iconRight={false} >Prev</Button>
       <Button icon="clock" iconRight={false} size="fa-2xl">Prev</Button>
+
+      <Button icon="arrow-right" iconRight={true} iconSize="fa-3xl">Next</Button>
+      <Button icon="arrow-left" iconRight={false} iconSize="fa-xl">Prev</Button>
+      <Button icon="clock" iconRight={false} iconSize="fa-2xl">Prev</Button>
 
     </div>
 </section>
