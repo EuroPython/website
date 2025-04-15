@@ -10,6 +10,7 @@ jobs:
     env:
       PREVIEW_HOSTNAME: ep-preview.click
       GITHUB_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      GITHUB_COMMIT_HASH: ${{ github.sha }}
 
     steps:
       - name: Checkout
@@ -41,6 +42,7 @@ jobs:
         run:
           make build PREVIEW=true
           SITE_URL="https://${BRANCH_NAME}.ep-preview.click"
+          GIT_VERSION="${GITHUB_COMMIT_HASH}"
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
