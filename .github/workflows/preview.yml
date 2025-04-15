@@ -10,7 +10,7 @@ jobs:
     env:
       PREVIEW_HOSTNAME: ep-preview.click
       GITHUB_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-      GITHUB_COMMIT_HASH: ${{ github.sha }}
+      GITHUB_COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
 
     steps:
       - name: Checkout
