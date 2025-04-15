@@ -20,6 +20,6 @@ build:
   commands:
     - npm install -g pnpm@latest-10
     - make install
-    - make build PREVIEW=true
+    - make build PREVIEW=true SITE_URL=$READTHEDOCS_CANONICAL_URL
     - mkdir -p $READTHEDOCS_OUTPUT/html
     - cd dist && cp -r * $READTHEDOCS_OUTPUT/html
