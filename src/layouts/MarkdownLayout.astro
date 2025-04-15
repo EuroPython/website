@@ -1,0 +1,11 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import "../styles/markdown.css";
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <slot />
+</Layout>
