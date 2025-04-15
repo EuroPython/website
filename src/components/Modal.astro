@@ -1,17 +1,18 @@
 ---
 import Button from '@ui/Button.astro';
-const { id = 'modal', open = false } = Astro.props;
+const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
 ---
-
 <div
   id={id}
   class={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${
     open ? 'opacity-100 visible bg-black/50' : 'opacity-0 invisible'
   }`}
   data-modal-wrapper
+  data-close-on-outside-click={closeOnOutsideClick.toString()}
 >
   <div
     class="relative bg-white dark:bg-gray-800 p-6 lg:rounded-2xl lg:shadow-xl lg:max-w-4xl lg:mx-4 h-full lg:h-[80vh] w-full lg:w-[70vw] max-h-full overflow-y-auto"
+    data-modal-content
   >
     <Button
       id="search-close"
@@ -24,9 +25,9 @@ const { id = 'modal', open = false } = Astro.props;
     <slot />
   </div>
 </div>
-
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
+    // Open modal buttons
     document.querySelectorAll('[data-open-modal]').forEach(button => {
       button.addEventListener('click', () => {
         const modal = document.getElementById(button.dataset.openModal);
@@ -35,12 +36,28 @@ const { id = 'modal', open = false } = Astro.props;
       });
     });
 
+    // Close modal buttons
     document.querySelectorAll('[data-close-modal]').forEach(button => {
       button.addEventListener('click', () => {
         const modal = button.closest('[data-modal-wrapper]');
         modal?.classList.remove('opacity-100', 'visible');
         modal?.classList.add('opacity-0', 'invisible');
       });
+    });
+
+    // Close when clicking outside the modal content - only if enabled
+    document.querySelectorAll('[data-modal-wrapper]').forEach(modal => {
+      const closeOnOutsideClick = modal.dataset.closeOnOutsideClick === 'true';
+
+      if (closeOnOutsideClick) {
+        modal.addEventListener('click', (event) => {
+          // Check if the click was on the wrapper but not on the content
+          if (event.target === modal) {
+            modal.classList.remove('opacity-100', 'visible');
+            modal.classList.add('opacity-0', 'invisible');
+          }
+        });
+      }
     });
   });
 </script>
