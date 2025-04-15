@@ -3,7 +3,7 @@ import { getEntries } from "astro:content";
 
 interface Props {
   speakers: Array<{
-    slug: string;
+    id: string;
     collection: "speakers";
   }>;
 }
@@ -13,7 +13,7 @@ const { speakers: speakersEntries } = Astro.props;
 const speakers = await getEntries(
   speakersEntries.map((entry) => ({
     collection: entry.collection,
-    id: entry.slug,
+    id: entry.id,
   })),
 );
 ---
@@ -21,7 +21,7 @@ const speakers = await getEntries(
 {
   speakers.map((speaker, index) => (
     <span class="inline">
-      <a href={`/speaker/${speaker.slug}`} class="underline">
+      <a href={`/speaker/${speaker.id}`} class="underline">
         {speaker.data.name}
       </a>
       {index < speakers.length - 1 ? ", " : ""}
