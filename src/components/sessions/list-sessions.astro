@@ -8,15 +8,16 @@ type Session = {
   data: {
     title: string;
     speakers: Array<{
+      id: string;
       collection: "speakers";
-      slug: string;
     }>;
     session_type: string;
     track: string;
     level: string;
   };
-  slug: string;
+  id: string;
 };
+
 ---
 
 <ol class="sessions">
@@ -30,7 +31,7 @@ type Session = {
       >
         <Prose>
           <h4>
-            <a href={`/session/${session.slug}`} class="underline">
+            <a href={`/session/${session.id}`} class="underline">
               {session.data.title}
             </a>
           </h4>
