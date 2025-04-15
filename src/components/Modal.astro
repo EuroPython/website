@@ -27,12 +27,53 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
 </div>
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
+    // Function to toggle body scroll
+    const toggleBodyScroll = (disable) => {
+      if (disable) {
+        // Save the current scroll position
+        const scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = '100%';
+        document.body.dataset.scrollPosition = scrollY.toString();
+      } else {
+        // Restore scroll position
+        const scrollY = parseInt(document.body.dataset.scrollPosition || '0');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollY);
+        delete document.body.dataset.scrollPosition;
+      }
+    };
+
+    // Function to open modal
+    const openModal = (modal) => {
+      if (modal) {
+        // Disable body scroll
+        toggleBodyScroll(true);
+        // Show modal
+        modal.classList.remove('opacity-0', 'invisible');
+        modal.classList.add('opacity-100', 'visible');
+      }
+    };
+
+    // Function to close modal
+    const closeModal = (modal) => {
+      if (modal) {
+        // Enable body scroll
+        toggleBodyScroll(false);
+        // Hide modal
+        modal.classList.remove('opacity-100', 'visible');
+        modal.classList.add('opacity-0', 'invisible');
+      }
+    };
+
     // Open modal buttons
     document.querySelectorAll('[data-open-modal]').forEach(button => {
       button.addEventListener('click', () => {
         const modal = document.getElementById(button.dataset.openModal);
-        modal?.classList.remove('opacity-0', 'invisible');
-        modal?.classList.add('opacity-100', 'visible');
+        openModal(modal);
       });
     });
 
@@ -40,8 +81,7 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
     document.querySelectorAll('[data-close-modal]').forEach(button => {
       button.addEventListener('click', () => {
         const modal = button.closest('[data-modal-wrapper]');
-        modal?.classList.remove('opacity-100', 'visible');
-        modal?.classList.add('opacity-0', 'invisible');
+        closeModal(modal);
       });
     });
 
@@ -53,10 +93,22 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
         modal.addEventListener('click', (event) => {
           // Check if the click was on the wrapper but not on the content
           if (event.target === modal) {
-            modal.classList.remove('opacity-100', 'visible');
-            modal.classList.add('opacity-0', 'invisible');
+            closeModal(modal);
           }
         });
+      }
+
+      // Initialize any modal that's set to open by default
+      if (modal.classList.contains('opacity-100') && modal.classList.contains('visible')) {
+        toggleBodyScroll(true);
+      }
+    });
+
+    // Handle escape key to close all modals
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        const visibleModals = document.querySelectorAll('[data-modal-wrapper].visible, [data-modal-wrapper].opacity-100');
+        visibleModals.forEach(modal => closeModal(modal));
       }
     });
   });
