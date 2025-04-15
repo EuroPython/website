@@ -6,6 +6,43 @@ import heroImage from "./conference_photo.jpg";
 import IconWithLabel from "./icon-label.astro";
 import Button from "@ui/Button.astro";
 
+import Carousel from "@components/Carousel.astro";
+
+// Define your carousel items
+const carouselItems = [
+  {
+    src: '/carousel/1.jpg',
+    alt: 'Logo 1',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/carousel/2.jpg',
+    alt: 'Logo 2',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/carousel/3.jpg',
+    alt: 'Logo 3',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/carousel/4.jpg',
+    alt: 'Logo 4',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/carousel/5.jpg',
+    alt: 'Logo 5',
+    width: 800,
+    height: 600
+  },
+];
+
+
 const action1 = "/tickets";
 const action2 = "/sponsorship/sponsor/";
 ---
@@ -124,11 +161,14 @@ const action2 = "/sponsorship/sponsor/";
     <div class="hero-image overflow-hidden -mt-12">
       <!-- Image with Rounded Corners and Shadow -->
       <div class="px-5 md:px-10 md:m-10">
-        <Image
-          src={heroImage}
-          alt="EuroPython 2025 Hero Image"
-          class="w-full max-w-5xl lg:max-w-full h-auto lg:h-full rounded-2xl shadow-xl"
-        />
+
+<Carousel items={carouselItems}
+  className="w-[1000px] h-[500px] flex items-center justify-center text-center m-auto"
+  autoplay={true}
+  interval={5000}
+  showControls={true}
+  showIndicators={true}
+/>
       </div>
     </div>
     <!-- 3x1 Grid with Conference Stats -->

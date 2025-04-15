@@ -1,0 +1,245 @@
+---
+interface CarouselItem {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}
+
+interface Props {
+  items: CarouselItem[];
+  autoplay?: boolean;
+  interval?: number; // milliseconds
+  showControls?: boolean;
+  showIndicators?: boolean;
+  className?: string;
+}
+
+// Default props
+const {
+  items = [],
+  autoplay = true,
+  interval = 3000,
+  showControls = true,
+  showIndicators = true,
+  className = "w-full h-full",
+} = Astro.props;
+
+// Generate unique ID for this carousel instance
+const carouselId = `carousel-${Math.random().toString(36).substring(2, 11)}`;
+---
+
+<div id={carouselId} class={`carousel relative ${className}`}>
+  <div class="carousel-container overflow-hidden relative w-full h-full  rounded-2xl shadow-xl">
+    <div class="carousel-track flex transition-transform duration-500 ease-in-out h-full">
+      {items.map((item, index) => (
+        <div class="carousel-item flex-shrink-0 w-full h-full flex items-center justify-center" data-index={index}>
+          <img
+            src={item.src}
+            alt={item.alt}
+            width={item.width}
+            height={item.height}
+            class="object-cover h-full block md:w-full"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {showControls && (
+    <div class="carousel-controls">
+      <button
+        class="carousel-control prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+        aria-label="Previous slide"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <button
+        class="carousel-control next absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+        aria-label="Next slide"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  )}
+
+ {showIndicators && (
+    <div class="carousel-indicators absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      {items.map((_, index) => (
+        <button
+          class="carousel-indicator px-1 focus:outline-none"
+          data-index={index}
+          aria-label={`Go to slide ${index + 1}`}
+        >
+          <i class="far fa-circle"></i>
+        </button>
+      ))}
+    </div>
+  )}
+</div>
+
+<script define:vars={{ carouselId, autoplay, interval }}>
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.getElementById(carouselId);
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.carousel-track');
+  const items = carousel.querySelectorAll('.carousel-item');
+  const prevBtn = carousel.querySelector('.carousel-control.prev');
+  const nextBtn = carousel.querySelector('.carousel-control.next');
+  const indicators = carousel.querySelectorAll('.carousel-indicator');
+
+  let currentIndex = 0;
+  const itemCount = items.length;
+  let autoplayInterval;
+
+  // Set the initial active state
+  updateActiveState();
+
+  // Set up autoplay
+  function startAutoplay() {
+    if (autoplay && itemCount > 1) {
+      autoplayInterval = setInterval(() => {
+        goToSlide((currentIndex + 1) % itemCount);
+      }, interval);
+    }
+  }
+
+  function stopAutoplay() {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+    }
+  }
+
+  // Go to specific slide
+  function goToSlide(index) {
+    currentIndex = index;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateActiveState();
+  }
+
+  // Update active states
+  function updateActiveState() {
+    // Update indicators
+    indicators.forEach((indicator, index) => {
+      const icon = indicator.querySelector('i');
+      if (index === currentIndex) {
+        // Change to solid circle for active indicator
+        icon.classList.remove('far', 'fa-circle');
+        icon.classList.add('fas', 'fa-circle');
+      } else {
+        // Change to outline circle for inactive indicators
+        icon.classList.remove('fas', 'fa-circle');
+        icon.classList.add('far', 'fa-circle');
+      }
+    });
+
+    // Update aria attributes on items
+    items.forEach((item, index) => {
+      if (index === currentIndex) {
+        item.setAttribute('aria-hidden', 'false');
+      } else {
+        item.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  // Event listeners
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      stopAutoplay();
+      const newIndex = (currentIndex - 1 + itemCount) % itemCount;
+      goToSlide(newIndex);
+      startAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      stopAutoplay();
+      const newIndex = (currentIndex + 1) % itemCount;
+      goToSlide(newIndex);
+      startAutoplay();
+    });
+  }
+
+  // Indicator clicks
+  indicators.forEach((indicator) => {
+    indicator.addEventListener('click', () => {
+      stopAutoplay();
+      const index = parseInt(indicator.getAttribute('data-index'));
+      goToSlide(index);
+      startAutoplay();
+    });
+  });
+
+  // Pause autoplay on hover or focus
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  carousel.addEventListener('focusin', stopAutoplay);
+  carousel.addEventListener('focusout', startAutoplay);
+
+  // Touch support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoplay();
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    startAutoplay();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const difference = touchStartX - touchEndX;
+    if (difference > 50) {
+      // Swipe left, go to next
+      const newIndex = (currentIndex + 1) % itemCount;
+      goToSlide(newIndex);
+    } else if (difference < -50) {
+      // Swipe right, go to previous
+      const newIndex = (currentIndex - 1 + itemCount) % itemCount;
+      goToSlide(newIndex);
+    }
+  }
+
+  // Start autoplay on load
+  startAutoplay();
+});
+</script>
+
+<style>
+  .carousel-track {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .carousel-control i {
+    font-size: 16px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  /* Indicator icon styling */
+  .carousel-indicator i {
+    font-size: 12px;
+    color: #333;
+  }
+
+  .carousel-indicator i.fas {
+    color: #EB714D;
+  }
+</style>
