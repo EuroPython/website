@@ -2,24 +2,51 @@
 import { getCollection, getEntries } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/prose/prose.astro";
+import { Image } from "astro:assets";
+import Markdown from "@ui/Markdown.astro";
+import Headline from "@ui/Headline.astro";
+
 
 export async function getStaticPaths() {
   const entries = await getCollection("speakers");
   return entries.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
 
 const sessions = await getEntries(entry.data.submissions);
+
+function isUrl(str: string): boolean {
+  str = ensureHttps(str);
+  const regex = /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)$/;
+  return regex.test(str);
+}
+
+function ensureHttps(str: string): string {
+  if (!/^https?:\/\//i.test(str)) {
+    return "https://" + str;
+  }
+  return str;
+}
 
 // Get @username from Twitter URL
 function getTwitterUsername(url: string): string | undefined {
   const username = url.split("/").pop();
   return (username ?? url).startsWith("@") ? username : `@${username}`;
+}
+
+function getBlueskyUsername(url: string): string | undefined {
+  const username = url.split("/").pop()?.replace(/^@/, "");
+  return username ? `@${username}` : undefined;
+}
+
+function getBlueskyProfileLink(username: string): string {
+  // Remove any leading @ if present
+  const cleanUsername = username.replace(/^@/, "");
+  return `https://bsky.app/profile/${cleanUsername}`;
 }
 
 // Get @username@instance.tld from Mastodon URL
@@ -31,7 +58,14 @@ function getMastodonUsername(url: string): string | null {
 // Get in/username from LinkedIn URL
 function getLinkedInUsername(url: string): string | null {
   const match = url.match(/https?:\/\/([^\/]+)\/in\/([^\/]+)(\/|\?|$)/);
-  return match ? `in/${match[2]}` : null;
+  if (match) {
+    try {
+      return `in/${decodeURIComponent(match[2])}`;
+    } catch {
+      return `in/${match[2]}`;
+    }
+  }
+  return null;
 }
 
 // Get Git hosting service from URL
@@ -46,50 +80,38 @@ function getGitHosting(url: string): string | undefined {
   }
   return undefined;
 }
-
-function isUrl(str: string): boolean {
-  str = ensureHttps(str);
-  const regex =
-    /^(https?:\/\/)?([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,6})([\/\w@.-]*)*(\?.*)?$/;
-  return regex.test(str);
-}
-
-function ensureHttps(str: string): string {
-  if (!/^https?:\/\//i.test(str)) {
-    return `https://${str}`;
-  }
-  return str;
-}
 ---
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
-  <article class="mx-auto pb-12 px-6">
-    <h1
-      class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-7xl"
-    >
-      {entry.data.name}
-    </h1>
+  <article class="pb-12 px-6">
+    <Headline as="h1" id="speaker" title={entry.data.name} />
 
+              <div class="md:grid grid-cols-[460px_1fr] md:gap-6">
     {
-      entry.data.avatar && (
-        <div>
-          <img
+      ( entry.data.avatar &&
+                  <div class="flex items-start">
+                    <div class="border-4 border-white rounded-lg shadow-lg inline-block mb-10">
+          <Image
             src={entry.data.avatar}
             alt={entry.data.name}
-            class="w-full max-w-sm mb-12"
+            height={400}
+            width={600}
+            class="w-full max-w-[240px] sm:max-w-[540px] xl:max-w-[720px]  max-h-[240px] sm:max-h-[440px] xl:max-h-[540px] object-scale-down"
           />
+        </div>
         </div>
       )
     }
+                </div>
 
     {
-      entry.body ? (
+      entry.data.biography ? (
         <>
           <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
             Biography
           </h2>
           <Prose>
-            <Content />
+            <Markdown content={entry.data.biography} />
           </Prose>
         </>
       ) : null
@@ -98,7 +120,7 @@ function ensureHttps(str: string): string {
     {
       entry.data.affiliation ||
       entry.data.homepage ||
-      entry.data.gitx ||
+      entry.data.gitx_url ||
       entry.data.linkedin_url ||
       entry.data.mastodon_url ||
       entry.data.twitter_url ? (
@@ -132,22 +154,18 @@ function ensureHttps(str: string): string {
               </>
             )}
 
-            {entry.data.gitx && (
+            {entry.data.gitx_url && (
               <>
                 <dt class="font-bold">
-                  {getGitHosting(entry.data.gitx) ?? "Git"}
+                  {getGitHosting(entry.data.gitx_url) ?? "Git"}
                 </dt>
                 <dd>
-                  {isUrl(entry.data.gitx) ? (
-                    <a
-                      href={ensureHttps(entry.data.gitx)}
-                      class="text-primary underline hover:text-primary-hover"
-                    >
-                      {entry.data.gitx}
-                    </a>
-                  ) : (
-                    <span>{entry.data.gitx}</span>
-                  )}
+                  <a
+                    href={ensureHttps(entry.data.gitx_url)}
+                    class="text-primary underline hover:text-primary-hover"
+                  >
+                    {entry.data.gitx_url}
+                  </a>
                 </dd>
               </>
             )}
@@ -193,6 +211,19 @@ function ensureHttps(str: string): string {
                 </dd>
               </>
             )}
+            {entry.data.bluesky_url && (
+              <>
+                <dt class="font-bold">Bluesky</dt>
+                <dd>
+                  <a
+                    href={getBlueskyProfileLink(getBlueskyUsername(entry.data.bluesky_url) as string)}
+                    class="text-primary underline hover:text-primary-hover"
+                  >
+                    {getBlueskyUsername(entry.data.bluesky_url)}
+                  </a>
+                </dd>
+              </>
+            )}
           </dl>
         </div>
       ) : null
@@ -211,7 +242,7 @@ function ensureHttps(str: string): string {
           <li class="mb-2 text-xl leading-snug">
             <a
               class="text-primary hover:text-primary-hover font-title underline font-semibold"
-              href={`/session/${session.slug}`}
+              href={`/session/${session.id}`}
             >
               {session.data.title}
             </a>

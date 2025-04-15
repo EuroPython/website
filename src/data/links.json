@@ -4,8 +4,12 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Sessions Previews",
-          "path": "/programme/sessions"
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
         },
         {
           "name": "Tracks",
@@ -34,6 +38,15 @@
         {
           "name": "Rust Summit",
           "path": "/programme/rust-summit"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Speakers' Dinner",
+          "path": "/speakers-dinner"
         }
       ]
     },
