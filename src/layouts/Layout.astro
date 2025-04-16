@@ -1,7 +1,15 @@
 ---
-import Header from "../components/header/header.astro";
-import Footer from "../components/footer.astro";
-import BaseHead from "../components/BaseHead.astro";
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Search from "@components/Search.astro";
+
+
+import "@src/styles/global.css";
+import "@src/styles/search.css";
+import "@fontsource-variable/inter";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 export interface Props {
   title: string;
@@ -15,6 +23,7 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
+    <slot name="head" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -23,18 +32,17 @@ const { title, description } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 
   </head>
+  <body>
+      <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-blue-600 p-2 z-50"> Skip to main content</a>
 
-  <div class="flex flex-col items-stretch min-h-screen">
-    <a href="#main-content" class="sr-only"> Skip to main content</a>
+      <Search />
+      <Header />
 
-    <Header />
+      <main id="main-content" role="main" class="layout-wrapper overflow-x-clip">
+        <slot />
+      </main>
 
-    <main id="main-content" class="layout-wrapper overflow-x-clip">
-      <slot />
-    </main>
-
-    <div class="mt-auto">
       <Footer />
-    </div>
-  </div>
+
+  </body>
 </html>
