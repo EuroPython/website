@@ -564,14 +564,17 @@ posters.forEach((poster) => {
       &::after {
         content: "";
         display: block;
+        padding: 4px 8px;
       }
 
       h2,
-      &::after {
-        background: var(--color-primary);
-        color: var(--color-text-inverted);
+      {
+        background: linear-gradient(#F8F7F6, #F2E2D3 );
+        /*color: var(--color-text-inverted);*/
         padding: 4px 8px;
-        outline: 2px solid var(--color-primary);
+        margin-top:8px;
+        border-radius: 10px;
+        /*outline: 2px solid var(--color-primary);*/
         /*font-weight: bold;*/
         font-size: 0.8em;
       }
