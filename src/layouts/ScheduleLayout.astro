@@ -1,0 +1,47 @@
+---
+import Header from "../components/header/header.astro";
+import Footer from "../components/footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <div class="flex flex-col items-stretch min-h-screen">
+    <a href="#main-content" class="sr-only"> Skip to main content</a>
+
+    <Header />
+
+    <main id="main-content" class="layout-wrapper2 overflow-x-clip">
+      <slot />
+    </main>
+
+    <div class="mt-auto">
+      <Footer />
+    </div>
+  </div>
+</html>
+
+<style>
+.layout-wrapper2 {
+  max-width: 800px;
+  margin:auto;
+  display: grid;
+  grid-template-columns: 1fr (770px, 100%) 1fr !important;
+}
+
+.layout-wrapper2 > * {
+  grid-column: 2;
+}
+
+</style>

@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+
+const days = await getCollection("days");
+
+const availableDays = days.map((day) => new Date(day.id));
+---
+
+<script type="module" define:vars={{ availableDays }}>
+  // Return timestamp of date without time
+  function normalizeDate(date) {
+    date = new Date(date);
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();
+  }
+
+  const currentDate = normalizeDate(new Date());
+
+  let closestDate = availableDays[0];
+  let minDiff = Math.abs(normalizeDate(closestDate) - currentDate);
+
+  for (let i = 1; i < availableDays.length; i++) {
+    const normalizedDate = normalizeDate(availableDays[i]);
+    const diff = Math.abs(normalizedDate - currentDate);
+
+    if (diff < minDiff) {
+      closestDate = availableDays[i];
+      minDiff = diff;
+    }
+  }
+
+  const redirectUrl = `/schedule/${new Date(closestDate).toISOString().slice(0, 10)}`;
+  window.location.href = redirectUrl;
+</script>
+
+<noscript>
+  <!-- Fallback for users with JavaScript disabled, what a shame :D -->
+  <meta http-equiv="refresh" content="0;url=/schedule/2024-07-08">
+</noscript>

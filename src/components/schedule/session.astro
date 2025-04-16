@@ -25,6 +25,7 @@ const hasFooter = hasRoom || hasSpeakers;
 ---
 
 <div class:list={["session", session.level, session.sessionType]} style={style}>
+  <!--
   <header>
     {
       session.sessionType === "poster" && (
@@ -42,9 +43,10 @@ const hasFooter = hasRoom || hasSpeakers;
         </>
       )
     }
-  </header>
+    </header>
+    -->
 
-  <div class="time">
+  <!--   <div class="time">
     <span class="sr-only">Session start:</span>
     <time>
       {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")}
@@ -54,6 +56,7 @@ const hasFooter = hasRoom || hasSpeakers;
     <span class="sr-only">Session end:</span>
     <time>{formatInTimeZone(session.end, "Europe/Prague", "HH:mm")}</time>
   </div>
+  -->
 
   <h2>{session.title}</h2>
 
@@ -86,7 +89,13 @@ const hasFooter = hasRoom || hasSpeakers;
     font-weight: bold;
     display: grid;
     flex-direction: column;
-    background-color: var(--color-body-background);
+    /*background-color: var(--color-body-background);*/
+
+    background-color: color-mix(
+      in srgb,
+      var(--color-body-background),
+      white 30%
+    );
     position: relative;
 
     grid-template-areas:
@@ -120,6 +129,7 @@ const hasFooter = hasRoom || hasSpeakers;
     bottom: 0;
     left: 0;
     z-index: 1;
+
   }
 
   footer :global(a) {
@@ -135,7 +145,7 @@ const hasFooter = hasRoom || hasSpeakers;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-right: 1px solid var(--color-text);
+      /*border-right: 1px solid var(--color-text);*/
       gap: 4px;
 
       & .minus {
@@ -169,7 +179,7 @@ const hasFooter = hasRoom || hasSpeakers;
     background-color: color-mix(
       in srgb,
       var(--color-body-background),
-      white 40%
+      white 50%
     );
   }
 
@@ -190,13 +200,13 @@ const hasFooter = hasRoom || hasSpeakers;
   }
 
   footer.has-speakers {
-    border-top: 1px solid var(--color-text);
+    /*border-top: 1px solid var(--color-text);*/
     margin-top: auto;
   }
 
   header {
     background-color: var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
+    /*border-bottom: 2px solid var(--color-primary);*/
     color: black;
     text-transform: capitalize;
     font-size: 0.8em;

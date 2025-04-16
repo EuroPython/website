@@ -1,4 +1,3 @@
-const mode = import.meta.env.MODE;
 export async function loadData(apiUrl: any) {
   if (!apiUrl) {
     console.warn(`No API URL provided`);
