@@ -193,6 +193,9 @@ const days = defineCollection({
   loader: async (): Promise<any[]> => {
     const schedule = await loadData(import.meta.env.EP_SCHEDULE_API);
 
+    if (Object.keys(schedule).length === 0) {
+      return schedule;
+    }
     return Object.entries(schedule.days).map(([date, data]: [string, any]) => ({
       id: date,
       ...data,
