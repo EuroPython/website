@@ -1,7 +1,5 @@
 ---
-import Header from "../components/header/header.astro";
-import Footer from "../components/footer.astro";
-import BaseHead from "../components/BaseHead.astro";
+import Layout from "@layouts/Layout.astro";
 
 export interface Props {
   title: string;
@@ -11,36 +9,22 @@ export interface Props {
 const { title, description } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-
+<Layout title="Schedule" description="Schedule" >
+  <Fragment slot="head">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-
   </head>
 
-  <div class="flex flex-col items-stretch min-h-screen">
-    <a href="#main-content" class="sr-only"> Skip to main content</a>
-
-    <Header />
-
-    <main id="main-content" class="layout-wrapper2 overflow-x-clip">
-      <slot />
-    </main>
-
-    <div class="mt-auto">
-      <Footer />
-    </div>
+  <div class="layout-wrapper2">
+  <slot />
   </div>
-</html>
+  </Layout>
 
-<style>
+<style is:global>
 .layout-wrapper2 {
   max-width: 800px;
   margin:auto;

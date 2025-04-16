@@ -191,8 +191,7 @@ const sessions = defineCollection({
 
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
-    const rawSchedule = await loadData(import.meta.env.EP_SCHEDULE_API);
-    const schedule = rawSchedule.default ?? rawSchedule;
+    const schedule = await loadData(import.meta.env.EP_SCHEDULE_API);
 
     return Object.entries(schedule.days).map(([date, data]: [string, any]) => ({
       id: date,
@@ -200,7 +199,7 @@ const days = defineCollection({
     }));
   },
   schema: z.object({
-    id: z.string(), // the date, like "2024-07-08"
+    id: z.string(),
     rooms: z.array(z.string()).optional(),
     events: z.array(
       z.object({
