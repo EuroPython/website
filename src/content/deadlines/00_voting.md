@@ -1,7 +1,7 @@
 ---
 title: Community Voting
 subtitle: Closed on February 17th
-url: /programme/voting/
+url: /voting/
 image: voting.jpg
 ---
 
