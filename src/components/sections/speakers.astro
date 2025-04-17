@@ -1,0 +1,160 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+const allSpeakers = await getCollection("speakers");
+
+const validSpeakers = allSpeakers.filter(speaker =>
+  !!speaker.data?.name && !!speaker.data?.avatar
+);
+
+function getRandomSpeakers(speakers: CollectionEntry<"speakers">[], count: number) {
+  const shuffled = [...speakers].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, Math.min(count, speakers.length));
+}
+
+const featuredSpeakers = getRandomSpeakers(validSpeakers, 15);
+
+const sectionTitle = "Featured Speakers";
+const sectionSubtitle = "Meet some of our amazing speakers";
+---
+
+<section class="py-16 px-4 bg-gray-50">
+  <div class="container mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{sectionTitle}</h2>
+      <p class="text-lg text-gray-600">{sectionSubtitle}</p>
+    </div>
+
+    <div class="speakers-carousel-container relative overflow-hidden">
+      <div class="speakers-track flex transition-transform duration-1000 ease-linear">
+        {[...featuredSpeakers, ...featuredSpeakers].map((speaker, _index) => (
+          <div class="speaker-slide w-full sm:w-1/2 md:w-1/3 lg:w-1/5 flex-shrink-0 px-3">
+            <a href={`/speaker/${speaker.id}`} class="block group">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
+                <div class="aspect-square overflow-hidden">
+                  <img
+                    src={speaker.data.avatar}
+                    alt={`${speaker.data.name}'s profile picture`}
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="eager"
+                  />
+                </div>
+                <div class="p-4 text-center">
+                  <h3 class="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors">
+                    {speaker.data.name}
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a
+        href="/speakers"
+        class="inline-block px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-md transition-colors"
+      >
+        View All Speakers
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.speakers-track') as HTMLElement;
+    const slides = document.querySelectorAll('.speaker-slide');
+
+    if (!track || slides.length === 0) return;
+
+    const slideWidth = 100 / 5;
+    const totalOriginalSlides = slides.length / 2;
+    let currentPosition = 0;
+    const scrollSpeed = 4000;
+
+    slides.forEach((slide) => {
+      (slide as HTMLElement).style.flexBasis = `${slideWidth}%`;
+    });
+
+    startAnimation();
+
+    function startAnimation() {
+      moveCarousel();
+      let slidingInterval = setInterval(moveCarousel, scrollSpeed);
+
+      function moveCarousel() {
+        currentPosition += slideWidth;
+
+        track.style.transition = 'transform 2000ms linear';
+        track.style.transform = `translateX(-${currentPosition}%)`;
+
+        if (currentPosition >= slideWidth * totalOriginalSlides) {
+          setTimeout(() => {
+            track.style.transition = 'none';
+            currentPosition = 0;
+            track.style.transform = `translateX(0)`;
+
+            setTimeout(() => {
+              track.style.transition = 'transform 2000ms linear';
+            }, 20);
+          }, 1000);
+        }
+      }
+
+      const carouselContainer = document.querySelector('.speakers-carousel-container');
+      carouselContainer?.addEventListener('mouseenter', () => {
+        clearInterval(slidingInterval);
+      });
+
+      carouselContainer?.addEventListener('mouseleave', () => {
+        slidingInterval = setInterval(moveCarousel, scrollSpeed);
+      });
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          clearInterval(slidingInterval);
+        } else {
+          slidingInterval = setInterval(moveCarousel, scrollSpeed);
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  .speakers-carousel-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .speakers-track {
+    will-change: transform;
+  }
+
+  @media (max-width: 1024px) {
+    .speaker-slide {
+      width: 25%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .speaker-slide {
+      width: 33.333%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .speaker-slide {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .speaker-slide {
+      width: 100%;
+    }
+  }
+</style>
