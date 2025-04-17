@@ -1,49 +1,99 @@
-:root {
-  --color-primary: #151f38;
-  --color-primary-hover: #7a7ebd;
-  --color-primary-active: #7a7ebd;
-  --color-button: #ee714b;
-  --color-button-hover: #fabc1b;
-  --color-secondary: #151f38;
-  --color-secondary-dark: #f5e5d6;
-  --color-secondary-darkest: white;
-  --color-secondary-light: #7a7ebd;
-  --color-text: #151f38;
-  --color-text-inverted: white;
-  --color-body-background: #f5e5d6;
-  --color-hero-primary: #151f38;
-  --color-hero-secondary: #fabc1b;
-
-  --color-session-neutral: #f5e5d6;
-  --color-session-beginner: #63d452;
-  --color-session-intermediate: #ffcd45;
-  --color-session-advanced: #d34847;
+.prose :is(h1, h2, h3, h4, h5, h6) a {
+  text-decoration: none !important;
 }
 
-.tp-dfwv {
-  position: fixed !important;
-  z-index: 9999;
+.prose :is(h1, h2, h3, h4, h5, h6) a:hover {
+  text-decoration: underline !important;
 }
 
-body {
-  @apply bg-body-background text-text;
+.prose :is(h1, h2, h3, h4, h5, h6) a:focus {
+  outline: 4px solid #0073e6;
+  outline-offset: 5px;
 }
 
-.layout-wrapper {
-  display: grid;
-  grid-template-columns:
-    1fr
-    min(1150px, 100%)
-    1fr;
+ul.milestone-done li {
+  position: relative;
+  list-style: none;
 }
 
-.layout-wrapper > * {
-  grid-column: 2;
+ul.milestone-done li::before {
+  content: "\2705  " !important;
+  background: none !important;
 }
 
-.full-bleed {
-  width: 100%;
-  grid-column: 1 / 4;
+ul.milestone-todo li {
+  position: relative;
+  list-style: none;
+}
+
+ul.milestone-todo li::before {
+  content: "\1F4DD  " !important;
+  background: none !important;
+}
+
+img.findaid-accent-round-marker {
+  width: 120px;
+  min-width: 70px;
+  padding: 0 10px;
+  display: inline-block;
+  margin: 0;
+}
+
+table.finaid-timeline td {
+  padding-bottom: 1rem;
+}
+
+div.finaid-sponsor {
+  width: 50%;
+  margin: 0 auto 2rem auto;
+}
+
+summary h4::after {
+  content: "👇";
+}
+
+.list-disc li {
+  list-style: none;
+  position: relative;
+}
+
+ul.list-disc li::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  /*background-image: url(/img/list-item.svg);*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: absolute;
+  left: -30px;
+  top: 0.2em;
+}
+
+ul ul.list-disc li {
+  list-style: disc;
+}
+ul ul.list-disc li::before {
+  display: none;
+}
+
+p.tick::before {
+  content: "\2705  ";
+  padding: 0.5rem;
+}
+
+p.cross::before {
+  content: "\274C  ";
+  padding: 0.5rem;
+}
+
+p.tick::after,
+p.cross::after {
+  content: "\23EC";
+  display: inline-block;
+  font-size: 1.3em;
+  margin-left: 0.4em;
 }
 
 /* typography */
