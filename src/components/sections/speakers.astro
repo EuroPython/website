@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 
 const allSpeakers = await getCollection("speakers");
 
@@ -33,10 +34,12 @@ const sectionSubtitle = "Meet some of our amazing speakers";
             <a href={`/speaker/${speaker.id}`} class="block group">
               <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
                 <div class="aspect-square overflow-hidden">
-                  <img
+                  <Image
                     src={speaker.data.avatar}
                     alt={`${speaker.data.name}'s profile picture`}
                     class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    height={250}
+                    width={250}
                     loading="eager"
                   />
                 </div>
@@ -88,7 +91,7 @@ const sectionSubtitle = "Meet some of our amazing speakers";
       function moveCarousel() {
         currentPosition += slideWidth;
 
-        track.style.transition = 'transform 2000ms linear';
+        track.style.transition = 'transform 1000ms linear';
         track.style.transform = `translateX(-${currentPosition}%)`;
 
         if (currentPosition >= slideWidth * totalOriginalSlides) {
@@ -98,9 +101,9 @@ const sectionSubtitle = "Meet some of our amazing speakers";
             track.style.transform = `translateX(0)`;
 
             setTimeout(() => {
-              track.style.transition = 'transform 2000ms linear';
+              track.style.transition = 'transform 1000ms linear';
             }, 20);
-          }, 1000);
+          }, 4000);
         }
       }
 

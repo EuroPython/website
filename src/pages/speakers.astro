@@ -37,7 +37,7 @@ function createOptimalGroups(speakers: Speaker[]): Record<string, Speaker[]> {
       currentGroup.push(speaker);
     }
     else {
-      if (currentGroup.length < 10 && currentGroup.length + 1 <= 15) {
+      if (currentGroup.length < 1 && currentGroup.length + 1 <= 15) {
         currentGroup.push(speaker);
         groupKey = `${currentLetter}-${letter}`;
       } else {
@@ -100,8 +100,8 @@ const description = "Our conference speakers organized alphabetically";
           <Image
             src={speaker.data.avatar}
             alt={`${speaker.data.name}'s profile picture`}
-            height={300}
-            width={300}
+            height={250}
+            width={250}
             class="w-full h-full object-cover"
           />
                     ) : (
