@@ -1,42 +1,66 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
 import { Separator } from "../components/separator/separator";
+import { Image } from "astro:assets";
 
-// Fetch all speaker entries
+type Speaker = CollectionEntry<"speakers">;
+
 const speakersCollection = await getCollection("speakers");
 
-// Define the type for the groups object
-type Speaker = {
-  id: string;
-  data: {
-    name: string;
-  };
-};
+const speakersWithNames = speakersCollection.filter((speaker) =>
+  !!speaker.data?.name
+);
 
-type Groups = {
-  [key: string]: Speaker[];
-};
+const getFirstLetter = (name: string): string => name.charAt(0).toUpperCase();
 
-// Group speakers by the first letter of their name
-const groups: Groups = speakersCollection
-  .filter((speaker: Speaker) => !!speaker.data.name)
-  .reduce((acc: Groups, speaker: Speaker) => {
-    const letter = speaker.data.name[0].toUpperCase();
-    if (!acc[letter]) {
-      acc[letter] = [];
+function createOptimalGroups(speakers: Speaker[]): Record<string, Speaker[]> {
+  const sortedSpeakers = [...speakers].sort((a, b) =>
+    a.data.name.localeCompare(b.data.name)
+  );
+
+  const groups: Record<string, Speaker[]> = {};
+  let currentGroup: Speaker[] = [];
+  let currentLetter = '';
+  let groupKey = '';
+
+  sortedSpeakers.forEach((speaker) => {
+    const letter = getFirstLetter(speaker.data.name);
+
+    if (currentGroup.length === 0) {
+      currentLetter = letter;
+      groupKey = letter;
+      currentGroup.push(speaker);
     }
-    acc[letter].push(speaker);
-    return acc;
-  }, {} as Groups);
+    else if (letter === currentLetter && currentGroup.length < 15) {
+      currentGroup.push(speaker);
+    }
+    else {
+      if (currentGroup.length < 10 && currentGroup.length + 1 <= 15) {
+        currentGroup.push(speaker);
+        groupKey = `${currentLetter}-${letter}`;
+      } else {
+        groups[groupKey] = currentGroup;
+        currentLetter = letter;
+        groupKey = letter;
+        currentGroup = [speaker];
+      }
+    }
+  });
 
-const letters = Object.keys(groups).sort((a, b) => a.localeCompare(b));
+  if (currentGroup.length > 0) {
+    groups[groupKey] = currentGroup;
+  }
+
+  return groups;
+}
+
+const speakerGroups = createOptimalGroups(speakersWithNames);
+const groupKeys = Object.keys(speakerGroups);
 
 const title = "Speakers";
-
-const description =
-  "Alphabetical list of all confirmed speakers for the conference";
+const description = "Our conference speakers organized alphabetically";
 ---
 
 <Layout title={title} description={description}>
@@ -45,49 +69,68 @@ const description =
       <h1>Speakers</h1>
     </Prose>
 
-    <div class="flex text-3xl font-bold flex-wrap my-10">
+    <div class="flex text-xl md:text-2xl font-bold flex-wrap my-8 justify-center">
       {
-        letters.map((letter) => (
-          <h3 class="mr-2">
-            <a href={`#letter-${letter}`}>{letter}</a>
-          </h3>
+        groupKeys.map((key) => (
+          <a
+            href={`#group-${key}`}
+            class="mx-2 my-1 px-2 py-1 hover:text-primary hover:bg-gray-100 rounded transition-colors"
+          >
+            {key}
+          </a>
         ))
       }
     </div>
 
-    <ol class="speakers">
-      {
-        letters.map((letter, index) => (
-          <>
-            <div id={`letter-${letter}`}>
-              <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-4xl">
-                {letter}
-              </h2>
+    {
+      groupKeys.map((key, index) => (
+        <>
+          <div id={`group-${key}`} class="pt-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">{key}</h2>
 
-              <ul class="pl-4">
-                {groups[letter]
-                  .sort((a, b) => a.data.name.localeCompare(b.data.name))
-                  .map((speaker) => (
-                    <li {...{ key: speaker.id }} class="mb-1">
-                      <a
-                        class="underline hover:text-primary-hover"
-                        href={`/speaker/${speaker.id}`}
-                      >
-                        {speaker.data.name}
-                      </a>
-                    </li>
-                  ))}
-              </ul>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
+              {speakerGroups[key].map((speaker) => (
+                <a
+                  href={`/speaker/${speaker.id}`}
+                  class="flex flex-col items-center group"
+                >
+                  <div class="w-full aspect-square rounded-full overflow-hidden mb-3 border-2 border-transparent group-hover:border-primary transition-all">
+                    {speaker.data.avatar ? (
+
+          <Image
+            src={speaker.data.avatar}
+            alt={`${speaker.data.name}'s profile picture`}
+            height={200}
+            width={200}
+            class="w-full h-full object-cover"
+          />
+                    ) : (
+                      <div class="w-full h-full bg-[#f7efe6] flex items-center justify-center text-gray-500 text-xl">
+                        {speaker.data.name.charAt(0)}
+                      </div>
+                    )}
+                  </div>
+                  <h3 class="text-center font-medium group-hover:text-primary text-sm md:text-base">
+                    {speaker.data.name}
+                  </h3>
+                </a>
+              ))}
             </div>
+          </div>
 
-            {index !== letters.length - 1 ? (
-              <Separator />
-            ) : (
-              <div class="mb-20" />
-            )}
-          </>
-        ))
-      }
-    </ol>
+          {index !== groupKeys.length - 1 && <Separator />}
+        </>
+      ))
+    }
   </div>
 </Layout>
+
+<style>
+  a {
+    transition: transform 0.2s ease;
+  }
+
+  a.group:hover {
+    transform: translateY(-3px);
+  }
+</style>
