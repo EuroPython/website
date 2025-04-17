@@ -17,31 +17,31 @@
         },
         {
           "name": "Tracks",
-          "path": "/programme/tracks"
+          "path": "/tracks"
         },
         {
           "name": "Selection Process",
-          "path": "/programme/selection"
+          "path": "/selection"
         },
         {
           "name": "Community Voting",
-          "path": "/programme/voting"
+          "path": "/voting"
         },
         {
           "name": "Speaker Mentorship",
-          "path": "/programme/mentorship"
+          "path": "/mentorship"
         },
         {
           "name": "C API Summit",
-          "path": "/programme/c-api-summit"
+          "path": "/c-api-summit"
         },
         {
           "name": "WebAssembly Summit",
-          "path": "/programme/wasm-summit"
+          "path": "/wasm-summit"
         },
         {
           "name": "Rust Summit",
-          "path": "/programme/rust-summit"
+          "path": "/rust-summit"
         }
       ]
     },
