@@ -32,18 +32,20 @@ jobs:
       - name: Install dependencies
         run: make install
 
+      - name: Get current branch name
+        run: |
+          BRANCH_NAME=$(make safe_branch BRANCH=$GITHUB_BRANCH_NAME)
+          echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
+
       - name: Build the website
-        run: make build PREVIEW=true
+        run:
+          make build MODE=preview
+          SITE_URL="https://${BRANCH_NAME}.ep-preview.click"
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
-
-      - name: Get current branch name
-        run: |
-          BRANCH_NAME=$(make safe_branch BRANCH=$GITHUB_BRANCH_NAME)
-          echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
 
       - name: ssh keyscan
         run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts

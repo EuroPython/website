@@ -1,9 +1,4 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import "../styles/global.css";
-import "@fontsource-variable/inter";
-
 interface Props {
   title: string;
   description: string;
@@ -58,8 +53,3 @@ const { title, description, image = "/social-card.png" } = Astro.props;
   is:inline
   data-domain="ep2025.europython.eu"
   src="https://plausible.io/js/script.js"></script>
-
-<script
-  is:inline
-  src="https://kit.fontawesome.com/14a4971ab3.js"
-  crossorigin="anonymous"></script>

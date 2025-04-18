@@ -1,4 +1,5 @@
 ---
+import Button from "@ui/Button.astro";
 const socialLinks = [
   { href: "https://linkedin.com/company/europython/", icon: "linkedin" },
   { href: "https://instagram.com/europython/", icon: "instagram" },
@@ -10,56 +11,52 @@ const socialLinks = [
 ---
 
 <div class="full-bleed w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-08 px-4 text-center">
-<div class="w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-20 px-4 text-center relative z-10">
-  <h1 class="text-4xl md:text-6xl font-bold mb-10 leading-tight text-[#17223A]">
-    Follow us<br />for updates
-  </h1>
+  <div class="w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-20 px-4 text-center relative z-10">
+    <h1 class="text-4xl md:text-6xl font-bold mb-10 leading-tight text-[#17223A]">
+      Follow us<br />for updates!
+    </h1>
 
-  <div class="flex justify-center flex-wrap gap-6 mb-8">
-    {socialLinks.map(({ href, icon }) => (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-16 h-16 flex items-center justify-center border-2 border-yellow-400 rounded-full hover:scale-110 transition-transform"
-      >
-        <img src={`/icons/${icon}.svg`} alt={icon} class="w-6 h-6" />
-      </a>
-    ))}
-  </div>
+    <div class="flex justify-center flex-wrap gap-6 mb-8">
+      {socialLinks.map(({ href, icon }) => (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-16 h-16 flex items-center justify-center border-2 border-yellow-400 rounded-full hover:scale-110 transition-transform"
+        >
+          <i class={`fab fa-${icon} text-2xl text-[#17223A]`}></i>
+        </a>
+      ))}
+    </div>
 
-  <p class="text-[#151f38] mb-8 text-sm md:text-base">
-    Subscribe to our conference newsletter and get<br />
-    the latest updates and special deals
-  </p>
+    <p class="text-[#151f38] mb-8 text-sm md:text-base">
+      Subscribe to our conference newsletter and get<br />
+      the latest updates and special deals
+    </p>
 
-  <form
-    id="subscribeForm"
-    class="flex flex-col sm:flex-row justify-center items-center gap-4"
-  >
-    <input
-      id="emailInput"
-      type="email"
-      name="email"
-      placeholder="Your email"
-      required
-      class="px-4 py-3 rounded-[10px] bg-white text-black text-base font-medium w-72 text-center"
-    />
-    <button
-      type="submit"
-      class="font-bold text-lg px-4 py-4 bg-button rounded-[10px] inline-block leading-4 hover:bg-button-hover not-prose outline-solid outline bg-transparent text-xl text-secondary outline-secondary text-black"
+    <form
+      id="subscribeForm"
+      class="flex flex-col sm:flex-row justify-center items-center gap-4"
     >
-      Subscribe
-    </button>
-  </form>
+      <input
+        id="emailInput"
+        type="email"
+        name="email"
+        placeholder="Your email"
+        required
+        class="px-4 py-3 rounded-[10px] bg-white text-black text-base font-medium w-72 text-center"
+      />
 
-  <p
-    id="subscribeMessage"
-    class="hidden mt-4 text-green-600 text-lg font-medium transition-opacity duration-500 opacity-0"
-  >
-    Please check your email to confirm. 📬
-  </p>
-</div>
+      <Button outline type="submit"> Subscribe </Button>
+    </form>
+
+    <p
+      id="subscribeMessage"
+      class="hidden mt-4 text-green-600 text-lg font-medium transition-opacity duration-500 opacity-0"
+    >
+      Please check your email to confirm. 📬
+    </p>
+  </div>
 </div>
 
 <script>

@@ -6,6 +6,7 @@ VPS_HOST  ?= static.europython.eu
 VPS_PROD_PATH  ?= /home/static_content_user/content/europython_websites/ep2025
 VPS_PREVIEW_PATH  ?= /home/static_content_user/content/previews
 REMOTE_CMD=ssh $(VPS_USER)@$(VPS_HOST)
+PREVIEW_SITE_URL ?= "https://$(SAFE_BRANCH).ep-preview.click"
 
 # Variables for build/deploy
 # ==========================
@@ -19,9 +20,9 @@ BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
 # Replace "/" and other non-alphanumeric characters with "-"
 SAFE_BRANCH := $(shell echo "$(BRANCH)" | sed 's/[^A-Za-z0-9-]/-/g')
 FORCE_DEPLOY ?= false
+SITE_URL ?= "https://$(SAFE_BRANCH).ep-preview.click"
 
 .PHONY: build deploy dev clean install
-
 
 safe_branch:
 	@echo $(SAFE_BRANCH)
@@ -42,17 +43,19 @@ check:
 	pnpm run astro check
 
 build:
-	pnpm build
+	pnpm run astro build --mode $(MODE)
 
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)
 preview:
+	@echo "Preview site URL: $(PREVIEW_SITE_URL)"
 	echo $(TARGET)
 	@echo "\n\n**** Deploying preview of a branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
 	$(REMOTE_CMD) "mkdir -p $(TARGET)"
 	rsync -avz --delete ./dist/ $(VPS_USER)@$(VPS_HOST):$(TARGET)/
 	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current"
 	@echo "\n\n**** Preview complete.\n\n"
+	@echo "Open the preview site at: $(PREVIEW_SITE_URL)\n\n"
 
 
 ifeq ($(FORCE_DEPLOY), true)
