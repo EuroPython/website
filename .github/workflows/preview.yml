@@ -40,7 +40,7 @@ jobs:
 
       - name: Build the website
         run:
-          make build PREVIEW=true
+          make build MODE=preview
           SITE_URL="https://${BRANCH_NAME}.ep-preview.click"
           GIT_VERSION="${GITHUB_COMMIT_HASH}"
 

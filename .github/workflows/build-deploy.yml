@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - ep2025
+  schedule:
+    - cron: "0 * * * *"
 
 jobs:
   deploy:
@@ -32,7 +34,7 @@ jobs:
         run: make install
 
       - name: Build the website
-        run: make build
+        run: make build MODE=production
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1

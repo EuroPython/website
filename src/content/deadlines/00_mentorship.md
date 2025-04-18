@@ -1,7 +1,7 @@
 ---
 title: Speaker Mentorship
 subtitle: Open until 21st January
-url: /programme/mentorship
+url: /mentorship
 image: mentorship1.jpg
 ---
 
