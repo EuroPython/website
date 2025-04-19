@@ -78,7 +78,6 @@ const description = "Our conference speakers organized alphabetically";
                   href={`/speaker/${speaker.id}`}
                   class="flex flex-col items-center group"
                 >
-                  <div class="w-full aspect-square rounded-full overflow-hidden mb-3 border-2 border-transparent group-hover:border-primary transition-all">
                     {speaker.data.avatar ? (
 
           <Image
@@ -86,14 +85,13 @@ const description = "Our conference speakers organized alphabetically";
             alt={`${speaker.data.name}'s profile picture`}
             height={250}
             width={250}
-            class="w-full h-full object-cover "
+            class="w-full aspect-square rounded-full overflow-hidden mb-3 border-2 border-transparent group-hover:border-primary transition-all h-full object-cover "
           />
                     ) : (
-                      <div class="w-full h-full bg-[#f7efe6] flex items-center justify-center text-gray-500 text-xl">
+                      <div class="w-full h-full bg-[#f7efe6] flex items-center justify-center text-gray-500 text-xl aspect-square rounded-full overflow-hidden mb-3 border-2 border-transparent ">
                         {speaker.data.name.charAt(0)}
                       </div>
                     )}
-                  </div>
                   <h3 class="text-center font-medium group-hover:text-primary text-sm md:text-base">
                     {speaker.data.name}
                   </h3>
