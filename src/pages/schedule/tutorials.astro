@@ -26,8 +26,6 @@ const allDays = Array.from(
   new Set(days.map((day) => day.id).filter((id) => id))
 ).sort();
 
-const visibleClass = "tutorial";
-
 ---
 
 <Layout title="" description="">
@@ -44,36 +42,3 @@ const visibleClass = "tutorial";
     ))
   }
 </Layout>
-<style is:global>
-
-      .announcements,
-      .conference-workshop,
-      .keynote,
-      .panel,
-      .poster,
-      .sponsored,
-      .talk,
-      .talk-long-session,
-      .tutorial{
-        display:none;
-      }
-  </style>
-  <script define:vars={{ visibleClass }}>
-    const allClasses = [
-      'announcements',
-      'conference-workshop',
-      'keynote',
-      'panel',
-      'poster',
-      'sponsored',
-      'talk',
-      'talk-long-session',
-      'tutorial'
-    ];
-
-    allClasses.forEach(cls => {
-      document.querySelectorAll(`.${cls}`).forEach(el => {
-        el.style.display = (cls === visibleClass) ? '' : 'none';
-      });
-    });
-  </script>
