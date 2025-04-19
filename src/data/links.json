@@ -55,23 +55,11 @@
       "items": [
         {
           "name": "Tutorials",
-          "path": "/schedule/tutorial"
-        },
-        {
-          "name": "Sponsor Presentations",
-          "path": "/schedule/sponsored"
+          "path": "/schedule/tutorials"
         },
         {
           "name": "Talks",
-          "path": "/schedule/talk"
-        },
-        {
-          "name": "Posters",
-          "path": "/schedule/poster"
-        },
-        {
-          "name": "Keynotes",
-          "path": "/schedule/keynote"
+          "path": "/schedule/talks"
         }
       ]
     },

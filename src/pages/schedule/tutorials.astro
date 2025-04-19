@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/ScheduleLayout.astro";
+import ScheduleDay from "@components/schedule/day.astro";
+import { slugify } from '@utils/content';
+import Headline from "@ui/Headline.astro"
+
+export const getStaticPaths = async () => {
+  const sessions = await getCollection("sessions");
+
+  const allTypes = Array.from(
+    new Set(
+      sessions
+        .map((session) => slugify(session.data.session_type))
+        .filter((type) => type)
+    )
+  ).sort();
+  return allTypes.map((type) => {
+    return { params: { type } };
+  });
+};
+
+const days = await getCollection("days");
+
+const allDays = Array.from(
+  new Set(days.map((day) => day.id).filter((id) => id))
+).sort();
+
+const visibleClass = "tutorial";
+
+---
+
+<Layout title="" description="">
+
+  <Headline as="h2" id=`schedule-main` title="2025 Schedule" />
+  {
+  days
+    .filter((day) => {
+      const dayOfWeek = new Date(day.id).getDay();
+      return dayOfWeek == 1 || dayOfWeek == 2;
+    })
+    .map((day) => (
+      <ScheduleDay dayName={day.id} />
+    ))
+  }
+</Layout>
+<style is:global>
+
+      .announcements,
+      .conference-workshop,
+      .keynote,
+      .panel,
+      .poster,
+      .sponsored,
+      .talk,
+      .talk-long-session,
+      .tutorial{
+        display:none;
+      }
+  </style>
+  <script define:vars={{ visibleClass }}>
+    const allClasses = [
+      'announcements',
+      'conference-workshop',
+      'keynote',
+      'panel',
+      'poster',
+      'sponsored',
+      'talk',
+      'talk-long-session',
+      'tutorial'
+    ];
+
+    allClasses.forEach(cls => {
+      document.querySelectorAll(`.${cls}`).forEach(el => {
+        el.style.display = (cls === visibleClass) ? '' : 'none';
+      });
+    });
+  </script>
