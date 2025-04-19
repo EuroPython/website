@@ -6,6 +6,7 @@ const {
   url,
   id,
   class: className = "",
+  type,
   secondary = false,
   outline = false,
   disabled = false,
@@ -44,6 +45,7 @@ const slotContent = await Astro.slots.render('default');
       ${disabled ? disabledClasses : ""}
       ${className}`}
     aria-disabled={disabled}
+    type={type}
     {...(resolvedIsExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     {...restProps}
   >

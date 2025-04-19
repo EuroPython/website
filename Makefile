@@ -43,7 +43,7 @@ check:
 	pnpm run astro check
 
 build:
-	pnpm build
+	pnpm run astro build --mode $(MODE)
 
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)

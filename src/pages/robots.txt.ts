@@ -14,6 +14,6 @@ Allow: /
 Sitemap: https://ep2025.europython.eu/sitemap-index.xml
 `;
 
-const isPreview = String(import.meta.env.PREVIEW).toLowerCase() === "true";
+const isPreview = import.meta.env.MODE == "preview";
 export const GET: APIRoute = () =>
   new Response(isPreview ? previewRobots : prodRobots);
