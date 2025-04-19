@@ -3,6 +3,7 @@ import { getEntry, getCollection } from "astro:content";
 import Layout from "@layouts/ScheduleLayout.astro";
 import ScheduleDay from "@components/schedule/day.astro";
 import Headline from "@ui/Headline.astro";
+import Button from "@ui/Button.astro";
 
 export const getStaticPaths = async () => {
   const days = await getCollection("days");
@@ -17,15 +18,10 @@ const days = await getCollection("days");
 const allDays = Array.from(
   new Set(days.map((day) => day.id).filter((id) => id))
 ).sort();
-
+let isActive = true;
 ---
 
 <Layout title="" description="">
-
   <Headline as="h2" id=`schedule-main` title="2025 Schedule" />
-  {
-    days.map((day) => (
-      <ScheduleDay dayName={day.id} />
-    ))
-  }
+  <ScheduleDay dayName={Astro.params.day} />
 </Layout>

@@ -20,15 +20,16 @@ const speakers = Astro.props.speakers
 
 {
   speakers.map((speaker, index) => (
-    <a href={`/speaker/${speaker.id}`} class="inline">
+    <span>
       {speaker.data.name}
       {index < speakers.length - 1 ? ", " : ""}
-    </a>
+    </span>
   ))
 }
 
 <style>
-  a:hover {
-    text-decoration: underline;
+  span {
+    /*display:block;*/
+  font-weight: 500;
   }
 </style>

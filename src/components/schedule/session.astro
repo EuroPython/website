@@ -1,8 +1,9 @@
 ---
 import { formatInTimeZone } from "date-fns-tz";
 import Speakers from "./speakers.astro";
+import { slugify } from "@utils/content";
 
-export interface Props {
+export interface props {
   style: any;
   session: {
     slug?: string;
@@ -21,10 +22,11 @@ const { style, session } = Astro.props;
 
 const hasRoom = session.rooms.length === 1;
 const hasSpeakers = session.speakers && session.speakers.length > 0;
-const hasFooter = hasRoom || hasSpeakers;
+//const hasFooter = hasRoom || hasSpeakers;
+const hasFooter = true;
 ---
 
-<div class:list={["session", session.level, session.sessionType]} style={style}>
+<div class:list={["session", session.level, slugify(session.sessionType)]} style={style}>
   <!--
   <header>
     {
@@ -70,7 +72,7 @@ const hasFooter = hasRoom || hasSpeakers;
             {hasSpeakers && <span aria-hidden="true"> • </span>}
           </div>
         )}
-        {session.speakers && session.speakers.length > 0 && (
+        {session.speakers && (
           <>
             <Speakers speakers={session.speakers} />
           </>
@@ -86,6 +88,8 @@ const hasFooter = hasRoom || hasSpeakers;
 
 <style>
   .session {
+
+    border: 1px solid transparent;
     font-weight: bold;
     display: grid;
     flex-direction: column;
@@ -173,6 +177,7 @@ const hasFooter = hasRoom || hasSpeakers;
       var(--color-body-background),
       white 70%
     );
+    border: 1px solid #33333366;
   }
 
   .session:has(.read-more[href]:not([href=""]):hover) {
@@ -180,8 +185,10 @@ const hasFooter = hasRoom || hasSpeakers;
       in srgb,
       var(--color-body-background),
       white 50%
-    );
+        );
+    border: 1px solid #E9714D;
   }
+
 
   .time,
   footer {
@@ -197,11 +204,13 @@ const hasFooter = hasRoom || hasSpeakers;
 
   h2 {
     margin-bottom: 1em;
+    height:100%;
   }
 
   footer.has-speakers {
     /*border-top: 1px solid var(--color-text);*/
-    margin-top: auto;
+
+    margin-top: 5px;
   }
 
   header {
@@ -210,6 +219,7 @@ const hasFooter = hasRoom || hasSpeakers;
     color: black;
     text-transform: capitalize;
     font-size: 0.8em;
+    font-weight: 500;
   }
 
   .beginner header {

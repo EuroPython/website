@@ -51,6 +51,31 @@
       ]
     },
     {
+      "name": "Schedule",
+      "items": [
+        {
+          "name": "Tutorials",
+          "path": "/schedule/tutorial"
+        },
+        {
+          "name": "Sponsor Presentations",
+          "path": "/schedule/sponsored"
+        },
+        {
+          "name": "Talks",
+          "path": "/schedule/talk"
+        },
+        {
+          "name": "Posters",
+          "path": "/schedule/poster"
+        },
+        {
+          "name": "Keynotes",
+          "path": "/schedule/keynote"
+        }
+      ]
+    },
+    {
       "name": "Prague & Venue",
       "items": [
         {
