@@ -1,10 +1,10 @@
 ---
 import { promises as fs } from "fs";
-import { NavItems } from "../nav-items";
-import HeaderActions from "./header-actions.astro";
-import HeaderLogo from "./header-logo.astro";
+import { NavItems } from "@components/nav-items";
+import HeaderActions from "@components/header/header-actions.astro";
+import HeaderLogo from "@components/header/header-logo.astro";
 
-const links = JSON.parse(await fs.readFile("./src/data/links.json", "utf-8"));
+import links from "../data/links.json";
 ---
 
 <header class="p-6 flex items-center justify-between relative z-40">
@@ -27,7 +27,7 @@ const links = JSON.parse(await fs.readFile("./src/data/links.json", "utf-8"));
   <div
     class="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 p-6"
   >
-    <div class="flex items-center">
+    <div class="flex items-center justify-between">
       <HeaderLogo />
       <HeaderActions mobile />
     </div>

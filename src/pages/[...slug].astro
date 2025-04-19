@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/MarkdownLayout.astro";
 
 import Prose from "../components/prose/prose.astro";
 import ButtonLink from "../components/button-link/button-link.astro";
@@ -17,12 +17,25 @@ import SponsorTiers from "../components/sponsor-tiers/sponsor-tiers.astro";
 import Accordion from "../components/accordion/accordion.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("pages");
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
-  }));
+  const pages = await getCollection("pages");
+
+  return pages.flatMap((page) => {
+    const slugParts = page.slug.split("/");
+    const shortSlug = slugParts[slugParts.length - 1];
+
+    const paths = [
+      { params: { slug: page.slug }, props: page }, // long slug
+    ];
+
+    // only add short slug if it's not the same
+    if (page.slug !== shortSlug) {
+      paths.push({ params: { slug: shortSlug }, props: page }); // short slug
+    }
+
+    return paths;
+  });
 }
+
 type Props = CollectionEntry<"pages">;
 
 const post = Astro.props;
