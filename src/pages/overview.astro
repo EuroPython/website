@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/MarkdownLayout.astro";
+import Headline from "@ui/Headline.astro"
+
+---
+
+<Layout
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
+>
+  <div class="mb-4 prose prose-xl prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-a:underline prose-h1:text-text prose-headings:font-title prose-headings:text-text prose-a:text-text hover:prose-a:text-primary-hover prose-strong:text-text prose-strong:font-bold prose-li:marker:text-text">
+  <Headline id="oveview" title="Programme & Events Overview" center=true />
+
+  <div class="events-container w-full">
+    <div class="decorative-border"></div>
+
+    <div class="events-grid">
+      <div class="event-category">
+        <h3>Talks, Tutorials & Posters</h3>
+        <ul class="event-list">
+          <li><a href="/sessions/">~120 talks</a></li>
+          <li><a href="/sessions/">~20 tutorials</a></li>
+          <li><a href="/sessions/">5–6 keynotes</a></li>
+          <li><a href="/sessions/">10 posters</a></li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Summits</h3>
+        <ul class="event-list">
+          <li><a href="/rust-summit/">Rust Summit</a></li>
+          <li><a href="/wasm-summit/">WASM Summit</a></li>
+          <li><a href="/c-api-summit/">C API Summit</a></li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>PyLadies Sessions</h3>
+        <ul class="event-list">
+          <li>Will be added soon!</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Beginner Workshops</h3>
+        <ul class="event-list">
+          <li>Django Girls</li>
+          <li>Humble Data</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Community Organizers' Sessions</h3>
+        <ul class="event-list">
+          <li>Will be added soon!</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Social & Networking Events</h3>
+        <ul class="event-list">
+          <li><a href="/speakers-dinner/">Speakers' dinner</a></li>
+          <li>More events will be added soon!</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Open spaces</h3>
+        <ul class="event-list">
+          <li>Will be added soon!</li>
+        </ul>
+      </div>
+
+      <div class="event-category">
+        <h3>Sprints</h3>
+        <ul class="event-list">
+          <li>10+ open-source projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="decorative-border"></div>
+  </div>
+  </div>
+</Layout>
+
+<style>
+    :root {
+      --primary-blue: #3A4CA3;
+      --accent-pink: #F3B719;
+      --bg-cream: #F7F1E6;
+      --text-dark: #333;
+    }
+    .prose {
+      max-width: initial;
+    }
+    .events-container {
+      /*max-width: 1000px;*/
+      margin: 0 auto;
+      padding: 2rem;
+      /*background-color: var(--bg-cream);*/
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    .page-title {
+      color: var(--primary-blue);
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .event-category {
+      margin-bottom: 2rem;
+    }
+
+    .event-category h3 {
+      color: var(--primary-blue);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 4px solid var(--accent-pink);
+      padding-bottom: 5px;
+    }
+
+    .event-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .event-list li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .event-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-pink);
+      font-weight: bold;
+    }
+
+    .decorative-border {
+      height: 16px;
+      background-image: url('/hr.png');
+
+      margin: 20px 0;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo-container {
+        margin-bottom: 1rem;
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+</style>
