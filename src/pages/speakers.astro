@@ -2,7 +2,6 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Prose from "@components/prose/prose.astro";
-import { Separator } from "@components/separator/separator";
 import { Image } from "astro:assets";
 
 type Speaker = CollectionEntry<"speakers">;
@@ -37,7 +36,7 @@ function createOptimalGroups(speakers: Speaker[]): Record<string, Speaker[]> {
       currentGroup.push(speaker);
     }
     else {
-      if (currentGroup.length < 1 && currentGroup.length + 1 <= 15) {
+      if (currentGroup.length < 10 && currentGroup.length + 1 <= 15) {
         currentGroup.push(speaker);
         groupKey = `${currentLetter}-${letter}`;
       } else {
@@ -69,32 +68,17 @@ const description = "Our conference speakers organized alphabetically";
       <h1>Speakers</h1>
     </Prose>
 
-    <div class="flex text-xl md:text-2xl font-bold flex-wrap my-8 justify-center">
-      {
-        groupKeys.map((key) => (
-          <a
-            href={`#group-${key}`}
-            class="mx-2 my-1 px-2 py-1 hover:text-primary hover:bg-gray-100 rounded transition-colors"
-          >
-            {key}
-          </a>
-        ))
-      }
-    </div>
-
     {
       groupKeys.map((key, index) => (
         <>
           <div id={`group-${key}`} class="pt-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">{key}</h2>
-
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
               {speakerGroups[key].map((speaker) => (
                 <a
                   href={`/speaker/${speaker.id}`}
                   class="flex flex-col items-center group"
                 >
-                  <div class="w-full aspect-square rounded-full overflow-hidden mb-3 border-2 border-transparent group-hover:border-primary transition-all">
+                  <div class="w-full aspect-square rounded-full overflow-hidden mb-3 ">
                     {speaker.data.avatar ? (
 
           <Image
@@ -118,7 +102,6 @@ const description = "Our conference speakers organized alphabetically";
             </div>
           </div>
 
-          {index !== groupKeys.length - 1 && <Separator />}
         </>
       ))
     }
