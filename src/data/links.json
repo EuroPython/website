@@ -47,6 +47,10 @@
         {
           "name": "Speakers' Dinner",
           "path": "/speakers-dinner"
+        },
+        {
+          "name": "Beginners' Day",
+          "path": "/beginners-day"
         }
       ]
     },
