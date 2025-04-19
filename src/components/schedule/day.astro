@@ -432,7 +432,7 @@ const dateText = format(date, "eeee - do MMMM");
 
   .schedule-wrapper
 {
-  min-width: 780px;
+  min-width: 360px;
   width: 100%;
 }
   :global(body) {
@@ -465,7 +465,7 @@ const dateText = format(date, "eeee - do MMMM");
 
   header,
   .time {
-    display: none;
+    /*display: none;*/
   }
 
   :global(.session) {
@@ -490,7 +490,29 @@ const dateText = format(date, "eeee - do MMMM");
     display: none;
   }
 
+
+  .schedule-container.header {
+    display:none;
+  }
+
+  @media screen and (max-width: 799px) {
+    .time {
+      background:transparent;
+    }
+    .time h2 {
+      text-align:center;
+      color:#333332;
+      font-size:2rem;
+    }
+    .room-info {
+      text-align:center;
+    }
+  }
   @media screen and (min-width: 800px) {
+
+  .schedule-container.header {
+    display: inherit;
+  }
     .schedule-container {
       /*overflow-x: auto;*/
       padding-bottom: 2px;
@@ -510,7 +532,7 @@ const dateText = format(date, "eeee - do MMMM");
       position: sticky;
       top: 0;
       background: var(--color-body-background);
-      z-index: 20;
+      z-index: 20;inherit
 
       > div > div {
         padding: 8px;

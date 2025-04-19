@@ -8,13 +8,15 @@ export interface Props {
 
 const { title, description } = Astro.props;
 ---
-
 <Layout title="Schedule" description="Schedule" >
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+  </Fragment>
   <div class="layout-wrapper2">
   <slot />
   </div>
-
-  </Layout>
+</Layout>
 
 <style is:global>
 .layout-wrapper2 {
