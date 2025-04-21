@@ -19,15 +19,64 @@ const { title, description } = Astro.props;
 </Layout>
 
 <style is:global>
-.layout-wrapper2 {
-  max-width: 800px;
-  margin:auto;
-  display: grid;
-  grid-template-columns: 1fr (770px, 100%) 1fr !important;
-}
-
 .layout-wrapper2 > * {
   grid-column: 2;
 }
 
+@media screen and (max-width: 1280px) {
+  .layout-wrapper2 {
+    max-width: 800px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr (770px, 100%) 1fr !important;
+  }
+}
+
+
+@media screen and (min-width: 1281px) {
+  .layout-wrapper2 {
+    /*max-width: 1100px;*/
+    max-width: auto !important;
+    grid-template-columns: 1fr (1070px, 100%) 1fr !important;
+  }
+
+  .layout-wrapper2 .schedule *{
+    font-size:1.2rem;
+    --header-height: 40px !important;
+    --break: 10px !important;
+  }
+
+  .layout-wrapper2 {
+    h2, .break {
+    font-size:1.2rem;
+    }
+  }
+}
+
+
+/*@media screen and (min-width: 1601px) {*/
+  /*.layout-wrapper2 {*/
+  /*  max-width: auto !important;*/
+  /*  grid-template-columns: 1fr (1170px, 100%) 1fr !important;*/
+  /*}*/
+  /**/
+
+@media screen and (min-width: 1201px) {
+
+  .layout-wrapper2.scaled-up .schedule *{
+    font-size:1.4rem;
+    --header-height: 60px !important;
+    --break: 14px !important;
+  }
+  .layout-wrapper2.scaled-up {
+    h2, .break {
+    font-size:1.4rem;
+    }
+  }
+}
+@media screen and (min-width: 1601px) {
+  .maximize-btn {
+    visibility:initial;
+  }
+}
 </style>

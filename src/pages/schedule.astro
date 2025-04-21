@@ -3,6 +3,7 @@ import { getEntry, getCollection } from "astro:content";
 import Layout from "@layouts/ScheduleLayout.astro";
 import ScheduleDay from "@components/schedule/day.astro";
 import Headline from "@ui/Headline.astro";
+import Button from "@ui/Button.astro";
 
 export const getStaticPaths = async () => {
   const days = await getCollection("days");
@@ -29,3 +30,50 @@ const allDays = Array.from(
     ))
   }
 </Layout>
+
+<style is:global>
+  .layout-wrapper2 {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+  }
+
+  .layout-wrapper2.scaled-up {
+    position: absolute;
+    background-color: #F5E5D7;
+    height:100vh;
+    width:100vw;
+    padding:50px;
+  }
+</style>
+
+
+<script is:inline>
+  const days = document.querySelectorAll('.day');
+  const wrapper = document.querySelector('.layout-wrapper2');
+
+  days.forEach((day) => {
+    let btn = day.querySelector('.maximize-btn');
+    btn.addEventListener('click', () => {
+      wrapper.classList.toggle('scaled-up');
+      btn.textContent = wrapper.classList.contains('scaled-up') ? 'Normal View' : 'Full View';
+
+    const h3 = day.querySelector('h3');
+
+    if (h3 && h3.tagName === 'H3') {
+      const anchor = h3.querySelector('a[href^="#"]');
+
+      if (anchor) {
+        const targetId = anchor.getAttribute('href').substring(1); // remove '#'
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView();
+
+        }
+      }
+    }
+    });
+
+
+  });
+</script>

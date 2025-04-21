@@ -6,6 +6,7 @@ import Session from "@components/schedule/session.astro";
 import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
 //import { Title } from "@components/typography/title";
 import Headline from "@components/ui/Headline.astro";
+import Button from "@ui/Button.astro";
 import { Select } from "@components/form/select";
 import { formatInTimeZone } from "date-fns-tz";
 
@@ -335,6 +336,7 @@ const dateText = format(date, "eeee - do MMMM");
 
   <div class="h-12"></div>
 
+  <Button class="maximize-btn invisible"  clear>Full view</Button>
   <div class="schedule-wrapper">
     <header class="schedule-container header">
       <div
@@ -544,10 +546,6 @@ const dateText = format(date, "eeee - do MMMM");
     }
 
     .schedule {
-      --header-height: 30px;
-      --break: 8px;
-      --lunch: 8px;
-      --minute: 4px;
       --room-change: calc(var(--minute) * 8);
       --5min: calc(var(--minute) * 5);
 
