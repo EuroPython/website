@@ -5,4 +5,5 @@ url: https://europython-society.org/2026-host-venue
 image: "./venue.jpg"
 ---
 
-Are you a community builder dreaming of bringing EuroPython to your city? The Call for Venues for EP 2026 is now open!
+Are you a community builder dreaming of bringing EuroPython to your city? The
+Call for Venues for EP 2026 is now open!
