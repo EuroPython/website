@@ -53,14 +53,6 @@ const { title, description } = Astro.props;
   }
 }
 
-
-/*@media screen and (min-width: 1601px) {*/
-  /*.layout-wrapper2 {*/
-  /*  max-width: auto !important;*/
-  /*  grid-template-columns: 1fr (1170px, 100%) 1fr !important;*/
-  /*}*/
-  /**/
-
 @media screen and (min-width: 1201px) {
 
   .layout-wrapper2.scaled-up .schedule *{
@@ -112,7 +104,7 @@ const { title, description } = Astro.props;
       const anchor = h3.querySelector('a[href^="#"]');
 
       if (anchor) {
-        const targetId = anchor.getAttribute('href').substring(1); // remove '#'
+        const targetId = anchor.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
