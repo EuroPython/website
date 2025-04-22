@@ -1,5 +1,5 @@
 ---
-import { getEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getEntry, getCollection } from "astro:content";
 import Layout from "@layouts/ScheduleLayout.astro";
 import ScheduleDay from "@components/schedule/day.astro";
 import Headline from "@ui/Headline.astro";
@@ -13,15 +13,18 @@ export const getStaticPaths = async () => {
   });
 };
 
-const days = await getCollection("days");
 
-const allDays = Array.from(
-  new Set(days.map((day) => day.id).filter((id) => id))
-).sort();
-let isActive = true;
+type Day = CollectionEntry<"days">;
+const dayEntry = await getEntry("days", Astro.params.day);
+
+if (!dayEntry) {
+  throw new Error(`Day entry "${Astro.params.day}" not found`);
+}
+
+const day: Day = dayEntry;
 ---
 
 <Layout title="" description="">
   <Headline as="h2" id=`schedule-main` title="2025 Schedule" />
-  <ScheduleDay dayName={Astro.params.day} />
+  <ScheduleDay day={day} />
 </Layout>

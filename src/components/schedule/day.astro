@@ -1,6 +1,6 @@
 
 ---
-import { getEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getEntry, getCollection } from "astro:content";
 import Break from "@components/schedule/break.astro";
 import Session from "@components/schedule/session.astro";
 import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
@@ -11,11 +11,9 @@ import { Select } from "@components/form/select";
 import { formatInTimeZone } from "date-fns-tz";
 
 
-export interface props {
-  dayName: string;
-  eventType?: string | null;
+interface Props {
+  day: CollectionEntry<"days">;
 }
-
 
 const format = (date: Date, format: string) => {
   return formatInTimeZone(date, "Europe/Prague", format);
@@ -41,14 +39,11 @@ export const getStaticPaths = async () => {
 };
 
 
-const { dayName } = Astro.props;
+const { day } = Astro.props;
+const dayName = day.id;
+//const day = getEntry("days", dayName);
 
-const days = await getCollection("days");
-
-//const day = await getEntry("days", dayName);
-const day = await getEntry("days", dayName);
-
-const ROOMS = (day?.data.rooms ?? [])
+const ROOMS = (day.data.rooms ?? [])
   .filter((room) => room.toLowerCase() !== "exhibit hall")
   .sort();
 
@@ -67,7 +62,7 @@ type ScheduleSession = {
 // hack for posters :)
 const posters: Array<ScheduleSession> = [];
 
-const sessions = day?.data.events
+const sessions = day.data.events
   .map((event) => {
     const start = parseISO(event.start);
     const startTime = format(start, "HH:mm");

@@ -5,6 +5,10 @@ import ScheduleDay from "@components/schedule/day.astro";
 import Headline from "@ui/Headline.astro";
 import Button from "@ui/Button.astro";
 
+interface Props {
+  dayName: string;
+}
+
 export const getStaticPaths = async () => {
   const days = await getCollection("days");
 
@@ -15,10 +19,6 @@ export const getStaticPaths = async () => {
 
 const days = await getCollection("days");
 
-const allDays = Array.from(
-  new Set(days.map((day) => day.id).filter((id) => id))
-).sort();
-
 ---
 
 <Layout title="" description="">
@@ -26,7 +26,7 @@ const allDays = Array.from(
   <Headline as="h2" id=`schedule-main` title="2025 Schedule" />
   {
     days.map((day) => (
-      <ScheduleDay dayName={day.id} />
+      <ScheduleDay day={day} />
     ))
   }
 </Layout>
