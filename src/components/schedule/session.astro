@@ -53,7 +53,7 @@ const hasFooter = true;
         {session.rooms.length === 1 && (
           <div class="room-info">
             <span class="sr-only">Room:</span>
-            {session.rooms && session.rooms.join(", ")} ⇢
+            {session.rooms && session.rooms.join(", ")}
           </div>
         )}
     </header>
@@ -98,7 +98,6 @@ const hasFooter = true;
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    /*background-color: var(--color-body-background);*/
 
     background-color: color-mix(
       in srgb,
@@ -113,10 +112,6 @@ const hasFooter = true;
       "time footer";
 
     grid-template-columns: 60px 1fr;
-
-    /*@media screen and (min-width: 640px) {*/
-    /*  display: flex;*/
-    /*}*/
   }
 
   .room-info {
@@ -223,33 +218,25 @@ const hasFooter = true;
   }
 
   footer.has-speakers {
-    /*border-top: 1px solid var(--color-text);*/
     margin-top: 5px;
   }
 
   header {
-    /*background-color: var(--color-primary);*/
-    /*border-bottom: 2px solid var(--color-primary);*/
-    /*background-color: #e6c8ac;*/
     text-transform: capitalize;
     font-size: 0.8em;
     font-weight: 500;
   }
 
   .beginner header {
-    /*background-color: var(--color-session-beginner);*/
   }
 
   .intermediate header {
-    /*background-color: var(--color-session-intermediate);*/
   }
 
   .advanced header {
-    /*background-color: var(--color-session-advanced);*/
   }
 
   .poster header {
     text-align:center
-    /*background-color: var(--color-secondary);*/
   }
 </style>
