@@ -19,14 +19,6 @@ const featuredSpeakers = getRandomSpeakers(validSpeakers, 15);
 const sectionTitle = "Featured Speakers";
 const sectionSubtitle = "Meet some of our amazing speakers";
 
-// Helper function to truncate names if needed
-function formatSpeakerName(name: string) {
-  // Option: You could truncate very long names
-  // if (name.length > 20) {
-  //   return name.substring(0, 18) + '...';
-  // }
-  return name;
-}
 ---
 
 <section class="py-16 px-4 bg-gray-50">
@@ -55,15 +47,8 @@ function formatSpeakerName(name: string) {
                 <div class="p-4 text-center h-[88px] flex flex-col justify-center">
                   <!-- Solution: Use text-ellipsis with 2 lines max and remove whitespace-nowrap -->
                   <h3 class="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors line-clamp-2">
-                    {formatSpeakerName(speaker.data.name)}
+                    {speaker.data.name}
                   </h3>
-
-                  <!-- Optional: Add role/title with ellipsis if available -->
-                  {speaker.data.title && (
-                    <p class="text-sm text-gray-600 mt-1 line-clamp-1">
-                      {speaker.data.title}
-                    </p>
-                  )}
                 </div>
               </div>
             </a>
