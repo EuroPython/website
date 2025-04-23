@@ -55,6 +55,19 @@
       ]
     },
     {
+      "name": "Schedule",
+      "items": [
+        {
+          "name": "Tutorials",
+          "path": "/schedule/tutorials"
+        },
+        {
+          "name": "Talks",
+          "path": "/schedule/talks"
+        }
+      ]
+    },
+    {
       "name": "Prague & Venue",
       "items": [
         {

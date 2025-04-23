@@ -8,18 +8,19 @@ export interface Props {
 const { time, title, style }: Props = Astro.props;
 ---
 
-<div class="break" style={style}>
+<div class="break" style={style} aria-label=`${time} ${title}` >
   {time}{" "}
   {title}
+  <span class="sr-only">{time} {title}</span>
 </div>
 
 <style>
   .break {
-    background: var(--color-session-neutral);
-    color: var(--color-text);
     display: flex;
     align-items: center;
-    font-weight: bold;
+    text-align: center;
+    justify-items: center;
     padding-left: 8px;
+    background-color: #FCFBFA;
   }
 </style>
