@@ -5,6 +5,7 @@ on:
 
 jobs:
   preview:
+    if: github.event.pull_request.head.repo.fork == false
     name: Run preview
     runs-on: ubuntu-latest
     env:

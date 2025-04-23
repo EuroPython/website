@@ -1,6 +1,6 @@
 ---
 title: Planning Survey
-subtitle: Share Your Ideas for EP2025
+subtitle: Share Your Ideas
 url: https://forms.gle/riw6CvML8ck94A4V9
 image: "./planning-survey.jpg"
 ---
