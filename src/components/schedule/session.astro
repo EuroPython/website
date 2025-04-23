@@ -1,8 +1,10 @@
 ---
 import { formatInTimeZone } from "date-fns-tz";
 import Speakers from "./speakers.astro";
+import { slugify } from "@utils/content";
+import Icon from "@ui/Icon.astro";
 
-export interface Props {
+export interface props {
   style: any;
   session: {
     slug?: string;
@@ -21,10 +23,12 @@ const { style, session } = Astro.props;
 
 const hasRoom = session.rooms.length === 1;
 const hasSpeakers = session.speakers && session.speakers.length > 0;
-const hasFooter = hasRoom || hasSpeakers;
+//const hasFooter = hasRoom || hasSpeakers;
+const hasFooter = true;
 ---
 
-<div class:list={["session", session.level, session.sessionType]} style={style}>
+<div class:list={["session", session.level, slugify(session.sessionType)]} style={style}>
+  <!--
   <header>
     {
       session.sessionType === "poster" && (
@@ -42,9 +46,20 @@ const hasFooter = hasRoom || hasSpeakers;
         </>
       )
     }
-  </header>
+    </header>
+    -->
+    <header>
 
-  <div class="time">
+        {session.rooms.length === 1 && (
+          <div class="room-info">
+            <span class="sr-only">Room:</span>
+            {session.rooms && session.rooms.join(", ")}
+          </div>
+        )}
+    </header>
+
+
+  <!--   <div class="time">
     <span class="sr-only">Session start:</span>
     <time>
       {formatInTimeZone(session.start, "Europe/Prague", "HH:mm")}
@@ -54,24 +69,19 @@ const hasFooter = hasRoom || hasSpeakers;
     <span class="sr-only">Session end:</span>
     <time>{formatInTimeZone(session.end, "Europe/Prague", "HH:mm")}</time>
   </div>
+  -->
 
   <h2>{session.title}</h2>
 
   {
     hasFooter && (
       <footer class:list={{ "has-room": hasRoom, "has-speakers": hasSpeakers }}>
-        {session.rooms.length === 1 && (
-          <div class="room-info">
-            <span class="sr-only">Room:</span>
-            {session.rooms && session.rooms.join(", ")}
-            {hasSpeakers && <span aria-hidden="true"> • </span>}
-          </div>
-        )}
-        {session.speakers && session.speakers.length > 0 && (
+        {session.speakers && (
           <>
             <Speakers speakers={session.speakers} />
           </>
         )}
+
       </footer>
     )
   }
@@ -83,10 +93,17 @@ const hasFooter = hasRoom || hasSpeakers;
 
 <style>
   .session {
+
+    border: 1px solid transparent;
     font-weight: bold;
-    display: grid;
+    display: flex;
     flex-direction: column;
-    background-color: var(--color-body-background);
+
+    background-color: color-mix(
+      in srgb,
+      var(--color-body-background),
+      white 30%
+    );
     position: relative;
 
     grid-template-areas:
@@ -95,16 +112,14 @@ const hasFooter = hasRoom || hasSpeakers;
       "time footer";
 
     grid-template-columns: 60px 1fr;
-
-    @media screen and (min-width: 640px) {
-      display: flex;
-    }
   }
 
   .room-info {
-    display: inline;
+    display: block;
+    text-align:center;
 
-    @media screen and (min-width: 640px) {
+
+    @media screen and (min-width: 800px) {
       display: none;
     }
   }
@@ -120,6 +135,7 @@ const hasFooter = hasRoom || hasSpeakers;
     bottom: 0;
     left: 0;
     z-index: 1;
+
   }
 
   footer :global(a) {
@@ -127,7 +143,15 @@ const hasFooter = hasRoom || hasSpeakers;
     z-index: 2;
   }
 
-  @media screen and (max-width: 639px) {
+  @media screen and (max-width: 800px) {
+    header {
+      /*text-align:right;*/
+    }
+    .session h2{
+      padding:0 8px ;
+      margin:0;
+    }
+
     .session > .time {
       grid-area: time;
       padding-block: 8px;
@@ -135,7 +159,7 @@ const hasFooter = hasRoom || hasSpeakers;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-right: 1px solid var(--color-text);
+      /*border-right: 1px solid var(--color-text);*/
       gap: 4px;
 
       & .minus {
@@ -145,7 +169,7 @@ const hasFooter = hasRoom || hasSpeakers;
 
     .session > h2 {
       grid-area: title;
-      padding-block: 8px;
+      padding-block: 0;
     }
 
     .session > footer {
@@ -163,15 +187,18 @@ const hasFooter = hasRoom || hasSpeakers;
       var(--color-body-background),
       white 70%
     );
+    border: 1px solid #33333366;
   }
 
-  .session:has(.read-more[href]:not([href=""]):hover) {
+  .session:hover {
     background-color: color-mix(
       in srgb,
       var(--color-body-background),
-      white 40%
-    );
+      white 50%
+        );
+    border: 1px solid #E9714D;
   }
+
 
   .time,
   footer {
@@ -187,34 +214,29 @@ const hasFooter = hasRoom || hasSpeakers;
 
   h2 {
     margin-bottom: 1em;
+    height:100%;
   }
 
   footer.has-speakers {
-    border-top: 1px solid var(--color-text);
-    margin-top: auto;
+    margin-top: 5px;
   }
 
   header {
-    background-color: var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-    color: black;
     text-transform: capitalize;
     font-size: 0.8em;
+    font-weight: 500;
   }
 
   .beginner header {
-    background-color: var(--color-session-beginner);
   }
 
   .intermediate header {
-    background-color: var(--color-session-intermediate);
   }
 
   .advanced header {
-    background-color: var(--color-session-advanced);
   }
 
   .poster header {
-    background-color: var(--color-secondary);
+    text-align:center
   }
 </style>
