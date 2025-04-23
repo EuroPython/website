@@ -1,4 +1,5 @@
 ---
+import BaseLayout from "@layouts/BaseLayout.astro";
 import BaseHead from "@components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
@@ -16,14 +17,18 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+if (!title || !description) {
+throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be set.`);
+}
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
+<BaseLayout title={title} description={description}>
+    <Fragment slot="head">
     <BaseHead title={title} description={description} />
     <slot name="head" />
-  </head>
+    </Fragment>
+
   <body>
       <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-blue-600 p-2 z-50"> Skip to main content</a>
 
@@ -37,4 +42,4 @@ const { title, description } = Astro.props;
       <Footer />
 
   </body>
-</html>
+</BaseLayout>
