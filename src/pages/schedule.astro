@@ -2,8 +2,6 @@
 import { getEntry, getCollection } from "astro:content";
 import Layout from "@layouts/ScheduleLayout.astro";
 import ScheduleDay from "@components/schedule/day.astro";
-import Headline from "@ui/Headline.astro";
-import Button from "@ui/Button.astro";
 
 interface Props {
   dayName: string;
@@ -21,9 +19,8 @@ const days = await getCollection("days");
 
 ---
 
-<Layout title="" description="">
+<Layout description="Browse all scheduled events.">
 
-  <Headline as="h2" id=`schedule-main` title="2025 Schedule" />
   {
     days.map((day) => (
       <ScheduleDay day={day} />

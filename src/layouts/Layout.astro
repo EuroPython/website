@@ -17,6 +17,10 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+if (!title || !description) {
+throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be set.`);
+}
 ---
 
 <BaseLayout title={title} description={description}>

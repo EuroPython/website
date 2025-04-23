@@ -3,7 +3,6 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/ScheduleLayout.astro";
 import ScheduleDay from "@components/schedule/day.astro";
 import { slugify } from '@utils/content';
-import Headline from "@ui/Headline.astro";
 
 export const getStaticPaths = async () => {
   const sessions = await getCollection("sessions");
@@ -24,9 +23,7 @@ const days = await getCollection("days");
 
 ---
 
-<Layout title="" description="">
-
-  <Headline as="h2" id=`schedule-main` title="2025 Schedule" />
+<Layout description="Browse all scheduled talks.">
   {
   days
     .filter((day) => {
