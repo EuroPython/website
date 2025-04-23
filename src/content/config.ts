@@ -158,37 +158,6 @@ const sessions = defineCollection({
   }),
 });
 
-//const days = defineCollection({
-//  type: "data",
-//  schema: z.object({
-//    rooms: z.array(z.string()),
-//    events: z.array(
-//      z.object({
-//        rooms: z.array(z.string()),
-//        event_type: z.string(),
-//        code: z.string().optional(),
-//        title: z.string(),
-//        slug: z.string().optional(),
-//        session_type: z.string().optional(), // why?
-//        speakers: z
-//          .array(
-//            z.object({
-//              code: z.string(),
-//              name: z.string(),
-//              website_url: z.string(),
-//            })
-//          )
-//          .optional(),
-//        tweet: z.string().optional().nullable(),
-//        level: z.string().optional().nullable(),
-//        start: z.string(),
-//        website_url: z.string().optional().nullable(),
-//        duration: z.number(),
-//      })
-//    ),
-//  }),
-//});
-
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
     const schedule = await loadData(import.meta.env.EP_SCHEDULE_API);
