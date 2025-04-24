@@ -1,0 +1,29 @@
+---
+import { getEntry, getCollection } from "astro:content";
+import Layout from "@layouts/ScheduleLayout.astro";
+import ScheduleDay from "@components/schedule/day.astro";
+
+interface Props {
+  dayName: string;
+}
+
+export const getStaticPaths = async () => {
+  const days = await getCollection("days");
+
+  return days.map((day) => {
+    return { params: { day: day.id } };
+  });
+};
+
+const days = await getCollection("days");
+
+---
+
+<Layout description="Browse all scheduled events.">
+
+  {
+    days.map((day) => (
+      <ScheduleDay day={day} />
+    ))
+  }
+</Layout>

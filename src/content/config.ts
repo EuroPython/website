@@ -1,5 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
-import { loadData } from "../utils/dataLoader";
+import { loadData } from "@utils/dataLoader";
 
 const mode = import.meta.env.MODE;
 console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
@@ -159,17 +159,29 @@ const sessions = defineCollection({
 });
 
 const days = defineCollection({
-  type: "data",
+  loader: async (): Promise<any[]> => {
+    const schedule = await loadData(import.meta.env.EP_SCHEDULE_API);
+
+    if (Object.keys(schedule).length === 0) {
+      return schedule;
+    }
+    return Object.entries(schedule.days).map(([date, data]: [string, any]) => ({
+      id: date,
+      ...data,
+    }));
+  },
   schema: z.object({
-    rooms: z.array(z.string()),
+    id: z.string(),
+    rooms: z.array(z.string()).optional(),
     events: z.array(
       z.object({
-        rooms: z.array(z.string()),
-        event_type: z.string(),
         code: z.string().optional(),
-        title: z.string(),
+        duration: z.number(),
+        event_type: z.string(),
+        level: z.string().optional().nullable(),
+        rooms: z.array(z.string()),
+        session_type: z.string().optional(),
         slug: z.string().optional(),
-        session_type: z.string().optional(), // why?
         speakers: z
           .array(
             z.object({
@@ -179,11 +191,11 @@ const days = defineCollection({
             })
           )
           .optional(),
-        tweet: z.string().optional().nullable(),
-        level: z.string().optional().nullable(),
         start: z.string(),
+        title: z.string(),
+        track: z.string().optional().nullable(),
+        tweet: z.string().optional().nullable(),
         website_url: z.string().optional().nullable(),
-        duration: z.number(),
       })
     ),
   }),
