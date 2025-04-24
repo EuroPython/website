@@ -141,7 +141,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
   if (nextStart !== end) {
     const duration = differenceInMinutes(nextStart, end);
 
-    if (duration === 5) {
+    if (duration >= 5) {
       const roomChangeStart = end;
       const roomChangeTime = format(roomChangeStart, "HH:mm");
       const roomChangeEnd = addMinutes(roomChangeStart, 5);
@@ -167,7 +167,9 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
         },
       ];
     } else {
-      console.warn("Missing room change", end, nextStart, duration);
+      if (duration != 0){
+        console.warn("Missing room change", end, nextStart, duration);
+      }
     }
   }
 }
