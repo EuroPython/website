@@ -25,7 +25,7 @@ const speakers = await getEntries(entry.data.speakers);
 
 // Resolve session codes to session data
 const resolveSessions = (codes: string[]) =>
-  codes.map((code) => sessions.find((s) => s?.data?.code === code));
+  codes.map(code => sessions.find(s => s.data.code === code)!);
 
 // Filter out sessions with room "Exhibit Hall"
 const filteredSessions = sessions.filter(
@@ -74,7 +74,7 @@ const nextSessionsOrdered = sameRoomNextSession
       <dd class="capitalize">{entry.data.session_type}</dd>
       <dt class="font-bold">Level:</dt>
       <dd class="capitalize">{entry.data.level}</dd>
-      <!-- {
+      {
         entry.data.room && (
           <>
             <dt class="font-bold">Room:</dt>
@@ -95,7 +95,7 @@ const nextSessionsOrdered = sameRoomNextSession
             </dd>
           </>
         )
-      } -->
+      }
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
@@ -148,8 +148,8 @@ const nextSessionsOrdered = sameRoomNextSession
               The speaker{speakers.length > 1 ? "s" : ""}
             </h2>
             {speakers.map((speaker) => (
-              <div class="md:grid grid-cols-[260px_1fr] md:gap-6">
-                {speaker.data.avatar ? (
+              <div class={speaker.data.avatar ? "md:grid grid-cols-[260px_1fr] md:gap-6" : ""}>
+                {speaker.data.avatar && (
                   <div class="flex items-start">
                     <div class="border-4 border-white rounded-lg shadow-lg inline-block mb-10">
                       <Picture
@@ -160,10 +160,6 @@ const nextSessionsOrdered = sameRoomNextSession
                         class="w-full max-w-[240px] sm:max-w-[540px] xl:max-w-[720px]  max-h-[240px] sm:max-h-[540px] xl:max-h-[720px] object-scale-down"
                       />
                     </div>
-                  </div>
-                ) : (
-                  <div class="flex items-start mb-4 invisible">
-                    <img src="" alt="" class="w-full max-w-sm mb-12" />
                   </div>
                 )}
                 <div>
@@ -185,7 +181,7 @@ const nextSessionsOrdered = sameRoomNextSession
         )
       }
 
-      <!-- {
+      {
         (parallelSessions?.length ?? 0) > 0 ||
         (nextSessionsInAllRooms?.length ?? 0) > 0 ? (
           <>
@@ -232,7 +228,7 @@ const nextSessionsOrdered = sameRoomNextSession
             </div>
           </>
         ) : null
-      } -->
+      }
     </footer>
   </article>
 </Layout>
