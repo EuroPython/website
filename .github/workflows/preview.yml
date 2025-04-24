@@ -41,8 +41,7 @@ jobs:
 
       - name: Export short commit hash
         run:
-          echo "GITHUB_COMMIT_HASH=$(git rev-parse --short
-          "$GITHUB_COMMIT_HASH")" >> "$GITHUB_ENV"
+          echo "GITHUB_COMMIT_HASH=${GITHUB_COMMIT_HASH:0:7}" >> "$GITHUB_ENV"
 
       - name: Build the website
         run: |
