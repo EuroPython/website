@@ -12,10 +12,10 @@ import { Select } from "../form/select";
 
 <form class="mb-12 filter-sessions">
   <div class="w-full mb-6">
-    <Label htmlFor="search">Search</Label>
+    <Label htmlFor="sessionSearch">Search</Label>
     <input
       type="text"
-      id="search"
+      id="sessionSearch"
       name="search"
       class="block w-full bg-transparent text-lg h-16 py-2 pr-16 pl-4 border-[3px] border-primary appearance-none focus:outline-none focus:border-black focus-visible:bg-white"
       placeholder="Search sessions..."
@@ -101,7 +101,7 @@ import { Select } from "../form/select";
         const trackSelect = form.querySelector<HTMLSelectElement>("#track");
         const typeSelect = form.querySelector<HTMLSelectElement>("#type");
         const levelSelect = form.querySelector<HTMLSelectElement>("#level");
-        const searchInput = form.querySelector<HTMLInputElement>("#search");
+        const searchInput = form.querySelector<HTMLInputElement>("#sessionSearch");
 
         if (trackSelect) trackSelect.value = track;
         if (typeSelect) typeSelect.value = type;
@@ -130,7 +130,7 @@ import { Select } from "../form/select";
         const trackSelect = form.querySelector<HTMLSelectElement>("#track");
         const typeSelect = form.querySelector<HTMLSelectElement>("#type");
         const levelSelect = form.querySelector<HTMLSelectElement>("#level");
-        const searchInput = form.querySelector<HTMLInputElement>("#search");
+        const searchInput = form.querySelector<HTMLInputElement>("#sessionSearch");
 
         const track = trackSelect?.value || "";
         const type = typeSelect?.value || "";
@@ -190,7 +190,7 @@ import { Select } from "../form/select";
         select.addEventListener("change", filterSessions);
       });
 
-      const searchInput = form.querySelector<HTMLInputElement>("#search");
+      const searchInput = form.querySelector<HTMLInputElement>("#sessionSearch");
       if (searchInput) {
         searchInput.addEventListener("input", filterSessions);
       }
