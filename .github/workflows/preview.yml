@@ -39,8 +39,13 @@ jobs:
           BRANCH_NAME=$(make safe_branch BRANCH=$GITHUB_BRANCH_NAME)
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
 
-      - name: Build the website
+      - name: Export short commit hash
         run:
+          echo "GITHUB_COMMIT_HASH=$(git rev-parse --short
+          "$GITHUB_COMMIT_HASH")" >> "$GITHUB_ENV"
+
+      - name: Build the website
+        run: |
           make build MODE=preview
           SITE_URL="https://${BRANCH_NAME}.ep-preview.click"
           GIT_VERSION="${GITHUB_COMMIT_HASH}"
