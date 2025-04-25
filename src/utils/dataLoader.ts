@@ -1,3 +1,5 @@
+const dataCache: Record<string, any> = {};
+
 export async function loadData(
   apiUrl: string,
   maxRetries = 3,
@@ -5,6 +7,11 @@ export async function loadData(
 ): Promise<any> {
   if (!apiUrl) {
     throw new Error(`No API URL provided`);
+  }
+
+  if (dataCache[apiUrl]) {
+    console.log(`Cache hit for: ${apiUrl}`);
+    return dataCache[apiUrl];
   }
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
@@ -35,10 +42,9 @@ export async function loadData(
         console.log(
           `Received JSON object with ${Object.keys(data).length} keys`
         );
-      } else {
-        console.log(`Received JSON of type: ${typeof data}`);
       }
 
+      dataCache[apiUrl] = data;
       return data;
     } catch (error) {
       console.error(`Attempt ${attempt} failed:`, error);
