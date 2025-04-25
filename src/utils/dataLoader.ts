@@ -29,6 +29,16 @@ export async function loadData(
         throw new Error(`Received empty or invalid JSON`);
       }
 
+      if (Array.isArray(data)) {
+        console.log(`Received JSON array with ${data.length} items`);
+      } else if (typeof data === "object") {
+        console.log(
+          `Received JSON object with ${Object.keys(data).length} keys`
+        );
+      } else {
+        console.log(`Received JSON of type: ${typeof data}`);
+      }
+
       return data;
     } catch (error) {
       console.error(`Attempt ${attempt} failed:`, error);
@@ -42,6 +52,4 @@ export async function loadData(
       }
     }
   }
-
-  throw new Error(`Unexpected execution path`);
 }
