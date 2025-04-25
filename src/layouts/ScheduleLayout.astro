@@ -15,7 +15,13 @@ const { title, description } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
   </Fragment>
   <>
+
+    <p class="bg-[rgb(255,252,204)] text-[rgb(153,101,21)] border-l-4 border-[rgb(255,204,0)] p-4 text-sm flex items-center space-x-2">
+      <i class="fas fa-exclamation-triangle"></i>
+      <span><strong>Important:</strong> This is an early version of the schedule. It might still change, so please manage your expectations when planning your travel based on specific sessions.</span>
+    </p>
     <Headline as="h2" id="schedule-main" title="2025 Schedule" />
+
     <div class="layout-wrapper2">
       <slot />
     </div>
