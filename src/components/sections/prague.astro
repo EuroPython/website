@@ -4,8 +4,10 @@ import { Image } from "astro:assets";
 import pragueImage from "@assets/prague2.jpg";
 import Logo from "@assets/prague.svg";
 import Headline from "@ui/Headline.astro";
+import Section from "@ui/Section.astro"
 ---
 
+<Section>
 <div class="mt-12">
   <Headline id="prague" title="Prague & Venue" center=true />
 </div>
@@ -35,9 +37,9 @@ import Headline from "@ui/Headline.astro";
 
   </div>
 </article>
+</Section>
 
-
-<div class="city full-bleed" id="one">
+<div class="city full-bleed " id="one">
   <Logo />
 </div>
 
@@ -57,6 +59,6 @@ import Headline from "@ui/Headline.astro";
     width: 100vw;
     position: relative;
     bottom: -4px;
-    z-index: -1;
+    z-index: 1;
   }
 </style>

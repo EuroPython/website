@@ -2,6 +2,7 @@
 import Keynoter from "./keynoter.astro";
 import Headline from "@ui/Headline.astro";
 import Button from "@ui/Button.astro";
+import Section from "@ui/Section.astro"
 
 import { getCollection } from "astro:content";
 
@@ -9,8 +10,8 @@ const keynoters = await getCollection("keynoters");
 
 const placeholders = Math.max(0, 5 - keynoters.length);
 ---
-
-<section class="prose-xl relative my-12 px-6">
+<Section>
+<div class="prose-xl relative my-12 px-6 z-10">
   <svg viewBox="0 0 729 704" class="absolute top-0 left-0 w-full h-full -z-10">
     <g
       stroke="none"
@@ -123,7 +124,8 @@ const placeholders = Math.max(0, 5 - keynoters.length);
       <Button url="/sessions">See sessions preview</Button>
     </div>
   </div>
-</section>
+</div>
+</Section>
 <style>
   .fill-hero-primary {}
 </style>

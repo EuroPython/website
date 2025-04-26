@@ -1,5 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Section from "@ui/Section.astro";
+import Prose from "@components/prose/prose.astro";
 
 import "../styles/markdown.css";
 
@@ -7,5 +9,9 @@ const { title, description } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <slot />
+  <Section>
+    <Prose class="pb-20" >
+      <slot />
+    </Prose>
+  </Section>
 </Layout>

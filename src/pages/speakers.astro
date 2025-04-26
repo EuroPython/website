@@ -3,6 +3,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Prose from "@components/prose/prose.astro";
 import { Image } from "astro:assets";
+import Section from "@ui/Section.astro";
 
 type Speaker = CollectionEntry<"speakers">;
 
@@ -63,7 +64,7 @@ const description = "Our conference speakers organized alphabetically";
 ---
 
 <Layout title={title} description={description}>
-  <div class="px-6">
+  <Section>
     <Prose>
       <h1>Speakers</h1>
     </Prose>
@@ -103,7 +104,7 @@ const description = "Our conference speakers organized alphabetically";
         </>
       ))
     }
-  </div>
+  </Section>
 </Layout>
 
 <style>
