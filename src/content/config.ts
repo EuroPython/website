@@ -59,12 +59,10 @@ const keynoters = defineCollection({
     }),
 });
 
-// Shared data fetching function
 async function getCollectionsData() {
   const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
   const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
 
-  // Create indexed versions for efficient lookups
   const speakersById = Object.entries(
     speakersData as Record<string, {}>
   ).reduce(
@@ -173,17 +171,14 @@ interface ScheduleData {
 
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
-    // Type assertion to specify the expected structure of the loaded data
     const schedule = (await loadData(
       import.meta.env.EP_SCHEDULE_API
     )) as ScheduleData;
 
-    // Check if schedule is empty
     if (!schedule || Object.keys(schedule).length === 0) {
       return [];
     }
 
-    // Now TypeScript knows schedule has days property
     return Object.entries(schedule.days).map(([date, data]: [string, any]) => ({
       id: date,
       ...data,
