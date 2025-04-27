@@ -6,15 +6,15 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "paths": {
-      "@utils/*": ["src/utils/*"],
-      "@data/*": ["src/data/*"],
-      "@components/*": ["src/components/*"],
-      "@sections/*": ["src/components/sections/*"],
-      "@ui/*": ["src/components/ui/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@assets/*": ["src/assets/*"],
-      "@i18n/*": ["src/i18n/*"],
-      "@src/*": ["src/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@data/*": ["./src/data/*"],
+      "@components/*": ["./src/components/*"],
+      "@sections/*": ["./src/components/sections/*"],
+      "@ui/*": ["./src/components/ui/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@i18n/*": ["./src/i18n/*"],
+      "@src/*": ["./src/*"]
     }
   }
 }
