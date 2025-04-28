@@ -26,9 +26,7 @@ export default defineConfig({
         .toISOString()
         .replace(/[-:T.Z]/g, "")
         .slice(0, 14),
-      "import.meta.env.GIT_VERSION": new String(
-        gitVersion
-      ),
+      "import.meta.env.GIT_VERSION": new String(gitVersion),
     },
     resolve: {
       alias: {
