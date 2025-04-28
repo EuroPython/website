@@ -11,12 +11,22 @@ import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 import preload from "astro-preload";
+import { execSync } from "node:child_process";
+
+let gitVersion = "";
+try {
+  gitVersion = execSync("git rev-parse --short HEAD 2>&1 > /dev/null");
+} catch (e) {}
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
     define: {
-      "process.env.VITE_BUILD_TIME": JSON.stringify(new Date().toISOString()),
+      "import.meta.env.TIMESTAMP": new Date()
+        .toISOString()
+        .replace(/[-:T.Z]/g, "")
+        .slice(0, 14),
+      "import.meta.env.GIT_VERSION": new String(gitVersion),
     },
     resolve: {
       alias: {
@@ -75,8 +85,5 @@ export default defineConfig({
   image: {
     remotePatterns: [{ protocol: "https" }],
     domains: ["programme.europython.eu", "placehold.co"],
-  },
-  experimental: {
-    svg: true,
   },
 });
