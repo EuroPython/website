@@ -10,22 +10,22 @@ importers:
     dependencies:
       '@astro-community/astro-embed-youtube':
         specifier: ^0.5.6
-        version: 0.5.6(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
+        version: 0.5.6(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: ^4.2.3
-        version: 4.2.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
+        version: 4.2.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))
       '@astrojs/react':
         specifier: ^4.2.3
-        version: 4.2.3(@types/react-dom@19.1.1(@types/react@19.1.0))(@types/react@19.1.0)(jiti@1.21.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.7.0)
+        version: 4.2.3(@types/react-dom@19.1.1(@types/react@19.1.0))(@types/react@19.1.0)(jiti@1.21.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tsx@4.19.3)(yaml@2.7.0)
       '@astrojs/sitemap':
         specifier: ^3.3.0
         version: 3.3.0
       '@astrojs/tailwind':
         specifier: ^5.1.5
-        version: 5.1.5(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@fontsource-variable/inter':
         specifier: ^5.2.5
         version: 5.2.5
@@ -43,16 +43,16 @@ importers:
         version: 19.1.1(@types/react@19.1.0)
       astro:
         specifier: ^5.5.2
-        version: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)
+        version: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)
       astro-delete-unused-images:
         specifier: ^1.0.3
         version: 1.0.3
       astro-meta-tags:
         specifier: ^0.3.1
-        version: 0.3.1(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
+        version: 0.3.1(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))
       astro-pagefind:
         specifier: ^1.8.3
-        version: 1.8.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
+        version: 1.8.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))
       astro-preload:
         specifier: ^1.1.2
         version: 1.1.2
@@ -98,9 +98,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
-      typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
     devDependencies:
       '@types/js-yaml':
         specifier: ^4.0.9
@@ -111,6 +108,12 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
+      tsx:
+        specifier: ^4.19.3
+        version: 4.19.3
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
 packages:
 
@@ -1671,6 +1674,9 @@ packages:
     resolution: {integrity: sha512-vpeMIQKxczTD/0s2CdEWHcb0eeJe6TFjxb+J5xgX7hScxqrGuyjmv4c1D4A/gelKfyox0gJJwIHF+fLjeaM8kQ==}
     engines: {node: '>=18'}
 
+  get-tsconfig@4.10.0:
+    resolution: {integrity: sha512-kGzZ3LWWQcGIAmg6iWvXn0ei6WDtV26wzHRMwDSzmAbcXrTEXxHy6IehI6/4eT6VRKyMP1eF1VqwrVUmE/LR7A==}
+
   github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
 
@@ -2398,6 +2404,9 @@ packages:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
 
+  resolve-pkg-maps@1.0.0:
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
+
   resolve@1.22.10:
     resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
     engines: {node: '>= 0.4'}
@@ -2601,6 +2610,11 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
+  tsx@4.19.3:
+    resolution: {integrity: sha512-4H8vUNGNjQ4V2EOoGw005+c+dGuPSnhpPBPHBtsZdGZBk/iJb4kguGlPWaZTZ3q5nMtFOEsY0nRDlh9PJyd6SQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   type-fest@4.37.0:
     resolution: {integrity: sha512-S/5/0kFftkq27FPNye0XM1e2NsnoD/3FS+pBmbjmmtLT6I+i344KoOf7pvXreaFsDamWeaJX55nczA1m5PsBDg==}
@@ -3030,9 +3044,9 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@astro-community/astro-embed-youtube@0.5.6(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))':
+  '@astro-community/astro-embed-youtube@0.5.6(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))':
     dependencies:
-      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)
       lite-youtube-embed: 0.3.3
 
   '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)':
@@ -3128,12 +3142,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.2.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))':
+  '@astrojs/mdx@4.2.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -3151,15 +3165,15 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/react@4.2.3(@types/react-dom@19.1.1(@types/react@19.1.0))(@types/react@19.1.0)(jiti@1.21.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.7.0)':
+  '@astrojs/react@4.2.3(@types/react-dom@19.1.1(@types/react@19.1.0))(@types/react@19.1.0)(jiti@1.21.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(tsx@4.19.3)(yaml@2.7.0)':
     dependencies:
       '@types/react': 19.1.0
       '@types/react-dom': 19.1.1(@types/react@19.1.0)
-      '@vitejs/plugin-react': 4.3.4(vite@6.2.5(jiti@1.21.7)(yaml@2.7.0))
+      '@vitejs/plugin-react': 4.3.4(vite@6.2.5(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0))
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       ultrahtml: 1.6.0
-      vite: 6.2.5(jiti@1.21.7)(yaml@2.7.0)
+      vite: 6.2.5(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -3180,9 +3194,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/tailwind@5.1.5(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)
       autoprefixer: 10.4.21(postcss@8.5.3)
       postcss: 8.5.3
       postcss-load-config: 4.0.2(postcss@8.5.3)
@@ -4026,14 +4040,14 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-react@4.3.4(vite@6.2.5(jiti@1.21.7)(yaml@2.7.0))':
+  '@vitejs/plugin-react@4.3.4(vite@6.2.5(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0))':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.10)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.10)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 6.2.5(jiti@1.21.7)(yaml@2.7.0)
+      vite: 6.2.5(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4133,20 +4147,20 @@ snapshots:
 
   astro-delete-unused-images@1.0.3: {}
 
-  astro-meta-tags@0.3.1(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)):
+  astro-meta-tags@0.3.1(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)):
     dependencies:
-      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)
 
-  astro-pagefind@1.8.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)):
+  astro-pagefind@1.8.3(astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)):
     dependencies:
       '@pagefind/default-ui': 1.3.0
-      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0)
       pagefind: 1.3.0
       sirv: 3.0.1
 
   astro-preload@1.1.2: {}
 
-  astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0):
+  astro@5.5.2(jiti@1.21.7)(rollup@4.39.0)(tsx@4.19.3)(typescript@5.8.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
@@ -4198,8 +4212,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.2.1(jiti@1.21.7)(yaml@2.7.0)
-      vitefu: 1.0.6(vite@6.2.1(jiti@1.21.7)(yaml@2.7.0))
+      vite: 6.2.1(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0)
+      vitefu: 1.0.6(vite@6.2.1(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -4595,6 +4609,10 @@ snapshots:
   get-caller-file@2.0.5: {}
 
   get-east-asian-width@1.3.0: {}
+
+  get-tsconfig@4.10.0:
+    dependencies:
+      resolve-pkg-maps: 1.0.0
 
   github-slugger@2.0.0: {}
 
@@ -5725,6 +5743,8 @@ snapshots:
 
   require-from-string@2.0.2: {}
 
+  resolve-pkg-maps@1.0.0: {}
+
   resolve@1.22.10:
     dependencies:
       is-core-module: 2.16.1
@@ -6056,6 +6076,13 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
+  tsx@4.19.3:
+    dependencies:
+      esbuild: 0.25.2
+      get-tsconfig: 4.10.0
+    optionalDependencies:
+      fsevents: 2.3.3
+
   type-fest@4.37.0: {}
 
   typesafe-path@0.2.2: {}
@@ -6164,7 +6191,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.2.1(jiti@1.21.7)(yaml@2.7.0):
+  vite@6.2.1(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.1
       postcss: 8.5.3
@@ -6172,9 +6199,10 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       jiti: 1.21.7
+      tsx: 4.19.3
       yaml: 2.7.0
 
-  vite@6.2.5(jiti@1.21.7)(yaml@2.7.0):
+  vite@6.2.5(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.2
       postcss: 8.5.3
@@ -6182,11 +6210,12 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       jiti: 1.21.7
+      tsx: 4.19.3
       yaml: 2.7.0
 
-  vitefu@1.0.6(vite@6.2.1(jiti@1.21.7)(yaml@2.7.0)):
+  vitefu@1.0.6(vite@6.2.1(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0)):
     optionalDependencies:
-      vite: 6.2.1(jiti@1.21.7)(yaml@2.7.0)
+      vite: 6.2.1(jiti@1.21.7)(tsx@4.19.3)(yaml@2.7.0)
 
   volar-service-css@0.0.62(@volar/language-service@2.4.12):
     dependencies:

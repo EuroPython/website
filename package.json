@@ -40,13 +40,14 @@
     "rehype-slug": "^6.0.0",
     "remark-toc": "^9.0.0",
     "sharp": "^0.34.0",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3"
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
   },
   "prettier": {
     "proseWrap": "always"
