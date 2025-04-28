@@ -59,13 +59,13 @@ const keynoters = defineCollection({
     }),
 });
 
-// Shared data fetching function
 async function getCollectionsData() {
   const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
   const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
 
-  // Create indexed versions for efficient lookups
-  const speakersById = Object.entries(speakersData).reduce(
+  const speakersById = Object.entries(
+    speakersData as Record<string, {}>
+  ).reduce(
     (acc, [id, speaker]: [string, any]) => {
       acc[id] = { id, ...speaker };
       return acc;
@@ -73,7 +73,9 @@ async function getCollectionsData() {
     {} as Record<string, any>
   );
 
-  const sessionsById = Object.entries(sessionsData).reduce(
+  const sessionsById = Object.entries(
+    sessionsData as Record<string, {}>
+  ).reduce(
     (acc, [id, session]: [string, any]) => {
       acc[id] = { id, ...session };
       return acc;
@@ -93,13 +95,15 @@ const speakers = defineCollection({
   loader: async (): Promise<any> => {
     const { speakersData, sessionsById } = await getCollectionsData();
 
-    return Object.values(speakersData).map((speaker: any) => ({
-      id: speaker.slug,
-      ...speaker,
-      submissions: (speaker.submissions || [])
-        .filter((sessionId: string) => sessionId in sessionsById)
-        .map((sessionId: string) => sessionsById[sessionId].slug),
-    }));
+    return Object.values(speakersData as Record<string, {}>).map(
+      (speaker: any) => ({
+        id: speaker.slug,
+        ...speaker,
+        submissions: (speaker.submissions || [])
+          .filter((sessionId: string) => sessionId in sessionsById)
+          .map((sessionId: string) => sessionsById[sessionId].slug),
+      })
+    );
   },
   schema: z.object({
     code: z.string(),
@@ -122,13 +126,15 @@ const sessions = defineCollection({
   loader: async (): Promise<any> => {
     const { sessionsData, speakersById } = await getCollectionsData();
 
-    return Object.values(sessionsData).map((session: any) => ({
-      id: session.slug,
-      ...session,
-      speakers: (session.speakers || [])
-        .filter((speakerId: string) => speakerId in speakersById)
-        .map((speakerId: string) => speakersById[speakerId].slug),
-    }));
+    return Object.values(sessionsData as Record<string, {}>).map(
+      (session: any) => ({
+        id: session.slug,
+        ...session,
+        speakers: (session.speakers || [])
+          .filter((speakerId: string) => speakerId in speakersById)
+          .map((speakerId: string) => speakersById[speakerId].slug),
+      })
+    );
   },
   schema: z.object({
     code: z.string(),
@@ -159,13 +165,20 @@ const sessions = defineCollection({
   }),
 });
 
+interface ScheduleData {
+  days: Record<string, any>;
+}
+
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
-    const schedule = await loadData(import.meta.env.EP_SCHEDULE_API);
+    const schedule = (await loadData(
+      import.meta.env.EP_SCHEDULE_API
+    )) as ScheduleData;
 
-    if (Object.keys(schedule).length === 0) {
-      return schedule;
+    if (!schedule || Object.keys(schedule).length === 0) {
+      return [];
     }
+
     return Object.entries(schedule.days).map(([date, data]: [string, any]) => ({
       id: date,
       ...data,
