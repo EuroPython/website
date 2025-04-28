@@ -46,7 +46,9 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
   },
   "prettier": {
     "proseWrap": "always"

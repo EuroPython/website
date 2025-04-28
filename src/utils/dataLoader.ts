@@ -18,7 +18,8 @@ export async function loadData(
     return dataCache[apiUrl];
   }
 
-  if (inFlightCache[apiUrl]) {
+  // Check if the key exists in the inFlightCache object
+  if (apiUrl in inFlightCache) {
     console.log(`⏳ Waiting for in-flight fetch of: ${apiUrl}`);
     return inFlightCache[apiUrl];
   }
