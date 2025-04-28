@@ -83,7 +83,4 @@ export default defineConfig({
     remotePatterns: [{ protocol: "https" }],
     domains: ["programme.europython.eu", "placehold.co"],
   },
-  experimental: {
-    svg: true,
-  },
 });
