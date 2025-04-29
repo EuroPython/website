@@ -11,7 +11,14 @@ const puppeteer = require("puppeteer");
 
   for (let i = 0; i < elements.length; i++) {
     const el = elements[i];
-    await el.screenshot({ path: `social-${i}.png` });
+
+    // Get the slug from the element
+    const slug = await page.evaluate((el) => el.getAttribute("data-slug"), el);
+
+    // Fallback if slug is missing
+    const filename = slug ? `social-${slug}.png` : `social-${i}.png`;
+
+    await el.screenshot({ path: filename });
   }
 
   await browser.close();

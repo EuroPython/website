@@ -6,7 +6,7 @@ const { entry } = Astro.props;
 
 const sessions = await getEntries(entry.data.submissions);
 ---
-
+<div class="slug">{entry.data.slug}</div>
 <svg width="900" height="900" class="h-full w-full -z-10">
   <image href="http://localhost:4321/social/bg.png" width="900" height="900" />
 </svg>
@@ -108,5 +108,9 @@ const sessions = await getEntries(entry.data.submissions);
       font-weight: bold;
       line-height: 1em;
     }
+
+  .sulg{
+    display:none;
+  }
 
 </style>
