@@ -84,8 +84,7 @@ fitAllText();
 window.addEventListener('resize', fitAllText);
 </script>
 
-
-<script>
+<script define:vars={{slug: entry.data.slug}}>
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.social').forEach((socialDiv, index) => {
 
@@ -118,7 +117,7 @@ window.addEventListener('resize', fitAllText);
 
     const a = document.createElement('a');
     a.href = url;
-    a.download = `social_media.svg`;
+    a.download = slug ? `social-${slug}.svg` : `social-${index +1}.svg`;
     a.style.display = "none";
     document.body.appendChild(a);
     a.click();
