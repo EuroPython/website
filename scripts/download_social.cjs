@@ -3,6 +3,7 @@ const puppeteer = require("puppeteer");
 (async () => {
   const browser = await puppeteer.launch({
     executablePath: process.env.CHROME_BIN,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
   await page.goto("http://localhost:4321/media/social_media_cards");
