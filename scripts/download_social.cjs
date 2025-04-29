@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
     executablePath: process.env.CHROME_BIN,
   });
   const page = await browser.newPage();
-  await page.goto("http://localhost:4321/social/");
+  await page.goto("http://localhost:4321/media/social_media_cards");
 
   const elements = await page.$$(".social");
 
