@@ -19,7 +19,7 @@ for (const path in jobFiles) {
   }
   }
 
-  const jobs: CollectionEntry<"jobs"> = companiesJobsMap[company.id];
+  const jobs: CollectionEntry<"jobs">[] = companiesJobsMap[company.id];
 
   const isCompanyPage = Astro.url.pathname == `/company/${company.id}`;
 
