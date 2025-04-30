@@ -10,16 +10,23 @@ import TwoCols from "@components/TwoCols.astro";
 const companies = await getCollection("companies");
 
 const jobFiles = import.meta.glob("../content/companies/*/!(index).md");
-const companiesJobsMap = {};
+const companiesJobsMap: Record<string, CollectionEntry<"jobs">[]> = {};
 
 for (const path in jobFiles) {
   const match = path.match(/\.\.\/content\/companies\/([^/]+)\/([^/]+)\.md$/);
   if (match) {
     const companyId = match[1];
-    if (!companiesJobsMap[companyId]) companiesJobsMap[companyId] = [];
-    companiesJobsMap[companyId].push(
-      await getEntry("jobs", `${companyId}/${match[2]}`),
-    );
+    const jobId = match[2];
+
+    const entry = await getEntry("jobs", `${companyId}/${jobId}`);
+    if (entry) {
+      if (!companiesJobsMap[companyId]) {
+        companiesJobsMap[companyId] = [];
+      }
+      companiesJobsMap[companyId].push(entry);
+    } else {
+      console.warn(`Job entry not found for: ${companyId}/${jobId}`);
+    }
   }
 }
 ---
