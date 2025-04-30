@@ -8,6 +8,7 @@ Disallow: /
 const prodRobots = `
 User-agent: *
 Disallow: /_astro/
+Disallow: /media/
 Disallow: /*?
 Allow: /
 
