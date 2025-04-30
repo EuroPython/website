@@ -2,6 +2,7 @@
 import Layout from "@layouts/MarkdownLayout.astro";
 import JobCard from "@components/JobCard.astro";
 import CompanyCard from "@components/CompanyCard.astro";
+import TwoCols from "@components/TwoCols.astro";
 
 import { getEntry } from "astro:content";
 
@@ -31,13 +32,13 @@ export async function getStaticPaths() {
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
   <section class="space-y-12 pb-6 md:p-6">
-    <div class="flex flex-col lg:flex-row-reverse gap-6">
-      <div class="w-full lg:max-w-[400px]  lg:sticky lg:top-6 self-start">
+    <TwoCols>
+      <Fragment slot="content">
         <CompanyCard {company} />
-      </div>
-      <div class="flex-1">
+      </Fragment>
+      <Fragment slot="sidebar">
         {(<JobCard {job} />)}
-      </div>
-    </div>
+      </Fragment>
+    </TwoCols>
   </section>
 </Layout>

@@ -5,6 +5,7 @@ import Layout from "@layouts/MarkdownLayout.astro";
 
 import CompanyCard from "@components/CompanyCard.astro";
 import JobCard from "@components/JobCard.astro";
+import TwoCols from "@components/TwoCols.astro";
 
 const companies = await getCollection("companies");
 
@@ -32,11 +33,11 @@ for (const path in jobFiles) {
       companies.map((company) => {
         const companyJobs = companiesJobsMap[company.id];
         return (
-          <div class="flex flex-col lg:flex-row-reverse gap-6">
-            <div class="w-full lg:max-w-[400px]  lg:sticky lg:top-6 self-start">
+          <TwoCols>
+            <Fragment slot="content">
               <CompanyCard {company} />
-            </div>
-            <div class="flex-1 ">
+            </Fragment>
+            <Fragment slot="sidebar">
               {companyJobs.length > 0 && (
                 <>
                   {companyJobs.map((job) => (
@@ -44,8 +45,8 @@ for (const path in jobFiles) {
                   ))}
                 </>
               )}
-            </div>
-          </div>
+            </Fragment>
+          </TwoCols>
         );
       })
     }
