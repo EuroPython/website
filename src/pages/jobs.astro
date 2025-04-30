@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { type CollectionEntry, getCollection, getEntry } from "astro:content";
 
 import Layout from "@layouts/MarkdownLayout.astro";
 
@@ -27,13 +27,13 @@ for (const path in jobFiles) {
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-  <section class="space-y-12 pb-6">
+  <section class="space-y-12 pb-6 md:p-6">
     {
       companies.map((company) => {
         const companyJobs = companiesJobsMap[company.id];
         return (
-          <div class="flex flex-col md:flex-row-reverse gap-6">
-            <div class="sticky top-0 self-start">
+          <div class="flex flex-col lg:flex-row-reverse gap-6">
+            <div class="w-full lg:max-w-[400px]  lg:sticky lg:top-6 self-start">
               <CompanyCard {company} />
             </div>
             <div class="flex-1 ">

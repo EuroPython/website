@@ -24,9 +24,10 @@ export async function getStaticPaths() {
 >
 
 
-    <section class="space-y-12 pb-6">
+    <section class="space-y-12 pb-6 md:p-6">
+          <div class="flex flex-col lg:flex-row-reverse gap-6">
             <div class="flex flex-col md:flex-row-reverse gap-6">
-              <div class="sticky top-0 self-start">
+              <div class="w-full lg:max-w-[400px]  lg:sticky lg:top-6 self-start">
                 <CompanyCard {company} />
               </div>
               <div class="flex-1 ">
