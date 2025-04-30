@@ -1,4 +1,6 @@
+---
 name: 1Password
 url: https://1password.com/
-image: ./1password.svg
 tier: Supporters
+logo_padding: 30px 10px
+---

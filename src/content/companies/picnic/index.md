@@ -1,4 +1,6 @@
+---
 name: picnic
 url: https://jobs.picnic.app/en/home
 image: ./picnic.svg
 tier: Gold
+---

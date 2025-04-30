@@ -1,4 +1,6 @@
+---
 name: pretix
 url: https://pretix.eu/
 image: ./pretix.svg
 tier: Silver
+---

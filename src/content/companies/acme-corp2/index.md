@@ -1,7 +1,6 @@
 ---
-title: "Acme Corp 2"
-logo: "/logos/eps.svg"
-website: "https://www.acmecorp.com"
+name: "Acme Corp 2"
+url: "https://www.acmecorp.com"
 location: "New York, USA"
 industry: "Technology & Innovation"
 description:

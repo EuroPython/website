@@ -38,17 +38,6 @@ const deadlines = defineCollection({
     }),
 });
 
-const sponsors = defineCollection({
-  type: "data",
-  schema: ({ image }) =>
-    z.object({
-      name: z.string(),
-      url: z.string(),
-      image: image(),
-      tier: z.enum(tiers),
-    }),
-});
-
 const keynoters = defineCollection({
   type: "content",
   schema: ({ image }) =>
@@ -219,12 +208,12 @@ const days = defineCollection({
 const companies = defineCollection({
   loader: glob({ pattern: "*/index.md", base: "./src/content/companies" }),
   schema: z.object({
-    title: z.string(),
-    logo: z.string().optional(),
-    website: z.string().url(),
-    location: z.string(),
-    industry: z.string(),
-    description: z.string(),
+    name: z.string(),
+    url: z.string().url(),
+    tier: z.string().optional(),
+    location: z.string().optional(),
+    industry: z.string().optional(),
+    description: z.string().optional(),
     socials: z
       .object({
         linkedin: z.string().url().optional(),
@@ -232,6 +221,7 @@ const companies = defineCollection({
       })
       .optional(),
     jobs: z.array(z.string()).optional(),
+    logo_padding: z.string().optional(),
   }),
 });
 
@@ -256,7 +246,6 @@ export const collections = {
   days,
   pages,
   deadlines,
-  sponsors,
   sessions,
   speakers,
   keynoters,

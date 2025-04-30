@@ -1,4 +1,6 @@
+---
 name: pretalx
 url: https://pretalx.com/p/about/
 image: ./pretalx.svg
 tier: Supporters
+---

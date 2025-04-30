@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
-type Sponsor = Awaited<ReturnType<typeof getCollection<"sponsors">>>[0];
+type Sponsor = Awaited<ReturnType<typeof getCollection<"companies">>>[0];
 
 export interface Props {
   tier: {
@@ -12,6 +12,9 @@ export interface Props {
 
   top?: boolean;
 }
+
+
+import { companyLogos } from "@data/companyLogos";
 
 const { tier, top } = Astro.props;
 ---
@@ -42,7 +45,7 @@ const { tier, top } = Astro.props;
           class="pb-8"
         >
           <Image
-            src={sponsor.data.image}
+            src={companyLogos[sponsor.id]}
             alt={sponsor.data.name}
             width={500}
             class="max-w-[250px] max-h-[120px]"

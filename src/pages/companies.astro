@@ -1,11 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, getEntry } from "astro:content";
-
 import Layout from "@layouts/MarkdownLayout.astro";
-
 import CompanyCard from "@components/CompanyCard.astro";
-import JobCard from "@components/JobCard.astro";
-import TwoCols from "@components/TwoCols.astro";
 
 const companies = await getCollection("companies");
 
@@ -29,34 +25,28 @@ for (const path in jobFiles) {
     }
   }
 }
+
+const companiesWithDescription: CollectionEntry<"companies">[]  = companies.filter(c => c.data.description?.trim());
+const companiesWithoutDescription: CollectionEntry<"companies">[] = companies.filter(c => !c.data.description?.trim());
 ---
 
 <Layout
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-  <section class="space-y-12 pb-6 md:p-6">
-    {
-      companies.map((company) => {
-        const companyJobs = companiesJobsMap[company.id];
-        if (!companyJobs) return;
-        return (
-          <TwoCols>
-            <Fragment slot="content">
-              <CompanyCard {company} />
-            </Fragment>
-            <Fragment slot="sidebar">
-              {companyJobs && companyJobs.length > 0 && (
-                <>
-                  {companyJobs.map((job) => (
-                    <JobCard {job} />
-                  ))}
-                </>
-              )}
-            </Fragment>
-          </TwoCols>
-        );
-      })
-    }
+{companiesWithDescription.length > 0 && (
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
+    {companiesWithDescription.map((company) => (
+      <CompanyCard company={company} />
+    ))}
   </section>
+)}
+
+{companiesWithoutDescription.length > 0 && (
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
+    {companiesWithoutDescription.map((company) => (
+      <CompanyCard company={company} />
+    ))}
+  </section>
+)}
 </Layout>

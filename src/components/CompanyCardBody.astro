@@ -1,26 +1,8 @@
 ---
-import { type CollectionEntry, getEntry } from "astro:content";
+
 import { marked } from 'marked';
-
-
-const { company, full=false, openings=false } = Astro.props;
-const { title, logo, website, location, industry, description, socials } = company.data;
-
-const jobFiles = import.meta.glob('../content/companies/*/!(index).md');
-const jobs: CollectionEntry<'jobs'>[] = [];
-
-for (const path in jobFiles) {
-  const match = path.match(/\.\.\/content\/companies\/([^/]+)\/([^/]+)\.md$/);
-  if (match) {
-    const companyId = company.id;
-    const entry = await getEntry('jobs', `${companyId}/${match[2]}`);
-    if (entry) {
-      jobs.push(entry);
-    }
-  }
-}
-
-const html = marked.parse(company.body);
+const { company } = Astro.props;
+const html = company.body ? marked.parse(company.body) :  "";
 
 ---
 

@@ -1,4 +1,7 @@
+---
 name: Numberly
 url: https://numberly.com/
 image: ./numberly.svg
 tier: Gold
+logo_padding: 30px
+---

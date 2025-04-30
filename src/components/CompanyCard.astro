@@ -1,10 +1,11 @@
 ---
 import { type CollectionEntry, getEntry } from "astro:content";
-import { marked } from 'marked';
+import { Image } from "astro:assets";
+import { companyLogos } from "@data/companyLogos";
 
 
 const { company } = Astro.props;
-const { title, logo, website, location, industry, description, socials } = company.data;
+const { name: title, url:website, location, industry, description, socials, logo_padding=false } = company.data;
 
 const jobFiles = import.meta.glob('../content/companies/*/!(index).md');
 const companiesJobsMap = {};
@@ -18,26 +19,31 @@ for (const path in jobFiles) {
   }
   }
 
-  const jobs = companiesJobsMap[company.id];
+  const jobs: CollectionEntry<"jobs"> = companiesJobsMap[company.id];
 
   const isCompanyPage = Astro.url.pathname == `/company/${company.id}`;
 
-const html = marked.parse(company.body);
+const logo = companyLogos[company.id];
+
+const link = description ? `/company/${company.id}` : website;
 
 ---
 
 <div class="lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black">
   <div class="w-full flex justify-center items-center md:items-center ">
-    <img src={logo} alt={title + " Logo"} class="max-h-[200px] object-contain" />
+    {logo && (
+      <a href={link}>
+        <Image
+          src={logo}
+          alt={`${title} Logo`}
+         style={{ minWidth: "250px", maxHeight: "120px", objectFit: "contain", padding: logo_padding ? logo_padding : undefined, }}
+        />
+      </a>
+    )}
   </div>
+  { description &&
   <div class="flex-1">
-    <h2 class="text-2xl font-bold mb-2">
-      { isCompanyPage ?
-          <>{title}</> :
-          <a href={`/company/${company.id}`}>{title}</a>
-      }
-    </h2>
-    <p class="text-gray-600 mb-2">{industry} — {location}</p>
+    <p class="text-gray-600 mb-2">{industry} {industry && location && <>—</>} {location}</p>
     <p class="mb-4">{description}</p>
 
     <div class="flex space-x-4 mb-4">
@@ -58,7 +64,8 @@ const html = marked.parse(company.body);
       </div>
     )}
 
-    { !isCompanyPage && <a class="btn btn-primary mt-6 inline-block" href={`/company/${company.id}`}>Who We Are</a>}
+    { !isCompanyPage && company.body && <a class="btn btn-primary mt-6 inline-block" href={`/company/${company.id}`}>Who We Are</a>}
   </div>
+  }
 
 </div>
