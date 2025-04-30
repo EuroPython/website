@@ -1,0 +1,53 @@
+---
+import { getCollection, getEntry } from "astro:content";
+
+import Layout from "@layouts/MarkdownLayout.astro";
+
+import CompanyCard from "@components/CompanyCard.astro";
+import JobCard from "@components/JobCard.astro";
+
+const companies = await getCollection("companies");
+
+const jobFiles = import.meta.glob("../content/companies/*/!(index).md");
+const companiesJobsMap = {};
+
+for (const path in jobFiles) {
+  const match = path.match(/\.\.\/content\/companies\/([^/]+)\/([^/]+)\.md$/);
+  if (match) {
+    const companyId = match[1];
+    if (!companiesJobsMap[companyId]) companiesJobsMap[companyId] = [];
+    companiesJobsMap[companyId].push(
+      await getEntry("jobs", `${companyId}/${match[2]}`),
+    );
+  }
+}
+---
+
+<Layout
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
+>
+  <section class="space-y-12 pb-6">
+    {
+      companies.map((company) => {
+        const companyJobs = companiesJobsMap[company.id];
+        return (
+          <div class="flex flex-col md:flex-row-reverse gap-6">
+            <div class="sticky top-0 self-start">
+              <CompanyCard {company} />
+            </div>
+            <div class="flex-1 ">
+              {companyJobs.length > 0 && (
+                <>
+                  {companyJobs.map((job) => (
+                    <JobCard {job} />
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
+        );
+      })
+    }
+  </section>
+</Layout>

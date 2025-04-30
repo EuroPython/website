@@ -1,5 +1,6 @@
 import { defineCollection, reference, z } from "astro:content";
 import { loadData } from "@utils/dataLoader";
+import { glob, file } from "astro/loaders";
 
 const mode = import.meta.env.MODE;
 console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
@@ -215,6 +216,42 @@ const days = defineCollection({
   }),
 });
 
+const companies = defineCollection({
+  loader: glob({ pattern: "*/index.md", base: "./src/content/companies" }),
+  schema: z.object({
+    title: z.string(),
+    logo: z.string().optional(),
+    website: z.string().url(),
+    location: z.string(),
+    industry: z.string(),
+    description: z.string(),
+    socials: z
+      .object({
+        linkedin: z.string().url().optional(),
+        twitter: z.string().url().optional(),
+      })
+      .optional(),
+    jobs: z.array(z.string()).optional(),
+  }),
+});
+
+const jobs = defineCollection({
+  loader: glob({ pattern: "*/!(index).md", base: "./src/content/companies" }),
+  schema: z.object({
+    title: z.string(),
+    location: z.string(),
+    type: z.string(), // e.g., Full-Time
+    level: z.string(), // e.g., Senior
+    salary: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    description: z.string(),
+    responsibilities: z.array(z.string()).optional(),
+    requirements: z.array(z.string()).optional(),
+    benefits: z.array(z.string()).optional(),
+    apply_link: z.string().url(),
+  }),
+});
+
 export const collections = {
   days,
   pages,
@@ -223,4 +260,6 @@ export const collections = {
   sessions,
   speakers,
   keynoters,
+  companies,
+  jobs,
 };

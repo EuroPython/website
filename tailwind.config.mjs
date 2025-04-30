@@ -83,7 +83,7 @@ export default {
         DEFAULT: {
           css: {
             color: theme("colors.text"),
-            "--tw-prose-headings": theme("colors.white"),
+            "--tw-prose-headings": theme("colors.black"),
           },
         },
       }),

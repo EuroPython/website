@@ -1,0 +1,38 @@
+---
+const { job } = Astro.props;
+const { title, company, location, type, level, salary, tags, description, responsibilities, requirements, benefits, apply_link } = job.data;
+---
+
+<div class="mb-6 last:mb-0">
+  <div class="flex-1 p-6 rounded-lg shadow-md bg-white">
+    <a href={`/company/${job.id}`}>
+      <h2 class="text-3xl font-bold mb-2">{title}</h2>
+    </a>
+    <p class="text-gray-600 mb-2">{level} • {type} • {location}</p>
+    <p class="text-gray-700 mb-4">{salary}</p>
+    <p class="mb-6">{description}</p>
+
+    <h3 class="text-xl font-semibold mb-2">Responsibilities</h3>
+    <ul class="list-disc list-inside mb-4">
+      {responsibilities && responsibilities.map(item => <li>{item}</li>)}
+    </ul>
+
+    <h3 class="text-xl font-semibold mb-2">Requirements</h3>
+    <ul class="list-disc list-inside mb-4">
+      {requirements && requirements.map(item => <li>{item}</li>)}
+    </ul>
+
+    <h3 class="text-xl font-semibold mb-2">Benefits</h3>
+    <ul class="list-disc list-inside mb-6">
+      {benefits && benefits.map(item => <li>{item}</li>)}
+    </ul>
+
+      <a
+        href={apply_link}
+        target="_blank"
+        class="inline-block bg-button hover:bg-button-hover text-text-inverted font-semibold py-2 px-4 rounded-lg shadow transition-colors duration-200"
+>
+        Apply Now
+      </a>
+  </div>
+</div>

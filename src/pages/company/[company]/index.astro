@@ -1,0 +1,39 @@
+---
+import Layout from "@layouts/MarkdownLayout.astro";
+import CompanyCard from "@components/CompanyCard.astro";
+import CompanyCardBody from "@components/CompanyCardBody.astro";
+
+import { getEntry, getCollection } from "astro:content";
+
+const company = await getEntry("companies", Astro.params.company);
+
+export async function getStaticPaths() {
+  const companies = await getCollection("companies");
+
+  return companies.map((company: any) => ({
+    params: {
+      company: company.id,
+    },
+  }));
+}
+---
+
+<Layout
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
+>
+
+
+    <section class="space-y-12 pb-6">
+            <div class="flex flex-col md:flex-row-reverse gap-6">
+              <div class="sticky top-0 self-start">
+                <CompanyCard {company} />
+              </div>
+              <div class="flex-1 ">
+                <CompanyCardBody {company} />
+              </div>
+            </div>
+      </section>
+  <section class="space-y-12 pb-6">
+  </section>
+</Layout>

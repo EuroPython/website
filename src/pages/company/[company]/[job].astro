@@ -1,0 +1,43 @@
+---
+import Layout from "@layouts/MarkdownLayout.astro";
+import JobCard from "@components/JobCard.astro";
+import CompanyCard from "@components/CompanyCard.astro";
+
+import { getEntry } from "astro:content";
+
+const { company: companyId, job: jobId } = Astro.params;
+
+const company = await getEntry("companies", companyId);
+const job = await getEntry("jobs", `${companyId}/${jobId}`);
+
+export async function getStaticPaths() {
+  const jobFiles = import.meta.glob("@src/content/companies/*/!(index).md");
+  return Object.keys(jobFiles)
+    .map((path) => {
+      const match = path.match(/\/companies\/([^/]+)\/([^/]+)\.md$/);
+      if (!match) return null;
+
+      const [, companyId, jobId] = match;
+      return {
+        params: { company: companyId, job: jobId },
+      };
+    })
+    .filter(Boolean);
+}
+---
+
+<Layout
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
+>
+  <section class="space-y-12 pb-6">
+    <div class="flex flex-col md:flex-row-reverse gap-6">
+      <div class="sticky top-0 self-start">
+        <CompanyCard {company} />
+      </div>
+      <div class="flex-1">
+        {(<JobCard {job} />)}
+      </div>
+    </div>
+  </section>
+</Layout>

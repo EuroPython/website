@@ -1,0 +1,64 @@
+---
+import { type CollectionEntry, getEntry } from "astro:content";
+import { marked } from 'marked';
+
+
+const { company } = Astro.props;
+const { title, logo, website, location, industry, description, socials } = company.data;
+
+const jobFiles = import.meta.glob('../content/companies/*/!(index).md');
+const companiesJobsMap = {};
+
+for (const path in jobFiles) {
+  const match = path.match(/\.\.\/content\/companies\/([^/]+)\/([^/]+)\.md$/);
+  if (match) {
+    const companyId = match[1];
+    if (!companiesJobsMap[companyId]) companiesJobsMap[companyId] = [];
+    companiesJobsMap[companyId].push(await getEntry('jobs', `${companyId}/${match[2]}`));
+  }
+  }
+
+  const jobs = companiesJobsMap[company.id];
+
+  const isCompanyPage = Astro.url.pathname == `/company/${company.id}`;
+
+const html = marked.parse(company.body);
+
+---
+
+<div class="max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black">
+  <div class="w-full flex justify-center items-center md:items-center ">
+    <img src={logo} alt={title + " Logo"} class="max-h-[200px] object-contain" />
+  </div>
+  <div class="flex-1">
+    <h2 class="text-2xl font-bold mb-2">
+      { isCompanyPage ?
+          <>{title}</> :
+          <a href={`/company/${company.id}`}>{title}</a>
+      }
+    </h2>
+    <p class="text-gray-600 mb-2">{industry} — {location}</p>
+    <p class="mb-4">{description}</p>
+
+    <div class="flex space-x-4 mb-4">
+      {socials?.linkedin && <a href={socials.linkedin} target="_blank">LinkedIn</a>}
+      {socials?.twitter && <a href={socials.twitter} target="_blank">Twitter</a>}
+    </div>
+
+    <a href={website} target="_blank" class="text-blue-600 underline">Visit Website</a>
+
+    { jobs && (
+      <div class="mt-4">
+        <h3 class="font-semibold">Open Positions:</h3>
+        <ul class="list-disc list-inside">
+          {Object.values(jobs).map(job => (
+            <li><a href={`/company/${job.id}`}>{job.data.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    { !isCompanyPage && <a class="btn btn-primary mt-6 inline-block" href={`/company/${company.id}`}>Who We Are</a>}
+  </div>
+
+</div>
