@@ -13,10 +13,19 @@ import deleteUnusedImages from "astro-delete-unused-images";
 import preload from "astro-preload";
 import { execSync } from "node:child_process";
 
-let gitVersion = "";
-try {
-  gitVersion = execSync("git rev-parse --short HEAD 2>&1 > /dev/null");
-} catch (e) {}
+let gitVersion = String(import.meta.env.GIT_VERSION ?? "").slice(0, 7);
+
+if (!gitVersion) {
+  try {
+    gitVersion = execSync("git rev-parse --short HEAD", {
+      stdio: ["ignore", "pipe", "ignore"],
+    })
+      .toString()
+      .trim();
+  } catch {
+    gitVersion = "unknown";
+  }
+}
 
 // https://astro.build/config
 export default defineConfig({
