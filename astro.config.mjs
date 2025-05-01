@@ -31,11 +31,13 @@ if (!gitVersion) {
 export default defineConfig({
   vite: {
     define: {
-      __TIMESTAMP__: new Date()
-        .toISOString()
-        .replace(/[-:T.Z]/g, "")
-        .slice(0, 14),
-      __GIT_VERSION__: gitVersion,
+      __TIMESTAMP__: JSON.stringify(
+        new Date()
+          .toISOString()
+          .replace(/[-:T.Z]/g, "")
+          .slice(0, 14)
+      ),
+      __GIT_VERSION__: JSON.stringify(gitVersion),
     },
     resolve: {
       alias: {
