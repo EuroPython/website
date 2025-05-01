@@ -13,7 +13,7 @@ import deleteUnusedImages from "astro-delete-unused-images";
 import preload from "astro-preload";
 import { execSync } from "node:child_process";
 
-let gitVersion = String(import.meta.env.GIT_VERSION ?? "").slice(0, 7);
+let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
 
 if (!gitVersion) {
   try {
@@ -31,11 +31,11 @@ if (!gitVersion) {
 export default defineConfig({
   vite: {
     define: {
-      "import.meta.env.TIMESTAMP": new Date()
+      __TIMESTAMP__: new Date()
         .toISOString()
         .replace(/[-:T.Z]/g, "")
         .slice(0, 14),
-      "import.meta.env.GIT_VERSION": `"${gitVersion}"`,
+      __GIT_VERSION__: gitVersion,
     },
     resolve: {
       alias: {

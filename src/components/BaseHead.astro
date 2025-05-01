@@ -5,8 +5,8 @@ interface Props {
   image?: string;
 }
 
-const buildTimestamp = import.meta.env.TIMESTAMP;
-const gitVersion = import.meta.env.GIT_VERSION;
+const buildTimestamp = __TIMESTAMP__;
+const gitVersion = __GIT_VERSION__;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = "/social-card.png" } = Astro.props;
