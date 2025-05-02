@@ -10,3 +10,6 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+declare const __GIT_VERSION__: string;
+declare const __TIMESTAMP__: string;
