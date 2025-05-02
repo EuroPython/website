@@ -47,6 +47,14 @@ throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be se
   </body>
 </html>
 
+
+<style is:global>
+  main section .container {
+    max-width: 1150px;
+  }
+</style>
+
+
 <style>
   body {
     @apply bg-primary min-w-[360px];
