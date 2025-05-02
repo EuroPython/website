@@ -11,6 +11,7 @@ import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 import preload from "astro-preload";
+import rehypeMermaid from "rehype-mermaid";
 import { execSync } from "node:child_process";
 
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
@@ -54,6 +55,10 @@ export default defineConfig({
     },
   },
   markdown: {
+    syntaxHighlight: {
+      type: "shiki",
+      excludeLangs: ["mermaid", "math"],
+    },
     remarkPlugins: [
       [
         remarkToc,
@@ -63,6 +68,7 @@ export default defineConfig({
       ],
     ],
     rehypePlugins: [
+      rehypeMermaid,
       rehypeSlug,
       [
         rehypeAutolinkHeadings,
