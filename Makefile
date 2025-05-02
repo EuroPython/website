@@ -32,6 +32,7 @@ pre:
 
 install:
 	pnpm install
+	pnpm exec playwright install
 
 dev:
 	pnpm dev
