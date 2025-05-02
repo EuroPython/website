@@ -1,9 +1,10 @@
 ---
 export interface Props {
   class?: string;
+  full?: boolean;
 }
 
-const { class: className } = Astro.props;
+const { class: className, full=false } = Astro.props;
 ---
 
 <article
@@ -17,12 +18,7 @@ const { class: className } = Astro.props;
     "prose-li:marker:text-text",
     className,
   ]}
+    style={full ?  "max-width: none !important;": "margin:auto;"}
 >
   <slot />
 </article>
-
-<style>
-.prose {
-  max-width: none !important;
-}
-</style>

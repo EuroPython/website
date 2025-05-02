@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/MarkdownLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import Headline from "@ui/Headline.astro"
 import Section from "@ui/Section.astro";
 
@@ -9,9 +9,10 @@ import Section from "@ui/Section.astro";
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
+  <Section>
   <Headline id="oveview" title="Programme & Events Overview" center=true />
 
-  <div class="events-container w-full">
+  <div class="events-container w-full prose prose-xl">
     <div class="decorative-border"></div>
 
     <div class="events-grid">
@@ -82,6 +83,7 @@ import Section from "@ui/Section.astro";
 
     <div class="decorative-border"></div>
   </div>
+  </Section>
 </Layout>
 
 <style>
