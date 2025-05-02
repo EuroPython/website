@@ -29,10 +29,6 @@ body {
   @apply bg-body-background text-text;
 }
 
-main section .container {
-  max-width: 1150px;
-}
-
 .layout-wrapper {
   display: grid;
   grid-template-columns:
