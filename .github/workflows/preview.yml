@@ -11,6 +11,7 @@ jobs:
     env:
       PREVIEW_HOSTNAME: ep-preview.click
       GITHUB_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      GITHUB_COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
 
     steps:
       - name: Checkout
@@ -33,15 +34,12 @@ jobs:
       - name: Install dependencies
         run: make install
 
-      - name: Get current branch name
-        run: |
-          BRANCH_NAME=$(make safe_branch BRANCH=$GITHUB_BRANCH_NAME)
-          echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
-
       - name: Build the website
-        run:
-          make build MODE=preview
-          SITE_URL="https://${BRANCH_NAME}.ep-preview.click"
+        env:
+          BRANCH: "${{ env.GITHUB_BRANCH_NAME }}"
+          GIT_VERSION: "${{ env.GITHUB_COMMIT_HASH }}"
+          MODE: "preview"
+        run: make build
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
@@ -52,7 +50,9 @@ jobs:
         run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
 
       - name: Upload preview
-        run: make preview BRANCH=$GITHUB_BRANCH_NAME
+        env:
+          BRANCH: "${{ env.GITHUB_BRANCH_NAME }}"
+        run: make preview
 
       - name: Update PR Comment
         uses: actions/github-script@v7
@@ -80,7 +80,7 @@ jobs:
               }
             });
 
-            const branch_name = process.env.BRANCH_NAME;
+            const branch_name = process.env.GITHUB_BRANCH_NAME;
             const url = "https://" + branch_name + "." + process.env.PREVIEW_HOSTNAME;
             const timestamp = new Date().toISOString();
             const header = "\n|Key|Value|\n|---|---|\n"
