@@ -72,7 +72,12 @@ const socialLinks = [
     description && (
       <div class="flex-1">
         <h2 class="text-2xl font-bold mb-2 ">
-          {title}
+          { !isSponsorPage ?
+            <a href={`/sponsor/${sponsor.id}`}>
+            {title}
+            </a> :
+            <>{title}</>
+          }
         </h2>
         <p class="text-gray-600 mb-4" style="color:oklch(54.6% 0.03 256.802);">
           {industry} {industry && location && <>—</>} {location}
@@ -151,11 +156,11 @@ const socialLinks = [
         )}
 
         {showJobs && jobs && (
-          <div class="mt-4">
-            <h3 class="font-semibold">Open Positions:</h3>
-            <ul class="list-disc list-inside">
+          <div class="mt-6 pt-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">
+            <h3 class="text-xl font-semibold">All job offers</h3>
+            <ul class="list-disc list-inside" >
               {Object.values(jobs).map((job) => (
-                <li>
+                <li >
                   <a href={`/sponsor/${job.id}`}>{job.data.title}</a>
                 </li>
               ))}
@@ -261,5 +266,16 @@ const socialLinks = [
   .social-links {
     border: 0 solid rgba(33,33,33,0.2);
     border-width: 1px 0 0 0;
+  }
+
+  li {
+    list-style-type:disc;
+    list-style-position: inside;
+  }
+  h2 a, li a {
+    text-decoration: underline;
+  }
+  h2 a:hover, li a:hover {
+    color:var(--color-primary-hover);
   }
 </style>

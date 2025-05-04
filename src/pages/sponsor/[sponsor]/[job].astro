@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 >
     <TwoCols>
       <Fragment slot="content">
-        <SponsorCard {sponsor} />
+        <SponsorCard {sponsor} showJobs />
       </Fragment>
       <Fragment slot="sidebar">
         {(<JobCard {job} />)}
