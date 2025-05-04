@@ -1,11 +1,11 @@
 ---
 const { job } = Astro.props;
-const { title, company, location, type, level, salary, tags, description, responsibilities, requirements, benefits, apply_link } = job.data;
+const { title, sponsor, location, type, level, salary, tags, description, responsibilities, requirements, benefits, apply_link } = job.data;
 ---
 
 <div class="mb-6 last:mb-0">
   <div class="flex-1 p-6 rounded-lg shadow-md bg-white">
-    <a href={`/company/${job.id}`}>
+    <a href={`/sponsor/${job.id}`}>
       <h2 class="text-3xl font-bold mb-2">{title}</h2>
     </a>
     <p class="text-gray-600 mb-2">{level} • {type} • {location}</p>

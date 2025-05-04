@@ -205,8 +205,8 @@ const days = defineCollection({
   }),
 });
 
-const companies = defineCollection({
-  loader: glob({ pattern: "*/index.md", base: "./src/content/companies" }),
+const sponsors = defineCollection({
+  loader: glob({ pattern: "*/index.md", base: "./src/content/sponsors" }),
   schema: z.object({
     name: z.string(),
     url: z.string().url(),
@@ -226,7 +226,7 @@ const companies = defineCollection({
 });
 
 const jobs = defineCollection({
-  loader: glob({ pattern: "*/!(index).md", base: "./src/content/companies" }),
+  loader: glob({ pattern: "*/!(index).md", base: "./src/content/sponsors" }),
   schema: z.object({
     title: z.string(),
     location: z.string(),
@@ -249,6 +249,6 @@ export const collections = {
   sessions,
   speakers,
   keynoters,
-  companies,
+  sponsors,
   jobs,
 };

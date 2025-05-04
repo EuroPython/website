@@ -1,19 +1,20 @@
 ---
 import Layout from "@layouts/MarkdownLayout.astro";
-import CompanyCard from "@components/CompanyCard.astro";
-import CompanyCardBody from "@components/CompanyCardBody.astro";
+import SponsorCard from "@components/SponsorCard.astro";
+import SponsorCardBody from "@components/SponsorCardBody.astro";
+import SponsorDisplay from "@components/SponsorDisplay.astro";
 import TwoCols from "@components/TwoCols.astro";
 
 import { getEntry, getCollection } from "astro:content";
 
-const company = await getEntry("companies", Astro.params.company);
+const sponsor = await getEntry("sponsors", Astro.params.sponsor);
 
 export async function getStaticPaths() {
-  const companies = await getCollection("companies");
+  const sponsors = await getCollection("sponsors");
 
-  return companies.map((company: any) => ({
+  return sponsors.map((sponsor: any) => ({
     params: {
-      company: company.id,
+      sponsor: sponsor.id,
     },
   }));
 }
@@ -23,14 +24,13 @@ export async function getStaticPaths() {
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-  <section class="space-y-12 pb-6 md:p-6">
+    <SponsorDisplay {sponsor} />
     <TwoCols>
       <Fragment slot="content">
-        <CompanyCard {company} />
+        <SponsorCard {sponsor} />
       </Fragment>
       <Fragment slot="sidebar">
-        <CompanyCardBody {company} />
+        <SponsorCardBody {sponsor} />
       </Fragment>
     </TwoCols>
-  </section>
 </Layout>

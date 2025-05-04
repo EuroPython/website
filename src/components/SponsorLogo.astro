@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import { sponsorLogos } from "@data/sponsorLogos";
+
+const { sponsor } = Astro.props;
+const {
+  name: title,
+  url: website,
+  logo_padding = false,
+} = sponsor.data;
+
+const logo = sponsorLogos[sponsor.id];
+---
+
+<div
+  class="lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black"
+>
+  <div class="w-full flex justify-center items-center md:items-center">
+    {
+      website ? (
+
+        <a href={website}>
+          <Image
+            src={logo}
+            alt={`${title} Logo`}
+            style={{
+              minWidth: "250px",
+              maxHeight: "120px",
+              objectFit: "contain",
+              padding: logo_padding ? logo_padding : undefined,
+            }}
+          />
+        </a>
+  ):
+          <Image
+            src={logo}
+            alt={`${title} Logo`}
+            style={{
+              minWidth: "250px",
+              maxHeight: "120px",
+              objectFit: "contain",
+              padding: logo_padding ? logo_padding : undefined,
+            }}
+          />
+    }
+  </div>
+</div>

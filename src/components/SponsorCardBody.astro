@@ -1,8 +1,9 @@
 ---
 
 import { marked } from 'marked';
-const { company } = Astro.props;
-const html = company.body ? marked.parse(company.body) :  "";
+const { sponsor } = Astro.props;
+const html = sponsor.body ? marked.parse(sponsor.body) :  "";
+
 
 ---
 

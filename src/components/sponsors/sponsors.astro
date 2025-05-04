@@ -23,7 +23,7 @@ const tiers = [
   "Partners"
 ] as const;
 
-const sponsors = await getCollection("companies");
+const sponsors = await getCollection("sponsors");
 
 let hasSponsors = false;
 
@@ -61,7 +61,7 @@ const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
             ) : (
               <p class="text-center">
                 Sponsoring EuroPython guarantees you highly targeted visibility
-                and the opportunity to present yourself and your company to one
+                and the opportunity to present yourself and your sponsor to one
                 of the largest and most diverse Python communities in Europe and
                 beyond.
               </p>

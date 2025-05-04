@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+const { sponsor } = Astro.props;
+---
+
+<section class="space-y-12 pb-6 md:p-6 overflow-hidden">
+  <Image
+    src={sponsor.image
+      ? sponsor.image
+      : "https://placehold.co/1100x360/19233C/white"}
+    alt="Image"
+    height="360"
+    width="1100"
+    class="max-w-[1100px] max-h-[360px]"
+  />
+</section>
