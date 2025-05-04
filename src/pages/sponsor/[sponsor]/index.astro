@@ -27,7 +27,7 @@ export async function getStaticPaths() {
     <SponsorDisplay {sponsor} />
     <TwoCols>
       <Fragment slot="content">
-        <SponsorCard {sponsor} />
+        <SponsorCard {sponsor} showJobs />
       </Fragment>
       <Fragment slot="sidebar">
         <SponsorCardBody {sponsor} />

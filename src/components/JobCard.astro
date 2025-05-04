@@ -30,9 +30,36 @@ const { title, sponsor, location, type, level, salary, tags, description, respon
       <a
         href={apply_link}
         target="_blank"
-        class="inline-block bg-button hover:bg-button-hover text-text-inverted font-semibold py-2 px-4 rounded-lg shadow transition-colors duration-200"
+        class="apply-btn"
 >
         Apply Now
       </a>
   </div>
 </div>
+
+<style>
+
+  .apply-btn {
+    display: inline-block;
+    padding: 8px 24px;
+    color: white;
+    font-weight: 700;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    background: linear-gradient(to right, #16a34a, #22c55e);
+  }
+
+  .apply-btn:hover {
+    color:white;
+  }
+
+  a{
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+  }
+</style>

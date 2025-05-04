@@ -5,7 +5,7 @@ import { sponsorLogos } from "@data/sponsorLogos";
 
 import Icon from "@ui/Icon.astro";
 
-const { sponsor } = Astro.props;
+const { sponsor, showJobs=false } = Astro.props;
 const {
   name: title,
   url: website,
@@ -36,26 +36,24 @@ const isSponsorPage = Astro.url.pathname == `/sponsor/${sponsor.id}`;
 
 const logo = sponsorLogos[sponsor.id];
 
-const link = description ? `/sponsor/${sponsor.id}` : website;
-
 const socialLinks = [
-  { key: "website", icon: "globe", label: "Visit Website" },
   { key: "linkedin", icon: "linkedin-in", label: "LinkedIn Profile" },
   { key: "twitter", icon: "twitter", label: "Twitter Profile" },
   { key: "discord", icon: "discord", label: "Discord Profile" },
   { key: "mastodon", icon: "mastodon", label: "Mastodon Profile" },
   { key: "bluesky", icon: "bluesky", label: "Bluesky Profile" },
+  { key: "facebook", icon: "facebook-f", label: "Facebook Profile" },
+  { key: "github", icon: "github", label: "GitHub Profile" },
+  { key: "instagram", icon: "instagram", label: "Instagram Profile" },
 ];
 ---
 
 <div
-  class="lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black"
+  class="lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black mb-6"
 >
   <div class="w-full flex justify-center items-center md:items-center">
     {
       logo && (
-
-        <a href={link}>
           <Image
             src={logo}
             alt={`${title} Logo`}
@@ -66,38 +64,93 @@ const socialLinks = [
               padding: logo_padding ? logo_padding : undefined,
             }}
           />
-        </a>
       )
     }
   </div>
+
   {
     description && (
       <div class="flex-1">
-        <p class="text-gray-600 mb-2">
+        <h2 class="text-2xl font-bold mb-2 ">
+          {title}
+        </h2>
+        <p class="text-gray-600 mb-4" style="color:oklch(54.6% 0.03 256.802);">
           {industry} {industry && location && <>—</>} {location}
         </p>
-        <p class="mb-4">{description}</p>
 
-        <div class="flex space-x-1 justify-center">
+        <p class="py-6" style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">{description}</p>
+
+        <div class="social-links flex justify-center space-x-4 pt-4">
           {socialLinks
-            .filter((link) =>
-              link.key === "website" ? website : socials?.[link.key],
-            )
-            .map((link) => (
-              <a
-                key={link.key}
-                href={link.key === "website" ? website : socials[link.key]}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.label}
-                class="social-link justify-center items-center "
-              >
-                <Icon name={link.icon} size="fa-lg" />
-              </a>
-            ))}
+            .filter((link) => socials?.[link.key])
+            .map((link) => {
+              const url = socials[link.key];
+              let iconColor;
+
+              // Assign colors based on social media platform
+              switch(link.key) {
+                case "facebook":
+                  iconColor = "facebook";
+                  break;
+                case "twitter":
+                  iconColor = "twitter";
+                  break;
+                case "linkedin":
+                  iconColor = "linkedin";
+                  break;
+                case "github":
+                  iconColor = "github";
+                  break;
+                case "instagram":
+                  iconColor = "instagram";
+                  break;
+                case "discord":
+                  iconColor = "discord";
+                  break;
+                case "mastodon":
+                  iconColor = "mastodon";
+                  break;
+                case "bluesky":
+                  iconColor = "bluesky";
+                  break;
+                default:
+                  iconColor = "";
+                  break;
+              }
+
+              return (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                  class={`social-icon ${iconColor}`}
+                >
+                  <span class="social-icon-inner">
+                    <Icon name={link.icon} size="fa-lg" />
+                  </span>
+                </a>
+              );
+            })}
         </div>
 
-        {jobs && (
+        {website && (
+          <div class="website-btn-container flex flex-col sm:flex-row justify-center gap-2 mt-4">
+
+            <a href={website} target="_blank" rel="noopener noreferrer" class="website-btn ">
+              Visit Website <span class="pl-2"><Icon name="external-link" /></span>
+            </a>
+
+          { !isSponsorPage &&
+            <a href={`/sponsor/${sponsor.id}`} class="website-btn-outline">
+              About {title}
+            </a>
+          }
+
+          </div>
+        )}
+
+        {showJobs && jobs && (
           <div class="mt-4">
             <h3 class="font-semibold">Open Positions:</h3>
             <ul class="list-disc list-inside">
@@ -109,32 +162,110 @@ const socialLinks = [
             </ul>
           </div>
         )}
-
-        {!isSponsorPage && sponsor.body && (
-
-          <a
-            class="btn btn-primary mt-6 inline-block"
-            href={`/sponsor/${sponsor.id}`}
-          >
-            More about us!
-          </a>
-        )}
       </div>
     )
   }
 </div>
 
 <style>
-  .social-link {
-    display: inline-block;
-    margin: 0.25em;
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 36px;
     height: 36px;
-    padding: 8px;
-    outline: 0;
-    border: 0;
-    margin: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
-  .social-link:hover {
+
+  .social-icon:hover {
+    transform: scale(1.2) rotate(6deg);
   }
+
+  .social-icon-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Platform-specific colors */
+  .social-icon.facebook {
+    color: #1877f2;
+  }
+
+  .social-icon.twitter {
+    color: #1da1f2;
+  }
+
+  .social-icon.linkedin {
+    color: #0a66c2;
+  }
+
+  .social-icon.github {
+    color: #333333;
+  }
+
+  .social-icon.instagram {
+    color: #e4405f;
+  }
+
+  .social-icon.discord {
+    color: #5865F2;
+  }
+
+  .social-icon.mastodon {
+    color: #6364FF;
+  }
+
+  .social-icon.bluesky {
+    color: #0085FF;
+  }
+
+  .social-icon.website {
+    color: #0077b5;
+  }
+
+  /* Website button styles */
+  .website-btn-container {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  }
+
+  .website-btn, .website-btn-outline {
+    display: inline-block;
+    padding: 8px 24px;
+    color: white;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.1s ease;
+  }
+
+  .website-btn {
+    background: linear-gradient(to right, #1a56db, #4f46e5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+  }
+
+  .website-btn-outline {
+    color: #1a56db;
+  }
+
+  .website-btn:hover ,  .website-btn-outline:hover {
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);*/
+    /*transform: translateY(-2px);*/
+  }
+
+  .social-links {
+    border: 0 solid rgba(33,33,33,0.2);
+    border-width: 1px 0 0 0;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
 </style>
