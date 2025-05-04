@@ -1,7 +1,25 @@
 ---
 name: PyCon Italia
 url: https://2025.pycon.it/en
-image: ./pycon-it.png
+location: "Italy"
+industry: "Technology & Non-Profit"
+description:
+  "PyCon Italy is the largest Italian event for Python developers, featuring
+  talks, sprints, and networking. It emphasizes diversity and innovation within
+  the Python community."
+socials:
+  linkedin:
+  twitter: "https://twitter.com/pyconit"
+  github:
+  discord:
+  mastodon:
+  bluesky:
 tier: Partners
 logo_padding: 10px 0
 ---
+
+## About PyCon Italia
+
+PyCon Italia drives Python’s growth in Italy through annual conferences and
+grassroots outreach. Though 2025 details are absent here, its legacy of
+community building endures.

@@ -210,14 +210,18 @@ const sponsors = defineCollection({
   schema: z.object({
     name: z.string(),
     url: z.string().url(),
-    tier: z.string().optional(),
+    tier: z.string().nullable(),
     location: z.string().optional(),
     industry: z.string().optional(),
     description: z.string().optional(),
     socials: z
       .object({
-        linkedin: z.string().url().optional(),
-        twitter: z.string().url().optional(),
+        linkedin: z.string().url().optional().nullable(),
+        twitter: z.string().url().optional().nullable(),
+        github: z.string().url().optional().nullable(),
+        discord: z.string().url().optional().nullable(),
+        mastodon: z.string().url().optional().nullable(),
+        bluesky: z.string().url().optional().nullable(),
       })
       .optional(),
     jobs: z.array(z.string()).optional(),
@@ -229,16 +233,16 @@ const jobs = defineCollection({
   loader: glob({ pattern: "*/!(index).md", base: "./src/content/sponsors" }),
   schema: z.object({
     title: z.string(),
-    location: z.string(),
-    type: z.string(), // e.g., Full-Time
-    level: z.string(), // e.g., Senior
-    salary: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    description: z.string(),
-    responsibilities: z.array(z.string()).optional(),
-    requirements: z.array(z.string()).optional(),
-    benefits: z.array(z.string()).optional(),
-    apply_link: z.string().url(),
+    location: z.string().nullable(),
+    type: z.string().nullable(), // e.g., Full-Time
+    level: z.string().nullable(), // e.g., Senior
+    salary: z.string().nullable(),
+    tags: z.array(z.string()).nullable(),
+    description: z.string().nullable(),
+    responsibilities: z.array(z.string()).nullable(),
+    requirements: z.array(z.string()).nullable(),
+    benefits: z.array(z.string()).nullable(),
+    apply_link: z.string().url().optional(),
   }),
 });
 

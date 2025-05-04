@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/MarkdownLayout.astro";
 import SponsorCard from "@components/SponsorCard.astro";
-import SponsorCardBody from "@components/SponsorCardBody.astro";
+import CardContent from "@components/CardContent.astro";
 import SponsorDisplay from "@components/SponsorDisplay.astro";
 import TwoCols from "@components/TwoCols.astro";
 
@@ -18,6 +18,8 @@ export async function getStaticPaths() {
     },
   }));
 }
+
+console.log(sponsor)
 ---
 
 <Layout
@@ -30,7 +32,7 @@ export async function getStaticPaths() {
         <SponsorCard {sponsor} showJobs />
       </Fragment>
       <Fragment slot="sidebar">
-        <SponsorCardBody {sponsor} />
+        <CardContent entry={sponsor} />
       </Fragment>
     </TwoCols>
 </Layout>
