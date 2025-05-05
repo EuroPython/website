@@ -48,8 +48,6 @@
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "puppeteer": "^24.7.2",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-adblocker": "^2.13.6",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },

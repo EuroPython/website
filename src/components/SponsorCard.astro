@@ -85,6 +85,38 @@ const socialLinks = [
 
         <p class="py-6" style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">{description}</p>
 
+
+        {showJobs && jobs && (
+          <div class="py-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">
+            <h3 class="text-xl font-semibold">Job offers</h3>
+            <ul class="list-disc list-inside" >
+              {Object.values(jobs).map((job) => (
+                <li >
+                  <a href={`/sponsor/${job.id}`}>{job.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+
+        {website && (
+          <div class="website-btn-container flex flex-col sm:flex-row justify-center gap-2 mt-4">
+
+          { !isSponsorPage &&
+            <a href={`/sponsor/${sponsor.id}`} class="website-btn-outline">
+              About {title}
+            </a>
+          }
+
+            <a href={website} target="_blank" rel="noopener noreferrer" class="website-btn ">
+              Visit Website <span class="pl-2"><Icon name="external-link" /></span>
+            </a>
+
+          </div>
+        )}
+
+
         <div class="social-links flex justify-center space-x-4 pt-4">
           {socialLinks
             .filter((link) => socials?.[link.key])
@@ -139,34 +171,6 @@ const socialLinks = [
             })}
         </div>
 
-        {website && (
-          <div class="website-btn-container flex flex-col sm:flex-row justify-center gap-2 mt-4">
-
-            <a href={website} target="_blank" rel="noopener noreferrer" class="website-btn ">
-              Visit Website <span class="pl-2"><Icon name="external-link" /></span>
-            </a>
-
-          { !isSponsorPage &&
-            <a href={`/sponsor/${sponsor.id}`} class="website-btn-outline">
-              About {title}
-            </a>
-          }
-
-          </div>
-        )}
-
-        {showJobs && jobs && (
-          <div class="mt-6 pt-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">
-            <h3 class="text-xl font-semibold">All job offers</h3>
-            <ul class="list-disc list-inside" >
-              {Object.values(jobs).map((job) => (
-                <li >
-                  <a href={`/sponsor/${job.id}`}>{job.data.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     )
   }
@@ -242,11 +246,16 @@ const socialLinks = [
   .website-btn, .website-btn-outline {
     display: inline-block;
     padding: 8px 24px;
+    margin: 0 0 12px 0;
     color: white;
     border-radius: 9999px;
     border: 1px solid transparent;
     text-decoration: none;
     transition: all 0.1s ease;
+  }
+
+  .website-btn-outline {
+    border: 1px solid #1a56db;
   }
 
   .website-btn {
@@ -264,8 +273,8 @@ const socialLinks = [
   }
 
   .social-links {
-    border: 0 solid rgba(33,33,33,0.2);
-    border-width: 1px 0 0 0;
+    /*border: 0 solid rgba(33,33,33,0.2);*/
+    /*border-width: 1px 0 0 0;*/
   }
 
   li {
