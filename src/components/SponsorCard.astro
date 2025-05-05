@@ -51,7 +51,7 @@ const socialLinks = [
 <div
   class="lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black mb-6"
 >
-  <div class="w-full flex justify-center items-center md:items-center">
+  <div class="w-full flex justify-center items-center md:items-center min-h-[140px]">
     {
       logo && (
           <Image
@@ -83,7 +83,7 @@ const socialLinks = [
           {industry} {industry && location && <>—</>} {location}
         </p>
 
-        <p class="py-6" style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">{description}</p>
+        <p class="py-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">{description}</p>
 
 
         {showJobs && jobs && (
