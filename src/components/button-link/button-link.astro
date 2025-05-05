@@ -15,10 +15,7 @@ const {
   className = "",
   secondary = false,
   disabled = false,
-  isExternal,
 } = Astro.props;
-const resolvedIsExternal =
-  isExternal !== undefined ? isExternal : url?.startsWith("http");
 ---
 
 <a

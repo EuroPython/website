@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntries, type CollectionEntry } from "astro:content";
+import { getCollection} from "astro:content";
 import SocialMediaCard from "@components/SocialMediaCard.astro";
 
 export async function getStaticPaths() {
@@ -84,7 +84,7 @@ fitAllText();
 window.addEventListener('resize', fitAllText);
 </script>
 
-<script define:vars={{slug: entry.data.slug}}>
+<script is:inline define:vars={{slug: entry.data.slug}}>
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.social').forEach((socialDiv, index) => {
 
