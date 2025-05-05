@@ -1,14 +1,15 @@
 ---
-const { full = false, variant = "default" } = Astro.props;
+const { full = false, variant = "default", padding=true } = Astro.props;
 
 const variantClass = {
   default: "",
   primary: "bg-[#d4d5e5]",
   secondary: "bg-white",
-}[variant] || "";
+  }[variant] || "";
+
 ---
 
-<section class={variantClass}>
+<section class=`${variantClass} ${padding && "pt-12"}`>
   {
     full ? (
       <slot />

@@ -11,7 +11,6 @@ const keynoters = await getCollection("keynoters");
 const placeholders = Math.max(0, 5 - keynoters.length);
 ---
 <Section>
-<div class="prose-xl relative my-12 px-6 z-10">
   <svg viewBox="0 0 729 704" class="absolute top-0 left-0 w-full h-full -z-10">
     <g
       stroke="none"
@@ -82,7 +81,7 @@ const placeholders = Math.max(0, 5 - keynoters.length);
 
   <Headline id="keynoters" title="Keynote Speakers"  center=true />
 
-  <ul class="p-0 mt-12 flex gap-6 flex-wrap justify-center">
+  <ul class="p-0 flex gap-6 flex-wrap justify-center">
     {
       keynoters
         .sort((a, b) => a.data.order - b.data.order)
@@ -115,17 +114,13 @@ const placeholders = Math.max(0, 5 - keynoters.length);
     }
   </ul>
 
-  <div class="flex items-center flex-col pr-6">
+  <div class="flex items-center flex-col pt-6">
     <div class="text-center">
-      <h3 class="font-bold text-3xl mb-4">
+      <h3 class="font-bold text-3xl m-4 ">
         <span class="text-body-light inline-block mr-2">#</span>
         See other sessions
       </h3>
       <Button url="/sessions">See sessions preview</Button>
     </div>
   </div>
-</div>
 </Section>
-<style>
-  .fill-hero-primary {}
-</style>

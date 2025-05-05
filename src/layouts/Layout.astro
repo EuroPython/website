@@ -1,5 +1,4 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
 import BaseHead from "@components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
@@ -20,6 +19,8 @@ const { title, description } = Astro.props;
 if (!title || !description) {
 throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be set.`);
 }
+
+const externalDomain = new URL(Astro.site || "").hostname;
 ---
 
 <!DOCTYPE html>
@@ -48,9 +49,14 @@ throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be se
 </html>
 
 
-<style is:global>
+<style is:global define:vars={{ externalDomain }}>
   main section .container {
     max-width: 1150px;
+  }
+
+  main a[href^="http"]:not([href*="var(--externalDomain)"]):not(:has(img))::after {
+    content: "↗";
+    font-size: 0.8em;
   }
 </style>
 
