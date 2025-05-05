@@ -1,8 +1,7 @@
 ---
-import { Fullbleed } from "./layout/fullbleed";
-
-import links from "../data/links.json";
-import { EPSLogo } from "./logo/eps-logo";
+import { Image } from "astro:assets";
+import links from "@data/links.json";
+import EPSLogo from "../../public/eps-logo.svg";
 
 const buildTimestamp = __TIMESTAMP__;
 const gitVersion = __GIT_VERSION__;
@@ -36,7 +35,7 @@ const gitVersion = __GIT_VERSION__;
       class="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end"
     >
       <div>
-        <EPSLogo className="max-w-[100px] lg:max-w-[200px] h-auto w-full" />
+        <EPSLogo width=200 height=200 class="max-w-[100px] lg:max-w-[200px] h-auto w-full" />
       </div>
       <div>
         <address class="not-italic mb-4">

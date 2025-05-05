@@ -15,7 +15,7 @@ const IS_LIVE = false;
       //<Button id="searchButton" icon="search" iconSize="fa-xl" clear title="Search (Crtl+K)"></Button>
 ---
 
-<div class="flex items-center justify-end gap-2 h-[85px] w-1/3">
+<div class="flex items-center justify-end gap-2 w-1/3">
 <div class="ml-auto justify-end flex items-center w-full">
   {
     !mobile ?
@@ -34,7 +34,7 @@ const IS_LIVE = false;
               <kbd>Ctrl</kbd><kbd>K</kbd>
             </kbd>
           </button>
-      <Button url="/tickets" icon="ticket" class="w-full max-w-48 max-xl:hidden">Register Now!</Button>
+      <Button url="/tickets" icon="ticket" class="w-full max-w-48 max-xl:hidden">Tickets</Button>
       {IS_LIVE && <Button url="/live">Live</Button>}
       </>
      : null

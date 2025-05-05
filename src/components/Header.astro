@@ -7,7 +7,8 @@ import Search from "@components/Search.astro";
 import links from "../data/links.json";
 ---
 
-<header class="p-6 flex items-center justify-between relative z-40">
+<section id="navbar" class="fixed top-0 z-50 transition-transform duration-300 transform-gpu w-full">
+  <div class="container max-w-[1150px] mx-auto py-2 mt-2 lg:p-2 lg:mt-6 px-6 flex items-center justify-between relative z-40 bg-white/80 lg:rounded-lg  backdrop-blur-md shadow-lg">
   <input
     type="checkbox"
     name="mobile-controls"
@@ -25,7 +26,7 @@ import links from "../data/links.json";
   <HeaderActions />
 
   <div
-    class="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 p-6"
+    class="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 px-6 py-2 "
   >
     <div class="flex items-center justify-between">
       <HeaderLogo />
@@ -54,5 +55,30 @@ import links from "../data/links.json";
       />
     </nav>
   </div>
+</div>
+</section>
 <Search />
-</header>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        // Auto-hide Navbar on scroll
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.transform = "translateY(0)";
+            } else {
+                navbar.style.transform = "translateY(-100%)";
+            }
+            prevScrollPos = currentScrollPos;
+        };
+
+        // Mobile Menu Toggle
+        //const menuBtn = document.getElementById("menu-btn");
+        //const mobileMenu = document.getElementById("mobile-menu");
+        //
+        //menuBtn.addEventListener("click", () => {
+        //    mobileMenu.classList.toggle("hidden");
+        //});
+    </script>
