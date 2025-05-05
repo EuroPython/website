@@ -84,7 +84,7 @@ fitAllText();
 window.addEventListener('resize', fitAllText);
 </script>
 
-<script define:vars={{slug: entry.data.slug}}>
+<script is:inline define:vars={{slug: entry.data.slug}}>
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.social').forEach((socialDiv, index) => {
 
