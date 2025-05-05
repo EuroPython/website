@@ -1,0 +1,196 @@
+---
+import Icon from "@ui/Icon.astro";
+import clsx from "clsx";
+
+type Item = {
+  name: string;
+  path?: string;
+  items?: Item[];
+};
+
+interface Props {
+  items: Item[];
+  inverted?: boolean;
+  level?: number;
+}
+
+const { items, inverted = false, level = 1 } = Astro.props;
+---
+
+<ul
+  class={clsx(
+    level === 1 ? "flex flex-col xl:flex-row" : "",
+    level === 2 ? "mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px] xl:min-w-[220px]" : "",
+    level === 3 ? "bg-[#1c294b] xl:rounded-[20px] xl:my-1 xl:mx-2 xl:min-w-[200px]" : "",
+    level > 1 ? "shadow-lg" : ""
+  )}
+  role={level === 1 ? "menubar" : "menu"}
+  aria-label={level === 1 ? "Main navigation" : level === 2 ? "Submenu" : "Sub-submenu"}
+>
+  {items.map((item) => (
+    <li
+      class={clsx(
+        "relative",
+        level === 1 ? "border-b border-border-secondary-dark xl:border-0 group" : "",
+        level === 2 ? "bg-secondary text-white block w-full font-bold text-center xl:text-left xl:hover:bg-secondary-light xl:first:rounded-t-[30px] xl:first:pt-2 xl:last:rounded-b-[30px] xl:last:pb-2 group/level2" : "",
+        level === 3 ? "text-white xl:hover:bg-secondary-light xl:first:rounded-t-[20px] xl:last:rounded-b-[20px]" : "",
+        {
+          "text-white": inverted,
+          "text-primary": !inverted && level === 1,
+        }
+      )}
+      role="none"
+    >
+      {!item.items ? (
+        <a
+          href={item.path || "#"}
+          class={clsx(
+            "flex items-center justify-between",
+            level === 1 ? "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:p-2 xl:px-5 xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white xl:group-focus:bg-secondary xl:group-focus:rounded-[30px] xl:group-focus:text-white" : "",
+            level === 2 ? "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:px-5" : "",
+            level === 3 ? "block w-full p-2 xl:px-4 text-sm xl:text-left" : ""
+          )}
+          rel={item.path?.startsWith("http") ? "nofollow noopener" : undefined}
+          target={item.path?.startsWith("http") ? "_blank" : undefined}
+          role="menuitem"
+        >
+          <span>{item.name}</span>
+          {item.path?.startsWith("http") && (
+            <span class="ml-1" aria-hidden="true">↗</span>
+          )}
+        </a>
+      ) : (
+        <button
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          class={clsx(
+            "flex items-center justify-between",
+            level === 1 ? "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:p-2 xl:px-5 xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white xl:group-focus:bg-secondary xl:group-focus:rounded-[30px] xl:group-focus:text-white" : "",
+            level === 2 ? "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:px-5" : "",
+            level === 3 ? "block w-full p-2 xl:px-4 text-sm xl:text-left" : ""
+          )}
+          role="menuitem"
+        >
+          <span>{item.name}</span>
+          {level === 2 && (
+            <span aria-hidden="true">
+              <Icon name="caret-right" />
+            </span>
+          )}
+        </button>
+      )}
+
+      {item.items && (
+        <div
+          class={clsx(
+            level === 1 ? "xl:hidden xl:group-hover:block xl:absolute z-50 xl:top-full xl:left-0 xl:group-focus-within:block" : "",
+            level === 2 ? "xl:hidden xl:group-hover/level2:block xl:absolute z-50 xl:left-full xl:top-0 xl:-mt-2 xl:group-focus-within:block" : ""
+          )}
+        >
+          {level === 1 && (
+            <Astro.self items={item.items} level={2} />
+          )}
+
+          {level === 2 && (
+            <Astro.self items={item.items} level={3} />
+          )}
+        </div>
+      )}
+    </li>
+  ))}
+</ul>
+
+<script>
+  // Add keyboard navigation support
+  document.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll('[role="menuitem"][aria-haspopup="true"]');
+
+    navButtons.forEach(button => {
+      button.addEventListener('keydown', (e) => {
+        const key = e.key;
+
+        if (key === 'Enter' || key === ' ' || key === 'ArrowDown') {
+          e.preventDefault();
+          toggleSubmenu(button, true);
+        } else if (key === 'Escape') {
+          e.preventDefault();
+          toggleSubmenu(button, false);
+        }
+      });
+
+      // Close submenu when focus leaves
+      button.addEventListener('blur', (e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) {
+          toggleSubmenu(button, false);
+        }
+      });
+    });
+
+    function toggleSubmenu(button, show) {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+
+      if (show && !expanded) {
+        button.setAttribute('aria-expanded', 'true');
+        // Add focus to first link in submenu
+        const submenu = button.nextElementSibling;
+        if (submenu) {
+          const firstLink = submenu.querySelector('[role="menuitem"]');
+          if (firstLink) setTimeout(() => firstLink.focus(), 10);
+        }
+      } else if (!show && expanded) {
+        button.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // Add arrow key navigation within same level
+    const menuLists = document.querySelectorAll('[role="menu"], [role="menubar"]');
+    menuLists.forEach(menu => {
+      const menuItems = menu.querySelectorAll('[role="menuitem"]');
+
+      menuItems.forEach((item, index) => {
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight' && index < menuItems.length - 1) {
+            e.preventDefault();
+            menuItems[index + 1].focus();
+          } else if (e.key === 'ArrowLeft' && index > 0) {
+            e.preventDefault();
+            menuItems[index - 1].focus();
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            menuItems[0].focus();
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            menuItems[menuItems.length - 1].focus();
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Add transition for smoother hover effects */
+  li {
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Custom styling for desktop third level menu positioning */
+  @media (min-width: 1280px) {
+    li.group\/level2:hover > div {
+      display: block;
+    }
+  }
+
+  /* Focus styles for keyboard navigation */
+  [role="menuitem"]:focus-visible {
+    outline: 2px solid white;
+    outline-offset: -2px;
+    border-radius: 4px;
+  }
+
+  /* Hide outline for mouse users, but keep for keyboard */
+  [role="menuitem"]:focus:not(:focus-visible) {
+    outline: none;
+  }
+</style>
