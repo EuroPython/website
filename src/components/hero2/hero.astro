@@ -4,11 +4,13 @@ import heroImage from "./conference_photo.jpg";
 
 import IconWithLabel from "./icon-label.astro";
 import Button from "@ui/Button.astro";
+import Section from "@ui/Section.astro";
 
 const action1 = "/tickets";
 const action2 = "/sponsorship/sponsor/";
 ---
 
+<section class="relative z-10">
 <div
   class="bg-icons full-bleed relative flex flex-col items-center justify-center"
   style=""
@@ -202,6 +204,7 @@ const action2 = "/sponsorship/sponsor/";
       </div>
     </div>
   </div>
+  </section>
 
   <style>
     .bg-icons {

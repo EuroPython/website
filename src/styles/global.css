@@ -25,6 +25,10 @@
   z-index: 9999;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-body-background text-text;
 }
@@ -262,4 +266,21 @@ p.cross::after {
     --min-fs: 1;
     --max-fs: 1.5;
   }
+}
+
+h1,
+h2 {
+  scroll-margin-top: 40px;
+}
+
+main a[href^="#"]:not([data-footnote-backref]):not([data-footnote-ref])::after {
+  content: " ⤵";
+  font-size: 0.9em;
+  opacity: 0.2;
+}
+
+main a[href^="#"]::before {
+  content: "(in-page) ";
+  font-size: 0;
+  visibility: hidden;
 }

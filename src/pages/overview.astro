@@ -1,6 +1,7 @@
 ---
-import Layout from "../layouts/MarkdownLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import Headline from "@ui/Headline.astro"
+import Section from "@ui/Section.astro";
 
 ---
 
@@ -8,10 +9,10 @@ import Headline from "@ui/Headline.astro"
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-  <div class="mb-4 prose prose-xl prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-a:underline prose-h1:text-text prose-headings:font-title prose-headings:text-text prose-a:text-text hover:prose-a:text-primary-hover prose-strong:text-text prose-strong:font-bold prose-li:marker:text-text">
-  <Headline id="oveview" title="Programme & Events Overview" center=true />
+  <Section>
+  <Headline id="oveview" as="h1" title="Programme & Events Overview" center=true />
 
-  <div class="events-container w-full">
+  <div class="events-container w-full prose prose-xl">
     <div class="decorative-border"></div>
 
     <div class="events-grid">
@@ -82,7 +83,7 @@ import Headline from "@ui/Headline.astro"
 
     <div class="decorative-border"></div>
   </div>
-  </div>
+  </Section>
 </Layout>
 
 <style>

@@ -1,14 +1,15 @@
 ---
 export interface Props {
   class?: string;
+  full?: boolean;
 }
 
-const { class: className } = Astro.props;
+const { class: className, full=false } = Astro.props;
 ---
 
-<div
+<article
   class:list={[
-    "mb-4 prose prose-xl prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-a:underline",
+    "mb-5 prose prose-xl prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-a:underline",
     "prose-h1:text-text prose-headings:font-title",
     "prose-headings:text-text",
     "prose-a:text-text",
@@ -17,6 +18,7 @@ const { class: className } = Astro.props;
     "prose-li:marker:text-text",
     className,
   ]}
+    style={full ?  "max-width: none !important;": "margin:auto;"}
 >
   <slot />
-</div>
+</article>

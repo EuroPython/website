@@ -1,31 +1,25 @@
 ---
-import { getCollection } from "astro:content";
-
-import Layout from "@layouts/HomePageLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Hero from "@components/hero2/hero.astro";
-import Keynoters from "@components/keynoters/keynoters.astro";
 import Updates from "@sections/updates.astro";
+import Keynoters from "@components/keynoters/keynoters.astro";
+import Speakers from "@sections/speakers.astro";
 import Prague from "@sections/prague.astro";
 import Sponsors from "@components/sponsors/sponsors.astro";
 import Subscribe from "@sections/subscribe.astro";
-import Speakers from "@sections/speakers.astro";
-
-let deadlines = await getCollection("deadlines");
-deadlines = deadlines
-  .sort((a, b) => a.slug.localeCompare(b.slug))
-  .reverse()
-  .slice(0, 3);
 ---
 
 <Layout
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
+
   <Hero />
   <Updates />
   <Keynoters />
   <Speakers />
   <Prague />
   <Sponsors />
-  <Subscribe />
+  <Subscribe/>
+
 </Layout>

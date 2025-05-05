@@ -31,6 +31,10 @@ ul.milestone-todo li::before {
   background: none !important;
 }
 
+.prose img {
+  max-width: max(800px, 50vw);
+}
+
 img.findaid-accent-round-marker {
   width: 120px;
   min-width: 70px;

@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
 import Filter from "../components/sessions/filter.astro";
 import ListSessions from "../components/sessions/list-sessions.astro";
+import Section from "@ui/Section.astro";
 
 const sessions = await getCollection("sessions");
 
@@ -24,8 +25,8 @@ const description = "A list of all the sessions at the conference";
 ---
 
 <Layout title={title} description={description}>
-  <div class="px-6">
-    <Prose>
+  <Section>
+    <Prose full>
       <h1>Sessions</h1>
       <p>Here you can find a list of all the sessions at the conference.</p>
       <p>You can filter the sessions by track, type, and level.</p>
@@ -34,10 +35,10 @@ const description = "A list of all the sessions at the conference";
 
     <Filter allTracks={allTracks} allTypes={allTypes} allLevels={allLevels} />
 
-    <Prose>
+    <Prose full>
       <h2>List of Sessions</h2>
     </Prose>
 
     <ListSessions sessions={sessions} />
-  </div>
+  </Section>
 </Layout>

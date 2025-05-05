@@ -4,6 +4,7 @@ import { CardContainer } from "@components/card/card-container";
 import DeadlineCard from "@components/deadline-card.astro";
 import Headline from "@ui/Headline.astro"
 import { getCollection } from "astro:content";
+import Section from "@ui/Section.astro"
 
 let deadlines = await getCollection("deadlines");
 deadlines = deadlines
@@ -12,9 +13,15 @@ deadlines = deadlines
   .slice(0, 6);
 
 ---
-  <section class="prose-xl m-0 my-12 p-0">
+  <Section>
     <Headline id="updates" title="Updates" center=true />
     <CardContainer>
       {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
     </CardContainer>
-  </section>
+  </Section>
+
+<style>
+  .s {
+    @apply prose-xl m-0 my-12 p-0;
+  }
+</style>

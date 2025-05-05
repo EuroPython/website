@@ -331,9 +331,6 @@ const dateText = format(date, "eeee - do MMMM");
 >
 <Headline as="h3" id=`day-${dayName}` title={dateText} />
 
-  <div class="h-12"></div>
-
-  <Button class="maximize-btn invisible"  clear>Full view</Button>
   <div class="schedule-wrapper">
     <header class="schedule-container header">
       <div
@@ -428,10 +425,8 @@ const dateText = format(date, "eeee - do MMMM");
 
 </style>
 <style>
-
   .schedule-wrapper
 {
-  min-width: 360px;
   width: 100%;
 }
   :global(body) {
