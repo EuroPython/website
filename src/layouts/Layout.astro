@@ -54,7 +54,7 @@ const externalDomain = new URL(Astro.site || "").hostname;
     max-width: 1150px;
   }
 
-  main a[href^="http"]:not([href*="var(--externalDomain)"]):not(.button-link):not(:has(img))::after {
+  article a[href^="http"]:not([href*="var(--externalDomain)"]):not(.button-link):not(:has(img))::after {
     font-size: 0.8em;
     content: " ↗";
     display: inline-block;
