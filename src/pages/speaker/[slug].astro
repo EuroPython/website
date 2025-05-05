@@ -5,6 +5,7 @@ import Prose from "../../components/prose/prose.astro";
 import { Image } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Headline from "@ui/Headline.astro";
+import Section from "@ui/Section.astro"
 
 
 export async function getStaticPaths() {
@@ -83,7 +84,7 @@ function getGitHosting(url: string): string | undefined {
 ---
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
-  <article class="pb-12 px-6">
+  <Section>
     <Headline as="h1" id="speaker" title={entry.data.name} />
 
               <div class="md:grid grid-cols-[460px_1fr] md:gap-6">
@@ -110,13 +111,14 @@ function getGitHosting(url: string): string | undefined {
           <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
             Biography
           </h2>
-          <Prose>
+          <Prose full>
             <Markdown content={entry.data.biography} />
           </Prose>
         </>
       ) : null
     }
 
+    <Prose full>
     {
       entry.data.affiliation ||
       entry.data.homepage ||
@@ -128,7 +130,7 @@ function getGitHosting(url: string): string | undefined {
           <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
             More about the speaker
           </h2>
-          <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2">
+          <dl>
             {entry.data.affiliation && (
               <>
                 <dt class="font-bold">Affiliation</dt>
@@ -228,6 +230,7 @@ function getGitHosting(url: string): string | undefined {
         </div>
       ) : null
     }
+    </Prose>
 
     <br />
 
@@ -250,5 +253,15 @@ function getGitHosting(url: string): string | undefined {
         ))
       }
     </ul>
-  </article>
+  </Section>
 </Layout>
+
+<style>
+
+dl,
+dd, dt {
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+  </style>

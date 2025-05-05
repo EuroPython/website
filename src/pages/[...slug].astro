@@ -2,12 +2,11 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/MarkdownLayout.astro";
 
-import Prose from "../components/prose/prose.astro";
 import ButtonLink from "../components/button-link/button-link.astro";
 import { Separator } from "../components/separator/separator";
 import { Map } from "../components/map";
 import { MapSprints } from "../components//map-for-sprints";
-import { YouTube } from "@astro-community/astro-embed-youtube";
+import YouTube from "@ui/YouTube.astro";
 import BenefitsList from "../components/benefits-list/benefits-list.astro";
 import BenefitItem from "../components/benefits-list/benefit-item.astro";
 import HighlightCard from "../components/highlight-list/highlight-card.astro";
@@ -48,7 +47,6 @@ const description = post.data.subtitle;
 ---
 
 <Layout title={title} description={description}>
-  <Prose class="mx-auto pb-12 px-6">
     <Content
       components={{
         ButtonLink,
@@ -65,5 +63,4 @@ const description = post.data.subtitle;
         Accordion,
       }}
     />
-  </Prose>
 </Layout>

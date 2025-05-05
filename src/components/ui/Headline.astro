@@ -8,7 +8,7 @@ const isCenter = center ? "text-center" : "";
 
 ---
 
-<Tag id={isAnchor ? id : undefined} class={`${isCenter} mx-5 py-2 font-bold max-w-[90vw]`}>
+<Tag id={isAnchor ? id : undefined} class={`${isCenter} mx-5 py-4 font-bold max-w-[90vw]`}>
   {isAnchor && (
     <a href={`#${id}`} aria-label={`Jump to ${id}`}>
       {Title}
@@ -18,27 +18,70 @@ const isCenter = center ? "text-center" : "";
 </Tag>
 
 <style>
-h1 {
-  font-size: calc(1.9rem + 1.5vw + 0.8vh);
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    font-family: var(--font-display);
+    line-height: 1.25;
 
-h2 {
-  font-size: calc(1.75rem + 1.5vw + 0.8vh);
-}
+    /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
 
-h3 {
-  font-size: calc(1.5rem + 1.2vw + 0.6vh);
-}
+    --min-fs: 1;
+    --max-fs: 1.5;
+    --min-vw: 20;
+    --max-vw: 45;
 
-h4 {
-  font-size: calc(1.25rem + 1vw + 0.4vh);
-}
+    --min-fs-rem: var(--min-fs) * 1rem;
+    --max-fs-rem: var(--max-fs) * 1rem;
+    --min-vw-rem: var(--min-vw) * 1rem;
 
-h5 {
-  font-size: calc(1rem + 0.8vw + 0.3vh);
-}
+    --slope: (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) /
+      (var(--max-vw) - var(--min-vw));
 
-h6 {
-  font-size: calc(0.875rem + 0.6vw + 0.2vh);
-}
+    font-size: clamp(
+      var(--min-fs-rem),
+      var(--min-fs-rem) + var(--slope),
+      var(--max-fs-rem)
+    );
+  }
+
+  h1 {
+    /* 36 px, 48px */
+    --min-fs: 2.25;
+    --max-fs: 3;
+  }
+
+  h2 {
+    /* 32px, 40px */
+    --min-fs: 2;
+    --max-fs: 2.5;
+  }
+
+  h3 {
+    /* 28px, 36px */
+    --min-fs: 1.75;
+    --max-fs: 2.25;
+  }
+
+  h4 {
+    /* 24px, 32px */
+    --min-fs: 1.5;
+    --max-fs: 2;
+  }
+
+  h5 {
+    /* 20px, 28px */
+    --min-fs: 1.25;
+    --max-fs: 1.75;
+  }
+
+  h6 {
+    /* 16px, 24px */
+    --min-fs: 1;
+    --max-fs: 1.5;
+  }
 </style>

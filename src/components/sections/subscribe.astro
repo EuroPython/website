@@ -1,5 +1,6 @@
 ---
 import Button from "@ui/Button.astro";
+import Section from "@ui/Section.astro"
 const socialLinks = [
   { href: "https://linkedin.com/company/europython/", icon: "linkedin" },
   { href: "https://instagram.com/europython/", icon: "instagram" },
@@ -10,8 +11,9 @@ const socialLinks = [
 ];
 ---
 
-<div class="full-bleed w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-08 px-4 text-center">
-  <div class="w-full bg-[#d4d5e5] flex flex-col items-center justify-center py-20 px-4 text-center relative z-10">
+<Section variant="primary">
+<div class="flex flex-col items-center justify-center py-08 px-4 text-center">
+  <div class="w-full flex flex-col items-center justify-center py-20 px-4 text-center relative z-10">
     <h1 class="text-4xl md:text-6xl font-bold mb-10 leading-tight text-[#17223A]">
       Follow us<br />for updates!
     </h1>
@@ -58,6 +60,7 @@ const socialLinks = [
     </p>
   </div>
 </div>
+</Section>
 
 <script>
   const form = document.getElementById("subscribeForm");
