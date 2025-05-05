@@ -25,10 +25,11 @@ const tiers = [
 // Group sponsors by their tier
 const grouped = sponsors.reduce((acc, sponsor) => {
   const tier = sponsor.data.tier;
-  if (!acc[tier]) {
-    acc[tier] = [];
+  const key = tier ?? 'unknown';
+  if (!acc[key]) {
+    acc[key] = [];
   }
-  acc[tier].push(sponsor);
+  acc[key].push(sponsor);
   return acc;
 }, {} as Record<string, CollectionEntry<"sponsors">[]>);
 ---
@@ -44,7 +45,7 @@ const grouped = sponsors.reduce((acc, sponsor) => {
   {tiers.map((tier) => {
     const tiersponsors = grouped[tier];
     return tiersponsors?.length ? (
-      <section key={tier} class="mb-12">
+      <section class="mb-12">
         <Headline id=`tier-${slugify(tier)}` title={tier} />
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
           {tiersponsors.map((sponsor) => (

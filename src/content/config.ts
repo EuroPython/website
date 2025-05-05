@@ -1,23 +1,9 @@
 import { defineCollection, reference, z } from "astro:content";
 import { loadData } from "@utils/dataLoader";
-import { glob, file } from "astro/loaders";
+import { glob } from "astro/loaders";
 
 const mode = import.meta.env.MODE;
 console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
-
-const tiers = [
-  "Keystone",
-  "Diamond",
-  "Platinum",
-  "Platinum X",
-  "Gold",
-  "Silver",
-  "Bronze",
-  "Patron",
-  "Financial Aid",
-  "Supporters",
-  "Partners",
-] as const;
 
 const pages = defineCollection({
   type: "content",

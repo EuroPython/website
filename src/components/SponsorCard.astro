@@ -122,7 +122,7 @@ const socialLinks = [
             .filter((link) => socials?.[link.key])
             .map((link) => {
               const url = socials[link.key];
-              let iconColor;
+              let iconColor:string;
 
               // Assign colors based on social media platform
               switch(link.key) {

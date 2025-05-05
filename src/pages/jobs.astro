@@ -41,14 +41,14 @@ for (const path in jobFiles) {
         if (!sponsorJobs) return;
         return (
           <TwoCols>
-            <Fragment slot="content">
+            <div slot="content" class="hidden lg:block">
               <SponsorCard {sponsor} />
-            </Fragment>
+            </div>
             <Fragment slot="sidebar">
               {sponsorJobs && sponsorJobs.length > 0 && (
                 <>
                   {sponsorJobs.map((job) => (
-                    <JobCard {job} />
+                  <JobCard {job} {sponsor} />
                   ))}
                 </>
               )}

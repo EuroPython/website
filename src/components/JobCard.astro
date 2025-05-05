@@ -1,7 +1,12 @@
 ---
 import CardContent from "@components/CardContent.astro";
-const { job } = Astro.props;
-const { title, sponsor, location, type, level, salary, tags, description, responsibilities, requirements, benefits, apply_link } = job.data;
+const { job, sponsor } = Astro.props;
+
+// TODO: add tags
+const { title, location, type, level, salary, description, responsibilities, requirements, benefits, apply_link } = job.data;
+
+
+
 ---
 
 <div class="mb-6 last:mb-0">
@@ -9,6 +14,11 @@ const { title, sponsor, location, type, level, salary, tags, description, respon
     <a href={`/sponsor/${job.id}`}>
       <h2 class="text-3xl font-bold mb-2">{title}</h2>
     </a>
+
+    <a class="lg:hidden text-[#1a56db] hover:text-[#4f46e5] text-xl pb-2 inline-block font-bold" href={`/sponsor/${sponsor.id}`}>
+      {sponsor.data.name}
+    </a>
+
     { level && type && location &&
       <p class="text-gray-600 mb-2">{level} • {type} • {location}</p>
     }
@@ -18,21 +28,21 @@ const { title, sponsor, location, type, level, salary, tags, description, respon
     { responsibilities &&
       <h3 class="text-xl font-semibold mb-2">Responsibilities</h3>
       <ul class="list-disc list-inside mb-4">
-        {responsibilities.map(item => <li>{item}</li>)}
+        {responsibilities.map((item:string ) => <li>{item}</li>)}
       </ul>
     }
 
     { requirements &&
     <h3 class="text-xl font-semibold mb-2">Requirements</h3>
     <ul class="list-disc list-inside mb-4">
-      {requirements.map(item => <li>{item}</li>)}
+      {requirements.map((item:string) => <li>{item}</li>)}
     </ul>
     }
 
     { benefits &&
     <h3 class="text-xl font-semibold mb-2">Benefits</h3>
     <ul class="list-disc list-inside mb-6">
-      {benefits.map(item => <li>{item}</li>)}
+      {benefits.map((item:string) => <li>{item}</li>)}
     </ul>
     }
 
