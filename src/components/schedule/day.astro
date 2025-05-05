@@ -1,13 +1,10 @@
 
 ---
-import { type CollectionEntry, getEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import Break from "@components/schedule/break.astro";
 import Session from "@components/schedule/session.astro";
 import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
-//import { Title } from "@components/typography/title";
 import Headline from "@components/ui/Headline.astro";
-import Button from "@ui/Button.astro";
-import { Select } from "@components/form/select";
 import { formatInTimeZone } from "date-fns-tz";
 
 

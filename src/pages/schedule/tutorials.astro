@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import Layout from "@layouts/ScheduleLayout.astro";
 import ScheduleDay from "@components/schedule/day.astro";
 import { slugify } from '@utils/content';
-import Headline from "@ui/Headline.astro"
 
 export const getStaticPaths = async () => {
   const sessions = await getCollection("sessions");

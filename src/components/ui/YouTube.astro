@@ -1,13 +1,21 @@
 ---
-import { YouTube } from "@astro-community/astro-embed-youtube";
+import { YouTube as Player } from "@astro-community/astro-embed-youtube";
+
+type Props = {
+  id?: string;
+  class?: string;
+  [key: string]: any;
+}
 
 const {
   class: userClass = '',
   ...attrs
 } = Astro.props;
 
+const attrId = attrs.id || '';
+
 const defaultClass = 'border-4 border-white rounded-lg shadow-lg';
 const className = `${defaultClass} ${userClass}`.trim();
 ---
 
-<YouTube class={className} {...attrs} />
+<Player id={attrId} class={className} {...attrs} />
