@@ -36,7 +36,7 @@ const externalDomain = new URL(Astro.site || "").hostname;
         <Header />
       </header>
 
-      <main class="main" role="main">
+      <main class="main pt-28" role="main">
         <slot />
       </main>
 
@@ -76,7 +76,7 @@ const externalDomain = new URL(Astro.site || "").hostname;
     @apply bg-body-background;
   }
   main {
-    @apply bg-body-background pt-6;
+    @apply bg-body-background;
   }
   footer {
     @apply bg-primary py-10;
