@@ -13,6 +13,7 @@ socials:
   mastodon:
   bluesky:
 tier: Financial Aid
+draft: true
 ---
 
 ## About EuroPython Society

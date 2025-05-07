@@ -16,7 +16,6 @@ socials:
   bluesky:
 tier: Partners
 logo_padding: 30px 20px
-draft: true
 ---
 
 ## About PyVEC
