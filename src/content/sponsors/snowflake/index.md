@@ -16,6 +16,7 @@ socials:
   bluesky:
 tier: Silver
 logo_padding: 20px 0
+draft: true
 ---
 
 ## About Snowflake

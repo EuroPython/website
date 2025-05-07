@@ -1,17 +1,28 @@
 ---
 import CardContent from "@components/CardContent.astro";
-const { job, sponsor } = Astro.props;
+import { getEntry } from "astro:content";
+const { job:jobId, sponsor:sponsorId } = Astro.props;
+
+const job = await getEntry("jobs", jobId);
+if (!job) {
+  throw new Error(`Job with ID "${jobId}" not found`);
+}
+
+const sponsor = await getEntry("sponsors", sponsorId);
+
+if (!sponsor) {
+  throw new Error(`Sponsor with ID "${sponsorId}" not found`);
+}
 
 // TODO: add tags
-const { title, location, type, level, salary, description, responsibilities, requirements, benefits, apply_link } = job.data;
+const { title, location, type, level, salary, description, responsibilities, requirements, benefits, apply_link, draft } = job.data;
 
-
-
+const isJobPage = Astro.url.pathname == `/sponsor/${job.id}`;
 ---
 
-<div class="mb-6 last:mb-0">
-  <div class="flex-1 p-6 rounded-lg shadow-md bg-white">
-    <a href={`/sponsor/${job.id}`}>
+<div class="mb-6 last:mb-0 rounded-lg shadow-md bg-white">
+  <div class=`flex-1 p-6 ${draft ? "draft": ""}`>
+    <a href={`/sponsor/${jobId}`}>
       <h2 class="text-3xl font-bold mb-2">{title}</h2>
     </a>
 
@@ -23,7 +34,7 @@ const { title, location, type, level, salary, description, responsibilities, req
       <p class="text-gray-600 mb-2">{level} • {type} • {location}</p>
     }
     <p class="text-gray-700 mb-4">{salary}</p>
-    <p class="mb-6">{description}</p>
+    <p class="mb-3">{description}</p>
 
     { responsibilities &&
       <h3 class="text-xl font-semibold mb-2">Responsibilities</h3>
@@ -45,9 +56,6 @@ const { title, location, type, level, salary, description, responsibilities, req
       {benefits.map((item:string) => <li>{item}</li>)}
     </ul>
     }
-
-
-    <CardContent entry={job} />
 
       <a
         href={apply_link}
@@ -84,4 +92,5 @@ const { title, location, type, level, salary, description, responsibilities, req
     color: var(--color-primary-hover);
     text-decoration: underline;
   }
+
 </style>

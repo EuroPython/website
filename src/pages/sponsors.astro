@@ -49,7 +49,7 @@ const grouped = sponsors.reduce((acc, sponsor) => {
         <Headline id=`tier-${slugify(tier)}` title={tier} />
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
           {tiersponsors.map((sponsor) => (
-            <SponsorLogo sponsor={sponsor} />
+            <SponsorLogo sponsor={sponsor.id} />
           ))}
         </div>
       </section>

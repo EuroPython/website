@@ -15,6 +15,7 @@ socials:
   mastodon:
   bluesky:
 tier: Silver
+draft: true
 ---
 
 ## About Pretix

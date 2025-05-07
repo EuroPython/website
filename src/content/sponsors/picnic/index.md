@@ -15,6 +15,7 @@ socials:
   mastodon:
   bluesky:
 tier: Gold
+draft: true
 ---
 
 ## About Picnic

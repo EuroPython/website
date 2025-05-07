@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection, getEntry } from "astro:content";
+import { type CollectionEntry, getEntry, getCollection } from "astro:content";
 
 import Layout from "@layouts/SectionLayout.astro";
 
@@ -7,7 +7,15 @@ import SponsorCard from "@components/SponsorCard.astro";
 import JobCard from "@components/JobCard.astro";
 import TwoCols from "@components/TwoCols.astro";
 
-const sponsors = await getCollection("sponsors");
+const sponsors = await getCollection("sponsors", ({ data }) => {
+  return import.meta.env.MODE === "production" ? data.draft !== true : true;
+});
+
+const jobs = await getCollection("jobs", ({ data }) => {
+  return import.meta.env.MODE === "production" ? data.draft !== true : true;
+});
+
+const jobsMap = Object.fromEntries(jobs.map((job) => [job.id, job]));
 
 const jobFiles = import.meta.glob("../content/sponsors/*/!(index).md");
 const sponsorsJobsMap: Record<string, CollectionEntry<"jobs">[]> = {};
@@ -18,8 +26,10 @@ for (const path in jobFiles) {
     const sponsorId = match[1];
     const jobId = match[2];
 
-    const entry = await getEntry("jobs", `${sponsorId}/${jobId}`);
-    if (entry) {
+    const entry: CollectionEntry<"jobs"> = jobsMap[`${sponsorId}/${jobId}`];
+    const sponsor = await getEntry("sponsors", sponsorId);
+    if (entry && entry.data) {
+      entry.data.sponsor = sponsor;
       if (!sponsorsJobsMap[sponsorId]) {
         sponsorsJobsMap[sponsorId] = [];
       }
@@ -29,32 +39,38 @@ for (const path in jobFiles) {
     }
   }
 }
+
+sponsors.forEach((sponsor) => {
+  sponsor.data.jobs = (sponsorsJobsMap[sponsor.id] || []).map((job) => ({
+    id: job.id,
+    collection: "jobs",
+  }));
+});
 ---
 
 <Layout
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-    {
-      sponsors.map((sponsor) => {
-        const sponsorJobs = sponsorsJobsMap[sponsor.id];
-        if (!sponsorJobs) return;
-        return (
-          <TwoCols>
-            <div slot="content" class="hidden lg:block">
-              <SponsorCard {sponsor} />
-            </div>
-            <Fragment slot="sidebar">
-              {sponsorJobs && sponsorJobs.length > 0 && (
-                <>
-                  {sponsorJobs.map((job) => (
-                  <JobCard {job} {sponsor} />
-                  ))}
-                </>
-              )}
-            </Fragment>
-          </TwoCols>
-        );
-      })
-    }
+  {
+    sponsors.map((sponsor) => {
+      if (!(sponsor.data.jobs && sponsor.data.jobs.length > 0)) return;
+      return (
+        <TwoCols>
+          <div slot="content" class="hidden lg:block">
+            <SponsorCard sponsor={sponsor.id} />
+          </div>
+          <Fragment slot="sidebar">
+            {sponsor.data.jobs && sponsor.data.jobs.length > 0 && (
+              <>
+                {sponsor.data.jobs.map((job) => (
+                  <JobCard job={job.id} sponsor={sponsor.id} />
+                ))}
+              </>
+            )}
+          </Fragment>
+        </TwoCols>
+      );
+    })
+  }
 </Layout>

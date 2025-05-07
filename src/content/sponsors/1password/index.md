@@ -17,6 +17,7 @@ socials:
   bluesky:
 tier: Supporters
 logo_padding: 30px 10px
+draft: true
 ---
 
 ## About 1Password

@@ -210,8 +210,9 @@ const sponsors = defineCollection({
         bluesky: z.string().url().optional().nullable(),
       })
       .optional(),
-    jobs: z.array(z.string()).optional(),
     logo_padding: z.string().optional(),
+    draft: z.boolean().optional().default(false),
+    jobs: z.array(reference("jobs")).optional().default([]),
   }),
 });
 
@@ -229,6 +230,8 @@ const jobs = defineCollection({
     requirements: z.array(z.string()).nullable(),
     benefits: z.array(z.string()).nullable(),
     apply_link: z.string().url().optional(),
+    draft: z.boolean().optional().default(false),
+    sponsor: reference("sponsors").optional(),
   }),
 });
 

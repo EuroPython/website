@@ -5,9 +5,9 @@ import CardContent from "@components/CardContent.astro";
 import SponsorDisplay from "@components/SponsorDisplay.astro";
 import TwoCols from "@components/TwoCols.astro";
 
-import { getEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 
-const sponsor = await getEntry("sponsors", Astro.params.sponsor);
+const {sponsor } = Astro.params;
 
 export async function getStaticPaths() {
   const sponsors = await getCollection("sponsors");
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
         <SponsorCard {sponsor} showJobs />
       </Fragment>
       <Fragment slot="sidebar">
-        <CardContent entry={sponsor} />
+        <CardContent collection="sponsors" entry={sponsor} />
       </Fragment>
     </TwoCols>
 </Layout>

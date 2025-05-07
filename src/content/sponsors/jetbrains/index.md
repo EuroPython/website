@@ -17,6 +17,7 @@ socials:
   bluesky:
 tier: Gold
 logo_padding: 20px 10px
+draft: true
 ---
 
 ## About JetBrains

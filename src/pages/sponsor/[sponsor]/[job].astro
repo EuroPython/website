@@ -4,12 +4,10 @@ import JobCard from "@components/JobCard.astro";
 import SponsorCard from "@components/SponsorCard.astro";
 import TwoCols from "@components/TwoCols.astro";
 
-import { getEntry } from "astro:content";
 
-const { sponsor: sponsorId, job: jobId } = Astro.params;
+const { sponsor, job: jobId } = Astro.params;
 
-const sponsor = await getEntry("sponsors", sponsorId);
-const job = await getEntry("jobs", `${sponsorId}/${jobId}`);
+const job = `${sponsor}/${jobId}`;
 
 export async function getStaticPaths() {
   const jobFiles = import.meta.glob("@src/content/sponsors/*/!(index).md");

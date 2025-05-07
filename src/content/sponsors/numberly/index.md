@@ -2,23 +2,23 @@
 name: Numberly
 url: https://numberly.com/
 description:
-  Numberly is a global data marketing technology company that helps advertisers
-  build lasting customer relationships through omnichannel strategies,
-  programmatic trading, and conversational platforms.
+  Numberly, Marketing Technologist, met la data au service de la relation
+  client. Le groupe permet aux entreprises de comprendre les besoins de leurs
+  prospects et clients et d’interagir avec chacun de manière performante et
+  pertinente.
 tier: Gold
 logo_padding: 30px
 ---
 
-Numberly helps its customers collect, analyze and leverage their data across all
-marketing channels. We are more than 200 engineers divided into teams with a
-human dimension, where everyone develops a positive influence and can be
-autonomous. Our sustained growth encourages us to constantly question our
-technical and organizational choices.
+Numberly, Marketing Technologist, met la data au service de la relation client.
+Le groupe permet aux entreprises de comprendre les besoins de leurs prospects et
+clients et d’interagir avec chacun de manière performante et pertinente.
 
-Our challenges are international: 8 offices worldwide.
+Nos experts en orchestration omnicanal, en activation programmatique et en
+plateformes conversationnelles développent et mettent en place des expériences à
+fort impact. Nous opérons dans plus de 50 pays : le groupe, résolument
+international, poursuit son expansion depuis 25 ans.
 
-Our wide range of interconnected products and technical challenges are diverse
-and complex. Our daily missions consist of processing thousands of requests per
-second, operating databases of several petabytest, automating our entire
-bare-metal infrastructure, and building the digital marketing interfaces of
-tomorrow.
+Plus de 500 collaborateurs, basés à Paris, Londres, Montréal, New York et Dubaï,
+contribuent tous les jours à la qualité d’exécution et la satisfaction client,
+en restant curieux, agiles et innovants, un état d’esprit qui anime Numberly.

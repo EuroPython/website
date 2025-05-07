@@ -1,8 +1,17 @@
 ---
+import { getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import { sponsorLogos } from "@data/sponsorLogos";
 
-const { sponsor } = Astro.props;
+const { sponsor: sponsorId } = Astro.props;
+
+
+const sponsor = await getEntry("sponsors", sponsorId);
+
+if (!sponsor) {
+  throw new Error(`Sponsor with ID "${sponsorId}" not found`);
+}
+
 const {
   name: title,
   url: website,

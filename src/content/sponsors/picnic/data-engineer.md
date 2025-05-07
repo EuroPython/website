@@ -23,4 +23,5 @@ benefits:
   - "Impact-driven work in sustainable e-commerce."
   - "Access to learning and development resources."
 apply_link: "https://picnic.wiki/careers"
+draft: true
 ---

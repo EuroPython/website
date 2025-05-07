@@ -2,10 +2,15 @@
 import { type CollectionEntry, getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import { sponsorLogos } from "@data/sponsorLogos";
-
 import Icon from "@ui/Icon.astro";
 
-const { sponsor, showJobs=false } = Astro.props;
+const { sponsor: sponsorId, showJobs=false } = Astro.props;
+const sponsor = await getEntry("sponsors", sponsorId);
+
+if (!sponsor) {
+  throw new Error(`Sponsor with ID "${sponsorId}" not found`);
+}
+
 const {
   name: title,
   url: website,
@@ -14,6 +19,7 @@ const {
   description,
   socials,
   logo_padding = false,
+  draft
 } = sponsor.data;
 
 const jobFiles = import.meta.glob("../content/sponsors/*/!(index).md");
@@ -49,9 +55,9 @@ const socialLinks = [
 ---
 
 <div
-  class="lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black mb-6"
+  class=`lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black mb-6 ${draft ? "draft": "no-draft"}`
 >
-  <div class="w-full flex justify-center items-center md:items-center min-h-[140px]">
+  <div class="w-full flex justify-center items-center md:items-center min-h-[140px] ">
     {
       logo && (
           <Image
@@ -121,6 +127,7 @@ const socialLinks = [
           {socialLinks
             .filter((link) => socials?.[link.key])
             .map((link) => {
+              if (!socials) return;
               const url = socials[link.key];
               let iconColor:string;
 

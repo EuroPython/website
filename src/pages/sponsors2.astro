@@ -37,7 +37,7 @@ const sponsorsWithoutDescription: CollectionEntry<"sponsors">[] = sponsors.filte
 {sponsorsWithDescription.length > 0 && (
   <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
     {sponsorsWithDescription.map((sponsor) => (
-      <SponsorCard sponsor={sponsor} />
+      <SponsorCard sponsor={sponsor.id} />
     ))}
   </section>
 )}
@@ -45,7 +45,7 @@ const sponsorsWithoutDescription: CollectionEntry<"sponsors">[] = sponsors.filte
 {sponsorsWithoutDescription.length > 0 && (
   <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
     {sponsorsWithoutDescription.map((sponsor) => (
-      <SponsorCard sponsor={sponsor} />
+      <SponsorCard sponsor={sponsor.id} />
     ))}
   </section>
 )}
