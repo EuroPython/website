@@ -107,7 +107,7 @@ const { items, inverted = false, level = 1 } = Astro.props;
     const navButtons = document.querySelectorAll('[role="menuitem"][aria-haspopup="true"]');
 
     navButtons.forEach(button => {
-      button.addEventListener('keydown', (e) => {
+      button.addEventListener('keydown', (e:any) => {
         const key = e.key;
 
         if (key === 'Enter' || key === ' ' || key === 'ArrowDown') {
@@ -120,14 +120,14 @@ const { items, inverted = false, level = 1 } = Astro.props;
       });
 
       // Close submenu when focus leaves
-      button.addEventListener('blur', (e) => {
+      button.addEventListener('blur', (e:any) => {
         if (!e.currentTarget.contains(e.relatedTarget)) {
           toggleSubmenu(button, false);
         }
       });
     });
 
-    function toggleSubmenu(button, show) {
+    function toggleSubmenu(button:any, show:any) {
       const expanded = button.getAttribute('aria-expanded') === 'true';
 
       if (show && !expanded) {
@@ -144,9 +144,9 @@ const { items, inverted = false, level = 1 } = Astro.props;
     }
 
     // Add arrow key navigation within same level
-    const menuLists = document.querySelectorAll('[role="menu"], [role="menubar"]');
+    const menuLists = document.querySelectorAll('[role="menu"], [role="menubar"]') as NodeListOf<HTMLElement>;
     menuLists.forEach(menu => {
-      const menuItems = menu.querySelectorAll('[role="menuitem"]');
+      const menuItems = menu.querySelectorAll('[role="menuitem"]') as NodeListOf<HTMLElement>;
 
       menuItems.forEach((item, index) => {
         item.addEventListener('keydown', (e) => {

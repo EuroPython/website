@@ -3,6 +3,7 @@ import { type CollectionEntry, getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import { sponsorLogos } from "@data/sponsorLogos";
 import Icon from "@ui/Icon.astro";
+import SocialLinks from "@components/SocialLinks.astro";
 
 const { sponsor: sponsorId, showJobs=false } = Astro.props;
 const sponsor = await getEntry("sponsors", sponsorId);
@@ -38,21 +39,8 @@ for (const path in jobFiles) {
 }
 
 const jobs: CollectionEntry<"jobs">[] = sponsorsJobsMap[sponsor.id];
-
 const isSponsorPage = Astro.url.pathname == `/sponsor/${sponsor.id}`;
-
 const logo = sponsorLogos[sponsor.id];
-
-const socialLinks = [
-  { key: "linkedin", icon: "linkedin-in", label: "LinkedIn Profile" },
-  { key: "twitter", icon: "twitter", label: "Twitter Profile" },
-  { key: "discord", icon: "discord", label: "Discord Profile" },
-  { key: "mastodon", icon: "mastodon", label: "Mastodon Profile" },
-  { key: "bluesky", icon: "bluesky", label: "Bluesky Profile" },
-  { key: "facebook", icon: "facebook-f", label: "Facebook Profile" },
-  { key: "github", icon: "github", label: "GitHub Profile" },
-  { key: "instagram", icon: "instagram", label: "Instagram Profile" },
-];
 ---
 
 <div
@@ -124,60 +112,7 @@ const socialLinks = [
 
 
       { (tier !== "Partners") &&
-        <div class="social-links flex justify-center space-x-4 pt-4">
-          {socialLinks
-            .filter((link) => socials?.[link.key])
-            .map((link) => {
-              if (!socials) return;
-              const url = socials[link.key];
-              let iconColor:string;
-
-              // Assign colors based on social media platform
-              switch(link.key) {
-                case "facebook":
-                  iconColor = "facebook";
-                  break;
-                case "twitter":
-                  iconColor = "twitter";
-                  break;
-                case "linkedin":
-                  iconColor = "linkedin";
-                  break;
-                case "github":
-                  iconColor = "github";
-                  break;
-                case "instagram":
-                  iconColor = "instagram";
-                  break;
-                case "discord":
-                  iconColor = "discord";
-                  break;
-                case "mastodon":
-                  iconColor = "mastodon";
-                  break;
-                case "bluesky":
-                  iconColor = "bluesky";
-                  break;
-                default:
-                  iconColor = "";
-                  break;
-              }
-
-              return (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                  class={`social-icon ${iconColor}`}
-                >
-                  <span class="social-icon-inner">
-                    <Icon name={link.icon} style="brands" size="fa-lg" />
-                  </span>
-                </a>
-              );
-            })}
-        </div>
+        <SocialLinks socials={socials} />
       }
       </div>
     )
@@ -185,43 +120,6 @@ const socialLinks = [
 </div>
 
 <style>
-
-/* Platform-specific colors */
-.social-icon.facebook {
-  color: #1877f2;
-}
-
-.social-icon.twitter {
-  color: #1da1f2;
-}
-
-.social-icon.linkedin {
-  color: #0a66c2;
-}
-
-.social-icon.github {
-  color: #333333;
-}
-
-.social-icon.instagram {
-  color: #e4405f;
-}
-
-.social-icon.discord {
-  color: #5865f2;
-}
-
-.social-icon.mastodon {
-  color: #6364ff;
-}
-
-.social-icon.bluesky {
-  color: #0085ff;
-}
-
-.social-icon.website {
-  color: #0077b5;
-}
 
   /* Website button styles */
   .website-btn-container {
@@ -258,11 +156,6 @@ const socialLinks = [
 
   .website-btn:hover ,  .website-btn-outline:hover {
     text-decoration: underline;
-  }
-
-  .social-links {
-    /*border: 0 solid rgba(33,33,33,0.2);*/
-    /*border-width: 1px 0 0 0;*/
   }
 
   li {
