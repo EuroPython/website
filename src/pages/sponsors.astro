@@ -1,0 +1,58 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "@layouts/SectionLayout.astro";
+import SponsorLogo from "@components/SponsorLogo.astro";
+import Headline from "@ui/Headline.astro";
+
+import { slugify } from "@utils/content";
+
+const sponsors = await getCollection("sponsors");
+
+const tiers = [
+  "Keystone",
+  "Diamond",
+  "Platinum",
+  "Platinum X",
+  "Gold",
+  "Silver",
+  "Bronze",
+  "Patron",
+  "Financial Aid",
+  "Supporters",
+  "Partners",
+] as const;
+
+// Group sponsors by their tier
+const grouped = sponsors.reduce((acc, sponsor) => {
+  const tier = sponsor.data.tier;
+  const key = tier ?? 'unknown';
+  if (!acc[key]) {
+    acc[key] = [];
+  }
+  acc[key].push(sponsor);
+  return acc;
+}, {} as Record<string, CollectionEntry<"sponsors">[]>);
+---
+
+<Layout
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
+>
+
+  <Headline title="Thank You to Our Sponsors" />
+
+  <!-- Render sponsors grouped by tier -->
+  {tiers.map((tier) => {
+    const tiersponsors = grouped[tier];
+    return tiersponsors?.length ? (
+      <section class="mb-12">
+        <Headline id=`tier-${slugify(tier)}` title={tier} />
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
+          {tiersponsors.map((sponsor) => (
+            <SponsorLogo sponsor={sponsor.id} />
+          ))}
+        </div>
+      </section>
+    ) : null;
+  })}
+</Layout>
