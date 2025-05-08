@@ -1,22 +1,9 @@
 import { defineCollection, reference, z } from "astro:content";
 import { loadData } from "@utils/dataLoader";
+import { glob } from "astro/loaders";
 
 const mode = import.meta.env.MODE;
 console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
-
-const tiers = [
-  "Keystone",
-  "Diamond",
-  "Platinum",
-  "Platinum X",
-  "Gold",
-  "Silver",
-  "Bronze",
-  "Patron",
-  "Financial Aid",
-  "Supporters",
-  "Partners",
-] as const;
 
 const pages = defineCollection({
   type: "content",
@@ -34,17 +21,6 @@ const deadlines = defineCollection({
       subtitle: z.string(),
       url: z.string(),
       image: image(),
-    }),
-});
-
-const sponsors = defineCollection({
-  type: "data",
-  schema: ({ image }) =>
-    z.object({
-      name: z.string(),
-      url: z.string(),
-      image: image(),
-      tier: z.enum(tiers),
     }),
 });
 
@@ -215,12 +191,57 @@ const days = defineCollection({
   }),
 });
 
+const sponsors = defineCollection({
+  loader: glob({ pattern: "*/index.md", base: "./src/content/sponsors" }),
+  schema: z.object({
+    name: z.string(),
+    url: z.string().url(),
+    tier: z.string().nullable(),
+    location: z.string().optional(),
+    industry: z.string().optional(),
+    description: z.string().optional(),
+    socials: z
+      .object({
+        linkedin: z.string().url().optional().nullable(),
+        twitter: z.string().url().optional().nullable(),
+        github: z.string().url().optional().nullable(),
+        discord: z.string().url().optional().nullable(),
+        mastodon: z.string().url().optional().nullable(),
+        bluesky: z.string().url().optional().nullable(),
+      })
+      .optional(),
+    logo_padding: z.string().optional(),
+    draft: z.boolean().optional().default(false),
+    jobs: z.array(reference("jobs")).optional().default([]),
+  }),
+});
+
+const jobs = defineCollection({
+  loader: glob({ pattern: "*/!(index).md", base: "./src/content/sponsors" }),
+  schema: z.object({
+    title: z.string(),
+    location: z.string().nullable(),
+    type: z.string().nullable(), // e.g., Full-Time
+    level: z.string().nullable(), // e.g., Senior
+    salary: z.string().nullable(),
+    tags: z.array(z.string()).nullable(),
+    description: z.string().nullable(),
+    responsibilities: z.array(z.string()).nullable(),
+    requirements: z.array(z.string()).nullable(),
+    benefits: z.array(z.string()).nullable(),
+    apply_link: z.string().url().optional(),
+    draft: z.boolean().optional().default(false),
+    sponsor: reference("sponsors").optional(),
+  }),
+});
+
 export const collections = {
   days,
   pages,
   deadlines,
-  sponsors,
   sessions,
   speakers,
   keynoters,
+  sponsors,
+  jobs,
 };

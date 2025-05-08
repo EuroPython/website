@@ -1,0 +1,39 @@
+---
+import Layout from "@layouts/SectionLayout.astro";
+import SponsorCard from "@components/SponsorCard.astro";
+import CardContent from "@components/CardContent.astro";
+import SponsorDisplay from "@components/SponsorDisplay.astro";
+import TwoCols from "@components/TwoCols.astro";
+
+import { getCollection } from "astro:content";
+
+const {sponsor } = Astro.params;
+
+export async function getStaticPaths() {
+
+const sponsors = await getCollection("sponsors", ({ data }) => {
+  return import.meta.env.MODE === "production" ? data.draft !== true : true;
+});
+
+  return sponsors.map((sponsor: any) => ({
+    params: {
+      sponsor: sponsor.id,
+    },
+  }));
+}
+---
+
+<Layout
+  title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
+  description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
+>
+    <SponsorDisplay {sponsor} />
+    <TwoCols>
+      <Fragment slot="content">
+        <SponsorCard {sponsor} showJobs />
+      </Fragment>
+      <Fragment slot="sidebar">
+        <CardContent collection="sponsors" entry={sponsor} />
+      </Fragment>
+    </TwoCols>
+</Layout>

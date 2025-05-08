@@ -130,6 +130,10 @@
           "path": "/childcare"
         }
       ]
+    },
+    {
+      "name": "Jobs",
+      "path": "/jobs"
     }
   ],
   "footer": [

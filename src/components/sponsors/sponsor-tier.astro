@@ -13,6 +13,9 @@ export interface Props {
   top?: boolean;
 }
 
+
+import { sponsorLogos } from "@data/sponsorLogos";
+
 const { tier, top } = Astro.props;
 ---
 
@@ -42,7 +45,7 @@ const { tier, top } = Astro.props;
           class="pb-8"
         >
           <Image
-            src={sponsor.data.image}
+            src={sponsorLogos[sponsor.id]}
             alt={sponsor.data.name}
             width={500}
             class="max-w-[250px] max-h-[120px]"
