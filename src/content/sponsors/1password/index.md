@@ -9,20 +9,12 @@ description:
   combat shadow IT. Founded in 2005, the company prioritizes user experience,
   privacy, and security across its cross-platform applications."
 socials:
-  linkedin: "https://linkedin.com/company/agilebits"
-  twitter: "https://twitter.com/1Password"
+  linkedin:
+  twitter:
   github:
   discord:
   mastodon:
   bluesky:
 tier: Supporters
 logo_padding: 30px 10px
-draft: true
 ---
-
-## About 1Password
-
-1Password is a leader in password management and cybersecurity, offering tools
-to safeguard critical data for businesses and individuals. In 2025, it expanded
-its impact as a cybersecurity partner for Formula 1’s Oracle Red Bull Racing and
-a sponsor at major tech events like GISEC GLOBAL 2025.
