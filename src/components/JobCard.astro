@@ -1,5 +1,4 @@
 ---
-import CardContent from "@components/CardContent.astro";
 import { getEntry } from "astro:content";
 const { job:jobId, sponsor:sponsorId } = Astro.props;
 
@@ -17,7 +16,6 @@ if (!sponsor) {
 // TODO: add tags
 const { title, location, type, level, salary, description, responsibilities, requirements, benefits, apply_link, draft } = job.data;
 
-const isJobPage = Astro.url.pathname == `/sponsor/${job.id}`;
 ---
 
 <div class="mb-6 last:mb-0 rounded-lg shadow-md bg-white">

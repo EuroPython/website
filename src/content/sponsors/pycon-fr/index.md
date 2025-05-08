@@ -16,9 +16,3 @@ socials:
   bluesky:
 tier: Partners
 ---
-
-## About PyCon France
-
-PyCon France promotes Python’s growth through annual events featuring diverse
-speakers and hands-on sessions. Though 2025 specifics aren’t listed here, it
-remains a cornerstone of France’s tech community.

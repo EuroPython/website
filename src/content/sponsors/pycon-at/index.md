@@ -17,9 +17,3 @@ socials:
 tier: Partners
 logo_padding: 10px 0
 ---
-
-## About PyCon Austria
-
-PyCon Austria brings together Python enthusiasts annually to share knowledge and
-innovations. While 2025 details are unavailable, its mission aligns with other
-PyCon events in advancing Python adoption.

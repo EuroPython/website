@@ -17,9 +17,3 @@ socials:
 tier: Partners
 logo_padding: 10px 0
 ---
-
-## About PyCon Italia
-
-PyCon Italia drives Python’s growth in Italy through annual conferences and
-grassroots outreach. Though 2025 details are absent here, its legacy of
-community building endures.

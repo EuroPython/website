@@ -16,9 +16,3 @@ socials:
   bluesky:
 tier: Partners
 ---
-
-## About PyCon Portugal
-
-PyCon Portugal unites developers, educators, and companies to advance Python in
-Portugal and beyond. While 2025 updates aren’t listed, its commitment to the
-community remains strong.

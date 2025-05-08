@@ -17,9 +17,3 @@ socials:
 tier: Partners
 logo_padding: 10px
 ---
-
-## About PyCon Greece
-
-PyCon Greece fosters Python adoption through conferences and community
-initiatives. While 2025 plans aren’t detailed in current data, its impact on
-regional tech ecosystems continues.
