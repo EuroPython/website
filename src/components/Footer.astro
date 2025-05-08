@@ -1,10 +1,23 @@
 ---
-import { Image } from "astro:assets";
+import Icon from "@ui/Icon.astro";
 import links from "@data/links.json";
 import EPSLogo from "../../public/eps-logo.svg";
 
 const buildTimestamp = __TIMESTAMP__;
 const gitVersion = __GIT_VERSION__;
+
+const socialLinks = [
+  { key: "website", icon: "globe", label: "Website" },
+  { key: "blog", icon: "rss", label: "Blog" },
+  { key: "linkedin", icon: "linkedin", label: "LinkedIn" },
+  { key: "github", icon: "github", label: "GitHub" },
+  { key: "mastodon", icon: "mastodon", label: "Mastodon" },
+  { key: "bluesky", icon: "bluesky", label: "Bluesky" },
+  { key: "twitter", icon: "x-twitter", label: "Twitter" },
+  { key: "instagram", icon: "instagram", label: "Instagram" },
+  { key: "youtube", icon: "youtube", label: "YouTube" }
+];
+
 ---
 
   <div
@@ -53,11 +66,65 @@ const gitVersion = __GIT_VERSION__;
     <div
       class="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end"
     >
-    <div class="flex text-white/40  w-full lg:w-2/3 px-6 items-center">
+    <div class="flex flex-col text-white/40  w-full lg:w-2/3 px-6 items-center">
         <p>Excited about our mission? Want to collaborate or contribute? Let's connect!
 We're open to partnership opportunities and would love to hear your ideas.
 <a class="text-white" href="mailto:helpdesk@europython.eu">helpdesk@europython.eu</a>
 </p>
+        <div class="social-links flex justify-center space-x-4 pt-4">
+          {socialLinks
+            .filter((link) => links.socials?.[link.key])
+            .map((link) => {
+              if (!links.socials) return;
+              const url = links.socials[link.key];
+              let iconColor:string;
+
+              switch(link.key) {
+                case "facebook":
+                  iconColor = "facebook";
+                  break;
+                case "twitter":
+                  iconColor = "twitter";
+                  break;
+                case "linkedin":
+                  iconColor = "linkedin";
+                  break;
+                case "github":
+                  iconColor = "github";
+                  break;
+                case "instagram":
+                  iconColor = "instagram";
+                  break;
+                case "discord":
+                  iconColor = "discord";
+                  break;
+                case "mastodon":
+                  iconColor = "mastodon";
+                  break;
+                case "bluesky":
+                  iconColor = "bluesky";
+                  break;
+                default:
+                  iconColor = "";
+                  break;
+              }
+
+              return (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                  class={`social-icon ${iconColor}`}
+                >
+                  <span class="social-icon-inner">
+                    <Icon name={link.icon} style="brands" size="fa-lg" />
+                  </span>
+                </a>
+              );
+            })}
+        </div>
+
       </div>
       <div class="flex text-white/40 w-full lg:w-1/3 text-start">
         <div>
