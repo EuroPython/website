@@ -4,7 +4,6 @@ import { marked } from 'marked';
 const { collection, entry:entryId } = Astro.props;
 
 const entry = await getEntry(collection, entryId);
-console.log(entryId)
 const html = entry && entry.body ? marked.parse(entry.body) :  "";
 
 ---
