@@ -1,14 +1,14 @@
 {
   "header": [
     {
-      "name": "Schedule",
+      "name": "Program",
       "items": [
         { "name": "Overview", "path": "/overview" },
         { "name": "Sessions", "path": "/sessions" },
         { "name": "Speakers", "path": "/speakers" },
         { "name": "Tracks", "path": "/tracks" },
-        { "name": "Talks", "path": "/schedule/talks" },
-        { "name": "Tutorials", "path": "/schedule/tutorials" },
+        { "name": "Talks Schedule", "path": "/schedule/talks" },
+        { "name": "Tutorials Schedule", "path": "/schedule/tutorials" },
         { "name": "Selection Process", "path": "/selection" },
         { "name": "Community Voting", "path": "/voting" },
         { "name": "Speaker Mentorship", "path": "/mentorship" }
