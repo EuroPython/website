@@ -3,121 +3,52 @@
     {
       "name": "Schedule",
       "items": [
-        {
-          "name": "Overview",
-          "path": "/overview"
-        },
-        {
-          "name": "Talks",
-          "path": "/schedule/talks"
-        },
-        {
-          "name": "Tutorials",
-          "path": "/schedule/tutorials"
-        },
-        {
-          "name": "Sessions",
-          "path": "/sessions"
-        },
-        {
-          "name": "Speakers",
-          "path": "/speakers"
-        },
-        {
-          "name": "Tracks",
-          "path": "/tracks"
-        },
-        {
-          "name": "Selection",
-          "path": "/selection"
-        },
-        {
-          "name": "Voting",
-          "path": "/voting"
-        },
-        {
-          "name": "Mentorship",
-          "path": "/mentorship"
-        }
+        { "name": "Overview", "path": "/overview" },
+        { "name": "Sessions", "path": "/sessions" },
+        { "name": "Speakers", "path": "/speakers" },
+        { "name": "Tracks", "path": "/tracks" },
+        { "name": "Talks", "path": "/schedule/talks" },
+        { "name": "Tutorials", "path": "/schedule/tutorials" },
+        { "name": "Selection Process", "path": "/selection" },
+        { "name": "Community Voting", "path": "/voting" },
+        { "name": "Speaker Mentorship", "path": "/mentorship" }
       ]
     },
     {
       "name": "Events",
       "items": [
-        {
-          "name": "Social Dinner",
-          "path": "/speakers-dinner"
-        },
-        {
-          "name": "Beginners’ Day",
-          "path": "/beginners-day"
-        },
-        {
-          "name": "C API Summit",
-          "path": "/c-api-summit"
-        },
-        {
-          "name": "WASM Summit",
-          "path": "/wasm-summit"
-        },
-        {
-          "name": "Rust Summit",
-          "path": "/rust-summit"
-        }
+        { "name": "C API Summit", "path": "/c-api-summit" },
+        { "name": "WebAssembly Summit", "path": "/wasm-summit" },
+        { "name": "Rust Summit", "path": "/rust-summit" },
+        { "name": "Speakers' Dinner", "path": "/speakers-dinner" },
+        { "name": "Beginners' Day", "path": "/beginners-day" }
       ]
     },
     {
-      "name": "Location",
+      "name": "Venue",
       "items": [
-        {
-          "name": "Prague",
-          "path": "/prague"
-        },
-        {
-          "name": "Venue",
-          "path": "/venue"
-        }
+        { "name": "Prague", "path": "/prague" },
+        { "name": "Venue", "path": "/venue" }
       ]
     },
     {
       "name": "Sponsorship",
       "items": [
-        {
-          "name": "Sponsor Packages",
-          "path": "/sponsorship/sponsor"
-        },
-        {
-          "name": "Sponsor Info",
-          "path": "/sponsorship/information"
-        }
+        { "name": "Sponsor Packages", "path": "/sponsorship/sponsor" },
+        { "name": "Sponsor Information", "path": "/sponsorship/information" }
       ]
     },
     {
       "name": "Registration",
       "items": [
-        {
-          "name": "Tickets",
-          "path": "/tickets"
-        },
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Visa Letter",
-          "path": "/visa"
-        },
-        {
-          "name": "Childcare",
-          "path": "/childcare"
-        },
+        { "name": "Tickets", "path": "/tickets" },
+        { "name": "Financial Aid", "path": "/finaid" },
+        { "name": "Visa Support Letter", "path": "/visa" },
+        { "name": "Childcare", "path": "/childcare" },
+        { "name": "FAQ", "path": "/faq" },
         {
           "name": "Code of Conduct",
           "path": "https://www.europython-society.org/coc/"
-        },
-        {
-          "name": "FAQ",
-          "path": "/faq"
         }
       ]
     },
@@ -131,20 +62,11 @@
     }
   ],
   "footer": [
+    { "name": "2024 Photos", "path": "https://ep2024.europython.eu/photos" },
+    { "name": "Contacts", "path": "/contacts" },
+    { "name": "Terms", "path": "/terms" },
     {
-      "name": "2024 Photos",
-      "path": "https://ep2024.europython.eu/photos"
-    },
-    {
-      "name": "Contacts",
-      "path": "/contacts"
-    },
-    {
-      "name": "Terms",
-      "path": "/terms"
-    },
-    {
-      "name": "Privacy",
+      "name": "Privacy Policy",
       "path": "https://www.europython-society.org/privacy/"
     }
   ]
