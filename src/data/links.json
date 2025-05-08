@@ -1,18 +1,26 @@
 {
   "header": [
     {
-      "name": "Programme",
+      "name": "Schedule",
       "items": [
         {
-          "name": "Programme & Events Overview",
+          "name": "Overview",
           "path": "/overview"
         },
         {
-          "name": "List of Sessions",
+          "name": "Talks",
+          "path": "/schedule/talks"
+        },
+        {
+          "name": "Tutorials",
+          "path": "/schedule/tutorials"
+        },
+        {
+          "name": "Sessions",
           "path": "/sessions"
         },
         {
-          "name": "List of Speakers",
+          "name": "Speakers",
           "path": "/speakers"
         },
         {
@@ -20,23 +28,36 @@
           "path": "/tracks"
         },
         {
-          "name": "Selection Process",
+          "name": "Selection",
           "path": "/selection"
         },
         {
-          "name": "Community Voting",
+          "name": "Voting",
           "path": "/voting"
         },
         {
-          "name": "Speaker Mentorship",
+          "name": "Mentorship",
           "path": "/mentorship"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Social Dinner",
+          "path": "/speakers-dinner"
+        },
+        {
+          "name": "Beginners’ Day",
+          "path": "/beginners-day"
         },
         {
           "name": "C API Summit",
           "path": "/c-api-summit"
         },
         {
-          "name": "WebAssembly Summit",
+          "name": "WASM Summit",
           "path": "/wasm-summit"
         },
         {
@@ -46,33 +67,7 @@
       ]
     },
     {
-      "name": "Events",
-      "items": [
-        {
-          "name": "Speakers' Dinner",
-          "path": "/speakers-dinner"
-        },
-        {
-          "name": "Beginners' Day",
-          "path": "/beginners-day"
-        }
-      ]
-    },
-    {
-      "name": "Schedule",
-      "items": [
-        {
-          "name": "Tutorials",
-          "path": "/schedule/tutorials"
-        },
-        {
-          "name": "Talks",
-          "path": "/schedule/talks"
-        }
-      ]
-    },
-    {
-      "name": "Prague & Venue",
+      "name": "Location",
       "items": [
         {
           "name": "Prague",
@@ -92,7 +87,7 @@
           "path": "/sponsorship/sponsor"
         },
         {
-          "name": "Sponsor Information",
+          "name": "Sponsor Info",
           "path": "/sponsorship/information"
         }
       ]
@@ -101,14 +96,21 @@
       "name": "Registration",
       "items": [
         {
-          "name": "Tickets information",
+          "name": "Tickets",
           "path": "/tickets"
-        }
-      ]
-    },
-    {
-      "name": "Info & Support",
-      "items": [
+        },
+        {
+          "name": "Financial Aid",
+          "path": "/finaid"
+        },
+        {
+          "name": "Visa Letter",
+          "path": "/visa"
+        },
+        {
+          "name": "Childcare",
+          "path": "/childcare"
+        },
         {
           "name": "Code of Conduct",
           "path": "https://www.europython-society.org/coc/"
@@ -116,20 +118,16 @@
         {
           "name": "FAQ",
           "path": "/faq"
-        },
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Visa Support Letter",
-          "path": "/visa"
-        },
-        {
-          "name": "Childcare",
-          "path": "/childcare"
         }
       ]
+    },
+    {
+      "name": "Jobs",
+      "path": "/jobs"
+    },
+    {
+      "name": "Community",
+      "path": "/community-partners"
     }
   ],
   "footer": [
@@ -146,7 +144,7 @@
       "path": "/terms"
     },
     {
-      "name": "Privacy Policy",
+      "name": "Privacy",
       "path": "https://www.europython-society.org/privacy/"
     }
   ]
