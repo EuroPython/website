@@ -1,13 +1,12 @@
 ---
-import { getCollection, getEntries, type CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
+import { getEntries, type CollectionEntry } from "astro:content";
 
 const { entry } = Astro.props;
 
-const sessions = await getEntries(entry.data.submissions);
+const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submissions);
 ---
 <svg width="900" height="900" class="h-full w-full -z-10">
-  <image href="http://localhost:4321/social/bg.png" width="900" height="900" />
+  <image href="/social/bg.png" width="900" height="900" />
 </svg>
 {
   entry.data.avatar ? (

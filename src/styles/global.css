@@ -118,30 +118,10 @@ summary h4::after {
   content: "👇";
 }
 
-.list-disc li {
-  list-style: none;
-  position: relative;
-}
-
-ul.list-disc li::before {
-  content: "";
-  display: inline-block;
-  width: 25px;
-  height: 20px;
-  /*background-image: url(/img/list-item.svg);*/
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  position: absolute;
-  left: -30px;
-  top: 0.2em;
-}
-
-ul ul.list-disc li {
-  list-style: disc;
-}
-ul ul.list-disc li::before {
-  display: none;
+ul.list-disc li {
+  list-style: square;
+  list-style-position: outside;
+  margin-left: 30px;
 }
 
 p.tick::before {
@@ -283,4 +263,10 @@ main a[href^="#"]::before {
   content: "(in-page) ";
   font-size: 0;
   visibility: hidden;
+}
+
+.draft {
+  background: url("/draft.png");
+  background-size: 65%;
+  background-color: white;
 }
