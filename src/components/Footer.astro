@@ -5,104 +5,123 @@ import EPSLogo from "../../public/eps-logo.svg";
 
 const buildTimestamp = __TIMESTAMP__;
 const gitVersion = __GIT_VERSION__;
-
 ---
 
-  <div
-    class="text-white max-w-4xl lg:max-w-6xl mx-auto py-10 px-6"
-  >
-  <p class="mb-16 text-white/10" >
-          version: {gitVersion} @ {buildTimestamp}
-          </p>
-    <div class="links flex flex-wrap gap-8 justify-between">
-      {
-        links.footer.map((section) => (
+<div class="text-white max-w-4xl lg:max-w-6xl mx-auto py-10 px-6">
+  <div class="links grid grid-cols-2 lg:flex flex-wrap gap-8 justify-between pb-8">
+    {
+      links.footer.map((section) => (
         <div class="md:w-auto mb-8 md:mb-0 text-start">
-            <h3 class="font-bold text-lg mb-4">{section.name}</h3>
-            {section.items ? (
-              <ul class="space-y-2">
-                {section.items.map((item) => (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="text-gray-700 hover:text-primary-hover transition-colors duration-200"
-                    >
-                      {item.name}
-                      {item.path.startsWith("http") && (
-                        <span class="inline-block ml-1">↗</span>
-                      )}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <a
-                href={section["path"]}
-                class="text-gray-700 hover:text-primary-hover transition-colors duration-200"
-              >
-                {section.name}
-                {section["path"].startsWith("http") && (
-                  <span class="inline-block ml-1">↗</span>
-                )}
-              </a>
-            )}
+          <h3 class="font-bold text-lg mb-4">{section.name}</h3>
+          {section.items ? (
+            <ul class="space-y-2">
+              {section.items.map((item) => (
+                <li>
+                  <a
+                    href={item.path}
+                    class="text-gray-700 hover:text-primary-hover transition-colors duration-200"
+                  >
+                    {item.name}
+                    {item.path.startsWith("http") && (
+                      <span class="inline-block ml-1">↗</span>
+                    )}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <a
+              href={section["path"]}
+              class="text-gray-700 hover:text-primary-hover transition-colors duration-200"
+            >
+              {section.name}
+              {section["path"].startsWith("http") && (
+                <span class="inline-block ml-1">↗</span>
+              )}
+            </a>
+          )}
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="flex flex-wrap gap-8 justify-between">
+    <div class="w-full py-2 border-t border-b border-white/10">
+      <div
+        class="flex flex-col lg:flex-row self-center gap-2 lg:gap-12 justify-end"
+      >
+        <div
+          class="flex flex-col text-white/40 w-full lg:w-2/3 p-5 items-center text-center"
+        >
+          <p>
+            Excited about our mission? Want to collaborate or contribute? Let's
+            connect! We're open to partnership opportunities and would love to
+            hear your ideas.
+            <a class="text-white" href="mailto:helpdesk@europython.eu"
+              >helpdesk@europython.eu</a
+            >
+          </p>
+        </div>
+        <div
+          class="flex text-white/40 w-full lg:w-1/3 justify-center text-start mb-4 lg:mb-0"
+        >
+          <div>
+            <EPSLogo width="90" height="90" class="w-[90px] mr-4 h-auto" />
           </div>
-        ))
-      }
-
-      <div class="w-full py-2 border-t border-b border-white/10">
-    <div
-      class="flex flex-col lg:flex-row self-center gap-8 lg:gap-12 justify-end"
-    >
-    <div class="flex flex-col text-white/40  w-full lg:w-2/3 p-5 items-center">
-        <p>Excited about our mission? Want to collaborate or contribute? Let's connect!
-We're open to partnership opportunities and would love to hear your ideas.
-<a class="text-white" href="mailto:helpdesk@europython.eu">helpdesk@europython.eu</a>
-</p>
-
-      </div>
-      <div class="flex text-white/40 w-full lg:w-1/3 text-start">
-        <div>
-          <EPSLogo width=90 height=90 class="w-[90px] mr-4 h-auto " />
-        </div>
-        <div>
-          <address class="not-italic ">
-            EuroPython Society (EPS)
-            <br />Ramnebacken 45
-            <br />
-            424 38 Agnesberg
-            <br />
-            Sweden
-          </address>
-        </div>
+          <div>
+            <address class="not-italic">
+              EuroPython Society (EPS)
+              <br />Ramnebacken 45
+              <br />
+              424 38 Agnesberg
+              <br />
+              Sweden
+            </address>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class=" terms flex flex-row justify-around w-1/3 pt-2">
-          {links.terms.map((item) => (
-              <a
-                href={item.path}
-                class="text-gray-700 hover:text-primary-hover transition-colors duration-200"
-              >
-                {item.name}
-                {item.path.startsWith("http") && (
-                  <span class="inline-block ml-1">↗</span>
-                )}
-              </a>
-          ))}
+    <div class="flex w-full lg:flex-row flex-col-reverse justify-between">
+      <div class="terms py-4 text-center ">
+        {
+          links.terms.map((item) => (
+            <a
+              href={item.path}
+              class="text-gray-700 hover:text-primary-hover transition-colors duration-200 mx-2"
+            >
+              {item.name}
+              {item.path.startsWith("http") && (
+                <span class="inline-block">↗</span>
+              )}
+            </a>
+          ))
+        }
       </div>
 
-      { links && links["socials"] &&
-        <SocialLinks socials={links["socials"]} variant="white" class="opacity-40" />
+      {
+        links && links["socials"] && (
+          <SocialLinks
+            socials={links["socials"]}
+            variant="white"
+            class="opacity-40 pb-4"
+          />
+        )
       }
+    </div>
   </div>
+
+  <p class="mb-16 text-white/10 text-center">
+    version: {gitVersion} @ {buildTimestamp}
+  </p>
+</div>
+
 <style>
   .links > div:first-child {
     font-size: 1.8rem;
   }
   .terms {
     font-size: 0.8rem;
-    opacity:0.4;
+    opacity: 0.4;
   }
 </style>
