@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/prose/prose.astro";
+import Headline from "@ui/Headline.astro"
 import Filter from "../components/sessions/filter.astro";
 import ListSessions from "../components/sessions/list-sessions.astro";
 import Section from "@ui/Section.astro";
@@ -26,18 +27,16 @@ const description = "A list of all the sessions at the conference";
 
 <Layout title={title} description={description}>
   <Section>
+    <Headline id="sessions" as="h1" title="List of Sessions" />
     <Prose full>
-      <h1>Sessions</h1>
       <p>Here you can find a list of all the sessions at the conference.</p>
       <p>You can filter the sessions by track, type, and level.</p>
-      <h2>Filters</h2>
     </Prose>
+    <Headline id="filters" title="Filters" />
 
     <Filter allTracks={allTracks} allTypes={allTypes} allLevels={allLevels} />
 
-    <Prose full>
-      <h2>List of Sessions</h2>
-    </Prose>
+    <Headline id="results" as="h2" title="Search results" />
 
     <ListSessions sessions={sessions} />
   </Section>
