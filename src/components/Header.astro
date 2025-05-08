@@ -50,7 +50,7 @@ import links from "../data/links.json";
   let prevScrollPos = window.pageYOffset;
   const navbar = document.getElementById("navbar") as HTMLElement;
 
-  window.onscroll = function () {
+  window.addEventListener("scroll", () => {
     let currentScrollPos = window.pageYOffset;
     if (prevScrollPos > currentScrollPos) {
       navbar.style.transform = "translateY(0)";
@@ -58,5 +58,15 @@ import links from "../data/links.json";
       navbar.style.transform = "translateY(-100%)";
     }
     prevScrollPos = currentScrollPos;
-  };
+  });
+
+  navbar.addEventListener("focusin", () => {
+    navbar.style.transform = "translateY(0)";
+  });
+
+  navbar.addEventListener("focusout", () => {
+    if (window.pageYOffset > 100) {
+      navbar.style.transform = "translateY(-100%)";
+    }
+  });
 </script>
