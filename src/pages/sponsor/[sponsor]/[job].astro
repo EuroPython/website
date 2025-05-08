@@ -3,6 +3,7 @@ import Layout from "@layouts/SectionLayout.astro";
 import JobCard from "@components/JobCard.astro";
 import SponsorCard from "@components/SponsorCard.astro";
 import TwoCols from "@components/TwoCols.astro";
+import { getCollection } from "astro:content";
 
 
 const { sponsor, job: jobId } = Astro.params;
@@ -10,6 +11,13 @@ const { sponsor, job: jobId } = Astro.params;
 const job = `${sponsor}/${jobId}`;
 
 export async function getStaticPaths() {
+
+
+  const jobs = await getCollection("jobs", ({ data }) => {
+    return import.meta.env.MODE === "production" ? data.draft !== true : true;
+  });
+  const jobIds = new Set(jobs.map((job) => job.id));
+
   const jobFiles = import.meta.glob("@src/content/sponsors/*/!(index).md");
   return Object.keys(jobFiles)
     .map((path) => {
@@ -17,12 +25,17 @@ export async function getStaticPaths() {
       if (!match) return null;
 
       const [, sponsorId, jobId] = match;
+
+      if (!jobIds.has(`${sponsorId}/${jobId}`)) return null;
+
       return {
         params: { sponsor: sponsorId, job: jobId },
       };
     })
     .filter(Boolean);
 }
+
+
 ---
 
 <Layout

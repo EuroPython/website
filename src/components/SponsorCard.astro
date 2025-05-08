@@ -109,7 +109,7 @@ const socialLinks = [
         {website && (
           <div class="website-btn-container flex flex-col sm:flex-row justify-center gap-2 mt-4">
 
-          { !isSponsorPage &&
+          { !isSponsorPage && sponsor.body &&
             <a href={`/sponsor/${sponsor.id}`} class="website-btn-outline">
               About {title}
             </a>
