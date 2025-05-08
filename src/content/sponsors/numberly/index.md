@@ -6,6 +6,9 @@ description:
   client. Le groupe permet aux entreprises de comprendre les besoins de leurs
   prospects et clients et d’interagir avec chacun de manière performante et
   pertinente.
+socials:
+  linkedin: https://www.linkedin.com/company/numberly/
+  twitter: https://x.com/Numberly
 tier: Gold
 logo_padding: 30px
 ---
