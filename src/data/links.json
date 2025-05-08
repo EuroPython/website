@@ -110,10 +110,6 @@
         {
           "name": "FAQ",
           "path": "/faq"
-        },
-        {
-          "name": "Code of Conduct",
-          "path": "https://www.europython-society.org/coc/"
         }
       ]
     },
