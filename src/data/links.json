@@ -1,100 +1,269 @@
 {
   "header": [
     {
-      "name": "Program",
+      "name": "Programme",
       "items": [
-        { "name": "Overview", "path": "/overview" },
         {
-          "name": "Schedule",
-          "items": [
-            { "name": "Full Program", "path": "/schedule" },
-            { "name": "Day 1 - July 8", "path": "/schedule/day1" },
-            { "name": "Day 2 - July 9", "path": "/schedule/day2" },
-            { "name": "Day 3 - July 10", "path": "/schedule/day3" },
-            { "name": "Talks", "path": "/schedule/talks" },
-            { "name": "Workshops", "path": "/schedule/workshops" },
-            { "name": "Keynotes", "path": "/schedule/keynotes" },
-            { "name": "Lightning Talks", "path": "/schedule/lightning" },
-            { "name": "My Schedule", "path": "/schedule/my-schedule" }
-          ]
+          "name": "Overview",
+          "path": "/overview"
         },
-        { "name": "Speakers", "path": "/speakers" },
-        { "name": "Sessions", "path": "/sessions" },
-        { "name": "Tracks", "path": "/tracks" }
+        {
+          "name": "Talks Schedule",
+          "path": "/schedule/talks"
+        },
+        {
+          "name": "Tutorials Schedule",
+          "path": "/schedule/tutorials"
+        },
+        {
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
+          "name": "Tracks",
+          "path": "/tracks"
+        },
+        {
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
+        }
       ]
     },
     {
       "name": "Events",
       "items": [
-        { "name": "Main Conference", "path": "/conference" },
         {
-          "name": "Summits",
-          "items": [
-            { "name": "C API Summit", "path": "/c-api-summit" },
-            { "name": "WebAssembly Summit", "path": "/wasm-summit" },
-            { "name": "Rust Summit", "path": "/rust-summit" }
-          ]
+          "name": "Speakers' Dinner",
+          "path": "/speakers-dinner"
         },
         {
-          "name": "Special Events",
-          "items": [
-            { "name": "Speakers' Dinner", "path": "/speakers-dinner" },
-            { "name": "Beginners' Day", "path": "/beginners-day" },
-            { "name": "Lightning Talks", "path": "/schedule/lightning" },
-            { "name": "Poster Session", "path": "/posters" },
-            { "name": "Social Event", "path": "/social" }
-          ]
+          "name": "Beginners' Day",
+          "path": "/beginners-day"
         },
-        { "name": "Tutorials", "path": "/schedule/tutorials" }
+        {
+          "name": "WASM Summit",
+          "path": "/wasm-summit"
+        },
+        {
+          "name": "C-API Summit",
+          "path": "/c-api-summit"
+        },
+        {
+          "name": "Rust Summit",
+          "path": "/rust-summit"
+        },
+        {
+          "name": "Community",
+          "path": "/community-partners"
+        }
       ]
     },
     {
       "name": "Venue",
       "items": [
-        { "name": "Location & Facilities", "path": "/venue" },
-        { "name": "Prague Guide", "path": "/prague" }
+        {
+          "name": "Prague",
+          "path": "/prague"
+        },
+        {
+          "name": "Venue",
+          "path": "/venue"
+        }
       ]
     },
     {
-      "name": "Participate",
+      "name": "Sponsorship",
       "items": [
-        { "name": "Register", "path": "/tickets" },
-        { "name": "Submit Proposal", "path": "/selection" },
-        { "name": "Community Voting", "path": "/voting" },
-        { "name": "Speaker Mentorship", "path": "/mentorship" },
-        { "name": "Financial Aid", "path": "/finaid" }
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsorship/information"
+        }
       ]
     },
     {
-      "name": "Sponsors",
+      "name": "Registration",
       "items": [
-        { "name": "Our Sponsors", "path": "/sponsors" },
-        { "name": "Sponsorship Packages", "path": "/sponsorship/sponsor" },
-        { "name": "Become a Sponsor", "path": "/sponsorship/information" }
-      ]
-    },
-    {
-      "name": "Info",
-      "items": [
-        { "name": "FAQ", "path": "/faq" },
+        {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
+        {
+          "name": "Financial Aid",
+          "path": "/finaid"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
+        },
+        {
+          "name": "Childcare",
+          "path": "/childcare"
+        },
+        {
+          "name": "FAQ",
+          "path": "/faq"
+        },
         {
           "name": "Code of Conduct",
           "path": "https://www.europython-society.org/coc/"
-        },
-        { "name": "Visa Support", "path": "/visa" },
-        { "name": "Childcare", "path": "/childcare" },
-        {
-          "name": "2024 Photos",
-          "path": "https://ep2024.europython.eu/photos"
-        },
-        { "name": "Contact Us", "path": "/contacts" }
+        }
       ]
+    },
+    {
+      "name": "Jobs",
+      "path": "/jobs"
     }
   ],
   "footer": [
-    { "name": "2024 Photos", "path": "https://ep2024.europython.eu/photos" },
-    { "name": "Contacts", "path": "/contacts" },
-    { "name": "Terms", "path": "/terms" },
+    {
+      "name": "Quick links",
+      "items": [
+        {
+          "name": "FAQ",
+          "path": "/faq"
+        },
+        {
+          "name": "Prague",
+          "path": "/prague"
+        },
+        {
+          "name": "Venue",
+          "path": "/venue"
+        },
+        {
+          "name": "Jobs",
+          "path": "/jobs"
+        }
+      ]
+    },
+    {
+      "name": "Programme",
+      "items": [
+        {
+          "name": "Overview",
+          "path": "/overview"
+        },
+        {
+          "name": "Talks Schedule",
+          "path": "/schedule/talks"
+        },
+        {
+          "name": "Tutorials Schedule",
+          "path": "/schedule/tutorials"
+        },
+        {
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
+          "name": "Tracks",
+          "path": "/tracks"
+        },
+        {
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Speakers' Dinner",
+          "path": "/speakers-dinner"
+        },
+        {
+          "name": "Beginners' Day",
+          "path": "/beginners-day"
+        },
+        {
+          "name": "WASM Summit",
+          "path": "/wasm-summit"
+        },
+        {
+          "name": "C-API Summit",
+          "path": "/c-api-summit"
+        },
+        {
+          "name": "Rust Summit",
+          "path": "/rust-summit"
+        },
+        {
+          "name": "Community",
+          "path": "/community-partners"
+        }
+      ]
+    },
+    {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsorship/information"
+        }
+      ]
+    },
+    {
+      "name": "Registration",
+      "items": [
+        {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
+        {
+          "name": "Financial Aid",
+          "path": "/finaid"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
+        },
+        {
+          "name": "Childcare",
+          "path": "/childcare"
+        }
+      ]
+    },
+    {
+      "name": "Sites",
+      "items": [
+        {
+          "name": "EuroPython Society",
+          "path": "https://europython-society.org"
+        },
+        { "name": "EuroPython Blog", "path": "https://blog.europython.eu" }
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "name": "Contacts",
+      "path": "/contacts"
+    },
+    {
+      "name": "Terms",
+      "path": "/terms"
+    },
+    {
+      "name": "Code of Conduct",
+      "path": "https://www.europython-society.org/coc/"
+    },
     {
       "name": "Privacy Policy",
       "path": "https://www.europython-society.org/privacy/"
