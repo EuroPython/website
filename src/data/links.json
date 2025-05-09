@@ -55,10 +55,6 @@
         {
           "name": "Rust Summit",
           "path": "/rust-summit"
-        },
-        {
-          "name": "Community Organisers",
-          "path": "/community-partners"
         }
       ]
     },
@@ -112,6 +108,10 @@
           "path": "/faq"
         }
       ]
+    },
+    {
+      "name": "Community",
+      "path": "/community-partners"
     },
     {
       "name": "Jobs",
@@ -243,7 +243,10 @@
           "name": "EuroPython Society",
           "path": "https://europython-society.org"
         },
-        { "name": "EuroPython Blog", "path": "https://blog.europython.eu" }
+        {
+          "name": "EuroPython Blog",
+          "path": "https://blog.europython.eu"
+        }
       ]
     }
   ],
