@@ -65,8 +65,8 @@ const { items, inverted = false, level = 1 } = Astro.props;
           aria-haspopup="true"
           aria-expanded="false"
           class={clsx(
-            "flex items-center justify-between",
-            level === 1 ? "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:p-2 xl:px-5 xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white xl:group-focus:bg-secondary xl:group-focus:rounded-[30px] xl:group-focus:text-white" : "",
+            "flex items-center justify-around",
+            level === 1 ? "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:p-2 xl:px-4 xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white xl:group-focus:bg-secondary xl:group-focus:rounded-[30px] xl:group-focus:text-white" : "",
             level === 2 ? "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:px-5" : "",
             level === 3 ? "block w-full p-2 xl:px-4 text-sm xl:text-left" : ""
           )}
