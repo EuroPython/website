@@ -11,9 +11,11 @@ const {sponsor } = Astro.params;
 
 export async function getStaticPaths() {
 
-const sponsors = await getCollection("sponsors", ({ data }) => {
-  return import.meta.env.MODE === "production" ? data.draft !== true : true;
-});
+  const isProduction = import.meta.env.MODE === "production";
+
+  const sponsors = await getCollection("sponsors", ({ data }) =>
+    data.tier !== "Partners" && (isProduction ? data.draft !== true : true)
+  );
 
   return sponsors.map((sponsor: any) => ({
     params: {

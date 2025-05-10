@@ -67,7 +67,7 @@ const logo = sponsorLogos[sponsor.id];
     description && (
       <div class="flex-1">
         <h2 class="text-2xl font-bold mb-2 ">
-          { !isSponsorPage ?
+          { !isSponsorPage && tier !== 'Partners' ?
             <a href={`/sponsor/${sponsor.id}`}>
             {title}
             </a> :
