@@ -204,11 +204,14 @@ const sponsors = defineCollection({
     socials: z
       .object({
         linkedin: z.string().url().optional().nullable(),
-        twitter: z.string().url().optional().nullable(),
         github: z.string().url().optional().nullable(),
-        discord: z.string().url().optional().nullable(),
         mastodon: z.string().url().optional().nullable(),
         bluesky: z.string().url().optional().nullable(),
+        twitter: z.string().url().optional().nullable(),
+        instagram: z.string().url().optional().nullable(),
+        discord: z.string().url().optional().nullable(),
+        facebook: z.string().url().optional().nullable(),
+        youtube: z.string().url().optional().nullable(),
       })
       .optional(),
     logo_padding: z.string().optional(),

@@ -12,7 +12,7 @@ const IS_LIVE = false;
 
 ---
 
-<div class="flex items-center justify-end gap-2 h-[85px] w-1/3">
+<div class="flex items-center justify-end gap-2 w-1/3">
 <div class="ml-auto justify-end flex items-center w-full">
   {
     !mobile ?
@@ -31,7 +31,7 @@ const IS_LIVE = false;
               <kbd>Ctrl</kbd><kbd>K</kbd>
             </kbd>
           </button>
-      <Button url="/tickets" icon="ticket" class="w-full max-w-48 max-xl:hidden">Register Now!</Button>
+      <Button custom url="/tickets" icon="ticket" class="button-link font-bold text-lg px-4 py-3 rounded-full inline-flex items-center justify-center leading-4 transition-colors duration-200 not-prose border hover:text-black w-full max-w-36 max-xl:hidden bg-button text-text-inverted hover:bg-button-hover border-transparent">Tickets</Button>
       {IS_LIVE && <Button url="/live">Live</Button>}
       </>
      : null
@@ -39,7 +39,7 @@ const IS_LIVE = false;
 
 
   <label for="nav_toggle" class="flex xl:hidden">
-      <span class="w-[3em] h-[3em] font-bold text-lg px-4 py-4 rounded-lg inline-flex items-center justify-center leading-4 transition-colors duration-200 not-prose border hover:text-black bg-primary text-white hover:bg-primary-hover border-transparent">
+      <span class="w-[3em] h-[3em] font-bold text-lg px-4 py-4 rounded-full inline-flex items-center justify-center leading-4 transition-colors duration-200 not-prose border hover:text-black bg-primary text-white hover:bg-primary-hover border-transparent">
       {mobile ? <Icon name="close" size="fa-xl" /> : <Icon name="bars" size="fa-xl" />}
       </span>
   </label>

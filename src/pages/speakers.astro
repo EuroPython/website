@@ -1,7 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import Prose from "@components/prose/prose.astro";
+import Headline from "@ui/Headline.astro"
 import { Image } from "astro:assets";
 import Section from "@ui/Section.astro";
 
@@ -65,9 +65,8 @@ const description = "Our conference speakers organized alphabetically";
 
 <Layout title={title} description={description}>
   <Section>
-    <Prose full>
-      <h1>Speakers</h1>
-    </Prose>
+
+  <Headline id="speakers" as="h1" title="List of Speakers" />
 
     {
       groupKeys.map((key, _index) => (

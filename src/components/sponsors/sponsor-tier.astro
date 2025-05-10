@@ -29,15 +29,16 @@ const { tier, top } = Astro.props;
   </h4>
   <div
     class:list={[
-      "grid gap-12 sm:gap-6 ml-12 items-center justify-items-center",
+      "grid gap-6 lg:gap-12 ml-12 items-center justify-items-center",
       {
-        "grid-cols-1 sm:grid-cols-2 md:grid-cols-3": !top,
-        "grid-cols-1 sm:grid-cols-2 md:grid-cols-2": top,
+        "grid-cols-1 md:grid-cols-2 lg:grid-cols-3": !top,
+        "grid-cols-1 md:grid-cols-1": top,
       },
     ]}
   >
     {
       tier.sponsors.map((sponsor) => (
+        <div>
         <a
           href={sponsor.data.url}
           target="_blank"
@@ -51,6 +52,7 @@ const { tier, top } = Astro.props;
             class="max-w-[250px] max-h-[120px]"
           />
         </a>
+        </div>
       ))
     }
   </div>
