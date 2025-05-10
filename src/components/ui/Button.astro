@@ -11,6 +11,7 @@ const {
   outline = false,
   disabled = false,
   clear = false,
+  custom = false,
   isExternal,
   icon,
   iconSvg = false,
@@ -40,7 +41,7 @@ const slotContent = await Astro.slots.render('default');
     href={disabled ? undefined : url}
     title={title}
     aria-label={title ? title : slotContent}
-    class={`${baseClasses}
+    class={custom ? `${className}`: `${baseClasses}
       ${clear ? clearClasses : outline ? outlineClasses : secondary ? secondaryClasses : primaryClasses}
       ${disabled ? disabledClasses : ""}
       ${className}`}

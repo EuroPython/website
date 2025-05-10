@@ -4,8 +4,16 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Programme & Events Overview",
+          "name": "Overview",
           "path": "/overview"
+        },
+        {
+          "name": "Talks Schedule",
+          "path": "/schedule/talks"
+        },
+        {
+          "name": "Tutorials Schedule",
+          "path": "/schedule/tutorials"
         },
         {
           "name": "List of Sessions",
@@ -20,28 +28,8 @@
           "path": "/tracks"
         },
         {
-          "name": "Selection Process",
-          "path": "/selection"
-        },
-        {
-          "name": "Community Voting",
-          "path": "/voting"
-        },
-        {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
-        },
-        {
-          "name": "C API Summit",
-          "path": "/c-api-summit"
-        },
-        {
-          "name": "WebAssembly Summit",
-          "path": "/wasm-summit"
-        },
-        {
-          "name": "Rust Summit",
-          "path": "/rust-summit"
         }
       ]
     },
@@ -55,24 +43,23 @@
         {
           "name": "Beginners' Day",
           "path": "/beginners-day"
-        }
-      ]
-    },
-    {
-      "name": "Schedule",
-      "items": [
-        {
-          "name": "Tutorials",
-          "path": "/schedule/tutorials"
         },
         {
-          "name": "Talks",
-          "path": "/schedule/talks"
+          "name": "WASM Summit",
+          "path": "/wasm-summit"
+        },
+        {
+          "name": "C-API Summit",
+          "path": "/c-api-summit"
+        },
+        {
+          "name": "Rust Summit",
+          "path": "/rust-summit"
         }
       ]
     },
     {
-      "name": "Prague & Venue",
+      "name": "Venue",
       "items": [
         {
           "name": "Prague",
@@ -101,21 +88,139 @@
       "name": "Registration",
       "items": [
         {
-          "name": "Tickets information",
+          "name": "Tickets",
           "path": "/tickets"
-        }
-      ]
-    },
-    {
-      "name": "Info & Support",
-      "items": [
+        },
         {
-          "name": "Code of Conduct",
-          "path": "https://www.europython-society.org/coc/"
+          "name": "Financial Aid",
+          "path": "/finaid"
+        },
+        {
+          "name": "Visa Support Letter",
+          "path": "/visa"
+        },
+        {
+          "name": "Childcare",
+          "path": "/childcare"
         },
         {
           "name": "FAQ",
           "path": "/faq"
+        }
+      ]
+    },
+    {
+      "name": "Community",
+      "path": "/community-partners"
+    },
+    {
+      "name": "Jobs",
+      "path": "/jobs"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Quick links",
+      "items": [
+        {
+          "name": "FAQ",
+          "path": "/faq"
+        },
+        {
+          "name": "Prague",
+          "path": "/prague"
+        },
+        {
+          "name": "Schedule",
+          "path": "/schedule"
+        },
+        {
+          "name": "Jobs",
+          "path": "/jobs"
+        }
+      ]
+    },
+    {
+      "name": "Programme",
+      "items": [
+        {
+          "name": "Overview",
+          "path": "/overview"
+        },
+        {
+          "name": "Talks Schedule",
+          "path": "/schedule/talks"
+        },
+        {
+          "name": "Tutorials Schedule",
+          "path": "/schedule/tutorials"
+        },
+        {
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
+          "name": "Tracks",
+          "path": "/tracks"
+        },
+        {
+          "name": "Speaker Mentorship",
+          "path": "/mentorship"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Speakers' Dinner",
+          "path": "/speakers-dinner"
+        },
+        {
+          "name": "Beginners' Day",
+          "path": "/beginners-day"
+        },
+        {
+          "name": "WASM Summit",
+          "path": "/wasm-summit"
+        },
+        {
+          "name": "C-API Summit",
+          "path": "/c-api-summit"
+        },
+        {
+          "name": "Rust Summit",
+          "path": "/rust-summit"
+        },
+        {
+          "name": "Community",
+          "path": "/community-partners"
+        }
+      ]
+    },
+    {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsorship/information"
+        }
+      ]
+    },
+    {
+      "name": "Registration",
+      "items": [
+        {
+          "name": "Tickets",
+          "path": "/tickets"
         },
         {
           "name": "Financial Aid",
@@ -132,15 +237,20 @@
       ]
     },
     {
-      "name": "Jobs",
-      "path": "/jobs"
+      "name": "Sites",
+      "items": [
+        {
+          "name": "EuroPython Society",
+          "path": "https://europython-society.org"
+        },
+        {
+          "name": "EuroPython Blog",
+          "path": "https://blog.europython.eu"
+        }
+      ]
     }
   ],
-  "footer": [
-    {
-      "name": "2024 Photos",
-      "path": "https://ep2024.europython.eu/photos"
-    },
+  "terms": [
     {
       "name": "Contacts",
       "path": "/contacts"
@@ -150,8 +260,21 @@
       "path": "/terms"
     },
     {
+      "name": "Code of Conduct",
+      "path": "https://www.europython-society.org/coc/"
+    },
+    {
       "name": "Privacy Policy",
       "path": "https://www.europython-society.org/privacy/"
     }
-  ]
+  ],
+  "socials": {
+    "mastodon": "https://fosstodon.org/@europython",
+    "linkedin": "https://linkedin.com/company/europython",
+    "github": "https://github.com/europython",
+    "bluesky": "https://bsky.app/profile/europython.eu",
+    "twitter": "https://x.com/europython",
+    "instagram": "https://instagram.com/europython/",
+    "youtube": "https://youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q"
+  }
 }

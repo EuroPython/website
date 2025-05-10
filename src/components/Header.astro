@@ -1,5 +1,5 @@
 ---
-import { NavItems } from "@components/nav-items";
+import NavItems from "@components/NavItems.astro";
 import HeaderActions from "@components/header/header-actions.astro";
 import HeaderLogo from "@components/header/header-logo.astro";
 import Search from "@components/Search.astro";
@@ -7,52 +7,66 @@ import Search from "@components/Search.astro";
 import links from "../data/links.json";
 ---
 
-<header class="p-6 flex items-center justify-between relative z-40">
-  <input
-    type="checkbox"
-    name="mobile-controls"
-    id="nav_toggle"
-    class="hidden peer"
-    aria-hidden="true"
-  />
-
-  <HeaderLogo />
-
-  <nav class="hidden xl:block">
-    <NavItems items={links.header} />
-  </nav>
-
-  <HeaderActions />
-
+<section
+  id="navbar"
+  class="fixed top-0 z-50 transition-transform duration-300 transform-gpu w-full"
+>
   <div
-    class="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 p-6"
+    class="container max-w-[1150px] mx-auto px-6 py-2 mt-1 lg:p-2 lg:mt-6 px-2 flex items-center justify-between relative z-40 bg-white/80 rounded-full backdrop-blur-md shadow-lg"
   >
-    <div class="flex items-center justify-between">
-      <HeaderLogo />
-      <HeaderActions mobile />
-    </div>
+    <input
+      type="checkbox"
+      name="mobile-controls"
+      id="nav_toggle"
+      class="hidden peer"
+      aria-hidden="true"
+    />
 
-    <nav class="mt-8">
-      <NavItems
-        items={[
-          {
-            name: "Code of Conduct",
-            path: "https://www.europython-society.org/coc/",
-          },
-          /*
-            {
-              name: "Live 📺",
-              path: "/live",
-            },
-            */
-          {
-            name: "Recordings",
-            path: "https://www.youtube.com/playlist?list=PL8uoeex94UhE1CbtkDK4hevp2lBif57Nq",
-          },
-          ...links.header,
-        ]}
-      />
+    <HeaderLogo />
+
+    <nav class="hidden xl:block">
+      <NavItems items={links.header} />
     </nav>
+
+    <HeaderActions />
+
+    <div
+      class="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 px-6 py-2"
+    >
+      <div class="flex items-center justify-between">
+        <HeaderLogo />
+        <HeaderActions mobile />
+      </div>
+
+      <nav class="mt-8">
+        <NavItems items={[...links.header]} />
+      </nav>
+    </div>
   </div>
+</section>
 <Search />
-</header>
+
+<script>
+  let prevScrollPos = window.pageYOffset;
+  const navbar = document.getElementById("navbar") as HTMLElement;
+
+  window.addEventListener("scroll", () => {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      navbar.style.transform = "translateY(0)";
+    } else {
+      navbar.style.transform = "translateY(-100%)";
+    }
+    prevScrollPos = currentScrollPos;
+  });
+
+  navbar.addEventListener("focusin", () => {
+    navbar.style.transform = "translateY(0)";
+  });
+
+  navbar.addEventListener("focusout", () => {
+    if (window.pageYOffset > 100) {
+      navbar.style.transform = "translateY(-100%)";
+    }
+  });
+</script>

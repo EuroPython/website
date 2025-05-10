@@ -78,6 +78,7 @@ const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
 
     {sponsorTiers.length > 0 && <Separator light />}
 
+    <div class="mb-20">
     {
       sponsorTiers.map((tier, index) => (
         <Fragment>
@@ -86,4 +87,5 @@ const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
         </Fragment>
       ))
     }
+    </div>
 </Section>
