@@ -270,3 +270,26 @@ main a[href^="#"]::before {
   background-size: 65%;
   background-color: white;
 }
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2) rotate(6deg);
+}
+
+.social-icon-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

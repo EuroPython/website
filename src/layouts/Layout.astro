@@ -35,7 +35,7 @@ const externalDomain = new URL(Astro.site || "").hostname;
         <Header />
       </header>
 
-      <main class="main" role="main">
+      <main class="main pt-28" role="main">
         <slot />
       </main>
 
@@ -80,4 +80,19 @@ const externalDomain = new URL(Astro.site || "").hostname;
   footer {
     @apply bg-primary py-10;
   }
+
+  @media screen and (width>1200px){
+  main {
+    margin-bottom:800px;
+  }
+   footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 20px 40px 20px;
+            text-align: center;
+            z-index: -1;
+        }
+}
 </style>

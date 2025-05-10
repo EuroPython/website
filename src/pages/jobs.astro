@@ -2,7 +2,7 @@
 import { type CollectionEntry, getEntry, getCollection } from "astro:content";
 
 import Layout from "@layouts/SectionLayout.astro";
-
+import Headline from "@ui/Headline.astro"
 import SponsorCard from "@components/SponsorCard.astro";
 import JobCard from "@components/JobCard.astro";
 import TwoCols from "@components/TwoCols.astro";
@@ -52,6 +52,8 @@ sponsors.forEach((sponsor) => {
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
+
+  <Headline id="jobs" as="h1" title="Job board" />
   {
     sponsors.map((sponsor) => {
       if (!(sponsor.data.jobs && sponsor.data.jobs.length > 0)) return;
