@@ -131,8 +131,8 @@
           "path": "/prague"
         },
         {
-          "name": "Venue",
-          "path": "/venue"
+          "name": "Talks",
+          "path": "/schedule/talks"
         },
         {
           "name": "Jobs",
