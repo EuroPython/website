@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tocContainer = document.getElementById("toc");
   if (!tocContainer) return;
 
-  const headings = Array.from(document.querySelectorAll("article h2, article h3, article h4"));
+  const headings = Array.from(document.querySelectorAll("article h2, article h3, article h4, article summary span:nth-child(1)"));
   if (!headings.length) return;
 
   const rootUl = document.createElement("ul");
@@ -139,6 +139,15 @@ document.addEventListener("DOMContentLoaded", () => {
     lastLevel = level;
   });
 
+  // Add "Back to top" link
+  const backToTop = document.createElement("li");
+  const topLink = document.createElement("a");
+  topLink.href = "#";
+  topLink.textContent = "↑ Back to top";
+  topLink.style.marginTop = "1em";
+  backToTop.appendChild(topLink);
+  rootUl.appendChild(backToTop);
+
   tocContainer.appendChild(rootUl);
 
   // Scroll spy: highlight active link
@@ -156,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      rootMargin: "-30% 0px -60% 0px", // adjust when to highlight
+      rootMargin: "-30% 0px -60% 0px",
       threshold: 0,
     }
   );
@@ -170,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
 #toc {
   font-size: 0.95rem;
   line-height: 1.5;
-  max-width: 300px;
   padding: 1rem;
   border-left: 1px solid #e0e0e0;
   position: sticky;
@@ -198,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
   color: #333;
   display: block;
   padding: 0.25em 0.5em;
-  border-radius: 4px;
+  /*border-radius: 4px;*/
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -213,5 +221,16 @@ document.addEventListener("DOMContentLoaded", () => {
   border-left: 3px solid #007acc;
   background: rgba(0, 122, 204, 0.1);
   padding-left: 0.5em;
+}
+
+#toc a[href="#"] {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+#toc a[href="#"]:hover {
+  color: #007acc;
+  text-decoration: underline;
 }
 </style>
