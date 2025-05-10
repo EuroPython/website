@@ -20,11 +20,11 @@ const sponsors = await getCollection("sponsors", ({ data }) => {
 
 
   <Headline as="h1" id="community-partners" title="Community partners" />
-  <p>
+  <p class="pb-5">
     EuroPython is a community-driven conference, we wouldn't be able to make as much impact without the support of our brilliant Community Partners. Get to know our partners better below (alphabetical order).
   </p>
   {sponsors.length > 0 && (
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {sponsors.map((sponsor) => (
         <SponsorCard sponsor={sponsor.id} />
       ))}
