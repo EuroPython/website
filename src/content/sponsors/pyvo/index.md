@@ -4,10 +4,12 @@ url: https://pyvo.cz/en
 location: "Czech Republic"
 industry: "Technology & Non-Profit"
 description:
-  "Pyvo is a meetup for fans of the Python programming language and related technologies. Prague Pyvo is traditionally held on the third Wednesday of each month."
+  "Pyvo is a meetup for fans of the Python programming language and related
+  technologies. Prague Pyvo is traditionally held on the third Wednesday of each
+  month."
 socials:
   linkedin:
-  twitter: 
+  twitter:
   github:
   discord:
   mastodon:
