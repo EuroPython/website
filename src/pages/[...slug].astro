@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Layout from "@layouts/MarkdownLayout.astro";
+import Layout from "@layouts/SectionLayout.astro";
 
 import ButtonLink from "../components/button-link/button-link.astro";
 import { Separator } from "../components/separator/separator";
@@ -14,6 +14,10 @@ import HighlightItem from "../components/highlight-list/highlight-item.astro";
 import { Note } from "../components/note";
 import SponsorTiers from "../components/sponsor-tiers/sponsor-tiers.astro";
 import Accordion from "../components/accordion/accordion.astro";
+
+import TwoCols from "@components/TwoCols.astro";
+import Prose from "@components/prose/prose.astro";
+import Headline from "@components/ui/Headline.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -46,21 +50,83 @@ let title =
 const description = post.data.subtitle;
 ---
 
-<Layout title={title} description={description}>
-    <Content
-      components={{
-        ButtonLink,
-        Map,
-        MapSprints,
-        YouTube,
-        BenefitItem,
-        BenefitsList,
-        HighlightCard,
-        HighlightItem,
-        Note,
-        SponsorTiers,
-        hr: Separator,
-        Accordion,
-      }}
-    />
+<Layout title={title} description={description} toc={post.data.toc}>
+
+    { post.data.toc ?
+        <TwoCols>
+          <div class="mt-28" > aaa </div>
+          <Fragment slot="content">
+          <Headline id="contents" as="h4" title="Contents" />
+          <div id="toc" class="mb-6 last:mb-0 rounded-lg shadow-md bg-white p-6"></div>
+          </Fragment>
+          <Fragment slot="sidebar">
+            <Prose class="pb-20" >
+          <Content
+            components={{
+              ButtonLink,
+              Map,
+              MapSprints,
+              YouTube,
+              BenefitItem,
+              BenefitsList,
+              HighlightCard,
+              HighlightItem,
+              Note,
+              SponsorTiers,
+              hr: Separator,
+              Accordion,
+            }}
+          />
+            </Prose>
+          </Fragment>
+        </TwoCols>
+        :
+        <Prose class="pb-20" >
+          <Content
+            components={{
+              ButtonLink,
+              Map,
+              MapSprints,
+              YouTube,
+              BenefitItem,
+              BenefitsList,
+              HighlightCard,
+              HighlightItem,
+              Note,
+              SponsorTiers,
+              hr: Separator,
+              Accordion,
+            }}
+          />
+        </Prose>
+    }
 </Layout>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+  const tocContainer = document.getElementById("toc");
+  if (!tocContainer) return;
+
+  const headings = document.querySelectorAll("article h2, article h3");
+  if (!headings.length) return;
+
+  const ul = document.createElement("ul");
+
+  headings.forEach((heading, index) => {
+    if (!heading.id) {
+      heading.id = `heading-${index}`;
+    }
+
+    const li = document.createElement("li");
+    li.style.marginLeft = heading.tagName === "H3" ? "1em" : "0";
+    const a = document.createElement("a");
+    a.href = `#${heading.id}`;
+    a.textContent = heading.textContent;
+
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  tocContainer.appendChild(ul);
+});
+</script>

@@ -2,16 +2,41 @@
 import Layout from "@layouts/Layout.astro";
 import Section from "@ui/Section.astro";
 import Prose from "@components/prose/prose.astro";
+import TwoCols from "@components/TwoCols.astro";
+import { marked } from 'marked';
 
 import "../styles/markdown.css";
 
-const { title, description } = Astro.props;
+const { title, description, toc=false } = Astro.props;
+
+import remarkToc from 'remark-toc'
+
+//const html0 = marked.parse(Astro.slots.render);
+const html = await Astro.slots.render('default');
+
+  //html.use(remarkToc)
+  //.process(await read('src/content/pages/childcare.mdx'))
+
 ---
 
 <Layout title={title} description={description}>
   <Section>
-    <Prose class="pb-20" >
-      <slot />
-    </Prose>
+    { toc ?
+        <TwoCols>
+          <Fragment slot="content">
+            <Prose class="pb-20" >
+              <slot />
+            </Prose>
+          </Fragment>
+          <Fragment slot="sidebar">
+            <article set:html={html} />
+          </Fragment>
+        </TwoCols>
+        :
+        <Prose class="pb-20" >
+          <slot />
+        </Prose>
+    }
+
   </Section>
 </Layout>
