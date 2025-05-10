@@ -1,7 +1,7 @@
 ---
 name: PyLadies
 url: https://pyladies.com/
-location: "Global"
+location: "US"
 industry: "Technology & Non-Profit"
 description:
   "PyLadies is an international mentorship group with a focus on helping more
