@@ -16,5 +16,6 @@ socials:
   discord:
   mastodon:
   bluesky:
+logo_padding: 10px 30px
 tier: Partners
 ---

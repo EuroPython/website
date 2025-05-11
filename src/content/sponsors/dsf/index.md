@@ -13,7 +13,7 @@ socials:
   mastodon: "https://fosstodon.org/@django"
   bluesky:
 tier: Partners
-draft: false
+logo_padding: 20px 30px
 ---
 
 ## About EuroPython Society
