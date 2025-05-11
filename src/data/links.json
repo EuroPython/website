@@ -111,20 +111,7 @@
     },
     {
       "name": "Community",
-      "items": [
-        {
-          "name": "About Us",
-          "path": "/about"
-        },
-        {
-          "name": "EuroPython Society",
-          "path": "https://europython-society.org/"
-        },
-        {
-          "name": "Community Partners",
-          "path": "/community-partners"
-        }
-      ]
+                "path": "/community-partners"
     },
     {
       "name": "Jobs",
@@ -150,6 +137,10 @@
         {
           "name": "Jobs",
           "path": "/jobs"
+        },
+        {
+          "name": "About Us",
+          "path": "/about"
         }
       ]
     },
