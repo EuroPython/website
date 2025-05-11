@@ -4,9 +4,9 @@ url: https://pyvec.org/en/
 location: "Czech Republic"
 industry: "Technology & Non-Profit"
 description:
-  "PyVEC is the Czech Python community organization supporting Python
-  development and education. It organizes PyCon CZ and initiatives to grow
-  Python adoption in Central Europe."
+  "Pyvec is a nonprofit organization that supports the Czech Python programming
+  community. Founded in 2012, it assists volunteers in organizing various local
+  Python-related projects across the Czech Republic."
 socials:
   linkedin:
   twitter: "https://twitter.com/pyvec"
