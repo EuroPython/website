@@ -15,6 +15,8 @@ import { Note } from "../components/note";
 import SponsorTiers from "../components/sponsor-tiers/sponsor-tiers.astro";
 import Accordion from "../components/accordion/accordion.astro";
 
+import Prose from "@components/prose/prose.astro";
+
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
 
@@ -46,7 +48,8 @@ let title =
 const description = post.data.subtitle;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} toc={post.data.toc}>
+  <Prose class="pb-20">
     <Content
       components={{
         ButtonLink,
@@ -63,4 +66,5 @@ const description = post.data.subtitle;
         Accordion,
       }}
     />
+  </Prose>
 </Layout>
