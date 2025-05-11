@@ -15,4 +15,3 @@ socials:
 tier: Partners
 logo_padding: 20px 30px
 ---
-
