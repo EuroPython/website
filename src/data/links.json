@@ -121,11 +121,10 @@
           "path": "https://europython-society.org/"
         },
         {
-       "name": "Community Partners",
-        "path": "/community-partners"
-      }
+          "name": "Community Partners",
+          "path": "/community-partners"
+        }
       ]
-     
     },
     {
       "name": "Jobs",
