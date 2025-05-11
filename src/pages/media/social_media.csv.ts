@@ -13,14 +13,21 @@ export async function GET({ params, request }) {
     "Mastodon URL",
   ];
 
+  const exclude = [
+    "sebastian-ramirez",
+    "savannah-ostrowski",
+    "nerea-luis",
+    "petr-baudis",
+    "brett-cannon",
+  ];
+
   const rows: string[][] = [];
 
   for (const speaker of speakers) {
+    if (exclude.includes(speaker.id)) continue;
+
     const {
       name,
-      avatar,
-      homepage,
-      gitx_url,
       twitter_url,
       linkedin_url,
       bluesky_url,
@@ -34,20 +41,16 @@ export async function GET({ params, request }) {
 
     for (const session of sessions) {
       if (session) {
+        const speaker_page = `https://ep2025.europython.eu/speaker/${speaker.id}`;
         rows.push([
           session.data.title || "",
           name,
           `https://ep2025-buffer.ep-preview.click/media/social-${speaker.id}.png`,
-          twitter_url ||
-            linkedin_url ||
-            mastodon_url ||
-            gitx_url ||
-            homepage ||
-            `https://ep2025.europython.eu/speaker/${speaker.id}`,
-          twitter_url ?? "",
-          linkedin_url ?? "",
-          bluesky_url ?? "",
-          mastodon_url ?? "",
+          twitter_url || linkedin_url || mastodon_url || speaker_page,
+          twitter_url ?? speaker_page,
+          linkedin_url ?? speaker_page,
+          bluesky_url ?? speaker_page,
+          mastodon_url ?? speaker_page,
         ]);
       }
     }
