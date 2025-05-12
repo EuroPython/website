@@ -1,6 +1,6 @@
 ---
 name: "PyCon Finland"
-url: "https://pycon.at"
+url: "http://fi.pycon.org"
 location: "Finland"
 industry: "Technology & Non-Profit"
 description:
