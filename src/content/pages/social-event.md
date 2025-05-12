@@ -10,7 +10,7 @@ architecture, Střelecký Island sets the stage for our main social event. Expec
 a laid-back evening with:
 
 - **Beautiful riverside seating** in a green setting just minutes from the city
-  center—plenty of space to chill.
+  centre—plenty of space to chill.
 - **Board games**, with a dedicated zone for group fun.
 - **Quiet corners** to relax, chat, or simply enjoy the atmosphere.
 - **Live music and jamming**—bring your instruments or join in with others for a
@@ -21,7 +21,7 @@ a laid-back evening with:
 ## Bring Your Board Games
 
 We’ll have space reserved for board games, so whether you're into competitive
-strategy or casual party games, bring your favorites along!
+strategy or casual party games, bring your favourites along!
 
 ![](/images/social-event-games.jpg)
 
