@@ -33,6 +33,9 @@ community. Let’s make some music together!
 
 ![](/images/social-event-jam.jpg)
 
+## Pack Your Picnic Blankets & Sportswear
+Feel like moving around? There will be room to play volleyball, foot tennis, pétanque, or croquet. Whether you’re joining in or just watching from your blanket, come as you are and enjoy the summer vibe!
+
 ## Tickets
 
 **Please note:** This event is not included in the conference ticket.
@@ -43,7 +46,7 @@ sure you don’t miss out.
 
 ## When & Where?
 
-🗓 **Thursday, July 17th at 7 PM** 📍
+🗓 **Thursday, July 17th at 7.30 PM** 📍
 [Střelecký Island, Prague](https://www.google.com/maps/place/St%C5%99eleck%C3%BD+Island/@50.0808254,14.4100926,138m/data=!3m1!1e3!4m6!3m5!1s0x470b94fac3cf3515:0x80d309307da30232!8m2!3d50.0812108!4d14.4098907!16s%2Fg%2F1v8kzb1g?hl=en&entry=ttu)
 
 ## Getting There
@@ -57,5 +60,14 @@ sure you don’t miss out.
 ## Food & Drinks
 
 We’ll offer a variety of light snacks, including vegetarian, vegan, and
-gluten-free options. A range of drinks will be available—both alcoholic and
+gluten-free options. Drinks will be available as well—both alcoholic and
 non-alcoholic.
+
+## Accessibility
+The venue is mostly accessible:
+* Elevator access from the bridge, with internal dimensions of 105 × 128 cm and a door width of 85 cm.
+* Wheelchair-accessible toilet available inside the bridge pillar.
+* Quiet space available for rest and relaxation.
+* Parking is available nearby.
+
+Please note: Some areas have cobblestone surfaces.
