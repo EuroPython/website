@@ -34,7 +34,10 @@ community. Let’s make some music together!
 ![](/images/social-event-jam.jpg)
 
 ## Pack Your Picnic Blankets & Sportswear
-Feel like moving around? There will be room to play volleyball, foot tennis, pétanque, or croquet. Whether you’re joining in or just watching from your blanket, come as you are and enjoy the summer vibe!
+
+Feel like moving around? There will be room to play volleyball, foot tennis,
+pétanque, or croquet. Whether you’re joining in or just watching from your
+blanket, come as you are and enjoy the summer vibe!
 
 ## Tickets
 
@@ -64,10 +67,13 @@ gluten-free options. Drinks will be available as well—both alcoholic and
 non-alcoholic.
 
 ## Accessibility
+
 The venue is mostly accessible:
-* Elevator access from the bridge, with internal dimensions of 105 × 128 cm and a door width of 85 cm.
-* Wheelchair-accessible toilet available inside the bridge pillar.
-* Quiet space available for rest and relaxation.
-* Parking is available nearby.
+
+- Elevator access from the bridge, with internal dimensions of 105 × 128 cm and
+  a door width of 85 cm.
+- Wheelchair-accessible toilet available inside the bridge pillar.
+- Quiet space available for rest and relaxation.
+- Parking is available nearby.
 
 Please note: Some areas have cobblestone surfaces.
