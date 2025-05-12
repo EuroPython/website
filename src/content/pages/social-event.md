@@ -16,14 +16,14 @@ a laid-back evening with:
 - **Live music and jamming**—bring your instruments or join in with others for a
   jam session!
 
-![](/images/social-event-venue.jpg)
+![Riverside view of Střelecký Island, the social event venue](/images/social-event-venue.jpg)
 
 ## Bring Your Board Games
 
 We’ll have space reserved for board games, so whether you're into competitive
 strategy or casual party games, bring your favourites along!
 
-![](/images/social-event-games.jpg)
+![People playing board and social games at an outdoor event](/images/social-event-games.jpg)
 
 ## Bring Your Instruments
 
@@ -31,7 +31,7 @@ Music has been a highlight of the past year, and we’re keeping that tradition
 alive. You’re welcome to bring your own instruments or borrow one from the local
 community. Let’s make some music together!
 
-![](/images/social-event-jam.jpg)
+![People playing music together in an outdoor jam session](/images/social-event-jam.jpg)
 
 ## Pack Your Picnic Blankets & Sportswear
 
