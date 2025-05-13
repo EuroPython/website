@@ -123,6 +123,7 @@ teams:
 - Simon Peter Dagbui
 
 ### 👩‍💻 Infrastructure & Website
+
 - Artur Czepiel
 - Cyril Bitterlich
 - Ege Akman
