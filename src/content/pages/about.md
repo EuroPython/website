@@ -14,8 +14,10 @@ Behind the scenes, it is run by the
 non-profit organisation responsible for the legal and financial aspects of the
 conference, as well as overall coordination.
 
-In accordance with Swedish bylaws, the Society is governed by a board of seven
-people, elected annually by its members.
+In accordance with the [EPS bylaws](https://www.europython-society.org/bylaws/),
+the society is governed by a board consisting of a chairperson, a vice chairperson,
+and between two and seven additional board members, all elected annually by its
+members.
 
 Current Board Members:
 
