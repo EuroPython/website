@@ -6,11 +6,11 @@ subtitle: About
 
 # About Us
 
-The EuroPython conference is organized by volunteers from the Python community
+The EuroPython conference is organised by volunteers from the Python community
 across Europe and beyond.
 
 Behind the scenes, it is run by the EuroPython Society (EPS), a Swedish
-non-profit organization responsible for the legal and financial aspects of the
+non-profit organisation responsible for the legal and financial aspects of the
 conference, as well as overall coordination.
 
 In accordance with Swedish bylaws, the Society is governed by a board of seven
@@ -26,20 +26,20 @@ Current Board Members:
 - Mia Bajić (Vice Chair)
 - Shekhar Koirala
 
-## Where Does Our Profit Go?
+## Where Does Our Surplus Go?
 
 If the conference generates a surplus, all proceeds go back to the community.
 The funds are allocated as follows:
 
 - Grants – We support Python community events across Europe through our grants
-  program. Learn more about grants
+  programme. Learn more about grants
   [here](https://europython-society.org/grants/).
 - Financial Aid – We provide assistance to help individuals attend EuroPython
   who might not otherwise be able to. Learn more about finaid [here](/finaid).
 
 ## Teams
 
-We’re organized into teams, each focused on a different area of the conference.
+We’re organised into teams, each focused on a different area of the conference.
 Every team is made up of volunteers donating their time and skills to make the
 event possible.
 
@@ -58,8 +58,10 @@ teams:
 
 ### 🎨 Communications & Design
 
+- Adriana Sanchez
 - Daksh P. Jain
 - Mia Bajić
+- Panagiotis Kyrillos
 - Tim Hobbs
 
 ### 🏃‍♀️ Sprints Team
@@ -78,6 +80,7 @@ teams:
 - Artur Czepiel
 - Doreen Peace Nangira Wanyama
 - Koti Vellanki
+- Shekhar Koirala
 - Vicky Twomey-Lee
 
 ### 🛡️ Code of Conduct
@@ -85,6 +88,7 @@ teams:
 - Cheuk Ting Ho
 - Jakub Vysoký
 - Lumír Balhar
+- Naomi Ceder
 - Vicky Twomey-Lee
 
 ### 🤝 Sponsors Team
@@ -101,6 +105,7 @@ teams:
 ### ⚙️ Operations Team
 
 - Aneta Popelová
+- Anežka Müller
 - Aris Nivorlis
 - George Margaritis
 - George Zisopoulos
@@ -116,3 +121,10 @@ teams:
 - Piotr Gnus
 - Saurav Pandey
 - Simon Peter Dagbui
+
+### 👩‍💻 Infrastructure & Website
+- Artur Czepiel
+- Cyril Bitterlich
+- Ege Akman
+- Mia Bajić
+- Marcin Wierzbanowski
