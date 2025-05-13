@@ -1,10 +1,50 @@
 import { getCollection, getEntry } from "astro:content";
 import type { APIRoute } from "astro";
 
+// Get @username from Twitter URL
+function getTwitterUsername(url: string): string | undefined {
+  if (!url) return undefined;
+  const username = url.split("/").pop();
+  return (username ?? url).startsWith("@") ? username : `@${username}`;
+}
+
+// Get @username from Bluesky URL
+function getBlueskyUsername(url: string): string | undefined {
+  if (!url) return undefined;
+  const username = url.split("/").pop()?.replace(/^@/, "");
+  return username ? `@${username}` : undefined;
+}
+
+// Get Bluesky profile link from username
+function getBlueskyProfileLink(username: string): string {
+  // Remove any leading @ if present
+  const cleanUsername = username.replace(/^@/, "");
+  return `https://bsky.app/profile/${cleanUsername}`;
+}
+
+// Get @username@instance.tld from Mastodon URL
+function getMastodonUsername(url: string): string | undefined {
+  if (!url) return undefined;
+  const match = url.match(/https?:\/\/([^\/]+)\/@([^\/]+)(\/|\?|$)/);
+  return match ? `@${match[2]}@${match[1]}` : undefined;
+}
+
+function getLinkedInUsernameHandler(url: string): string | undefined {
+  if (!url) return undefined;
+  const match = url.match(/https?:\/\/([^\/]+)\/in\/([^\/]+)(\/|\?|$)/);
+  if (match) {
+    try {
+      return `https://www.linkedin.com/in/${decodeURIComponent(match[2])}`;
+    } catch {
+      return `https://www.linkedin.com/in/${match[2]}`;
+    }
+  }
+  return undefined;
+}
+
 export const GET: APIRoute = async ({ params, request }) => {
   const limit = Infinity;
   const speakers = await getCollection("speakers");
-
   const exclude = [
     "sebastian-ramirez",
     "savannah-ostrowski",
@@ -12,7 +52,6 @@ export const GET: APIRoute = async ({ params, request }) => {
     "petr-baudis",
     "brett-cannon",
   ];
-
   const records: any[] = [];
 
   const charLimits: Record<string, number> = {
@@ -23,17 +62,31 @@ export const GET: APIRoute = async ({ params, request }) => {
     fosstodon: 500,
   };
 
-  const message_template_full = ({
-    name,
-    talkTitle,
-    talkUrl,
-    fallbackUrl,
-  }: {
-    name: string;
-    talkTitle: string;
-    talkUrl: string;
-    fallbackUrl: string;
-  }) => `Join ${name} at EuroPython for “${talkTitle}”.`;
+  // Tailor message templates for each platform using appropriate handle formats
+  const message_template = {
+    instagram: ({ name, talkTitle, talkUrl }) =>
+      `Join ${name} at EuroPython for "${talkTitle}". Check the link in bio for details!`,
+
+    x: ({ name, handle, talkTitle, talkUrl }) =>
+      handle
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+
+    linkedin: ({ name, handle, talkTitle, talkUrl }) =>
+      handle
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+
+    bsky: ({ name, handle, talkTitle, talkUrl }) =>
+      handle
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+
+    fosstodon: ({ name, handle, talkTitle, talkUrl }) =>
+      handle
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+  };
 
   const trimToLimit = (text: string, limit: number) =>
     text.length <= limit ? text : text.slice(0, limit - 1) + "…";
@@ -58,37 +111,46 @@ export const GET: APIRoute = async ({ params, request }) => {
     const validSessions = sessions.filter(
       (session) => session && session.data.title
     );
+
     if (validSessions.length === 0) continue;
 
     const talkTitle = validSessions[0]?.data.title || "an exciting topic";
     const talkCode = validSessions[0]?.data.code;
-
     const talkUrl = `https://ep2025.europython.eu/${talkCode}`;
     const speakerImage = `https://ep2025-buffer.ep-preview.click/media/social-${speaker.id}.png`;
     const fallbackUrl = `https://ep2025.europython.eu/speaker/${speaker.id}`;
-    const links = {
-      instagram: fallbackUrl,
-      x: twitter_url ?? fallbackUrl,
-      linkedin: linkedin_url ?? fallbackUrl,
-      bsky: bluesky_url ?? fallbackUrl,
-      fosstodon: mastodon_url ?? fallbackUrl,
+
+    // Extract handles for each platform
+    const handles = {
+      x: getTwitterUsername(twitter_url || ""),
+      linkedin: getLinkedInUsernameHandler(linkedin_url || ""),
+      bsky: getBlueskyUsername(bluesky_url || ""),
+      fosstodon: getMastodonUsername(mastodon_url || ""),
     };
 
-    const generateMessage = (platform: string) => {
-      const full = message_template_full({
-        name,
-        talkTitle,
-        talkUrl,
-        fallbackUrl: links[platform],
-      });
-      const limit = charLimits[platform];
+    // Generate appropriate messages for each platform
+    const generateMessage = (platform: keyof typeof message_template) => {
+      const templateFn = message_template[platform];
+      const handle =
+        platform === "instagram"
+          ? undefined
+          : handles[platform as keyof typeof handles];
 
+      const full = templateFn({
+        name,
+        handle,
+        talkTitle,
+        talkUrl: platform === "instagram" ? fallbackUrl : talkUrl,
+      });
+
+      const limit = charLimits[platform];
       return trimToLimit(full, limit);
     };
 
     const record = {
       name,
       image: speakerImage,
+      handles: handles,
       channel: {
         instagram: generateMessage("instagram"),
         x: generateMessage("x"),
