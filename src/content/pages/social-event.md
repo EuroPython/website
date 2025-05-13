@@ -66,14 +66,18 @@ We’ll offer a variety of light snacks, including vegetarian, vegan, and
 gluten-free options. Drinks will be available as well—both alcoholic and
 non-alcoholic.
 
-## Accessibility
+## Accessibility Information
 
 The venue is mostly accessible:
 
-- Elevator access from the bridge, with internal dimensions of 105 × 128 cm and
-  a door width of 85 cm.
-- Wheelchair-accessible toilet available inside the bridge pillar.
-- Quiet space available for rest and relaxation.
-- Parking is available nearby.
+- Elevator access is available from the bridge. The elevator has internal dimensions of 105 × 128 cm and a door width of 85 cm.  
+- Most of the outdoor area is unpaved. Surfaces include cobblestones, sand paths, and grassy areas.  
+- There are no steps or stairs at the entrance to the main building. However, access to the first floor (where board games will be played) is only via stairs and is not accessible for individuals with limited mobility.  
+- A wheelchair-accessible toilet is located inside the bridge pillar.  
+- A quiet space is available for rest and relaxation.  
+- Nearby parking is available.  
+- The bridge and surrounding paths are equipped with street lamps and are well-lit, even at night.
 
-Please note: Some areas have cobblestone surfaces.
+> Note: Some areas have cobblestone surfaces, which may be difficult to navigate with mobility aids.
+
+
