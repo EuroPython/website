@@ -69,21 +69,21 @@ export const GET: APIRoute = async ({ params, request }) => {
 
     x: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". talk: ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". Talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
 
     linkedin: ({ name, handle, talkTitle, talkUrl }) =>
       `Join ${name} at EuroPython for "${talkTitle}".`,
 
     bsky: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". talk: ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". Talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
 
     fosstodon: ({ name, handle, talkTitle, talkUrl }) =>
       handle
         ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". talk: ${talkUrl}`,
+        : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
   };
 
   const trimToLimit = (text: string, limit: number) =>
