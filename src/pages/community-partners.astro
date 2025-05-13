@@ -4,12 +4,12 @@ import Layout from "@layouts/SectionLayout.astro";
 import SponsorCard from "@components/SponsorCard.astro";
 import Headline from "@ui/Headline.astro";
 
-const sponsors = await getCollection("sponsors", ({ data }) => {
+const sponsors = (await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
   const notDraft = !isProd || data.draft !== true;
   const isPartner = data.tier === "Partners";
   return notDraft && isPartner;
-});
+})).sort((a, b) => a.id.localeCompare(b.id));
 
 ---
 
@@ -30,4 +30,6 @@ const sponsors = await getCollection("sponsors", ({ data }) => {
       ))}
     </div>
   )}
-</Layout>
+  <p class="pb-5">
+  Are you a Python Community organiser, interested in knowing more about EuroPython Society? Feel free to reach out at board@europython.eu!
+  </p></Layout>
