@@ -68,6 +68,10 @@
         {
           "name": "Venue",
           "path": "/venue"
+        },
+        {
+          "name": "Hotels",
+          "path": "/hotels"
         }
       ]
     },
