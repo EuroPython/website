@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+export async function getStaticPaths() {
+  const sessions = await getCollection("sessions");
+  return sessions.map((entry) => ({
+    params: { code: entry.data.code },
+    props: { slug: entry.id},
+  }));
+}
+const { slug } = Astro.props;
+return Astro.rewrite(`/session/${slug}`);
+---
