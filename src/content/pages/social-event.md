@@ -49,8 +49,8 @@ sure you don’t miss out.
 
 ## When & Where?
 
-* 🗓 **Thursday, July 17th at 7.30 PM** 📍
-* [Střelecký Island, Prague](https://www.google.com/maps/place/St%C5%99eleck%C3%BD+Island/@50.0808254,14.4100926,138m/data=!3m1!1e3!4m6!3m5!1s0x470b94fac3cf3515:0x80d309307da30232!8m2!3d50.0812108!4d14.4098907!16s%2Fg%2F1v8kzb1g?hl=en&entry=ttu)
+- 🗓 **Thursday, July 17th at 19:30 CEST** 📍
+- [Střelecký Island, Prague](https://www.google.com/maps/place/St%C5%99eleck%C3%BD+Island/@50.0808254,14.4100926,138m/data=!3m1!1e3!4m6!3m5!1s0x470b94fac3cf3515:0x80d309307da30232!8m2!3d50.0812108!4d14.4098907!16s%2Fg%2F1v8kzb1g?hl=en&entry=ttu)
 
 ## Getting There
 
