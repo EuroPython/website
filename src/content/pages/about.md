@@ -133,3 +133,4 @@ teams:
 - Ege Akman
 - Mia Bajić
 - Marcin Wierzbanowski
+- Raquel Dou
