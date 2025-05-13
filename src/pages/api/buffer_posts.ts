@@ -65,25 +65,25 @@ export const GET: APIRoute = async ({ params, request }) => {
   // Tailor message templates for each platform using appropriate handle formats
   const message_template = {
     instagram: ({ name, talkTitle, talkUrl }) =>
-      `Join ${name} at EuroPython for "${talkTitle}". Check the link in bio for details!`,
+      `Join ${name} at EuroPython for "${talkTitle}".`,
 
     x: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". talk: ${talkUrl}`,
 
     linkedin: ({ name, handle, talkTitle, talkUrl }) =>
       `Join ${name} at EuroPython for "${talkTitle}".`,
 
     bsky: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". talk: ${talkUrl}`,
 
     fosstodon: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}". talk: ${talkUrl}`,
   };
 
   const trimToLimit = (text: string, limit: number) =>
