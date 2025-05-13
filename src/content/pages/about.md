@@ -9,7 +9,7 @@ subtitle: About
 The EuroPython conference is organised by volunteers from the Python community
 across Europe and beyond.
 
-Behind the scenes, it is run by the EuroPython Society (EPS), a Swedish
+Behind the scenes, it is run by the [EuroPython Society (EPS)](https://europython-society.org/), a Swedish
 non-profit organisation responsible for the legal and financial aspects of the
 conference, as well as overall coordination.
 
