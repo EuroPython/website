@@ -101,6 +101,7 @@ teams:
 - Marcin Wierzbanowski
 - Mia Bajić
 - Oleh Kostromin
+- Raquel Dou
 
 ### ⚙️ Operations Team
 
