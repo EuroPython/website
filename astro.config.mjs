@@ -76,7 +76,6 @@ export default defineConfig({
   redirects: {
     "/planning/": "https://forms.gle/riw6CvML8ck94A4V9",
     "/reviewers/": "https://forms.gle/4GTJjwZ1nHBGetM18",
-    "/[code]": "/session/[...slug]",
   },
   integrations: [
     preload(),

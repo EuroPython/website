@@ -10,7 +10,5 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.props;
-
+return Astro.rewrite(`/session/${slug}`);
 ---
-
-<meta http-equiv="refresh" content=`0;url=/session/${slug}` />
