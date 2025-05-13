@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 const sessions = await getCollection("sessions");
 
 const { entry } = Astro.props;
-
+const slug = entry.id;
 const speakers = await getEntries(entry.data.speakers);
 
 // Resolve session codes to session data
@@ -233,3 +233,12 @@ const nextSessionsOrdered = sameRoomNextSession
     </footer>
   </Section>
 </Layout>
+
+<script is:inline define:vars={{ slug }}>
+  const currentUrl = window.location.pathname;
+  const expectedUrl = `/session/${slug}`;
+
+  if (currentUrl !== expectedUrl) {
+    window.history.replaceState({}, '', expectedUrl);
+  }
+</script>
