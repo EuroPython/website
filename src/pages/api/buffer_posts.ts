@@ -73,9 +73,7 @@ export const GET: APIRoute = async ({ params, request }) => {
         : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
 
     linkedin: ({ name, handle, talkTitle, talkUrl }) =>
-      handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". ${talkUrl}`,
+      `Join ${name} at EuroPython for "${talkTitle}".`,
 
     bsky: ({ name, handle, talkTitle, talkUrl }) =>
       handle
