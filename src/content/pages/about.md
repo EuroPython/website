@@ -15,9 +15,9 @@ non-profit organisation responsible for the legal and financial aspects of the
 conference, as well as overall coordination.
 
 In accordance with the [EPS bylaws](https://www.europython-society.org/bylaws/),
-the society is governed by a board consisting of a chairperson, a vice chairperson,
-and between two and seven additional board members, all elected annually by its
-members.
+the society is governed by a board consisting of a chairperson, a vice
+chairperson, and between two and seven additional board members, all elected
+annually by its members.
 
 Current Board Members:
 
