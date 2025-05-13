@@ -235,14 +235,10 @@ const nextSessionsOrdered = sameRoomNextSession
 </Layout>
 
 <script is:inline define:vars={{ slug }}>
-  // Check if the current URL contains the entry ID
   const currentUrl = window.location.pathname;
   const expectedUrl = `/session/${slug}`;
 
-  // If the URL doesn't match the expected URL with the entry ID, replace it
   if (currentUrl !== expectedUrl) {
-    // Use history.replaceState to update the URL without refreshing the page
     window.history.replaceState({}, '', expectedUrl);
-    console.log(`URL updated to match entry ID: ${expectedUrl}`);
   }
 </script>
