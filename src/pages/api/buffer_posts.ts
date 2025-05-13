@@ -26,31 +26,14 @@ export const GET: APIRoute = async ({ params, request }) => {
   const message_template_full = ({
     name,
     talkTitle,
-    affiliation,
+    talkUrl,
     fallbackUrl,
   }: {
     name: string;
     talkTitle: string;
-    affiliation: string | null;
+    talkUrl: string;
     fallbackUrl: string;
-  }) => `🚀 Exciting News: ${name} to Speak at EuroPython 2025!
-
-I'm thrilled to announce that ${name}${affiliation ? `, renowned for their work at ${affiliation},` : ""} will be speaking at EuroPython 2025 about "${talkTitle}"!
-
-🗓️ Event: EuroPython 2025
-🔗 Details & Registration: https://ep2025.europython.eu/
-👤 Speaker Profile: ${fallbackUrl}
-
-#EuroPython2025 #Python #TechConference`;
-
-  const message_template_short = ({
-    name,
-    talkTitle,
-  }: {
-    name: string;
-    talkTitle: string;
-  }) =>
-    `${name} is speaking at EuroPython 2025 about "${talkTitle}"! 🎤 https://ep2025.europython.eu/ #EuroPython2025`;
+  }) => `Join ${name} at EuroPython for “${talkTitle}”.`;
 
   const trimToLimit = (text: string, limit: number) =>
     text.length <= limit ? text : text.slice(0, limit - 1) + "…";
@@ -66,7 +49,6 @@ I'm thrilled to announce that ${name}${affiliation ? `, renowned for their work 
       bluesky_url,
       mastodon_url,
       submissions,
-      affiliation,
     } = speaker.data;
 
     const sessions = await Promise.all(
@@ -79,7 +61,9 @@ I'm thrilled to announce that ${name}${affiliation ? `, renowned for their work 
     if (validSessions.length === 0) continue;
 
     const talkTitle = validSessions[0]?.data.title || "an exciting topic";
+    const talkCode = validSessions[0]?.data.code;
 
+    const talkUrl = `https://ep2025.europython.eu/${talkCode}`;
     const speakerImage = `https://ep2025-buffer.ep-preview.click/media/social-${speaker.id}.png`;
     const fallbackUrl = `https://ep2025.europython.eu/speaker/${speaker.id}`;
     const links = {
@@ -94,15 +78,12 @@ I'm thrilled to announce that ${name}${affiliation ? `, renowned for their work 
       const full = message_template_full({
         name,
         talkTitle,
-        affiliation,
+        talkUrl,
         fallbackUrl: links[platform],
       });
-      const short = message_template_short({ name, talkTitle });
       const limit = charLimits[platform];
 
-      if (full.length <= limit) return full;
-      if (short.length <= limit) return short;
-      return trimToLimit(short, limit);
+      return trimToLimit(full, limit);
     };
 
     const record = {
