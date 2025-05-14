@@ -65,6 +65,7 @@ teams:
 - Daksh P. Jain
 - Mia Bajić
 - Panagiotis Kyrillos
+- Sangharshanan Veera
 - Tim Hobbs
 
 ### 🏃‍♀️ Sprints Team
