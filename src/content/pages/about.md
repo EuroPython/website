@@ -76,7 +76,8 @@ teams:
 ### 🗣️ Speaker Mentorship
 
 - Joana Owusu-Appiah
-- Naa Ashiorkor Nortey Theofanis Petkos
+- Naa Ashiorkor Nortey
+- Theofanis Petkos
 
 ### 💸 Financial Aid
 
