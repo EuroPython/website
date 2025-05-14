@@ -89,7 +89,7 @@
       ]
     },
     {
-      "name": "Registration",
+      "name": "Attend",
       "items": [
         {
           "name": "Tickets",
@@ -110,6 +110,10 @@
         {
           "name": "FAQ",
           "path": "/faq"
+        },
+        {
+          "name": "Code of Conduct",
+          "path": "https://www.europython-society.org/coc/"
         }
       ]
     },
@@ -220,7 +224,7 @@
       ]
     },
     {
-      "name": "Registration",
+      "name": "Attend",
       "items": [
         {
           "name": "Tickets",
