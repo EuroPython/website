@@ -77,6 +77,7 @@ teams:
 
 - Joana Owusu-Appiah
 - Naa Ashiorkor Nortey
+Theofanis Petkos
 
 ### 💸 Financial Aid
 
