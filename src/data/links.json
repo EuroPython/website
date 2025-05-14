@@ -45,6 +45,10 @@
           "path": "/beginners-day"
         },
         {
+          "name": "Thursday Social Event",
+          "path": "/social-event"
+        },
+        {
           "name": "WASM Summit",
           "path": "/wasm-summit"
         },
