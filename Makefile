@@ -69,6 +69,7 @@ deploy:
 endif
 
 # Cleanup preview builds that no longer match any remote branches
+# Lets test it with some comment.
 clean-previews:
 	@echo "\n\n**** Cleaning up preview builds of deleted branches...\n\n"
 	$(REMOTE_CMD) 'cd $(VPS_PREVIEW_PATH) && \
