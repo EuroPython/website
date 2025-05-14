@@ -93,7 +93,7 @@
       ]
     },
     {
-      "name": "Registration",
+      "name": "Attend",
       "items": [
         {
           "name": "Tickets",
@@ -114,12 +114,29 @@
         {
           "name": "FAQ",
           "path": "/faq"
+        },
+        {
+          "name": "Code of Conduct",
+          "path": "https://www.europython-society.org/coc/"
         }
       ]
     },
     {
       "name": "Community",
-      "path": "/community-partners"
+      "items": [
+        {
+          "name": "About Us",
+          "path": "/about"
+        },
+        {
+          "name": "EuroPython Society",
+          "path": "https://europython-society.org/"
+        },
+        {
+          "name": "Community Partners",
+          "path": "/community-partners"
+        }
+      ]
     },
     {
       "name": "Jobs",
@@ -224,7 +241,7 @@
       ]
     },
     {
-      "name": "Registration",
+      "name": "Attend",
       "items": [
         {
           "name": "Tickets",
