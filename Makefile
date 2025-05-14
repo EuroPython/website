@@ -53,7 +53,7 @@ preview:
 	@echo "\n\n**** Deploying preview of a branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
 	$(REMOTE_CMD) "mkdir -p $(TARGET)"
 	rsync -avz --delete ./dist/ $(VPS_USER)@$(VPS_HOST):$(TARGET)/
-	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current"
+	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current" && vi
 	@echo "\n\n**** Preview complete.\n\n"
 	@echo "Open the preview site at: $(PREVIEW_SITE_URL)\n\n"
 
