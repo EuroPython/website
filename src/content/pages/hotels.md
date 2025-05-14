@@ -30,5 +30,5 @@ Use the following link to apply the EuroPython discount coupon directly:
 
 Address: Kongresová 1655/1, 140 69 Nusle
 
-Use the following link to apply to EuroPython discount coupon directly:
+Use the following link to apply the EuroPython discount coupon directly:
 [link](https://hoteltowers.cz/en/booking-search/?currency=EUR&adults=2&loaded=1&datein=2025-07-14&dateout=2025-07-20&promo=EP2025)
