@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import heroImage from "/public/images/conference_photo.jpg";
 
 import IconWithLabel from "./icon-label.astro";
+import Icon from "@ui/Icon.astro";
 import Button from "@ui/Button.astro";
 
 const action1 = "/tickets";
@@ -10,200 +11,176 @@ const action2 = "/sponsorship/sponsor/";
 ---
 
 <section class="relative z-10">
-<div
-  class="bg-icons full-bleed relative flex flex-col items-center justify-center"
-  style=""
->
-  <div class="absolute inset-0 overflow-hidden -z-10">
-    <!-- Left side icons -->
-    <svg
-      class="bg-icon top-[5%] left-[15%] rotate-[23deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
-        >{"{}"}</text
-      ></svg
-    >
-    <svg
-      class="bg-icon top-[30%] left-[5%] rotate-[42deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
-        >#</text
-      ></svg
-    >
-    <svg
-      class="bg-icon bottom-[30%] left-[18%] rotate-[15deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
-        >&lt;/&gt;</text
-      ></svg
-    >
-    <svg
-      class="bg-icon bottom-[5%] left-[7%] rotate-[10deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text
-        x="10"
-        y="50"
-        font-size="80"
-        font-weight="bold"
-        fill="#A0B7E9"
-        set:html={"..."}
-      /></svg
-    >
+  <div
+    class="bg-icons full-bleed relative flex flex-col items-center justify-center"
+    style=""
+  >
+    <div class="absolute inset-0 overflow-hidden -z-10">
+      <!-- Left side icons -->
+      <svg
+        class="bg-icon top-[5%] left-[15%] rotate-[23deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >{"{}"}</text
+        ></svg
+      >
+      <svg
+        class="bg-icon top-[30%] left-[5%] rotate-[42deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >#</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[30%] left-[18%] rotate-[15deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >&lt;/&gt;</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[5%] left-[7%] rotate-[10deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text
+          x="10"
+          y="50"
+          font-size="80"
+          font-weight="bold"
+          fill="#A0B7E9"
+          set:html={"..."}
+        /></svg
+      >
 
-    <!-- Right side icons -->
-    <svg
-      class="bg-icon top-[5%] right-[17%] rotate-[30deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
-        >&lt;/&gt;</text
-      ></svg
-    >
-    <svg
-      class="bg-icon top-[30%] right-[6%] rotate-[15deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
-        >:=</text
-      ></svg
-    >
-    <svg
-      class="bg-icon bottom-[30%] right-[20%] rotate-[45deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
-        >&gt;&gt;&gt;</text
-      ></svg
-    >
-    <svg
-      class="bg-icon bottom-[5%] right-[8%] rotate-[33deg] xl:block hidden"
-      viewBox="-40 -40 200 200"
-      ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
-        >ƒ(x)</text
-      ></svg
-    >
-  </div>
-  <div class="prose-xl relative z-10 text-center">
-    <div class="flex items-center space-x-3 p-10 md:mt-20 justify-center">
-      <div class="w-200 h-200 flex items-center justify-center">
-        <img class="h-full block md:w-full lg:w-[200px] pr-3 lg:pr-8" src="/logo.png" height="188" width="188" />
+      <!-- Right side icons -->
+      <svg
+        class="bg-icon top-[5%] right-[17%] rotate-[30deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >&lt;/&gt;</text
+        ></svg
+      >
+      <svg
+        class="bg-icon top-[30%] right-[6%] rotate-[15deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >:=</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[30%] right-[20%] rotate-[45deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >&gt;&gt;&gt;</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[5%] right-[8%] rotate-[33deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >ƒ(x)</text
+        ></svg
+      >
+    </div>
+    <div class="prose-xl relative z-10 text-center">
+      <div class="flex items-center space-x-3 p-10 md:mt-20 justify-center">
+        <div class="w-200 h-200 flex items-center justify-center">
+          <img
+            class="h-full block md:w-full lg:w-[200px] pr-3 lg:pr-8"
+            src="/logo.png"
+            height="188"
+            width="188"
+          />
+        </div>
+        <h1
+          class="text-5xl md:text-8xl lg:text-9xl m-0 font-bold text-[#17223A]"
+        >
+          EuroPython
+        </h1>
       </div>
-      <h1 class="text-5xl md:text-8xl lg:text-9xl m-0 font-bold text-[#17223A]">
-        EuroPython
-      </h1>
+      <p
+        class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 mt-2"
+      >
+        Discover the latest Python trends, learn from 180+ expert speakers,
+        network with fellow developers, enjoy social events, and explore open
+        spaces to spark new ideas.
+      </p>
     </div>
-    <p class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 mt-2">
-      Discover the latest Python trends, learn from 180+ expert speakers,
-      network with fellow developers, enjoy social events, and explore open
-      spaces to spark new ideas.
-    </p>
-  </div>
-  <!-- First 2x1 Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-10">
-    <div>
-      <IconWithLabel icon="map-pin" label="Prague, Czech Republic" />
+    <!-- First 2x1 Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-10">
+      <div>
+        <IconWithLabel icon="map-pin" label="Prague, Czech Republic" />
+      </div>
+      <div>
+        <IconWithLabel icon="calendar-days" label="14-20 July, 2025" />
+      </div>
     </div>
-    <div>
-      <IconWithLabel icon="calendar-days" label="14-20 July, 2025" />
+
+    <!-- Second 2x1 Grid with Action Buttons -->
+    <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
+      <div>
+        <Button secondary url={action1}> Register Now </Button>
+      </div>
+      <div class="btn-outline">
+        <Button outline url={action2}> Call for Sponsors </Button>
+      </div>
     </div>
   </div>
 
-  <!-- Second 2x1 Grid with Action Buttons -->
-  <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
-    <div>
-      <Button secondary url={action1}> Register Now </Button>
-    </div>
-    <div class="btn-outline">
-      <Button outline url={action2}> Call for Sponsors </Button>
-    </div>
-  </div>
-</div>
-
-<div
-  class="bluebox full-bleed relative flex flex-col items-center justify-center"
-  style=""
->
-  <div class="bluebox-shift">
-    <div class="hero-image overflow-hidden -mt-12">
-      <!-- Image with Rounded Corners and Shadow -->
-      <div class="px-5 md:px-10 md:m-10">
-        <Image
-          src={heroImage}
-          alt="EuroPython 2025 Hero Image"
-          class="w-full max-w-5xl lg:max-w-full h-auto lg:h-full rounded-2xl shadow-xl"
-        />
-      </div>
-    </div>
-    <!-- 3x1 Grid with Conference Stats -->
-    <div
-      class="stats grid grid-cols-1 sm:grid-cols-3 gap-8 mx-20 md:mr-40 md:ml-40"
-    >
-      <div class="p-4 bg-gray-100 rounded-lg flex items-center">
-        <div
-          class="w-16 h-16 flex items-center justify-center rounded-full text-white mr-4"
-        >
-          <svg
-            class="w-30 h-30"
-            stroke="#17223A"
-            viewBox="0 0 70 51"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12.3945 0C13.0261 0 13.6318 0.250881 14.0783 0.697452C14.5249 1.14402 14.7758 1.7497 14.7758 2.38125V6.35H37.0008V2.38125C37.0008 1.7497 37.2517 1.14402 37.6982 0.697452C38.1448 0.250881 38.7505 0 39.382 0C40.0136 0 40.6193 0.250881 41.0658 0.697452C41.5124 1.14402 41.7633 1.7497 41.7633 2.38125V6.35H42.557C44.8727 6.35 47.0935 7.2699 48.731 8.90732C50.3684 10.5448 51.2883 12.7656 51.2883 15.0813V42.0687C51.2883 44.3844 50.3684 46.6052 48.731 48.2427C47.0935 49.8801 44.8727 50.8 42.557 50.8H9.21953C6.90386 50.8 4.68303 49.8801 3.04561 48.2427C1.40818 46.6052 0.488281 44.3844 0.488281 42.0687V15.0813C0.488281 12.7656 1.40818 10.5448 3.04561 8.90732C4.68303 7.2699 6.90386 6.35 9.21953 6.35H10.0133V2.38125C10.0133 1.7497 10.2642 1.14402 10.7107 0.697452C11.1573 0.250881 11.763 0 12.3945 0ZM9.21953 17.4625C7.02878 17.4625 5.25078 19.2405 5.25078 21.4312V42.0687C5.25078 44.2595 7.02878 46.0375 9.21953 46.0375H42.557C44.7478 46.0375 46.5258 44.2595 46.5258 42.0687V21.4312C46.5258 19.2405 44.7478 17.4625 42.557 17.4625H9.21953Z"
-              fill="#141F36"></path>
-          </svg>
-        </div>
-        <div>
-          <h3 class="text-2xl md:text-5xl font-bold">7</h3>
-          <p class="text-xl md:text-3xl">Days</p>
+  <div
+    class="bluebox full-bleed relative flex flex-col items-center justify-center"
+    style=""
+  >
+    <div class="bluebox-shift">
+      <div class="hero-image overflow-hidden -mt-12">
+        <!-- Image with Rounded Corners and Shadow -->
+        <div class="px-5 md:px-10 md:m-10">
+          <Image
+            src={heroImage}
+            alt="EuroPython 2025 Hero Image"
+            class="w-full max-w-5xl lg:max-w-full h-auto lg:h-full rounded-2xl shadow-xl"
+          />
         </div>
       </div>
-      <div class="p-4 bg-gray-100 rounded-lg flex items-center">
-        <div
-          class="w-16 h-16 flex items-center justify-center rounded-full text-white mr-4"
-        >
-          <svg
-            class="w-30 h-30"
-            stroke="#17223A"
-            viewBox="0 0 70 51"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+      <!-- 3x1 Grid with Conference Stats -->
+      <div
+        class="stats flex flex-wrap flex-col md:flex-row justify-around items-center"
+      >
+        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
           >
-            <path
-              d="M34.6813 25.4171C38.0432 25.4171 41.2674 24.0816 43.6446 21.7044C46.0218 19.3272 47.3573 16.103 47.3573 12.7412C47.3573 9.37928 46.0218 6.1551 43.6446 3.77789C41.2674 1.40069 38.0432 0.0651855 34.6813 0.0651855C31.3194 0.0651855 28.0953 1.40069 25.7181 3.77789C23.3408 6.1551 22.0053 9.37928 22.0053 12.7412C22.0053 16.103 23.3408 19.3272 25.7181 21.7044C28.0953 24.0816 31.3194 25.4171 34.6813 25.4171ZM10.1204 44.497C10.9316 41.3077 12.3513 38.3618 14.2426 35.7759C11.4918 35.2499 8.6442 35.6496 6.14456 36.9127C3.64492 38.1758 1.63397 40.2312 0.425768 42.7579C-0.263805 44.2131 0.942947 45.6987 2.54519 45.6987H9.89218C9.94289 45.3083 10.0189 44.9077 10.1204 44.497ZM59.2575 44.497C59.3589 44.9026 59.44 45.3083 59.4907 45.6987H66.8225C68.4248 45.6987 69.6315 44.2131 68.9369 42.7629C67.7301 40.2383 65.722 38.1839 63.2254 36.92C60.7289 35.6562 57.8843 35.2539 55.1353 35.7759C57.0316 38.3618 58.4462 41.3027 59.2575 44.497ZM65.1036 22.8819C65.1036 23.8807 64.9069 24.8697 64.5247 25.7925C64.1425 26.7152 63.5823 27.5537 62.876 28.2599C62.1698 28.9661 61.3313 29.5264 60.4086 29.9086C59.4858 30.2908 58.4968 30.4875 57.4981 30.4875C56.4993 30.4875 55.5103 30.2908 54.5875 29.9086C53.6648 29.5264 52.8264 28.9661 52.1201 28.2599C51.4139 27.5537 50.8536 26.7152 50.4714 25.7925C50.0892 24.8697 49.8925 23.8807 49.8925 22.8819C49.8925 20.8648 50.6938 18.9303 52.1201 17.504C53.5464 16.0777 55.4809 15.2764 57.4981 15.2764C59.5152 15.2764 61.4497 16.0777 62.876 17.504C64.3024 18.9303 65.1036 20.8648 65.1036 22.8819ZM11.8646 30.4875C13.8817 30.4875 15.8162 29.6862 17.2425 28.2599C18.6688 26.8336 19.4701 24.8991 19.4701 22.8819C19.4701 20.8648 18.6688 18.9303 17.2425 17.504C15.8162 16.0777 13.8817 15.2764 11.8646 15.2764C9.84744 15.2764 7.91293 16.0777 6.48661 17.504C5.06028 18.9303 4.25898 20.8648 4.25898 22.8819C4.25898 24.8991 5.06028 26.8336 6.48661 28.2599C7.91293 29.6862 9.84744 30.4875 11.8646 30.4875ZM19.4701 50.7691C16.6713 50.7691 14.3338 48.462 15.0285 45.7494C16.1476 41.3865 18.6865 37.52 22.2451 34.759C25.8037 31.998 30.1798 30.4995 34.6838 30.4995C39.1879 30.4995 43.564 31.998 47.1226 34.759C50.6812 37.52 53.2201 41.3865 54.3392 45.7494C55.0288 48.462 52.6964 50.7691 49.8925 50.7691H19.4701Z"
-              fill="#141F36"></path>
-          </svg>
+            <Icon name="calendar-days" size="fa-3x" />
+          </div>
+          <div>
+            <h3 class="text-2xl md:text-5xl font-bold">7</h3>
+            <p class="text-xl md:text-3xl">Days</p>
+          </div>
         </div>
-        <div>
-          <h3 class="text-2xl md:text-5xl font-bold">1.3k+</h3>
-          <p class="text-xl md:text-3xl">Attendees</p>
-        </div>
-      </div>
-      <div class="p-4 bg-gray-100 rounded-lg flex items-center">
-        <div
-          class="w-16 h-16 flex items-center justify-center rounded-full text-white mr-4"
-        >
-          <svg
-            class="w-30 h-30"
-            stroke="#17223A"
-            viewBox="0 0 70 58"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
           >
-            <path
-              d="M25.5882 31.1869C29.1291 31.1869 32.5251 29.7962 35.0289 27.3207C37.5327 24.8452 38.9394 21.4877 38.9394 17.9869C38.9394 14.486 37.5327 11.1285 35.0289 8.65306C32.5251 6.17758 29.1291 4.78687 25.5882 4.78687C22.0472 4.78687 18.6513 6.17758 16.1474 8.65306C13.6436 11.1285 12.237 14.486 12.237 17.9869C12.237 21.4877 13.6436 24.8452 16.1474 27.3207C18.6513 29.7962 22.0472 31.1869 25.5882 31.1869ZM46.6608 57.5869C49.4112 57.5869 51.5251 55.1185 50.5416 52.5753C48.6122 47.5772 45.193 43.2763 40.7367 40.2419C36.2803 37.2076 30.9969 35.5828 25.5859 35.5828C20.175 35.5828 14.8916 37.2076 10.4352 40.2419C5.97883 43.2763 2.55965 47.5772 0.6303 52.5753C-0.348789 55.1185 1.7607 57.5869 4.51105 57.5869H46.6608Z"
-              fill="#141F36"></path>
-            <path
-              d="M63.3384 35.1419C62.327 36.3722 60.4865 36.3378 59.377 35.1953C58.2644 34.0495 58.3172 32.2283 59.2938 30.9646C60.3077 29.6525 61.157 28.2067 61.8417 26.6271C62.9246 24.1292 63.466 21.4753 63.466 18.6652C63.466 15.8551 62.9246 13.2235 61.8417 10.7702C61.1582 9.22154 60.3107 7.79729 59.2992 6.49747C58.3131 5.23036 58.245 3.40528 59.3451 2.23582C60.4669 1.04329 62.3634 0.993292 63.3985 2.26183C64.9035 4.10631 66.1604 6.16186 67.1691 8.42849C68.5984 11.64 69.3131 15.0522 69.3131 18.6652C69.3131 22.2781 68.5984 25.6904 67.1691 28.9019C66.147 31.1986 64.87 33.2786 63.3384 35.1419ZM55.0109 26.4778C54.0668 27.8211 52.1556 27.7584 51.0118 26.5805C49.8524 25.3865 49.9382 23.4912 50.709 22.0163C50.7389 21.959 50.7683 21.9013 50.7972 21.8432C51.2736 20.8842 51.5118 19.8249 51.5118 18.6652C51.5118 17.5055 51.2736 16.4461 50.7972 15.4871C50.7683 15.4291 50.7389 15.3714 50.709 15.3141C49.9382 13.8391 49.8524 11.9439 51.0118 10.7499C52.1556 9.57195 54.0668 9.50926 55.0109 10.8526C55.5148 11.5695 55.951 12.3338 56.3195 13.1454C57.0991 14.8627 57.4889 16.7026 57.4889 18.6652C57.4889 20.6278 57.0991 22.4677 56.3195 24.185C55.951 24.9966 55.5148 25.7608 55.0109 26.4778Z"
-              fill="#141F36"></path>
-          </svg>
+            <Icon name="users" size="fa-3x" />
+          </div>
+          <div>
+            <h3 class="text-2xl md:text-5xl font-bold">1.3k+</h3>
+            <p class="text-xl md:text-3xl">Attendees</p>
+          </div>
         </div>
-        <div>
-          <h3 class="text-2xl md:text-5xl font-bold">180+</h3>
-          <p class="text-xl md:text-3xl">Speakers</p>
+        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
+          >
+            <Icon name="comments" size="fa-3x" />
+          </div>
+          <div>
+            <h3 class="text-2xl md:text-5xl font-bold">180+</h3>
+            <p class="text-xl md:text-3xl">Speakers</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  </section>
 
   <style>
     .bg-icons {
@@ -233,6 +210,5 @@ const action2 = "/sponsorship/sponsor/";
       width: 100%;
       grid-column: 1 / 4;
     }
-
   </style>
-</div>
+</section>
