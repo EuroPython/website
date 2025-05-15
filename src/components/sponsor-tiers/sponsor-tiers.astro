@@ -1,7 +1,7 @@
 ---
 import { Title } from "../typography/title";
 import Ribbon from "./ribbon.astro";
-import ButtonLink from "../button-link/button-link.astro";
+import Button from "@ui/Button.astro";
 
 interface Props {
   signupLink: string;
@@ -233,7 +233,7 @@ const formatPrice = (price: number | string) => {
               ))}
             </ul>
             <div class="absolute bottom-4 right-4">
-              <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
+              <Button url={signupLink}>Sign Up Now!</Button>
             </div>
           </div>
         ))
@@ -291,7 +291,7 @@ const formatPrice = (price: number | string) => {
               ))}
             </ul>
             <div class="absolute bottom-4 right-4">
-              <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
+              <Button url={signupLink}>Sign Up Now!</Button>
             </div>
           </div>
         ))
@@ -347,7 +347,7 @@ const formatPrice = (price: number | string) => {
               ))}
             </ul>
             <div class="absolute bottom-4 right-4">
-              <ButtonLink url={signupLink}>Sign Up Now!</ButtonLink>
+              <Button url={signupLink}>Sign Up Now!</Button>
             </div>
           </div>
         ))
