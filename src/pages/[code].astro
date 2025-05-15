@@ -7,6 +7,6 @@ export async function getStaticPaths() {
     props: { slug: entry.id},
   }));
 }
-const { slug } = Astro.props;
-return Astro.rewrite(`/session/${slug}`);
+
+return Astro.rewrite(`/session/${Astro.props.slug}`);
 ---

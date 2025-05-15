@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import SponsorLogo from "@components/SponsorLogo.astro";
 import { Image } from "astro:assets";
 
 type Sponsor = Awaited<ReturnType<typeof getCollection<"sponsors">>>[0];
@@ -29,7 +30,7 @@ const { tier, top } = Astro.props;
   </h4>
   <div
     class:list={[
-      "grid gap-6 lg:gap-12 ml-12 items-center justify-items-center",
+      "grid ml-12 items-center justify-items-center",
       {
         "grid-cols-1 md:grid-cols-2 lg:grid-cols-3": !top,
         "grid-cols-1 md:grid-cols-1": top,
@@ -43,14 +44,8 @@ const { tier, top } = Astro.props;
           href={sponsor.data.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="pb-8"
         >
-          <Image
-            src={sponsorLogos[sponsor.id]}
-            alt={sponsor.data.name}
-            width={500}
-            class="max-w-[250px] max-h-[120px]"
-          />
+          <SponsorLogo sponsor={sponsor.id} />
         </a>
         </div>
       ))

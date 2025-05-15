@@ -236,10 +236,7 @@ Barking up the right tree
 
 ## Images
 
- <a href="https://www.europython-society.org/" target="_blank">
-    This image is public, stored in /public, so no import is needed
-    <img src="/img/eps-logo.png" alt="Logo of the EuroPython Society" width="400"/>
-  </a>
+<EPSLogo />
 
  <a href="/venue" target="_blank">
     This image is internal, in /src, so import is needed
@@ -256,17 +253,12 @@ Barking up the right tree
 />
 <figcaption>Hear from our CHO at EuroPython 2023</figcaption>
 
-## ButtonLinks
-<div class="text-center mb-10">
-    <ButtonLink url="https://forms.gle/4GTJjwZ1nHBGetM18">JOIN THE REVIEWER TEAM!</ButtonLink>
-</div>
+## Button Links
+<Button url="https://forms.gle/4GTJjwZ1nHBGetM18">JOIN THE REVIEWER TEAM!</Button>
 
- <div class="text-center mt-10">
+<Button disabled>Signup closed, no URL present</Button>
 
-    <ButtonLink disabled>Signup closed, no URL present</ButtonLink>
-</div>
-
-<ButtonLink url="https://voting.europython.eu" className="flex justify-center mt-10 mb-10">Go to the community voting</ButtonLink>
+<Button url="https://voting.europython.eu">Go to the community voting</Button>
 
 ## YouTube
 <YouTube id="j5a0jTc9S10" alt="Mood lifter" />
@@ -289,3 +281,48 @@ Barking up the right tree
 <Accordion title="Finnish-speaking dogs" id="finnish">
   ***Hau hau!***
 </Accordion>
+
+## Maps
+<h2>Example 1: Map with Location</h2>
+<Map
+  location="Empire State Building, New York"
+  zoom={15}
+/>
+
+<h2>Example 2: Map with Coordinates (Latitude & Longitude)</h2>
+<Map
+  lat={48.8584}
+  lng={2.2945}
+  zoom={16}
+  title="Eiffel Tower, Paris"
+/>
+
+<h2>Example 3: Map with Default Zoom Level</h2>
+<Map
+  location="Sydney Opera House"
+/>
+
+<h2>Example 4: Map with Custom Title</h2>
+<Map
+  lat={36.1069}
+  lng={-112.1129}
+  zoom={13}
+  title="Grand Canyon"
+/>
+
+<h2>Example 5: Map with All Default Values</h2>
+<Map
+  location="Statue of Liberty, New York"
+/>
+
+<h2>Usage in Layout</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div>
+    <h3>New York</h3>
+    <Map location="New York, NY" />
+  </div>
+  <div>
+    <h3>London</h3>
+    <Map location="London, UK" />
+  </div>
+</div>
