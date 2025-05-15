@@ -1,5 +1,5 @@
 ---
-import ButtonLink from "../button-link/button-link.astro";
+import Button from "@ui/Button.astro";
 import { Title } from "../typography/title";
 
 interface Props {
@@ -19,7 +19,7 @@ const { title, subtitle, buttonText, buttonUrl } = Astro.props;
   {
     buttonText && buttonUrl && (
       <div class="mt-8">
-        <ButtonLink url={buttonUrl}>{buttonText}</ButtonLink>
+        <Button url={buttonUrl}>{buttonText}</Button>
       </div>
     )
   }
