@@ -45,46 +45,50 @@ const sponsorTiers = tiers
 
 const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
 ---
+
 <Section variant="secondary">
-          <Headline id="sponsors" title="Sponsors & Partners" center=true />
-    <div>
-          {
-            hasSponsors ? (
-              <p class="text-center">
-                EuroPython wouldn't be such an affordable event without the help
-                of the sponsors and partners. We'd like to thank all of them for their
-                support.
-              </p>
-            ) : (
-              <p class="text-center">
-                Sponsoring EuroPython guarantees you highly targeted visibility
-                and the opportunity to present yourself and your sponsor to one
-                of the largest and most diverse Python communities in Europe and
-                beyond.
-              </p>
-            )
-          }
+  <Headline id="sponsors" title="Sponsors & Partners" center="true" />
+  <div class="mb-10">
+    {
+      hasSponsors ? (
+        <p class="text-center">
+          EuroPython wouldn't be such an affordable event without the help of
+          the sponsors and partners. We'd like to thank all of them for their
+          support.
+        </p>
+      ) : (
+        <p class="text-center">
+          Sponsoring EuroPython guarantees you highly targeted visibility and
+          the opportunity to present yourself and your sponsor to one of the
+          largest and most diverse Python communities in Europe and beyond.
+        </p>
+      )
+    }
 
-          <div class="mt-4 text-center">
-            <Button url="/sponsor">Become a sponsor</Button>
-      </div>
-      {
-        topTier && topTier.sponsors.length > 0 && (
-          <SponsorTier tier={topTier} top={true} />
-        )
-      }
+    <div class="mt-4 text-center">
+      <Button url="/sponsor">Become a sponsor</Button>
     </div>
+    {
+      topTier && topTier.sponsors.length > 0 && (
+        <SponsorTier tier={topTier} top={true} />
+      )
+    }
+  </div>
 
-    {sponsorTiers.length > 0 && <Separator light />}
+  {sponsorTiers.length > 0 && <hr />}
 
-    <div class="mb-20">
+  <div class="">
     {
       sponsorTiers.map((tier, index) => (
         <Fragment>
           <SponsorTier tier={tier} top={tier.name === "Platinum"} />
-          {index !== sponsorTiers.length - 1 && <Separator light />}
+          {index !== sponsorTiers.length - 1 && <hr />}
         </Fragment>
       ))
     }
-    </div>
+  </div>
 </Section>
+
+<style>
+  hr {margin: 10px 0;}
+</style>

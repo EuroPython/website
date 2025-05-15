@@ -281,3 +281,48 @@ Barking up the right tree
 <Accordion title="Finnish-speaking dogs" id="finnish">
   ***Hau hau!***
 </Accordion>
+
+## Maps
+<h2>Example 1: Map with Location</h2>
+<Map
+  location="Empire State Building, New York"
+  zoom={15}
+/>
+
+<h2>Example 2: Map with Coordinates (Latitude & Longitude)</h2>
+<Map
+  lat={48.8584}
+  lng={2.2945}
+  zoom={16}
+  title="Eiffel Tower, Paris"
+/>
+
+<h2>Example 3: Map with Default Zoom Level</h2>
+<Map
+  location="Sydney Opera House"
+/>
+
+<h2>Example 4: Map with Custom Title</h2>
+<Map
+  lat={36.1069}
+  lng={-112.1129}
+  zoom={13}
+  title="Grand Canyon"
+/>
+
+<h2>Example 5: Map with All Default Values</h2>
+<Map
+  location="Statue of Liberty, New York"
+/>
+
+<h2>Usage in Layout</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div>
+    <h3>New York</h3>
+    <Map location="New York, NY" />
+  </div>
+  <div>
+    <h3>London</h3>
+    <Map location="London, UK" />
+  </div>
+</div>

@@ -12,7 +12,7 @@ socials:
   linkedin: "https://www.linkedin.com/company/bloomberg"
   twitter: "https://x.com/TechAtBloomberg"
 tier: Platinum
-logo_padding: 20px 10px
+logo_padding: 10px 0px
 
 draft: true
 ---
