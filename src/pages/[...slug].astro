@@ -5,8 +5,7 @@ import Layout from "@layouts/MarkdownLayout.astro";
 import Separator from "@ui/Separator.astro";
 import Map from "@components/Map.astro";
 import YouTube from "@ui/YouTube.astro";
-import HighlightCard from "@components/highlight-list/highlight-card.astro";
-import HighlightItem from "@components/highlight-list/highlight-item.astro";
+import HighlightCard from "@components/markdown/HighlightCard.astro";
 import Note from "@ui/Note.astro";
 import SponsorTiers from "@components/sponsor-tiers/sponsor-tiers.astro";
 import Accordion from "@components/ui/Accordion.astro";
@@ -61,7 +60,6 @@ const description = post.data.subtitle;
         Map,
         YouTube,
         HighlightCard,
-        HighlightItem,
         Note,
         SponsorTiers,
         hr: Separator,
