@@ -2,7 +2,6 @@ import path from "path";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
@@ -48,6 +47,7 @@ export default defineConfig({
         "@layouts": path.resolve("./src/layouts"),
         "@ui": path.resolve("./src/components/ui"),
         "@assets": path.resolve("./src/assets"),
+        "@styles": path.resolve("./src/styles"),
         "@i18n": path.resolve("./src/i18n"),
         "@src": path.resolve("./src"),
       },
@@ -81,7 +81,6 @@ export default defineConfig({
     preload(),
     mdx(),
     sitemap(),
-    react(),
     tailwind({
       nesting: true,
     }),

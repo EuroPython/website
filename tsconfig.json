@@ -3,8 +3,6 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "noImplicitAny": false,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
     "paths": {
       "@utils/*": ["./src/utils/*"],
       "@data/*": ["./src/data/*"],
@@ -13,6 +11,7 @@
       "@ui/*": ["./src/components/ui/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@assets/*": ["./src/assets/*"],
+      "@styles/*": ["./src/styles/*"],
       "@i18n/*": ["./src/i18n/*"],
       "@src/*": ["./src/*"]
     }
