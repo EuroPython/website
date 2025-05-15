@@ -47,26 +47,10 @@ content collections to manage the content. The collections are configure inside
 
 ### Pages
 
-Pages are stored in the `src/content/pages` directory. Each page is a mdx file
+Pages are stored in the `src/content/pages` directory. Each page is a md file
 with frontmatter.
 
 ### Deadlines
 
 Meanwhile, our important deadlines ⏰ are located inside the
 `src/content/deadlines` directory.
-
-## Using Astro Image Component 🖼️
-
-When adding images to the website, please make sure to use astro Image component
-and to specify the width of the image. This will make sure we are optimizing the
-images and not serving large images to the users.
-
-Here is an example:
-
-```jsx
-import { Image } from "astro:assset";
-
-import image from "./image.jpg";
-
-<Image src={image} width={500} />;
-```
