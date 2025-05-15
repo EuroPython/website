@@ -1,8 +1,8 @@
 ---
 const { sessions } = Astro.props;
-import Prose from "../prose/prose.astro";
+import Prose from "@ui/Prose.astro";
 import Tag from "@ui/Tag.astro";
-import SessionSpeakers from "../session-speakers.astro";
+import SessionSpeakers from "./session-speakers.astro";
 
 type Session = {
   data: {
