@@ -62,19 +62,19 @@ const isSpeaker = entries.some((entry) => entry.id === slug);
         ) : (
           <>
             {isSpeaker ? (
-              <p class="text-[#17223A] font-bold">
+              <h2 class="text-[#17223A] font-bold">
                 <a
                   href={`/speaker/${slug}`}
-                  class="text-[#17223A] font-bold hover:underline"
+                  class="text-2xl text-[#17223A] font-bold hover:underline"
                 >
                   {name}
                 </a>
-              </p>
+              </h2>
             ) : (
-              <p class="text-[#17223A] font-bold">{name}</p>
+              <h2 class="text-2xl text-[#17223A] font-bold">{name}</h2>
             )}
             {tagline && (
-              <p class="text-secondary-hover text-lg italic">{tagline}</p>
+              <h3 class="text-secondary-hover text-lg italic">{tagline}</h3>
             )}
           </>
         )

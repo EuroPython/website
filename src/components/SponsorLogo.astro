@@ -28,7 +28,8 @@ const logo = sponsorLogos[sponsor.id];
     {
       website ? (
 
-        <a href={website}>
+        <a href={website} aria-label={`Link to ${title}`}
+>
           <Image
             src={logo}
             alt={`${title} Logo`}
