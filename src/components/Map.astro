@@ -1,4 +1,6 @@
 ---
+import type { HTMLAttributeReferrerPolicy } from 'react';
+
 interface Props {
   location?: string;
   embedCode?: string;
@@ -8,15 +10,8 @@ interface Props {
   zoom?: number;
   mapType?: "roadmap" | "satellite" | "hybrid" | "terrain";
   title?: string;
-  width?: string;
-  maxWidth?: string;
-  aspectRatio?: string;
-  borderWidth?: string;
-  borderColor?: string;
-  rounded?: string;
-  shadow?: string;
   loading?: "eager" | "lazy";
-  referrerPolicy?: string;
+  referrerPolicy?: HTMLAttributeReferrerPolicy;
 }
 
 const {
@@ -64,17 +59,11 @@ else if (location) {
     <iframe
       src={src}
       title={title}
-      class="w-full aspect-video "
-      allowFullScreen={true}
+      class="w-full aspect-video"
+      allowfullscreen={true}
       loading={loading}
-      referrerPolicy={referrerPolicy}
+      referrerpolicy={referrerPolicy}
       style="border:0;"
     ></iframe>
   )}
 </div>
-
-<style>
-  .astro-map-container {
-    width: 100%;
-  }
-</style>
