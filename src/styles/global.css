@@ -246,6 +246,9 @@ p.cross::after {
     --min-fs: 1;
     --max-fs: 1.5;
   }
+  td img {
+    margin: 0;
+  }
 }
 
 h1,
