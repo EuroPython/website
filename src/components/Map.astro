@@ -1,10 +1,80 @@
-  <Fragment is:raw>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10245.064741908278!2d14.4290206!3d50.0625764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4d26855708eb61f7!2sPrague%20Congress%20Centre!5e0!3m2!1sen!2suk!4v1676555813425!5m2!1sen!2suk"
-    title="Map"
-    class="w-full aspect-video max-w-[800px] border-4 border-white rounded-lg shadow-lg"
-    allowFullScreen="true"
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-  </Fragment>
+---
+interface Props {
+  location?: string;
+  embedCode?: string;
+  mapId?: string;
+  lat?: number;
+  lng?: number;
+  zoom?: number;
+  mapType?: "roadmap" | "satellite" | "hybrid" | "terrain";
+  title?: string;
+  width?: string;
+  maxWidth?: string;
+  aspectRatio?: string;
+  borderWidth?: string;
+  borderColor?: string;
+  rounded?: string;
+  shadow?: string;
+  loading?: "eager" | "lazy";
+  referrerPolicy?: string;
+}
+
+const {
+  location,
+  embedCode,
+  mapId,
+  lat,
+  lng,
+  zoom = 14,
+  mapType = "roadmap",
+  title = "Map",
+  loading = "lazy",
+  referrerPolicy = "no-referrer-when-downgrade",
+} = Astro.props;
+
+
+let src = "";
+
+if (embedCode) {
+  const srcMatch = embedCode.match(/src="([^"]+)"/);
+  src = srcMatch ? srcMatch[1] : "";
+}
+else if (lat && lng) {
+  src = `https://maps.google.com/maps?q=${lat},${lng}&z=${zoom}&t=${
+    mapType === "satellite" ? "k" :
+    mapType === "hybrid" ? "h" :
+    mapType === "terrain" ? "p" : "m"
+  }&output=embed`;
+}
+
+else if (mapId) {
+  src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-73.9857!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s${mapId}!2s!5e0!3m2!1sen!2sus!4v1684164357244!5m2!1sen!2sus`;
+}
+else if (location) {
+  src = `https://maps.google.com/maps?q=${encodeURIComponent(location)}&t=${
+    mapType === "satellite" ? "k" :
+    mapType === "hybrid" ? "h" :
+    mapType === "terrain" ? "p" : "m"
+  }&z=${zoom}&output=embed&iwloc=near`;
+}
+---
+
+<div class="astro-map-container w-full aspect-video max-w-[800px] border-4 border-white rounded-lg shadow-lg">
+  {src && (
+    <iframe
+      src={src}
+      title={title}
+      class="w-full aspect-video "
+      allowFullScreen={true}
+      loading={loading}
+      referrerPolicy={referrerPolicy}
+      style="border:0;"
+    ></iframe>
+  )}
+</div>
+
+<style>
+  .astro-map-container {
+    width: 100%;
+  }
+</style>
