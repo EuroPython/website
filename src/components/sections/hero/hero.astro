@@ -1,0 +1,214 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "/public/images/conference_photo.jpg";
+
+import IconWithLabel from "./icon-label.astro";
+import Icon from "@ui/Icon.astro";
+import Button from "@ui/Button.astro";
+
+const action1 = "/tickets";
+const action2 = "/sponsorship/sponsor/";
+---
+
+<section class="relative z-10">
+  <div
+    class="bg-icons full-bleed relative flex flex-col items-center justify-center"
+    style=""
+  >
+    <div class="absolute inset-0 overflow-hidden -z-10">
+      <!-- Left side icons -->
+      <svg
+        class="bg-icon top-[5%] left-[15%] rotate-[23deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >{"{}"}</text
+        ></svg
+      >
+      <svg
+        class="bg-icon top-[30%] left-[5%] rotate-[42deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >#</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[30%] left-[18%] rotate-[15deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >&lt;/&gt;</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[5%] left-[7%] rotate-[10deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text
+          x="10"
+          y="50"
+          font-size="80"
+          font-weight="bold"
+          fill="#A0B7E9"
+          set:html={"..."}
+        /></svg
+      >
+
+      <!-- Right side icons -->
+      <svg
+        class="bg-icon top-[5%] right-[17%] rotate-[30deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >&lt;/&gt;</text
+        ></svg
+      >
+      <svg
+        class="bg-icon top-[30%] right-[6%] rotate-[15deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >:=</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[30%] right-[20%] rotate-[45deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >&gt;&gt;&gt;</text
+        ></svg
+      >
+      <svg
+        class="bg-icon bottom-[5%] right-[8%] rotate-[33deg] xl:block hidden"
+        viewBox="-40 -40 200 200"
+        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+          >ƒ(x)</text
+        ></svg
+      >
+    </div>
+    <div class="prose-xl relative z-10 text-center">
+      <div class="flex items-center space-x-3 p-10 md:mt-20 justify-center">
+        <div class="w-200 h-200 flex items-center justify-center">
+          <img
+            class="h-full block md:w-full lg:w-[200px] pr-3 lg:pr-8"
+            src="/logo.png"
+            height="188"
+            width="188"
+          />
+        </div>
+        <h1
+          class="text-5xl md:text-8xl lg:text-9xl m-0 font-bold text-[#17223A]"
+        >
+          EuroPython
+        </h1>
+      </div>
+      <p
+        class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 mt-2"
+      >
+        Discover the latest Python trends, learn from 180+ expert speakers,
+        network with fellow developers, enjoy social events, and explore open
+        spaces to spark new ideas.
+      </p>
+    </div>
+    <!-- First 2x1 Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-10">
+      <div>
+        <IconWithLabel icon="map-pin" label="Prague, Czech Republic" />
+      </div>
+      <div>
+        <IconWithLabel icon="calendar-days" label="14-20 July, 2025" />
+      </div>
+    </div>
+
+    <!-- Second 2x1 Grid with Action Buttons -->
+    <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
+      <div>
+        <Button secondary url={action1}> Register Now </Button>
+      </div>
+      <div class="btn-outline">
+        <Button outline url={action2}> Call for Sponsors </Button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="bluebox full-bleed relative flex flex-col items-center justify-center"
+    style=""
+  >
+    <div class="bluebox-shift">
+      <div class="hero-image overflow-hidden -mt-12">
+        <!-- Image with Rounded Corners and Shadow -->
+        <div class="px-5 md:px-10 md:m-10">
+          <Image
+            src={heroImage}
+            alt="EuroPython 2025 Hero Image"
+            class="w-full max-w-5xl lg:max-w-full h-auto lg:h-full rounded-2xl shadow-xl"
+          />
+        </div>
+      </div>
+      <!-- 3x1 Grid with Conference Stats -->
+      <div
+        class="stats flex flex-wrap flex-col md:flex-row justify-around items-center"
+      >
+        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
+          >
+            <Icon name="calendar-days" size="fa-3x" />
+          </div>
+          <div>
+            <h3 class="text-2xl md:text-5xl font-bold">7</h3>
+            <p class="text-xl md:text-3xl">Days</p>
+          </div>
+        </div>
+        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
+          >
+            <Icon name="users" size="fa-3x" />
+          </div>
+          <div>
+            <h3 class="text-2xl md:text-5xl font-bold">1.3k+</h3>
+            <p class="text-xl md:text-3xl">Attendees</p>
+          </div>
+        </div>
+        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
+          >
+            <Icon name="comments" size="fa-3x" />
+          </div>
+          <div>
+            <h3 class="text-2xl md:text-5xl font-bold">180+</h3>
+            <p class="text-xl md:text-3xl">Speakers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .bg-icons {
+      min-height: 600px;
+      padding-bottom: 150px;
+    }
+    .bg-icon {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      opacity: 0.7;
+    }
+    .bluebox {
+      background-color: #d4d5e5;
+      z-index: -2;
+    }
+    .bluebox-shift {
+      position: relative;
+      top: -100px;
+    }
+    .stats {
+      position: relative;
+      top: 10px;
+    }
+
+    .full-bleed {
+      width: 100%;
+      grid-column: 1 / 4;
+    }
+  </style>
+</section>

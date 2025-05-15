@@ -1,8 +1,8 @@
 ---
 import Button from "@ui/Button.astro";
 import { Image } from "astro:assets";
-import pragueImage from "@assets/prague2.jpg";
-import Logo from "@assets/prague.svg";
+import pragueImage from "/public/prague2.jpg";
+import Logo from "/public/prague.svg";
 import Headline from "@ui/Headline.astro";
 import Section from "@ui/Section.astro"
 ---
@@ -37,7 +37,7 @@ import Section from "@ui/Section.astro"
 </article>
 </Section>
 
-<div class="city full-bleed " id="one">
+<div class="city" id="one">
   <Logo />
 </div>
 
@@ -51,7 +51,8 @@ import Section from "@ui/Section.astro"
   .city {
     position: relative;
     top: 0;
-    width: 100vw;
+    width: 100%;
+    grid-column: 1 / 4;
   }
   .city svg {
     width: 100vw;
@@ -59,4 +60,5 @@ import Section from "@ui/Section.astro"
     bottom: -4px;
     z-index: 1;
   }
+
 </style>
