@@ -1,6 +1,6 @@
 ---
 import Button from "@ui/Button.astro";
-import { Title } from "../typography/title";
+import Headline from "@ui/Headline.astro";
 
 interface Props {
   title: string;
@@ -13,7 +13,7 @@ const { title, subtitle, buttonText, buttonUrl } = Astro.props;
 ---
 
 <div class="py-12 text-center">
-  <Title level={1} className="mb-4">{title}</Title>
+  <Headline {title} />
   <p class="text-2xl max-w-3xl mx-auto mb-8">{subtitle}</p>
 
   {
