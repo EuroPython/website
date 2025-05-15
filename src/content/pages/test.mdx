@@ -283,21 +283,13 @@ Barking up the right tree
 </Accordion>
 
 ## Maps
-
 <h2>Example 1: Map with Location</h2>
 <Map
   location="Empire State Building, New York"
   zoom={15}
 />
 
-<h2>Example 2: Map with Location and Custom Map Type</h2>
-<Map
-  location="Grand Canyon, Arizona"
-  mapType="satellite"
-  zoom={12}
-/>
-
-<h2>Example 3: Map with Coordinates (Latitude & Longitude)</h2>
+<h2>Example 2: Map with Coordinates (Latitude & Longitude)</h2>
 <Map
   lat={48.8584}
   lng={2.2945}
@@ -305,55 +297,22 @@ Barking up the right tree
   title="Eiffel Tower, Paris"
 />
 
-<h2>Example 4: Map with Coordinates and Terrain Map Type</h2>
+<h2>Example 3: Map with Default Zoom Level</h2>
+<Map
+  location="Sydney Opera House"
+/>
+
+<h2>Example 4: Map with Custom Title</h2>
 <Map
   lat={36.1069}
   lng={-112.1129}
-  mapType="terrain"
   zoom={13}
   title="Grand Canyon"
 />
 
-<h2>Example 5: Map with Hybrid Map Type</h2>
-<Map
-  location="Sydney Opera House"
-  mapType="hybrid"
-  zoom={17}
-/>
-
-<h2>Example 6: Map with Map ID</h2>
-<Map
-  mapId="0x89c259a944867e5b:0xb2c96748fa5e9cf"
-  title="Central Park, New York"
-/>
-
-<h2>Example 7: Map with Embed Code from Google Maps</h2>
-<Map
-  embedCode='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937586!2d2.2922926156740954!3d48.858370079287475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1621536319249!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'
-  title="Eiffel Tower Embed"
-/>
-
-<h2>Example 8: Map with Loading Performance Options</h2>
-<Map
-  location="Golden Gate Bridge, San Francisco"
-  loading="eager"
-  referrerPolicy="strict-origin"
-/>
-
-<h2>Example 9: Map with All Default Values</h2>
+<h2>Example 5: Map with All Default Values</h2>
 <Map
   location="Statue of Liberty, New York"
-/>
-
-<h2>Example 10: Full Custom Configuration</h2>
-<Map
-  lat={40.7484}
-  lng={-73.9857}
-  zoom={16}
-  mapType="hybrid"
-  title="Empire State Building"
-  loading="eager"
-  referrerPolicy="no-referrer"
 />
 
 <h2>Usage in Layout</h2>
