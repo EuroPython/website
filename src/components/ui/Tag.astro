@@ -1,11 +1,10 @@
 ---
 interface Props {
-  children: any;
   className?: string;
   href?: string;
 }
 
-const { children, className = "", href } = Astro.props;
+const { className = "", href } = Astro.props;
 
 const baseClasses = [
   "inline-block bg-secondary-light text-white px-4 py-2 rounded-xl font-bold",
