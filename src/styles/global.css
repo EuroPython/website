@@ -45,11 +45,6 @@ body {
   grid-column: 2;
 }
 
-.full-bleed {
-  width: 100%;
-  grid-column: 1 / 4;
-}
-
 .prose :is(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none !important;
 }
