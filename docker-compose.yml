@@ -9,8 +9,8 @@ services:
     environment:
       - ASTRO_TELEMETRY_DISABLED=1
     volumes:
-      - .:/app            
-      - node_modules:/app/node_modules  
+      - .:/app
+      - node_modules:/app/node_modules
 
 volumes:
   node_modules:
