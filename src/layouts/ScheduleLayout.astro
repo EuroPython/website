@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Section from "@ui/Section.astro";
+import Note from "@ui/Note.astro";
 
 export interface Props {
   title?: string;
@@ -16,10 +17,7 @@ const { title, description } = Astro.props;
   </Fragment>
   <Section>
 
-    <p class="bg-[rgb(255,252,204)] text-[rgb(153,101,21)] border-l-4 border-[rgb(255,204,0)] p-4 text-sm flex items-center space-x-2">
-      <i class="fas fa-exclamation-triangle"></i>
-      <span><strong>Important:</strong> This is an early version of the schedule and may still change. If you're planning travel around specific sessions, please keep that in mind.</span>
-    </p>
+    <Note type="warning">This is an early version of the schedule and may still change. If you're planning travel around specific sessions, please keep that in mind.</Note>
 
     <div class="layout-wrapper2">
       <slot />

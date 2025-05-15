@@ -45,11 +45,6 @@ body {
   grid-column: 2;
 }
 
-.full-bleed {
-  width: 100%;
-  grid-column: 1 / 4;
-}
-
 .prose :is(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none !important;
 }
@@ -75,6 +70,11 @@ body {
   box-shadow:
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.prose .no-border img {
+  border: 0;
+  box-shadow: none;
 }
 
 ul.milestone-done li {
@@ -107,11 +107,6 @@ img.findaid-accent-round-marker {
 
 table.finaid-timeline td {
   padding-bottom: 1rem;
-}
-
-div.finaid-sponsor {
-  width: 50%;
-  margin: 0 auto 2rem auto;
 }
 
 summary h4::after {
@@ -245,6 +240,14 @@ p.cross::after {
     /* 16px, 24px */
     --min-fs: 1;
     --max-fs: 1.5;
+  }
+  td img {
+    margin: 0;
+  }
+  .button-link {
+    display: block;
+    width: max-content;
+    margin: 8px auto;
   }
 }
 
