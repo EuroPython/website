@@ -12,6 +12,7 @@ services:
     volumes:
       - .:/app
       - node_modules:/app/node_modules
+      - .pnpm-store:/app/.pnpm-store
 
 volumes:
   node_modules:
