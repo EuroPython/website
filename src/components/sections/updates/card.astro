@@ -16,7 +16,6 @@ const { title, subtitle, url, image } = Astro.props;
 <div
   class="prose-xl min-w-[250px] w-full md:w-[40%] lg:w-[30%] p-4 bg-[#D5D6E6] rounded-2xl text-center flex flex-col"
 >
-  <a href={url} class="block">
     <div class="relative w-full">
       <Image
         src={image}
@@ -27,11 +26,8 @@ const { title, subtitle, url, image } = Astro.props;
         loading="lazy"
       />
     </div>
-  </a>
   <div class="flex items-center flex-col flex-grow mb-2">
-    <a href={url} class="button-link block hover:underline">
-      <h3 >{title}</h3>
-    </a>
+    <h3 >{title}</h3>
     <slot />
   </div>
 

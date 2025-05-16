@@ -2,14 +2,20 @@
   --color-primary: #151f38;
   --color-primary-hover: #7a7ebd;
   --color-primary-active: #7a7ebd;
-  --color-button: #ee714b;
-  --color-button-hover: #fabc1b;
+
+  --color-button: #6b5ca5; /* Darker orange-brown */
+  --color-button-hover: #8572c6; /* Lighter than base, but still accessible */
+  --color-button-active: #514689; /* Darker for pressed state */
+  --color-button-focus: #9c4222; /* Same as base with a visible outline */
+  --color-button-disabled: #b7b2c7; /* Desaturated, lighter version */
+  --color-button-text: #fdfdfd; /* White text on all states */
+
   --color-secondary: #151f38;
   --color-secondary-dark: #f5e5d6;
   --color-secondary-darkest: white;
   --color-secondary-light: #7a7ebd;
   --color-text: #151f38;
-  --color-text-inverted: white;
+  --color-text-inverted: #fdfdfd;
   --color-body-background: #f5e5d6;
   --color-hero-primary: #151f38;
   --color-hero-secondary: #fabc1b;

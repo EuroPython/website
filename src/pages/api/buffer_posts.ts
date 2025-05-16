@@ -16,12 +16,6 @@ function getBlueskyUsername(url: string): string | undefined {
 }
 
 // Get Bluesky profile link from username
-function getBlueskyProfileLink(username: string): string {
-  // Remove any leading @ if present
-  const cleanUsername = username.replace(/^@/, "");
-  return `https://bsky.app/profile/${cleanUsername}`;
-}
-
 // Get @username@instance.tld from Mastodon URL
 function getMastodonUsername(url: string): string | undefined {
   if (!url) return undefined;
@@ -42,7 +36,7 @@ function getLinkedInUsernameHandler(url: string): string | undefined {
   return undefined;
 }
 
-export const GET: APIRoute = async ({ params, request }) => {
+export const GET: APIRoute = async () => {
   const limit = Infinity;
   const speakers = await getCollection("speakers");
   const exclude = [
@@ -64,7 +58,7 @@ export const GET: APIRoute = async ({ params, request }) => {
 
   // Tailor message templates for each platform using appropriate handle formats
   const message_template = {
-    instagram: ({ name, talkTitle, talkUrl }) =>
+    instagram: ({ name, talkTitle }) =>
       `Join ${name} at EuroPython for "${talkTitle}".`,
 
     x: ({ name, handle, talkTitle, talkUrl }) =>
@@ -72,7 +66,7 @@ export const GET: APIRoute = async ({ params, request }) => {
         ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". Talk: ${talkUrl}`
         : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
 
-    linkedin: ({ name, handle, talkTitle, talkUrl }) =>
+    linkedin: ({ name, talkTitle }) =>
       `Join ${name} at EuroPython for "${talkTitle}".`,
 
     bsky: ({ name, handle, talkTitle, talkUrl }) =>

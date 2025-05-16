@@ -14,7 +14,7 @@ const { href, variant = "standard" } = Astro.props;
     {
       "bg-text": variant === "menu",
       "bg-primary": variant === "standard",
-      "text-text-inverted": variant !== "live",
+      "text-text": variant !== "live",
       "bg-red": variant === "live",
     },
   ]}

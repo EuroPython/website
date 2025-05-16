@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../layouts/Layout.astro";
-import Prose from "../components/prose/prose.astro";
+import Layout from "@layouts/Layout.astro";
+import Prose from "@ui/Prose.astro";
 import Headline from "@ui/Headline.astro"
-import Filter from "../components/sessions/filter.astro";
-import ListSessions from "../components/sessions/list-sessions.astro";
+import Filter from "@components/sessions/filter.astro";
+import ListSessions from "@components/sessions/list-sessions.astro";
 import Section from "@ui/Section.astro";
 
 const sessions = await getCollection("sessions");

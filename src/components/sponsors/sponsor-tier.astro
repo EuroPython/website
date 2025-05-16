@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import SponsorLogo from "@components/SponsorLogo.astro";
-import { Image } from "astro:assets";
 
 type Sponsor = Awaited<ReturnType<typeof getCollection<"sponsors">>>[0];
 
@@ -14,20 +13,17 @@ export interface Props {
   top?: boolean;
 }
 
-
-import { sponsorLogos } from "@data/sponsorLogos";
-
 const { tier, top } = Astro.props;
 ---
 
 <div class="relative">
-  <h4 class="absolute w-10 font-bold top-0 bottom-0 font-title text-primary">
+  <h3 class="absolute w-10 font-bold top-0 bottom-0 font-title text-primary">
     <span
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 block origin-center whitespace-nowrap"
     >
       {tier.name}
     </span>
-  </h4>
+  </h3>
   <div
     class:list={[
       "grid ml-12 items-center justify-items-center",
@@ -39,15 +35,7 @@ const { tier, top } = Astro.props;
   >
     {
       tier.sponsors.map((sponsor) => (
-        <div>
-        <a
-          href={sponsor.data.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <SponsorLogo sponsor={sponsor.id} />
-        </a>
-        </div>
       ))
     }
   </div>

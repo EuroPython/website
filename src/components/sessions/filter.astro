@@ -6,8 +6,8 @@ interface FilterSessionsProps {
 }
 
 const { allTracks = [], allTypes = [], allLevels = [] }: FilterSessionsProps = Astro.props;
-import { Label } from "../form/label";
-import { Select } from "../form/select";
+import Label from "@ui/Label.astro";
+import Select from "@ui/Select.astro";
 ---
 
 <form class="mb-12 filter-sessions">

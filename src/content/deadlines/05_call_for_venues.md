@@ -1,6 +1,6 @@
 ---
 title: Call for 2026 Venues
-subtitle: Read More
+subtitle: Propose a Venue
 url: https://europython-society.org/call-for-europython-2026-host-venues
 image: "./venue.jpg"
 ---

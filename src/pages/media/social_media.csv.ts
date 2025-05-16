@@ -1,5 +1,5 @@
 import { getCollection, getEntry } from "astro:content";
-export async function GET({ params, request }) {
+export async function GET() {
   const speakers = await getCollection("speakers");
 
   const header = [

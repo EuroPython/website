@@ -9,11 +9,13 @@ const isCenter = center ? "text-center" : "";
 ---
 
 <Tag id={isAnchor ? id : undefined} class={`${isCenter} py-4 font-bold max-w-[90vw]`}>
-  {isAnchor && (
+  {isAnchor ? (
     <a href={`#${id}`} aria-label={`Jump to ${id}`}>
       {Title}
     </a>
-  )}
+    ):
+    <>{Title}</>
+    }
   {isLink && <a aria-label="Read more about {Title}" href={href} class="hover:underline">{Title}</a> }
 </Tag>
 
