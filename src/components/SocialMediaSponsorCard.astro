@@ -1,17 +1,8 @@
 ---
 import { getEntry } from "astro:content";
-import SponsorLogo from "@components/SponsorLogo.astro";
-import { Image } from "astro:assets";
 import { sponsorLogos } from "@data/sponsorLogos";
-import { ta } from "date-fns/locale";
 
-const { slug:sponsorId } = Astro.props;
-
-const sponsor = await getEntry("sponsors", sponsorId);
-
-if (!sponsor) {
-  throw new Error(`Sponsor with ID "${sponsorId}" not found`);
-}
+const { sponsor } = Astro.props;
 
 const {
   name: title,
@@ -25,7 +16,7 @@ const logo = sponsorLogos[sponsor.id];
 const targetWidth = 400;
 const aspectRatio = logo.width / logo.height;
 const targetHeight = targetWidth / aspectRatio;
-const maxHeight = 240;
+const maxHeight = 220;
 const realHeight = targetHeight < maxHeight? targetHeight : maxHeight;
 
 const x = 650 - targetWidth/ 2;
@@ -50,6 +41,8 @@ const y = 650 - realHeight / 2;
        m 885 885 l -240 0 a 240 240 0 0 1 -240 -240 a 240 240 0 0 1 240 -240 a 240 240 0 0 1 240 240 z
        "
     fill="white"
+    stroke="#F5B91A"
+    stroke-width="8"
   />
 
 <image

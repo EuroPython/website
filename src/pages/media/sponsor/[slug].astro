@@ -1,19 +1,17 @@
 ---
-import { getCollection} from "astro:content";
+import { getEntry, getCollection} from "astro:content";
 import SocialMediaSponsorCard from "@components/SocialMediaSponsorCard.astro";
-import { slugify } from "@utils/content";
-
-
 
 export async function getStaticPaths() {
   const entries = await getCollection("sponsors");
   return entries.map((entry) => ({
-    params: { slug: slugify(entry.data.name)},
+    params: { slug: entry.id},
     props: { entry },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry:sponsor } = Astro.props;
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -28,9 +26,9 @@ const { entry } = Astro.props;
   </head>
   <body class="overflow-auto">
 {
-  entry &&
+  sponsor &&
     <div class="social relative w-[900px] h-[900px] overflow-hidden">
-      <SocialMediaSponsorCard entry={entry} slug={slugify(entry.data.name)} />
+      <SocialMediaSponsorCard {sponsor} />
     </div>
 }
 
@@ -87,7 +85,7 @@ fitAllText();
 window.addEventListener('resize', fitAllText);
 </script>
 
-<script is:inline define:vars={{slug: entry.data.slug}}>
+<script is:inline define:vars={{slug: sponsor.id}}>
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.social').forEach((socialDiv, index) => {
 

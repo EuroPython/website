@@ -1,6 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import SocialMediaSponsorCard from "@components/SocialMediaSponsorCard.astro";
+import { slugify } from "@utils/content";
 
 
 const sponsors = await getCollection("sponsors");
@@ -19,10 +20,10 @@ type Sponsor = CollectionEntry<"sponsors">;
   </head>
   <body class="overflow-auto">
 {
-  sponsors.map((entry: Sponsor) => (
-  <a href=`/media/card/${entry.data.slug}`>
-  <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={entry.data.slug}>
-      <SocialMediaSponsorCard slug={entry.id} />
+  sponsors.map((sponsor: Sponsor) => (
+  <a href=`/media/sponsor/${sponsor.id}`>
+  <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={sponsor.id}>
+      <SocialMediaSponsorCard {sponsor} />
     </div>
     </a>
   ))
