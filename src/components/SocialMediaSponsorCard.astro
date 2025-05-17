@@ -14,13 +14,22 @@ const {
 const logo = sponsorLogos[sponsor.id];
 // Assuming logo.width and logo.height are known
 const targetWidth = 400;
-const aspectRatio = logo.width / logo.height;
-const targetHeight = targetWidth / aspectRatio;
-const maxHeight = 220;
-const realHeight = targetHeight < maxHeight? targetHeight : maxHeight;
+const originalWidth = logo.width;
+const originalHeight = logo.height;
+const aspectRatio = originalWidth / originalHeight;
 
-const x = 650 - targetWidth/ 2;
-const y = 650 - realHeight / 2;
+let width = targetWidth;
+let height = width / aspectRatio;
+
+const maxHeight = 220;
+if (height > maxHeight) {
+  height = maxHeight;
+  width = height * aspectRatio; // adjust width to maintain aspect ratio
+}
+
+const x = 650 - width / 2;
+const y = 650 - height / 2;
+
 ---
 <svg width="900" height="900" class="h-full w-full -z-10">
   <image href="/social/bg.png" width="900" height="900" />
@@ -50,11 +59,11 @@ const y = 650 - realHeight / 2;
   href={logo.src}
   x={x}
   y={y}
-  width={targetWidth}
-  height={realHeight}
-            style={{
-              padding: logo_padding ? logo_padding : undefined,
-            }}
+  width={width}
+  height={height}
+  style={{
+    padding: logo_padding ? logo_padding : undefined,
+  }}
   clip-path="url(#curvedCornerClip)"
   preserveAspectRatio="xMidYMid meet"
 />
