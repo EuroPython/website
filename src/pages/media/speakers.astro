@@ -20,7 +20,7 @@ type Speaker = CollectionEntry<"speakers">;
   <body class="overflow-auto">
 {
   speakers.map((entry: Speaker) => (
-  <a href=`/media/card/${entry.data.slug}`>
+  <a href=`/media/speaker/${entry.data.slug}`>
   <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={entry.data.slug}>
       <SocialMediaCard entry={entry} />
     </div>
