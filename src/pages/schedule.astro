@@ -34,35 +34,15 @@ window.addEventListener('load', function() {
 
     if (!currentAnchor) return;
 
-    const targetElement = document.getElementById(currentAnchor);
-
-    const targetByName = targetElement || document.querySelector(`[name="${currentAnchor}"]`);
-
-    let targetH2;
-
-    if (targetByName && targetByName.tagName === 'H2') {
-      targetH2 = targetByName;
-    } else if (targetByName) {
-      const h2InTarget = targetByName.querySelector('h2');
-      if (h2InTarget) {
-        targetH2 = h2InTarget;
-      }
-    } else {
-      const allH2s = document.querySelectorAll('h2');
-      for (const h2 of allH2s) {
-        if (h2.id === currentAnchor || h2.getAttribute('name') === currentAnchor) {
-          targetH2 = h2;
-          break;
-        }
-      }
-    }
+    const allMatching = document.querySelectorAll(`h2#${currentAnchor}`);
+    const targetH2 = allMatching[allMatching.length - 1];
 
     if (targetH2) {
-      const parentElement = targetH2.parentElement;
+      const parentElement: any = targetH2.parentElement;
 
       if (parentElement) {
         const originalBorder = parentElement.style.border;
-        const originalBorderRadius = parentElement.style.borderRadius;
+        const originalBackground = parentElement.style.background;
 
         let blinkCount = 0;
         const maxBlinks = 5;
@@ -71,7 +51,7 @@ window.addEventListener('load', function() {
         function toggleBorder() {
           if (blinkCount >= maxBlinks * 2) {
             parentElement.style.border = originalBorder;
-            parentElement.style.back = originalBorder;
+            parentElement.style.background = originalBackground;
             return;
           }
 
@@ -80,7 +60,7 @@ window.addEventListener('load', function() {
             parentElement.style.background = 'white';
           } else {
             parentElement.style.border = originalBorder;
-            parentElement.style.background = originalBorder;
+            parentElement.style.background = originalBackground;
           }
 
           blinkCount++;
