@@ -1,0 +1,133 @@
+---
+import { getEntry } from "astro:content";
+import SponsorLogo from "@components/SponsorLogo.astro";
+import { Image } from "astro:assets";
+import { sponsorLogos } from "@data/sponsorLogos";
+import { ta } from "date-fns/locale";
+
+const { slug:sponsorId } = Astro.props;
+
+const sponsor = await getEntry("sponsors", sponsorId);
+
+if (!sponsor) {
+  throw new Error(`Sponsor with ID "${sponsorId}" not found`);
+}
+
+const {
+  name: title,
+  url: website,
+  logo_padding = false,
+} = sponsor.data;
+
+
+const logo = sponsorLogos[sponsor.id];
+// Assuming logo.width and logo.height are known
+const targetWidth = 400;
+const aspectRatio = logo.width / logo.height;
+const targetHeight = targetWidth / aspectRatio;
+const maxHeight = 240;
+const realHeight = targetHeight < maxHeight? targetHeight : maxHeight;
+
+const x = 650 - targetWidth/ 2;
+const y = 650 - realHeight / 2;
+---
+<svg width="900" height="900" class="h-full w-full -z-10">
+  <image href="/social/bg.png" width="900" height="900" />
+</svg>
+    <svg width="900" height="900">
+      <defs>
+        <clipPath id="curvedCornerClip">
+          <path
+            d="
+               m 885 885 l -240 0 a 240 240 0 0 1 -240 -240 a 240 240 0 0 1 240 -240 a 240 240 0 0 1 240 240 z
+               "
+          />
+        </clipPath>
+      </defs>
+
+        <path
+    d="
+       m 885 885 l -240 0 a 240 240 0 0 1 -240 -240 a 240 240 0 0 1 240 -240 a 240 240 0 0 1 240 240 z
+       "
+    fill="white"
+  />
+
+<image
+  class="sponsor_logo"
+  href={logo.src}
+  x={x}
+  y={y}
+  width={targetWidth}
+  height={realHeight}
+            style={{
+              padding: logo_padding ? logo_padding : undefined,
+            }}
+  clip-path="url(#curvedCornerClip)"
+  preserveAspectRatio="xMidYMid meet"
+/>
+    </svg>
+<p
+  class="box fit-text"
+>
+Thank you to our sponsor
+</p>
+
+<p lang="en" class="box2 fit-text">
+{title}
+</p>
+
+
+<style>
+  .box {
+      margin-top:250px;
+      width: 630px;
+      height: 150px;
+      font-size: 100px;
+      color: rgb(239, 215, 123);
+      padding: 1rem;
+  }
+
+  .box2 {
+
+      width: 420px;
+      height: 200px;
+      font-size: 70px;
+      color:white;
+      padding: 2rem;
+  }
+
+  .box3 {
+      margin-top:280px;
+      width: 800px;
+      height: 300px;
+      font-size: 100px;
+      color: rgb(239, 215, 123);
+      padding: 1rem;
+  }
+
+  .box4 {
+
+      width: 580px;
+      height: 200px;
+      font-size: 70px;
+      color:white;
+      padding: 2rem;
+  }
+
+
+  .box, .box2, .box3, .box4 {
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: Inter, sans-serif !important;
+      font-weight: bold;
+      line-height: 1em;
+    }
+
+  .sponsor_logo {
+    max-height:120px;
+  }
+</style>
