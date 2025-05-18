@@ -15,6 +15,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.2.6",
     "@astrojs/sitemap": "^3.3.1",
+    "@astrojs/svelte": "^7.0.13",
     "@astrojs/tailwind": "^5.1.5",
     "@fontsource-variable/inter": "^5.2.5",
     "@fortawesome/fontawesome-free": "^6.7.2",
@@ -36,6 +37,7 @@
     "rehype-slug": "^6.0.0",
     "remark-toc": "^9.0.0",
     "sharp": "^0.34.1",
+    "svelte": "^5.30.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   },

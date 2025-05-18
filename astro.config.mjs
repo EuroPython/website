@@ -14,6 +14,8 @@ import { execSync } from "node:child_process";
 
 import compress from "astro-compress";
 
+import svelte from "@astrojs/svelte";
+
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
 
 if (!gitVersion) {
@@ -89,6 +91,7 @@ export default defineConfig({
     metaTags(),
     pagefind(),
     deleteUnusedImages(),
+    svelte(),
     compress(),
   ],
   output: "static",
