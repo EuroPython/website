@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Headline from "@ui/Headline.astro";
 import Section from "@ui/Section.astro"
+import CodeHeart from "@components/island/CodeHeart.svelte";
 
 
 export async function getStaticPaths() {
@@ -249,6 +250,13 @@ function getGitHosting(url: string): string | undefined {
             >
               {session.data.title}
             </a>
+
+  <CodeHeart
+    client:load
+    mini={true}
+    codeId={session.data.code}
+    title={session.data.title}
+  />
           </li>
         ))
       }
