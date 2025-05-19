@@ -1,10 +1,12 @@
 ---
+import CodeHeart from "@components/island/CodeHeart.svelte";
 import Speakers from "./speakers.astro";
 import { slugify } from "@utils/content";
 
 export interface props {
   style: any;
   session: {
+    code: string;
     slug?: string;
     title: string;
     start: Date;
@@ -25,7 +27,10 @@ const hasSpeakers = session.speakers && session.speakers.length > 0;
 const hasFooter = true;
 ---
 
-<div class:list={["session", session.level, slugify(session.sessionType)]} style={style}>
+<div
+  class:list={["session", session.level, slugify(session.sessionType)]}
+  style={style}
+>
   <!--
   <header>
     {
@@ -46,16 +51,16 @@ const hasFooter = true;
     }
     </header>
     -->
-    <header>
-
-        {session.rooms.length === 1 && (
-          <div class="room-info">
-            <span class="sr-only">Room:</span>
-            {session.rooms && session.rooms.join(", ")}
-          </div>
-        )}
-    </header>
-
+  <header>
+    {
+      session.rooms.length === 1 && (
+        <div class="room-info">
+          <span class="sr-only">Room:</span>
+          {session.rooms && session.rooms.join(", ")}
+        </div>
+      )
+    }
+  </header>
 
   <!--   <div class="time">
     <span class="sr-only">Session start:</span>
@@ -69,7 +74,15 @@ const hasFooter = true;
   </div>
   -->
 
-  <h2>{session.title}</h2>
+  <CodeHeart
+    client:load
+    mini={true}
+    codeId={session.code}
+    title={session.title}
+  />
+  <h2>
+    {session.title}
+  </h2>
 
   {
     hasFooter && (
@@ -79,7 +92,6 @@ const hasFooter = true;
             <Speakers speakers={session.speakers} />
           </>
         )}
-
       </footer>
     )
   }
@@ -91,7 +103,6 @@ const hasFooter = true;
 
 <style>
   .session {
-
     border: 1px solid transparent;
     font-weight: bold;
     display: flex;
@@ -114,8 +125,7 @@ const hasFooter = true;
 
   .room-info {
     display: block;
-    text-align:center;
-
+    text-align: center;
 
     @media screen and (min-width: 800px) {
       display: none;
@@ -133,7 +143,6 @@ const hasFooter = true;
     bottom: 0;
     left: 0;
     z-index: 1;
-
   }
 
   footer :global(a) {
@@ -145,9 +154,9 @@ const hasFooter = true;
     header {
       /*text-align:right;*/
     }
-    .session h2{
-      padding:0 8px ;
-      margin:0;
+    .session h2 {
+      padding: 0 8px;
+      margin: 0;
     }
 
     .session > .time {
@@ -193,10 +202,9 @@ const hasFooter = true;
       in srgb,
       var(--color-body-background),
       white 50%
-        );
-    border: 1px solid #E9714D;
+    );
+    border: 1px solid #e9714d;
   }
-
 
   .time,
   footer {
@@ -212,7 +220,7 @@ const hasFooter = true;
 
   h2 {
     margin-bottom: 1em;
-    height:100%;
+    height: 100%;
   }
 
   footer.has-speakers {
@@ -235,6 +243,6 @@ const hasFooter = true;
   }
 
   .poster header {
-    text-align:center
+    text-align: center;
   }
 </style>
