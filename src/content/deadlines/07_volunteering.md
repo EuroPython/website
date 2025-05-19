@@ -5,7 +5,7 @@ url: /volunteers
 image: "./volunteers-2024.jpg"
 ---
 
-EuroPython would be nothing without the smiley faces of our volunteers!
-Check out our volunteering registration process & perks and, if you
-are interested, help us deliver the oldest and longest running volunteer-led
-Python programming conference on the planet!
+EuroPython would be nothing without the smiley faces of our volunteers! Check
+out our volunteering registration process & perks and, if you are interested,
+help us deliver the oldest and longest running volunteer-led Python programming
+conference on the planet!
