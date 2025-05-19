@@ -1,4 +1,4 @@
-const cacheName = "cache2";
+const cacheName = "cache7";
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
@@ -9,6 +9,8 @@ self.addEventListener("install", (event) => {
         "/",
         "favicon.ico",
         "index.html",
+        "schedule/talks/index.html",
+        "schedule/speakers/index.html",
         "main.js",
         "manifest.json",
         "style.css",

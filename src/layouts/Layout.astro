@@ -2,7 +2,7 @@
 import BaseHead from "@components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-
+import Offline from "@components/Offline.astro";
 
 import "@src/styles/global.css";
 import "@src/styles/search.css";
@@ -33,20 +33,20 @@ const externalDomain = new URL(Astro.site || "").hostname;
     <meta name="theme-color" content="#6200ee" />
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     </Fragment>
-
+  </head>
   <body>
       <header>
         <Header />
       </header>
 
       <main class="main pt-28" role="main">
+      <Offline />
         <slot />
       </main>
 
       <footer>
         <Footer />
       </footer>
-
 
   </body>
 </html>
