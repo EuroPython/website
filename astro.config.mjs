@@ -11,7 +11,6 @@ import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 import preload from "astro-preload";
 import { execSync } from "node:child_process";
-import basicSsl from "@vitejs/plugin-basic-ssl";
 
 import compress from "astro-compress";
 
@@ -32,10 +31,6 @@ if (!gitVersion) {
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [basicSsl()],
-    server: {
-      https: true,
-    },
     define: {
       __TIMESTAMP__: JSON.stringify(
         new Date()
