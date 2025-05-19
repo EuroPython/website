@@ -2,7 +2,7 @@
   "name": "EuroPython 2025",
   "short_name": "EP2025",
   "display": "standalone",
-  "start_url": "./?utm_source=pwa_install",
+  "start_url": "./schedule/?utm_source=pwa",
   "lang": "en",
   "scope": ".",
   "background_color": "#6200ee",
