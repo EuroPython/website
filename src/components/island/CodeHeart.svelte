@@ -1,7 +1,6 @@
 <script>
   import { onMount } from 'svelte';
 
-  // Component props
   export let mini = false;
   export let codeId = "";
   export let code = codeId;
