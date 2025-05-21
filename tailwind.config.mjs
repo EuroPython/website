@@ -54,7 +54,6 @@ export default {
       fontFamily: {
         system: ["system-ui", "sans-serif"],
         title: [
-          "Satoshi",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
@@ -67,7 +66,6 @@ export default {
           "Segoe UI Symbol",
         ],
         sans: [
-          "Satoshi",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
