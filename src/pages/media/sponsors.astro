@@ -1,10 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-import SocialMediaCard from "@components/SocialMediaCard.astro";
+import SocialMediaSponsorCard from "@components/SocialMediaSponsorCard.astro";
 
 
-const speakers = await getCollection("speakers");
-type Speaker = CollectionEntry<"speakers">;
+const sponsors = await getCollection("sponsors");
+type Sponsor = CollectionEntry<"sponsors">;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,10 +19,10 @@ type Speaker = CollectionEntry<"speakers">;
   </head>
   <body class="overflow-auto">
 {
-  speakers.map((entry: Speaker) => (
-  <a href=`/media/card/${entry.data.slug}`>
-  <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={entry.data.slug}>
-      <SocialMediaCard entry={entry} />
+  sponsors.map((sponsor: Sponsor) => (
+  <a href=`/media/sponsor/${sponsor.id}`>
+  <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={sponsor.id}>
+      <SocialMediaSponsorCard {sponsor} />
     </div>
     </a>
   ))

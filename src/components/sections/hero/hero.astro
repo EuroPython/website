@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import heroImage from "/public/images/conference_photo.jpg";
 
 import IconWithLabel from "./icon-label.astro";
@@ -135,10 +135,14 @@ const action2 = "/sponsorship/sponsor/";
       <div class="hero-image overflow-hidden -mt-12">
         <!-- Image with Rounded Corners and Shadow -->
         <div class="px-5 md:px-10 md:m-10">
-          <Image
+          <Picture
             src={heroImage}
             alt="EuroPython 2025 Conference"
+            layout='full-width'
+            formats={['avif', 'webp', 'jpeg']}
             class="w-full max-w-5xl lg:max-w-full h-auto lg:h-full rounded-2xl shadow-xl"
+            loading="eager"
+            priority={true}
           />
         </div>
       </div>

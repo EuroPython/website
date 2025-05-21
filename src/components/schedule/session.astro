@@ -1,6 +1,7 @@
 ---
 import Speakers from "./speakers.astro";
 import { slugify } from "@utils/content";
+import Headline from "@ui/Headline.astro";
 
 export interface props {
   style: any;
@@ -69,7 +70,7 @@ const hasFooter = true;
   </div>
   -->
 
-  <h2>{session.title}</h2>
+  <h2 id=`session-${session.slug}`>{session.title}</h2>
 
   {
     hasFooter && (
