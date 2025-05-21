@@ -54,9 +54,9 @@ const { items, inverted = false, level = 1 } = Astro.props;
           target={item.path?.startsWith("http") ? "_blank" : undefined}
           role="menuitem"
         >
-          <span>{item.name}</span>
+          {item.name}
           {item.path?.startsWith("http") && (
-            <span class="ml-1" aria-hidden="true">↗</span>
+            <span aria-hidden="true">↗</span>
           )}
         </a>
       ) : (
@@ -72,7 +72,7 @@ const { items, inverted = false, level = 1 } = Astro.props;
           )}
           role="menuitem"
         >
-          <span>{item.name}</span>
+          {item.name}
           {level === 2 && (
             <span aria-hidden="true">
               <Icon name="caret-right" />
