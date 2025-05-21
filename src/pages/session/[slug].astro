@@ -22,7 +22,6 @@ export async function getStaticPaths() {
 const sessions = await getCollection("sessions");
 
 const { entry } = Astro.props;
-console.log(entry)
 const slug = entry.id;
 const speakers = await getEntries(entry.data.speakers);
 
