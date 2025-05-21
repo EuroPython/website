@@ -8,6 +8,7 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
 import { Picture } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Section from "@ui/Section.astro";
+import Button from "@ui/Button.astro";
 
 export async function getStaticPaths() {
   const sessions = await getCollection("sessions");
@@ -100,6 +101,8 @@ const nextSessionsOrdered = sameRoomNextSession
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
+    <Button class="mb-10" url=`/schedule/#session-${entry.id}`>View in the schedule</Button>
+
 
     <Prose full>
       <h2>Abstract</h2>
