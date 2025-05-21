@@ -83,24 +83,14 @@
       aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
       title={isFavorite ? "Remove from favorites" : "Add to favorites"}
     >
-      {#if isFavorite}
-        <svg xmlns="http://www.w3.org/2000/svg" class="heart-icon filled" viewBox="0 0 24 24" width="24" height="24">
-          <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      {:else}
-          <svg xmlns="http://www.w3.org/2000/svg" class="heart-icon" viewBox="0 0 24 24" width="24" height="24">
-            <path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
-      {/if}
+      <i class={`fa-heart heart-icon ${isFavorite ? 'fas filled' : 'far'}`}></i>
     </button>
   </div>
 {:else}
   <div class="code-heart">
-      {#if isFavorite}
-        <svg xmlns="http://www.w3.org/2000/svg" class="heart-icon filled" viewBox="0 0 24 24" width="24" height="24">
-          <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      {/if}
+    {#if isFavorite}
+      <i class="fas fa-heart heart-icon filled"></i>
+    {/if}
   </div>
 {/if}
 
@@ -120,6 +110,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
+    font-size: 24px;
   }
 
   .heart-button:hover {
