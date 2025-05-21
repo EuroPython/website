@@ -108,6 +108,10 @@
           "path": "/visa"
         },
         {
+          "name": "Volunteering",
+          "path": "/volunteers"
+        },
+        {
           "name": "Childcare",
           "path": "/childcare"
         },
@@ -254,6 +258,10 @@
         {
           "name": "Visa Support Letter",
           "path": "/visa"
+        },
+        {
+          "name": "Volunteering",
+          "path": "/volunteers"
         },
         {
           "name": "Childcare",
