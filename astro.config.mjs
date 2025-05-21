@@ -93,7 +93,9 @@ export default defineConfig({
     pagefind(),
     deleteUnusedImages(),
     svelte(),
-    compress(),
+    (await import("astro-compress")).default({
+      SVG: false,
+    }),
   ],
   output: "static",
   build: {

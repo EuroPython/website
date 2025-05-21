@@ -9,11 +9,12 @@ import { Picture } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Section from "@ui/Section.astro";
 import CodeHeart from "@components/island/CodeHeart.svelte";
+import Button from "@ui/Button.astro";
 
 export async function getStaticPaths() {
   const sessions = await getCollection("sessions");
   return sessions.map((entry) => ({
-    params: { slug: entry.id },
+    params: { slug: entry.id},
     props: { entry },
   }));
 }
@@ -108,6 +109,8 @@ const nextSessionsOrdered = sameRoomNextSession
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
+    <Button class="mb-10" url=`/schedule/#session-${entry.id}`>View in the schedule</Button>
+
 
     <Prose full>
       <h2>Abstract</h2>
