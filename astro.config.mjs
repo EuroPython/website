@@ -12,8 +12,6 @@ import deleteUnusedImages from "astro-delete-unused-images";
 import preload from "astro-preload";
 import { execSync } from "node:child_process";
 
-import compress from "astro-compress";
-
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
 
 if (!gitVersion) {
