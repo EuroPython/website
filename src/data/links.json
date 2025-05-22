@@ -50,15 +50,15 @@
         },
         {
           "name": "WASM Summit",
-          "path": "/wasm-summit"
+          "path": "/session/webassembly-summit"
         },
         {
           "name": "C-API Summit",
-          "path": "/c-api-summit"
+          "path": "/session/c-api-summit"
         },
         {
           "name": "Rust Summit",
-          "path": "/rust-summit"
+          "path": "/session/rust-summit"
         }
       ]
     },
