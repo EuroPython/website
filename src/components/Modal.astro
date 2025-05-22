@@ -29,7 +29,7 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
 <script >
   document.addEventListener('DOMContentLoaded', () => {
     // Function to toggle body scroll
-    const toggleBodyScroll = (disable) => {
+    const toggleBodyScroll = (disable: any) => {
       if (disable) {
         // Save the current scroll position
         const scrollY = window.scrollY;
@@ -49,7 +49,7 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
     };
 
     // Function to open modal
-    const openModal = (modal) => {
+    const openModal = (modal: any) => {
       if (modal) {
         // Disable body scroll
         toggleBodyScroll(true);
@@ -60,7 +60,7 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
     };
 
     // Function to close modal
-    const closeModal = (modal) => {
+    const closeModal = (modal: any) => {
       if (modal) {
         // Enable body scroll
         toggleBodyScroll(false);
@@ -72,22 +72,25 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
 
     // Open modal buttons
     document.querySelectorAll('[data-open-modal]').forEach(button => {
-      button.addEventListener('click', () => {
-        const modal = document.getElementById(button.dataset.openModal);
+      const btn = button as HTMLElement;
+      btn.addEventListener('click', () => {
+        const modal = document.getElementById(btn.dataset.openModal!);
         openModal(modal);
       });
     });
 
     // Close modal buttons
     document.querySelectorAll('[data-close-modal]').forEach(button => {
-      button.addEventListener('click', () => {
+      const btn = button as HTMLElement;
+      btn.addEventListener('click', () => {
         const modal = button.closest('[data-modal-wrapper]');
         closeModal(modal);
       });
     });
 
     // Close when clicking outside the modal content - only if enabled
-    document.querySelectorAll('[data-modal-wrapper]').forEach(modal => {
+    document.querySelectorAll('[data-modal-wrapper]').forEach(m => {
+      const modal = m as HTMLElement;
       const closeOnOutsideClick = modal.dataset.closeOnOutsideClick === 'true';
 
       if (closeOnOutsideClick) {

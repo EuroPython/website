@@ -1,12 +1,10 @@
 ---
-import { getEntry } from "astro:content";
 import { sponsorLogos } from "@data/sponsorLogos";
 
 const { sponsor } = Astro.props;
 
 const {
   name: title,
-  url: website,
   logo_padding = false,
 } = sponsor.data;
 
