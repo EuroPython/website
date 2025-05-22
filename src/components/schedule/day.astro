@@ -322,6 +322,19 @@ posters.forEach((poster) => {
 
 const date = parseISO(dayName);
 const dateText = format(date, "eeee - do MMMM");
+
+
+
+
+  const lastEndTime = Math.max(
+    ...slots.flatMap((slot) => slot.sessions.map((s) => timeToNumber(s.endTime)))
+  );
+
+  const endStart = numberToTime(lastEndTime);
+  const endStartDate = addMinutes(parseISO(dayName), lastEndTime);
+  const endEndDate = addMinutes(endStartDate, 10);
+  const endEnd = numberToTime(lastEndTime + 10);
+
 ---
 
 <div class="day"
@@ -362,7 +375,7 @@ const dateText = format(date, "eeee - do MMMM");
                 <h2>{format(slot.start, "HH:mm")}</h2>
               </div>
 
-              {sessionsByTime[slot.startTime]
+              {(sessionsByTime[slot.startTime] ?? [])
                 .sort(sortSessionByRooms)
                 .map((session) => {
                   const style = getSessionStyle(session);
@@ -407,7 +420,14 @@ const dateText = format(date, "eeee - do MMMM");
             </div>
           ))
         }
+
       </div>
+
+      <Break
+        title="End of the Day"
+        time={endStart}
+        className="day-end"
+      />
     </div>
     <div class="h-12"></div>
   </div>
@@ -425,6 +445,19 @@ const dateText = format(date, "eeee - do MMMM");
   .schedule-wrapper
 {
   width: 100%;
+}
+
+
+  :global(.day-end) {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  background-color: #FCFBFA;
+  border-radius: 10px;
+  margin: 10px 1.5rem;
+  padding:2px 8px;
+  font-size: 0.8rem;
 }
   :global(body) {
   }
@@ -547,6 +580,14 @@ const dateText = format(date, "eeee - do MMMM");
       grid-row: var(--start) / var(--end);
       grid-column: var(--col-start) / var(--col-end);
     }
+
+
+    :global(.day-end){
+      font-size: 1.2rem;
+      margin: 2px;
+      padding: 8px;
+    }
+
 
     .time {
       padding: 8px;
