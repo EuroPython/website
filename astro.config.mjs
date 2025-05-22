@@ -116,6 +116,7 @@ export default defineConfig({
       enableInDevelopment: true,
     }),
     compress({
+      Images: false,
       SVG: false,
     }),
     dontDie(),

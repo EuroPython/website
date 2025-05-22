@@ -31,10 +31,6 @@
   z-index: 9999;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   @apply bg-body-background text-text;
 }

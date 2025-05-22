@@ -70,102 +70,93 @@ const sectionSubtitle = "Meet some of our amazing speakers";
 </Section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.speakers-track') as HTMLElement;
-    const slides = document.querySelectorAll('.speaker-slide');
-    const totalOriginalSlides = slides.length / 2;
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.speakers-track') as HTMLElement;
+  const slides = document.querySelectorAll('.speaker-slide');
+  const totalOriginalSlides = slides.length / 2;
 
-    if (!track || slides.length === 0) return;
+  if (!track || slides.length === 0) return;
 
-    let currentPosition = 0;
-    const scrollSpeed = 4000;
-    let slidingInterval: ReturnType<typeof setInterval> | null = null;
+  let currentPosition = 0;
+  const scrollSpeed = 4000;
+  let slidingInterval: number | null = null;
 
-    // Function to determine slides per view based on window width
-    function getSlidesPerView() {
-      const width = window.innerWidth;
-      if (width <= 480) return 1;
-      if (width <= 640) return 2;
-      if (width <= 768) return 3;
-      if (width <= 1024) return 4;
-      return 5;
+  function getSlidesPerView() {
+    const width = window.innerWidth;
+    if (width <= 480) return 1;
+    if (width <= 640) return 2;
+    if (width <= 768) return 3;
+    if (width <= 1024) return 4;
+    return 5;
+  }
+
+  function updateCarouselSettings() {
+    const slidesPerView = getSlidesPerView();
+    const slideWidth = 100 / slidesPerView;
+
+    currentPosition = 0;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(0)`;
+
+    if (slidingInterval !== null) {
+      clearInterval(slidingInterval);
     }
+    startAnimation(slideWidth);
+  }
 
-    function updateCarouselSettings() {
-      const slidesPerView = getSlidesPerView();
-      const slideWidth = 100 / slidesPerView;
+  function startAnimation(slideWidth: number) {
+    moveCarousel();
+    slidingInterval = window.setInterval(moveCarousel, scrollSpeed);
 
-      // Reset position when breakpoint changes
-      currentPosition = 0;
-      track.style.transition = 'none';
-      track.style.transform = `translateX(0)`;
+    function moveCarousel() {
+      currentPosition += slideWidth;
 
-      // Clear and restart animation
-      if (slidingInterval !== null) {
-        clearInterval(slidingInterval);
-      }
-      startAnimation(slideWidth);
-    }
+      track.style.transition = 'transform 1000ms linear';
+      track.style.transform = `translateX(-${currentPosition}%)`;
 
-    function startAnimation(slideWidth: number) {
-      // Initial setup
-      moveCarousel();
-      slidingInterval = setInterval(moveCarousel, scrollSpeed);
+      if (currentPosition >= slideWidth * totalOriginalSlides) {
+        setTimeout(() => {
+          track.style.transition = 'none';
+          currentPosition = 0;
+          track.style.transform = `translateX(0)`;
 
-      function moveCarousel() {
-        currentPosition += slideWidth;
-
-        track.style.transition = 'transform 1000ms linear';
-        track.style.transform = `translateX(-${currentPosition}%)`;
-
-        // Reset when we've scrolled through the original set of slides
-        if (currentPosition >= slideWidth * totalOriginalSlides) {
           setTimeout(() => {
-            track.style.transition = 'none';
-            currentPosition = 0;
-            track.style.transform = `translateX(0)`;
-
-            setTimeout(() => {
-              track.style.transition = 'transform 1000ms linear';
-            }, 20);
-          }, 1000);
-        }
+            track.style.transition = 'transform 1000ms linear';
+          }, 20);
+        }, 1000);
       }
     }
+  }
 
-    // Start the carousel
+  updateCarouselSettings();
+
+  window.addEventListener('resize', () => {
     updateCarouselSettings();
+  });
 
-    // Update on window resize
-    window.addEventListener('resize', () => {
-      updateCarouselSettings();
-    });
+  const carouselContainer = document.querySelector('.speakers-carousel-container');
+  carouselContainer?.addEventListener('mouseenter', () => {
+    if (slidingInterval !== null) {
+      clearInterval(slidingInterval);
+      slidingInterval = null;
+    }
+  });
 
-    // Pause on hover
-    const carouselContainer = document.querySelector('.speakers-carousel-container');
-    carouselContainer?.addEventListener('mouseenter', () => {
+  carouselContainer?.addEventListener('mouseleave', () => {
+    updateCarouselSettings();
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
       if (slidingInterval !== null) {
         clearInterval(slidingInterval);
         slidingInterval = null;
       }
-    });
-
-    carouselContainer?.addEventListener('mouseleave', () => {
+    } else {
       updateCarouselSettings();
-    });
-
-    // Pause when tab is not visible
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        if (slidingInterval !== null) {
-          clearInterval(slidingInterval);
-          slidingInterval = null;
-        }
-      } else {
-        updateCarouselSettings();
-      }
-    });
+    }
   });
+});
 </script>
 
 <style>

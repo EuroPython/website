@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 interface Props {
   title: string;
   description: string;
@@ -25,6 +26,8 @@ const { title, description, image = "/social-card.png" } = Astro.props;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<ClientRouter />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
