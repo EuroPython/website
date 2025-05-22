@@ -47,26 +47,41 @@ import links from "@data/links.json";
 <Search />
 
 <script>
-  let prevScrollPos = window.pageYOffset;
-  const navbar = document.getElementById("navbar") as HTMLElement;
+document.addEventListener("DOMContentLoaded", function() {
+  let prevScrollPos = window.scrollY || window.pageYOffset;
+  const navbar = document.getElementById("navbar");
 
-  window.addEventListener("scroll", () => {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      navbar.style.transform = "translateY(0)";
-    } else {
-      navbar.style.transform = "translateY(-100%)";
+  if (!navbar) return;
+
+  let ticking = false;
+
+  window.addEventListener("scroll", function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        let currentScrollPos = window.scrollY || window.pageYOffset;
+
+        if (prevScrollPos > currentScrollPos) {
+          navbar.style.transform = "translateY(0)";
+        } else {
+          navbar.style.transform = "translateY(-100%)";
+        }
+
+        prevScrollPos = currentScrollPos;
+        ticking = false;
+      });
+
+      ticking = true;
     }
-    prevScrollPos = currentScrollPos;
   });
 
-  navbar.addEventListener("focusin", () => {
+  navbar.addEventListener("focusin", function() {
     navbar.style.transform = "translateY(0)";
   });
 
-  navbar.addEventListener("focusout", () => {
-    if (window.pageYOffset > 100) {
+  navbar.addEventListener("focusout", function() {
+    if ((window.scrollY || window.pageYOffset) > 100) {
       navbar.style.transform = "translateY(-100%)";
     }
   });
+});
 </script>
