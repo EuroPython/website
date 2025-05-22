@@ -85,7 +85,7 @@ window.addEventListener('resize', fitAllText);
 </script>
 
 <script is:inline define:vars={{slug: entry.data.slug}}>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     document.querySelectorAll('.social').forEach((socialDiv, index) => {
 
   socialDiv.addEventListener('click', () => {

@@ -27,7 +27,7 @@ const { id = 'modal', open = false, closeOnOutsideClick = false } = Astro.props;
   </div>
 </div>
 <script >
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     // Function to toggle body scroll
     const toggleBodyScroll = (disable: any) => {
       if (disable) {

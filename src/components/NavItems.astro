@@ -103,7 +103,7 @@ const { items, inverted = false, level = 1 } = Astro.props;
 
 <script>
   // Add keyboard navigation support
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     const navButtons = document.querySelectorAll('[role="menuitem"][aria-haspopup="true"]');
 
     navButtons.forEach(button => {

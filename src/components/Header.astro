@@ -46,16 +46,18 @@ import links from "@data/links.json";
   </div>
 </section>
 <Search />
+
+<style>
+  :root::view-transition-group(navbar) {
+    z-index: 100;
+  }
+</style>
 <script>
 document.addEventListener("astro:page-load", () => {
   let prevScrollPos = window.pageYOffset;
-  const navbar = document.getElementById("navbar");
-  if (!navbar) return;
-
-  let isFocused = false;
+  const navbar = document.getElementById("navbar") as HTMLElement;
 
   window.addEventListener("scroll", () => {
-    if (isFocused) return;
     let currentScrollPos = window.pageYOffset;
     if (prevScrollPos > currentScrollPos) {
       navbar.style.transform = "translateY(0)";
@@ -65,13 +67,12 @@ document.addEventListener("astro:page-load", () => {
     prevScrollPos = currentScrollPos;
   });
 
+
   navbar.addEventListener("focusin", () => {
-    isFocused = true;
     navbar.style.transform = "translateY(0)";
   });
 
   navbar.addEventListener("focusout", () => {
-    isFocused = false;
     if (window.pageYOffset > 100) {
       navbar.style.transform = "translateY(-100%)";
     }

@@ -24,7 +24,7 @@ import Modal from "@components/Modal.astro";
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("astro:page-load", function () {
   const searchContainer = document.querySelector(".pagefind-ui") as HTMLElement | null;
   const searchInput = searchContainer?.querySelector("input") as HTMLInputElement | null;
   const searchButton = document.getElementById("searchButton") as HTMLElement | null;

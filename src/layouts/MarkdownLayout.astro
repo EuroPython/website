@@ -34,7 +34,7 @@ const { title, description, toc=false } = Astro.props;
 </Layout>
 
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("astro:page-load", () => {
     const tocContainer = document.getElementById("toc");
     if (!tocContainer) return;
 
