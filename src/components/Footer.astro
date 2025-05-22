@@ -57,7 +57,7 @@ const gitVersion = __GIT_VERSION__;
             Excited about our mission? Want to collaborate or contribute? Let's
             connect! We're open to partnership opportunities and would love to
             hear your ideas.
-            <a class="text-white" href="mailto:helpdesk@europython.eu"
+            <a class="text-white/80 hover:text-white underline" href="mailto:helpdesk@europython.eu"
               >helpdesk@europython.eu</a
             >
           </p>
@@ -88,7 +88,7 @@ const gitVersion = __GIT_VERSION__;
           links.terms.map((item) => (
             <a
               href={item.path}
-              class="text-gray-700 hover:text-primary-hover transition-colors duration-200 mx-2"
+              class="text-white/80 hover:text-primary-hover transition-colors duration-200 mx-2"
             >
               {item.name}
               {item.path.startsWith("http") && (
@@ -104,14 +104,14 @@ const gitVersion = __GIT_VERSION__;
           <SocialLinks
             socials={links["socials"]}
             variant="white"
-            class="opacity-40 pb-4"
+            class="opacity-60 pb-4"
           />
         )
       }
     </div>
   </div>
 
-  <p class="mb-16 text-text-inverted text-center">
+  <p class="mb-16 text-white/80 text-center">
     version: {gitVersion} @ {buildTimestamp}
   </p>
 </div>
@@ -122,6 +122,5 @@ const gitVersion = __GIT_VERSION__;
   }
   .terms {
     font-size: 0.8rem;
-    opacity: 0.4;
   }
 </style>

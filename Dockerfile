@@ -8,3 +8,8 @@ RUN corepack enable
 RUN pnpm config set store-dir /home/node/.local/share/pnpm/store
 
 WORKDIR /app
+
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install
+
+RUN mkdir -p /app/src
