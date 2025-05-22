@@ -81,8 +81,6 @@ const description = "Our conference speakers organized alphabetically";
                     {speaker.data.avatar ? (
 
           <Image
-            transition:animate="fade"
-            transition:name=`speaker-${speaker.data.code}`
             src={speaker.data.avatar}
             alt={`${speaker.data.name}'s profile picture`}
             height={250}

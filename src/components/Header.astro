@@ -11,8 +11,6 @@ import links from "@data/links.json";
 <section
   id="navbar"
   class="fixed top-0 z-50 transition-transform duration-300 transform-gpu w-full"
-  transition:name="navbar"
-  transition:animate="fade"
 >
   <div
     class="container max-w-[1150px] mx-auto px-6 py-2 mt-1 lg:p-2 lg:mt-6 flex items-center justify-between relative z-40 bg-white/80 rounded-full backdrop-blur-md shadow-lg"
@@ -48,12 +46,6 @@ import links from "@data/links.json";
   </div>
 </section>
 <Search />
-
-<style>
-  :root::view-transition-group(navbar) {
-    z-index: 100;
-  }
-</style>
 <script>
 document.addEventListener("astro:page-load", () => {
   let prevScrollPos = window.pageYOffset;
@@ -63,7 +55,7 @@ document.addEventListener("astro:page-load", () => {
   let isFocused = false;
 
   window.addEventListener("scroll", () => {
-    if (isFocused) return; // Don't hide navbar if focused
+    if (isFocused) return;
     let currentScrollPos = window.pageYOffset;
     if (prevScrollPos > currentScrollPos) {
       navbar.style.transform = "translateY(0)";
@@ -84,13 +76,5 @@ document.addEventListener("astro:page-load", () => {
       navbar.style.transform = "translateY(-100%)";
     }
   });
-});
-
-document.addEventListener("astro:before-preparation", ()=>{
-  window.scrollTo({ left: 0, top: 0, behavior: "instant" });
-});
-
-document.addEventListener("astro:after-preparation", ()=>{
-  window.scrollTo({ left: 0, top: 0, behavior: "instant" });
 });
 </script>
