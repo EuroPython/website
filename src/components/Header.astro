@@ -5,11 +5,14 @@ import HeaderLogo from "@components/header/header-logo.astro";
 import Search from "@components/Search.astro";
 
 import links from "@data/links.json";
+
 ---
 
 <section
   id="navbar"
   class="fixed top-0 z-50 transition-transform duration-300 transform-gpu w-full"
+  transition:name="navbar"
+  transition:animate="fade"
 >
   <div
     class="container max-w-[1150px] mx-auto px-6 py-2 mt-1 lg:p-2 lg:mt-6 flex items-center justify-between relative z-40 bg-white/80 rounded-full backdrop-blur-md shadow-lg"
@@ -46,42 +49,48 @@ import links from "@data/links.json";
 </section>
 <Search />
 
+<style>
+  :root::view-transition-group(navbar) {
+    z-index: 100;
+  }
+</style>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  let prevScrollPos = window.scrollY || window.pageYOffset;
+document.addEventListener("astro:page-load", () => {
+  let prevScrollPos = window.pageYOffset;
   const navbar = document.getElementById("navbar");
-
   if (!navbar) return;
 
-  let ticking = false;
+  let isFocused = false;
 
-  window.addEventListener("scroll", function() {
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
-        let currentScrollPos = window.scrollY || window.pageYOffset;
-
-        if (prevScrollPos > currentScrollPos) {
-          navbar.style.transform = "translateY(0)";
-        } else {
-          navbar.style.transform = "translateY(-100%)";
-        }
-
-        prevScrollPos = currentScrollPos;
-        ticking = false;
-      });
-
-      ticking = true;
+  window.addEventListener("scroll", () => {
+    if (isFocused) return; // Don't hide navbar if focused
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      navbar.style.transform = "translateY(0)";
+    } else {
+      navbar.style.transform = "translateY(-100%)";
     }
+    prevScrollPos = currentScrollPos;
   });
 
-  navbar.addEventListener("focusin", function() {
+  navbar.addEventListener("focusin", () => {
+    isFocused = true;
     navbar.style.transform = "translateY(0)";
   });
 
-  navbar.addEventListener("focusout", function() {
-    if ((window.scrollY || window.pageYOffset) > 100) {
+  navbar.addEventListener("focusout", () => {
+    isFocused = false;
+    if (window.pageYOffset > 100) {
       navbar.style.transform = "translateY(-100%)";
     }
   });
+});
+
+document.addEventListener("astro:before-preparation", ()=>{
+  window.scrollTo({ left: 0, top: 0, behavior: "instant" });
+});
+
+document.addEventListener("astro:after-preparation", ()=>{
+  window.scrollTo({ left: 0, top: 0, behavior: "instant" });
 });
 </script>

@@ -27,8 +27,7 @@ const days = await getCollection("days");
     ))
   }
 </Layout>
-<script>
-window.addEventListener('load', function() {
+<script is:inline data-astro-rerun>
   function checkForAnchorAndHighlight() {
     const currentAnchor = window.location.hash.substring(1);
 
@@ -38,7 +37,7 @@ window.addEventListener('load', function() {
     const targetH2 = allMatching[allMatching.length - 1];
 
     if (targetH2) {
-      const parentElement: any = targetH2.parentElement;
+      const parentElement = targetH2.parentElement;
 
       if (parentElement) {
         const originalBorder = parentElement.style.border;
@@ -86,5 +85,4 @@ window.addEventListener('load', function() {
   checkForAnchorAndHighlight();
 
   window.addEventListener('hashchange', checkForAnchorAndHighlight);
-});
 </script>
