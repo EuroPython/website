@@ -50,15 +50,15 @@
         },
         {
           "name": "WASM Summit",
-          "path": "/session/webassembly-summit"
+          "path": "/wasm-summit"
         },
         {
           "name": "C-API Summit",
-          "path": "/session/c-api-summit"
+          "path": "/c-api-summit"
         },
         {
           "name": "Rust Summit",
-          "path": "/session/rust-summit"
+          "path": "/rust-summit"
         }
       ]
     },
@@ -215,15 +215,15 @@
         },
         {
           "name": "WASM Summit",
-          "path": "/session/webassembly-summit"
+          "path": "/wasm-summit"
         },
         {
           "name": "C-API Summit",
-          "path": "/session/c-api-summit"
+          "path": "/c-api-summit"
         },
         {
           "name": "Rust Summit",
-          "path": "/session/rust-summit"
+          "path": "/rust-summit"
         },
         {
           "name": "Community",
