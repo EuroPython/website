@@ -9,6 +9,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
+import serviceWorker from "astrojs-service-worker";
 import { execSync } from "node:child_process";
 
 import compress from "astro-compress";
@@ -110,6 +111,10 @@ export default defineConfig({
     metaTags(),
     pagefind(),
     deleteUnusedImages(),
+    serviceWorker({
+      workbox: { inlineWorkboxRuntime: true },
+      enableInDevelopment: true,
+    }),
     compress({
       SVG: false,
     }),
@@ -122,5 +127,8 @@ export default defineConfig({
   image: {
     remotePatterns: [{ protocol: "https" }],
     domains: ["programme.europython.eu", "placehold.co"],
+  },
+  prefetch: {
+    prefetchAll: true,
   },
 });
