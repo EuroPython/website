@@ -9,9 +9,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
-import preload from "astro-preload";
 import { execSync } from "node:child_process";
-
 import compress from "astro-compress";
 
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
@@ -26,6 +24,28 @@ if (!gitVersion) {
   } catch {
     gitVersion = "unknown";
   }
+}
+
+function dontDie() {
+  return {
+    name: "dont-die",
+    hooks: {
+      "astro:config:setup": () => {
+        process.on("uncaughtException", (error) => {
+          if (
+            error.message &&
+            error.message.includes("Failed to load remote image")
+          ) {
+            console.warn(
+              "[dont-die] Caught remote image error:",
+              error.message
+            );
+            return;
+          }
+        });
+      },
+    },
+  };
 }
 
 // https://astro.build/config
@@ -81,7 +101,6 @@ export default defineConfig({
     "/speaker/savannah-ostrowski": "/speaker/savannah-bailey",
   },
   integrations: [
-    preload(),
     mdx(),
     sitemap(),
     tailwind({
@@ -90,9 +109,10 @@ export default defineConfig({
     metaTags(),
     pagefind(),
     deleteUnusedImages(),
-    (await import("astro-compress")).default({
+    compress({
       SVG: false,
     }),
+    dontDie(),
   ],
   output: "static",
   build: {
