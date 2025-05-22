@@ -11,7 +11,6 @@ import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 import serviceWorker from "astrojs-service-worker";
 import { execSync } from "node:child_process";
-
 import compress from "astro-compress";
 
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
@@ -116,7 +115,6 @@ export default defineConfig({
       enableInDevelopment: true,
     }),
     compress({
-      Images: false,
       SVG: false,
     }),
     dontDie(),
