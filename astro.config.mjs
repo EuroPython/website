@@ -2,7 +2,6 @@ import path from "path";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -11,6 +10,7 @@ import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 import { execSync } from "node:child_process";
 import compress from "astro-compress";
+import tailwindcss from "@tailwindcss/vite";
 
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
 
@@ -60,6 +60,7 @@ export default defineConfig({
       ),
       __GIT_VERSION__: JSON.stringify(gitVersion),
     },
+
     resolve: {
       alias: {
         "@utils": path.resolve("./src/utils"),
@@ -74,6 +75,8 @@ export default defineConfig({
         "@src": path.resolve("./src"),
       },
     },
+
+    plugins: [tailwindcss()],
   },
   markdown: {
     remarkPlugins: [
@@ -93,6 +96,7 @@ export default defineConfig({
         },
       ],
     ],
+    plugins: [tailwindcss()],
   },
   site: process.env.SITE_URL || "https://ep2025.europython.eu",
   redirects: {
@@ -109,9 +113,6 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    tailwind({
-      nesting: true,
-    }),
     metaTags(),
     pagefind(),
     deleteUnusedImages(),
