@@ -51,7 +51,7 @@ type ScheduleSession = {
   end: Date;
   endTime: string;
   duration: number;
-  sessionType?: string;
+  sessionType?: string | undefined;
   type: string;
   rooms: string[];
 };
@@ -331,9 +331,6 @@ const dateText = format(date, "eeee - do MMMM");
   );
 
   const endStart = numberToTime(lastEndTime);
-  const endStartDate = addMinutes(parseISO(dayName), lastEndTime);
-  const endEndDate = addMinutes(endStartDate, 10);
-  const endEnd = numberToTime(lastEndTime + 10);
 
 ---
 

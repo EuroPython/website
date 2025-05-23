@@ -79,7 +79,7 @@ const sectionSubtitle = "Meet some of our amazing speakers";
 
     let currentPosition = 0;
     const scrollSpeed = 4000;
-    let slidingInterval: ReturnType<typeof setInterval> | null = null;
+    let slidingInterval: number | null = null;
 
     // Function to determine slides per view based on window width
     function getSlidesPerView() {
@@ -110,7 +110,7 @@ const sectionSubtitle = "Meet some of our amazing speakers";
     function startAnimation(slideWidth: number) {
       // Initial setup
       moveCarousel();
-      slidingInterval = setInterval(moveCarousel, scrollSpeed);
+      slidingInterval = window.setInterval(moveCarousel, scrollSpeed) as number;
 
       function moveCarousel() {
         currentPosition += slideWidth;
