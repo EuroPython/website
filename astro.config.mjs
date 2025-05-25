@@ -76,11 +76,7 @@ export default defineConfig({
       },
     },
 
-    plugins: [
-      tailwindcss({
-        nesting: true,
-      }),
-    ],
+    plugins: [tailwindcss()],
   },
   markdown: {
     remarkPlugins: [
@@ -121,6 +117,7 @@ export default defineConfig({
     pagefind(),
     deleteUnusedImages(),
     compress({
+      CSS: false,
       SVG: false,
     }),
     dontDie(),
