@@ -73,5 +73,6 @@
 @layer utilities {
   .prose {
     --tw-prose-headings: var(--color-black);
+    --tw-prose-body: var(--color-text);
   }
 }
