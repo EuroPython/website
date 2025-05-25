@@ -76,7 +76,11 @@ export default defineConfig({
       },
     },
 
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss({
+        nesting: true,
+      }),
+    ],
   },
   markdown: {
     remarkPlugins: [
