@@ -11,10 +11,10 @@ import Person5 from "./placeholders/person-5.astro";
 export interface Props {
   name: string;
   slug: string;
-  tagline?: string;
+  tagline?: string | undefined;
   image?: ImageMetadata;
-  placeholder?: boolean;
-  order?: number;
+  placeholder?: boolean | undefined;
+  order?: number | undefined;
   class?: string;
 }
 

@@ -3,6 +3,17 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // TODO: around 63 errors to clean up
+    // "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+
     "paths": {
       "@utils/*": ["./src/utils/*"],
       "@data/*": ["./src/data/*"],
@@ -15,5 +26,10 @@
       "@i18n/*": ["./src/i18n/*"],
       "@src/*": ["./src/*"]
     }
-  }
+  },
+  "plugins": [
+    {
+      "name": "@astrojs/ts-plugin"
+    }
+  ]
 }
