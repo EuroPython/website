@@ -9,7 +9,7 @@ const html = entry && entry.body ? marked.parse(entry.body) :  "";
 ---
 
   { html &&
-    <div class="mb-2 prose prose-li:m-0 prose-ul:m-0 prose-ul:mb-2 prose-a:underline prose-h1:text-text prose-headings:font-title prose-headings:text-text prose-a:text-text hover:prose-a:text-primary-hover prose-strong:text-text prose-strong:font-bold prose-li:marker:text-text p-6">
+    <div class="mb-2 prose prose-li:m-0 prose-ul:m-0 prose-ul:mb-2 prose-a:underline prose-h1:text-text prose-headings:font-title prose-headings:text-text prose-a:text-text prose-a:hover:text-primary-hover prose-strong:text-text prose-strong:font-bold prose-li:marker:text-text p-6">
       <article set:html={html} />
     </div>
   }
