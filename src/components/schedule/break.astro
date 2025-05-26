@@ -3,12 +3,13 @@ export interface Props {
   time: string;
   title: string;
   style?: any;
+  className?: string;
 }
 
-const { time, title, style }: Props = Astro.props;
+const { time, title, style, className }: Props = Astro.props;
 ---
 
-<div class="break" style={style} aria-label=`${time} ${title}` >
+<div class={className? className: "break"} style={style} aria-label=`${time} ${title}` >
   {time}{" "}
   {title}
   <span class="sr-only">{time} {title}</span>

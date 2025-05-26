@@ -106,6 +106,20 @@ const nextSessionsOrdered = sameRoomNextSession
           </>
         )
       }
+      {
+        entry.data.end && (
+          <>
+            <dt class="font-bold">End:</dt>
+            <dd>
+              {formatInTimeZone(
+                entry.data.end,
+                "Europe/Prague",
+                "HH:mm 'on' dd MMMM yyyy",
+              )}
+            </dd>
+          </>
+        )
+      }
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
