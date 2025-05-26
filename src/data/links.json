@@ -214,6 +214,10 @@
           "path": "/beginners-day"
         },
         {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
+        },
+        {
           "name": "WASM Summit",
           "path": "/session/webassembly-summit"
         },
