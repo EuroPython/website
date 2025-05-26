@@ -5,8 +5,9 @@ import Footer from "@components/Footer.astro";
 
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@src/styles/global.css";
-import "@src/styles/search.css";
+import "@styles/tailwind.css";
+import "@styles/global.css";
+import "@styles/search.css";
 
 export interface Props {
   title: string;
@@ -67,18 +68,24 @@ const externalDomain = new URL(Astro.site || "").hostname;
 
 
 <style>
-  body {
-    @apply bg-primary min-w-[360px];
-  }
-  header {
-    @apply bg-body-background;
-  }
-  main {
-    @apply bg-body-background;
-  }
-  footer {
-    @apply bg-primary py-10;
-  }
+body {
+  background-color: var(--color-primary);
+  min-width: 360px;
+}
+
+header {
+  background-color: var(--color-body-background);
+}
+
+main {
+  background-color: var(--color-body-background);
+}
+
+footer {
+  background-color: var(--color-primary);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 
   @media screen and (width>1200px){
   main {

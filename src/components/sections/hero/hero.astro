@@ -12,7 +12,7 @@ const action2 = "/sponsorship/sponsor/";
 
 <section class="relative z-10">
   <div
-    class="bg-icons full-bleed relative flex flex-col items-center justify-center"
+    class="bg-icons relative flex flex-col items-center justify-center"
     style=""
   >
     <div class="absolute inset-0 overflow-hidden -z-10">
@@ -82,8 +82,8 @@ const action2 = "/sponsorship/sponsor/";
       >
     </div>
     <div class="prose-xl relative z-10 text-center">
-      <div class="flex items-center space-x-3 p-10 md:mt-20 justify-center">
-        <div class="w-200 h-200 flex items-center justify-center">
+      <div class="grid md:flex items-center space-x-3 p-10 md:mt-20 justify-center">
+        <div class="flex items-center justify-center">
           <img
             class="h-full block md:w-full lg:w-[200px] pr-3 lg:pr-8"
             src="/logo.png"
@@ -93,7 +93,7 @@ const action2 = "/sponsorship/sponsor/";
           />
         </div>
         <h1
-          class="text-5xl md:text-8xl lg:text-9xl m-0 font-bold text-[#17223A]"
+          class="text-6xl md:text-8xl lg:text-9xl mb-0 font-bold"
         >
           EuroPython
         </h1>
@@ -107,13 +107,9 @@ const action2 = "/sponsorship/sponsor/";
       </p>
     </div>
     <!-- First 2x1 Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-10">
-      <div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-6 my-10">
         <IconWithLabel icon="map-pin" label="Prague, Czech Republic" />
-      </div>
-      <div>
         <IconWithLabel icon="calendar-days" label="14-20 July, 2025" />
-      </div>
     </div>
 
     <!-- Second 2x1 Grid with Action Buttons -->
@@ -128,7 +124,7 @@ const action2 = "/sponsorship/sponsor/";
   </div>
 
   <div
-    class="bluebox full-bleed relative flex flex-col items-center justify-center"
+    class="bluebox relative flex flex-col items-center justify-center"
     style=""
   >
     <div class="bluebox-shift">
@@ -150,7 +146,7 @@ const action2 = "/sponsorship/sponsor/";
       <div
         class="stats flex flex-wrap flex-col md:flex-row justify-around items-center"
       >
-        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+        <div class="p-4 rounded-lg flex items-center">
           <div
             class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
           >
@@ -161,7 +157,7 @@ const action2 = "/sponsorship/sponsor/";
             <h3 class="text-xl md:text-3xl">Days</h3>
           </div>
         </div>
-        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+        <div class="p-4 rounded-lg flex items-center">
           <div
             class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
           >
@@ -172,7 +168,7 @@ const action2 = "/sponsorship/sponsor/";
             <h3 class="text-xl md:text-3xl">Attendees</h3>
           </div>
         </div>
-        <div class="p-4 bg-gray-100 rounded-lg flex items-center">
+        <div class="p-4 rounded-lg flex items-center">
           <div
             class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
           >
@@ -191,6 +187,7 @@ const action2 = "/sponsorship/sponsor/";
     .bg-icons {
       min-height: 600px;
       padding-bottom: 150px;
+      overflow: hidden;
     }
     .bg-icon {
       position: absolute;
@@ -211,9 +208,5 @@ const action2 = "/sponsorship/sponsor/";
       top: 10px;
     }
 
-    .full-bleed {
-      width: 100%;
-      grid-column: 1 / 4;
-    }
   </style>
 </section>
