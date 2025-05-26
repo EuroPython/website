@@ -45,6 +45,10 @@
           "path": "/beginners-day"
         },
         {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
+        },
+        {
           "name": "Thursday Social Event",
           "path": "/social-event"
         },
@@ -232,6 +236,10 @@
         {
           "name": "PyLadies Events—Lunch, Workshops & Networking",
           "path": "/pyladies"
+        },
+        {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
         },
         {
           "name": "WASM Summit",
