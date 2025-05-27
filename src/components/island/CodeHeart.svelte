@@ -1,138 +1,44 @@
 <script>
-  import { onMount } from 'svelte';
+  import { favorites } from "@stores/favorites.js";
 
   export let mini = false;
-  export let codeId = "";
+  export let codeId = '';
   export let code = codeId;
-  export let title = "";
+  export let title = '';
 
   let isFavorite = false;
 
-  const STORAGE_PREFIX = "codeheart_v1";
-
-  function getStorageKey() {
-    if (!codeId) {
-      throw new Error("CodeHeart component requires a codeId prop");
-    }
-    return `${STORAGE_PREFIX}:${codeId}`;
-  }
-
-  function saveCode() {
-    try {
-      const item = {
-        code,
-        title,
-        timestamp: new Date().toISOString(),
-        version: 1 // For future compatibility
-      };
-
-      localStorage.setItem(getStorageKey(), JSON.stringify(item));
-
-      dispatchEvent('save', { codeId, code, title });
-    } catch (error) {
-      console.error("Failed to save code:", error);
-    }
-  }
-
-  function removeCode() {
-    try {
-      localStorage.removeItem(getStorageKey());
-
-      dispatchEvent('remove', { codeId });
-    } catch (error) {
-      console.error("Failed to remove code:", error);
-    }
-  }
+  favorites.subscribe($favorites => {
+    isFavorite = !!$favorites[codeId];
+  });
 
   function toggleFavorite() {
-    isFavorite = !isFavorite;
-
-    if (isFavorite) {
-      saveCode();
+    const current = favorites.get();
+    if (current[codeId]) {
+      const { [codeId]: _, ...rest } = current;
+      favorites.set(rest);
     } else {
-      removeCode();
+      favorites.set({
+        ...current,
+        [codeId]: { code, title }
+      });
     }
   }
-
-  function dispatchEvent(action, detail) {
-    const event = new CustomEvent('codeheartaction', {
-      bubbles: true,
-      detail: { action, ...detail }
-    });
-
-    document.dispatchEvent(event);
-  }
-
-  onMount(() => {
-    try {
-      const item = localStorage.getItem(getStorageKey());
-      isFavorite = !!item;
-    } catch (error) {
-      console.error("Failed to check if code is saved:", error);
-      isFavorite = false;
-    }
-  });
 </script>
 
 {#if !mini}
-  <div class="code-heart">
-    <button
-      class="heart-button"
-      on:click={toggleFavorite}
-      aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
-      title={isFavorite ? "Remove from favorites" : "Add to favorites"}
-    >
-      <i class={`fa-heart heart-icon ${isFavorite ? 'fas filled' : 'far'}`}></i>
-    </button>
-  </div>
-{:else}
-  <div class="code-heart">
-    {#if isFavorite}
-      <i class="fas fa-heart heart-icon filled"></i>
-    {/if}
-  </div>
+  <button
+    class="code-heart inline-flex items-center p-1 text-gray-500 transition-transform duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:rounded-full"
+    aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+    title={isFavorite ? "Remove from favorites" : "Add to favorites"}
+    on:click={toggleFavorite}
+  >
+    <i
+      class={`fa-heart text-lg transition-colors duration-200 ${
+        isFavorite ? 'fas text-red-500' : 'far text-gray-500 hover:text-gray-700'
+      }`}
+    ></i>
+  </button>
+{:else if isFavorite}
+  <div class="flex justify-center">❤️</div>
 {/if}
-
-<style>
-  .code-heart {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .heart-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-    font-size: 24px;
-  }
-
-  .heart-button:hover {
-    transform: scale(1.1);
-  }
-
-  .heart-button:focus {
-    outline: 2px solid rgba(59, 130, 246, 0.5);
-    border-radius: 20px;
-  }
-
-  .heart-icon {
-    width: 24px;
-    height: 24px;
-    color: #666;
-    transition: color 0.2s ease;
-  }
-
-  .heart-icon.filled {
-    color: #ff3e66;
-  }
-
-  .heart-button:hover .heart-icon:not(.filled) {
-    color: #999;
-  }
-</style>

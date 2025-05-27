@@ -67,6 +67,7 @@ export default defineConfig({
         "@utils": path.resolve("./src/utils"),
         "@data": path.resolve("./src/data"),
         "@components": path.resolve("./src/components"),
+        "@stores": path.resolve("./src/stores"),
         "@sections": path.resolve("./src/components/sections"),
         "@layouts": path.resolve("./src/layouts"),
         "@ui": path.resolve("./src/components/ui"),
