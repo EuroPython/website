@@ -117,6 +117,7 @@ export default defineConfig({
     pagefind(),
     deleteUnusedImages(),
     compress({
+      HTML: false,
       CSS: false,
       SVG: false,
     }),
