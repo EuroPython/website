@@ -54,6 +54,10 @@ jobs:
           BRANCH: "${{ env.GITHUB_BRANCH_NAME }}"
         run: make preview
 
+      - name: Get safe branch and export to env
+        run: |
+          echo "SAFE_BRANCH=$(make safe_branch)" >> $GITHUB_ENV
+
       - name: Update PR Comment
         uses: actions/github-script@v7
         if: github.event_name == 'pull_request'
@@ -80,8 +84,8 @@ jobs:
               }
             });
 
-            const branch_name = process.env.GITHUB_BRANCH_NAME;
-            const url = "https://" + branch_name + "." + process.env.PREVIEW_HOSTNAME;
+            const safe_branch = process.env.SAFE_BRANCH;
+            const url = "https://" + safe_branch + "." + process.env.PREVIEW_HOSTNAME;
             const timestamp = new Date().toISOString();
             const header = "\n|Key|Value|\n|---|---|\n"
             const body = preview_identifier + header + "|url|" + url + "|\n|last update|" + timestamp + "|";
