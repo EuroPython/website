@@ -29,6 +29,7 @@ const externalDomain = new URL(Astro.site || "").hostname;
     <BaseHead title={title} description={description} />
     <slot name="head" />
     </Fragment>
+  </head>
 
   <body>
       <header>
