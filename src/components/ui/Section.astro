@@ -1,12 +1,12 @@
 ---
-const { full = false, variant = "default", padding=true } = Astro.props;
+const { full = false, variant = "default", padding = true } = Astro.props;
 
-const variantClass = {
-  default: "",
-  primary: "bg-[#d4d5e5]",
-  secondary: "bg-white",
+const variantClass =
+  {
+    default: "",
+    primary: "bg-[#d4d5e5]",
+    secondary: "bg-white",
   }[variant] || "";
-
 ---
 
 <section class=`${variantClass} ${padding && "py-6"}`>
@@ -23,6 +23,16 @@ const variantClass = {
 
 <style>
   .container {
-    @apply mx-auto px-2 md:px-5;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem; /* px-2 = 0.5rem */
+    padding-right: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 1.25rem; /* md:px-5 = 1.25rem */
+      padding-right: 1.25rem;
+    }
   }
 </style>
