@@ -55,6 +55,8 @@ jobs:
         run: make preview
 
       - name: Get safe branch and export to env
+        env:
+          BRANCH: ${{ env.GITHUB_BRANCH_NAME }}
         run: |
           echo "SAFE_BRANCH=$(make safe_branch)" >> $GITHUB_ENV
 
