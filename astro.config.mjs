@@ -9,6 +9,7 @@ import metaTags from "astro-meta-tags";
 import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 import { execSync } from "node:child_process";
+import svelte from "@astrojs/svelte";
 import compress from "astro-compress";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -66,6 +67,7 @@ export default defineConfig({
         "@utils": path.resolve("./src/utils"),
         "@data": path.resolve("./src/data"),
         "@components": path.resolve("./src/components"),
+        "@stores": path.resolve("./src/stores"),
         "@sections": path.resolve("./src/components/sections"),
         "@layouts": path.resolve("./src/layouts"),
         "@ui": path.resolve("./src/components/ui"),
@@ -116,7 +118,9 @@ export default defineConfig({
     metaTags(),
     pagefind(),
     deleteUnusedImages(),
+    svelte(),
     compress({
+      HTML: false,
       CSS: false,
       SVG: false,
     }),
