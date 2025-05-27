@@ -18,6 +18,7 @@
       "@utils/*": ["./src/utils/*"],
       "@data/*": ["./src/data/*"],
       "@components/*": ["./src/components/*"],
+      "@stores/*": ["./src/stores/*"],
       "@sections/*": ["./src/components/sections/*"],
       "@ui/*": ["./src/components/ui/*"],
       "@layouts/*": ["./src/layouts/*"],
