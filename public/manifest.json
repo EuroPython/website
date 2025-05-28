@@ -1,7 +1,7 @@
 {
   "name": "EuroPython 2025",
   "short_name": "EP2025",
-  "display": "standalone",
+  "display": "fullscreen",
   "start_url": "./schedule/?utm_source=pwa",
   "lang": "en",
   "scope": ".",
