@@ -5,8 +5,8 @@
   "start_url": "./schedule/?utm_source=pwa",
   "lang": "en",
   "scope": ".",
-  "background_color": "#6200ee",
-  "theme_color": "#6200ee",
+  "background_color": "#f5e5d6",
+  "theme_color": "#f5e5d6",
   "icons": [
     {
       "src": "android-chrome-36x36.png",
