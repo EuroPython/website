@@ -117,4 +117,27 @@ if ("serviceWorker" in navigator) {
     });
   });
 }
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  document.addEventListener('click', function (e: any) {
+    const anchor = e.target.closest('a');
+
+    if (!anchor || !anchor.href) return;
+
+    const origin = window.location.origin;
+    const href = anchor.getAttribute('href');
+
+    if (
+      href.startsWith('#') ||
+      href.startsWith('/') ||
+      href.startsWith(origin)
+    ) {
+      return;
+    }
+
+    e.preventDefault();
+
+    alert('External links are available only via website.');
+  });
+}
 </script>

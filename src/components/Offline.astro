@@ -6,7 +6,7 @@
 </div>
 <script is:inline>
 
-  document.addEventListener('astro:page-load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const offlineIcon = document.getElementById('offline-icon');
 
     function updateOnlineStatus() {
@@ -17,7 +17,6 @@
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
 
-    // Initial check
     updateOnlineStatus();
   }
   );

@@ -122,7 +122,6 @@ export default defineConfig({
     svelte(),
     serviceWorker({
       workbox: { inlineWorkboxRuntime: true },
-      enableInDevelopment: true,
     }),
     compress({
       HTML: false,
