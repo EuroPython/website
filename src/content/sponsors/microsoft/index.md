@@ -3,7 +3,8 @@ name: "Microsoft"
 url: "https://www.microsoft.com"
 location: "USA"
 description:
-  "Open Source enables Microsoft products and services to bring choice, technology and community to our customers. "
+  "Open Source enables Microsoft products and services to bring choice,
+  technology and community to our customers. "
 socials:
   linkedin: "https://www.linkedin.com/showcase/vs-code/"
   twitter: "https://x.com/code"
@@ -16,4 +17,5 @@ draft: true
 
 ## About Microsoft
 
-Open Source enables Microsoft products and services to bring choice, technology and community to our customers. 
+Open Source enables Microsoft products and services to bring choice, technology
+and community to our customers.
