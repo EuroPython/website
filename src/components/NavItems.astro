@@ -19,10 +19,10 @@ const { items, inverted = false, level = 1 } = Astro.props;
 
 <ul
   class={clsx(
-    level === 1 ? "ml-1 flex flex-col xl:flex-row" : "",
-    level === 2 ? "mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px] xl:min-w-[220px]" : "",
-    level === 3 ? "bg-[#1c294b] xl:rounded-[20px] xl:my-1 xl:mx-2 xl:min-w-[200px]" : "",
-    level > 1 ? "shadow-lg" : ""
+    level === 1 && "ml-1 flex flex-col xl:flex-row",
+    level === 2 && "mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px] xl:min-w-[220px]",
+    level === 3 && "bg-[#1c294b] xl:rounded-[20px] xl:my-1 xl:mx-2 xl:min-w-[200px]",
+    level > 1 && "shadow-lg"
   )}
   role={level === 1 ? "menubar" : "menu"}
   aria-label={level === 1 ? "Main navigation" : level === 2 ? "Submenu" : "Sub-submenu"}
@@ -30,14 +30,11 @@ const { items, inverted = false, level = 1 } = Astro.props;
   {items.map((item) => (
     <li
       class={clsx(
-        "relative",
-        level === 1 ? "border-b border-border-secondary-dark xl:border-0 group" : "",
-        level === 2 ? "bg-secondary text-white block w-full font-bold text-center xl:text-left xl:hover:bg-secondary-light xl:first:rounded-t-[30px] xl:first:pt-2 xl:last:rounded-b-[30px] xl:last:pb-2 group/level2" : "",
-        level === 3 ? "text-white xl:hover:bg-secondary-light xl:first:rounded-t-[20px] xl:last:rounded-b-[20px]" : "",
-        {
-          "text-white": inverted,
-          "text-primary": !inverted && level === 1,
-        }
+        "relative transition-all duration-200 ease-in-out",
+        level === 1 && "border-b border-border-secondary-dark xl:border-0 group",
+        level === 2 && "bg-secondary text-white block w-full font-bold text-center xl:text-left xl:hover:bg-secondary-light xl:first:rounded-t-[30px] xl:first:pt-2 xl:last:rounded-b-[30px] xl:last:pb-2 group",
+        level === 3 && "text-white xl:hover:bg-secondary-light xl:first:rounded-t-[20px] xl:last:rounded-b-[20px]",
+        inverted ? "text-white" : level === 1 && "text-primary"
       )}
       role="none"
     >
@@ -46,9 +43,9 @@ const { items, inverted = false, level = 1 } = Astro.props;
           href={item.path || "#"}
           class={clsx(
             "flex items-center justify-between",
-            level === 1 ? "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:p-2 xl:px-5 xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white xl:group-focus:bg-secondary xl:group-focus:rounded-[30px] xl:group-focus:text-white" : "",
-            level === 2 ? "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:px-5" : "",
-            level === 3 ? "block w-full p-2 xl:px-4 text-sm xl:text-left" : ""
+            level === 1 && "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:py-2 xl:px-4 xl:hover:bg-secondary xl:hover:rounded-[30px] xl:hover:text-white xl:focus:bg-secondary xl:focus:rounded-[30px] xl:focus:text-white",
+            level === 2 && "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:ps-5",
+            level === 3 && "block w-full p-2 text-sm xl:text-left"
           )}
           rel={item.path?.startsWith("http") ? "nofollow noopener" : undefined}
           target={item.path?.startsWith("http") ? "_blank" : undefined}
@@ -66,9 +63,9 @@ const { items, inverted = false, level = 1 } = Astro.props;
           aria-expanded="false"
           class={clsx(
             "flex items-center justify-around",
-            level === 1 ? "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:p-2 xl:px-4 xl:group-hover:bg-secondary xl:group-hover:rounded-[30px] xl:group-hover:text-white xl:group-focus:bg-secondary xl:group-focus:rounded-[30px] xl:group-focus:text-white" : "",
-            level === 2 ? "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:px-5" : "",
-            level === 3 ? "block w-full p-2 xl:px-4 text-sm xl:text-left" : ""
+            level === 1 && "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:py-2 xl:px-4 xl:hover:bg-secondary xl:hover:rounded-[30px] xl:hover:text-white xl:focus:bg-secondary xl:focus:rounded-[30px] xl:focus:text-white",
+            level === 2 && "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:ps-5",
+            level === 3 && "block w-full p-2 text-sm xl:text-left"
           )}
           role="menuitem"
         >
@@ -84,8 +81,8 @@ const { items, inverted = false, level = 1 } = Astro.props;
       {item.items && (
         <div
           class={clsx(
-            level === 1 ? "xl:hidden xl:group-hover:block xl:absolute z-50 xl:top-full xl:left-0 xl:group-focus-within:block" : "",
-            level === 2 ? "xl:hidden xl:group-hover/level2:block xl:absolute z-50 xl:left-full xl:top-0 xl:-mt-2 xl:group-focus-within:block" : ""
+            level === 1 && "xl:hidden group-hover:block xl:absolute z-50 xl:top-full xl:left-0 xl:focus-within:block",
+            level === 2 && "xl:hidden group-hover:block xl:absolute z-50 xl:left-full xl:top-0 xl:-mt-2 xl:focus-within:block"
           )}
         >
           {level === 1 && (

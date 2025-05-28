@@ -2,11 +2,13 @@
 const { sessions } = Astro.props;
 import Prose from "@ui/Prose.astro";
 import Tag from "@ui/Tag.astro";
+import CodeHeart from "@components/island/CodeHeart.svelte";
 import SessionSpeakers from "./session-speakers.astro";
 
 type Session = {
   data: {
     title: string;
+    code: string;
     speakers: Array<{
       id: string;
       collection: "speakers";
@@ -34,6 +36,13 @@ type Session = {
             <a href={`/session/${session.id}`} class="underline">
               {session.data.title}
             </a>
+
+  <CodeHeart
+    client:load
+    mini={true}
+    codeId={session.data.code}
+    title={session.data.title}
+  />
           </h4>
           <p>
             <span class="sr-only">Speakers:</span>

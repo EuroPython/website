@@ -19,7 +19,7 @@ const gitVersion = __GIT_VERSION__;
                 <li>
                   <a
                     href={item.path}
-                    class="text-gray-700 hover:text-primary-hover transition-colors duration-200"
+                    class="hover:text-primary-hover transition-colors duration-200"
                   >
                     {item.name}
                     {item.path.startsWith("http") && (
@@ -32,7 +32,7 @@ const gitVersion = __GIT_VERSION__;
           ) : (
             <a
               href={section["path"]}
-              class="text-gray-700 hover:text-primary-hover transition-colors duration-200"
+              class="hover:text-primary-hover transition-colors duration-200"
             >
               {section.name}
               {section["path"].startsWith("http") && (

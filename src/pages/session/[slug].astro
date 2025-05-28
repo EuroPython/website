@@ -8,6 +8,7 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
 import { Picture } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Section from "@ui/Section.astro";
+import CodeHeart from "@components/island/CodeHeart.svelte";
 import Button from "@ui/Button.astro";
 
 export async function getStaticPaths() {
@@ -27,7 +28,7 @@ const speakers = await getEntries(entry.data.speakers);
 
 // Resolve session codes to session data
 const resolveSessions = (codes: string[]) =>
-  codes.map(code => sessions.find(s => s.data.code === code)!);
+  codes.map((code) => sessions.find((s) => s.data.code === code)!);
 
 // Filter out sessions with room "Exhibit Hall"
 const filteredSessions = sessions.filter(
@@ -60,6 +61,13 @@ const nextSessionsOrdered = sameRoomNextSession
         class="relative font-title text-text font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-pretty"
       >
         {entry.data.title}
+        <span class="pl-1">
+        <CodeHeart
+          client:load
+          codeId={entry.data.code}
+          title={entry.data.title}
+        />
+        </span>
       </h1>
     </Prose>
 
@@ -166,7 +174,13 @@ const nextSessionsOrdered = sameRoomNextSession
               The speaker{speakers.length > 1 ? "s" : ""}
             </h2>
             {speakers.map((speaker) => (
-              <div class={speaker.data.avatar ? "md:grid grid-cols-[260px_1fr] md:gap-6" : ""}>
+              <div
+                class={
+                  speaker.data.avatar
+                    ? "md:grid grid-cols-[260px_1fr] md:gap-6"
+                    : ""
+                }
+              >
                 {speaker.data.avatar && (
                   <div class="flex items-start">
                     <div class="border-4 border-white rounded-lg shadow-lg inline-block mb-10">
@@ -256,6 +270,6 @@ const nextSessionsOrdered = sameRoomNextSession
   const expectedUrl = `/session/${slug}`;
 
   if (currentUrl !== expectedUrl) {
-    window.history.replaceState({}, '', expectedUrl);
+    window.history.replaceState({}, "", expectedUrl);
   }
 </script>

@@ -51,7 +51,7 @@ type ScheduleSession = {
   end: Date;
   endTime: string;
   duration: number;
-  sessionType?: string;
+  sessionType?: string | undefined;
   type: string;
   rooms: string[];
 };
@@ -331,9 +331,6 @@ const dateText = format(date, "eeee - do MMMM");
   );
 
   const endStart = numberToTime(lastEndTime);
-  const endStartDate = addMinutes(parseISO(dayName), lastEndTime);
-  const endEndDate = addMinutes(endStartDate, 10);
-  const endEnd = numberToTime(lastEndTime + 10);
 
 ---
 
@@ -478,7 +475,8 @@ const dateText = format(date, "eeee - do MMMM");
     display: flex;
     flex-direction: column;
     gap: 8px;
-    @apply px-6;
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
   }
 
   .slot {
@@ -605,14 +603,14 @@ const dateText = format(date, "eeee - do MMMM");
       grid-column: 3 / 6;
       position: relative;
       display: block;
-
-      &::after {
+    }
+    .posters::after {
         content: "";
         display: block;
         /*padding: 4px 8px;*/
       }
 
-      h2,
+      .posters h2
       {
         background: linear-gradient(#F8F7F6, #F2E2D3 );
         padding: 4px 8px;
@@ -622,7 +620,7 @@ const dateText = format(date, "eeee - do MMMM");
         font-size: 0.8em;
       }
 
-      > div {
+      .posters > div {
         display: flex;
 
         & > :global(*) {
@@ -630,10 +628,9 @@ const dateText = format(date, "eeee - do MMMM");
         }
       }
 
-      & :global(.session.poster) {
+      .posters :global(.session.poster) {
         display: flex;
       }
-    }
   }
 </style>
 
