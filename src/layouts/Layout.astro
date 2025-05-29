@@ -107,12 +107,23 @@ footer {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("/service-worker.js").then((registration) => {
-      console.log("ServiceWorker registered: ", registration);
+      registration.pushManager.getSubscription()
+
+      self.addEventListener("push", (event: any) => {
+        const payload = event.data?.text() ?? "no payload";
+        event.waitUntil(
+          registration.showNotification("EP 2025", {
+            body: payload,
+          }),
+        );
+      });
+
     }).catch((registrationError) => {
       console.log("ServiceWorker registration failed: ", registrationError);
     });
   });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia('(display-mode: standalone)').matches) {
