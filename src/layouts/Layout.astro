@@ -107,23 +107,12 @@ footer {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("/service-worker.js").then((registration) => {
-      registration.pushManager.getSubscription()
-
-      self.addEventListener("push", (event: any) => {
-        const payload = event.data?.text() ?? "no payload";
-        event.waitUntil(
-          registration.showNotification("EP 2025", {
-            body: payload,
-          }),
-        );
-      });
-
+      console.log("ServiceWorker registered: ", registration);
     }).catch((registrationError) => {
       console.log("ServiceWorker registration failed: ", registrationError);
     });
   });
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia('(display-mode: standalone)').matches) {
@@ -156,13 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       anchor.href = "";
 
-      const message = 'External links are disabled in standalone mode. Please visit the website to access external content.';
-
-      if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted') {
-        new Notification('External Link Blocked', { body: message });
-      } else {
-        alert(message);
-      }
+      const message = 'Please visit the website to access external content.';
+      alert(message);
     }, { passive: false });
   }
 });
