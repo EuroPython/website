@@ -116,24 +116,60 @@ if ("serviceWorker" in navigator) {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia('(display-mode: standalone)').matches) {
-    document.addEventListener('click', function (e:any) {
-      const anchor = e.target.closest('a');
+    document.addEventListener('click', function (e: Event) {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a') as HTMLAnchorElement;
+
       if (!anchor || !anchor.href) return;
 
       const origin = window.location.origin;
       const href = anchor.getAttribute('href');
 
+      if (!href) return;
+
+      const normalizedHref = href.trim().toLowerCase();
+
       if (
-        href.startsWith('#') ||
-        href.startsWith('/') ||
-        href.startsWith(origin)
+        normalizedHref.startsWith('#') ||
+        normalizedHref.startsWith('/') ||
+        normalizedHref.startsWith(origin.toLowerCase()) ||
+        normalizedHref.startsWith('mailto:') ||
+        normalizedHref.startsWith('tel:') ||
+        normalizedHref.startsWith('sms:') ||
+        (!normalizedHref.includes('://') && !normalizedHref.startsWith('//'))
       ) {
         return;
       }
 
       e.preventDefault();
-      alert('External links are available only via website.');
+      e.stopPropagation();
+
+      const message = 'External links are disabled in standalone mode. Please visit the website to access external content.';
+
+      if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted') {
+        new Notification('External Link Blocked', { body: message });
+      } else {
+        alert(message);
+      }
+
+      console.log('Blocked external link:', href);
+
     }, { passive: false });
   }
 });
+
+function addVisualFeedback() {
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    const style = document.createElement('style');
+    style.textContent = `
+      a[href^="http"]:not([href^="${window.location.origin}"]):hover::after,
+      a[href^="//"]:hover::after {
+        content: " 🚫";
+      }
+    `;
+    document.head.appendChild(style);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', addVisualFeedback);
 </script>
