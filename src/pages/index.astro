@@ -13,6 +13,13 @@ import Subscribe from "@sections/subscribe.astro";
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
+  <Fragment slot="head">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="mask-icon" href="/maskable_icon.png" color="#f5e5d6">
+    <meta name="msapplication-TileColor" content="#f5e5d6">
+    <meta name="theme-color" content="#f5e5d6">
+  </Fragment>
 
   <Hero />
   <Updates />

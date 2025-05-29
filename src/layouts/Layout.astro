@@ -28,10 +28,6 @@ const externalDomain = new URL(Astro.site || "").hostname;
   <head>
     <BaseHead title={title} description={description} />
     <slot name="head" />
-
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#6200ee" />
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     </Fragment>
   </head>
   <body>
