@@ -147,6 +147,7 @@ function getGitHosting(url: string): string | undefined {
                     <a
                       href={ensureHttps(entry.data.homepage)}
                       class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
                     >
                       {entry.data.homepage}
                     </a>
@@ -166,6 +167,7 @@ function getGitHosting(url: string): string | undefined {
                   <a
                     href={ensureHttps(entry.data.gitx_url)}
                     class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
                   >
                     {entry.data.gitx_url}
                   </a>
@@ -180,6 +182,7 @@ function getGitHosting(url: string): string | undefined {
                   <a
                     href={entry.data.linkedin_url}
                     class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
                   >
                     {getLinkedInUsername(entry.data.linkedin_url)}
                   </a>
@@ -194,6 +197,7 @@ function getGitHosting(url: string): string | undefined {
                   <a
                     href={entry.data.mastodon_url}
                     class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
                   >
                     {getMastodonUsername(entry.data.mastodon_url)}
                   </a>
@@ -208,6 +212,7 @@ function getGitHosting(url: string): string | undefined {
                   <a
                     href={entry.data.twitter_url}
                     class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
                   >
                     {getTwitterUsername(entry.data.twitter_url)}
                   </a>
@@ -221,6 +226,7 @@ function getGitHosting(url: string): string | undefined {
                   <a
                     href={getBlueskyProfileLink(getBlueskyUsername(entry.data.bluesky_url) as string)}
                     class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
                   >
                     {getBlueskyUsername(entry.data.bluesky_url)}
                   </a>

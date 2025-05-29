@@ -103,7 +103,7 @@ footer {
 }
 
 @media all and (display-mode: standalone) {
-  header, footer {
+  footer {
     display: none;
   }
 }
@@ -123,13 +123,36 @@ if ("serviceWorker" in navigator) {
 document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia('(display-mode: standalone)').matches) {
 
-    document.addEventListener('click', function (_: Event) {
+    (document.querySelector('.home-link') as HTMLAnchorElement).href = '/schedule/?utm_source=pwa';
 
-      const path = window.location.pathname;
+    document.addEventListener('click', function (e: Event) {
 
-      if (!['/schedule', '/speaker', '/session'].some(prefix => path.startsWith(prefix))) {
-        window.location.href = '/schedule';
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a') as HTMLAnchorElement;
+
+      if (!anchor || !anchor.href) return;
+
+      const origin = window.location.origin;
+      const href = anchor.getAttribute('href');
+
+      if (!href) return;
+
+      const normalizedHref = href.trim().toLowerCase();
+
+      if (
+        normalizedHref.startsWith('#') ||
+        normalizedHref.startsWith('/') ||
+        normalizedHref.startsWith(origin.toLowerCase()) ||
+        (!normalizedHref.includes('://') && !normalizedHref.startsWith('//'))
+      ) {
+        return;
       }
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      const message = 'Please visit the website to access external content.';
+      alert(message);
 
     }, { passive: false });
   }
