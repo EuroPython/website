@@ -47,11 +47,6 @@ import links from "@data/links.json";
 </section>
 <Search />
 
-<style>
-  :root::view-transition-group(navbar) {
-    z-index: 100;
-  }
-</style>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   let prevScrollPos = window.pageYOffset;
@@ -66,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     prevScrollPos = currentScrollPos;
   });
-
 
   navbar.addEventListener("focusin", () => {
     navbar.style.transform = "translateY(0)";
