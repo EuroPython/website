@@ -2,13 +2,16 @@
 import Layout from "@layouts/Layout.astro";
 import Section from "@ui/Section.astro";
 import Note from "@ui/Note.astro";
+import Headline from "@ui/Headline.astro"
+import { slugify } from '@utils/content';
 
 export interface Props {
   title?: string;
   description: string;
+  headline: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, headline } = Astro.props;
 ---
 <Layout title={title || "Schedule for 2025"} description={description} >
   <Fragment slot="head">
@@ -17,8 +20,10 @@ const { title, description } = Astro.props;
   </Fragment>
   <Section>
 
-    <Note type="warning">This is an early version of the schedule and may still change. If you're planning travel around specific sessions, please keep that in mind.</Note>
-    <Note type="info" >Mark talks as favorites by opening their details and tapping the ❤️ icon. Your selections are saved locally and will only be visible on this device.</Note>
+    <Headline as="h1"id={slugify(headline)} title={headline} />
+
+  <Note type="warning">This is an early version of the schedule and may still change. If you're planning travel around specific sessions, please keep that in mind.</Note>
+  <Note type="info" >Mark talks as favorites by opening their details and tapping the ❤️ icon. Your selections are saved locally and will only be visible on this device.</Note>
 
     <div class="layout-wrapper2">
       <slot />
