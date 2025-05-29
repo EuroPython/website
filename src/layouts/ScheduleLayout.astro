@@ -16,9 +16,15 @@ const { title, description, headline } = Astro.props;
 ---
 <Layout title={title || "Schedule for 2025"} description={description} >
   <Fragment slot="head">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="mask-icon" href="/maskable_icon.png" color="#f5e5d6">
+    <meta name="msapplication-TileColor" content="#f5e5d6">
+    <meta name="theme-color" content="#f5e5d6">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
   </Fragment>
+
   <InstallPWA />
   <Section>
     <Headline as="h1"id={slugify(headline)} title={headline} />
