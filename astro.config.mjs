@@ -6,7 +6,6 @@ import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
-import pagefind from "astro-pagefind";
 import deleteUnusedImages from "astro-delete-unused-images";
 import serviceWorker from "astrojs-service-worker";
 import { execSync } from "node:child_process";
@@ -117,7 +116,6 @@ export default defineConfig({
     mdx(),
     sitemap(),
     metaTags(),
-    pagefind(),
     deleteUnusedImages(),
     svelte(),
     serviceWorker({

@@ -44,6 +44,7 @@ check:
 
 build:
 	pnpm run astro build --mode $(MODE)
+	pnpm pagefind
 
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)
