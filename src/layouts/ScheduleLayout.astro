@@ -4,6 +4,7 @@ import Section from "@ui/Section.astro";
 import Note from "@ui/Note.astro";
 import Headline from "@ui/Headline.astro"
 import { slugify } from '@utils/content';
+import InstallPWA from "@components/InstallPWA.astro";
 
 export interface Props {
   title?: string;
@@ -18,8 +19,8 @@ const { title, description, headline } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
   </Fragment>
+  <InstallPWA />
   <Section>
-
     <Headline as="h1"id={slugify(headline)} title={headline} />
 
   <Note type="warning">This is an early version of the schedule and may still change. If you're planning travel around specific sessions, please keep that in mind.</Note>
