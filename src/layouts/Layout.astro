@@ -87,7 +87,7 @@ footer {
   padding-bottom: 2.5rem;
 }
 
-  @media screen and (width>1200px){
+@media screen and (width>1200px){
   main {
     margin-bottom:800px;
   }
@@ -100,6 +100,12 @@ footer {
             text-align: center;
             z-index: -1;
         }
+}
+
+@media all and (display-mode: standalone) {
+  header, footer {
+    display: none;
+  }
 }
 </style>
 
@@ -116,33 +122,15 @@ if ("serviceWorker" in navigator) {
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia('(display-mode: standalone)').matches) {
-    document.addEventListener('click', function (e: Event) {
-      const target = e.target as HTMLElement;
-      const anchor = target.closest('a') as HTMLAnchorElement;
 
-      if (!anchor || !anchor.href) return;
+    document.addEventListener('click', function (_: Event) {
 
-      const origin = window.location.origin;
-      const href = anchor.getAttribute('href');
+      const path = window.location.pathname;
 
-      if (!href) return;
-
-      const normalizedHref = href.trim().toLowerCase();
-
-      if (
-        normalizedHref.startsWith('#') ||
-        normalizedHref.startsWith('/') ||
-        normalizedHref.startsWith(origin.toLowerCase()) ||
-        (!normalizedHref.includes('://') && !normalizedHref.startsWith('//'))
-      ) {
-        return;
+      if (!['/schedule', '/speaker', '/session'].some(prefix => path.startsWith(prefix))) {
+        window.location.href = '/schedule';
       }
 
-      e.preventDefault();
-      e.stopPropagation();
-
-      const message = 'Please visit the website to access external content.';
-      alert(message);
     }, { passive: false });
   }
 });
