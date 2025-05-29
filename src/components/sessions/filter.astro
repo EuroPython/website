@@ -80,7 +80,7 @@ import Select from "@ui/Select.astro";
     search: string;
   }
 
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const forms = document.querySelectorAll<HTMLFormElement>("form.filter-sessions");
     const resultsInfo = document.getElementById("results-info");
 

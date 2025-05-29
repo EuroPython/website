@@ -151,25 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         alert(message);
       }
-
-      console.log('Blocked external link:', href);
-
     }, { passive: false });
   }
 });
-
-function addVisualFeedback() {
-  if (window.matchMedia('(display-mode: standalone)').matches) {
-    const style = document.createElement('style');
-    style.textContent = `
-      a[href^="http"]:not([href^="${window.location.origin}"]):hover::after,
-      a[href^="//"]:hover::after {
-        content: " 🚫";
-      }
-    `;
-    document.head.appendChild(style);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', addVisualFeedback);
 </script>

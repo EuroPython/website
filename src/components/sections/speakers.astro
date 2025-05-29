@@ -70,7 +70,7 @@ const sectionSubtitle = "Meet some of our amazing speakers";
 </Section>
 
 <script>
-document.addEventListener('astro:page-load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.speakers-track') as HTMLElement;
   const slides = document.querySelectorAll('.speaker-slide');
   const totalOriginalSlides = slides.length / 2;

@@ -635,7 +635,7 @@ const dateText = format(date, "eeee - do MMMM");
 </style>
 
 <script>
-  document.addEventListener("astro:page-load", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const containers = document.querySelectorAll(".schedule-container");
 
     function syncScroll(event: any) {
