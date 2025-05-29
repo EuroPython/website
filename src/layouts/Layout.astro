@@ -133,9 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         normalizedHref.startsWith('#') ||
         normalizedHref.startsWith('/') ||
         normalizedHref.startsWith(origin.toLowerCase()) ||
-        normalizedHref.startsWith('mailto:') ||
-        normalizedHref.startsWith('tel:') ||
-        normalizedHref.startsWith('sms:') ||
         (!normalizedHref.includes('://') && !normalizedHref.startsWith('//'))
       ) {
         return;
@@ -143,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       e.preventDefault();
       e.stopPropagation();
-      anchor.href = "";
 
       const message = 'Please visit the website to access external content.';
       alert(message);
