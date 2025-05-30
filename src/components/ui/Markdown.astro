@@ -1,13 +1,12 @@
 ---
 import { marked } from 'marked';
-import { replaceYouTubeLinks } from "@utils/markdown";
 
 interface Props {
   content: string;
 }
 
 const { content } = Astro.props;
-const html = marked.parse(await replaceYouTubeLinks(content) );
+const html = marked.parse(content);
 ---
 
 <div class="prose prose-xl max-w-none" >
