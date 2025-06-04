@@ -1,6 +1,5 @@
 ---
 import type { ImageMetadata } from "astro";
-import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import Person1 from "./placeholders/person-1.astro";
 import Person2 from "./placeholders/person-2.astro";
@@ -10,7 +9,7 @@ import Person5 from "./placeholders/person-5.astro";
 
 export interface Props {
   name: string;
-  slug: string;
+  url: string;
   tagline?: string | undefined;
   image?: ImageMetadata;
   placeholder?: boolean | undefined;
@@ -20,7 +19,7 @@ export interface Props {
 
 const {
   name,
-  slug,
+  url,
   tagline,
   image,
   placeholder,
@@ -31,9 +30,6 @@ const placeholders = [Person1, Person2, Person3, Person4, Person5];
 
 const Placeholder =
   placeholders[Math.floor(Math.random() * placeholders.length)];
-
-const entries = await getCollection("speakers");
-const isSpeaker = entries.some((entry) => entry.id === slug);
 ---
 
 <li class:list={["list-none rounded-2xl overflow-clip flex group", className]}>
@@ -61,10 +57,10 @@ const isSpeaker = entries.some((entry) => entry.id === slug);
           <p class="text-body-inverted">More keynoters coming soon</p>
         ) : (
           <>
-            {isSpeaker ? (
+            {url ? (
               <h2 class="text-[#17223A] font-bold">
                 <a
-                  href={`/speaker/${slug}`}
+                  href={url}
                   class="text-2xl font-bold hover:underline"
                 >
                   {name}
