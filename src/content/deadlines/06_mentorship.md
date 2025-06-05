@@ -1,6 +1,6 @@
 ---
 title: Speakers' Workshop
-subtitle: Already Taken Place 
+subtitle: Already Taken Place
 url: https://forms.gle/T8rc73sbyu3KbLNKA
 image: "mentorship1.jpg"
 ---
