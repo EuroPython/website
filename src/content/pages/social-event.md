@@ -71,13 +71,13 @@ non-alcoholic.
 As we want to make this event enjoyable for everyone, we have taken steps to
 ensure accessibility. However, please note that the venue has some limitations:
 
-> &#128679; IMPORTANT: The elevator from the bridge to the island is currently
-> under construction and will most likely not be available during the event. We
+> &#128679; IMPORTANT: The lift from the bridge to the island is currently under
+> construction and will most likely not be available during the event. We
 > apologize for any inconvenience this may cause.
 
 - Access to the island is from the middle of a bridge with uneven surfaces
   (flattened cobblestones). To get down to the island you will need to use about
-  20 stairs. (The elevator is currently under repair.)
+  20 stairs. (The lift is currently under repair.)
   - If you need assistance, please contact us in advance so we can arrange for
     help.
 - The bridge, surrounding paths and path on the island are equipped with
