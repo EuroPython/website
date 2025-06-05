@@ -74,6 +74,10 @@
           "path": "/venue"
         },
         {
+          "name": "Accessibility",
+          "path": "/accessibility"
+        },
+        {
           "name": "Hotels",
           "path": "/hotels"
         }
