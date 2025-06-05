@@ -40,7 +40,7 @@
     "remark-toc": "^9.0.0",
     "sharp": "^0.34.2",
     "svelte": "^5.33.12",
-    "tailwindcss": "^4.1.7",
+    "tailwindcss": "^4.1.8",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
