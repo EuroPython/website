@@ -26,6 +26,8 @@ if (!gitVersion) {
   }
 }
 
+const fastBuild= true;
+
 function dontDie() {
   return {
     name: "dont-die",
@@ -113,20 +115,23 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
-    sitemap(),
-    metaTags(),
-    deleteUnusedImages(),
     svelte(),
-    compress({
-      HTML: false,
-      CSS: false,
-      SVG: false,
-    }),
-    dontDie(),
+    ...(fastBuild? [] : [
+      sitemap(),
+      metaTags(),
+      deleteUnusedImages(),
+      compress({
+        HTML: false,
+        JavaScript: false,
+        CSS: false,
+        SVG: false,
+      }),
+      dontDie(),
+    ]),
   ],
   output: "static",
   build: {
-    minify: true,
+    ...(fastBuild? {} : { minify: true,}),
   },
   image: {
     remotePatterns: [{ protocol: "https" }],
