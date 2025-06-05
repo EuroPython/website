@@ -4,6 +4,7 @@ import Section from "@ui/Section.astro";
 import Note from "@ui/Note.astro";
 import Headline from "@ui/Headline.astro"
 import { slugify } from '@utils/content';
+import InstallPWA from "@components/InstallPWA.astro";
 
 export interface Props {
   title?: string;
@@ -15,11 +16,17 @@ const { title, description, headline } = Astro.props;
 ---
 <Layout title={title || "Schedule for 2025"} description={description} >
   <Fragment slot="head">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="mask-icon" href="/maskable_icon.png" color="#f5e5d6">
+    <meta name="msapplication-TileColor" content="#f5e5d6">
+    <meta name="theme-color" content="#f5e5d6">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
   </Fragment>
-  <Section>
 
+  <InstallPWA />
+  <Section>
     <Headline as="h1"id={slugify(headline)} title={headline} />
 
   <Note type="warning">This is an early version of the schedule and may still change. If you're planning travel around specific sessions, please keep that in mind.</Note>

@@ -7,6 +7,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 import deleteUnusedImages from "astro-delete-unused-images";
+import serviceWorker from "astrojs-service-worker";
 import { execSync } from "node:child_process";
 import svelte from "@astrojs/svelte";
 import compress from "astro-compress";
@@ -117,6 +118,9 @@ export default defineConfig({
     metaTags(),
     deleteUnusedImages(),
     svelte(),
+    serviceWorker({
+      workbox: { inlineWorkboxRuntime: true },
+    }),
     compress({
       HTML: false,
       CSS: false,
@@ -131,5 +135,9 @@ export default defineConfig({
   image: {
     remotePatterns: [{ protocol: "https" }],
     domains: ["programme.europython.eu", "placehold.co"],
+  },
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "load",
   },
 });
