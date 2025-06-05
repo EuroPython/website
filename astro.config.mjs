@@ -120,21 +120,23 @@ export default defineConfig({
     serviceWorker({
       workbox: { inlineWorkboxRuntime: true },
     }),
-    ...(fastBuild? [] : [
-      sitemap(),
-      metaTags(),
-      deleteUnusedImages(),
-      compress({
-        HTML: false,
-        CSS: false,
-        SVG: false,
-      }),
-      dontDie(),
-    ]),
+    ...(fastBuild
+      ? []
+      : [
+          sitemap(),
+          metaTags(),
+          deleteUnusedImages(),
+          compress({
+            HTML: false,
+            CSS: false,
+            SVG: false,
+          }),
+          dontDie(),
+        ]),
   ],
   output: "static",
   build: {
-    ...(fastBuild? {} : { minify: true,}),
+    ...(fastBuild ? {} : { minify: true }),
   },
   image: {
     remotePatterns: [{ protocol: "https" }],
