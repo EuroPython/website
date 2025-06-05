@@ -5,6 +5,7 @@ import HeaderLogo from "@components/header/header-logo.astro";
 import Search from "@components/Search.astro";
 
 import links from "@data/links.json";
+
 ---
 
 <section
@@ -47,6 +48,7 @@ import links from "@data/links.json";
 <Search />
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   let prevScrollPos = window.pageYOffset;
   const navbar = document.getElementById("navbar") as HTMLElement;
 
@@ -69,4 +71,5 @@ import links from "@data/links.json";
       navbar.style.transform = "translateY(-100%)";
     }
   });
+});
 </script>

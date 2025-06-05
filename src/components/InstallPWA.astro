@@ -1,0 +1,54 @@
+---
+
+---
+<div id="install-pwa" class="hidden">
+  <p>Add website to home screen and get easy access to the schedule!</p>
+  <button id="install-btn" class="button-link font-bold text-lg px-4 py-4 rounded-lg inline-flex items-center justify-center leading-4 transition-colors duration-200 not-prose border text-white
+      bg-primary hover:bg-primary-hover border-transparent">Add to home screen</button>
+</div>
+
+<style>
+#install-pwa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+
+#install-pwa.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+}
+</style>
+
+<script>
+function showInstallPrompt() {
+  const installBanner = document.getElementById('install-pwa');
+  installBanner.classList.remove('hidden');
+}
+
+document.getElementById('install-btn').addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult: any) => {
+      console.log(choiceResult.outcome);
+      deferredPrompt = null;
+    });
+  }
+});
+
+let deferredPrompt: any;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  showInstallPrompt();
+});
+</script>
