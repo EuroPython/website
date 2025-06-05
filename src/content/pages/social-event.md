@@ -68,20 +68,31 @@ non-alcoholic.
 
 ## Accessibility Information
 
-The venue is mostly accessible:
+As we want to make this event enjoyable for everyone, we have taken steps to
+ensure accessibility. However, please note that the venue has some limitations:
 
-- Elevator access is available from the bridge. The elevator has internal
-  dimensions of 105 × 128 cm and a door width of 85 cm.
-- Most of the outdoor area is unpaved. Surfaces include cobblestones, sand
-  paths, and grassy areas.
+> &#128679; IMPORTANT: The elevator from the bridge to the island is currently
+> under construction and will most likely not be available during the event. We
+> apologize for any inconvenience this may cause.
+
+- Access to the island is from the middle of a bridge with uneven surfaces
+  (flattened cobblestones). To get down to the island you will need to use about
+  20 stairs. (The elevator is currently under repair.)
+  - If you need assistance, please contact us in advance so we can arrange for
+    help.
+- The bridge, surrounding paths and path on the island are equipped with
+  streetlamps and are well-lit, even at night. There is a clear delineation
+  between the paths and the surrounding grass.
+- The island is mostly flat, paths are wide but unpaved. Surfaces include
+  cobblestones and sand paths. Wheelchairs are fine, other mobility aids may
+  need more care.
+
 - There are no steps or stairs at the entrance to the main building. However,
   access to the first floor (where board games will be played) is only via
   stairs and is not accessible for individuals with limited mobility.
 - A wheelchair-accessible toilet is located inside the bridge pillar.
 - A quiet space is available for rest and relaxation.
 - Nearby parking is available.
-- The bridge and surrounding paths are equipped with street lamps and are
-  well-lit, even at night.
 
 > Note: Some areas have cobblestone surfaces, which may be difficult to navigate
 > with mobility aids.
