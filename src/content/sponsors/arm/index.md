@@ -15,6 +15,8 @@ socials:
 
 tier: Gold
 logo_padding: 35px
+draft: true
+
 ---
 
 ## About Arm
