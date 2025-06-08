@@ -18,7 +18,7 @@ export GIT_VERSION ?= $(shell git rev-parse --short HEAD)
 # Auto-detect and sanitize current git branch
 BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
 # Replace "/" and other non-alphanumeric characters with "-"
-SAFE_BRANCH := $(shell echo "$(BRANCH)" | sed 's/[^A-Za-z0-9-]/-/g')
+SAFE_BRANCH := $(shell echo "$(BRANCH)" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g')
 FORCE_DEPLOY ?= false
 SITE_URL ?= "https://$(SAFE_BRANCH).ep-preview.click"
 
@@ -44,6 +44,7 @@ check:
 
 build:
 	pnpm run astro build --mode $(MODE)
+	pnpm pagefind
 
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)

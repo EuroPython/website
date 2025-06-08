@@ -3,10 +3,6 @@
   z-index: 9999;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: var(--color-body-background);
   color: var(--color-text);

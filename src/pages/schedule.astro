@@ -19,14 +19,13 @@ const days = await getCollection("days");
 
 ---
 
-<Layout description="Browse all scheduled events.">
+<Layout description="Browse all scheduled events." headline="Schedule">
 
   {
     days.map((day) => (
       <ScheduleDay day={day} />
     ))
   }
-</Layout>
 <script>
 window.addEventListener('load', function() {
   function checkForAnchorAndHighlight() {
@@ -88,3 +87,4 @@ window.addEventListener('load', function() {
   window.addEventListener('hashchange', checkForAnchorAndHighlight);
 });
 </script>
+</Layout>
