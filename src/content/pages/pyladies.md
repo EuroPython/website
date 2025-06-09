@@ -19,7 +19,7 @@ attendees an exclusive opportunity to connect, share, and grow together.
 Join us for a special lunch event aimed at fostering community and empowerment
 in tech. Enjoy meaningful conversations and networking opportunities.
 
-WHEN? Thursday, 11th July 2025, 12:30 to 14:00.
+WHEN? Thursday, 17th July 2025, 12:30 to 14:00.
 
 WHERE? Prague Congress Centre (PCC), VIP lunch area.
 
