@@ -1,0 +1,60 @@
+---
+import Section from "@ui/Section.astro"
+import Headline from "@ui/Headline.astro";
+
+interface WeekPeriod {
+  id: string;
+  days: string;
+  dates: string;
+  activities: string;
+  isActive?: boolean;
+}
+
+const weekPeriods: WeekPeriod[] = [
+  {
+    id: 'monday-tuesday',
+    days: 'Mon – Tues',
+    dates: '14 – 15 July',
+    activities: 'Workshops & Tutorials',
+    isActive: true
+  },
+  {
+    id: 'wednesday-friday',
+    days: 'Wed – Friday',
+    dates: '16 – 18 July',
+    activities: 'The Main Conference',
+  },
+  {
+    id: 'saturday-sunday',
+    days: 'Sat – Sun',
+    dates: '19 – 20 July',
+    activities: 'Sprints',
+  }
+];
+---
+
+<Section>
+  <Headline id="theweek" title="The Week" center="true" />
+  <div class="grid sm:flex w-full justify-center sm:justify-around ">
+    {weekPeriods.map((period) => (
+    <div class="grid grid-cols-1 text-center w-[160px] m-5 rounded overflow-hidden">
+        <div
+          data-period={period.id}
+          class="bg-slate-800 text-slate-200 p-2"
+        >
+          <h3 class="text-xl">
+            {period.dates}
+          </h3>
+          <span class="text-xs">
+            {period.days}
+          </span>
+        </div>
+        <div class="bg-[#D5D6E6] p-3 h-[80px]">
+          <span class="text-lg text-wrap">
+            {period.activities}
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
