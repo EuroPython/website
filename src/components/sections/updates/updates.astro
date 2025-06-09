@@ -8,7 +8,7 @@ let deadlines = await getCollection("deadlines");
 deadlines = deadlines
   .sort((a, b) => a.slug.localeCompare(b.slug))
   .reverse()
-  .slice(0, 6);
+  .slice(0, 3);
 ---
 
 <Section>

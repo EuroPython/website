@@ -1,4 +1,5 @@
 import path from "path";
+import { loadEnv } from "vite";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -26,6 +27,15 @@ if (!gitVersion) {
     gitVersion = "unknown";
   }
 }
+
+const mode =
+  process.argv.find((arg) =>
+    ["development", "production", "preview"].includes(arg)
+  ) || "production";
+const fastBuild = loadEnv(mode, process.cwd(), "").EP_FAST_BUILD === "true";
+console.log(
+  `\x1b[35m[EP]\x1b[0m Fast Build: \x1b[1m\x1b[34m${fastBuild}\x1b[0m`
+);
 
 function dontDie() {
   return {
@@ -114,23 +124,27 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
-    sitemap(),
-    metaTags(),
-    deleteUnusedImages(),
     svelte(),
     serviceWorker({
       workbox: { inlineWorkboxRuntime: true },
     }),
-    compress({
-      HTML: false,
-      CSS: false,
-      SVG: false,
-    }),
-    dontDie(),
+    ...(fastBuild
+      ? []
+      : [
+          sitemap(),
+          metaTags(),
+          deleteUnusedImages(),
+          compress({
+            HTML: false,
+            CSS: false,
+            SVG: false,
+          }),
+          dontDie(),
+        ]),
   ],
   output: "static",
   build: {
-    minify: true,
+    ...(fastBuild ? {} : { minify: true }),
   },
   image: {
     remotePatterns: [{ protocol: "https" }],

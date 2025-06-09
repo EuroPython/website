@@ -5,6 +5,7 @@ interface ImportMetaEnv {
   readonly EP_SESSIONS_API: string;
   readonly EP_SPEAKERS_API: string;
   readonly EP_SCHEDULE_API: string;
+  readonly EP_FAST_BUILD: boolean;
 }
 
 interface ImportMeta {
