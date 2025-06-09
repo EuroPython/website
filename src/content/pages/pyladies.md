@@ -30,7 +30,7 @@ WHERE? Prague Congress Centre (PCC), VIP lunch area.
 Empower yourself in this workshop designed to help you celebrate your achievements and improve your self-promotion skills.
 
 WHEN?
-Thursday, 11th July 2024, 15:30 to 17:00.
+Thursday, 17th July 2024, 15:30 to 17:00.
 
 WHERE?
 Prague Congress Centre (PCC), Open Space 2 (Room 224)
