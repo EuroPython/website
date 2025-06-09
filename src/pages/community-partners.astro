@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "@layouts/SectionLayout.astro";
 import SponsorCard from "@components/SponsorCard.astro";
 import Headline from "@ui/Headline.astro";
+import Button from "@ui/Button.astro";
 
 const sponsors = (await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
@@ -31,5 +32,5 @@ const sponsors = (await getCollection("sponsors", ({ data }) => {
     </div>
   )}
   <p class="pb-5">
-  Are you a Python Community organiser, interested in knowing more about EuroPython Society? Feel free to reach out at board@europython.eu!
+  Are you a Python Community organiser, interested in knowing more about EuroPython Society? Feel free to reach out at <Button custom class="font-bold text-button-active hover:underline" url="mailto:board@europython.eu">board@europython.eu</Button>!
   </p></Layout>

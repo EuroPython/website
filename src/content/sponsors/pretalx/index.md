@@ -15,10 +15,9 @@ socials:
   mastodon:
   bluesky:
 tier: Supporters
-draft: true
 ---
 
-## About Pretalx
+# About Pretalx
 
 Pretalx simplifies event logistics with a free, privacy-focused tool for
 call-for-papers, scheduling, and attendee engagement. It powers conferences like
