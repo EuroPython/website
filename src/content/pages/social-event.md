@@ -78,8 +78,6 @@ ensure accessibility. However, please note that the venue has some limitations:
 - Access to the island is from the middle of a bridge with uneven surfaces
   (flattened cobblestones). To get down to the island you will need to use about
   20 stairs. (The lift is currently under repair.)
-  - If you need assistance, please contact us in advance so we can arrange for
-    help.
 - The bridge, surrounding paths and path on the island are equipped with
   streetlamps and are well-lit, even at night. There is a clear delineation
   between the paths and the surrounding grass.
@@ -94,5 +92,5 @@ ensure accessibility. However, please note that the venue has some limitations:
 - A quiet space is available for rest and relaxation.
 - Nearby parking is available.
 
-> Note: Some areas have cobblestone surfaces, which may be difficult to navigate
-> with mobility aids.
+  **If you need assistance, please contact us in advance so we can arrange for
+  help.**
