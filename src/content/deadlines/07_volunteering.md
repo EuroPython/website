@@ -1,6 +1,6 @@
 ---
 title: On-Site Volunteers
-subtitle: Join Us
+subtitle: Already Closed
 url: /volunteers
 image: "./volunteers-2024.jpg"
 ---
