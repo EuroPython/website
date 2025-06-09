@@ -1,6 +1,6 @@
 ---
 title: Financial Aid
-subtitle: Open until 9 May
+subtitle: Already Closed
 url: /finaid
 image: "./finaid.jpeg"
 ---
