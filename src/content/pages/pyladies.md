@@ -42,7 +42,7 @@ Prague Congress Centre (PCC), Open Space 2 (Room 224)
 Take advantage of this unique networking opportunity to meet and connect with experienced members of PyLadies. Gain valuable insights, advice, and inspiration for your Python and life journeys.
 
 WHEN?
-Thursday, 11th July 2024, 15:30 to 17:00.
+Thursday, 17th July 2024, 15:30 to 17:00.
 
 WHERE?
 Prague Congress Centre (PCC), Open Space 2 (Room 223)
