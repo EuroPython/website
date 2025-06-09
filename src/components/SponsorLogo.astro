@@ -20,7 +20,7 @@ const {
 } = sponsor.data;
 
 const logo = sponsorLogos[sponsor.id];
-const slug = tier==="Partners"? '/community-partners': tier==="Platinum" ? `/sponsor/${sponsorId}` : `/sponsors#sponsor-${sponsorId}`
+const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`: tier==="Platinum" ? `/sponsor/${sponsorId}` : `/sponsors#sponsor-${sponsorId}`
 
 ---
 
