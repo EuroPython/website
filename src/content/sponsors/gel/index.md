@@ -14,7 +14,7 @@ socials:
   discord: "https://discord.gg/gel"
   youtube: "https://www.youtube.com/@EdgeDB"
 tier: Platinum
-
+logo_padding: 10px
 draft: true
 ---
 
