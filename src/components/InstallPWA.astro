@@ -29,11 +29,12 @@
 
 <script>
 function showInstallPrompt() {
-  const installBanner = document.getElementById('install-pwa');
+  const installBanner = document.getElementById('install-pwa') as HTMLElement;
   installBanner.classList.remove('hidden');
 }
 
-document.getElementById('install-btn').addEventListener('click', () => {
+  const installBtn = document.getElementById('install-btn') as HTMLElement;
+  installBtn.addEventListener('click', () => {
   if (deferredPrompt) {
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choiceResult: any) => {
