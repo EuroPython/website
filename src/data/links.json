@@ -116,6 +116,10 @@
           "path": "/volunteers"
         },
         {
+          "name": "Accessibility",
+          "path": "/accessibility"
+        },
+        {
           "name": "Childcare",
           "path": "/childcare"
         },
