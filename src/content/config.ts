@@ -25,7 +25,6 @@ const deadlines = defineCollection({
     }),
 });
 
-
 const week = defineCollection({
   type: "content",
   schema: ({ image }) =>
