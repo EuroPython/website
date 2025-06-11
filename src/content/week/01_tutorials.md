@@ -5,7 +5,6 @@ url: /schedule/tutorials/
 image: "./tutorials.jpg"
 ---
 
-16 tutorials & 3 summits 
+16 tutorials & 3 summits
 
-July 14-15
-Monday-Tuesday
+July 14-15 Monday-Tuesday
