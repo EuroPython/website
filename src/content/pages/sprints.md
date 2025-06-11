@@ -4,22 +4,34 @@ subtitle: Organise or join a sprint at EuroPython 2025!
 ---
 
 # EuroPython 2025 Sprints
-Join us for two days of open-source hacking, learning, and collaboration! As is tradition, the sprints will happen the weekend after EuroPython—this year on Saturday and Sunday, 19–20 July.
 
-The conference team provides the space, lunch, and coffee—you bring the energy, ideas, and code. Whether you're maintaining a major library or trying your first contribution, there's something for everyone.
+Join us for two days of open-source hacking, learning, and collaboration! As is
+tradition, the sprints will happen the weekend after EuroPython—this year on
+Saturday and Sunday, 19–20 July.
+
+The conference team provides the space, lunch, and coffee—you bring the energy,
+ideas, and code. Whether you're maintaining a major library or trying your first
+contribution, there's something for everyone.
 
 ## What is a Sprint?
-Sprints are informal coding sessions (think: mini hackathons) where people gather to work on open-source projects, share ideas, and solve problems together.
+
+Sprints are informal coding sessions (think: mini hackathons) where people
+gather to work on open-source projects, share ideas, and solve problems
+together.
 
 ![Sprints photos collage](/images/sprints.png)
 
-
 ## Who Can Attend:
-- EuroPython ticket holders (Conference, Tutorial, or Combined) can join the sprints for free—just make sure to select sprint attendance when configuring your ticket.
-- No ticket? No problem. You’ll be able to register for the sprints for free—details coming soon on our [tickets page](https://europython.eu/tickets).
+
+- EuroPython ticket holders (Conference, Tutorial, or Combined) can join the
+  sprints for free—just make sure to select sprint attendance when configuring
+  your ticket.
+- No ticket? No problem. You’ll be able to register for the sprints for
+  free—details coming soon on our [tickets page](https://europython.eu/tickets).
 
 ## Open-Source Projects
-More info soon! 
+
+More info soon!
 
 <!-- ## Location of the sprints venue
 The Rajska Building (RB), [Žižkov Campus, VŠE](https://maps.app.goo.gl/azRTAczu8B5ma1XFA) (Prague University of Economics and Business) is the home of our sprints again this year.
@@ -42,5 +54,3 @@ You can use the [Žižkov Campus Map, VŠE (PDF)](https://www.vse.cz/english/wp-
 <Image src={vseImage1} width="1080" alt="A photo pointing up the hill to the VSE building with our entrance." />
 <Image src={vseImage2} width="1080" alt="A photo displaying the entrance to use to go to the sprints." />
  -->
-
-

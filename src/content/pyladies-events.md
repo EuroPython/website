@@ -4,24 +4,28 @@ subtitle: Lunch, Workshops & Networking
 ---
 
 # PyLadies Events
-We’re excited to announce a range of events for underrepresented groups in computing this year! 🎉 Whether you're new to PyLadies or a long-time supporter, we warmly welcome you to join us and be part of our supportive community.
 
-These events are open only to those who have a conference ticket, giving our attendees an exclusive opportunity to connect, share, and grow together.
+We’re excited to announce a range of events for underrepresented groups in
+computing this year! 🎉 Whether you're new to PyLadies or a long-time supporter,
+we warmly welcome you to join us and be part of our supportive community.
+
+These events are open only to those who have a conference ticket, giving our
+attendees an exclusive opportunity to connect, share, and grow together.
 
 ![](./images/pyladies-events.jpg)
 
 ## PyLadies Lunch
-Join us for a special lunch event aimed at fostering community and empowerment in tech. Enjoy meaningful conversations and networking opportunities.
 
-WHEN?
-Thursday, 11th July 2025, 12:30 to 14:00.
+Join us for a special lunch event aimed at fostering community and empowerment
+in tech. Enjoy meaningful conversations and networking opportunities.
 
-WHERE?
-Prague Congress Centre (PCC), VIP lunch area.
+WHEN? Thursday, 11th July 2025, 12:30 to 14:00.
 
-## More Events Coming Soon! 
+WHERE? Prague Congress Centre (PCC), VIP lunch area.
 
-<!-- 
+## More Events Coming Soon!
+
+<!--
 ## #IAmRemarkable
 Empower yourself in this workshop designed to help you celebrate your achievements and improve your self-promotion skills.
 
