@@ -63,6 +63,10 @@
         {
           "name": "Rust Summit",
           "path": "/session/rust-summit"
+        },
+        {
+          "name": "Sprints Weekend",
+          "path": "/sprints"
         }
       ]
     },
@@ -242,8 +246,8 @@
           "path": "/session/rust-summit"
         },
         {
-          "name": "Community",
-          "path": "/community-partners"
+          "name": "Sprints Weekend",
+          "path": "/sprints"
         }
       ]
     },
