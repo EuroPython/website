@@ -48,28 +48,40 @@ import links from "@data/links.json";
 <Search />
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  let prevScrollPos = window.pageYOffset;
-  const navbar = document.getElementById("navbar") as HTMLElement;
-
-  window.addEventListener("scroll", () => {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      navbar.style.transform = "translateY(0)";
-    } else {
-      navbar.style.transform = "translateY(-100%)";
+document.addEventListener("DOMContentLoaded", function() {
+  var navbar = document.getElementById("navbar") as HTMLElement;
+  if (!navbar) return;
+  
+  var prevScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+  var isFocused = false;
+  
+  window.addEventListener("scroll", function() {
+    var currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (!isFocused) {
+      if (prevScrollPos > currentScrollPos) {
+        navbar.style.transform = "translateY(0)";
+      } else {
+        navbar.style.transform = "translateY(-100%)";
+      }
     }
+    
     prevScrollPos = currentScrollPos;
   });
-
-  navbar.addEventListener("focusin", () => {
-    navbar.style.transform = "translateY(0)";
-  });
-
-  navbar.addEventListener("focusout", () => {
-    if (window.pageYOffset > 100) {
-      navbar.style.transform = "translateY(-100%)";
-    }
-  });
+  
+  if ('onfocusin' in navbar) {
+    navbar.addEventListener("focusin", function() {
+      isFocused = true;
+      navbar.style.transform = "translateY(0)";
+    });
+    
+    navbar.addEventListener("focusout", function() {
+      isFocused = false;
+      var currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPos > prevScrollPos) {
+        navbar.style.transform = "translateY(-100%)";
+      }
+    });
+  }
 });
 </script>
