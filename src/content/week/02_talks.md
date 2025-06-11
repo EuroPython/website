@@ -1,11 +1,12 @@
 ---
-title: Talks & Open Spaces
-subtitle: See in Schedule
+title: Main Conference
+subtitle: See the Schedule
 url: /schedule/talks/
 image: "talks.jpg"
 ---
 
-120+ talks across 6 parallel tracks over 3 days. Open spaces. PyLadies
-Workshops.
+120+ talks, six parallel tracks, open spaces, PyLadies
+day, social events, and more!
 
-July 16-18 Wednesday-Friday
+July 16-18 <br />
+Wednesday-Friday
