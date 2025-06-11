@@ -36,7 +36,8 @@ community. Let’s make some music together!
 ## Pack Your Picnic Blankets & Sportswear
 
 Feel like moving around? We’ve got a variety of outdoor sports confirmed for the
-evening, including volleyball, croquet, pétanque, tennis, and table tennis! 
+evening, including volleyball, croquet, pétanque, tennis, and table tennis!
+
 <!-- —plus archery with trained instructors to guide you. -->
 
 Whether you’re joining in or just watching from your blanket, come as you are
