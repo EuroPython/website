@@ -36,16 +36,18 @@ community. Let’s make some music together!
 ## Pack Your Picnic Blankets & Sportswear
 
 Feel like moving around? We’ve got a variety of outdoor sports confirmed for the
-evening, including volleyball, croquet, pétanque, tennis, and table tennis—plus
-archery with trained instructors to guide you.
+evening, including volleyball, croquet, pétanque, tennis, and table tennis! 
+<!-- —plus archery with trained instructors to guide you. -->
 
 Whether you’re joining in or just watching from your blanket, come as you are
 and enjoy the summer vibe! Don’t forget to bring your sporty clothes or
 comfortable shoes if you’d like to take part in the games!
 
-![Archery at the social event venue](/images/social-event-archery.jpg)
+<!-- ![Archery at the social event venue](/images/social-event-archery.jpg) -->
 
 ![Night view of the social event venue](/images/social-event-night.jpg)
+
+![Campfire at the social event venue](/images/social-event-campfire.jpg)
 
 ## Tickets
 
