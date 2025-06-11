@@ -19,13 +19,15 @@ const action2 = "/sponsorship/sponsor/";
       <!-- Left side icons -->
       <svg
         class="bg-icon top-[5%] left-[15%] rotate-[23deg] xl:block hidden"
+        style="animation: 4s ease-in-out infinite float1;"
         viewBox="-40 -40 200 200"
-        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+        ><text x="10" y="50" font-size="100" font-weight="bold" fill="#A0B7E9"
           >{"{}"}</text
         ></svg
       >
       <svg
         class="bg-icon top-[30%] left-[5%] rotate-[42deg] xl:block hidden"
+        style="animation: 4s ease-in-out infinite float3;"
         viewBox="-40 -40 200 200"
         ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
           >#</text
@@ -33,6 +35,7 @@ const action2 = "/sponsorship/sponsor/";
       >
       <svg
         class="bg-icon bottom-[30%] left-[18%] rotate-[15deg] xl:block hidden"
+        style="animation: 3s ease-in-out infinite float1;"
         viewBox="-40 -40 200 200"
         ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
           >&lt;/&gt;</text
@@ -40,6 +43,7 @@ const action2 = "/sponsorship/sponsor/";
       >
       <svg
         class="bg-icon bottom-[5%] left-[7%] rotate-[10deg] xl:block hidden"
+        style="animation: 3s ease-in-out infinite float3;"
         viewBox="-40 -40 200 200"
         ><text
           x="10"
@@ -54,13 +58,15 @@ const action2 = "/sponsorship/sponsor/";
       <!-- Right side icons -->
       <svg
         class="bg-icon top-[5%] right-[17%] rotate-[30deg] xl:block hidden"
+        style="animation: 3s ease-in-out infinite float3;"
         viewBox="-40 -40 200 200"
-        ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
+        ><text x="10" y="50" font-size="100" font-weight="bold" fill="#A0B7E9"
           >&lt;/&gt;</text
         ></svg
       >
       <svg
         class="bg-icon top-[30%] right-[6%] rotate-[15deg] xl:block hidden"
+        style="animation: 3s ease-in-out infinite float1;"
         viewBox="-40 -40 200 200"
         ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
           >:=</text
@@ -68,6 +74,7 @@ const action2 = "/sponsorship/sponsor/";
       >
       <svg
         class="bg-icon bottom-[30%] right-[20%] rotate-[45deg] xl:block hidden"
+        style="animation: 4s ease-in-out infinite float3;"
         viewBox="-40 -40 200 200"
         ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
           >&gt;&gt;&gt;</text
@@ -75,6 +82,7 @@ const action2 = "/sponsorship/sponsor/";
       >
       <svg
         class="bg-icon bottom-[5%] right-[8%] rotate-[33deg] xl:block hidden"
+        style="animation: 4s ease-in-out infinite float1;"
         viewBox="-40 -40 200 200"
         ><text x="10" y="50" font-size="80" font-weight="bold" fill="#A0B7E9"
           >ƒ(x)</text
@@ -208,5 +216,19 @@ const action2 = "/sponsorship/sponsor/";
       top: 10px;
     }
 
+
+
+  @keyframes float1 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+  }
+  @keyframes float2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-25px, 25px); }
+  }
+  @keyframes float3 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(15px, 15px); }
+  }
   </style>
 </section>
