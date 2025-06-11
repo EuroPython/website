@@ -222,6 +222,14 @@
           "path": "/beginners-day"
         },
         {
+          "name": "Thursday Social Event",
+          "path": "/social-event"
+        },
+        {
+          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "path": "/pyladies"
+        },
+        {
           "name": "WASM Summit",
           "path": "/session/webassembly-summit"
         },
