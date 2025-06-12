@@ -16,7 +16,7 @@ socials:
   mastodon:
   bluesky:
 tier: Supporters
-logo_padding: 30px 0
+logo_padding: 25px 0
 draft: true
 ---
 

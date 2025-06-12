@@ -1,7 +1,7 @@
 ---
-name: CultRepo
+name: LWN.net 
 description: ""
-url: https://instagram.com/cult.repo
+url: https://LWN.net
 socials:
   twitter: https://x.com/CultRepo
   bluesky: https://bsky.app/profile/cultrepo.bsky.social
