@@ -49,6 +49,10 @@
           "path": "/social-event"
         },
         {
+          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "path": "/pyladies"
+        },
+        {
           "name": "WASM Summit",
           "path": "/session/webassembly-summit"
         },
@@ -59,6 +63,10 @@
         {
           "name": "Rust Summit",
           "path": "/session/rust-summit"
+        },
+        {
+          "name": "Sprints Weekend",
+          "path": "/sprints"
         }
       ]
     },
@@ -218,6 +226,14 @@
           "path": "/beginners-day"
         },
         {
+          "name": "Thursday Social Event",
+          "path": "/social-event"
+        },
+        {
+          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "path": "/pyladies"
+        },
+        {
           "name": "WASM Summit",
           "path": "/session/webassembly-summit"
         },
@@ -230,8 +246,8 @@
           "path": "/session/rust-summit"
         },
         {
-          "name": "Community",
-          "path": "/community-partners"
+          "name": "Sprints Weekend",
+          "path": "/sprints"
         }
       ]
     },
