@@ -1,7 +1,7 @@
 ---
 name: Junior Guru
 description: ""
-url: https://logo.junior.guru/
+url: https://junior.guru/
 socials:
   youtube: https://www.youtube.com/@juniordotguru
 
