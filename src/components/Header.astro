@@ -51,18 +51,18 @@ import links from "@data/links.json";
 document.addEventListener("DOMContentLoaded", function() {
   var navbar = document.getElementById("navbar") as HTMLElement;
   if (!navbar) return;
-  
+
   var prevScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-  
+
   window.addEventListener("scroll", function() {
     var currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-  
+
     if (prevScrollPos > currentScrollPos) {
       navbar.style.transform = "translateY(0)";
     } else {
       navbar.style.transform = "translateY(-100%)";
     }
-  
+
     prevScrollPos = currentScrollPos;
   });
 });
