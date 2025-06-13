@@ -11,12 +11,11 @@ socials:
   bluesky: https://bsky.app/profile/pydantic.dev
   mastodon: https://fosstodon.org/@pydantic
   github: https://github.com/pydantic/pydantic
-
+logo_padding: "0"
 tier: Gold
-draft: true
 ---
 
-## About Pydantic
+# About Pydantic
 
 Pydantic is built on the pillars of open source: transparency, collaboration and
 excellence. Our origins inform every product we craft. Whether it’s a community

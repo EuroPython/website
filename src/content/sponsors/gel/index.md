@@ -18,7 +18,7 @@ logo_padding: 5px
 draft: true
 ---
 
-## About Gel
+# About Gel
 
 Gel is a scalable, integrated data platform on top of Postgres. Gel gives the
 relational model a fresh facelift, solves n+1, simplifies migrations, and
