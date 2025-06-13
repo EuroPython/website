@@ -15,10 +15,9 @@ socials:
   mastodon:
   bluesky:
 tier: Silver
-draft: true
 ---
 
-## About Pretix
+# About Pretix
 
 Pretix enables event organizers to manage ticket sales and registrations without
 vendor lock-in. Its open-source model and focus on data protection make it a

@@ -11,11 +11,9 @@ socials:
   bluesky: "https://bsky.app/profile/visualstudio.com"
 tier: Platinum
 logo_padding: 10px 0px
-
-draft: true
 ---
 
-## About Microsoft
+# About Microsoft
 
 Open Source enables Microsoft products and services to bring choice, technology
 and community to our customers.

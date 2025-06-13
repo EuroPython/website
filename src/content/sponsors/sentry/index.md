@@ -16,10 +16,9 @@ socials:
   bluesky:
 tier: Bronze
 logo_padding: 20px 0
-draft: true
 ---
 
-## About Sentry
+# About Sentry
 
 Sentry’s platform streamlines debugging and performance monitoring for apps
 across platforms. Though 2025 partnerships aren’t listed here, its integration

@@ -13,11 +13,9 @@ socials:
   twitter: "https://x.com/TechAtBloomberg"
 tier: Platinum
 logo_padding: 10px 0px
-
-draft: true
 ---
 
-## About Bloomberg
+# About Bloomberg
 
 Bloomberg is a global leader in business and financial information, delivering
 trusted data, news, and insights that bring transparency, efficiency, and
