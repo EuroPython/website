@@ -1,7 +1,7 @@
 ---
 name: CultRepo
 description: ""
-url: https://instagram.com/cult.repo
+url: https://www.youtube.com/@cultrepo
 socials:
   twitter: https://x.com/CultRepo
   bluesky: https://bsky.app/profile/cultrepo.bsky.social
