@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Headline from "@ui/Headline.astro"
 import Section from "@ui/Section.astro";
 
+import { Image } from "astro:assets";
+
+const imageStyle = "m-2 md:float-right max-w-[300px] md:max-w-[400px] lg:max-w-[300px] w-full border-4 border-white rounded-lg shadow-lg ";
 ---
 
 <Layout
@@ -18,6 +21,15 @@ import Section from "@ui/Section.astro";
     <div class="events-grid">
       <div class="event-category">
         <h3>Talks, Tutorials & Posters</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/sessions/">~120 talks</a></li>
           <li><a href="/sessions/">~20 tutorials</a></li>
@@ -28,6 +40,15 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Summits</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/session/rust-summit/">Rust Summit</a></li>
           <li><a href="/session/webassembly-summit">WASM Summit</a></li>
@@ -37,6 +58,15 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>PyLadies Sessions</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li>Will be added soon!</li>
         </ul>
@@ -44,6 +74,15 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Beginner Workshops</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/beginners-day#django-girls">Django Girls</a></li>
           <li><a href="/beginners-day#humble-data">Humble Data</a></li>
@@ -52,6 +91,15 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Community Organizers' Sessions</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li>Will be added soon!</li>
         </ul>
@@ -59,6 +107,15 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Social & Networking Events</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/speakers-dinner/">Speakers' dinner</a></li>
           <li><a href="/beginners-day#beginners-day-unconference">Beginners’ Day Unconference</a></li>
@@ -68,6 +125,15 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Open spaces</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li>Will be added soon!</li>
         </ul>
@@ -75,6 +141,15 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Sprints</h3>
+
+          <Image
+              src="/overview/placeholder.png"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li>10+ open-source projects</li>
         </ul>
@@ -118,7 +193,7 @@ import Section from "@ui/Section.astro";
 
     .events-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
       gap: 2rem;
     }
 
