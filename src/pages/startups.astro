@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import Layout from "@layouts/SectionLayout.astro";
 import SponsorCard from "@components/SponsorCard.astro";
 import Headline from "@ui/Headline.astro";
+import Button from "@ui/Button.astro";
+
 
 const sponsors = (await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
@@ -21,7 +23,7 @@ const sponsors = (await getCollection("sponsors", ({ data }) => {
 
   <Headline as="h1" id="startups" title="Startups" />
   <p class="pb-5">
-    EuroPython is a community-driven conference, and we wouldn’t be able to empower early-stage innovation and support emerging talent in the Python ecosystem without the generous support of our **Startups** tier sponsors. Learn more about them below (listed in alphabetical order).
+  EuroPython is a community-driven conference, and we wouldn’t be able to empower early-stage innovation and support emerging talent in the Python ecosystem without the generous support of our <strong>Startups</strong> tier sponsors. Learn more about them below (listed in alphabetical order).
   </p>
   {sponsors.length > 0 && (
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -31,5 +33,5 @@ const sponsors = (await getCollection("sponsors", ({ data }) => {
     </div>
   )}
   <p class="pb-5">
-    Are you a startup working with Python or building something exciting in the tech space? Looking to grow your visibility and connect with a vibrant developer community? We’d love to hear from you — reach out to us at sponsoring@europython.eu!
+    Are you a startup working with Python or building something exciting in the tech space? Looking to grow your visibility and connect with a vibrant developer community? We’d love to hear from you — reach out to us at <Button custom class="font-bold text-button-active hover:underline" url="mailto:board@europython.eu">board@europython.eu</Button>!
   </p></Layout>

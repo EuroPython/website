@@ -15,7 +15,6 @@ socials:
   youtube: "https://www.youtube.com/@EdgeDB"
 tier: Platinum
 logo_padding: 5px
-draft: true
 ---
 
 # About Gel
