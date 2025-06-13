@@ -13,10 +13,9 @@ socials:
   mastodon:
   bluesky:
 tier: Financial Aid
-draft: true
 ---
 
-## About EuroPython Society
+# About EuroPython Society
 
 The EuroPython Society (EPS) is a Swedish non-profit organization dedicated to
 supporting Python communities across Europe and organizing EuroPython

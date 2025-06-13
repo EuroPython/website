@@ -1,12 +1,14 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/SectionLayout.astro";
-import SponsorLogo from "@components/SponsorLogo.astro";
+import SponsorCard from "@components/SponsorCard.astro";
 import Headline from "@ui/Headline.astro";
+import Button from "@ui/Button.astro";
 
 import { slugify } from "@utils/content";
 
 const sponsors = await getCollection("sponsors");
+
 
 const tiers = [
   "Keystone",
@@ -40,20 +42,34 @@ const grouped = sponsors.reduce((acc, sponsor) => {
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
 
-  <Headline title="Thank You to Our Sponsors" />
+  <Headline title="Sponsors" />
+
+  <p class="pb-5">
+    EuroPython thrives thanks to the generous support of our Sponsors. Their commitment empowers us to build a world-class conference that’s accessible, diverse, and driven by community. From supporting open source to fostering innovation, these organizations make it all possible. Explore the companies championing Python and helping us bring EuroPython to life.
+  </p>
 
   <!-- Render sponsors grouped by tier -->
-  {tiers.map((tier) => {
+  {tiers
+
+  .filter((tier) => tier !== "Partners")
+  .map((tier) => {
     const tiersponsors = grouped[tier];
     return tiersponsors?.length ? (
       <section class="mb-12">
         <Headline id=`tier-${slugify(tier)}` title={tier} />
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
           {tiersponsors.map((sponsor) => (
-            <SponsorLogo sponsor={sponsor.id} />
+            <SponsorCard sponsor={sponsor.id} />
           ))}
         </div>
       </section>
     ) : null;
   })}
+
+
+  <p>
+    We’re also incredibly grateful to the vibrant Python communities that support us around the world.
+    Discover our <Button custom class="font-bold text-button-active hover:underline" url="/community-partners">Community Partners</Button> — local groups and global initiatives that help grow and connect the Python ecosystem.
+  </p>
+
 </Layout>

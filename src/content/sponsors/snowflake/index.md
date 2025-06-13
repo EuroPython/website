@@ -16,10 +16,9 @@ socials:
   bluesky:
 tier: Silver
 logo_padding: 20px 0
-draft: true
 ---
 
-## About Snowflake
+# About Snowflake
 
 Snowflake’s data platform enables organizations to store, process, and analyze
 massive datasets efficiently. Though no 2025 event ties are listed, its role in

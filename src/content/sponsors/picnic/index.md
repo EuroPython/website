@@ -15,10 +15,9 @@ socials:
   mastodon:
   bluesky:
 tier: Gold
-draft: true
 ---
 
-## About Picnic
+# About Picnic
 
 Picnic leverages AI and automation to streamline grocery delivery, reducing
 costs and environmental impact. Though not explicitly tied to 2025 events in

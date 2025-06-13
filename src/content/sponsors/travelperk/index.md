@@ -19,10 +19,9 @@ socials:
   instagram: https://www.instagram.com/travelperk
 tier: Gold
 logo_padding: 20px 20px
-draft: true
 ---
 
-## About TravelPerk
+# About TravelPerk
 
 TravelPerk is a travel-management company that provides companies with a variety
 of travel- and expense-management services. A business travel platform that

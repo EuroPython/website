@@ -17,10 +17,9 @@ socials:
   bluesky:
 tier: Gold
 logo_padding: 20px 10px
-draft: true
 ---
 
-## About JetBrains
+# About JetBrains
 
 JetBrains is a global leader in developer productivity tools, offering solutions
 for Python, Java, JavaScript, and more. In 2025, it supported community events

@@ -15,10 +15,9 @@ socials:
 
 tier: Gold
 logo_padding: 35px
-draft: true
 ---
 
-## About Arm
+# About Arm
 
 Born more than 30 years ago with the goal of designing a computer intended to
 run on a battery, Arm has become a global compute platform delivering advanced

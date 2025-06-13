@@ -25,6 +25,17 @@ const deadlines = defineCollection({
     }),
 });
 
+const week = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      subtitle: z.string(),
+      url: z.string(),
+      image: image(),
+    }),
+});
+
 const keynoters = defineCollection({
   type: "content",
   schema: ({ image }) =>
@@ -198,7 +209,7 @@ const sponsors = defineCollection({
   schema: z.object({
     name: z.string(),
     url: z.string().url(),
-    tier: z.string().nullable(),
+    tier: z.string(),
     location: z.string().optional(),
     industry: z.string().optional(),
     description: z.string().optional(),
@@ -244,6 +255,7 @@ export const collections = {
   days,
   pages,
   deadlines,
+  week,
   sessions,
   speakers,
   keynoters,

@@ -1,5 +1,5 @@
 ---
-title: PyLadies Events—Lunch, Workshops & Networking
+title: PyLadies Events
 subtitle: Lunch, Workshops & Networking
 ---
 
@@ -12,7 +12,7 @@ we warmly welcome you to join us and be part of our supportive community.
 These events are open only to those who have a conference ticket, giving our
 attendees an exclusive opportunity to connect, share, and grow together.
 
-![](./images/pyladies-events.jpg)
+![PyLadies Lunch Photo](./images/pyladies-events.jpg)
 
 ## PyLadies Lunch
 
