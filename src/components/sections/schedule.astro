@@ -1,0 +1,42 @@
+---
+import Section from "@ui/Section.astro";
+import Button from "@ui/Button.astro";
+import Headline from "@ui/Headline.astro";
+const schedule = [
+{ dayname: 'Sunday', day:'July 14', href: '/schedule/day/2025-07-14' },
+  { dayname: 'Monday', day:'July 15', href: '/schedule/day/2025-07-15' },
+  { dayname: 'Tuesday', day:'July 16', href: '/schedule/day/2025-07-16' },
+  { dayname: 'Wednesday', day:'July 17', href: '/schedule/day/2025-07-17' },
+  { dayname: 'Thursday', day:'July 18', href: '/schedule/day/2025-07-18' },
+];
+
+const sprints = {
+  day: 'July 19–20',
+  dayname: 'Sprints',
+  href: '/sprints',
+};
+---
+
+<Section>
+  <Headline as="h5" title="Detailed Daily Conference Schedule" center="true"  />
+  <div class="schedule-grid p-2">
+    {schedule.map(day => (
+    <Button url={day.href} outline class="schedule-box">
+        {day.day}<br />{day.dayname}
+      </Button>
+    ))}
+
+      <Button url={sprints.href} secondary class="schedule-box">
+        {sprints.day}<br />{sprints.dayname}
+      </Button>
+  </div>
+</Section>
+
+<style>
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+</style>
