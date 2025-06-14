@@ -225,8 +225,8 @@ const formatPrice = (price: number | string) => {
               <div class="text-xl mt-4">
                 {tier.slotsLeft ? (
                   <>
-                    <span>{tier.slotsLeft}</span> slot
-                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
                   </>
                 ) : (
                   <>Fully booked</>
@@ -281,8 +281,8 @@ const formatPrice = (price: number | string) => {
                   <>Exclusive</>
                 ) : tier.slotsLeft ? (
                   <>
-                    <span>{tier.slotsLeft}</span> slot
-                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
                   </>
                 ) : (
                   <>Fully booked</>
@@ -337,8 +337,8 @@ const formatPrice = (price: number | string) => {
                   <>Exclusive</>
                 ) : tier.slotsLeft ? (
                   <>
-                    <span>{tier.slotsLeft}</span> slot
-                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
                   </>
                 ) : (
                   <>Fully booked</>
@@ -391,8 +391,8 @@ const formatPrice = (price: number | string) => {
               <div class="text-xl">
                 {tier.slotsLeft ? (
                   <>
-                    <span>{tier.slotsLeft}</span> slot
-                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
                   </>
                 ) : (
                   <>Fully booked</>
