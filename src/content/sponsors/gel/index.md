@@ -14,11 +14,10 @@ socials:
   discord: "https://discord.gg/gel"
   youtube: "https://www.youtube.com/@EdgeDB"
 tier: Platinum
-logo_padding: 10px
-draft: true
+logo_padding: 5px
 ---
 
-## About Gel
+# About Gel
 
 Gel is a scalable, integrated data platform on top of Postgres. Gel gives the
 relational model a fresh facelift, solves n+1, simplifies migrations, and
