@@ -98,3 +98,57 @@ p.cross::after {
   font-size: 1.3em;
   margin-left: 0.4em;
 }
+
+.md_table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+@media screen and (max-width: 680px) {
+  .md_table thead {
+    border: none;
+  }
+  .md_table tr {
+    display: block;
+    margin-bottom: 0.8em;
+    border: none;
+  }
+  .md_table th {
+    margin-bottom: 0.8em;
+    border: none;
+    display: block;
+  }
+
+  .md_table thead th div {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .md_table tr td {
+    border: none;
+    display: block;
+    text-align: left;
+    position: relative;
+    padding-inline-start: 0.8em;
+  }
+  .md_table tr td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+  }
+  .md_table tr td:last-child {
+    border-bottom: 0;
+  }
+  .md_table__thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
