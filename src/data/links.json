@@ -28,6 +28,10 @@
           "path": "/tracks"
         },
         {
+          "name": "Speaker Guidelines",
+          "path": "/guidelines"
+        },
+        {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
         }
@@ -51,6 +55,10 @@
         {
           "name": "PyLadies Events—Lunch, Workshops & Networking",
           "path": "/pyladies"
+        },
+        {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
         },
         {
           "name": "WASM Summit",
@@ -232,6 +240,10 @@
         {
           "name": "PyLadies Events—Lunch, Workshops & Networking",
           "path": "/pyladies"
+        },
+        {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
         },
         {
           "name": "WASM Summit",
