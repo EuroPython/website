@@ -100,25 +100,24 @@ p.cross::after {
 }
 
 .md_table {
-  border-collapse:collapse;
+  border-collapse: collapse;
   width: 100%;
   table-layout: fixed;
 }
 @media screen and (max-width: 680px) {
   .md_table thead {
-    border:none;
+    border: none;
   }
   .md_table tr {
     display: block;
     margin-bottom: 0.8em;
-    border:none;
+    border: none;
   }
   .md_table th {
     margin-bottom: 0.8em;
-    border:none;
+    border: none;
     display: block;
   }
-
 
   .md_table thead th div {
     text-align: center;
@@ -126,13 +125,13 @@ p.cross::after {
   }
 
   .md_table tr td {
-    border:none;
+    border: none;
     display: block;
     text-align: left;
     position: relative;
-    padding-inline-start:0.8em;
+    padding-inline-start: 0.8em;
   }
-  .md_table tr td:before { 
+  .md_table tr td:before {
     content: attr(data-label);
     font-weight: bold;
     text-transform: uppercase;
