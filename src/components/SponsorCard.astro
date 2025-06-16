@@ -66,7 +66,7 @@ const logo = sponsorLogos[sponsor.id];
   {
     description && (
       <div class="flex-1">
-        <h2 class="text-2xl font-bold mb-2 ">
+        <h2 id=`sponsor-${sponsorId}` class="sponsor text-2xl font-bold mb-2 ">
           { !isSponsorPage && tier !== 'Partners' ?
             <a href={`/sponsor/${sponsor.id}`}>
             {title}
@@ -95,10 +95,15 @@ const logo = sponsorLogos[sponsor.id];
         )}
 
 
+      </div>
+    )
+  }
+    <div>
+
         {(tier !== "Partners") && website && (
           <div class="website-btn-container flex flex-col sm:flex-row justify-center gap-2 mt-4">
 
-          { !isSponsorPage && sponsor.body &&
+            { !isSponsorPage && sponsor.body && tier && ["Gold", "Platinum"].includes(tier) &&
             <a href={`/sponsor/${sponsor.id}`} class="website-btn-outline">
               About {title}
             </a>
@@ -114,9 +119,7 @@ const logo = sponsorLogos[sponsor.id];
       { (tier !== "Partners") &&
         <SocialLinks socials={socials} />
       }
-      </div>
-    )
-  }
+    </div>
 </div>
 
 <style>
