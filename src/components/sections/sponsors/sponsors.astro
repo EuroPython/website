@@ -14,11 +14,13 @@ const tiers = [
   "Platinum X",
   "Gold",
   "Silver",
+  "Startups",
   "Bronze",
   "Patron",
   "Financial Aid",
   "Supporters",
-  "Partners"
+  "Partners",
+  "Media Partners"
 ] as const;
 
 const sponsors = await getCollection("sponsors");
@@ -67,20 +69,15 @@ const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
     <div class="mt-4 text-center">
       <Button url="/sponsor">Become a sponsor</Button>
     </div>
-    {
-      topTier && topTier.sponsors.length > 0 && (
-        <SponsorTier tier={topTier} top={true} />
-      )
-    }
   </div>
 
   {sponsorTiers.length > 0 && <hr />}
 
-  <div class="">
+  <div >
     {
       sponsorTiers.map((tier, index) => (
         <Fragment>
-          <SponsorTier tier={tier} top={tier.name === "Platinum"} />
+          <SponsorTier tier={tier} level={index} />
           {index !== sponsorTiers.length - 1 && <hr />}
         </Fragment>
       ))

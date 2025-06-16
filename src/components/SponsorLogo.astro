@@ -15,10 +15,13 @@ if (!sponsor) {
 const {
   name: title,
   url: website,
+  tier,
   logo_padding = false,
 } = sponsor.data;
 
 const logo = sponsorLogos[sponsor.id];
+const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`: tier==="Platinum" ? `/sponsor/${sponsorId}` : tier==="Media Partners" ? `/media-partners#sponsor-${sponsorId}` : tier==="Startups" ? `/startups#sponsor-${sponsorId}` : ""
+
 ---
 
 <div
@@ -26,15 +29,15 @@ const logo = sponsorLogos[sponsor.id];
 >
   <div class="w-full flex justify-center items-center md:items-center">
     {
-      website ? (
+      website && slug ? (
 
-        <a href={website} target="_blank" aria-label={`Link to ${title}`}
+      <a href={slug} aria-label={`Link to ${title}`}
 >
           <Image
             src={logo}
             alt={`${title} Logo`}
             style={{
-              minWidth: "250px",
+              minWidth: "170px",
               maxHeight: "120px",
               objectFit: "contain",
               padding: logo_padding ? logo_padding : undefined,
@@ -46,7 +49,7 @@ const logo = sponsorLogos[sponsor.id];
             src={logo}
             alt={`${title} Logo`}
             style={{
-              minWidth: "250px",
+              minWidth: "170px",
               maxHeight: "120px",
               objectFit: "contain",
               padding: logo_padding ? logo_padding : undefined,

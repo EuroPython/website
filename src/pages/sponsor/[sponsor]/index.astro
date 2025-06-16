@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   const isProduction = import.meta.env.MODE === "production";
 
   const sponsors = await getCollection("sponsors", ({ data }) =>
-    data.tier !== "Partners" && (isProduction ? data.draft !== true : true)
+  data.tier && ["Gold", "Platinum"].includes(data.tier) && (isProduction ? data.draft !== true : true)
   );
 
   return sponsors.map((sponsor: any) => ({
@@ -29,6 +29,7 @@ export async function getStaticPaths() {
   title="EuroPython 2025 | July 14th-20th 2025 | Prague, Czech Republic & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
+<h1>
     <SponsorDisplay {sponsor} />
     <TwoCols>
       <Fragment slot="content">
