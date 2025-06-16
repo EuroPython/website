@@ -5,10 +5,11 @@ import SponsorCard from "@components/SponsorCard.astro";
 import Headline from "@ui/Headline.astro";
 import Button from "@ui/Button.astro";
 
+
 const sponsors = (await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
   const notDraft = !isProd || data.draft !== true;
-  const isPartner = data.tier === "Partners";
+  const isPartner = data.tier === "Startups";
   return notDraft && isPartner;
 })).sort((a, b) => a.id.localeCompare(b.id));
 
@@ -19,11 +20,12 @@ const sponsors = (await getCollection("sponsors", ({ data }) => {
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
 
-
-  <Headline as="h1" id="community-partners" title="Community partners" />
+  <Headline as="h1" id="startups" title="Startups" />
+  {sponsors.length > 0 &&
   <p class="pb-5">
-    EuroPython is a community-driven conference, we wouldn't be able to make as much impact without the support of our brilliant Community Partners. Get to know our partners better below (alphabetical order).
+  EuroPython is a community-driven conference, and we wouldn’t be able to empower early-stage innovation and support emerging talent in the Python ecosystem without the generous support of our <strong>Startups</strong> tier sponsors. Learn more about them below (listed in alphabetical order).
   </p>
+  }
   {sponsors.length > 0 && (
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {sponsors.map((sponsor) => (
@@ -31,6 +33,6 @@ const sponsors = (await getCollection("sponsors", ({ data }) => {
       ))}
     </div>
   )}
-  <p class="pb-5">
-  Are you a Python Community organiser, interested in knowing more about EuroPython Society? Feel free to reach out at <Button custom class="font-bold text-button-active hover:underline" url="mailto:board@europython.eu">board@europython.eu</Button>!
+  <p class="pb-25">
+    Are you a startup working with Python or building something exciting in the tech space? Looking to grow your visibility and connect with a vibrant developer community? We’d love to hear from you — reach out to us at <Button custom class="font-bold text-button-active hover:underline" url="mailto:board@europython.eu">board@europython.eu</Button>!
   </p></Layout>

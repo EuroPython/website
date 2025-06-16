@@ -17,10 +17,9 @@ socials:
   bluesky:
 tier: Supporters
 logo_padding: 30px 0
-draft: true
 ---
 
-## About Evolabel
+# About Evolabel
 
 Evolabel focuses on democratizing AI through efficient data annotation tools and
 workflows. Though 2025 updates are sparse, its role in enabling accurate machine

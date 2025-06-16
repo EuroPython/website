@@ -8,7 +8,7 @@ import Button from "@ui/Button.astro";
 const sponsors = (await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
   const notDraft = !isProd || data.draft !== true;
-  const isPartner = data.tier === "Partners";
+  const isPartner = data.tier === "Media Partners";
   return notDraft && isPartner;
 })).sort((a, b) => a.id.localeCompare(b.id));
 
@@ -20,9 +20,9 @@ const sponsors = (await getCollection("sponsors", ({ data }) => {
 >
 
 
-  <Headline as="h1" id="community-partners" title="Community partners" />
+  <Headline as="h1" id="media-partners" title="Media partners" />
   <p class="pb-5">
-    EuroPython is a community-driven conference, we wouldn't be able to make as much impact without the support of our brilliant Community Partners. Get to know our partners better below (alphabetical order).
+    EuroPython is a community-driven conference, and we wouldn’t be able to amplify our message and reach as many people without the support of our amazing Media Partners. Learn more about them below (listed in alphabetical order).
   </p>
   {sponsors.length > 0 && (
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -31,6 +31,6 @@ const sponsors = (await getCollection("sponsors", ({ data }) => {
       ))}
     </div>
   )}
-  <p class="pb-5">
-  Are you a Python Community organiser, interested in knowing more about EuroPython Society? Feel free to reach out at <Button custom class="font-bold text-button-active hover:underline" url="mailto:board@europython.eu">board@europython.eu</Button>!
+  <p class="pb-25">
+    Are you part of a media outlet or platform that shares Python or tech-related content? Interested in partnering with EuroPython? We’d love to hear from you — reach out to us at <Button custom class="font-bold text-button-active hover:underline" url="mailto:board@europython.eu">board@europython.eu</Button>!
   </p></Layout>

@@ -278,3 +278,7 @@ main a[href^="#"]::before {
 .one {
   overflow: hidden;
 }
+
+h2.sponsor {
+  scroll-margin-top: 300px;
+}

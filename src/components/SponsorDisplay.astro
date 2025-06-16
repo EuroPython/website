@@ -15,7 +15,7 @@ import { sponsorDisplay } from "@data/sponsorDisplay";
 const image = sponsorDisplay[sponsor.id]
 ---
 
-{ image &&
+{ sponsor.data.tier == "Platinum" && image &&
 <section class="space-y-12 pb-6 overflow-hidden">
   <Image
     src={image}
