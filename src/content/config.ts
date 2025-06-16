@@ -209,7 +209,7 @@ const sponsors = defineCollection({
   schema: z.object({
     name: z.string(),
     url: z.string().url(),
-    tier: z.string().nullable(),
+    tier: z.string(),
     location: z.string().optional(),
     industry: z.string().optional(),
     description: z.string().optional(),

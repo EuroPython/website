@@ -12,10 +12,9 @@ socials:
   twitter: "https://x.com/ataccama?lang=en"
   facebook: "https://www.facebook.com/Ataccama/"
 tier: Silver
-draft: true
 ---
 
-## About Ataccama
+# About Ataccama
 
 Ataccama ONE is a unified data trust platform for enterprise data leaders that
 combines data quality, observability, lineage, governance and master data
