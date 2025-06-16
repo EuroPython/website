@@ -124,6 +124,18 @@ const tiers: SponsorTierProps[] = [
     ],
   },
   {
+    title: "Startup",
+    price: 3_000,
+    slotsLeft: "5",
+    features: [
+    "<strong>Exhibition Space for 3 days</strong>",
+    "<strong>2 conference tickets (€1000 value)</strong>",
+      "1 remote ticket (€150 value)",
+      "Logo on website and signage",
+      "Welcome post on EuroPython social media",
+    ],
+  },
+  {
     title: "Bronze",
     price: 2_000,
     slotsLeft: "unlimited",
@@ -153,6 +165,7 @@ const getRibbonClass = (title: string) => {
     Platinum: "text-sponsor-platinum",
     Gold: "text-sponsor-gold",
     Silver: "text-sponsor-silver",
+    Startup: "text-sponsor-startup",
     Bronze: "text-sponsor-bronze",
     Patron: "text-sponsor-patron",
   };
@@ -212,8 +225,64 @@ const formatPrice = (price: number | string) => {
               <div class="text-xl mt-4">
                 {tier.slotsLeft ? (
                   <>
-                    <span>{tier.slotsLeft}</span> slot
-                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
+                  </>
+                ) : (
+                  <>Fully booked</>
+                )}
+              </div>
+            </div>
+
+            <p class="font-bold text-base">This tier includes:</p>
+            <ul class="text-base list-none pl-0">
+              {tier.features.map((feature) => (
+                <li class="flex items-start">
+                  <span class="flex-shrink-0 w-6">✔️</span>
+                  <span set:html={feature} />
+                </li>
+              ))}
+            </ul>
+            <div class="absolute bottom-4 right-4">
+              <Button url={signupLink}>Sign Up Now!</Button>
+            </div>
+          </div>
+        ))
+    }
+  </div>
+
+
+  <div class="text-center mb-8 mt-16">
+    <h2 class="text-3xl font-bold">Startups</h2>
+    <p class="text-xl mt-2 mb-12">
+      For early-stage companies ready to connect with the community, boost visibility, and make a strong first impression.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-1 gap-10 mx-96">
+    {
+      tiers
+        .filter((tier) => tier.title === "Startup")
+        .sort((a, b) => {
+          const order: { [key: string]: number } = { Startup: 1 };
+          return order[a.title] - order[b.title];
+        })
+
+        .map((tier) => (
+          <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
+            <div class="h-[160px]">
+              <Ribbon
+                className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
+                style={{ zIndex: "-1", top: "-55px" }}
+              />
+              <Headline as="h3" title={tier.title} />
+              <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
+              <div class="text-xl">
+                {tier.slotsLeft === "Exclusive" ? (
+                  <>Exclusive</>
+                ) : tier.slotsLeft ? (
+                  <>
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
                   </>
                 ) : (
                   <>Fully booked</>
@@ -268,8 +337,8 @@ const formatPrice = (price: number | string) => {
                   <>Exclusive</>
                 ) : tier.slotsLeft ? (
                   <>
-                    <span>{tier.slotsLeft}</span> slot
-                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
                   </>
                 ) : (
                   <>Fully booked</>
@@ -322,8 +391,8 @@ const formatPrice = (price: number | string) => {
               <div class="text-xl">
                 {tier.slotsLeft ? (
                   <>
-                    <span>{tier.slotsLeft}</span> slot
-                    {tier.slotsLeft == 1 ? "" : "s"} remaining
+                    <span>{tier.slotsLeft}</span>
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
                   </>
                 ) : (
                   <>Fully booked</>
