@@ -10,7 +10,6 @@ import links from "@data/links.json";
 
 <section
   id="navbar"
-  class="fixed top-0 z-50 transition-transform duration-300 transform-gpu w-full"
 >
   <div
     class="container max-w-[1150px] mx-auto px-6 py-2 mt-1 lg:p-2 lg:mt-6 flex items-center justify-between relative z-40 bg-white/80 rounded-full backdrop-blur-md shadow-lg"
@@ -47,6 +46,16 @@ import links from "@data/links.json";
 </section>
 <Search />
 
+<style>
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+</style>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const navbar = document.getElementById("navbar") as HTMLElement;
@@ -64,9 +73,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
     const documentHeight = document.documentElement.scrollHeight;
     const windowHeight = window.innerHeight;
-
-    // Don't hide navbar when at the very top
-    if (currentScrollPos <= 10) {
+    
+    // Don't hide navbar when at the very top - increased threshold for reliability
+    if (currentScrollPos <= 20) {
       if (!isVisible) {
         navbar.style.transform = "translateY(0)";
         isVisible = true;
@@ -107,15 +116,70 @@ document.addEventListener("DOMContentLoaded", function() {
     ticking = false;
   }
 
+  // Additional polling check when near the top (for edge cases)
+  let topCheckInterval: any = null;
+  
+  function startTopCheck() {
+    if (topCheckInterval) return;
+    topCheckInterval = setInterval(() => {
+      const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+      if (currentScrollPos <= 20 && !isVisible) {
+        navbar.style.transform = "translateY(0)";
+        isVisible = true;
+        prevScrollPos = currentScrollPos;
+      }
+      if (currentScrollPos > 100 && topCheckInterval) {
+        clearInterval(topCheckInterval);
+        topCheckInterval = null;
+      }
+    }, 50);
+  }
+
   function requestTick() {
     if (!ticking) {
       requestAnimationFrame(updateNavbar);
       ticking = true;
     }
+    
+    // Start polling when we're in the danger zone
+    const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+    if (currentScrollPos <= 100) {
+      startTopCheck();
+    }
   }
 
   // Use passive listener for better performance on mobile
   window.addEventListener("scroll", requestTick, { passive: true });
+
+  // Handle keyboard navigation (arrow keys, page up/down, home/end)
+  document.addEventListener("keydown", function(e) {
+    const keysToWatch = ['PageUp', 'PageDown', 'End', 'Home', 'ArrowUp', 'ArrowDown'];
+    if (keysToWatch.includes(e.key)) {
+      setTimeout(() => {
+        const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+        if (currentScrollPos <= 10) {
+          navbar.style.transform = "translateY(0)";
+          isVisible = true;
+          prevScrollPos = currentScrollPos;
+        }
+      }, 100);
+    }
+  });
+
+  // Additional check with a longer delay for keyboard scrolling
+  document.addEventListener("keyup", function(e) {
+    const keysToWatch = ['PageUp', 'PageDown', 'End', 'Home', 'ArrowUp', 'ArrowDown'];
+    if (keysToWatch.includes(e.key)) {
+      setTimeout(() => {
+        const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+        if (currentScrollPos <= 10) {
+          navbar.style.transform = "translateY(0)";
+          isVisible = true;
+          prevScrollPos = currentScrollPos;
+        }
+      }, 200);
+    }
+  });
 
   // Handle orientation change on mobile devices
   window.addEventListener("orientationchange", function() {
