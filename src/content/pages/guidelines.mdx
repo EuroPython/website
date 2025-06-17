@@ -2,6 +2,11 @@
 title: Speaker Guidelines
 subtitle: Are you presenting a session at EuroPython this year? We can’t wait to see it!
 ---
+import { Image } from 'astro:assets';
+
+import speakerPhoto from "./images/speakerPhoto.jpg";
+import posterPhoto from "./images/posterPhoto.jpg";
+import helperPhoto from "./images/helperPhoto.jpg";
 
 # Speaker Guidelines
 
@@ -72,19 +77,23 @@ best of all of us, and in the case you mistype your code may not work. We also a
 backup of anything you need rather than relying on the internet: while we do have dedicated ethernet
 cables on the podiums, Murphy has a special nose for materials needed during live sessions.
 
+<div class="flex gap-4 max-w-[800px]" >
+  <Image src={speakerPhoto} alt="A speaker behind the podium" class="w-[60%] border-4 border-white rounded-lg shadow-lg" />
+</div>
+
 ## Making your session accessible for everyone
 
 We want everyone to feel welcome and comfortable at EuroPython. As such, it’s important that your
 session is accessible for all of your audience members.
 
-In order to make accessible slides, you can check the following guidelines. In general, please
+In order to make accessible slides, you can check the [following guidelines](https://www.gov.wales/how-create-accessible-powerpoint-presentations). In general, please
 consider the following:
 
 * Use a simple, sans serif font with enough spacing between letters, with at least an 18-point font
   size. Examples include Calibri, Franklin Gothic Book, Lucida Sans and Segoe UI.
 * Use enough spacing between lines of text, and limit the amount of text per slide.
 * Use high-contrast colours, but please avoid red-green combinations. Try to use an off-white or
-  cream background instead of bright white. This tool can help to select accessible colour
+  cream background instead of bright white. [This tool](https://github.com/alan-turing-institute/distinctipy) can help to select accessible colour
   combinations.
 * Avoid using images with text that might be hard to read.
 
@@ -131,6 +140,10 @@ there, they are likely to have just popped out, so don’t despair! Come back un
 
 **Meeting Room 241** will be available as a Speaker Ready Room. There will be a monitor with an HDMI
 cable if you want to check the set up for your presentation.
+
+<div class="flex gap-4 max-w-[800px]" >
+  <Image src={posterPhoto} alt="People reading a poster" class="w-[60%] border-4 border-white rounded-lg shadow-lg" />
+</div>
 
 ## Preparing for any technical difficulties
 
@@ -187,6 +200,10 @@ time, your final number of attendees is likely to be smaller than this.
 | South Room 223+224 | 30 |
 </div>
 
+<div class="flex gap-4 max-w-[800px]" >
+  <Image src={helperPhoto} alt="A tutor helping a tutorial attendee at their laptop" class="w-[60%] border-4 border-white rounded-lg shadow-lg" />
+</div>
+
 ## Specific advice for tutorials
 
 Please note that tutorials are intended to be a hands-on experience for the attendees, rather than a
@@ -199,9 +216,11 @@ Please keep in mind that if attendees need to download materials for your tutori
 give them a heads up at least a couple of days prior. Bandwidth will be limited, and many public
 resources have some kind of rate limiting set up.
 
-If you will need helpers for your session, please add them to your session in Pretalx or contact the
-Programme Committee (programme@europython.eu) ahead of the conference, as we’ll need to create
-tutorial tickets for them.
+If you will need helpers for your session, please add them to your session in Pretalx and contact the
+Programme Committee (programme@europython.eu) ahead of the conference, as we’ll need to give them
+something for them to be able to attend the tutorials (in case they don't have
+tutorial tickets). In the case they do have tutorial tickets, let us know
+anyway.
 
 To keep a more relaxed learning atmosphere there will be no video recording of your tutorial. Please
 note that this also means that participants cannot scroll back if they miss something, so if in
