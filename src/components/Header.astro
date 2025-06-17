@@ -70,23 +70,27 @@ document.addEventListener("DOMContentLoaded", function() {
   navbar.style.transition = "transform 0.3s ease-in-out";
 
   function updateNavbar() {
-    const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+    // Handle iOS bounce - scroll position can be negative during bounce
+    const rawScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    const currentScrollPos = Math.max(0, rawScrollPos);
+    
+    // Show navbar immediately if we're bouncing above the page (negative scroll)
+    // or if we're very close to the top
+    if (rawScrollPos <= 0 || currentScrollPos <= 50) {
+      if (!isVisible) {
+        navbar.style.transform = "translateY(0)";
+        isVisible = true;
+      }
+      prevScrollPos = currentScrollPos;
+      ticking = false;
+      return;
+    }
+
     const documentHeight = document.documentElement.scrollHeight;
     const windowHeight = window.innerHeight;
 
-    // Don't hide navbar when at the very top - increased threshold for reliability
-    if (currentScrollPos <= 20) {
-      if (!isVisible) {
-        navbar.style.transform = "translateY(0)";
-        isVisible = true;
-      }
-      prevScrollPos = currentScrollPos;
-      ticking = false;
-      return;
-    }
-
     // Don't hide navbar when at the very bottom
-    if (currentScrollPos + windowHeight >= documentHeight - 10) {
+    if (currentScrollPos + windowHeight >= documentHeight - 50) {
       if (!isVisible) {
         navbar.style.transform = "translateY(0)";
         isVisible = true;
@@ -96,9 +100,9 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    // Only update if scroll difference is significant (helps with iOS bounce)
+    // Only update if scroll difference is significant
     const scrollDiff = Math.abs(currentScrollPos - prevScrollPos);
-    if (scrollDiff < 5) {
+    if (scrollDiff < 3) {
       ticking = false;
       return;
     }
@@ -107,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (prevScrollPos > currentScrollPos && !isVisible) {
       navbar.style.transform = "translateY(0)";
       isVisible = true;
-    } else if (prevScrollPos < currentScrollPos && isVisible) {
+    } else if (prevScrollPos < currentScrollPos && isVisible && currentScrollPos > 100) {
       navbar.style.transform = "translateY(-100%)";
       isVisible = false;
     }
@@ -116,89 +120,44 @@ document.addEventListener("DOMContentLoaded", function() {
     ticking = false;
   }
 
-  // Additional polling check when near the top (for edge cases)
-  let topCheckInterval: any = null;
-
-  function startTopCheck() {
-    if (topCheckInterval) return;
-    topCheckInterval = setInterval(() => {
-      const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
-      if (currentScrollPos <= 20 && !isVisible) {
-        navbar.style.transform = "translateY(0)";
-        isVisible = true;
-        prevScrollPos = currentScrollPos;
-      }
-      if (currentScrollPos > 100 && topCheckInterval) {
-        clearInterval(topCheckInterval);
-        topCheckInterval = null;
-      }
-    }, 50);
-  }
-
   function requestTick() {
     if (!ticking) {
       requestAnimationFrame(updateNavbar);
       ticking = true;
-    }
-
-    // Start polling when we're in the danger zone
-    const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
-    if (currentScrollPos <= 100) {
-      startTopCheck();
     }
   }
 
   // Use passive listener for better performance on mobile
   window.addEventListener("scroll", requestTick, { passive: true });
 
-  // Handle keyboard navigation (arrow keys, page up/down, home/end)
-  document.addEventListener("keydown", function(e) {
-    const keysToWatch = ['PageUp', 'PageDown', 'End', 'Home', 'ArrowUp', 'ArrowDown'];
-    if (keysToWatch.includes(e.key)) {
-      setTimeout(() => {
-        const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
-        if (currentScrollPos <= 10) {
-          navbar.style.transform = "translateY(0)";
-          isVisible = true;
-          prevScrollPos = currentScrollPos;
-        }
-      }, 100);
+  // Additional safety check specifically for iOS bounce recovery
+  let bounceCheckTimeout: any = null;
+  
+  window.addEventListener("scroll", function() {
+    // Clear any existing timeout
+    if (bounceCheckTimeout) {
+      clearTimeout(bounceCheckTimeout);
     }
-  });
-
-  // Additional check with a longer delay for keyboard scrolling
-  document.addEventListener("keyup", function(e) {
-    const keysToWatch = ['PageUp', 'PageDown', 'End', 'Home', 'ArrowUp', 'ArrowDown'];
-    if (keysToWatch.includes(e.key)) {
-      setTimeout(() => {
-        const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
-        if (currentScrollPos <= 10) {
-          navbar.style.transform = "translateY(0)";
-          isVisible = true;
-          prevScrollPos = currentScrollPos;
-        }
-      }, 200);
-    }
-  });
-
-  // Handle orientation change on mobile devices
-  window.addEventListener("orientationchange", function() {
-    setTimeout(() => {
-      prevScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
-      if (prevScrollPos <= 10) {
+    
+    // Set a timeout to check position after scroll momentum stops
+    bounceCheckTimeout = setTimeout(() => {
+      const finalScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+      if (finalScrollPos <= 50 && !isVisible) {
         navbar.style.transform = "translateY(0)";
         isVisible = true;
+        prevScrollPos = finalScrollPos;
       }
-    }, 100);
-  });
+    }, 150);
+  }, { passive: true });
 
   // Handle page visibility changes (when switching tabs/apps)
   document.addEventListener("visibilitychange", function() {
     if (!document.hidden) {
-      prevScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
-      if (prevScrollPos <= 10) {
+      const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+      if (currentScrollPos <= 50) {
         navbar.style.transform = "translateY(0)";
         isVisible = true;
+        prevScrollPos = currentScrollPos;
       }
     }
   });
