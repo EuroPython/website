@@ -75,6 +75,10 @@
         {
           "name": "Sprints Weekend",
           "path": "/sprints"
+        },
+        {
+          "name": "Community Organisers Activities",
+          "path": "/community-activities"
         }
       ]
     },
@@ -260,6 +264,10 @@
         {
           "name": "Sprints Weekend",
           "path": "/sprints"
+        },
+        {
+          "name": "Community Organisers Activities",
+          "path": "/community-activities"
         }
       ]
     },
