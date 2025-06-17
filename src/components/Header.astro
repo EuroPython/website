@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Handle iOS bounce - scroll position can be negative during bounce
     const rawScrollPos = window.pageYOffset || document.documentElement.scrollTop;
     const currentScrollPos = Math.max(0, rawScrollPos);
-    
+
     // Show navbar immediately if we're bouncing above the page (negative scroll)
     // or if we're very close to the top
     if (rawScrollPos <= 0 || currentScrollPos <= 50) {
@@ -132,13 +132,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Additional safety check specifically for iOS bounce recovery
   let bounceCheckTimeout: any = null;
-  
+
   window.addEventListener("scroll", function() {
     // Clear any existing timeout
     if (bounceCheckTimeout) {
       clearTimeout(bounceCheckTimeout);
     }
-    
+
     // Set a timeout to check position after scroll momentum stops
     bounceCheckTimeout = setTimeout(() => {
       const finalScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
