@@ -17,14 +17,14 @@ decide whether booking with the coupon or through other platforms.
 Address: Václavské náměstí 812/59, 110 00 Nové Město
 
 Use the following link to apply the EuroPython discount coupon directly:
-[link](https://reservation.barcelo.com/?bep=CERES&hotel=7311&arrive=2025-07-14&depart=2025-07-20&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTHON)
+[link](https://reservation.barcelo.com/?bep=CERES&hotel=7302&arrive=2025-07-10&depart=2025-07-23&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTH25)
 
 ### Occidental Prague (Prague 4)
 
 Address: Na Strži 1660/32, 140 00 Krč
 
 Use the following link to apply the EuroPython discount coupon directly:
-[link](https://reservation.barcelo.com/?bep=CERES&hotel=7302&arrive=2025-07-14&depart=2025-07-20&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTHON)
+[link](https://reservation.barcelo.com/?bep=CERES&hotel=7311&arrive=2025-07-10&depart=2025-07-23&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTH25)
 
 ### Grand Hotel Prague Towers (Prague 4)
 
