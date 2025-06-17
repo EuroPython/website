@@ -57,6 +57,10 @@
           "path": "/pyladies"
         },
         {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
+        },
+        {
           "name": "WASM Summit",
           "path": "/session/webassembly-summit"
         },
@@ -236,6 +240,10 @@
         {
           "name": "PyLadies Events—Lunch, Workshops & Networking",
           "path": "/pyladies"
+        },
+        {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
         },
         {
           "name": "WASM Summit",
