@@ -5,8 +5,8 @@ location: "World"
 industry: "Technology & Non-Profit"
 description:
   "The PyLadies Conference (PyLadiesCon) is an exciting online and free event
-  dedicated to empowerment, learning, and diversity within the Python
-  community! 🎉"
+  dedicated to empowerment, learning, and diversity within the Python community!
+  🎉"
 socials:
   linkedin: "https://www.linkedin.com/company/pyladiescon"
   twitter: "https://twitter.com/pyladiescon"

@@ -3,9 +3,8 @@ name: Python en Español
 url: https://conference.pyladies.com/
 location: "World"
 industry: "Technology & Open Source Community"
-description:
-  "Python in Spanish is an initiative born from the efforts of people from
-  Spanish-speaking countries to create a central place where the community
+description: "Python in Spanish is an initiative born from the efforts of people
+  from Spanish-speaking countries to create a central place where the community
   could continue to grow and strengthen.
 
   We are a community based on respect, offering a safe place where anyone can
