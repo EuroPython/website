@@ -53,7 +53,7 @@
           "path": "/social-event"
         },
         {
-          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "name": "PyLadies Events",
           "path": "/pyladies"
         },
         {
@@ -75,6 +75,10 @@
         {
           "name": "Sprints Weekend",
           "path": "/sprints"
+        },
+        {
+          "name": "Community Organisers Activities",
+          "path": "/community-activities"
         }
       ]
     },
@@ -238,7 +242,7 @@
           "path": "/social-event"
         },
         {
-          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "name": "PyLadies Events",
           "path": "/pyladies"
         },
         {
@@ -260,6 +264,10 @@
         {
           "name": "Sprints Weekend",
           "path": "/sprints"
+        },
+        {
+          "name": "Community Organisers Activities",
+          "path": "/community-activities"
         }
       ]
     },
