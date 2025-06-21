@@ -58,11 +58,17 @@ preview:
 	@echo "\n\n**** Preview complete.\n\n"
 	@echo "Open the preview site at: $(PREVIEW_SITE_URL)\n\n"
 	@echo "\n**** Cleaning up old releases (keep latest 3, skip 'current')...\n"
-	$(REMOTE_CMD) 'bash -c "cd $(RELEASES_DIR) && \
-	for dir in $(ls -1dt */ | sed \"s:/*$$::\" | grep -v ^current$$ | grep -v ^$(TIMESTAMP)$$ | tail -n +2); do \
-		echo rm -rf \"$$dir\"; \
-	done"' | tee /dev/stdout
-	@echo "Need more"
+	$(REMOTE_CMD) "bash -c '\
+cd $(RELEASES_DIR) && \
+echo \"[INFO] In directory: \$$PWD\" && \
+echo \"[INFO] Listing contents:\" && ls -1dt */ && \
+echo \"[INFO] Cleaning (dry-run):\" && \
+ls -1dt */ \
+  | sed \"s:/*\\\$$::\" \
+  | grep -v ^current\\\$$ \
+  | grep -v ^$(TIMESTAMP)\\\$$ \
+  | tail -n +4 \
+  | xargs -r -I{} echo rm -rf \"{}\"'"
 
 
 ifeq ($(FORCE_DEPLOY), true)
