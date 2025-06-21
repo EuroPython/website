@@ -47,16 +47,20 @@ build:
 	pnpm pagefind
 
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
-preview: TARGET = $(RELEASES_DIR)/$(SAFE_BRANCH)
+preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)
 preview:
 	@echo "Preview site URL: $(PREVIEW_SITE_URL)"
 	echo $(TARGET)
 	@echo "\n\n**** Deploying preview of a branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
 	$(REMOTE_CMD) "mkdir -p $(TARGET)"
 	rsync -avz --delete ./dist/ $(VPS_USER)@$(VPS_HOST):$(TARGET)/
-	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(SAFE_BRANCH) current"
+	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current"
 	@echo "\n\n**** Preview complete.\n\n"
 	@echo "Open the preview site at: $(PREVIEW_SITE_URL)\n\n"
+
+	@echo "\n**** Cleaning up old releases (keep latest 3, skip 'current')...\n"
+	$(REMOTE_CMD) 'cd $(RELEASES_DIR) && \
+	ls -1dt */ | grep -v "^current/?$$" | grep -v "^$(TIMESTAMP)/$$" | tail -n +4 | xargs -r echo rm -rf'
 
 
 ifeq ($(FORCE_DEPLOY), true)
