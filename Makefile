@@ -57,17 +57,15 @@ preview:
 	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current"
 	@echo "\n\n**** Preview complete.\n\n"
 	@echo "Open the preview site at: $(PREVIEW_SITE_URL)\n\n"
-	@echo "\n**** Cleaning up old releases (keep latest 3, skip 'current')...\n"
+	@echo "\n**** Cleaning up old releases (keep latest 1, skip 'current')...\n"
 	$(REMOTE_CMD) "bash -c '\
 cd $(RELEASES_DIR) && \
-echo \"[INFO] In directory: \$$PWD\" && \
-echo \"[INFO] Listing contents:\" && ls -1dt */ && \
-echo \"[INFO] Cleaning (dry-run):\" && \
+echo \"[INFO] Cleaning:\" && \
 ls -1dt */ \
   | sed \"s:/*\\\$$::\" \
   | grep -v ^current\\\$$ \
   | grep -v ^$(TIMESTAMP)\\\$$ \
-  | tail -n +4 \
+  | tail -n +2 \
   | xargs -r -I{} echo rm -rf \"{}\"'"
 
 
