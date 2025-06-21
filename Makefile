@@ -62,6 +62,7 @@ preview:
 	for dir in $(ls -1dt */ | sed \"s:/*$$::\" | grep -v ^current$$ | grep -v ^$(TIMESTAMP)$$ | tail -n +2); do \
 		echo rm -rf \"$$dir\"; \
 	done"' | tee /dev/stdout
+	@echo "Need more"
 
 
 ifeq ($(FORCE_DEPLOY), true)
