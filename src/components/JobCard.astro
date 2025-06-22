@@ -55,6 +55,10 @@ const { title, location, type, level, salary, description, responsibilities, req
     </ul>
     }
 
+    { job.data.description2 &&
+      <p class="mb-3">{job.data.description2}</p>
+    }
+
       <a
         href={apply_link}
         target="_blank"
