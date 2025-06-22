@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Headline from "@ui/Headline.astro"
 import Section from "@ui/Section.astro";
 
+import { Image } from "astro:assets";
+
+const imageStyle = "m-2 md:float-right max-w-[300px] md:max-w-[400px] lg:max-w-[300px] w-full border-4 border-white rounded-lg shadow-lg ";
 ---
 
 <Layout
@@ -18,16 +21,34 @@ import Section from "@ui/Section.astro";
     <div class="events-grid">
       <div class="event-category">
         <h3>Talks, Tutorials & Posters</h3>
+
+          <Image
+              src="/overview/conference.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/sessions/">~120 talks</a></li>
           <li><a href="/sessions/">~20 tutorials</a></li>
-          <li><a href="/sessions/">5–6 keynotes</a></li>
+          <li><a href="/sessions/">6 keynotes</a></li>
           <li><a href="/sessions/">10 posters</a></li>
         </ul>
       </div>
 
       <div class="event-category">
         <h3>Summits</h3>
+
+          <Image
+              src="/overview/summits.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/session/rust-summit/">Rust Summit</a></li>
           <li><a href="/session/webassembly-summit">WASM Summit</a></li>
@@ -37,13 +58,31 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>PyLadies Sessions</h3>
+
+          <Image
+              src="/overview/pyladies-lunch.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
-          <li>Will be added soon!</li>
+          <li><a href="/pyladies">PyLadies Lunch</a></li>
         </ul>
       </div>
 
       <div class="event-category">
         <h3>Beginner Workshops</h3>
+
+          <Image
+              src="/overview/hd.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/beginners-day#django-girls">Django Girls</a></li>
           <li><a href="/beginners-day#humble-data">Humble Data</a></li>
@@ -52,22 +91,51 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Community Organizers' Sessions</h3>
+
+          <Image
+              src="/overview/pyo.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
-          <li>Will be added soon!</li>
+          <li><a href="community-activities#community-organisers-open-space">Open space</a></li>
+          <li><a href="/community-activities#community-organisers-lunch">Lunch</a></li>
+          <li><a href="/community-activities#community-booths">Booths</a></li>
         </ul>
       </div>
 
       <div class="event-category">
         <h3>Social & Networking Events</h3>
+
+          <Image
+              src="/overview/social-event.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li><a href="/speakers-dinner/">Speakers' dinner</a></li>
           <li><a href="/beginners-day#beginners-day-unconference">Beginners’ Day Unconference</a></li>
-          <li>More events will be added soon!</li>
+          <li><a href="/social-event">Thursday social event</a></li>
         </ul>
       </div>
 
       <div class="event-category">
         <h3>Open spaces</h3>
+
+          <Image
+              src="/overview/open-spaces.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
           <li>Will be added soon!</li>
         </ul>
@@ -75,8 +143,17 @@ import Section from "@ui/Section.astro";
 
       <div class="event-category">
         <h3>Sprints</h3>
+
+          <Image
+              src="/overview/sprints.jpg"
+            alt=""
+            height={250}
+            width={250}
+            class={imageStyle}
+          />
+
         <ul class="event-list">
-          <li>10+ open-source projects</li>
+          <li><a href="/sprints">10+ open-source projects</a></li>
         </ul>
       </div>
     </div>
@@ -118,7 +195,7 @@ import Section from "@ui/Section.astro";
 
     .events-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
       gap: 2rem;
     }
 

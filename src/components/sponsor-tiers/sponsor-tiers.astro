@@ -29,7 +29,7 @@ const tiers: SponsorTierProps[] = [
   },
   {
     title: "Diamond",
-    slotsLeft: "2",
+    slotsLeft: "Talk to us",
     price: 30_000,
     features: [
       "<strong>Extra large</strong> booth in exhibit hall (incl. TV & stand)",
@@ -60,7 +60,7 @@ const tiers: SponsorTierProps[] = [
   },
   {
     title: "Platinum",
-    slotsLeft: "4",
+    slotsLeft: 0,
     price: 18_000,
     features: [
       "<strong>Large</strong> booth in exhibit hall <strong>(incl. TV & stand)</strong>",
@@ -88,7 +88,7 @@ const tiers: SponsorTierProps[] = [
   {
     title: "Gold",
     price: 9_500,
-    slotsLeft: "10",
+    slotsLeft: 0,
     features: [
       "Booth in exhibit hall",
       "<strong>3</strong> conference tickets (€1500 value)",
@@ -110,7 +110,7 @@ const tiers: SponsorTierProps[] = [
   {
     title: "Silver",
     price: 7_000,
-    slotsLeft: "10",
+    slotsLeft: 0,
     features: [
       "Small booth in exhibit hall",
       "2 conference tickets (€1000 value)",
@@ -215,7 +215,7 @@ const formatPrice = (price: number | string) => {
         })
         .map((tier) => (
           <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-            <div class="h-[160px]">
+            <div class="min-h-[160px]">
               <Ribbon
                 className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
                 style={{ zIndex: "-1", top: "-55px" }}
@@ -226,7 +226,7 @@ const formatPrice = (price: number | string) => {
                 {tier.slotsLeft ? (
                   <>
                     <span>{tier.slotsLeft}</span>
-                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} available
                   </>
                 ) : (
                   <>Fully booked</>
@@ -258,7 +258,7 @@ const formatPrice = (price: number | string) => {
       For early-stage companies ready to connect with the community, boost visibility, and make a strong first impression.
     </p>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-1 gap-10 mx-96">
+  <div class="grid grid-cols-1 gap-10 md:mx-50 lg:mx-60 xl:mx-96">
     {
       tiers
         .filter((tier) => tier.title === "Startup")
@@ -269,7 +269,7 @@ const formatPrice = (price: number | string) => {
 
         .map((tier) => (
           <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-            <div class="h-[160px]">
+            <div class="min-h-[160px]">
               <Ribbon
                 className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
                 style={{ zIndex: "-1", top: "-55px" }}
@@ -282,7 +282,7 @@ const formatPrice = (price: number | string) => {
                 ) : tier.slotsLeft ? (
                   <>
                     <span>{tier.slotsLeft}</span>
-                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} available
                   </>
                 ) : (
                   <>Fully booked</>
@@ -325,7 +325,7 @@ const formatPrice = (price: number | string) => {
 
         .map((tier) => (
           <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-            <div class="h-[160px]">
+            <div class="min-h-[160px]">
               <Ribbon
                 className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
                 style={{ zIndex: "-1", top: "-55px" }}
@@ -335,10 +335,12 @@ const formatPrice = (price: number | string) => {
               <div class="text-xl">
                 {tier.slotsLeft === "Exclusive" ? (
                   <>Exclusive</>
+                ) : tier.slotsLeft === "Talk to us" ? (
+                  <>Talk to us</>
                 ) : tier.slotsLeft ? (
                   <>
                     <span>{tier.slotsLeft}</span>
-                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} available
                   </>
                 ) : (
                   <>Fully booked</>
@@ -381,7 +383,7 @@ const formatPrice = (price: number | string) => {
         })
         .map((tier) => (
           <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
-            <div class="h-[160px]">
+            <div class="min-h-[160px]">
               <Ribbon
                 className={`absolute -right-6 -top-8 ${getRibbonClass(tier.title)}`}
                 style={{ zIndex: "-1", top: "-55px" }}
@@ -392,7 +394,7 @@ const formatPrice = (price: number | string) => {
                 {tier.slotsLeft ? (
                   <>
                     <span>{tier.slotsLeft}</span>
-                    {tier.slotsLeft == 1 ? "slot" : "slots"} availalbe
+                    {tier.slotsLeft == 1 ? "slot" : "slots"} available
                   </>
                 ) : (
                   <>Fully booked</>

@@ -28,6 +28,10 @@
           "path": "/tracks"
         },
         {
+          "name": "Speaker Guidelines",
+          "path": "/guidelines"
+        },
+        {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
         }
@@ -49,8 +53,12 @@
           "path": "/social-event"
         },
         {
-          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "name": "PyLadies Events",
           "path": "/pyladies"
+        },
+        {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
         },
         {
           "name": "WASM Summit",
@@ -67,6 +75,10 @@
         {
           "name": "Sprints Weekend",
           "path": "/sprints"
+        },
+        {
+          "name": "Community Organisers Activities",
+          "path": "/community-activities"
         }
       ]
     },
@@ -230,8 +242,12 @@
           "path": "/social-event"
         },
         {
-          "name": "PyLadies Events—Lunch, Workshops & Networking",
+          "name": "PyLadies Events",
           "path": "/pyladies"
+        },
+        {
+          "name": "Beginners' Day Unconference",
+          "path": "/beginners-day-unconference"
         },
         {
           "name": "WASM Summit",
@@ -248,6 +264,10 @@
         {
           "name": "Sprints Weekend",
           "path": "/sprints"
+        },
+        {
+          "name": "Community Organisers Activities",
+          "path": "/community-activities"
         }
       ]
     },

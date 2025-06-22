@@ -43,7 +43,8 @@
     "sharp": "^0.34.2",
     "svelte": "^5.33.12",
     "tailwindcss": "^4.1.8",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
@@ -51,8 +52,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "puppeteer": "^24.9.0",
     "tsx": "^4.19.4",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "typescript": "^5.8.3"
   },
   "prettier": {
     "proseWrap": "always"
