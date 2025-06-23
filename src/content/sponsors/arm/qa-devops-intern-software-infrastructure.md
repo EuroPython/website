@@ -4,19 +4,7 @@ location: "Sophia Antipolis, France"
 type: "Flexible (Autumn/Winter 2025) 6 months"
 level: null
 salary: null
-tags:
-  [
-    "FastAPI",
-    "Vue 3",
-    "PostgreSQL",
-    "MSSQL",
-    "Kafka",
-    "GitLab",
-    "Kubernetes",
-    "Docker",
-    "Cypress",
-    "pytest",
-  ]
+tags: []
 description:
   "Join the Productivity Engineering team to help build and maintain scalable,
   automated infrastructure that ensures our ML-based tools run reliably and

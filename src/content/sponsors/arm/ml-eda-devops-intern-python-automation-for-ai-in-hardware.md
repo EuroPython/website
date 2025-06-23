@@ -4,19 +4,7 @@ location: "Sophia Antipolis, France"
 type: "Flexible (Autumn/Winter 2025) 6 months"
 level: null
 salary: null
-tags:
-  [
-    "FastAPI",
-    "Vue 3",
-    "PostgreSQL",
-    "MSSQL",
-    "Kafka",
-    "GitLab",
-    "Kubernetes",
-    "Docker",
-    "Cypress",
-    "pytest",
-  ]
+tags: []
 description:
   "Work at the cutting edge of ML and chip design automation. You'll help us
   integrate Python-based ML workflows into our EDA toolchain, improving the
