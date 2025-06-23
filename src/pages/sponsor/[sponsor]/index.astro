@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   const isProduction = import.meta.env.MODE === "production";
 
   const sponsors = await getCollection("sponsors", ({ data }) =>
-  data.tier && ["Gold", "Platinum"].includes(data.tier) && (isProduction ? data.draft !== true : true)
+  data.tier && ["Diamond", "Platinum"].includes(data.tier) && (isProduction ? data.draft !== true : true)
   );
 
   return sponsors.map((sponsor: any) => ({
