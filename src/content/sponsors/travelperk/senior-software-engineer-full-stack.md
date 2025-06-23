@@ -2,12 +2,12 @@
 title: "Senior Software Engineer (Full Stack and Backend)"
 location: "London, Barcelona, Edinburgh and Berlin"
 type: ""
-level: null
+level: Senior
 salary: null
 tags: []
 description:
 responsibilities:
-  - \"Product Engineering\" mindset
+  - Product Engineering mindset
   - Pragmatism and obsession for simplicity, efficiency, and performance
   - Extensive experience in similar roles building technically complex products
     in any web programming language

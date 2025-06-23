@@ -2,7 +2,7 @@
 title: "Engineering Manager"
 location: "London, Barcelona, Edinburgh and Berlin"
 type: ""
-level: null
+level: Manager
 salary: null
 tags: []
 description:

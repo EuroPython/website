@@ -2,7 +2,7 @@
 title: "Senior Director, Data"
 location: "Barcelona and London"
 type: ""
-level: null
+level: Director
 salary: null
 tags: []
 description:

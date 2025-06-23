@@ -2,7 +2,7 @@
 title: "ML/EDA DevOps Intern – Python Automation for AI in Hardware"
 location: "Sophia Antipolis, France"
 type: "Flexible (Autumn/Winter 2025) 6 months"
-level: null
+level: Intern
 salary: null
 tags: []
 description:

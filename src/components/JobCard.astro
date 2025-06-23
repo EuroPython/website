@@ -28,8 +28,8 @@ const { title, location, type, level, salary, description, responsibilities, req
       {sponsor.data.name}
     </a>
 
-    { level && type && location &&
-      <p class="text-gray-600 mb-2">{level} • {type} • {location}</p>
+    { location &&
+    <p class="text-gray-600 mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
     }
     <p class="text-gray-700 mb-4">{salary}</p>
     <p class="mb-3">{description}</p>

@@ -2,7 +2,7 @@
 title: "Senior Software Engineer"
 location: "London, Barcelona, Edinburgh and Berlin"
 type: ""
-level: null
+level: Senior
 salary: null
 tags: []
 description:
