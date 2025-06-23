@@ -12,7 +12,7 @@ interface Feature {
 
 interface TicketTierProps {
   title: string;
-  educationPrice: number | string;
+  educationPrice?: number | string;
   personalPrice: number | string;
   businessPrice: number | string;
   lateBusinessPrice?: number | string;
@@ -123,7 +123,6 @@ const tiers: TicketTierProps[] = [
 
   {
   title: "Remote",
-  educationPrice: "free",
   personalPrice: 80,
   businessPrice: 150,
   subtitle: "Conference days only",
@@ -167,6 +166,7 @@ const formatPrice = (price: number | string) => {
           <div>
             <Headline as="h4" id=`titer-${tier}` title={tier.title} />
             <div class="mt-4 space-y-2">
+              {tier.educationPrice !== undefined && (
               <div>
                 <div class="font-bold text-lg">
                   Education:
@@ -175,7 +175,8 @@ const formatPrice = (price: number | string) => {
                   </span>
                 </div>
               </div>
-
+              )}
+              
               <div>
                 <div class="font-bold text-lg">
                   Personal:
