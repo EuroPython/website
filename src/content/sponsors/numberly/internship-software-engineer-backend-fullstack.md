@@ -5,22 +5,6 @@ type: "Hybrid"
 level: "Intern"
 salary:
 tags:
-  [
-    "FastAPI",
-    "Vue 3",
-    "PostgreSQL",
-    "MSSQL",
-    "Kafka",
-    "Kubernetes",
-    "Docker",
-    "GitLab CI/CD",
-    "Cypress",
-    "Pytest",
-    "Grafana",
-    "Sentry",
-    "Prometheus",
-    "Graylog",
-  ]
 description: |
   Numberly is recognized as one of the world's leading data marketing specialists with nearly 500 employees and 8 offices worldwide serving more than 500 blue-chip clients (L'Oréal, Sanofi, Moleskine, Campari, Nestlé, HSBC..). By putting technology to work for brands and consumers, Numberly is at the heart of business growth and everyone's desire for more sustainable and relevant marketing. Numberly leverages the latest advances in data processing, analysis and activation, incorporating artificial intelligence technologies. This approach is part of a virtuous circle in which business competitiveness goes hand in hand with greater respect for privacy and data protection.
 responsibilities:
@@ -50,5 +34,5 @@ benefits:
   - Remote work flexibility and international office mobility
   - Swile meal vouchers, Gymlib access, and mystery lunches
   - Support for people with disabilities
-apply_link: https://joinus.numberly.com/jobs/5783005-internship-software-engineer-backend-fullstack
+apply_link: https://joinus.numberly.com/jobs/5783005-internship-software-engineer-backend-fullstack/44e50848-9694-4e6d-9fc2-dc42e524a10d
 ---

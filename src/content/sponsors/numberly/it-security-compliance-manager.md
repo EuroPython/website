@@ -5,52 +5,32 @@ type: "Hybrid"
 level: "Manager"
 salary: null
 tags:
-  [
-    "Linux",
-    "Windows Server",
-    "Kubernetes",
-    "Hadoop",
-    "PostgreSQL",
-    "GitLab",
-    "Google Workspace",
-    "Yubikey",
-    "GitLab SAST/DAST",
-    "Renovate",
-    "gitleaks",
-    "Falco",
-    "CyberVadis",
-    "ISO27001",
-    "SOC2",
-    "DevSecOps",
-    "GRC",
-    "Formation cyber",
-  ]
 description: |
-  Numberly est un leader mondial du Data Marketing, avec 500 collaborateurs et 8 bureaux dans le monde, servant des clients de premier plan comme L'Oréal, HSBC et Moleskine. Notre engagement pour une sécurité renforcée des données s'inscrit dans une approche vertueuse alliant compétitivité et respect de la vie privée. En tant que IT/Security Compliance Manager, vous piloterez la conformité IT et la gestion des risques, en soutien à notre certification ISO27001 et nos projets futurs (SecNumCloud, SOC2). Vous animerez un système de management de la sécurité des informations (SMSI) et participerez à des audits clients et formations internes.
+  Numberly uses technology for marketing: we help clients better understand their customers by implementing systems to collect, analyze, and use data. With over 150 engineers (a third of Numberly's talents), we work in autonomous teams to ensure everyone can influence technical and organizational choices. The NMP team develops and maintains the Numberly MarTech Platform, a suite of applications for campaign management across digital channels like email, SMS, push notifications, and social media. We prioritize code quality, modern technical stacks, and efficient processes. We seek a curious, autonomous individual with backend experience to contribute quickly to our team.
 responsibilities:
-  - Représenter la sécurité vis-à-vis des collaborateurs et clients
-  - Coordonner la gestion des risques IT et cyber
-  - Formaliser les contrôles de sécurité conformément aux normes (ISO27001,
-    SOC2)
-  - Animer et améliorer le SMSI (Système de Management de la Sécurité de
-    l'Information)
-  - Développer et suivre les formations sécurité (phishing, développeurs)
-  - Répondre aux audits clients et questionnaires de conformité
-  - Représenter Numberly lors de réunions de due diligence avec les clients
+  - Represent security to employees and clients
+  - Coordinate IT and cyber risk management
+  - Formalize security controls in accordance with standards (ISO27001, SOC2)
+  - Lead and improve the ISMS (Information Security Management System)
+  - Develop and monitor security training (phishing, developers)
+  - Respond to client audits and compliance questionnaires
+  - Represent Numberly during due diligence meetings with clients
 requirements:
-  - Expérience dans un poste de sécurité IT/Compliance ou similaire
-  - Participation à un audit ISO27001 ou SOC2
-  - Connaissance des environnements techniques internes (hébergement,
-    développement)
-  - Excellentes compétences rédactionnelles et communicationnelles
-  - Maîtrise des outils DevSecOps et gestion des risques
+  - Experience in an IT Security/Compliance role or similar
+  - Participation in an ISO27001 or SOC2 audit
+  - Knowledge of internal technical environments (hosting, development)
+  - Excellent written and communication skills
+  - Proficiency in DevSecOps tools and risk management
 benefits:
-  - Onboarding intensif avec mentorat et rotations inter-équipes
-  - Culture d'innovation (logiciels libres, infrastructure internalisée)
-  - Flexibilité hybride et possibilité de télétravail ponctuel
-  - Écosystème international (30+ nationalités, score équité genre 97/100)
-  - Bureaux innovants (studio de musique, bibliothèque, espaces animaux)
-  - "Avantages : Swile, Gymlib, formations continues, mystery lunches"
-  - Engagement RSE (1000mercis, Open Source)
-apply_link: https://joinus.numberly.com/jobs/5198895-it-security-compliance-manager
+  - Fast onboarding with mentorship and team rotations
+  - Monthly global team meetings (Happy Meetings)
+  - Freedom of speech and collaborative decision-making
+  - Social impact initiatives (1000mercis, Open Source contributions)
+  - Diverse workplace (30+ nationalities, 97/100 gender equity score)
+  - Modern offices with amenities (library, music studio, pet-friendly)
+  - Remote flexibility (up to 50% remote, 60-day consecutive remote option)
+  - Swile meal vouchers and international office mobility
+  - Perks like Gymlib, sports classes, themed parties
+  - Unlimited coffee/tea/infusions and mystery lunches
+apply_link: https://joinus.numberly.com/jobs/5198895-it-security-compliance-manager?promotion=1522265-trackable-share-link-it-security-compliance-manager-europython
 ---
