@@ -1,6 +1,6 @@
 ---
 name: Arm
-url: http://www.arm.com
+url: https://www.arm.com
 description:
   Born more than 30 years ago with the goal of designing a computer intended to
   run on a battery, Arm has become a global compute platform delivering advanced

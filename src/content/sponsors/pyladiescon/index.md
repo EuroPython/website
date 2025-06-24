@@ -10,7 +10,7 @@ description:
 socials:
   linkedin: "https://www.linkedin.com/company/pyladiescon"
   twitter: "https://twitter.com/pyladiescon"
-  github: "http://github.com/pyladies/global-conference"
+  github: "https://github.com/pyladies/global-conference"
   discord:
   mastodon: "https://fosstodon.org/@pyladiescon"
   bluesky: "https://bsky.app/profile/pyladiescon.bsky.social"

@@ -12,7 +12,7 @@ description:
 socials:
   linkedin: "https://www.linkedin.com/company/pyladies-global"
   twitter: "https://twitter.com/pyladies"
-  github: "http://github.com/pyladies"
+  github: "https://github.com/pyladies"
   discord:
   mastodon:
   bluesky:
