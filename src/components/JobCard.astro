@@ -18,7 +18,7 @@ const { title, location, type, level, salary, description, responsibilities, req
 
 ---
 
-<div class="mb-6 last:mb-0 rounded-lg shadow-md bg-white">
+<div class="mb-6 rounded-lg shadow-md bg-white">
   <div class=`flex-1 p-6 ${draft ? "draft": ""}`>
     <a href={`/sponsor/${jobId}`}>
       <h2 class="text-3xl font-bold mb-2">{title}</h2>
@@ -28,8 +28,8 @@ const { title, location, type, level, salary, description, responsibilities, req
       {sponsor.data.name}
     </a>
 
-    { level && type && location &&
-      <p class="text-gray-600 mb-2">{level} • {type} • {location}</p>
+    { location &&
+    <p class="text-gray-600 mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
     }
     <p class="text-gray-700 mb-4">{salary}</p>
     <p class="mb-3">{description}</p>
@@ -53,6 +53,10 @@ const { title, location, type, level, salary, description, responsibilities, req
     <ul class="list-disc list-inside mb-6">
       {benefits.map((item:string) => <li>{item}</li>)}
     </ul>
+    }
+
+    { job.data.description2 &&
+      <p class="mb-3">{job.data.description2}</p>
     }
 
       <a

@@ -15,7 +15,7 @@ description: "Python in Spanish is an initiative born from the efforts of people
 socials:
   linkedin: "https://www.linkedin.com/company/94153525"
   twitter: "https://twitter.com/hablemospython"
-  github: "http://github.com/python-discord-es"
+  github: "https://github.com/python-discord-es"
   discord: "https://discord.gg/hablemospython"
   mastodon: "https://fosstodon.org/@hablemospython"
   bluesky: "https://bsky.app/profile/hablemospython.dev"
