@@ -5,18 +5,6 @@ type: "Hybrid"
 level: null
 salary: null
 tags:
-  [
-    "FastAPI",
-    "Vue 3",
-    "PostgreSQL",
-    "MSSQL",
-    "Kafka",
-    "GitLab",
-    "Kubernetes",
-    "Docker",
-    "Cypress",
-    "pytest",
-  ]
 description: |
   Numberly uses technology for marketing: we help clients better understand their customers by implementing systems to collect, analyze, and use data. With over 150 engineers (a third of Numberly's talents), we work in autonomous teams to ensure everyone can influence technical and organizational choices. The NMP team develops and maintains the Numberly MarTech Platform, a suite of applications for campaign management across digital channels like email, SMS, push notifications, and social media. We prioritize code quality, modern technical stacks, and efficient processes. We seek a curious, autonomous individual with backend experience to contribute quickly to our team.
 responsibilities:
@@ -47,5 +35,5 @@ benefits:
   - Swile meal vouchers and international office mobility
   - Perks like Gymlib, sports classes, themed parties
   - Unlimited coffee/tea/infusions and mystery lunches
-apply_link: https://joinus.numberly.com/jobs/4553435-software-engineer-backend-fullstack
+apply_link: https://joinus.numberly.com/jobs/4553435-software-engineer-backend-fullstack/51c59c7f-3d65-4996-b5fe-9e0ee251bcb6
 ---

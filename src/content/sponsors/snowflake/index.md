@@ -20,6 +20,8 @@ logo_padding: 20px 0
 
 # About Snowflake
 
-Snowflake’s data platform enables organizations to store, process, and analyze
-massive datasets efficiently. Though no 2025 event ties are listed, its role in
-cloud computing remains foundational.
+Snowflake makes enterprise AI easy, efficient and trusted. Thousands of
+companies around the globe, including hundreds of the world’s largest, use
+Snowflake’s AI Data Cloud to share data, build applications, and power their
+business with AI. The era of enterprise AI is here. Learn more at snowflake.com
+(NYSE: SNOW).
