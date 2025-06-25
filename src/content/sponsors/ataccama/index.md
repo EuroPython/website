@@ -16,7 +16,12 @@ tier: Silver
 
 # About Ataccama
 
-Ataccama ONE is a unified data trust platform for enterprise data leaders that
-combines data quality, observability, lineage, governance and master data
-management in ONE solution to accelerate business growth, reduce cost, and
-mitigate risk.
+We're on a mission to power a better future with data. Our platform helps all
+kinds of data professionals build high-quality, governed, reusable data
+products—earning us a spot as a Leader in the Gartner Magic Quadrant® and the
+backing of Bain Capital Tech Opportunities. We're aiming to lead in AI-powered
+cloud data management—and that means building a company where people love to
+work and grow. Our global team thrives on collaboration and lives by our values:
+Challenging Fun, ONE Team, Customer Centric, Candid and Caring, Aim High. Join
+us as a Python Engineer and help transform Ataccama into a smarter, faster, more
+scalable SaaS platform.

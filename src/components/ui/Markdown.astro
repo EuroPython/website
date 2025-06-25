@@ -4,12 +4,13 @@ import { replaceYouTubeLinks } from "@utils/markdown";
 
 interface Props {
   content: string;
+  class: string;
 }
 
-const { content } = Astro.props;
+const { content, class: className } = Astro.props;
+const defaultClass = className? className: "prose-xl";
 const html = marked.parse(await replaceYouTubeLinks(content) );
 ---
-
-<div class="prose prose-xl max-w-none" >
+<div class:list={['prose', "max-w-none", defaultClass]} >
     <article set:html={html} />
 </div>
