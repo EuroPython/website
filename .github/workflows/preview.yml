@@ -2,6 +2,8 @@ name: Preview
 
 on:
   pull_request:
+    paths-ignore: # skip building preview if changes are limited to following paths
+      - "README.md"
 
 jobs:
   preview:
