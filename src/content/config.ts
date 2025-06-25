@@ -246,6 +246,7 @@ const jobs = defineCollection({
     min_requirements: z.array(z.string()).optional().nullable(),
     requirements: z.array(z.string()).nullable(),
     preffered: z.array(z.string()).optional().nullable(),
+    stack: z.array(z.string()).optional().nullable(),
     benefits: z.array(z.string()).nullable(),
     description2: z.string().optional().nullable(),
     apply_link: z.string().url().optional(),
