@@ -20,6 +20,15 @@ const jobsMap = Object.fromEntries(jobs.map((job) => [job.id, job]));
 const jobFiles = import.meta.glob("../content/sponsors/*/!(index).md");
 const sponsorsJobsMap: Record<string, CollectionEntry<"jobs">[]> = {};
 
+const tiers = [
+  "Keystone",
+  "Diamond",
+  "Platinum",
+  "Platinum X",
+  "Gold",
+  "Silver",
+] as const;
+
 for (const path in jobFiles) {
   const match = path.match(/\.\.\/content\/sponsors\/([^/]+)\/([^/]+)\.md$/);
   if (match) {
@@ -46,6 +55,20 @@ sponsors.forEach((sponsor) => {
     collection: "jobs",
   }));
 });
+
+// Sort sponsors by tier order
+const sponsorsWithJobs = sponsors
+  .filter((sponsor) => sponsor.data.jobs && sponsor.data.jobs.length > 0)
+  .sort((a, b) => {
+    const aTierIndex = tiers.indexOf(a.data.tier as typeof tiers[number]);
+    const bTierIndex = tiers.indexOf(b.data.tier as typeof tiers[number]);
+
+    // If tier not found in array, put it at the end
+    const aIndex = aTierIndex === -1 ? tiers.length : aTierIndex;
+    const bIndex = bTierIndex === -1 ? tiers.length : bTierIndex;
+
+    return aIndex - bIndex;
+  });
 ---
 
 <Layout
@@ -55,8 +78,7 @@ sponsors.forEach((sponsor) => {
 
   <Headline id="jobs" as="h1" title="Job board" />
   {
-    sponsors.map((sponsor) => {
-      if (!(sponsor.data.jobs && sponsor.data.jobs.length > 0)) return;
+    sponsorsWithJobs.map((sponsor) => {
       return (
         <TwoCols>
           <div slot="content" class="hidden lg:block">
