@@ -12,7 +12,7 @@ interface Feature {
 
 interface TicketTierProps {
   title: string;
-  educationPrice: number | string;
+  educationPrice?: number | string;
   personalPrice: number | string;
   businessPrice: number | string;
   lateBusinessPrice?: number | string;
@@ -120,6 +120,31 @@ const tiers: TicketTierProps[] = [
       },
     ],
   },
+
+  {
+  title: "Remote",
+  personalPrice: 80,
+  businessPrice: 150,
+  subtitle: "Conference days only",
+  features: [
+    {
+      text: "Remote participation for Conference Days (16-18 July)",
+    },
+    {
+      text: "Watch live talks, keynotes & panels in all 6 tracks",
+    },
+    {
+      text: "Live text-based Q&A",
+    },
+    {
+      text: "Interact with speakers and attendees in chat channels",
+    },
+    {
+      text: "<strong>Proper VAT invoice with company name (Business only)</strong>. <i>Remote tickets invoiced by the EPS (Sweden); <strong>no VAT charged due to non-profit status</strong></i>.",
+      icon: "ℹ️",
+    },
+  ],
+},
 ];
 
 const formatPrice = (price: number | string) => {
@@ -141,6 +166,7 @@ const formatPrice = (price: number | string) => {
           <div>
             <Headline as="h4" id=`titer-${tier}` title={tier.title} />
             <div class="mt-4 space-y-2">
+              {tier.educationPrice !== undefined && (
               <div>
                 <div class="font-bold text-lg">
                   Education:
@@ -149,6 +175,7 @@ const formatPrice = (price: number | string) => {
                   </span>
                 </div>
               </div>
+              )}
 
               <div>
                 <div class="font-bold text-lg">
