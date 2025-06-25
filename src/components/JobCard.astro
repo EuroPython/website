@@ -1,5 +1,6 @@
 ---
 import { getEntry } from "astro:content";
+import Markdown from "@ui/Markdown.astro";
 const { job:jobId, sponsor:sponsorId } = Astro.props;
 
 const job = await getEntry("jobs", jobId);
@@ -14,25 +15,22 @@ if (!sponsor) {
 }
 
 // TODO: add tags
-const { title, location, type, level, salary, description, responsibilities, requirements, benefits, apply_link, draft } = job.data;
+const { title, location, type, level, salary, description, responsibilities, min_requirements, requirements, preffered, benefits, apply_link, draft } = job.data;
 
 ---
 
 <div class="mb-6 rounded-lg shadow-md bg-white">
   <div class=`flex-1 p-6 ${draft ? "draft": ""}`>
+    <p class="text-xl pb-2 inline-block font-bold">
+      {sponsor.data.name}
+    </p>
     <a href={`/sponsor/${jobId}`}>
       <h2 class="text-3xl font-bold mb-2">{title}</h2>
     </a>
 
-    <a class="lg:hidden text-[#1a56db] hover:text-[#4f46e5] text-xl pb-2 inline-block font-bold" href={`/sponsor/${sponsor.id}`}>
-      {sponsor.data.name}
-    </a>
-
-    { location &&
     <p class="text-gray-600 mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
-    }
     <p class="text-gray-700 mb-4">{salary}</p>
-    <p class="mb-3">{description}</p>
+    <Markdown content={description || ""} class="job-post" />
 
     { responsibilities &&
       <h3 class="text-xl font-semibold mb-2">Responsibilities</h3>
@@ -41,10 +39,23 @@ const { title, location, type, level, salary, description, responsibilities, req
       </ul>
     }
 
+    { min_requirements &&
+    <h3 class="text-xl font-semibold mb-2">Minimum requirements</h3>
+    <ul class="list-disc list-inside mb-4">
+      {min_requirements.map((item:string) => <li>{item}</li>)}
+    </ul>
+    }
     { requirements &&
     <h3 class="text-xl font-semibold mb-2">Requirements</h3>
     <ul class="list-disc list-inside mb-4">
       {requirements.map((item:string) => <li>{item}</li>)}
+    </ul>
+    }
+
+    { preffered &&
+    <h3 class="text-xl font-semibold mb-2">Preferred job requirements</h3>
+    <ul class="list-disc list-inside mb-4">
+      {preffered.map((item:string) => <li>{item}</li>)}
     </ul>
     }
 
@@ -56,7 +67,7 @@ const { title, location, type, level, salary, description, responsibilities, req
     }
 
     { job.data.description2 &&
-      <p class="mb-3">{job.data.description2}</p>
+      <Markdown content={job.data.description2 || ""} class="job-post" />
     }
 
       <a

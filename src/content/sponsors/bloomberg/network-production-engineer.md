@@ -6,6 +6,8 @@ level:
 tags:
 salary:
 description: "As a Network Production Engineer, you will be a critical member of the team responsible for the full lifecycle of our global network infrastructure that supports Bloomberg’s core products and services. This includes building and maintaining a network that is scalable, reliable and robust. Our network is vast, connecting several large-scale Data Centers and over a hundred edge sites. It connects Bloomberg to hundreds of thousands of our clients, over 1,500 global exchanges and trading venues over private connectivity, Internet and Public Cloud.
+
+
 This is a unique opportunity to help build robust, highly scalable solutions that will power the future of how Bloomberg automates network infrastructure. You'll be trusted to design and work on tooling that builds on automation best practices and principles."
 responsibilities:
 
