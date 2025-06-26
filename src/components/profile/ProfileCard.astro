@@ -1,5 +1,5 @@
 ---
-const {name, slug, url, avatar, company} = Astro.props;
+const {name, slug, url, avatar, company, position=""} = Astro.props;
 const defaultAltText = `Profile photo of ${name}`;
 
 const link = url? url:`/speaker/${slug}`
@@ -18,7 +18,8 @@ const isExternal = Boolean(url);
       class="profile-image"
     />
     <span class="profile-text">{name}</span>
-    <span class="text-sm">{company}</span>
+    {position && <span class="text-sm">{position}</span>}
+    {company && <span class="text-sm">@ {company}</span>}
   </div>
 </a>
 
