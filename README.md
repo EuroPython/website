@@ -39,6 +39,25 @@ $ docker compose up
 
 The website will be available at `http://localhost:4321`.
 
+#### Docker Troubleshooting
+
+Docker Compose mounts volumes from your file system to enable live reload. If
+you're having problems starting the container, try this:
+
+```
+# Clean everything
+docker compose down -v  # Remove volumes
+docker image rmi website-web # Clean unused images
+docker rm website-web # Clean unused containers
+
+# Remove local pnpm store if it exists
+rm -rf .pnpm-store
+
+# Rebuild from scratch
+docker compose build --no-cache
+docker compose up
+```
+
 ## Content Structure 🗂️
 
 The content of the site is store in this repository. We are using Astro's
