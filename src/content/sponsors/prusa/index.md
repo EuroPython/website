@@ -4,7 +4,8 @@ url: "https://www.prusa3d.com/"
 location: "Czechia"
 industry: "3D printers"
 description:
-  "A Czech company founded by Josef Prusa making award-winning open source desktop 3D printers"
+  "A Czech company founded by Josef Prusa making award-winning open source
+  desktop 3D printers"
 socials:
   linkedin:
   twitter: https://x.com/Prusa3D
