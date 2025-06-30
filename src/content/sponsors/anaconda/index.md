@@ -1,7 +1,6 @@
 ---
 name: Anaconda
 url: https://www.anaconda.com
-industry: "Developer Tools & Error Tracking"
 description:
   "Anaconda is built to advance AI with open source at scale, giving builders
   and organizations the confidence to increase productivity, and save time,
