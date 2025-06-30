@@ -4,7 +4,6 @@ import Layout from "@layouts/SectionLayout.astro";
 import Button from "@ui/Button.astro";
 import Headline from "@ui/Headline.astro"
 import Icon from "@ui/Icon.astro"
-import GoogleCalendar from '@components/GoogleCalendar.astro';
 ---
 
 <Layout
@@ -18,15 +17,6 @@ import GoogleCalendar from '@components/GoogleCalendar.astro';
 
 
 <Headline as="h1" id="components" title="Example components" />
-
-<GoogleCalendar
-  height="800"
-  width="1000"
-  mode="WEEK"
-  showTitle={false}
-  showPrint={false}
-  backgroundColor="%23f0f0f0"
-/>
 
 Key Features
     <Headline id="button" title="Button" />
