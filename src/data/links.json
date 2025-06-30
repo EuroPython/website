@@ -79,6 +79,10 @@
         {
           "name": "Community Organisers Activities",
           "path": "/community-activities"
+        },
+        {
+          "name": "Open Spaces",
+          "path": "/open-spaces"
         }
       ]
     },
@@ -268,6 +272,10 @@
         {
           "name": "Community Organisers Activities",
           "path": "/community-activities"
+        },
+        {
+          "name": "Open Spaces",
+          "path": "/open-spaces"
         }
       ]
     },
