@@ -41,7 +41,8 @@ Please note that Room 221+222 has tables and chairs and a 65'' monitor; while
 Room 223+224 has no tables (only chairs) and no monitor.
 
 If you want to make a reservation but do not have a Google account, please
-contact us at [programme@europython.eu](mailto:programme@europython.eu) and we will reserve the slot for you.
+contact us at [programme@europython.eu](mailto:programme@europython.eu) and we
+will reserve the slot for you.
 
 ## Who Can Participate?
 
@@ -67,5 +68,5 @@ Open Space sessions can cover a wide range of topics, such as:
 - Building ham radios
 - Dancing or movement sessions
 
-… and anything else you want to explore together — non-coding stuff is
-very welcomed too!
+… and anything else you want to explore together — non-coding stuff is very
+welcomed too!
