@@ -121,6 +121,7 @@ export default defineConfig({
     "/programme/rust-summit": "/session/rust-summit",
     "/programme/c-api-summit": "/session/c-api-summit",
     "/programme/wasm-summit": "/session/webassembly-summit",
+    "/discord": "https://discord.gg/BhTN2zJPMh",
   },
   integrations: [
     mdx(),
