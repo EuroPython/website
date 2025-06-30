@@ -61,7 +61,7 @@ achievements and improve your self-promotion skills.
 
 Join us for an interactive Stretch Activity at the Europython.
 
-- WHEN? Thursday, 17th July 2025,
+- WHEN? Thursday, 17th July 2025, time TBD
 - WHERE? Prague Congress Centre (PCC), Open Space 2 (Room 223)
 
 ## PyLadies and PyLadiesCon Booth
@@ -71,4 +71,5 @@ people and minorities become active participants and leaders in the Python
 open-source community.
 
 - WHEN? From 16th, 17th and 18th of July 2025
-- WHERE? Prague Congress Centre (PCC), Open Space 2 (Room 224)
+- WHERE? Prague Congress Centre (PCC)
+- Registration: TBD
