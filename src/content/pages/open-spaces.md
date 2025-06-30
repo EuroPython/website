@@ -24,9 +24,9 @@ serves to attract potential participants interested in joining.
 Check the
 [Open Spaces schedule ↗️!](https://calendar.google.com/calendar/u/0?cid=Y19iODcwNzViMjljZjRhOWRkNGRhM2ZlNzI0ZmNiYTkyYTRiNDA2YWEzZjkxY2I3ZTdjZTUwZmVkZTQzMjE1YjE3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 
-## How to Organize an Open Space
+## How to Organise an Open Space
 
-To organize your own Open Space session, simply book a free time slot and room
+To organise your own Open Space session, simply book a free time slot and room
 via our
 [Open Spaces registration calendar](https://calendar.google.com/calendar/u/0?cid=Y19iODcwNzViMjljZjRhOWRkNGRhM2ZlNzI0ZmNiYTkyYTRiNDA2YWEzZjkxY2I3ZTdjZTUwZmVkZTQzMjE1YjE3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 — this allows you to easily secure a space to host your discussion or
@@ -36,6 +36,12 @@ Both Room 221+222 and Room 223+224 will be reserved exclusively for Open Space
 sessions. You can book either space by using the links below:
 
 [Room 221+222](https://calendar.app.google/6nb3VqFGf6j5vT7f8) | [Room 223+224](https://calendar.app.google/i8bspsBUZ4AapNZ98)
+
+Please note that Room 221+222 has tables and chairs and a 65'' monitor; while
+Room 223+224 has no tables (only chairs) and no monitor.
+
+If you want to make a reservation but do not have a Google account, please
+contact us at [programme@europython.eu](mailto:programme@europython.eu) and we will reserve the slot for you.
 
 ## Who Can Participate?
 
@@ -57,5 +63,9 @@ Open Space sessions can cover a wide range of topics, such as:
 - Open source contributions
 - Mentoring
 - Career growth and personal development
+- Knitting and crafting
+- Building ham radios
+- Dancing or movement sessions
 
-… and anything else you want to explore together!
+… and anything else you want to explore together — non-coding stuff is
+very welcomed too!
