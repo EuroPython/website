@@ -23,19 +23,30 @@ const tiers = [
   "Silver",
   "Bronze",
   "Patron",
+  "Sprint",
   "Financial Aid",
+  "Open Space",
   "Supporters",
   "Partners",
 ] as const;
 
+function getSponsorTiers(sponsor) {
+  if (typeof sponsor.data.tier === 'string') {
+    return sponsor.data.tier.split(',').map(tier => tier.trim());
+  }
+  return Array.isArray(sponsor.data.tier) ? sponsor.data.tier : [sponsor.data.tier];
+}
+
 // Group sponsors by their tier
 const grouped = sponsors.reduce((acc, sponsor) => {
-  const tier = sponsor.data.tier;
+  const sponsorTiers = getSponsorTiers(sponsor);
+  sponsorTiers.forEach(tier => {
   const key = tier ?? 'unknown';
   if (!acc[key]) {
     acc[key] = [];
   }
   acc[key].push(sponsor);
+  });
   return acc;
 }, {} as Record<string, CollectionEntry<"sponsors">[]>);
 ---

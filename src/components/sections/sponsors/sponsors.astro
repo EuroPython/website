@@ -17,8 +17,10 @@ const tiers = [
   "Startups",
   "Bronze",
   "Patron",
+  "Sprint",
   "Financial Aid",
-  "Supporters",
+  "Open Space",
+    "Supporters",
   "Partners",
   "Media Partners"
 ] as const;
@@ -27,10 +29,20 @@ const sponsors = await getCollection("sponsors");
 
 let hasSponsors = false;
 
+function getSponsorTiers(sponsor) {
+  if (typeof sponsor.data.tier === 'string') {
+    return sponsor.data.tier.split(',').map(tier => tier.trim());
+  }
+  return Array.isArray(sponsor.data.tier) ? sponsor.data.tier : [sponsor.data.tier];
+}
+
 const sponsorTiers = tiers
   .map((tier) => {
     const tierSponsors = sponsors.filter(
-      (sponsor) => sponsor.data.tier === tier,
+      (sponsor) => {
+      const sponsorTiers = getSponsorTiers(sponsor);
+      return sponsorTiers.includes(tier);
+    }
     );
 
     if (tierSponsors.length > 0) {
