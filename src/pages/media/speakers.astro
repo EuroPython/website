@@ -36,6 +36,8 @@ type Speaker = CollectionEntry<"speakers">;
 .social {
   width: 900px;
   height: 900px;
+  position: relative;
+  overflow: hidden;
 }
 
 .social svg {
@@ -46,6 +48,15 @@ type Speaker = CollectionEntry<"speakers">;
   height: 100%;
   object-fit: contain;
 }
+
+.social svg.bg {
+  z-index:0;
+}
+
+.social svg.avatar {
+  z-index:10000;
+}
+
 
   body * {
       font-family: Inter, sans-serif;
