@@ -5,12 +5,12 @@ const { entry } = Astro.props;
 
 const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submissions);
 ---
-<svg width="900" height="900" class="h-full w-full -z-10">
+<svg class="bg" width="900" height="900" class="h-full w-full -z-10">
   <image href="/social/bg.png" width="900" height="900" />
 </svg>
 {
   entry.data.avatar ? (
-    <svg width="900" height="900">
+    <svg class="avatar" width="900" height="900">
       <defs>
         <clipPath id="curvedCornerClip">
           <path
@@ -65,6 +65,7 @@ const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submi
       font-size: 100px;
       color: rgb(239, 215, 123);
       padding: 1rem;
+      position:relative;
   }
 
   .box2 {
@@ -74,6 +75,7 @@ const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submi
       font-size: 70px;
       color:white;
       padding: 2rem;
+      position:relative;
   }
 
   .box3 {
@@ -83,6 +85,7 @@ const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submi
       font-size: 100px;
       color: rgb(239, 215, 123);
       padding: 1rem;
+      position:relative;
   }
 
   .box4 {
@@ -92,6 +95,7 @@ const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submi
       font-size: 70px;
       color:white;
       padding: 2rem;
+      position:relative;
   }
 
 
