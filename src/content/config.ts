@@ -255,6 +255,35 @@ const jobs = defineCollection({
   }),
 });
 
+const sprints = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    slug: z.string().optional(), // Auto-generated from filename if not provided
+    numberOfPeople: z.string().or(z.number()),
+    room: z.string(),
+    pythonLevel: z.enum(["Any", "Beginner", "Intermediate", "Advanced"]),
+    contactPerson: z.object({
+      name: z.string(),
+      email: z.string().email().optional(),
+      github: z.string().optional(),
+      twitter: z.string().optional(),
+    }),
+    links: z
+      .array(
+        z.object({
+          title: z.string(),
+          url: z.string().url(),
+        })
+      )
+      .optional(),
+    description: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    status: z.enum(["active", "full", "cancelled"]).default("active"),
+    draft: z.boolean().optional().default(false),
+  }),
+});
+
 export const collections = {
   days,
   pages,
@@ -262,6 +291,7 @@ export const collections = {
   week,
   sessions,
   speakers,
+  sprints,
   keynoters,
   sponsors,
   jobs,

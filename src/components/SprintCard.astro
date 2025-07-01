@@ -1,0 +1,88 @@
+---
+import { getEntry } from 'astro:content';
+import Markdown from "@ui/Markdown.astro";
+
+const { slug } = Astro.props;
+
+
+const sprint = await getEntry("sprints", slug);
+
+if (!sprint) {
+  throw new Error(`Sprint entry "${slug}" not found`);
+}
+
+const { data, body } = sprint;
+
+//  <a href={`/sprints/${slug}`} id={slug} class="text-blue-600 hover:text-blue-800 hover:underline"></a>
+---
+
+<article class="sprint-card bg-white border border-gray-200 rounded-lg p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-200" data-python-level={data.pythonLevel} data-room={data.room}>
+  <header class="mb-4">
+    <h3 class="text-2xl font-semibold mb-2">
+        {data.title}
+    </h3>
+    <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+      <span class="flex items-center gap-1">
+        <span>👥</span>
+        <span>{data.numberOfPeople}</span>
+      </span>
+      <span class="flex items-center gap-1">
+        <span>📍</span>
+        <span>{data.room}</span>
+      </span>
+      <span class="flex items-center gap-1">
+        <span>🐍</span>
+        <span>{data.pythonLevel}</span>
+      </span>
+    </div>
+  </header>
+
+  <div class="space-y-4">
+    <div class="text-sm">
+      <span class="font-medium text-gray-900">Contact:</span>
+      <span class="text-gray-700">{data.contactPerson.name}</span>
+      {data.contactPerson.email && (
+        <span class="text-gray-600">
+          {' '}(<a href={`mailto:${data.contactPerson.email}`} class="text-blue-600 hover:text-blue-800 hover:underline">{data.contactPerson.email}</a>)
+        </span>
+      )}
+      {data.contactPerson.github && (
+        <span class="text-gray-600">
+          {' '}(<a href={`https://github.com/${data.contactPerson.github}`} target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800 hover:underline">@{data.contactPerson.github}</a>)
+        </span>
+      )}
+    </div>
+
+    {data.tags && data.tags.length > 0 && (
+      <div class="flex flex-wrap gap-2 pt-2">
+        {data.tags.map((tag) => (
+          <span key={tag} class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium">{tag}</span>
+        ))}
+      </div>
+    )}
+
+    {data.description && (
+      <p class="text-gray-700 leading-relaxed">{data.description}</p>
+    )}
+
+    {(data.links) && (
+      <div class="text-sm">
+        <span class="font-medium text-gray-900">Links:</span>
+        <ul class="mt-2 ml-6 space-y-1 list-disc">
+          {data.links?.map((link) => (
+            <li key={link.url}>
+              <a href={link.url} target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800 hover:underline">{link.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+
+    {body &&
+      <Markdown content={body} />
+    }
+
+  </div>
+
+</article>

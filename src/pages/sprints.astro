@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/SectionLayout.astro'; // Adjust path as needed
+import SprintCard from '@components/SprintCard.astro';
+import Headline from "@ui/Headline.astro"
+
+// Get all sprint entries
+const sprints = await getCollection("sprints", ({ data }) => {
+  return import.meta.env.MODE === "production" ? data.draft !== true : true;
+});
+
+// Sort sprints by title or any other criteria
+const sortedSprints = sprints.sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+
+// Filter by status if needed
+const activeSprints = sortedSprints.filter(sprint =>
+  sprint.data.status === 'active'
+);
+
+// Extract unique rooms for filter
+const uniqueRooms = Array.from(new Set(activeSprints.map(sprint => sprint.data.room)));
+---
+
+<Layout title="Sprints & Workshops" description="All in one">
+  <main class="min-h-screen py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <header class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">Sprints & Workshops</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Join collaborative coding sessions and hands-on workshops.
+          Connect with maintainers, contribute to open source projects,
+          and learn new skills alongside fellow Python enthusiasts.
+        </p>
+      </header>
+
+      <div class="flex flex-wrap gap-8 justify-center mb-8">
+        <div class="flex flex-col gap-2">
+          <label for="level-filter" class="font-semibold text-gray-700 text-sm">Python Level:</label>
+          <select id="level-filter" class="px-4 py-2 border border-gray-300 rounded-lg bg-white text-sm min-w-[150px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="">All Levels</option>
+            <option value="Any">Any</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="room-filter" class="font-semibold text-gray-700 text-sm">Room:</label>
+          <select id="room-filter" class="px-4 py-2 border border-gray-300 rounded-lg bg-white text-sm min-w-[150px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="">All Rooms</option>
+            {uniqueRooms.map((room) => (
+              <option  value={room}>{room}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      <div class="text-center mb-8">
+        <p class="text-gray-600 font-medium">{activeSprints.length} active {activeSprints.length === 1 ? 'sprint' : 'sprints'}</p>
+      </div>
+
+      <section class="max-w-4xl mx-auto" id="sprints-list">
+        {activeSprints.map((sprint) => (
+          <SprintCard slug={sprint.slug} />
+        ))}
+      </section>
+
+      {activeSprints.length === 0 && (
+        <div class="text-center py-12">
+          <p class="text-gray-500 text-lg">No sprints are currently available. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </main>
+
+  <script>
+    // Client-side filtering
+    document.addEventListener('DOMContentLoaded', () => {
+      const levelFilter = document.getElementById('level-filter') as HTMLSelectElement;
+      const roomFilter = document.getElementById('room-filter') as HTMLSelectElement;
+      const sprintsList = document.getElementById('sprints-list');
+      const sprintsCount = document.querySelector('.text-center.mb-8 p');
+
+      function filterSprints() {
+        const selectedLevel = levelFilter.value;
+        const selectedRoom = roomFilter.value;
+        const sprintCards = sprintsList?.querySelectorAll('.sprint-card');
+
+        let visibleCount = 0;
+
+        sprintCards?.forEach((card) => {
+          const cardElement = card as HTMLElement;
+          const pythonLevel = cardElement.getAttribute('data-python-level');
+          const room = cardElement.getAttribute('data-room');
+
+          const levelMatch = !selectedLevel || pythonLevel === selectedLevel;
+          const roomMatch = !selectedRoom || room === selectedRoom;
+
+          if (levelMatch && roomMatch) {
+            cardElement.style.display = 'block';
+            visibleCount++;
+          } else {
+            cardElement.style.display = 'none';
+          }
+        });
+
+        if (sprintsCount) {
+          sprintsCount.textContent = `${visibleCount} active ${visibleCount === 1 ? 'sprint' : 'sprints'}`;
+        }
+      }
+
+      levelFilter?.addEventListener('change', filterSprints);
+      roomFilter?.addEventListener('change', filterSprints);
+    });
+  </script>
+</Layout>
