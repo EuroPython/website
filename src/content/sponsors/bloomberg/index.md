@@ -17,8 +17,15 @@ logo_padding: 10px 0px
 
 # About Bloomberg
 
-Bloomberg is a global leader in business and financial information, delivering
-trusted data, news, and insights that bring transparency, efficiency, and
-fairness to markets. The company helps connect influential communities across
-the global financial ecosystem via reliable technology solutions that enable our
-customers to make more informed decisions and foster better collaboration.
+Bloomberg is building the world's most trusted information network for financial
+professionals. Our 9,000+ engineers are dedicated to advancing and building new
+systems for the Bloomberg Terminal to solve complex, real-world problems. ​We
+trust our teams to choose the right technologies for the job, and, at Bloomberg,
+the answer is often Python. We employ an active community of 4,000+ Python
+developers who have their hands in everything from financial analytics and data
+science to contributing to open source technologies like Project Jupyter.
+Bloomberg is proud to be a Visionary Sponsor of the Python Software Foundation
+and sponsor of many Python community events around the world. Learn more at
+[TechAtBloomberg.com/python](http://www.techatbloomberg.com/python).
+
+https://www.youtube.com/watch?v=ucWq9Cjg8bg
