@@ -226,6 +226,7 @@ const sponsors = defineCollection({
         youtube: z.string().url().optional().nullable(),
       })
       .optional(),
+    event_name: z.string().optional().nullable(),
     logo_padding: z.string().optional(),
     draft: z.boolean().optional().default(false),
     jobs: z.array(reference("jobs")).optional().default([]),

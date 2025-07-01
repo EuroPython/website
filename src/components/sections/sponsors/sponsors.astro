@@ -17,6 +17,7 @@ const tiers = [
   "Startups",
   "Bronze",
   "Patron",
+  "Special Event",
   "Financial Aid",
   "Supporters",
   "Partners",
@@ -77,7 +78,7 @@ const sponsorTiers = tiers
     {
       sponsorTiers.map((tier, index) => (
         <Fragment>
-          <SponsorTier tier={tier} level={index} />
+        <SponsorTier tier={tier} level={index} />
           {index !== sponsorTiers.length - 1 && <hr />}
         </Fragment>
       ))
