@@ -6,7 +6,7 @@ const puppeteer = require("puppeteer");
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
-  await page.goto("http://localhost:4321/media/speakers");
+  await page.goto("http://localhost:4321/media/sponsors");
 
   const elements = await page.$$(".social");
 
