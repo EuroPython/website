@@ -48,6 +48,7 @@ build:
 
 preview: RELEASES_DIR = $(VPS_PREVIEW_PATH)/$(SAFE_BRANCH)/releases
 preview: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)
+preview: build
 preview:
 	@echo "Preview site URL: $(PREVIEW_SITE_URL)"
 	echo $(TARGET)
@@ -72,6 +73,7 @@ ls -1 */ \
 ifeq ($(FORCE_DEPLOY), true)
 deploy: RELEASES_DIR = $(VPS_PROD_PATH)/releases
 deploy: TARGET = $(RELEASES_DIR)/$(TIMESTAMP)
+deploy: build
 deploy:
 	@echo "\n\n**** Deploying branch '$(BRANCH)' (safe: $(SAFE_BRANCH)) to $(TARGET)...\n\n"
 	$(REMOTE_CMD) "mkdir -p $(TARGET)"

@@ -33,9 +33,6 @@ jobs:
       - name: Install dependencies
         run: make install
 
-      - name: Build the website
-        run: make build MODE=production
-
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
         with:
@@ -44,5 +41,7 @@ jobs:
       - name: ssh keyscan
         run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
 
-      - name: Deploy to server
+      - name: Build and Deploy to server
+        env:
+          MODE: "production"
         run: make deploy FORCE_DEPLOY=true
