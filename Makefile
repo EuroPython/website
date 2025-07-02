@@ -62,11 +62,11 @@ preview:
 	$(REMOTE_CMD) "bash -c '\
 cd $(RELEASES_DIR) && \
 echo \"[INFO] Cleaning:\" && \
-ls -1dt */ \
-  | sed \"s:/*\\\$$::\" \
-  | grep -v ^current\\\$$ \
-  | grep -v ^$(TIMESTAMP)\\\$$ \
-  | tail -n +2 \
+ls -1 */ \
+	| sed \"s:/*\\\$$::\" \
+  | grep \"^2025\" \
+  | sort -r \
+  | tail -n +4 \
   | xargs -r -I{} echo rm -rf \"{}\"'"
 
 
