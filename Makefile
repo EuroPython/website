@@ -63,7 +63,7 @@ preview:
 cd $(RELEASES_DIR) && \
 echo \"[INFO] Cleaning:\" && \
 ls -1 */ \
-  | sed \"s:/*\\\$::\" \
+	| sed \"s:/*\\\$$::\" \
   | grep \"^2025\" \
   | sort -r \
   | tail -n +4 \
