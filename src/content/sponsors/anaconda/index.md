@@ -16,6 +16,6 @@ socials:
   instagram: "https://www.instagram.com/anaconda_inc/"
   youtube: "https://www.youtube.com/c/ContinuumIo"
 tier: Bronze
-event_name: Open Spaces & Sprints
+event_name: Open Space & Sprint
 logo_padding: "10px 0"
 ---
