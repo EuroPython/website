@@ -1,17 +1,21 @@
 ---
-name: "Anaconda"
-url: "https://.com"
-location: ""
-industry: ""
-description: "asda"
+name: Anaconda
+url: https://www.anaconda.com
+description:
+  "Anaconda is built to advance AI with open source at scale, giving builders
+  and organizations the confidence to increase productivity, and save time,
+  spend and risk associated with open source. "
 socials:
-  linkedin:
-  twitter:
-  github:
-  discord:
+  linkedin: "https://www.linkedin.com/company/anacondainc"
+  twitter: "https://x.com/anacondainc"
+  github: "https://github.com/ContinuumIO"
+  discord: "https://discord.com/invite/3zWZbsEx7A"
   mastodon:
   bluesky:
-tier: Special Event
+  facebook: "https://www.facebook.com/anacondainc"
+  instagram: "https://www.instagram.com/anaconda_inc/"
+  youtube: "https://www.youtube.com/c/ContinuumIo"
+tier: Bronze
 event_name: Open Spaces & Sprints
-logo_padding: 30px 10px
+logo_padding: "10px 0"
 ---

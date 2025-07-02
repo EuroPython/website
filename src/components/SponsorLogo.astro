@@ -3,7 +3,7 @@ import { getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import { sponsorLogos } from "@data/sponsorLogos";
 
-const { sponsor: sponsorId } = Astro.props;
+const { sponsor: sponsorId, special_event=false } = Astro.props;
 
 
 const sponsor = await getEntry("sponsors", sponsorId);
@@ -57,8 +57,8 @@ const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`: tier
             }}
           />
     }
-    { tier == "Special Event" && event_name &&
-      <span class="">{event_name}</span>
+    { special_event && event_name &&
+    <span class="">{event_name}</span>
     }
   </div>
 </div>
