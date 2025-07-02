@@ -190,6 +190,10 @@
         {
           "name": "Jobs",
           "path": "/jobs"
+        },
+        {
+          "name": "Discord",
+          "path": "https://discord.com/invite/BhTN2zJPMh"
         }
       ]
     },
