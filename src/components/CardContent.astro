@@ -1,15 +1,14 @@
 ---
 import { getEntry } from "astro:content";
-import { marked } from 'marked';
+import Markdown from "@ui/Markdown.astro";
 const { collection, entry:entryId } = Astro.props;
 
 const entry = await getEntry(collection, entryId);
-const html = entry && entry.body ? marked.parse(entry.body) :  "";
 
 ---
 
-  { html &&
+  { entry && entry.body &&
     <div class="mb-2 prose prose-li:m-0 prose-ul:m-0 prose-ul:mb-2 prose-a:underline prose-h1:text-text prose-headings:font-title prose-headings:text-text prose-a:text-text prose-a:hover:text-primary-hover prose-strong:text-text prose-strong:font-bold prose-li:marker:text-text p-6">
-      <article set:html={html} />
+      <Markdown content={entry.body || ""} class="" />
     </div>
   }
