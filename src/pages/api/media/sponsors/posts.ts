@@ -27,12 +27,12 @@ export const GET: APIRoute = async () => {
   ] as const;
 
   const commercialMessages = [
-    "🎉✨ We are pleased to welcome SPONSOR_NAME as a sponsor for EuroPython 2025! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌SPONSOR_HANDLE SPONSOR_URL",
-    "🚀✨ We are delighted to welcome SPONSOR_NAME as a sponsor for EuroPython 2025! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌SPONSOR_HANDLE SPONSOR_URL",
-    "🎉✨ A big thank you to SPONSOR_NAME for joining us as a sponsor for EuroPython 2025! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌SPONSOR_HANDLE SPONSOR_URL",
+    "🎉✨ We are pleased to welcome SPONSOR_NAME as a sponsor for EuroPython 2025! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🚀✨ We are delighted to welcome SPONSOR_NAME as a sponsor for EuroPython 2025! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🎉✨ A big thank you to SPONSOR_NAME for joining us as a sponsor for EuroPython 2025! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
     "🚀✨ Big shoutout and heartfelt thanks to SPONSOR_NAME for sponsoring EuroPython 2025! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌SPONSOR_HANDLE SPONSOR_URL",
-    "🎉✨ Thank you to SPONSOR_NAME for sponsoring EuroPython 2025! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌SPONSOR_HANDLE SPONSOR_URL",
-    "🚀✨ A huge thank you to SPONSOR_NAME for sponsoring EuroPython 2025! Your support helps make this event extraordinary. 🙌SPONSOR_HANDLE SPONSOR_URL",
+    "🎉✨ Thank you to SPONSOR_NAME for sponsoring EuroPython 2025! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🚀✨ A huge thank you to SPONSOR_NAME for sponsoring EuroPython 2025! Your support helps make this event extraordinary. 🙌 SPONSOR_HANDLE SPONSOR_URL",
   ];
 
   const communityMessages = [
@@ -48,7 +48,43 @@ export const GET: APIRoute = async () => {
   };
 
   const message_template = {
+    x: ({ name, handle, url, tier }) => {
+      const isCommercial = isCommercialTier(tier);
+      const messages = isCommercial ? commercialMessages : communityMessages;
+      const template = messages[0];
+
+      return template
+        .replace(/SPONSOR_NAME/g, name)
+        .replace(/SPONSOR_HANDLE/g, handle)
+        .replace(/SPONSOR_URL/g, url)
+        .replace(/SUPPORTER_HANDLE/g, handle)
+        .replace(/SUPPORTER_URL/g, url);
+    },
     linkedin: ({ name, handle, url, tier }) => {
+      const isCommercial = isCommercialTier(tier);
+      const messages = isCommercial ? commercialMessages : communityMessages;
+      const template = getRandomMessage(messages);
+
+      return template
+        .replace(/SPONSOR_NAME/g, name)
+        .replace(/SPONSOR_HANDLE/g, handle)
+        .replace(/SPONSOR_URL/g, url)
+        .replace(/SUPPORTER_HANDLE/g, handle)
+        .replace(/SUPPORTER_URL/g, url);
+    },
+    bsky: ({ name, handle, url, tier }) => {
+      const isCommercial = isCommercialTier(tier);
+      const messages = isCommercial ? commercialMessages : communityMessages;
+      const template = getRandomMessage(messages);
+
+      return template
+        .replace(/SPONSOR_NAME/g, name)
+        .replace(/SPONSOR_HANDLE/g, handle)
+        .replace(/SPONSOR_URL/g, url)
+        .replace(/SUPPORTER_HANDLE/g, handle)
+        .replace(/SUPPORTER_URL/g, url);
+    },
+    fosstodon: ({ name, handle, url, tier }) => {
       const isCommercial = isCommercialTier(tier);
       const messages = isCommercial ? commercialMessages : communityMessages;
       const template = getRandomMessage(messages);
@@ -73,12 +109,13 @@ export const GET: APIRoute = async () => {
 
     const sponsorImage = `https://ep2025.europython.eu/media/sponsors/social-${sponsor.id}.png`;
 
-    // Extract handles for each platform
     const handles = {
+      x: socials?.twitter,
       linkedin: socials?.linkedin,
+      bsky: socials?.bluesky,
+      fosstodon: socials?.mastodon,
     };
 
-    // Generate appropriate messages for each platform
     const generateMessage = (platform: keyof typeof message_template) => {
       const templateFn = message_template[platform];
       const handle = handles[platform as keyof typeof handles] || "";
@@ -99,7 +136,10 @@ export const GET: APIRoute = async () => {
       image: sponsorImage,
       handles: handles,
       channel: {
+        x: generateMessage("x"),
         linkedin: generateMessage("linkedin"),
+        bsky: generateMessage("bsky"),
+        fosstodon: generateMessage("fosstodon"),
       },
     };
 
