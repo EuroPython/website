@@ -73,6 +73,10 @@
           "path": "/session/rust-summit"
         },
         {
+          "name": "Packaging Summit",
+          "path": "/session/packaging-summit"
+        },
+        {
           "name": "Sprints Weekend",
           "path": "/sprints"
         },
@@ -260,6 +264,10 @@
         {
           "name": "Rust Summit",
           "path": "/session/rust-summit"
+        },
+        {
+          "name": "Packaging Summit",
+          "path": "/session/packaging-summit"
         },
         {
           "name": "Sprints Weekend",

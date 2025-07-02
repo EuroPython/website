@@ -4,7 +4,7 @@ import { replaceYouTubeLinks } from "@utils/markdown";
 
 interface Props {
   content: string;
-  class: string;
+  class?: string;
 }
 
 const { content, class: className } = Astro.props;
