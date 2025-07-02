@@ -36,13 +36,6 @@ jobs:
       - name: Install dependencies
         run: make install
 
-      - name: Build the website
-        env:
-          BRANCH: "${{ env.GITHUB_BRANCH_NAME }}"
-          GIT_VERSION: "${{ env.GITHUB_COMMIT_HASH }}"
-          MODE: "preview"
-        run: make build
-
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
         with:
@@ -51,9 +44,11 @@ jobs:
       - name: ssh keyscan
         run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
 
-      - name: Upload preview
+      - name: Build and upload preview
         env:
           BRANCH: "${{ env.GITHUB_BRANCH_NAME }}"
+          GIT_VERSION: "${{ env.GITHUB_COMMIT_HASH }}"
+          MODE: "preview"
         run: make preview
 
       - name: Get safe branch and export to env
