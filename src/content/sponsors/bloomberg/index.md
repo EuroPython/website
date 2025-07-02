@@ -28,4 +28,4 @@ Bloomberg is proud to be a Visionary Sponsor of the Python Software Foundation
 and sponsor of many Python community events around the world. Learn more at
 [TechAtBloomberg.com/python](http://www.techatbloomberg.com/python).
 
-https://www.youtube.com/watch?v=ucWq9Cjg8bg
+https://youtu.be/A2r1qmHLLHU
