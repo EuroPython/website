@@ -27,10 +27,6 @@ const { data, body } = sprint;
         <span>{data.numberOfPeople}</span>
       </span>
       <span class="flex items-center gap-1">
-        <span>📍</span>
-        <span>{data.room}</span>
-      </span>
-      <span class="flex items-center gap-1">
         <span>🐍</span>
         <span>{data.pythonLevel}</span>
       </span>
@@ -52,18 +48,6 @@ const { data, body } = sprint;
         </span>
       )}
     </div>
-
-    {data.tags && data.tags.length > 0 && (
-      <div class="flex flex-wrap gap-2 pt-2">
-        {data.tags.map((tag) => (
-          <span key={tag} class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium">{tag}</span>
-        ))}
-      </div>
-    )}
-
-    {data.description && (
-      <p class="text-gray-700 leading-relaxed">{data.description}</p>
-    )}
 
     {(data.links) && (
       <div class="text-sm">

@@ -261,7 +261,6 @@ const sprints = defineCollection({
     title: z.string(),
     slug: z.string().optional(), // Auto-generated from filename if not provided
     numberOfPeople: z.string().or(z.number()),
-    room: z.string(),
     pythonLevel: z.enum(["Any", "Beginner", "Intermediate", "Advanced"]),
     contactPerson: z.object({
       name: z.string(),
@@ -277,9 +276,6 @@ const sprints = defineCollection({
         })
       )
       .optional(),
-    description: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    status: z.enum(["active", "full", "cancelled"]).default("active"),
     draft: z.boolean().optional().default(false),
   }),
 });
