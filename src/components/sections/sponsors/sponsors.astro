@@ -17,6 +17,7 @@ const tiers = [
   "Startups",
   "Bronze",
   "Patron",
+  "Special Event",
   "Financial Aid",
   "Supporters",
   "Partners",
@@ -29,9 +30,21 @@ let hasSponsors = false;
 
 const sponsorTiers = tiers
   .map((tier) => {
-    const tierSponsors = sponsors.filter(
-      (sponsor) => sponsor.data.tier === tier,
-    );
+    const tierSponsors = sponsors.filter((sponsor) => {
+      // Original tier matching
+      if (sponsor.data.tier === tier) {
+        return true;
+      }
+
+      // Also include in "Special Event" if sponsor has event_name
+      if (tier === "Special Event" &&
+          sponsor.data.event_name &&
+          sponsor.data.event_name.trim() !== "") {
+        return true;
+      }
+
+      return false;
+    });
 
     if (tierSponsors.length > 0) {
       hasSponsors = true;
@@ -77,7 +90,7 @@ const sponsorTiers = tiers
     {
       sponsorTiers.map((tier, index) => (
         <Fragment>
-          <SponsorTier tier={tier} level={index} />
+        <SponsorTier tier={tier} level={index} />
           {index !== sponsorTiers.length - 1 && <hr />}
         </Fragment>
       ))
