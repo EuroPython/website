@@ -1,5 +1,9 @@
 import { getCollection, getEntry } from "astro:content";
 import type { APIRoute } from "astro";
+import { sponsorDisplay } from "@data/sponsorDisplay";
+import { getImage } from "astro:assets";
+
+const siteUrl = import.meta.env.SITE;
 
 export const GET: APIRoute = async () => {
   const allJobs = await getCollection("jobs");
@@ -15,6 +19,11 @@ export const GET: APIRoute = async () => {
           throw new Error(`Sponsor with ID "${job.data.sponsor}" not found`);
         }
 
+        const image = sponsorDisplay[sponsorId];
+        const processedImage = image
+          ? await getImage({ src: image, format: "webp" })
+          : null;
+
         return {
           id: job.id,
           title: `${sponsor.data.name} - ${job.data.title}`,
@@ -27,13 +36,14 @@ export const GET: APIRoute = async () => {
           responsibilities: job.data.responsibilities,
           min_requirements: job.data.min_requirements,
           requirements: job.data.requirements,
-          preferred: job.data.preferred, // fixed typo: `preffered` → `preferred`
+          preferred: job.data.preffered,
           stack: job.data.stack,
           benefits: job.data.benefits,
           description2: job.data.description2,
-          apply_link: `https://ep2025.europython.eu/sponsor/${job.id}`,
+          apply_link: `${siteUrl}${job.id}`,
           sponsor: sponsor.data.name,
           sponsor_description: sponsor.data.description,
+          sponsor_image: `${siteUrl}${processedImage?.src || ""}`,
         };
       })
   );
