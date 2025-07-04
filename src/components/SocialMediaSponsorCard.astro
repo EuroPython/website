@@ -4,10 +4,25 @@ import { sponsorLogos } from "@data/sponsorLogos";
 const { sponsor } = Astro.props;
 const {
   name: title,
+  tier,
   logo_padding = false,
 } = sponsor.data;
 
 const logo = sponsorLogos[sponsor.id];
+
+const tiers = [
+  "Keystone",
+  "Diamond",
+  "Platinum",
+  "Platinum X",
+  "Gold",
+  "Silver",
+  "Bronze",
+  "Patron",
+] as const;
+
+const bg_url = tiers.includes(tier)? '/social/bg4.png' : '/social/bg5.png';
+
 
 // Function to parse CSS padding values
 function parsePadding(paddingStr: string) {
@@ -65,7 +80,7 @@ const y = 650 - (height + padding.top + padding.bottom) / 2 + padding.top;
 ---
 
 <svg class="bg" width="900" height="900" class="h-full w-full -z-10">
-  <image href="/social/bg4.png" width="900" height="900" />
+  <image href={bg_url} width="900" height="900" />
 </svg>
 
 <svg class="sponsor-logo" width="900" height="900">
