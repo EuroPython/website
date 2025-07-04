@@ -54,9 +54,9 @@ comfortable shoes if you’d like to take part in the games!
 
 **Please note:** This event is not included in the conference ticket.
 
-Tickets are available via our ticket shop and will be limited in
-number. You will receive the voucher code to pre-order them by mail.
-Please note the event is meant for conference attendees only.
+Tickets are available via our ticket shop and will be limited in number. You
+will receive the voucher code to pre-order them by mail. Please note the event
+is meant for conference attendees only.
 
 ## When & Where?
 
