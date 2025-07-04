@@ -14,6 +14,7 @@ export interface Props {
 }
 
 const { tier, level = 2} = Astro.props;
+const special_event = tier.name === "Special Event";
 ---
 
 <div class="relative">
@@ -30,15 +31,15 @@ const { tier, level = 2} = Astro.props;
       `level-${level}`,
       {
         "grid-cols-1 md:grid-cols-2 m-20 [&>*]:scale-110": level===0,
-        "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 [&>*]:scale-90": level > 0 && level << 6,
-        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-90" : level===6,
-        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-85" : level>6,
+        "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 [&>*]:scale-90": level > 0 && level < 6,
+        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-70" : level >= 6 && level < 7,
+        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-85" : level >= 7,
       },
     ]}
   >
     {
       tier.sponsors.map((sponsor) => (
-          <SponsorLogo sponsor={sponsor.id} />
+      <SponsorLogo sponsor={sponsor.id} {special_event} />
       ))
     }
   </div>
