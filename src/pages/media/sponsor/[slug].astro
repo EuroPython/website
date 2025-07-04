@@ -87,45 +87,57 @@ window.addEventListener('resize', fitAllText);
 
 <script is:inline define:vars={{slug: sponsor.id}}>
   document.addEventListener('DOMContentLoaded', () => {
+    // Get base URL from document
+    const baseUrl = document.baseURI || document.location.origin;
+
     document.querySelectorAll('.social').forEach((socialDiv, index) => {
+      socialDiv.addEventListener('click', () => {
+        const svgs = socialDiv.querySelectorAll('svg');
+        if (svgs.length === 0) {
+          alert('No SVGs found!');
+          return;
+        }
+        const xmlns = "http://www.w3.org/2000/svg";
+        const combinedSvg = document.createElementNS(xmlns, "svg");
+        combinedSvg.setAttribute("xmlns", xmlns);
+        combinedSvg.setAttribute("width", "900");
+        combinedSvg.setAttribute("height", "900");
+        combinedSvg.setAttribute("viewBox", "0 0 900 900");
 
-  socialDiv.addEventListener('click', () => {
-    const svgs = socialDiv.querySelectorAll('svg');
+        svgs.forEach(svg => {
+          const g = document.createElementNS(xmlns, "g");
+          // Clone the SVG content and resolve relative URLs
+          const clonedContent = svg.innerHTML;
+          // Replace relative URLs with absolute URLs
+          const resolvedContent = clonedContent.replace(
+            /href="([^"]*(?:\.png|\.jpg|\.jpeg|\.gif|\.svg|\.webp)[^"]*)"/gi,
+            (match, url) => {
+              // If URL is already absolute, keep it as is
+              if (url.startsWith('http') || url.startsWith('//')) {
+                return match;
+              }
+              // Convert relative URL to absolute
+              const absoluteUrl = new URL(url, baseUrl).href;
+              return `href="${absoluteUrl}"`;
+            }
+          );
+          g.innerHTML = resolvedContent;
+          combinedSvg.appendChild(g);
+        });
 
-    if (svgs.length === 0) {
-      alert('No SVGs found!');
-      return;
-    }
-
-    const xmlns = "http://www.w3.org/2000/svg";
-    const combinedSvg = document.createElementNS(xmlns, "svg");
-    combinedSvg.setAttribute("xmlns", xmlns);
-    combinedSvg.setAttribute("width", "900");
-    combinedSvg.setAttribute("height", "900");
-    combinedSvg.setAttribute("viewBox", "0 0 900 900");
-
-    svgs.forEach(svg => {
-      const g = document.createElementNS(xmlns, "g");
-      g.innerHTML = svg.innerHTML;
-      combinedSvg.appendChild(g);
+        const serializer = new XMLSerializer();
+        const svgString = serializer.serializeToString(combinedSvg);
+        const blob = new Blob([svgString], {type: "image/svg+xml"});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = slug ? `social-${slug}.svg` : `social-${index + 1}.svg`;
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+        URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+      });
     });
-
-    const serializer = new XMLSerializer();
-    const svgString = serializer.serializeToString(combinedSvg);
-
-    const blob = new Blob([svgString], {type: "image/svg+xml"});
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = slug ? `social-${slug}.svg` : `social-${index +1}.svg`;
-    a.style.display = "none";
-    document.body.appendChild(a);
-    a.click();
-
-    URL.revokeObjectURL(url);
-    document.body.removeChild(a);
   });
-    });
-});
 </script>

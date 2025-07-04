@@ -73,12 +73,20 @@
           "path": "/session/rust-summit"
         },
         {
+          "name": "Packaging Summit",
+          "path": "/session/packaging-summit"
+        },
+        {
           "name": "Sprints Weekend",
           "path": "/sprints"
         },
         {
           "name": "Community Organisers Activities",
           "path": "/community-activities"
+        },
+        {
+          "name": "Open Spaces",
+          "path": "/open-spaces"
         }
       ]
     },
@@ -190,6 +198,10 @@
         {
           "name": "Jobs",
           "path": "/jobs"
+        },
+        {
+          "name": "Discord",
+          "path": "https://discord.com/invite/BhTN2zJPMh"
         }
       ]
     },
@@ -262,12 +274,20 @@
           "path": "/session/rust-summit"
         },
         {
+          "name": "Packaging Summit",
+          "path": "/session/packaging-summit"
+        },
+        {
           "name": "Sprints Weekend",
           "path": "/sprints"
         },
         {
           "name": "Community Organisers Activities",
           "path": "/community-activities"
+        },
+        {
+          "name": "Open Spaces",
+          "path": "/open-spaces"
         }
       ]
     },

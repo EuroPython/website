@@ -2,52 +2,99 @@
 import { sponsorLogos } from "@data/sponsorLogos";
 
 const { sponsor } = Astro.props;
-
 const {
   name: title,
+  tier,
   logo_padding = false,
 } = sponsor.data;
 
-
 const logo = sponsorLogos[sponsor.id];
-// Assuming logo.width and logo.height are known
+
+const tiers = [
+  "Keystone",
+  "Diamond",
+  "Platinum",
+  "Platinum X",
+  "Gold",
+  "Silver",
+  "Bronze",
+  "Patron",
+] as const;
+
+const bg_url = tiers.includes(tier)? '/social/bg4.png' : '/social/bg5.png';
+
+
+// Function to parse CSS padding values
+function parsePadding(paddingStr: string) {
+  if (!paddingStr || paddingStr === "0") {
+    return { top: 0, right: 0, bottom: 0, left: 0 };
+  }
+
+  // Remove 'px' and split by spaces
+  const values = paddingStr.replace(/px/g, '').split(/\s+/).map(v => parseFloat(v) || 0);
+
+  switch (values.length) {
+    case 1:
+      // "10px" -> all sides
+      return { top: values[0], right: values[0], bottom: values[0], left: values[0] };
+    case 2:
+      // "15px 20px" -> top/bottom, left/right
+      return { top: values[0], right: values[1], bottom: values[0], left: values[1] };
+    case 3:
+      // "10px 15px 20px" -> top, left/right, bottom
+      return { top: values[0], right: values[1], bottom: values[2], left: values[1] };
+    case 4:
+      // "10px 15px 20px 25px" -> top, right, bottom, left
+      return { top: values[0], right: values[1], bottom: values[2], left: values[3] };
+    default:
+      return { top: 0, right: 0, bottom: 0, left: 0 };
+  }
+}
+
+// Parse padding
+const padding = parsePadding(logo_padding);
+
+// Calculate dimensions with padding
 const targetWidth = 400;
 const originalWidth = logo.width;
 const originalHeight = logo.height;
 const aspectRatio = originalWidth / originalHeight;
 
-let width = targetWidth;
+// Available space after padding
+const availableWidth = targetWidth - padding.left - padding.right;
+const maxHeight = 220;
+const availableHeight = maxHeight - padding.top - padding.bottom;
+
+let width = availableWidth;
 let height = width / aspectRatio;
 
-const maxHeight = 220;
-if (height > maxHeight) {
-  height = maxHeight;
-  width = height * aspectRatio ;
+// Check if height exceeds available space
+if (height > availableHeight) {
+  height = availableHeight;
+  width = height * aspectRatio;
 }
 
-const x = 450 - width / 2;
-const y = 650 - height / 2;
-
+// Calculate position with padding offset
+const x = 450 - (width + padding.left + padding.right) / 2 + padding.left;
+const y = 650 - (height + padding.top + padding.bottom) / 2 + padding.top;
 ---
-<svg width="900" height="900" class="h-full w-full -z-10">
-  <image href="/social/bg4.png" width="900" height="900" />
-</svg>
-    <svg width="900" height="900">
 
-<image
-  class="sponsor_logo"
-  href={logo.src}
-  x={x}
-  y={y}
-  width={width}
-  height={height}
-  style={{
-    padding: logo_padding ? logo_padding : undefined,
-  }}
-  clip-path="url(#curvedCornerClip)"
-  preserveAspectRatio="xMidYMid meet"
-/>
-    </svg>
+<svg class="bg" width="900" height="900" class="h-full w-full -z-10">
+  <image href={bg_url} width="900" height="900" />
+</svg>
+
+<svg class="sponsor-logo" width="900" height="900">
+  <image
+    class="sponsor_logo"
+    href={logo.src}
+    x={x}
+    y={y}
+    width={width}
+    height={height}
+    clip-path="url(#curvedCornerClip)"
+    preserveAspectRatio="xMidYMid meet"
+  />
+</svg>
 
 <p lang="en" class="box2 fit-text">
 {title}
