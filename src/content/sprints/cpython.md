@@ -4,7 +4,7 @@ numberOfPeople: "TBA"
 pythonLevel: "Intermediate"
 contactPerson:
   name: "Petr Viktorin"
-  email: ""
+  email: "name@example.com"
 links:
   - title: "Code of Conduct"
     url: "https://www.python.org/psf/conduct/"
