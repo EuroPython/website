@@ -1,17 +1,13 @@
 ---
 title: "BeeWare"
 numberOfPeople: "TBA"
-pythonLevel: "Any"
+pythonLevel: "Beginner"
 contactPerson:
-  name: "Petr Viktorin"
-  email: "-"
+  name: "Russell Keith-Magee"
+  email: ""
 links:
-  - title: "Code of Conduct"
-    url: "https://www.python.org/psf/conduct/"
-  - title: "CPython's Developer Guide"
-    url: "https://devguide.python.org/"
-  - title: "Easy Issues"
-    url: "https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy"
+  - title: "BeeWare GitHub"
+    url: "https://github.com/beeware"
 ---
 
-Come sprint on CPython and work on Python 3.15!
+Come sprint on the BeeWare project!

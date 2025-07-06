@@ -1,13 +1,17 @@
 ---
 title: "CPython Core"
 numberOfPeople: "TBA"
-pythonLevel: "2+ years recommended"
+pythonLevel: "Intermediate"
 contactPerson:
-  name: "Russell Keith-Magee"
-  email: "-"
+  name: "Petr Viktorin"
+  email: ""
 links:
-  - title: "BeeWare GitHub"
-    url: "https://github.com/beeware"
+  - title: "Code of Conduct"
+    url: "https://www.python.org/psf/conduct/"
+  - title: "CPython's Developer Guide"
+    url: "https://devguide.python.org/"
+  - title: "Easy Issues"
+    url: "https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy"
 ---
 
-Come sprint on the BeeWare project!
+Come sprint on CPython and work on Python 3.15!
