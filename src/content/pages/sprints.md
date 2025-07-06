@@ -31,7 +31,13 @@ together.
 
 ## Open-Source Projects
 
-More info soon!
+Anyone can submit a project for the sprints, although sprints are typically
+submitted by project maintainers or frequet contributors.
+
+To submit a project for the sprints, head to
+[the EuroPython website repository](https://github.com/EuroPython/website) and
+add your project as a markdown file in the folder `src/content/spints`.
+Use the file `_sprints_template.md` as the template for your project file.
 
 <!-- ## Location of the sprints venue
 The Rajska Building (RB), [Žižkov Campus, VŠE](https://maps.app.goo.gl/azRTAczu8B5ma1XFA) (Prague University of Economics and Business) is the home of our sprints again this year.
