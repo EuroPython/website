@@ -1,6 +1,6 @@
 
 ---
-import Layout from "@layouts/Layout.astro";
+import Layout from "@layouts/SectionLayout.astro";
 import Button from "@ui/Button.astro";
 import Headline from "@ui/Headline.astro"
 import Icon from "@ui/Icon.astro"
@@ -17,7 +17,8 @@ import Icon from "@ui/Icon.astro"
 
 
 <Headline as="h1" id="components" title="Example components" />
-<section class="prose-xl my-10">
+
+Key Features
     <Headline id="button" title="Button" />
     <div class="grid gap-2 w-[200px]">
       <Button>Primary Button</Button>
@@ -28,9 +29,7 @@ import Icon from "@ui/Icon.astro"
       <Button url="/about">Internal Link</Button>
       <Button url="https://example.com">External Link</Button>
     </div>
-</section>
 
-<section class="prose-xl my-10">
     <Headline id="button" title="Icons" />
     <div class="grid gap-2 w-[200px]">
       <Icon name="check" />
@@ -49,5 +48,4 @@ import Icon from "@ui/Icon.astro"
       <Button icon="clock" iconRight={false} iconSize="fa-2xl">Prev</Button>
 
     </div>
-</section>
 </Layout>

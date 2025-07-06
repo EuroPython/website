@@ -16,6 +16,7 @@ import Center from "@components/markdown/Center.astro";
 import EPSLogo from "@components/markdown/EPSLogo.astro";
 import ProfileCard from "@components/profile/ProfileCard.astro";
 import SpeakerCard from "@components/profile/SpeakerCard.astro";
+import GoogleCalendar from '@components/GoogleCalendar.astro';
 
 import Prose from "@ui/Prose.astro";
 
@@ -67,7 +68,8 @@ const description = post.data.subtitle;
         hr: Separator,
         Accordion,
         ProfileCard,
-        SpeakerCard
+        SpeakerCard,
+        GoogleCalendar
       }}
     />
   </Prose>
