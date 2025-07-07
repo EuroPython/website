@@ -1,6 +1,6 @@
 ---
 name: Ataccama
-url: https://jobs.ataccama.com/
+url: https://ataccama.com/
 location: "Czechia"
 description:
   "Ataccama is an international software company full of data experts and

@@ -1,6 +1,6 @@
 ---
 name: "Picnic"
-url: "https://jobs.picnic.app/en/home"
+url: "https://picnic.app/"
 location: "Germany"
 industry: "Grocery Delivery"
 description:
