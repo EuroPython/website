@@ -4,7 +4,7 @@ numberOfPeople: "TBA"
 pythonLevel: "Beginner"
 contactPerson:
   name: "Russell Keith-Magee"
-  email: "name@example.com"
+  email:
 links:
   - title: "BeeWare GitHub"
     url: "https://github.com/beeware"
