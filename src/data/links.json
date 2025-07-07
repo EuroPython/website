@@ -87,6 +87,10 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+            "name": "Resume Workshop",
+            "path": "/resume-workshop"
         }
       ]
     },
@@ -254,10 +258,6 @@
           "path": "/social-event"
         },
         {
-            "name": "Resume Workshop",
-            "path": "/resume-workshop"
-        },
-        {
           "name": "PyLadies Events",
           "path": "/pyladies"
         },
@@ -292,6 +292,10 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+            "name": "Resume Workshop",
+            "path": "/resume-workshop"
         }
       ]
     },
