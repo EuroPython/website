@@ -89,8 +89,8 @@
           "path": "/open-spaces"
         },
         {
-            "name": "Resume Workshop",
-            "path": "/resume-workshop"
+          "name": "Resume Workshop",
+          "path": "/resume-workshop"
         }
       ]
     },
@@ -294,8 +294,8 @@
           "path": "/open-spaces"
         },
         {
-            "name": "Resume Workshop",
-            "path": "/resume-workshop"
+          "name": "Resume Workshop",
+          "path": "/resume-workshop"
         }
       ]
     },
