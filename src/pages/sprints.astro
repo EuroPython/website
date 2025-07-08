@@ -3,19 +3,13 @@ import { getCollection } from 'astro:content';
 import { getEntry, render } from 'astro:content';
 import Layout from '@layouts/MarkdownLayout.astro';
 import SprintCard from '@components/SprintCard.astro';
-import Headline from "@ui/Headline.astro"
 import Markdown from "@ui/Markdown.astro";
-import TwoCols from "@components/TwoCols.astro";
-import Prose from "@ui/Prose.astro";
 
 const entry = await getEntry('pages', 'sprints_info');
 
 if (!entry) {
   throw new Error('Could not find page entry.');
 }
-
-console.log(entry)
-const { Content } = await render(entry);
 
 const sprints = await getCollection("sprints", ({ data }) => {
   return import.meta.env.MODE === "production" ? data.draft !== true : true;
