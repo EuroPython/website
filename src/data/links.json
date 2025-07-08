@@ -87,6 +87,10 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
@@ -288,6 +292,10 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
