@@ -115,6 +115,10 @@
       "name": "Sponsorship",
       "items": [
         {
+          "name": "Our Sponsors",
+          "path": "/sponsors"
+        },
+        {
           "name": "Sponsor Packages",
           "path": "/sponsorship/sponsor"
         },
@@ -302,6 +306,10 @@
     {
       "name": "Sponsorship",
       "items": [
+        {
+          "name": "Our Sponsors",
+          "path": "/sponsors"
+        },
         {
           "name": "Sponsor Packages",
           "path": "/sponsorship/sponsor"
