@@ -1,0 +1,8 @@
+---
+import Markdown from "@ui/Markdown.astro";
+
+const content = await Astro.slots.render('default')
+
+---
+
+<Markdown content={content} />
