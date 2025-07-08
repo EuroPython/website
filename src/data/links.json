@@ -89,8 +89,8 @@
           "path": "/open-spaces"
         },
         {
-          "name": "Resume Workshop",
-          "path": "/resume-workshop"
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
@@ -294,8 +294,8 @@
           "path": "/open-spaces"
         },
         {
-          "name": "Resume Workshop",
-          "path": "/resume-workshop"
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
