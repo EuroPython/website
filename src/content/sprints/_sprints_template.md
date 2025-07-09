@@ -10,7 +10,6 @@ contactPerson: # The main person to reach out to regarding the sprint.
 links: # Add as many links as relevant.
   - title: "Project xyz GitHub repo"
     url: "https://github.com/xyz"
-draft: true # Remove this line when you send the PR.
 ---
 
 Your sprint/project description goes here.
