@@ -342,6 +342,10 @@
         {
           "name": "Childcare",
           "path": "/childcare"
+        },
+        {
+          "name": "Remote",
+          "path": "/remote"
         }
       ]
     },
