@@ -38,8 +38,12 @@ const { data, body } = sprint;
       <span class="text-gray-900">Contact:</span>
       <span class="text-gray-700">{data.contactPerson.name}</span>
       {data.contactPerson.email && (
-        <span class="text-gray-600">
-          {' '}(<a href={`mailto:${data.contactPerson.email}`} class="text-primary hover:text-primary-hover underline">{data.contactPerson.email}</a>)
+        <span class="text-primary">
+          {data.contactPerson.email.includes('@') ? (
+            <a href={`mailto:${data.contactPerson.email}`} class="hover:text-primary-hover underline">({data.contactPerson.email})</a>
+          ) : (
+            <span>({data.contactPerson.email})  </span>
+          )}
         </span>
       )}
       {data.contactPerson.github && (

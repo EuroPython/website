@@ -4,7 +4,7 @@ numberOfPeople: "5"
 pythonLevel: "Any"
 contactPerson:
   name: "Nikoś Hell"
-  email:
+  email: "nikoshell [at] example.com"
   github: "nikoshell"
   twitter: "nikoshell20"
 links:

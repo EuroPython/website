@@ -265,7 +265,7 @@ const sprints = defineCollection({
     pythonLevel: z.enum(["Any", "Beginner", "Intermediate", "Advanced"]),
     contactPerson: z.object({
       name: z.string(),
-      email: z.string().email().optional().nullable(),
+      email: z.string().optional().nullable(),
       github: z.string().optional().nullable(),
       twitter: z.string().optional().nullable(),
     }),

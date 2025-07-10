@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { getEntry, render } from 'astro:content';
+import { getEntry } from 'astro:content';
 import Layout from '@layouts/MarkdownLayout.astro';
 import SprintCard from '@components/SprintCard.astro';
 import Markdown from "@ui/Markdown.astro";
@@ -17,7 +17,7 @@ const sprints = await getCollection("sprints", ({ data }) => {
 
 ---
 
-<Layout title=`${entry.title}` description=`${entry.description}` toc=true>
+<Layout title=`${entry.data.title}` description=`${entry.data.description}` toc=true>
 
       <Markdown content={entry.body} />
       <div class="flex flex-wrap gap-8 justify-center my-8">
