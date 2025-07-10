@@ -70,7 +70,7 @@ teams:
 
 ### 🏃‍♀️ Sprints Team
 
-- Daria Grudzien Linhart
+- Daria Linhart Grudzień
 - Honza Javorek
 - Rodrigo Girão Serrão
 
