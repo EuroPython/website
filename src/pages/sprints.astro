@@ -4,6 +4,11 @@ import { getEntry } from 'astro:content';
 import Layout from '@layouts/MarkdownLayout.astro';
 import SprintCard from '@components/SprintCard.astro';
 import Markdown from "@ui/Markdown.astro";
+import Headline from "@ui/Headline.astro";
+import Prose from "@ui/Prose.astro";
+
+import { Image } from 'astro:assets';
+import anacondaLogo from '@src/content/sponsors/anaconda/anaconda.svg';
 
 const entry = await getEntry('pages', 'sprints_info');
 
@@ -48,6 +53,22 @@ const sprints = await getCollection("sprints", ({ data }) => {
           <p class="text-gray-500 text-lg">No sprints are currently available. Check back soon!</p>
         </div>
       )}
+    <Prose>
+      <Headline center title="Big Thanks to Our Sponsor" />
+
+      <div class="flex justify-center">
+        <a href="https://www.anaconda.com" target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform  external">
+          <Image
+            src={anacondaLogo}
+            alt="Anaconda"
+            width={200}
+            height={80}
+          />
+        </a>
+      </div>
+
+      <span class="text-lg text-center block">We're grateful to have <b>Anaconda</b> as our <b>Sprints sponsor</b>!</span>
+    </Prose>
 </Layout>
 
   <script>
