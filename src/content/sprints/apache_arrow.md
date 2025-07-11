@@ -4,7 +4,7 @@ numberOfPeople: "TBA"
 pythonLevel: "Intermediate"
 contactPerson:
   name: "Rok Mihevc"
-  email: "rok.mihevc [at] gmail.com"
+  email: "rok.mihevc@gmail.com"
 links:
   - title: "Apache Arrow"
     url: "https://github.com/apache/arrow"
