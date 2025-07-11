@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/MarkdownLayout.astro";
 
+import Headline from "@ui/Headline.astro";
 import Separator from "@ui/Separator.astro";
 import Map from "@components/Map.astro";
 import YouTube from "@ui/YouTube.astro";
@@ -56,6 +57,7 @@ const description = post.data.subtitle;
     <Content
       components={{
         Button,
+        Headline,
         Icon,
         IconLabel,
         Center,
