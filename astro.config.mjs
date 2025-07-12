@@ -153,7 +153,27 @@ export default defineConfig({
     mdx(),
     svelte(),
     serviceWorker({
-      workbox: { inlineWorkboxRuntime: true },
+      workbox: {
+        inlineWorkboxRuntime: true,
+        runtimeCaching: [
+          {
+            urlPattern:
+              /\.(?:js|css|json|png|jpg|jpeg|svg|woff2?|ttf|eot|gif)$/,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "assets-cache",
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 1, // 1h
+              },
+            },
+          },
+          {
+            urlPattern: /\.html$/,
+            handler: "NetworkOnly", // ⛔ Don't cache HTML
+          },
+        ],
+      },
     }),
     ...(fastBuild
       ? []
