@@ -43,8 +43,6 @@ const mobileEmbedUrl = `https://calendar.google.com/calendar/embed?src=${encodeU
     src={embedUrl}
     class="hidden md:block w-full max-w-4xl rounded-lg shadow-lg border-0"
     style={`border: 0; width: ${width}px; height: ${height}px;`}
-    frameborder="0"
-    scrolling="no"
     title={title}
     loading="lazy"
   ></iframe>
@@ -54,8 +52,6 @@ const mobileEmbedUrl = `https://calendar.google.com/calendar/embed?src=${encodeU
     src={mobileEmbedUrl}
     class="block md:hidden w-full rounded-lg shadow-lg border-0"
     style="height: 400px;"
-    frameborder="0"
-    scrolling="no"
     title={`${title} - Mobile View`}
     loading="lazy"
   ></iframe>
