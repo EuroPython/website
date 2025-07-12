@@ -252,6 +252,12 @@ main a[href^="#"]::before {
   background-color: white;
 }
 
+.draft2 {
+  background: url("/draft2.png");
+  background-size: 25%;
+  background-color: white;
+}
+
 .social-icon {
   display: inline-flex;
   align-items: center;

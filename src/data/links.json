@@ -87,6 +87,10 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
@@ -110,6 +114,10 @@
     {
       "name": "Sponsorship",
       "items": [
+        {
+          "name": "Our Sponsors",
+          "path": "/sponsors"
+        },
         {
           "name": "Sponsor Packages",
           "path": "/sponsorship/sponsor"
@@ -150,6 +158,10 @@
         {
           "name": "FAQ",
           "path": "/faq"
+        },
+        {
+          "name": "Discord",
+          "path": "/discord"
         },
         {
           "name": "Code of Conduct",
@@ -288,12 +300,20 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
     {
       "name": "Sponsorship",
       "items": [
+        {
+          "name": "Our Sponsors",
+          "path": "/sponsors"
+        },
         {
           "name": "Sponsor Packages",
           "path": "/sponsorship/sponsor"
@@ -326,6 +346,10 @@
         {
           "name": "Childcare",
           "path": "/childcare"
+        },
+        {
+          "name": "Remote",
+          "path": "/remote"
         }
       ]
     },
