@@ -178,7 +178,6 @@ export default defineConfig({
     domains: ["programme.europython.eu", "placehold.co"],
   },
   prefetch: {
-    prefetchAll: true,
-    defaultStrategy: "load",
+    prefetchAll: false,
   },
 });
