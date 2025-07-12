@@ -41,9 +41,9 @@ file `_sprints_template.md` as the template for your project file.
 
 💡 **Quick tip:** You can quickly edit and prepare your changes directly in the
 browser using
-[github web-based editor](https://github.dev/EuroPython/website/blob/ep2025/src/content/sprints/_sprints_template.md).
+[GitHub web-based editor](https://github.dev/EuroPython/website/blob/ep2025/src/content/sprints/_sprints_template.md).
 
-Once your file is added, submit a Pull Request — and you're done!
+Once your file is added, submit a pull request — and you're done!
 
 <!-- ## Location of the sprints venue
 The Rajska Building (RB), [Žižkov Campus, VŠE](https://maps.app.goo.gl/azRTAczu8B5ma1XFA) (Prague University of Economics and Business) is the home of our sprints again this year.
