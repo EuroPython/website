@@ -16,7 +16,7 @@ const { data, body } = sprint;
 //  <a href={`/sprints/${slug}`} id={slug} class="text-blue-600 hover:text-blue-800 hover:underline"></a>
 ---
 
-<article class=`${data.draft?"draft2":""} sprint-card bg-white border border-gray-200 rounded-lg p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-200` data-python-level={data.pythonLevel} data-room={data.room}>
+<article class=`${data.draft?"draft2":""} sprint-card bg-white border border-gray-200 rounded-lg p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-200` data-python-level={data.pythonLevel} >
   <header class="mb-4">
     <h3 class="text-2xl font-semibold mb-2">
         {data.title}
