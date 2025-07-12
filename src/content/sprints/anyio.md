@@ -13,5 +13,7 @@ links:
     url: "https://matrix.to/#/#python-trio_AnyIO:gitter.im"
 ---
 
-We'll mostly work on improving the documentation, in particular adding guides for migrating existing asyncio or Trio apps and libraries to the AnyIO API.
-If you have a pet peeve with AnyIO, or would just like to ask questions or get help with your AnyIO migration, feel free to join!
+We'll mostly work on improving the documentation, in particular adding guides
+for migrating existing asyncio or Trio apps and libraries to the AnyIO API. If
+you have a pet peeve with AnyIO, or would just like to ask questions or get help
+with your AnyIO migration, feel free to join!
