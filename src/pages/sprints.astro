@@ -22,7 +22,7 @@ const sprints = await getCollection("sprints", ({ data }) => {
 
 ---
 
-<Layout title=`${entry.data.title}` description=`${entry.data.description}` toc=true>
+<Layout title=`${entry.data.title}` description=`${entry.data.subtitle}` toc=true>
 
       <Markdown content={entry.body} />
       <div class="flex flex-wrap gap-8 justify-center my-8">
