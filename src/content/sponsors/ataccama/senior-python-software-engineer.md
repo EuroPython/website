@@ -49,5 +49,5 @@ benefits:
   - Company library, where you can even suggest the best educational books for
     us to order
   - Kitchens stocked with fresh fruit and juice, teas, and the best coffee
-apply_link: https://jobs.ataccama.com/6ee9ecc4-2d15-4644-a0fb-e29ea6cc99d6/prague/data-quality/
+apply_link: https://jobs.ataccama.com/ec3fb830-22f9-4c3f-9d47-d24271aa41d7/prague/data-quality/
 ---
