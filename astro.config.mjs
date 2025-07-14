@@ -122,12 +122,58 @@ export default defineConfig({
     "/programme/c-api-summit": "/session/c-api-summit",
     "/programme/wasm-summit": "/session/webassembly-summit",
     "/discord": "https://discord.gg/BhTN2zJPMh",
+    // For AV team internal use: break screens
+    "/break/forum-hall":
+      "https://overlays.gbdl.in/ep-forum-hall/scene-schedule.html",
+    "/break/north-hall":
+      "https://overlays.gbdl.in/ep-north-hall/scene-schedule.html",
+    "/break/south-hall-2a":
+      "https://overlays.gbdl.in/ep-south-hall-2a/scene-schedule.html",
+    "/break/south-hall-2b":
+      "https://overlays.gbdl.in/ep-south-hall-2b/scene-schedule.html",
+    "/break/terrace-2a":
+      "https://overlays.gbdl.in/ep-terrace-2a/scene-schedule.html",
+    "/break/terrace-2b":
+      "https://overlays.gbdl.in/ep-terrace-2b/scene-schedule.html",
+    // For AV team internal use: VDO ninja screen share
+    "/ninja/forum-hall":
+      "https://vdo.ninja/?room=EuroPython_2025_Forum_Hall&hash=338a&do",
+    "/ninja/north-hall":
+      "https://vdo.ninja/?room=EuroPython_2025_North_Hall&hash=338a&do",
+    "/ninja/south-hall-2a":
+      "https://vdo.ninja/?room=EuroPython_2025_Southhall_2A&hash=338a&do",
+    "/ninja/south-hall-2b":
+      "https://vdo.ninja/?room=EuroPython_2025_Southhall_2B&hash=338a&do",
+    "/ninja/terrace-2a":
+      "https://vdo.ninja/?room=EuroPython_2025_Terrace_2A&hash=338a&do",
+    "/ninja/terrace-2b":
+      "https://vdo.ninja/?room=EuroPython_2025_Terrace_2B&hash=338a&do",
   },
   integrations: [
     mdx(),
     svelte(),
     serviceWorker({
-      workbox: { inlineWorkboxRuntime: true },
+      workbox: {
+        inlineWorkboxRuntime: true,
+        runtimeCaching: [
+          {
+            urlPattern:
+              /\.(?:js|css|json|png|jpg|jpeg|svg|woff2?|ttf|eot|gif)$/,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "assets-cache",
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 1, // 1h
+              },
+            },
+          },
+          {
+            urlPattern: /\.html$/,
+            handler: "NetworkOnly", // ⛔ Don't cache HTML
+          },
+        ],
+      },
     }),
     ...(fastBuild
       ? []
@@ -152,7 +198,6 @@ export default defineConfig({
     domains: ["programme.europython.eu", "placehold.co"],
   },
   prefetch: {
-    prefetchAll: true,
-    defaultStrategy: "load",
+    prefetchAll: false,
   },
 });
