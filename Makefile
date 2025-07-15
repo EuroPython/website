@@ -67,7 +67,7 @@ ls -1 */ \
   | grep \"^2025\" \
   | sort -r \
   | tail -n +4 \
-  | xargs -r -I{} echo rm -rf \"{}\"'"
+  | xargs -r -I{} rm -rf \"{}\"'"
 
 
 ifeq ($(FORCE_DEPLOY), true)
