@@ -18,5 +18,5 @@ socials:
   youtube: "https://www.youtube.com/@GResearchquantfinance"
   instagram: "https://www.instagram.com/gresearchcareers/"
 tier: Gold
-logo_padding: 10px
+logo_padding: 15px
 ---
