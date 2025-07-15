@@ -10,7 +10,7 @@ description:
   we focus on developing smart, enduring strategies that deliver lasting impact."
 socials:
   linkedin: "https://www.linkedin.com/company/g-research/"
-  twitter:
+  twitter: "https://x.com/gresearchjobs"
   github:
   discord:
   mastodon:
