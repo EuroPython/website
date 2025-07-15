@@ -2,13 +2,15 @@
 name: "G-Research"
 url: "https://www.gresearch.com/"
 description:
-  "We are a leading quantitative research and technology firm. We hire the
-  brightest minds to tackle the biggest questions in finance. We pair our
-  people’s expertise with machine learning, big data, and emerging tech to
-  predict movements in financial markets."
+  "G-Research is a leading quantitative finance research firm, applying
+  scientific rigour to solve complex challenges in financial markets. From our
+  offices in London and Dallas, we bring together world-class researchers and
+  engineers in a culture that values deep exploration, methodical execution, and
+  long-term thinking. Grounded in honesty, curiosity, and care for our people,
+  we focus on developing smart, enduring strategies that deliver lasting impact."
 socials:
   linkedin: "https://www.linkedin.com/company/g-research/"
-  twitter:
+  twitter: "https://x.com/gresearchjobs"
   github:
   discord:
   mastodon:
@@ -16,5 +18,5 @@ socials:
   youtube: "https://www.youtube.com/@GResearchquantfinance"
   instagram: "https://www.instagram.com/gresearchcareers/"
 tier: Gold
-logo_padding: 10px
+logo_padding: 15px
 ---
