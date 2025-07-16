@@ -1,7 +1,7 @@
 ---
 title: "CPython Core & Python Documentation"
 numberOfPeople: "TBA"
-pythonLevel: "Intermediate [Core] or Any [Documentation]"
+pythonLevel: "Any"
 contactPerson:
   name: "Petr Viktorin"
   email:
