@@ -23,9 +23,21 @@ interface BreadcrumbItem {
   isActive: boolean;
 }
 
+function normalizePath(path: string): string {
+console.log(path)
+  if (!path) return ""
+  if (path === "/") return "/";
+  return path.replace(/\/+$/, "");
+}
+
+const normalizedCurrentPath = normalizePath(currentPath);
+
+// Recursive function to build breadcrumb trail
 function findBreadcrumbTrail(items: any[], currentPath: string, parentName?: string): BreadcrumbItem[] {
   for (const item of items) {
-    if (item.path === currentPath) {
+    const itemPath = normalizePath(item.path);
+
+    if (itemPath === currentPath) {
       const breadcrumb: BreadcrumbItem = {
         name: item.name,
         path: item.path,
@@ -53,21 +65,22 @@ function findBreadcrumbTrail(items: any[], currentPath: string, parentName?: str
   return [];
 }
 
+// Build the breadcrumb trail
 const breadcrumbs: BreadcrumbItem[] = [];
 
 breadcrumbs.push({
   name: homeLabel,
   path: homePath,
-  isActive: currentPath === homePath
+  isActive: normalizedCurrentPath === normalizePath(homePath)
 });
 
-if (currentPath !== homePath && linksData?.header) {
-  const trail = findBreadcrumbTrail(linksData.header, currentPath);
+if (normalizedCurrentPath !== normalizePath(homePath) && linksData?.header) {
+  const trail = findBreadcrumbTrail(linksData.header, normalizedCurrentPath);
   breadcrumbs.push(...trail);
 }
 
-if (breadcrumbs.length === 1 && currentPath !== homePath) {
-  const pathSegments = currentPath.split('/').filter(Boolean);
+if (breadcrumbs.length === 1 && normalizedCurrentPath !== normalizePath(homePath)) {
+  const pathSegments = normalizedCurrentPath.split('/').filter(Boolean);
   const lastSegment = pathSegments[pathSegments.length - 1];
 
   if (lastSegment) {
