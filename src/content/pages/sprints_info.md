@@ -32,7 +32,7 @@ together.
 ## Open-Source Projects
 
 Anyone can submit a project for the sprints, although sprints are typically
-submitted by project maintainers or frequet contributors.
+submitted by project maintainers or frequent contributors.
 
 To submit a project for the sprints, head to
 [the EuroPython website repository](https://github.com/EuroPython/website) and
