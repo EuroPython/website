@@ -299,3 +299,9 @@ h2.sponsor {
   margin-top: 0.6em;
   margin-right: 0.5rem;
 }
+
+@media (max-width: 640px) {
+  .prose dl {
+    display: block;
+  }
+}
