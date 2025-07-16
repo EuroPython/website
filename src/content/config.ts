@@ -108,6 +108,8 @@ const speakers = defineCollection({
     mastodon_url: z.string().url().nullable(),
     bluesky_url: z.string().url().nullable().optional(),
     twitter_url: z.string().url().nullable(),
+    discord: z.string().url().nullable().optional(),
+    tiktok: z.string().url().nullable().optional(),
   }),
 });
 
@@ -224,6 +226,7 @@ const sponsors = defineCollection({
         discord: z.string().url().optional().nullable(),
         facebook: z.string().url().optional().nullable(),
         youtube: z.string().url().optional().nullable(),
+        tiktok: z.string().url().optional().nullable(),
       })
       .optional(),
     event_name: z.string().optional().nullable(),
