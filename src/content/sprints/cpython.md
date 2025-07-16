@@ -43,7 +43,8 @@ October 2026).
 
 ### Python Documentation
 
-Contacts: **Adam Turner**
+Contacts: **Adam Turner**  \
+Experience Level: **Any**
 
 Help us with Python's documentation!
 
