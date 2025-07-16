@@ -288,3 +288,14 @@ main a[href^="#"]::before {
 h2.sponsor {
   scroll-margin-top: 300px;
 }
+
+.prose dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  margin-bottom: 1rem;
+}
+
+.prose dt {
+  margin-top: 0.6em;
+  margin-right: 0.5rem;
+}
