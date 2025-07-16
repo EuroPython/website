@@ -25,7 +25,8 @@ documentation!
 
 ### CPython Core
 
-Contacts: **Petr Viktorin**
+Contacts: **Petr Viktorin, Adam Turner**  \
+Experience Level: **Intermediate or Advanced**
 
 Sprints will focus on release candidate fixes to Python 3.14 (to be released
 this October), with some limited new feature work for 3.15 (final version in
