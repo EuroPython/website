@@ -16,6 +16,9 @@ links:
     url: "https://github.com/sphinx-doc/sphinx/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen%20label%3Aeasy%2C%22help%20wanted%22"
 ---
 
-Help us work on Sphinx, the documentation generator that powers Python, Linux, Jupyter, and more!
+Help us work on Sphinx, the documentation generator that powers Python, Linux,
+Jupyter, and more!
 
-We're very happy to have contributors new and old! We'd be interested in improvements to the documentation, core extensions, theme usability, and anything else you'd be keen to work on!
+We're very happy to have contributors new and old! We'd be interested in
+improvements to the documentation, core extensions, theme usability, and
+anything else you'd be keen to work on!
