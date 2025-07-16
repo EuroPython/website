@@ -23,7 +23,7 @@ links:
 Come sprint on CPython and work on Python 3.14 and 3.15, or Python's
 documentation!
 
-### CPython Core
+##### CPython Core
 
 Contacts: **Petr Viktorin, Adam Turner** \
 Experience Level: **Intermediate or Advanced**
