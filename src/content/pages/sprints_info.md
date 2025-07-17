@@ -26,9 +26,7 @@ together.
 The sprints will take place on Saturday and Sunday, 19-20 July.
 Doors open at 8:30 AM, Sprints start at 9:00 AM, Sprints end at 06:00 PM.
 
-The sprints venue is the WPP Prague, located in Ogilvy+ Geometry Business Centre, Bubenská 1, 170 00 Praha 7-Holešovice
-
-<Map location="WPP Prague, Bubenská 1, 170 00 Praha 7-Holešovice" title="Sprints Venue" />
+The sprints will be held at the [WPP Prague](/venue/#sprints-venue--saturday--sunday).
 
 ## Who Can Attend:
 
