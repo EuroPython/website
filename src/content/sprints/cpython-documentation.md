@@ -24,7 +24,7 @@ welcome -- from fixing a spelling error to documenting a new feature.
 1. Read
    ['what to expect'](https://pycon.blogspot.com/2025/04/pyconus-sprints.html)
    for a briefing on what happens at sprints in general. This was written for
-   the PyCon US sprints, but a lot applies here!.
+   the PyCon US sprints, but a lot applies here!
 1. Fork and clone the [repository](https://github.com/python/cpython/fork)
    **before** arriving at the sprints, to get started faster.
 1. Use the
