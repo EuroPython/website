@@ -8,6 +8,8 @@ contactPerson:
 links:
   - title: "CPython's Developer Guide"
     url: "https://devguide.python.org/"
+  - title: "Setup & Building"
+    url: "https://devguide.python.org/getting-started/setup-building/"
   - title: "Code of Conduct"
     url: "https://policies.python.org/python.org/code-of-conduct/"
   - title: "Easy Issues"
