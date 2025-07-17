@@ -18,7 +18,7 @@ links:
 
 Help us improve the Python documentation!
 
-We'll be working on all parts of the documentation, so all any any changes are
+We'll be working on all parts of the documentation, so all and any changes are
 welcome -- from fixing a spelling error to documenting a new feature.
 
 1. Read
