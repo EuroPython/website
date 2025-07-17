@@ -28,5 +28,5 @@ welcome -- from fixing a spelling error to documenting a new feature.
 1. Fork and clone the [repository](https://github.com/python/cpython/fork)
    **before** arriving at the sprints, to get started faster.
 1. Use the
-   [Python Developer's Guide](https://devguide.python.org/getting-started/setup-building/)
+   [Python Developer's Guide](https://devguide.python.org/documentation/start-documenting/)
    to set up an environment for contributing to the documentation.
