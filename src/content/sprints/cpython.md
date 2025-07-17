@@ -1,7 +1,7 @@
 ---
-title: "CPython Core
+title: "CPython Core"
 numberOfPeople: "TBA"
-pythonLevel: "Intermediate
+pythonLevel: "Intermediate"
 contactPerson:
   name: "Petr Viktorin"
   email:
