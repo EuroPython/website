@@ -16,9 +16,9 @@ if (!entry) {
   throw new Error('Could not find page entry.');
 }
 
-const sprints = await getCollection("sprints", ({ data }) => {
+const sprints = (await getCollection("sprints", ({ data }) => {
   return import.meta.env.MODE === "production" ? data.draft !== true : true;
-});
+})).sort((a, b) => a.id.localeCompare(b.id));
 
 ---
 
