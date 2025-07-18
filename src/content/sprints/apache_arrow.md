@@ -16,6 +16,10 @@ links:
     url: "https://github.com/apache/arrow/discussions/45919"
 ---
 
-If there's a feature you want, documentation that you could improve, a bug that bothers you or if you'd just like to open your first PR for PyArrow come join us (Alenka and Rok) and we'll help you pick an issue and open a PR.
+If there's a feature you want, documentation that you could improve, a bug that
+bothers you or if you'd just like to open your first PR for PyArrow come join us
+(Alenka and Rok) and we'll help you pick an issue and open a PR.
 
-Additionally - we want to add type annotations to the PyArrow project. We will sprint to identify best approach to do so by prototyping. Suggestions and discussion also welcome.
+Additionally - we want to add type annotations to the PyArrow project. We will
+sprint to identify best approach to do so by prototyping. Suggestions and
+discussion also welcome.
