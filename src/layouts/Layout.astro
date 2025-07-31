@@ -3,16 +3,22 @@ import BaseHead from "@components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Offline from "@components/Offline.astro";
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+
+import linksData from '@src/data/links.json';
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@styles/tailwind.css";
 import "@styles/global.css";
 import "@styles/search.css";
 
+
 export interface Props {
   title: string;
   description: string;
 }
+
+const currentPath = Astro.url.pathname;
 
 const { title, description } = Astro.props;
 
@@ -37,6 +43,13 @@ const externalDomain = new URL(Astro.site || "").hostname;
 
       <main class="main pt-28" role="main">
       <Offline />
+        <Breadcrumbs
+            linksData={linksData}
+            currentPath={currentPath}
+            homeLabel="EuroPython 2025"
+            homePath="/"
+            separator="›"
+        />
         <slot />
       </main>
 
