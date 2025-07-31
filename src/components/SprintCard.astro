@@ -11,6 +11,11 @@ if (!sprint) {
   throw new Error(`Sprint entry "${slug}" not found`);
 }
 
+if (sprint.body && /^#+\s/m.test(sprint.body)) {
+  throw new Error(`No headlines allowed in description. [${sprint.id}]`);
+}
+
+
 const { data, body } = sprint;
 
 //  <a href={`/sprints/${slug}`} id={slug} class="text-blue-600 hover:text-blue-800 hover:underline"></a>
