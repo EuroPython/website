@@ -58,16 +58,15 @@ preview:
 	$(REMOTE_CMD) "cd $(RELEASES_DIR) && ln -snf $(TIMESTAMP) current"
 	@echo "\n\n**** Preview complete.\n\n"
 	@echo "Open the preview site at: $(PREVIEW_SITE_URL)\n\n"
-	@echo "\n**** Cleaning up old releases (keep latest 1, skip 'current')...\n"
+	@echo "\n**** Cleaning up old releases (keep latest 3, skip 'current')...\n"
 	$(REMOTE_CMD) "bash -c '\
 cd $(RELEASES_DIR) && \
 echo \"[INFO] Cleaning:\" && \
-ls -1 */ \
-	| sed \"s:/*\\\$$::\" \
-  | grep \"^2025\" \
+ls -1d 2025*/ 2>/dev/null \
+  | sed \"s:/*\\\$$::\" \
   | sort -r \
   | tail -n +4 \
-  | xargs -r -I{} rm -rf \"{}\"'"
+  | xargs -r rm -rf'"
 
 
 ifeq ($(FORCE_DEPLOY), true)
