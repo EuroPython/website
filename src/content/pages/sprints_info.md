@@ -21,6 +21,14 @@ together.
 
 ![Sprints photos collage](/images/sprints.png)
 
+## When and Where?
+
+The sprints will take place on Saturday and Sunday, 19-20 July. Doors open at
+8:30 AM, Sprints start at 9:00 AM, Sprints end at 06:00 PM.
+
+The sprints will be held at the
+[WPP Prague](/venue/#sprints-venue--saturday--sunday).
+
 ## Who Can Attend:
 
 - EuroPython ticket holders (Conference, Tutorial, or Combined) can join the
