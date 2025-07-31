@@ -8,7 +8,6 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 import deleteUnusedImages from "astro-delete-unused-images";
-import serviceWorker from "astrojs-service-worker";
 import { execSync } from "node:child_process";
 import svelte from "@astrojs/svelte";
 import compress from "astro-compress";
@@ -152,29 +151,6 @@ export default defineConfig({
   integrations: [
     mdx(),
     svelte(),
-    serviceWorker({
-      workbox: {
-        inlineWorkboxRuntime: true,
-        runtimeCaching: [
-          {
-            urlPattern:
-              /\.(?:js|css|json|png|jpg|jpeg|svg|woff2?|ttf|eot|gif)$/,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "assets-cache",
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 1, // 1h
-              },
-            },
-          },
-          {
-            urlPattern: /\.html$/,
-            handler: "NetworkOnly", // ⛔ Don't cache HTML
-          },
-        ],
-      },
-    }),
     ...(fastBuild
       ? []
       : [
