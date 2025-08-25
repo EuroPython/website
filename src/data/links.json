@@ -185,6 +185,10 @@
           "path": "https://europython-society.org/"
         },
         {
+          "name": "Team",
+          "path": "/thank-you"
+        },
+        {
           "name": "Community Partners",
           "path": "/community-partners"
         }
