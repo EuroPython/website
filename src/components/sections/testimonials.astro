@@ -60,14 +60,14 @@ const sectionSubtitle = "Hear from our community";
 
     <div class="testimonials-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
       {testimonials.map((testimonial) => (
-        <a 
+        <a
           href={testimonial.linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
           class="testimonial-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-[#0077b5] hover:-translate-y-1 group"
         >
           <div class="flex items-center mb-4">
-            <img 
+            <img
               src={testimonial.profileImage}
               alt={`${testimonial.name}'s profile picture`}
               class="w-12 h-12 rounded-full mr-3 border-2 border-gray-200"
@@ -97,15 +97,15 @@ const sectionSubtitle = "Hear from our community";
     background-color: #d4d5e5;
     z-index: 1;
   }
-  
+
   .testimonial-card:hover {
     transform: translateY(-4px);
   }
-  
+
   .testimonials-grid {
     animation: fadeInUp 0.6s ease-out;
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -116,7 +116,7 @@ const sectionSubtitle = "Hear from our community";
       transform: translateY(0);
     }
   }
-  
+
   .container {
     max-width: 1150px;
   }
