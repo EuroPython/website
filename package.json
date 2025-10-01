@@ -43,7 +43,7 @@
     "sharp": "^0.34.2",
     "svelte": "^5.35.4",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.3",
     "vite": "^6.3.6"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "puppeteer": "^24.12.0",
     "tsx": "^4.20.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "prettier": {
     "proseWrap": "always"
