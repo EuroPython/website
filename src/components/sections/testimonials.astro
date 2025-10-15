@@ -1,5 +1,6 @@
 ---
 import Section from "@ui/Section.astro";
+import Headline from "@ui/Headline.astro";
 
 const testimonials = [
   {
@@ -51,10 +52,10 @@ const sectionTitle = "See what participants say";
 const sectionSubtitle = "Hear from our community";
 ---
 
-<section class="bluebox relative py-16">
+<Section variant="primary">
+  <Headline id="testimonials" title={sectionTitle} center="true" />
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{sectionTitle}</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
     </div>
 
@@ -90,14 +91,9 @@ const sectionSubtitle = "Hear from our community";
       ))}
     </div>
   </div>
-</section>
+</Section>
 
 <style>
-  .bluebox {
-    background-color: #d4d5e5;
-    z-index: 1;
-  }
-
   .testimonial-card:hover {
     transform: translateY(-4px);
   }
