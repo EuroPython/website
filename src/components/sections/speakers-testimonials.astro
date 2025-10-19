@@ -1,0 +1,97 @@
+---
+import Section from "@ui/Section.astro";
+import Headline from "@ui/Headline.astro";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Iulia Feroli",
+    profileImage: "https://media.licdn.com/dms/image/v2/C4E03AQE9vLqX7-hVJA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1628671930679?e=1762387200&v=beta&t=QwJC1ApU5L8QWqbEzGV_C6a2zBmg43P9c0ijvJlqDbc",
+    quote: "What an amazing first #europython <3 I've gotten so much lovely feedback and follow-up questions for my talk - the Python community here is the most encouraging and friendly!!",
+    linkedinUrl: "https://www.linkedin.com/posts/iuliaferoli_europython-wrapped-activity-7351230116837875715-8yH8/"
+  },
+  {
+    id: 2,
+    name: "Sebastián Ramírez Montaño",
+    profileImage: "https://media.licdn.com/dms/image/v2/D4D03AQFaNx4Gkntzbw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728333798826?e=1762387200&v=beta&t=DahHJDEce9HSFu49XTVtEcCicJBbodakGOT3LYCDC8I",
+    quote: "This was my first time at EuroPython, I had a lot of fun! And the audience was so nice. 😊😁🚀",
+    linkedinUrl: "https://www.linkedin.com/posts/tiangolo_this-was-my-first-time-at-europython-i-had-activity-7351699344753836032-iFaO/"
+  },
+  {
+    id: 3,
+    name: "Farhaan Bukhsh",
+    profileImage: "https://media.licdn.com/dms/image/v2/D5603AQGU0wm3lNjVAw/profile-displayphoto-crop_800_800/B56ZkLZhzJHQAI-/0/1756832868031?e=1762387200&v=beta&t=3xl6ou5ldMEtf2SgEeOQ-luCd1DuecqRwmtKMJKlMhc",
+    quote: "Attending and speaking at EuroPython is one of my core memories now. This was such an exhilarating experience to speak at a conference where you have seen your heros speak.",
+    linkedinUrl: "https://www.linkedin.com/posts/farhaanbukhsh_attending-and-speaking-at-europython-is-activity-7357675714390732800-qGR3/"
+  }
+];
+
+const sectionTitle = "Why should you speak at EuroPython?";
+const sectionSubtitle = "Hear from our previous speakers";
+---
+
+<Section variant="primary">
+  <Headline id="speakers-testimonials" title={sectionTitle} center="true" />
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
+    </div>
+
+    <div class="testimonials-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {testimonials.map((testimonial) => (
+        <a
+          href={testimonial.linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="testimonial-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-[#0077b5] hover:-translate-y-1 group"
+        >
+          <div class="flex items-center mb-4">
+            <img
+              src={testimonial.profileImage}
+              alt={`${testimonial.name}'s profile picture`}
+              class="w-12 h-12 rounded-full mr-3 border-2 border-gray-200"
+            />
+            <div>
+              <h3 class="font-semibold text-gray-900 group-hover:text-[#0077b5] transition-colors">
+                {testimonial.name}
+              </h3>
+            </div>
+            <div class="ml-auto">
+              <svg class="w-5 h-5 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed italic">
+            "{testimonial.quote}"
+          </p>
+        </a>
+      ))}
+    </div>
+  </div>
+</Section>
+
+<style>
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .testimonials-grid {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .container {
+    max-width: 1150px;
+  }
+</style>
