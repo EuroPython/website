@@ -44,7 +44,7 @@
     "svelte": "^5.35.4",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
-    "vite": "^6.3.6"
+    "vite": "^6.4.1"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
