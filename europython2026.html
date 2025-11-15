@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroPython 2026 | July 2026</title>
+    <meta name="description" content="EuroPython 2026 - The largest Python conference in Europe. Coming July 2026. Follow for more updates!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #141F37;
+            background-image:
+                radial-gradient(1px 1px at 10% 20%, white, transparent),
+                radial-gradient(1px 1px at 30% 40%, white, transparent),
+                radial-gradient(1px 1px at 50% 60%, white, transparent),
+                radial-gradient(1px 1px at 70% 30%, white, transparent),
+                radial-gradient(1px 1px at 90% 80%, white, transparent),
+                radial-gradient(1px 1px at 15% 70%, white, transparent),
+                radial-gradient(1px 1px at 40% 15%, white, transparent),
+                radial-gradient(1px 1px at 60% 85%, white, transparent),
+                radial-gradient(1px 1px at 85% 50%, white, transparent),
+                radial-gradient(1px 1px at 25% 90%, white, transparent);
+            background-size:
+                200px 200px,
+                250px 250px,
+                300px 300px,
+                180px 180px,
+                220px 220px,
+                280px 280px,
+                240px 240px,
+                260px 260px,
+                290px 290px,
+                210px 210px;
+            background-position:
+                0 0,
+                40px 60px,
+                130px 270px,
+                70px 100px,
+                220px 180px,
+                300px 320px,
+                150px 80px,
+                280px 380px,
+                100px 200px,
+                350px 250px;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-logo {
+            height: 12rem;
+            width: auto;
+            margin-bottom: 2rem;
+            filter: brightness(0) saturate(100%) invert(100%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0 0 1rem 0;
+            background: linear-gradient(135deg, #FFD700 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .date {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+            color: white;
+        }
+
+        .hero .location {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            max-width: 600px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .hero-button {
+            padding: 0.875rem 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .hero-button-secondary {
+            background-color: white;
+            color: #141F37;
+            border: 2px solid white;
+        }
+
+        .hero-button-secondary:hover {
+            background-color: #f0f0f0;
+        }
+
+        .hero-button-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .hero-button-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-buttons {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+            .hero-logo {
+                height: 8rem;
+                margin-bottom: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero .date {
+                font-size: 1.5rem;
+            }
+            .hero .location {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            color: #17223A;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #ffffff;
+        }
+
+        .testimonials-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 42rem;
+            margin: 0 auto 3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #0077b5;
+            transform: translateY(-4px);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            border: 2px solid #e5e7eb;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: #111827;
+            flex-grow: 1;
+        }
+
+        .testimonial-card:hover .testimonial-name {
+            color: #0077b5;
+        }
+
+        .linkedin-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #0077b5;
+            fill: currentColor;
+        }
+
+        .testimonial-quote {
+            color: #374151;
+            line-height: 1.625;
+            font-style: italic;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Subscribe Section */
+        .subscribe {
+            background: #141F37;
+            background-image:
+                radial-gradient(1px 1px at 10% 20%, white, transparent),
+                radial-gradient(1px 1px at 30% 40%, white, transparent),
+                radial-gradient(1px 1px at 50% 60%, white, transparent),
+                radial-gradient(1px 1px at 70% 30%, white, transparent),
+                radial-gradient(1px 1px at 90% 80%, white, transparent),
+                radial-gradient(1px 1px at 15% 70%, white, transparent),
+                radial-gradient(1px 1px at 40% 15%, white, transparent),
+                radial-gradient(1px 1px at 60% 85%, white, transparent),
+                radial-gradient(1px 1px at 85% 50%, white, transparent),
+                radial-gradient(1px 1px at 25% 90%, white, transparent);
+            background-size:
+                200px 200px,
+                250px 250px,
+                300px 300px,
+                180px 180px,
+                220px 220px,
+                280px 280px,
+                240px 240px,
+                260px 260px,
+                290px 290px,
+                210px 210px;
+            background-position:
+                0 0,
+                40px 60px,
+                130px 270px,
+                70px 100px,
+                220px 180px,
+                300px 320px,
+                150px 80px,
+                280px 380px,
+                100px 200px,
+                350px 250px;
+            color: white;
+            text-align: center;
+        }
+
+        .subscribe h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 2.5rem;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+
+        .subscribe-text {
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .subscribe-form {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .email-input {
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            color: black;
+            font-size: 1rem;
+            font-weight: 500;
+            width: 18rem;
+            text-align: center;
+        }
+
+        .subscribe-button {
+            padding: 0.75rem 2rem;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-button:hover {
+            background-color: white;
+            color: #3b82f6;
+        }
+
+        .subscribe-message {
+            margin-top: 1rem;
+            color: #10b981;
+            font-size: 1.125rem;
+            font-weight: 500;
+            transition: opacity 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+
+        .opacity-100 {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="./public/EPS-Logo-v3.svg" alt="EuroPython Society Logo" class="hero-logo">
+        <h1>EuroPython 2026</h1>
+        <div class="date">Summer 2026</div>
+        <div class="location">Stay tuned for details</div>
+
+        <!-- Action Buttons -->
+        <div class="hero-buttons">
+            <a href="https://www.youtube.com/@EuroPythonConference" target="_blank" rel="noopener noreferrer" class="hero-button hero-button-secondary">
+                Check out talks on YouTube
+            </a>
+            <a href="https://www.flickr.com/photos/europython/collections/72157724135241893/" target="_blank" rel="noopener noreferrer" class="hero-button hero-button-outline">
+                Conference photos
+            </a>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">See how it looked like last year</h2>
+            <p class="testimonials-subtitle">Hear from our community</p>
+
+            <div class="testimonials-grid">
+                <a href="https://www.linkedin.com/posts/thibaudcolas_django-python-europython2025-activity-7353026711569035265-bb1U"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./public/images/thibaud.jpeg" alt="Thibaud Colas's profile picture" class="testimonial-img">
+                        <div class="testimonial-name">Thibaud Colas</div>
+                        <svg class="linkedin-icon" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "Pretty sure EuroPython 2025 was my top 1 fav conference ever. Just the perfect mixture of catching up with people I know, meeting people I don't know, learning new things. Time well spent chatting w/ Python veterans and also first-timers."
+                    </p>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/wonowicki_europython-python-opensource-activity-7352947135354433536-W_pQ"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./public/images/wojciech.jpeg" alt="Wojciech Nowicki, MBA's profile picture" class="testimonial-img">
+                        <div class="testimonial-name">Wojciech Nowicki, MBA</div>
+                        <svg class="linkedin-icon" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "I learned from brilliant speakers across topics spanning Python best practices, data engineering, and AI/ML applications. Even more valuable were the conversations with fellow developers, maintainers, community organizers, and representatives from many companies across the Python ecosystem."
+                    </p>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/diegor_back-fromeuropython-2025and-still-buzzing-activity-7353354177646845953-4nNo/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./public/images/diego.jpeg" alt="Diego Russo's profile picture" class="testimonial-img">
+                        <div class="testimonial-name">Diego Russo</div>
+                        <svg class="linkedin-icon" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "I've been attending EuroPython since 2011. To me, this is the Python conference. Period. I'm proud to be part of this community, and I will do my best to keep it that way."
+                    </p>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/jodieburchell_last-weeks-europython-was-one-of-the-most-ugcPost-7354418947993042947-NsXG/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./public/images/jodie.jpeg" alt="Jodie Burchell's profile picture" class="testimonial-img">
+                        <div class="testimonial-name">Jodie Burchell</div>
+                        <svg class="linkedin-icon" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "Last week's EuroPython was one of the most wonderful conferences I've ever been to, and my heart is still overflowing with all of the wonderful moments."
+                    </p>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/activity-7355237790462148608-VYL-/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./public/images/vassillikki.jpeg" alt="Vassiliki Dalakiari's profile picture" class="testimonial-img">
+                        <div class="testimonial-name">Vassiliki Dalakiari</div>
+                        <svg class="linkedin-icon" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "This event was built by the community, for the community, with authentic support for local groups. From the PyLadies meetups to the Python documentary screening, inclusivity felt genuine and present throughout the conference."
+                    </p>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/rodrigo-gir%C3%A3o-serr%C3%A3o_its-been-4-weeks-but-it-feels-like-it-was-activity-7360678874222936064-N1eg/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="./public/images/rodrigo.jpeg" alt="Rodrigo Girão Serrão's profile picture" class="testimonial-img">
+                        <div class="testimonial-name">Rodrigo Girão Serrão</div>
+                        <svg class="linkedin-icon" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "This was also the most rewarding conference for me so far. A conference like EuroPython is much more than just talks and tutorials. There is the hallway track, lightning talkss ⚡️, social events, snacks exchange 🍿, the sprints weekend, ..."
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe">
+        <div class="container">
+            <h2>Follow us<br />for updates!</h2>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/europython/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit our LinkedIn page">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/europython/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit our Instagram page">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit our YouTube page">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://fosstodon.org/@europython" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit our Mastodon page">
+                    <i class="fab fa-mastodon"></i>
+                </a>
+                <a href="https://bsky.app/profile/europython.eu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit our Bluesky page">
+                    <i class="fas fa-cloud"></i>
+                </a>
+                <a href="https://x.com/europython" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit our X (formerly Twitter) page">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+
+            <p class="subscribe-text">
+                Subscribe to our conference newsletter and get<br />
+                the latest updates and special deals
+            </p>
+
+            <form id="subscribeForm" class="subscribe-form">
+                <label for="emailInput" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Email address</label>
+                <input id="emailInput" type="email" name="email" placeholder="Your email" required class="email-input" />
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+
+            <p id="subscribeMessage" class="subscribe-message hidden opacity-0">
+                Please check your email to confirm. 📬
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const form = document.getElementById('subscribeForm');
+        const message = document.getElementById('subscribeMessage');
+
+        form?.addEventListener('submit', handleSubscribe);
+
+        async function handleSubscribe(event) {
+            event.preventDefault();
+
+            const input = document.getElementById('emailInput');
+            if (!(input instanceof HTMLInputElement)) return;
+
+            const email = input.value.trim();
+            if (!email) return;
+
+            try {
+                const result = await fetch('https://blog.europython.eu/members/api/send-magic-link/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, emailType: 'subscribe' })
+                });
+
+                const r = await result.text();
+                if (r === 'Created.') {
+                    input.value = '';
+
+                    message?.classList.remove('hidden');
+                    setTimeout(() => message?.classList.add('opacity-100'), 50);
+
+                    setTimeout(() => {
+                        message?.classList.remove('opacity-100');
+                        setTimeout(() => message?.classList.add('hidden'), 500);
+                    }, 5000);
+                }
+            } catch (error) {
+                console.error('Subscription error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

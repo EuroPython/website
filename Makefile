@@ -22,7 +22,10 @@ SAFE_BRANCH := $(shell echo "$(BRANCH)" | tr '[:upper:]' '[:lower:]' | sed 's/[^
 FORCE_DEPLOY ?= false
 SITE_URL ?= "https://$(SAFE_BRANCH).ep-preview.click"
 
-.PHONY: build deploy dev clean install
+.PHONY: build deploy dev clean install serve
+
+serve:
+	python3 -m http.server 8000
 
 safe_branch:
 	@echo $(SAFE_BRANCH)
