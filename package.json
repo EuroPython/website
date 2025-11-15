@@ -32,7 +32,7 @@
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
     "hastscript": "^9.0.1",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "lite-youtube-embed": "^0.3.3",
     "marked": "^16.1.1",
     "nanostores": "^1.0.1",
