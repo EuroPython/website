@@ -1,5 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
-import { loadData } from "@utils/dataLoader";
+// import { loadData } from "@utils/dataLoader";
 import { glob } from "astro/loaders";
 
 const mode = import.meta.env.MODE;
@@ -49,8 +49,11 @@ const keynoters = defineCollection({
 });
 
 async function getCollectionsData() {
-  const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
-  const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
+  // TODO: Re-enable when the API is available
+  // const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
+  // const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
+  const speakersData = {};
+  const sessionsData = {};
 
   const speakersById = Object.entries(
     speakersData as Record<string, {}>
@@ -162,9 +165,11 @@ interface ScheduleData {
 
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
-    const schedule = (await loadData(
-      import.meta.env.EP_SCHEDULE_API
-    )) as ScheduleData;
+    // TODO: Re-enable when the API is available
+    // const schedule = (await loadData(
+    //   import.meta.env.EP_SCHEDULE_API
+    // )) as ScheduleData;
+    const schedule = null as ScheduleData | null;
 
     if (!schedule || Object.keys(schedule).length === 0) {
       return [];

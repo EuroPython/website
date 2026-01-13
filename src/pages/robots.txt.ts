@@ -12,7 +12,7 @@ Disallow: /media/
 Disallow: /*?
 Allow: /
 
-Sitemap: https://ep2025.europython.eu/sitemap-index.xml
+Sitemap: https://ep2026.europython.eu/sitemap-index.xml
 `;
 
 const isPreview = import.meta.env.MODE == "preview";

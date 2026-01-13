@@ -107,7 +107,7 @@ export const GET: APIRoute = async () => {
 
     const { name, url, tier, socials } = sponsor.data;
 
-    const sponsorImage = `https://ep2025.europython.eu/media/sponsors/social-${sponsor.id}.png`;
+    const sponsorImage = `https://ep2026.europython.eu/media/sponsors/social-${sponsor.id}.png`;
 
     const handles = {
       x: socials?.twitter,

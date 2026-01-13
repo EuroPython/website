@@ -108,9 +108,9 @@ export const GET: APIRoute = async () => {
 
     const talkTitle = validSessions[0]?.data.title || "an exciting topic";
     const talkCode = validSessions[0]?.data.code;
-    const talkUrl = `https://ep2025.europython.eu/${talkCode}`;
-    const speakerImage = `https://ep2025.europython.eu/media/social-${speaker.id}.png`;
-    const fallbackUrl = `https://ep2025.europython.eu/speaker/${speaker.id}`;
+    const talkUrl = `https://ep2026.europython.eu/${talkCode}`;
+    const speakerImage = `https://ep2026.europython.eu/media/social-${speaker.id}.png`;
+    const fallbackUrl = `https://ep2026.europython.eu/speaker/${speaker.id}`;
 
     // Extract handles for each platform
     const handles = {

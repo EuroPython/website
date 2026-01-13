@@ -4,8 +4,8 @@ import Headline from "@ui/Headline.astro";
 import { getCollection } from "astro:content";
 import Section from "@ui/Section.astro";
 
-let deadlines = await getCollection("week");
-deadlines = deadlines
+let parts = await getCollection("week");
+parts = parts
   .sort((a, b) => a.slug.localeCompare(b.slug))
   .reverse()
   .slice(0, 3);
@@ -14,6 +14,6 @@ deadlines = deadlines
 <Section>
   <Headline id="the_week" title="A Week of All Things Python" center="true" />
   <section class="justify-center gap-6 flex flex-wrap px-6">
-    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
+    {parts.map((part) => <DeadlineCard id={part.slug} />)}
   </section>
 </Section>

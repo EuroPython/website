@@ -27,14 +27,14 @@ const {
   showTz = false,
   mode = "MONTH",
   backgroundColor = "%23000000",
-  dates = "20250714/20250720"
+  dates = "20260713/20260719"
 } = Astro.props;
 
 // Construct the embed URL
-const embedUrl = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&dates=${dates}&ctz=Europe%2FPrague&mode=${mode}&height=${height}&wkst=2&bgcolor=${backgroundColor}&showTitle=${showTitle ? 1 : 0}&showPrint=${showPrint ? 1 : 0}&showTabs=${showTabs ? 1 : 0}&showCalendars=${showCalendars ? 1 : 0}&showTz=${showTz ? 1 : 0}`;
+const embedUrl = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&dates=${dates}&ctz=Europe%2FWarsaw&mode=${mode}&height=${height}&wkst=2&bgcolor=${backgroundColor}&showTitle=${showTitle ? 1 : 0}&showPrint=${showPrint ? 1 : 0}&showTabs=${showTabs ? 1 : 0}&showCalendars=${showCalendars ? 1 : 0}&showTz=${showTz ? 1 : 0}`;
 
 // Mobile-specific embed URL for agenda view
-const mobileEmbedUrl = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&dates=${dates}&ctz=Europe%2FPrague&mode=AGENDA&height=400&wkst=2&bgcolor=${backgroundColor}&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0`;
+const mobileEmbedUrl = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&dates=${dates}&ctz=Europe%2FWarsaw&mode=AGENDA&height=400&wkst=2&bgcolor=${backgroundColor}&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0`;
 ---
 
 <div class="flex justify-center items-center my-4 max-w-full overflow-hidden">

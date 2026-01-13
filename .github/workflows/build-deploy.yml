@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - ep2025
+      - ep2026
   schedule:
     - cron: "0 0 * * *"
 

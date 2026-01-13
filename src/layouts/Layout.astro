@@ -16,6 +16,8 @@ import "@styles/search.css";
 export interface Props {
   title: string;
   description: string;
+  hideHeader?: boolean;
+  hideFooter?: boolean;
 }
 
 const currentPath = Astro.url.pathname;
@@ -27,6 +29,9 @@ throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be se
 }
 
 const externalDomain = new URL(Astro.site || "").hostname;
+
+const hideHeader = Astro.props.hideHeader ?? true;
+const hideFooter = Astro.props.hideFooter ?? true;
 ---
 
 <!DOCTYPE html>
@@ -37,25 +42,33 @@ const externalDomain = new URL(Astro.site || "").hostname;
     </Fragment>
   </head>
   <body>
-      <header>
-        <Header />
-      </header>
+      {!hideHeader &&
+        <header>
+          <Header />
+        </header>
+      }
 
       <main class="main pt-28" role="main">
       <Offline />
         <Breadcrumbs
             linksData={linksData}
             currentPath={currentPath}
-            homeLabel="EuroPython 2025"
+            homeLabel="EuroPython 2026"
             homePath="/"
             separator="›"
         />
         <slot />
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+
+      <!-- if !hideFooter, show footer; if hideFooter, hide footer and -mb-256 -->
+      {!hideFooter ?
+        <footer>
+          <Footer />
+        </footer>
+        :
+        <div class="-mb-256"></div>
+      }
 
   </body>
 </html>

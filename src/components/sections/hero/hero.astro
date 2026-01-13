@@ -1,13 +1,13 @@
 ---
-import { Picture } from "astro:assets";
-import heroImage from "/public/images/conference_photo.jpg";
+// import { Picture } from "astro:assets";
+// import heroImage from "/public/images/conference_photo.jpg";
 
 import IconWithLabel from "./icon-label.astro";
-import Icon from "@ui/Icon.astro";
+// import Icon from "@ui/Icon.astro";
 import Button from "@ui/Button.astro";
 
-const action1 = "https://www.youtube.com/@EuroPythonConference";
-const action2 = "https://www.flickr.com/photos/europython/collections/72157724135241893/";
+const action1 = "https://programme.europython.eu/europython-2026/";
+const action2 = "https://www.youtube.com/watch?v=laSzm-raS5A";
 ---
 
 <section class="relative z-10">
@@ -85,11 +85,11 @@ const action2 = "https://www.flickr.com/photos/europython/collections/7215772413
       <div class="grid md:flex items-center space-x-3 p-10 md:mt-0 justify-center">
         <div class="flex items-center justify-center">
           <img
-            class="h-full block md:w-full lg:w-[200px] pr-3 lg:pr-8"
-            src="/logo.png"
-            height="188"
-            width="188"
-            alt="2025 EuroPython logo"
+            class="h-full block md:w-full lg:w-[250px] pr-3"
+            src="/eps-logo.svg"
+            height="250"
+            width="250"
+            alt="EuroPython Society Logo"
           />
         </div>
         <h1
@@ -99,24 +99,24 @@ const action2 = "https://www.flickr.com/photos/europython/collections/7215772413
         </h1>
       </div>
       <p
-        class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 mt-2"
+        class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 -mt-6"
       >
-        Thank you to everyone who joined us! We were thrilled to welcome over 1,600 Python enthusiasts from around the world. We can't wait to see you again next year!
+        EuroPython 2026 is coming to Krakow! Join thousands of Python enthusiasts for a week of learning, networking, and community. Stay tuned for more details!
       </p>
     </div>
     <!-- First 2x1 Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-6 my-10">
-        <IconWithLabel icon="map-pin" label="Prague, Czech Republic" />
-        <IconWithLabel icon="calendar-days" label="14-20 July, 2025" />
+        <IconWithLabel icon="map-pin" label="Krakow, Poland" />
+        <IconWithLabel icon="calendar-days" label="13-19 July, 2026" />
     </div>
 
     <!-- Second 2x1 Grid with Action Buttons -->
     <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
       <div>
-        <Button secondary url={action1}> Check out talks on YouTube </Button>
+        <Button secondary url={action1}> Submit your talk! </Button>
       </div>
       <div class="btn-outline">
-        <Button outline url={action2}> Conference photos </Button>
+        <Button outline url={action2} class="!text-white !border-white hover:!bg-white hover:!text-primary"> Watch the video (no Rickrolls) </Button>
       </div>
     </div>
   </div>

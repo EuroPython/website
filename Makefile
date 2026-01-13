@@ -3,7 +3,7 @@
 # =========================
 VPS_USER  ?= static_content_user
 VPS_HOST  ?= static.europython.eu
-VPS_PROD_PATH  ?= /home/static_content_user/content/europython_websites/ep2025
+VPS_PROD_PATH  ?= /home/static_content_user/content/europython_websites/ep2026
 VPS_PREVIEW_PATH  ?= /home/static_content_user/content/previews
 REMOTE_CMD=ssh $(VPS_USER)@$(VPS_HOST)
 PREVIEW_SITE_URL ?= "https://$(SAFE_BRANCH).ep-preview.click"
@@ -64,7 +64,7 @@ cd $(RELEASES_DIR) && \
 echo \"[INFO] Cleaning:\" && \
 ls -1 */ \
 	| sed \"s:/*\\\$$::\" \
-  | grep \"^2025\" \
+  | grep \"^2026\" \
   | sort -r \
   | tail -n +4 \
   | xargs -r -I{} echo rm -rf \"{}\"'"
