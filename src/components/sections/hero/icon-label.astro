@@ -1,5 +1,5 @@
 ---
-const { icon, label } = Astro.props;
+const { icon, label, subtitle } = Astro.props;
 
 import Icon from "@ui/Icon.astro";
 ---
@@ -10,5 +10,8 @@ import Icon from "@ui/Icon.astro";
   >
     <Icon name={icon} size="fa-2x" />
   </div>
-  <span class="p-2 text-xl font-medium"> {label}</span>
+  <div class="p-2 flex flex-col">
+    <span class="text-xl font-medium">{label}</span>
+    {subtitle && <span class="text-sm text-gray-600">{subtitle}</span>}
+  </div>
 </div>

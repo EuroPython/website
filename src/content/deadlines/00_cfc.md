@@ -1,6 +1,6 @@
 ---
 title: Call for Contributors
-subtitle: Join the EuroPython 2026 Team!
+subtitle: Join the Team!
 url: https://forms.gle/maKez1nRMQZSwexWA
 image: "./volunteers-2024.jpg"
 ---

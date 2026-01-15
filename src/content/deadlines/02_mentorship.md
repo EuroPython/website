@@ -1,6 +1,6 @@
 ---
 title: Speaker Mentorship
-subtitle: Open until TBD
+subtitle: Opens soon
 url: /mentorship
 image: mentorship1.jpg
 ---
