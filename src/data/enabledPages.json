@@ -15,7 +15,5 @@
     "/contacts",
     "/terms"
   ],
-  "navItems": [
-    "Programme"
-  ]
+  "navItems": ["Programme"]
 }
