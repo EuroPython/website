@@ -24,4 +24,4 @@ repos:
     rev: v10.0.0
     hooks:
       - id: oxipng
-        args: ["-o=max", "--strip=all"]
+        args: ["--strip=all"]
