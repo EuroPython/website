@@ -38,7 +38,7 @@ The funds are allocated as follows:
   programme. Learn more about grants
   [here](https://europython-society.org/grants/).
 - Financial Aid – We provide assistance to help individuals attend EuroPython
-  who might not otherwise be able to. 
+  who might not otherwise be able to.
   <!-- Learn more about finaid [here](/finaid). -->
 
 ## Teams

@@ -21,7 +21,7 @@
 }
 
 .section-universe::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -67,18 +67,18 @@
 }
 
 .section-universe::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(2px 2px at 20% 15%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(2px 2px at 20% 15%, rgba(255, 255, 255, 0.8), transparent),
     radial-gradient(1px 1px at 45% 35%, white, transparent),
-    radial-gradient(1px 1px at 65% 55%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 65% 55%, rgba(255, 255, 255, 0.7), transparent),
     radial-gradient(2px 2px at 80% 25%, white, transparent),
-    radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1px 1px at 35% 75%, rgba(255, 255, 255, 0.9), transparent),
     radial-gradient(1px 1px at 55% 45%, white, transparent);
   background-size:
     300px 300px,
