@@ -13,7 +13,10 @@
     "/cfp",
     "/guidelines",
     "/contacts",
-    "/terms"
+    "/terms",
+    "/venue",
+    "/krakow",
+    "/about"
   ],
-  "navItems": ["Programme"]
+  "navItems": ["Programme", "Venue", "About"]
 }

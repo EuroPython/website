@@ -30,8 +30,8 @@ throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be se
 
 const externalDomain = new URL(Astro.site || "").hostname;
 
-const hideHeader = Astro.props.hideHeader ?? true;
-const hideFooter = Astro.props.hideFooter ?? true;
+const hideHeader = Astro.props.hideHeader ?? false;
+const hideFooter = Astro.props.hideFooter ?? false;
 ---
 
 <!DOCTYPE html>
@@ -48,15 +48,17 @@ const hideFooter = Astro.props.hideFooter ?? true;
         </header>
       }
 
-      <main class="main pt-28" role="main">
+      <main class="main" role="main">
       <Offline />
-        <Breadcrumbs
-            linksData={linksData}
-            currentPath={currentPath}
-            homeLabel="EuroPython 2026"
-            homePath="/"
-            separator="›"
-        />
+        {currentPath !== "/" && (
+          <Breadcrumbs
+              linksData={linksData}
+              currentPath={currentPath}
+              homeLabel="EuroPython 2026"
+              homePath="/"
+              separator="›"
+          />
+        )}
         <slot />
       </main>
 
@@ -95,16 +97,19 @@ const hideFooter = Astro.props.hideFooter ?? true;
 
 <style>
 body {
-  background-color: var(--color-primary);
+  background-color: #E8F4F8;
   min-width: 360px;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: var(--color-body-background);
+  background-color: transparent;
 }
 
 main {
-  background-color: var(--color-body-background);
+  background-color: transparent;
+  padding-top: 0;
 }
 
 footer {
@@ -115,17 +120,8 @@ footer {
 
 @media screen and (width>1200px){
   main {
-    margin-bottom:90vh;
+    min-height: calc(100vh - 200px);
   }
-   footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 40px 20px 40px 20px;
-            text-align: center;
-            z-index: -1;
-        }
 }
 
 @media all and (display-mode: standalone) {

@@ -16,7 +16,7 @@ const action2 = "https://www.youtube.com/watch?v=laSzm-raS5A";
     style=""
   >
     <div class="prose-xl relative z-10 text-center">
-      <div class="grid md:flex items-center space-x-3 p-10 md:mt-0 justify-center">
+      <div class="grid md:flex items-center space-x-3 p-10 pt-32 md:pt-36 justify-center">
         <div class="flex items-center justify-center">
           <img
             class="h-full block md:w-full lg:w-[250px] pr-3"
@@ -40,21 +40,20 @@ const action2 = "https://www.youtube.com/watch?v=laSzm-raS5A";
     </div>
     <!-- First 2x1 Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-6 my-10">
-        <IconWithLabel icon="map-pin" label="Kraków, Poland" />
+        <IconWithLabel icon="map-pin" label="ICE, Kraków, Poland" />
         <IconWithLabel icon="calendar-days" label="13-19 July, 2026" />
     </div>
 
     <!-- Second 2x1 Grid with Action Buttons -->
     <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
-      <div>
-        <Button secondary url={action1}> Submit your talk! </Button>
+      <div class="btn-outline">
+        <Button outline url={action1} class="!text-white !border-white hover:!bg-white hover:!text-primary"> Submit your talk! </Button>
       </div>
       <div class="btn-outline">
         <Button outline url={action2} class="!text-white !border-white hover:!bg-white hover:!text-primary"> Watch the video (no Rickrolls) </Button>
       </div>
     </div>
   </div>
-
 
   <style>
     .bg-icons {
@@ -69,7 +68,7 @@ const action2 = "https://www.youtube.com/watch?v=laSzm-raS5A";
       opacity: 0.7;
     }
     .bluebox {
-      background-color: #d4d5e5;
+      background-color: #E8F4F8;
       z-index: -2;
     }
     .bluebox-shift {
