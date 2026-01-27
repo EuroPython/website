@@ -22,12 +22,12 @@ annually by its members.
 Current Board Members:
 
 - Anders Hammarquist
+- Angel Ramboi
 - Aris Nivorils
 - Artur Czepiel (Chair)
-- Cyril Bitterich
 - Ege Akman
 - Mia Bajić (Vice Chair)
-- Shekhar Koirala
+- Yuliia Barabash
 
 ## Where Does Our Surplus Go?
 
@@ -38,12 +38,11 @@ The funds are allocated as follows:
   programme. Learn more about grants
   [here](https://europython-society.org/grants/).
 - Financial Aid – We provide assistance to help individuals attend EuroPython
-  who might not otherwise be able to. Learn more about finaid [here](/finaid).
+  who might not otherwise be able to. 
+  <!-- Learn more about finaid [here](/finaid). -->
 
 ## Teams
 
 We’re organised into teams, each focused on a different area of the conference.
 Every team is made up of volunteers donating their time and skills to make the
 event possible.
-
-The full list of our team members can be found on [our teams](/thank-you) page.

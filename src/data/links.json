@@ -4,26 +4,6 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Overview",
-          "path": "/overview"
-        },
-        {
-          "name": "Talks Schedule",
-          "path": "/schedule/talks"
-        },
-        {
-          "name": "Tutorials Schedule",
-          "path": "/schedule/tutorials"
-        },
-        {
-          "name": "List of Sessions",
-          "path": "/sessions"
-        },
-        {
-          "name": "List of Speakers",
-          "path": "/speakers"
-        },
-        {
           "name": "Tracks",
           "path": "/tracks"
         },
@@ -38,135 +18,21 @@
       ]
     },
     {
-      "name": "Events",
-      "items": [
-        {
-          "name": "Speakers' Dinner",
-          "path": "/speakers-dinner"
-        },
-        {
-          "name": "Wednesday Local Community Drinks",
-          "path": "/pyvo"
-        },
-        {
-          "name": "Beginners' Day",
-          "path": "/beginners-day"
-        },
-        {
-          "name": "Thursday Social Event",
-          "path": "/social-event"
-        },
-        {
-          "name": "PyLadies Events",
-          "path": "/pyladies"
-        },
-        {
-          "name": "Beginners' Day Unconference",
-          "path": "/beginners-day-unconference"
-        },
-        {
-          "name": "WASM Summit",
-          "path": "/session/webassembly-summit"
-        },
-        {
-          "name": "C-API Summit",
-          "path": "/session/c-api-summit"
-        },
-        {
-          "name": "Rust Summit",
-          "path": "/session/rust-summit"
-        },
-        {
-          "name": "Packaging Summit",
-          "path": "/session/packaging-summit"
-        },
-        {
-          "name": "Sprints Weekend",
-          "path": "/sprints"
-        },
-        {
-          "name": "Community Organisers Activities",
-          "path": "/community-activities"
-        },
-        {
-          "name": "Open Spaces",
-          "path": "/open-spaces"
-        },
-        {
-          "name": "CV Feedback Session",
-          "path": "/feedback-session"
-        }
-      ]
-    },
-    {
       "name": "Venue",
       "items": [
-        {
-          "name": "Prague",
-          "path": "/prague"
-        },
         {
           "name": "Venue",
           "path": "/venue"
         },
         {
-          "name": "Hotels",
-          "path": "/hotels"
-        }
-      ]
-    },
-    {
-      "name": "Sponsorship",
-      "items": [
-        {
-          "name": "Our Sponsors",
-          "path": "/sponsors"
-        },
-        {
-          "name": "Sponsor Packages",
-          "path": "/sponsorship/sponsor"
-        },
-        {
-          "name": "Sponsor Information",
-          "path": "/sponsorship/information"
+          "name": "Kraków",
+          "path": "/krakow"
         }
       ]
     },
     {
       "name": "Attend",
       "items": [
-        {
-          "name": "Tickets",
-          "path": "/tickets"
-        },
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Visa Support Letter",
-          "path": "/visa"
-        },
-        {
-          "name": "Volunteering",
-          "path": "/volunteers"
-        },
-        {
-          "name": "Accessibility",
-          "path": "/accessibility"
-        },
-        {
-          "name": "Childcare",
-          "path": "/childcare"
-        },
-        {
-          "name": "FAQ",
-          "path": "/faq"
-        },
-        {
-          "name": "Discord",
-          "path": "/discord"
-        },
         {
           "name": "Code of Conduct",
           "path": "https://www.europython-society.org/coc/"
@@ -185,18 +51,10 @@
           "path": "https://europython-society.org/"
         },
         {
-          "name": "Team",
-          "path": "/thank-you"
-        },
-        {
           "name": "Community Partners",
           "path": "/community-partners"
         }
       ]
-    },
-    {
-      "name": "Jobs",
-      "path": "/jobs"
     }
   ],
   "footer": [
@@ -204,24 +62,8 @@
       "name": "Quick links",
       "items": [
         {
-          "name": "FAQ",
-          "path": "/faq"
-        },
-        {
-          "name": "Prague",
-          "path": "/prague"
-        },
-        {
-          "name": "Schedule",
-          "path": "/schedule"
-        },
-        {
-          "name": "Jobs",
-          "path": "/jobs"
-        },
-        {
-          "name": "Discord",
-          "path": "https://discord.com/invite/BhTN2zJPMh"
+          "name": "Kraków",
+          "path": "/krakow"
         }
       ]
     },
@@ -229,139 +71,12 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Overview",
-          "path": "/overview"
-        },
-        {
-          "name": "Talks Schedule",
-          "path": "/schedule/talks"
-        },
-        {
-          "name": "Tutorials Schedule",
-          "path": "/schedule/tutorials"
-        },
-        {
-          "name": "List of Sessions",
-          "path": "/sessions"
-        },
-        {
-          "name": "List of Speakers",
-          "path": "/speakers"
-        },
-        {
           "name": "Tracks",
           "path": "/tracks"
         },
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
-        }
-      ]
-    },
-    {
-      "name": "Events",
-      "items": [
-        {
-          "name": "Speakers' Dinner",
-          "path": "/speakers-dinner"
-        },
-        {
-          "name": "Beginners' Day",
-          "path": "/beginners-day"
-        },
-        {
-          "name": "Wednesday Local Community Drinks",
-          "path": "/pyvo"
-        },
-        {
-          "name": "Thursday Social Event",
-          "path": "/social-event"
-        },
-        {
-          "name": "PyLadies Events",
-          "path": "/pyladies"
-        },
-        {
-          "name": "Beginners' Day Unconference",
-          "path": "/beginners-day-unconference"
-        },
-        {
-          "name": "WASM Summit",
-          "path": "/session/webassembly-summit"
-        },
-        {
-          "name": "C-API Summit",
-          "path": "/session/c-api-summit"
-        },
-        {
-          "name": "Rust Summit",
-          "path": "/session/rust-summit"
-        },
-        {
-          "name": "Packaging Summit",
-          "path": "/session/packaging-summit"
-        },
-        {
-          "name": "Sprints Weekend",
-          "path": "/sprints"
-        },
-        {
-          "name": "Community Organisers Activities",
-          "path": "/community-activities"
-        },
-        {
-          "name": "Open Spaces",
-          "path": "/open-spaces"
-        },
-        {
-          "name": "CV Feedback Session",
-          "path": "/feedback-session"
-        }
-      ]
-    },
-    {
-      "name": "Sponsorship",
-      "items": [
-        {
-          "name": "Our Sponsors",
-          "path": "/sponsors"
-        },
-        {
-          "name": "Sponsor Packages",
-          "path": "/sponsorship/sponsor"
-        },
-        {
-          "name": "Sponsor Information",
-          "path": "/sponsorship/information"
-        }
-      ]
-    },
-    {
-      "name": "Attend",
-      "items": [
-        {
-          "name": "Tickets",
-          "path": "/tickets"
-        },
-        {
-          "name": "Financial Aid",
-          "path": "/finaid"
-        },
-        {
-          "name": "Visa Support Letter",
-          "path": "/visa"
-        },
-        {
-          "name": "Volunteering",
-          "path": "/volunteers"
-        },
-        {
-          "name": "Childcare",
-          "path": "/childcare"
-        },
-        {
-          "name": "Remote",
-          "path": "/remote"
         }
       ]
     },
