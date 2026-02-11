@@ -8,9 +8,9 @@ description:
   Warsaw. Organized entirely by volunteers, Python Pizza events unite the love
   of pizza and Python across Europe and beyond."
 socials:
-  linkedin:
+  linkedin: "https://www.linkedin.com/company/98334563"
   twitter: "https://twitter.com/pythonpizza"
-  github:
+  github: "https://github.com/pythonpizza"
   discord:
   mastodon:
   bluesky:
