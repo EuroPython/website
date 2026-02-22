@@ -35,6 +35,23 @@
       ]
     },
     {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Our Sponsors",
+          "path": "/sponsors"
+        },
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
+        },
+        {
+          "name": "Sponsor Information",
+          "path": "/sponsorship/information"
+        }
+      ]
+    },
+    {
       "name": "Attend",
       "items": [
         {
