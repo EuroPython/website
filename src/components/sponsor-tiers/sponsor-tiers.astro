@@ -29,7 +29,7 @@ const tiers: SponsorTierProps[] = [
   },
   {
     title: "Diamond",
-    slotsLeft: "Talk to us",
+    slotsLeft: 2,
     price: 30_000,
     features: [
       "<strong>Extra large</strong> booth in exhibit hall (incl. TV & stand)",
@@ -41,7 +41,6 @@ const tiers: SponsorTierProps[] = [
       "<strong>5 min slot during the closing session</strong>",
       "<strong>One-time email to all conference participants</strong>",
       "<strong>1 technical case study posted on dev.to and the EuroPython blog </strong>",
-      "Video ad(s) (silent) on venue digital signage",
       "1 technical talk slot (30 min)</strong>",
       "Unlimited job postings on website",
       "1 job posting on EuroPython blog",
@@ -60,26 +59,25 @@ const tiers: SponsorTierProps[] = [
   },
   {
     title: "Platinum",
-    slotsLeft: 0,
+    slotsLeft: 4,
     price: 18_000,
     features: [
       "<strong>Large</strong> booth in exhibit hall <strong>(incl. TV & stand)</strong>",
       "<strong>6</strong> conference tickets (€3000 value)",
       "<strong>6</strong> remote tickets (€900 value)",
       "<strong>6</strong> conference vouchers with 30% discount (€900 value)",
-      "Video ad(s) (silent) on venue digital signage",
       "<strong>1 technical talk slot (30 min)</strong>",
       "<strong>Unlimited</strong> job postings on website",
       "1 job posting on EuroPython blog",
       "<strong>Dedicated sponsor page on website</strong>",
       "<strong>Sponsor spotlight in 6 newsletters</strong>",
       "Custom Discord channel",
-      "Video ad(s) on livestreams",
+      "<strong>Video ad(s) on livestreams</strong>",
       "Recruiting Session/Talent Track access",
       "<strong>Media corner access</strong>",
       "<strong>Published interview on YouTube channel</strong>",
       "<strong>1 custom YouTube short</strong>",
-      "Logo on <strong>livestreams</strong>, recordings, banners, website, signage",
+      "Logo on livestreams, recordings, banners, website, signage",
       "1 repost on EuroPython socials (35k total reach)",
       "Welcome post on EuroPython social media",
     ],
@@ -88,20 +86,17 @@ const tiers: SponsorTierProps[] = [
   {
     title: "Gold",
     price: 9_500,
-    slotsLeft: 0,
+    slotsLeft: 10,
     features: [
       "Booth in exhibit hall",
       "<strong>3</strong> conference tickets (€1500 value)",
       "<strong>3</strong> remote tickets (€450 value)",
       "<strong>3</strong> conference vouchers with 30% discount (€450 value)",
-
-      "Video ad(s) (silent) on venue digital signage",
       "1 job posting on EuroPython blog",
       "<strong>5</strong> job postings on website",
       "<strong>Custom Discord channel</strong>",
-      "<strong>Video ad(s) on livestreams</strong>",
       "<strong>Recruiting Session/Talent Track access</strong>",
-      "Logo on <strong>recordings</strong>, <strong>banners</strong>, website, signage",
+      "Logo on <strong>livestreams</strong>, <strong>recordings</strong>, <strong>banners</strong>, website, signage",
       "<strong>1 repost on EuroPython socials (35k total reach)</strong>",
       "Welcome post on EuroPython social media",
     ],
@@ -110,13 +105,12 @@ const tiers: SponsorTierProps[] = [
   {
     title: "Silver",
     price: 7_000,
-    slotsLeft: 0,
+    slotsLeft: 10,
     features: [
       "Small booth in exhibit hall",
       "2 conference tickets (€1000 value)",
       "2 remote tickets (€300 value)",
       "1 conference voucher with 30% discount (€150 value)",
-      "Video ad(s) (silent) on venue digital signage",
       "1 job posting on EuroPython blog",
       "2 job postings on website",
       "Logo on website and signage",
@@ -251,7 +245,7 @@ const formatPrice = (price: number | string) => {
     }
   </div>
 
-
+<!--
   <div class="text-center mb-8 mt-16">
     <h2 class="text-3xl font-bold">Startups</h2>
     <p class="text-xl mt-2 mb-12">
@@ -306,6 +300,7 @@ const formatPrice = (price: number | string) => {
         ))
     }
   </div>
+-->
 
   <div class="text-center mb-8 mt-16">
     <h2 class="text-3xl font-bold">Major Supporters</h2>

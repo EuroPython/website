@@ -35,6 +35,15 @@
       ]
     },
     {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
+        }
+      ]
+    },
+    {
       "name": "Attend",
       "items": [
         {
@@ -81,6 +90,15 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
+        }
+      ]
+    },
+    {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
         }
       ]
     },
