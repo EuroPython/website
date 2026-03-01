@@ -94,6 +94,15 @@
       ]
     },
     {
+      "name": "Sponsorship",
+      "items": [
+        {
+          "name": "Sponsor Packages",
+          "path": "/sponsorship/sponsor"
+        }
+      ]
+    },
+    {
       "name": "Sites",
       "items": [
         {
