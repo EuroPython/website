@@ -19,7 +19,8 @@
     "/venue",
     "/krakow",
     "/about",
-    "/sponsorship/sponsor"
+    "/sponsorship/sponsor",
+    "/sponsorship/information"
   ],
   "navItems": ["Programme", "Venue", "About"]
 }
