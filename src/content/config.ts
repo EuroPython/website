@@ -11,7 +11,6 @@ const pages = defineCollection({
     title: z.string(),
     subtitle: z.string(),
     toc: z.boolean().optional().default(true),
-    full: z.boolean().optional().default(false),
   }),
 });
 
