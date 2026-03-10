@@ -51,6 +51,10 @@
       "name": "Attend",
       "items": [
         {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
+        {
           "name": "Code of Conduct",
           "path": "https://www.europython-society.org/coc/"
         }
@@ -78,6 +82,10 @@
     {
       "name": "Quick links",
       "items": [
+        {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
         {
           "name": "Kraków",
           "path": "/krakow"
