@@ -26,6 +26,18 @@ const { entry } = Astro.props;
 const slug = entry.id;
 const speakers = await getEntries(entry.data.speakers);
 
+// Sort speakers according to Issue #1282 rules
+speakers.sort((a, b) => {
+  const aNoPicAndBio = !a.data.avatar && !a.data.biography;
+  const bNoPicAndBio = !b.data.avatar && !b.data.biography;
+
+  if (aNoPicAndBio && !bNoPicAndBio) return 1;
+  if (!aNoPicAndBio && bNoPicAndBio) return -1;
+
+  // Otherwise, sort by first name (alphabetical)
+  return a.data.name.localeCompare(b.data.name);
+});
+
 // Resolve session codes to session data
 const resolveSessions = (codes: string[]) =>
   codes.map((code) => sessions.find((s) => s.data.code === code)!);
