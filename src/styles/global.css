@@ -150,6 +150,14 @@ p.cross::after {
     word-break: break-word;
   }
 
+  /* Preserve bold when a link is wrapped in <strong> (e.g. **[text](#link)**).
+     The typography plugin sets an explicit font-weight on <a> tags, which
+     overrides the inherited bold from a parent <strong>. */
+  strong a,
+  a strong {
+    font-weight: bold;
+  }
+
   h1,
   h2,
   h3,
