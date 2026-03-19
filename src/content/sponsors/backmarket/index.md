@@ -11,6 +11,5 @@ socials:
   discord:
   mastodon: https://mastodon.social/@BackMarketEng
   bluesky: https://bsky.app/profile/backmarketeng.bsky.social
-  instagram: https://www.instagram.com/backmarket
 tier: Gold
 ---
