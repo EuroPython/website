@@ -1,6 +1,6 @@
 ---
 title: Call for Proposals
-subtitle: Open until February 15th
+subtitle: Learn More
 url: /cfp
 image: "./cfp.jpg"
 ---
