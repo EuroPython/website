@@ -1,6 +1,7 @@
 ---
 name: "Manychat"
 url: "https://careers.manychat.com/"
+industry: "Technology & Marketing"
 description:
   "We help businesses grow by building meaningful customer relationships, powered by a leading chat marketing platform."
 socials:
