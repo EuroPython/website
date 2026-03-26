@@ -59,6 +59,14 @@
           "path": "/finaid"
         },
         {
+          "name": "Visa Information",
+          "path": "/visa"
+        },
+        {
+          "name": "FAQ",
+          "path": "/faq"
+        },
+        {
           "name": "Code of Conduct",
           "path": "https://www.europython-society.org/coc/"
         }
@@ -89,6 +97,10 @@
         {
           "name": "Kraków",
           "path": "/krakow"
+        },
+        {
+          "name": "Visa Information",
+          "path": "/visa"
         }
       ]
     },
