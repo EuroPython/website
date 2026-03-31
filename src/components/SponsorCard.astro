@@ -100,7 +100,7 @@ const logo = sponsorLogos[sponsor.id];
   }
     <div>
 
-        {(tier !== "Partners") && website && (
+        {website && (
           <div class="website-btn-container flex flex-col sm:flex-row justify-center gap-2 mt-4">
 
             { !isSponsorPage && sponsor.body && tier && ["Diamond", "Platinum"].includes(tier) &&
