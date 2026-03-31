@@ -5,7 +5,7 @@ import { sponsorLogos } from "@data/sponsorLogos";
 import Icon from "@ui/Icon.astro";
 import SocialLinks from "@components/SocialLinks.astro";
 
-const { sponsor: sponsorId, showJobs=false } = Astro.props;
+const { sponsor: sponsorId, showJobs=false, showLinks=true } = Astro.props;
 const sponsor = await getEntry("sponsors", sponsorId);
 
 if (!sponsor) {
@@ -116,7 +116,7 @@ const logo = sponsorLogos[sponsor.id];
         )}
 
 
-      { (tier !== "Partners") &&
+      { (tier !== "Partners" || showLinks) &&
         <SocialLinks socials={socials} />
       }
     </div>
