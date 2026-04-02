@@ -13,4 +13,5 @@ socials:
   bluesky: https://bsky.app/profile/backmarketeng.bsky.social
   instagram: https://www.instagram.com/backmarket
 tier: Gold
+logo_padding: 10px 10px
 ---
