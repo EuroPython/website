@@ -10,11 +10,11 @@ description:
   algorithms using advanced mathematical techniques, trading on nearly all of
   the world's electronic markets across multiple asset classes. With over 800
   people and one of the most sophisticated computing environments in the
-  industry, HRT is a leading advocate for fair and transparent markets -
-  a philosophy that drives every aspect of their research."
+  industry, HRT is a leading advocate for fair and transparent markets - a
+  philosophy that drives every aspect of their research."
 socials:
   linkedin: "https://www.linkedin.com/company/hudson-river-trading"
-  github: 
+  github:
   discord:
   youtube: "https://www.youtube.com/@Hudson-River-Trading"
   instagram: "https://www.instagram.com/hudsonrivertrading/"
