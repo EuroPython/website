@@ -102,7 +102,7 @@ const speakers = defineCollection({
     code: z.string(),
     name: z.string(),
     slug: z.string(),
-    avatar: z.string(),
+    avatar: z.string().url().nullable(),
     biography: z.string().nullable(),
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
