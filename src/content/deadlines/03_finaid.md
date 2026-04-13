@@ -1,9 +1,9 @@
 ---
 title: Financial Aid
-subtitle: Applications now open!
+subtitle: Applications are closed
 url: /finaid
 image: "./finaid.jpeg"
+disabled: true
 ---
 
-Need support to attend EuroPython 2026? Check details and submit your financial
-aid application! First-round applications close on 9 April 2026!
+Applications for the EuroPython 2026 Financial Aid Programme are closed.
