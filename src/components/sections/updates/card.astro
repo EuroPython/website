@@ -8,9 +8,10 @@ export interface Props {
   subtitle: string;
   url: string;
   image: ImageMetadata;
+  disabled?: boolean;
 }
 
-const { title, subtitle, url, image } = Astro.props;
+const { title, subtitle, url, image, disabled = false } = Astro.props;
 ---
 
 <div
@@ -31,5 +32,5 @@ const { title, subtitle, url, image } = Astro.props;
     <slot />
   </div>
 
-  <Button secondary url={url}>{subtitle}</Button>
+  <Button secondary url={disabled ? undefined : url} disabled={disabled}>{subtitle}</Button>
 </div>
