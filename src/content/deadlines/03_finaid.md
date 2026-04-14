@@ -1,6 +1,6 @@
 ---
 title: Financial Aid
-subtitle: Applications are closed
+subtitle: Applications now open!
 url: /finaid
 image: "./finaid.jpeg"
 disabled: true
