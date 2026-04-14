@@ -23,6 +23,7 @@ const deadlines = defineCollection({
       subtitle: z.string(),
       url: z.string(),
       image: image(),
+      disabled: z.boolean().optional(),
     }),
 });
 
