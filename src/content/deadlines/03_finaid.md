@@ -5,4 +5,5 @@ url: /finaid
 image: "./finaid.jpeg"
 ---
 
-Applications for the EuroPython 2026 Financial Aid Programme are closed.
+Need support to attend EuroPython 2026? Check details and submit your financial
+aid application! Second-round applications close on 11 May 2026!
