@@ -1,8 +1,9 @@
 ---
 title: Speaker Mentorship
-subtitle: Open until February 10th
+subtitle: Sign-ups closed
 url: /mentorship
 image: mentorship1.jpg
+disabled: true
 ---
 
 All voices are welcome at EuroPython. But sometimes folks appreciate help and
