@@ -21,4 +21,5 @@ socials:
   facebook: "https://www.facebook.com/hudsonrivertrading"
   twitter: "https://x.com/weareHRT"
 tier: Gold
+logo_padding: 10px
 ---

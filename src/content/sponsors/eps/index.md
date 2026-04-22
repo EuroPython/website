@@ -13,6 +13,8 @@ socials:
   mastodon:
   bluesky:
 tier: Financial Aid
+logo_padding: 15px
+
 ---
 
 # About EuroPython Society
