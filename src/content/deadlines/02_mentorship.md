@@ -1,11 +1,10 @@
 ---
 title: Speaker Mentorship
-subtitle: Sign-ups closed
-url: /mentorship
+subtitle: Sign up now
+url: https://forms.gle/uZKwuAiBkUSmx7gn7
 image: mentorship1.jpg
 disabled: true
 ---
 
-All voices are welcome at EuroPython. But sometimes folks appreciate help and
-support for their contribution. That's why we have organised the Speaker
-Mentorship Programme.
+Join our Speaker Orientation to build confidence, improve stage presence, and learn how to engage your audience.
+It is happening on 3 June 2026 18:00 CEST Online and is open to first time and returning speakers.
