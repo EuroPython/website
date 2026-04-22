@@ -8,7 +8,7 @@ const {
 } = Astro.props;
 const socialMap = {
   website: { icon: "globe", label: "Website", color: "#0077b5" },
-  blog: { icon: "rss", label: "Blog", color: "" },
+  blog: { icon: "rss", label: "Blog", color: "#f26522", style: "solid" },
   linkedin: { icon: "linkedin", label: "LinkedIn", color: "#0a66c2" },
   github: { icon: "github", label: "GitHub", color: "#333333" },
   mastodon: { icon: "mastodon", label: "Mastodon", color: "#6364ff" },
@@ -26,7 +26,7 @@ const socialMap = {
   {
     Object.entries(socialMap)
       .filter(([key]) => socials?.[key])
-      .map(([key, { icon, label, color }]) => {
+      .map(([key, { icon, label, color, style: iconStyle = "brands" }]) => {
         const url = socials[key];
         const style = variant === "color" && color ? `color: ${color}` : {variant};
         return (
@@ -41,10 +41,11 @@ const socialMap = {
             {" "}
             <span class="social-icon-inner">
               {" "}
-              <Icon name={icon} style="brands" size="fa-xl" />{" "}
+              <Icon name={icon} style={iconStyle} size="fa-xl" />{" "}
             </span>{" "}
           </a>
         );
       })
   }
 </div>
+

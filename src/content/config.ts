@@ -225,6 +225,7 @@ const sponsors = defineCollection({
     socials: z
       .object({
         linkedin: z.string().url().optional().nullable(),
+        blog: z.string().url().optional().nullable(),
         github: z.string().url().optional().nullable(),
         mastodon: z.string().url().optional().nullable(),
         bluesky: z.string().url().optional().nullable(),
