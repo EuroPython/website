@@ -15,4 +15,5 @@ socials:
   discord:
   youtube: "https://youtube.com/@numberly"
 tier: Gold
+logo_padding: 20px
 ---
