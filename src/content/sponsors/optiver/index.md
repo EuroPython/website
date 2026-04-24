@@ -1,6 +1,6 @@
 ---
 name: Optiver
-url: hhttps://optiver.com/
+url: https://optiver.com/
 location: "Netherlands"
 industry: "Algorithmic Trading"
 description:
