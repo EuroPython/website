@@ -1,8 +1,9 @@
 ---
 title: Call for Proposals
-subtitle: Learn More
+subtitle: Submissions closed
 url: /cfp
 image: "./cfp.jpg"
+disabled: true
 ---
 
 Our colorful and cosmopolitan community is what makes EuroPython so special. We
