@@ -14,4 +14,5 @@ socials:
   instagram: "https://www.instagram.com/bloomberg/"
   facebook: "https://www.facebook.com/bloomberg/"
 tier: Gold
+logo_padding: 10px
 ---
