@@ -15,4 +15,3 @@ socials:
   facebook: "https://www.facebook.com/bloomberg/"
 tier: Gold
 ---
-
