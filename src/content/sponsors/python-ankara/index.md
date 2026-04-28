@@ -1,6 +1,6 @@
 ---
 name: Python Ankara
-url: https://kommunity.com/ankara-python-toplulugu/events
+url: https://pythonankara.com/
 location: "Turkey"
 industry: "Technology & Community"
 description:

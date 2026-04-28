@@ -87,9 +87,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
   }
 
   article a[href^="http"]:not([href*="var(--externalDomain)"]):not(.button-link):not(:has(img)) {
-    display: inline-block;
-    white-space: nowrap;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     word-break: break-word;
   }
 </style>
