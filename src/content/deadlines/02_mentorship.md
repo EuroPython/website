@@ -9,4 +9,3 @@ image: mentorship1.jpg
 Join our Speaker Orientation to build confidence, improve stage presence, and
 learn how to engage your audience. It is happening on 3 June 2026 18:00 CEST
 online and is open to first-time and returning speakers.
-
