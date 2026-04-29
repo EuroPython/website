@@ -22,7 +22,7 @@ const {
 
 const logo = sponsorLogos[sponsor.id];
 const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
-/*: tier==="Platinum" ? `/sponsor/${sponsorId}` */
+: tier==="Platinum" ? `/sponsor/${sponsorId}`
 : tier==="Media Partners" ? `/media-partners#sponsor-${sponsorId}` : tier==="Startups" ? `/startups#sponsor-${sponsorId}` : `/sponsors#sponsor-${sponsorId}`
 
 ---
@@ -30,7 +30,7 @@ const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
 <div
   class="lg:max-w-[400px] flex flex-col p-6 bg-white"
 >
-  <div class="w-full grid text-center justify-center items-center md:items-center">
+  <div class={`w-full grid text-center justify-center items-center md:items-center ${tier === "Platinum" ? "min-h-[140px]" : ""}`}>
     {
       website && slug ? (
 
