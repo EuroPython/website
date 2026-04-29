@@ -7,6 +7,7 @@ description:
 socials:
   twitter: https://x.com/GoogleCloudTech
   youtube: https://www.youtube.com/googlecloudplatform
+  linkedin: https://www.linkedin.com/showcase/google-cloud
 
 tier: Gold
 logo_padding: 10px
