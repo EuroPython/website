@@ -55,6 +55,10 @@
       "name": "Attend",
       "items": [
         {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
+        {
           "name": "Financial Aid",
           "path": "/finaid"
         },
@@ -94,6 +98,10 @@
     {
       "name": "Quick links",
       "items": [
+        {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
         {
           "name": "Kraków",
           "path": "/krakow"
