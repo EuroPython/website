@@ -23,7 +23,8 @@
     "/about",
     "/faq",
     "/sponsorship/sponsor",
-    "/sponsorship/information"
+    "/sponsorship/information",
+    "/tickets"
   ],
   "navItems": ["Programme", "Venue", "About"]
 }
