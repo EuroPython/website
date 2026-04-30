@@ -18,6 +18,15 @@
       ]
     },
     {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Language Summit",
+          "path": "/language-summit"
+        }
+      ]
+    },
+    {
       "name": "Venue",
       "items": [
         {
