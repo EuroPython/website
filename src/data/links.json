@@ -14,10 +14,6 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
-        },
-        {
-          "name": "Community Voting",
-          "path": "/voting"
         }
       ]
     },
