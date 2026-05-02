@@ -22,10 +22,6 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
-        },
-        {
-          "name": "Community Voting",
-          "path": "/voting"
         }
       ]
     },
@@ -62,6 +58,10 @@
     {
       "name": "Attend",
       "items": [
+        {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
         {
           "name": "Financial Aid",
           "path": "/finaid"
@@ -102,6 +102,10 @@
     {
       "name": "Quick links",
       "items": [
+        {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
         {
           "name": "Kraków",
           "path": "/krakow"
@@ -181,6 +185,7 @@
     "bluesky": "https://bsky.app/profile/europython.eu",
     "twitter": "https://x.com/europython",
     "instagram": "https://www.instagram.com/europython/",
-    "youtube": "https://www.youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q"
+    "youtube": "https://www.youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q",
+    "tiktok": "https://www.tiktok.com/@europython"
   }
 }

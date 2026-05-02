@@ -3,11 +3,12 @@ name: "Manychat"
 url: "https://careers.manychat.com/"
 industry: "Technology & Marketing"
 description:
-  "We help businesses grow by building meaningful customer relationships,
-  powered by a leading chat marketing platform."
+  "We build AI-powered chat automation for 1M+ creators and brands at real
+  production scale."
 socials:
   linkedin: "https://www.linkedin.com/company/manychat"
   twitter: "https://x.com/Manychat_life"
+  blog: "https://medium.com/manychat-engineering"
   github:
   discord:
   youtube: "https://www.youtube.com/@manychat-engineering/"
@@ -18,28 +19,47 @@ logo_padding: 20px 10px
 
 # About Manychat
 
-Manychat is a leading Chat Marketing platform. We enable businesses and creators
-to drive more sales and conversions on messaging apps, such as Instagram,
-WhatsApp, Facebook Messenger, and Telegram, using automation.
+**We’re [Manychat](https://manychat.com/)! 👋🏻 Chat automation for 1M+ businesses
+at massive scale, with Python infrastructure that actually handles it without
+headaches.**
 
-Trusted by over 1 million brands in 170+ countries, we're an official Meta
-Business Partner, backed by top investors, including Bessemer Venture Partners.
+Bet you know this feeling all too well: deploying an LLM feature and HOPING for
+the best in production 🤞🏻
 
-Our global team of 350+ people is located around international offices in
-Austin, Barcelona, Yerevan, São Paulo, and Amsterdam. 🌏
+The costs, rate limits, provider outages taking down your entire feature… it
+used to haunt us, but we developed the systems that can handle it all.
 
-Founded in 2016, we still embrace a startup work culture — making fast
-decisions, setting ambitions goals, fostering open feedback and transparency. We
-think big and win together. 🏆
+We power chat automation for over a million creators and brands, so "the LLM is
+down" isn't an acceptable answer, ever. We built infrastructure that expects
+LLMs to misbehave:
 
-We value our team, offering competitive compensation and benefits, and a hybrid
-work model to split time between home and cozy offices.
+- Multi-provider routing that fails over from Azure to OpenAI mid-retry.
+- Weighted traffic distribution that we can rebalance without deploying code.
+- Cooldowns that pull failing backends out of rotation automatically.
+- Observability that actually helps — Prometheus metrics, Grafana dashboards,
+  OpenTelemetry traces with business context so we know which customer's request
+  just broke.
 
-We care intensely about our customers and their goals. By experimenting a lot
-and testing hypotheses, we continuously improve our product to help businesses
-grow and generate revenue on their social channels. That’s how we deliver
-results and dazzle our customers. ⚡️
+We also monitor our asyncio event loop like hawks, because nothing ruins your
+day faster than discovering a blocking call is starving your entire service.
 
-🚀 Ready to make an impact in a new and fast-evolving market? Explore our job
-openings here on LinkedIn, or by visiting our careers page:
-https://careers.manychat.com/
+**And we'd love to discuss this and all things Python with like-minded people!**
+Come by our booth to talk to the engineers who built this infrastructure. We can
+tell you how we handle rate-limit cascades. How we track token costs per AI
+agent. What it's like to debug distributed traces when you're trying to figure
+out why one specific request took 6 seconds instead of 2. And anything else
+you'd like to know about working in such a high-load environment.
+
+Come see us on stage:
+
+- Daria Korsakova, Python Engineer at Manychat will talk about Practical
+  observability for Python APIs, workers & jobs
+- Sergi Porta, Python Team Lead at Manychat will talk about LLM Traffic Spikes:
+  Routing, Rate Limits, and Failover in Python
+
+Read the full technical breakdown of our infrastructure:
+https://medium.com/manychat-engineering/how-to-survive-llm-traffic-spikes-in-python-73955ee9426f
+
+Meet our engineering team: https://careers.manychat.com/team/engineering
+
+Explore open roles: https://careers.manychat.com/positions
