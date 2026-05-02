@@ -25,7 +25,7 @@
     "/sponsorship/sponsor",
     "/sponsorship/information",
     "/sessions",
-    "/speakers"
+    "/speakers",
     "/tickets"
   ],
   "navItems": ["Programme", "Venue", "About"]
