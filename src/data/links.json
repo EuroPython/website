@@ -4,6 +4,14 @@
       "name": "Programme",
       "items": [
         {
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "Tracks",
           "path": "/tracks"
         },
