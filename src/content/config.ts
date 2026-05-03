@@ -1,5 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
-// import { loadData } from "@utils/dataLoader";
+import { loadData } from "@utils/dataLoader";
 import { glob } from "astro/loaders";
 
 const mode = import.meta.env.MODE;
@@ -51,11 +51,10 @@ const keynoters = defineCollection({
 });
 
 async function getCollectionsData() {
-  // TODO: Re-enable when the API is available
-  // const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
-  // const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
-  const speakersData = {};
-  const sessionsData = {};
+  const [speakersData, sessionsData] = await Promise.all([
+    loadData(import.meta.env.EP_SPEAKERS_API),
+    loadData(import.meta.env.EP_SESSIONS_API),
+  ]);
 
   const speakersById = Object.entries(
     speakersData as Record<string, {}>
