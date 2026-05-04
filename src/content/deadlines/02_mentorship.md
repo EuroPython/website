@@ -3,7 +3,7 @@ title: Speaker Mentorship
 subtitle: Sign up now
 url: https://forms.gle/uZKwuAiBkUSmx7gn7
 image: mentorship1.jpg
-disabled: true
+#disabled: false
 ---
 
 Join our Speaker Orientation to build confidence, improve stage presence, and
