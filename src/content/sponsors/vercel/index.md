@@ -1,6 +1,6 @@
 ---
 name: "Vercel"
-country: "USA"
+location: "USA"
 url: "https://vercel.com"
 industry: "Software Development"
 description:
