@@ -31,6 +31,10 @@
         {
           "name": "Language Summit",
           "path": "/language-summit"
+        },
+        {
+          "name": "Rust Summit",
+          "path": "/rust-summit"
         }
       ]
     },
