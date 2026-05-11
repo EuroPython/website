@@ -72,18 +72,6 @@ ul.milestone-todo li::before {
   background: none !important;
 }
 
-img.finaid-accent-round-marker {
-  width: 120px;
-  min-width: 70px;
-  padding: 0 10px;
-  display: inline-block;
-  margin: 0;
-}
-
-table.finaid-timeline td {
-  padding-bottom: 1rem;
-}
-
 summary h4::after {
   content: "👇";
 }
