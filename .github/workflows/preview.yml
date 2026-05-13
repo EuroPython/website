@@ -19,6 +19,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set timestamp for build/deploy
+        run: echo "TIMESTAMP=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+
       - name: Set up uv
         uses: astral-sh/setup-uv@v5
 
@@ -31,7 +34,7 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
       - name: ssh keyscan
-        run: ssh-keyscan "ls.artcz.pl" > ~/.ssh/known_hosts
+        run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
 
       - name: Download data
         env:
@@ -40,16 +43,17 @@ jobs:
           EP_SCHEDULE_API: ${{ vars.EP_SCHEDULE_API }}
         run: make download-data
 
-      - name: Build preview
+      - name: Build and upload preview
         env:
+          BRANCH: "${{ env.GITHUB_BRANCH_NAME }}"
           SITE_URL: "https://${{ env.GITHUB_BRANCH_NAME }}.${{ env.PREVIEW_HOSTNAME }}"
-        run: make build-all
+        run: make preview
 
-      - name: Deploy preview
+      - name: Get safe branch and export to env
+        env:
+          BRANCH: ${{ env.GITHUB_BRANCH_NAME }}
         run: |
-          SAFE_BRANCH=$(echo "${{ env.GITHUB_BRANCH_NAME }}" | tr '/' '-' | tr '[:upper:]' '[:lower:]')
-          rsync -avz --delete build/ static_content_user@ls.artcz.pl:/home/static_content_user/content/preview/${SAFE_BRANCH}/
-          echo "SAFE_BRANCH=${SAFE_BRANCH}" >> $GITHUB_ENV
+          echo "SAFE_BRANCH=$(make safe_branch)" >> $GITHUB_ENV
 
       - name: Update PR comment
         uses: actions/github-script@v7

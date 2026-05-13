@@ -16,6 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set timestamp for build/deploy
+        run: echo "TIMESTAMP=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+
       - name: Set up uv
         uses: astral-sh/setup-uv@v5
 
@@ -28,7 +31,7 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
       - name: ssh keyscan
-        run: ssh-keyscan "ls.artcz.pl" > ~/.ssh/known_hosts
+        run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
 
       - name: Download data
         env:
@@ -41,4 +44,4 @@ jobs:
         run: make download-avatars
 
       - name: Build and deploy
-        run: make ship
+        run: make ship FORCE_DEPLOY=true
