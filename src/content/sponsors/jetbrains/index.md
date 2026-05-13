@@ -20,5 +20,3 @@ socials:
   instagram: "https://www.instagram.com/jetbrains/"
 tier: Gold
 ---
-
-
