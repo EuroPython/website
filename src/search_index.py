@@ -44,11 +44,11 @@ def build_index(
     for spk in speakers:
         entries.append(_index_speaker(spk))
 
-    for tier in (sponsor_tiers or []):
+    for tier in sponsor_tiers or []:
         for sponsor in tier.sponsors:
             entries.append(_index_sponsor(sponsor, tier.label))
 
-    for cp in (community_partners or []):
+    for cp in community_partners or []:
         entries.append(_index_community_partner(cp))
 
     out = build_dir / "search-index.json"
@@ -260,5 +260,3 @@ def collect_links() -> list[Link]:
                 seen.add(item.url)
                 links.append(item)
     return links
-
-

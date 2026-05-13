@@ -1,11 +1,8 @@
 """Tests for search_index module."""
 
-from pathlib import Path
-
 import pytest
 
-from search_index import _collapse, _strip_tags, _session_label, _resolve_url, _extract_section_text, _extract_main_text
-
+from search_index import _collapse, _extract_main_text, _extract_section_text, _resolve_url, _session_label, _strip_tags
 
 # --- _collapse ---
 

@@ -82,7 +82,6 @@ class Session(BaseModel):
         e = self.end.strftime("%H:%M") if self.end else ""
         return f"{s} – {e} CEST" if e else f"{s} CEST"
 
-
     @property
     def track_id(self) -> str:
         """URL-safe slug of the track name."""
@@ -111,10 +110,7 @@ class Session(BaseModel):
             return []
         end_str = self.end.strftime("%H:%M")
         cutoff = (self.end + timedelta(minutes=30)).strftime("%H:%M")
-        return [
-            slot for slot in self.schedule_day_slots
-            if end_str <= slot.start_time <= cutoff
-        ]
+        return [slot for slot in self.schedule_day_slots if end_str <= slot.start_time <= cutoff]
 
     def get_speaker_names(self) -> str:
         """Return lowercase speaker names for search indexing."""

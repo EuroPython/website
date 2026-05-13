@@ -1,12 +1,10 @@
 """Tests for build module."""
 
-import pytest
 from markupsafe import Markup
 
+from build import _group_talks_by_topic, _sessions_of_type
 from ep_markdown import md_filter as _md_filter
-from build import _sessions_of_type, _group_talks_by_topic
-from models import Session, Speaker
-
+from models import Session
 
 # --- _md_filter ---
 

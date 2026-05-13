@@ -4,8 +4,7 @@ from datetime import datetime
 
 import pytest
 
-from models import Speaker, Session, _slugify
-
+from models import Session, Speaker, _slugify
 
 # --- _slugify ---
 

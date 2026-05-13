@@ -3,8 +3,7 @@
 import pytest
 
 from models import ScheduleEvent
-from schedule import _day_label, _is_spanning, _filter_events
-
+from schedule import _day_label, _filter_events, _is_spanning
 
 # --- _day_label ---
 

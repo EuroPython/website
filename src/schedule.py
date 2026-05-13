@@ -22,9 +22,7 @@ _LUNCH_EVENTS: dict[str, list[LunchEvent]] = {
 }
 
 
-def build_schedule(
-    raw: dict, sessions: dict[str, Session]
-) -> list[ScheduleDay]:
+def build_schedule(raw: dict, sessions: dict[str, Session]) -> list[ScheduleDay]:
     """Build structured schedule days from raw schedule data and resolved sessions."""
     if not raw:
         return []
@@ -78,19 +76,13 @@ def _filter_events(events: list[ScheduleEvent], rooms_set: set[str]) -> list[Sch
     return [e for e in events if any(r in rooms_set for r in e.rooms)]
 
 
-def _is_spanning(
-    event: ScheduleEvent, events_at_time: list[ScheduleEvent], rooms_set: set[str]
-) -> bool:
+def _is_spanning(event: ScheduleEvent, events_at_time: list[ScheduleEvent], rooms_set: set[str]) -> bool:
     """Determine if an event should span all columns."""
     if event.is_break:
         return True
 
     if (event.session_type or "") in _SPANNING_TYPES:
-        room_events = [
-            e
-            for e in events_at_time
-            if any(r in rooms_set for r in e.rooms) and not e.is_break
-        ]
+        room_events = [e for e in events_at_time if any(r in rooms_set for r in e.rooms) and not e.is_break]
         distinct_titles = {e.title for e in room_events}
         return len(distinct_titles) == 1
 
@@ -124,9 +116,7 @@ def _make_entry(
     )
 
 
-def _posters_at_time(
-    all_events: list[ScheduleEvent], time_key: str, sessions: dict[str, Session]
-) -> list[Session]:
+def _posters_at_time(all_events: list[ScheduleEvent], time_key: str, sessions: dict[str, Session]) -> list[Session]:
     """Collect poster sessions from hidden rooms at a given time."""
     posters = []
     for e in all_events:

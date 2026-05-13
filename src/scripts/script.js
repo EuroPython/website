@@ -421,4 +421,3 @@ document.addEventListener('keydown', function(e) {
 document.addEventListener('mousedown', function() {
   document.body.classList.remove('keyboard-nav');
 });
-

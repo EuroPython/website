@@ -12,15 +12,39 @@ from markupsafe import Markup
 # =============
 
 BLEACH_TAGS = [
-    "a", "abbr", "acronym", "b", "blockquote", "br", "code", "em", "hr",
-    "i", "li", "ol", "p", "pre", "strong", "ul",
-    "h1", "h2", "h3", "h4", "h5", "h6", "img",
+    "a",
+    "abbr",
+    "acronym",
+    "b",
+    "blockquote",
+    "br",
+    "code",
+    "em",
+    "hr",
+    "i",
+    "li",
+    "ol",
+    "p",
+    "pre",
+    "strong",
+    "ul",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "img",
 ]
 BLEACH_ATTRS = {
     "a": ["href", "title"],
     "img": ["src", "alt", "title"],
-    "h1": ["id"], "h2": ["id"], "h3": ["id"],
-    "h4": ["id"], "h5": ["id"], "h6": ["id"],
+    "h1": ["id"],
+    "h2": ["id"],
+    "h3": ["id"],
+    "h4": ["id"],
+    "h5": ["id"],
+    "h6": ["id"],
 }
 
 _MD_EXTENSIONS = ["fenced_code", "toc"]
@@ -104,9 +128,7 @@ def _build_toc(html: str) -> str:
     if not items:
         return ""
     return (
-        '<div class="info-toc">'
-        '<div class="info-toc-title">Table of Contents</div>'
-        '<ul>' + "".join(items) + "</ul></div>"
+        '<div class="info-toc"><div class="info-toc-title">Table of Contents</div><ul>' + "".join(items) + "</ul></div>"
     )
 
 
@@ -118,5 +140,6 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
     if len(parts) < 3:
         return {}, text
     import yaml
+
     meta = yaml.safe_load(parts[1]) or {}
     return meta, parts[2]

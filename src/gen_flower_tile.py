@@ -55,10 +55,7 @@ def _load_flowers() -> list[tuple[str, str, str]]:
 
 def _build_symbols(flowers: list[tuple[str, str, str]]) -> list[str]:
     """Build <symbol> definitions for all flowers."""
-    return [
-        f'  <symbol id="{fid}" viewBox="{vb}">{inner}</symbol>'
-        for fid, vb, inner in flowers
-    ]
+    return [f'  <symbol id="{fid}" viewBox="{vb}">{inner}</symbol>' for fid, vb, inner in flowers]
 
 
 def _use_element(flower_id: str, x: float, y: float, size: float, rotation: float, flip: int) -> str:
@@ -75,7 +72,9 @@ def _use_element(flower_id: str, x: float, y: float, size: float, rotation: floa
 
 
 def _circles_overlap(
-    cx: float, cy: float, r: float,
+    cx: float,
+    cy: float,
+    r: float,
     placed: list[tuple[float, float, float]],
     min_gap: float,
     *,
@@ -136,8 +135,8 @@ def _build_tile(flowers: list[tuple[str, str, str]]) -> str:
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"\n'
         f'     viewBox="0 0 {CANVAS} {CANVAS}" width="{CANVAS}" height="{CANVAS}">\n'
-        f'<defs>\n{chr(10).join(symbols)}\n</defs>\n'
-        f'{chr(10).join(uses)}\n</svg>\n'
+        f"<defs>\n{chr(10).join(symbols)}\n</defs>\n"
+        f"{chr(10).join(uses)}\n</svg>\n"
     )
 
 
@@ -183,8 +182,7 @@ def _build_separator(flowers: list[tuple[str, str, str]]) -> str:
             y = y_center - size / 2
             cx, cy, r = x + size / 2, y_center, size / 2
 
-            if not _circles_overlap(cx, cy, r, placed, SEP_MIN_GAP,
-                                    toroidal_w=SEP_WIDTH):
+            if not _circles_overlap(cx, cy, r, placed, SEP_MIN_GAP, toroidal_w=SEP_WIDTH):
                 rotation = rng.uniform(0, 360)
                 flip = rng.choice([1, -1])
                 placements.append((flower_id, x, y, size, rotation, flip))
@@ -207,8 +205,8 @@ def _build_separator(flowers: list[tuple[str, str, str]]) -> str:
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"\n'
         f'     viewBox="0 0 {SEP_WIDTH} {SEP_HEIGHT}" width="{SEP_WIDTH}" height="{SEP_HEIGHT}">\n'
-        f'<defs>\n{chr(10).join(symbols)}\n</defs>\n'
-        f'{chr(10).join(uses)}\n</svg>\n'
+        f"<defs>\n{chr(10).join(symbols)}\n</defs>\n"
+        f"{chr(10).join(uses)}\n</svg>\n"
     )
 
 

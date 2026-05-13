@@ -8,9 +8,7 @@ class Keynote:
     name: str
     role: str
     bio: str
-    photo: (
-        str  # local path relative to site root, e.g. "keynotes/sebastian-ramirez.webp"
-    )
+    photo: str  # local path relative to site root, e.g. "keynotes/sebastian-ramirez.webp"
     is_placeholder: bool = False
     session_code: str = ""  # pretalx code, resolved to url at build time
     session_url: str = ""
@@ -64,8 +62,7 @@ KEYNOTES: list[Keynote] = [
     Keynote(
         "Mystery Keynote #6",
         "To be announced",
-        "Our final keynote slot is reserved for someone special."
-        " Watch this space — the announcement is coming.",
+        "Our final keynote slot is reserved for someone special. Watch this space — the announcement is coming.",
         "",
         is_placeholder=True,
     ),
