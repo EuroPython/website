@@ -1,32 +1,37 @@
-# EuroPython Website 🌍🐍
+# EuroPython Website
 
-## Introduction 👋
+## Introduction
 
-Welcome to the repository for the EuroPython website! We use
-[Astro](https://astro.build) in combination with pnpm to manage dependencies.
+Welcome to the repository for the EuroPython website! We use Python with
+[Jinja2](https://jinja.palletsprojects.com/) templates and `uv` to manage
+dependencies.
 
-## Setup 🛠️
+## Setup
 
 ### Local dev env
 
-To get started, clone the repository and run `pnpm install` to fetch all the
-dependencies. Then, use `pnpm run dev` to start the development server.
+To get started, clone the repository and install dependencies:
+
+```sh
+uv sync
+```
+
+Then start the development server with live reload:
+
+```sh
+make dev
+```
 
 The website will be available at `http://localhost:4321`.
 
-### Pre-commit Setup
+For a full production build:
 
-To ensure code quality and consistency, we use `pre-commit` hooks. Follow these
-steps to set up `pre-commit` on your local environment:
+```sh
+make build-all ENV=production
+```
 
-1. Install `pre-commit`. You can follow the instructions from
-   [pre-commit.com](https://pre-commit.com/#install).
-2. Run `pre-commit install` in the root of your local repository.
-3. Now, `pre-commit` will run automatically on `git commit`. You can also run it
-   manually on all files using `pre-commit run --all-files`.
-
-This will help maintain a consistent coding style and catch common issues before
-submission.
+`ENV` defaults to `development`. The corresponding `.env.<ENV>` file is loaded
+automatically.
 
 ### Docker
 
@@ -42,34 +47,90 @@ The website will be available at `http://localhost:4321`.
 #### Docker Troubleshooting
 
 Docker Compose mounts volumes from your file system to enable live reload. If
-you're having problems starting the container, try this:
+you're having problems starting the container, try:
 
 ```sh
 # Clean everything
-docker compose down -v  # Remove volumes
-docker image rmi website-web # Clean unused images
-docker rm website-web # Clean unused containers
-
-# Remove local pnpm store if it exists
-rm -rf .pnpm-store
+docker compose down -v       # Remove volumes (including .venv and uv-cache)
+docker image rmi ep26-web    # Clean unused images
+docker rm ep26-web           # Clean unused containers
 
 # Rebuild from scratch
 docker compose build --no-cache
 docker compose up
 ```
 
-## Content Structure 🗂️
+## Content Structure
 
-The content of the site is store in this repository. We are using Astro's
-content collections to manage the content. The collections are configure inside
-`src/content/config.ts`.
+The content of the site is stored in `src/content/`. The build is driven by
+`src/build.py` using Jinja2 templates from `src/templates/`.
 
 ### Pages
 
-Pages are stored in the `src/content/pages` directory. Each page is a md file
-with frontmatter.
+Pages are stored in the `src/content/pages/` directory as Markdown files.
 
 ### Deadlines
 
-Meanwhile, our important deadlines ⏰ are located inside the
-`src/content/deadlines` directory.
+Important deadlines are located in the `src/content/deadlines/` directory.
+
+## Programme Data
+
+Programme data (sessions, speakers, schedule) is fetched from the pretalx API
+and stored in `data/` (gitignored). Run once before building:
+
+```sh
+make download-data
+```
+
+## Speaker Avatars
+
+Speaker avatars are optimised per environment:
+
+| ENV | Strategy | How |
+|-----|----------|-----|
+| `development` | wsrv.nl proxy | No local download needed |
+| `preview` | wsrv.nl proxy | `EP_AVATAR_PROXY=true` in `.env.preview` |
+| `production` | Local files | Downloaded and resized via `make download-avatars` |
+
+In **development and preview**, avatar URLs are rewritten through
+[wsrv.nl](https://wsrv.nl) which resizes and caches them on the fly — no local
+storage or bandwidth required.
+
+In **production**, avatars are downloaded, resized to 80/200/400px WebP, and
+stored in `avatars/` (gitignored). Run once before the production build:
+
+```sh
+make download-avatars  # requires data/speakers.json to exist first
+make build-all ENV=production
+```
+
+The `avatars/` directory is safe to delete and re-generate at any time.
+
+## Environment Variables
+
+All env vars are loaded from `.env.<ENV>` (default: `.env.development`).
+Pass `ENV=preview` or `ENV=production` to `make` to switch environments.
+
+| Variable | Description |
+|----------|-------------|
+| `EP_SESSIONS_API` | Sessions JSON URL |
+| `EP_SPEAKERS_API` | Speakers JSON URL |
+| `EP_SCHEDULE_API` | Schedule JSON URL |
+| `EP_FAST_BUILD` | Skip detail pages when `true` |
+| `EP_MINIFY` | Minify CSS/JS when `true` |
+| `EP_AVATAR_PROXY` | Force wsrv.nl proxy for avatars when `true` |
+| `SITE_URL` | Base URL used in canonical links and redirects |
+
+## Development
+
+| Command                   | Description                                    |
+|---------------------------|------------------------------------------------|
+| `make dev`                | Build and start dev server with live reload    |
+| `make build`              | Build the site (fast, no detail pages)         |
+| `make build-all`          | Full build including session/speaker pages     |
+| `make download-data`      | Fetch sessions, speakers, schedule from API    |
+| `make download-avatars`   | Download and resize speaker avatars locally    |
+| `make test`               | Run tests                                      |
+| `make lint`               | Lint with ruff                                 |
+| `make format`             | Format with ruff                               |
+| `make type-check`         | Type-check with mypy                           |

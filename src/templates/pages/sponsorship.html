@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Sponsorship — EuroPython 2026{% endblock %}
+{% block og_title %}Sponsorship — EuroPython 2026{% endblock %}
+{% block twitter_title %}Sponsorship — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/sponsorship/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+</div>
+{% set sponsor_detailed = true %}
+{% include "sponsors.html" %}
+{% include "sponsor_packages.html" %}
+{% endblock %}

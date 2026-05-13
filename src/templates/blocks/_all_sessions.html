@@ -1,0 +1,38 @@
+{% from "_sess_card.html" import sess_card %}
+<!-- ============================================================
+     ALL TALKS
+     ============================================================ -->
+<section class="sess-section" id="all-talks">
+  <div class="sec-inner">
+    <p class="sec-subtitle" style="text-align:center; margin-bottom:2rem;"><span id="sess-count" aria-live="polite">{{ talks|length }}</span> talks at EuroPython 2025</p>
+
+    {% if talks %}
+    <div class="sess-filters">
+      <input type="text" id="sess-search" class="sess-search" placeholder="Filter by title or speaker..." autocomplete="off" aria-label="Filter talks by title or speaker">
+      {% if talk_topics %}
+      <select id="sess-track-filter" class="sess-track-select" aria-label="Filter by topic">
+        <option value="">All topics</option>
+        {% for track in talk_topics %}
+        <option value="{{ track }}">{{ track }}</option>
+        {% endfor %}
+      </select>
+      {% endif %}
+    </div>
+    <div id="sess-grid">
+      {% for group in talks_by_topic %}
+      <div class="sess-topic-group" id="topic-{{ group.topic_slug }}" data-topic="{{ group.topic }}">
+        <h3 class="sess-topic-heading"><a href="#topic-{{ group.topic_slug }}"># {{ group.topic or 'Other' }}</a></h3>
+        <div class="sess-grid">
+          {% for talk in group.talks %}
+          {{ sess_card(talk, searchable=true) }}
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="sess-no-results" id="sess-no-results" hidden>No talks match your search.</p>
+    {% else %}
+    <p class="sess-empty">Session data is not yet available. Run <code>make download-data</code> to fetch it.</p>
+    {% endif %}
+  </div>
+</section>

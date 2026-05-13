@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /search-index.json
+
+Sitemap: https://ep2026.europython.eu/sitemap.xml

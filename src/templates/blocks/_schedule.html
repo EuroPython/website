@@ -1,0 +1,116 @@
+<!-- ============================================================
+     SCHEDULE
+     ============================================================ -->
+<section class="sched-section" id="schedule">
+  <div class="sec-inner sched-inner">
+
+    <div class="sec-header">
+      <h2 class="sec-title">SCHEDULE <sup class="sec-anchor"><a href="#schedule">#</a></sup></h2>
+      <p class="sec-subtitle">Three days of talks across six parallel tracks &mdash; Wednesday to Friday, July 16&ndash;18. But EuroPython 2025 is a full week &mdash; there&rsquo;s much more beyond the talks:</p>
+    </div>
+
+    <div class="sched-notice-grid">
+      <a href="{{ L.tutorials.url }}" class="sched-notice-card">
+        <strong>Tutorials</strong>
+        <span>Two days of hands-on workshops</span>
+        <span class="sched-notice-date">Mon&ndash;Tue, July 14&ndash;15</span>
+      </a>
+      <a href="{{ L.open_spaces.url }}" class="sched-notice-card">
+        <strong>Open Spaces</strong>
+        <span>Participant-led sessions</span>
+        <span class="sched-notice-date">Throughout the conference</span>
+      </a>
+      <a href="{{ L.sprints.url }}" class="sched-notice-card">
+        <strong>Sprints</strong>
+        <span>Two days of coding sprints, co-organised with EuroSciPy at a separate venue</span>
+        <span class="sched-notice-date">Sat&ndash;Sun, July 19&ndash;20</span>
+      </a>
+      <a href="{{ L.euroscipy.url }}" class="sched-notice-card">
+        <strong>EuroSciPy</strong>
+        <span>The scientific Python conference</span>
+        <span class="sched-notice-date">Mon&ndash;Tue, July 21&ndash;22</span>
+      </a>
+    </div>
+
+    {% if schedule_days %}
+    <!-- Day tabs -->
+    <div class="sched-tabs" role="tablist">
+      {% for day in schedule_days %}
+      <button class="sched-tab{% if loop.first %} sched-tab--active{% endif %}"
+              id="tab-{{ day.day_id }}"
+              data-day="{{ day.day_id }}"
+              role="tab"
+              aria-selected="{{ 'true' if loop.first else 'false' }}"
+              aria-controls="sched-{{ day.day_id }}">
+        <span class="sched-tab-short">{{ day.short_label }}</span>
+        <span class="sched-tab-full">{{ day.label }}</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    {% for day in schedule_days %}
+    <div class="sched-day{% if loop.first %} sched-day--active{% endif %}" id="sched-{{ day.day_id }}" role="tabpanel" aria-labelledby="tab-{{ day.day_id }}" tabindex="0">
+
+      <!-- Room headers (desktop) -->
+      <div class="sched-room-headers">
+        <div class="sched-time-col"></div>
+        {% for room in day.rooms %}
+        <div class="sched-room-header">{{ room }}</div>
+        {% endfor %}
+      </div>
+
+      <!-- Slots -->
+      {% for slot in day.slots %}
+      {% if slot.is_spanning %}
+      {% set e = slot.entries[0] %}
+      <div class="sched-row sched-row--spanning{% if e.is_break %} sched-row--break{% endif %}{% if e.posters %} sched-row--posters{% endif %}"{% if e.session %} id="session-{{ e.session.code }}"{% elif e.is_break %} id="break-{{ day.day_id }}-{{ slot.start_time }}"{% endif %}>
+        <div class="sched-time-col">{{ slot.start_time }}</div>
+        <div class="sched-spanning-entry">
+          {% include "_sched_spanning_entry.html" %}
+        </div>
+      </div>
+      {% else %}
+      <div class="sched-row">
+        <div class="sched-time-col">{{ slot.start_time }}</div>
+        {% for entry in slot.entries %}
+        {% if entry %}
+        <div class="sched-cell{% if entry.session and entry.session.duration == '60' %} sched-cell--tall{% endif %}"{% if entry.session %} id="session-{{ entry.session.code }}"{% endif %}>
+          <div class="sched-card{% if entry.session and entry.session.level == 'advanced' %} sched-card--advanced{% elif entry.session and entry.session.level == 'beginner' %} sched-card--beginner{% endif %}">
+            {% if entry.session and entry.session.display_type %}
+            <div class="sched-entry-type">{{ entry.session.display_type }}</div>
+            {% endif %}
+            <div class="sched-entry-title">
+              {% if entry.session and entry.session.url %}
+              <a href="{{ entry.session.url }}">{{ entry.session.title }}</a>
+              {% else %}
+              {{ entry.session.title if entry.session else entry.break_title }}
+              {% endif %}
+            </div>
+            {% if entry.session and entry.session.speaker_names %}
+            <div class="sched-entry-speakers">{{ entry.session.speaker_names }}</div>
+            {% endif %}
+            <div class="sched-entry-meta">
+              <span class="sched-entry-room">{{ entry.session.room if entry.session else "" }}</span>
+              &middot; {{ entry.session.duration if entry.session else entry.break_duration }}min
+              {% if entry.session and entry.session.level %}
+              <span class="sched-level sched-level--{{ entry.session.level }}">{{ entry.session.level|capitalize }}</span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <div class="sched-cell sched-cell--empty"></div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endfor %}
+
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="sec-subtitle">Schedule coming soon.</p>
+    {% endif %}
+
+  </div>
+</section>

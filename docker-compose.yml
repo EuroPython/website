@@ -3,16 +3,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["pnpm", "run", "dev", "--host", "0.0.0.0"]
+    command: ["uv", "run", "python", "src/serve.py", "--port", "4321", "--host", "0.0.0.0"]
+    env_file:
+      - .env.development
     ports:
       - "4321:4321"
-    environment:
-      - ASTRO_TELEMETRY_DISABLED=1
-      - NODE_ENV=development
     volumes:
       - .:/app
-      - node_modules:/app/node_modules
-      - .pnpm-store:/app/.pnpm-store
+      - venv:/app/.venv
+      - uv-cache:/root/.cache/uv
 
 volumes:
-  node_modules:
+  venv:
+  uv-cache:

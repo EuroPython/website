@@ -1,0 +1,30 @@
+<!-- ============================================================
+     TEAM
+     ============================================================ -->
+<section class="sec-wrap team-section" id="team">
+  <div class="sec-inner team-inner">
+
+    <div class="progsec-header">
+      <h2 class="sec-title" style="color: #f5a623;">THE TEAM <sup class="sec-anchor"><a href="#team">#</a></sup></h2>
+      <p class="sec-subtitle">We're organised into teams, each focused on a different area of the conference. Every team is made up of volunteers donating their time and skills.</p>
+    </div>
+
+    <div class="team-groups">
+      {% for team in teams %}
+      <div class="team-group">
+        <h3 class="team-group-title">{{ team.name }}</h3>
+        <ul class="team-group-members">
+          {% for member in team.members %}
+          <li>{{ member }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="team-volunteers">
+      <p class="team-volunteers-text">The conference is made possible by dozens of volunteers working across programme, communications, infrastructure, sponsorship, on-site operations, and more. Want to help? <a href="/participate/#volunteering">Join us as a volunteer!</a></p>
+    </div>
+
+  </div>
+</section>

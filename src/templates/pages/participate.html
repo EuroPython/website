@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Participate — EuroPython 2026{% endblock %}
+{% block og_title %}Participate — EuroPython 2026{% endblock %}
+{% block twitter_title %}Participate — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/participate/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+</div>
+{% include "tickets.html" %}
+{% set finaid_full = true %}
+{% include "finaid.html" %}
+{% include "visa.html" %}
+{% include "volunteering.html" %}
+{% endblock %}

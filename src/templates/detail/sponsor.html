@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}{{ sponsor.name }} — EuroPython 2026{% endblock %}
+{% block og_title %}{{ sponsor.name }} — EuroPython 2026{% endblock %}
+{% block twitter_title %}{{ sponsor.name }} — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/sponsorship/{{ sponsor.slug }}/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+  <span class="page-breadcrumb-sep">/</span>
+  <a href="/sponsorship/" class="btn btn-outline btn-warning page-breadcrumb-btn">Sponsorship</a>
+</div>
+
+<section class="detail-section sponsor-detail-page">
+  <div class="sec-inner">
+
+    {% if sponsor.cover %}
+    <div class="sponsor-detail-cover">
+      <img src="{{ sponsor.cover }}" alt="{{ sponsor.name }}" loading="lazy">
+    </div>
+    {% endif %}
+
+    <div class="sponsor-detail-layout">
+
+      <div class="sponsor-detail-main">
+        <h1 class="detail-title">About {{ sponsor.name }}</h1>
+
+        {% if sponsor.description %}
+        <div class="detail-text">{{ sponsor.description|md }}</div>
+        {% endif %}
+      </div>
+
+      <aside class="sponsor-detail-sidebar">
+        <div class="sponsor-detail-card">
+          <div class="sponsor-detail-card-logo">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" loading="lazy">
+          </div>
+
+          <h2 class="sponsor-detail-card-name">{{ sponsor.name }}</h2>
+          {% if sponsor.location %}
+          <p class="sponsor-detail-card-location">{{ sponsor.location }}</p>
+          {% endif %}
+
+          <hr class="sponsor-detail-card-sep">
+
+          {% if sponsor.summary %}
+          <p class="sponsor-detail-card-summary">{{ sponsor.summary }}</p>
+          {% endif %}
+
+          {% if sponsor.website %}
+          <a href="{{ sponsor.website }}" target="_blank" rel="noopener" class="btn btn-archivo btn-grad-red sponsor-detail-card-cta">
+            Visit Website &#8599;
+          </a>
+          {% endif %}
+
+          {% from "_icons.html" import linkedin as icon_linkedin, github as icon_github, twitter as icon_twitter %}
+          <div class="sponsor-detail-card-socials">
+            {% if sponsor.socials.get('linkedin') %}
+            <a href="{{ sponsor.socials.linkedin }}" target="_blank" rel="noopener" aria-label="{{ sponsor.name }} on LinkedIn">
+              {{ icon_linkedin() }}
+            </a>
+            {% endif %}
+            {% if sponsor.socials.get('github') %}
+            <a href="{{ sponsor.socials.github }}" target="_blank" rel="noopener" aria-label="{{ sponsor.name }} on GitHub">
+              {{ icon_github() }}
+            </a>
+            {% endif %}
+            {% if sponsor.socials.get('twitter') %}
+            <a href="{{ sponsor.socials.twitter }}" target="_blank" rel="noopener" aria-label="{{ sponsor.name }} on X / Twitter">
+              {{ icon_twitter() }}
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </div>
+</section>
+{% endblock %}

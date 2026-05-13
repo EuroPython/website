@@ -1,0 +1,79 @@
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo"><span class="nav-logo-ep">#EP</span><span class="nav-logo-year">2026</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links-menu">
+    <li class="nav-item nav-mobile-search" id="nav-mobile-search">
+      <button type="button" style="background:none;border:none;color:inherit;padding:0;cursor:pointer;font:inherit;width:100%;text-align:left;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 0.4rem;" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        Search
+      </button>
+    </li>
+    {% for menu in nav_menus %}
+    {% if menu.sections %}
+    <li class="nav-item has-dropdown">
+      <a href="{{ menu.url }}" aria-haspopup="true" aria-expanded="false">{{ menu.label }} <span class="nav-arrow">▾</span></a>
+      <div class="nav-dropdown{{ ' nav-dropdown-wide' if menu.wide }}">
+        <div class="nav-dropdown-inner">
+          {% if menu.wide %}
+          <div class="nav-dropdown-columns">
+            {% set current_col = namespace(val=0) %}
+            {% for section in menu.sections %}
+            {% if section.column != current_col.val %}
+            {% if current_col.val != 0 %}
+            </ul></div>
+            {% endif %}
+            <div class="nav-dropdown-col"><ul>
+            {% set current_col.val = section.column %}
+            {% endif %}
+              <li class="nav-dropdown-label">{{ section.label }}</li>
+              {% for item in section.items %}
+              <li><a href="{{ item.url }}">{{ item.label }}{% if item.external %} <span class="nav-ext">&#8599;</span>{% endif %}</a></li>
+              {% endfor %}
+            {% endfor %}
+            </ul></div>
+          </div>
+          {% else %}
+          <ul>
+          {% for section in menu.sections %}
+          {% if section.label is defined and section.label %}
+          <li class="nav-dropdown-label">{{ section.label }}</li>
+          {% endif %}
+          {% for item in section.items %}
+          <li><a href="{{ item.url }}">{{ item.label }}{% if item.external %} <span class="nav-ext">&#8599;</span>{% endif %}</a></li>
+          {% endfor %}
+          {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a href="{{ menu.url }}">{{ menu.label }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  <button class="nav-search-btn" aria-label="Search" id="nav-search-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    Search
+  </button>
+  <a href="#tickets" class="nav-cta">Register Now</a>
+</nav>
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search" hidden data-index-version="{{ search_index_version or '' }}">
+  <div class="search-modal-backdrop"></div>
+  <div class="search-modal-content">
+    <input type="search" id="search-modal-input" class="search-modal-input" placeholder="Search everything..." autocomplete="off" autofocus aria-label="Search the website">
+    <div class="search-modal-results" id="search-modal-results"></div>
+  </div>
+</div>
+

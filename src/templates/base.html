@@ -1,0 +1,45 @@
+{% set _site = "https://ep2026.europython.eu" %}
+{% set _default_desc = "EuroPython 2026 — Europe's largest Python conference. 13–19 July 2026 in Kraków, Poland. Talks, tutorials, sprints and more." %}
+{% set _default_img = _site ~ "/og-image.jpg" %}
+{% set _desc = page_description if page_description is defined else _default_desc %}
+{% set _img = page_image if page_image is defined else _default_img %}
+{% set _canonical = _site ~ page_canonical if page_canonical is defined else none %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}EuroPython 2026 — Kraków, Poland{% endblock %}</title>
+<meta name="description" content="{{ _desc }}">
+{% if _canonical %}<link rel="canonical" href="{{ _canonical }}">{% endif %}
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EuroPython 2026">
+<meta property="og:title" content="{% block og_title %}EuroPython 2026 — Kraków, Poland{% endblock %}">
+<meta property="og:description" content="{{ _desc }}">
+{% if _canonical %}<meta property="og:url" content="{{ _canonical }}">{% endif %}
+<meta property="og:image" content="{{ _img }}">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@europython">
+<meta name="twitter:title" content="{% block twitter_title %}EuroPython 2026 — Kraków, Poland{% endblock %}">
+<meta name="twitter:description" content="{{ _desc }}">
+<meta name="twitter:image" content="{{ _img }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"></noscript>
+<link rel="preload" as="image" href="/krakow.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="/style.css">
+{% block head_extra %}{% endblock %}
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+{% include "nav.html" %}
+<main id="main-content">
+{% block content %}{% endblock %}
+</main>
+{% include "connect.html" %}
+{% include "footer.html" %}
+</body>
+</html>

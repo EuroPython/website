@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Venue — EuroPython 2026{% endblock %}
+{% block og_title %}Venue — EuroPython 2026{% endblock %}
+{% block twitter_title %}Venue — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/venue/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+</div>
+{% set include_details = true %}
+{% include "krakow.html" %}
+{% include "ice_venue.html" %}
+{% endblock %}

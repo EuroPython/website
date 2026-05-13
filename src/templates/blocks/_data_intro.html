@@ -1,0 +1,28 @@
+<!-- ============================================================
+     DATA / AI / ML INTRO
+     ============================================================ -->
+<section class="progtalk-section" id="data-ai">
+  <div class="sec-inner progtalk-inner">
+
+    <div class="progsec-header">
+      <h2 class="sec-title progtalk-title">DATA, AI &amp; MACHINE LEARNING <sup class="sec-anchor"><a href="#data-ai">#</a></sup></h2>
+      <p class="sec-subtitle progtalk-subtitle">Python is the language of data science and AI &mdash; EuroPython features dedicated tracks covering data engineering, machine learning, NLP, computer vision, and scientific computing.</p>
+      <div class="summit-info">
+        <p class="summit-date">Wednesday &ndash; Friday, July 15&ndash;17</p>
+        <p class="summit-room">{{ data_sessions|length }} sessions across 5 tracks</p>
+      </div>
+    </div>
+
+    <ul class="progsec-grid data-track-grid">
+      {% for group in data_sessions_by_topic %}
+      <li>
+        <a href="#topic-{{ group.topic_slug }}" class="data-track-link">
+          <strong>{{ group.topic or 'Other' }}</strong>
+          {{ group.talks|length }} session{{ 's' if group.talks|length != 1 }} &rarr;
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>

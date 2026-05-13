@@ -1,17 +1,10 @@
-FROM node:20-slim
+FROM python:3.13-slim
 
-RUN apt-get update && apt-get install -y make
-
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-
-RUN corepack enable
-
-RUN pnpm config set store-dir /home/node/.local/share/pnpm/store
+RUN pip install uv
 
 WORKDIR /app
 
-COPY Makefile package.json pnpm-lock.yaml ./
-RUN make install
+COPY pyproject.toml uv.lock ./
+RUN uv sync
 
-RUN mkdir -p /app/src
+COPY . .

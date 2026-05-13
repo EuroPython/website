@@ -1,3 +1,0 @@
-site: dist
-glob: "**/*.{html}"
-root_selector: "main"

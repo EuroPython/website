@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} — EuroPython 2026{% endblock %}
+{% block og_title %}{{ page.title }} — EuroPython 2026{% endblock %}
+{% block twitter_title %}{{ page.title }} — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/{{ page.slug }}/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+  {% for label, url in page.breadcrumb %}
+  <span class="page-breadcrumb-sep">/</span>
+  <a href="{{ url }}" class="btn btn-outline btn-warning page-breadcrumb-btn">{{ label }}</a>
+  {% endfor %}
+</div>
+{% for block_name in page.blocks %}
+{% include block_name %}
+{% endfor %}
+{% endblock %}

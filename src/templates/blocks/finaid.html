@@ -1,0 +1,105 @@
+<!-- ============================================================
+     FINANCIAL AID
+     ============================================================ -->
+<section class="sec-wrap finaid-section" id="finaid">
+  <div class="sec-inner finaid-inner">
+
+    <div class="sec-header finaid-header">
+      <h2 class="sec-title">Financial Aid <sup class="sec-anchor"><a href="#finaid">#</a></sup></h2>
+      <p>No one should miss EuroPython because of money. We offer grants to cover tickets, travel, accommodation, and visa fees for those who need support.</p>
+    </div>
+
+    <div class="finaid-grid">
+      <div class="finaid-card">
+        <div class="finaid-title">Free Ticket</div>
+        <div class="finaid-amount">100%</div>
+        <p class="finaid-desc">A three day conference ticket grant for eligible applicants who cannot afford the registration fee.</p>
+      </div>
+      <div class="finaid-card">
+        <div class="finaid-title">Travel &amp; Accommodation</div>
+        <div class="finaid-amount">up to €500</div>
+        <p class="finaid-desc">Financial support to cover travel costs and accommodation for the duration of the conference.</p>
+      </div>
+      <div class="finaid-card">
+        <div class="finaid-title">Visa Fee Support</div>
+        <div class="finaid-amount">€90</div>
+        <p class="finaid-desc">Up to €90 for Schengen visa fees. Poland is in the Schengen Area. Official invitation letters <a href='#'>provided on request.</a></p>
+      </div>
+    </div>
+
+{% if finaid_full %}
+    <div class="finaid-rules">
+      <h3 class="finaid-rules-title">Financial Aid Rules</h3>
+
+      <div class="finaid-rules-grid">
+        <div>
+          <h4 class="finaid-rules-subtitle">How it works</h4>
+          <ul class="finaid-rules-list">
+              <li><strong>Grants for in-person attendance will be awarded in two rounds.</strong> This makes it easier for us to reallocate grants in case grant offers were rejected in the first round. Receiving a grant early is also beneficial for people having to apply for a Schengen visa.</li>
+              <li>If you've applied for the first round, you will automatically be considered during the second round if you did not receive a grant during the first round. You do not have to reapply separately for the second round. <strong>In fact, if you want to increase your chances of receiving a grant, it is recommended to apply early.</strong></li>
+            <li>Grants are personal and non-transferable</li>
+            <li>You must accept your offer before the stated deadline or it expires</li>
+            <li>The Financial Aid team may make offers outside of regular rounds</li>
+            <li>If you already bought a ticket before receiving a voucher, you need to request a refund separately &mdash; the programme cannot reimburse previously paid tickets</li>
+            <li>The total combined travel/accommodation grant cannot exceed €500, unless otherwise agreed.</li>
+            <li>The Visa Application Fee Grant cannot exceed €90.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="finaid-rules-subtitle">Key dates</h4>
+          <ul class="finaid-rules-list">
+            <li><strong>16 March 2026</strong> – applications open</li>
+            <li><strong>6 April</strong> – deadline for submitting first-round applications</li>
+            <li><strong>20 April</strong> – First round of grant notifications</li>
+            <li><strong>30 April</strong> – Deadline to accepta first-round grant</li>
+            <li><strong>8 May</strong> – Deadline for submitting second-round-applications</li>
+            <li><strong>29 May</strong> – Second round grant notifications</li>
+            <li><strong>6 June</strong> – Deadline to accept a second-round grant</li>
+            <li><strong>28 July 2026</strong> – receipt submission deadline</li>
+          </ul>
+
+          <h4 class="finaid-rules-subtitle" style="margin-top: 1.5rem;">If you cannot attend</h4>
+          <p class="finaid-rules-text">If you've applied for a grant or accepted a grant, but cannot make it to the conference, please contact us at <a href="mailto:finaid@europython.eu">finaid@europython.eu</a> as soon as possible. This allows us to reallocate your grant to someone else.</p>
+
+          <h4 class="finaid-rules-subtitle" style="margin-top: 1.5rem;">Data privacy</h4>
+          <p class="finaid-rules-text">The data we collect will exclusively be used by our Financial Aid team for the selection of grant recipients and the processing of refunds.</p>
+        </div>
+
+        <div>
+          <h4 class="finaid-rules-subtitle">Who can apply?</h4>
+          <ul class="finaid-rules-list">
+            <li><strong>Contributors:</strong> We want to support those who make the Python community a positive, inclusive and welcoming space. We welcome grant applications from folks who need financial support and who clearly put effort into the community and EuroPython, including speakers, volunteers, community organizers, and open-source contributors.</li>
+            <li><strong>Social & economic factors:</strong> Everyone should have a chance to attend EuroPython, regardless of their social or economic situation.</li>
+            <li><strong>Diversity:</strong> We want EuroPython to be the most diverse and inclusive event possible, and we are especially committed to helping those from underrepresented groups in tech feel welcome, participate fully, and contribute to our community.</li>
+          </ul>
+        </div>
+
+
+        <div>
+          <h4 class="finaid-rules-subtitle">Reimbursement process</h4>
+          <ul class="finaid-rules-list">
+              <li>Reimbursements will be made <strong>after the conference</strong> via PayPal, Wise or bank transfer (SEPA/Swift)</li>
+              <li>We will only reimburse you after we've received your receipt/invoices and a <strong>photo of your conference badge</strong></li>
+            <li>Please make sure that your receipts/invoices contain the information necessary for us to validate them. At the very least, they should contain your name, the date, the amount, and specify what the receipt/invoice is for.</li>
+            <li>Reimbursements will only be made to individuals who actually attended the conference. Please include a <strong>photo of your conference badge</strong> with your receipts/invoices.</li>
+            <li>Please consider the risk of travel restrictions: choose flexible booking options that allow you to cancel in case you can't actually make it to the conference.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sec-footer-bar finaid-footer finaid-footer-full">
+      <p><strong>Questions?</strong> Reach out to <a href="mailto:finaid@europython.eu">finaid@europython.eu</a></p>
+      <a href="mailto:finaid@europython.eu" class="btn btn-lg btn-grad-red finaid-cta">Apply for a Grant</a>
+    </div>
+{% else %}
+    <div class="sec-footer-bar finaid-footer">
+      <p><strong>Priority:</strong> underrepresented groups, first-time attendees, speakers, and open source contributors.</p>
+      <a href="/participate/#finaid" class="btn btn-lg btn-grad-red finaid-cta">Learn more about Financial Aid</a>
+    </div>
+{% endif %}
+
+  </div>
+</section>

@@ -1,0 +1,49 @@
+[project]
+name = "ep26"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2",
+    "pydantic",
+    "markdown",
+    "bleach",
+    "pyyaml>=6.0.3",
+    "livereload>=2.7.1",
+    "rcssmin>=1.2.2",
+    "rjsmin>=1.2.5",
+    "pillow>=12.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "types-bleach>=6.3.0.20251115",
+    "types-markdown>=3.10.2.20260211",
+    "segno>=1.6.6",
+    "types-pyyaml>=6.0.12.20260510",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.13"
+mypy_path = "src"
+files = ["src"]
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--cov=src --cov-report=term-missing"

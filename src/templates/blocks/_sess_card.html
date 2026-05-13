@@ -1,0 +1,14 @@
+{% macro sess_card(session, show_track=false, show_type=false, searchable=false) %}
+<div class="sess-card{% if session.level %} sess-card--{{ session.level }}{% endif %}"{% if searchable %} data-track="{{ session.track or '' }}" data-search="{{ session.title|lower }} {{ session.get_speaker_names() }} {{ session.get_track_name() }}"{% endif %}>
+  <h3 class="sess-title"><a href="{{ session.url }}" class="sess-title-link">{{ session.title }}</a></h3>
+  {% if session.speakers %}
+  <p class="sess-speakers">{{ session.speakers | join(", ", attribute='name') }}</p>
+  {% endif %}
+  <div class="sess-card-bottom">
+    <span class="sched-entry-meta">{% if show_type and session.session_type %}<span class="sess-type-badge">{{ session.session_type }}</span>{% endif %}{% if session.duration %}{{ session.duration }} min{% endif %}{% if session.level %}{% if session.duration %} &middot; {% endif %}<span class="sched-level sched-level--{{ session.level }}">{{ session.level|capitalize }}</span>{% endif %}</span>
+    {% if show_track and session.track %}
+    <p class="sess-track-label">{{ session.track }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

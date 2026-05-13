@@ -1,0 +1,135 @@
+<!-- ============================================================
+     PROGRAMME
+     ============================================================ -->
+<section class="prog-section section" id="programme">
+  <div class="section-inner">
+
+    <div class="sec-header prog-section-header">
+      <h2 class="sec-title prog-section-title">What to Expect? <sup class="sec-anchor"><a href="#programme">#</a></sup></h2>
+      <p class="prog-topics-label">A Week of All Things Python!</p>
+    </div>
+
+    <div class="prog-grid">
+      <div class="prog-card">
+        <div class="prog-card-date">
+          <div class="prog-card-date-main">13th &amp; 14th July</div>
+          <div class="prog-card-date-days">Monday &amp; Tuesday</div>
+        </div>
+        <div class="prog-card-body">
+          <h3 class="prog-card-title"><a href="/tutorials/" class="link-inherit">Tutorials &amp; Summits</a></h3>
+          <p class="prog-card-desc">Full-day deep dives with an expert in a small group. Far more hands-on than a talk. Sold separately.</p>
+          <a href="/tutorials/" class="btn btn-outline btn-warning btn-glow">Browse tutorials</a>
+        </div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-card-date">
+          <div class="prog-card-date-main">15th – 17th July</div>
+          <div class="prog-card-date-days">Wednesday, Thursday &amp; Friday</div>
+        </div>
+        <div class="prog-card-body">
+          <h3 class="prog-card-title"><a href="/schedule/" class="link-inherit">Main Conference</a></h3>
+          <p class="prog-card-desc">100+ talks across five parallel tracks. Keynotes, open spaces, and social events. The heart of EuroPython.</p>
+          <a href="/schedule/" class="btn btn-outline btn-warning btn-glow">Full conference schedule</a>
+        </div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-card-date">
+          <div class="prog-card-date-main">18th &amp; 19th July</div>
+          <div class="prog-card-date-days">Saturday &amp; Sunday</div>
+        </div>
+        <div class="prog-card-body">
+          <h3 class="prog-card-title"><a href="/programme/#sprints" class="link-inherit">Sprints &amp; Workshops</a></h3>
+          <p class="prog-card-desc">Contribute to real Python projects alongside the people who maintain them. Beginners welcome!</p>
+          <a href="/programme/#sprints" class="btn btn-outline btn-warning btn-glow">Sprints info</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prog-topics">
+      <p class="prog-topics-label">Conference Topics</p>
+      <div class="topics-grid">
+        {% if talks_by_topic %}
+        {% for group in talks_by_topic %}
+        {% if group.topic and 'None of these' not in group.topic %}
+        <a href="/talks/#topic-{{ group.topic_slug }}" class="topic-tag">{{ group.topic }}</a>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <span class="topic-tag">Python Core &amp; Internals</span>
+        <span class="topic-tag">Web Dev &amp; APIs</span>
+        <span class="topic-tag">DevOps &amp; Cloud</span>
+        <span class="topic-tag">IoT &amp; Embedded</span>
+        <span class="topic-tag">Tooling &amp; Packaging</span>
+        <span class="topic-tag">Testing &amp; Security</span>
+        <span class="topic-tag">Community &amp; Education</span>
+        <span class="topic-tag">Ethics &amp; Sustainability</span>
+        <span class="topic-tag">Careers &amp; Leadership</span>
+        <span class="topic-tag">Games, Art &amp; Play</span>
+        <span class="topic-tag">Machine Learning</span>
+        <span class="topic-tag">NLP &amp; Computer Vision</span>
+        <span class="topic-tag">Data &amp; Visualisation</span>
+        <span class="topic-tag">Jupyter &amp; Scientific Python</span>
+        <span class="topic-tag">Data Engineering &amp; MLOps</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="prog-events">
+      <p class="prog-topics-label">More than just talks</p>
+      <p class="prog-events-desc">EuroPython is a full week of community — from dedicated community days and social events to open spaces, workshops, and sprints.</p>
+      <div class="prog-events-list">
+        <a href="/programme/#beginners-day" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--bday); border-color: var(--bday)">Beginners' Day</a>
+        <a href="/programme/#open-spaces" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--track-open); border-color: var(--track-open)">Open Spaces</a>
+        <a href="/programme/#lightning-talks" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--track-lightning); border-color: var(--track-lightning)">Lightning Talks</a>
+        <a href="/programme/#pyladies" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--pyladies); border-color: var(--pyladies)">PyLadies Events</a>
+        <a href="/programme/#orgsummit" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--green-2e); border-color: var(--green-2e)">Organisers Summit</a>
+        <a href="/programme/#lang-summit" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--summit-lang); border-color: var(--summit-lang)">Language Summit</a>
+        <a href="/programme/#rust-summit" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--summit-rust); border-color: var(--summit-rust)">Rust Summit</a>
+        <a href="/programme/#pkg-summit" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--summit-pkg); border-color: var(--summit-pkg)">Packaging Summit</a>
+        <a href="/programme/#wasm-summit" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--summit-wasm); border-color: var(--summit-wasm)">WASM Summit</a>
+        <a href="/participate/#tickets" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--track-talk); border-color: var(--track-talk)">Social Event</a>
+        <a href="/participate/#tickets" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--track-talk); border-color: var(--track-talk)">Speaker Dinner</a>
+        <a href="/participate/#volunteering" class="btn btn-lg btn-archivo btn-outline btn-glow" style="color: var(--accent); border-color: var(--accent)">Volunteering</a>
+      </div>
+    </div>
+
+    <div class="prog-keynoters">
+      <p class="prog-topics-label">Keynote Speakers</p>
+      <div class="prog-keynoters-grid">
+        {% for k in keynotes %}
+        {% if k.session_url %}
+        <a href="{{ k.session_url }}" class="prog-keynoter">
+        {% else %}
+        <div class="prog-keynoter">
+        {% endif %}
+          {% if k.is_placeholder %}
+          <div class="prog-keynoter-photo prog-keynoter-photo--empty">
+            <span class="prog-keynoter-placeholder">?</span>
+          </div>
+          {% else %}
+          <div class="prog-keynoter-photo">
+            <img src="{{ k.photo | avatar(400) }}" alt="{{ k.name }}" loading="lazy">
+          </div>
+          {% endif %}
+          <div class="prog-keynoter-body">
+            <div class="prog-keynoter-name">{{ k.name }}</div>
+            <div class="prog-keynoter-role">{{ k.role }}</div>
+            <p class="prog-keynoter-bio">{{ k.bio }}</p>
+          </div>
+        {% if k.session_url %}
+        </a>
+        {% else %}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if not include_details %}
+    <div class="prog-more">
+      <a href="/programme/#talks" class="btn btn-lg btn-primary prog-more-cta">Explore the full programme</a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

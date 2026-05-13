@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}{{ session.title }} — EuroPython 2026{% endblock %}
+{% block og_title %}{{ session.title }} — EuroPython 2026{% endblock %}
+{% block twitter_title %}{{ session.title }} — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/session/{{ session.slug }}/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+  <span class="page-breadcrumb-sep">/</span>
+  <a href="/programme/" class="btn btn-outline btn-warning page-breadcrumb-btn">Programme</a>
+  <span class="page-breadcrumb-sep">/</span>
+  <a href="/talks/" class="btn btn-outline btn-warning page-breadcrumb-btn">Sessions</a>
+</div>
+
+<section class="detail-section">
+  <div class="sec-inner">
+
+    <div class="detail-header">
+      {% if session.session_type %}
+      <span class="detail-type-label">{{ session.session_type }}</span>
+      {% endif %}
+      <h1 class="detail-title">{{ session.title }}</h1>
+
+      <div class="detail-meta">
+        {% if session.track %}
+        <a href="/talks/#topic-{{ session.track_id }}" class="detail-meta-item"><span class="detail-meta-label">Topic:</span> {{ session.track }}</a>
+        {% endif %}
+        {% if session.level %}
+        <span class="detail-meta-item detail-meta-level--{{ session.level }}"><span class="detail-meta-label">Level:</span> {{ session.level|capitalize }}</span>
+        {% endif %}
+        {% if session.duration %}
+        <span class="detail-meta-item">{{ session.duration }} min</span>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if session.speakers %}
+    <div class="detail-speakers">
+      <h2 class="detail-subtitle">Speakers</h2>
+      <div class="detail-speaker-cards">
+        {% for speaker in session.speakers %}
+        <a href="{{ speaker.url }}" class="detail-speaker-card">
+          {% if speaker.avatar %}
+          <img src="{{ speaker.avatar | avatar(80) }}" alt="{{ speaker.name }}" class="detail-avatar-small" loading="lazy">
+          {% endif %}
+          <span>{{ speaker.name }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if session.abstract %}
+    <div class="detail-abstract">
+      <h2 class="detail-subtitle">Abstract</h2>
+      <div class="detail-text">{{ session.abstract|md }}</div>
+    </div>
+    {% endif %}
+
+    {% if session.room or session.start %}
+    <div class="detail-schedule-info">
+      <h2 class="detail-subtitle">When &amp; Where</h2>
+      <a href="/schedule/#session-{{ session.code }}" class="detail-schedule-link">
+        {% if session.start %}
+        <p class="detail-schedule-date">{{ session.date_display }}</p>
+        <p class="detail-schedule-time">{{ session.time_display }}</p>
+        {% endif %}
+        {% if session.room %}
+        <p class="detail-schedule-room">{{ session.room }}</p>
+        {% endif %}
+        <span class="detail-schedule-cta">View in schedule &rarr;</span>
+      </a>
+    </div>
+    {% endif %}
+
+    {% if session.youtube_url %}
+    <div class="detail-links">
+      <a href="{{ session.youtube_url }}" target="_blank" rel="noopener" class="detail-link-btn">Watch on YouTube &#8599;</a>
+    </div>
+    {% endif %}
+
+    {% if session.website_url %}
+    <div class="detail-links">
+      <a href="{{ session.website_url }}" target="_blank" rel="noopener" class="detail-link-btn">View on EuroPython website &#8599;</a>
+    </div>
+    {% endif %}
+
+    {% if session.sessions_in_parallel %}
+    <hr class="detail-divider">
+    <div class="detail-related">
+      <h2 class="detail-subtitle">Sessions at the same time</h2>
+      <div class="detail-sched-grid detail-sched-grid--6col">
+        {% for s in session.session_page_at_the_same_time %}
+        {% if s.code == session.code %}
+        <div class="detail-sched-card sched-highlight">
+          <div class="sched-entry-title">{{ s.title }}</div>
+          {% if s.speaker_names %}
+          <div class="sched-entry-speakers">{{ s.speaker_names }}</div>
+          {% endif %}
+          <div class="sched-entry-meta">{{ s.room }} &middot; {{ s.duration }} min</div>
+        </div>
+        {% else %}
+        <a href="{{ s.url }}" class="detail-sched-card">
+          <div class="sched-entry-title">{{ s.title }}</div>
+          {% if s.speaker_names %}
+          <div class="sched-entry-speakers">{{ s.speaker_names }}</div>
+          {% endif %}
+          <div class="sched-entry-meta">{{ s.room }} &middot; {{ s.duration }} min</div>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if session.session_page_up_next %}
+    <div class="detail-related">
+      <h2 class="detail-subtitle">Up next</h2>
+      {% for slot in session.session_page_up_next %}
+      <div class="detail-sched-time-label">{{ slot.start_time }}</div>
+      {% if slot.is_spanning %}
+      {% set e = slot.entries[0] %}
+      {% if e.is_break %}
+      <a href="/schedule/#break-{{ session.schedule_day_id }}-{{ slot.start_time }}" class="detail-upnext-spanning">
+        <div class="sched-spanning-entry{% if e.is_break %} sched-row--break{% endif %}">
+          {% include "_sched_spanning_entry.html" %}
+        </div>
+      </a>
+      {% else %}
+      <div class="detail-upnext-spanning">
+        <div class="sched-spanning-entry">
+          {% include "_sched_spanning_entry.html" %}
+        </div>
+      </div>
+      {% endif %}
+      {% else %}
+      <div class="detail-sched-grid detail-sched-grid--6col">
+        {% for entry in slot.entries %}
+        {% if entry and entry.session %}
+        <a href="{{ entry.session.url }}" class="detail-sched-card">
+          <div class="sched-entry-title">{{ entry.session.title }}</div>
+          {% if entry.session.speaker_names %}
+          <div class="sched-entry-speakers">{{ entry.session.speaker_names }}</div>
+          {% endif %}
+          <div class="sched-entry-meta">{{ entry.session.room }} &middot; {{ entry.session.duration }} min</div>
+        </a>
+        {% else %}
+        <div class="detail-sched-card detail-sched-card--empty"></div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}

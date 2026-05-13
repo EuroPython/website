@@ -1,0 +1,27 @@
+<!-- ============================================================
+     ALL SPEAKERS
+     ============================================================ -->
+<section class="sess-section" id="all-speakers">
+  <div class="sec-inner">
+    <div class="sec-header">
+      <h2 class="sec-title">All Speakers <sup class="sec-anchor"><a href="#all-speakers">#</a></sup></h2>
+      <p class="sec-subtitle">{{ speakers|length }} speakers at EuroPython 2025</p>
+    </div>
+
+    {% if speakers %}
+    <div class="sess-filters">
+      <input type="text" id="spkrs-search" class="sess-search" placeholder="Filter by name..." autocomplete="off" aria-label="Filter speakers by name">
+    </div>
+    <div class="spkrs-grid" id="spkrs-grid">
+      {% for speaker in speakers %}
+      <a href="{{ speaker.url }}" class="sess-card spkrs-card-link" data-search="{{ speaker.name|lower }}">
+        <span class="spkrs-name">{{ speaker.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="sess-no-results" id="spkrs-no-results" hidden>No speakers match your search.</p>
+    {% else %}
+    <p class="sess-empty">Speaker data is not yet available. Run <code>make download-data</code> to fetch it.</p>
+    {% endif %}
+  </div>
+</section>

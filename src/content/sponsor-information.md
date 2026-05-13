@@ -1,0 +1,499 @@
+---
+title: Sponsor Information
+---
+{% from "macros.html" import note %}
+
+This page lists all sponsor deliverables and deadlines to help you plan and make the most of your sponsorship.
+
+{% call note("warning") %}
+
+All deadlines below are **hard deadlines**.
+Unfortunately, we won't be able to accept late submissions or offer refunds if anything is missed.
+
+{% endcall %}
+
+You'll also find more details about each deliverable in the sections below.
+
+Thank you again for supporting EuroPython. We're excited to have you on board!
+
+
+## Due Dates of Deliverables
+
+<h5 id="talk-deadline">Monday, May 25</h5>
+
+- **[Sponsored Talk Submission](#sponsored-content)**: Keystone, Diamond, Platinum
+- **[Workshop/Tutorial Submission](#sponsored-content)**: Keystone
+- **[Sponsor Logo Submission](#sponsor-logo)**: all sponsors
+
+<h5 id="booth-study-reg-deadline">Sunday, June 7</h5>
+
+- **[Technical Case Study Blog Post Submission](#technical-study-blog-post)**: Keystone, Diamond
+
+<h5 id="booth-graphics-deadline">Sunday, June 14</h5>
+
+- **[Booth & Counter Graphics Submission](#booth-back-wall--counter-graphics)**: Keystone, Diamond, Platinum, Gold, Silver
+- **[Booth Customisations](#booth-customisation-and-add-ons)**: Keystone, Diamond, Platinum, Gold, Silver
+
+<h5 id="comms-deadline">Monday, June 22</h5>
+
+- **[Tickets Registration & Assignment](#register-and-assign-your-passes)**: all sponsors
+- **[Job Postings on Website Submission](#job-postings-on-website)**: Keystone, Diamond, Platinum, Gold, Silver
+- **[Job Posting on EuroPython Blog Submission](#job-posting-on-europython-blog)**: Keystone, Diamond, Platinum, Gold, Silver
+- **[Sponsor Highlight on Website Submission](#sponsor-highlight-page-on-website)**: Keystone, Diamond, Platinum
+- **[Sponsor Spotlight in Newsletters Submission](#sponsor-spotlight-in-europython-newsletters)**: Keystone, Diamond, Platinum
+- **[Video Ads submission (with & without Audio)](#video-ads)**: Keystone, Diamond, Platinum, Gold, Silver
+- **[Media Corner Interview Info Submission](#media-corner-access-at-the-conference)**: Keystone, Diamond, Platinum
+- **[YouTube Short Submission](#custom-youtube-short)**: Keystone, Diamond, Platinum
+
+<h5 id="presentation-deadline">Monday, June 29</h5>
+
+- **[Recruiting Session Presentation Slides](#recruiting-session--talent-track)**: Keystone, Diamond, Platinum, Gold
+
+<h5>During the Conference</h5>
+
+- **[Recruiting - On-site Job Board Ad Submission](#on-site-job-board)**: any sponsor, anytime during the conference (we'll have a whiteboard for this)
+- **[One Email to All Attendees Submission](#one-email-to-attendees)**: Keystone, Diamond; anytime during the conference; please give us enough lead time to schedule them
+- **[Social Media Repost Submission](#sponsor-repost)**: Keystone, Diamond, Platinum, Gold; anytime during the conference; please give us enough lead time to schedule them
+
+
+---
+## Register and Assign Your Passes
+
+- **Purchase all your complimentary or discounted passes in bulk** using the voucher links sent to your sponsor representative.
+Please follow the instructions in that email carefully and complete the purchase for all the tickets included in your package.
+
+- **Assign the passes** to your team members who will attend the conference.
+  You can do this by updating your order details:
+  - Open the order confirmation email from [support@pretix.eu](mailto:support@pretix.eu) with the subject line **Your order: XXXX**.
+  - Click the order URL provided in the email.
+  - Amend the attendee information accordingly.
+
+**Deadline** to register and assign your passes: **Monday, 22 June, 2026**
+
+
+---
+## Exhibition
+
+We've compiled all exhibition-related information below.
+
+We provide a **lockable counter** to all exhibitors and strongly recommend storing any valuable items
+inside overnight or whenever the booth is unattended, just for peace of mind.
+Please note that EuroPython organisers are **not** responsible for any lost or stolen items.
+
+The EuroPython Society will have **public liability insurance** for the event. However, we are **not responsible for any damages** caused by sponsors in the exhibit area or for any goods ordered from the booth builder.
+We encourage you to arrange **separate insurance** for your property and equipment when possible.
+
+### Exhibit Booths
+
+All **Silver sponsors and above** will be assigned a booth (unless agreed otherwise), with sizes ranging from 6 sqm to 56 sqm, depending on the sponsorship package.
+
+#### Booth Builder Contact
+
+Our official booth builder is [ArtEXPO](https://www.artexpo.com.pl/contact/). For any booth-related questions, you can contact: **Monika Gregorczyk - monika@artexpo.com.pl**.
+
+#### Booth Mockups
+
+Please refer to the **[EuroPython 2026 – Exhibit Booths](https://drive.google.com/file/d/1ogc2pF3wYMugzq9LYjyaSivmuUcv4QF8/) document for booth mockups and details** on what's included as part of your package.
+
+#### Exhibition Schedule
+
+**Exhibit Days:** During the three main conference days **Wednesday to Friday, 15–17 July 2026**.
+
+**Exhibit Hours:**
+- **Wednesday & Thursday (15–16 July):** 09:00 – 17:00
+- **Friday (17 July):** 09:00 – 17:00
+
+We ask that **all booths be staffed at least during the official breaks**.
+However, we strongly recommend keeping booths staffed throughout the opening hours, especially for Keystone, Diamond, and Platinum sponsors.
+
+<h5> Booth Build – Tuesday, 14 July</h5>
+
+- Booth construction will be completed by **Tuesday, 14 July, 17:00**.
+- **Sponsor booth setup**: You are welcome to set up your booth between **17:00 and 18:00**.
+  - If you need additional time for setup, please let us know and we will try to accommodate your request.
+  - If you are unable to set up on Tuesday, you can access the venue on **Wednesday, 15 July from 08:00** to finish your setup.
+
+Please note: During the live event, the schedule may change quickly. We will communicate any updates in the **sponsor-lounge** channel on our conference Discord community.
+
+<h5> Booth Teardown – Friday, 17 July </h5>
+
+- Teardown starts at **17:00**.
+- For safety reasons, no access to the booths will be allowed after teardown begins.
+
+#### Booth Customisation and Add-ons
+
+On top of what is already included in your booth as part of the package, you can order add-ons, such as TV sets and furniture for your booth.
+
+{% call note() %}
+
+Packages of **Platinum and above** already include **a TV and stand** as part of the booth.
+Gold and Silver sponsors can order a TV and stand separately, if needed.
+
+{% endcall %}
+
+- **Deadline** for booth customisation order: **Sunday, 14 June 2026**.
+
+{% call note("warning") %}
+
+Late orders will incur a 20% surcharge until 26th of June and a 50% surcharge from 27th of June. From 3rd of July onwards, orders will no longer be accepted.
+
+{% endcall %}
+
+- **How to order**: Go to [EuroPython 2026 - ArtEXPO webshop](https://efee.artexpo.com.pl/), register and order.
+
+#### Booth Back Wall & Counter Graphics
+
+<h5>Booth Back Wall Graphic</h5>
+
+- **Gold, Platinum, Diamond, and Keystone sponsors** have a full back wall graphic included in their booth package.  **We highly recommend submitting a custom company graphic**. The production cost is already covered by your sponsorship.
+
+- **Silver sponsors** do not have a back wall graphic included but are welcome to bring up to **two roll-up banners** to display at your booth.
+
+<h5>Counter Graphic</h5>
+
+- Each booth includes one counter sized **964mm (W) x 964mm (H)**. **We highly recommend submitting a custom graphic for the counter.**
+
+#### Graphic Submission Guide
+
+Graphics should be submitted directly to [ArtEXPO](https://www.artexpo.com.pl/contact/) as detailed below.
+
+<h5> Booth Graphic Sizes</h5>
+
+- **Silver Booth**: *No back wall graphic included. Space for 2 roll-up banners.*
+- **Gold Booth**: 3136mm (W) x 2480mm (H)
+- **Platinum Booth**: 4128mm (W) x 2480mm (H)
+- **Diamond Booth**: 6112mm (W) x 2480mm (H)
+- **Keystone Booth**: please contact [ArtEXPO](https://www.artexpo.com.pl/contact/) for details
+
+<h5>Info Counter Graphic Size</h5>
+
+- 964mm (W) x 964mm (H)
+
+<h5>Graphic Specifications</h5>
+
+- **Accepted File type**: Standard print PDF or TIFF (vector files preferred)
+- **Scale**: 1:1
+- **File name**: Use identifiable names for the files
+- **Fonts**: Fonts converted to outlines
+- **Resolution**: 150 dpi
+- **Bleeds**: No bleed or crop marks
+- **Colour space**: CMYK only
+
+<h5>Graphics Submission</h5>
+
+- **Deadline** for submitting booth and counter graphics: **Sunday, 14 June 2026**
+- **Submission**: Send the final files to [artexpo@artexpo.com.pl](mailto:artexpo@artexpo.com.pl).
+
+
+---
+## Parcel Delivery & Swag
+
+As part of our commitment to reducing the carbon footprint of EuroPython, we're making the distribution of physical gifts optional. Instead of placing your items in attendee bags, you'll have the freedom to distribute gifts directly from your booth.
+
+We strongly encourage you to choose gifts made from environmentally friendly materials and focus on quality over quantity to reduce waste.
+
+### Shipping & Logistics
+
+Shipping to the venue is **recommended to be handled by either NETLOG or TRANSMEBLE**. Please contact their teams directly to discuss costs and shipping arrangements.
+
+**NETLOG contact:**
+- **Tomasz Romanowicz**
+  - Tel: [+48 668 890 263](tel:+48668890263)
+  - Email: [tomasz.romanowicz@netlog.org.pl](mailto:tomasz.romanowicz@netlog.org.pl)
+
+**TRANSMEBLE contact:**
+- **Main office**
+  - Tel: [+48 618 656 807](tel:+48618656807)
+  - Email: [office@transmeble.com.pl](mailto:office@transmeble.com.pl)
+
+**Shipping Resources:**
+- [**Shipping Guidelines & Address (doc)**](https://files.icekrakow.pl/128_shippingEN.pdf) for full delivery details and requirements
+
+**Shipping Address:**
+
+ICE Kraków Congress Centre
+Marii Konopnickiej 17 street
+30-302 Kraków, Poland
+
+**Deadlines:** All shipments must arrive at the venue either on **Monday, 13 July 2026** or **Tuesday, 14 July 2026**.
+
+{% call note("warning") %}
+
+Please work with the shipping company to schedule the delivery on either of those dates.
+We cannot receive shipments at the venue before the conference dates.
+
+{% endcall %}
+
+If you have any questions about shipping or customs, please contact NETLOG or TRANSMEBLE directly.
+
+---
+## Leads Collection
+
+We do not provide a dedicated tool for lead collection, but you are welcome to
+engage with attendees and request their information with their consent. You may
+ask attendees for permission to scan the QR code on their badge. These QR codes
+contain vCard 3.0 records with their name, affiliation and email addresses. While
+QR code scanners are not provided, you are welcome to bring your own device or
+use an app of your choice to capture these contact details. You can also
+use the leads for prize draws, games, party invites or other attendee
+interaction ideas.
+
+**Friendly reminder**: the data collection process is subject to
+[GDPR](https://gdpr.eu/what-is-gdpr/). And our
+[Code of Conduct](https://www.europython-society.org/coc/) should be adhered to
+at all times.
+
+---
+
+## Sponsored Content
+
+### Talks | Tutorials/Workshops | Posters
+
+As part of your sponsorship package, you may be entitled to a sponsored talk, tutorial/workshop, or poster.
+Below are the details for each:
+
+- **Technical Talk**: A 30-minute talk slot within the official conference schedule during the Conference Days (15-17 July, 2026).
+*Platinum, Diamond, and Keystone sponsors, or those who have purchased a sponsored talk will need to submit details to us for inclusion.*
+- **Tutorial/Workshop**: A 180-minute tutorial slot within the official conference schedule during the Workshop/Tutorial Days (13-14 July, 2026).
+*Keystone sponsors, or those who have purchased a sponsored tutorial will need to submit details to us for inclusion.*
+
+- **Poster**: Posters will be displayed during the Conference Days (15-17 July, 2026), available for attendees to read at any time.
+During dedicated poster sessions, the authors will be available to discuss their work face-to-face.
+
+For inspiration, you can review previous years' lineups:
+- [2025 Programme](https://ep2025.europython.eu/schedule/)
+- [2024 Programme](https://ep2024.europython.eu/schedule/)
+
+<h5> Submission Process</h5>
+
+Our programme team will provide a dedicated Pretalx submission link, our CfP and scheduling system. We will send this to you to share with your presenter,
+who will submit their title, abstract, and speaker details directly, following the standard submission process.
+
+- **Deadline** for submitting presentation: **Monday, 25 May 2026**
+- **Submission Link**: Provided by the programme team
+
+
+---
+## Recruiting
+
+### Job Postings on Website
+
+**Sponsors at Silver level and above** can post recruitment ads on our Job Board (to be published later.)
+
+- **Silver sponsors** can post up to 2 jobs
+- **Gold sponsors** can post up to 5 jobs
+- **Platinum and above** can post unlimited jobs
+
+Please include a brief company introduction, job title, description, and contact address.
+Check out the [2025 Job Board](https://ep2025.europython.eu/jobs) to get an idea.
+
+*You may also include your featured blog job post in the same document (see next section [Job Postings on EuroPython Blog](#job-posting-on-europython-blog)).*
+
+
+- **Deadline** for submitting job postings for the website: **Monday, 22 June 2026**
+- **Submission Channel**: [Sponsor Assets Submission Form](https://forms.gle/iFUjtiDXZXrvnYHq9) (Submit by linking a file only)
+
+### Job Posting on EuroPython Blog
+
+**Sponsors at Silver level and above** can submit one recruitment ad for the EuroPython blog.
+You may either use the same posting submitted for the job board on the website or provide a new one.
+
+*If you're using the same document as for the website job board, just make sure your featured blog job post is clearly marked.*
+
+- **Deadline** for submitting job postings for the EuroPython Blog: **Monday, 22 June 2026**
+- **Submission Channel**: [Sponsor Assets Submission Form](https://forms.gle/iFUjtiDXZXrvnYHq9)
+
+### On-site Job Board
+
+For your recruiting ad on the on-site job board at the venue,
+you can bring a printed ad and pin it to the whiteboard yourself.
+
+
+### Recruiting Session / Talent Track
+
+The dedicated Sponsor Highlight & Recruitment Fair will take place during the conference.
+It is part of the official conference schedule.
+
+This session is available to **Gold sponsors and above**.
+During the session, each sponsor will have the opportunity to give a 3-minute pitch, presenting your company and job offers.
+Attendees can then visit your booth for direct follow-up chats. Please remember to specify the location of your booth so that
+attendees can find you easily.
+
+To register your interest, send an email with the subject "**EuroPython 2026 Sponsor Recruiting Session**: **_your company name_**"
+to sponsoring@europython.eu before the deadline, with the following information:
+
+- Name of your company
+- Name and email of the person giving the pitch for your company
+- Will you be using slides?
+- If you are using slides, please send the file as a backup in the same email, within the same deadline.
+
+You can also check out the [2025 Recruiting Session](https://www.youtube.com/watch?v=ck7ghfwx-hI)
+for an idea of what the session looked like at our last conference.
+
+- **Deadline** for submitting recruiting session presentation: **Monday, 29 June 2026**
+- **Submission Channel**: sponsoring@europython.eu
+
+
+---
+## Brand Visibility & Marketing
+
+### Sponsor Logo
+
+Your company logo will be featured in various promotional materials, both digital and print.
+You should have already been asked to submit your logo in both PNG and vector formats (e.g. .SVG, .PDF, .AI)
+when you signed up as a sponsor.
+
+If you have **not** submitted your logo at the time of signup or before the specified deadline,
+please note that it may not be included in certain printed materials.
+
+- **Deadline** for submitting sponsor logo: **Monday, 25 May 2026**
+- **Submission Channel**: Either submit during your sponsor sign-up
+or email us at sponsoring@europython.eu later.
+
+
+### Video Ads
+
+This year we only have one type of video ads you can submit:
+
+- **Video ads for streaming channels (Platinum and above): With audio**, up to **30 seconds** each.
+These will be shown during breaks for the remote audience.
+
+**File specifications**: MP4 format, 720p or 1080p resolution.
+
+**Copyright Note**: If you include music, please ensure you have the legal rights. We recommend using music under a
+Creative Commons license to avoid copyright issues or strikes on our YouTube channel.
+
+You can submit different video files or reuse the same video in both. The number of video ads you submit is up to you.
+We recommend **2 to 10** files. Higher sponsorship levels will receive more ad share.
+
+**Important**: To avoid attachment size limits, please upload your videos to a file-sharing service
+(e.g. Dropbox, Google Drive, WeTransfer, OneDrive) and send us the download link.
+
+- **Deadline** for submitting video ad links: **Monday, 22 June 2026**
+- **Submission Channel**: [Sponsor Assets Submission Form](https://forms.gle/iFUjtiDXZXrvnYHq9) (please upload all videos via file-sharing and submit the link through the form)
+
+### Technical Study Blog Post
+
+**Diamond and Keystone Level sponsors**, or those who have purchased this add-on, can have a blog post highlighting their company. The Communications team will assist in crafting a technical case study blog post, which will be published on EuroPython's [dev.to](https://dev.to/t/europython) and [EuroPython Blog](https://blog.europython.eu/), with promotion across our social media channels. You can also choose to cross-post the same blog on both platforms.
+
+For each blog post, we will need **at least 3 paragraphs** of text, along with an image (if you don't have one, we can use your logo).
+
+The text should focus on a technical case study related to Python, such as how you solved a problem or improved performance using Python. The content should appeal to a technically oriented audience.
+
+For inspiration, check out [Kraken's 2023 Sponsor post](https://blog.europython.eu/kraken-technologies-how-we-organize-our-very-large-pythonmonolith/).
+
+Some other good technical case study examples include:
+
+- [A closer look at the research to help AI see more skin tones](https://blog.google/technology/research/ai-monk-scale-skin-tone-story/)
+- [Bloomberg publishes Memray](https://www.bloomberg.com/company/stories/bloomberg-memray-open-source-profiler-python-code/)
+- [Accelerated Inference with Optimum and Transformers Pipelines](https://huggingface.co/blog/optimum-inference)
+
+Feel free to mention any talks or special events you're organising at the conference as well. After submitting the draft, we'll forward it to our Communications Team for editing.
+
+- **Deadline** for submitting blog post text and image: **Sunday, 7 June 2026**
+- **Submission Channel**: sponsoring@europython.eu
+
+
+---
+## Communications
+
+### Sponsor Highlight Page on Website
+
+Sponsors at the **Platinum level and above** are eligible for a dedicated sponsor highlight page on our website.
+This is your opportunity to showcase your company to our attendees with a custom page tailored to your needs.
+
+You can submit text and any attachments, such as images or other content, that you'd like to feature.
+Our Communications team is happy to help shape the layout.
+
+We're here to help bring your ideas to life, so feel free to get creative with how you'd like to present your company!
+
+- **Deadline** for submitting sponsor highlight page on the website: **Monday, 22 June 2026**
+- **Submission Channel**: [Sponsor Assets Submission Form](https://forms.gle/iFUjtiDXZXrvnYHq9) (please upload all content via file-sharing and submit the link through the form)
+
+
+### Sponsor Spotlight in EuroPython Newsletters
+
+Sponsors of **Platinum level and above** can be featured in six editions of the EuroPython newsletter,
+ which is sent out monthly. We'll highlight your company with your logo and a short blurb of up to **100 characters**. The publication cycle starts before the conference and can continue after the event, giving your company ongoing visibility throughout the year.
+
+- **Deadline** for submitting sponsor spotlight content for the newsletters: **Monday, 22 June 2026**
+- **Submission Channel**: [Sponsor Assets Submission Form](https://forms.gle/iFUjtiDXZXrvnYHq9)
+
+
+### One Email to Attendees
+
+Diamond and Keystone sponsors are eligible to draft **one email** of your choice,
+which the organisers will send on your behalf to attendees to receive sponsor emails.
+
+You can use this opportunity to:
+
+- Tie in with your blog post or recruiting activities
+- Introduce a special activity or highlight of your company
+- Share something technical and geeky about your work
+
+The content and angle are entirely up to you, so feel free to get creative!
+
+- **Deadline** for submitting your email draft: Any time before or during the conference days
+- **Submission Channel**: sponsoring@europython.eu
+
+
+### Sponsor Repost
+
+All sponsors of **Gold and above** are eligible for **one repost** on any of our social media channels
+(LinkedIn, X/Twitter, Bluesky, Mastodon).
+
+We usually do not repost or retweet company content, so this is a great opportunity to get featured.
+Our combined social media reach is around 35K.
+
+**How to request your repost**:
+- Email **sponsoring@europython.eu** with the subject:
+  **"EuroPython 2026 Repost: _your company name_"**
+- Include the **URL of the post** you want us to share
+- Optionally, include the post text you'd like us to use if needed
+
+That's it -- we will schedule the repost accordingly!
+
+- **Deadline** for submitting the post URL and text: Any time **before or during the conference days**
+- **Submission Channel**: sponsoring@europython.eu
+
+
+---
+## Media Package
+
+EuroPython's **YouTube channel** has over **35K subscribers** and over **4 million views**, providing significant exposure for your content.
+Both the full-length interview and custom YouTube short will be published on this channel, offering your company
+the opportunity to be featured in front of our engaged audience.
+
+### Media Corner Access at the Conference
+
+Sponsors of **Platinum level and above** — or those who purchased this add-on — are invited to book a slot at our **Media Corner**
+during the conference for a recorded interview.
+
+- The **full interview (up to 30 minutes)** will be published on the **EuroPython YouTube channel** after the conference.
+- Use this opportunity to introduce your company, share technical insights, or talk about your involvement with EuroPython.
+- **Keystone and Diamond sponsors** are entitled to choose preferred time slots and formats.
+
+**What we need from you**:
+- The **name(s) of up to 4 interviewee(s)**
+- Your **preferred time slot** (subject to availability)
+
+- **Deadline** for submitting Media Corner access information: **Monday, 22 June 2026**
+- **Submission Channel**: [Sponsor Assets Submission Form](https://forms.gle/iFUjtiDXZXrvnYHq9)
+
+### Custom YouTube Short
+
+**Platinum and above sponsors** — or sponsors who purchased this as an add-on — can submit **one custom YouTube Short** (up to **3 minutes**)
+to be published on the **EuroPython YouTube channel before the conference**.
+
+This is your opportunity to:
+- Highlight your company and team, and share your support for EuroPython
+- Promote any talks, workshops, or special events you're running at the conference
+- Invite attendees to visit your booth or join your activities at the conference
+
+We encourage you to create a short video that connects to your EuroPython sponsorship or participation.
+Content purely focused on general product promotion may not be suitable for our channel.
+
+**File specifications**: MP4 format, 1080p and **vertical videos** preferred
+
+- **Deadline** for submitting the YouTube short video: **Monday, 22 June 2026**
+- **Submission Channel**: [Sponsor Assets Submission Form](https://forms.gle/iFUjtiDXZXrvnYHq9) (please upload the video via file-sharing and submit the link through the form)

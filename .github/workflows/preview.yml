@@ -2,7 +2,7 @@ name: Preview
 
 on:
   pull_request:
-    paths-ignore: # skip building preview if changes are limited to following paths
+    paths-ignore:
       - "README.md"
 
 jobs:
@@ -19,22 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set timestamp for build/deploy
-        run: echo "TIMESTAMP=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "pnpm"
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
 
       - name: Install dependencies
-        run: make install
+        run: uv sync
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
@@ -42,43 +31,43 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
       - name: ssh keyscan
-        run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
+        run: ssh-keyscan "ls.artcz.pl" > ~/.ssh/known_hosts
 
-      - name: Build and upload preview
+      - name: Download data
         env:
-          BRANCH: "${{ env.GITHUB_BRANCH_NAME }}"
-          GIT_VERSION: "${{ env.GITHUB_COMMIT_HASH }}"
-          MODE: "preview"
-        run: make preview
+          EP_SESSIONS_API: ${{ vars.EP_SESSIONS_API }}
+          EP_SPEAKERS_API: ${{ vars.EP_SPEAKERS_API }}
+          EP_SCHEDULE_API: ${{ vars.EP_SCHEDULE_API }}
+        run: make download-data
 
-      - name: Get safe branch and export to env
+      - name: Build preview
         env:
-          BRANCH: ${{ env.GITHUB_BRANCH_NAME }}
+          SITE_URL: "https://${{ env.GITHUB_BRANCH_NAME }}.${{ env.PREVIEW_HOSTNAME }}"
+        run: make build-all
+
+      - name: Deploy preview
         run: |
-          echo "SAFE_BRANCH=$(make safe_branch)" >> $GITHUB_ENV
+          SAFE_BRANCH=$(echo "${{ env.GITHUB_BRANCH_NAME }}" | tr '/' '-' | tr '[:upper:]' '[:lower:]')
+          rsync -avz --delete build/ static_content_user@ls.artcz.pl:/home/static_content_user/content/preview/${SAFE_BRANCH}/
+          echo "SAFE_BRANCH=${SAFE_BRANCH}" >> $GITHUB_ENV
 
-      - name: Update PR Comment
+      - name: Update PR comment
         uses: actions/github-script@v7
         if: github.event_name == 'pull_request'
-
         with:
           github-token: ${{ secrets.COMMENT_TOKEN }}
           script: |
-            console.log("Hello world!");
             const pr_id = ${{ github.event.number }};
-            console.log("PR Id %d", pr_id);
-
-            comments = await github.paginate(github.rest.issues.listComments, {
+            const comments = await github.paginate(github.rest.issues.listComments, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: Number(pr_id)
-            })
+            });
 
-            const preview_identifier = "# Preview available"
-
+            const preview_identifier = "# Preview available";
             let comment_id = null;
             comments.forEach(comment => {
-              if(comment.body.indexOf(preview_identifier) >= 0) {
+              if (comment.body.indexOf(preview_identifier) >= 0) {
                 comment_id = comment.id;
               }
             });
@@ -86,19 +75,17 @@ jobs:
             const safe_branch = process.env.SAFE_BRANCH;
             const url = "https://" + safe_branch + "." + process.env.PREVIEW_HOSTNAME;
             const timestamp = new Date().toISOString();
-            const header = "\n|Key|Value|\n|---|---|\n"
+            const header = "\n|Key|Value|\n|---|---|\n";
             const body = preview_identifier + header + "|url|" + url + "|\n|last update|" + timestamp + "|";
 
-            if(comment_id > 0) {
+            if (comment_id > 0) {
               await github.rest.issues.updateComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 comment_id: comment_id,
                 body: body
               });
-
             } else {
-
               await github.rest.issues.createComment({
                 issue_number: Number(pr_id),
                 owner: context.repo.owner,

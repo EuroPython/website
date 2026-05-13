@@ -1,0 +1,21 @@
+{% from "_sess_card.html" import sess_card %}
+<!-- ============================================================
+     ALL TUTORIALS
+     ============================================================ -->
+<section class="sess-section" id="all-tutorials">
+  <div class="sec-inner">
+    <p class="sec-subtitle" style="text-align:center; margin-bottom:2rem;">{{ tutorials|length }} tutorials at EuroPython 2025</p>
+
+    {% if tutorials %}
+    <div id="sess-grid">
+      <div class="sess-grid">
+        {% for t in tutorials %}
+        {{ sess_card(t, show_track=true) }}
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <p class="sess-empty">Session data is not yet available. Run <code>make download-data</code> to fetch it.</p>
+    {% endif %}
+  </div>
+</section>

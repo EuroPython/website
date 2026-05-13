@@ -1,34 +1,28 @@
 ---
-title: Hotels
-subtitle: Hotels
+title: Hotels in Kraków
+section_label: Hotels
+subtitle: EuroPython 2026 doesn't have an official hotel partner, but Kraków has a wide range of accommodation options at all price points.
+breadcrumb: [["Venue", "/venue/"]]
 ---
 
-## Hotels
+## Finding accommodation
 
-EuroPython does **not** have an official accommodation partner and we **cannot**
-guarantee lower prices through any specific provider.
+We recommend booking as early as possible, especially if you plan to arrive before the conference for tutorials (13–14 July) or stay on for sprints (18–19 July).
 
-However, we’ve arranged discount coupons for EuroPython attendees at the hotels
-listed below. These may offer better rates, but it's entirely up to you to
-decide whether booking with the coupon or through other platforms.
+The ICE Kraków Congress Centre is at **Marii Konopnickiej 17**, directly opposite Wawel Castle. Good areas to stay include:
 
-### Occidental Prague Wilson (Prague 1)
+- **Old Town (Stare Miasto)** — 10–15 minute walk to the venue, great for sightseeing
+- **Kazimierz** — historic neighbourhood, vibrant restaurants and bars, 20 min walk or short tram ride
+- **Grzegórzki / Podgórze** — close to the venue, quieter residential areas
 
-Address: Václavské náměstí 812/59, 110 00 Nové Město
+Hotel and accommodation details, including any special EuroPython discount codes, will be announced closer to the conference. Check back here for updates.
 
-Use the following link to apply the EuroPython discount coupon directly:
-[link](https://reservation.barcelo.com/?bep=CERES&hotel=7302&arrive=2025-07-10&depart=2025-07-23&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTH25)
+## Getting around
 
-### Occidental Prague (Prague 4)
+Kraków has excellent public transport (trams and buses). The **MPK Kraków** network connects the airport, train station, and all major areas. A single ticket covers all journeys within a time window — buy them from machines at stops or via the MPK app.
 
-Address: Na Strži 1660/32, 140 00 Krč
+The city centre is very walkable, and most conference venues and social events will be easily reachable on foot or by tram.
 
-Use the following link to apply the EuroPython discount coupon directly:
-[link](https://reservation.barcelo.com/?bep=CERES&hotel=7311&arrive=2025-07-10&depart=2025-07-23&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTH25)
+---
 
-### Grand Hotel Prague Towers (Prague 4)
-
-Address: Kongresová 1655/1, 140 69 Nusle
-
-Use the following link to apply the EuroPython discount coupon directly:
-[link](https://hoteltowers.cz/en/booking-search/?currency=EUR&adults=2&loaded=1&datein=2025-07-14&dateout=2025-07-20&promo=EP2025)
+Check our [Venue & Kraków guide](/venue/) for more travel tips.

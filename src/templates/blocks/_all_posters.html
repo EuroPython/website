@@ -1,0 +1,21 @@
+{% from "_sess_card.html" import sess_card %}
+<!-- ============================================================
+     ALL POSTERS
+     ============================================================ -->
+<section class="sess-section" id="all-posters">
+  <div class="sec-inner">
+    <p class="sec-subtitle" style="text-align:center; margin-bottom:2rem;">{{ posters|length }} posters at EuroPython 2025</p>
+
+    {% if posters %}
+    <div id="sess-grid">
+      <div class="sess-grid">
+        {% for p in posters %}
+        {{ sess_card(p, show_track=true) }}
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <p class="sess-empty">Session data is not yet available. Run <code>make download-data</code> to fetch it.</p>
+    {% endif %}
+  </div>
+</section>

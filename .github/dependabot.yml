@@ -1,15 +1,9 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "monthly"
-    groups:
-      react-dependencies:
-        patterns:
-          - "react"
-          - "react-dom"
-          - "@types/react"
 
   - package-ecosystem: "github-actions"
     directory: "/"

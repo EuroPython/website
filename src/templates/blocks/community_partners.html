@@ -1,0 +1,30 @@
+<!-- ============================================================
+     COMMUNITY PARTNERS
+     ============================================================ -->
+<section class="community-partners-section" id="community-partners">
+  <div class="community-partners-inner">
+
+    <div class="sec-header community-partners-header">
+      <h2 class="sec-title">Community Partners <sup class="sec-anchor"><a href="#community-partners">#</a></sup></h2>
+      <p>Meet the local Python communities joining us at EuroPython 2026</p>
+    </div>
+
+    <div class="community-partners-grid">
+      {% for cp in community_partners %}
+      <div class="cp-card" id="community-partner-{{ cp.slug }}">
+        <a href="{{ cp.url }}" class="cp-logo">
+          <img src="{{ cp.logo }}" alt="{{ cp.name }}" loading="lazy">
+        </a>
+        <span class="cp-name">{{ cp.name }}</span>
+        {% if cp_detailed and cp.summary %}
+        <p class="cp-summary">{{ cp.summary }}</p>
+        {% endif %}
+        {% if cp_detailed and cp.website %}
+        <a href="{{ cp.website }}" class="cp-website" target="_blank" rel="noopener">Visit website &#8599;</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

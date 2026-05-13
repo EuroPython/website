@@ -1,5 +1,8 @@
-node_modules
-.pnpm-store
+.venv
+.ruff_cache
 .git
 .gitignore
-dist
+build
+docs
+.env*
+avatars/

@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "schedule",
+    "title": "Schedule",
+    "blocks": ["_schedule.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "programme_selection",
+    "title": "Programme Selection",
+    "blocks": ["prog_selection.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "programme_speakers",
+    "title": "Speakers",
+    "blocks": ["_all_speakers.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "guidelines",
+    "title": "Speaker Guidelines",
+    "blocks": ["speaker_guidelines_block.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "mentorship",
+    "title": "Speaker Mentorship",
+    "blocks": ["speaker_mentorship_block.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "sprints",
+    "title": "Sprints",
+    "blocks": ["prog_sprints.html", "sprints_info.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "talks",
+    "title": "Talks",
+    "blocks": ["prog_talks.html", "_all_sessions.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {"hide_cta": true}
+  },
+  {
+    "slug": "tutorials",
+    "title": "Tutorials",
+    "blocks": ["prog_tutorials.html", "_all_tutorials.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "posters",
+    "title": "Posters",
+    "blocks": ["prog_posters.html", "_all_posters.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "data",
+    "title": "Data & AI Track",
+    "blocks": ["_data_intro.html", "_all_data.html"],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  },
+  {
+    "slug": "beginners",
+    "title": "Beginners' Day",
+    "blocks": [
+      "_beginners_intro.html",
+      "_beginners_day.html",
+      "_django_girls.html",
+      "_humble_data.html",
+      "_unconference.html",
+      "_all_beginners.html"
+    ],
+    "breadcrumb": [["Programme", "/programme/"]],
+    "flags": {}
+  }
+]

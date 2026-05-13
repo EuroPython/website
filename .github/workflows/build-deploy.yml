@@ -16,22 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set timestamp for build/deploy
-        run: echo "TIMESTAMP=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "pnpm"
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
 
       - name: Install dependencies
-        run: make install
+        run: uv sync
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
@@ -39,9 +28,17 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
       - name: ssh keyscan
-        run: ssh-keyscan "static.europython.eu" > ~/.ssh/known_hosts
+        run: ssh-keyscan "ls.artcz.pl" > ~/.ssh/known_hosts
 
-      - name: Build and Deploy to server
+      - name: Download data
         env:
-          MODE: "production"
-        run: make deploy FORCE_DEPLOY=true
+          EP_SESSIONS_API: ${{ vars.EP_SESSIONS_API }}
+          EP_SPEAKERS_API: ${{ vars.EP_SPEAKERS_API }}
+          EP_SCHEDULE_API: ${{ vars.EP_SCHEDULE_API }}
+        run: make download-data
+
+      - name: Download avatars
+        run: make download-avatars
+
+      - name: Build and deploy
+        run: make ship

@@ -1,0 +1,25 @@
+{% from "_sess_card.html" import sess_card %}
+<!-- ============================================================
+     ALL BEGINNER SESSIONS
+     ============================================================ -->
+<section class="sess-section" id="all-beginners">
+  <div class="sec-inner">
+    <p class="sec-subtitle" style="text-align:center; margin-bottom:2rem;"><span id="sess-count" aria-live="polite">{{ beginner_sessions|length }}</span> beginner-friendly sessions at EuroPython 2025</p>
+
+    {% if beginner_sessions %}
+    <div class="sess-filters">
+      <input type="text" id="sess-search" class="sess-search" placeholder="Filter by title or speaker..." autocomplete="off" aria-label="Filter talks by title or speaker">
+    </div>
+    <div id="sess-grid">
+      <div class="sess-grid">
+        {% for s in beginner_sessions %}
+        {{ sess_card(s, show_track=true, searchable=true) }}
+        {% endfor %}
+      </div>
+    </div>
+    <p class="sess-no-results" id="sess-no-results" hidden>No sessions match your search.</p>
+    {% else %}
+    <p class="sess-empty">Session data is not yet available. Run <code>make download-data</code> to fetch it.</p>
+    {% endif %}
+  </div>
+</section>

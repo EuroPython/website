@@ -1,0 +1,7 @@
+{
+  "site": "https://ep2026.europython.eu",
+  "redirects": {
+    "/rust-summit/": "/session/rust-summit-at-europython/",
+    "/session/rust-summit/": "/session/rust-summit-at-europython/"
+  }
+}

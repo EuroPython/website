@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}{{ speaker.name }} — EuroPython 2026{% endblock %}
+{% block og_title %}{{ speaker.name }} — EuroPython 2026{% endblock %}
+{% block twitter_title %}{{ speaker.name }} — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/speaker/{{ speaker.slug }}/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+  <span class="page-breadcrumb-sep">/</span>
+  <a href="/programme/" class="btn btn-outline btn-warning page-breadcrumb-btn">Programme</a>
+  <span class="page-breadcrumb-sep">/</span>
+  <a href="/programme_speakers/" class="btn btn-outline btn-warning page-breadcrumb-btn">Speakers</a>
+</div>
+
+<section class="detail-section">
+  <div class="sec-inner">
+
+    <div class="detail-header">
+      <span class="detail-type-label">Speaker</span>
+      <div class="detail-speaker-header">
+        {% if speaker.avatar %}
+        <img src="{{ speaker.avatar | avatar(200) }}" alt="{{ speaker.name }}" class="detail-avatar" loading="lazy">
+        {% endif %}
+        <div>
+          <h1 class="detail-title">{{ speaker.name }}</h1>
+          {% if speaker.affiliation %}
+          <p class="detail-affiliation">{{ speaker.affiliation }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if speaker.biography %}
+    <div class="detail-bio">
+      <h2 class="detail-subtitle">Biography</h2>
+      <div class="detail-text">{{ speaker.biography|md }}</div>
+    </div>
+    {% endif %}
+
+    <div class="detail-social-links">
+      {% if speaker.homepage %}
+      <a href="{{ speaker.homepage }}" target="_blank" rel="noopener" class="detail-social-link">Website &#8599;</a>
+      {% endif %}
+      {% if speaker.linkedin_url %}
+      <a href="{{ speaker.linkedin_url }}" target="_blank" rel="noopener" class="detail-social-link">LinkedIn &#8599;</a>
+      {% endif %}
+      {% if speaker.twitter_url %}
+      <a href="{{ speaker.twitter_url }}" target="_blank" rel="noopener" class="detail-social-link">Twitter &#8599;</a>
+      {% endif %}
+      {% if speaker.mastodon_url %}
+      <a href="{{ speaker.mastodon_url }}" target="_blank" rel="noopener" class="detail-social-link">Mastodon &#8599;</a>
+      {% endif %}
+      {% if speaker.bluesky_url %}
+      <a href="{{ speaker.bluesky_url }}" target="_blank" rel="noopener" class="detail-social-link">Bluesky &#8599;</a>
+      {% endif %}
+      {% if speaker.gitx_url %}
+      <a href="{{ speaker.gitx_url }}" target="_blank" rel="noopener" class="detail-social-link">GitHub &#8599;</a>
+      {% endif %}
+    </div>
+
+    {% if speaker.sessions %}
+    <div class="detail-related">
+      <h2 class="detail-subtitle">Sessions</h2>
+      <div class="detail-sched-grid">
+        {% for sess in speaker.sessions %}
+        <a href="{{ sess.url }}" class="detail-sched-card">
+          {% if sess.session_type %}
+          <div class="sched-entry-type">{{ sess.session_type }}</div>
+          {% endif %}
+          <div class="sched-entry-title">{{ sess.title }}</div>
+          {% if sess.room %}
+          <div class="sched-entry-meta">{{ sess.room }}{% if sess.duration %} &middot; {{ sess.duration }} min{% endif %}</div>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}

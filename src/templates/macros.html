@@ -1,0 +1,3 @@
+{% macro note(type="info") %}
+<div class="note note-{{ type }}">{{ caller() }}</div>
+{% endmacro %}

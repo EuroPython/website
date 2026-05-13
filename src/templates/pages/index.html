@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+<link rel="canonical" href="{{ base_url }}/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "EuroPython 2026",
+  "description": "EuroPython 2026 — Europe's largest Python conference. Talks, tutorials, sprints and more.",
+  "url": "{{ base_url }}/",
+  "startDate": "2026-07-13",
+  "endDate": "2026-07-19",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "ICE Kraków Congress Centre",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Marii Konopnickiej 17",
+      "addressLocality": "Kraków",
+      "postalCode": "30-302",
+      "addressCountry": "PL"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "EuroPython Society",
+    "url": "https://europython-society.org/"
+  },
+  "image": "{{ base_url }}/og-image.jpg"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+{% include "hero.html" %}
+{% include "news.html" %}
+{% include "programme.html" %}
+{% include "krakow.html" %}
+{% include "ice_venue.html" %}
+{% include "testimonials.html" %}
+{% include "community_partners.html" %}
+{% include "sponsors.html" %}
+{% include "tickets.html" %}
+{% include "finaid.html" %}
+{% include "pyladies.html" %}
+{% include "orgsummit.html" %}
+{% include "ep25.html" %}
+{% include "euroscipy.html" %}
+{% include "faq.html" %}
+{% endblock %}

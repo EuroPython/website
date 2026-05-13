@@ -1,0 +1,41 @@
+{% if e.is_break %}
+<div class="sched-entry-type">Break</div>
+{% elif e.session and e.session.display_type %}
+<div class="sched-entry-type">{{ e.session.display_type }}</div>
+{% endif %}
+<div class="sched-entry-title">
+  {% if e.session and e.session.url %}
+  <a href="{{ e.session.url }}">{{ e.session.title }}</a>
+  {% else %}
+  {{ e.session.title if e.session else e.break_title }}
+  {% endif %}
+</div>
+{% if e.session and e.session.speaker_names %}
+<div class="sched-entry-speakers">{{ e.session.speaker_names }}</div>
+{% endif %}
+<div class="sched-entry-meta">
+  {{ e.time }}&ndash;{{ e.end_time }} &middot; {{ e.session.duration if e.session else e.break_duration }}min
+  {% if not e.is_break and e.session %}
+  &middot; {{ e.session.room }}
+  {% endif %}
+</div>
+{% if e.lunch_events %}
+<div class="sched-lunch-events">
+  <div class="sched-lunch-events-label">Also during lunch</div>
+  <ul class="sched-posters-list">
+    {% for ev in e.lunch_events %}
+    <li>{% if ev.url %}<a href="{{ ev.url }}">{{ ev.title }}</a>{% else %}{{ ev.title }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% if e.posters %}
+<div class="sched-posters">
+  <div class="sched-lunch-events-label">Poster Session @ Exhibit Hall</div>
+  <ul class="sched-posters-list">
+    {% for poster in e.posters %}
+    <li><a href="{{ poster.url }}">{{ poster.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

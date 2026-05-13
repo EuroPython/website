@@ -1,0 +1,68 @@
+<!-- ============================================================
+     SPONSORS & PARTNERS
+     ============================================================ -->
+<section class="sponsors-section" id="{% if sponsor_detailed %}sponsors-listing{% else %}sponsors{% endif %}">
+  <div class="sponsors-inner">
+
+    <div class="sec-header sponsors-header">
+      <h2 class="sec-title">Sponsors &amp; Supporters <sup class="sec-anchor"><a href="#{% if sponsor_detailed %}sponsors-listing{% else %}sponsors{% endif %}">#</a></sup></h2>
+      <p>EuroPython wouldn't be such an affordable event without the help of the sponsors and partners. We'd like to thank all of them for their support.</p>
+      <a href="/sponsorship/#sponsor-packages" class="btn btn-archivo btn-grad-red sponsors-cta">See pricing &amp; become a sponsor</a>
+    </div>
+
+    {% for tier in sponsor_tiers %}
+    <div class="sponsor-tier {{ tier.css_class }}">
+      <div class="sponsor-tier-label">{{ tier.label }}</div>
+      <div class="sponsor-tier-logos{% if sponsor_detailed %} sponsor-tier-detailed{% endif %}">
+        {% for s in tier.sponsors %}
+        {% if sponsor_detailed %}
+        <div class="sponsor-cell" id="sponsor-{{ s.slug }}">
+          <a href="{{ s.url }}" class="sponsor-logo">
+            <img src="{{ s.logo }}" alt="{{ s.name }}" loading="lazy">
+          </a>
+          <div class="sponsor-cell-info">
+            <h3 class="sponsor-cell-name">{{ s.name }}</h3>
+            {% if s.location %}
+            <p class="sponsor-cell-location">{{ s.location }}</p>
+            {% endif %}
+            {% if s.summary %}
+            <p class="sponsor-cell-desc">{{ s.summary }}</p>
+            {% endif %}
+            {% from "_icons.html" import website as icon_website, linkedin as icon_linkedin, github as icon_github, twitter as icon_twitter %}
+            <div class="sponsor-cell-links">
+              {% if s.website %}
+              <a href="{{ s.website }}" target="_blank" rel="noopener" class="sponsor-cell-social" aria-label="{{ s.name }} website">
+                {{ icon_website() }}
+              </a>
+              {% endif %}
+              {% if s.socials.get('linkedin') %}
+              <a href="{{ s.socials.linkedin }}" target="_blank" rel="noopener" class="sponsor-cell-social" aria-label="{{ s.name }} on LinkedIn">
+                {{ icon_linkedin() }}
+              </a>
+              {% endif %}
+              {% if s.socials.get('github') %}
+              <a href="{{ s.socials.github }}" target="_blank" rel="noopener" class="sponsor-cell-social" aria-label="{{ s.name }} on GitHub">
+                {{ icon_github() }}
+              </a>
+              {% endif %}
+              {% if s.socials.get('twitter') %}
+              <a href="{{ s.socials.twitter }}" target="_blank" rel="noopener" class="sponsor-cell-social" aria-label="{{ s.name }} on X / Twitter">
+                {{ icon_twitter() }}
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <a href="{{ s.url }}" class="sponsor-logo">
+          <img src="{{ s.logo }}" alt="{{ s.name }}" loading="lazy">
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% if not loop.last %}<hr class="sponsor-tier-divider">{% endif %}
+    {% endfor %}
+
+  </div>
+</section>

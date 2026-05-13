@@ -1,0 +1,44 @@
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-flowers-bg" aria-hidden="true"></div>
+  <div class="sec-inner footer-inner">
+    <div class="footer-top-row">
+      <div>
+        <p class="footer-title"><span class="footer-title-ep">#EP</span><span class="footer-title-year">2026</span></p>
+        <p class="footer-subtitle">KRAKóW, POLAND &nbsp;·&nbsp; JULY 13–19</p>
+      </div>
+      <a href="https://europython-society.org/" target="_blank" rel="noopener" class="footer-eps-link">
+        <img src="/eps-logo.svg" alt="EuroPython Society" class="footer-eps-logo">
+      </a>
+    </div>
+
+    <div class="footer-grid">
+      {% for col in footer_columns %}
+      <div>
+        <p class="footer-col-title">{{ col.title }}</p>
+        <ul class="footer-links">
+          {% for item in col.items %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        © 2026 EuroPython Society &nbsp;·&nbsp;
+        EuroPython is a community conference run by volunteers &nbsp;·&nbsp;
+        Code of Conduct applies
+      </p>
+      {% if base_url and base_url != "https://ep2026.europython.eu" %}
+      <a href="{{ base_url }}" class="footer-url">{{ base_url }}</a>
+      {% endif %}
+      {% if build_stamp %}<div class="footer-build">{{ build_stamp }}</div>{% endif %}
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>

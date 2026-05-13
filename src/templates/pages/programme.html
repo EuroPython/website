@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Programme — EuroPython 2026{% endblock %}
+{% block og_title %}Programme — EuroPython 2026{% endblock %}
+{% block twitter_title %}Programme — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/programme/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+</div>
+{% set include_details = true %}
+{% include "programme.html" %}
+{% include "prog_talks.html" %}
+{% include "prog_tutorials.html" %}
+{% include "prog_posters.html" %}
+{% include "prog_lightning.html" %}
+{% include "prog_openspaces.html" %}
+{% include "prog_sprints.html" %}
+{% include "lang_summit.html" %}
+{% include "capi_summit.html" %}
+{% include "pkg_summit.html" %}
+{% include "rust_summit.html" %}
+{% include "wasm_summit.html" %}
+{% include "pyladies.html" %}
+{% include "orgsummit.html" %}
+{% include "euroscipy.html" %}
+{% endblock %}

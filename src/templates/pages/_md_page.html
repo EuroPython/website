@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} — EuroPython 2026{% endblock %}
+{% block og_title %}{{ page.title }} — EuroPython 2026{% endblock %}
+{% block twitter_title %}{{ page.title }} — EuroPython 2026{% endblock %}
+{% block head_extra %}<link rel="canonical" href="{{ base_url }}/{{ page.slug }}/">{% endblock %}
+
+{% block content %}
+<div class="page-breadcrumb">
+  <a href="/" class="btn btn-outline btn-warning page-breadcrumb-btn">&#9664;&ensp;Back to homepage</a>
+  {% for label, url in page.breadcrumb %}
+  <span class="page-breadcrumb-sep">/</span>
+  <a href="{{ url }}" class="btn btn-outline btn-warning page-breadcrumb-btn">{{ label }}</a>
+  {% endfor %}
+</div>
+<section class="sec-wrap content-page" id="{{ page.slug }}">
+  <div class="sec-inner">
+    <div class="sec-header">
+      <h1 class="sec-title">{{ page.title }} <sup class="sec-anchor"><a href="#{{ page.slug }}">#</a></sup></h1>
+      {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+    </div>
+    <div class="detail-text">
+      {{ markdown_include("pages/" + page.slug + ".md") }}
+    </div>
+  </div>
+</section>
+{% endblock %}
