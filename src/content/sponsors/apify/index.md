@@ -5,7 +5,10 @@ location: "Czech Republic"
 industry: "Technology & Information"
 
 description:
-  " Apify is the world's largest marketplace of tools for web scraping, data extraction, and automation tools. Apify Actors scrape up-to-date web data from any website for AI apps and agents, social media monitoring, competitive intelligence, lead generation, and product research."
+  " Apify is the world's largest marketplace of tools for web scraping, data
+  extraction, and automation tools. Apify Actors scrape up-to-date web data from
+  any website for AI apps and agents, social media monitoring, competitive
+  intelligence, lead generation, and product research."
 socials:
   linkedin: "https://www.linkedin.com/company/apify/"
   twitter: "https://x.com/apify"
