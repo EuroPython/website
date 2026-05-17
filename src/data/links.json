@@ -4,6 +4,10 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Schedule",
+          "path": "/schedule"
+        },
+        {
           "name": "List of Sessions",
           "path": "/sessions"
         },
@@ -133,8 +137,24 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Schedule",
+          "path": "/schedule"
+        },
+        {
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "Tracks",
           "path": "/tracks"
+        },
+        {
+          "name": "Speaker Guidelines",
+          "path": "/guidelines"
         },
         {
           "name": "Speaker Mentorship",
