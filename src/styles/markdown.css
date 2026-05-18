@@ -35,7 +35,7 @@ ul.milestone-todo li::before {
   max-width: max(800px, 50vw);
 }
 
-img.findaid-accent-round-marker {
+img.finaid-accent-round-marker {
   width: 120px;
   min-width: 70px;
   padding: 0 10px;
