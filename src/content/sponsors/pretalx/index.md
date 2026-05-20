@@ -13,5 +13,5 @@ socials:
   mastodon: "https://chaos.social/@pretalx"
   bluesky:
 tier: Supporters
-logo_padding: 5px
+logo_padding: 20px
 ---
