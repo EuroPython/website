@@ -14,5 +14,5 @@ socials:
   mastodon: "https://pretix.social/@pretix"
   youtube: "https://www.youtube.com/channel/UCG1Og1YUpgIJD4geAZLAp5g"
 tier: Silver
-logo_padding: 10px
+
 ---
