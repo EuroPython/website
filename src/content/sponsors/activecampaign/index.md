@@ -18,4 +18,6 @@ socials:
   youtube: https://www.youtube.com/@ActiveCampaign
 
 tier: Gold
+
+logo_max_width: 400px
 ---
