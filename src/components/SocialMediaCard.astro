@@ -6,7 +6,7 @@ const { entry } = Astro.props;
 const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submissions);
 ---
 <svg class="bg" width="900" height="900" class="h-full w-full -z-10">
-  <image href="/social/bg.png" width="900" height="900" />
+  <image href="/social/speaker_card.png" width="900" height="900" />
 </svg>
 {
   entry.data.avatar ? (
