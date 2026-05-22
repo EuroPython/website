@@ -135,8 +135,14 @@ export const GET: APIRoute = async () => {
   for (const speaker of allSpeakers) {
     if (keynoteSpeakerIds.has(speaker.id)) continue;
 
-    const { name, twitter_url, linkedin_url, bluesky_url, mastodon_url, submissions } =
-      speaker.data;
+    const {
+      name,
+      twitter_url,
+      linkedin_url,
+      bluesky_url,
+      mastodon_url,
+      submissions,
+    } = speaker.data;
 
     const sessions = await Promise.all(
       submissions.map((s) => getEntry("sessions", s.id))
@@ -157,10 +163,20 @@ export const GET: APIRoute = async () => {
       fosstodon: getMastodonUsername(mastodon_url || ""),
     };
 
-    const generateSpeakerMessage = (platform: keyof typeof speakerMessageTemplate) => {
+    const generateSpeakerMessage = (
+      platform: keyof typeof speakerMessageTemplate
+    ) => {
       const fn = speakerMessageTemplate[platform];
-      const handle = platform === "instagram" ? undefined : handles[platform as keyof typeof handles];
-      const full = fn({ name, handle, talkTitle, talkUrl: platform === "instagram" ? fallbackUrl : talkUrl });
+      const handle =
+        platform === "instagram"
+          ? undefined
+          : handles[platform as keyof typeof handles];
+      const full = fn({
+        name,
+        handle,
+        talkTitle,
+        talkUrl: platform === "instagram" ? fallbackUrl : talkUrl,
+      });
       return trimToLimit(full, charLimits[platform]);
     };
 
@@ -198,7 +214,8 @@ export const GET: APIRoute = async () => {
 
     const makeMsg = (platform: "x" | "linkedin" | "bsky" | "fosstodon") => {
       const messages = commercialMessages;
-      const template = platform === "x" ? messages[0] : getRandomMessage(messages);
+      const template =
+        platform === "x" ? messages[0] : getRandomMessage(messages);
       const full = buildSponsorMessage(template, name, handles[platform], url);
       return trimToLimit(full, charLimits[platform]);
     };
