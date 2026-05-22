@@ -18,6 +18,7 @@ const {
   tier,
   event_name,
   logo_padding = false,
+  logo_max_width,
 } = sponsor.data;
 
 const logo = sponsorLogos[sponsor.id];
@@ -39,8 +40,8 @@ const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
           <Image
             src={logo}
             alt={`${title} Logo`}
+            class={`max-w-full ${logo_max_width ? `lg:max-w-[${logo_max_width}]` : ""}`}
             style={{
-              minWidth: "140px",
               maxHeight: "120px",
               objectFit: "contain",
               padding: logo_padding ? logo_padding : undefined,
@@ -51,8 +52,8 @@ const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
           <Image
             src={logo}
             alt={`${title} Logo`}
+            class={`max-w-full ${logo_max_width ? `lg:max-w-[${logo_max_width}]` : ""}`}
             style={{
-              minWidth: "140px",
               maxHeight: "120px",
               objectFit: "contain",
               padding: logo_padding ? logo_padding : undefined,

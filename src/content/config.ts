@@ -236,6 +236,7 @@ const sponsors = defineCollection({
       .optional(),
     event_name: z.string().optional().nullable(),
     logo_padding: z.string().optional(),
+    logo_max_width: z.string().optional(),
     draft: z.boolean().optional().default(false),
     jobs: z.array(reference("jobs")).optional().default([]),
   }),

@@ -88,6 +88,10 @@
           "path": "/visa"
         },
         {
+          "name": "Volunteering",
+          "path": "/volunteering"
+        },
+        {
           "name": "FAQ",
           "path": "/faq"
         },
