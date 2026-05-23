@@ -4,10 +4,11 @@ url: "https://www.jetbrains.com/pycharm/"
 location: "Czech Republic"
 industry: "Software Development Tools"
 description:
-  "JetBrains develops intelligent IDEs like PyCharm and IntelliJ IDEA,
-  supporting developers globally. In 2025, JetBrains sponsored the International
-  Olympiad in Informatics (IOI) with free software licenses and participated in
-  GDC 2025, while running its annual Developer Ecosystem Survey."
+  "JetBrains creates intelligent software development tools such as PyCharm and
+  IntelliJ IDEA, used by over 11.4 million professionals and 88 Fortune Global
+  Top 100 companies. PyCharm is the professional Python IDE for developers who
+  take their code seriously — combining deep code intelligence, full AI agent
+  flexibility, and first-class support for web, data, and ML."
 socials:
   linkedin: "https://www.linkedin.com/products/jetbrains-pycharm/"
   twitter: "https://x.com/pycharm"
