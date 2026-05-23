@@ -62,7 +62,8 @@ const { entry } = Astro.props;
 
 <script is:inline>
 function fitText(container) {
-  let fontSize = 100; // Start big
+  const maxFont = parseInt(container.dataset.maxFont) || 100;
+  let fontSize = maxFont;
   container.style.fontSize = fontSize + 'px';
 
   while (
