@@ -1,6 +1,8 @@
 # Social Media Scheduling
 
-This document describes the end-to-end process for generating social media cards and scheduling posts for EuroPython 2026 speakers, sponsors, and community partners via Buffer.
+This document describes the end-to-end process for generating social media cards
+and scheduling posts for EuroPython 2026 speakers, sponsors, and community
+partners via Buffer.
 
 ---
 
@@ -8,9 +10,12 @@ This document describes the end-to-end process for generating social media cards
 
 The pipeline has three stages:
 
-1. **Generate social card images** — render PNG cards for speakers and sponsors using Puppeteer
-2. **Generate the post queue** — hit the Astro API endpoint to produce `queue.json`
-3. **Schedule posts to Buffer** — run the Python script to push items from the queue
+1. **Generate social card images** — render PNG cards for speakers and sponsors
+   using Puppeteer
+2. **Generate the post queue** — hit the Astro API endpoint to produce
+   `queue.json`
+3. **Schedule posts to Buffer** — run the Python script to push items from the
+   queue
 
 ---
 
@@ -30,7 +35,8 @@ This file is gitignored and never committed.
 ### Getting the Buffer API key
 
 1. Log in to [buffer.com](https://buffer.com) with the EuroPython account
-2. Go to **Account Settings** → **Apps & Integrations** (or navigate directly to https://account.buffer.com/apps)
+2. Go to **Account Settings** → **Apps & Integrations** (or navigate directly to
+   https://account.buffer.com/apps)
 3. Under **Access Token**, copy your personal access token
 4. Paste it as the value of `BUFFER_API_KEY` in your `.env.local`
 
@@ -38,7 +44,8 @@ This file is gitignored and never committed.
 
 ## Step 1 — Generate Social Card Images
 
-Social cards are 900×900px PNG images rendered from Astro pages and screenshotted with Puppeteer.
+Social cards are 900×900px PNG images rendered from Astro pages and
+screenshotted with Puppeteer.
 
 ### Speaker cards
 
@@ -64,11 +71,15 @@ Move them:
 mv social-*.png public/media/sponsors/
 ```
 
-> The scripts read from `http://localhost:4321/media/speakers` and `http://localhost:4321/media/sponsors` respectively, so the dev server must be running.
+> The scripts read from `http://localhost:4321/media/speakers` and
+> `http://localhost:4321/media/sponsors` respectively, so the dev server must be
+> running.
 
 ### Checking for missing images
 
-Cross-reference the live site with what's in `public/media/sponsors/`. Every sponsor and partner listed on:
+Cross-reference the live site with what's in `public/media/sponsors/`. Every
+sponsor and partner listed on:
+
 - https://ep2026.europython.eu/sponsors/
 - https://ep2026.europython.eu/community-partners/
 
@@ -78,7 +89,8 @@ should have a corresponding `social-<slug>.png` in `public/media/sponsors/`.
 
 ## Step 2 — Generate the Post Queue
 
-The queue is a JSON file that interleaves speakers, sponsors, and community partners in a repeating pattern:
+The queue is a JSON file that interleaves speakers, sponsors, and community
+partners in a repeating pattern:
 
 ```
 speaker → speaker → sponsor → speaker → partner → (repeat)
@@ -90,20 +102,24 @@ Regenerate it by hitting the API endpoint while the dev server is running:
 curl -s http://localhost:4321/api/media/queue > src/pages/api/media/combined_socials_queue.json
 ```
 
-This overwrites `src/pages/api/media/combined_socials_queue.json` with all 150+ items sorted and interleaved.
+This overwrites `src/pages/api/media/combined_socials_queue.json` with all 150+
+items sorted and interleaved.
 
 ### Tier classification
 
 Sponsors are split into two buckets:
 
-- **Commercial** (go into the sponsor slot): Keystone, Diamond, Platinum, Platinum X, Gold, Silver, Bronze, Patron, Supporters, Financial Aid
+- **Commercial** (go into the sponsor slot): Keystone, Diamond, Platinum,
+  Platinum X, Gold, Silver, Bronze, Patron, Supporters, Financial Aid
 - **Community partners** (go into the partner slot): Partners tier
 
-If a new sponsor tier is added, update `commercialTiers` in `src/pages/api/media/combined_socials_queue.ts`.
+If a new sponsor tier is added, update `commercialTiers` in
+`src/pages/api/media/combined_socials_queue.ts`.
 
 ### Manual queue adjustments
 
-You can edit `src/pages/api/media/combined_socials_queue.json` directly to reorder entries. For example, to swap two sponsors:
+You can edit `src/pages/api/media/combined_socials_queue.json` directly to
+reorder entries. For example, to swap two sponsors:
 
 ```python
 python3 -c "
@@ -117,13 +133,17 @@ with open(path, 'w') as f:
 "
 ```
 
-`src/pages/api/media/combined_socials_queue.json` is committed to the repo. Any manual reordering should be committed so the intentional order is preserved and not lost when the queue is regenerated.
+`src/pages/api/media/combined_socials_queue.json` is committed to the repo. Any
+manual reordering should be committed so the intentional order is preserved and
+not lost when the queue is regenerated.
 
 ---
 
 ## Step 3 — Commit and Merge Images
 
-Before scheduling, the social card images need to be live on the production site. Buffer fetches the image URL at scheduling time and will fail with `Failed to fetch image dimensions: Not Found` if the file isn't deployed yet.
+Before scheduling, the social card images need to be live on the production
+site. Buffer fetches the image URL at scheduling time and will fail with
+`Failed to fetch image dimensions: Not Found` if the file isn't deployed yet.
 
 1. Stage the new images:
 
@@ -153,7 +173,12 @@ You can verify the images are live by checking a URL like:
 
 ## Step 4 — Schedule Posts via Buffer
 
-> ⚠️ **Images must be live before scheduling.** Buffer fetches the image URL at scheduling time. If the PNG hasn't been deployed yet (i.e. the PR adding it hasn't been merged and deployed), Buffer will fail with `Failed to fetch image dimensions: Not Found`. Always merge and confirm the images are live at `https://ep2026.europython.eu/media/speakers/` or `https://ep2026.europython.eu/media/sponsors/` before running the script.
+> ⚠️ **Images must be live before scheduling.** Buffer fetches the image URL at
+> scheduling time. If the PNG hasn't been deployed yet (i.e. the PR adding it
+> hasn't been merged and deployed), Buffer will fail with
+> `Failed to fetch image dimensions: Not Found`. Always merge and confirm the
+> images are live at `https://ep2026.europython.eu/media/speakers/` or
+> `https://ep2026.europython.eu/media/sponsors/` before running the script.
 
 The scheduling script is at `src/pages/api/media/buffer-scheduling.py`.
 
@@ -184,7 +209,8 @@ python src/pages/api/media/buffer-scheduling.py
 
 1. Connects to Buffer and fetches your channel profile IDs
 2. Iterates over the selected queue items
-3. For each item, posts to every channel that has text defined (`instagram`, `x`, `linkedin`, `bsky`, `fosstodon`)
+3. For each item, posts to every channel that has text defined (`instagram`,
+   `x`, `linkedin`, `bsky`, `fosstodon`)
 4. Skips channels with empty text or no matching Buffer profile
 5. Adds Instagram-specific metadata (`postType: post`) automatically
 6. Waits 1.5 seconds between items to respect rate limits
@@ -192,25 +218,30 @@ python src/pages/api/media/buffer-scheduling.py
 ### Channel notes
 
 - **Instagram**: requires `postType: post` — handled automatically
-- **Sponsors/partners**: no Instagram channel (only x, linkedin, bsky, fosstodon)
+- **Sponsors/partners**: no Instagram channel (only x, linkedin, bsky,
+  fosstodon)
 - **Speakers**: all 5 channels including Instagram
-- **Bluesky**: Buffer returns this as `"bluesky"` — normalized to `"bsky"` automatically
+- **Bluesky**: Buffer returns this as `"bluesky"` — normalized to `"bsky"`
+  automatically
 
 ### Tracking progress
 
-After each successful run, note the last `QUEUE_END` value. The next run should set `QUEUE_START = previous QUEUE_END + 1`.
+After each successful run, note the last `QUEUE_END` value. The next run should
+set `QUEUE_START = previous QUEUE_END + 1`.
 
 Already scheduled as of initial setup:
-- Positions 1–4: Abhik Sarkar, Abhimanyu Singh Shekhawat, Arm, Abigail Afi Gbadago
+
+- Positions 1–4: Abhik Sarkar, Abhimanyu Singh Shekhawat, Arm, Abigail Afi
+  Gbadago
 
 ---
 
 ## Troubleshooting
 
-| Error | Cause | Fix |
-|---|---|---|
-| `BUFFER_API_KEY not set` | Missing `.env.local` | Create `.env.local` with the key |
-| `Failed to fetch image dimensions: Not Found` | Image not deployed yet | Generate and commit the missing PNG first |
-| `Field "postType" is not defined` | Wrong field placement | `postType` goes inside `metadata.instagram`, not top-level |
-| `Channel profile not connected` | Service name mismatch | Check the normalization block in the script |
-| `KeyError: 'channel'` | Queue item missing channel data | Re-run `curl .../queue > queue.json` to regenerate |
+| Error                                         | Cause                           | Fix                                                        |
+| --------------------------------------------- | ------------------------------- | ---------------------------------------------------------- |
+| `BUFFER_API_KEY not set`                      | Missing `.env.local`            | Create `.env.local` with the key                           |
+| `Failed to fetch image dimensions: Not Found` | Image not deployed yet          | Generate and commit the missing PNG first                  |
+| `Field "postType" is not defined`             | Wrong field placement           | `postType` goes inside `metadata.instagram`, not top-level |
+| `Channel profile not connected`               | Service name mismatch           | Check the normalization block in the script                |
+| `KeyError: 'channel'`                         | Queue item missing channel data | Re-run `curl .../queue > queue.json` to regenerate         |
