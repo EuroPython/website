@@ -48,6 +48,8 @@ const commercialTiers = [
   "Silver",
   "Bronze",
   "Patron",
+  "Supporters",
+  "Financial Aid",
 ] as const;
 
 const isCommercialTier = (tier: any) => commercialTiers.includes(tier);
@@ -270,6 +272,11 @@ export const GET: APIRoute = async () => {
       },
     });
   }
+
+  // ── sort each bucket alphabetically by name ─────────────────────────────
+  speakerRecords.sort((a, b) => a.name.localeCompare(b.name));
+  sponsorRecords.sort((a, b) => a.name.localeCompare(b.name));
+  partnerRecords.sort((a, b) => a.name.localeCompare(b.name));
 
   // ── interleave: speaker, speaker, sponsor, speaker, partner ──────────────
   // The pattern is a sequence of bucket references that repeats until all
