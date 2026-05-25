@@ -142,3 +142,6 @@ storybook-static/
 
 # EuroPython website
 src/content/days
+
+# Local secrets (never commit)
+.env.local
