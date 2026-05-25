@@ -110,8 +110,12 @@ function buildSponsorMessage(
 ): string {
   // If no handle, remove the placeholder (and any leading space before it)
   const withHandle = handle
-    ? template.replace(/SPONSOR_HANDLE/g, handle).replace(/SUPPORTER_HANDLE/g, handle)
-    : template.replace(/ ?SPONSOR_HANDLE/g, "").replace(/ ?SUPPORTER_HANDLE/g, "");
+    ? template
+        .replace(/SPONSOR_HANDLE/g, handle)
+        .replace(/SUPPORTER_HANDLE/g, handle)
+    : template
+        .replace(/ ?SPONSOR_HANDLE/g, "")
+        .replace(/ ?SUPPORTER_HANDLE/g, "");
 
   return withHandle
     .replace(/SPONSOR_NAME/g, name)
