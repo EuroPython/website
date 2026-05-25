@@ -3,6 +3,7 @@
     "type": "speaker",
     "name": "Abhik Sarkar",
     "image": "https://ep2026.europython.eu/media/speakers/social-abhik-sarkar.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Abhik Sarkar — An Introduction to Writing Fast GPU Code in Python",
     "handles": {
       "x": "@abhiksark",
       "linkedin": "https://www.linkedin.com/in/abhiksark"
@@ -19,6 +20,7 @@
     "type": "speaker",
     "name": "Abhimanyu Singh Shekhawat",
     "image": "https://ep2026.europython.eu/media/speakers/social-abhimanyu-singh-shekhawat.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Abhimanyu Singh Shekhawat — Deconstructing the tenets of Planet Scale Systems with Python",
     "handles": {
       "x": "@abshekha",
       "linkedin": "https://www.linkedin.com/in/abhimanyubitsgoa"
@@ -32,26 +34,10 @@
     }
   },
   {
-    "type": "sponsor",
-    "name": "Arm",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-arm.png",
-    "handles": {
-      "x": "https://x.com/Arm",
-      "linkedin": "https://www.linkedin.com/company/arm/",
-      "bsky": "",
-      "fosstodon": ""
-    },
-    "channel": {
-      "x": "🎉✨ We are pleased to welcome Arm as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/Arm https://www.arm.com",
-      "linkedin": "🎉✨ A big thank you to Arm for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/arm/ https://www.arm.com",
-      "bsky": "🚀✨ Big shoutout and heartfelt thanks to Arm for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.arm.com",
-      "fosstodon": "🎉✨ A big thank you to Arm for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.arm.com"
-    }
-  },
-  {
     "type": "speaker",
     "name": "Abigail Afi Gbadago",
     "image": "https://ep2026.europython.eu/media/speakers/social-abigail-afi-gbadago.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Abigail Afi Gbadago — Pointers, Objects, and References - How Python Manages Memory",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/abigail-afi-gbadago"
     },
@@ -64,26 +50,10 @@
     }
   },
   {
-    "type": "partner",
-    "name": "Cracow Linux Users Group",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-clug.png",
-    "handles": {
-      "x": "",
-      "linkedin": "",
-      "bsky": "",
-      "fosstodon": ""
-    },
-    "channel": {
-      "x": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://clug.space/",
-      "linkedin": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://clug.space/",
-      "bsky": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://clug.space/",
-      "fosstodon": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://clug.space/"
-    }
-  },
-  {
     "type": "speaker",
     "name": "Adam Gorgoń",
     "image": "https://ep2026.europython.eu/media/speakers/social-adam-gorgon.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Adam Gorgoń — gRPC for Beginners",
     "handles": {},
     "channel": {
       "instagram": "Join Adam Gorgoń at EuroPython for \"gRPC for Beginners\".",
@@ -97,6 +67,7 @@
     "type": "speaker",
     "name": "Alejandro Cabello Jiménez",
     "image": "https://ep2026.europython.eu/media/speakers/social-alejandro-cabello-jimenez.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Alejandro Cabello Jiménez — Python on Serverless: Strategies for Peak Performance",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/alejandrocabello"
     },
@@ -112,23 +83,25 @@
     "type": "sponsor",
     "name": "ActiveCampaign",
     "image": "https://ep2026.europython.eu/media/sponsors/social-activecampaign.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: ActiveCampaign",
     "handles": {
-      "x": "https://x.com/ActiveCampaign",
-      "linkedin": "https://www.linkedin.com/company/activecampaign/",
+      "x": "@ActiveCampaign",
+      "linkedin": "https://www.linkedin.com/company/activecampaign",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome ActiveCampaign as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/ActiveCampaign https://www.activecampaign.com/",
-      "linkedin": "🎉✨ A big thank you to ActiveCampaign for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/activecampaign/ https://www.activecampaign.com/",
-      "bsky": "🚀✨ We are delighted to welcome ActiveCampaign as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.activecampaign.com/",
-      "fosstodon": "🎉✨ We are pleased to welcome ActiveCampaign as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.activecampaign.com/"
+      "x": "🎉✨ We are pleased to welcome ActiveCampaign as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @ActiveCampaign https://www.activecampaign.com/",
+      "linkedin": "🚀✨ We are delighted to welcome ActiveCampaign as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/activecampaign https://www.activecampaign.com/",
+      "bsky": "🎉✨ A big thank you to ActiveCampaign for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.activecampaign.com/",
+      "fosstodon": "🚀✨ A huge thank you to ActiveCampaign for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.activecampaign.com/"
     }
   },
   {
     "type": "speaker",
     "name": "Aleksander",
     "image": "https://ep2026.europython.eu/media/speakers/social-aleksander.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Aleksander — Python in the Service of Justice: Modern Analysis Tools in Forensics",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/aleksander-kopyto-6b0339123"
     },
@@ -142,8 +115,45 @@
   },
   {
     "type": "partner",
-    "name": "EuroSciPy",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-euroscipy.png",
+    "name": "1Password",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-1password.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: 1Password",
+    "handles": {
+      "x": "@1Password",
+      "linkedin": "https://www.linkedin.com/company/1password",
+      "bsky": "",
+      "fosstodon": "@1password@1password.social"
+    },
+    "channel": {
+      "x": "🎉✨ A warm thank you to 1Password for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @1Password https://1password.com",
+      "linkedin": "🎉✨ A warm thank you to 1Password for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/1password https://1password.com",
+      "bsky": "🎉✨ A warm thank you to 1Password for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://1password.com",
+      "fosstodon": "🎉✨ A warm thank you to 1Password for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @1password@1password.social https://1password.com"
+    }
+  },
+  {
+    "type": "sponsor",
+    "name": "Apify",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-apify.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Apify",
+    "handles": {
+      "x": "@apify",
+      "linkedin": "https://www.linkedin.com/company/apify",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ We are pleased to welcome Apify as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @apify https://apify.com/",
+      "linkedin": "🚀✨ We are delighted to welcome Apify as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/apify https://apify.com/",
+      "bsky": "🎉✨ Thank you to Apify for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://apify.com/",
+      "fosstodon": "🎉✨ A big thank you to Apify for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://apify.com/"
+    }
+  },
+  {
+    "type": "partner",
+    "name": "Cracow Linux Users Group",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-clug.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Cracow Linux Users Group",
     "handles": {
       "x": "",
       "linkedin": "",
@@ -151,16 +161,17 @@
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://euroscipy.org/",
-      "linkedin": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://euroscipy.org/",
-      "bsky": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://euroscipy.org/",
-      "fosstodon": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://euroscipy.org/"
+      "x": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://clug.space/",
+      "linkedin": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://clug.space/",
+      "bsky": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://clug.space/",
+      "fosstodon": "🎉✨ A warm thank you to Cracow Linux Users Group for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://clug.space/"
     }
   },
   {
     "type": "speaker",
     "name": "Alenka Frim",
     "image": "https://ep2026.europython.eu/media/speakers/social-alenka-frim.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Alenka Frim — Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data",
     "handles": {},
     "channel": {
       "instagram": "Join Alenka Frim at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\".",
@@ -174,6 +185,7 @@
     "type": "speaker",
     "name": "Anwesha Das",
     "image": "https://ep2026.europython.eu/media/speakers/social-anwesha-das.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Anwesha Das — Demystifying CRA for the community",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/anwesha-das-1247121a2",
       "fosstodon": "@anwesha@toots.dgplug.org"
@@ -188,25 +200,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Apify",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-apify.png",
+    "name": "Arm",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-arm.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Arm",
     "handles": {
-      "x": "https://x.com/apify",
-      "linkedin": "https://www.linkedin.com/company/apify/",
+      "x": "@Arm",
+      "linkedin": "https://www.linkedin.com/company/arm",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Apify as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/apify https://apify.com/",
-      "linkedin": "🎉✨ Thank you to Apify for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/apify/ https://apify.com/",
-      "bsky": "🎉✨ A big thank you to Apify for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://apify.com/",
-      "fosstodon": "🎉✨ A big thank you to Apify for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://apify.com/"
+      "x": "🎉✨ We are pleased to welcome Arm as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @Arm https://www.arm.com",
+      "linkedin": "🎉✨ We are pleased to welcome Arm as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/arm https://www.arm.com",
+      "bsky": "🎉✨ Thank you to Arm for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.arm.com",
+      "fosstodon": "🚀✨ We are delighted to welcome Arm as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.arm.com"
     }
   },
   {
     "type": "speaker",
     "name": "Ariel Ortiz",
     "image": "https://ep2026.europython.eu/media/speakers/social-ariel-ortiz.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ariel Ortiz — Crafting Your Own Compiler: From Python Logic to High-Speed WebAssembly",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/ariel-ortiz-ramirez"
     },
@@ -220,25 +234,27 @@
   },
   {
     "type": "partner",
-    "name": "Free Software Foundation Europe",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-fsfe.png",
+    "name": "EuroPython Society",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-eps.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: EuroPython Society",
     "handles": {
-      "x": "",
-      "linkedin": "",
-      "bsky": "",
-      "fosstodon": "https://mastodon.social/@fsfe"
+      "x": "@EuroPython",
+      "linkedin": "https://www.linkedin.com/company/europython",
+      "bsky": "@europython.eu",
+      "fosstodon": "@europython@fosstodon.org"
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://fsfe.org/",
-      "linkedin": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://fsfe.org/",
-      "bsky": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://fsfe.org/",
-      "fosstodon": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://mastodon.social/@fsfe https://fsfe.org/"
+      "x": "🎉✨ A warm thank you to EuroPython Society for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @EuroPython https://www.europython-society.org/",
+      "linkedin": "🎉✨ A warm thank you to EuroPython Society for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/europython https://www.europython-society.org/",
+      "bsky": "🎉✨ A warm thank you to EuroPython Society for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @europython.eu https://www.europython-society.org/",
+      "fosstodon": "🎉✨ A warm thank you to EuroPython Society for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @europython@fosstodon.org https://www.europython-society.org/"
     }
   },
   {
     "type": "speaker",
     "name": "Bryce Adelstein Lelbach",
     "image": "https://ep2026.europython.eu/media/speakers/social-bryce-adelstein-lelbach.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Bryce Adelstein Lelbach — GPU Programming in Pure Python",
     "handles": {
       "x": "@blelbach",
       "linkedin": "https://www.linkedin.com/in/brycelelbach"
@@ -255,6 +271,7 @@
     "type": "speaker",
     "name": "Carlos A Aranibar",
     "image": "https://ep2026.europython.eu/media/speakers/social-carlos-a-aranibar.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Carlos A Aranibar — Designing and Building Custom Keyboards ⌨️ with Python",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/carlos-aranibar"
     },
@@ -268,25 +285,27 @@
   },
   {
     "type": "sponsor",
-    "name": "1Password",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-1password.png",
+    "name": "Back Market",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-backmarket.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Back Market",
     "handles": {
-      "x": "https://x.com/1Password",
-      "linkedin": "https://www.linkedin.com/company/1password/",
-      "bsky": "",
-      "fosstodon": "https://1password.social/@1password"
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/back-market",
+      "bsky": "@backmarketeng.bsky.social",
+      "fosstodon": "@BackMarketEng@mastodon.social"
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome 1Password as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/1Password https://1password.com",
-      "linkedin": "🚀✨ We are delighted to welcome 1Password as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/1password/ https://1password.com",
-      "bsky": "🚀✨ A huge thank you to 1Password for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌  https://1password.com",
-      "fosstodon": "🚀✨ We are delighted to welcome 1Password as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://1password.social/@1password https://1password.com"
+      "x": "🎉✨ We are pleased to welcome Back Market as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.backmarket.com/en-us",
+      "linkedin": "🚀✨ A huge thank you to Back Market for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/back-market https://www.backmarket.com/en-us",
+      "bsky": "🚀✨ We are delighted to welcome Back Market as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @backmarketeng.bsky.social https://www.backmarket.com/en-us",
+      "fosstodon": "🎉✨ Thank you to Back Market for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @BackMarketEng@mastodon.social https://www.backmarket.com/en-us"
     }
   },
   {
     "type": "speaker",
     "name": "Cheuk Ting Ho",
     "image": "https://ep2026.europython.eu/media/speakers/social-cheuk-ting-ho.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Cheuk Ting Ho — Rust Summit at EuroPython",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/cheukting-ho",
       "bsky": "@cheuk.dev",
@@ -302,25 +321,27 @@
   },
   {
     "type": "partner",
-    "name": "PyCon Greece",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pycon-greece.png",
+    "name": "EuroSciPy",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-euroscipy.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: EuroSciPy",
     "handles": {
       "x": "",
-      "linkedin": "https://www.linkedin.com/company/pycon-greece/",
+      "linkedin": "",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pycon.gr/",
-      "linkedin": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/pycon-greece/ https://pycon.gr/",
-      "bsky": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pycon.gr/",
-      "fosstodon": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pycon.gr/"
+      "x": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://euroscipy.org/",
+      "linkedin": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://euroscipy.org/",
+      "bsky": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://euroscipy.org/",
+      "fosstodon": "🎉✨ A warm thank you to EuroSciPy for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://euroscipy.org/"
     }
   },
   {
     "type": "speaker",
     "name": "Christian Leitold",
     "image": "https://ep2026.europython.eu/media/speakers/social-christian-leitold.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Christian Leitold — How to blend Python, physics, and art to create (hopefully) pretty pictures",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/christian-leitold-273492197"
     },
@@ -336,6 +357,7 @@
     "type": "speaker",
     "name": "Claudiu Belu",
     "image": "https://ep2026.europython.eu/media/speakers/social-claudiu-belu.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Claudiu Belu — What is this footgun called unittest.mock, and how to avoid misusing it",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/claudiubelu"
     },
@@ -349,25 +371,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Back Market",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-backmarket.png",
+    "name": "Bloomberg",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-bloomberg.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Bloomberg",
     "handles": {
-      "x": "",
-      "linkedin": "https://www.linkedin.com/company/back-market/",
-      "bsky": "https://bsky.app/profile/backmarketeng.bsky.social",
-      "fosstodon": "https://mastodon.social/@BackMarketEng"
+      "x": "@TechAtBloomberg",
+      "linkedin": "https://www.linkedin.com/company/bloomberg",
+      "bsky": "",
+      "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Back Market as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.backmarket.com/en-us",
-      "linkedin": "🚀✨ A huge thank you to Back Market for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/back-market/ https://www.backmarket.com/en-us",
-      "bsky": "🎉✨ Thank you to Back Market for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://bsky.app/profile/backmarketeng.bsky.social https://www.backmarket.com/en-us",
-      "fosstodon": "🚀✨ We are delighted to welcome Back Market as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://mastodon.social/@BackMarketEng https://www.backmarket.com/en-us"
+      "x": "🎉✨ We are pleased to welcome Bloomberg as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @TechAtBloomberg https://www.bloomberg.com/company/values/tech-at-bloomberg/python/",
+      "linkedin": "🎉✨ A big thank you to Bloomberg for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/bloomberg https://www.bloomberg.com/company/values/tech-at-bloomberg/python/",
+      "bsky": "🚀✨ Big shoutout and heartfelt thanks to Bloomberg for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.bloomberg.com/company/values/tech-at-…",
+      "fosstodon": "🎉✨ A big thank you to Bloomberg for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.bloomberg.com/company/values/tech-at-bloomberg/python/"
     }
   },
   {
     "type": "speaker",
     "name": "Cody Fincher",
     "image": "https://ep2026.europython.eu/media/speakers/social-cody-fincher.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Cody Fincher — Designing Performant APIs with Litestar",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/cofin"
     },
@@ -381,25 +405,27 @@
   },
   {
     "type": "partner",
-    "name": "PyCon Wrocław",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pyconwro.png",
+    "name": "Evolabel",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-evolabel.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Evolabel",
     "handles": {
       "x": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/company/autolabel-ab",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pyconwroclaw.com/",
-      "linkedin": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pyconwroclaw.com/",
-      "bsky": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pyconwroclaw.com/",
-      "fosstodon": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pyconwroclaw.com/"
+      "x": "🎉✨ A warm thank you to Evolabel for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.evolabel.com",
+      "linkedin": "🎉✨ A warm thank you to Evolabel for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/autolabel-ab https://www.evolabel.com",
+      "bsky": "🎉✨ A warm thank you to Evolabel for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.evolabel.com",
+      "fosstodon": "🎉✨ A warm thank you to Evolabel for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.evolabel.com"
     }
   },
   {
     "type": "speaker",
     "name": "Cristián Maureira-Fredes",
     "image": "https://ep2026.europython.eu/media/speakers/social-cristian-maureira-fredes.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Cristián Maureira-Fredes — Understand and expand Python: a hands-on experience on Python internals",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/cmaureir",
       "bsky": "@maureira.dev",
@@ -417,6 +443,7 @@
     "type": "speaker",
     "name": "Damian Wysocki",
     "image": "https://ep2026.europython.eu/media/speakers/social-damian-wysocki.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Damian Wysocki — From Ticket Taker to Problem Solver: Discovery for Senior Thinking",
     "handles": {},
     "channel": {
       "instagram": "Join Damian Wysocki at EuroPython for \"From Ticket Taker to Problem Solver: Discovery for Senior Thinking\".",
@@ -428,25 +455,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Bloomberg",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-bloomberg.png",
+    "name": "Google Cloud",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-google-cloud.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Google Cloud",
     "handles": {
-      "x": "https://x.com/TechAtBloomberg",
-      "linkedin": "https://www.linkedin.com/company/bloomberg",
+      "x": "@GoogleCloudTech",
+      "linkedin": "https://www.linkedin.com/showcase/google-cloud",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Bloomberg as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/TechAtBloomberg https://www.bloomberg.com/company/values/tech-at-blo…",
-      "linkedin": "🚀✨ A huge thank you to Bloomberg for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/bloomberg https://www.bloomberg.com/company/values/tech-at-bloomberg/python/",
-      "bsky": "🚀✨ We are delighted to welcome Bloomberg as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.bloomberg.com/company/values/tech-at-bloomberg/python/",
-      "fosstodon": "🚀✨ Big shoutout and heartfelt thanks to Bloomberg for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.bloomberg.com/company/values/tech-at-bloomberg/python/"
+      "x": "🎉✨ We are pleased to welcome Google Cloud as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @GoogleCloudTech https://cloud.google.com/",
+      "linkedin": "🎉✨ Thank you to Google Cloud for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/showcase/google-cloud https://cloud.google.com/",
+      "bsky": "🚀✨ We are delighted to welcome Google Cloud as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://cloud.google.com/",
+      "fosstodon": "🚀✨ A huge thank you to Google Cloud for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://cloud.google.com/"
     }
   },
   {
     "type": "speaker",
     "name": "Daniel Vahla",
     "image": "https://ep2026.europython.eu/media/speakers/social-daniel-vahla.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Daniel Vahla — Python and HTTP/3: feel the difference in performance",
     "handles": {},
     "channel": {
       "instagram": "Join Daniel Vahla at EuroPython for \"Python and HTTP/3: feel the difference in performance\".",
@@ -458,25 +487,27 @@
   },
   {
     "type": "partner",
-    "name": "PyData Bydgoszcz",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pydatabydgoszcz.png",
+    "name": "Free Software Foundation Europe",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-fsfe.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Free Software Foundation Europe",
     "handles": {
       "x": "",
       "linkedin": "",
       "bsky": "",
-      "fosstodon": ""
+      "fosstodon": "@fsfe@mastodon.social"
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Bydgoszcz/",
-      "linkedin": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Bydgoszcz/",
-      "bsky": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Bydgoszcz/",
-      "fosstodon": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Bydgoszcz/"
+      "x": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://fsfe.org/",
+      "linkedin": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://fsfe.org/",
+      "bsky": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://fsfe.org/",
+      "fosstodon": "🎉✨ A warm thank you to Free Software Foundation Europe for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @fsfe@mastodon.social https://fsfe.org/"
     }
   },
   {
     "type": "speaker",
     "name": "Daria Korsakova",
     "image": "https://ep2026.europython.eu/media/speakers/social-daria-korsakova.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Daria Korsakova — Stop firefighting: practical observability for Python APIs, workers & jobs",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/dariakors"
     },
@@ -492,6 +523,7 @@
     "type": "speaker",
     "name": "David Rousset",
     "image": "https://ep2026.europython.eu/media/speakers/social-david-rousset.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: David Rousset — When Python Agents Meet 3D: Automating Blender from Natural Language",
     "handles": {
       "x": "@davrous",
       "linkedin": "https://www.linkedin.com/in/davrous"
@@ -506,25 +538,27 @@
   },
   {
     "type": "sponsor",
-    "name": "EuroPython Society",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-eps.png",
+    "name": "Hudson River Trading",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-hrt.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Hudson River Trading",
     "handles": {
-      "x": "https://twitter.com/EuroPython",
-      "linkedin": "https://linkedin.com/company/europython",
-      "bsky": "https://bsky.app/profile/europython.eu",
-      "fosstodon": "https://fosstodon.org/@europython"
+      "x": "@weareHRT",
+      "linkedin": "https://www.linkedin.com/company/hudson-river-trading",
+      "bsky": "",
+      "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome EuroPython Society as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://twitter.com/EuroPython https://www.europython-society.org/",
-      "linkedin": "🚀✨ We are delighted to welcome EuroPython Society as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://linkedin.com/company/europython https://www.europython-society.org/",
-      "bsky": "🎉✨ We are pleased to welcome EuroPython Society as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://bsky.app/profile/europython.eu https://www.europython-society.org/",
-      "fosstodon": "🚀✨ Big shoutout and heartfelt thanks to EuroPython Society for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://fosstodon.org/@europython https://www.europython-society.org/"
+      "x": "🎉✨ We are pleased to welcome Hudson River Trading as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @weareHRT https://www.hudsonrivertrading.com",
+      "linkedin": "🚀✨ Big shoutout and heartfelt thanks to Hudson River Trading for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://www.linkedin.com/company/hudson-river-trading https://www.hudsonrivertrading.com",
+      "bsky": "🎉✨ We are pleased to welcome Hudson River Trading as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.hudsonrivertrading.com",
+      "fosstodon": "🚀✨ We are delighted to welcome Hudson River Trading as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.hudsonrivertrading.com"
     }
   },
   {
     "type": "speaker",
     "name": "David Vaz",
     "image": "https://ep2026.europython.eu/media/speakers/social-david-vaz.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: David Vaz — I Am a Sucker for Conventions. Why Django’s Defaults Work, Until They Don’t",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/davidmgvaz"
     },
@@ -538,25 +572,27 @@
   },
   {
     "type": "partner",
-    "name": "PyData Kraków",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pydatakrk.png",
+    "name": "pretalx",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pretalx.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: pretalx",
     "handles": {
       "x": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/company/pretalx",
       "bsky": "",
-      "fosstodon": ""
+      "fosstodon": "@pretalx@chaos.social"
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Krakow/",
-      "linkedin": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Krakow/",
-      "bsky": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Krakow/",
-      "fosstodon": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Krakow/"
+      "x": "🎉✨ A warm thank you to pretalx for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pretalx.org",
+      "linkedin": "🎉✨ A warm thank you to pretalx for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/pretalx https://pretalx.org",
+      "bsky": "🎉✨ A warm thank you to pretalx for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pretalx.org",
+      "fosstodon": "🎉✨ A warm thank you to pretalx for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @pretalx@chaos.social https://pretalx.org"
     }
   },
   {
     "type": "speaker",
     "name": "Dawn Wages",
     "image": "https://ep2026.europython.eu/media/speakers/social-dawn-wages.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Dawn Wages — How many spoons does your environment cost: Broken demos & human element",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/dawnwages",
       "bsky": "@bajoranengineer.bsky.social",
@@ -574,6 +610,7 @@
     "type": "speaker",
     "name": "Deb Nicholson",
     "image": "https://ep2026.europython.eu/media/speakers/social-deb-nicholson.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Deb Nicholson — International Open Source – Your Best Choice in Interesting Times",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/denicholson",
       "bsky": "@baconandcoconut.bsky.social",
@@ -589,25 +626,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Evolabel",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-evolabel.png",
+    "name": "JetBrains",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-jetbrains.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: JetBrains",
     "handles": {
-      "x": "",
-      "linkedin": "https://www.linkedin.com/company/autolabel-ab/",
-      "bsky": "",
+      "x": "@pycharm",
+      "linkedin": "https://www.linkedin.com/products/jetbrains-pycharm/",
+      "bsky": "@pycharm.dev",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Evolabel as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.evolabel.com",
-      "linkedin": "🚀✨ A huge thank you to Evolabel for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/autolabel-ab/ https://www.evolabel.com",
-      "bsky": "🚀✨ Big shoutout and heartfelt thanks to Evolabel for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.evolabel.com",
-      "fosstodon": "🚀✨ A huge thank you to Evolabel for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌  https://www.evolabel.com"
+      "x": "🎉✨ We are pleased to welcome JetBrains as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @pycharm https://www.jetbrains.com/pycharm/",
+      "linkedin": "🎉✨ A big thank you to JetBrains for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/products/jetbrains-pycharm/ https://www.jetbrains.com/pycharm/",
+      "bsky": "🚀✨ A huge thank you to JetBrains for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 @pycharm.dev https://www.jetbrains.com/pycharm/",
+      "fosstodon": "🎉✨ A big thank you to JetBrains for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.jetbrains.com/pycharm/"
     }
   },
   {
     "type": "speaker",
     "name": "DEBORAH E DANJUMA",
     "image": "https://ep2026.europython.eu/media/speakers/social-deborah-e-danjuma.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: DEBORAH E DANJUMA — Flying in Formation - with Python Threading and ROS2 Parallelism",
     "handles": {
       "x": "@danjumaedeborah",
       "linkedin": "https://www.linkedin.com/in/deborahdanjuma"
@@ -622,25 +661,27 @@
   },
   {
     "type": "partner",
-    "name": "PyData Trójmiasto",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pydatatrojmiasto.png",
+    "name": "PyCon Greece",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pycon-greece.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyCon Greece",
     "handles": {
       "x": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/company/pycon-greece",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Trojmiasto/",
-      "linkedin": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Trojmiasto/",
-      "bsky": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Trojmiasto/",
-      "fosstodon": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/PyData-Trojmiasto/"
+      "x": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pycon.gr/",
+      "linkedin": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/pycon-greece https://pycon.gr/",
+      "bsky": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pycon.gr/",
+      "fosstodon": "🎉✨ A warm thank you to PyCon Greece for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pycon.gr/"
     }
   },
   {
     "type": "speaker",
     "name": "Diego Russo",
     "image": "https://ep2026.europython.eu/media/speakers/social-diego-russo.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Diego Russo — Python on Windows on Arm: Ecosystem Enablement Update",
     "handles": {
       "x": "@diegor",
       "linkedin": "https://www.linkedin.com/in/diegor",
@@ -658,6 +699,7 @@
     "type": "speaker",
     "name": "Domagoj Marić",
     "image": "https://ep2026.europython.eu/media/speakers/social-domagoj-maric.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Domagoj Marić — Friendly Borders: Graph algorithms reveal Eurovision voting patterns",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/domagoj-maric"
     },
@@ -671,27 +713,29 @@
   },
   {
     "type": "sponsor",
-    "name": "Google Cloud",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-google-cloud.png",
+    "name": "Manychat",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-manychat.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Manychat",
     "handles": {
-      "x": "https://x.com/GoogleCloudTech",
-      "linkedin": "https://www.linkedin.com/showcase/google-cloud",
+      "x": "@Manychat_life",
+      "linkedin": "https://www.linkedin.com/company/manychat",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Google Cloud as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/GoogleCloudTech https://cloud.google.com/",
-      "linkedin": "🚀✨ We are delighted to welcome Google Cloud as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/showcase/google-cloud https://cloud.google.com/",
-      "bsky": "🚀✨ A huge thank you to Google Cloud for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌  https://cloud.google.com/",
-      "fosstodon": "🎉✨ A big thank you to Google Cloud for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://cloud.google.com/"
+      "x": "🎉✨ We are pleased to welcome Manychat as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @Manychat_life https://careers.manychat.com/",
+      "linkedin": "🚀✨ We are delighted to welcome Manychat as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/manychat https://careers.manychat.com/",
+      "bsky": "🚀✨ We are delighted to welcome Manychat as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://careers.manychat.com/",
+      "fosstodon": "🚀✨ We are delighted to welcome Manychat as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://careers.manychat.com/"
     }
   },
   {
     "type": "speaker",
     "name": "ELENI TOKMAKTSI",
     "image": "https://ep2026.europython.eu/media/speakers/social-eleni-tokmaktsi.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: ELENI TOKMAKTSI — From Pixels to Insights: Python for Earth Observation",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/eleni-tokmaktsi-982334257"
+      "linkedin": "https://gr.linkedin.com/in/eleni-tokmaktsi-982334257"
     },
     "channel": {
       "instagram": "Join ELENI TOKMAKTSI at EuroPython for \"From Pixels to Insights: Python for Earth Observation\".",
@@ -703,8 +747,9 @@
   },
   {
     "type": "partner",
-    "name": "PyGda",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pygda.png",
+    "name": "PyCon Wrocław",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pyconwro.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyCon Wrocław",
     "handles": {
       "x": "",
       "linkedin": "",
@@ -712,16 +757,17 @@
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pygda.pl/",
-      "linkedin": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pygda.pl/",
-      "bsky": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pygda.pl/",
-      "fosstodon": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pygda.pl/"
+      "x": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pyconwroclaw.com/",
+      "linkedin": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pyconwroclaw.com/",
+      "bsky": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pyconwroclaw.com/",
+      "fosstodon": "🎉✨ A warm thank you to PyCon Wrocław for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pyconwroclaw.com/"
     }
   },
   {
     "type": "speaker",
     "name": "Emmanuel Ugwu",
     "image": "https://ep2026.europython.eu/media/speakers/social-emmanuel-ugwu.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Emmanuel Ugwu — Python Stings Your Ego: Finding Pride in Community, Not Just Code",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/emmanuel-ugwu-b58b80223"
     },
@@ -737,6 +783,7 @@
     "type": "speaker",
     "name": "Evan Kohilas",
     "image": "https://ep2026.europython.eu/media/speakers/social-evan-kohilas.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Evan Kohilas — Args: Amazing or Approaching?",
     "handles": {
       "x": "@ekohilas",
       "linkedin": "https://www.linkedin.com/in/ekohilas"
@@ -751,25 +798,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Hudson River Trading",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-hrt.png",
+    "name": "Microsoft",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-microsoft.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Microsoft",
     "handles": {
-      "x": "https://x.com/weareHRT",
-      "linkedin": "https://www.linkedin.com/company/hudson-river-trading",
-      "bsky": "",
+      "x": "@code",
+      "linkedin": "https://www.linkedin.com/showcase/vs-code",
+      "bsky": "@visualstudio.com",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Hudson River Trading as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/weareHRT https://www.hudsonrivertrading.com",
-      "linkedin": "🚀✨ Big shoutout and heartfelt thanks to Hudson River Trading for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://www.linkedin.com/company/hudson-river-trading https://www.hudsonrivertrading.com",
-      "bsky": "🎉✨ A big thank you to Hudson River Trading for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.hudsonrivertrading.com",
-      "fosstodon": "🚀✨ A huge thank you to Hudson River Trading for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌  https://www.hudsonrivertrading.com"
+      "x": "🎉✨ We are pleased to welcome Microsoft as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @code https://www.microsoft.com",
+      "linkedin": "🎉✨ A big thank you to Microsoft for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/showcase/vs-code https://www.microsoft.com",
+      "bsky": "🚀✨ A huge thank you to Microsoft for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 @visualstudio.com https://www.microsoft.com",
+      "fosstodon": "🎉✨ Thank you to Microsoft for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.microsoft.com"
     }
   },
   {
     "type": "speaker",
     "name": "Farhaan Bukhsh",
     "image": "https://ep2026.europython.eu/media/speakers/social-farhaan-bukhsh.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Farhaan Bukhsh — Python Games in the Browser: Teaching with WebAssembly",
     "handles": {
       "x": "@fhackdroid",
       "linkedin": "https://www.linkedin.com/in/farhaanbukhsh",
@@ -785,8 +834,9 @@
   },
   {
     "type": "partner",
-    "name": "Pykonik",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pykonik.png",
+    "name": "PyData Bydgoszcz",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pydatabydgoszcz.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyData Bydgoszcz",
     "handles": {
       "x": "",
       "linkedin": "",
@@ -794,16 +844,17 @@
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.pykonik.org/",
-      "linkedin": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.pykonik.org/",
-      "bsky": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.pykonik.org/",
-      "fosstodon": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.pykonik.org/"
+      "x": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Bydgoszcz/",
+      "linkedin": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Bydgoszcz/",
+      "bsky": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Bydgoszcz/",
+      "fosstodon": "🎉✨ A warm thank you to PyData Bydgoszcz for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Bydgoszcz/"
     }
   },
   {
     "type": "speaker",
     "name": "Felipe Arruda Pontes",
     "image": "https://ep2026.europython.eu/media/speakers/social-felipe-arruda-pontes.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Felipe Arruda Pontes — How Python is Democratising Agritech for Farmers Across Europe",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/felipe-arruda-pontes"
     },
@@ -819,6 +870,7 @@
     "type": "speaker",
     "name": "Filip Makraduli",
     "image": "https://ep2026.europython.eu/media/speakers/social-filip-makraduli.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Filip Makraduli — Self-Hosted Small Models: From OpenAI Lock-In to Open Models",
     "handles": {},
     "channel": {
       "instagram": "Join Filip Makraduli at EuroPython for \"Self-Hosted Small Models: From OpenAI Lock-In to Open Models\".",
@@ -830,25 +882,27 @@
   },
   {
     "type": "sponsor",
-    "name": "JetBrains",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-jetbrains.png",
+    "name": "Numberly",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-numberly.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Numberly",
     "handles": {
-      "x": "https://x.com/pycharm",
-      "linkedin": "https://www.linkedin.com/products/jetbrains-pycharm/",
-      "bsky": "https://bsky.app/profile/pycharm.dev",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/numberly",
+      "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome JetBrains as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/pycharm https://www.jetbrains.com/pycharm/",
-      "linkedin": "🚀✨ A huge thank you to JetBrains for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/products/jetbrains-pycharm/ https://www.jetbrains.com/pycharm/",
-      "bsky": "🎉✨ We are pleased to welcome JetBrains as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://bsky.app/profile/pycharm.dev https://www.jetbrains.com/pycharm/",
-      "fosstodon": "🎉✨ A big thank you to JetBrains for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.jetbrains.com/pycharm/"
+      "x": "🎉✨ We are pleased to welcome Numberly as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://numberly.tech/",
+      "linkedin": "🎉✨ We are pleased to welcome Numberly as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/numberly https://numberly.tech/",
+      "bsky": "🚀✨ Big shoutout and heartfelt thanks to Numberly for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://numberly.tech/",
+      "fosstodon": "🎉✨ We are pleased to welcome Numberly as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://numberly.tech/"
     }
   },
   {
     "type": "speaker",
     "name": "Florian Freitag",
     "image": "https://ep2026.europython.eu/media/speakers/social-florian-freitag.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Florian Freitag — How CPythons Errors keep getting better",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/flofriday",
       "bsky": "@flofriday.bsky.social"
@@ -863,25 +917,27 @@
   },
   {
     "type": "partner",
-    "name": "PyLadiesCon",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pyladiescon.png",
+    "name": "PyData Kraków",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pydatakrk.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyData Kraków",
     "handles": {
-      "x": "https://twitter.com/pyladiescon",
-      "linkedin": "https://www.linkedin.com/company/pyladiescon",
-      "bsky": "https://bsky.app/profile/pyladiescon.bsky.social",
-      "fosstodon": "https://fosstodon.org/@pyladiescon"
+      "x": "",
+      "linkedin": "",
+      "bsky": "",
+      "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://twitter.com/pyladiescon https://conference.pylad…",
-      "linkedin": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/pyladiescon https://conference.pyladies.com/",
-      "bsky": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://bsky.app/profile/pyladiescon.bsky.social https://conference.pyladies…",
-      "fosstodon": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://fosstodon.org/@pyladiescon https://conference.pyladies.com/"
+      "x": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Krakow/",
+      "linkedin": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Krakow/",
+      "bsky": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Krakow/",
+      "fosstodon": "🎉✨ A warm thank you to PyData Kraków for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Krakow/"
     }
   },
   {
     "type": "speaker",
     "name": "Francesco Lucantoni",
     "image": "https://ep2026.europython.eu/media/speakers/social-francesco-lucantoni.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Francesco Lucantoni — Everything you always wanted to know about pandas*",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/flucantoni"
     },
@@ -897,6 +953,7 @@
     "type": "speaker",
     "name": "Freya Bruhin",
     "image": "https://ep2026.europython.eu/media/speakers/social-freya-bruhin.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Freya Bruhin — Property based testing with Hypothesis",
     "handles": {
       "x": "@the_compiler",
       "bsky": "@the-compiler.org",
@@ -912,25 +969,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Manychat",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-manychat.png",
+    "name": "Optiver",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-optiver.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Optiver",
     "handles": {
-      "x": "https://x.com/Manychat_life",
-      "linkedin": "https://www.linkedin.com/company/manychat",
+      "x": "@OptiverGlobal",
+      "linkedin": "https://www.linkedin.com/company/optiver",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Manychat as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/Manychat_life https://careers.manychat.com/",
-      "linkedin": "🚀✨ Big shoutout and heartfelt thanks to Manychat for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://www.linkedin.com/company/manychat https://careers.manychat.com/",
-      "bsky": "🎉✨ Thank you to Manychat for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://careers.manychat.com/",
-      "fosstodon": "🎉✨ We are pleased to welcome Manychat as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://careers.manychat.com/"
+      "x": "🎉✨ We are pleased to welcome Optiver as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @OptiverGlobal https://optiver.com/",
+      "linkedin": "🚀✨ Big shoutout and heartfelt thanks to Optiver for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://www.linkedin.com/company/optiver https://optiver.com/",
+      "bsky": "🎉✨ A big thank you to Optiver for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://optiver.com/",
+      "fosstodon": "🚀✨ A huge thank you to Optiver for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://optiver.com/"
     }
   },
   {
     "type": "speaker",
     "name": "Fridtjof Stoldt",
     "image": "https://ep2026.europython.eu/media/speakers/social-fridtjof-stoldt.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Fridtjof Stoldt — Immutability: Fast and Safe sharing of Data across Subinterpreters",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/fridtjof-stoldt"
     },
@@ -944,8 +1003,9 @@
   },
   {
     "type": "partner",
-    "name": "PyStok",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pystok.png",
+    "name": "PyData Trójmiasto",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pydatatrojmiasto.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyData Trójmiasto",
     "handles": {
       "x": "",
       "linkedin": "",
@@ -953,16 +1013,17 @@
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pystok.org/",
-      "linkedin": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pystok.org/",
-      "bsky": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pystok.org/",
-      "fosstodon": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pystok.org/"
+      "x": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Trojmiasto/",
+      "linkedin": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Trojmiasto/",
+      "bsky": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Trojmiasto/",
+      "fosstodon": "🎉✨ A warm thank you to PyData Trójmiasto for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/PyData-Trojmiasto/"
     }
   },
   {
     "type": "speaker",
     "name": "GAFFIOT Jonathan",
     "image": "https://ep2026.europython.eu/media/speakers/social-gaffiot-jonathan.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: GAFFIOT Jonathan — Getting out of the testing hell",
     "handles": {},
     "channel": {
       "instagram": "Join GAFFIOT Jonathan at EuroPython for \"Getting out of the testing hell\".",
@@ -976,6 +1037,7 @@
     "type": "speaker",
     "name": "Giovanni Barillari",
     "image": "https://ep2026.europython.eu/media/speakers/social-giovanni-barillari.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Giovanni Barillari — Rethinking AsyncIO from scratch for free-threaded Python",
     "handles": {
       "x": "@gi0baro",
       "bsky": "@baro.dev"
@@ -990,25 +1052,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Microsoft",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-microsoft.png",
+    "name": "pretix",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pretix.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: pretix",
     "handles": {
-      "x": "https://x.com/code",
-      "linkedin": "https://www.linkedin.com/showcase/vs-code/",
-      "bsky": "https://bsky.app/profile/visualstudio.com",
-      "fosstodon": ""
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/pretix",
+      "bsky": "",
+      "fosstodon": "@pretix@pretix.social"
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Microsoft as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/code https://www.microsoft.com",
-      "linkedin": "🚀✨ A huge thank you to Microsoft for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/showcase/vs-code/ https://www.microsoft.com",
-      "bsky": "🚀✨ We are delighted to welcome Microsoft as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://bsky.app/profile/visualstudio.com https://www.microsoft.com",
-      "fosstodon": "🎉✨ A big thank you to Microsoft for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.microsoft.com"
+      "x": "🎉✨ We are pleased to welcome pretix as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://pretix.eu",
+      "linkedin": "🎉✨ We are pleased to welcome pretix as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/pretix https://pretix.eu",
+      "bsky": "🎉✨ A big thank you to pretix for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://pretix.eu",
+      "fosstodon": "🎉✨ A big thank you to pretix for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @pretix@pretix.social https://pretix.eu"
     }
   },
   {
     "type": "speaker",
     "name": "Gleb Khmyznikov",
     "image": "https://ep2026.europython.eu/media/speakers/social-gleb-khmyznikov.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Gleb Khmyznikov — Python on Windows on Arm: Ecosystem Enablement Update",
     "handles": {
       "x": "@khmyznikov",
       "linkedin": "https://www.linkedin.com/in/gleb-khmyznikov-130511128"
@@ -1023,25 +1087,27 @@
   },
   {
     "type": "partner",
-    "name": "Python Ankara",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-python-ankara.png",
+    "name": "PyGda",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pygda.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyGda",
     "handles": {
       "x": "",
-      "linkedin": "https://www.linkedin.com/groups/10081345/",
+      "linkedin": "",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pythonankara.com/",
-      "linkedin": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/groups/10081345/ https://pythonankara.com/",
-      "bsky": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pythonankara.com/",
-      "fosstodon": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pythonankara.com/"
+      "x": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pygda.pl/",
+      "linkedin": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pygda.pl/",
+      "bsky": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pygda.pl/",
+      "fosstodon": "🎉✨ A warm thank you to PyGda for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pygda.pl/"
     }
   },
   {
     "type": "speaker",
     "name": "Goutam Tiwari",
     "image": "https://ep2026.europython.eu/media/speakers/social-goutam-tiwari.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Goutam Tiwari — I Accidentally Built a Monitoring System While Trying to Debug Memory Leak",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/goutam-tiwari"
     },
@@ -1057,6 +1123,7 @@
     "type": "speaker",
     "name": "Gracjan Adamus",
     "image": "https://ep2026.europython.eu/media/speakers/social-gracjan-adamus.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Gracjan Adamus — PyPartMC: A Pythonic interface enhancing Fortran-based simulation package",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/gracjan-adamus"
     },
@@ -1070,25 +1137,27 @@
   },
   {
     "type": "sponsor",
-    "name": "Numberly",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-numberly.png",
+    "name": "Revolut",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-revolut.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Revolut",
     "handles": {
-      "x": "",
-      "linkedin": "https://www.linkedin.com/company/numberly/",
+      "x": "@Revolut",
+      "linkedin": "https://www.linkedin.com/company/revolut",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ We are pleased to welcome Numberly as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://numberly.tech/",
-      "linkedin": "🚀✨ A huge thank you to Numberly for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/numberly/ https://numberly.tech/",
-      "bsky": "🎉✨ A big thank you to Numberly for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://numberly.tech/",
-      "fosstodon": "🚀✨ Big shoutout and heartfelt thanks to Numberly for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://numberly.tech/"
+      "x": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @Revolut https://www.revolut.com/",
+      "linkedin": "🚀✨ A huge thank you to Revolut for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/revolut https://www.revolut.com/",
+      "bsky": "🎉✨ Thank you to Revolut for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.revolut.com/",
+      "fosstodon": "🚀✨ Big shoutout and heartfelt thanks to Revolut for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.revolut.com/"
     }
   },
   {
     "type": "speaker",
     "name": "Grzegorz Bokota",
     "image": "https://ep2026.europython.eu/media/speakers/social-grzegorz-bokota.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Grzegorz Bokota — Plugins in python - how it is done",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/grzegorz-bokota-765682243",
       "bsky": "@czaki-pl.bsky.social",
@@ -1104,25 +1173,27 @@
   },
   {
     "type": "partner",
-    "name": "Python en Español",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-hablemospython.png",
+    "name": "Pykonik",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pykonik.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Pykonik",
     "handles": {
-      "x": "https://twitter.com/hablemospython",
-      "linkedin": "https://www.linkedin.com/company/94153525",
-      "bsky": "https://bsky.app/profile/hablemospython.dev",
-      "fosstodon": "https://fosstodon.org/@hablemospython"
+      "x": "",
+      "linkedin": "",
+      "bsky": "",
+      "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://twitter.com/hablemospython https://hablemo…",
-      "linkedin": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/94153525 https://hablemospython.dev",
-      "bsky": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://bsky.app/profile/hablemospython.dev https://hablemospython.dev",
-      "fosstodon": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://fosstodon.org/@hablemospython https://hablemospython.dev"
+      "x": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.pykonik.org/",
+      "linkedin": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.pykonik.org/",
+      "bsky": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.pykonik.org/",
+      "fosstodon": "🎉✨ A warm thank you to Pykonik for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.pykonik.org/"
     }
   },
   {
     "type": "speaker",
     "name": "Grzegorz Kocjan",
     "image": "https://ep2026.europython.eu/media/speakers/social-grzegorz-kocjan.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Grzegorz Kocjan — The hardest test suite I ever built - a pytest case study",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/grzegorzkocjan"
     },
@@ -1138,6 +1209,7 @@
     "type": "speaker",
     "name": "Ivan Markeev",
     "image": "https://ep2026.europython.eu/media/speakers/social-ivan-markeev.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ivan Markeev — Scaling Python Systems by Designing Team-Aware Architecture",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/markeyev"
     },
@@ -1150,26 +1222,10 @@
     }
   },
   {
-    "type": "sponsor",
-    "name": "Optiver",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-optiver.png",
-    "handles": {
-      "x": "https://x.com/OptiverGlobal",
-      "linkedin": "https://www.linkedin.com/company/optiver/",
-      "bsky": "",
-      "fosstodon": ""
-    },
-    "channel": {
-      "x": "🎉✨ We are pleased to welcome Optiver as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/OptiverGlobal https://optiver.com/",
-      "linkedin": "🎉✨ A big thank you to Optiver for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/optiver/ https://optiver.com/",
-      "bsky": "🎉✨ A big thank you to Optiver for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://optiver.com/",
-      "fosstodon": "🎉✨ Thank you to Optiver for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://optiver.com/"
-    }
-  },
-  {
     "type": "speaker",
     "name": "Ivana Kellyer",
     "image": "https://ep2026.europython.eu/media/speakers/social-ivana-kellyer.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ivana Kellyer — How to Maintain 60 Integrations and Not Go Bananas",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/ivana-kellyer",
       "bsky": "@jenxness.bsky.social",
@@ -1185,25 +1241,27 @@
   },
   {
     "type": "partner",
-    "name": "Python Łódź",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pythonlodz.png",
+    "name": "PyLadiesCon",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pyladiescon.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyLadiesCon",
     "handles": {
-      "x": "",
-      "linkedin": "",
-      "bsky": "",
-      "fosstodon": ""
+      "x": "@pyladiescon",
+      "linkedin": "https://www.linkedin.com/company/pyladiescon",
+      "bsky": "@pyladiescon.bsky.social",
+      "fosstodon": "@pyladiescon@fosstodon.org"
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/Python-Lodz/",
-      "linkedin": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/Python-Lodz/",
-      "bsky": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/Python-Lodz/",
-      "fosstodon": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://www.meetup.com/Python-Lodz/"
+      "x": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @pyladiescon https://conference.pyladies.com/",
+      "linkedin": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/pyladiescon https://conference.pyladies.com/",
+      "bsky": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @pyladiescon.bsky.social https://conference.pyladies.com/",
+      "fosstodon": "🎉✨ A warm thank you to PyLadiesCon for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @pyladiescon@fosstodon.org https://conference.pyladies.com/"
     }
   },
   {
     "type": "speaker",
     "name": "Jan Bjørge",
     "image": "https://ep2026.europython.eu/media/speakers/social-jan-bjorge.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Bjørge — PgQueuer: Drop the Broker, Keep the Queue",
     "handles": {},
     "channel": {
       "instagram": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\".",
@@ -1217,6 +1275,7 @@
     "type": "speaker",
     "name": "Jan Koprowski",
     "image": "https://ep2026.europython.eu/media/speakers/social-jan-koprowski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Koprowski — How we write unit test in my team in Openchip",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/jankoprowski"
     },
@@ -1229,26 +1288,10 @@
     }
   },
   {
-    "type": "sponsor",
-    "name": "pretalx",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pretalx.png",
-    "handles": {
-      "x": "",
-      "linkedin": "https://www.linkedin.com/company/pretalx/",
-      "bsky": "",
-      "fosstodon": "https://chaos.social/@pretalx"
-    },
-    "channel": {
-      "x": "🎉✨ We are pleased to welcome pretalx as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://pretalx.org",
-      "linkedin": "🎉✨ Thank you to pretalx for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/pretalx/ https://pretalx.org",
-      "bsky": "🚀✨ Big shoutout and heartfelt thanks to pretalx for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://pretalx.org",
-      "fosstodon": "🚀✨ Big shoutout and heartfelt thanks to pretalx for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://chaos.social/@pretalx https://pretalx.org"
-    }
-  },
-  {
     "type": "speaker",
     "name": "Jan Musílek",
     "image": "https://ep2026.europython.eu/media/speakers/social-jan-musilek.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Musílek — Breaking changes – not great, not terrible",
     "handles": {
       "fosstodon": "@stinovlas@fosstodon.org"
     },
@@ -1262,25 +1305,27 @@
   },
   {
     "type": "partner",
-    "name": "Python Pizza Warsaw",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pythonpizza.png",
+    "name": "PyStok",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pystok.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyStok",
     "handles": {
-      "x": "https://twitter.com/pythonpizza",
-      "linkedin": "https://www.linkedin.com/company/98334563",
+      "x": "",
+      "linkedin": "",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://twitter.com/pythonpizza https://warsaw.p…",
-      "linkedin": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/98334563 https://warsaw.python.pizza/",
-      "bsky": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://warsaw.python.pizza/",
-      "fosstodon": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://warsaw.python.pizza/"
+      "x": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pystok.org/",
+      "linkedin": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pystok.org/",
+      "bsky": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pystok.org/",
+      "fosstodon": "🎉✨ A warm thank you to PyStok for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pystok.org/"
     }
   },
   {
     "type": "speaker",
     "name": "Jan Smitka",
     "image": "https://ep2026.europython.eu/media/speakers/social-jan-smitka.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Smitka — Faster Django ORM queries for everybody",
     "handles": {
       "x": "@jansmitka",
       "linkedin": "https://www.linkedin.com/in/jansmitka",
@@ -1298,6 +1343,7 @@
     "type": "speaker",
     "name": "Jarosław Śmietanka",
     "image": "https://ep2026.europython.eu/media/speakers/social-jaroslaw-smietanka.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jarosław Śmietanka — The Hidden Cost of Complexity: Reducing Cognitive Load in Python",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/jsmietanka"
     },
@@ -1310,26 +1356,10 @@
     }
   },
   {
-    "type": "sponsor",
-    "name": "pretix",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pretix.png",
-    "handles": {
-      "x": "",
-      "linkedin": "https://www.linkedin.com/company/pretix/",
-      "bsky": "",
-      "fosstodon": "https://pretix.social/@pretix"
-    },
-    "channel": {
-      "x": "🎉✨ We are pleased to welcome pretix as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://pretix.eu",
-      "linkedin": "🚀✨ A huge thank you to pretix for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/pretix/ https://pretix.eu",
-      "bsky": "🎉✨ Thank you to pretix for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://pretix.eu",
-      "fosstodon": "🎉✨ Thank you to pretix for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://pretix.social/@pretix https://pretix.eu"
-    }
-  },
-  {
     "type": "speaker",
     "name": "Jenny Vega",
     "image": "https://ep2026.europython.eu/media/speakers/social-jenny-vega.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jenny Vega — From Molecules to Models: A Guide to AI Drug Discovery with Python",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/jennyluciav"
     },
@@ -1343,25 +1373,27 @@
   },
   {
     "type": "partner",
-    "name": "Python Software Foundation",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-psf.png",
+    "name": "Python Ankara",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-python-ankara.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Python Ankara",
     "handles": {
       "x": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/groups/10081345/",
       "bsky": "",
       "fosstodon": ""
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://python.org/",
-      "linkedin": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://python.org/",
-      "bsky": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://python.org/",
-      "fosstodon": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://python.org/"
+      "x": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pythonankara.com/",
+      "linkedin": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/groups/10081345/ https://pythonankara.com/",
+      "bsky": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pythonankara.com/",
+      "fosstodon": "🎉✨ A warm thank you to Python Ankara for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pythonankara.com/"
     }
   },
   {
     "type": "speaker",
     "name": "Johannes Kolbe",
     "image": "https://ep2026.europython.eu/media/speakers/social-johannes-kolbe.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Johannes Kolbe — Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI",
     "handles": {
       "bsky": "@johko.bsky.social"
     },
@@ -1377,6 +1409,7 @@
     "type": "speaker",
     "name": "Jon Nordby",
     "image": "https://ep2026.europython.eu/media/speakers/social-jon-nordby.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jon Nordby — Developing IoT sensors with MicroPython",
     "handles": {},
     "channel": {
       "instagram": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\".",
@@ -1387,26 +1420,10 @@
     }
   },
   {
-    "type": "sponsor",
-    "name": "Revolut",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-revolut.png",
-    "handles": {
-      "x": "https://x.com/Revolut",
-      "linkedin": "https://www.linkedin.com/company/revolut",
-      "bsky": "",
-      "fosstodon": ""
-    },
-    "channel": {
-      "x": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://x.com/Revolut https://www.revolut.com/",
-      "linkedin": "🚀✨ Big shoutout and heartfelt thanks to Revolut for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://www.linkedin.com/company/revolut https://www.revolut.com/",
-      "bsky": "🚀✨ Big shoutout and heartfelt thanks to Revolut for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.revolut.com/",
-      "fosstodon": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌  https://www.revolut.com/"
-    }
-  },
-  {
     "type": "speaker",
     "name": "Jukka Lehtosalo",
     "image": "https://ep2026.europython.eu/media/speakers/social-jukka-lehtosalo.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jukka Lehtosalo — Speeding Up Python with Free Threading and Mypyc",
     "handles": {},
     "channel": {
       "instagram": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\".",
@@ -1418,25 +1435,27 @@
   },
   {
     "type": "partner",
-    "name": "PyWaw",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-pywaw.png",
+    "name": "Python en Español",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-hablemospython.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Python en Español",
     "handles": {
-      "x": "",
-      "linkedin": "",
-      "bsky": "",
-      "fosstodon": ""
+      "x": "@hablemospython",
+      "linkedin": "https://www.linkedin.com/company/94153525",
+      "bsky": "@hablemospython.dev",
+      "fosstodon": "@hablemospython@fosstodon.org"
     },
     "channel": {
-      "x": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pywaw.org/",
-      "linkedin": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pywaw.org/",
-      "bsky": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pywaw.org/",
-      "fosstodon": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌  https://pywaw.org/"
+      "x": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @hablemospython https://hablemospython.dev",
+      "linkedin": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/94153525 https://hablemospython.dev",
+      "bsky": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @hablemospython.dev https://hablemospython.dev",
+      "fosstodon": "🎉✨ A warm thank you to Python en Español for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @hablemospython@fosstodon.org https://hablemospython.dev"
     }
   },
   {
     "type": "speaker",
     "name": "Julien Courtès",
     "image": "https://ep2026.europython.eu/media/speakers/social-julien-courtes.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Julien Courtès — Designing Performant APIs with Litestar",
     "handles": {},
     "channel": {
       "instagram": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\".",
@@ -1450,6 +1469,7 @@
     "type": "speaker",
     "name": "Julien Lenormand",
     "image": "https://ep2026.europython.eu/media/speakers/social-julien-lenormand.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Julien Lenormand — Getting out of the testing hell",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/julien-lenormand"
     },
@@ -1465,6 +1485,7 @@
     "type": "speaker",
     "name": "Kamil Kulig",
     "image": "https://ep2026.europython.eu/media/speakers/social-kamil-kulig.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Kamil Kulig — gRPC for Beginners",
     "handles": {},
     "channel": {
       "instagram": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\".",
@@ -1475,9 +1496,28 @@
     }
   },
   {
+    "type": "partner",
+    "name": "Python Łódź",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pythonlodz.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Python Łódź",
+    "handles": {
+      "x": "",
+      "linkedin": "",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/Python-Lodz/",
+      "linkedin": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/Python-Lodz/",
+      "bsky": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/Python-Lodz/",
+      "fosstodon": "🎉✨ A warm thank you to Python Łódź for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.meetup.com/Python-Lodz/"
+    }
+  },
+  {
     "type": "speaker",
     "name": "Karen Jex",
     "image": "https://ep2026.europython.eu/media/speakers/social-karen-jex.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Karen Jex — How much do you really need to know about Databases?",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/karenhjex",
       "bsky": "@karenhjex.bsky.social",
@@ -1495,6 +1535,7 @@
     "type": "speaker",
     "name": "Katie Bickford",
     "image": "https://ep2026.europython.eu/media/speakers/social-katie-bickford.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Katie Bickford — Why doing difficult things is good for you and good for your team",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/katie-bickford-7a9958aa"
     },
@@ -1510,6 +1551,7 @@
     "type": "speaker",
     "name": "Ken Jin",
     "image": "https://ep2026.europython.eu/media/speakers/social-ken-jin.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ken Jin — Inside Python 3.15's JIT Optimizer",
     "handles": {},
     "channel": {
       "instagram": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\".",
@@ -1520,9 +1562,28 @@
     }
   },
   {
+    "type": "partner",
+    "name": "Python Pizza Warsaw",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pythonpizza.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Python Pizza Warsaw",
+    "handles": {
+      "x": "@pythonpizza",
+      "linkedin": "https://www.linkedin.com/company/98334563",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 @pythonpizza https://warsaw.python.pizza/",
+      "linkedin": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://www.linkedin.com/company/98334563 https://warsaw.python.pizza/",
+      "bsky": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://warsaw.python.pizza/",
+      "fosstodon": "🎉✨ A warm thank you to Python Pizza Warsaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://warsaw.python.pizza/"
+    }
+  },
+  {
     "type": "speaker",
     "name": "Koudai Aono",
     "image": "https://ep2026.europython.eu/media/speakers/social-koudai-aono.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Koudai Aono — Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/koxudaxi",
       "fosstodon": "@koxudaxi@fosstodon.org"
@@ -1539,6 +1600,7 @@
     "type": "speaker",
     "name": "Kuldeep Pisda",
     "image": "https://ep2026.europython.eu/media/speakers/social-kuldeep-pisda.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Kuldeep Pisda — Django TDD Patterns: A Visual Field Guide",
     "handles": {
       "x": "@kdpisda",
       "linkedin": "https://www.linkedin.com/in/kuldeep-pisda"
@@ -1555,6 +1617,7 @@
     "type": "speaker",
     "name": "Larry Hastings",
     "image": "https://ep2026.europython.eu/media/speakers/social-larry-hastings.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Larry Hastings — Conquer multithreaded Python with Blanket",
     "handles": {},
     "channel": {
       "instagram": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\".",
@@ -1565,9 +1628,28 @@
     }
   },
   {
+    "type": "partner",
+    "name": "Python Software Foundation",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-psf.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: Python Software Foundation",
+    "handles": {
+      "x": "",
+      "linkedin": "",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://python.org/",
+      "linkedin": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://python.org/",
+      "bsky": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://python.org/",
+      "fosstodon": "🎉✨ A warm thank you to Python Software Foundation for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://python.org/"
+    }
+  },
+  {
     "type": "speaker",
     "name": "Laura Summers",
     "image": "https://ep2026.europython.eu/media/speakers/social-laura-summers.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Laura Summers — The Human-in-the-Loop is Tired",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/summerscope"
     },
@@ -1583,6 +1665,7 @@
     "type": "speaker",
     "name": "Lokko Joyce Dzifa",
     "image": "https://ep2026.europython.eu/media/speakers/social-lokko-joyce-dzifa.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Lokko Joyce Dzifa — The Unseen Pull Request: The Crisis We Don’t Measure",
     "handles": {
       "x": "@dzifa_lokko",
       "linkedin": "https://www.linkedin.com/in/joyce-dzifa-lokko"
@@ -1599,6 +1682,7 @@
     "type": "speaker",
     "name": "Lysandros Nikolaou",
     "image": "https://ep2026.europython.eu/media/speakers/social-lysandros-nikolaou.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Lysandros Nikolaou — Python Dicts: Past, Present, and Free-Threaded Future",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/lysnikolaou",
       "bsky": "@lysnikolaou.com",
@@ -1613,9 +1697,28 @@
     }
   },
   {
+    "type": "partner",
+    "name": "PyWaw",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-pywaw.png",
+    "alt_text": "Partner announcement for EuroPython 2026 conference: PyWaw",
+    "handles": {
+      "x": "",
+      "linkedin": "",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pywaw.org/",
+      "linkedin": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pywaw.org/",
+      "bsky": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pywaw.org/",
+      "fosstodon": "🎉✨ A warm thank you to PyWaw for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 https://pywaw.org/"
+    }
+  },
+  {
     "type": "speaker",
     "name": "Maciej Sobczak",
     "image": "https://ep2026.europython.eu/media/speakers/social-maciej-sobczak.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Maciej Sobczak — Django’s Magic, FastAPI’s Reality: Test Isolation at Scale",
     "handles": {},
     "channel": {
       "instagram": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\".",
@@ -1629,6 +1732,7 @@
     "type": "speaker",
     "name": "Mai Giménez",
     "image": "https://ep2026.europython.eu/media/speakers/social-mai-gimenez.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mai Giménez — Let it rip a diffusion tutorial",
     "handles": {},
     "channel": {
       "instagram": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\".",
@@ -1642,6 +1746,7 @@
     "type": "speaker",
     "name": "Malcolm Smith",
     "image": "https://ep2026.europython.eu/media/speakers/social-malcolm-smith.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Malcolm Smith — Supporting Android and iOS in your Python package",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/malcolmhsmith"
     },
@@ -1657,6 +1762,7 @@
     "type": "speaker",
     "name": "Manivannan Selvaraj",
     "image": "https://ep2026.europython.eu/media/speakers/social-manivannan-selvaraj.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Manivannan Selvaraj — From Code Hero to Team Leader: Learning to Let Go",
     "handles": {
       "x": "@citizenmani",
       "linkedin": "https://www.linkedin.com/in/citizenmani"
@@ -1673,6 +1779,7 @@
     "type": "speaker",
     "name": "Marc-André Lemburg",
     "image": "https://ep2026.europython.eu/media/speakers/social-marc-andre-lemburg.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Marc-André Lemburg — DuckLake - Take Python and DuckDB for a swim in your data lake",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/lemburg",
       "fosstodon": "@malemburg@mastodon.social"
@@ -1689,6 +1796,7 @@
     "type": "speaker",
     "name": "Marcelo Trylesinski",
     "image": "https://ep2026.europython.eu/media/speakers/social-marcelo-trylesinski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Marcelo Trylesinski — What I've Learned Maintaining the MCP Python SDK",
     "handles": {},
     "channel": {
       "instagram": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\".",
@@ -1702,6 +1810,7 @@
     "type": "speaker",
     "name": "Marco Grossi",
     "image": "https://ep2026.europython.eu/media/speakers/social-marco-grossi.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Marco Grossi — From one to 1 million packet/second: scaling global Internet monitoring",
     "handles": {},
     "channel": {
       "instagram": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\".",
@@ -1715,6 +1824,7 @@
     "type": "speaker",
     "name": "Maria Ashna",
     "image": "https://ep2026.europython.eu/media/speakers/social-maria-ashna.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Maria Ashna — Climbing the Pyramid: Behind the Scenes of the Python Package Index",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/mariaashna"
     },
@@ -1730,6 +1840,7 @@
     "type": "speaker",
     "name": "Maria Lowas-Rzechonek",
     "image": "https://ep2026.europython.eu/media/speakers/social-maria-lowas-rzechonek.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Maria Lowas-Rzechonek — How to tackle complex authorization logic (and don't go crazy)",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/maria-lowas-rzechonek-1a215150"
     },
@@ -1745,6 +1856,7 @@
     "type": "speaker",
     "name": "Mario García",
     "image": "https://ep2026.europython.eu/media/speakers/social-mario-garcia.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mario García — Localization Made Easy: A Pythonic Approach to Global Applications",
     "handles": {
       "x": "@mariogmd",
       "linkedin": "https://www.linkedin.com/in/mariogmd"
@@ -1761,6 +1873,7 @@
     "type": "speaker",
     "name": "Mateusz Modrzejewski",
     "image": "https://ep2026.europython.eu/media/speakers/social-mateusz-modrzejewski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mateusz Modrzejewski — How Music Generation Actually Works",
     "handles": {},
     "channel": {
       "instagram": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\".",
@@ -1774,6 +1887,7 @@
     "type": "speaker",
     "name": "Mateusz Sokół",
     "image": "https://ep2026.europython.eu/media/speakers/social-mateusz-sokol.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mateusz Sokół — Building your DSL compiler in Python",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/mateusz-sokol"
     },
@@ -1789,6 +1903,7 @@
     "type": "speaker",
     "name": "Michael Seifert",
     "image": "https://ep2026.europython.eu/media/speakers/social-michael-seifert.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Michael Seifert — Code organization for non-engineers",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/seifertm"
     },
@@ -1804,6 +1919,7 @@
     "type": "speaker",
     "name": "Michał Karzyński",
     "image": "https://ep2026.europython.eu/media/speakers/social-michal-karzynski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Michał Karzyński — Building a Smart Home Device with MicroPython",
     "handles": {},
     "channel": {
       "instagram": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\".",
@@ -1817,6 +1933,7 @@
     "type": "speaker",
     "name": "Mike Fiedler",
     "image": "https://ep2026.europython.eu/media/speakers/social-mike-fiedler.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mike Fiedler — Anatomy of a Phishing Campaign",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/miketheman",
       "bsky": "@miketheman.com",
@@ -1834,6 +1951,7 @@
     "type": "speaker",
     "name": "Mike Müller",
     "image": "https://ep2026.europython.eu/media/speakers/social-mike-muller.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mike Müller — Fast Python Development with uv",
     "handles": {
       "x": "@pyacademy",
       "linkedin": "https://www.linkedin.com/in/mike-müller-1937695"
@@ -1850,6 +1968,7 @@
     "type": "speaker",
     "name": "Mohamed Elmaghraby",
     "image": "https://ep2026.europython.eu/media/speakers/social-mohamed-elmaghraby.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mohamed Elmaghraby — Refactor, Optimize, and Test: Crafting Cleaner Python Code",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/mohamed-elmaghraby-a6b836127"
     },
@@ -1865,6 +1984,7 @@
     "type": "speaker",
     "name": "Mohit Kumar Vyas",
     "image": "https://ep2026.europython.eu/media/speakers/social-mohit-kumar-vyas.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mohit Kumar Vyas — I Accidentally Built a Monitoring System While Trying to Debug Memory Leak",
     "handles": {},
     "channel": {
       "instagram": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\".",
@@ -1878,6 +1998,7 @@
     "type": "speaker",
     "name": "Nathan Goldbaum",
     "image": "https://ep2026.europython.eu/media/speakers/social-nathan-goldbaum.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Nathan Goldbaum — What every Python developer should know about the CPython ABI",
     "handles": {},
     "channel": {
       "instagram": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\".",
@@ -1891,6 +2012,7 @@
     "type": "speaker",
     "name": "Nicholas H.Tollervey",
     "image": "https://ep2026.europython.eu/media/speakers/social-nicholas-h-tollervey.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Nicholas H.Tollervey — Web Assembly Summit",
     "handles": {},
     "channel": {
       "instagram": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\".",
@@ -1904,6 +2026,7 @@
     "type": "speaker",
     "name": "Nikita Karamov",
     "image": "https://ep2026.europython.eu/media/speakers/social-nikita-karamov.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Nikita Karamov — Should you trust Trusted Publishing?",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/nikitakaramov",
       "fosstodon": "@kytta@polymaths.social"
@@ -1920,6 +2043,7 @@
     "type": "speaker",
     "name": "Nikita Smirnov",
     "image": "https://ep2026.europython.eu/media/speakers/social-nikita-smirnov.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Nikita Smirnov — Fast Multi-Version ETL Pipelines in Python with Generators and functools",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/nikita-smirnov-20897623b"
     },
@@ -1935,6 +2059,7 @@
     "type": "speaker",
     "name": "Nitish",
     "image": "https://ep2026.europython.eu/media/speakers/social-nitish.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Nitish — Beyond the Demo: Production Patterns for Streaming LLM Systems",
     "handles": {
       "x": "@nitishagar",
       "bsky": "@nitishagar.bsky.social"
@@ -1951,6 +2076,7 @@
     "type": "speaker",
     "name": "Oladapo Jesusemilore Jael",
     "image": "https://ep2026.europython.eu/media/speakers/social-oladapo-jesusemilore-jael.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Oladapo Jesusemilore Jael — Python Learning that fits Teen Life",
     "handles": {},
     "channel": {
       "instagram": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\".",
@@ -1964,6 +2090,7 @@
     "type": "speaker",
     "name": "Oladapo Kayode Abiodun",
     "image": "https://ep2026.europython.eu/media/speakers/social-oladapo-kayode-abiodun.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Oladapo Kayode Abiodun — Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks",
     "handles": {
       "x": "@oladapokayodea1",
       "linkedin": "https://www.linkedin.com/in/kayodeabiodunoladapo"
@@ -1980,6 +2107,7 @@
     "type": "speaker",
     "name": "Olha Poliuliakh",
     "image": "https://ep2026.europython.eu/media/speakers/social-olha-poliuliakh.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Olha Poliuliakh — Why Coding Agents Fail at ML (and How to Fix It)",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/olha-poliuliakh-9166b1313"
     },
@@ -1995,6 +2123,7 @@
     "type": "speaker",
     "name": "Pablo Galindo Salgado",
     "image": "https://ep2026.europython.eu/media/speakers/social-pablo-galindo-salgado.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Pablo Galindo Salgado — Lazy imports and the art of interpreter procrastination",
     "handles": {
       "bsky": "@pablogsal.com"
     },
@@ -2010,6 +2139,7 @@
     "type": "speaker",
     "name": "Petr Viktorin",
     "image": "https://ep2026.europython.eu/media/speakers/social-petr-viktorin.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Petr Viktorin — Python Syntax Diagram",
     "handles": {
       "fosstodon": "@encukou@mastodon.social"
     },
@@ -2025,6 +2155,7 @@
     "type": "speaker",
     "name": "Piotr Grędowski",
     "image": "https://ep2026.europython.eu/media/speakers/social-piotr-gredowski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Piotr Grędowski — Modern TUI with Textual in Python: Building Monokl",
     "handles": {
       "x": "@piotrgredowski",
       "linkedin": "https://www.linkedin.com/in/piotrgredowski"
@@ -2041,6 +2172,7 @@
     "type": "speaker",
     "name": "Piotr Rybak",
     "image": "https://ep2026.europython.eu/media/speakers/social-piotr-rybak.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Piotr Rybak — Is Object Detection Dead? A Case for Recognizing LEGO Bricks",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/piotrrybak"
     },
@@ -2056,6 +2188,7 @@
     "type": "speaker",
     "name": "Raúl Cumplido Domínguez",
     "image": "https://ep2026.europython.eu/media/speakers/social-raul-cumplido-dominguez.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Raúl Cumplido Domínguez — Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data",
     "handles": {},
     "channel": {
       "instagram": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\".",
@@ -2069,6 +2202,7 @@
     "type": "speaker",
     "name": "Reuven M. Lerner",
     "image": "https://ep2026.europython.eu/media/speakers/social-reuven-m-lerner.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Reuven M. Lerner — Let's write some decorators!",
     "handles": {
       "x": "@reuvenmlerner",
       "linkedin": "https://www.linkedin.com/in/reuven",
@@ -2087,6 +2221,7 @@
     "type": "speaker",
     "name": "Rodrigo Girão Serrão",
     "image": "https://ep2026.europython.eu/media/speakers/social-rodrigo-girao-serrao.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Rodrigo Girão Serrão — A tour of the module `itertools`",
     "handles": {
       "x": "@mathsppblog",
       "linkedin": "https://www.linkedin.com/in/rodrigo-girão-serrão",
@@ -2105,6 +2240,7 @@
     "type": "speaker",
     "name": "Sangarshanan",
     "image": "https://ep2026.europython.eu/media/speakers/social-sangarshanan.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Sangarshanan — Build a Synthesizer with Python",
     "handles": {},
     "channel": {
       "instagram": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\".",
@@ -2118,6 +2254,7 @@
     "type": "speaker",
     "name": "Savannah Ostrowski",
     "image": "https://ep2026.europython.eu/media/speakers/social-savannah-ostrowski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Savannah Ostrowski — The coolest feature in Python 3.14: sys.remote_exec()",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/savannahostrowski",
       "bsky": "@savannah.dev",
@@ -2135,6 +2272,7 @@
     "type": "speaker",
     "name": "Sebastian Buczyński",
     "image": "https://ep2026.europython.eu/media/speakers/social-sebastian-buczynski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Sebastian Buczyński — Navigating waters of background jobs and queues in Python as of 2026",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/sebastianbuczynski"
     },
@@ -2150,6 +2288,7 @@
     "type": "speaker",
     "name": "Sebastian Burzyński",
     "image": "https://ep2026.europython.eu/media/speakers/social-sebastian-burzynski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Sebastian Burzyński — The hidden cost of vibe coding",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/sebastian-burzynski"
     },
@@ -2165,6 +2304,7 @@
     "type": "speaker",
     "name": "Sergi Porta",
     "image": "https://ep2026.europython.eu/media/speakers/social-sergi-porta.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Sergi Porta — Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/sergi-porta"
     },
@@ -2180,6 +2320,7 @@
     "type": "speaker",
     "name": "Seth Michael Larson",
     "image": "https://ep2026.europython.eu/media/speakers/social-seth-michael-larson.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Seth Michael Larson — Learning from the not-so-secret Python security \"cabal\"",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/sethmlarson",
       "bsky": "@sethmlarson.dev",
@@ -2197,6 +2338,7 @@
     "type": "speaker",
     "name": "Stefanie Molin",
     "image": "https://ep2026.europython.eu/media/speakers/social-stefanie-molin.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Stefanie Molin — Process, Analyze, and Transform Python Code with ASTs",
     "handles": {
       "x": "@stefaniemolin",
       "linkedin": "https://www.linkedin.com/in/stefanie-molin",
@@ -2214,6 +2356,7 @@
     "type": "speaker",
     "name": "Sviatoslav Sydorenko (Святослав Сидоренко)",
     "image": "https://ep2026.europython.eu/media/speakers/social-sviatoslav-sydorenko-sviatoslav-sidorenko.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Sviatoslav Sydorenko (Святослав Сидоренко) — reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate",
     "handles": {
       "x": "@webknjaz",
       "linkedin": "https://www.linkedin.com/in/webknjaz",
@@ -2232,6 +2375,7 @@
     "type": "speaker",
     "name": "Sylwia Budzynska",
     "image": "https://ep2026.europython.eu/media/speakers/social-sylwia-budzynska.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Sylwia Budzynska — Introduction to security research. Find a CVE with CodeQL.",
     "handles": {
       "x": "@blazingwindsec",
       "linkedin": "https://www.linkedin.com/in/sylwia-budzynska",
@@ -2249,6 +2393,7 @@
     "type": "speaker",
     "name": "Thomas Wouters",
     "image": "https://ep2026.europython.eu/media/speakers/social-thomas-wouters.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Thomas Wouters — Free-threaded Python: past, present and future",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/thomas-wouters-3a1241306",
       "bsky": "@yhg1s.bsky.social",
@@ -2266,6 +2411,7 @@
     "type": "speaker",
     "name": "Tobias Wrigstad",
     "image": "https://ep2026.europython.eu/media/speakers/social-tobias-wrigstad.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Tobias Wrigstad — Immutability: Fast and Safe sharing of Data across Subinterpreters",
     "handles": {},
     "channel": {
       "instagram": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\".",
@@ -2279,6 +2425,7 @@
     "type": "speaker",
     "name": "Tomas Roun",
     "image": "https://ep2026.europython.eu/media/speakers/social-tomas-roun.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Tomas Roun — Become a Python Core Developer in 3 Easy Steps",
     "handles": {},
     "channel": {
       "instagram": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\".",
@@ -2292,6 +2439,7 @@
     "type": "speaker",
     "name": "Vincenzo Ventriglia",
     "image": "https://ep2026.europython.eu/media/speakers/social-vincenzo-ventriglia.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Vincenzo Ventriglia — When the Sun Breaks Your GPS: Building an Explainable Early Warning System",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/vincenzoventriglia"
     },
@@ -2307,6 +2455,7 @@
     "type": "speaker",
     "name": "Vinícius Gubiani Ferreira",
     "image": "https://ep2026.europython.eu/media/speakers/social-vinicius-gubiani-ferreira.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Vinícius Gubiani Ferreira — Load testing 1-on-1: discovering the limits of your system",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/vinicius-gubiani-ferreira"
     },
@@ -2322,6 +2471,7 @@
     "type": "speaker",
     "name": "Vlad-Stefan Harbuz",
     "image": "https://ep2026.europython.eu/media/speakers/social-vlad-stefan-harbuz.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Vlad-Stefan Harbuz — Binary Dependencies: Identifying the Hidden Packages We All Depend On",
     "handles": {
       "bsky": "@vlad.website",
       "fosstodon": "@vlad@mastodon.vlad.website"
@@ -2338,6 +2488,7 @@
     "type": "speaker",
     "name": "Vladimir Slavov",
     "image": "https://ep2026.europython.eu/media/speakers/social-vladimir-slavov.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Vladimir Slavov — How to Talk With Your Legal Department About Open Source",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/vladimir-slavov-🇪🇺-578726180"
     },
@@ -2353,6 +2504,7 @@
     "type": "speaker",
     "name": "Vyron Vasileiadis",
     "image": "https://ep2026.europython.eu/media/speakers/social-vyron-vasileiadis.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Vyron Vasileiadis — Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/fedonman"
     },
@@ -2368,6 +2520,7 @@
     "type": "speaker",
     "name": "Will Vincent",
     "image": "https://ep2026.europython.eu/media/speakers/social-will-vincent.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Will Vincent — Deploying Python Web Apps in 2026",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/william-s-vincent",
       "bsky": "@wsvincent.bsky.social",
@@ -2385,6 +2538,7 @@
     "type": "speaker",
     "name": "Wojtek Erbetowski",
     "image": "https://ep2026.europython.eu/media/speakers/social-wojtek-erbetowski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Wojtek Erbetowski — You Don't Need to Solve It: What Actually Gets You Hired in Tech",
     "handles": {
       "linkedin": "https://www.linkedin.com/in/wojtekerbetowski"
     },

@@ -3,10 +3,11 @@ import json
 import time
 import os
 
-# Load .env.local if present (for local development)
+# Load .env.local if present (for local development).
+# Run from the project root or open the project root in your IDE.
 try:
     from dotenv import load_dotenv
-    load_dotenv(os.path.join(os.path.dirname(__file__), "../../../../.env.local"))
+    load_dotenv(".env.local")
 except ImportError:
     pass  # dotenv not installed, rely on environment variables being set externally
 
@@ -124,7 +125,7 @@ for index, item in enumerate(data_payload, start=1):
                 "text": text,
                 "schedulingType": "automatic",
                 "mode": "addToQueue",
-                "assets": [{"image": {"url": item["image"]}}] if item.get("image") else [],
+                "assets": [{"image": {"url": item["image"], "alt_text": item.get("alt_text", "")}}] if item.get("image") else [],
                 **({"metadata": {"instagram": {"type": "post", "shouldShareToFeed": True}}} if network == "instagram" else {})
             }
         }

@@ -87,7 +87,7 @@ speaker → speaker → sponsor → speaker → partner → (repeat)
 Regenerate it by hitting the API endpoint while the dev server is running:
 
 ```bash
-curl -s http://localhost:4321/api/media/queue > src/pages/api/media/combined_socials_queue.json
+curl -s http://localhost:4321/api/media/combined_socials_queue > src/pages/api/media/combined_socials_queue.json
 ```
 
 This overwrites `src/pages/api/media/combined_socials_queue.json` with all 150+ items sorted and interleaved.
@@ -96,8 +96,8 @@ This overwrites `src/pages/api/media/combined_socials_queue.json` with all 150+ 
 
 Sponsors are split into two buckets:
 
-- **Commercial** (go into the sponsor slot): Keystone, Diamond, Platinum, Platinum X, Gold, Silver, Bronze, Patron, Supporters, Financial Aid
-- **Community partners** (go into the partner slot): Partners tier
+- **Commercial** (go into the sponsor slot): Keystone, Diamond, Platinum, Platinum X, Gold, Silver, Bronze, Patron
+- **Community partners** (go into the partner slot): Partners, Supporters, Financial Aid
 
 If a new sponsor tier is added, update `commercialTiers` in `src/pages/api/media/combined_socials_queue.ts`.
 
@@ -155,6 +155,16 @@ You can verify the images are live by checking a URL like:
 
 > ⚠️ **Images must be live before scheduling.** Buffer fetches the image URL at scheduling time. If the PNG hasn't been deployed yet (i.e. the PR adding it hasn't been merged and deployed), Buffer will fail with `Failed to fetch image dimensions: Not Found`. Always merge and confirm the images are live at `https://ep2026.europython.eu/media/speakers/` or `https://ep2026.europython.eu/media/sponsors/` before running the script.
 
+### How Buffer scheduling works
+
+Buffer operates as a FIFO queue against pre-configured time slots:
+
+- Time slots are defined per channel inside Buffer (e.g. "Twitter, weekdays at 09:00 and 14:00").
+- Incoming posts fill the next available slot in order — you don't pick a specific date/time.
+- Slots can be added or shifted directly in Buffer if you need to change the cadence.
+
+> ⚠️ **Check your Buffer slots before running the script.** If you push 120 cards and there is only one slot per day per channel, you'll end up with posts queued months out — and there is no bulk deletion in Buffer, so you'd have to remove them one by one. Before each run, open Buffer and verify the number and cadence of slots for each channel matches your intended rollout pace.
+
 The scheduling script is at `src/pages/api/media/buffer-scheduling.py`.
 
 ### Configuration
@@ -162,11 +172,11 @@ The scheduling script is at `src/pages/api/media/buffer-scheduling.py`.
 Open the script and set the range of queue items to schedule:
 
 ```python
-QUEUE_START = 5   # first item (1-based, inclusive)
-QUEUE_END   = 10  # last item (1-based, inclusive)
+QUEUE_START = 1   # first item (1-based, inclusive)
+QUEUE_END   = 5   # last item (1-based, inclusive)
 ```
 
-This selects items 5 through 10 from `queue.json`.
+It's a good idea to start with a small batch (e.g. 1–5) to verify everything looks correct in Buffer before pushing the full queue. Once you're happy with the results, increment the range for subsequent runs.
 
 ### Running the script
 
@@ -201,7 +211,9 @@ python src/pages/api/media/buffer-scheduling.py
 After each successful run, note the last `QUEUE_END` value. The next run should set `QUEUE_START = previous QUEUE_END + 1`.
 
 Already scheduled as of initial setup:
-- Positions 1–4: Abhik Sarkar, Abhimanyu Singh Shekhawat, Arm, Abigail Afi Gbadago
+- Positions 1–3: Abhik Sarkar, Abhimanyu Singh Shekhawat, Abigail Afi Gbadago
+
+Next batch (positions 4–8): Adam Gorgoń, Alejandro Cabello Jiménez, ActiveCampaign, Aleksander, 1Password
 
 ---
 
