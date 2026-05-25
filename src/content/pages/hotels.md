@@ -25,7 +25,7 @@ Address: Sławkowska 3, 31-014 Kraków
 
 Use the following link:
 [link](https://www.hilton.com/en/hotels/krkshqq-hotel-saski-krakow/?msockid=2cc65d89747d600c3b0d4b7d7579612b)
-- Pick a date between July 12-19th
+- Pick dates between July 12-19th
 - Click ‘special rates’ and insert Corporate account number: 3558632
 - This way system will show special EUROPYTHON rates
 
@@ -35,5 +35,5 @@ Address: Monte Cassino 1, 30-337 Kraków
 
 Book through the hotel website:
 [link](https://www.hotel-bb.com/en/hotel/krakow-centrum)
-- Pick a date between July 12-19th
-- Use a Discount Code tpo get a discount from the standard price: BBHKACM15EP26
+- Pick dates between July 12-19th
+- Use a Discount Code to get a discount from the standard price: BBHKACM15EP26
