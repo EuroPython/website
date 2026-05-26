@@ -12,6 +12,7 @@ const { signupLink = "#" } = Astro.props;
 interface SponsorTierProps {
   title: string;
   slotsLeft?: number | null | string;
+  totalSlots?: number | null;
   price: number | string;
   features: string[];
 }
@@ -30,6 +31,7 @@ const tiers: SponsorTierProps[] = [
   {
     title: "Diamond",
     slotsLeft: 1,
+    totalSlots: 2,
     price: 30_000,
     features: [
       "<strong>Extra large</strong> booth in exhibit hall (incl. TV & stand)",
@@ -60,6 +62,7 @@ const tiers: SponsorTierProps[] = [
   {
     title: "Platinum",
     slotsLeft: 1,
+    totalSlots: 4,
     price: 18_000,
     features: [
       "<strong>Large</strong> booth in exhibit hall <strong>(incl. TV & stand)</strong>",
@@ -87,6 +90,7 @@ const tiers: SponsorTierProps[] = [
     title: "Gold",
     price: 9_500,
     slotsLeft: 0,
+    totalSlots: 10,
     features: [
       "Booth in exhibit hall",
       "<strong>3</strong> conference tickets (€1500 value)",
@@ -106,6 +110,7 @@ const tiers: SponsorTierProps[] = [
     title: "Silver",
     price: 7_000,
     slotsLeft: 0,
+    totalSlots: 10,
     features: [
       "Small booth in exhibit hall",
       "2 conference tickets (€1000 value)",
@@ -217,13 +222,19 @@ const formatPrice = (price: number | string) => {
               <Headline as="h3" title={tier.title} />
               <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
               <div class="text-xl mt-4">
-                {tier.slotsLeft ? (
-                  <>
-                    <span>{tier.slotsLeft}</span>
-                    {tier.slotsLeft == 1 ? "slot" : "slots"} available
-                  </>
+                {typeof tier.slotsLeft === "number" ? (
+                  tier.totalSlots ? (
+                    <>
+                      {tier.slotsLeft} out of {tier.totalSlots}{" "}
+                      {tier.totalSlots === 1 ? "slot" : "slots"} available
+                    </>
+                  ) : (
+                    <>
+                      {tier.slotsLeft} slot{tier.slotsLeft === 1 ? "" : "s"} available
+                    </>
+                  )
                 ) : (
-                  <>Fully booked</>
+                  <>{tier.slotsLeft}</>
                 )}
               </div>
             </div>
@@ -319,17 +330,19 @@ const formatPrice = (price: number | string) => {
               <Headline as="h3" title={tier.title} />
               <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
               <div class="text-xl">
-                {tier.slotsLeft === "Exclusive" ? (
-                  <>Exclusive</>
-                ) : tier.slotsLeft === "Talk to us" ? (
-                  <>Talk to us</>
-                ) : tier.slotsLeft ? (
-                  <>
-                    <span>{tier.slotsLeft}</span>
-                    {tier.slotsLeft == 1 ? "slot" : "slots"} available
-                  </>
+                {typeof tier.slotsLeft === "number" ? (
+                  tier.totalSlots ? (
+                    <>
+                      {tier.slotsLeft} out of {tier.totalSlots}{" "}
+                      {tier.totalSlots === 1 ? "slot" : "slots"} available
+                    </>
+                  ) : (
+                    <>
+                      {tier.slotsLeft} slot{tier.slotsLeft === 1 ? "" : "s"} available
+                    </>
+                  )
                 ) : (
-                  <>Fully booked</>
+                  <>{tier.slotsLeft}</>
                 )}
               </div>
             </div>
@@ -377,13 +390,13 @@ const formatPrice = (price: number | string) => {
               <Headline as="h3" title={tier.title} />
               <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
               <div class="text-xl">
-                {tier.slotsLeft ? (
+                {typeof tier.slotsLeft === "number" ? (
                   <>
                     <span>{tier.slotsLeft}</span>
                     {tier.slotsLeft == 1 ? "slot" : "slots"} available
                   </>
                 ) : (
-                  <>Fully booked</>
+                  <>{tier.slotsLeft}</>
                 )}
               </div>
             </div>
