@@ -52,6 +52,10 @@
         {
           "name": "Kraków",
           "path": "/krakow"
+        },
+        {
+          "name": "Hotels",
+          "path": "/hotels"
         }
       ]
     },
