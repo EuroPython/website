@@ -21,17 +21,20 @@ function getMastodonUsername(url: string): string | undefined {
   return match ? `@${match[2]}@${match[1]}` : undefined;
 }
 
-function getLinkedInUsernameHandler(url: string): string | undefined {
+function getLinkedInUrl(url: string): string | undefined {
   if (!url) return undefined;
-  const match = url.match(/https?:\/\/([^\/]+)\/in\/([^\/]+)(\/|\?|$)/);
+  // Normalise linkedin.com URLs (handles both /in/ and /company/ paths)
+  const match = url.match(
+    /https?:\/\/(?:www\.)?linkedin\.com\/(in|company|showcase)\/([^\/\?]+)/
+  );
   if (match) {
     try {
-      return `https://www.linkedin.com/in/${decodeURIComponent(match[2])}`;
+      return `https://www.linkedin.com/${match[1]}/${decodeURIComponent(match[2])}`;
     } catch {
-      return `https://www.linkedin.com/in/${match[2]}`;
+      return `https://www.linkedin.com/${match[1]}/${match[2]}`;
     }
   }
-  return undefined;
+  return url; // fall back to the raw URL
 }
 
 const trimToLimit = (text: string, limit: number) =>
@@ -105,11 +108,18 @@ function buildSponsorMessage(
   handle: string,
   url: string
 ): string {
-  return template
+  // If no handle, remove the placeholder (and any leading space before it)
+  const withHandle = handle
+    ? template
+        .replace(/SPONSOR_HANDLE/g, handle)
+        .replace(/SUPPORTER_HANDLE/g, handle)
+    : template
+        .replace(/ ?SPONSOR_HANDLE/g, "")
+        .replace(/ ?SUPPORTER_HANDLE/g, "");
+
+  return withHandle
     .replace(/SPONSOR_NAME/g, name)
-    .replace(/SPONSOR_HANDLE/g, handle)
     .replace(/SPONSOR_URL/g, url)
-    .replace(/SUPPORTER_HANDLE/g, handle)
     .replace(/SUPPORTER_URL/g, url);
 }
 
@@ -158,7 +168,7 @@ export const GET: APIRoute = async () => {
 
     const handles = {
       x: getTwitterUsername(twitter_url || ""),
-      linkedin: getLinkedInUsernameHandler(linkedin_url || ""),
+      linkedin: getLinkedInUrl(linkedin_url || ""),
       bsky: getBlueskyUsername(bluesky_url || ""),
       fosstodon: getMastodonUsername(mastodon_url || ""),
     };
@@ -184,6 +194,7 @@ export const GET: APIRoute = async () => {
       type: "speaker",
       name,
       image,
+      alt_text: `Speaker announcement for EuroPython 2026 conference: ${name} — ${talkTitle}`,
       handles,
       channel: {
         instagram: generateSpeakerMessage("instagram"),
@@ -206,10 +217,10 @@ export const GET: APIRoute = async () => {
     const image = `https://ep2026.europython.eu/media/sponsors/social-${sponsor.id}.png`;
 
     const handles = {
-      x: socials?.twitter || "",
-      linkedin: socials?.linkedin || "",
-      bsky: socials?.bluesky || "",
-      fosstodon: socials?.mastodon || "",
+      x: getTwitterUsername(socials?.twitter || "") || "",
+      linkedin: getLinkedInUrl(socials?.linkedin || "") || "",
+      bsky: getBlueskyUsername(socials?.bluesky || "") || "",
+      fosstodon: getMastodonUsername(socials?.mastodon || "") || "",
     };
 
     const makeMsg = (platform: "x" | "linkedin" | "bsky" | "fosstodon") => {
@@ -224,6 +235,7 @@ export const GET: APIRoute = async () => {
       type: "sponsor",
       name,
       image,
+      alt_text: `Sponsor announcement for EuroPython 2026 conference: ${name}`,
       handles,
       channel: {
         x: makeMsg("x"),
@@ -245,10 +257,10 @@ export const GET: APIRoute = async () => {
     const image = `https://ep2026.europython.eu/media/sponsors/social-${sponsor.id}.png`;
 
     const handles = {
-      x: socials?.twitter || "",
-      linkedin: socials?.linkedin || "",
-      bsky: socials?.bluesky || "",
-      fosstodon: socials?.mastodon || "",
+      x: getTwitterUsername(socials?.twitter || "") || "",
+      linkedin: getLinkedInUrl(socials?.linkedin || "") || "",
+      bsky: getBlueskyUsername(socials?.bluesky || "") || "",
+      fosstodon: getMastodonUsername(socials?.mastodon || "") || "",
     };
 
     const makeMsg = (platform: "x" | "linkedin" | "bsky" | "fosstodon") => {
@@ -261,6 +273,7 @@ export const GET: APIRoute = async () => {
       type: "partner",
       name,
       image,
+      alt_text: `Partner announcement for EuroPython 2026 conference: ${name}`,
       handles,
       channel: {
         x: makeMsg("x"),
@@ -270,6 +283,11 @@ export const GET: APIRoute = async () => {
       },
     });
   }
+
+  // ── sort each bucket alphabetically by name ─────────────────────────────
+  speakerRecords.sort((a, b) => a.name.localeCompare(b.name));
+  sponsorRecords.sort((a, b) => a.name.localeCompare(b.name));
+  partnerRecords.sort((a, b) => a.name.localeCompare(b.name));
 
   // ── interleave: speaker, speaker, sponsor, speaker, partner ──────────────
   // The pattern is a sequence of bucket references that repeats until all
