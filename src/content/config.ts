@@ -166,11 +166,9 @@ interface ScheduleData {
 
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
-    // TODO: Re-enable when the API is available
-    // const schedule = (await loadData(
-    //   import.meta.env.EP_SCHEDULE_API
-    // )) as ScheduleData;
-    const schedule = null as ScheduleData | null;
+    const schedule = (await loadData(
+      import.meta.env.EP_SCHEDULE_API
+    )) as ScheduleData;
 
     if (!schedule || Object.keys(schedule).length === 0) {
       return [];
