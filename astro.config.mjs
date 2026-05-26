@@ -177,4 +177,7 @@ export default defineConfig({
   prefetch: {
     prefetchAll: false,
   },
+  devToolbar: {
+    enabled: false,
+  },
 });
