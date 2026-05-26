@@ -29,7 +29,8 @@
     "/sponsorship/information",
     "/sessions",
     "/speakers",
-    "/tickets"
+    "/tickets",
+    "/hotels"
   ],
   "navItems": ["Programme", "Venue", "About"]
 }
