@@ -28,29 +28,9 @@ const hasFooter = true;
 ---
 
 <div
-  class:list={["session", session.level, slugify(session.sessionType)]}
+  class:list={["ep-session", session.level, slugify(session.sessionType)]}
   style={style}
 >
-  <!--
-  <header>
-    {
-      session.sessionType === "poster" && (
-        <>
-          <span class="sr-only">Session type:</span>
-          Poster
-        </>
-      )
-    }
-    {
-      session.sessionType !== "poster" && session.level && (
-        <>
-          <span class="sr-only">Session level:</span>
-          {session.level}
-        </>
-      )
-    }
-    </header>
-    -->
   <header>
     {
       session.rooms.length === 1 && (
@@ -61,18 +41,6 @@ const hasFooter = true;
       )
     }
   </header>
-
-  <!--   <div class="time">
-    <span class="sr-only">Session start:</span>
-    <time>
-      {formatInTimeZone(session.start, "Europe/Warsaw", "HH:mm")}
-    </time>
-
-    <span class="minus">-</span>
-    <span class="sr-only">Session end:</span>
-    <time>{formatInTimeZone(session.end, "Europe/Warsaw", "HH:mm")}</time>
-  </div>
-  -->
 
   <CodeHeart
     client:load
@@ -97,45 +65,51 @@ const hasFooter = true;
     )
   }
 
-  <a href={session.slug && `/session/${session.slug}`} class="read-more">
+  <a href={session.slug ? `/session/${session.slug}` : '#'} class="read-more">
     <span class="sr-only">Read more</span>
   </a>
 </div>
 
 <style>
-  .session {
-
-    border: 1px solid transparent;
-    font-weight: bold;
+  .ep-session {
+    border: 1px solid var(--ep-border);
+    font-weight: 600;
     display: flex;
     flex-direction: column;
-
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 30%
-    );
+    background: var(--ep-surface-subtle);
     position: relative;
-
-    grid-template-areas:
-      "header header"
-      "time title"
-      "time footer";
-
-    grid-template-columns: 60px 1fr;
+    padding: 0.5rem 0.6rem;
+    gap: 0.15rem;
+    transition: border-color 0.2s, background 0.2s;
   }
 
   .room-info {
     display: block;
     text-align: center;
+    font-size: 0.72rem;
+    color: var(--ep-text-muted);
+    font-weight: 500;
 
     @media screen and (min-width: 800px) {
       display: none;
     }
   }
 
-  .session > header {
-    grid-area: header;
+  .ep-session > header {
+    padding: 0;
+    margin-bottom: 0.1rem;
+  }
+
+  .ep-session h2 {
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ep-white);
+    margin: 0;
+    padding: 0;
+    height: auto;
+    margin-bottom: 0;
   }
 
   .read-more {
@@ -145,7 +119,12 @@ const hasFooter = true;
     bottom: 0;
     left: 0;
     z-index: 1;
+  }
 
+  .read-more:focus {
+    outline: 2px solid var(--ep-accent);
+    outline-offset: 2px;
+    border-radius: 6px;
   }
 
   footer :global(a) {
@@ -153,100 +132,64 @@ const hasFooter = true;
     z-index: 2;
   }
 
-  @media screen and (max-width: 800px) {
-    header {
-      /*text-align:right;*/
-    }
-    .session h2 {
-      padding: 0 8px;
-      margin: 0;
-    }
-
-    .session > .time {
-      grid-area: time;
-      padding-block: 8px;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /*border-right: 1px solid var(--color-text);*/
-      gap: 4px;
-
-      & .minus {
-        display: none;
-      }
-    }
-
-    .session > h2 {
-      grid-area: title;
-      padding-block: 0;
-    }
-
-    .session > footer {
-      grid-area: footer;
-    }
-
-    .session > div {
-      display: flex;
-    }
-  }
-
-  .session:has(.read-more[href]:focus) {
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 70%
-    );
-    border: 1px solid #33333366;
-  }
-
-  .session:hover {
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 50%
-    );
-    border: 1px solid #e9714d;
-  }
-
-
-  .time,
   footer {
-    font-size: 0.9em;
+    font-size: 0.75rem;
+    color: var(--ep-text-secondary);
+    margin-top: 0.2rem;
+    padding: 0;
   }
 
-  header,
-  .time,
-  footer,
-  h2 {
-    padding: 0.2em 0.5em;
+  @media screen and (max-width: 800px) {
+    .ep-session h2 {
+      padding: 0 0.5rem;
+      margin: 0;
+      font-size: 0.9rem;
+    }
   }
 
-  h2 {
-    margin-bottom: 1em;
-    height:100%;
+  .ep-session:has(.read-more[href]:focus) {
+    border-color: var(--ep-accent);
+    background: var(--ep-surface-medium);
   }
 
-  footer.has-speakers {
-    margin-top: 5px;
+  .ep-session:hover {
+    border-color: var(--ep-accent);
+    background: var(--ep-surface-medium);
   }
 
   header {
     text-transform: capitalize;
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: 500;
+    color: var(--ep-text-muted);
+    padding: 0;
   }
 
-  .beginner header {
+  .beginner {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        rgba(50,180,50,0.2) 4px,
+        rgba(50,180,50,0.2) 6px
+      ),
+      var(--ep-surface-subtle);
   }
 
-  .intermediate header {
-  }
-
-  .advanced header {
+  .advanced {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        rgba(200,50,50,0.2) 4px,
+        rgba(200,50,50,0.2) 6px
+      ),
+      var(--ep-surface-subtle);
   }
 
   .poster header {
-    text-align:center
+    text-align: center;
   }
 </style>

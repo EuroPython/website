@@ -10,18 +10,32 @@ const { time, title, style, className }: Props = Astro.props;
 const label = [time, title].filter(Boolean).join(" ");
 ---
 
-<div class={className? className: "break"} style={style} aria-label={label} >
+<div class={className ? className : "break ep-break"} style={style} aria-label={label} >
   {time && `${time} `}
   {title}
 </div>
 
 <style>
-  .break {
+  .ep-break {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     text-align: center;
-    justify-items: center;
-    padding-left: 8px;
-    background-color: #FCFBFA;
+    padding: 0.4rem 0.8rem;
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-size: 0.85rem;
+    color: var(--ep-text-secondary);
+    font-weight: 500;
+    background: rgba(255,150,0,0.06);
+    border: 2px solid rgba(255,150,0,0.18);
+    border-radius: 6px;
+  }
+
+  .ep-break.room-change {
+    background: var(--ep-surface-subtle);
+    border: 1px dashed var(--ep-border);
+    color: var(--ep-text-muted);
+    font-weight: 400;
+    font-size: 0.75rem;
   }
 </style>

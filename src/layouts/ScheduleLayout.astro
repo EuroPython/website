@@ -1,8 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Section from "@ui/Section.astro";
-import Note from "@ui/Note.astro";
-import Headline from "@ui/Headline.astro"
 import { slugify } from '@utils/content';
 import InstallPWA from "@components/InstallPWA.astro";
 
@@ -18,61 +16,108 @@ const { title, description, headline } = Astro.props;
   <Fragment slot="head">
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-    <link rel="mask-icon" href="/maskable_icon.png" color="#f5e5d6">
-    <meta name="msapplication-TileColor" content="#f5e5d6">
-    <meta name="theme-color" content="#f5e5d6">
+    <link rel="mask-icon" href="/maskable_icon.png" color="#d4003a">
+    <meta name="msapplication-TileColor" content="#d4003a">
+    <meta name="theme-color" content="#080002">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
   </Fragment>
 
+  <div class="ep-sched-section">
+  <div class="ep-sched-inner">
   <InstallPWA />
   <Section>
-    <Headline as="h1"id={slugify(headline)} title={headline} />
+    <h1 class="ep-headline" id={slugify(headline)}><a href={`#${slugify(headline)}`} aria-label={`Jump to ${headline}`}>{headline}</a></h1>
 
-  <Note type="info" >Mark talks as favorites by opening their details and tapping the ❤️ icon. Your selections are saved locally and will only be visible on this device.</Note>
+  <div class="ep-note">💚 Mark talks as favorites by opening their details and tapping the ❤️ icon. Your selections are saved locally and will only be visible on this device.</div>
 
     <div class="layout-wrapper2">
       <slot />
     </div>
   </Section>
+  </div>
+  </div>
 </Layout>
 
 <style is:global>
+/* Dark theme for schedule pages */
+body {
+  background: var(--ep-bg) !important;
+  color: var(--ep-white);
+}
+
 .layout-wrapper2 > * {
   grid-column: 2;
 }
 
+/* Remove light theme background from body on schedule pages */
+body {
+  background-color: var(--color-primary) !important;
+}
+
+main {
+  background-color: transparent !important;
+}
+
+
+/* Unset Tailwind light theme on schedule pages */
+.text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900,
+.text-gray-500, .text-gray-400 {
+  color: var(--ep-text-secondary) !important;
+}
+
+/* Nav items on dark background */
+header#navbar .text-primary {
+  color: var(--ep-text-primary) !important;
+}
+
+header#navbar .bg-\[\#1c294b\] {
+  background: var(--ep-surface-medium) !important;
+}
+
+/* Breadcrumbs dark theme */
+nav[aria-label="Breadcrumb"] .text-gray-900 {
+  color: var(--ep-white) !important;
+}
+
+nav[aria-label="Breadcrumb"] a {
+  color: var(--ep-link-color) !important;
+}
+
+/* Improve select appearance on dark */
+select {
+  background: var(--ep-surface-subtle);
+  color: var(--ep-white);
+  border: 1px solid var(--ep-border);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
 
 @media screen and (min-width: 1281px) {
-  .layout-wrapper2 .schedule *{
-    font-size:1.2rem;
+  .schedule * {
+    font-size: 1.2rem;
     --header-height: 40px !important;
     --break: 10px !important;
   }
 
-  .layout-wrapper2 {
-    h2, .break {
-    font-size:1.2rem;
-    }
+  h2, .break {
+    font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 1201px) {
-
-  .layout-wrapper2.scaled-up .schedule *{
-    font-size:1.4rem;
+  .layout-wrapper2.scaled-up .schedule * {
+    font-size: 1.4rem;
     --header-height: 60px !important;
     --break: 14px !important;
   }
-  .layout-wrapper2.scaled-up {
-    h2, .break {
-    font-size:1.4rem;
-    }
+  .layout-wrapper2.scaled-up h2, .layout-wrapper2.scaled-up .break {
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 1601px) {
   .maximize-btn {
-    visibility:initial;
+    visibility: initial;
   }
 }
 </style>

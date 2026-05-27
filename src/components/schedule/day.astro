@@ -4,7 +4,6 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Break from "@components/schedule/break.astro";
 import Session from "@components/schedule/session.astro";
 import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
-import Headline from "@components/ui/Headline.astro";
 import { formatInTimeZone } from "date-fns-tz";
 
 
@@ -380,9 +379,8 @@ const dateText = format(date, "eeee - do MMMM");
 
 ---
 
-<div class="day"
->
-<Headline as="h3" id=`day-${dayName}` title={dateText} />
+<div class="day">
+<h3 class="ep-sched-day-title" id={`day-${dayName}`}><a href={`#day-${dayName}`} aria-label={`Jump to ${dateText}`}>{dateText}</a></h3>
 
   <div class="schedule-wrapper">
     <header class="schedule-container header">
@@ -479,7 +477,7 @@ const dateText = format(date, "eeee - do MMMM");
       <Break
         title="End of the Day"
         time={endStart}
-        className="day-end"
+        className="ep-break day-end"
       />
     </div>
     <div class="h-12"></div>
@@ -487,19 +485,17 @@ const dateText = format(date, "eeee - do MMMM");
 </div>
 
 <style is:global>
-
 .layout-wrapper {
   display: grid;
   grid-template-columns: 1fr minmax(0, 100%) 1fr !important;
 }
-
 </style>
+
 <style>
-  .schedule-wrapper
-{
-  width: 100%;
-  margin-top: 0.75rem;
-}
+  .schedule-wrapper {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
 
   .day {
     margin-block: 2rem 3rem;
@@ -509,48 +505,37 @@ const dateText = format(date, "eeee - do MMMM");
     margin-top: 0;
   }
 
-
-  :global(.day-end) {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-items: center;
-  background-color: #FCFBFA;
-  border-radius: 10px;
-  margin: 10px 1.5rem;
-  padding:2px 8px;
-  font-size: 0.8rem;
-}
-  :global(body) {
+  :global(.ep-break.day-end) {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    background: #2d3548;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.55);
   }
 
-  :global(select) {
-  }
-
-  :global(.schedule *)  {
-
-    font-family: "Inter Tight", sans-serif;
+  :global(.schedule *) {
+    font-family: 'Inter Tight', system-ui, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size:0.8rem;
-
+    font-size: 0.8rem;
   }
-  .schedule {
 
+  .schedule {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-left: 1.5rem; /* 24px */
-    padding-right: 1.5rem; /* 24px */
+    gap: 4px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .slot {
     display: contents;
-  }
-
-  header,
-  .time {
-    /*display: none;*/
   }
 
   :global(.session) {
@@ -563,32 +548,30 @@ const dateText = format(date, "eeee - do MMMM");
   :global(.break),
   header,
   header > div > div {
-    /*outline: 2px solid var(--color-primary);*/
-    background-color: #F7EEE5;
-    border-radius: 10px;
-    margin:2px;
-    padding:2px 0;
+    background-color: transparent;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
   }
 
   :global(.room-change) {
     align-items: center;
-    background-color: #FCFBFA;
-    border-radius: 10px;
-    box-sizing: border-box;
-    color: var(--color-text);
     display: flex;
     font-weight: 400;
     justify-content: center;
     line-height: 1.2;
-    margin: 2px;
     min-height: 0;
     overflow: hidden;
-    padding: 0 8px;
     white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    background: #151f38;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.75rem;
+    padding: 0 8px;
   }
 
   :global(.break:not(.room-change)) {
-    background-color: #FFFCF7;
     font-weight: 600;
     letter-spacing: 0;
   }
@@ -596,33 +579,35 @@ const dateText = format(date, "eeee - do MMMM");
   .posters {
     text-align: center;
     display: none;
-    border:2px solid #bb7332;
-    border-radius: 10px;
   }
 
-
   .schedule-container.header {
-    display:none;
+    display: none;
   }
 
   @media screen and (max-width: 799px) {
     .time {
-      background:transparent;
+      background: transparent;
+      border: 1px solid var(--ep-border);
+      border-radius: 4px;
+      padding: 0.3rem 0.5rem;
+      margin: 2px 0;
     }
     .time h2 {
-      text-align:center;
-      color:#333332;
-      font-size:2rem;
+      text-align: center;
+      color: var(--ep-text-secondary);
+      font-size: 1.2rem;
     }
     .room-info {
-      text-align:center;
+      text-align: center;
     }
   }
-  @media screen and (min-width: 800px) {
 
-  .schedule-container.header {
-    display: inherit;
-  }
+  @media screen and (min-width: 800px) {
+    .schedule-container.header {
+      display: inherit;
+    }
+
     .schedule-container {
       padding-bottom: 2px;
     }
@@ -641,16 +626,27 @@ const dateText = format(date, "eeee - do MMMM");
       display: block;
     }
 
-    header {
+    /* Header = room headers row */
+    header.schedule-container.header {
       position: sticky;
       top: 0;
-      background: var(--color-body-background);
+      background: #151f38;
       z-index: 20;
+    }
 
-      > div > div {
-        padding: 8px;
-      font-weight: bold;
-      }
+    header.schedule-container.header > div > div {
+      padding: 0.5rem 0.3rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--ep-text-primary);
+      background: var(--ep-sched-room-bg);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    header.schedule-container.header > div > div:first-child {
+      background: transparent;
+      color: var(--ep-accent);
     }
 
     .schedule {
@@ -658,11 +654,12 @@ const dateText = format(date, "eeee - do MMMM");
       --room-change: 52px;
 
       display: grid;
-      gap: 2px;
+      gap: 4px;
       padding: 0;
     }
 
     :global(.session),
+    :global(.ep-session),
     .time,
     .posters,
     :global(.room-change),
@@ -671,22 +668,35 @@ const dateText = format(date, "eeee - do MMMM");
       grid-column: var(--col-start) / var(--col-end);
     }
 
-    :global(.day-end){
+    :global(.ep-break.day-end) {
       font-size: 1.2rem;
       margin: 2px;
       padding: 8px;
+      background: #2d3548;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      color: rgba(255,255,255,0.55);
     }
-
 
     .time {
-      padding: 8px;
+      padding: 0.4rem 0.5rem;
       grid-column: 1 / 2;
       outline: none;
-    }
-    .time h2 {
+      text-align: right;
+      border: 1px solid var(--ep-border);
+      border-radius: 4px;
     }
 
-    :global(.session.poster) {
+    .time h2 {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ep-accent);
+      margin: 0;
+    }
+
+    :global(.session.poster),
+    :global(.ep-session.poster) {
       display: none;
     }
 
@@ -694,34 +704,34 @@ const dateText = format(date, "eeee - do MMMM");
       grid-column: 3 / 6;
       position: relative;
       display: block;
+      border: 2px solid var(--ep-accent);
+      border-radius: 6px;
+      background: #151f38;
+      z-index: 5;
     }
-    .posters::after {
-        content: "";
-        display: block;
-        /*padding: 4px 8px;*/
-      }
 
-      .posters h2
-      {
-        background: linear-gradient(#F8F7F6, #F2E2D3 );
-        padding: 4px 8px;
-        margin-top:8px;
-        border-radius: 10px;
-        font-weight: bold;
-        font-size: 0.8em;
-      }
+    .posters h2 {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--ep-accent);
+      padding: 0.4rem 0.5rem;
+      margin: 0;
+      background: transparent;
+    }
 
-      .posters > div {
-        display: flex;
+    .posters > div {
+      display: flex;
+    }
 
-        & > :global(*) {
-          flex: 1;
-        }
-      }
+    .posters > div > :global(*) {
+      flex: 1;
+    }
 
-      .posters :global(.session.poster) {
-        display: flex;
-      }
+    .posters :global(.session.poster),
+    .posters :global(.ep-session.poster) {
+      display: flex;
+    }
   }
 </style>
 

@@ -11,6 +11,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@styles/tailwind.css";
 import "@styles/global.css";
 import "@styles/search.css";
+import "@styles/ep2026-theme.css";
+import "@styles/markdown.css";
 
 
 export interface Props {
@@ -39,6 +41,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
   <head>
     <BaseHead title={title} description={description} />
     <slot name="head" />
+
     </Fragment>
   </head>
   <body>
@@ -48,7 +51,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
         </header>
       }
 
-      <main class="main" role="main">
+      <main class="main pt-28" role="main">
       <Offline />
         {currentPath !== "/" && (
           <Breadcrumbs
@@ -107,7 +110,6 @@ header {
 
 main {
   background-color: transparent;
-  padding-top: 0;
 }
 
 footer {
