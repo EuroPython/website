@@ -17,5 +17,5 @@ description:
   and related technologies. It offers an independent global framework for
   curriculum development, skills assessment, and high-stakes Python exams."
 tier: Gold
-logo_padding: 20px
+logo_padding: 15px
 ---
