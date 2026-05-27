@@ -1,6 +1,50 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@layer base {
+  :root {
+    --color-red: #d4003a;
+    --color-red-on-dark: #ff1a4a;
+    --color-indigo: #4a0018;
+    --color-magenta: #800020;
+    --color-accent: #f0c040;
+    --color-cream: #fff5f0;
+    --color-white: #ffffff;
+
+    --accent-rgb: 240, 192, 64;
+
+    --text-primary: rgba(255,255,255,0.93);
+    --text-secondary: rgba(255,255,255,0.78);
+    --text-muted: rgba(255,255,255,0.70);
+    --text-faint: rgba(255,255,255,0.60);
+
+    --border: rgba(255,255,255,0.10);
+    --border-strong: rgba(255,255,255,0.15);
+    --border-bright: rgba(255,255,255,0.25);
+    --surface-faint: rgba(255,255,255,0.03);
+    --surface-subtle: rgba(255,255,255,0.05);
+    --surface-medium: rgba(255,255,255,0.08);
+
+    --black-75: rgba(0,0,0,0.75);
+    --black-70: rgba(0,0,0,0.7);
+    --black-50: rgba(0,0,0,0.5);
+    --black-40: rgba(0,0,0,0.4);
+    --black-30: rgba(0,0,0,0.3);
+    --black-15: rgba(0,0,0,0.15);
+
+    --cta-red: #d62020;
+    --cta-red-dark: #8a0020;
+    --cta-mid: #a8002d;
+    --cta-end: #700020;
+
+    --bg-section: #080f1a;
+    --bg-section-alt: #070b14;
+    --bg-dark: #0a0a1a;
+
+    --overlay-dark: rgba(10,10,20,0.95);
+  }
+}
+
 @theme {
   /* Base Colors */
   --color-black: #000;
