@@ -5,7 +5,9 @@
 
 /* RESET & BASE */
 /* ============ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -32,28 +34,28 @@
 
   /* White text levels */
   /* ================= */
-  --ep-text-primary: rgba(255,255,255,0.93);
-  --ep-text-secondary: rgba(255,255,255,0.78);
-  --ep-text-muted: rgba(255,255,255,0.70);
-  --ep-text-faint: rgba(255,255,255,0.60);
+  --ep-text-primary: rgba(255, 255, 255, 0.93);
+  --ep-text-secondary: rgba(255, 255, 255, 0.78);
+  --ep-text-muted: rgba(255, 255, 255, 0.7);
+  --ep-text-faint: rgba(255, 255, 255, 0.6);
 
   /* White decorative (borders, surfaces) */
   /* ==================================== */
-  --ep-border: rgba(255,255,255,0.10);
-  --ep-border-strong: rgba(255,255,255,0.15);
-  --ep-border-bright: rgba(255,255,255,0.25);
-  --ep-surface-faint: rgba(255,255,255,0.03);
-  --ep-surface-subtle: rgba(255,255,255,0.05);
-  --ep-surface-medium: rgba(255,255,255,0.08);
+  --ep-border: rgba(255, 255, 255, 0.1);
+  --ep-border-strong: rgba(255, 255, 255, 0.15);
+  --ep-border-bright: rgba(255, 255, 255, 0.25);
+  --ep-surface-faint: rgba(255, 255, 255, 0.03);
+  --ep-surface-subtle: rgba(255, 255, 255, 0.05);
+  --ep-surface-medium: rgba(255, 255, 255, 0.08);
 
   /* Black shadows */
   /* ============= */
-  --ep-black-75: rgba(0,0,0,0.75);
-  --ep-black-70: rgba(0,0,0,0.7);
-  --ep-black-50: rgba(0,0,0,0.5);
-  --ep-black-40: rgba(0,0,0,0.4);
-  --ep-black-30: rgba(0,0,0,0.3);
-  --ep-black-15: rgba(0,0,0,0.15);
+  --ep-black-75: rgba(0, 0, 0, 0.75);
+  --ep-black-70: rgba(0, 0, 0, 0.7);
+  --ep-black-50: rgba(0, 0, 0, 0.5);
+  --ep-black-40: rgba(0, 0, 0, 0.4);
+  --ep-black-30: rgba(0, 0, 0, 0.3);
+  --ep-black-15: rgba(0, 0, 0, 0.15);
 
   /* CTA red gradient */
   /* ================ */
@@ -104,7 +106,7 @@
 
   /* Overlay */
   /* ======= */
-  --ep-overlay-dark: rgba(10,10,20,0.95);
+  --ep-overlay-dark: rgba(10, 10, 20, 0.95);
 
   /* Links */
   /* ===== */
@@ -117,7 +119,7 @@
 body.ep2026-theme {
   background: var(--ep-bg);
   color: var(--ep-white);
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 18px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -126,7 +128,7 @@ body.ep2026-theme {
 .ep2026-theme h1,
 .ep2026-theme h2,
 .ep2026-theme h3 {
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -148,8 +150,16 @@ body.ep2026-theme {
 .ep-sched-section {
   background:
     radial-gradient(circle, var(--ep-surface-medium) 1px, transparent 1px),
-    linear-gradient(135deg, var(--ep-footer-g1) 0%, var(--ep-footer-g2) 40%, var(--ep-footer-g3) 70%, var(--ep-footer-g4) 100%);
-  background-size: 24px 24px, 100% 100%;
+    linear-gradient(
+      135deg,
+      var(--ep-footer-g1) 0%,
+      var(--ep-footer-g2) 40%,
+      var(--ep-footer-g3) 70%,
+      var(--ep-footer-g4) 100%
+    );
+  background-size:
+    24px 24px,
+    100% 100%;
   color: var(--ep-white);
 }
 
@@ -161,9 +171,13 @@ body.ep2026-theme {
 
 /* Day title */
 .ep-sched-day-title {
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-weight: 500;
-  font-size: clamp(1.75rem, 1.75rem + (100vw - 20rem) * (2.25 - 1.75) / (45 - 20), 2.25rem);
+  font-size: clamp(
+    1.75rem,
+    1.75rem + (100vw - 20rem) * (2.25 - 1.75) / (45 - 20),
+    2.25rem
+  );
   line-height: 1.25;
   color: var(--ep-white);
   margin-bottom: 1.5rem;
@@ -199,7 +213,7 @@ body.ep2026-theme {
 
 /* Time slots */
 .ep-sched-time {
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--ep-accent);
@@ -209,7 +223,7 @@ body.ep2026-theme {
 }
 
 .ep-sched-time h2 {
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--ep-accent);
@@ -225,9 +239,11 @@ body.ep2026-theme {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
-  transition: border-color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
   color: var(--ep-white);
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -236,11 +252,13 @@ body.ep2026-theme {
   border-color: var(--ep-accent);
   background: #0f1a2e !important;
   z-index: 10;
-  transition: border-color 0.1s ease-in-out, background 0.1s ease-in-out;
+  transition:
+    border-color 0.1s ease-in-out,
+    background 0.1s ease-in-out;
 }
 
 .ep-session h2 {
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.3;
@@ -290,8 +308,8 @@ body.ep2026-theme {
       -45deg,
       transparent,
       transparent 4px,
-      rgba(50,180,50,0.2) 4px,
-      rgba(50,180,50,0.2) 6px
+      rgba(50, 180, 50, 0.2) 4px,
+      rgba(50, 180, 50, 0.2) 6px
     ),
     var(--ep-surface-subtle);
 }
@@ -302,8 +320,8 @@ body.ep2026-theme {
       -45deg,
       transparent,
       transparent 4px,
-      rgba(200,50,50,0.2) 4px,
-      rgba(200,50,50,0.2) 6px
+      rgba(200, 50, 50, 0.2) 4px,
+      rgba(200, 50, 50, 0.2) 6px
     ),
     var(--ep-surface-subtle);
 }
@@ -314,11 +332,11 @@ body.ep2026-theme {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(255,150,0,0.06);
-  border: 2px solid rgba(255,150,0,0.18);
+  background: rgba(255, 150, 0, 0.06);
+  border: 2px solid rgba(255, 150, 0, 0.18);
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 0.85rem;
   color: var(--ep-text-secondary);
   font-weight: 500;
@@ -334,9 +352,9 @@ body.ep2026-theme {
 
 .ep-break.day-end {
   background: #2d3548;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 0.9rem;
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
@@ -352,7 +370,7 @@ body.ep2026-theme {
 }
 
 .ep-posters h2 {
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-weight: 700;
   font-size: 0.8rem;
   color: var(--ep-accent);
@@ -373,7 +391,7 @@ body.ep2026-theme {
   font-weight: 700;
   font-size: 0.85rem;
   color: var(--ep-white);
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
 }
 
 /* Scrollbar styling for dark theme */
@@ -402,15 +420,19 @@ body.ep2026-theme {
   border-radius: 6px;
   padding: 0.8rem 1rem;
   color: var(--ep-text-secondary);
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 0.95rem;
 }
 
 /* Headline styles */
 .ep-headline {
-  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-weight: 500;
-  font-size: clamp(2.25rem, 2.25rem + (100vw - 20rem) * (3 - 2.25) / (45 - 20), 3rem);
+  font-size: clamp(
+    2.25rem,
+    2.25rem + (100vw - 20rem) * (3 - 2.25) / (45 - 20),
+    3rem
+  );
   line-height: 1.25;
   color: var(--ep-white);
   margin-bottom: 1.5rem;
