@@ -59,11 +59,23 @@
 
   --color-top-notification: #ee714b;
 
+  /* Footer Colors */
+  --color-footer-bg: #0a0003;
+  --color-footer-gray: #222222;
+  --color-footer-accent: #f0c040;
+  --color-footer-red: #d4003a;
+  --color-footer-red-on-dark: #ff1a4a;
+  --color-footer-text-muted: rgba(255, 255, 255, 0.70);
+  --color-footer-text-secondary: rgba(255, 255, 255, 0.78);
+
   /* Aspect Ratios */
   --aspect-hero: 2.4380530973;
 
   /* Font Families */
   --font-system: system-ui, sans-serif;
+  --font-archivo: "Archivo Black", sans-serif;
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+
   --font-title:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

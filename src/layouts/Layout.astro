@@ -65,9 +65,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
 
       <!-- if !hideFooter, show footer; if hideFooter, hide footer and -mb-256 -->
       {!hideFooter ?
-        <footer>
           <Footer />
-        </footer>
         :
         <div class="-mb-256"></div>
       }
