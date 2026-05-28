@@ -125,6 +125,15 @@
 
   --color-top-notification: #ee714b;
 
+  /* Footer Colors */
+  --color-footer-bg: #0a0003;
+  --color-footer-gray: #222222;
+  --color-footer-accent: #f0c040;
+  --color-footer-red: #d4003a;
+  --color-footer-red-on-dark: #ff1a4a;
+  --color-footer-text-muted: rgba(255, 255, 255, 0.7);
+  --color-footer-text-secondary: rgba(255, 255, 255, 0.78);
+
   /* Aspect Ratios */
   --aspect-hero: 2.4380530973;
 
