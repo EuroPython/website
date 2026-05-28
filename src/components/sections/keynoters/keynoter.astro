@@ -1,80 +1,183 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import Person1 from "./placeholders/person-1.astro";
-import Person2 from "./placeholders/person-2.astro";
-import Person3 from "./placeholders/person-3.astro";
-import Person4 from "./placeholders/person-4.astro";
-import Person5 from "./placeholders/person-5.astro";
 
 export interface Props {
   name: string;
   url: string;
   tagline?: string | undefined;
+  bio?: string | undefined;
   image?: ImageMetadata;
   placeholder?: boolean | undefined;
-  order?: number | undefined;
+  order: number;
   class?: string;
 }
 
-const {
-  name,
-  url,
-  tagline,
-  image,
-  placeholder,
-  class: className,
-} = Astro.props;
-
-const placeholders = [Person1, Person2, Person3, Person4, Person5];
-
-const Placeholder =
-  placeholders[Math.floor(Math.random() * placeholders.length)];
+const { name, url, tagline, bio, image, placeholder, class: className } = Astro.props;
 ---
 
-<li class:list={["list-none rounded-2xl overflow-clip flex group", className]}>
-  <div class="block w-full h-full relative">
-    <div class="relative aspect-[9/10] overflow-clip">
-      {
-        image ? (
-          <Image
-            src={image}
-            alt={`A photo of ${name}`}
-            width={800}
-            class="object-cover group-hover:scale-105 transition-transform h-full w-full"
-          />
-        ) : (
-          <div class="bg-white w-full h-full mt-10">
-            <Placeholder />
-          </div>
-        )
-      }
+<li class:list={["prog-keynoter", className]}>
+  {placeholder ? (
+    <div class="prog-keynoter-link">
+      <div class="prog-keynoter-photo">
+        <div class="prog-keynoter-photo--empty">
+          <span class="prog-keynoter-placeholder">?</span>
+        </div>
+      </div>
     </div>
-
-    <div class="px-5 py-2 pb-4 bg-white rounded-t-none h-full">
-      {
-        placeholder ? (
-          <p class="text-body-inverted">More keynoters coming soon</p>
-        ) : (
+  ) : url ? (
+    <a href={`/speaker/${url}/`} class="prog-keynoter-link">
+      <div class="prog-keynoter-photo">
+        {image ? (
           <>
-            {url ? (
-              <h2 class="text-[#17223A] font-bold">
-                <a
-                  href={url}
-                  class="text-2xl font-bold hover:underline"
-                >
-                  {name}
-                </a>
-              </h2>
-            ) : (
-              <h2 class="text-2xl font-bold">{name}</h2>
-            )}
-            {tagline && (
-              <h3 class="text-secondary-hover text-lg italic">{tagline}</h3>
-            )}
+            <Image src={image} alt={name} class="prog-keynoter-img" />
           </>
-        )
-      }
+        ) : (
+          <div class="prog-keynoter-photo--empty">
+            <span class="prog-keynoter-placeholder">?</span>
+          </div>
+        )}
+      </div>
+      <div class="prog-keynoter-body">
+        <div class="prog-keynoter-name">{name}</div>
+        {tagline && <div class="prog-keynoter-role">{tagline}</div>}
+        {bio && <p class="prog-keynoter-bio">{bio}</p>}
+      </div>
+    </a>
+  ) : (
+    <div class="prog-keynoter-link">
+      <div class="prog-keynoter-photo">
+        {image ? (
+          <>
+            <Image src={image} alt={name} class="prog-keynoter-img" />
+          </>
+        ) : (
+          <div class="prog-keynoter-photo--empty">
+            <span class="prog-keynoter-placeholder">?</span>
+          </div>
+        )}
+      </div>
+      <div class="prog-keynoter-body">
+        <div class="prog-keynoter-name">{name}</div>
+        {tagline && <div class="prog-keynoter-role">{tagline}</div>}
+        {bio && <p class="prog-keynoter-bio">{bio}</p>}
+      </div>
     </div>
-  </div>
+  )}
 </li>
+
+<style>
+  .prog-keynoter {
+    border-right: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    overflow: hidden;
+    transition: background 0.2s;
+    list-style: none;
+  }
+
+  .prog-keynoter:nth-child(3n) {
+    border-right: none;
+  }
+
+  .prog-keynoter:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+
+  .prog-keynoter:hover {
+    background: var(--color-surface-subtle, rgba(255,255,255,0.05));
+  }
+
+  .prog-keynoter-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  .prog-keynoter-photo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .prog-keynoter-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .prog-keynoter:hover .prog-keynoter-img {
+    transform: scale(1.05);
+  }
+
+  .prog-keynoter-photo--empty {
+    width: 100%;
+    height: 100%;
+    background: var(--color-section-bg, #080f1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prog-keynoter-placeholder {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: 5rem;
+    opacity: 0.12;
+    color: #fff;
+  }
+
+
+
+  .prog-keynoter-body {
+    padding: 1.8rem 1.8rem 2rem;
+  }
+
+  .prog-keynoter-name {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: 1.3rem;
+    color: var(--color-cream, #fff5f0);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+
+  .prog-keynoter-role {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent, #f0c040);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.8rem;
+  }
+
+  .prog-keynoter-bio {
+    font-family: system-ui, sans-serif;
+    font-size: 1.05rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .prog-keynoter:nth-child(2n) {
+      border-right: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .prog-keynoter {
+      border-right: none !important;
+      border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    }
+    .prog-keynoter:last-child {
+      border-bottom: none;
+    }
+  }
+</style>

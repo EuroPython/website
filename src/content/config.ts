@@ -45,6 +45,7 @@ const keynoters = defineCollection({
       name: z.string(),
       url: z.string().optional(),
       tagline: z.string().optional(),
+      bio: z.string().optional(),
       image: image(),
       order: z.number(),
     }),
