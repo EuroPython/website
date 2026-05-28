@@ -1,0 +1,171 @@
+---
+import Button from "@ui/Button.astro";
+---
+
+<section class="sec-wrap euroscipy-section" id="euroscipy">
+  <div class="sec-inner split-layout euroscipy-inner">
+
+    <div class="split-left euroscipy-left">
+      <h2 class="sec-title euroscipy-title">EuroSciPy 2026 <sup class="sec-anchor"><a href="#euroscipy">#</a></sup></h2>
+      <div class="euroscipy-dates">
+        18–23 July 2026<br>
+        AGH University of Kraków, Poland
+      </div>
+      <a href="https://euroscipy.org" class="euroscipy-cta">Get Your Ticket</a>
+    </div>
+
+    <div class="euroscipy-right">
+      <p>EuroSciPy is Europe's premier conference on scientific Python — covering NumPy, SciPy, pandas, machine learning, and the broader scientific ecosystem. In 2026 it comes to Kraków, right after EuroPython.</p>
+      <p><strong>We co-organise the sprints together.</strong> The final two days of EuroPython sprints overlap with the opening of EuroSciPy sprints — giving you the unique opportunity to hack alongside both communities at once.</p>
+      <div class="euroscipy-sprint-badge">✦ Joint sprints: 20–21 July</div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .sec-wrap {
+    color: var(--color-white, #fff);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .euroscipy-section {
+    background: var(--color-euroscipy, #2e2ed4);
+    scroll-margin-top: 60px;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .split-left {
+    position: sticky;
+    top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .split-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .split-left {
+      position: static;
+    }
+    .sec-inner {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  /* ---- Title ---- */
+  .sec-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--color-white, #fff);
+    text-transform: uppercase;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .euroscipy-title {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+
+  .euroscipy-title .sec-anchor {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.2em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .euroscipy-title:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .euroscipy-title .sec-anchor a {
+    color: var(--color-white, #fff);
+    text-decoration: none;
+  }
+
+  .euroscipy-title .sec-anchor a:hover {
+    opacity: 0.8;
+  }
+
+  /* ---- Dates ---- */
+  .euroscipy-dates {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  /* ---- CTA ---- */
+  .euroscipy-cta {
+    display: inline-block;
+    font-size: 1.15rem;
+    padding: 0.85rem 2.2rem;
+    background: linear-gradient(to bottom, #f04040, #cc3030);
+    color: var(--color-white, #fff);
+    border: 1px solid #f04040;
+    border-radius: 0.375rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: filter 0.2s ease;
+    cursor: pointer;
+  }
+
+  .euroscipy-cta:hover {
+    filter: brightness(1.1);
+  }
+
+  /* ---- Right column ---- */
+  .euroscipy-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .euroscipy-right p {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.93);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .euroscipy-right p strong {
+    color: var(--color-white, #fff);
+  }
+
+  /* ---- Sprint badge ---- */
+  .euroscipy-sprint-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px dashed rgba(255, 255, 255, 0.25);
+    border-radius: 2px;
+    padding: 0.5rem 1.2rem;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-white, #fff);
+  }
+</style>
