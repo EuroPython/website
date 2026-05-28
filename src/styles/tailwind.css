@@ -59,11 +59,38 @@
 
   --color-top-notification: #ee714b;
 
+  /* Section Colors */
+  --color-section-bg: #080f1a;
+  --color-section-bg-alt: #070b14;
+  --color-bg-dark: #0a0a1a;
+  --color-cta-red: #d62020;
+  --color-accent: #f0c040;
+  --color-cream: #fff5f0;
+  --color-pyladies: #d42027;
+  --color-pyladies-dark: #b01a20;
+  --color-green-2e: #2ecc71;
+  --color-green-25: #25a85d;
+  --color-ep25-bg: #0b1b4d;
+  --color-ep25-yellow: #ffd43b;
+  --color-ep25-yellow-dark: #dbb52e;
+
+  /* Text Variants for dark sections */
+  --color-text-primary-dark: rgba(255, 255, 255, 0.93);
+  --color-text-secondary-dark: rgba(255, 255, 255, 0.78);
+  --color-text-muted-dark: rgba(255, 255, 255, 0.70);
+  --color-surface-medium: rgba(255, 255, 255, 0.08);
+  --color-surface-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-dark: rgba(255, 255, 255, 0.10);
+  --color-border-bright: rgba(255, 255, 255, 0.25);
+
   /* Aspect Ratios */
   --aspect-hero: 2.4380530973;
 
   /* Font Families */
   --font-system: system-ui, sans-serif;
+  --font-archivo: "Archivo Black", sans-serif;
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+
   --font-title:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

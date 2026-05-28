@@ -1,0 +1,333 @@
+<section class="sec-wrap connect-section" id="connect">
+  <div class="sec-inner connect-inner">
+
+    <div class="sec-header connect-header">
+      <h2 class="sec-title connect-title">LET'S CONNECT <sup class="sec-anchor"><a href="#connect">#</a></sup></h2>
+      <p class="connect-subtitle">Want to collaborate or contribute? We're open to partnership opportunities and would love to hear your ideas.</p>
+    </div>
+
+    <div class="connect-grid">
+
+      <div class="connect-block">
+        <div class="connect-block-title">Newsletter</div>
+        <form class="connect-newsletter-form" id="subscribeForm">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input type="email" id="newsletter-email" class="connect-newsletter-input" placeholder="your@email.com">
+          <button type="submit" class="connect-newsletter-btn">Subscribe</button>
+        </form>
+        <p class="connect-newsletter-note">Get the latest updates, speaker announcements, and special deals. No spam, unsubscribe anytime.</p>
+      </div>
+
+      <div class="connect-block">
+        <div class="connect-block-title">Follow Us</div>
+        <div class="connect-socials">
+          <a href="https://x.com/europython" class="connect-social-link" title="X / Twitter">
+            <i class="fab fa-x-twitter"></i>
+            <span>X</span>
+          </a>
+          <a href="https://fosstodon.org/@europython" class="connect-social-link" title="Mastodon">
+            <i class="fab fa-mastodon"></i>
+            <span>Mastodon</span>
+          </a>
+          <a href="https://bsky.app/profile/europython.eu" class="connect-social-link" title="Bluesky">
+            <i class="fab fa-bluesky"></i>
+            <span>Bluesky</span>
+          </a>
+          <a href="https://linkedin.com/company/europython" class="connect-social-link" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://instagram.com/europython" class="connect-social-link" title="Instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q" class="connect-social-link" title="YouTube">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+          <a href="https://github.com/europython" class="connect-social-link" title="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="connect-block">
+        <div class="connect-block-title">Contact</div>
+        <div class="connect-contact-grid">
+          <div class="connect-contact-col">
+            <div class="connect-contact-label">Helpdesk</div>
+            <a href="mailto:helpdesk@europython.eu">helpdesk@europython.eu</a>
+          </div>
+          <div class="connect-contact-col">
+            <div class="connect-contact-label">Sponsoring</div>
+            <a href="mailto:sponsoring@europython.eu">sponsoring@europython.eu</a>
+          </div>
+          <div class="connect-contact-col">
+            <div class="connect-contact-label">Programme</div>
+            <a href="mailto:programme@europython.eu">programme@europython.eu</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("subscribeForm");
+  form?.addEventListener("submit", handleSubscribe);
+
+  async function handleSubscribe(event) {
+    event.preventDefault();
+
+    const input = document.getElementById("newsletter-email");
+    if (!(input instanceof HTMLInputElement)) return;
+
+    const email = input.value.trim();
+    if (!email) return;
+
+    try {
+      const result = await fetch("https://blog.europython.eu/members/api/send-magic-link/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, emailType: "subscribe" })
+      });
+
+      const r = await result.text();
+      if (r === "Created.") {
+        input.value = "";
+        alert("Please check your email to confirm. 📬");
+      }
+    } catch {}
+  }
+</script>
+
+<style>
+  .sec-wrap {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .connect-section {
+    background: var(--color-section-bg, #080f1a);
+  }
+
+  .connect-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(circle, var(--color-surface-subtle, rgba(255,255,255,0.05)) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .connect-header {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .sec-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+
+  .sec-title .sec-anchor {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.15em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .sec-title:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .sec-title .sec-anchor a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .connect-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .connect-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-radius: 2px;
+  }
+
+  .connect-block {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    text-align: center;
+  }
+
+  .connect-block:last-child {
+    border-bottom: none;
+  }
+
+  .connect-block-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  .connect-newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .connect-newsletter-input {
+    padding: 0.75rem 1.2rem;
+    border: 1px solid var(--color-border-dark, rgba(255,255,255,0.10));
+    border-radius: 2px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+    font-size: 1rem;
+    min-width: 240px;
+  }
+
+  .connect-newsletter-input::placeholder {
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+  }
+
+  .connect-newsletter-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--color-accent, #f0c040);
+    color: var(--color-section-bg, #080f1a);
+    border: 1px solid var(--color-accent, #f0c040);
+    border-radius: 2px;
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .connect-newsletter-btn:hover {
+    opacity: 0.85;
+  }
+
+  .connect-newsletter-note {
+    font-size: 0.95rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    margin-top: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .connect-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+  }
+
+  .connect-social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.2rem 1.5rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    text-decoration: none;
+    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.15s;
+  }
+
+  .connect-social-link:hover {
+    color: #fff;
+  }
+
+  .connect-social-link i {
+    font-size: 2rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .connect-contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .connect-contact-col {
+    text-align: center;
+  }
+
+  .connect-contact-label {
+    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent, #f0c040);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  .connect-contact-col a {
+    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+    font-size: 0.95rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    text-decoration: none;
+  }
+
+  .connect-contact-col a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .sec-inner {
+      padding: 3rem 1.5rem;
+    }
+    .connect-block {
+      padding: 1.5rem 1.5rem;
+    }
+    .connect-social-link {
+      padding: 0.8rem 1rem;
+    }
+    .connect-newsletter-input {
+      min-width: 100%;
+    }
+  }
+</style>
