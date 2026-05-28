@@ -1,5 +1,6 @@
 ---
 name: Pablo Galindo Salgado
+image: ./pablo.jpg
 tagline: CPython Core Developer & Steering Council member
 bio:
   "Python core developer and Steering Council member. Maintainer of the parser,
