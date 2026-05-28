@@ -7,4 +7,3 @@ bio:
   Release Manager. Driving performance and concurrency improvements in CPython."
 order: 2
 ---
-
