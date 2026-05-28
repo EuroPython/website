@@ -4,6 +4,34 @@ interface Props {
 }
 ---
 
-<a href="/" class="home-link block min-w-[44px] min-h-[44px]" aria-label="Go to homepage by clicking the logo">
-  <img class="md:block block w-[44px] h-[44px]" src="/eps-logo.svg" alt="EuroPython Society logo" />
+<a href="/" class="nav-logo" aria-label="Go to homepage">
+  <span class="nav-logo-ep">#EP</span><span class="nav-logo-year">2026</span>
 </a>
+
+<style>
+.nav-logo {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-red);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: baseline;
+  transition: opacity 0.15s;
+}
+.nav-logo:hover {
+  opacity: 0.85;
+}
+
+.nav-logo-ep {
+  color: #ffffff;
+}
+
+.nav-logo-year {
+  color: var(--color-red);
+}
+</style>
