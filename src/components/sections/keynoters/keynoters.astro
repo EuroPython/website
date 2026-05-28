@@ -18,7 +18,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   <div class="sec-inner">
 
     <div class="prog-keynoters">
-      <p class="prog-topics-label">Keynote Speakers</p>
+      <h2 class="sec-title prog-topics-label">Keynote Speakers <sup class="sec-anchor"><a href="#keynoters">#</a></sup></h2>
       <ul class="prog-keynoters-grid">
         {keynoters.map((k) => (
           <Keynoter
@@ -74,10 +74,31 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
   .prog-topics-label {
     font-family: var(--font-archivo, 'Archivo Black', sans-serif);
-    font-size: 1.4rem;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
     color: var(--color-cream, #fff5f0);
+    text-transform: uppercase;
     margin-bottom: 1.2rem;
     text-align: center;
+    position: relative;
+  }
+
+  .prog-topics-label .sec-anchor {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.15em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .prog-topics-label:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .prog-topics-label .sec-anchor a {
+    color: var(--color-cream, #fff5f0);
+    text-decoration: none;
   }
 
   .prog-keynoters-grid {

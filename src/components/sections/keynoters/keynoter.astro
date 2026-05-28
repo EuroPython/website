@@ -25,6 +25,30 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
         </div>
       </div>
     </div>
+  ) : !image ? (
+    url ? (
+      <a href={`/speaker/${url}/`} class="prog-keynoter-link">
+        <div class="prog-keynoter-photo">
+          <div class="prog-keynoter-photo--light"></div>
+        </div>
+        <div class="prog-keynoter-body">
+          <div class="prog-keynoter-name">{name}</div>
+          {tagline && <div class="prog-keynoter-role">{tagline}</div>}
+          {bio && <p class="prog-keynoter-bio">{bio}</p>}
+        </div>
+      </a>
+    ) : (
+      <div class="prog-keynoter-link">
+        <div class="prog-keynoter-photo">
+          <div class="prog-keynoter-photo--light"></div>
+        </div>
+        <div class="prog-keynoter-body">
+          <div class="prog-keynoter-name">{name}</div>
+          {tagline && <div class="prog-keynoter-role">{tagline}</div>}
+          {bio && <p class="prog-keynoter-bio">{bio}</p>}
+        </div>
+      </div>
+    )
   ) : url ? (
     <a href={`/speaker/${url}/`} class="prog-keynoter-link">
       <div class="prog-keynoter-photo">
@@ -131,6 +155,12 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
     font-size: 5rem;
     opacity: 0.12;
     color: #fff;
+  }
+
+  .prog-keynoter-photo--light {
+    width: 100%;
+    height: 100%;
+    background: var(--color-surface-medium, rgba(255,255,255,0.08));
   }
 
 
