@@ -77,10 +77,10 @@
   /* Text Variants for dark sections */
   --color-text-primary-dark: rgba(255, 255, 255, 0.93);
   --color-text-secondary-dark: rgba(255, 255, 255, 0.78);
-  --color-text-muted-dark: rgba(255, 255, 255, 0.70);
+  --color-text-muted-dark: rgba(255, 255, 255, 0.7);
   --color-surface-medium: rgba(255, 255, 255, 0.08);
   --color-surface-subtle: rgba(255, 255, 255, 0.05);
-  --color-border-dark: rgba(255, 255, 255, 0.10);
+  --color-border-dark: rgba(255, 255, 255, 0.1);
   --color-border-bright: rgba(255, 255, 255, 0.25);
 
   /* Aspect Ratios */
