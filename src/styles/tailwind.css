@@ -83,6 +83,22 @@
 
   /* Section Colors */
   --color-euroscipy: #2e2ed4;
+  --color-section-bg: #080f1a;
+  --color-section-bg-alt: #070b14;
+  --color-bg-dark: #0a0a1a;
+  --color-cta-red: #d62020;
+  --color-green-2e: #2ecc71;
+  --color-green-25: #25a85d;
+
+  /* Text Variants for dark sections */
+  --color-text-primary-dark: rgba(255, 255, 255, 0.93);
+  --color-text-secondary-dark: rgba(255, 255, 255, 0.78);
+  --color-text-muted-dark: rgba(255, 255, 255, 0.7);
+  --color-text-faint-dark: rgba(255, 255, 255, 0.6);
+  --color-surface-medium: rgba(255, 255, 255, 0.08);
+  --color-border-dark: rgba(255, 255, 255, 0.1);
+  --color-border-bright: rgba(255, 255, 255, 0.25);
+  --color-black-30: rgba(0, 0, 0, 0.3);
 
   /* Hero Colors */
   --color-hero-primary: #151f38;
