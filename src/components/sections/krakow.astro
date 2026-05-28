@@ -65,10 +65,10 @@
     z-index: 1;
   }
 
+
   .krakow-section {
-    background: var(--color-section-bg, #080f1a);
+    background: var(--color-bg-dark, #0a0a1a);
     scroll-margin-top: 60px;
-    overflow: visible;
   }
 
   .krakow-section::before {
@@ -78,33 +78,8 @@
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(46,204,113,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(30,140,70,0.06) 0%, transparent 55%);
-  }
-
-  .krakow-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 42px;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.45;
-    background: url('/flowers/flowers-separator.svg') repeat-x center;
-    background-size: auto 100%;
-  }
-
-  .krakow-flowers-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.07;
-    filter: brightness(1.5) saturate(0.5);
-    background: url('/flowers/flowers-tile.svg') repeat;
-    background-size: 2400px 2400px;
+      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(214,32,32,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(180,20,20,0.06) 0%, transparent 55%);
   }
 
   .krakow-gallery-container {
