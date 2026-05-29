@@ -116,6 +116,7 @@ export default defineConfig({
     // "/speaker/savannah-ostrowski": "/speaker/savannah-bailey",
     "/rust-summit": "/session/rust-summit-at-europython",
     "/session/rust-summit": "/session/rust-summit-at-europython",
+    "/25anniversary": "https://forms.gle/X4vCPsmHy95s5S9Y8",
     // "/c-api-summit": "/session/c-api-summit",
     // "/wasm-summit": "/session/webassembly-summit",
     // "/programme/rust-summit": "/session/rust-summit",
