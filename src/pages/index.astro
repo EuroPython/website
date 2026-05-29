@@ -6,9 +6,9 @@ import KrakowGallery from "@sections/krakow-gallery.astro";
 import Updates from "@sections/updates/updates.astro";
 import "../styles/bg-universe.css";
 // import Week from "@sections/updates/week.astro";
-// import Keynoters from "@sections/keynoters/keynoters.astro";
-// import Speakers from "@sections/speakers.astro";
-// import City from "@sections/city.astro";
+import Keynoters from "@sections/keynoters/keynoters.astro";
+import Speakers from "@sections/speakers.astro";
+import City from "@sections/city.astro";
 import Sponsors from "@sections/sponsors/sponsors.astro";
 import Testimonials from "@sections/testimonials.astro";
 import CommunityPartners from "@sections/community-partners.astro";
@@ -25,13 +25,13 @@ import Subscribe from "@sections/subscribe.astro";
     <!-- <Week /> -->
     <Updates />
   </div>
-  <KrakowGallery />
+  <Keynoters />
+  <Speakers />
   <Testimonials />
-  <CommunityPartners />
-  <!-- <Keynoters /> -->
-  <!-- <Speakers /> -->
-  <!-- <City /> -->
+  <KrakowGallery />
+  <City />
   <Sponsors />
+  <CommunityPartners />
   <Subscribe/>
 
 </Layout>
