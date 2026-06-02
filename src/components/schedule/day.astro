@@ -40,9 +40,20 @@ const { day } = Astro.props;
 const dayName = day.id;
 //const day = getEntry("days", dayName);
 
+const getRoomSortKey = (room: string) => {
+  const match = room.match(/\(S(\d+)([A-Z]?)\)/i);
+
+  if (!match) {
+    return `99-${room}`;
+  }
+
+  const [, number, suffix = ""] = match;
+  return `${number.padStart(2, "0")}-${suffix || "0"}-${room}`;
+};
+
 const ROOMS = (day.data.rooms ?? [])
   .filter((room) => room.toLowerCase() !== "exhibit hall")
-  .sort();
+  .sort((a, b) => getRoomSortKey(a).localeCompare(getRoomSortKey(b)));
 
 type ScheduleSession = {
   title: string;
@@ -117,18 +128,21 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
 
   const ends = sessions.map((session) => session.end);
   const nextStart = nextSessions[0].start;
+  const candidateEndTimes = ends
+    .filter(
+      // skip talks than end after the next start,
+      // this is for events that span for multiple slots
+      // (like a sponsor fair)
+      (end) => end.getTime() <= nextStart.getTime(),
+    )
+    .map((end) => end.getTime());
+
+  if (candidateEndTimes.length === 0) {
+    continue;
+  }
 
   const end = new Date(
-    Math.max(
-      ...ends
-        .filter(
-          // skip talks than end after the next start,
-          // this is for events that span for multiple slots
-          // (like a sponsor fair)
-          (end) => end.getTime() <= nextStart.getTime(),
-        )
-        .map((end) => end.getTime()),
-    ),
+    Math.max(...candidateEndTimes),
   );
 
   const hasBreakAfter = nextSessions.some(
@@ -220,7 +234,7 @@ for (let i = 0; i < slots.length; i++) {
   const sizeInMinutes = nextTime - currentTime;
   let size = sizeInMinutes / 5;
 
-  let sizeValue = `repeat(${size}, fit-content(100px))`;
+  let rowSize = `fit-content(100px)`;
 
   if (current.type === "break") {
     // we might have some "breaks" that are quite short, for example
@@ -229,16 +243,24 @@ for (let i = 0; i < slots.length; i++) {
     // visually small breaks :)
     size = Math.max(3, size);
 
-    sizeValue = `repeat(${size}, var(--break))`;
+    rowSize = `var(--break)`;
   } else if (current.type === "room-change") {
-    sizeValue = `repeat(${size}, var(--room-change))`;
+    size = 1;
+    rowSize = `var(--room-change)`;
   }
 
-  gridRows.push(sizeValue);
+  const rowTimes = Array.from({ length: size }, (_, i) =>
+    numberToTime(currentTime + i * 5),
+  );
+  const visibleRowCount = rowTimes.filter(
+    (time) => !timesToSkip.includes(time),
+  ).length;
 
-  for (let i = 0; i < size; i++) {
-    const time = numberToTime(currentTime + i * 5);
+  if (visibleRowCount > 0) {
+    gridRows.push(`repeat(${visibleRowCount}, ${rowSize})`);
+  }
 
+  for (const time of rowTimes) {
     timeToRow[time] = row;
 
     if (!timesToSkip.includes(time)) {
@@ -267,30 +289,54 @@ type Session = {
   rooms: string[];
 };
 
+const spansAllRooms = (rooms: string[]) => {
+  return ROOMS.every((room) => rooms.includes(room));
+};
+
 const getColStart = ({ type, rooms }: Session) => {
-  if (["room-change", "break"].includes(type)) {
+  if (type === "room-change") {
+    return 1;
+  }
+
+  if (type === "break" && spansAllRooms(rooms)) {
     return 1;
   }
 
   const indexes = rooms
     .map((room) => ROOMS.indexOf(room))
     .filter((index) => index >= 0);
+
+  if (indexes.length === 0) {
+    return 1;
+  }
+
   return Math.min(...indexes) + 2;
 };
 
 const getColEnd = ({ type, rooms }: Session) => {
-  if (["room-change", "break"].includes(type)) {
+  if (type === "room-change" || (type === "break" && spansAllRooms(rooms))) {
     return -1;
   }
 
-  const indexes = rooms.map((room) => ROOMS.indexOf(room));
+  const indexes = rooms
+    .map((room) => ROOMS.indexOf(room))
+    .filter((index) => index >= 0);
+
+  if (indexes.length === 0) {
+    return -1;
+  }
+
   return Math.max(...indexes) + 3;
 };
 
 const getSessionStyle = (session: any) => {
+  const startRow = timeToRow[session.startTime];
   const style = {
-    "--start": timeToRow[session.startTime],
-    "--end": timeToRow[session.endTime],
+    "--start": startRow,
+    "--end":
+      session.type === "room-change"
+        ? startRow + 1
+        : timeToRow[session.endTime],
     "--col-start": getColStart(session),
     "--col-end": getColEnd(session),
   };
@@ -362,25 +408,35 @@ const dateText = format(date, "eeee - do MMMM");
         {
           slots.map((slot) => (
             <div class="slot">
-              <div
-                class="time"
-                style={{
-                  "--start": timeToRow[slot.startTime],
-                  "--end": timeToRow[slot.endTime],
-                }}
-              >
-                <h2>{format(slot.start, "HH:mm")}</h2>
-              </div>
+              {slot.type !== "room-change" && (
+                <div
+                  class="time"
+                  style={{
+                    "--start": timeToRow[slot.startTime],
+                    "--end": timeToRow[slot.endTime],
+                  }}
+                >
+                  <h2>{format(slot.start, "HH:mm")}</h2>
+                </div>
+              )}
 
               {(sessionsByTime[slot.startTime] ?? [])
                 .sort(sortSessionByRooms)
                 .map((session) => {
                   const style = getSessionStyle(session);
 
-                  if (
-                    session.type === "room-change" ||
-                    session.type === "break"
-                  ) {
+                  if (session.type === "room-change") {
+                    return (
+                      <Break
+                        title={session.title}
+                        time={session.startTime}
+                        className="break room-change"
+                        style={style}
+                      />
+                    );
+                  }
+
+                  if (session.type === "break") {
                     return (
                       <Break
                         title={session.title}
@@ -428,13 +484,13 @@ const dateText = format(date, "eeee - do MMMM");
     </div>
     <div class="h-12"></div>
   </div>
-</day>
+</div>
 
 <style is:global>
 
 .layout-wrapper {
   display: grid;
-  grid-template-columns: 1fr (770px, 100%) 1fr !important;
+  grid-template-columns: 1fr minmax(0, 100%) 1fr !important;
 }
 
 </style>
@@ -442,7 +498,16 @@ const dateText = format(date, "eeee - do MMMM");
   .schedule-wrapper
 {
   width: 100%;
+  margin-top: 0.75rem;
 }
+
+  .day {
+    margin-block: 2rem 3rem;
+  }
+
+  .day:first-child {
+    margin-top: 0;
+  }
 
 
   :global(.day-end) {
@@ -496,7 +561,6 @@ const dateText = format(date, "eeee - do MMMM");
   :global(.session),
   .time,
   :global(.break),
-  .room-change,
   header,
   header > div > div {
     /*outline: 2px solid var(--color-primary);*/
@@ -504,6 +568,29 @@ const dateText = format(date, "eeee - do MMMM");
     border-radius: 10px;
     margin:2px;
     padding:2px 0;
+  }
+
+  :global(.room-change) {
+    align-items: center;
+    background-color: #FCFBFA;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: var(--color-text);
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.2;
+    margin: 2px;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+
+  :global(.break:not(.room-change)) {
+    background-color: #FFFCF7;
+    font-weight: 600;
+    letter-spacing: 0;
   }
 
   .posters {
@@ -542,6 +629,11 @@ const dateText = format(date, "eeee - do MMMM");
 
     .schedule-container.header {
       padding-bottom: 0;
+      margin-top: 0.5rem;
+    }
+
+    .schedule-container:not(.header) {
+      margin-top: 0.75rem;
     }
 
     .time,
@@ -553,7 +645,7 @@ const dateText = format(date, "eeee - do MMMM");
       position: sticky;
       top: 0;
       background: var(--color-body-background);
-      z-index: 20;inherit
+      z-index: 20;
 
       > div > div {
         padding: 8px;
@@ -562,24 +654,22 @@ const dateText = format(date, "eeee - do MMMM");
     }
 
     .schedule {
-      --room-change: calc(var(--minute) * 8);
-      --5min: calc(var(--minute) * 5);
+      --break: 14px;
+      --room-change: 52px;
 
       display: grid;
       gap: 2px;
       padding: 0;
-      padding-top:100px;
     }
 
     :global(.session),
     .time,
     .posters,
-    .room-change,
+    :global(.room-change),
     :global(.break) {
       grid-row: var(--start) / var(--end);
       grid-column: var(--col-start) / var(--col-end);
     }
-
 
     :global(.day-end){
       font-size: 1.2rem;

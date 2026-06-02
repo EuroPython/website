@@ -20,14 +20,17 @@
     "/krakow",
     "/finaid",
     "/visa",
+    "/volunteering",
     "/about",
     "/faq",
     "/language-summit",
+    "/rust-summit",
     "/sponsorship/sponsor",
     "/sponsorship/information",
     "/sessions",
     "/speakers",
-    "/tickets"
+    "/tickets",
+    "/hotels"
   ],
   "navItems": ["Programme", "Venue", "About"]
 }

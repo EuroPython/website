@@ -21,7 +21,7 @@ const tiers = [
   "Patron",
 ] as const;
 
-const bg_url = tiers.includes(tier)? '/social/bg4.png' : '/social/bg5.png';
+const bg_url = tiers.includes(tier)? '/social/sponsor_card_white.png' : '/social/partner_card_white.png';
 
 
 // Function to parse CSS padding values
@@ -76,7 +76,7 @@ if (height > availableHeight) {
 
 // Calculate position with padding offset
 const x = 450 - (width + padding.left + padding.right) / 2 + padding.left;
-const y = 650 - (height + padding.top + padding.bottom) / 2 + padding.top;
+const y = 670 - (height + padding.top + padding.bottom) / 2 + padding.top;
 ---
 
 <svg class="bg" width="900" height="900" class="h-full w-full -z-10">

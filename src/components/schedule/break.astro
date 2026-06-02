@@ -7,12 +7,12 @@ export interface Props {
 }
 
 const { time, title, style, className }: Props = Astro.props;
+const label = [time, title].filter(Boolean).join(" ");
 ---
 
-<div class={className? className: "break"} style={style} aria-label=`${time} ${title}` >
-  {time}{" "}
+<div class={className? className: "break"} style={style} aria-label={label} >
+  {time && `${time} `}
   {title}
-  <span class="sr-only">{time} {title}</span>
 </div>
 
 <style>

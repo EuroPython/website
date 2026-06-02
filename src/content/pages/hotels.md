@@ -12,23 +12,30 @@ However, we’ve arranged discount coupons for EuroPython attendees at the hotel
 listed below. These may offer better rates, but it's entirely up to you to
 decide whether booking with the coupon or through other platforms.
 
-### Occidental Prague Wilson (Prague 1)
+### Q Hotel Plus Kraków
 
-Address: Václavské náměstí 812/59, 110 00 Nové Město
-
-Use the following link to apply the EuroPython discount coupon directly:
-[link](https://reservation.barcelo.com/?bep=CERES&hotel=7302&arrive=2025-07-10&depart=2025-07-23&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTH25)
-
-### Occidental Prague (Prague 4)
-
-Address: Na Strži 1660/32, 140 00 Krč
+Address: Wygrana 6, 30-311 Kraków
 
 Use the following link to apply the EuroPython discount coupon directly:
-[link](https://reservation.barcelo.com/?bep=CERES&hotel=7311&arrive=2025-07-10&depart=2025-07-23&rooms=1&store=en-ie&theme=initialTheme&adult=1&marketprice=EUR&country=cz&marketcampaign=REMEA&locale=en-gb&currency=EUR&category=urban&be_redirect=ceres&usercurrency=EUR&coupon=EUROPYTH25)
+[link](https://booking.profitroom.com/pl/qhotelpluskrakow/details/offer/426634?codes=EuroPython&no-cache=1&currency=PLN)
 
-### Grand Hotel Prague Towers (Prague 4)
+### Hotel Saski Kraków
 
-Address: Kongresová 1655/1, 140 69 Nusle
+Address: Sławkowska 3, 31-014 Kraków
 
-Use the following link to apply the EuroPython discount coupon directly:
-[link](https://hoteltowers.cz/en/booking-search/?currency=EUR&adults=2&loaded=1&datein=2025-07-14&dateout=2025-07-20&promo=EP2025)
+Use the following link:
+[link](https://www.hilton.com/en/hotels/krkshqq-hotel-saski-krakow/?msockid=2cc65d89747d600c3b0d4b7d7579612b)
+
+- Pick dates between July 12-19th
+- Click ‘special rates’ and insert Corporate account number: 3558632
+- This way system will show special EUROPYTHON rates
+
+### B&B HOTEL Kraków Centrum
+
+Address: Monte Cassino 1, 30-337 Kraków
+
+Book through the hotel website:
+[link](https://www.hotel-bb.com/en/hotel/krakow-centrum)
+
+- Pick dates between July 12-19th
+- Use a Discount Code to get a discount from the standard price: BBHKACM15EP26

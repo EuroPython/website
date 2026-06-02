@@ -4,23 +4,17 @@ url: https://www.europython-society.org/
 location: "Sweden"
 industry: "Technology & Non-Profit"
 description: |
-  The EuroPython Society (EPS) is a Swedish non-profit organization dedicated to supporting Python communities across Europe. It organizes EuroPython conferences, sponsors initiatives like financial aid programs, and promotes diversity and inclusion in the tech ecosystem.
+  The EuroPython Society (EPS) is a Swedish non-profit organisation dedicated to supporting Python communities across Europe. It organises EuroPython conferences, supports communities through its grants and financial aid programmes, and promotes diversity and inclusion in the tech ecosystem.
 socials:
   linkedin: "https://linkedin.com/company/europython"
   twitter: "https://twitter.com/EuroPython"
-  github:
+  github: "https://github.com/europython"
   discord:
-  mastodon:
-  bluesky:
+  youtube: "https://www.youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q"
+  instagram: "https://www.instagram.com/europython/"
+  mastodon: "https://fosstodon.org/@europython"
+  bluesky: "https://bsky.app/profile/europython.eu"
+  tiktok: "https://www.tiktok.com/@europython"
 tier: Financial Aid
 logo_padding: 15px
 ---
-
-# About EuroPython Society
-
-The EuroPython Society (EPS) is a Swedish non-profit organization dedicated to
-supporting Python communities across Europe and organizing EuroPython
-conferences. Founded in 2004, EPS provides a legal framework for EuroPython
-events and champions the growth of the Python ecosystem through initiatives like
-sponsoring PyCon+Web 2025. By fostering collaboration and innovation, EPS plays
-a critical role in advancing Python programming across the continent.
