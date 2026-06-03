@@ -70,7 +70,11 @@ const puppeteer = require("puppeteer");
     const code = await page.evaluate((el) => el.getAttribute("data-code"), el);
 
     // Use session code suffix when present (multi-session speaker)
-    const filename = code ? `social-${slug}-${code}.png` : slug ? `social-${slug}.png` : `social-${i}.png`;
+    const filename = code
+      ? `social-${slug}-${code}.png`
+      : slug
+        ? `social-${slug}.png`
+        : `social-${i}.png`;
 
     await el.screenshot({ path: filename });
     console.log(`Saved ${filename}`);
