@@ -1196,77 +1196,6 @@
     }
   },
   {
-    "type": "speaker",
-    "name": "Grzegorz Kocjan",
-    "image": "https://ep2026.europython.eu/media/speakers/social-grzegorz-kocjan.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Grzegorz Kocjan — The hardest test suite I ever built - a pytest case study",
-    "handles": {
-      "linkedin": "https://www.linkedin.com/in/grzegorzkocjan"
-    },
-    "channel": {
-      "instagram": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\".",
-      "x": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\". Talk: https://ep2026.europython.eu/TWBDVZ",
-      "linkedin": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\".",
-      "bsky": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\". Talk: https://ep2026.europython.eu/TWBDVZ",
-      "fosstodon": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\". Talk: https://ep2026.europython.eu/TWBDVZ",
-      "tiktok": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Ivan Markeev",
-    "image": "https://ep2026.europython.eu/media/speakers/social-ivan-markeev.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ivan Markeev — Scaling Python Systems by Designing Team-Aware Architecture",
-    "handles": {
-      "linkedin": "https://www.linkedin.com/in/markeyev"
-    },
-    "channel": {
-      "instagram": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\".",
-      "x": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\". Talk: https://ep2026.europython.eu/QT97WA",
-      "linkedin": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\".",
-      "bsky": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\". Talk: https://ep2026.europython.eu/QT97WA",
-      "fosstodon": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\". Talk: https://ep2026.europython.eu/QT97WA",
-      "tiktok": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\"."
-    }
-  },
-  {
-    "type": "sponsor",
-    "name": "Revolut",
-    "image": "https://ep2026.europython.eu/media/sponsors/social-revolut.png",
-    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Revolut",
-    "handles": {
-      "x": "@Revolut",
-      "linkedin": "https://www.linkedin.com/company/revolut",
-      "bsky": "",
-      "fosstodon": ""
-    },
-    "channel": {
-      "x": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @Revolut https://www.revolut.com/",
-      "linkedin": "🚀✨ A huge thank you to Revolut for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://www.linkedin.com/company/revolut https://www.revolut.com/",
-      "bsky": "🎉✨ Thank you to Revolut for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.revolut.com/",
-      "fosstodon": "🚀✨ Big shoutout and heartfelt thanks to Revolut for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.revolut.com/"
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Ivana Kellyer",
-    "image": "https://ep2026.europython.eu/media/speakers/social-ivana-kellyer.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ivana Kellyer — How to Maintain 60 Integrations and Not Go Bananas",
-    "handles": {
-      "linkedin": "https://www.linkedin.com/in/ivana-kellyer",
-      "bsky": "@jenxness.bsky.social",
-      "fosstodon": "@jenx@hachyderm.io"
-    },
-    "channel": {
-      "instagram": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\".",
-      "x": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\". Talk: https://ep2026.europython.eu/H7DVRJ",
-      "linkedin": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\".",
-      "bsky": "Join Ivana Kellyer (@jenxness.bsky.social) at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\". Talk: https://ep2026.europython.eu/H7DVRJ",
-      "fosstodon": "Join Ivana Kellyer (@jenx@hachyderm.io) at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\". talk: https://ep2026.europython.eu/H7DVRJ",
-      "tiktok": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\"."
-    }
-  },
-  {
     "type": "partner",
     "name": "Pykonik",
     "image": "https://ep2026.europython.eu/media/sponsors/social-pykonik.png",
@@ -1286,51 +1215,19 @@
   },
   {
     "type": "speaker",
-    "name": "Jan Bjørge",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jan-bjorge.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Bjørge — PgQueuer: Drop the Broker, Keep the Queue",
-    "handles": {},
-    "channel": {
-      "instagram": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\".",
-      "x": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\". Talk: https://ep2026.europython.eu/RMY7Y7",
-      "linkedin": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\".",
-      "bsky": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\". Talk: https://ep2026.europython.eu/RMY7Y7",
-      "fosstodon": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\". Talk: https://ep2026.europython.eu/RMY7Y7",
-      "tiktok": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Jan Koprowski",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jan-koprowski.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Koprowski — How we write unit test in my team in Openchip",
+    "name": "Grzegorz Kocjan",
+    "image": "https://ep2026.europython.eu/media/speakers/social-grzegorz-kocjan.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Grzegorz Kocjan — The hardest test suite I ever built - a pytest case study",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/jankoprowski"
+      "linkedin": "https://www.linkedin.com/in/grzegorzkocjan"
     },
     "channel": {
-      "instagram": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\".",
-      "x": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\". Talk: https://ep2026.europython.eu/9URK9U",
-      "linkedin": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\".",
-      "bsky": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\". Talk: https://ep2026.europython.eu/9URK9U",
-      "fosstodon": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\". Talk: https://ep2026.europython.eu/9URK9U",
-      "tiktok": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Jan Musílek",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jan-musilek.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Musílek — Breaking changes – not great, not terrible",
-    "handles": {
-      "fosstodon": "@stinovlas@fosstodon.org"
-    },
-    "channel": {
-      "instagram": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\".",
-      "x": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\". Talk: https://ep2026.europython.eu/FBQQXS",
-      "linkedin": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\".",
-      "bsky": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\". Talk: https://ep2026.europython.eu/FBQQXS",
-      "fosstodon": "Join Jan Musílek (@stinovlas@fosstodon.org) at EuroPython for \"Breaking changes – not great, not terrible\". talk: https://ep2026.europython.eu/FBQQXS",
-      "tiktok": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\"."
+      "instagram": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\".",
+      "x": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\" talk: https://ep2026.europython.eu/TWBDVZ",
+      "linkedin": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\" talk: https://ep2026.europython.eu/TWBDVZ",
+      "bsky": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\" talk: https://ep2026.europython.eu/TWBDVZ",
+      "fosstodon": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\" talk: https://ep2026.europython.eu/TWBDVZ",
+      "tiktok": "Join Grzegorz Kocjan at EuroPython for \"The hardest test suite I ever built - a pytest case study\"."
     }
   },
   {
@@ -1353,55 +1250,67 @@
   },
   {
     "type": "speaker",
-    "name": "Jan Smitka",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jan-smitka.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Smitka — Faster Django ORM queries for everybody",
-    "handles": {
-      "x": "@jansmitka",
-      "linkedin": "https://www.linkedin.com/in/jansmitka",
-      "fosstodon": "@jansmitka@fosstodon.org"
-    },
+    "name": "Gyeongjae Choi",
+    "image": "https://ep2026.europython.eu/media/speakers/social-gyeongjae-choi.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Gyeongjae Choi — Python Everywhere: The State of Python on WebAssembly",
+    "handles": {},
     "channel": {
-      "instagram": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\".",
-      "x": "Join Jan Smitka (@jansmitka) at EuroPython for \"Faster Django ORM queries for everybody\". Talk: https://ep2026.europython.eu/BFK3JK",
-      "linkedin": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\".",
-      "bsky": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\". Talk: https://ep2026.europython.eu/BFK3JK",
-      "fosstodon": "Join Jan Smitka (@jansmitka@fosstodon.org) at EuroPython for \"Faster Django ORM queries for everybody\". talk: https://ep2026.europython.eu/BFK3JK",
-      "tiktok": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\"."
+      "instagram": "Join Gyeongjae Choi at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\".",
+      "x": "Join Gyeongjae Choi at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "linkedin": "Join Gyeongjae Choi at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "bsky": "Join Gyeongjae Choi at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "fosstodon": "Join Gyeongjae Choi at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "tiktok": "Join Gyeongjae Choi at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\"."
     }
   },
   {
     "type": "speaker",
-    "name": "Jarosław Śmietanka",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jaroslaw-smietanka.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jarosław Śmietanka — The Hidden Cost of Complexity: Reducing Cognitive Load in Python",
+    "name": "Hood Chatham",
+    "image": "https://ep2026.europython.eu/media/speakers/social-hood-chatham.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Hood Chatham — Python Everywhere: The State of Python on WebAssembly",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Hood Chatham at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\".",
+      "x": "Join Hood Chatham at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "linkedin": "Join Hood Chatham at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "bsky": "Join Hood Chatham at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "fosstodon": "Join Hood Chatham at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\" talk: https://ep2026.europython.eu/QHFXXA",
+      "tiktok": "Join Hood Chatham at EuroPython for \"Python Everywhere: The State of Python on WebAssembly\"."
+    }
+  },
+  {
+    "type": "sponsor",
+    "name": "Revolut",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-revolut.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Revolut",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/jsmietanka"
+      "x": "@Revolut",
+      "linkedin": "https://www.linkedin.com/company/revolut",
+      "bsky": "",
+      "fosstodon": ""
     },
     "channel": {
-      "instagram": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\".",
-      "x": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\". Talk: https://ep2026.europython.eu/UGM7F8",
-      "linkedin": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\".",
-      "bsky": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\". Talk: https://ep2026.europython.eu/UGM7F8",
-      "fosstodon": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\". Talk: https://ep2026.europython.eu/UGM7F8",
-      "tiktok": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\"."
+      "x": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @Revolut https://www.revolut.com/",
+      "linkedin": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/revolut https://www.revolut.com/",
+      "bsky": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.revolut.com/",
+      "fosstodon": "🎉✨ We are pleased to welcome Revolut as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.revolut.com/"
     }
   },
   {
     "type": "speaker",
-    "name": "Jenny Vega",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jenny-vega.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jenny Vega — From Molecules to Models: A Guide to AI Drug Discovery with Python",
+    "name": "Ivan Markeev",
+    "image": "https://ep2026.europython.eu/media/speakers/social-ivan-markeev.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ivan Markeev — Scaling Python Systems by Designing Team-Aware Architecture",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/jennyluciav"
+      "linkedin": "https://www.linkedin.com/in/markeyev"
     },
     "channel": {
-      "instagram": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\".",
-      "x": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\". Talk: https://ep2026.europython.eu/VNR377",
-      "linkedin": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\".",
-      "bsky": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\". Talk: https://ep2026.europython.eu/VNR377",
-      "fosstodon": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\". Talk: https://ep2026.europython.eu/VNR377",
-      "tiktok": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\"."
+      "instagram": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\".",
+      "x": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\" talk: https://ep2026.europython.eu/QT97WA",
+      "linkedin": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\" talk: https://ep2026.europython.eu/QT97WA",
+      "bsky": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\" talk: https://ep2026.europython.eu/QT97WA",
+      "fosstodon": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\" talk: https://ep2026.europython.eu/QT97WA",
+      "tiktok": "Join Ivan Markeev at EuroPython for \"Scaling Python Systems by Designing Team-Aware Architecture\"."
     }
   },
   {
@@ -1424,49 +1333,71 @@
   },
   {
     "type": "speaker",
-    "name": "Johannes Kolbe",
-    "image": "https://ep2026.europython.eu/media/speakers/social-johannes-kolbe.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Johannes Kolbe — Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI",
+    "name": "Ivana Kellyer",
+    "image": "https://ep2026.europython.eu/media/speakers/social-ivana-kellyer.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ivana Kellyer — How to Maintain 60 Integrations and Not Go Bananas",
     "handles": {
-      "bsky": "@johko.bsky.social"
+      "linkedin": "https://www.linkedin.com/in/ivana-kellyer",
+      "bsky": "@jenxness.bsky.social",
+      "fosstodon": "@jenx@hachyderm.io"
     },
     "channel": {
-      "instagram": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\".",
-      "x": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\". Talk: https://ep2026.europython.eu/LFSJYL",
-      "linkedin": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\".",
-      "bsky": "Join Johannes Kolbe (@johko.bsky.social) at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\". Talk: https://ep2026.europython.eu/LFSJYL",
-      "fosstodon": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\". Talk: https://ep2026.europython.eu/LFSJYL",
-      "tiktok": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\"."
+      "instagram": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\".",
+      "x": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\" talk: https://ep2026.europython.eu/H7DVRJ",
+      "linkedin": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\" talk: https://ep2026.europython.eu/H7DVRJ",
+      "bsky": "Join Ivana Kellyer (@jenxness.bsky.social) at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\" talk: https://ep2026.europython.eu/H7DVRJ",
+      "fosstodon": "Join Ivana Kellyer (@jenx@hachyderm.io) at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\" talk: https://ep2026.europython.eu/H7DVRJ",
+      "tiktok": "Join Ivana Kellyer at EuroPython for \"How to Maintain 60 Integrations and Not Go Bananas\"."
     }
   },
   {
     "type": "speaker",
-    "name": "Jon Nordby",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jon-nordby.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jon Nordby — Developing IoT sensors with MicroPython",
+    "name": "Jan Bjørge",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jan-bjorge.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Bjørge — PgQueuer: Drop the Broker, Keep the Queue",
     "handles": {},
     "channel": {
-      "instagram": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\".",
-      "x": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\". Talk: https://ep2026.europython.eu/NQGSY7",
-      "linkedin": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\".",
-      "bsky": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\". Talk: https://ep2026.europython.eu/NQGSY7",
-      "fosstodon": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\". Talk: https://ep2026.europython.eu/NQGSY7",
-      "tiktok": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\"."
+      "instagram": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\".",
+      "x": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\" talk: https://ep2026.europython.eu/RMY7Y7",
+      "linkedin": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\" talk: https://ep2026.europython.eu/RMY7Y7",
+      "bsky": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\" talk: https://ep2026.europython.eu/RMY7Y7",
+      "fosstodon": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\" talk: https://ep2026.europython.eu/RMY7Y7",
+      "tiktok": "Join Jan Bjørge at EuroPython for \"PgQueuer: Drop the Broker, Keep the Queue\"."
+    }
+  },
+  {
+    "type": "sponsor",
+    "name": "Vercel",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-vercel.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Vercel",
+    "handles": {
+      "x": "@vercel",
+      "linkedin": "https://www.linkedin.com/company/vercel",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ We are pleased to welcome Vercel as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @vercel https://vercel.com",
+      "linkedin": "🚀✨ Big shoutout and heartfelt thanks to Vercel for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://www.linkedin.com/company/vercel https://vercel.com",
+      "bsky": "🎉✨ Thank you to Vercel for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://vercel.com",
+      "fosstodon": "🎉✨ Thank you to Vercel for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://vercel.com"
     }
   },
   {
     "type": "speaker",
-    "name": "Jukka Lehtosalo",
-    "image": "https://ep2026.europython.eu/media/speakers/social-jukka-lehtosalo.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jukka Lehtosalo — Speeding Up Python with Free Threading and Mypyc",
-    "handles": {},
+    "name": "Jan Koprowski",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jan-koprowski.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Koprowski — How we write unit test in my team in Openchip",
+    "handles": {
+      "linkedin": "https://www.linkedin.com/in/jankoprowski"
+    },
     "channel": {
-      "instagram": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\".",
-      "x": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\". Talk: https://ep2026.europython.eu/PWGSJQ",
-      "linkedin": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\".",
-      "bsky": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\". Talk: https://ep2026.europython.eu/PWGSJQ",
-      "fosstodon": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\". Talk: https://ep2026.europython.eu/PWGSJQ",
-      "tiktok": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\"."
+      "instagram": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\".",
+      "x": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\" session: https://ep2026.europython.eu/9URK9U",
+      "linkedin": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\" session: https://ep2026.europython.eu/9URK9U",
+      "bsky": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\" session: https://ep2026.europython.eu/9URK9U",
+      "fosstodon": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\" session: https://ep2026.europython.eu/9URK9U",
+      "tiktok": "Join Jan Koprowski at EuroPython for \"How we write unit test in my team in Openchip\"."
     }
   },
   {
@@ -1489,49 +1420,71 @@
   },
   {
     "type": "speaker",
-    "name": "Julien Courtès",
-    "image": "https://ep2026.europython.eu/media/speakers/social-julien-courtes.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Julien Courtès — Designing Performant APIs with Litestar",
-    "handles": {},
-    "channel": {
-      "instagram": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\".",
-      "x": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\". Talk: https://ep2026.europython.eu/ZRWENU",
-      "linkedin": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\".",
-      "bsky": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\". Talk: https://ep2026.europython.eu/ZRWENU",
-      "fosstodon": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\". Talk: https://ep2026.europython.eu/ZRWENU",
-      "tiktok": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Julien Lenormand",
-    "image": "https://ep2026.europython.eu/media/speakers/social-julien-lenormand.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Julien Lenormand — Getting out of the testing hell",
+    "name": "Jan Musílek",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jan-musilek.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Musílek — Breaking changes – not great, not terrible",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/julien-lenormand"
+      "fosstodon": "@stinovlas@fosstodon.org"
     },
     "channel": {
-      "instagram": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\".",
-      "x": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\". Talk: https://ep2026.europython.eu/GCWCEU",
-      "linkedin": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\".",
-      "bsky": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\". Talk: https://ep2026.europython.eu/GCWCEU",
-      "fosstodon": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\". Talk: https://ep2026.europython.eu/GCWCEU",
-      "tiktok": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\"."
+      "instagram": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\".",
+      "x": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\" talk: https://ep2026.europython.eu/FBQQXS",
+      "linkedin": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\" talk: https://ep2026.europython.eu/FBQQXS",
+      "bsky": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\" talk: https://ep2026.europython.eu/FBQQXS",
+      "fosstodon": "Join Jan Musílek (@stinovlas@fosstodon.org) at EuroPython for \"Breaking changes – not great, not terrible\" talk: https://ep2026.europython.eu/FBQQXS",
+      "tiktok": "Join Jan Musílek at EuroPython for \"Breaking changes – not great, not terrible\"."
     }
   },
   {
     "type": "speaker",
-    "name": "Kamil Kulig",
-    "image": "https://ep2026.europython.eu/media/speakers/social-kamil-kulig.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Kamil Kulig — gRPC for Beginners",
+    "name": "Jan Smitka",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jan-smitka.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jan Smitka — Faster Django ORM queries for everybody",
+    "handles": {
+      "x": "@jansmitka",
+      "linkedin": "https://www.linkedin.com/in/jansmitka",
+      "fosstodon": "@jansmitka@fosstodon.org"
+    },
+    "channel": {
+      "instagram": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\".",
+      "x": "Join Jan Smitka (@jansmitka) at EuroPython for \"Faster Django ORM queries for everybody\" talk: https://ep2026.europython.eu/BFK3JK",
+      "linkedin": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\" talk: https://ep2026.europython.eu/BFK3JK",
+      "bsky": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\" talk: https://ep2026.europython.eu/BFK3JK",
+      "fosstodon": "Join Jan Smitka (@jansmitka@fosstodon.org) at EuroPython for \"Faster Django ORM queries for everybody\" talk: https://ep2026.europython.eu/BFK3JK",
+      "tiktok": "Join Jan Smitka at EuroPython for \"Faster Django ORM queries for everybody\"."
+    }
+  },
+  {
+    "type": "sponsor",
+    "name": "Waracle",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-waracle.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Waracle",
+    "handles": {
+      "x": "@WaracleUK",
+      "linkedin": "https://www.linkedin.com/company/waracle",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ We are pleased to welcome Waracle as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @WaracleUK https://waracle.com/",
+      "linkedin": "🎉✨ We are pleased to welcome Waracle as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/waracle https://waracle.com/",
+      "bsky": "🎉✨ We are pleased to welcome Waracle as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://waracle.com/",
+      "fosstodon": "🎉✨ We are pleased to welcome Waracle as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://waracle.com/"
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Jannis Leidel",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jannis-leidel.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jannis Leidel — Packaging Summit",
     "handles": {},
     "channel": {
-      "instagram": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\".",
-      "x": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\". Talk: https://ep2026.europython.eu/TGGHKC",
-      "linkedin": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\".",
-      "bsky": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\". Talk: https://ep2026.europython.eu/TGGHKC",
-      "fosstodon": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\". Talk: https://ep2026.europython.eu/TGGHKC",
-      "tiktok": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\"."
+      "instagram": "Join Jannis Leidel at EuroPython for \"Packaging Summit\".",
+      "x": "Join Jannis Leidel at EuroPython for \"Packaging Summit\" session: https://ep2026.europython.eu/SBREFN",
+      "linkedin": "Join Jannis Leidel at EuroPython for \"Packaging Summit\" session: https://ep2026.europython.eu/SBREFN",
+      "bsky": "Join Jannis Leidel at EuroPython for \"Packaging Summit\" session: https://ep2026.europython.eu/SBREFN",
+      "fosstodon": "Join Jannis Leidel at EuroPython for \"Packaging Summit\" session: https://ep2026.europython.eu/SBREFN",
+      "tiktok": "Join Jannis Leidel at EuroPython for \"Packaging Summit\"."
     }
   },
   {
@@ -1554,53 +1507,53 @@
   },
   {
     "type": "speaker",
-    "name": "Karen Jex",
-    "image": "https://ep2026.europython.eu/media/speakers/social-karen-jex.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Karen Jex — How much do you really need to know about Databases?",
+    "name": "Jarosław Śmietanka",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jaroslaw-smietanka.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jarosław Śmietanka — The Hidden Cost of Complexity: Reducing Cognitive Load in Python",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/karenhjex",
-      "bsky": "@karenhjex.bsky.social",
-      "fosstodon": "@karenhjex@mastodon.online"
+      "linkedin": "https://www.linkedin.com/in/jsmietanka"
     },
     "channel": {
-      "instagram": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\".",
-      "x": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\". Talk: https://ep2026.europython.eu/X3ENDU",
-      "linkedin": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\".",
-      "bsky": "Join Karen Jex (@karenhjex.bsky.social) at EuroPython for \"How much do you really need to know about Databases?\". Talk: https://ep2026.europython.eu/X3ENDU",
-      "fosstodon": "Join Karen Jex (@karenhjex@mastodon.online) at EuroPython for \"How much do you really need to know about Databases?\". talk: https://ep2026.europython.eu/X3ENDU",
-      "tiktok": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\"."
+      "instagram": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\".",
+      "x": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\" talk: https://ep2026.europython.eu/UGM7F8",
+      "linkedin": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\" talk: https://ep2026.europython.eu/UGM7F8",
+      "bsky": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\" talk: https://ep2026.europython.eu/UGM7F8",
+      "fosstodon": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\" talk: https://ep2026.europython.eu/UGM7F8",
+      "tiktok": "Join Jarosław Śmietanka at EuroPython for \"The Hidden Cost of Complexity: Reducing Cognitive Load in Python\"."
     }
   },
   {
     "type": "speaker",
-    "name": "Katie Bickford",
-    "image": "https://ep2026.europython.eu/media/speakers/social-katie-bickford.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Katie Bickford — Why doing difficult things is good for you and good for your team",
+    "name": "Jenny Vega",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jenny-vega.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jenny Vega — From Molecules to Models: A Guide to AI Drug Discovery with Python",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/katie-bickford-7a9958aa"
+      "linkedin": "https://www.linkedin.com/in/jennyluciav"
     },
     "channel": {
-      "instagram": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\".",
-      "x": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\". Talk: https://ep2026.europython.eu/NWLBJC",
-      "linkedin": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\".",
-      "bsky": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\". Talk: https://ep2026.europython.eu/NWLBJC",
-      "fosstodon": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\". Talk: https://ep2026.europython.eu/NWLBJC",
-      "tiktok": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\"."
+      "instagram": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\".",
+      "x": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\" talk: https://ep2026.europython.eu/VNR377",
+      "linkedin": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\" talk: https://ep2026.europython.eu/VNR377",
+      "bsky": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\" talk: https://ep2026.europython.eu/VNR377",
+      "fosstodon": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\" talk: https://ep2026.europython.eu/VNR377",
+      "tiktok": "Join Jenny Vega at EuroPython for \"From Molecules to Models: A Guide to AI Drug Discovery with Python\"."
     }
   },
   {
     "type": "speaker",
-    "name": "Ken Jin",
-    "image": "https://ep2026.europython.eu/media/speakers/social-ken-jin.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ken Jin — Inside Python 3.15's JIT Optimizer",
-    "handles": {},
+    "name": "Johannes Kolbe",
+    "image": "https://ep2026.europython.eu/media/speakers/social-johannes-kolbe.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Johannes Kolbe — Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI",
+    "handles": {
+      "bsky": "@johko.bsky.social"
+    },
     "channel": {
-      "instagram": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\".",
-      "x": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\". Talk: https://ep2026.europython.eu/KRMBWS",
-      "linkedin": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\".",
-      "bsky": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\". Talk: https://ep2026.europython.eu/KRMBWS",
-      "fosstodon": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\". Talk: https://ep2026.europython.eu/KRMBWS",
-      "tiktok": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\"."
+      "instagram": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\".",
+      "x": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\" talk: https://ep2026.europython.eu/LFSJYL",
+      "linkedin": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\" talk: https://ep2026.europython.eu/LFSJYL",
+      "bsky": "Join Johannes Kolbe (@johko.bsky.social) at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\" talk: https://ep2026.europython.eu/LFSJYL",
+      "fosstodon": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\" talk: https://ep2026.europython.eu/LFSJYL",
+      "tiktok": "Join Johannes Kolbe at EuroPython for \"Robot Holmes and the Silenced Witness: A Noir Guide to Real-Time Voice AI\"."
     }
   },
   {
@@ -1623,53 +1576,47 @@
   },
   {
     "type": "speaker",
-    "name": "Koudai Aono",
-    "image": "https://ep2026.europython.eu/media/speakers/social-koudai-aono.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Koudai Aono — Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset",
-    "handles": {
-      "linkedin": "https://www.linkedin.com/in/koxudaxi",
-      "fosstodon": "@koxudaxi@fosstodon.org"
-    },
-    "channel": {
-      "instagram": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\".",
-      "x": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\". Talk: https://ep2026.europython.eu/7VKQQM",
-      "linkedin": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\".",
-      "bsky": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\". Talk: https://ep2026.europython.eu/7VKQQM",
-      "fosstodon": "Join Koudai Aono (@koxudaxi@fosstodon.org) at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\". talk: https://ep2026.europython.eu/7VKQQM",
-      "tiktok": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Kuldeep Pisda",
-    "image": "https://ep2026.europython.eu/media/speakers/social-kuldeep-pisda.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Kuldeep Pisda — Django TDD Patterns: A Visual Field Guide",
-    "handles": {
-      "x": "@kdpisda",
-      "linkedin": "https://www.linkedin.com/in/kuldeep-pisda"
-    },
-    "channel": {
-      "instagram": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\".",
-      "x": "Join Kuldeep Pisda (@kdpisda) at EuroPython for \"Django TDD Patterns: A Visual Field Guide\". Talk: https://ep2026.europython.eu/LNVDY3",
-      "linkedin": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\".",
-      "bsky": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\". Talk: https://ep2026.europython.eu/LNVDY3",
-      "fosstodon": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\". Talk: https://ep2026.europython.eu/LNVDY3",
-      "tiktok": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Larry Hastings",
-    "image": "https://ep2026.europython.eu/media/speakers/social-larry-hastings.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Larry Hastings — Conquer multithreaded Python with Blanket",
+    "name": "Jon Nordby",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jon-nordby.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jon Nordby — Developing IoT sensors with MicroPython",
     "handles": {},
     "channel": {
-      "instagram": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\".",
-      "x": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\". Talk: https://ep2026.europython.eu/QY7PFR",
-      "linkedin": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\".",
-      "bsky": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\". Talk: https://ep2026.europython.eu/QY7PFR",
-      "fosstodon": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\". Talk: https://ep2026.europython.eu/QY7PFR",
-      "tiktok": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\"."
+      "instagram": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\".",
+      "x": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\" tutorial: https://ep2026.europython.eu/NQGSY7",
+      "linkedin": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\" tutorial: https://ep2026.europython.eu/NQGSY7",
+      "bsky": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\" tutorial: https://ep2026.europython.eu/NQGSY7",
+      "fosstodon": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\" tutorial: https://ep2026.europython.eu/NQGSY7",
+      "tiktok": "Join Jon Nordby at EuroPython for \"Developing IoT sensors with MicroPython\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Jukka Lehtosalo",
+    "image": "https://ep2026.europython.eu/media/speakers/social-jukka-lehtosalo.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Jukka Lehtosalo — Speeding Up Python with Free Threading and Mypyc",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\".",
+      "x": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\" talk: https://ep2026.europython.eu/PWGSJQ",
+      "linkedin": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\" talk: https://ep2026.europython.eu/PWGSJQ",
+      "bsky": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\" talk: https://ep2026.europython.eu/PWGSJQ",
+      "fosstodon": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\" talk: https://ep2026.europython.eu/PWGSJQ",
+      "tiktok": "Join Jukka Lehtosalo at EuroPython for \"Speeding Up Python with Free Threading and Mypyc\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Julien Courtès",
+    "image": "https://ep2026.europython.eu/media/speakers/social-julien-courtes.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Julien Courtès — Designing Performant APIs with Litestar",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\".",
+      "x": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\" talk: https://ep2026.europython.eu/ZRWENU",
+      "linkedin": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\" talk: https://ep2026.europython.eu/ZRWENU",
+      "bsky": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\" talk: https://ep2026.europython.eu/ZRWENU",
+      "fosstodon": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\" talk: https://ep2026.europython.eu/ZRWENU",
+      "tiktok": "Join Julien Courtès at EuroPython for \"Designing Performant APIs with Litestar\"."
     }
   },
   {
@@ -1692,56 +1639,53 @@
   },
   {
     "type": "speaker",
-    "name": "Laura Summers",
-    "image": "https://ep2026.europython.eu/media/speakers/social-laura-summers.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Laura Summers — The Human-in-the-Loop is Tired",
+    "name": "Julien Lenormand",
+    "image": "https://ep2026.europython.eu/media/speakers/social-julien-lenormand.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Julien Lenormand — Getting out of the testing hell",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/summerscope"
+      "linkedin": "https://www.linkedin.com/in/julien-lenormand"
     },
     "channel": {
-      "instagram": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\".",
-      "x": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\". Talk: https://ep2026.europython.eu/HJ8KPY",
-      "linkedin": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\".",
-      "bsky": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\". Talk: https://ep2026.europython.eu/HJ8KPY",
-      "fosstodon": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\". Talk: https://ep2026.europython.eu/HJ8KPY",
-      "tiktok": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\"."
+      "instagram": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\".",
+      "x": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\" tutorial: https://ep2026.europython.eu/GCWCEU",
+      "linkedin": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\" tutorial: https://ep2026.europython.eu/GCWCEU",
+      "bsky": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\" tutorial: https://ep2026.europython.eu/GCWCEU",
+      "fosstodon": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\" tutorial: https://ep2026.europython.eu/GCWCEU",
+      "tiktok": "Join Julien Lenormand at EuroPython for \"Getting out of the testing hell\"."
     }
   },
   {
     "type": "speaker",
-    "name": "Lokko Joyce Dzifa",
-    "image": "https://ep2026.europython.eu/media/speakers/social-lokko-joyce-dzifa.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Lokko Joyce Dzifa — The Unseen Pull Request: The Crisis We Don’t Measure",
-    "handles": {
-      "x": "@dzifa_lokko",
-      "linkedin": "https://www.linkedin.com/in/joyce-dzifa-lokko"
-    },
+    "name": "Kamil Kulig",
+    "image": "https://ep2026.europython.eu/media/speakers/social-kamil-kulig.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Kamil Kulig — gRPC for Beginners",
+    "handles": {},
     "channel": {
-      "instagram": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\".",
-      "x": "Join Lokko Joyce Dzifa (@dzifa_lokko) at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\". Talk: https://ep2026.europython.eu/NS8QQA",
-      "linkedin": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\".",
-      "bsky": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\". Talk: https://ep2026.europython.eu/NS8QQA",
-      "fosstodon": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\". Talk: https://ep2026.europython.eu/NS8QQA",
-      "tiktok": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\"."
+      "instagram": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\".",
+      "x": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\" tutorial: https://ep2026.europython.eu/TGGHKC",
+      "linkedin": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\" tutorial: https://ep2026.europython.eu/TGGHKC",
+      "bsky": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\" tutorial: https://ep2026.europython.eu/TGGHKC",
+      "fosstodon": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\" tutorial: https://ep2026.europython.eu/TGGHKC",
+      "tiktok": "Join Kamil Kulig at EuroPython for \"gRPC for Beginners\"."
     }
   },
   {
     "type": "speaker",
-    "name": "Lysandros Nikolaou",
-    "image": "https://ep2026.europython.eu/media/speakers/social-lysandros-nikolaou.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Lysandros Nikolaou — Python Dicts: Past, Present, and Free-Threaded Future",
+    "name": "Karen Jex",
+    "image": "https://ep2026.europython.eu/media/speakers/social-karen-jex.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Karen Jex — How much do you really need to know about Databases?",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/lysnikolaou",
-      "bsky": "@lysnikolaou.com",
-      "fosstodon": "@lysnikolaou@fosstodon.org"
+      "linkedin": "https://www.linkedin.com/in/karenhjex",
+      "bsky": "@karenhjex.bsky.social",
+      "fosstodon": "@karenhjex@mastodon.online"
     },
     "channel": {
-      "instagram": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\".",
-      "x": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\". Talk: https://ep2026.europython.eu/VKURLV",
-      "linkedin": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\".",
-      "bsky": "Join Lysandros Nikolaou (@lysnikolaou.com) at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\". Talk: https://ep2026.europython.eu/VKURLV",
-      "fosstodon": "Join Lysandros Nikolaou (@lysnikolaou@fosstodon.org) at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\". talk: https://ep2026.europython.eu/VKURLV",
-      "tiktok": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\"."
+      "instagram": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\".",
+      "x": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\" talk: https://ep2026.europython.eu/X3ENDU",
+      "linkedin": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\" talk: https://ep2026.europython.eu/X3ENDU",
+      "bsky": "Join Karen Jex (@karenhjex.bsky.social) at EuroPython for \"How much do you really need to know about Databases?\" talk: https://ep2026.europython.eu/X3ENDU",
+      "fosstodon": "Join Karen Jex (@karenhjex@mastodon.online) at EuroPython for \"How much do you really need to know about Databases?\" talk: https://ep2026.europython.eu/X3ENDU",
+      "tiktok": "Join Karen Jex at EuroPython for \"How much do you really need to know about Databases?\"."
     }
   },
   {
@@ -1764,49 +1708,52 @@
   },
   {
     "type": "speaker",
-    "name": "Maciej Sobczak",
-    "image": "https://ep2026.europython.eu/media/speakers/social-maciej-sobczak.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Maciej Sobczak — Django’s Magic, FastAPI’s Reality: Test Isolation at Scale",
-    "handles": {},
-    "channel": {
-      "instagram": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\".",
-      "x": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\". Talk: https://ep2026.europython.eu/YKWMBZ",
-      "linkedin": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\".",
-      "bsky": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\". Talk: https://ep2026.europython.eu/YKWMBZ",
-      "fosstodon": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\". Talk: https://ep2026.europython.eu/YKWMBZ",
-      "tiktok": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Mai Giménez",
-    "image": "https://ep2026.europython.eu/media/speakers/social-mai-gimenez.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mai Giménez — Let it rip a diffusion tutorial",
-    "handles": {},
-    "channel": {
-      "instagram": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\".",
-      "x": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\". Talk: https://ep2026.europython.eu/ZPCDKE",
-      "linkedin": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\".",
-      "bsky": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\". Talk: https://ep2026.europython.eu/ZPCDKE",
-      "fosstodon": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\". Talk: https://ep2026.europython.eu/ZPCDKE",
-      "tiktok": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\"."
-    }
-  },
-  {
-    "type": "speaker",
-    "name": "Malcolm Smith",
-    "image": "https://ep2026.europython.eu/media/speakers/social-malcolm-smith.png",
-    "alt_text": "Speaker announcement for EuroPython 2026 conference: Malcolm Smith — Supporting Android and iOS in your Python package",
+    "name": "Katie Bickford",
+    "image": "https://ep2026.europython.eu/media/speakers/social-katie-bickford.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Katie Bickford — Why doing difficult things is good for you and good for your team",
     "handles": {
-      "linkedin": "https://www.linkedin.com/in/malcolmhsmith"
+      "linkedin": "https://www.linkedin.com/in/katie-bickford-7a9958aa"
     },
     "channel": {
-      "instagram": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\".",
-      "x": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\". Talk: https://ep2026.europython.eu/MP9ZRM",
-      "linkedin": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\".",
-      "bsky": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\". Talk: https://ep2026.europython.eu/MP9ZRM",
-      "fosstodon": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\". Talk: https://ep2026.europython.eu/MP9ZRM",
-      "tiktok": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\"."
+      "instagram": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\".",
+      "x": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\" talk: https://ep2026.europython.eu/NWLBJC",
+      "linkedin": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\" talk: https://ep2026.europython.eu/NWLBJC",
+      "bsky": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\" talk: https://ep2026.europython.eu/NWLBJC",
+      "fosstodon": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\" talk: https://ep2026.europython.eu/NWLBJC",
+      "tiktok": "Join Katie Bickford at EuroPython for \"Why doing difficult things is good for you and good for your team\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Ken Jin",
+    "image": "https://ep2026.europython.eu/media/speakers/social-ken-jin.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Ken Jin — Inside Python 3.15's JIT Optimizer",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\".",
+      "x": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\" talk: https://ep2026.europython.eu/KRMBWS",
+      "linkedin": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\" talk: https://ep2026.europython.eu/KRMBWS",
+      "bsky": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\" talk: https://ep2026.europython.eu/KRMBWS",
+      "fosstodon": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\" talk: https://ep2026.europython.eu/KRMBWS",
+      "tiktok": "Join Ken Jin at EuroPython for \"Inside Python 3.15's JIT Optimizer\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Koudai Aono",
+    "image": "https://ep2026.europython.eu/media/speakers/social-koudai-aono.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Koudai Aono — Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset",
+    "handles": {
+      "linkedin": "https://www.linkedin.com/in/koxudaxi",
+      "fosstodon": "@koxudaxi@fosstodon.org"
+    },
+    "channel": {
+      "instagram": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\".",
+      "x": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\" talk: https://ep2026.europython.eu/7VKQQM",
+      "linkedin": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\" talk: https://ep2026.europython.eu/7VKQQM",
+      "bsky": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\" talk: https://ep2026.europython.eu/7VKQQM",
+      "fosstodon": "Join Koudai Aono (@koxudaxi@fosstodon.org) at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\" talk: https://ep2026.europython.eu/7VKQQM",
+      "tiktok": "Join Koudai Aono at EuroPython for \"Beyond `Optional` in Real-World Projects: Missing, `None`, and Unset\"."
     }
   },
   {
@@ -1829,6 +1776,140 @@
   },
   {
     "type": "speaker",
+    "name": "Kuldeep Pisda",
+    "image": "https://ep2026.europython.eu/media/speakers/social-kuldeep-pisda.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Kuldeep Pisda — Django TDD Patterns: A Visual Field Guide",
+    "handles": {
+      "x": "@kdpisda",
+      "linkedin": "https://www.linkedin.com/in/kuldeep-pisda"
+    },
+    "channel": {
+      "instagram": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\".",
+      "x": "Join Kuldeep Pisda (@kdpisda) at EuroPython for \"Django TDD Patterns: A Visual Field Guide\" session: https://ep2026.europython.eu/LNVDY3",
+      "linkedin": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\" session: https://ep2026.europython.eu/LNVDY3",
+      "bsky": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\" session: https://ep2026.europython.eu/LNVDY3",
+      "fosstodon": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\" session: https://ep2026.europython.eu/LNVDY3",
+      "tiktok": "Join Kuldeep Pisda at EuroPython for \"Django TDD Patterns: A Visual Field Guide\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Larry Hastings",
+    "image": "https://ep2026.europython.eu/media/speakers/social-larry-hastings.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Larry Hastings — Conquer multithreaded Python with Blanket",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\".",
+      "x": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\" talk: https://ep2026.europython.eu/QY7PFR",
+      "linkedin": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\" talk: https://ep2026.europython.eu/QY7PFR",
+      "bsky": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\" talk: https://ep2026.europython.eu/QY7PFR",
+      "fosstodon": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\" talk: https://ep2026.europython.eu/QY7PFR",
+      "tiktok": "Join Larry Hastings at EuroPython for \"Conquer multithreaded Python with Blanket\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Laura Summers",
+    "image": "https://ep2026.europython.eu/media/speakers/social-laura-summers.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Laura Summers — The Human-in-the-Loop is Tired",
+    "handles": {
+      "linkedin": "https://www.linkedin.com/in/summerscope"
+    },
+    "channel": {
+      "instagram": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\".",
+      "x": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\" talk: https://ep2026.europython.eu/HJ8KPY",
+      "linkedin": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\" talk: https://ep2026.europython.eu/HJ8KPY",
+      "bsky": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\" talk: https://ep2026.europython.eu/HJ8KPY",
+      "fosstodon": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\" talk: https://ep2026.europython.eu/HJ8KPY",
+      "tiktok": "Join Laura Summers at EuroPython for \"The Human-in-the-Loop is Tired\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Lokko Joyce Dzifa",
+    "image": "https://ep2026.europython.eu/media/speakers/social-lokko-joyce-dzifa.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Lokko Joyce Dzifa — The Unseen Pull Request: The Crisis We Don’t Measure",
+    "handles": {
+      "x": "@dzifa_lokko",
+      "linkedin": "https://www.linkedin.com/in/joyce-dzifa-lokko"
+    },
+    "channel": {
+      "instagram": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\".",
+      "x": "Join Lokko Joyce Dzifa (@dzifa_lokko) at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\" talk: https://ep2026.europython.eu/NS8QQA",
+      "linkedin": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\" talk: https://ep2026.europython.eu/NS8QQA",
+      "bsky": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\" talk: https://ep2026.europython.eu/NS8QQA",
+      "fosstodon": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\" talk: https://ep2026.europython.eu/NS8QQA",
+      "tiktok": "Join Lokko Joyce Dzifa at EuroPython for \"The Unseen Pull Request: The Crisis We Don’t Measure\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Lysandros Nikolaou",
+    "image": "https://ep2026.europython.eu/media/speakers/social-lysandros-nikolaou.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Lysandros Nikolaou — Python Dicts: Past, Present, and Free-Threaded Future",
+    "handles": {
+      "linkedin": "https://www.linkedin.com/in/lysnikolaou",
+      "bsky": "@lysnikolaou.com",
+      "fosstodon": "@lysnikolaou@fosstodon.org"
+    },
+    "channel": {
+      "instagram": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\".",
+      "x": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\" talk: https://ep2026.europython.eu/VKURLV",
+      "linkedin": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\" talk: https://ep2026.europython.eu/VKURLV",
+      "bsky": "Join Lysandros Nikolaou (@lysnikolaou.com) at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\" talk: https://ep2026.europython.eu/VKURLV",
+      "fosstodon": "Join Lysandros Nikolaou (@lysnikolaou@fosstodon.org) at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\" talk: https://ep2026.europython.eu/VKURLV",
+      "tiktok": "Join Lysandros Nikolaou at EuroPython for \"Python Dicts: Past, Present, and Free-Threaded Future\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Maciej Sobczak",
+    "image": "https://ep2026.europython.eu/media/speakers/social-maciej-sobczak.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Maciej Sobczak — Django’s Magic, FastAPI’s Reality: Test Isolation at Scale",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\".",
+      "x": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\" talk: https://ep2026.europython.eu/YKWMBZ",
+      "linkedin": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\" talk: https://ep2026.europython.eu/YKWMBZ",
+      "bsky": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\" talk: https://ep2026.europython.eu/YKWMBZ",
+      "fosstodon": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\" talk: https://ep2026.europython.eu/YKWMBZ",
+      "tiktok": "Join Maciej Sobczak at EuroPython for \"Django’s Magic, FastAPI’s Reality: Test Isolation at Scale\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Mai Giménez",
+    "image": "https://ep2026.europython.eu/media/speakers/social-mai-gimenez.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Mai Giménez — Let it rip a diffusion tutorial",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\".",
+      "x": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\" tutorial: https://ep2026.europython.eu/ZPCDKE",
+      "linkedin": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\" tutorial: https://ep2026.europython.eu/ZPCDKE",
+      "bsky": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\" tutorial: https://ep2026.europython.eu/ZPCDKE",
+      "fosstodon": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\" tutorial: https://ep2026.europython.eu/ZPCDKE",
+      "tiktok": "Join Mai Giménez at EuroPython for \"Let it rip a diffusion tutorial\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Malcolm Smith",
+    "image": "https://ep2026.europython.eu/media/speakers/social-malcolm-smith.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Malcolm Smith — Supporting Android and iOS in your Python package",
+    "handles": {
+      "linkedin": "https://www.linkedin.com/in/malcolmhsmith"
+    },
+    "channel": {
+      "instagram": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\".",
+      "x": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\" talk: https://ep2026.europython.eu/MP9ZRM",
+      "linkedin": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\" talk: https://ep2026.europython.eu/MP9ZRM",
+      "bsky": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\" talk: https://ep2026.europython.eu/MP9ZRM",
+      "fosstodon": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\" talk: https://ep2026.europython.eu/MP9ZRM",
+      "tiktok": "Join Malcolm Smith at EuroPython for \"Supporting Android and iOS in your Python package\"."
+    }
+  },
+  {
+    "type": "speaker",
     "name": "Manivannan Selvaraj",
     "image": "https://ep2026.europython.eu/media/speakers/social-manivannan-selvaraj.png",
     "alt_text": "Speaker announcement for EuroPython 2026 conference: Manivannan Selvaraj — From Code Hero to Team Leader: Learning to Let Go",
@@ -1838,10 +1919,10 @@
     },
     "channel": {
       "instagram": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\".",
-      "x": "Join Manivannan Selvaraj (@citizenmani) at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\". Talk: https://ep2026.europython.eu/WHHAQK",
-      "linkedin": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\".",
-      "bsky": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\". Talk: https://ep2026.europython.eu/WHHAQK",
-      "fosstodon": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\". Talk: https://ep2026.europython.eu/WHHAQK",
+      "x": "Join Manivannan Selvaraj (@citizenmani) at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\" talk: https://ep2026.europython.eu/WHHAQK",
+      "linkedin": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\" talk: https://ep2026.europython.eu/WHHAQK",
+      "bsky": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\" talk: https://ep2026.europython.eu/WHHAQK",
+      "fosstodon": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\" talk: https://ep2026.europython.eu/WHHAQK",
       "tiktok": "Join Manivannan Selvaraj at EuroPython for \"From Code Hero to Team Leader: Learning to Let Go\"."
     }
   },
@@ -1856,10 +1937,10 @@
     },
     "channel": {
       "instagram": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\".",
-      "x": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\". Talk: https://ep2026.europython.eu/H7KGU3",
-      "linkedin": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\".",
-      "bsky": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\". Talk: https://ep2026.europython.eu/H7KGU3",
-      "fosstodon": "Join Marc-André Lemburg (@malemburg@mastodon.social) at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\". talk: https://ep2026.europython.eu/H7KGU3",
+      "x": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\" talk: https://ep2026.europython.eu/H7KGU3",
+      "linkedin": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\" talk: https://ep2026.europython.eu/H7KGU3",
+      "bsky": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\" talk: https://ep2026.europython.eu/H7KGU3",
+      "fosstodon": "Join Marc-André Lemburg (@malemburg@mastodon.social) at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\" talk: https://ep2026.europython.eu/H7KGU3",
       "tiktok": "Join Marc-André Lemburg at EuroPython for \"DuckLake - Take Python and DuckDB for a swim in your data lake\"."
     }
   },
@@ -1871,10 +1952,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\".",
-      "x": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\". Talk: https://ep2026.europython.eu/BJBKRM",
-      "linkedin": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\".",
-      "bsky": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\". Talk: https://ep2026.europython.eu/BJBKRM",
-      "fosstodon": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\". Talk: https://ep2026.europython.eu/BJBKRM",
+      "x": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\" talk: https://ep2026.europython.eu/BJBKRM",
+      "linkedin": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\" talk: https://ep2026.europython.eu/BJBKRM",
+      "bsky": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\" talk: https://ep2026.europython.eu/BJBKRM",
+      "fosstodon": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\" talk: https://ep2026.europython.eu/BJBKRM",
       "tiktok": "Join Marcelo Trylesinski at EuroPython for \"What I've Learned Maintaining the MCP Python SDK\"."
     }
   },
@@ -1886,10 +1967,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\".",
-      "x": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\". Talk: https://ep2026.europython.eu/788XZA",
-      "linkedin": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\".",
-      "bsky": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\". Talk: https://ep2026.europython.eu/788XZA",
-      "fosstodon": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\". Talk: https://ep2026.europython.eu/788XZA",
+      "x": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\" talk: https://ep2026.europython.eu/788XZA",
+      "linkedin": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\" talk: https://ep2026.europython.eu/788XZA",
+      "bsky": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\" talk: https://ep2026.europython.eu/788XZA",
+      "fosstodon": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\" talk: https://ep2026.europython.eu/788XZA",
       "tiktok": "Join Marco Grossi at EuroPython for \"From one to 1 million packet/second: scaling global Internet monitoring\"."
     }
   },
@@ -1903,10 +1984,10 @@
     },
     "channel": {
       "instagram": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\".",
-      "x": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\". Talk: https://ep2026.europython.eu/TAZHCD",
-      "linkedin": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\".",
-      "bsky": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\". Talk: https://ep2026.europython.eu/TAZHCD",
-      "fosstodon": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\". Talk: https://ep2026.europython.eu/TAZHCD",
+      "x": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\" talk: https://ep2026.europython.eu/TAZHCD",
+      "linkedin": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\" talk: https://ep2026.europython.eu/TAZHCD",
+      "bsky": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\" talk: https://ep2026.europython.eu/TAZHCD",
+      "fosstodon": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\" talk: https://ep2026.europython.eu/TAZHCD",
       "tiktok": "Join Maria Ashna at EuroPython for \"Climbing the Pyramid: Behind the Scenes of the Python Package Index\"."
     }
   },
@@ -1920,10 +2001,10 @@
     },
     "channel": {
       "instagram": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\".",
-      "x": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\". Talk: https://ep2026.europython.eu/PBTPJR",
-      "linkedin": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\".",
-      "bsky": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\". Talk: https://ep2026.europython.eu/PBTPJR",
-      "fosstodon": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\". Talk: https://ep2026.europython.eu/PBTPJR",
+      "x": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\" talk: https://ep2026.europython.eu/PBTPJR",
+      "linkedin": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\" talk: https://ep2026.europython.eu/PBTPJR",
+      "bsky": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\" talk: https://ep2026.europython.eu/PBTPJR",
+      "fosstodon": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\" talk: https://ep2026.europython.eu/PBTPJR",
       "tiktok": "Join Maria Lowas-Rzechonek at EuroPython for \"How to tackle complex authorization logic (and don't go crazy)\"."
     }
   },
@@ -1938,10 +2019,10 @@
     },
     "channel": {
       "instagram": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\".",
-      "x": "Join Mario García (@mariogmd) at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\". Talk: https://ep2026.europython.eu/ETBPVR",
-      "linkedin": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\".",
-      "bsky": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\". Talk: https://ep2026.europython.eu/ETBPVR",
-      "fosstodon": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\". Talk: https://ep2026.europython.eu/ETBPVR",
+      "x": "Join Mario García (@mariogmd) at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\" talk: https://ep2026.europython.eu/ETBPVR",
+      "linkedin": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\" talk: https://ep2026.europython.eu/ETBPVR",
+      "bsky": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\" talk: https://ep2026.europython.eu/ETBPVR",
+      "fosstodon": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\" talk: https://ep2026.europython.eu/ETBPVR",
       "tiktok": "Join Mario García at EuroPython for \"Localization Made Easy: A Pythonic Approach to Global Applications\"."
     }
   },
@@ -1953,10 +2034,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\".",
-      "x": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\". Talk: https://ep2026.europython.eu/7SSS93",
-      "linkedin": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\".",
-      "bsky": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\". Talk: https://ep2026.europython.eu/7SSS93",
-      "fosstodon": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\". Talk: https://ep2026.europython.eu/7SSS93",
+      "x": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\" talk: https://ep2026.europython.eu/7SSS93",
+      "linkedin": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\" talk: https://ep2026.europython.eu/7SSS93",
+      "bsky": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\" talk: https://ep2026.europython.eu/7SSS93",
+      "fosstodon": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\" talk: https://ep2026.europython.eu/7SSS93",
       "tiktok": "Join Mateusz Modrzejewski at EuroPython for \"How Music Generation Actually Works\"."
     }
   },
@@ -1970,11 +2051,28 @@
     },
     "channel": {
       "instagram": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\".",
-      "x": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\". Talk: https://ep2026.europython.eu/SCZ8ZK",
-      "linkedin": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\".",
-      "bsky": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\". Talk: https://ep2026.europython.eu/SCZ8ZK",
-      "fosstodon": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\". Talk: https://ep2026.europython.eu/SCZ8ZK",
+      "x": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\" talk: https://ep2026.europython.eu/SCZ8ZK",
+      "linkedin": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\" talk: https://ep2026.europython.eu/SCZ8ZK",
+      "bsky": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\" talk: https://ep2026.europython.eu/SCZ8ZK",
+      "fosstodon": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\" talk: https://ep2026.europython.eu/SCZ8ZK",
       "tiktok": "Join Mateusz Sokół at EuroPython for \"Building your DSL compiler in Python\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Matthias Kirschner",
+    "image": "https://ep2026.europython.eu/media/speakers/social-matthias-kirschner.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Matthias Kirschner — A vision for software freedom in 2048",
+    "handles": {
+      "fosstodon": "@kirschner@mastodon.social"
+    },
+    "channel": {
+      "instagram": "Join Matthias Kirschner at EuroPython for \"A vision for software freedom in 2048\".",
+      "x": "Join Matthias Kirschner at EuroPython for \"A vision for software freedom in 2048\" talk: https://ep2026.europython.eu/R3GBYA",
+      "linkedin": "Join Matthias Kirschner at EuroPython for \"A vision for software freedom in 2048\" talk: https://ep2026.europython.eu/R3GBYA",
+      "bsky": "Join Matthias Kirschner at EuroPython for \"A vision for software freedom in 2048\" talk: https://ep2026.europython.eu/R3GBYA",
+      "fosstodon": "Join Matthias Kirschner (@kirschner@mastodon.social) at EuroPython for \"A vision for software freedom in 2048\" talk: https://ep2026.europython.eu/R3GBYA",
+      "tiktok": "Join Matthias Kirschner at EuroPython for \"A vision for software freedom in 2048\"."
     }
   },
   {
@@ -1987,10 +2085,10 @@
     },
     "channel": {
       "instagram": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\".",
-      "x": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\". Talk: https://ep2026.europython.eu/JRMSZT",
-      "linkedin": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\".",
-      "bsky": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\". Talk: https://ep2026.europython.eu/JRMSZT",
-      "fosstodon": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\". Talk: https://ep2026.europython.eu/JRMSZT",
+      "x": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\" tutorial: https://ep2026.europython.eu/JRMSZT",
+      "linkedin": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\" tutorial: https://ep2026.europython.eu/JRMSZT",
+      "bsky": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\" tutorial: https://ep2026.europython.eu/JRMSZT",
+      "fosstodon": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\" tutorial: https://ep2026.europython.eu/JRMSZT",
       "tiktok": "Join Michael Seifert at EuroPython for \"Code organization for non-engineers\"."
     }
   },
@@ -2002,10 +2100,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\".",
-      "x": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\". Talk: https://ep2026.europython.eu/BMQP7J",
-      "linkedin": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\".",
-      "bsky": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\". Talk: https://ep2026.europython.eu/BMQP7J",
-      "fosstodon": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\". Talk: https://ep2026.europython.eu/BMQP7J",
+      "x": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\" talk: https://ep2026.europython.eu/BMQP7J",
+      "linkedin": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\" talk: https://ep2026.europython.eu/BMQP7J",
+      "bsky": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\" talk: https://ep2026.europython.eu/BMQP7J",
+      "fosstodon": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\" talk: https://ep2026.europython.eu/BMQP7J",
       "tiktok": "Join Michał Karzyński at EuroPython for \"Building a Smart Home Device with MicroPython\"."
     }
   },
@@ -2021,10 +2119,10 @@
     },
     "channel": {
       "instagram": "Join Mike Fiedler at EuroPython for \"Anatomy of a Phishing Campaign\".",
-      "x": "Join Mike Fiedler at EuroPython for \"Anatomy of a Phishing Campaign\". Talk: https://ep2026.europython.eu/NXNHSB",
-      "linkedin": "Join Mike Fiedler at EuroPython for \"Anatomy of a Phishing Campaign\".",
-      "bsky": "Join Mike Fiedler (@miketheman.com) at EuroPython for \"Anatomy of a Phishing Campaign\". Talk: https://ep2026.europython.eu/NXNHSB",
-      "fosstodon": "Join Mike Fiedler (@miketheman@hachyderm.io) at EuroPython for \"Anatomy of a Phishing Campaign\". talk: https://ep2026.europython.eu/NXNHSB",
+      "x": "Join Mike Fiedler at EuroPython for \"Anatomy of a Phishing Campaign\" talk: https://ep2026.europython.eu/NXNHSB",
+      "linkedin": "Join Mike Fiedler at EuroPython for \"Anatomy of a Phishing Campaign\" talk: https://ep2026.europython.eu/NXNHSB",
+      "bsky": "Join Mike Fiedler (@miketheman.com) at EuroPython for \"Anatomy of a Phishing Campaign\" talk: https://ep2026.europython.eu/NXNHSB",
+      "fosstodon": "Join Mike Fiedler (@miketheman@hachyderm.io) at EuroPython for \"Anatomy of a Phishing Campaign\" talk: https://ep2026.europython.eu/NXNHSB",
       "tiktok": "Join Mike Fiedler at EuroPython for \"Anatomy of a Phishing Campaign\"."
     }
   },
@@ -2039,10 +2137,10 @@
     },
     "channel": {
       "instagram": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\".",
-      "x": "Join Mike Müller (@pyacademy) at EuroPython for \"Fast Python Development with uv\". Talk: https://ep2026.europython.eu/RARRL7",
-      "linkedin": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\".",
-      "bsky": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\". Talk: https://ep2026.europython.eu/RARRL7",
-      "fosstodon": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\". Talk: https://ep2026.europython.eu/RARRL7",
+      "x": "Join Mike Müller (@pyacademy) at EuroPython for \"Fast Python Development with uv\" tutorial: https://ep2026.europython.eu/RARRL7",
+      "linkedin": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\" tutorial: https://ep2026.europython.eu/RARRL7",
+      "bsky": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\" tutorial: https://ep2026.europython.eu/RARRL7",
+      "fosstodon": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\" tutorial: https://ep2026.europython.eu/RARRL7",
       "tiktok": "Join Mike Müller at EuroPython for \"Fast Python Development with uv\"."
     }
   },
@@ -2056,10 +2154,10 @@
     },
     "channel": {
       "instagram": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\".",
-      "x": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\". Talk: https://ep2026.europython.eu/TG7YMS",
-      "linkedin": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\".",
-      "bsky": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\". Talk: https://ep2026.europython.eu/TG7YMS",
-      "fosstodon": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\". Talk: https://ep2026.europython.eu/TG7YMS",
+      "x": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\" talk: https://ep2026.europython.eu/TG7YMS",
+      "linkedin": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\" talk: https://ep2026.europython.eu/TG7YMS",
+      "bsky": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\" talk: https://ep2026.europython.eu/TG7YMS",
+      "fosstodon": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\" talk: https://ep2026.europython.eu/TG7YMS",
       "tiktok": "Join Mohamed Elmaghraby at EuroPython for \"Refactor, Optimize, and Test: Crafting Cleaner Python Code\"."
     }
   },
@@ -2071,10 +2169,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\".",
-      "x": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\". Talk: https://ep2026.europython.eu/VSZSMW",
-      "linkedin": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\".",
-      "bsky": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\". Talk: https://ep2026.europython.eu/VSZSMW",
-      "fosstodon": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\". Talk: https://ep2026.europython.eu/VSZSMW",
+      "x": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\" talk: https://ep2026.europython.eu/VSZSMW",
+      "linkedin": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\" talk: https://ep2026.europython.eu/VSZSMW",
+      "bsky": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\" talk: https://ep2026.europython.eu/VSZSMW",
+      "fosstodon": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\" talk: https://ep2026.europython.eu/VSZSMW",
       "tiktok": "Join Mohit Kumar Vyas at EuroPython for \"I Accidentally Built a Monitoring System While Trying to Debug Memory Leak\"."
     }
   },
@@ -2086,26 +2184,41 @@
     "handles": {},
     "channel": {
       "instagram": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\".",
-      "x": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\". Talk: https://ep2026.europython.eu/ENK9EF",
-      "linkedin": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\".",
-      "bsky": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\". Talk: https://ep2026.europython.eu/ENK9EF",
-      "fosstodon": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\". Talk: https://ep2026.europython.eu/ENK9EF",
+      "x": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\" talk: https://ep2026.europython.eu/ENK9EF",
+      "linkedin": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\" talk: https://ep2026.europython.eu/ENK9EF",
+      "bsky": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\" talk: https://ep2026.europython.eu/ENK9EF",
+      "fosstodon": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\" talk: https://ep2026.europython.eu/ENK9EF",
       "tiktok": "Join Nathan Goldbaum at EuroPython for \"What every Python developer should know about the CPython ABI\"."
     }
   },
   {
     "type": "speaker",
     "name": "Nicholas H.Tollervey",
-    "image": "https://ep2026.europython.eu/media/speakers/social-nicholas-h-tollervey.png",
+    "image": "https://ep2026.europython.eu/media/speakers/social-nicholas-h-tollervey-BTTFFJ.png",
     "alt_text": "Speaker announcement for EuroPython 2026 conference: Nicholas H.Tollervey — Web Assembly Summit",
     "handles": {},
     "channel": {
       "instagram": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\".",
-      "x": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\". Talk: https://ep2026.europython.eu/BTTFFJ",
-      "linkedin": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\".",
-      "bsky": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\". Talk: https://ep2026.europython.eu/BTTFFJ",
-      "fosstodon": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\". Talk: https://ep2026.europython.eu/BTTFFJ",
+      "x": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\" session: https://ep2026.europython.eu/BTTFFJ",
+      "linkedin": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\" session: https://ep2026.europython.eu/BTTFFJ",
+      "bsky": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\" session: https://ep2026.europython.eu/BTTFFJ",
+      "fosstodon": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\" session: https://ep2026.europython.eu/BTTFFJ",
       "tiktok": "Join Nicholas H.Tollervey at EuroPython for \"Web Assembly Summit\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Nicholas H.Tollervey",
+    "image": "https://ep2026.europython.eu/media/speakers/social-nicholas-h-tollervey-SWCWKZ.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Nicholas H.Tollervey — The Good, the Bad and the Ugly: native Python app development and delivery.",
+    "handles": {},
+    "channel": {
+      "instagram": "Join Nicholas H.Tollervey at EuroPython for \"The Good, the Bad and the Ugly: native Python app development and delivery.\".",
+      "x": "Join Nicholas H.Tollervey at EuroPython for \"The Good, the Bad and the Ugly: native Python app development and delivery.\" talk: https://ep2026.europython.eu/SWCWKZ",
+      "linkedin": "Join Nicholas H.Tollervey at EuroPython for \"The Good, the Bad and the Ugly: native Python app development and delivery.\" talk: https://ep2026.europython.eu/SWCWKZ",
+      "bsky": "Join Nicholas H.Tollervey at EuroPython for \"The Good, the Bad and the Ugly: native Python app development and delivery.\" talk: https://ep2026.europython.eu/SWCWKZ",
+      "fosstodon": "Join Nicholas H.Tollervey at EuroPython for \"The Good, the Bad and the Ugly: native Python app development and delivery.\" talk: https://ep2026.europython.eu/SWCWKZ",
+      "tiktok": "Join Nicholas H.Tollervey at EuroPython for \"The Good, the Bad and the Ugly: native Python app development and delivery.\"."
     }
   },
   {
@@ -2119,10 +2232,10 @@
     },
     "channel": {
       "instagram": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\".",
-      "x": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\". Talk: https://ep2026.europython.eu/M8Q77Z",
-      "linkedin": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\".",
-      "bsky": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\". Talk: https://ep2026.europython.eu/M8Q77Z",
-      "fosstodon": "Join Nikita Karamov (@kytta@polymaths.social) at EuroPython for \"Should you trust Trusted Publishing?\". talk: https://ep2026.europython.eu/M8Q77Z",
+      "x": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\" talk: https://ep2026.europython.eu/M8Q77Z",
+      "linkedin": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\" talk: https://ep2026.europython.eu/M8Q77Z",
+      "bsky": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\" talk: https://ep2026.europython.eu/M8Q77Z",
+      "fosstodon": "Join Nikita Karamov (@kytta@polymaths.social) at EuroPython for \"Should you trust Trusted Publishing?\" talk: https://ep2026.europython.eu/M8Q77Z",
       "tiktok": "Join Nikita Karamov at EuroPython for \"Should you trust Trusted Publishing?\"."
     }
   },
@@ -2136,10 +2249,10 @@
     },
     "channel": {
       "instagram": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\".",
-      "x": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\". Talk: https://ep2026.europython.eu/JEN7WA",
-      "linkedin": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\".",
-      "bsky": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\". Talk: https://ep2026.europython.eu/JEN7WA",
-      "fosstodon": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\". Talk: https://ep2026.europython.eu/JEN7WA",
+      "x": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\" talk: https://ep2026.europython.eu/JEN7WA",
+      "linkedin": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\" talk: https://ep2026.europython.eu/JEN7WA",
+      "bsky": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\" talk: https://ep2026.europython.eu/JEN7WA",
+      "fosstodon": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\" talk: https://ep2026.europython.eu/JEN7WA",
       "tiktok": "Join Nikita Smirnov at EuroPython for \"Fast Multi-Version ETL Pipelines in Python with Generators and functools\"."
     }
   },
@@ -2154,10 +2267,10 @@
     },
     "channel": {
       "instagram": "Join Nitish at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\".",
-      "x": "Join Nitish (@nitishagar) at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\". Talk: https://ep2026.europython.eu/BYWVNK",
-      "linkedin": "Join Nitish at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\".",
-      "bsky": "Join Nitish (@nitishagar.bsky.social) at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\". Talk: https://ep2026.europython.eu/BYWVNK",
-      "fosstodon": "Join Nitish at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\". Talk: https://ep2026.europython.eu/BYWVNK",
+      "x": "Join Nitish (@nitishagar) at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\" talk: https://ep2026.europython.eu/BYWVNK",
+      "linkedin": "Join Nitish at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\" talk: https://ep2026.europython.eu/BYWVNK",
+      "bsky": "Join Nitish (@nitishagar.bsky.social) at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\" talk: https://ep2026.europython.eu/BYWVNK",
+      "fosstodon": "Join Nitish at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\" talk: https://ep2026.europython.eu/BYWVNK",
       "tiktok": "Join Nitish at EuroPython for \"Beyond the Demo: Production Patterns for Streaming LLM Systems\"."
     }
   },
@@ -2169,10 +2282,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\".",
-      "x": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\". Talk: https://ep2026.europython.eu/3FW7UF",
-      "linkedin": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\".",
-      "bsky": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\". Talk: https://ep2026.europython.eu/3FW7UF",
-      "fosstodon": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\". Talk: https://ep2026.europython.eu/3FW7UF",
+      "x": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\" talk: https://ep2026.europython.eu/3FW7UF",
+      "linkedin": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\" talk: https://ep2026.europython.eu/3FW7UF",
+      "bsky": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\" talk: https://ep2026.europython.eu/3FW7UF",
+      "fosstodon": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\" talk: https://ep2026.europython.eu/3FW7UF",
       "tiktok": "Join Oladapo Jesusemilore Jael at EuroPython for \"Python Learning that fits Teen Life\"."
     }
   },
@@ -2187,10 +2300,10 @@
     },
     "channel": {
       "instagram": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\".",
-      "x": "Join Oladapo Kayode Abiodun (@oladapokayodea1) at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\". Talk: https://ep2026.europython.eu/33RGZA",
-      "linkedin": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\".",
-      "bsky": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\". Talk: https://ep2026.europython.eu/33RGZA",
-      "fosstodon": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\". Talk: https://ep2026.europython.eu/33RGZA",
+      "x": "Join Oladapo Kayode Abiodun (@oladapokayodea1) at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\" session: https://ep2026.europython.eu/33RGZA",
+      "linkedin": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\" session: https://ep2026.europython.eu/33RGZA",
+      "bsky": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\" session: https://ep2026.europython.eu/33RGZA",
+      "fosstodon": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\" session: https://ep2026.europython.eu/33RGZA",
       "tiktok": "Join Oladapo Kayode Abiodun at EuroPython for \"Heuristic-Rule Based Model for Packet Loss Inference in IIoT Networks\"."
     }
   },
@@ -2204,10 +2317,10 @@
     },
     "channel": {
       "instagram": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\".",
-      "x": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\". Talk: https://ep2026.europython.eu/GP39VP",
-      "linkedin": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\".",
-      "bsky": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\". Talk: https://ep2026.europython.eu/GP39VP",
-      "fosstodon": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\". Talk: https://ep2026.europython.eu/GP39VP",
+      "x": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\" session: https://ep2026.europython.eu/GP39VP",
+      "linkedin": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\" session: https://ep2026.europython.eu/GP39VP",
+      "bsky": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\" session: https://ep2026.europython.eu/GP39VP",
+      "fosstodon": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\" session: https://ep2026.europython.eu/GP39VP",
       "tiktok": "Join Olha Poliuliakh at EuroPython for \"Why Coding Agents Fail at ML (and How to Fix It)\"."
     }
   },
@@ -2221,10 +2334,10 @@
     },
     "channel": {
       "instagram": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\".",
-      "x": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\". Talk: https://ep2026.europython.eu/RGBSS8",
-      "linkedin": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\".",
-      "bsky": "Join Pablo Galindo Salgado (@pablogsal.com) at EuroPython for \"Lazy imports and the art of interpreter procrastination\". Talk: https://ep2026.europython.eu/RGBSS8",
-      "fosstodon": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\". Talk: https://ep2026.europython.eu/RGBSS8",
+      "x": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\" talk: https://ep2026.europython.eu/RGBSS8",
+      "linkedin": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\" talk: https://ep2026.europython.eu/RGBSS8",
+      "bsky": "Join Pablo Galindo Salgado (@pablogsal.com) at EuroPython for \"Lazy imports and the art of interpreter procrastination\" talk: https://ep2026.europython.eu/RGBSS8",
+      "fosstodon": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\" talk: https://ep2026.europython.eu/RGBSS8",
       "tiktok": "Join Pablo Galindo Salgado at EuroPython for \"Lazy imports and the art of interpreter procrastination\"."
     }
   },
@@ -2238,10 +2351,10 @@
     },
     "channel": {
       "instagram": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\".",
-      "x": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\". Talk: https://ep2026.europython.eu/8HBEYS",
-      "linkedin": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\".",
-      "bsky": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\". Talk: https://ep2026.europython.eu/8HBEYS",
-      "fosstodon": "Join Petr Viktorin (@encukou@mastodon.social) at EuroPython for \"Python Syntax Diagram\". talk: https://ep2026.europython.eu/8HBEYS",
+      "x": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\" session: https://ep2026.europython.eu/8HBEYS",
+      "linkedin": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\" session: https://ep2026.europython.eu/8HBEYS",
+      "bsky": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\" session: https://ep2026.europython.eu/8HBEYS",
+      "fosstodon": "Join Petr Viktorin (@encukou@mastodon.social) at EuroPython for \"Python Syntax Diagram\" session: https://ep2026.europython.eu/8HBEYS",
       "tiktok": "Join Petr Viktorin at EuroPython for \"Python Syntax Diagram\"."
     }
   },
@@ -2256,10 +2369,10 @@
     },
     "channel": {
       "instagram": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\".",
-      "x": "Join Piotr Grędowski (@piotrgredowski) at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\". Talk: https://ep2026.europython.eu/LRVCYU",
-      "linkedin": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\".",
-      "bsky": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\". Talk: https://ep2026.europython.eu/LRVCYU",
-      "fosstodon": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\". Talk: https://ep2026.europython.eu/LRVCYU",
+      "x": "Join Piotr Grędowski (@piotrgredowski) at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\" talk: https://ep2026.europython.eu/LRVCYU",
+      "linkedin": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\" talk: https://ep2026.europython.eu/LRVCYU",
+      "bsky": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\" talk: https://ep2026.europython.eu/LRVCYU",
+      "fosstodon": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\" talk: https://ep2026.europython.eu/LRVCYU",
       "tiktok": "Join Piotr Grędowski at EuroPython for \"Modern TUI with Textual in Python: Building Monokl\"."
     }
   },
@@ -2273,10 +2386,10 @@
     },
     "channel": {
       "instagram": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\".",
-      "x": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\". Talk: https://ep2026.europython.eu/RB9TKP",
-      "linkedin": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\".",
-      "bsky": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\". Talk: https://ep2026.europython.eu/RB9TKP",
-      "fosstodon": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\". Talk: https://ep2026.europython.eu/RB9TKP",
+      "x": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\" talk: https://ep2026.europython.eu/RB9TKP",
+      "linkedin": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\" talk: https://ep2026.europython.eu/RB9TKP",
+      "bsky": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\" talk: https://ep2026.europython.eu/RB9TKP",
+      "fosstodon": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\" talk: https://ep2026.europython.eu/RB9TKP",
       "tiktok": "Join Piotr Rybak at EuroPython for \"Is Object Detection Dead? A Case for Recognizing LEGO Bricks\"."
     }
   },
@@ -2288,10 +2401,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\".",
-      "x": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\". Talk: https://ep2026.europython.eu/ZFJEUJ",
-      "linkedin": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\".",
-      "bsky": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\". Talk: https://ep2026.europython.eu/ZFJEUJ",
-      "fosstodon": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\". Talk: https://ep2026.europython.eu/ZFJEUJ",
+      "x": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\" talk: https://ep2026.europython.eu/ZFJEUJ",
+      "linkedin": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\" talk: https://ep2026.europython.eu/ZFJEUJ",
+      "bsky": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\" talk: https://ep2026.europython.eu/ZFJEUJ",
+      "fosstodon": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\" talk: https://ep2026.europython.eu/ZFJEUJ",
       "tiktok": "Join Raúl Cumplido Domínguez at EuroPython for \"Stop Guessing, Start Understanding: How Arrow and Pandas Exchange Data\"."
     }
   },
@@ -2308,17 +2421,17 @@
     },
     "channel": {
       "instagram": "Join Reuven M. Lerner at EuroPython for \"Let's write some decorators!\".",
-      "x": "Join Reuven M. Lerner (@reuvenmlerner) at EuroPython for \"Let's write some decorators!\". Talk: https://ep2026.europython.eu/MENRZG",
-      "linkedin": "Join Reuven M. Lerner at EuroPython for \"Let's write some decorators!\".",
-      "bsky": "Join Reuven M. Lerner (@lernerpython.com) at EuroPython for \"Let's write some decorators!\". Talk: https://ep2026.europython.eu/MENRZG",
-      "fosstodon": "Join Reuven M. Lerner (@reuven@fosstodon.org) at EuroPython for \"Let's write some decorators!\". talk: https://ep2026.europython.eu/MENRZG",
+      "x": "Join Reuven M. Lerner (@reuvenmlerner) at EuroPython for \"Let's write some decorators!\" tutorial: https://ep2026.europython.eu/MENRZG",
+      "linkedin": "Join Reuven M. Lerner at EuroPython for \"Let's write some decorators!\" tutorial: https://ep2026.europython.eu/MENRZG",
+      "bsky": "Join Reuven M. Lerner (@lernerpython.com) at EuroPython for \"Let's write some decorators!\" tutorial: https://ep2026.europython.eu/MENRZG",
+      "fosstodon": "Join Reuven M. Lerner (@reuven@fosstodon.org) at EuroPython for \"Let's write some decorators!\" tutorial: https://ep2026.europython.eu/MENRZG",
       "tiktok": "Join Reuven M. Lerner at EuroPython for \"Let's write some decorators!\"."
     }
   },
   {
     "type": "speaker",
     "name": "Rodrigo Girão Serrão",
-    "image": "https://ep2026.europython.eu/media/speakers/social-rodrigo-girao-serrao.png",
+    "image": "https://ep2026.europython.eu/media/speakers/social-rodrigo-girao-serrao-PRGGNW.png",
     "alt_text": "Speaker announcement for EuroPython 2026 conference: Rodrigo Girão Serrão — A tour of the module `itertools`",
     "handles": {
       "x": "@mathsppblog",
@@ -2328,11 +2441,31 @@
     },
     "channel": {
       "instagram": "Join Rodrigo Girão Serrão at EuroPython for \"A tour of the module `itertools`\".",
-      "x": "Join Rodrigo Girão Serrão (@mathsppblog) at EuroPython for \"A tour of the module `itertools`\". Talk: https://ep2026.europython.eu/PRGGNW",
-      "linkedin": "Join Rodrigo Girão Serrão at EuroPython for \"A tour of the module `itertools`\".",
-      "bsky": "Join Rodrigo Girão Serrão (@mathspp.com) at EuroPython for \"A tour of the module `itertools`\". Talk: https://ep2026.europython.eu/PRGGNW",
-      "fosstodon": "Join Rodrigo Girão Serrão (@mathsppblog@fosstodon.org) at EuroPython for \"A tour of the module `itertools`\". talk: https://ep2026.europython.eu/PRGGNW",
+      "x": "Join Rodrigo Girão Serrão (@mathsppblog) at EuroPython for \"A tour of the module `itertools`\" session: https://ep2026.europython.eu/PRGGNW",
+      "linkedin": "Join Rodrigo Girão Serrão at EuroPython for \"A tour of the module `itertools`\" session: https://ep2026.europython.eu/PRGGNW",
+      "bsky": "Join Rodrigo Girão Serrão (@mathspp.com) at EuroPython for \"A tour of the module `itertools`\" session: https://ep2026.europython.eu/PRGGNW",
+      "fosstodon": "Join Rodrigo Girão Serrão (@mathsppblog@fosstodon.org) at EuroPython for \"A tour of the module `itertools`\" session: https://ep2026.europython.eu/PRGGNW",
       "tiktok": "Join Rodrigo Girão Serrão at EuroPython for \"A tour of the module `itertools`\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Rodrigo Girão Serrão",
+    "image": "https://ep2026.europython.eu/media/speakers/social-rodrigo-girao-serrao-WYBHCE.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Rodrigo Girão Serrão — Cooking with asyncio: an introduction to asynchronous programming",
+    "handles": {
+      "x": "@mathsppblog",
+      "linkedin": "https://www.linkedin.com/in/rodrigo-girão-serrão",
+      "bsky": "@mathspp.com",
+      "fosstodon": "@mathsppblog@fosstodon.org"
+    },
+    "channel": {
+      "instagram": "Join Rodrigo Girão Serrão at EuroPython for \"Cooking with asyncio: an introduction to asynchronous programming\".",
+      "x": "Join Rodrigo Girão Serrão (@mathsppblog) at EuroPython for \"Cooking with asyncio: an introduction to asynchronous programming\" tutorial: https://ep2026.europython.eu/WYBHCE",
+      "linkedin": "Join Rodrigo Girão Serrão at EuroPython for \"Cooking with asyncio: an introduction to asynchronous programming\" tutorial: https://ep2026.europython.eu/WYBHCE",
+      "bsky": "Join Rodrigo Girão Serrão (@mathspp.com) at EuroPython for \"Cooking with asyncio: an introduction to asynchronous programming\" tutorial: https://ep2026.europython.eu/WYBHCE",
+      "fosstodon": "Join Rodrigo Girão Serrão (@mathsppblog@fosstodon.org) at EuroPython for \"Cooking with asyncio: an introduction to asynchronous programming\" tutorial: https://ep2026.europython.eu/WYBHCE",
+      "tiktok": "Join Rodrigo Girão Serrão at EuroPython for \"Cooking with asyncio: an introduction to asynchronous programming\"."
     }
   },
   {
@@ -2343,10 +2476,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\".",
-      "x": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\". Talk: https://ep2026.europython.eu/NELACW",
-      "linkedin": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\".",
-      "bsky": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\". Talk: https://ep2026.europython.eu/NELACW",
-      "fosstodon": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\". Talk: https://ep2026.europython.eu/NELACW",
+      "x": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\" tutorial: https://ep2026.europython.eu/NELACW",
+      "linkedin": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\" tutorial: https://ep2026.europython.eu/NELACW",
+      "bsky": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\" tutorial: https://ep2026.europython.eu/NELACW",
+      "fosstodon": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\" tutorial: https://ep2026.europython.eu/NELACW",
       "tiktok": "Join Sangarshanan at EuroPython for \"Build a Synthesizer with Python\"."
     }
   },
@@ -2362,10 +2495,10 @@
     },
     "channel": {
       "instagram": "Join Savannah Ostrowski at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\".",
-      "x": "Join Savannah Ostrowski at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\". Talk: https://ep2026.europython.eu/KFQN3X",
-      "linkedin": "Join Savannah Ostrowski at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\".",
-      "bsky": "Join Savannah Ostrowski (@savannah.dev) at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\". Talk: https://ep2026.europython.eu/KFQN3X",
-      "fosstodon": "Join Savannah Ostrowski (@savannah@fosstodon.org) at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\". talk: https://ep2026.europython.eu/KFQN3X",
+      "x": "Join Savannah Ostrowski at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\" talk: https://ep2026.europython.eu/KFQN3X",
+      "linkedin": "Join Savannah Ostrowski at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\" talk: https://ep2026.europython.eu/KFQN3X",
+      "bsky": "Join Savannah Ostrowski (@savannah.dev) at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\" talk: https://ep2026.europython.eu/KFQN3X",
+      "fosstodon": "Join Savannah Ostrowski (@savannah@fosstodon.org) at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\" talk: https://ep2026.europython.eu/KFQN3X",
       "tiktok": "Join Savannah Ostrowski at EuroPython for \"The coolest feature in Python 3.14: sys.remote_exec()\"."
     }
   },
@@ -2379,10 +2512,10 @@
     },
     "channel": {
       "instagram": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\".",
-      "x": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\". Talk: https://ep2026.europython.eu/TZHTEE",
-      "linkedin": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\".",
-      "bsky": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\". Talk: https://ep2026.europython.eu/TZHTEE",
-      "fosstodon": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\". Talk: https://ep2026.europython.eu/TZHTEE",
+      "x": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\" talk: https://ep2026.europython.eu/TZHTEE",
+      "linkedin": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\" talk: https://ep2026.europython.eu/TZHTEE",
+      "bsky": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\" talk: https://ep2026.europython.eu/TZHTEE",
+      "fosstodon": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\" talk: https://ep2026.europython.eu/TZHTEE",
       "tiktok": "Join Sebastian Buczyński at EuroPython for \"Navigating waters of background jobs and queues in Python as of 2026\"."
     }
   },
@@ -2396,10 +2529,10 @@
     },
     "channel": {
       "instagram": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\".",
-      "x": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\". Talk: https://ep2026.europython.eu/MJTZ7A",
-      "linkedin": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\".",
-      "bsky": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\". Talk: https://ep2026.europython.eu/MJTZ7A",
-      "fosstodon": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\". Talk: https://ep2026.europython.eu/MJTZ7A",
+      "x": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\" talk: https://ep2026.europython.eu/MJTZ7A",
+      "linkedin": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\" talk: https://ep2026.europython.eu/MJTZ7A",
+      "bsky": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\" talk: https://ep2026.europython.eu/MJTZ7A",
+      "fosstodon": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\" talk: https://ep2026.europython.eu/MJTZ7A",
       "tiktok": "Join Sebastian Burzyński at EuroPython for \"The hidden cost of vibe coding\"."
     }
   },
@@ -2413,10 +2546,10 @@
     },
     "channel": {
       "instagram": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\".",
-      "x": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\". Talk: https://ep2026.europython.eu/E3GVVR",
-      "linkedin": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\".",
-      "bsky": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\". Talk: https://ep2026.europython.eu/E3GVVR",
-      "fosstodon": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\". Talk: https://ep2026.europython.eu/E3GVVR",
+      "x": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\" session: https://ep2026.europython.eu/E3GVVR",
+      "linkedin": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\" session: https://ep2026.europython.eu/E3GVVR",
+      "bsky": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\" session: https://ep2026.europython.eu/E3GVVR",
+      "fosstodon": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\" session: https://ep2026.europython.eu/E3GVVR",
       "tiktok": "Join Sergi Porta at EuroPython for \"Surviving LLM Traffic Spikes: Routing, Rate Limits, and Failover in Python\"."
     }
   },
@@ -2432,10 +2565,10 @@
     },
     "channel": {
       "instagram": "Join Seth Michael Larson at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\".",
-      "x": "Join Seth Michael Larson at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\". Talk: https://ep2026.europython.eu/9JALSN",
-      "linkedin": "Join Seth Michael Larson at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\".",
-      "bsky": "Join Seth Michael Larson (@sethmlarson.dev) at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\". Talk: https://ep2026.europython.eu/9JALSN",
-      "fosstodon": "Join Seth Michael Larson (@sethmlarson@mastodon.social) at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\". talk: https://ep2026.europython.eu/9JALSN",
+      "x": "Join Seth Michael Larson at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\" talk: https://ep2026.europython.eu/9JALSN",
+      "linkedin": "Join Seth Michael Larson at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\" talk: https://ep2026.europython.eu/9JALSN",
+      "bsky": "Join Seth Michael Larson (@sethmlarson.dev) at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\" talk: https://ep2026.europython.eu/9JALSN",
+      "fosstodon": "Join Seth Michael Larson (@sethmlarson@mastodon.social) at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\" talk: https://ep2026.europython.eu/9JALSN",
       "tiktok": "Join Seth Michael Larson at EuroPython for \"Learning from the not-so-secret Python security \"cabal\"\"."
     }
   },
@@ -2451,17 +2584,17 @@
     },
     "channel": {
       "instagram": "Join Stefanie Molin at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\".",
-      "x": "Join Stefanie Molin (@stefaniemolin) at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\". Talk: https://ep2026.europython.eu/3TZHB9",
-      "linkedin": "Join Stefanie Molin at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\".",
-      "bsky": "Join Stefanie Molin (@stefaniemolin.com) at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\". Talk: https://ep2026.europython.eu/3TZHB9",
-      "fosstodon": "Join Stefanie Molin at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\". Talk: https://ep2026.europython.eu/3TZHB9",
+      "x": "Join Stefanie Molin (@stefaniemolin) at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\" tutorial: https://ep2026.europython.eu/3TZHB9",
+      "linkedin": "Join Stefanie Molin at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\" tutorial: https://ep2026.europython.eu/3TZHB9",
+      "bsky": "Join Stefanie Molin (@stefaniemolin.com) at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\" tutorial: https://ep2026.europython.eu/3TZHB9",
+      "fosstodon": "Join Stefanie Molin at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\" tutorial: https://ep2026.europython.eu/3TZHB9",
       "tiktok": "Join Stefanie Molin at EuroPython for \"Process, Analyze, and Transform Python Code with ASTs\"."
     }
   },
   {
     "type": "speaker",
     "name": "Sviatoslav Sydorenko (Святослав Сидоренко)",
-    "image": "https://ep2026.europython.eu/media/speakers/social-sviatoslav-sydorenko-sviatoslav-sidorenko.png",
+    "image": "https://ep2026.europython.eu/media/speakers/social-sviatoslav-sydorenko-sviatoslav-sidorenko-BX77EE.png",
     "alt_text": "Speaker announcement for EuroPython 2026 conference: Sviatoslav Sydorenko (Святослав Сидоренко) — reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate",
     "handles": {
       "x": "@webknjaz",
@@ -2471,11 +2604,31 @@
     },
     "channel": {
       "instagram": "Join Sviatoslav Sydorenko (Святослав Сидоренко) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\".",
-      "x": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\". Talk: https://ep2026.europython.eu/BX77EE",
-      "linkedin": "Join Sviatoslav Sydorenko (Святослав Сидоренко) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\".",
-      "bsky": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz.me) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\". Talk: https://ep2026.europython.eu/BX77EE",
-      "fosstodon": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz@mastodon.social) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\". talk: https://ep2026.europython.eu/BX77EE",
+      "x": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\" session: https://ep2026.europython.eu/BX77EE",
+      "linkedin": "Join Sviatoslav Sydorenko (Святослав Сидоренко) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\" session: https://ep2026.europython.eu/BX77EE",
+      "bsky": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz.me) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\" session: https://ep2026.europython.eu/BX77EE",
+      "fosstodon": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz@mastodon.social) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\" session: https://ep2026.europython.eu/BX77EE",
       "tiktok": "Join Sviatoslav Sydorenko (Святослав Сидоренко) at EuroPython for \"reusable-tox.yml: Five Patterns to Eliminate CI/CD Boilerplate\"."
+    }
+  },
+  {
+    "type": "speaker",
+    "name": "Sviatoslav Sydorenko (Святослав Сидоренко)",
+    "image": "https://ep2026.europython.eu/media/speakers/social-sviatoslav-sydorenko-sviatoslav-sidorenko-ZHCNDY.png",
+    "alt_text": "Speaker announcement for EuroPython 2026 conference: Sviatoslav Sydorenko (Святослав Сидоренко) — Defending Open Source from \"AI\" Slop: A Maintainer's Practical Guide",
+    "handles": {
+      "x": "@webknjaz",
+      "linkedin": "https://www.linkedin.com/in/webknjaz",
+      "bsky": "@webknjaz.me",
+      "fosstodon": "@webknjaz@mastodon.social"
+    },
+    "channel": {
+      "instagram": "Join Sviatoslav Sydorenko (Святослав Сидоренко) at EuroPython for \"Defending Open Source from \"AI\" Slop: A Maintainer's Practical Guide\".",
+      "x": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz) at EuroPython for \"Defending Open Source from \"AI\" Slop: A Maintainer's Practical Guide\" talk: https://ep2026.europython.eu/ZHCNDY",
+      "linkedin": "Join Sviatoslav Sydorenko (Святослав Сидоренко) at EuroPython for \"Defending Open Source from \"AI\" Slop: A Maintainer's Practical Guide\" talk: https://ep2026.europython.eu/ZHCNDY",
+      "bsky": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz.me) at EuroPython for \"Defending Open Source from \"AI\" Slop: A Maintainer's Practical Guide\" talk: https://ep2026.europython.eu/ZHCNDY",
+      "fosstodon": "Join Sviatoslav Sydorenko (Святослав Сидоренко) (@webknjaz@mastodon.social) at EuroPython for \"Defending Open Source from \"AI\" Slop: A Maintainer's Practical Guide\" talk: https://ep2026.europython.eu/ZHCNDY",
+      "tiktok": "Join Sviatoslav Sydorenko (Святослав Сидоренко) at EuroPython for \"Defending Open Source from \"AI\" Slop: A Maintainer's Practical Guide\"."
     }
   },
   {
@@ -2490,10 +2643,10 @@
     },
     "channel": {
       "instagram": "Join Sylwia Budzynska at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\".",
-      "x": "Join Sylwia Budzynska (@blazingwindsec) at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\". Talk: https://ep2026.europython.eu/ZSRZPC",
-      "linkedin": "Join Sylwia Budzynska at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\".",
-      "bsky": "Join Sylwia Budzynska at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\". Talk: https://ep2026.europython.eu/ZSRZPC",
-      "fosstodon": "Join Sylwia Budzynska (@blazingwind@infosec.exchange) at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\". talk: https://ep2026.europython.eu/ZSRZPC",
+      "x": "Join Sylwia Budzynska (@blazingwindsec) at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\" tutorial: https://ep2026.europython.eu/ZSRZPC",
+      "linkedin": "Join Sylwia Budzynska at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\" tutorial: https://ep2026.europython.eu/ZSRZPC",
+      "bsky": "Join Sylwia Budzynska at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\" tutorial: https://ep2026.europython.eu/ZSRZPC",
+      "fosstodon": "Join Sylwia Budzynska (@blazingwind@infosec.exchange) at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\" tutorial: https://ep2026.europython.eu/ZSRZPC",
       "tiktok": "Join Sylwia Budzynska at EuroPython for \"Introduction to security research. Find a CVE with CodeQL.\"."
     }
   },
@@ -2509,10 +2662,10 @@
     },
     "channel": {
       "instagram": "Join Thomas Wouters at EuroPython for \"Free-threaded Python: past, present and future\".",
-      "x": "Join Thomas Wouters at EuroPython for \"Free-threaded Python: past, present and future\". Talk: https://ep2026.europython.eu/Y8QAUA",
-      "linkedin": "Join Thomas Wouters at EuroPython for \"Free-threaded Python: past, present and future\".",
-      "bsky": "Join Thomas Wouters (@yhg1s.bsky.social) at EuroPython for \"Free-threaded Python: past, present and future\". Talk: https://ep2026.europython.eu/Y8QAUA",
-      "fosstodon": "Join Thomas Wouters (@yhg1s@social.coop) at EuroPython for \"Free-threaded Python: past, present and future\". talk: https://ep2026.europython.eu/Y8QAUA",
+      "x": "Join Thomas Wouters at EuroPython for \"Free-threaded Python: past, present and future\" talk: https://ep2026.europython.eu/Y8QAUA",
+      "linkedin": "Join Thomas Wouters at EuroPython for \"Free-threaded Python: past, present and future\" talk: https://ep2026.europython.eu/Y8QAUA",
+      "bsky": "Join Thomas Wouters (@yhg1s.bsky.social) at EuroPython for \"Free-threaded Python: past, present and future\" talk: https://ep2026.europython.eu/Y8QAUA",
+      "fosstodon": "Join Thomas Wouters (@yhg1s@social.coop) at EuroPython for \"Free-threaded Python: past, present and future\" talk: https://ep2026.europython.eu/Y8QAUA",
       "tiktok": "Join Thomas Wouters at EuroPython for \"Free-threaded Python: past, present and future\"."
     }
   },
@@ -2524,10 +2677,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\".",
-      "x": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\". Talk: https://ep2026.europython.eu/GEJAQW",
-      "linkedin": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\".",
-      "bsky": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\". Talk: https://ep2026.europython.eu/GEJAQW",
-      "fosstodon": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\". Talk: https://ep2026.europython.eu/GEJAQW",
+      "x": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\" talk: https://ep2026.europython.eu/GEJAQW",
+      "linkedin": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\" talk: https://ep2026.europython.eu/GEJAQW",
+      "bsky": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\" talk: https://ep2026.europython.eu/GEJAQW",
+      "fosstodon": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\" talk: https://ep2026.europython.eu/GEJAQW",
       "tiktok": "Join Tobias Wrigstad at EuroPython for \"Immutability: Fast and Safe sharing of Data across Subinterpreters\"."
     }
   },
@@ -2539,10 +2692,10 @@
     "handles": {},
     "channel": {
       "instagram": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\".",
-      "x": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\". Talk: https://ep2026.europython.eu/B7CMBD",
-      "linkedin": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\".",
-      "bsky": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\". Talk: https://ep2026.europython.eu/B7CMBD",
-      "fosstodon": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\". Talk: https://ep2026.europython.eu/B7CMBD",
+      "x": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\" talk: https://ep2026.europython.eu/B7CMBD",
+      "linkedin": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\" talk: https://ep2026.europython.eu/B7CMBD",
+      "bsky": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\" talk: https://ep2026.europython.eu/B7CMBD",
+      "fosstodon": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\" talk: https://ep2026.europython.eu/B7CMBD",
       "tiktok": "Join Tomas Roun at EuroPython for \"Become a Python Core Developer in 3 Easy Steps\"."
     }
   },
@@ -2556,10 +2709,10 @@
     },
     "channel": {
       "instagram": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\".",
-      "x": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\". Talk: https://ep2026.europython.eu/VXDYGX",
-      "linkedin": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\".",
-      "bsky": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\". Talk: https://ep2026.europython.eu/VXDYGX",
-      "fosstodon": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\". Talk: https://ep2026.europython.eu/VXDYGX",
+      "x": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\" talk: https://ep2026.europython.eu/VXDYGX",
+      "linkedin": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\" talk: https://ep2026.europython.eu/VXDYGX",
+      "bsky": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\" talk: https://ep2026.europython.eu/VXDYGX",
+      "fosstodon": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\" talk: https://ep2026.europython.eu/VXDYGX",
       "tiktok": "Join Vincenzo Ventriglia at EuroPython for \"When the Sun Breaks Your GPS: Building an Explainable Early Warning System\"."
     }
   },
@@ -2573,10 +2726,10 @@
     },
     "channel": {
       "instagram": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\".",
-      "x": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\". Talk: https://ep2026.europython.eu/N39TFS",
-      "linkedin": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\".",
-      "bsky": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\". Talk: https://ep2026.europython.eu/N39TFS",
-      "fosstodon": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\". Talk: https://ep2026.europython.eu/N39TFS",
+      "x": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\" tutorial: https://ep2026.europython.eu/N39TFS",
+      "linkedin": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\" tutorial: https://ep2026.europython.eu/N39TFS",
+      "bsky": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\" tutorial: https://ep2026.europython.eu/N39TFS",
+      "fosstodon": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\" tutorial: https://ep2026.europython.eu/N39TFS",
       "tiktok": "Join Vinícius Gubiani Ferreira at EuroPython for \"Load testing 1-on-1: discovering the limits of your system\"."
     }
   },
@@ -2591,10 +2744,10 @@
     },
     "channel": {
       "instagram": "Join Vlad-Stefan Harbuz at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\".",
-      "x": "Join Vlad-Stefan Harbuz at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\". Talk: https://ep2026.europython.eu/UY9UAG",
-      "linkedin": "Join Vlad-Stefan Harbuz at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\".",
-      "bsky": "Join Vlad-Stefan Harbuz (@vlad.website) at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\". Talk: https://ep2026.europython.eu/UY9UAG",
-      "fosstodon": "Join Vlad-Stefan Harbuz (@vlad@mastodon.vlad.website) at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\". talk: https://ep2026.europython.eu/UY9UAG",
+      "x": "Join Vlad-Stefan Harbuz at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\" talk: https://ep2026.europython.eu/UY9UAG",
+      "linkedin": "Join Vlad-Stefan Harbuz at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\" talk: https://ep2026.europython.eu/UY9UAG",
+      "bsky": "Join Vlad-Stefan Harbuz (@vlad.website) at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\" talk: https://ep2026.europython.eu/UY9UAG",
+      "fosstodon": "Join Vlad-Stefan Harbuz (@vlad@mastodon.vlad.website) at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\" talk: https://ep2026.europython.eu/UY9UAG",
       "tiktok": "Join Vlad-Stefan Harbuz at EuroPython for \"Binary Dependencies: Identifying the Hidden Packages We All Depend On\"."
     }
   },
@@ -2608,10 +2761,10 @@
     },
     "channel": {
       "instagram": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\".",
-      "x": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\". Talk: https://ep2026.europython.eu/9EFAJS",
-      "linkedin": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\".",
-      "bsky": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\". Talk: https://ep2026.europython.eu/9EFAJS",
-      "fosstodon": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\". Talk: https://ep2026.europython.eu/9EFAJS",
+      "x": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\" talk: https://ep2026.europython.eu/9EFAJS",
+      "linkedin": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\" talk: https://ep2026.europython.eu/9EFAJS",
+      "bsky": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\" talk: https://ep2026.europython.eu/9EFAJS",
+      "fosstodon": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\" talk: https://ep2026.europython.eu/9EFAJS",
       "tiktok": "Join Vladimir Slavov at EuroPython for \"How to Talk With Your Legal Department About Open Source\"."
     }
   },
@@ -2625,10 +2778,10 @@
     },
     "channel": {
       "instagram": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\".",
-      "x": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\". Talk: https://ep2026.europython.eu/3FDLUS",
-      "linkedin": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\".",
-      "bsky": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\". Talk: https://ep2026.europython.eu/3FDLUS",
-      "fosstodon": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\". Talk: https://ep2026.europython.eu/3FDLUS",
+      "x": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\" tutorial: https://ep2026.europython.eu/3FDLUS",
+      "linkedin": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\" tutorial: https://ep2026.europython.eu/3FDLUS",
+      "bsky": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\" tutorial: https://ep2026.europython.eu/3FDLUS",
+      "fosstodon": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\" tutorial: https://ep2026.europython.eu/3FDLUS",
       "tiktok": "Join Vyron Vasileiadis at EuroPython for \"Learn Quantum Computing with QiliSDK: From Circuits to Pulse-Level Control\"."
     }
   },
@@ -2644,10 +2797,10 @@
     },
     "channel": {
       "instagram": "Join Will Vincent at EuroPython for \"Deploying Python Web Apps in 2026\".",
-      "x": "Join Will Vincent at EuroPython for \"Deploying Python Web Apps in 2026\". Talk: https://ep2026.europython.eu/AGX8D9",
-      "linkedin": "Join Will Vincent at EuroPython for \"Deploying Python Web Apps in 2026\".",
-      "bsky": "Join Will Vincent (@wsvincent.bsky.social) at EuroPython for \"Deploying Python Web Apps in 2026\". Talk: https://ep2026.europython.eu/AGX8D9",
-      "fosstodon": "Join Will Vincent (@wsvincent@fosstodon.org) at EuroPython for \"Deploying Python Web Apps in 2026\". talk: https://ep2026.europython.eu/AGX8D9",
+      "x": "Join Will Vincent at EuroPython for \"Deploying Python Web Apps in 2026\" talk: https://ep2026.europython.eu/AGX8D9",
+      "linkedin": "Join Will Vincent at EuroPython for \"Deploying Python Web Apps in 2026\" talk: https://ep2026.europython.eu/AGX8D9",
+      "bsky": "Join Will Vincent (@wsvincent.bsky.social) at EuroPython for \"Deploying Python Web Apps in 2026\" talk: https://ep2026.europython.eu/AGX8D9",
+      "fosstodon": "Join Will Vincent (@wsvincent@fosstodon.org) at EuroPython for \"Deploying Python Web Apps in 2026\" talk: https://ep2026.europython.eu/AGX8D9",
       "tiktok": "Join Will Vincent at EuroPython for \"Deploying Python Web Apps in 2026\"."
     }
   },
@@ -2661,11 +2814,47 @@
     },
     "channel": {
       "instagram": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\".",
-      "x": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\". Talk: https://ep2026.europython.eu/BPJHWT",
-      "linkedin": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\".",
-      "bsky": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\". Talk: https://ep2026.europython.eu/BPJHWT",
-      "fosstodon": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\". Talk: https://ep2026.europython.eu/BPJHWT",
+      "x": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\" talk: https://ep2026.europython.eu/BPJHWT",
+      "linkedin": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\" talk: https://ep2026.europython.eu/BPJHWT",
+      "bsky": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\" talk: https://ep2026.europython.eu/BPJHWT",
+      "fosstodon": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\" talk: https://ep2026.europython.eu/BPJHWT",
       "tiktok": "Join Wojtek Erbetowski at EuroPython for \"You Don't Need to Solve It: What Actually Gets You Hired in Tech\"."
+    }
+  },
+  {
+    "type": "sponsor",
+    "name": "Modal",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-modal.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: Modal",
+    "handles": {
+      "x": "@modal",
+      "linkedin": "https://www.linkedin.com/company/modal-labs",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ We are pleased to welcome Modal as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @modal https://modal.com/",
+      "linkedin": "🚀✨ Big shoutout and heartfelt thanks to Modal for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌https://www.linkedin.com/company/modal-labs https://modal.com/",
+      "bsky": "🎉✨ A big thank you to Modal for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://modal.com/",
+      "fosstodon": "🎉✨ A big thank you to Modal for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://modal.com/"
+    }
+  },
+  {
+    "type": "sponsor",
+    "name": "OpenEDG | Python Institute",
+    "image": "https://ep2026.europython.eu/media/sponsors/social-openedg-python-institute.png",
+    "alt_text": "Sponsor announcement for EuroPython 2026 conference: OpenEDG | Python Institute",
+    "handles": {
+      "x": "@pythoninstitute",
+      "linkedin": "https://www.linkedin.com/company/pythoninstitute",
+      "bsky": "",
+      "fosstodon": ""
+    },
+    "channel": {
+      "x": "🎉✨ We are pleased to welcome OpenEDG | Python Institute as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 @pythoninstitute https://pythoninstitute.org",
+      "linkedin": "🎉✨ We are pleased to welcome OpenEDG | Python Institute as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://www.linkedin.com/company/pythoninstitute https://pythoninstitute.org",
+      "bsky": "🎉✨ We are pleased to welcome OpenEDG | Python Institute as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 https://pythoninstitute.org",
+      "fosstodon": "🚀✨ A huge thank you to OpenEDG | Python Institute for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 https://pythoninstitute.org"
     }
   }
 ]
