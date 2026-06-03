@@ -87,8 +87,8 @@ const speakerMessageTemplate = {
     handle
       ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`
       : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
-  linkedin: ({ name, talkTitle, label: _label }) =>
-    `Join ${name} at EuroPython for "${talkTitle}".`,
+  linkedin: ({ name, talkTitle, talkUrl, label }) =>
+    `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
   bsky: ({ name, handle, talkTitle, talkUrl, label }) =>
     handle
       ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`
