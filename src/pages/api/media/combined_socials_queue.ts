@@ -72,11 +72,11 @@ const charLimits: Record<string, number> = {
   tiktok: 2200,
 };
 
-const talkTypes = ["Talk", "Talk (long session)", "Tutorial"] as const;
-type TalkType = (typeof talkTypes)[number];
-
 function sessionLabel(sessionType: string): string {
-  return sessionType === "Tutorial" ? "tutorial" : "talk";
+  const t = sessionType?.toLowerCase();
+  if (t === "tutorial") return "tutorial";
+  if (t === "talk" || t === "talk (long session)") return "talk";
+  return "session";
 }
 
 // Speaker messages
@@ -176,9 +176,9 @@ export const GET: APIRoute = async () => {
       submissions.map((s) => getEntry("sessions", s.id))
     );
 
-    // One card per qualifying session (Talk, Tutorial); skip everything else
+    // One card per qualifying session (Talk, Tutorial, or other); skip sessions without a title
     const qualifyingSessions = sessions.filter(
-      (s) => s && s.data.title && talkTypes.includes(s.data.session_type as TalkType)
+      (s) => s && s.data.title && s.data.session_type
     );
     if (qualifyingSessions.length === 0) continue;
 
