@@ -71,18 +71,18 @@ const speakerMessageTemplate = {
     `Join ${name} at EuroPython for "${talkTitle}".`,
   x: ({ name, handle, talkTitle, talkUrl }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". Talk: ${talkUrl}`
-      : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
+      : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
   linkedin: ({ name, talkTitle }) =>
     `Join ${name} at EuroPython for "${talkTitle}".`,
   bsky: ({ name, handle, talkTitle, talkUrl }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". Talk: ${talkUrl}`
-      : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
+      : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
   fosstodon: ({ name, handle, talkTitle, talkUrl }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
-      : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
+      : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
 };
 
 // Sponsor messages
