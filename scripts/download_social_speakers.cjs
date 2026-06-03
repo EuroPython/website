@@ -65,11 +65,12 @@ const puppeteer = require("puppeteer");
   for (let i = 0; i < elements.length; i++) {
     const el = elements[i];
 
-    // Get the slug from the element
+    // Get the slug and optional session code from the element
     const slug = await page.evaluate((el) => el.getAttribute("data-slug"), el);
+    const code = await page.evaluate((el) => el.getAttribute("data-code"), el);
 
-    // Fallback if slug is missing
-    const filename = slug ? `social-${slug}.png` : `social-${i}.png`;
+    // Use session code suffix when present (multi-session speaker)
+    const filename = code ? `social-${slug}-${code}.png` : slug ? `social-${slug}.png` : `social-${i}.png`;
 
     await el.screenshot({ path: filename });
     console.log(`Saved ${filename}`);

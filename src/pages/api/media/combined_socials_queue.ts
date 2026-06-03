@@ -198,6 +198,10 @@ export const GET: APIRoute = async () => {
       const talkTitle = session.data.title;
       const talkUrl = `https://ep2026.europython.eu/${session.data.code}`;
       const label = sessionLabel(session.data.session_type);
+      // Use per-session image when speaker has multiple sessions, generic otherwise
+      const sessionImage = qualifyingSessions.length > 1
+        ? `https://ep2026.europython.eu/media/speakers/social-${speaker.id}-${session.data.code}.png`
+        : image;
 
       const generateSpeakerMessage = (
         platform: keyof typeof speakerMessageTemplate
@@ -220,7 +224,7 @@ export const GET: APIRoute = async () => {
       speakerRecords.push({
         type: "speaker",
         name,
-        image,
+        image: sessionImage,
         alt_text: `Speaker announcement for EuroPython 2026 conference: ${name} — ${talkTitle}`,
         handles,
         channel: {
