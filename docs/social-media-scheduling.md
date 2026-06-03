@@ -112,19 +112,21 @@ Regenerate it by hitting the API endpoint while the dev server is running:
 curl -s http://localhost:4321/api/media/combined_socials_queue > src/pages/api/media/combined_socials_queue.json
 ```
 
-This overwrites `src/pages/api/media/combined_socials_queue.json` with all
-items sorted and interleaved.
+This overwrites `src/pages/api/media/combined_socials_queue.json` with all items
+sorted and interleaved.
 
 > **Note:** There are two queue files:
+>
 > - `combined_socials_queue.json` — the freshly generated queue, used as the
 >   source of truth and read by `buffer-scheduling.py`
 > - `combined_socials_queue_2026.json` — the manually curated queue that
 >   preserves already-scheduled posts at the top; new entries are appended after
 >   the last scheduled position
 
-When new speakers or sponsors are added, regenerate `combined_socials_queue.json`
-and then merge the new entries into `combined_socials_queue_2026.json` manually —
-keeping already-posted entries intact and appending only new/unposted ones.
+When new speakers or sponsors are added, regenerate
+`combined_socials_queue.json` and then merge the new entries into
+`combined_socials_queue_2026.json` manually — keeping already-posted entries
+intact and appending only new/unposted ones.
 
 ### Session types and labels
 
@@ -135,8 +137,8 @@ The label used in post text is determined by session type:
 - `"Tutorial"` → `"tutorial"`
 - Everything else (Poster, Summit, etc.) → `"session"`
 
-Speakers with multiple qualifying sessions get one queue entry per session,
-each with its own per-session card image.
+Speakers with multiple qualifying sessions get one queue entry per session, each
+with its own per-session card image.
 
 ### Tier classification
 
