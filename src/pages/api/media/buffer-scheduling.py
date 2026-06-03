@@ -125,8 +125,9 @@ for index, item in enumerate(data_payload, start=1):
                 "text": text,
                 "schedulingType": "automatic",
                 "mode": "addToQueue",
-                "assets": [{"image": {"url": item["image"], "alt_text": item.get("alt_text", "")}}] if item.get("image") else [],
-                **({"metadata": {"instagram": {"type": "post", "shouldShareToFeed": True}}} if network == "instagram" else {})
+                "assets": [{"image": {"url": item["image"], "metadata": {"altText": item.get("alt_text", "")}}}] if item.get("image") else [],
+                **({"metadata": {"instagram": {"type": "post", "shouldShareToFeed": True}}} if network == "instagram" else {}),
+                **({"metadata": {"tiktok": {"title": item["name"]}}} if network == "tiktok" else {})
             }
         }
 
