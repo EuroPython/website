@@ -43,6 +43,12 @@ Various WebAssembly Python distributions (both Cloudflare and Fastly) are using 
 
 Taking a memory snapshot introduces two separate stages of execution: initialization time vs execution time. In order to work, client code may need to know  The Python language model has no concept of initialization time, there is only runtime. Faster alternative implementations like PyPy and GraalPython introduce this distinction in order to make Python code run faster. JavaScript ES6 modules introduced a similar distinction. Could Python benefit from a formal notion of an "initialization phase"?
 
+### **One namespace to namespacing them all** — Pablo Galindo Salgado
+
+We know you have shadowed `random` with your own `random.py`. Don’t lie. We’ve all done it, and one of us shipped it to prod. The stdlib lives in the same flat namespace as everything on PyPI, which means `os` and `leftpad` are equals in the eyes of the import system, and that is frankly embarrassing for `os`.
+
+This talk pitches a single top-level namespace for the stdlib and we can discuss better ways to do experimental features and other advantages. We will gesture at what it could look like, admit upfront it’s a year-long migration nobody asked for, and mostly try to find out whether you all want to hurt us for proposing it. Bring opinions.
+
 ### **PEP 827 - Type manipulation and annotationlib** — Michael J. Sullivan
 
 PEP 827 proposes adding powerful type-level introspection and construction facilities to Python’s type system. This design is inspired largely by TypeScript’s conditional and mapped types, but is heavily adapted to the very different semantics and constraints of Python’s typing model. It will allow typing a wide range of dynamic APIs and metaprogramming that currently are not well typeable.
@@ -60,10 +66,6 @@ includes part of stdlib, async (via tokio), actix-web examples. Slowly more and
 more Rust crates are available as stub typed Python modules, which we can use
 like normal Python code while developing and then compiling the generated Rust
 code as final output. The final goal is to be able to write smaller production code using spicycrab.
-
-### **TBC** — Pablo Galindo Salgado
-
-TBC
 
 ### **Thinking about the post era of free-threading Python** — Donghee Na, Tobias Wrigstad, Fridtjof
 
