@@ -199,9 +199,10 @@ export const GET: APIRoute = async () => {
       const talkUrl = `https://ep2026.europython.eu/${session.data.code}`;
       const label = sessionLabel(session.data.session_type);
       // Use per-session image when speaker has multiple sessions, generic otherwise
-      const sessionImage = qualifyingSessions.length > 1
-        ? `https://ep2026.europython.eu/media/speakers/social-${speaker.id}-${session.data.code}.png`
-        : image;
+      const sessionImage =
+        qualifyingSessions.length > 1
+          ? `https://ep2026.europython.eu/media/speakers/social-${speaker.id}-${session.data.code}.png`
+          : image;
 
       const generateSpeakerMessage = (
         platform: keyof typeof speakerMessageTemplate
