@@ -238,9 +238,11 @@ python src/pages/api/media/buffer-scheduling.py
 ### Channel notes
 
 - **Instagram**: requires `postType: post` — handled automatically
-- **Sponsors/partners**: no Instagram channel (only x, linkedin, bsky,
+- **TikTok**: supports photo posts with an optional `title` (set to the speaker
+  name) — handled automatically
+- **Sponsors/partners**: no Instagram or TikTok channel (only x, linkedin, bsky,
   fosstodon)
-- **Speakers**: all 5 channels including Instagram
+- **Speakers**: all 6 channels including Instagram and TikTok
 - **Bluesky**: Buffer returns this as `"bluesky"` — normalized to `"bsky"`
   automatically
 
