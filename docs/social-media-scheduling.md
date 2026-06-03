@@ -49,6 +49,11 @@ screenshotted with Puppeteer.
 
 ### Speaker cards
 
+Speaker cards are generated per-session. Speakers with multiple qualifying
+sessions (Talk, Tutorial, or other session types) get one card per session,
+named `social-${slug}-${sessionCode}.png`. Single-session speakers get the
+standard `social-${slug}.png`.
+
 ```bash
 node scripts/download_social_speakers.cjs
 ```
@@ -58,6 +63,11 @@ Screenshots are saved to the current directory. Move them to the right place:
 ```bash
 mv social-*.png public/media/speakers/
 ```
+
+When regenerating, skip files that already exist to avoid overwriting images for
+speakers whose posts are already scheduled. If a speaker previously had one
+session and now has a second, delete the old generic `social-${slug}.png` after
+the per-session images are committed.
 
 ### Sponsor & partner cards
 
@@ -102,8 +112,31 @@ Regenerate it by hitting the API endpoint while the dev server is running:
 curl -s http://localhost:4321/api/media/combined_socials_queue > src/pages/api/media/combined_socials_queue.json
 ```
 
-This overwrites `src/pages/api/media/combined_socials_queue.json` with all 150+
+This overwrites `src/pages/api/media/combined_socials_queue.json` with all
 items sorted and interleaved.
+
+> **Note:** There are two queue files:
+> - `combined_socials_queue.json` — the freshly generated queue, used as the
+>   source of truth and read by `buffer-scheduling.py`
+> - `combined_socials_queue_2026.json` — the manually curated queue that
+>   preserves already-scheduled posts at the top; new entries are appended after
+>   the last scheduled position
+
+When new speakers or sponsors are added, regenerate `combined_socials_queue.json`
+and then merge the new entries into `combined_socials_queue_2026.json` manually —
+keeping already-posted entries intact and appending only new/unposted ones.
+
+### Session types and labels
+
+The queue includes all qualifying session types — not just talks and tutorials.
+The label used in post text is determined by session type:
+
+- `"Talk"` / `"Talk (long session)"` → `"talk"`
+- `"Tutorial"` → `"tutorial"`
+- Everything else (Poster, Summit, etc.) → `"session"`
+
+Speakers with multiple qualifying sessions get one queue entry per session,
+each with its own per-session card image.
 
 ### Tier classification
 
@@ -251,12 +284,16 @@ python src/pages/api/media/buffer-scheduling.py
 After each successful run, note the last `QUEUE_END` value. The next run should
 set `QUEUE_START = previous QUEUE_END + 1`.
 
-Already scheduled as of initial setup:
+The script reads from `combined_socials_queue.json` by default. When switching
+to the curated `combined_socials_queue_2026.json`, update `queue_path` in the
+script accordingly.
 
-- Positions 1–3: Abhik Sarkar, Abhimanyu Singh Shekhawat, Abigail Afi Gbadago
+Already scheduled as of June 2026:
 
-Next batch (positions 4–8): Adam Gorgoń, Alejandro Cabello Jiménez,
-ActiveCampaign, Aleksander, 1Password
+- Positions 1–67 in `combined_socials_queue_2026.json` (up to and including
+  PyGda partner post)
+
+Next batch starts at position 68 (Giovanni Barillari).
 
 ---
 
