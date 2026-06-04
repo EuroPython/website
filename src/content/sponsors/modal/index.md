@@ -4,10 +4,9 @@ url: https://modal.com/
 location: "US"
 industry: "Software Development"
 description:
-  Deploy generative AI models, large-scale batch jobs, job queues, and more on
-  Modal's platform. We help data science and machine learning teams accelerate
-  development, reduce costs, and effortlessly scale workloads across thousands
-  of CPUs and GPUs.
+  The production cloud for AI. Run inference, training, batch processing and
+  sandboxes with sub-second cold starts, instant autoscaling across thousands of
+  GPUs and a developer experience that feels local.
 
 socials:
   linkedin: https://www.linkedin.com/company/modal-labs/
