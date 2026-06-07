@@ -44,12 +44,14 @@ Book through the hotel website:
 
 Address: Halicka 14A, 31-036 Kraków
 
-- Contact directly with reservation team and with code: EUROPYTHON - receive 30 % discount from daily rate with brekfast
+- Contact directly with reservation team and with code: EUROPYTHON - receive 30
+  % discount from daily rate with brekfast
 - e-mail: krakow.kazimierz@purohotels.com
 
 ### [Hotel PURO Kraków Old Town](https://purohotels.com/en/cracow/cracow-old-town/)
 
 Address: Ogrodowa 10, 31-155 Kraków
 
-- Contact directly with reservation team and with code: EUROPYTHON - receive 30 % discount from daily rate with brekfast
+- Contact directly with reservation team and with code: EUROPYTHON - receive 30
+  % discount from daily rate with brekfast
 - e-mail: krakow@purohotels.com
