@@ -280,6 +280,12 @@ python src/pages/api/media/buffer-scheduling.py
 - **Speakers**: all 6 channels including Instagram and TikTok
 - **Bluesky**: Buffer returns this as `"bluesky"` — normalized to `"bsky"`
   automatically
+- **Ticket call-to-action**: speaker posts include a "Get your ticket" line on
+  Instagram, LinkedIn, Fosstodon, and TikTok. X and Bluesky are skipped due to
+  character limits. Instagram and TikTok use the short form
+  (`europython.eu/tickets/`) since URLs are not clickable on those platforms;
+  LinkedIn and Fosstodon use the full clickable
+  `https://europython.eu/tickets/`.
 
 ### Tracking progress
 
@@ -294,8 +300,14 @@ Already scheduled as of June 2026:
 
 - Positions 1–67 in `combined_socials_queue_2026.json` (up to and including
   PyGda partner post)
+- Cheuk Ting Ho and Diego Russo were posted manually outside the queue. Their
+  per-session cards (`social-cheuk-ting-ho-VYUNHG.png`,
+  `social-cheuk-ting-ho-WKBHZW.png`, `social-diego-russo-QXZMP8.png`,
+  `social-diego-russo-W9NLXV.png`) are committed for consistency so all speaker
+  cards are available on the site, even though they aren't part of the active
+  queue rotation.
 
-Next batch starts at position 68 (Giovanni Barillari).
+Next batch starts at position 68 (Grzegorz Kocjan).
 
 ---
 
