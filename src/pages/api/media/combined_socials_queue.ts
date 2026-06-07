@@ -82,25 +82,25 @@ function sessionLabel(sessionType: string): string {
 // Speaker messages
 const speakerMessageTemplate = {
   instagram: ({ name, talkTitle, label: _label }) =>
-    `Join ${name} at EuroPython for "${talkTitle}".`,
+    `Join ${name} at EuroPython for "${talkTitle}".\nGet your ticket: europython.eu/tickets/`,
   x: ({ name, handle, talkTitle, talkUrl, label }) =>
     handle
       ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`
       : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
   linkedin: ({ name, talkTitle, talkUrl, label }) =>
-    `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
+    `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}\nGet your ticket: https://europython.eu/tickets/`,
   bsky: ({ name, handle, talkTitle, talkUrl, label }) =>
     handle
       ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`
       : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
   fosstodon: ({ name, handle, talkTitle, talkUrl, label }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`
-      : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}\nGet your ticket: https://europython.eu/tickets/`
+      : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}\nGet your ticket: https://europython.eu/tickets/`,
   tiktok: ({ name, handle, talkTitle, label: _label }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}".`
-      : `Join ${name} at EuroPython for "${talkTitle}".`,
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}".\nGet your ticket: europython.eu/tickets/`
+      : `Join ${name} at EuroPython for "${talkTitle}".\nGet your ticket: europython.eu/tickets/`,
 };
 
 // Sponsor messages
