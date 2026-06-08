@@ -21,6 +21,12 @@ function getMastodonUsername(url: string): string | undefined {
   return match ? `@${match[2]}@${match[1]}` : undefined;
 }
 
+function getTikTokUsername(url: string): string | undefined {
+  if (!url) return undefined;
+  const match = url.match(/tiktok\.com\/@([^\/\?]+)/);
+  return match ? `@${match[1]}` : undefined;
+}
+
 function getLinkedInUrl(url: string): string | undefined {
   if (!url) return undefined;
   // Normalise linkedin.com URLs (handles both /in/ and /company/ paths)
@@ -63,26 +69,38 @@ const charLimits: Record<string, number> = {
   linkedin: 3000,
   bsky: 300,
   fosstodon: 500,
+  tiktok: 2200,
 };
+
+function sessionLabel(sessionType: string): string {
+  const t = sessionType?.toLowerCase();
+  if (t === "tutorial") return "tutorial";
+  if (t === "talk" || t === "talk (long session)") return "talk";
+  return "session";
+}
 
 // Speaker messages
 const speakerMessageTemplate = {
-  instagram: ({ name, talkTitle }) =>
-    `Join ${name} at EuroPython for "${talkTitle}".`,
-  x: ({ name, handle, talkTitle, talkUrl }) =>
+  instagram: ({ name, talkTitle, label: _label }) =>
+    `Join ${name} at EuroPython for "${talkTitle}".\nGet your ticket: europython.eu/tickets/`,
+  x: ({ name, handle, talkTitle, talkUrl, label }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
-      : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
-  linkedin: ({ name, talkTitle }) =>
-    `Join ${name} at EuroPython for "${talkTitle}".`,
-  bsky: ({ name, handle, talkTitle, talkUrl }) =>
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`
+      : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
+  linkedin: ({ name, talkTitle, talkUrl, label }) =>
+    `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}\nGet your ticket: https://europython.eu/tickets/`,
+  bsky: ({ name, handle, talkTitle, talkUrl, label }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
-      : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
-  fosstodon: ({ name, handle, talkTitle, talkUrl }) =>
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`
+      : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}`,
+  fosstodon: ({ name, handle, talkTitle, talkUrl, label }) =>
     handle
-      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
-      : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" ${label}: ${talkUrl}\nGet your ticket: https://europython.eu/tickets/`
+      : `Join ${name} at EuroPython for "${talkTitle}" ${label}: ${talkUrl}\nGet your ticket: https://europython.eu/tickets/`,
+  tiktok: ({ name, handle, talkTitle, label: _label }) =>
+    handle
+      ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}".\nGet your ticket: europython.eu/tickets/`
+      : `Join ${name} at EuroPython for "${talkTitle}".\nGet your ticket: europython.eu/tickets/`,
 };
 
 // Sponsor messages
@@ -157,12 +175,13 @@ export const GET: APIRoute = async () => {
     const sessions = await Promise.all(
       submissions.map((s) => getEntry("sessions", s.id))
     );
-    const validSessions = sessions.filter((s) => s && s.data.title);
-    if (validSessions.length === 0) continue;
 
-    const talkTitle = validSessions[0]?.data.title || "an exciting topic";
-    const talkCode = validSessions[0]?.data.code;
-    const talkUrl = `https://ep2026.europython.eu/${talkCode}`;
+    // One card per qualifying session (Talk, Tutorial, or other); skip sessions without a title
+    const qualifyingSessions = sessions.filter(
+      (s) => s && s.data.title && s.data.session_type
+    );
+    if (qualifyingSessions.length === 0) continue;
+
     const fallbackUrl = `https://ep2026.europython.eu/speaker/${speaker.id}`;
     const image = `https://ep2026.europython.eu/media/speakers/social-${speaker.id}.png`;
 
@@ -171,39 +190,54 @@ export const GET: APIRoute = async () => {
       linkedin: getLinkedInUrl(linkedin_url || ""),
       bsky: getBlueskyUsername(bluesky_url || ""),
       fosstodon: getMastodonUsername(mastodon_url || ""),
+      tiktok: getTikTokUsername(speaker.data.tiktok || ""),
     };
 
-    const generateSpeakerMessage = (
-      platform: keyof typeof speakerMessageTemplate
-    ) => {
-      const fn = speakerMessageTemplate[platform];
-      const handle =
-        platform === "instagram"
-          ? undefined
-          : handles[platform as keyof typeof handles];
-      const full = fn({
+    for (const session of qualifyingSessions) {
+      if (!session) continue;
+      const talkTitle = session.data.title;
+      const talkUrl = `https://ep2026.europython.eu/${session.data.code}`;
+      const label = sessionLabel(session.data.session_type);
+      // Use per-session image when speaker has multiple sessions, generic otherwise
+      const sessionImage =
+        qualifyingSessions.length > 1
+          ? `https://ep2026.europython.eu/media/speakers/social-${speaker.id}-${session.data.code}.png`
+          : image;
+
+      const generateSpeakerMessage = (
+        platform: keyof typeof speakerMessageTemplate
+      ) => {
+        const fn = speakerMessageTemplate[platform];
+        const handle =
+          platform === "instagram"
+            ? undefined
+            : handles[platform as keyof typeof handles];
+        const full = fn({
+          name,
+          handle,
+          talkTitle,
+          label,
+          talkUrl: platform === "instagram" ? fallbackUrl : talkUrl,
+        });
+        return trimToLimit(full, charLimits[platform]);
+      };
+
+      speakerRecords.push({
+        type: "speaker",
         name,
-        handle,
-        talkTitle,
-        talkUrl: platform === "instagram" ? fallbackUrl : talkUrl,
+        image: sessionImage,
+        alt_text: `Speaker announcement for EuroPython 2026 conference: ${name} — ${talkTitle}`,
+        handles,
+        channel: {
+          instagram: generateSpeakerMessage("instagram"),
+          x: generateSpeakerMessage("x"),
+          linkedin: generateSpeakerMessage("linkedin"),
+          bsky: generateSpeakerMessage("bsky"),
+          fosstodon: generateSpeakerMessage("fosstodon"),
+          tiktok: generateSpeakerMessage("tiktok"),
+        },
       });
-      return trimToLimit(full, charLimits[platform]);
-    };
-
-    speakerRecords.push({
-      type: "speaker",
-      name,
-      image,
-      alt_text: `Speaker announcement for EuroPython 2026 conference: ${name} — ${talkTitle}`,
-      handles,
-      channel: {
-        instagram: generateSpeakerMessage("instagram"),
-        x: generateSpeakerMessage("x"),
-        linkedin: generateSpeakerMessage("linkedin"),
-        bsky: generateSpeakerMessage("bsky"),
-        fosstodon: generateSpeakerMessage("fosstodon"),
-      },
-    });
+    }
   }
 
   // ── build sponsor records (commercial) ──────────────────────────────────
