@@ -1,9 +1,12 @@
 ---
 import { getEntries, type CollectionEntry } from "astro:content";
 
-const { entry } = Astro.props;
+const { entry, session } = Astro.props;
 
-const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submissions);
+// If a specific session is passed use it, otherwise fall back to all (legacy)
+const sessions: CollectionEntry<"sessions">[] = session
+  ? [session]
+  : await getEntries(entry.data.submissions);
 ---
 <svg class="bg" width="900" height="900" class="h-full w-full -z-10">
   <image href="/social/speaker_card.png" width="900" height="900" />
