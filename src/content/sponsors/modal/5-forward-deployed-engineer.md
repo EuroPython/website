@@ -8,32 +8,6 @@ salary:
 
 benefits:
 description: "
-  AI needs a new infrastructure layer. We're building it at Modal.
-
-  Every era of computing brought new workloads that previous infrastructure
-  couldn't support: mainframes, databases, and the cloud. Each time, the company
-  that rebuilt the layer underneath defined the decade. AI is no different,
-  except it touches everything instead of one slice, and the window to build the
-  layer underneath it is open right now.
-
-
-  Our customers include category-defining companies like Lovable, Ramp,
-  Cognition, DoorDash, and Suno. They rely on Modal for instant GPU access,
-  sub-second container starts, and native storage, so it's simple to serve
-  low-latency inference, fine-tune models, and access production-ready sandboxes
-  at scale.
-
-
-  We recently raised a $355M Series C at a $4.65B valuation, led by General
-  Catalyst and Redpoint Ventures. We've crossed $300M+ ARR and grown fivefold
-  since September.
-
-
-  Our team includes creators of popular open-source projects (e.g.,Seaborn,
-  Luigi), academic researchers, international olympiad medalists, and
-  experienced engineering and product leaders with decades of experience.
-
-
   **The Role:**
 
 
