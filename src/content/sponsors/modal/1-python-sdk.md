@@ -36,7 +36,7 @@ requirements:
   - Ability to participate in on-call rotation and respond to production incidents.
   - Ability to work in-person in our NYC or Stockholm office.
 
-preffered:
+preferred:
   - Familiarity with modern data / ML / AI tools and workflows
   - Experience with Typescript, Go, or Rust
 

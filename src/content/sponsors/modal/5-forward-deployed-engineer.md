@@ -45,7 +45,7 @@ requirements:
   - Strong communicator who can go deep on technical architecture with an engineering team and clearly articulate tradeoffs to technical leadership
   - Genuine interest in working directly with customers — you find it energizing to understand someone else's problem and help them solve it
   - Willing to work in-person in Stockholm
-preffered: 
+preferred: 
  - side projects, open-source contributions, or published work you're proud of in ML or systems performance
 
 apply_link: "https://jobs.ashbyhq.com/modal/0d9c249b-f305-4b0e-b325-3242ac7274e7"
