@@ -121,6 +121,10 @@
           "path": "/community-partners"
         }
       ]
+    },
+  {
+      "name": "Jobs",
+      "path": "/jobs"
     }
   ],
   "footer": [
