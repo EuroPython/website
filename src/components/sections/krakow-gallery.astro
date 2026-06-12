@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import Section from "@ui/Section.astro";
 import Headline from "@ui/Headline.astro";
 import Button from "@ui/Button.astro";
+import Logo from "/public/krakow.svg";
 
 // Import images
 const images = [
@@ -34,6 +35,7 @@ const images = [
 ---
 
 <Section>
+  <article>
   <div class="krakow-gallery-container">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center space-y-6 mb-12">
       <Headline id="krakow" title="Discover Kraków" center={true} />
@@ -65,14 +67,40 @@ const images = [
       <p class="text-sm text-gray-500">
         📸 Photos by Ela Marchewka
       </p>
-      <div class="pt-4">
-        <Button secondary url="/krakow">More about Kraków</Button>
+      <div class="pt-12 flex w-full justify-evenly items-center">
+        <Button secondary url="/krakow">More about Krakow</Button>
+        <Button secondary url="/venue">More About Venue</Button>
       </div>
     </div>
+    </article>
   </div>
 </Section>
 
+<div class="city" id="one">
+  <Logo />
+</div>
+
 <style>
+  article {
+    position: relative;
+    top: 40vh;
+    margin-top: -40vh;
+    z-index: 10;
+  }
+  .city {
+    position: relative;
+    top: 0;
+    width: 100%;
+    grid-column: 1 / 4;
+    overflow: hidden;
+  }
+  .city svg {
+    width: 100vw;
+    position: relative;
+    bottom: -4px;
+    z-index: 1;
+  }
+
   .krakow-gallery-container {
     max-width: 1400px;
     margin: 0 auto;
