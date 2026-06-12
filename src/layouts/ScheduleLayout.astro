@@ -31,6 +31,14 @@ const { title, description, headline } = Astro.props;
 
   <div class="ep-note">💚 Mark talks as favorites by opening their details and tapping the ❤️ icon. Your selections are saved locally and will only be visible on this device.</div>
 
+  <div class="ep-legend">
+    <span class="ep-legend-item"><span class="ep-legend-swatch ep-legend-default"></span> Talk</span>
+    <span class="ep-legend-item"><span class="ep-legend-swatch ep-legend-beginner"></span> Beginner</span>
+    <span class="ep-legend-item"><span class="ep-legend-swatch ep-legend-advanced"></span> Advanced</span>
+    <span class="ep-legend-item"><span class="ep-legend-swatch ep-legend-break"></span> Break</span>
+    <span class="ep-legend-item"><span class="ep-legend-swatch ep-legend-room-change"></span> Room Change</span>
+  </div>
+
     <div class="layout-wrapper2">
       <slot />
     </div>
@@ -75,6 +83,72 @@ header#navbar .bg-\[\#1c294b\] {
   background: var(--ep-surface-medium) !important;
 }
 
+/* Schedule legend */
+.ep-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1rem;
+  background: var(--ep-surface-subtle);
+  border: 1px solid var(--ep-border);
+  border-radius: 6px;
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ep-text-secondary);
+}
+
+.ep-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ep-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--ep-border);
+  flex-shrink: 0;
+}
+
+.ep-legend-default {
+  background: var(--ep-surface-subtle);
+}
+
+.ep-legend-beginner {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 2px,
+    rgba(50,180,50,0.3) 2px,
+    rgba(50,180,50,0.3) 4px
+  );
+  background-color: var(--ep-surface-subtle);
+}
+
+.ep-legend-advanced {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 2px,
+    rgba(200,50,50,0.3) 2px,
+    rgba(200,50,50,0.3) 4px
+  );
+  background-color: var(--ep-surface-subtle);
+}
+
+.ep-legend-break {
+  background: rgba(255,150,0,0.2);
+  border-color: rgba(255,150,0,0.4);
+}
+
+.ep-legend-room-change {
+  background: var(--ep-surface-subtle);
+  border: 1px dashed var(--ep-border);
+}
+
 /* Breadcrumbs dark theme */
 nav[aria-label="Breadcrumb"] .text-gray-900 {
   color: var(--ep-white) !important;
@@ -94,14 +168,14 @@ select {
 }
 
 @media screen and (min-width: 1281px) {
-  .schedule * {
-    font-size: 1.2rem;
+  .layout-wrapper2 .schedule * {
+    font-size: 1.1rem;
     --header-height: 40px !important;
     --break: 10px !important;
   }
 
-  h2, .break {
-    font-size: 1.2rem;
+  .layout-wrapper2 h2, .layout-wrapper2 .break {
+    font-size: 1.3rem;
   }
 }
 
