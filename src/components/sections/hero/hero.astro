@@ -10,7 +10,8 @@ const action1 = "https://programme.europython.eu/europython-2026/";
 const action2 = "https://www.youtube.com/watch?v=laSzm-raS5A";
 ---
 
-<section class="relative z-10">
+<section class="relative z-10 hero-section">
+  <div class="hero-flowers-bg" aria-hidden="true"></div>
   <div
     class="bg-icons relative flex flex-col items-center justify-center"
     style=""
@@ -56,6 +57,34 @@ const action2 = "https://www.youtube.com/watch?v=laSzm-raS5A";
   </div>
 
   <style>
+    .hero-section {
+      overflow: hidden;
+
+  background-color: #0b1121;
+  background-image:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 0.5%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 0.5%
+    );
+    }
+
+    .hero-flowers-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.05;
+      filter: brightness(1.5) saturate(0.5);
+      background: url('/flowers/flowers-tile.svg') repeat;
+      background-size: 2400px 2400px;
+    }
+
     .bg-icons {
       min-height: 400px;
       padding-bottom: 50px;
