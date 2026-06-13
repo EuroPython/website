@@ -14,6 +14,11 @@ const weekCards = await Promise.all(
   })
 );
 
+const allTracks = await getCollection("tracks");
+const tracks = allTracks
+  .filter((t) => !t.data.name.toLowerCase().includes("none of these"))
+  .sort((a, b) => a.data.order - b.data.order);
+
 const allKeynoters = await getCollection("keynoters");
 const keynoters = allKeynoters.sort((a, b) => a.data.order - b.data.order);
 
@@ -55,21 +60,9 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     <div class="prog-topics">
       <p class="prog-topics-label">Conference Topics</p>
       <div class="topics-grid">
-        <a href="/talks/#topic-python-core" class="topic-tag">Python Core &amp; Internals</a>
-        <a href="/talks/#topic-web" class="topic-tag">Web Dev &amp; APIs</a>
-        <a href="/talks/#topic-devops" class="topic-tag">DevOps &amp; Cloud</a>
-        <a href="/talks/#topic-iot" class="topic-tag">IoT &amp; Embedded</a>
-        <a href="/talks/#topic-tooling" class="topic-tag">Tooling &amp; Packaging</a>
-        <a href="/talks/#topic-testing" class="topic-tag">Testing &amp; Security</a>
-        <a href="/talks/#topic-community" class="topic-tag">Community &amp; Education</a>
-        <a href="/talks/#topic-ethics" class="topic-tag">Ethics &amp; Sustainability</a>
-        <a href="/talks/#topic-careers" class="topic-tag">Careers &amp; Leadership</a>
-        <a href="/talks/#topic-games" class="topic-tag">Games, Art &amp; Play</a>
-        <a href="/talks/#topic-ml" class="topic-tag">Machine Learning</a>
-        <a href="/talks/#topic-nlp" class="topic-tag">NLP &amp; Computer Vision</a>
-        <a href="/talks/#topic-data" class="topic-tag">Data &amp; Visualisation</a>
-        <a href="/talks/#topic-jupyter" class="topic-tag">Jupyter &amp; Scientific Python</a>
-        <a href="/talks/#topic-data-eng" class="topic-tag">Data Engineering &amp; MLOps</a>
+        {tracks.map((track) => (
+          <a href={`/sessions?track=${encodeURIComponent(track.data.name)}`} class="topic-tag">{track.data.name}</a>
+        ))}
       </div>
     </div>
 
@@ -280,7 +273,6 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
-    max-width: 900px;
     margin: 0 auto;
   }
 
@@ -297,6 +289,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     transition: background 0.15s, color 0.15s;
     opacity: 0.7;
     text-align: center;
+    min-height: 4rem;
   }
 
   .topic-tag:hover {

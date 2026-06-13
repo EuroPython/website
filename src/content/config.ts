@@ -163,6 +163,27 @@ const sessions = defineCollection({
   }),
 });
 
+const tracks = defineCollection({
+  loader: async (): Promise<any[]> => {
+    const { sessionsData } = await getCollectionsData();
+    const trackSet = new Set<string>();
+    Object.values(sessionsData as Record<string, any>).forEach((s: any) => {
+      if (s.track) trackSet.add(s.track);
+    });
+    return Array.from(trackSet)
+      .sort()
+      .map((track, i) => ({
+        id: track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
+        name: track,
+        order: i,
+      }));
+  },
+  schema: z.object({
+    name: z.string(),
+    order: z.number(),
+  }),
+});
+
 interface ScheduleData {
   days: Record<string, any>;
 }
@@ -302,6 +323,7 @@ export const collections = {
   speakers,
   sprints,
   keynoters,
+  tracks,
   sponsors,
   jobs,
 };
