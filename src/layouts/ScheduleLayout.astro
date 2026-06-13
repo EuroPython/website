@@ -82,35 +82,36 @@ header#navbar .bg-\[\#1c294b\] {
 /* Day tabs */
 .ep-sched-tabs {
   display: flex;
-  gap: 0;
+  gap: 0.6rem;
   justify-content: center;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
-  border-bottom: 2px solid var(--ep-border);
 }
 
 .ep-sched-tab {
-  padding: 0.6rem 1.5rem;
-  border: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
-  background: transparent;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--ep-border);
+  border-radius: 6px;
+  background: var(--ep-surface-subtle);
   color: var(--ep-text-muted);
   font-family: 'Inter Tight', system-ui, sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
+  transition: all 0.15s ease;
 }
 
 .ep-sched-tab:hover {
+  border-color: var(--ep-accent);
   color: var(--ep-white);
+  background: rgba(240, 192, 64, 0.08);
 }
 
 .ep-sched-tab.active {
-  color: var(--ep-accent);
-  border-bottom-color: var(--ep-accent);
-  font-weight: 700;
+  background: var(--ep-accent);
+  border-color: var(--ep-accent);
+  color: var(--ep-bg);
+  font-weight: 600;
 }
 
 .ep-sched-day {
