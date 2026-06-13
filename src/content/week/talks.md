@@ -7,4 +7,5 @@ url: /schedule/
 image: ./talks.jpg
 ---
 
-100+ talks across five parallel tracks. Keynotes, open spaces, and social events. The heart of EuroPython.
+100+ talks across five parallel tracks. Keynotes, open spaces, and social
+events. The heart of EuroPython.

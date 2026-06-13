@@ -7,4 +7,5 @@ url: /sprints/
 image: ./sprints.jpg
 ---
 
-Contribute to real Python projects alongside the people who maintain them. Beginners welcome!
+Contribute to real Python projects alongside the people who maintain them.
+Beginners welcome!
