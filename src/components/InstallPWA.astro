@@ -59,6 +59,7 @@ installBtn.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => {
+  localStorage.setItem('install-pwa-dismissed', 'true');
   hideInstallPrompt();
 });
 
@@ -66,6 +67,8 @@ let deferredPrompt: any;
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  showInstallPrompt();
+  if (localStorage.getItem('install-pwa-dismissed') !== 'true') {
+    showInstallPrompt();
+  }
 });
 </script>
