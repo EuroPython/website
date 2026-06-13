@@ -12,6 +12,7 @@ import { execSync } from "node:child_process";
 import svelte from "@astrojs/svelte";
 import compress from "astro-compress";
 import tailwindcss from "@tailwindcss/vite";
+import pagefind from "astro-pagefind";
 
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
 
@@ -151,6 +152,7 @@ export default defineConfig({
     //   "https://vdo.ninja/?room=EuroPython_2025_Terrace_2B&hash=338a&do",
   },
   integrations: [
+    pagefind(),
     mdx(),
     svelte(),
     ...(fastBuild

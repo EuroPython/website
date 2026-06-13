@@ -95,7 +95,6 @@ const hideFooter = Astro.props.hideFooter ?? false;
 
 <style>
 body {
-  background-color: #E8F4F8;
   min-width: 360px;
   margin: 0;
   padding: 0;
@@ -103,6 +102,11 @@ body {
 
 header {
   background-color: transparent;
+  padding: 0;
+}
+
+nav#navbar {
+  position: fixed;
 }
 
 main {
@@ -111,7 +115,7 @@ main {
 }
 
 footer {
-  background-color: var(--color-primary);
+  background-color: #0c1628;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
