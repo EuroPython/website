@@ -1,0 +1,174 @@
+<section class="sec-wrap pyladies-section" id="pyladies">
+  <div class="sec-inner split-layout pyladies-inner">
+
+    <div class="split-left pyladies-left">
+      <h2 class="sec-title pyladies-title">PYLADIES<br><span>AT EP2026 <sup class="sec-anchor"><a href="#pyladies">#</a></sup></span></h2>
+      <p class="sec-subtitle pyladies-subtitle">Dedicated events for women and gender minorities in the Python community.</p>
+      <a href="#" class="pyladies-cta">Learn more</a>
+    </div>
+
+    <ul class="event-list pyladies-events">
+      <li>
+        <strong>Self-Promotion Workshop/strong>
+        Learn how to communicate your technical work effectively and build your personal brand in tech.
+      </li>
+      <li>
+        <strong>PyLadies Lunch — 16 July, 13:00–14:00</strong>
+        Community lunch following the workshop. Meet fellow PyLadies from across Europe and beyond.
+      </li>
+      <li>
+        <strong>Open Space Sessions — 16–18 July, Various</strong>
+        Drop-in conversations on diversity, inclusion, and building welcoming Python communities.
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<style>
+  .sec-wrap {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pyladies-section {
+    background: var(--color-bg-dark, #0a0a1a);
+  }
+
+  .pyladies-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(210,30,60,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(160,20,60,0.08) 0%, transparent 55%);
+  }
+
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .split-left {
+    position: sticky;
+    top: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .split-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .split-left {
+      position: static;
+    }
+    .sec-inner {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  .sec-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .sec-title .sec-anchor {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.15em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .sec-title:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .sec-title .sec-anchor a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .pyladies-title {
+    line-height: 0.9;
+  }
+
+  .pyladies-title span {
+    display: block;
+    color: var(--color-pyladies, #d42027);
+  }
+
+  .sec-subtitle {
+    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+    font-size: 1.1rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    margin-top: 1.2rem;
+    line-height: 1.55;
+  }
+
+  .pyladies-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to bottom, var(--color-pyladies, #d42027), var(--color-pyladies-dark, #b01a20));
+    color: #fff;
+    border: 1px solid var(--color-pyladies, #d42027);
+    border-radius: 0.375rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .pyladies-cta:hover {
+    opacity: 0.85;
+  }
+
+  .event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .event-list li {
+    padding: 1.4rem 1.8rem 1.4rem 0;
+    font-size: 1.1rem;
+    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    line-height: 1.6;
+    border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+  }
+
+  .event-list li:last-child {
+    border-bottom: none;
+  }
+
+  .event-list li strong {
+    display: block;
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+  }
+</style>

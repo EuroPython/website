@@ -134,6 +134,13 @@
   --color-footer-text-muted: rgba(255, 255, 255, 0.7);
   --color-footer-text-secondary: rgba(255, 255, 255, 0.78);
 
+  /* Section-specific colors */
+  --color-pyladies: #d42027;
+  --color-pyladies-dark: #b01a20;
+  --color-ep25-bg: #0b1b4d;
+  --color-ep25-yellow: #ffd43b;
+  --color-ep25-yellow-dark: #dbb52e;
+
   /* Aspect Ratios */
   --aspect-hero: 2.4380530973;
 

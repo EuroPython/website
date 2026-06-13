@@ -1,0 +1,217 @@
+<section class="sec-wrap finaid-section" id="finaid">
+  <div class="sec-inner finaid-inner">
+
+    <div class="sec-header finaid-header">
+      <h2 class="sec-title">Financial Aid <sup class="sec-anchor"><a href="#finaid">#</a></sup></h2>
+      <p>No one should miss EuroPython because of money. We offer grants to cover tickets, travel, accommodation, and visa fees for those who need support.</p>
+    </div>
+
+    <div class="finaid-grid">
+      <div class="finaid-card">
+        <div class="finaid-title">Free Ticket</div>
+        <div class="finaid-amount">100%</div>
+        <p class="finaid-desc">A three day conference ticket grant for eligible applicants who cannot afford the registration fee.</p>
+      </div>
+      <div class="finaid-card">
+        <div class="finaid-title">Travel &amp; Accommodation</div>
+        <div class="finaid-amount">up to €500</div>
+        <p class="finaid-desc">Financial support to cover travel costs and accommodation for the duration of the conference.</p>
+      </div>
+      <div class="finaid-card">
+        <div class="finaid-title">Visa Fee Support</div>
+        <div class="finaid-amount">€90</div>
+        <p class="finaid-desc">Up to €90 for Schengen visa fees. Poland is in the Schengen Area.</p>
+      </div>
+    </div>
+
+    <div class="sec-footer-bar finaid-footer">
+      <p><strong>Priority:</strong> underrepresented groups, first-time attendees, speakers, and open source contributors.</p>
+      <a href="/finaid" class="finaid-cta">Learn more about Financial Aid</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .sec-wrap {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .finaid-section {
+    background: var(--color-section-bg-alt, #070b14);
+  }
+
+  .finaid-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(circle, var(--color-surface-subtle, rgba(255,255,255,0.05)) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .finaid-inner {
+    padding: 5rem 2rem;
+  }
+
+  .finaid-header {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .finaid-header h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .finaid-header p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  .sec-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .sec-title .sec-anchor {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.15em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .sec-title:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .sec-title .sec-anchor a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .finaid-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+  }
+
+  .finaid-card {
+    padding: 2.5rem 2rem;
+    border-right: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .finaid-card:last-child {
+    border-right: none;
+  }
+
+  .finaid-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: 1.4rem;
+    color: var(--color-cream, #fff5f0);
+  }
+
+  .finaid-amount {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: 2.2rem;
+    color: var(--color-accent, #f0c040);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0.25rem 0;
+  }
+
+  .finaid-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .sec-footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-radius: 2px;
+    background: var(--color-surface-medium, rgba(255,255,255,0.08));
+    flex-wrap: wrap;
+  }
+
+  .finaid-footer p {
+    font-size: 1.05rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+  }
+
+  .finaid-cta {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to bottom, var(--color-cta-red, #d62020), #8a0020);
+    color: #fff;
+    border: 1px solid var(--color-cta-red, #d62020);
+    border-radius: 0.375rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .finaid-cta:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 900px) {
+    .finaid-grid {
+      grid-template-columns: 1fr;
+    }
+    .finaid-card {
+      border-right: none;
+      border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    }
+    .finaid-card:last-child {
+      border-bottom: none;
+    }
+    .sec-footer-bar {
+      flex-direction: column;
+      text-align: center;
+    }
+    .finaid-inner {
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>
