@@ -35,43 +35,83 @@ const sectionTitle = "Community Partners";
 const sectionSubtitle = "Meet the local Python communities joining us at EuroPython 2026";
 ---
 
-<Section variant="secondary">
-  <Headline id="community-partners" title={sectionTitle} center="true" />
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-12">
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
-    </div>
+<section class="sec-wrap" id="community-partners">
+  <div class="sec-inner">
 
-    <div class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-      {partners.map((partner) => {
-        const logo = sponsorLogos[partner.id];
-        return (
-          <a
-            href={`/community-partners#sponsor-${partner.id}`}
-            class="partner-card bg-white rounded-xl p-4 flex flex-col items-center justify-center aspect-square"
-          >
-            {logo && (
-              <Image
-                src={logo}
-                alt={`${partner.data.name} Logo`}
-                class="max-h-36 max-w-[80%] w-auto object-contain mb-2"
-              />
-            )}
-            <h3 class="font-semibold text-gray-900 text-center text-sm">
-              {partner.data.name}
-            </h3>
-          </a>
-        );
-      })}
-    </div>
+    <div class="community-partners-header">
+      <h2 class="community-partners-title sec-title">Community Partners<sup class="sec-anchor"><a href="#community-partners">#</a></sup></h2>
+      </div>
+      <div class="text-center mb-12">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
+      </div>
 
-    <div class="mt-10 text-center">
-      <Button url="/community-partners">Learn more about our partners</Button>
-    </div>
+      <div class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
+        {partners.map((partner) => {
+          const logo = sponsorLogos[partner.id];
+          return (
+            <a
+              href={`/community-partners#sponsor-${partner.id}`}
+              class="partner-card bg-white rounded-xl p-4 flex flex-col items-center justify-center aspect-square"
+            >
+              {logo && (
+                <Image
+                  src={logo}
+                  alt={`${partner.data.name} Logo`}
+                  class="max-h-36 max-w-[80%] w-auto object-contain mb-2"
+                />
+              )}
+              <h3 class="font-semibold text-gray-900 text-center text-sm">
+                {partner.data.name}
+              </h3>
+            </a>
+          );
+        })}
+      </div>
+
+      <div class="mt-10 text-center">
+        <Button url="/community-partners">Learn more about our partners</Button>
+      </div>
   </div>
-</Section>
+</section>
 
 <style>
+  .sec-wrap {
+    background: white;
+  }
+
+   .sec-inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+   }
+
+  .sec-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--color-white, #fff);
+    text-transform: uppercase;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .community-partners-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+
+
+  .community-partners-title {
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+    color: var(--color-primary, #1f2937);
+  }
+
   .partner-card:hover {
     transform: translateY(-4px);
   }

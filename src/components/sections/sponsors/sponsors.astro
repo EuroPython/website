@@ -61,7 +61,11 @@ const sponsorTiers = tiers
 ---
 
 <Section variant="secondary">
-  <Headline id="sponsors" title="Sponsors & Partners" center="true" />
+    <div class="sec-inner">
+
+  <div class="sponsors-header">
+   <h2 class="sponsors-title sec-title">Sponsors & Partners<sup class="sec-anchor"><a href="#sponsors">#</a></sup></h2>
+  </div>
   <div class="mb-10">
     {
       hasSponsors ? (
@@ -96,8 +100,35 @@ const sponsorTiers = tiers
       ))
     }
   </div>
+  </div>
 </Section>
 
 <style>
   hr {margin: 10px 0;}
+
+
+  .sponsors-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+   .sec-inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+   }
+
+  .sec-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    position: relative;
+  }
+
 </style>
