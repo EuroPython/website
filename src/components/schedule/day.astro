@@ -152,11 +152,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
     const duration = differenceInMinutes(nextStart, end);
 
     if (duration >= 5) {
-      const roomChangeStart = end;
-      const roomChangeTime = format(roomChangeStart, "HH:mm");
-      const roomChangeEnd = addMinutes(roomChangeStart, 5);
-      const roomChangeEndTime = format(roomChangeEnd, "HH:mm");
-
+      const roomChangeTime = format(end, "HH:mm");
       if (hasBreakAfter) {
         timesToSkip.push(roomChangeTime);
         continue;
@@ -354,7 +350,7 @@ posters.forEach((poster) => {
 
 
 const date = parseISO(dayName);
-const dateText = format(date, "eeee - do MMMM");
+const dateText = format(date, "EEE eeee, MMMM d");
 
 
 
@@ -367,7 +363,7 @@ const dateText = format(date, "eeee - do MMMM");
 
 ---
 
-<div class="day">
+<div class="day ep-sched-day" data-day={dayName}>
 <h3 class="ep-sched-day-title" id={`day-${dayName}`}><a href={`#day-${dayName}`} aria-label={`Jump to ${dateText}`}>{dateText}</a></h3>
 
   <div class="schedule-wrapper">
