@@ -173,7 +173,10 @@ const tracks = defineCollection({
     return Array.from(trackSet)
       .sort()
       .map((track, i) => ({
-        id: track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
+        id: track
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, ""),
         name: track,
         order: i,
       }));
