@@ -1,54 +1,144 @@
 ---
 import Keynoter from "./keynoter.astro";
-import Headline from "@ui/Headline.astro";
 import Button from "@ui/Button.astro";
-import Section from "@ui/Section.astro"
-
 import { getCollection } from "astro:content";
 
-const keynoters = await getCollection("keynoters");
+const allKeynoters = await getCollection("keynoters");
+const keynoters = allKeynoters.sort((a, b) => a.data.order - b.data.order);
 
-const placeholders = Math.max(0, 5 - keynoters.length);
+const placeholderCount = Math.max(0, 6 - keynoters.length);
+const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
+  name: "",
+  url: "",
+  order: keynoters.length + i + 1,
+}));
 ---
-<Section>
-  <Headline id="keynoters" title="Keynote Speakers"  center=true />
-  <ul class="p-10 lg:p-0 flex gap-6 flex-wrap justify-center">
-    {
-      keynoters
-        .sort((a, b) => a.data.order - b.data.order)
-        .map((keynoter, _index) => (
-          <Keynoter
-            name={keynoter.data.name}
-            url={keynoter.data.url || ""}
-            tagline={keynoter.data.tagline}
-            image={keynoter.data.image}
-            placeholder={false}
-            order={keynoter.data.order}
-            class:list={[
-              "w-full sm:w-[calc(50%-1rem)] md:w-[calc(30%-1rem)]",
-            ]}
-          />
-        ))
-    }
-    {
-      new Array(placeholders)
-        .fill(null)
-        .map((_, _index) => (
-          <Keynoter
-            name=""
-            url=""
-            tagline=""
-            placeholder={true}
-            class:list={["w-full sm:w-[calc(50%-1rem)] md:w-[calc(30%-1rem)]"]}
-          />
-        ))
-    }
-  </ul>
 
-  <div class="flex items-center flex-col pt-6">
-    <div class="text-center">
-      <Headline as="h4" title="See other sessions" />
-      <Button url="/sessions">See sessions preview</Button>
+<section class="sec-wrap progtalk-section" id="keynoters">
+  <div class="sec-inner">
+
+    <div class="prog-keynoters">
+      <h2 class="sec-title prog-topics-label">Keynote Speakers <sup class="sec-anchor"><a href="#keynoters">#</a></sup></h2>
+      <ul class="prog-keynoters-grid">
+        {keynoters.map((k) => (
+          <Keynoter
+            name={k.data.name}
+            url={k.data.url || ""}
+            tagline={k.data.tagline}
+            bio={k.data.bio}
+            image={k.data.image}
+            order={k.data.order}
+          />
+        ))}
+        {placeholders.map((p) => (
+          <Keynoter
+            name={p.name}
+            url={p.url}
+            order={p.order}
+            placeholder={true}
+          />
+        ))}
+      </ul>
     </div>
+
+    <div class="prog-more">
+      <a href="/sessions" class="prog-more-cta">Explore the full programme</a>
+    </div>
+
   </div>
-</Section>
+</section>
+
+<style>
+  .sec-wrap {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .progtalk-section {
+    background: var(--color-section-bg, #080f1a);
+    scroll-margin-top: 60px;
+  }
+
+  .prog-keynoters {
+    margin-top: 0;
+  }
+
+  .prog-topics-label {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--color-cream, #fff5f0);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .prog-topics-label .sec-anchor {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.15em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .prog-topics-label:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .prog-topics-label .sec-anchor a {
+    color: var(--color-cream, #fff5f0);
+    text-decoration: none;
+  }
+
+  .prog-keynoters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 1.5rem;
+  }
+
+  .prog-more {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .prog-more-cta {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: var(--color-cta-red, #d4003a);
+    color: #fff;
+    border: 1px solid var(--color-cta-red, #d4003a);
+    border-radius: 0.375rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .prog-more-cta:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 1024px) {
+    .prog-keynoters-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .prog-keynoters-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
