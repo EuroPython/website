@@ -3,7 +3,7 @@ title: Tutorials & Summits
 date: 13th & 14th July
 weekdays: Monday & Tuesday
 button: Browse tutorials
-url: /tutorials/
+url: /schedule/tutorials/
 image: ./tutorials.jpg
 ---
 

@@ -3,7 +3,7 @@ title: Main Conference
 date: 15th – 17th July
 weekdays: Wednesday, Thursday & Friday
 button: Full conference schedule
-url: /schedule/
+url: /schedule/talks/
 image: ./talks.jpg
 ---
 

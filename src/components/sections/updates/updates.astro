@@ -62,10 +62,23 @@ const cards = await Promise.all(
     background: var(--color-section-bg, #080f1a);
   }
 
+  .news-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(210,30,60,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(160,20,60,0.08) 0%, transparent 55%);
+  }
+
   .section-inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
   }
 
   .news-grid {
