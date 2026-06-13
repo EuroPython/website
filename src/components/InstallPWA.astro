@@ -34,38 +34,38 @@
 }
 </style>
 <script>
-function showInstallPrompt() {
-  const installBanner = document.getElementById('install-pwa') as HTMLElement;
-  installBanner.classList.remove('hidden');
-}
-
-function hideInstallPrompt() {
-  const installBanner = document.getElementById('install-pwa') as HTMLElement;
-  installBanner.classList.add('hidden');
-}
-
-const installBtn = document.getElementById('install-btn') as HTMLElement;
-const closeBtn = document.getElementById('close-btn') as HTMLElement;
-
-installBtn.addEventListener('click', () => {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult: any) => {
-      console.log(choiceResult.outcome);
-      deferredPrompt = null;
-      hideInstallPrompt();
-    });
-  }
-});
-
-closeBtn.addEventListener('click', () => {
-  hideInstallPrompt();
-});
-
-let deferredPrompt: any;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  showInstallPrompt();
-});
+// function showInstallPrompt() {
+//   const installBanner = document.getElementById('install-pwa') as HTMLElement;
+//   installBanner.classList.remove('hidden');
+// }
+//
+// function hideInstallPrompt() {
+//   const installBanner = document.getElementById('install-pwa') as HTMLElement;
+//   installBanner.classList.add('hidden');
+// }
+//
+// const installBtn = document.getElementById('install-btn') as HTMLElement;
+// const closeBtn = document.getElementById('close-btn') as HTMLElement;
+//
+// installBtn.addEventListener('click', () => {
+//   if (deferredPrompt) {
+//     deferredPrompt.prompt();
+//     deferredPrompt.userChoice.then((choiceResult: any) => {
+//       console.log(choiceResult.outcome);
+//       deferredPrompt = null;
+//       hideInstallPrompt();
+//     });
+//   }
+// });
+//
+// closeBtn.addEventListener('click', () => {
+//   hideInstallPrompt();
+// });
+//
+// let deferredPrompt: any;
+// window.addEventListener('beforeinstallprompt', (e) => {
+//   e.preventDefault();
+//   deferredPrompt = e;
+//   showInstallPrompt();
+// });
 </script>

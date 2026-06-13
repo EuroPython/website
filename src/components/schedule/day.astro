@@ -159,23 +159,11 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
 
       if (hasBreakAfter) {
         timesToSkip.push(roomChangeTime);
-
         continue;
       }
 
-      sessionsByTime[roomChangeTime] = [
-        {
-          title: "Room Change",
-          start: roomChangeStart,
-          startTime: roomChangeTime,
-          end: roomChangeEnd,
-          endTime: roomChangeEndTime,
-          duration: 5,
-          type: "room-change",
-          sessionType: undefined,
-          rooms: ROOMS,
-        },
-      ];
+      timesToSkip.push(roomChangeTime);
+      continue;
     } else {
       if (duration != 0){
         console.warn("Missing room change", end, nextStart, duration);
