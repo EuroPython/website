@@ -16,8 +16,8 @@
     100% 100%,
     100% 100%;
   color: #fff;
-  padding-bottom: 4rem;
   position: relative;
+  overflow: hidden;
 }
 
 .section-universe::before {

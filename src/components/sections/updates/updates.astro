@@ -1,19 +1,156 @@
 ---
-import DeadlineCard from "./deadline-card.astro";
-import Headline from "@ui/Headline.astro";
 import { getCollection } from "astro:content";
-import Section from "@ui/Section.astro";
+import { Image } from "astro:assets";
 
-let deadlines = await getCollection("deadlines");
-deadlines = deadlines
+let deadlineEntries = await getCollection("deadlines");
+deadlineEntries = deadlineEntries
+  .filter((d) => !d.data.disabled)
   .sort((a, b) => a.slug.localeCompare(b.slug))
   .reverse()
   .slice(0, 3);
+
+const cards = await Promise.all(
+  deadlineEntries.map(async (entry) => {
+    const { Content } = await entry.render();
+    return { data: entry.data, Content };
+  })
+);
 ---
 
-<Section>
-  <Headline id="updates" title="Updates" center="true" />
-  <section class="justify-center gap-6 flex flex-wrap px-6">
-    {deadlines.map((deadline) => <DeadlineCard id={deadline.slug} />)}
-  </section>
-</Section>
+<section class="sec-wrap news-section" id="updates">
+  <div class="section-inner">
+
+    <div class="news-grid">
+      {cards.map(({ data, Content }) => (
+        <div class="news-card">
+          {data.image && (
+            <div class="news-image">
+              <Image
+                src={data.image}
+                alt={data.title}
+                width={600}
+                height={375}
+                class="news-img"
+                loading="lazy"
+              />
+            </div>
+          )}
+          <div class="news-title">{data.title}</div>
+          <div class="news-desc"><Content /></div>
+          <a
+            href={data.url}
+            class="news-cta"
+            style={data.disabled ? "opacity: 0.4; pointer-events: none;" : ""}
+          >
+            {data.subtitle}
+          </a>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .sec-wrap {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .news-section {
+    background: var(--color-section-bg, #080f1a);
+  }
+
+  .news-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(210,30,60,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(160,20,60,0.08) 0%, transparent 55%);
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .news-card {
+    padding: 1.4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .news-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .news-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .news-title {
+    font-family: var(--font-archivo, 'Roboto', sans-serif);
+    font-size: 1.4rem;
+    color: var(--color-cream, #fff5f0);
+    line-height: 1.25;
+  }
+
+  .news-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    flex: 1;
+  }
+
+  .news-cta {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--color-accent, #f0c040);
+    border-radius: 2px;
+    color: var(--color-accent, #f0c040);
+    font-family: var(--font-archivo, 'Roboto', sans-serif);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    background: transparent;
+    align-self: center;
+  }
+
+  .news-cta:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 860px) {
+    .news-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .news-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

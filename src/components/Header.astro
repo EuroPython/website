@@ -1,84 +1,502 @@
 ---
-import NavItems from "@components/NavItems.astro";
-import HeaderActions from "@components/header/header-actions.astro";
 import HeaderLogo from "@components/header/header-logo.astro";
 import Search from "@components/Search.astro";
 
 import links from "@data/links.json";
 
+interface NavItem {
+  name: string;
+  path?: string;
+  items?: { name: string; path: string }[];
+}
 ---
 
-<section
-  id="navbar"
->
-  <div
-    class="container max-w-[1150px] mx-auto px-6 py-2 mt-4 lg:p-2 lg:mt-6 flex items-center justify-between relative z-40 bg-white/80 rounded-full backdrop-blur-md shadow-lg"
-  >
-    <input
-      type="checkbox"
-      name="mobile-controls"
-      id="nav_toggle"
-      class="hidden peer"
-      aria-hidden="true"
-    />
+<nav aria-label="Main navigation" id="navbar">
+  <HeaderLogo />
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links-menu">
+    <li class="nav-item nav-mobile-search" id="nav-mobile-search">
+      <button type="button" class="nav-mobile-search-btn" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        Search
+      </button>
+    </li>
+    {(links.header as NavItem[]).map((menu) => (
+      menu.items ? (
+        <li class="nav-item has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">
+            {menu.name} <span class="nav-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <ul>
+                {menu.items.map((item) => (
+                  <li>
+                    <a
+                      href={item.path}
+                      target={item.path.startsWith("http") ? "_blank" : undefined}
+                      rel={item.path.startsWith("http") ? "nofollow noopener" : undefined}
+                    >
+                      {item.name}
+                      {item.path.startsWith("http") && <span class="nav-ext">&#8599;</span>}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </li>
+      ) : (
+        <li class="nav-item">
+          <a href={menu.path || "#"}>{menu.name}</a>
+        </li>
+      )
+    ))}
+  </ul>
+  <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    Search
+  </button>
+  <a href="/tickets" class="nav-cta">Register Now</a>
+</nav>
 
-    <HeaderLogo />
-
-    <nav class="hidden xl:block">
-      <NavItems items={links.header} />
-    </nav>
-
-    <HeaderActions />
-
-    <div
-      class="fixed bg-body-background top-0 left-0 w-screen h-screen overflow-scroll hidden peer-checked:block xl:peer-checked:hidden z-50 px-6 py-2"
-    >
-      <div class="flex items-center justify-between">
-        <HeaderLogo />
-        <HeaderActions mobile />
-      </div>
-
-      <nav class="mt-8">
-        <NavItems items={[...links.header]} />
-      </nav>
-    </div>
-  </div>
-</section>
 <Search />
 
 <style>
-#navbar {
+nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(10,10,20,0.95);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0.55rem calc((100% - 1200px) / 2);
+  white-space: nowrap;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5);
   transition: transform 0.3s ease-in-out;
   transform: translateY(0);
 }
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item > a {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.55rem 1.1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.93);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.nav-item > a:hover,
+.nav-item:hover > a,
+.nav-item > a:focus {
+  color: #ffffff;
+  background: rgba(255,255,255,0.10);
+}
+
+.nav-arrow {
+  font-size: 0.55em;
+  opacity: 0.6;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+.nav-item:hover .nav-arrow { transform: rotate(180deg); }
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 0.2rem;
+  list-style: none;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s, visibility 0.18s;
+  z-index: 10;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown,
+.nav-item.dropdown-open .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav-dropdown-inner {
+  background: rgba(10,10,20,0.95);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 2px;
+  padding: 0.5rem;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.75), 0 4px 12px rgba(0,0,0,0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-dropdown-inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-dropdown li a {
+  display: block;
+  padding: 0.65rem 1.2rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.93);
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  transition: color 0.12s, background 0.12s;
+  white-space: nowrap;
+}
+.nav-dropdown li a:hover {
+  color: #ffffff;
+  background: rgba(255,255,255,0.15);
+}
+
+.nav-ext {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  margin-left: 0.3rem;
+}
+
+.nav-mobile-search { display: none; }
+
+.nav-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  padding: 0.45rem 0.9rem;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  color: rgba(255,255,255,0.78);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.nav-search-btn:hover {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+}
+
+.nav-cta {
+  font-family: var(--font-archivo, 'Roboto', sans-serif);
+  font-size: 0.88rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #d62020, #8a0020);
+  border-radius: 2px;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+  transition: opacity 0.15s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* Hamburger toggle - visible on mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0.55rem 1rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: auto;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: rgba(255,255,255,0.93);
+    border-radius: 1px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+  .nav-toggle.active span:nth-child(2) { opacity: 0; }
+  .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    inset: 0;
+    height: 100dvh;
+    background: rgba(10,10,20,0.95);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item > a {
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+  }
+
+  .nav-search-btn {
+    display: none;
+  }
+
+  .nav-mobile-search {
+    display: block;
+  }
+
+  .nav-mobile-search-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.8rem 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: rgba(255,255,255,0.93);
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding-top: 0;
+    min-width: auto;
+    display: none;
+  }
+
+  .nav-item.open .nav-dropdown {
+    display: block;
+  }
+
+  .nav-dropdown-inner {
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0;
+  }
+
+  .nav-dropdown li a {
+    padding: 0.6rem 0 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-item.open .nav-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+/* Nav hidden state for scroll-to-hide */
+.nav-hidden {
+  transform: translateY(-100%);
+}
 </style>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const navbar = document.getElementById("navbar") as HTMLElement;
+  const navbar = document.getElementById("navbar");
   if (!navbar) return;
 
-  let prevScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-  let ticking = false;
-  let isVisible = true;
+  const navbarEl: HTMLElement = navbar;
 
-  // Ensure navbar is visible initially
-  navbar.style.transform = "translateY(0)";
-  navbar.style.transition = "transform 0.3s ease-in-out";
+  // ── Mobile hamburger ──
+  const toggle = navbar.querySelector(".nav-toggle") as HTMLElement | null;
+  const navLinks = navbar.querySelector(".nav-links") as HTMLElement | null;
+
+  if (toggle && navLinks) {
+    var toggleEl = toggle;
+    var navLinksEl = navLinks;
+    function closeMenu() {
+      navLinksEl.classList.remove("open");
+      toggleEl.classList.remove("active");
+      toggleEl.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+      toggleEl.focus();
+    }
+
+    function openMenu() {
+      navLinksEl.classList.add("open");
+      toggleEl.classList.add("active");
+      toggleEl.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+      navbarEl.classList.remove("nav-hidden");
+    }
+
+    toggleEl.addEventListener("click", function(e) {
+      e.stopPropagation();
+      if (navLinksEl.classList.contains("open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Dropdown toggle on mobile
+    navLinksEl.querySelectorAll(".nav-item.has-dropdown > a").forEach(function(link) {
+      link.addEventListener("click", function(e) {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          var item = link.closest(".nav-item") as HTMLElement | null;
+          if (!item) return;
+          navLinksEl.querySelectorAll(".nav-item.open").forEach(function(other) {
+            if (other !== item) other.classList.remove("open");
+          });
+          item.classList.toggle("open");
+        }
+      });
+
+      // Keyboard support for desktop dropdowns
+      link.addEventListener("keydown", function(e: Event) {
+        var ke = e as KeyboardEvent;
+        if (window.innerWidth <= 900) return;
+        if (ke.key === "Enter" || ke.key === " ") {
+          e.preventDefault();
+          var item = link.closest(".nav-item") as HTMLElement | null;
+          if (!item) return;
+          var isOpen = item.classList.contains("dropdown-open");
+          navLinksEl.querySelectorAll(".nav-item.dropdown-open").forEach(function(other) {
+            other.classList.remove("dropdown-open");
+            var otherLink = other.querySelector(":scope > a");
+            if (otherLink) otherLink.setAttribute("aria-expanded", "false");
+          });
+          if (!isOpen) {
+            item.classList.add("dropdown-open");
+            link.setAttribute("aria-expanded", "true");
+            var firstLink = item.querySelector(".nav-dropdown li a") as HTMLElement | null;
+            if (firstLink) firstLink.focus();
+          }
+        } else if (ke.key === "Escape") {
+          var item = link.closest(".nav-item") as HTMLElement | null;
+          if (item) item.classList.remove("dropdown-open");
+          link.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
+    // Escape key inside dropdowns
+    navLinksEl.querySelectorAll(".nav-dropdown li a").forEach(function(ddLink) {
+      ddLink.addEventListener("keydown", function(e: Event) {
+        var ke = e as KeyboardEvent;
+        if (ke.key === "Escape") {
+          var item = ddLink.closest(".nav-item.has-dropdown") as HTMLElement | null;
+          if (item) item.classList.remove("dropdown-open");
+          var trigger = item ? item.querySelector(":scope > a") as HTMLElement | null : null;
+          if (trigger) {
+            trigger.setAttribute("aria-expanded", "false");
+            trigger.focus();
+          }
+        }
+      });
+    });
+
+    // Close menu when clicking a sub-link (mobile)
+
+    // Close menu when clicking a sub-link (mobile)
+    navLinksEl.querySelectorAll(".nav-dropdown li a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        if (window.innerWidth <= 900) {
+          closeMenu();
+          navLinksEl.querySelectorAll(".nav-item.open").forEach(function(item) {
+            item.classList.remove("open");
+          });
+        }
+      });
+    });
+
+    // Close menu on backdrop click
+    navLinksEl.addEventListener("click", function(e) {
+      if (e.target === navLinksEl && window.innerWidth <= 900) {
+        closeMenu();
+      }
+    });
+  }
+
+  // ── Scroll-to-hide nav ──
+  var prevScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+  var ticking = false;
+  var isVisible = true;
 
   function updateNavbar() {
-    // Handle iOS bounce - scroll position can be negative during bounce
-    const rawScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-    const currentScrollPos = Math.max(0, rawScrollPos);
+    var rawScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    var currentScrollPos = Math.max(0, rawScrollPos);
 
-    // Show navbar immediately if we're bouncing above the page (negative scroll)
-    // or if we're very close to the top
     if (rawScrollPos <= 0 || currentScrollPos <= 50) {
       if (!isVisible) {
-        navbar.style.transform = "translateY(0)";
+        navbarEl.style.transform = "translateY(0)";
         isVisible = true;
       }
       prevScrollPos = currentScrollPos;
@@ -86,13 +504,12 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    const documentHeight = document.documentElement.scrollHeight;
-    const windowHeight = window.innerHeight;
+    var documentHeight = document.documentElement.scrollHeight;
+    var windowHeight = window.innerHeight;
 
-    // Don't hide navbar when at the very bottom
     if (currentScrollPos + windowHeight >= documentHeight - 50) {
       if (!isVisible) {
-        navbar.style.transform = "translateY(0)";
+        navbarEl.style.transform = "translateY(0)";
         isVisible = true;
       }
       prevScrollPos = currentScrollPos;
@@ -100,19 +517,17 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    // Only update if scroll difference is significant
-    const scrollDiff = Math.abs(currentScrollPos - prevScrollPos);
+    var scrollDiff = Math.abs(currentScrollPos - prevScrollPos);
     if (scrollDiff < 3) {
       ticking = false;
       return;
     }
 
-    // Show navbar when scrolling up, hide when scrolling down
     if (prevScrollPos > currentScrollPos && !isVisible) {
-      navbar.style.transform = "translateY(0)";
+      navbarEl.style.transform = "translateY(0)";
       isVisible = true;
     } else if (prevScrollPos < currentScrollPos && isVisible && currentScrollPos > 100) {
-      navbar.style.transform = "translateY(-100%)";
+      navbarEl.style.transform = "translateY(-100%)";
       isVisible = false;
     }
 
@@ -127,35 +542,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Use passive listener for better performance on mobile
   window.addEventListener("scroll", requestTick, { passive: true });
 
-  // Additional safety check specifically for iOS bounce recovery
-  let bounceCheckTimeout: any = null;
-
+  var bounceCheckTimeout: any = null;
   window.addEventListener("scroll", function() {
-    // Clear any existing timeout
-    if (bounceCheckTimeout) {
-      clearTimeout(bounceCheckTimeout);
-    }
-
-    // Set a timeout to check position after scroll momentum stops
-    bounceCheckTimeout = setTimeout(() => {
-      const finalScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+    if (bounceCheckTimeout) clearTimeout(bounceCheckTimeout);
+    bounceCheckTimeout = setTimeout(function() {
+      var finalScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
       if (finalScrollPos <= 50 && !isVisible) {
-        navbar.style.transform = "translateY(0)";
+        navbarEl.style.transform = "translateY(0)";
         isVisible = true;
         prevScrollPos = finalScrollPos;
       }
     }, 150);
   }, { passive: true });
 
-  // Handle page visibility changes (when switching tabs/apps)
   document.addEventListener("visibilitychange", function() {
     if (!document.hidden) {
-      const currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+      var currentScrollPos = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
       if (currentScrollPos <= 50) {
-        navbar.style.transform = "translateY(0)";
+        navbarEl.style.transform = "translateY(0)";
         isVisible = true;
         prevScrollPos = currentScrollPos;
       }

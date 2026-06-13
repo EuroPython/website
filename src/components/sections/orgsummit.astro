@@ -1,0 +1,178 @@
+<section class="sec-wrap orgsummit-section" id="orgsummit">
+  <div class="sec-inner split-layout orgsummit-inner">
+
+    <div class="split-left orgsummit-left">
+      <h2 class="sec-title orgsummit-title">CONFERENCE<br>ORGANISERS<br><span>SUMMIT <sup class="sec-anchor"><a href="#orgsummit">#</a></sup></span></h2>
+      <p class="sec-subtitle orgsummit-subtitle">A dedicated day for Python conference and community organisers from across Europe — bigger and better than ever before.</p>
+      <a href="#" class="orgsummit-cta">Learn more</a>
+    </div>
+
+    <ul class="event-list orgsummit-events">
+      <li>
+        <strong>Organisers Meetup — Friday 17 July</strong>
+        Gather with fellow PyCon and PyO organisers from across Europe. Share what's working, what isn't, and what's next for your community.
+      </li>
+      <li>
+        <strong>Community Lunch — Friday 17 July, 13:00–14:00</strong>
+        Sit down together over a shared meal. An informal space to connect with peers, swap stories, and build lasting relationships.
+      </li>
+      <li>
+        <strong>Open Space Sessions — Friday 17 July, Afternoon</strong>
+        Unconference-style discussions on running events, growing communities, diversity, sponsorship, and everything in between.
+      </li>
+      <li>
+        <strong>More activities to be announced</strong>
+        We're making this year's summit bigger than EP2025. Stay tuned for additional programming.
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<style>
+  .sec-wrap {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .orgsummit-section {
+    background: var(--color-section-bg, #080f1a);
+  }
+
+  .orgsummit-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(20,160,80,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(10,100,50,0.07) 0%, transparent 55%);
+  }
+
+  .sec-title {
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .sec-title .sec-anchor {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.15em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .sec-title:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .sec-title .sec-anchor a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .split-left {
+    position: sticky;
+    top: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .split-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .split-left {
+      position: static;
+    }
+    .sec-inner {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  .orgsummit-title {
+    line-height: 0.9;
+  }
+
+  .orgsummit-title span {
+    display: block;
+    color: var(--color-green-2e, #2ecc71);
+  }
+
+  .sec-subtitle {
+    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+    font-size: 1.1rem;
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    margin-top: 1.2rem;
+    line-height: 1.55;
+  }
+
+  .orgsummit-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to bottom, var(--color-green-2e, #2ecc71), var(--color-green-25, #25a85d));
+    color: var(--color-section-bg, #080f1a);
+    border: 1px solid var(--color-green-2e, #2ecc71);
+    border-radius: 0.375rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .orgsummit-cta:hover {
+    opacity: 0.85;
+  }
+
+  .event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .event-list li {
+    padding: 1.4rem 1.8rem 1.4rem 0;
+    font-size: 1.1rem;
+    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    line-height: 1.6;
+    border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+  }
+
+  .event-list li:last-child {
+    border-bottom: none;
+  }
+
+  .event-list li strong {
+    display: block;
+    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 0.25rem;
+  }
+</style>

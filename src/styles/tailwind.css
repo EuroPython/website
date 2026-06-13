@@ -1,6 +1,50 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@layer base {
+  :root {
+    --color-red: #d4003a;
+    --color-red-on-dark: #ff1a4a;
+    --color-indigo: #4a0018;
+    --color-magenta: #800020;
+    --color-accent: #f0c040;
+    --color-cream: #fff5f0;
+    --color-white: #ffffff;
+
+    --accent-rgb: 240, 192, 64;
+
+    --text-primary: rgba(255, 255, 255, 0.93);
+    --text-secondary: rgba(255, 255, 255, 0.78);
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --text-faint: rgba(255, 255, 255, 0.6);
+
+    --border: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.15);
+    --border-bright: rgba(255, 255, 255, 0.25);
+    --surface-faint: rgba(255, 255, 255, 0.03);
+    --surface-subtle: rgba(255, 255, 255, 0.05);
+    --surface-medium: rgba(255, 255, 255, 0.08);
+
+    --black-75: rgba(0, 0, 0, 0.75);
+    --black-70: rgba(0, 0, 0, 0.7);
+    --black-50: rgba(0, 0, 0, 0.5);
+    --black-40: rgba(0, 0, 0, 0.4);
+    --black-30: rgba(0, 0, 0, 0.3);
+    --black-15: rgba(0, 0, 0, 0.15);
+
+    --cta-red: #d62020;
+    --cta-red-dark: #8a0020;
+    --cta-mid: #a8002d;
+    --cta-end: #700020;
+
+    --bg-section: #080f1a;
+    --bg-section-alt: #070b14;
+    --bg-dark: #0a0a1a;
+
+    --overlay-dark: rgba(10, 10, 20, 0.95);
+  }
+}
+
 @theme {
   /* Base Colors */
   --color-black: #000;
@@ -37,6 +81,28 @@
   --color-secondary-darkest: #ffffff;
   --color-secondary-light: #7a7ebd;
 
+  /* Section Colors */
+  --color-euroscipy: #2e2ed4;
+  --color-section-bg: #080f1a;
+  --color-section-bg-alt: #070b14;
+  --color-bg-dark: #0a0a1a;
+  --color-cta-red: #d62020;
+  --color-green-2e: #2ecc71;
+  --color-green-25: #25a85d;
+
+  /* Text Variants for dark sections */
+  --color-text-primary-dark: rgba(255, 255, 255, 0.93);
+  --color-text-secondary-dark: rgba(255, 255, 255, 0.78);
+  --color-text-muted-dark: rgba(255, 255, 255, 0.7);
+  --color-text-faint-dark: rgba(255, 255, 255, 0.6);
+  --color-surface-medium: rgba(255, 255, 255, 0.08);
+  --color-surface-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-dark: rgba(255, 255, 255, 0.1);
+  --color-border-bright: rgba(255, 255, 255, 0.25);
+  --color-black-30: rgba(0, 0, 0, 0.3);
+  --color-accent: #f0c040;
+  --color-cream: #fff5f0;
+
   /* Hero Colors */
   --color-hero-primary: #151f38;
   --color-hero-secondary: #fabc1b;
@@ -59,11 +125,30 @@
 
   --color-top-notification: #ee714b;
 
+  /* Footer Colors */
+  --color-footer-bg: #0a0003;
+  --color-footer-gray: #222222;
+  --color-footer-accent: #f0c040;
+  --color-footer-red: #d4003a;
+  --color-footer-red-on-dark: #ff1a4a;
+  --color-footer-text-muted: rgba(255, 255, 255, 0.7);
+  --color-footer-text-secondary: rgba(255, 255, 255, 0.78);
+
+  /* Section-specific colors */
+  --color-pyladies: #d42027;
+  --color-pyladies-dark: #b01a20;
+  --color-ep25-bg: #0b1b4d;
+  --color-ep25-yellow: #ffd43b;
+  --color-ep25-yellow-dark: #dbb52e;
+
   /* Aspect Ratios */
   --aspect-hero: 2.4380530973;
 
   /* Font Families */
   --font-system: system-ui, sans-serif;
+  --font-archivo: "Roboto", sans-serif;
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+
   --font-title:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

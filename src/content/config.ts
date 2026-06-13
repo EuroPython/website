@@ -32,7 +32,9 @@ const week = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      subtitle: z.string(),
+      date: z.string(),
+      weekdays: z.string(),
+      button: z.string(),
       url: z.string(),
       image: image(),
     }),
@@ -45,7 +47,8 @@ const keynoters = defineCollection({
       name: z.string(),
       url: z.string().optional(),
       tagline: z.string().optional(),
-      image: image(),
+      bio: z.string().optional(),
+      image: image().optional(),
       order: z.number(),
     }),
 });
@@ -160,6 +163,27 @@ const sessions = defineCollection({
   }),
 });
 
+const tracks = defineCollection({
+  loader: async (): Promise<any[]> => {
+    const { sessionsData } = await getCollectionsData();
+    const trackSet = new Set<string>();
+    Object.values(sessionsData as Record<string, any>).forEach((s: any) => {
+      if (s.track) trackSet.add(s.track);
+    });
+    return Array.from(trackSet)
+      .sort()
+      .map((track, i) => ({
+        id: track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
+        name: track,
+        order: i,
+      }));
+  },
+  schema: z.object({
+    name: z.string(),
+    order: z.number(),
+  }),
+});
+
 interface ScheduleData {
   days: Record<string, any>;
 }
@@ -255,7 +279,7 @@ const jobs = defineCollection({
     responsibilities: z.array(z.string()).nullable(),
     min_requirements: z.array(z.string()).optional().nullable(),
     requirements: z.array(z.string()).nullable(),
-    preffered: z.array(z.string()).optional().nullable(),
+    preferred: z.array(z.string()).optional().nullable(),
     stack: z.array(z.string()).optional().nullable(),
     benefits: z.array(z.string()).nullable(),
     description2: z.string().optional().nullable(),
@@ -299,6 +323,7 @@ export const collections = {
   speakers,
   sprints,
   keynoters,
+  tracks,
   sponsors,
   jobs,
 };
