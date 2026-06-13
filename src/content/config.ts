@@ -32,7 +32,9 @@ const week = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      subtitle: z.string(),
+      date: z.string(),
+      weekdays: z.string(),
+      button: z.string(),
       url: z.string(),
       image: image(),
     }),

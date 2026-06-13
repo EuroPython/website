@@ -1,6 +1,18 @@
 ---
 import Keynoter from "./keynoters/keynoter.astro";
-import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import { getCollection, getEntry } from "astro:content";
+
+const tutorials = await getEntry("week", "tutorials");
+const talks = await getEntry("week", "talks");
+const sprints = await getEntry("week", "sprints");
+const allEntries = [tutorials, talks, sprints];
+const weekCards = await Promise.all(
+  allEntries.map(async (e) => {
+    const { Content } = await e.render();
+    return { data: e.data, Content };
+  })
+);
 
 const allKeynoters = await getCollection("keynoters");
 const keynoters = allKeynoters.sort((a, b) => a.data.order - b.data.order);
@@ -22,39 +34,22 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     </div>
 
     <div class="prog-grid">
-      <div class="prog-card">
-        <div class="prog-card-date">
-          <div class="prog-card-date-main">13th &amp; 14th July</div>
-          <div class="prog-card-date-days">Monday &amp; Tuesday</div>
+      {weekCards.map(({ data, Content }) => (
+        <div class="prog-card">
+          <div class="prog-card-img">
+            <Image src={data.image} alt={data.title} class="prog-card-image" loading="lazy" />
+          </div>
+          <div class="prog-card-date">
+            <div class="prog-card-date-main">{data.date}</div>
+            <div class="prog-card-date-days">{data.weekdays}</div>
+          </div>
+          <div class="prog-card-body">
+            <h3 class="prog-card-title"><a href={data.url}>{data.title}</a></h3>
+            <div class="prog-card-desc"><Content /></div>
+            <a href={data.url} class="prog-card-btn">{data.button}</a>
+          </div>
         </div>
-        <div class="prog-card-body">
-          <h3 class="prog-card-title"><a href="/tutorials/">Tutorials &amp; Summits</a></h3>
-          <p class="prog-card-desc">Full-day deep dives with an expert in a small group. Far more hands-on than a talk. Sold separately.</p>
-          <a href="/tutorials/" class="prog-card-btn">Browse tutorials</a>
-        </div>
-      </div>
-      <div class="prog-card">
-        <div class="prog-card-date">
-          <div class="prog-card-date-main">15th – 17th July</div>
-          <div class="prog-card-date-days">Wednesday, Thursday &amp; Friday</div>
-        </div>
-        <div class="prog-card-body">
-          <h3 class="prog-card-title"><a href="/schedule/">Main Conference</a></h3>
-          <p class="prog-card-desc">100+ talks across five parallel tracks. Keynotes, open spaces, and social events. The heart of EuroPython.</p>
-          <a href="/schedule/" class="prog-card-btn">Full conference schedule</a>
-        </div>
-      </div>
-      <div class="prog-card">
-        <div class="prog-card-date">
-          <div class="prog-card-date-main">18th &amp; 19th July</div>
-          <div class="prog-card-date-days">Saturday &amp; Sunday</div>
-        </div>
-        <div class="prog-card-body">
-          <h3 class="prog-card-title"><a href="/programme/#sprints">Sprints &amp; Workshops</a></h3>
-          <p class="prog-card-desc">Contribute to real Python projects alongside the people who maintain them. Beginners welcome!</p>
-          <a href="/programme/#sprints" class="prog-card-btn">Sprints info</a>
-        </div>
-      </div>
+      ))}
     </div>
 
     <div class="prog-topics">
@@ -193,8 +188,25 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
   .prog-card {
     text-align: center;
-    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
     border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .prog-card-img {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .prog-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .prog-card:hover .prog-card-image {
+    transform: scale(1.05);
   }
 
   .prog-card-date {
@@ -238,7 +250,8 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     font-size: 1.1rem;
     color: var(--color-text-primary-dark, rgba(255,255,255,0.93));
     line-height: 1.65;
-    margin-bottom: 0.8rem;
+    padding: 0.5rem 0;
+    margin: 0;
   }
 
   .prog-card-btn {
