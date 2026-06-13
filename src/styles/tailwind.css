@@ -81,6 +81,9 @@
   --color-secondary-darkest: #ffffff;
   --color-secondary-light: #7a7ebd;
 
+  /* Section Colors */
+  --color-euroscipy: #2e2ed4;
+
   /* Hero Colors */
   --color-hero-primary: #151f38;
   --color-hero-secondary: #fabc1b;
@@ -108,6 +111,9 @@
 
   /* Font Families */
   --font-system: system-ui, sans-serif;
+  --font-archivo: "Archivo Black", sans-serif;
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+
   --font-title:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
