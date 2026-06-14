@@ -1,9 +1,10 @@
 ---
+import Section2 from "@ui/Section2.astro";
 import Button from "@ui/Button.astro";
 ---
 
-<section class="sec-wrap euroscipy-section" id="euroscipy">
-  <div class="sec-inner split-layout euroscipy-inner">
+<Section2 className="euroscipy-section" id="euroscipy">
+  <div class="split-layout euroscipy-inner">
 
     <div class="split-left euroscipy-left">
       <h2 class="sec-title euroscipy-title">EuroSciPy<br/> 2026 <sup class="sec-anchor"><a href="#euroscipy">#</a></sup></h2>
@@ -21,16 +22,11 @@ import Button from "@ui/Button.astro";
     </div>
 
   </div>
-</section>
+</Section2>
 
 <style>
-  .sec-wrap {
-    color: var(--color-white, #fff);
-    position: relative;
-    overflow: hidden;
-  }
 
-  .euroscipy-section {
+  :global(.euroscipy-section) {
     background: var(--color-euroscipy, #2e2ed4);
     scroll-margin-top: 60px;
   }

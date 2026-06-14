@@ -1,4 +1,5 @@
 ---
+import Section2 from "@ui/Section2.astro";
 import Keynoter from "./keynoters/keynoter.astro";
 import { Image } from "astro:assets";
 import { getCollection, getEntry } from "astro:content";
@@ -30,8 +31,8 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 }));
 ---
 
-<section class="sec-wrap prog-section" id="programme">
-  <div class="sec-inner prog-inner">
+<Section2 className="prog-section" variant="dark-alt" id="programme">
+  <div class="prog-inner">
 
     <div class="sec-header prog-section-header">
       <h2 class="sec-title prog-section-title">What to Expect? <sup class="sec-anchor"><a href="#programme">#</a></sup></h2>
@@ -110,7 +111,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     </div>
 
   </div>
-</section>
+</Section2>
 
 <style>
   .sec-wrap {
@@ -119,13 +120,6 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     overflow: hidden;
   }
 
-  .sec-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4.5rem 2rem;
-    position: relative;
-    z-index: 1;
-  }
 
   .prog-section {
     background: var(--color-section-bg-alt, #070b14);
@@ -147,9 +141,9 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   }
 
   .sec-title .sec-anchor {
+    position: absolute;
+    margin-left: 0.2em;
     font-size: 0.5em;
-    vertical-align: super;
-    margin-left: 0.15em;
     opacity: 0;
     transition: opacity 0.2s ease;
   }

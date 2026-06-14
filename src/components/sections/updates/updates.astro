@@ -1,4 +1,5 @@
 ---
+import Section2 from "@ui/Section2.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
@@ -17,7 +18,7 @@ const cards = await Promise.all(
 );
 ---
 
-<section class="sec-wrap news-section" id="updates">
+<Section2 className="news-section" id="updates">
   <div class="section-inner">
 
     <div class="news-grid">
@@ -49,7 +50,7 @@ const cards = await Promise.all(
     </div>
 
   </div>
-</section>
+</Section2>
 
 <style>
   .sec-wrap {
@@ -58,11 +59,11 @@ const cards = await Promise.all(
     overflow: hidden;
   }
 
-  .news-section {
+  :global(.news-section) {
     background: var(--color-section-bg, #080f1a);
   }
 
-  .news-section::before {
+  :global(.news-section::before) {
     content: '';
     position: absolute;
     inset: 0;

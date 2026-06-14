@@ -1,9 +1,13 @@
-<section class="sec-wrap connect-section" id="connect">
-  <div class="sec-inner connect-inner">
+---
+import Title from "@ui/Title.astro";
+import Section2 from "@ui/Section2.astro";
+---
+<Section2 id="connect" variant="dark" className="connect-section">
+  <div class="connect-bg" aria-hidden="true"></div>
+  <div class="connect-inner">
 
     <div class="sec-header connect-header">
-      <h2 class="sec-title connect-title">LET'S CONNECT <sup class="sec-anchor"><a href="#connect">#</a></sup></h2>
-      <p class="connect-subtitle">Want to collaborate or contribute? We're open to partnership opportunities and would love to hear your ideas.</p>
+      <Title id="connect" subtitle="Want to collaborate or contribute? We're open to partnership opportunities and would love to hear your ideas.">LET'S CONNECT</Title>
     </div>
 
     <div class="connect-grid">
@@ -55,7 +59,7 @@
     </div>
 
   </div>
-</section>
+</Section2>
 
 <script>
   const form = document.getElementById("subscribeForm");
@@ -87,32 +91,19 @@
 </script>
 
 <style>
-  .sec-wrap {
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
 
-  .sec-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4.5rem 2rem;
-    position: relative;
-    z-index: 1;
-  }
 
-  .connect-section {
+:global(.connect-section) {
     background: var(--color-section-bg, #080f1a);
   }
 
-  .connect-section::before {
-    content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: 0;
     background-image: radial-gradient(circle, var(--color-surface-subtle, rgba(255,255,255,0.05)) 1px, transparent 1px);
     background-size: 32px 32px;
+  .connect-bg {
   }
 
   .connect-header {
@@ -122,33 +113,9 @@
     margin-bottom: 2.5rem;
   }
 
-  .sec-title {
-    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 4.0rem);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 0.8rem;
-    position: relative;
-  }
 
-  .sec-title .sec-anchor {
-    font-size: 0.5em;
-    vertical-align: super;
-    margin-left: 0.15em;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
 
-  .sec-title:hover .sec-anchor {
-    opacity: 0.5;
-  }
 
-  .sec-title .sec-anchor a {
-    color: #fff;
-    text-decoration: none;
-  }
 
   .connect-subtitle {
     font-size: 1.15rem;
@@ -299,17 +266,4 @@
   }
 
   @media (max-width: 640px) {
-    .sec-inner {
-      padding: 3rem 1.5rem;
-    }
-    .connect-block {
-      padding: 1.5rem 1.5rem;
-    }
-    .connect-social-link {
-      padding: 0.8rem 1rem;
-    }
-    .connect-newsletter-input {
-      min-width: 100%;
-    }
-  }
 </style>

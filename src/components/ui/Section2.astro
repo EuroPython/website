@@ -1,0 +1,45 @@
+---
+export interface Props {
+  id?: string;
+  variant?: "default" | "dark" | "dark-alt" | "bg-dark" | "ep25" | "light";
+  className?: string;
+}
+
+const { id, variant = "default", className = "" } = Astro.props;
+
+const bg: Record<string, string> = {
+  default: "",
+  dark: "var(--color-section-bg, #080f1a)",
+  "dark-alt": "var(--color-section-bg-alt, #070b14)",
+  "bg-dark": "var(--color-bg-dark, #0a0a1a)",
+  ep25: "var(--color-ep25-bg, #0b1b4d)",
+  light: "#fff",
+};
+---
+
+<section class={`sec-wrap ${className}`} id={id} style={bg[variant] ? `background: ${bg[variant]}` : undefined}>
+  <div class="sec-inner">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .sec-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 640px) {
+    .sec-inner {
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>

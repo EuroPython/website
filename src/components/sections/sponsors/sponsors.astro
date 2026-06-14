@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import Headline from "@ui/Headline.astro"
-import Section from "@ui/Section.astro"
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 
 import Button from "@ui/Button.astro";
 
@@ -60,11 +60,9 @@ const sponsorTiers = tiers
 // const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
 ---
 
-<Section variant="secondary">
-    <div class="sec-inner">
-
+<Section2 id="sponsors" variant="light" className="sponsors-section">
   <div class="sponsors-header">
-   <h2 class="sponsors-title sec-title">Sponsors & Partners<sup class="sec-anchor"><a href="#sponsors">#</a></sup></h2>
+   <Title id="sponsors" color="#000">Sponsors & Partners</Title>
   </div>
   <div class="mb-10">
     {
@@ -100,8 +98,7 @@ const sponsorTiers = tiers
       ))
     }
   </div>
-  </div>
-</Section>
+</Section2>
 
 <style>
   hr {margin: 10px 0;}
@@ -120,15 +117,5 @@ const sponsorTiers = tiers
     z-index: 1;
    }
 
-  .sec-title {
-    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: black;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    position: relative;
-  }
 
 </style>

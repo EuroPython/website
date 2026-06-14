@@ -1,9 +1,13 @@
-<section class="sec-wrap ice-venue-section" id="ice-venue">
-  <div class="sec-inner ice-venue-inner">
+---
+import Section2 from "@ui/Section2.astro";
+import Display from "@ui/Display.astro";
+---
+<Section2 id="ice-venue" variant="bg-dark" className="ice-venue-section">
+  <div class="ice-venue-bg" aria-hidden="true"></div>
+  <div class="ice-venue-inner">
 
     <div class="ice-venue-left">
-      <h2 class="sec-title ice-venue-title">ICE<br>KRAKÓW<br><span>CONGRESS<br>CENTRE <sup class="sec-anchor"><a href="#ice-venue">#</a></sup></span></h2>
-      <p class="sec-subtitle ice-venue-subtitle">Opened in 2014, ICE Kraków is a state-of-the-art congress centre located directly opposite the iconic Wawel Castle, right on the banks of the Vistula river. The main conference (13–17 July) will be held here.</p>
+      <Display id="ice-venue" span="CONGRESS CENTRE" spanColor="var(--color-cta-red, #d62020)" subtitle="Opened in 2014, ICE Kraków is a state-of-the-art congress centre located directly opposite the iconic Wawel Castle, right on the banks of the Vistula river. The main conference (13–17 July) will be held here.">ICE<br>KRAKÓW</Display>
       <div class="ice-venue-cta-row">
         <a href="https://www.google.com/maps/place/ICE+Krak%C3%B3w+Congress+Centre/@50.0485,19.9355,17z/" class="ice-venue-map-link" target="_blank" rel="noopener">Google Maps</a>
         <a href="https://www.openstreetmap.org/?mlat=50.0485&mlon=19.9355#map=17/50.0485/19.9355" class="ice-venue-map-link" target="_blank" rel="noopener">OpenStreetMap</a>
@@ -30,30 +34,16 @@
     </div>
 
   </div>
-</section>
+</Section2>
 
 <style>
-  .sec-wrap {
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
 
-  .sec-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4.5rem 2rem;
-    position: relative;
-    z-index: 1;
-  }
 
-  .ice-venue-section {
+:global(.ice-venue-section) {
     background: var(--color-bg-dark, #0a0a1a);
     scroll-margin-top: 60px;
   }
 
-  .ice-venue-section::before {
-    content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -61,6 +51,7 @@
     background:
       radial-gradient(ellipse 80% 60% at 10% 50%, rgba(214,32,32,0.08) 0%, transparent 60%),
       radial-gradient(ellipse 50% 80% at 90% 20%, rgba(180,20,20,0.06) 0%, transparent 55%);
+  .ice-venue-bg {
   }
 
   .ice-venue-inner {
@@ -75,23 +66,8 @@
     top: 2rem;
   }
 
-  .ice-venue-title {
-    line-height: 0.9;
-    margin-bottom: 0;
-  }
 
-  .ice-venue-title span {
-    display: block;
-    color: var(--color-cta-red, #d62020);
-  }
 
-  .ice-venue-subtitle {
-    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
-    font-size: 1.1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
-    margin-top: 1.2rem;
-    line-height: 1.55;
-  }
 
   .ice-venue-cta-row {
     display: flex;
@@ -186,36 +162,9 @@
     .ice-venue-left {
       position: static;
     }
-    .sec-inner {
-      padding: 3rem 1.5rem;
-    }
-  }
 
   /* sec-title styles */
-  .sec-title {
-    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-  }
 
-  .sec-title .sec-anchor {
-    font-size: 0.5em;
-    vertical-align: super;
-    margin-left: 0.15em;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
 
-  .sec-title:hover .sec-anchor {
-    opacity: 0.5;
-  }
 
-  .sec-title .sec-anchor a {
-    color: #fff;
-    text-decoration: none;
-  }
 </style>

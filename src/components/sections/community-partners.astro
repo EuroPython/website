@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import Section from "@ui/Section.astro";
-import Headline from "@ui/Headline.astro";
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 import Button from "@ui/Button.astro";
 import { sponsorLogos } from "@data/sponsorLogos";
 
@@ -35,11 +35,10 @@ const sectionTitle = "Community Partners";
 const sectionSubtitle = "Meet the local Python communities joining us at EuroPython 2026";
 ---
 
-<section class="sec-wrap" id="community-partners">
-  <div class="sec-inner">
+<Section2 id="community-partners" variant="light">
 
     <div class="community-partners-header">
-      <h2 class="community-partners-title sec-title">Community Partners<sup class="sec-anchor"><a href="#community-partners">#</a></sup></h2>
+      <Title id="community-partners" color="#000">Community Partners</Title>
       </div>
       <div class="text-center mb-12">
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
@@ -71,32 +70,11 @@ const sectionSubtitle = "Meet the local Python communities joining us at EuroPyt
       <div class="mt-10 text-center">
         <Button url="/community-partners">Learn more about our partners</Button>
       </div>
-  </div>
-</section>
+</Section2>
 
 <style>
-  .sec-wrap {
-    background: white;
-  }
 
-   .sec-inner {
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 4.5rem 2rem;
-    position: relative;
-    z-index: 1;
-   }
 
-  .sec-title {
-    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--color-white, #fff);
-    text-transform: uppercase;
-    margin-bottom: 0;
-    position: relative;
-  }
 
   .community-partners-header {
     text-align: center;

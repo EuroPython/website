@@ -1,5 +1,6 @@
-<section class="sec-wrap ep25-section" id="ep25">
-  <div class="sec-inner ep25-inner">
+import Section2 from "@ui/Section2.astro";
+<Section2 className="ep25-section" variant="ep25" id="ep25">
+  <div class="ep25-inner">
 
     <div class="sec-header ep25-header">
       <h2 class="sec-title ep25-title">25 YEARS OF <span>EUROPYTHON <sup class="sec-anchor"><a href="#ep25">#</a></sup></span></h2>
@@ -44,14 +45,9 @@
     </div>
 
   </div>
-</section>
+</Section2>
 
 <style>
-  .sec-wrap {
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
 
   .sec-inner {
     max-width: 1200px;
@@ -61,11 +57,11 @@
     z-index: 1;
   }
 
-  .ep25-section {
+  :global(.ep25-section) {
     background: var(--color-ep25-bg, #0b1b4d);
   }
 
-  .ep25-section::before {
+  :global(.ep25-section::before) {
     content: '';
     position: absolute;
     inset: 0;

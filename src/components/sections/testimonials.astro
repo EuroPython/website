@@ -1,4 +1,6 @@
 ---
+import Title from "@ui/Title.astro";
+import Section2 from "@ui/Section2.astro";
 import Headline from "@ui/Headline.astro";
 
 const testimonials = [
@@ -47,16 +49,15 @@ There is the hallway track, lightning talks ⚡️, social events, snacks exchan
   }
 ];
 
-const sectionTitle = "See what participants say";
+const sectionTitle = "What about last year?";
 const sectionSubtitle = "Hear from our community";
 ---
 
-<section class="sec-wrap testimonials-section" id="testimonials">
-  <div class="sec-inner testimonials-inner">
+<Section2 className="testimonials-section" variant="dark" id="testimonials">
+  <div class="testimonials-inner">
 
     <div class="testimonials-header">
-      <h2 class="sec-title">{sectionTitle} <sup class="sec-anchor"><a href="#testimonials">#</a></sup></h2>
-      <p class="sec-subtitle">{sectionSubtitle}</p>
+      <Title id="testimonials" subtitle={sectionSubtitle}>{sectionTitle}</Title>
     </div>
 
     <div class="testimonials-grid">
@@ -84,24 +85,12 @@ const sectionSubtitle = "Hear from our community";
     </div>
 
   </div>
-</section>
+</Section2>
 
 <style>
-  .sec-wrap {
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
 
-  .sec-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4.5rem 2rem;
-    position: relative;
-    z-index: 1;
-  }
 
-  .testimonials-section {
+:global(.testimonials-section) {
     background: var(--color-section-bg, #080f1a);
   }
 
@@ -110,43 +99,10 @@ const sectionSubtitle = "Hear from our community";
     margin-bottom: 2.5rem;
   }
 
-  .sec-title {
-    font-family: var(--font-archivo, 'Roboto', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-  }
 
-  .sec-title .sec-anchor {
-    font-size: 0.5em;
-    vertical-align: super;
-    margin-left: 0.15em;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
 
-  .sec-title:hover .sec-anchor {
-    opacity: 0.5;
-  }
 
-  .sec-title .sec-anchor a {
-    color: #fff;
-    text-decoration: none;
-  }
 
-  .sec-subtitle {
-    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
-    font-size: 1.1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
-    margin-top: 1.2rem;
-    line-height: 1.55;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .testimonials-grid {
     display: grid;
@@ -218,8 +174,4 @@ const sectionSubtitle = "Hear from our community";
     .testimonials-grid {
       grid-template-columns: 1fr;
     }
-    .sec-inner {
-      padding: 3rem 1.5rem;
-    }
-  }
 </style>
