@@ -5,6 +5,8 @@ import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
 import Button from "@ui/Button.astro";
 import { sponsorLogos } from "@data/sponsorLogos";
+import SponsorLogo from "@components/SponsorLogo.astro";
+
 
 const allPartners = await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
@@ -45,26 +47,9 @@ const sectionSubtitle = "Meet the local Python communities joining us at EuroPyt
       </div>
 
       <div class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
-        {partners.map((partner) => {
-          const logo = sponsorLogos[partner.id];
-          return (
-            <a
-              href={`/community-partners#sponsor-${partner.id}`}
-              class="partner-card bg-white rounded-xl p-4 flex flex-col items-center justify-center aspect-square"
-            >
-              {logo && (
-                <Image
-                  src={logo}
-                  alt={`${partner.data.name} Logo`}
-                  class="max-h-36 max-w-[80%] w-auto object-contain mb-2"
-                />
-              )}
-              <h3 class="font-semibold text-gray-900 text-center text-sm">
-                {partner.data.name}
-              </h3>
-            </a>
-          );
-        })}
+        {partners.map((partner) => (
+          <SponsorLogo sponsor={partner.id} />
+        ))}
       </div>
 
       <div class="mt-10 text-center">
@@ -73,8 +58,6 @@ const sectionSubtitle = "Meet the local Python communities joining us at EuroPyt
 </Section2>
 
 <style>
-
-
 
   .community-partners-header {
     text-align: center;
