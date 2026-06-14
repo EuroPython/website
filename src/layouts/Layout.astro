@@ -51,13 +51,12 @@ const hideFooter = Astro.props.hideFooter ?? false;
         </header>
       }
 
-      <main class="main pt-28" role="main">
+      <main class="main pt-15" role="main">
       <Offline />
         {currentPath !== "/" && (
           <Breadcrumbs
               linksData={linksData}
               currentPath={currentPath}
-              homeLabel="EuroPython 2026"
               homePath="/"
               separator="›"
           />
@@ -78,6 +77,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
 
 
 <style is:global define:vars={{ externalDomain }}>
+
   main section .container {
     max-width: 1150px;
   }
