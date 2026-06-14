@@ -147,7 +147,8 @@
   /* Font Families */
   --font-system: system-ui, sans-serif;
   --font-heading: "Roboto", sans-serif;
-  --font-dm-sans: "Roboto", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-display: var(--font-heading);
 
   --font-title:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,

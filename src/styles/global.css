@@ -6,7 +6,7 @@
 body {
   background-color: var(--color-body-background);
   color: var(--color-text);
-  font-family: 'Roboto', system-ui, sans-serif;
+  font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
 }
 
 .layout-wrapper {
