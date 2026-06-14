@@ -278,11 +278,11 @@ const spansAllRooms = (rooms: string[]) => {
 
 const getColStart = ({ type, rooms }: Session) => {
   if (type === "room-change") {
-    return 1;
+    return 2;
   }
 
   if (type === "break" && spansAllRooms(rooms)) {
-    return 1;
+    return 2;
   }
 
   const indexes = rooms
@@ -490,17 +490,23 @@ const dateText = format(date, "EEE eeee, MMMM d");
   }
 
   :global(.ep-break.day-end) {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-items: center;
-    background: #2d3548;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 4px;
-    margin: 0.5rem 0;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: rgba(255,255,255,0.55);
+    display: none;
+  }
+
+  @media screen and (max-width: 799px) {
+    :global(.ep-break.day-end) {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-items: center;
+      background: #2d3548;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+    }
   }
 
   :global(.schedule *) {
@@ -667,7 +673,6 @@ const dateText = format(date, "EEE eeee, MMMM d");
       grid-column: 1 / 2;
       outline: none;
       text-align: right;
-      border: 1px solid var(--ep-border);
       border-radius: 4px;
     }
 
