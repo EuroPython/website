@@ -218,16 +218,17 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     padding: 0.6rem 1.5rem;
     border: 1px solid var(--color-accent, #f0c040);
     border-radius: 2px;
-    color: var(--color-accent, #f0c040);
+    color: var(--color-section-bg, #080f1a);
+    background: var(--color-accent, #f0c040);
     font-family: var(--font-heading, 'Roboto', sans-serif);
     font-size: 0.9rem;
+    font-weight: 700;
     text-decoration: none;
     transition: opacity 0.2s;
-    background: transparent;
   }
 
   .prog-card-btn:hover {
-    opacity: 0.8;
+    opacity: 0.85;
   }
 
   .prog-topics {
@@ -325,9 +326,8 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     font-family: var(--font-heading, 'Roboto', sans-serif);
     font-size: 0.9rem;
     text-decoration: none;
-    transition: opacity 0.2s, box-shadow 0.2s;
+    transition: opacity 0.2s;
     background: transparent;
-    opacity: 0.85;
     text-align: center;
   }
 

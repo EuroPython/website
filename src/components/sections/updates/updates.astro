@@ -20,8 +20,6 @@ const cards = await Promise.all(
 
 <Section2 className="news-section" variant="dark-alt" id="updates">
 
-  <div class="section-inner">
-
     <div class="news-grid">
       {cards.map(({ data, Content }) => (
         <div class="news-card">
@@ -49,22 +47,9 @@ const cards = await Promise.all(
         </div>
       ))}
     </div>
-
-  </div>
 </Section2>
 
 <style>
-
-
-
-  .section-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    position: relative;
-    z-index: 1;
-  }
-
   .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -109,21 +94,19 @@ const cards = await Promise.all(
 
   .news-cta {
     display: inline-block;
-    margin-top: 0.75rem;
     padding: 0.6rem 1.5rem;
+    background: var(--color-accent, #f0c040);
+    color: var(--color-section-bg, #080f1a);
     border: 1px solid var(--color-accent, #f0c040);
     border-radius: 2px;
-    color: var(--color-accent, #f0c040);
-    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-weight: 700;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: opacity 0.2s;
-    background: transparent;
-    align-self: center;
+    transition: opacity 0.2s ease;
   }
 
   .news-cta:hover {
-    opacity: 0.8;
+    opacity: 0.85;
   }
 
   @media (max-width: 860px) {
