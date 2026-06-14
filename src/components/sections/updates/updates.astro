@@ -19,6 +19,7 @@ const cards = await Promise.all(
 ---
 
 <Section2 className="news-section" id="updates">
+  <div class="news-bg" aria-hidden="true"></div>
   <div class="section-inner">
 
     <div class="news-grid">
@@ -53,18 +54,8 @@ const cards = await Promise.all(
 </Section2>
 
 <style>
-  .sec-wrap {
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
 
-  :global(.news-section) {
-    background: var(--color-section-bg, #080f1a);
-  }
-
-  :global(.news-section::before) {
-    content: '';
+  .news-bg {
     position: absolute;
     inset: 0;
     pointer-events: none;

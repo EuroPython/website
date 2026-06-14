@@ -1,5 +1,6 @@
 ---
 import Section2 from "@ui/Section2.astro";
+import Display from "@ui/Display.astro";
 import Button from "@ui/Button.astro";
 ---
 
@@ -7,7 +8,7 @@ import Button from "@ui/Button.astro";
   <div class="split-layout euroscipy-inner">
 
     <div class="split-left euroscipy-left">
-      <h2 class="sec-title euroscipy-title">EuroSciPy<br/> 2026 <sup class="sec-anchor"><a href="#euroscipy">#</a></sup></h2>
+      <Display id="euroscipy" span="2026" spanColor="#ffffff">EuroSciPy</Display>
       <div class="euroscipy-dates">
         18–23 July 2026<br>
         AGH University of Kraków, Poland
@@ -31,13 +32,6 @@ import Button from "@ui/Button.astro";
     scroll-margin-top: 60px;
   }
 
-  .sec-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4.5rem 2rem;
-    position: relative;
-    z-index: 1;
-  }
 
   .split-layout {
     display: grid;
@@ -59,49 +53,14 @@ import Button from "@ui/Button.astro";
     .split-left {
       position: static;
     }
-    .sec-inner {
-      padding: 3rem 1.5rem;
-    }
   }
 
   /* ---- Title ---- */
-  .sec-title {
-    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--color-white, #fff);
-    text-transform: uppercase;
-    margin-bottom: 0;
-    position: relative;
-  }
 
-  .euroscipy-title {
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1;
-    margin-bottom: 0.6rem;
-  }
 
-  .euroscipy-title .sec-anchor {
-    font-size: 0.5em;
-    vertical-align: super;
-    margin-left: 0.2em;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
 
-  .euroscipy-title:hover .sec-anchor {
-    opacity: 0.5;
-  }
 
-  .euroscipy-title .sec-anchor a {
-    color: var(--color-white, #fff);
-    text-decoration: none;
-  }
 
-  .euroscipy-title .sec-anchor a:hover {
-    opacity: 0.8;
-  }
 
   /* ---- Dates ---- */
   .euroscipy-dates {

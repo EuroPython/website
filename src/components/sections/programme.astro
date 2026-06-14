@@ -1,5 +1,6 @@
 ---
 import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 import Keynoter from "./keynoters/keynoter.astro";
 import { Image } from "astro:assets";
 import { getCollection, getEntry } from "astro:content";
@@ -35,8 +36,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   <div class="prog-inner">
 
     <div class="sec-header prog-section-header">
-      <h2 class="sec-title prog-section-title">What to Expect? <sup class="sec-anchor"><a href="#programme">#</a></sup></h2>
-      <p class="prog-topics-label">A Week of All Things Python!</p>
+      <Title id="programme" subtitle="A Week of All Things Python!">What to Expect?</Title>
     </div>
 
     <div class="prog-grid">
@@ -114,11 +114,6 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 </Section2>
 
 <style>
-  .sec-wrap {
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
 
 
   .prog-section {
@@ -130,32 +125,9 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     text-align: center;
   }
 
-  .sec-title {
-    font-family: var(--font-archivo, 'Roboto', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-  }
 
-  .sec-title .sec-anchor {
-    position: absolute;
-    margin-left: 0.2em;
-    font-size: 0.5em;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
 
-  .sec-title:hover .sec-anchor {
-    opacity: 0.5;
-  }
 
-  .sec-title .sec-anchor a {
-    color: #fff;
-    text-decoration: none;
-  }
 
   .prog-topics-label {
     font-family: var(--font-archivo, 'Roboto', sans-serif);

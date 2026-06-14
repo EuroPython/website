@@ -1,10 +1,10 @@
 import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 <Section2 className="ep25-section" variant="ep25" id="ep25">
   <div class="ep25-inner">
 
     <div class="sec-header ep25-header">
-      <h2 class="sec-title ep25-title">25 YEARS OF <span>EUROPYTHON <sup class="sec-anchor"><a href="#ep25">#</a></sup></span></h2>
-      <p class="sec-subtitle ep25-subtitle">From a small gathering of enthusiasts to Europe's largest Python conference — a quarter century of community, code, and collaboration.</p>
+      <Title id="ep25" subtitle="From a small gathering of enthusiasts to Europe's largest Python conference — a quarter century of community, code, and collaboration.">25 YEARS OF <span>EUROPYTHON</span></Title>
     </div>
 
     <div class="ep25-grid">
@@ -49,13 +49,6 @@ import Section2 from "@ui/Section2.astro";
 
 <style>
 
-  .sec-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4.5rem 2rem;
-    position: relative;
-    z-index: 1;
-  }
 
   :global(.ep25-section) {
     background: var(--color-ep25-bg, #0b1b4d);
@@ -84,44 +77,13 @@ import Section2 from "@ui/Section2.astro";
     text-align: center;
   }
 
-  .sec-title {
-    font-family: var(--font-archivo, 'Archivo Black', sans-serif);
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-  }
 
-  .sec-title .sec-anchor {
-    font-size: 0.5em;
-    vertical-align: super;
-    margin-left: 0.15em;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
 
-  .sec-title:hover .sec-anchor {
-    opacity: 0.5;
-  }
-
-  .sec-title .sec-anchor a {
-    color: #fff;
-    text-decoration: none;
-  }
 
   .ep25-title span {
     color: var(--color-ep25-yellow, #ffd43b);
   }
 
-  .sec-subtitle {
-    font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
-    font-size: 1.1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
-    margin-top: 1.2rem;
-    line-height: 1.55;
-  }
 
   .ep25-grid {
     display: grid;
@@ -226,8 +188,4 @@ import Section2 from "@ui/Section2.astro";
     .ep25-grid {
       grid-template-columns: repeat(3, 1fr);
     }
-    .sec-inner {
-      padding: 3rem 1rem;
-    }
-  }
 </style>
