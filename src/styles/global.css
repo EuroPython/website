@@ -1,3 +1,25 @@
+:root {
+  --ease-premium: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.sec-wrap:nth-child(2) { animation-delay: 0.08s; }
+.sec-wrap:nth-child(3) { animation-delay: 0.16s; }
+.sec-wrap:nth-child(4) { animation-delay: 0.24s; }
+.sec-wrap:nth-child(5) { animation-delay: 0.32s; }
+.sec-wrap:nth-child(6) { animation-delay: 0.40s; }
+.sec-wrap:nth-child(7) { animation-delay: 0.48s; }
+.sec-wrap:nth-child(8) { animation-delay: 0.56s; }
+.sec-wrap:nth-child(9) { animation-delay: 0.64s; }
+.sec-wrap:nth-child(10) { animation-delay: 0.72s; }
+
 .tp-dfwv {
   position: fixed !important;
   z-index: 9999;
@@ -254,6 +276,46 @@ main a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"])::afte
 
 main a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"]):hover::after {
   opacity: 1;
+}
+
+.finaid-cta,
+.pyladies-cta,
+.orgsummit-cta,
+.euroscipy-cta,
+.krakow-btn,
+.news-cta,
+.prog-card-btn,
+.prog-more-cta {
+  transition: all 0.35s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)) !important;
+}
+
+.finaid-cta:active,
+.pyladies-cta:active,
+.orgsummit-cta:active,
+.euroscipy-cta:active,
+.krakow-btn:active,
+.news-cta:active,
+.prog-card-btn:active,
+.prog-more-cta:active {
+  transform: scale(0.97);
+}
+
+.finaid-cta:hover,
+.pyladies-cta:hover,
+.orgsummit-cta:hover,
+.euroscipy-cta:hover,
+.krakow-btn:hover {
+  filter: brightness(1.1);
+}
+
+.hero-cta,
+.hero-cta-alt {
+  transition: all 0.35s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)) !important;
+}
+
+.hero-cta:active,
+.hero-cta-alt:active {
+  transform: scale(0.97);
 }
 
 .draft {

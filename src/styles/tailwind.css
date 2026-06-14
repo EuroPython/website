@@ -54,11 +54,11 @@
   --color-inherit: inherit;
 
   /* Text Colors */
-  --color-text: #151f38;
+  --color-text: rgba(255, 255, 255, 0.9);
   --color-text-inverted: #fdfdfd;
 
   /* Body Colors */
-  --color-body-background: #e8f4f8;
+  --color-body-background: #070b14;
   --color-body-inverted: #001c13;
   --color-body-light: #888;
 
