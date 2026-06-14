@@ -242,6 +242,19 @@ main a[href^="#"]::before {
   visibility: hidden;
 }
 
+main a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"])::after {
+  content: " \2197";
+  font-size: 0.75em;
+  display: inline-block;
+  margin-left: 0.2em;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+main a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"]):hover::after {
+  opacity: 1;
+}
+
 .draft {
   background: url("/draft.png");
   background-size: 65%;
