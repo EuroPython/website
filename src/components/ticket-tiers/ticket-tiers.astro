@@ -29,10 +29,10 @@ const tiers: TicketTierProps[] = [
     businessPrice: 400,
     features: [
       {
-        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)",
+        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (13-14 July)",
       },
       {
-        text: "<strong>Does NOT include</strong> access to three days of talks across six parallel tracks with 130+ talks (16-18 July)",
+        text: "<strong>Does NOT include</strong> access to three days of talks across six parallel tracks with 130+ talks (15-17 July)",
         icon: "❌",
       },
       {
@@ -43,7 +43,7 @@ const tiers: TicketTierProps[] = [
         text: "<strong>Does NOT include</strong> access to sponsor booths with opportunities to connect with sponsoring sponsors",
         icon: "❌",
       },
-      { text: "Access to Sprint Weekend (19-20 July)" },
+      { text: "Access to Sprint Weekend (18-19 July)" },
       { text: "Light lunch provided each day" },
       { text: "Break refreshments (coffee, tea, water, and more)" },
       {
@@ -66,18 +66,18 @@ const tiers: TicketTierProps[] = [
     lateBusinessPrice: 750,
     features: [
       {
-        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)",
+        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (13-14 July)",
         icon: "❌",
       },
       {
-        text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
+        text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (15-17 July)</strong>",
       },
       { text: "Access to open spaces throughout the three conference days" },
-      { text: "Access to Sprint Weekend (19-20 July)" },
+      { text: "Access to Sprint Weekend (18-19 July)" },
       {
         text: "Access to sponsor booths with opportunities to connect with sponsoring sponsors",
       },
-      { text: "Access to Sprint Weekend (19-20 July)" },
+      { text: "Access to Sprint Weekend (18-19 July)" },
       { text: "Limited access to specific sponsored workshops" },
       { text: "Light lunch provided each day" },
       { text: "Break refreshments (coffee, tea, water, and more)" },
@@ -97,16 +97,16 @@ const tiers: TicketTierProps[] = [
     lateBusinessPrice: 1200,
     features: [
       {
-        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (14-15 July)",
+        text: "Access to two full days of workshops, summits, and tutorials across six parallel tracks (13-14 July)",
       },
       {
-        text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (16-18 July)</strong>",
+        text: "<strong>Access to three days of talks across six parallel tracks with 130+ talks (15-17 July)</strong>",
       },
       { text: "Access to open spaces throughout the three conference days" },
       {
         text: "Access to sponsor booths with opportunities to connect with sponsoring sponsors",
       },
-      { text: "Access to Sprint Weekend (19-20 July)" },
+      { text: "Access to Sprint Weekend (18-19 July)" },
       { text: "Limited access to specific sponsored workshops" },
       { text: "Light lunch provided each day" },
       { text: "Break refreshments (coffee, tea, water, and more)" },
@@ -121,16 +121,13 @@ const tiers: TicketTierProps[] = [
       },
     ],
   },
-
+ /*
   {
   title: "Remote",
   personalPrice: 80,
   businessPrice: 150,
   subtitle: "Conference days only",
   features: [
-    {
-      text: "Remote participation for Conference Days (16-18 July)",
-    },
     {
       text: "Watch live talks, keynotes & panels in all 6 tracks",
     },
@@ -146,6 +143,7 @@ const tiers: TicketTierProps[] = [
     },
   ],
 },
+*/
 ];
 
 const formatPrice = (price: number | string) => {
@@ -235,13 +233,6 @@ const formatPrice = (price: number | string) => {
     /*transform: translateX(-50%);*/
     position: relative;
     /*padding: 0 40px;*/
-    background: linear-gradient( to top,
-rgba(245, 229, 214, 0) 0%,
-rgb(245, 229, 214) 5%,
-rgb(245, 229, 214) 95%,
-rgba(245, 229, 214, 0
-) 100% )
-;
   }
 
   @media (max-width: 1023px) {

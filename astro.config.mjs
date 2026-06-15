@@ -114,7 +114,9 @@ export default defineConfig({
     // "/planning/": "https://forms.gle/riw6CvML8ck94A4V9",
     // "/reviewers/": "https://forms.gle/4GTJjwZ1nHBGetM18",
     // "/speaker/savannah-ostrowski": "/speaker/savannah-bailey",
-    // "/rust-summit": "/session/rust-summit",
+    "/rust-summit": "/session/rust-summit-at-europython",
+    "/session/rust-summit": "/session/rust-summit-at-europython",
+    "/25anniversary": "https://forms.gle/X4vCPsmHy95s5S9Y8",
     // "/c-api-summit": "/session/c-api-summit",
     // "/wasm-summit": "/session/webassembly-summit",
     // "/programme/rust-summit": "/session/rust-summit",
@@ -175,5 +177,8 @@ export default defineConfig({
   },
   prefetch: {
     prefetchAll: false,
+  },
+  devToolbar: {
+    enabled: false,
   },
 });

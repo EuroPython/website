@@ -1,5 +1,5 @@
 ---
-import { getCollection} from "astro:content";
+import { getCollection, getEntries } from "astro:content";
 import SocialMediaCard from "@components/SocialMediaCard.astro";
 
 export async function getStaticPaths() {
@@ -11,6 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const allSessions = await getEntries(entry.data.submissions);
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,10 +26,11 @@ const { entry } = Astro.props;
   </head>
   <body class="overflow-auto">
 {
-  entry &&
-    <div class="social relative w-[900px] h-[900px] overflow-hidden">
-      <SocialMediaCard entry={entry} />
+  entry && allSessions.map((session) =>
+    <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={entry.id} data-code={session?.data.code}>
+      <SocialMediaCard entry={entry} session={session} />
     </div>
+  )
 }
 
   </body>
@@ -62,7 +64,8 @@ const { entry } = Astro.props;
 
 <script is:inline>
 function fitText(container) {
-  let fontSize = 100; // Start big
+  const maxFont = parseInt(container.dataset.maxFont) || 100;
+  let fontSize = maxFont;
   container.style.fontSize = fontSize + 'px';
 
   while (
@@ -84,47 +87,52 @@ fitAllText();
 window.addEventListener('resize', fitAllText);
 </script>
 
-<script is:inline define:vars={{slug: entry.data.slug}}>
+<script is:inline define:vars={{slug: entry.id, sessionCount: allSessions.length}}>
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.social').forEach((socialDiv, index) => {
+    document.querySelectorAll('.social').forEach((socialDiv) => {
+      const cardSlug = socialDiv.dataset.slug;
+      const cardCode = socialDiv.dataset.code;
 
-  socialDiv.addEventListener('click', () => {
-    const svgs = socialDiv.querySelectorAll('svg');
+      socialDiv.addEventListener('click', () => {
+        const svgs = socialDiv.querySelectorAll('svg');
 
-    if (svgs.length === 0) {
-      alert('No SVGs found!');
-      return;
-    }
+        if (svgs.length === 0) {
+          alert('No SVGs found!');
+          return;
+        }
 
-    const xmlns = "http://www.w3.org/2000/svg";
-    const combinedSvg = document.createElementNS(xmlns, "svg");
-    combinedSvg.setAttribute("xmlns", xmlns);
-    combinedSvg.setAttribute("width", "900");
-    combinedSvg.setAttribute("height", "900");
-    combinedSvg.setAttribute("viewBox", "0 0 900 900");
+        const xmlns = "http://www.w3.org/2000/svg";
+        const combinedSvg = document.createElementNS(xmlns, "svg");
+        combinedSvg.setAttribute("xmlns", xmlns);
+        combinedSvg.setAttribute("width", "900");
+        combinedSvg.setAttribute("height", "900");
+        combinedSvg.setAttribute("viewBox", "0 0 900 900");
 
-    svgs.forEach(svg => {
-      const g = document.createElementNS(xmlns, "g");
-      g.innerHTML = svg.innerHTML;
-      combinedSvg.appendChild(g);
+        svgs.forEach(svg => {
+          const g = document.createElementNS(xmlns, "g");
+          g.innerHTML = svg.innerHTML;
+          combinedSvg.appendChild(g);
+        });
+
+        const serializer = new XMLSerializer();
+        const svgString = serializer.serializeToString(combinedSvg);
+
+        const blob = new Blob([svgString], {type: "image/svg+xml"});
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        // Use session code suffix only when speaker has multiple sessions
+        a.download = (sessionCount > 1 && cardCode)
+          ? `social-${cardSlug}-${cardCode}.svg`
+          : `social-${cardSlug}.svg`;
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+
+        URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+      });
     });
-
-    const serializer = new XMLSerializer();
-    const svgString = serializer.serializeToString(combinedSvg);
-
-    const blob = new Blob([svgString], {type: "image/svg+xml"});
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = slug ? `social-${slug}.svg` : `social-${index +1}.svg`;
-    a.style.display = "none";
-    document.body.appendChild(a);
-    a.click();
-
-    URL.revokeObjectURL(url);
-    document.body.removeChild(a);
   });
-    });
-});
 </script>

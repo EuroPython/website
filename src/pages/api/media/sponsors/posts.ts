@@ -27,16 +27,16 @@ export const GET: APIRoute = async () => {
   ] as const;
 
   const commercialMessages = [
-    "🎉✨ We are pleased to welcome SPONSOR_NAME as a sponsor for EuroPython 2025! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
-    "🚀✨ We are delighted to welcome SPONSOR_NAME as a sponsor for EuroPython 2025! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
-    "🎉✨ A big thank you to SPONSOR_NAME for joining us as a sponsor for EuroPython 2025! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
-    "🚀✨ Big shoutout and heartfelt thanks to SPONSOR_NAME for sponsoring EuroPython 2025! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌SPONSOR_HANDLE SPONSOR_URL",
-    "🎉✨ Thank you to SPONSOR_NAME for sponsoring EuroPython 2025! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
-    "🚀✨ A huge thank you to SPONSOR_NAME for sponsoring EuroPython 2025! Your support helps make this event extraordinary. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🎉✨ We are pleased to welcome SPONSOR_NAME as a sponsor for EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🚀✨ We are delighted to welcome SPONSOR_NAME as a sponsor for EuroPython 2026! Your support helps make this event extraordinary. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🎉✨ A big thank you to SPONSOR_NAME for joining us as a sponsor for EuroPython 2026! Your support is making a huge impact. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🚀✨ Big shoutout and heartfelt thanks to SPONSOR_NAME for sponsoring EuroPython 2026! Your support is crucial in bringing the European Python 🐍 community closer together. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌SPONSOR_HANDLE SPONSOR_URL",
+    "🎉✨ Thank you to SPONSOR_NAME for sponsoring EuroPython 2026! Your support is making a huge difference. We are so grateful for your sponsorship and are thrilled to have you with us. 🙌 SPONSOR_HANDLE SPONSOR_URL",
+    "🚀✨ A huge thank you to SPONSOR_NAME for sponsoring EuroPython 2026! Your support helps make this event extraordinary. 🙌 SPONSOR_HANDLE SPONSOR_URL",
   ];
 
   const communityMessages = [
-    "🎉✨ A warm thank you to SPONSOR_NAME for supporting EuroPython 2025! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 SUPPORTER_HANDLE SUPPORTER_URL",
+    "🎉✨ A warm thank you to SPONSOR_NAME for supporting EuroPython 2026! We're proud to be a space where communities come together, and we value the opportunity to collaborate with other communities and open-source projects. 🙌 SUPPORTER_HANDLE SUPPORTER_URL",
   ];
 
   const getRandomMessage = (messages: any) => {

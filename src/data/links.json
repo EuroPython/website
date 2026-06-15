@@ -4,6 +4,18 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Schedule",
+          "path": "/schedule"
+        },
+        {
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "Tracks",
           "path": "/tracks"
         },
@@ -14,10 +26,19 @@
         {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Language Summit",
+          "path": "/language-summit"
         },
         {
-          "name": "Community Voting",
-          "path": "/voting"
+          "name": "Rust Summit",
+          "path": "/rust-summit"
         }
       ]
     },
@@ -31,6 +52,10 @@
         {
           "name": "Kraków",
           "path": "/krakow"
+        },
+        {
+          "name": "Hotels",
+          "path": "/hotels"
         }
       ]
     },
@@ -55,12 +80,28 @@
       "name": "Attend",
       "items": [
         {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
+        {
           "name": "Financial Aid",
           "path": "/finaid"
         },
         {
           "name": "Visa Information",
           "path": "/visa"
+        },
+        {
+          "name": "Volunteering",
+          "path": "/volunteering"
+        },
+        {
+          "name": "FAQ",
+          "path": "/faq"
+        },
+        {
+          "name": "Anniversary Challenge",
+          "path": "https://ep2026.europython.eu/25anniversary"
         },
         {
           "name": "Code of Conduct",
@@ -84,12 +125,20 @@
           "path": "/community-partners"
         }
       ]
+    },
+    {
+      "name": "Jobs",
+      "path": "/jobs"
     }
   ],
   "footer": [
     {
       "name": "Quick links",
       "items": [
+        {
+          "name": "Tickets",
+          "path": "/tickets"
+        },
         {
           "name": "Kraków",
           "path": "/krakow"
@@ -104,12 +153,41 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Schedule",
+          "path": "/schedule"
+        },
+        {
+          "name": "List of Sessions",
+          "path": "/sessions"
+        },
+        {
+          "name": "List of Speakers",
+          "path": "/speakers"
+        },
+        {
           "name": "Tracks",
           "path": "/tracks"
         },
         {
+          "name": "Speaker Guidelines",
+          "path": "/guidelines"
+        },
+        {
           "name": "Speaker Mentorship",
           "path": "/mentorship"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "items": [
+        {
+          "name": "Language Summit",
+          "path": "/language-summit"
+        },
+        {
+          "name": "Rust Summit",
+          "path": "/rust-summit"
         }
       ]
     },
@@ -169,6 +247,7 @@
     "bluesky": "https://bsky.app/profile/europython.eu",
     "twitter": "https://x.com/europython",
     "instagram": "https://www.instagram.com/europython/",
-    "youtube": "https://www.youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q"
+    "youtube": "https://www.youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q",
+    "tiktok": "https://www.tiktok.com/@europython"
   }
 }

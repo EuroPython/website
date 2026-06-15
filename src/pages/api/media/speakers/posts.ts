@@ -39,13 +39,16 @@ function getLinkedInUsernameHandler(url: string): string | undefined {
 export const GET: APIRoute = async () => {
   const limit = Infinity;
   const speakers = await getCollection("speakers");
-  const exclude = [
-    "sebastian-ramirez",
-    "savannah-ostrowski",
-    "nerea-luis",
-    "petr-baudis",
-    "brett-cannon",
-  ];
+  const sessions = await getCollection("sessions");
+
+  // Dynamically derive keynote speaker slugs from the sessions collection
+  // so this list stays accurate as the programme is updated
+  const keynoteSpeakerIds = new Set(
+    sessions
+      .filter((s) => s.data.session_type?.toLowerCase() === "keynote")
+      .flatMap((s) => s.data.speakers.map((ref) => ref.id))
+  );
+
   const records: any[] = [];
 
   const charLimits: Record<string, number> = {
@@ -63,21 +66,21 @@ export const GET: APIRoute = async () => {
 
     x: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". Talk: ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
 
     linkedin: ({ name, talkTitle }) =>
       `Join ${name} at EuroPython for "${talkTitle}".`,
 
     bsky: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". Talk: ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
 
     fosstodon: ({ name, handle, talkTitle, talkUrl }) =>
       handle
-        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}". talk: ${talkUrl}`
-        : `Join ${name} at EuroPython for "${talkTitle}". Talk: ${talkUrl}`,
+        ? `Join ${name} (${handle}) at EuroPython for "${talkTitle}" talk: ${talkUrl}`
+        : `Join ${name} at EuroPython for "${talkTitle}" talk: ${talkUrl}`,
   };
 
   const trimToLimit = (text: string, limit: number) =>
@@ -85,7 +88,7 @@ export const GET: APIRoute = async () => {
 
   for (const speaker of speakers) {
     if (records.length >= limit) break;
-    if (exclude.includes(speaker.id)) continue;
+    if (keynoteSpeakerIds.has(speaker.id)) continue;
 
     const {
       name,

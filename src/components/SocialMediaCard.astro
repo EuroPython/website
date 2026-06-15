@@ -1,31 +1,30 @@
 ---
 import { getEntries, type CollectionEntry } from "astro:content";
 
-const { entry } = Astro.props;
+const { entry, session } = Astro.props;
 
-const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submissions);
+// If a specific session is passed use it, otherwise fall back to all (legacy)
+const sessions: CollectionEntry<"sessions">[] = session
+  ? [session]
+  : await getEntries(entry.data.submissions);
 ---
 <svg class="bg" width="900" height="900" class="h-full w-full -z-10">
-  <image href="/social/bg.png" width="900" height="900" />
+  <image href="/social/speaker_card.png" width="900" height="900" />
 </svg>
 {
   entry.data.avatar ? (
     <svg class="avatar" width="900" height="900">
       <defs>
         <clipPath id="curvedCornerClip">
-          <path
-            d="
-               m 885 885 l -240 0 a 240 240 0 0 1 -240 -240 a 240 240 0 0 1 240 -240 a 240 240 0 0 1 240 240 z
-               "
-          />
+          <circle cx="645" cy="645" r="230" />
         </clipPath>
       </defs>
       <image
         href={entry.data.avatar}
-        x="400"
-        y="400"
-        width="500"
-        height="560"
+        x="415"
+        y="415"
+        width="460"
+        height="460"
         clip-path="url(#curvedCornerClip)"
         preserveAspectRatio="xMidYMid slice"
       />
@@ -33,10 +32,10 @@ const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submi
 <p
   class="box fit-text"
 >
-{sessions.map((session) => <>{session.data.title} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>)}
+{sessions.map((session) => <>{session.data.title}</>)}
 </p>
 
-<p lang="en" class="box2 fit-text">
+<p lang="en" class="box2 fit-text" data-max-font="60">
   {entry.data.name}
 </p>
 
@@ -45,7 +44,7 @@ const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submi
 <p
   class="box3 fit-text"
 >
-{sessions.map((session) => <>{session.data.title} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>)}
+{sessions.map((session) => <>{session.data.title}</>)}
 </p>
 
 <p lang="en" class="box4 fit-text">
@@ -58,56 +57,59 @@ const sessions: CollectionEntry<"sessions">[]= await getEntries(entry.data.submi
 
 
 <style>
+  /* With avatar: text occupies the left ~half of the card */
   .box {
-      margin-top:240px;
-      width: 430px;
-      height: 300px;
+      position: absolute;
+      left: 0;
+      top: 200px;
+      width: 450px;
+      height: 320px;
       font-size: 100px;
       color: rgb(239, 215, 123);
       padding: 1rem;
-      position:relative;
   }
 
   .box2 {
-
-      width: 420px;
-      height: 200px;
+      position: absolute;
+      left: 0;
+      top: 540px;
+      width: 450px;
+      height: 160px;
       font-size: 70px;
-      color:white;
-      padding: 2rem;
-      position:relative;
+      color: white;
+      padding: 1rem 3rem;
   }
 
+  /* No avatar: text spans the full width */
   .box3 {
-      margin-top:280px;
-      width: 800px;
-      height: 300px;
+      position: absolute;
+      left: 0;
+      top: 220px;
+      width: 900px;
+      height: 320px;
       font-size: 100px;
       color: rgb(239, 215, 123);
       padding: 1rem;
-      position:relative;
   }
 
   .box4 {
-
-      width: 580px;
+      position: absolute;
+      left: 0;
+      top: 540px;
+      width: 900px;
       height: 200px;
       font-size: 70px;
-      color:white;
-      padding: 2rem;
-      position:relative;
+      color: white;
+      padding: 1rem;
   }
-
 
   .box, .box2, .box3, .box4 {
       box-sizing: border-box;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       text-align: center;
       font-family: Inter, sans-serif !important;
       font-weight: bold;
-      line-height: 1em;
-    }
+      line-height: 1.1em;
+  }
 </style>

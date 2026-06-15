@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, getEntries, type CollectionEntry } from "astro:content";
 import SocialMediaCard from "@components/SocialMediaCard.astro";
 
 
@@ -19,13 +19,20 @@ type Speaker = CollectionEntry<"speakers">;
   </head>
   <body class="overflow-auto">
 {
-  speakers.map((entry: Speaker) => (
-  <a href=`/media/speaker/${entry.data.slug}`>
-  <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={entry.data.slug}>
-      <SocialMediaCard entry={entry} />
-    </div>
-    </a>
-  ))
+  await Promise.all(speakers.map(async (entry: Speaker) => {
+    const sessions = await getEntries(entry.data.submissions);
+    return sessions.map((session) => (
+      <a href=`/media/speaker/${entry.id}`>
+        <div
+          class="social relative w-[900px] h-[900px] overflow-hidden"
+          data-slug={entry.id}
+          data-code={sessions.length > 1 ? session?.data.code : undefined}
+        >
+          <SocialMediaCard entry={entry} session={session} />
+        </div>
+      </a>
+    ));
+  }))
 }
 
   </body>

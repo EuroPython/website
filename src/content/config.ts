@@ -1,5 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
-// import { loadData } from "@utils/dataLoader";
+import { loadData } from "@utils/dataLoader";
 import { glob } from "astro/loaders";
 
 const mode = import.meta.env.MODE;
@@ -23,6 +23,7 @@ const deadlines = defineCollection({
       subtitle: z.string(),
       url: z.string(),
       image: image(),
+      disabled: z.boolean().optional(),
     }),
 });
 
@@ -50,11 +51,10 @@ const keynoters = defineCollection({
 });
 
 async function getCollectionsData() {
-  // TODO: Re-enable when the API is available
-  // const speakersData = await loadData(import.meta.env.EP_SPEAKERS_API);
-  // const sessionsData = await loadData(import.meta.env.EP_SESSIONS_API);
-  const speakersData = {};
-  const sessionsData = {};
+  const [speakersData, sessionsData] = await Promise.all([
+    loadData(import.meta.env.EP_SPEAKERS_API),
+    loadData(import.meta.env.EP_SESSIONS_API),
+  ]);
 
   const speakersById = Object.entries(
     speakersData as Record<string, {}>
@@ -102,7 +102,7 @@ const speakers = defineCollection({
     code: z.string(),
     name: z.string(),
     slug: z.string(),
-    avatar: z.string(),
+    avatar: z.string().url().nullable(),
     biography: z.string().nullable(),
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
@@ -166,11 +166,9 @@ interface ScheduleData {
 
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
-    // TODO: Re-enable when the API is available
-    // const schedule = (await loadData(
-    //   import.meta.env.EP_SCHEDULE_API
-    // )) as ScheduleData;
-    const schedule = null as ScheduleData | null;
+    const schedule = (await loadData(
+      import.meta.env.EP_SCHEDULE_API
+    )) as ScheduleData;
 
     if (!schedule || Object.keys(schedule).length === 0) {
       return [];
@@ -224,6 +222,7 @@ const sponsors = defineCollection({
     socials: z
       .object({
         linkedin: z.string().url().optional().nullable(),
+        blog: z.string().url().optional().nullable(),
         github: z.string().url().optional().nullable(),
         mastodon: z.string().url().optional().nullable(),
         bluesky: z.string().url().optional().nullable(),
@@ -237,6 +236,7 @@ const sponsors = defineCollection({
       .optional(),
     event_name: z.string().optional().nullable(),
     logo_padding: z.string().optional(),
+    logo_max_width: z.string().optional(),
     draft: z.boolean().optional().default(false),
     jobs: z.array(reference("jobs")).optional().default([]),
   }),
@@ -255,7 +255,7 @@ const jobs = defineCollection({
     responsibilities: z.array(z.string()).nullable(),
     min_requirements: z.array(z.string()).optional().nullable(),
     requirements: z.array(z.string()).nullable(),
-    preffered: z.array(z.string()).optional().nullable(),
+    preferred: z.array(z.string()).optional().nullable(),
     stack: z.array(z.string()).optional().nullable(),
     benefits: z.array(z.string()).nullable(),
     description2: z.string().optional().nullable(),

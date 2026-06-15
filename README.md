@@ -33,8 +33,8 @@ submission.
 If you want to run this in docker, run:
 
 ```sh
-$ docker compose build
-$ docker compose up
+docker compose build
+docker compose up
 ```
 
 The website will be available at `http://localhost:4321`.
@@ -44,7 +44,7 @@ The website will be available at `http://localhost:4321`.
 Docker Compose mounts volumes from your file system to enable live reload. If
 you're having problems starting the container, try this:
 
-```
+```sh
 # Clean everything
 docker compose down -v  # Remove volumes
 docker image rmi website-web # Clean unused images
