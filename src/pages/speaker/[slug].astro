@@ -92,13 +92,13 @@ function getGitHosting(url: string): string | undefined {
     {
       ( entry.data.avatar &&
                   <div class="flex items-start">
-                    <div class="border border-white/10 rounded-lg inline-block mb-10">
+                    <div class="speaker-profile-photo border-4 border-white rounded-lg shadow-lg inline-block mb-10">
           <Image
             src={entry.data.avatar}
             alt={entry.data.name}
             height={400}
-            width={600}
-            class="w-full max-w-[240px] sm:max-w-[540px] xl:max-w-[720px]  max-h-[240px] sm:max-h-[440px] xl:max-h-[540px] object-scale-down"
+            width={300}
+            class="speaker-profile-img"
           />
         </div>
         </div>
@@ -271,6 +271,14 @@ function getGitHosting(url: string): string | undefined {
 </Layout>
 
 <style>
+
+  .speaker-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
 
 dl,
 dd, dt {

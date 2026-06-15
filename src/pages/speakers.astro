@@ -1,151 +1,89 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
-import { Image } from "astro:assets";
+import SpeakerCard from "@ui/SpeakerCard.astro";
 
-type Speaker = CollectionEntry<"speakers">;
-
-const speakersCollection = await getCollection("speakers");
-const speakersWithNames = speakersCollection.filter((speaker) => !!speaker.data?.name);
-
-const getFirstLetter = (name: string): string => name.charAt(0).toUpperCase();
-
-function createOptimalGroups(speakers: Speaker[]): Record<string, Speaker[]> {
-  const sortedSpeakers = [...speakers].sort((a, b) => a.data.name.localeCompare(b.data.name));
-  const groups: Record<string, Speaker[]> = {};
-  let currentGroup: Speaker[] = [];
-  let currentLetter = '';
-  let groupKey = '';
-
-  sortedSpeakers.forEach((speaker) => {
-    const letter = getFirstLetter(speaker.data.name);
-    if (currentGroup.length === 0) {
-      currentLetter = letter;
-      groupKey = letter;
-      currentGroup.push(speaker);
-    } else if (letter === currentLetter && currentGroup.length < 15) {
-      currentGroup.push(speaker);
-    } else {
-      if (currentGroup.length < 10 && currentGroup.length + 1 <= 15) {
-        currentGroup.push(speaker);
-        groupKey = `${currentLetter}-${letter}`;
-      } else {
-        groups[groupKey] = currentGroup;
-        currentLetter = letter;
-        groupKey = letter;
-        currentGroup = [speaker];
-      }
-    }
-  });
-
-  if (currentGroup.length > 0) groups[groupKey] = currentGroup;
-  return groups;
-}
-
-const speakerGroups = createOptimalGroups(speakersWithNames);
-const groupKeys = Object.keys(speakerGroups);
+const speakers = await getCollection("speakers");
+const sortedSpeakers = speakers
+  .filter(s => !!s.data?.name)
+  .sort((a, b) => a.data.name.localeCompare(b.data.name));
 ---
 
-<Layout title="Speakers" description="Our conference speakers organized alphabetically">
-  <Section2 id="speakers">
-    <Title id="speakers">List of Speakers</Title>
+<Layout title="Speakers" description="All speakers at EuroPython 2026">
+  <Section2 id="all-speakers">
+    <div class="section-header">
+      <Title id="all-speakers" subtitle={`${sortedSpeakers.length} speakers at EuroPython 2026`}>All Speakers</Title>
+    </div>
 
-    {groupKeys.map((key) => (
-      <div id={`group-${key}`} class="pt-8">
-        <div class="speakers-grid">
-          {speakerGroups[key].map((speaker) => (
-            <a href={`/speaker/${speaker.id}`} class="speaker-card">
-              <div class="speaker-photo">
-                {speaker.data.avatar ? (
-                  <Image
-                    src={speaker.data.avatar}
-                    alt={speaker.data.name}
-                    height={250}
-                    width={250}
-                    class="speaker-img"
-                  />
-                ) : (
-                  <div class="speaker-placeholder">{speaker.data.name.charAt(0)}</div>
-                )}
-              </div>
-              <div class="speaker-info">
-                <h3 class="speaker-name">{speaker.data.name}</h3>
-              </div>
-            </a>
-          ))}
+    <div class="speaker-filter">
+      <input type="text" id="speakerSearch" class="filter-input" placeholder="Search speakers..." />
+    </div>
+
+    <div class="speakers-grid" id="speakersGrid">
+      {sortedSpeakers.map((speaker) => (
+        <div class="speaker-card-wrap" data-name={speaker.data.name.toLowerCase()} style="min-width: 0">
+          <SpeakerCard speaker={speaker} />
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
   </Section2>
 </Layout>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("speakerSearch");
+    const grid = document.getElementById("speakersGrid");
+    if (!input || !grid) return;
+    const wraps = grid.querySelectorAll(".speaker-card-wrap");
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase().trim();
+      wraps.forEach((wrap) => {
+        const name = wrap.getAttribute("data-name") || "";
+        wrap.style.display = name.includes(query) ? "" : "none";
+      });
+    });
+  });
+</script>
+
 <style>
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .speaker-filter {
+    display: flex;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .filter-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .filter-input::placeholder {
+    color: rgba(255,255,255,0.5);
+  }
+
+  .filter-input:focus {
+    border-color: var(--color-accent, #f0c040);
+  }
+
   .speakers-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
-  }
-
-  .speaker-card {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
-    border-radius: 2px;
-    overflow: hidden;
-    transition: border-color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
-                transform 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
-  }
-
-  .speaker-card:hover {
-    border-color: var(--color-accent, #f0c040);
-    transform: translateY(-4px);
-  }
-
-  .speaker-photo {
-    aspect-ratio: 1/1;
-    overflow: hidden;
-  }
-
-  .speaker-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
-  }
-
-  .speaker-card:hover .speaker-img {
-    transform: scale(1.05);
-  }
-
-  .speaker-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-surface-medium, rgba(255,255,255,0.08));
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
-    font-family: var(--font-heading, 'Roboto', sans-serif);
-    font-size: 2rem;
-  }
-
-  .speaker-info {
-    padding: 0.6rem 0.8rem;
-    text-align: center;
-  }
-
-  .speaker-name {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--color-text-primary-dark, rgba(255,255,255,0.93));
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   @media (max-width: 1024px) {
