@@ -3,22 +3,42 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
 
-.sec-wrap:nth-child(2) { animation-delay: 0.08s; }
-.sec-wrap:nth-child(3) { animation-delay: 0.16s; }
-.sec-wrap:nth-child(4) { animation-delay: 0.24s; }
-.sec-wrap:nth-child(5) { animation-delay: 0.32s; }
-.sec-wrap:nth-child(6) { animation-delay: 0.40s; }
-.sec-wrap:nth-child(7) { animation-delay: 0.48s; }
-.sec-wrap:nth-child(8) { animation-delay: 0.56s; }
-.sec-wrap:nth-child(9) { animation-delay: 0.64s; }
-.sec-wrap:nth-child(10) { animation-delay: 0.72s; }
+.sec-wrap:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.sec-wrap:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.sec-wrap:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.sec-wrap:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.sec-wrap:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.sec-wrap:nth-child(7) {
+  animation-delay: 0.48s;
+}
+.sec-wrap:nth-child(8) {
+  animation-delay: 0.56s;
+}
+.sec-wrap:nth-child(9) {
+  animation-delay: 0.64s;
+}
+.sec-wrap:nth-child(10) {
+  animation-delay: 0.72s;
+}
 
 .tp-dfwv {
   position: fixed !important;
@@ -28,7 +48,7 @@
 body {
   background-color: var(--color-body-background);
   color: var(--color-text);
-  font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
+  font-family: var(--font-body, "Roboto", system-ui, sans-serif);
 }
 
 .layout-wrapper {
@@ -265,7 +285,8 @@ main a[href^="#"]::before {
   visibility: hidden;
 }
 
-main a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"])::after {
+main
+  a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"])::after {
   content: " \2197";
   font-size: 0.75em;
   display: inline-block;
@@ -274,7 +295,10 @@ main a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"])::afte
   transition: opacity 0.2s;
 }
 
-main a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"]):hover::after {
+main
+  a[href^="http"]:not([href*="europython.eu"]):not(
+    [href*="localhost"]
+  ):hover::after {
   opacity: 1;
 }
 
