@@ -23,7 +23,8 @@ try:
     from dotenv import load_dotenv
     load_dotenv("/.env.local")
 except ImportError:
-    pass
+    # python-dotenv is optional; continue if not installed and rely on existing env vars.
+    print("ℹ️ python-dotenv not installed; skipping /.env.local loading.", file=sys.stderr)
 
 # ==========================================
 # EDIT THESE TWO LINES BEFORE EACH RUN
