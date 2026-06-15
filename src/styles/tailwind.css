@@ -68,12 +68,12 @@
   --color-primary-active: #7a7ebd;
 
   /* Button Colors */
-  --color-button: #6b5ca5;
-  --color-button-hover: #8572c6;
+  --color-button: #f0c040;
+  --color-button-hover: #d4a830;
   --color-button-active: #514689;
   --color-button-focus: #9c4222;
   --color-button-disabled: #b7b2c7;
-  --color-button-text: #fdfdfd;
+  --color-button-text: #080f1a;
 
   /* Secondary Colors */
   --color-secondary: #151f38;

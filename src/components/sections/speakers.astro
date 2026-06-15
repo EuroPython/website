@@ -1,211 +1,132 @@
 ---
 import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
-import Section from "@ui/Section.astro"
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 
 const allSpeakers = await getCollection("speakers");
+const validSpeakers = allSpeakers.filter(s => !!s.data?.name && !!s.data?.avatar);
 
-const validSpeakers = allSpeakers.filter(speaker =>
-  !!speaker.data?.name && !!speaker.data?.avatar
-);
-
-function getRandomSpeakers(speakers: CollectionEntry<"speakers">[], count: number) {
-  const shuffled = [...speakers].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, Math.min(count, speakers.length));
-}
-
-const featuredSpeakers = getRandomSpeakers(validSpeakers, 6);
-
+const featuredSpeakers = validSpeakers.sort(() => 0.5 - Math.random()).slice(0, 6);
 const sectionTitle = "Featured Speakers";
 const sectionSubtitle = "Meet some of our amazing speakers";
-
 ---
 
-<Section>
-  <div class="container mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{sectionTitle}</h2>
-      <p class="text-lg text-gray-600">{sectionSubtitle}</p>
-    </div>
-
-    <div class="speakers-carousel-container relative overflow-hidden p-10 lg:p-0">
-      <div class="speakers-track flex transition-transform duration-1000 ease-linear">
-        {[...featuredSpeakers, ...featuredSpeakers].map((speaker, _index) => (
-          <div class="speaker-slide w-full sm:w-1/2 md:w-1/3 lg:w-1/5 flex-shrink-0 px-3">
-            <a href={`/speaker/${speaker.id}`} class="block group">
-              <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:-translate-y-2">
-                <div class="aspect-square overflow-hidden">
-                  <Image
-                    src={speaker.data.avatar}
-                    alt={`${speaker.data.name}'s profile picture`}
-                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    height={250}
-                    width={250}
-                    loading="eager"
-                  />
-                </div>
-                <div class="p-4 text-center h-[88px] flex flex-col justify-center">
-                  <!-- Solution: Use text-ellipsis with 2 lines max and remove whitespace-nowrap -->
-                  <h3 class="font-bold text-lg text-gray-900 group-hover:text-primary transition-colors line-clamp-2">
-                    {speaker.data.name}
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div class="text-center mt-10">
-      <a
-        href="/speakers"
-        class="inline-block px-6 py-3 bg-primary hover:bg-primary-dark text-white font-medium rounded-md transition-colors"
-      >
-        See all speakers
-      </a>
-    </div>
+<Section2 id="speakers" variant="dark">
+  <div class="section-header">
+    <Title id="speakers" subtitle={sectionSubtitle}>{sectionTitle}</Title>
   </div>
-</Section>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.speakers-track') as HTMLElement;
-  const slides = document.querySelectorAll('.speaker-slide');
-  const totalOriginalSlides = slides.length / 2;
+  <div class="speakers-grid">
+    {featuredSpeakers.map((speaker) => (
+      <a href={`/speaker/${speaker.id}`} class="speaker-card">
+        <div class="speaker-photo">
+          <Image
+            src={speaker.data.avatar}
+            alt={speaker.data.name}
+            class="speaker-img"
+            height={300}
+            width={300}
+            loading="lazy"
+          />
+        </div>
+        <div class="speaker-info">
+          <h3 class="speaker-name">{speaker.data.name}</h3>
+        </div>
+      </a>
+    ))}
+  </div>
 
-  if (!track || slides.length === 0) return;
-
-  let currentPosition = 0;
-  const scrollSpeed = 4000;
-  let slidingInterval: number | null = null;
-
-  function getSlidesPerView() {
-    const width = window.innerWidth;
-    if (width <= 480) return 1;
-    if (width <= 640) return 2;
-    if (width <= 768) return 3;
-    if (width <= 1024) return 4;
-    return 5;
-  }
-
-  function updateCarouselSettings() {
-    const slidesPerView = getSlidesPerView();
-    const slideWidth = 100 / slidesPerView;
-
-    currentPosition = 0;
-    track.style.transition = 'none';
-    track.style.transform = `translateX(0)`;
-
-    if (slidingInterval !== null) {
-      clearInterval(slidingInterval);
-    }
-    startAnimation(slideWidth);
-  }
-
-  function startAnimation(slideWidth: number) {
-    moveCarousel();
-    slidingInterval = window.setInterval(moveCarousel, scrollSpeed);
-
-    function moveCarousel() {
-      currentPosition += slideWidth;
-
-      track.style.transition = 'transform 1000ms linear';
-      track.style.transform = `translateX(-${currentPosition}%)`;
-
-      if (currentPosition >= slideWidth * totalOriginalSlides) {
-        setTimeout(() => {
-          track.style.transition = 'none';
-          currentPosition = 0;
-          track.style.transform = `translateX(0)`;
-
-          setTimeout(() => {
-            track.style.transition = 'transform 1000ms linear';
-          }, 20);
-        }, 1000);
-      }
-    }
-  }
-
-  updateCarouselSettings();
-
-  window.addEventListener('resize', () => {
-    updateCarouselSettings();
-  });
-
-  const carouselContainer = document.querySelector('.speakers-carousel-container');
-  carouselContainer?.addEventListener('mouseenter', () => {
-    if (slidingInterval !== null) {
-      clearInterval(slidingInterval);
-      slidingInterval = null;
-    }
-  });
-
-  carouselContainer?.addEventListener('mouseleave', () => {
-    updateCarouselSettings();
-  });
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      if (slidingInterval !== null) {
-        clearInterval(slidingInterval);
-        slidingInterval = null;
-      }
-    } else {
-      updateCarouselSettings();
-    }
-  });
-});
-</script>
+  <div class="speakers-footer">
+    <a href="/speakers" class="speakers-cta">See all speakers</a>
+  </div>
+</Section2>
 
 <style>
-  .speakers-carousel-container {
-    position: relative;
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+
+  .speaker-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-radius: 2px;
+    overflow: hidden;
+    transition: border-color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
+                transform 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+  }
+
+  .speaker-card:hover {
+    border-color: var(--color-accent, #f0c040);
+    transform: translateY(-4px);
+  }
+
+  .speaker-photo {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+
+  .speaker-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
   }
 
-  .speakers-track {
-    will-change: transform;
+  .speaker-card:hover .speaker-img {
+    transform: scale(1.05);
   }
 
-  /* Line clamping for text overflow */
-  .line-clamp-1 {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+  .speaker-info {
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+  }
+
+  .speaker-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-primary-dark, rgba(255,255,255,0.93));
+    margin: 0;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .speakers-footer {
+    text-align: center;
+    margin-top: 2.5rem;
   }
 
-  /* These styles match the responsive classes used in the HTML */
+  .speakers-cta {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: var(--color-accent, #f0c040);
+    color: var(--color-section-bg, #080f1a);
+    border: 1px solid var(--color-accent, #f0c040);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.35s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+  }
+
+  .speakers-cta:active { transform: scale(0.97); }
+  .speakers-cta:hover { filter: brightness(1.1); }
+
   @media (max-width: 1024px) {
-    .speaker-slide {
-      width: 25%;
-    }
+    .speakers-grid { grid-template-columns: repeat(3, 1fr); }
   }
-
-  @media (max-width: 768px) {
-    .speaker-slide {
-      width: 33.333%;
-    }
-  }
-
   @media (max-width: 640px) {
-    .speaker-slide {
-      width: 50%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .speaker-slide {
-      width: 100%;
-    }
+    .speakers-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>

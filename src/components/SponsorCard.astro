@@ -44,9 +44,9 @@ const logo = sponsorLogos[sponsor.id];
 ---
 
 <div
-  class=`lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black mb-6 ${draft ? "draft": "no-draft"}`
+  class=`lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white/5 mb-6 ${draft ? "draft": "no-draft"}`
 >
-  <div class="w-full flex justify-center items-center md:items-center min-h-[140px] ">
+  <div class="w-full flex justify-center items-center md:items-center min-h-[140px] bg-white rounded-lg p-4">
     {
       logo && (
           <Image
@@ -74,15 +74,15 @@ const logo = sponsorLogos[sponsor.id];
             <>{title}</>
           }
         </h2>
-        <p class="text-gray-600 mb-4" style="color:oklch(54.6% 0.03 256.802);">
+        <p class="text-white/60 mb-4" style="color:oklch(54.6% 0.03 256.802);">
           {industry} {industry && location && <>—</>} {location}
         </p>
 
-        <p class="py-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">{description}</p>
+        <p class="py-6 " style="border: 0 solid rgba(255,255,255,0.1); border-width: 1px 0 0 0;">{description}</p>
 
 
         {showJobs && jobs && (
-          <div class="py-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">
+          <div class="py-6 " style="border: 0 solid rgba(255,255,255,0.1); border-width: 1px 0 0 0;">
             <h3 class="text-xl font-semibold">Job offers</h3>
             <ul class="list-disc list-inside" >
               {Object.values(jobs).map((job) => (
@@ -136,7 +136,7 @@ const logo = sponsorLogos[sponsor.id];
     display: inline-block;
     padding: 8px 24px;
     margin: 0 0 12px 0;
-    color: white;
+    color: var(--color-text-primary-dark, rgba(255,255,255,0.93));
     border-radius: 9999px;
     border: 1px solid transparent;
     text-decoration: none;

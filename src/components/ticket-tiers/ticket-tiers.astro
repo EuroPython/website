@@ -161,7 +161,7 @@ const formatPrice = (price: number | string) => {
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 py-24">
     {
       tiers.map((tier) => (
-        <div class="bg-white text-black rounded-2xl p-6 pb-20 relative not-prose z-0">
+        <div class="rounded-2xl p-6 pb-20 relative not-prose z-0 border border-white/10 bg-[#141720]">
           <div>
             <Headline as="h4" id=`titer-${tier}` title={tier.title} />
             <div class="mt-4 space-y-2">

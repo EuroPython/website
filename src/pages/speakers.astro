@@ -1,25 +1,19 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import Headline from "@ui/Headline.astro"
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 import { Image } from "astro:assets";
-import Section from "@ui/Section.astro";
 
 type Speaker = CollectionEntry<"speakers">;
 
 const speakersCollection = await getCollection("speakers");
-
-const speakersWithNames = speakersCollection.filter((speaker) =>
-  !!speaker.data?.name
-);
+const speakersWithNames = speakersCollection.filter((speaker) => !!speaker.data?.name);
 
 const getFirstLetter = (name: string): string => name.charAt(0).toUpperCase();
 
 function createOptimalGroups(speakers: Speaker[]): Record<string, Speaker[]> {
-  const sortedSpeakers = [...speakers].sort((a, b) =>
-    a.data.name.localeCompare(b.data.name)
-  );
-
+  const sortedSpeakers = [...speakers].sort((a, b) => a.data.name.localeCompare(b.data.name));
   const groups: Record<string, Speaker[]> = {};
   let currentGroup: Speaker[] = [];
   let currentLetter = '';
@@ -27,16 +21,13 @@ function createOptimalGroups(speakers: Speaker[]): Record<string, Speaker[]> {
 
   sortedSpeakers.forEach((speaker) => {
     const letter = getFirstLetter(speaker.data.name);
-
     if (currentGroup.length === 0) {
       currentLetter = letter;
       groupKey = letter;
       currentGroup.push(speaker);
-    }
-    else if (letter === currentLetter && currentGroup.length < 15) {
+    } else if (letter === currentLetter && currentGroup.length < 15) {
       currentGroup.push(speaker);
-    }
-    else {
+    } else {
       if (currentGroup.length < 10 && currentGroup.length + 1 <= 15) {
         currentGroup.push(speaker);
         groupKey = `${currentLetter}-${letter}`;
@@ -49,69 +40,121 @@ function createOptimalGroups(speakers: Speaker[]): Record<string, Speaker[]> {
     }
   });
 
-  if (currentGroup.length > 0) {
-    groups[groupKey] = currentGroup;
-  }
-
+  if (currentGroup.length > 0) groups[groupKey] = currentGroup;
   return groups;
 }
 
 const speakerGroups = createOptimalGroups(speakersWithNames);
 const groupKeys = Object.keys(speakerGroups);
-
-const title = "Speakers";
-const description = "Our conference speakers organized alphabetically";
 ---
 
-<Layout title={title} description={description}>
-  <Section>
+<Layout title="Speakers" description="Our conference speakers organized alphabetically">
+  <Section2 id="speakers">
+    <Title id="speakers">List of Speakers</Title>
 
-  <Headline id="speakers" as="h1" title="List of Speakers" />
-
-    {
-      groupKeys.map((key, _index) => (
-        <>
-          <div id={`group-${key}`} class="pt-6">
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
-              {speakerGroups[key].map((speaker) => (
-                <a
-                  href={`/speaker/${speaker.id}`}
-                  class="flex flex-col items-center group"
-                >
-                    {speaker.data.avatar ? (
-
-          <Image
-            src={speaker.data.avatar}
-            alt={`${speaker.data.name}'s profile picture`}
-            height={250}
-            width={250}
-            class="w-full aspect-square rounded-full overflow-hidden mb-3 border-2 border-transparent group-hover:border-primary transition-all h-full object-cover "
-          />
-                    ) : (
-                      <div class="w-full h-full bg-[#f7efe6] flex items-center justify-center text-gray-500 text-xl aspect-square rounded-full overflow-hidden mb-3 border-2 border-transparent ">
-                        {speaker.data.name.charAt(0)}
-                      </div>
-                    )}
-                  <h3 class="text-center font-medium group-hover:text-primary text-sm md:text-base">
-                    {speaker.data.name}
-                  </h3>
-                </a>
-              ))}
-            </div>
-          </div>
-
-        </>
-      ))
-    }
-  </Section>
+    {groupKeys.map((key) => (
+      <div id={`group-${key}`} class="pt-8">
+        <div class="speakers-grid">
+          {speakerGroups[key].map((speaker) => (
+            <a href={`/speaker/${speaker.id}`} class="speaker-card">
+              <div class="speaker-photo">
+                {speaker.data.avatar ? (
+                  <Image
+                    src={speaker.data.avatar}
+                    alt={speaker.data.name}
+                    height={250}
+                    width={250}
+                    class="speaker-img"
+                  />
+                ) : (
+                  <div class="speaker-placeholder">{speaker.data.name.charAt(0)}</div>
+                )}
+              </div>
+              <div class="speaker-info">
+                <h3 class="speaker-name">{speaker.data.name}</h3>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </Section2>
 </Layout>
 
 <style>
-  a {
-    transition: transform 0.2s ease;
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
   }
 
-  a.group:hover {
-    transform: translateY(-3px);
+  .speaker-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-radius: 2px;
+    overflow: hidden;
+    transition: border-color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
+                transform 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+  }
+
+  .speaker-card:hover {
+    border-color: var(--color-accent, #f0c040);
+    transform: translateY(-4px);
+  }
+
+  .speaker-photo {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+
+  .speaker-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+  }
+
+  .speaker-card:hover .speaker-img {
+    transform: scale(1.05);
+  }
+
+  .speaker-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface-medium, rgba(255,255,255,0.08));
+    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-size: 2rem;
+  }
+
+  .speaker-info {
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+  }
+
+  .speaker-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-primary-dark, rgba(255,255,255,0.93));
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1024px) {
+    .speakers-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .speakers-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .speakers-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>

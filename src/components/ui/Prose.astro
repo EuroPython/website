@@ -13,9 +13,15 @@ const { class: className, full=false } = Astro.props;
     "prose-h1:text-text prose-headings:font-title",
     "prose-headings:text-text",
     "prose-a:text-text",
-    "prose-a:hover:text-primary-hover",
+    "prose-a:hover:text-accent",
     "prose-strong:text-text prose-strong:font-bold",
     "prose-li:marker:text-text",
+    "prose-code:text-accent",
+    "prose-code:bg-white/5",
+    "prose-pre:bg-white/5",
+    "prose-th:text-text",
+    "prose-td:text-text",
+    "prose-hr:border-white/10",
     className,
   ]}
     style={full ?  "max-width: none !important;": "margin:auto;"}

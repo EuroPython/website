@@ -8,33 +8,32 @@ interface Props {
 
 const { type="info", title, icon } = Astro.props;
 
-// Define styles for different note types
 const styles = {
   warning: {
-    bg: "bg-[rgb(255,252,204)]",
-    text: "text-[rgb(153,101,21)]",
-    border: "border-[rgb(255,204,0)]",
+    bg: "bg-yellow-500/10",
+    text: "text-yellow-300",
+    border: "border-yellow-500/40",
     defaultIcon: "fas fa-exclamation-triangle fa-2x",
     defaultTitle: "Warning"
   },
   info: {
-    bg: "bg-[rgb(229,246,253)]",
-    text: "text-[rgb(27,95,133)]",
-    border: "border-[rgb(83,177,234)]",
+    bg: "bg-blue-500/10",
+    text: "text-blue-300",
+    border: "border-blue-500/40",
     defaultIcon: "fas fa-info-circle fa-2x",
     defaultTitle: "Info"
   },
   success: {
-    bg: "bg-[rgb(237,247,237)]",
-    text: "text-[rgb(48,112,60)]",
-    border: "border-[rgb(98,187,112)]",
+    bg: "bg-green-500/10",
+    text: "text-green-300",
+    border: "border-green-500/40",
     defaultIcon: "fas fa-check-circle fa-2x",
     defaultTitle: "Success"
   },
   error: {
-    bg: "bg-[rgb(253,237,237)]",
-    text: "text-[rgb(156,38,38)]",
-    border: "border-[rgb(244,99,99)]",
+    bg: "bg-red-500/10",
+    text: "text-red-300",
+    border: "border-red-500/40",
     defaultIcon: "fas fa-times-circle fa-2x",
     defaultTitle: "Error"
   }
