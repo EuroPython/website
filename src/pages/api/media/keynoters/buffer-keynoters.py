@@ -31,11 +31,12 @@ except (ImportError, subprocess.CalledProcessError):
     pass
 
 # ==========================================
-# EDIT THESE TWO LINES BEFORE EACH RUN
+# EDIT THESE BEFORE EACH RUN
 # ==========================================
-KEYNOTER     = "Leah Wasser"                    # must match a key in keynoters.json
-SCHEDULED_AT = datetime(2026, 6, 16, 9, 0,     # year, month, day, hour, minute
-                        tzinfo=ZoneInfo("Europe/London"))
+KEYNOTER      = "Leah Wasser"                   # must match a key in keynoters.json
+SCHEDULED_AT  = datetime(2026, 6, 16, 9, 0,
+                         tzinfo=ZoneInfo("Europe/London"))
+ONLY_NETWORKS = {}              # set to None to post to all networks
 # ==========================================
 
 API_KEY = os.environ.get("BUFFER_API_KEY")
@@ -65,7 +66,6 @@ if KEYNOTER not in all_keynoters:
 data      = all_keynoters[KEYNOTER]
 image_url  = data.get("image")
 channels  = {k: v for k, v in data.items() if k != "image"}
-sched_unix = int(SCHEDULED_AT.timestamp())
 
 print(f"Keynoter:  {KEYNOTER}")
 print(f"Scheduled: {SCHEDULED_AT.strftime('%Y-%m-%d %H:%M %Z')}")
@@ -105,24 +105,26 @@ print("-" * 50)
 create_mutation = """
 mutation CreatePost($input: CreatePostInput!) {
   createPost(input: $input) {
-    ... on PostActionSuccess { post { id scheduledAt } }
+    ... on PostActionSuccess { post { id } }
     ... on MutationError { message }
   }
 }
 """
 
 for network, text in channels.items():
+    if ONLY_NETWORKS and network not in ONLY_NETWORKS:
+        continue
     profile_id = profile_map.get(network)
     if not profile_id:
         print(f"  [{network}] not connected in Buffer — skipped")
         continue
 
     post_input = {
-        "channelId":     profile_id,
-        "text":          text,
-        "schedulingType": "scheduled",
-        "mode":          "scheduled",
-        "scheduledAt":   sched_unix,
+        "channelId":      profile_id,
+        "text":           text,
+        "schedulingType": "automatic",
+        "mode":           "customScheduled",
+        "dueAt":          SCHEDULED_AT.isoformat(),
     }
     if image_url:
         post_input["assets"] = [{"image": {"url": image_url, "metadata": {"altText": KEYNOTER}}}]
@@ -144,7 +146,7 @@ for network, text in channels.items():
             res  = res_json.get("data", {}).get("createPost", {})
             post = res.get("post", {})
             if post.get("id"):
-                print(f"  [{network}] scheduled at {post.get('scheduledAt')} (id: {post['id']})")
+                print(f"  [{network}] scheduled (id: {post['id']})")
             else:
                 print(f"  [{network}] failed: {res.get('message', 'unknown error')}")
     else:
