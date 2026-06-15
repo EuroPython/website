@@ -1,13 +1,15 @@
 # Keynoter Social Media Scheduling
 
-This document describes the process for scheduling keynote speaker
-announcement posts to Buffer. In short, you should: 
-* prepare the images in canva and deploy them to have a live url to the image
-* prepare copy for each platform and put it into a json file
-* run the script to schedule posts for the keynoters, one at a time, to all the supported social media platform
+This document describes the process for scheduling keynote speaker announcement
+posts to Buffer. In short, you should:
 
-The script posts to all connected channels in one run per keynoter:
-`instagram`, `linkedin`, `fosstodon`, `bsky`, `x`, `tiktok`.
+- prepare the images in canva and deploy them to have a live url to the image
+- prepare copy for each platform and put it into a json file
+- run the script to schedule posts for the keynoters, one at a time, to all the
+  supported social media platform
+
+The script posts to all connected channels in one run per keynoter: `instagram`,
+`linkedin`, `fosstodon`, `bsky`, `x`, `tiktok`.
 
 ---
 
@@ -20,14 +22,12 @@ The script posts to all connected channels in one run per keynoter:
 BUFFER_API_KEY=your_buffer_api_key_here
 ```
 
-
 ### Getting the Buffer API key
 
 1. Log in to [buffer.com](https://buffer.com) with the EuroPython account
 2. Go to **Account Settings → Apps & Integrations**
 3. Copy the personal access token under **Access Token**
 4. Paste it as `BUFFER_API_KEY` in `.env.local`
-
 
 ---
 
@@ -63,20 +63,20 @@ All post text lives in `keynoters.json`
   "Speaker Name": {
     "image": "https://ep<year>.europython.eu/media/keynoters/firstname-lastname.png",
     "instagram": "Post text for Instagram...",
-    "linkedin":  "Post text for LinkedIn...",
+    "linkedin": "Post text for LinkedIn...",
     "fosstodon": "Post text for Fosstodon/Mastodon...",
-    "bsky":      "Post text for Bluesky...",
-    "x":         "Post text for X/Twitter...",
-    "tiktok":    "Post text for TikTok..."
+    "bsky": "Post text for Bluesky...",
+    "x": "Post text for X/Twitter...",
+    "tiktok": "Post text for TikTok..."
   }
 }
 ```
 
 A few things to keep in mind when writing copy:
 
-- Social handles (e.g. `@leahawasser.bsky.social`) go **inline in the post text**,
-  not as separate fields. Each platform's post should use the handle format native
-  to that platform.
+- Social handles (e.g. `@leahawasser.bsky.social`) go **inline in the post
+  text**, not as separate fields. Each platform's post should use the handle
+  format native to that platform.
 - X and Bluesky have character limits — keep those posts short.
 - Instagram and TikTok don't render clickable URLs, so use the short form
   (`europython.eu/tickets/`) rather than the full URL.
@@ -84,12 +84,12 @@ A few things to keep in mind when writing copy:
 
 Add one entry per keynoter. The key must match exactly what you'll set in the
 script in Step 3.
+
 ---
 
 ## Step 3 — Schedule posts via Buffer
 
-The scheduling script is `buffer-keynoters.py`.
-Run it once per keynoter.
+The scheduling script is `buffer-keynoters.py`. Run it once per keynoter.
 
 ### Configure the script
 
@@ -102,8 +102,8 @@ SCHEDULED_AT = datetime(2026, 6, 16, 10, 0,
 ```
 
 Set `SCHEDULED_AT` to the date and time you want the post to go live. The
-timezone is `Europe/London` — adjust the year, month, day, hour, and minute
-as needed.
+timezone is `Europe/London` — adjust the year, month, day, hour, and minute as
+needed.
 
 ### Preview before posting
 
@@ -135,9 +135,9 @@ Repeat for each keynoter, updating `KEYNOTER` and `SCHEDULED_AT` each time.
 
 ## Troubleshooting
 
-| Error | Cause | Fix |
-|---|---|---|
-| `BUFFER_API_KEY not set` | Missing `.env.local` | Create `website/.env.local` with the key |
-| `Image upload failed (404)` | Image not deployed yet | Merge the images PR and wait for deployment |
+| Error                               | Cause                        | Fix                                              |
+| ----------------------------------- | ---------------------------- | ------------------------------------------------ |
+| `BUFFER_API_KEY not set`            | Missing `.env.local`         | Create `website/.env.local` with the key         |
+| `Image upload failed (404)`         | Image not deployed yet       | Merge the images PR and wait for deployment      |
 | `not connected in Buffer — skipped` | Channel not linked in Buffer | Log in to Buffer and connect the missing channel |
-| `not found in keynoters.json` | Typo in `KEYNOTER` | Check the exact key spelling in `keynoters.json` |
+| `not found in keynoters.json`       | Typo in `KEYNOTER`           | Check the exact key spelling in `keynoters.json` |
