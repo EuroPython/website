@@ -7,7 +7,8 @@ import { formatInTimeZone } from "date-fns-tz";
 import { YouTube } from "@astro-community/astro-embed-youtube";
 import { Picture } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
-import Section from "@ui/Section.astro";
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 import CodeHeart from "@components/island/CodeHeart.svelte";
 import Button from "@ui/Button.astro";
 
@@ -67,10 +68,10 @@ const nextSessionsOrdered = sameRoomNextSession
 ---
 
 <Layout title={entry.data.title} description={entry.data.tweet}>
-  <Section>
+  <Section2 variant="dark" id="session-page">
     <Prose full>
       <h1
-        class="relative font-title text-text font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-pretty"
+        class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [[&>a]:text-inherit>a]:text-inherit text-white text-pretty"
       >
         {entry.data.title}
         <span class="pl-1">
@@ -165,7 +166,7 @@ const nextSessionsOrdered = sameRoomNextSession
                 <li>
                   <a
                     href={resource.resource}
-                    class="text-xl hover:text-primary-hover underline font-bold"
+                    class="text-xl hover:text-accent underline font-bold"
                   >
                     {resource.description}
                   </a>
@@ -182,7 +183,7 @@ const nextSessionsOrdered = sameRoomNextSession
         speakers.length > 0 && (
           <>
             <Separator />
-            <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+            <h2 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [[&>a]:text-inherit>a]:text-inherit text-white text-5xl">
               The speaker{speakers.length > 1 ? "s" : ""}
             </h2>
             {speakers.map((speaker) => (
@@ -210,7 +211,7 @@ const nextSessionsOrdered = sameRoomNextSession
                   <p class="mb-4">
                     <a
                       href={`/speaker/${speaker.id}`}
-                      class="text-4xl hover:text-primary-hover underline font-bold"
+                      class="text-4xl hover:text-accent underline font-bold"
                     >
                       {speaker.data.name}
                     </a>
@@ -259,7 +260,7 @@ const nextSessionsOrdered = sameRoomNextSession
                         <li>
                           <a
                             href={`/session/${session.id}`}
-                            class={`${session === sameRoomNextSession ? "text-primary font-bold" : ""}`}
+                            class={`${session === sameRoomNextSession ? "text-white font-bold" : ""}`}
                           >
                             {session.data.title}
                           </a>
@@ -274,7 +275,7 @@ const nextSessionsOrdered = sameRoomNextSession
         ) : null
       }
     </footer>
-  </Section>
+  </Section2>
 </Layout>
 
 <script is:inline define:vars={{ slug }}>
