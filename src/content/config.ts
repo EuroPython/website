@@ -252,7 +252,10 @@ const jobs = defineCollection({
     salary: z.string().nullable(),
     tags: z.array(z.string()).nullable(),
     description: z.string().nullable(),
-    responsibilities: z.array(z.string()).nullable(),
+    responsibilities: z.array(z.union([
+      z.string(),
+      z.record(z.array(z.string())),
+    ])).nullable(),
     min_requirements: z.array(z.string()).optional().nullable(),
     requirements: z.array(z.string()).nullable(),
     preferred: z.array(z.string()).optional().nullable(),
