@@ -4,29 +4,20 @@ import Markdown from "@ui/Markdown.astro";
 
 const { slug } = Astro.props;
 
-
 const sprint = await getEntry("sprints", slug);
-
-if (!sprint) {
-  throw new Error(`Sprint entry "${slug}" not found`);
-}
+if (!sprint) throw new Error(`Sprint entry "${slug}" not found`);
 
 if (sprint.body && /^#+\s/m.test(sprint.body)) {
   throw new Error(`No headlines allowed in description. [${sprint.id}]`);
 }
 
-
 const { data, body } = sprint;
-
-//  <a href={`/sprints/${slug}`} id={slug} class="text-blue-600 hover:text-blue-800 hover:underline"></a>
 ---
 
-<article class=`${data.draft?"draft2":""} sprint-card bg-white border border-gray-200 rounded-lg p-6 mb-8 shadow-sm hover:shadow-md transition-shadow duration-200` data-python-level={data.pythonLevel} >
+<article class="sprint-card" data-python-level={data.pythonLevel}>
   <header class="mb-4">
-    <h3 class="text-2xl font-semibold mb-2">
-        {data.title}
-    </h3>
-    <div class="flex flex-wrap gap-4 text-lg text-gray-600">
+    <h3 class="text-xl font-semibold mb-2 text-white">{data.title}</h3>
+    <div class="flex flex-wrap gap-4 text-white/60">
       <span class="flex items-center gap-1">
         <span>👥</span>
         <span>{data.numberOfPeople}</span>
@@ -38,45 +29,49 @@ const { data, body } = sprint;
     </div>
   </header>
 
-  <div class="space-y-4">
-    <div class="text-lg">
-      <span class="text-gray-900">Contact:</span>
-      <span class="text-gray-700">{data.contactPerson.name}</span>
+  <div class="space-y-4 text-white/70">
+    <div>
+      <span class="text-white/90">Contact:</span>
+      <span class="text-white/70">{data.contactPerson.name}</span>
       {data.contactPerson.email && (
-        <span class="text-gray-600">
-          {' '}(<a href={`mailto:${data.contactPerson.email}`} class="text-primary hover:text-primary-hover underline">{data.contactPerson.email}</a>)
-        </span>
+        <span> (<a href={`mailto:${data.contactPerson.email}`} class="text-white/60 hover:text-accent underline">{data.contactPerson.email}</a>)</span>
       )}
       {data.contactPerson.github && (
-        <span class="text-gray-600">
-          {' '}(<a href={`https://github.com/${data.contactPerson.github}`} target="_blank" rel="noopener" class="text-primary hover:text-primary-hover underline">@{data.contactPerson.github}</a>)
-        </span>
+        <span> (<a href={`https://github.com/${data.contactPerson.github}`} target="_blank" rel="noopener" class="text-white/60 hover:text-accent underline">@{data.contactPerson.github}</a>)</span>
       )}
       {data.contactPerson.twitter && (
-        <span class="text-gray-600">
-          {' '}(<a href={`https://x.com/${data.contactPerson.twitter}`} target="_blank" rel="noopener" class="text-primary hover:text-primary-hover underline">@{data.contactPerson.twitter}</a>)
-        </span>
+        <span> (<a href={`https://x.com/${data.contactPerson.twitter}`} target="_blank" rel="noopener" class="text-white/60 hover:text-accent underline">@{data.contactPerson.twitter}</a>)</span>
       )}
     </div>
 
     {(data.links) && (
-      <div class="text-lg">
-        <span class="font-medium text-gray-900">Links:</span>
+      <div>
+        <span class="font-medium text-white/90">Links:</span>
         <ul class="mt-2 ml-6 space-y-1 list-disc">
           {data.links?.map((link) => (
             <li>
-              <a href={link.url} target="_blank" rel="noopener" class="text-primary hover:text-primary-hover underline ">{link.title}</a>
+              <a href={link.url} target="_blank" rel="noopener" class="text-white/60 hover:text-accent underline">{link.title}</a>
             </li>
           ))}
         </ul>
       </div>
     )}
 
-
-    {body &&
-      <Markdown content={body} />
-    }
-
+    {body && <Markdown content={body} />}
   </div>
-
 </article>
+
+<style>
+  .sprint-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: border-color 0.2s;
+  }
+
+  .sprint-card:hover {
+    border-color: var(--color-accent, #f0c040);
+  }
+</style>

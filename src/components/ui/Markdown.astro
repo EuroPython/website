@@ -11,6 +11,6 @@ const { content, class: className } = Astro.props;
 const defaultClass = className? className: "prose-xl";
 const html = marked.parse(await replaceYouTubeLinks(content) );
 ---
-<div class:list={['prose', "max-w-none", defaultClass]} >
+<div class:list={['prose', "max-w-none", "prose-a:text-text", "prose-a:hover:text-accent", "prose-headings:text-text", "prose-strong:text-text", "prose-code:text-accent", "prose-code:bg-white/10", "prose-pre:bg-white/5", defaultClass]} >
     <article set:html={html} />
 </div>

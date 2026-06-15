@@ -161,7 +161,7 @@
 /* Customize typography plugin */
 @layer utilities {
   .prose {
-    --tw-prose-headings: var(--color-black);
+    --tw-prose-headings: var(--color-text);
     --tw-prose-body: var(--color-text);
   }
 }
