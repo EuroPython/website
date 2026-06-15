@@ -16,7 +16,8 @@ decide whether booking with the coupon or through other platforms.
 
 Address: Wygrana 6, 30-311 Kraków
 
-Use the following link to apply the EuroPython discount coupon directly and get special rates:
+Use the following link to apply the EuroPython discount coupon directly and get
+special rates:
 [link](https://booking.profitroom.com/pl/qhotelpluskrakow/details/offer/426634?codes=EuroPython&no-cache=1&currency=PLN)
 
 ### [Hotel Saski Kraków](https://hotelsaski.com/)
@@ -60,12 +61,12 @@ Address: Ogrodowa 10, 31-155 Kraków
 
 Address: Tadeusza Kosciuszki 5, 30-105 Kraków
 
-Use the following link to apply the EuroPython discount coupon directly and to get 15% discount off the daily rate:
-[link](https://tiny.pl/33wsq8jbd)
+Use the following link to apply the EuroPython discount coupon directly and to
+get 15% discount off the daily rate: [link](https://tiny.pl/33wsq8jbd)
 
 ### [ibis Krakow Centrum](https://all.accor.com/hotel/3710/index.en.shtml)
 
 Address: Syrokomli 2, 30 102 Kraków
 
-Use the following link to apply the EuroPython discount coupon directly and to get 15% discount off the daily rate:
-[link](https://tiny.pl/33wsq8jbd)
+Use the following link to apply the EuroPython discount coupon directly and to
+get 15% discount off the daily rate: [link](https://tiny.pl/33wsq8jbd)
