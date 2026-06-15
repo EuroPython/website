@@ -27,6 +27,7 @@ try:
     ).decode().strip()
     load_dotenv(os.path.join(repo_root, ".env.local"))
 except (ImportError, subprocess.CalledProcessError):
+    # Optional best-effort .env loading; fall back to existing environment vars.
     pass
 
 # ==========================================
