@@ -12,6 +12,7 @@ Requires: pip install requests python-dotenv
 import argparse
 import json
 import os
+import subprocess
 import sys
 import time
 from datetime import datetime
@@ -21,10 +22,12 @@ import requests
 
 try:
     from dotenv import load_dotenv
-    load_dotenv("/.env.local")
-except ImportError:
-    # python-dotenv is optional; continue if not installed and rely on existing env vars.
-    print("ℹ️ python-dotenv not installed; skipping /.env.local loading.", file=sys.stderr)
+    repo_root = subprocess.check_output(
+        ["git", "rev-parse", "--show-toplevel"], stderr=subprocess.DEVNULL
+    ).decode().strip()
+    load_dotenv(os.path.join(repo_root, ".env.local"))
+except (ImportError, subprocess.CalledProcessError):
+    pass
 
 # ==========================================
 # EDIT THESE TWO LINES BEFORE EACH RUN
@@ -36,7 +39,7 @@ SCHEDULED_AT = datetime(2026, 6, 16, 9, 0,     # year, month, day, hour, minute
 
 API_KEY = os.environ.get("BUFFER_API_KEY")
 if not API_KEY:
-    print("❌ BUFFER_API_KEY not set. Add it to website/.env.local or export it.")
+    print("ERROR: BUFFER_API_KEY not set. Add it to website/.env.local or export it.")
     sys.exit(1)
 
 BUFFER_URL = "https://api.buffer.com/"
@@ -54,22 +57,23 @@ with open(queue_path, encoding="utf-8") as f:
     all_keynoters = json.load(f)
 
 if KEYNOTER not in all_keynoters:
-    print(f"❌ '{KEYNOTER}' not found in keynoters.json")
+    print(f"ERROR: '{KEYNOTER}' not found in keynoters.json")
     print(f"   Available: {', '.join(all_keynoters.keys())}")
     sys.exit(1)
 
 data      = all_keynoters[KEYNOTER]
-image_path = os.path.join(os.path.dirname(__file__), data["image"])
+image_url  = data.get("image")
 channels  = {k: v for k, v in data.items() if k != "image"}
 sched_unix = int(SCHEDULED_AT.timestamp())
 
-print(f"👤 {KEYNOTER}")
-print(f"   📅 Scheduled: {SCHEDULED_AT.strftime('%Y-%m-%d %H:%M %Z')}")
+print(f"Keynoter:  {KEYNOTER}")
+print(f"Scheduled: {SCHEDULED_AT.strftime('%Y-%m-%d %H:%M %Z')}")
+print(f"Image:     {image_url or 'none'}")
 if args.dry_run:
-    print("   🔍 DRY RUN — nothing will be sent\n")
+    print("DRY RUN — nothing will be sent\n")
     for network, text in channels.items():
         print(f"[{network.upper()}]")
-        print(text[:200] + ("…" if len(text) > 200 else ""))
+        print(text[:200] + ("..." if len(text) > 200 else ""))
         print()
     sys.exit(0)
 
@@ -81,7 +85,7 @@ query { account { organizations { channels { id service } } } }
 """
 resp = requests.post(BUFFER_URL, json={"query": get_channels_query}, headers=HEADERS)
 if resp.status_code != 200 or "errors" in resp.json():
-    print(f"❌ Could not fetch Buffer channels: {resp.text}")
+    print(f"ERROR: Could not fetch Buffer channels: {resp.text}")
     sys.exit(1)
 
 SERVICE_MAP = {"twitter": "x", "mastodon": "fosstodon", "bluesky": "bsky"}
@@ -91,41 +95,8 @@ for org in resp.json()["data"]["account"]["organizations"]:
         key = SERVICE_MAP.get(ch["service"].lower(), ch["service"].lower())
         profile_map[key] = ch["id"]
 
-print("✅ Connected channels:", list(profile_map.keys()))
+print("Connected channels:", list(profile_map.keys()))
 print("-" * 50)
-
-# ==========================================
-# UPLOAD IMAGE
-# ==========================================
-upload_mutation = """
-mutation UploadMedia($input: UploadMediaInput!) {
-  uploadMedia(input: $input) {
-    ... on UploadMediaSuccess { mediaId url }
-    ... on MutationError { message }
-  }
-}
-"""
-
-image_url = None
-if os.path.isfile(image_path):
-    import base64
-    with open(image_path, "rb") as f:
-        encoded = base64.b64encode(f.read()).decode()
-    ext  = os.path.splitext(image_path)[1].lstrip(".").lower()
-    mime = "image/jpeg" if ext in ("jpg", "jpeg") else f"image/{ext}"
-    resp = requests.post(
-        BUFFER_URL,
-        json={"query": upload_mutation, "variables": {"input": {"data": f"data:{mime};base64,{encoded}"}}},
-        headers=HEADERS,
-    )
-    result = resp.json().get("data", {}).get("uploadMedia", {})
-    image_url = result.get("url")
-    if image_url:
-        print(f"📤 Image uploaded: {image_url}")
-    else:
-        print(f"⚠️  Image upload failed: {result.get('message', 'unknown')}")
-else:
-    print(f"⚠️  Image not found: {image_path}")
 
 # ==========================================
 # POST TO EACH CHANNEL
@@ -142,7 +113,7 @@ mutation CreatePost($input: CreatePostInput!) {
 for network, text in channels.items():
     profile_id = profile_map.get(network)
     if not profile_id:
-        print(f"⚠️  [{network}] not connected in Buffer — skipped")
+        print(f"  [{network}] not connected in Buffer — skipped")
         continue
 
     post_input = {
@@ -164,13 +135,20 @@ for network, text in channels.items():
         json={"query": create_mutation, "variables": {"input": post_input}},
         headers=HEADERS,
     )
-    res = resp.json().get("data", {}).get("createPost", {})
-    post = res.get("post", {})
-    if post.get("id"):
-        print(f"✅ [{network}] scheduled at {post.get('scheduledAt')} (id: {post['id']})")
+    if resp.status_code == 200:
+        res_json = resp.json()
+        if "errors" in res_json:
+            print(f"  [{network}] GraphQL error: {res_json['errors'][0]['message']}")
+        else:
+            res  = res_json.get("data", {}).get("createPost", {})
+            post = res.get("post", {})
+            if post.get("id"):
+                print(f"  [{network}] scheduled at {post.get('scheduledAt')} (id: {post['id']})")
+            else:
+                print(f"  [{network}] failed: {res.get('message', 'unknown error')}")
     else:
-        print(f"❌ [{network}] failed: {res.get('message') or resp.json().get('errors', '?')}")
+        print(f"  [{network}] HTTP {resp.status_code}: {resp.text}")
 
     time.sleep(0.5)
 
-print("\n🎉 Done!")
+print("\nDone.")
