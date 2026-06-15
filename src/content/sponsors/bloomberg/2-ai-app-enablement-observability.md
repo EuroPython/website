@@ -1,10 +1,10 @@
 ---
 title: Senior Software Engineer - AI App Enablement & Observability
 location: Dublin
-type: 
+type:
 level:
 tags:
-salary: 
+salary:
 
 benefits:
 description: "
@@ -18,18 +18,18 @@ description: "
 
 
   **What’s in it for you?**
-  
-  
+
+
   You will help define how Bloomberg Industry Group builds and operates AI systems at scale by working on platforms that:
-  
+
   - Accelerate AI product development through reusable tooling and paved roads
 
   - Provide end-to-end observability across AI systems (models, agents, pipelines, applications)
-  
+
   - Enable self-improving systems through telemetry-driven feedback loops
-  
+
   - Optimise cost, performance, and reliability of AI workloads
-  
+
   - Support both production AI systems and internal engineering agents
 
 You’ll collaborate across AI product, infrastructure, and platform teams to deliver foundational systems.
