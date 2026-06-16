@@ -89,7 +89,8 @@ script in Step 3.
 
 ## Step 3 — Schedule posts via Buffer
 
-The scheduling script is `scripts/buffer-keynoters.py`. Run it once per keynoter.
+The scheduling script is `scripts/buffer-keynoters.py`. Run it once per
+keynoter.
 
 ### Configure the script
 
