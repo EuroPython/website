@@ -216,3 +216,20 @@
 .light .sprint-card a {
   color: #1a56db !important;
 }
+
+/* ── Speaker detail page ── */
+.light #speaker-page h1,
+.light #speaker-page h2,
+.light #speaker-page h3 {
+  color: #1a1a2e !important;
+}
+
+.light #speaker-page a {
+  color: #1a56db !important;
+}
+
+.light #speaker-page dl,
+.light #speaker-page dt,
+.light #speaker-page dd {
+  color: rgba(0,0,0,0.65) !important;
+}
