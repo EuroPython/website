@@ -233,3 +233,24 @@
 .light #speaker-page dd {
   color: rgba(0,0,0,0.65) !important;
 }
+
+/* ── Keynoter placeholder ── */
+.light .prog-keynoter-photo--empty {
+  background: rgba(0,0,0,0.04) !important;
+}
+
+.light .prog-keynoter-placeholder {
+  opacity: 0.2 !important;
+  color: #1a1a2e !important;
+}
+
+/* ── Session detail page ── */
+.light #session-page h1,
+.light #session-page h2,
+.light #session-page h3 {
+  color: #1a1a2e !important;
+}
+
+.light #session-page a {
+  color: #1a56db !important;
+}
