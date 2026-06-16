@@ -1,6 +1,7 @@
 ---
 import Button from "@ui/Button.astro";
 import Icon from "@ui/Icon.astro";
+import ThemeToggle from "@components/ThemeToggle.astro";
 
 export interface Props {
   mobile?: boolean;
@@ -18,8 +19,9 @@ const IS_LIVE = false;
     !mobile ?
       <>
 
-        <button
-          id="searchButton"
+        <ThemeToggle />
+          <button
+            id="searchButton"
           class="mx-6 md:mx-2"
             data-open-modal="modal-search"
             aria-label="Search"
