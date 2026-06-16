@@ -35,7 +35,21 @@ const { title, location, type, level, salary, description, responsibilities, min
     { responsibilities &&
       <h3 class="text-xl font-semibold mb-2">Responsibilities</h3>
       <ul class="list-disc list-inside mb-4">
-        {responsibilities.map((item:string ) => <li>{item}</li>)}
+        {responsibilities.map((item) => {
+          if (typeof item === "string") {
+            return <li>{item}</li>;
+          }
+          const category = Object.keys(item)[0];
+          const subItems = item[category];
+          return (
+            <li>
+              <strong>{category}</strong>
+              <ul class="list-disc list-inside">
+                {subItems.map((sub) => <li>{sub}</li>)}
+              </ul>
+            </li>
+          );
+        })}
       </ul>
     }
 
