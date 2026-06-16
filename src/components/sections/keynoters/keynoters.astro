@@ -19,7 +19,7 @@ const placeholders = Math.max(0, 5 - keynoters.length);
         .map((keynoter, _index) => (
           <Keynoter
             name={keynoter.data.name}
-            url={keynoter.data.url || ""}
+            url={keynoter.data.url || `/keynoter/${keynoter.id}`}
             tagline={keynoter.data.tagline}
             image={keynoter.data.image}
             placeholder={false}
