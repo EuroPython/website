@@ -254,3 +254,8 @@
 .light #session-page a {
   color: #1a56db !important;
 }
+
+/* ── Light footer gradient ── */
+.light footer {
+  background: linear-gradient(135deg, #f4f5f7, #ebedef) !important;
+}
