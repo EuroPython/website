@@ -70,3 +70,11 @@ Address: Syrokomli 2, 30 102 Kraków
 
 Use the following link to apply the EuroPython discount coupon directly and to
 get 15% discount off the daily rate: [link](https://tiny.pl/33wsq8jbd)
+
+### [Golden Tulip Krakow Kazimierz](https://krakow-kazimierz.goldentulip.com/)
+
+Address: Krakowska 28, 31-062 Krakow
+
+- Contact the hotel representative Magdalena Kurek with code EuroPython2026 and
+  receive 20% discount from daily rates
+- e-mail: sales@goldentulipkrakowcitycenter.com
