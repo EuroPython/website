@@ -231,12 +231,12 @@
 .light #speaker-page dl,
 .light #speaker-page dt,
 .light #speaker-page dd {
-  color: rgba(0,0,0,0.65) !important;
+  color: rgba(0, 0, 0, 0.65) !important;
 }
 
 /* ── Keynoter placeholder ── */
 .light .prog-keynoter-photo--empty {
-  background: rgba(0,0,0,0.04) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
 }
 
 .light .prog-keynoter-placeholder {
