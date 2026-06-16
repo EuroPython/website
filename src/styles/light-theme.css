@@ -88,10 +88,16 @@
   color: oklch(0 0 0 / 0.4);
 }
 
-.light nav[aria-label="Breadcrumb"] a { color: oklch(0.39 0.11 277) !important; }
-.light nav[aria-label="Breadcrumb"] span { color: oklch(0 0 0 / 0.5) !important; }
+.light nav[aria-label="Breadcrumb"] a {
+  color: oklch(0.39 0.11 277) !important;
+}
+.light nav[aria-label="Breadcrumb"] span {
+  color: oklch(0 0 0 / 0.5) !important;
+}
 .light nav[aria-label="Breadcrumb"] .text-white\/60,
-.light nav[aria-label="Breadcrumb"] .text-white\/40 { color: oklch(0 0 0 / 0.5) !important; }
+.light nav[aria-label="Breadcrumb"] .text-white\/40 {
+  color: oklch(0 0 0 / 0.5) !important;
+}
 
 .light .search-modal-content .pagefind-ui__result {
   border-bottom-color: oklch(0 0 0 / 0.05);
@@ -113,14 +119,16 @@
   background: oklch(1 0 0 / 0.8);
 }
 
-.light .website-btn { color: #ffffff !important; }
+.light .website-btn {
+  color: #ffffff !important;
+}
 
 /* ── Filter inputs & selects ── */
 .light select,
 .light .filter-input {
   background: #ffffff !important;
   color: #1a1a2e !important;
-  border-color: rgba(0,0,0,0.15) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 .light label {
@@ -130,13 +138,13 @@
 .light .filter-sessions select {
   background: #ffffff !important;
   color: #1a1a2e !important;
-  border-color: rgba(0,0,0,0.15) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 /* ── Sessions page filter input ── */
 .light #sessionSearch {
   color: #1a1a2e !important;
-  border-color: rgba(0,0,0,0.15) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
   background: #ffffff !important;
 }
 
@@ -145,13 +153,13 @@
 }
 
 .light #sessionSearch::placeholder {
-  color: rgba(0,0,0,0.40) !important;
+  color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .light .filter-sessions select {
   color: #1a1a2e !important;
   background: #ffffff !important;
-  border-color: rgba(0,0,0,0.15) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 .light .filter-sessions select:focus {
@@ -165,14 +173,14 @@
 
 /* ── Tags (session type/level badges) ── */
 .light .inline-block.bg-white\/10 {
-  background: rgba(0,0,0,0.06) !important;
+  background: rgba(0, 0, 0, 0.06) !important;
   color: #1a1a2e !important;
 }
 
 /* ── Session list tags ── */
 .light .sessions a.inline-block,
 .light a.inline-block.bg-white\/10 {
-  background: rgba(0,0,0,0.06) !important;
+  background: rgba(0, 0, 0, 0.06) !important;
   color: #1a1a2e !important;
 }
 
@@ -185,14 +193,14 @@
 /* ── Pre / code blocks ── */
 .light pre,
 .light code {
-  background: rgba(0,0,0,0.04) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
   color: #1a1a2e !important;
 }
 
 /* ── Sprint cards ── */
 .light .sprint-card {
   background: #ffffff !important;
-  border-color: rgba(0,0,0,0.10) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .light .sprint-card h3 {
@@ -202,7 +210,7 @@
 .light .sprint-card .text-white\/60,
 .light .sprint-card .text-white\/70,
 .light .sprint-card .text-white\/90 {
-  color: rgba(0,0,0,0.65) !important;
+  color: rgba(0, 0, 0, 0.65) !important;
 }
 
 .light .sprint-card a {

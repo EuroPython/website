@@ -21,7 +21,11 @@
 
 .pagefind-ui__result.selected {
   background-color: oklch(0.973 0 0); /* #f8f8f8 */
-  background-image: linear-gradient(to right, oklch(0.57 0.105 245.8) 7px, transparent 5px); /* #3684b6 */
+  background-image: linear-gradient(
+    to right,
+    oklch(0.57 0.105 245.8) 7px,
+    transparent 5px
+  ); /* #3684b6 */
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -33,7 +37,11 @@
 }
 .pagefind-ui__result mark {
   background: oklch(0.916 0.16 100.6); /* #f9eb5d */
-  background-image: linear-gradient(to right, oklch(0.916 0.16 100.6) 10%, oklch(0.958 0.082 98.3) 100%); /* #f9eb5d -> #fcf4a7 */
+  background-image: linear-gradient(
+    to right,
+    oklch(0.916 0.16 100.6) 10%,
+    oklch(0.958 0.082 98.3) 100%
+  ); /* #f9eb5d -> #fcf4a7 */
   margin: 4px;
   padding-right: 6px;
   padding-left: 6px;
