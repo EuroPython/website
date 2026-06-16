@@ -75,5 +75,6 @@ get 15% discount off the daily rate: [link](https://tiny.pl/33wsq8jbd)
 
 Address: Krakowska 28, 31-062 Krakow
 
-- Contact the hotel representative Magdalena Kurek with code EuroPython2026 and receive 20% discount from daily rates
+- Contact the hotel representative Magdalena Kurek with code EuroPython2026 and
+  receive 20% discount from daily rates
 - e-mail: sales@goldentulipkrakowcitycenter.com
