@@ -56,7 +56,7 @@ live site before the script can use it.
 
 ## Step 2 — Prepare the post copy (`keynoters.json`)
 
-All post text lives in `keynoters.json`
+All post text lives in `scripts/keynoters.json`
 
 ```json
 {
@@ -89,11 +89,11 @@ script in Step 3.
 
 ## Step 3 — Schedule posts via Buffer
 
-The scheduling script is `buffer-keynoters.py`. Run it once per keynoter.
+The scheduling script is `scripts/buffer-keynoters.py`. Run it once per keynoter.
 
 ### Configure the script
 
-Open `buffer-keynoters.py` and edit the two lines at the top:
+Open `scripts/buffer-keynoters.py` and edit the two lines at the top:
 
 ```python
 KEYNOTER     = "Leah Wasser"           # must match the key in keynoters.json exactly
@@ -108,7 +108,7 @@ needed.
 ### Preview before posting
 
 ```bash
-python buffer-keynoters.py --dry-run
+python scripts/buffer-keynoters.py --dry-run
 ```
 
 This prints the first 200 characters of the post for each platform without
@@ -118,7 +118,7 @@ right keynoter is selected.
 ### Run
 
 ```bash
-python buffer-keynoters.py
+python scripts/buffer-keynoters.py
 ```
 
 The script will:

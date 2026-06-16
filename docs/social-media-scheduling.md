@@ -109,23 +109,23 @@ speaker → speaker → sponsor → speaker → partner → (repeat)
 Regenerate it by hitting the API endpoint while the dev server is running:
 
 ```bash
-curl -s http://localhost:4321/api/media/combined_socials_queue > src/pages/api/media/combined_socials_queue.json
+curl -s http://localhost:4321/api/media/combined_socials_queue > scripts/combined_socials_queue.json
 ```
 
-This overwrites `src/pages/api/media/combined_socials_queue.json` with all items
+This overwrites `scripts/combined_socials_queue.json` with all items
 sorted and interleaved.
 
 > **Note:** There are two queue files:
 >
-> - `combined_socials_queue.json` — the freshly generated queue, used as the
+> - `scripts/combined_socials_queue.json` — the freshly generated queue, used as the
 >   source of truth and read by `buffer-scheduling.py`
-> - `combined_socials_queue_2026.json` — the manually curated queue that
+> - `scripts/combined_socials_queue_2026.json` — the manually curated queue that
 >   preserves already-scheduled posts at the top; new entries are appended after
 >   the last scheduled position
 
 When new speakers or sponsors are added, regenerate
-`combined_socials_queue.json` and then merge the new entries into
-`combined_socials_queue_2026.json` manually — keeping already-posted entries
+`scripts/combined_socials_queue.json` and then merge the new entries into
+`scripts/combined_socials_queue_2026.json` manually — keeping already-posted entries
 intact and appending only new/unposted ones.
 
 ### Session types and labels
@@ -150,7 +150,7 @@ Sponsors are split into two buckets:
   Financial Aid
 
 If a new sponsor tier is added, update `commercialTiers` in
-`src/pages/api/media/combined_socials_queue.ts`.
+`src/pages/api/media/combined_socials_queue.ts` (this file stays in the API layer).
 
 ### Manual queue adjustments
 
@@ -160,7 +160,7 @@ reorder entries. For example, to swap two sponsors:
 ```python
 python3 -c "
 import json
-path = 'src/pages/api/media/combined_socials_queue.json'
+path = 'scripts/combined_socials_queue.json'
 with open(path) as f:
     q = json.load(f)
 q[2], q[17] = q[17], q[2]  # swap positions 3 and 18 (0-indexed)
@@ -169,7 +169,7 @@ with open(path, 'w') as f:
 "
 ```
 
-`src/pages/api/media/combined_socials_queue.json` is committed to the repo. Any
+`scripts/combined_socials_queue.json` is committed to the repo. Any
 manual reordering should be committed so the intentional order is preserved and
 not lost when the queue is regenerated.
 
@@ -233,7 +233,7 @@ Buffer operates as a FIFO queue against pre-configured time slots:
 > remove them one by one. Before each run, open Buffer and verify the number and
 > cadence of slots for each channel matches your intended rollout pace.
 
-The scheduling script is at `src/pages/api/media/buffer-scheduling.py`.
+The scheduling script is at `scripts/buffer-scheduling.py`.
 
 ### Configuration
 
@@ -251,13 +251,13 @@ the results, increment the range for subsequent runs.
 ### Running the script
 
 ```bash
-uv run python src/pages/api/media/buffer-scheduling.py
+uv run python scripts/buffer-scheduling.py
 ```
 
 Or with your venv activated:
 
 ```bash
-python src/pages/api/media/buffer-scheduling.py
+python scripts/buffer-scheduling.py
 ```
 
 ### What it does
@@ -292,8 +292,8 @@ python src/pages/api/media/buffer-scheduling.py
 After each successful run, note the last `QUEUE_END` value. The next run should
 set `QUEUE_START = previous QUEUE_END + 1`.
 
-The script reads from `combined_socials_queue.json` by default. When switching
-to the curated `combined_socials_queue_2026.json`, update `queue_path` in the
+The script reads from `scripts/combined_socials_queue.json` by default. When switching
+to the curated `scripts/combined_socials_queue_2026.json`, update `queue_path` in the
 script accordingly.
 
 Already scheduled as of June 2026:
