@@ -112,21 +112,21 @@ Regenerate it by hitting the API endpoint while the dev server is running:
 curl -s http://localhost:4321/api/media/combined_socials_queue > scripts/combined_socials_queue.json
 ```
 
-This overwrites `scripts/combined_socials_queue.json` with all items
-sorted and interleaved.
+This overwrites `scripts/combined_socials_queue.json` with all items sorted and
+interleaved.
 
 > **Note:** There are two queue files:
 >
-> - `scripts/combined_socials_queue.json` — the freshly generated queue, used as the
->   source of truth and read by `buffer-scheduling.py`
+> - `scripts/combined_socials_queue.json` — the freshly generated queue, used as
+>   the source of truth and read by `buffer-scheduling.py`
 > - `scripts/combined_socials_queue_2026.json` — the manually curated queue that
 >   preserves already-scheduled posts at the top; new entries are appended after
 >   the last scheduled position
 
 When new speakers or sponsors are added, regenerate
 `scripts/combined_socials_queue.json` and then merge the new entries into
-`scripts/combined_socials_queue_2026.json` manually — keeping already-posted entries
-intact and appending only new/unposted ones.
+`scripts/combined_socials_queue_2026.json` manually — keeping already-posted
+entries intact and appending only new/unposted ones.
 
 ### Session types and labels
 
@@ -150,7 +150,8 @@ Sponsors are split into two buckets:
   Financial Aid
 
 If a new sponsor tier is added, update `commercialTiers` in
-`src/pages/api/media/combined_socials_queue.ts` (this file stays in the API layer).
+`src/pages/api/media/combined_socials_queue.ts` (this file stays in the API
+layer).
 
 ### Manual queue adjustments
 
@@ -169,9 +170,9 @@ with open(path, 'w') as f:
 "
 ```
 
-`scripts/combined_socials_queue.json` is committed to the repo. Any
-manual reordering should be committed so the intentional order is preserved and
-not lost when the queue is regenerated.
+`scripts/combined_socials_queue.json` is committed to the repo. Any manual
+reordering should be committed so the intentional order is preserved and not
+lost when the queue is regenerated.
 
 ---
 
@@ -292,9 +293,9 @@ python scripts/buffer-scheduling.py
 After each successful run, note the last `QUEUE_END` value. The next run should
 set `QUEUE_START = previous QUEUE_END + 1`.
 
-The script reads from `scripts/combined_socials_queue.json` by default. When switching
-to the curated `scripts/combined_socials_queue_2026.json`, update `queue_path` in the
-script accordingly.
+The script reads from `scripts/combined_socials_queue.json` by default. When
+switching to the curated `scripts/combined_socials_queue_2026.json`, update
+`queue_path` in the script accordingly.
 
 Already scheduled as of June 2026:
 
