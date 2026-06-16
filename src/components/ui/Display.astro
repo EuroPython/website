@@ -7,13 +7,13 @@ export interface Props {
   color?: string;     // title color, default #fff
 }
 
-const { id, subtitle, span, spanColor, color = "#fff" } = Astro.props;
+const { id, subtitle, span, spanColor, color = "" } = Astro.props;
 ---
 
 <div class="display-header">
-  <h2 class="display-title" style={`color: ${color}`}>
+  <h2 class="display-title" style={color ? `color: ${color}` : undefined}>
     <slot />
-    <sup class="display-anchor"><a href={`#${id}`} style={`color: ${color}`}>#</a></sup>
+    <sup class="display-anchor"><a href={`#${id}`} style={color ? `color: ${color}` : undefined}>#</a></sup>
     {span && <span class="display-span" style={spanColor ? `color: ${spanColor}` : ""}>{span}</span>}
   </h2>
   {subtitle && <p class="display-subtitle">{subtitle}</p>}
@@ -25,6 +25,7 @@ const { id, subtitle, span, spanColor, color = "#fff" } = Astro.props;
   }
 
   .display-title {
+    color: var(--color-text);
     font-size: clamp(2.8rem, 6vw, 5.2rem);
     font-weight: 800;
     line-height: 0.9;
@@ -57,7 +58,7 @@ const { id, subtitle, span, spanColor, color = "#fff" } = Astro.props;
 
   .display-subtitle {
     font-size: 1.1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    color: var(--color-text-muted);
     margin-top: 1.2rem;
     line-height: 1.55;
     max-width: 600px;

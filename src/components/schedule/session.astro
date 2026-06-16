@@ -64,7 +64,7 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
 
   .ep-session:hover {
     border-color: var(--ep-accent);
-    background: #0f1a2e !important;
+    background: var(--ep-session-hover-bg) !important;
     z-index: 10;
   }
 
@@ -124,18 +124,18 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
   }
 
   .ep-session-level--beginner {
-    background: rgba(50,180,50,0.2);
-    color: #6fd66f;
+    background: var(--ep-level-beginner-bg);
+    color: var(--ep-level-beginner-text);
   }
 
   .ep-session-level--intermediate {
-    background: rgba(255,255,255,0.08);
-    color: var(--ep-text-muted, rgba(255,255,255,0.7));
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
   }
 
   .ep-session-level--advanced {
-    background: rgba(200,50,50,0.2);
-    color: #e07070;
+    background: var(--ep-level-advanced-bg);
+    color: var(--ep-level-advanced-text);
   }
 
 
@@ -152,8 +152,8 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
         -45deg,
         transparent,
         transparent 4px,
-        rgba(50,180,50,0.2) 4px,
-        rgba(50,180,50,0.2) 6px
+        var(--ep-beginner-stripe) 4px,
+        var(--ep-beginner-stripe) 6px
       ),
       var(--ep-surface-subtle);
   }
@@ -164,8 +164,8 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
         -45deg,
         transparent,
         transparent 4px,
-        rgba(200,50,50,0.2) 4px,
-        rgba(200,50,50,0.2) 6px
+        var(--ep-advanced-stripe) 4px,
+        var(--ep-advanced-stripe) 6px
       ),
       var(--ep-surface-subtle);
   }

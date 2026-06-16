@@ -50,7 +50,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
 <style>
   .sec-wrap {
-    color: #fff;
+    color: var(--color-white);
     position: relative;
     overflow: hidden;
   }
@@ -63,7 +63,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   }
 
   .progtalk-section {
-    background: var(--color-section-bg, #080f1a);
+    background: var(--color-section-bg);
     scroll-margin-top: 60px;
   }
 
@@ -76,7 +76,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     font-size: clamp(2.8rem, 6vw, 5.2rem);
     line-height: 1.05;
     letter-spacing: -0.02em;
-    color: var(--color-cream, #fff5f0);
+    color: var(--color-text);
     text-transform: uppercase;
     margin-bottom: 1.2rem;
     text-align: center;
@@ -96,7 +96,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   }
 
   .prog-topics-label .sec-anchor a {
-    color: var(--color-cream, #fff5f0);
+    color: var(--color-text);
     text-decoration: none;
   }
 
@@ -115,9 +115,9 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   .prog-more-cta {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background: var(--color-cta-red, #d4003a);
-    color: #fff;
-    border: 1px solid var(--color-cta-red, #d4003a);
+    background: var(--color-cta-red);
+    color: var(--color-white);
+    border: 1px solid var(--color-cta-red);
     border-radius: 2px;
     font-weight: 700;
     font-size: 1rem;

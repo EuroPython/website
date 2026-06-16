@@ -80,13 +80,13 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  background: rgba(10,10,20,0.95);
+  background: oklch(0.155 0.034 281.7 / 0.95); /* #0a0a1a */
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--color-surface-medium);
   padding: 0.55rem calc((100% - 1200px) / 2);
   white-space: nowrap;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 20px oklch(0 0 0 / 0.05);
   transition: transform 0.3s ease-in-out;
   transform: translateY(0);
 }
@@ -113,7 +113,7 @@ nav {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: rgba(255,255,255,0.93);
+  color: var(--color-text-primary);
   text-decoration: none;
   border-radius: 2px;
   transition: color 0.15s, background 0.15s;
@@ -122,8 +122,8 @@ nav {
 .nav-item > a:hover,
 .nav-item:hover > a,
 .nav-item > a:focus {
-  color: #ffffff;
-  background: rgba(255,255,255,0.10);
+  color: var(--color-text);
+  background: var(--color-border);
 }
 
 .nav-arrow {
@@ -157,11 +157,11 @@ nav {
 }
 
 .nav-dropdown-inner {
-  background: rgba(10,10,20,0.95);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: oklch(0.155 0.034 281.7 / 0.95); /* #0a0a1a */
+  border: 1px solid var(--color-border-bright);
   border-radius: 2px;
   padding: 0.5rem;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.75), 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 16px 48px var(--color-scrim-15), 0 4px 12px var(--color-scrim-15);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -178,7 +178,7 @@ nav {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.93);
+  color: var(--color-text-primary);
   text-decoration: none;
   border-radius: 2px;
   letter-spacing: 0.02em;
@@ -187,8 +187,8 @@ nav {
   white-space: nowrap;
 }
 .nav-dropdown li a:hover {
-  color: #ffffff;
-  background: rgba(255,255,255,0.15);
+  color: var(--color-text);
+  background: var(--color-border-strong);
 }
 
 .nav-ext {
@@ -203,14 +203,14 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: var(--color-surface-medium);
+  border: 1px solid var(--color-border-strong);
   border-radius: 4px;
   padding: 0.45rem 0.9rem;
   margin-left: auto;
   margin-right: 0.5rem;
   cursor: pointer;
-  color: rgba(255,255,255,0.78);
+  color: var(--color-text-secondary);
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   transition: background 0.15s, color 0.15s;
@@ -218,16 +218,16 @@ nav {
 }
 
 .nav-search-btn:hover {
-  background: rgba(255,255,255,0.15);
-  color: #ffffff;
+  background: var(--color-border-strong);
+  color: var(--color-text);
 }
 
 .nav-cta {
   font-size: 0.88rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #ffffff;
-  background: linear-gradient(to bottom, #d62020, #8a0020);
+  color: var(--color-white);
+  background: linear-gradient(to bottom, var(--color-cta-red), var(--color-cta-red-dark));
   border-radius: 2px;
   padding: 0.6rem 1.5rem;
   text-decoration: none;
@@ -265,7 +265,7 @@ nav {
     display: block;
     width: 24px;
     height: 2px;
-    background: rgba(255,255,255,0.93);
+    background: var(--color-text-primary);
     border-radius: 1px;
     transition: transform 0.2s, opacity 0.2s;
   }
@@ -279,7 +279,7 @@ nav {
     position: fixed;
     inset: 0;
     height: 100dvh;
-    background: rgba(10,10,20,0.95);
+    background: oklch(0.155 0.034 281.7 / 0.95); /* #0a0a1a */
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     flex-direction: column;
@@ -295,7 +295,7 @@ nav {
   .nav-item > a {
     font-size: 1.1rem;
     padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.10);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .nav-search-btn {
@@ -317,10 +317,10 @@ nav {
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.07em;
-    color: rgba(255,255,255,0.93);
+    color: var(--color-text-primary);
     background: none;
     border: none;
-    border-bottom: 1px solid rgba(255,255,255,0.10);
+    border-bottom: 1px solid var(--color-border);
     cursor: pointer;
     text-align: left;
   }
@@ -367,47 +367,47 @@ nav {
 }
 
 :global(.light) nav {
-  background: rgba(255,255,255,0.95) !important;
-  border-bottom-color: rgba(0,0,0,0.10) !important;
+  background: oklch(1 0 0 / 0.95) !important;
+  border-bottom-color: oklch(0 0 0 / 0.1) !important;
 }
 
-:global(.light) nav a,
+:global(.light) nav a:not(.nav-cta),
 :global(.light) .nav-item > a,
 :global(.light) .nav-toggle span,
 :global(.light) .theme-toggle {
-  color: #1a1a2e !important;
+  color: oklch(0.228 0.038 282.9) !important; /* #1a1a2e */
 }
 
 :global(.light) .nav-search-btn {
-  background: rgba(0,0,0,0.04) !important;
-  border-color: rgba(0,0,0,0.15) !important;
-  color: rgba(0,0,0,0.50) !important;
+  background: oklch(0 0 0 / 0.04) !important;
+  border-color: var(--color-scrim-15) !important;
+  color: var(--color-scrim-50) !important;
 }
 
 :global(.light) .nav-search-btn:hover {
-  color: #1a1a2e !important;
+  color: oklch(0.228 0.038 282.9) !important; /* #1a1a2e */
 }
 
-:global(.light) .nav-cta {
-  background: linear-gradient(to bottom, #d62020, #8a0020) !important;
-  color: #ffffff !important;
+:global(.light) a.nav-cta {
+  background: linear-gradient(to bottom, var(--color-cta-red), var(--color-cta-red-dark)) !important;
+  color: var(--color-white) !important;
 }
 
 :global(.light) .nav-dropdown-inner {
-  background: rgba(255,255,255,0.95) !important;
-  border-color: rgba(0,0,0,0.15) !important;
+  background: oklch(1 0 0 / 0.95) !important;
+  border-color: var(--color-scrim-15) !important;
 }
 
 :global(.light) .nav-dropdown li a {
-  color: #1a1a2e !important;
+  color: oklch(0.228 0.038 282.9) !important; /* #1a1a2e */
 }
 
 :global(.light) .nav-dropdown li a:hover {
-  background: rgba(0,0,0,0.04) !important;
+  background: oklch(0 0 0 / 0.04) !important;
 }
 
 :global(.light) .nav-links {
-  background: rgba(255,255,255,0.95) !important;
+  background: oklch(1 0 0 / 0.95) !important;
 }
 </style>
 

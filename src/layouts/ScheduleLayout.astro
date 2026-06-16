@@ -54,11 +54,6 @@ body {
   grid-column: 2;
 }
 
-/* Remove light theme background from body on schedule pages */
-body {
-  background-color: var(--color-primary) !important;
-}
-
 main {
   background-color: transparent !important;
 }
@@ -102,15 +97,15 @@ header#navbar .bg-\[\#1c294b\] {
 }
 
 .ep-sched-tab:hover {
-  border-color: var(--ep-accent);
+  border-color: var(--color-accent-themed);
   color: var(--ep-white);
-  background: rgba(240, 192, 64, 0.08);
+  background: var(--color-surface-subtle);
 }
 
 .ep-sched-tab.active {
-  background: var(--ep-accent);
-  border-color: var(--ep-accent);
-  color: var(--ep-bg);
+  background: var(--color-accent-themed);
+  border-color: var(--color-accent-themed);
+  color: var(--color-on-accent);
   font-weight: 600;
 }
 
@@ -161,8 +156,8 @@ header#navbar .bg-\[\#1c294b\] {
     -45deg,
     transparent,
     transparent 2px,
-    rgba(50,180,50,0.3) 2px,
-    rgba(50,180,50,0.3) 4px
+    oklch(0.675 0.201 142.9 / 0.3) 2px, /* rgba(50,180,50,0.3) */
+    oklch(0.675 0.201 142.9 / 0.3) 4px /* rgba(50,180,50,0.3) */
   );
   background-color: var(--ep-surface-subtle);
 }
@@ -172,15 +167,15 @@ header#navbar .bg-\[\#1c294b\] {
     -45deg,
     transparent,
     transparent 2px,
-    rgba(200,50,50,0.3) 2px,
-    rgba(200,50,50,0.3) 4px
+    oklch(0.551 0.187 25.8 / 0.3) 2px, /* rgba(200,50,50,0.3) */
+    oklch(0.551 0.187 25.8 / 0.3) 4px /* rgba(200,50,50,0.3) */
   );
   background-color: var(--ep-surface-subtle);
 }
 
 .ep-legend-break {
-  background: rgba(255,150,0,0.2);
-  border-color: rgba(255,150,0,0.4);
+  background: oklch(0.767 0.175 63.1 / 0.2); /* rgba(255,150,0,0.2) */
+  border-color: oklch(0.767 0.175 63.1 / 0.4); /* rgba(255,150,0,0.4) */
 }
 
 .ep-legend-room-change {

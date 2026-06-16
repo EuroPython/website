@@ -9,7 +9,7 @@ const gitVersion = __GIT_VERSION__;
 
 <footer>
   <div class="footer-flowers-bg" aria-hidden="true"></div>
-  <div class="text-white max-w-4xl lg:max-w-6xl mx-auto py-10 px-6 footer-inner">
+  <div class="text-[var(--color-text)] max-w-4xl lg:max-w-6xl mx-auto py-10 px-6 footer-inner">
     <div class="footer-top-row">
       <div>
         <p class="footer-title"><span class="footer-title-ep">#EP</span><span class="footer-title-year">2026</span></p>
@@ -51,24 +51,24 @@ const gitVersion = __GIT_VERSION__;
   </div>
 
   <div class="flex flex-wrap gap-2 justify-between">
-    <div class="w-full py-2 border-t border-b border-white/10">
+    <div class="w-full py-2 border-t border-b border-[var(--color-border)]">
       <div
         class="flex flex-col lg:flex-row self-center gap-2 lg:gap-12 justify-end"
       >
         <div
-          class="flex flex-col text-white/60 w-full lg:w-2/3 p-5 items-center text-center"
+          class="flex flex-col text-[var(--color-text-faint)] w-full lg:w-2/3 p-5 items-center text-center"
         >
           <p>
             Excited about our mission? Want to collaborate or contribute? Let's
             connect! We're open to partnership opportunities and would love to
             hear your ideas.
-            <a class="text-white/80 hover:text-white underline" href="mailto:helpdesk@europython.eu"
+            <a class="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] underline" href="mailto:helpdesk@europython.eu"
               >helpdesk@europython.eu</a
             >
           </p>
         </div>
         <div
-          class="flex text-white/60 w-full lg:w-1/3 justify-center text-start mb-4 lg:mb-0"
+          class="flex text-[var(--color-text-faint)] w-full lg:w-1/3 justify-center text-start mb-4 lg:mb-0"
         >
           <div>
             <EPSLogo width="90" height="90" class="w-[90px] mr-4 h-auto" />
@@ -93,7 +93,7 @@ const gitVersion = __GIT_VERSION__;
           links.terms.map((item) => (
             <a
               href={item.path}
-              class="text-white/80 hover:text-primary-hover transition-colors duration-200 mx-2"
+              class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200 mx-2"
             >
               {item.name}
               {item.path.startsWith("http") && (
@@ -116,7 +116,7 @@ const gitVersion = __GIT_VERSION__;
     </div>
   </div>
 
-  <p class="mb-16 text-white/80 text-center">
+  <p class="mb-16 text-[var(--color-text-secondary)] text-center">
     version: {gitVersion} @ {buildTimestamp}
   </p>
 </div>
@@ -126,7 +126,7 @@ const gitVersion = __GIT_VERSION__;
   footer {
     position: relative;
     overflow: hidden;
-    background: var(--color-footer-bg, #0a0003);
+    background: var(--color-footer-bg);
   }
 
   .footer-inner {
@@ -147,16 +147,16 @@ const gitVersion = __GIT_VERSION__;
   }
 
   .footer-title-ep {
-    color: #fff;
+    color: var(--color-text);
   }
 
   .footer-title-year {
-    color: var(--color-footer-red, #d4003a);
+    color: var(--color-footer-red);
   }
 
   .footer-subtitle {
     font-size: 1rem;
-    color: var(--color-footer-text-muted, rgba(255,255,255,0.70));
+    color: var(--color-footer-text-muted);
     margin-bottom: 3rem;
     letter-spacing: 0.1em;
   }
@@ -176,7 +176,7 @@ const gitVersion = __GIT_VERSION__;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
-    border-top: 3px solid var(--color-footer-gray, #222);
+    border-top: 3px solid var(--color-footer-gray);
     padding: 2rem 0;
     margin: 1rem 0;
   }
@@ -185,7 +185,7 @@ const gitVersion = __GIT_VERSION__;
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
-    color: var(--color-footer-accent, #f0c040);
+    color: var(--color-text);
     margin-bottom: 1rem;
   }
 
@@ -200,12 +200,12 @@ const gitVersion = __GIT_VERSION__;
 
   .footer-links a {
     font-size: 1.1rem;
-    color: var(--color-footer-text-secondary, rgba(255,255,255,0.78));
+    color: var(--color-footer-text-secondary);
     text-decoration: none;
   }
 
   .footer-links a:hover {
-    color: #fff;
+    color: var(--color-text);
     text-decoration: underline;
   }
 

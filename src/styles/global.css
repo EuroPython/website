@@ -72,7 +72,7 @@ body {
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:focus {
-  outline: 4px solid #0073e6;
+  outline: 4px solid oklch(0.55 0.18 250.4); /* #0073e6 */
   outline-offset: 5px;
 }
 
@@ -82,12 +82,12 @@ body {
   width: 100%;
   height: auto;
   border-width: 4px;
-  border-color: white;
+  border-color: var(--color-white);
   border-style: solid;
   border-radius: 0.5rem;
   box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    0 10px 15px -3px oklch(0 0 0 / 0.1),
+    0 4px 6px -2px oklch(0 0 0 / 0.05);
 }
 
 .prose .no-border img {

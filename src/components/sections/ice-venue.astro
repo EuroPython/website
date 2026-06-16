@@ -7,7 +7,7 @@ import Display from "@ui/Display.astro";
   <div class="ice-venue-inner">
 
     <div class="ice-venue-left">
-      <Display id="ice-venue" span="CONGRESS CENTRE" spanColor="var(--color-cta-red, #d62020)" subtitle="Opened in 2014, ICE Kraków is a state-of-the-art congress centre located directly opposite the iconic Wawel Castle, right on the banks of the Vistula river. The main conference (13–17 July) will be held here.">ICE<br>KRAKÓW</Display>
+      <Display id="ice-venue" span="CONGRESS CENTRE" spanColor="var(--color-cta-red)" subtitle="Opened in 2014, ICE Kraków is a state-of-the-art congress centre located directly opposite the iconic Wawel Castle, right on the banks of the Vistula river. The main conference (13–17 July) will be held here.">ICE<br>KRAKÓW</Display>
       <div class="ice-venue-cta-row">
         <a href="https://www.google.com/maps/place/ICE+Krak%C3%B3w+Congress+Centre/@50.0485,19.9355,17z/" class="ice-venue-map-link" target="_blank" rel="noopener">Google Maps</a>
         <a href="https://www.openstreetmap.org/?mlat=50.0485&mlon=19.9355#map=17/50.0485/19.9355" class="ice-venue-map-link" target="_blank" rel="noopener">OpenStreetMap</a>
@@ -40,7 +40,7 @@ import Display from "@ui/Display.astro";
 
 
 :global(.ice-venue-section) {
-    background: var(--color-bg-dark, #0a0a1a);
+    background: var(--color-bg-dark);
     scroll-margin-top: 60px;
   }
 
@@ -49,8 +49,8 @@ import Display from "@ui/Display.astro";
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(214,32,32,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(180,20,20,0.06) 0%, transparent 55%);
+      radial-gradient(ellipse 80% 60% at 10% 50%, oklch(0.567 0.214 25.9 / 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, oklch(0.491 0.191 28.1 / 0.06) 0%, transparent 55%); /* #b41414 */
   .ice-venue-bg {
   }
 
@@ -81,9 +81,9 @@ import Display from "@ui/Display.astro";
     align-items: center;
     gap: 0.4rem;
     padding: 0.75rem 1.4rem;
-    border: 1px dashed rgba(214,32,32,0.3);
+    border: 1px dashed oklch(0.567 0.214 25.9 / 0.3);
     border-radius: 2px;
-    color: var(--color-cta-red, #d62020);
+    color: var(--color-cta-red);
 
     font-weight: 600;
     font-size: 1rem;
@@ -92,8 +92,9 @@ import Display from "@ui/Display.astro";
   }
 
   .ice-venue-map-link:hover {
-    color: #fff;
-    border-color: rgba(214,32,32,0.5);
+    color: var(--color-white);
+    background: var(--color-cta-red);
+    border-color: var(--color-cta-red);
   }
 
   .ice-venue-photo {
@@ -116,9 +117,9 @@ import Display from "@ui/Display.astro";
   .ice-venue-details li {
 
     font-size: 1.1rem;
-    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    color: var(--color-text-secondary);
     padding: 0.6rem 0;
-    border-bottom: 1px solid var(--color-surface-medium, rgba(255,255,255,0.08));
+    border-bottom: 1px solid var(--color-surface-medium);
   }
 
   .ice-venue-details li:last-child {
@@ -126,16 +127,16 @@ import Display from "@ui/Display.astro";
   }
 
   .ice-venue-details li strong {
-    color: var(--color-text-primary-dark, rgba(255,255,255,0.93));
+    color: var(--color-text-primary);
   }
 
   .ice-venue-sprints {
     grid-column: 1 / -1;
     margin-top: 0;
     padding: 1rem 1.2rem;
-    border: 1px dashed rgba(214,32,32,0.2);
+    border: 1px dashed oklch(0.567 0.214 25.9 / 0.2);
     border-radius: 2px;
-    background: rgba(214,32,32,0.04);
+    background: oklch(0.567 0.214 25.9 / 0.04);
     text-align: center;
   }
 
@@ -143,13 +144,13 @@ import Display from "@ui/Display.astro";
 
     font-weight: 500;
     font-size: 1.4rem;
-    color: var(--color-cta-red, #d62020);
+    color: var(--color-cta-red);
     margin-bottom: 0.4rem;
   }
 
   .ice-venue-sprints p {
     font-size: 1.1rem;
-    color: var(--color-text-faint-dark, rgba(255,255,255,0.60));
+    color: var(--color-text-faint);
     margin: 0;
   }
 

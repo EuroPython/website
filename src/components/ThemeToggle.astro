@@ -26,7 +26,7 @@ const { class: className = "" } = Astro.props;
     cursor: pointer;
     padding: 0.45rem;
     border-radius: 4px;
-    color: rgba(255,255,255,0.78);
+    color: var(--color-text-secondary);
     transition: color 0.2s, background 0.2s;
     display: flex;
     align-items: center;
@@ -34,17 +34,17 @@ const { class: className = "" } = Astro.props;
   }
 
   .theme-toggle:hover {
-    color: #fff;
-    background: rgba(255,255,255,0.1);
+    color: var(--color-text);
+    background: var(--color-border);
   }
 
   :global(.light) .theme-toggle {
-    color: #1a1a2e;
+    color: oklch(0.228 0.038 282.9); /* #1a1a2e */
   }
 
   :global(.light) .theme-toggle:hover {
-    color: #1a1a2e;
-    background: rgba(0,0,0,0.06);
+    color: oklch(0.228 0.038 282.9); /* #1a1a2e */
+    background: oklch(0 0 0 / 0.06);
   }
 
   .theme-toggle svg {

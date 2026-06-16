@@ -11,107 +11,66 @@
   box-sizing: border-box;
 }
 
+/* NOTE: The --ep-* palette is now defined centrally in tailwind.css
+   as aliases to the semantic role tokens (so it flips with the
+   theme). Only the few --ep-* values that are NOT part of the
+   semantic system (decorative one-offs used solely by the schedule
+   selectors below) are declared here, in oklch. */
 :root {
-  /* Core brand */
-  /* ========== */
-  --ep-bg: #080002;
-  --ep-red: #d4003a;
-  --ep-red-on-dark: #ff1a4a;
-  --ep-indigo: #4a0018;
-  --ep-magenta: #800020;
-  --ep-accent: #f0c040;
-  --ep-white: #ffffff;
-  --ep-cream: #fff5f0;
-  --ep-dark2: #0e0004;
-  --ep-dark3: #0a0003;
+  /* Theme-constant decorative one-offs */
+  --ep-dark2: oklch(0.13 0.02 18.8); /* #0e0004 scrollbar track */
+  --ep-dark3: oklch(0.13 0.024 18.8); /* #0a0003 */
+  --ep-info: oklch(0.72 0.099 232.7); /* #5ab0e0 */
+  --ep-cta-text: oklch(0.2 0.03 256.4); /* #0d1a2a */
+  --ep-cta-text-warm: oklch(0.94 0.008 67.7); /* #f0ede8 */
+  --ep-gray-ee: oklch(0.949 0 0); /* #eeeeee */
+  --ep-gray-88: oklch(0.629 0 0); /* #888888 */
+  --ep-gray-37: oklch(0.373 0.027 257.9); /* #374151 */
+  --ep-gray-22: oklch(0.279 0 0); /* #222222 */
+  --ep-red-f0: oklch(0.633 0.211 23.6); /* #f04040 */
+  --ep-red-cc: oklch(0.553 0.176 24.5); /* #cc3030 */
+  --ep-green-light: oklch(0.793 0.166 146.6); /* #6fd66f */
+  --ep-red-light: oklch(0.64 0.121 20.7); /* #e07070 */
+  --ep-green-1a: oklch(0.43 0.105 150.4); /* #1a5c2a */
+  --ep-bg-card: oklch(0.27 0.07 5.9); /* #3d1a2a */
 
-  /* RGB channel triples (for composable rgba) */
-  /* ========================================= */
-  --ep-accent-rgb: 240, 192, 64;
-  --ep-info: #5ab0e0;
-  --ep-info-rgb: 90, 176, 224;
-  --ep-w: 255, 255, 255;
+  /* Schedule room bg — flips with theme via light-theme.css */
+  --ep-sched-room-bg: oklch(0.32 0.06 264.4); /* #1e3456 */
 
-  /* White text levels */
-  /* ================= */
-  --ep-text-primary: rgba(255, 255, 255, 0.93);
-  --ep-text-secondary: rgba(255, 255, 255, 0.78);
-  --ep-text-muted: rgba(255, 255, 255, 0.7);
-  --ep-text-faint: rgba(255, 255, 255, 0.6);
+  /* Footer gradient stops (dark theme) */
+  --ep-footer-g1: oklch(0.21 0.04 264.6); /* #0c1628 */
+  --ep-footer-g2: oklch(0.29 0.07 263.9); /* #142744 */
+  --ep-footer-g3: oklch(0.26 0.06 286.4); /* #1a1a3a */
+  --ep-footer-g4: oklch(0.24 0.05 266.4); /* #0f1a2e */
 
-  /* White decorative (borders, surfaces) */
-  /* ==================================== */
-  --ep-border: rgba(255, 255, 255, 0.1);
-  --ep-border-strong: rgba(255, 255, 255, 0.15);
-  --ep-border-bright: rgba(255, 255, 255, 0.25);
-  --ep-surface-faint: rgba(255, 255, 255, 0.03);
-  --ep-surface-subtle: rgba(255, 255, 255, 0.05);
-  --ep-surface-medium: rgba(255, 255, 255, 0.08);
+  /* Schedule decorative one-offs (dark theme; light overrides in
+     light-theme.css). These flip so the schedule chrome matches the
+     active theme instead of staying navy/dark in light mode. */
+  --ep-session-hover-bg: oklch(0.24 0.05 266.4); /* #0f1a2e */
+  --ep-beginner-stripe: oklch(0.66 0.18 145 / 0.2); /* rgba(50,180,50,.2) */
+  --ep-advanced-stripe: oklch(0.55 0.18 25 / 0.2); /* rgba(200,50,50,.2) */
+  --ep-break-bg: oklch(0.75 0.15 70 / 0.06); /* rgba(255,150,0,.06) */
+  --ep-break-border: oklch(0.75 0.15 70 / 0.18); /* rgba(255,150,0,.18) */
+  --ep-day-end-bg: oklch(0.34 0.03 266); /* #2d3548 */
+  --ep-day-end-text: oklch(1 0 0 / 0.55);
 
-  /* Black shadows */
-  /* ============= */
-  --ep-black-75: rgba(0, 0, 0, 0.75);
-  --ep-black-70: rgba(0, 0, 0, 0.7);
-  --ep-black-50: rgba(0, 0, 0, 0.5);
-  --ep-black-40: rgba(0, 0, 0, 0.4);
-  --ep-black-30: rgba(0, 0, 0, 0.3);
-  --ep-black-15: rgba(0, 0, 0, 0.15);
+  /* Schedule chrome: sticky header / posters / room-change panels */
+  --ep-sched-chrome-bg: var(--color-hero-primary); /* dark navy */
+  --ep-sched-chrome-text: oklch(1 0 0 / 0.55); /* muted light */
 
-  /* CTA red gradient */
-  /* ================ */
-  --ep-cta-red: #d62020;
-  --ep-cta-red-dark: #8a0020;
-  --ep-cta-mid: #a8002d;
-  --ep-cta-end: #700020;
+  /* Session level pills — dark theme: translucent tint + colored ink.
+     (Light theme makes these solid; see light-theme.css.) */
+  --ep-level-beginner-bg: oklch(0.654 0.196 142.5 / 0.2);
+  --ep-level-beginner-text: var(--color-session-beginner);
+  --ep-level-intermediate-bg: var(--color-surface-medium);
+  --ep-level-intermediate-text: var(--color-text-muted);
+  --ep-level-advanced-bg: oklch(0.521 0.196 27.5 / 0.2);
+  --ep-level-advanced-text: var(--color-session-advanced);
 
-  /* CTA text on colored buttons */
-  /* =========================== */
-  --ep-cta-text: #0d1a2a;
-  --ep-cta-text-warm: #f0ede8;
-
-  /* Grays */
-  /* ===== */
-  --ep-gray-ee: #eeeeee;
-  --ep-gray-88: #888888;
-  --ep-gray-37: #374151;
-  --ep-gray-22: #222222;
-
-  /* Red / green accents */
-  /* =================== */
-  --ep-red-f0: #f04040;
-  --ep-red-cc: #cc3030;
-  --ep-green-2e: #2ecc71;
-  --ep-green-25: #25a85d;
-  --ep-green-light: #6fd66f;
-  --ep-red-light: #e07070;
-  --ep-green-1a: #1a5c2a;
-
-  /* Schedule room bg */
-  /* ================ */
-  --ep-sched-room-bg: #1e3456;
-
-  /* Section backgrounds */
-  /* =================== */
-  --ep-bg-section: #080f1a;
-  --ep-bg-section-alt: #070b14;
-  --ep-bg-dark: #0a0a1a;
-  --ep-bg-card: #3d1a2a;
-
-  /* Footer gradient */
-  /* =============== */
-  --ep-footer-g1: #0c1628;
-  --ep-footer-g2: #142744;
-  --ep-footer-g3: #1a1a3a;
-  --ep-footer-g4: #0f1a2e;
-
-  /* Overlay */
-  /* ======= */
-  --ep-overlay-dark: rgba(10, 10, 20, 0.95);
-
-  /* Links */
-  /* ===== */
-  --ep-link-color: var(--ep-accent);
-  --ep-link-hover: var(--ep-white);
+  /* Note / info box — dark theme: faint amber tint + light ink. */
+  --ep-note-bg: oklch(0.831 0.142 84.4 / 0.08);
+  --ep-note-border: oklch(0.831 0.142 84.4 / 0.2);
+  --ep-note-text: var(--color-text-secondary);
 }
 
 /* Dark theme base styles */
@@ -250,7 +209,7 @@ body.ep2026-theme {
 
 .ep-session:hover {
   border-color: var(--ep-accent);
-  background: #0f1a2e !important;
+  background: var(--ep-session-hover-bg) !important;
   z-index: 10;
   transition:
     border-color 0.1s ease-in-out,
@@ -308,8 +267,8 @@ body.ep2026-theme {
       -45deg,
       transparent,
       transparent 4px,
-      rgba(50, 180, 50, 0.2) 4px,
-      rgba(50, 180, 50, 0.2) 6px
+      var(--ep-beginner-stripe) 4px,
+      var(--ep-beginner-stripe) 6px
     ),
     var(--ep-surface-subtle);
 }
@@ -320,8 +279,8 @@ body.ep2026-theme {
       -45deg,
       transparent,
       transparent 4px,
-      rgba(200, 50, 50, 0.2) 4px,
-      rgba(200, 50, 50, 0.2) 6px
+      var(--ep-advanced-stripe) 4px,
+      var(--ep-advanced-stripe) 6px
     ),
     var(--ep-surface-subtle);
 }
@@ -332,8 +291,8 @@ body.ep2026-theme {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(255, 150, 0, 0.06);
-  border: 2px solid rgba(255, 150, 0, 0.18);
+  background: var(--ep-break-bg);
+  border: 2px solid var(--ep-break-border);
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
   font-family: "Inter Tight", system-ui, sans-serif;
@@ -351,10 +310,10 @@ body.ep2026-theme {
 }
 
 .ep-break.day-end {
-  background: #2d3548;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--ep-day-end-bg);
+  border: 1px solid var(--ep-surface-medium);
   border-radius: 4px;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--ep-day-end-text);
   font-size: 0.9rem;
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
@@ -366,7 +325,7 @@ body.ep2026-theme {
   text-align: center;
   border: 2px solid var(--ep-accent);
   border-radius: 6px;
-  background: rgba(var(--ep-accent-rgb), 0.04);
+  background: oklch(0.831 0.142 84.4 / 0.04);
 }
 
 .ep-posters h2 {
@@ -415,11 +374,11 @@ body.ep2026-theme {
 
 /* Note / info box */
 .ep-note {
-  background: rgba(var(--ep-accent-rgb), 0.08);
-  border: 1px solid rgba(var(--ep-accent-rgb), 0.2);
+  background: var(--ep-note-bg);
+  border: 1px solid var(--ep-note-border);
   border-radius: 6px;
   padding: 0.8rem 1rem;
-  color: var(--ep-text-secondary);
+  color: var(--ep-note-text);
   font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 0.95rem;
 }

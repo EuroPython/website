@@ -71,18 +71,18 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
       <p class="prog-topics-label">More than just talks</p>
       <p class="prog-events-desc">EuroPython is a full week of community — from dedicated community days and social events to open spaces, workshops, and sprints.</p>
       <div class="prog-events-list">
-        <a href="/programme/#beginners-day" class="prog-event-btn" style="--event-color: #3ab8ff">Beginners' Day</a>
-        <a href="/programme/#open-spaces" class="prog-event-btn" style="--event-color: #f0c040">Open Spaces</a>
-        <a href="/programme/#lightning-talks" class="prog-event-btn" style="--event-color: #af6ae0">Lightning Talks</a>
-        <a href="/programme/#pyladies" class="prog-event-btn" style="--event-color: #d42027">PyLadies Events</a>
-        <a href="/programme/#orgsummit" class="prog-event-btn" style="--event-color: #2ecc71">Organisers Summit</a>
-        <a href="/programme/#lang-summit" class="prog-event-btn" style="--event-color: #3c78c8">Language Summit</a>
-        <a href="/programme/#rust-summit" class="prog-event-btn" style="--event-color: #de5833">Rust Summit</a>
-        <a href="/programme/#pkg-summit" class="prog-event-btn" style="--event-color: #cc9900">Packaging Summit</a>
-        <a href="/programme/#wasm-summit" class="prog-event-btn" style="--event-color: #7a4e9e">WASM Summit</a>
-        <a href="/participate/#tickets" class="prog-event-btn" style="--event-color: #f0c040">Social Event</a>
-        <a href="/participate/#tickets" class="prog-event-btn" style="--event-color: #f0c040">Speaker Dinner</a>
-        <a href="/participate/#volunteering" class="prog-event-btn" style="--event-color: #f0c040">Volunteering</a>
+        <a href="/programme/#beginners-day" class="prog-event-btn" style="--event-color: oklch(0.741 0.143 240.5) /* #3ab8ff */">Beginners' Day</a>
+        <a href="/programme/#open-spaces" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Open Spaces</a>
+        <a href="/programme/#lightning-talks" class="prog-event-btn" style="--event-color: oklch(0.638 0.182 305.0) /* #af6ae0 */">Lightning Talks</a>
+        <a href="/programme/#pyladies" class="prog-event-btn" style="--event-color: var(--color-pyladies)">PyLadies Events</a>
+        <a href="/programme/#orgsummit" class="prog-event-btn" style="--event-color: var(--color-green-2e)">Organisers Summit</a>
+        <a href="/programme/#lang-summit" class="prog-event-btn" style="--event-color: oklch(0.566 0.137 256.0) /* #3c78c8 */">Language Summit</a>
+        <a href="/programme/#rust-summit" class="prog-event-btn" style="--event-color: oklch(0.640 0.180 38.0) /* #de5833 */">Rust Summit</a>
+        <a href="/programme/#pkg-summit" class="prog-event-btn" style="--event-color: oklch(0.685 0.150 86.0) /* #cc9900 */">Packaging Summit</a>
+        <a href="/programme/#wasm-summit" class="prog-event-btn" style="--event-color: oklch(0.473 0.146 304.0) /* #7a4e9e */">WASM Summit</a>
+        <a href="/participate/#tickets" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Social Event</a>
+        <a href="/participate/#tickets" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Speaker Dinner</a>
+        <a href="/participate/#volunteering" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Volunteering</a>
       </div>
     </div>
 
@@ -117,7 +117,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
 
   .prog-section {
-    background: var(--color-section-bg-alt, #070b14);
+    background: var(--color-section-bg-alt);
   }
 
   .prog-section-header {
@@ -131,7 +131,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
   .prog-topics-label {
     font-size: 1.4rem;
-    color: var(--color-cream, #fff5f0);
+    color: var(--color-text);
     margin-top: 1rem;
     margin-bottom: 1.2rem;
     text-align: center;
@@ -169,19 +169,19 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
   .prog-card-date {
     padding: 1.8rem 1.4rem;
-    border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-bottom: 1px dashed var(--color-border);
   }
 
   .prog-card-date-main {
     font-size: 1.55rem;
-    color: var(--color-cream, #fff5f0);
+    color: var(--color-text);
     margin-bottom: 0.3rem;
     line-height: 1.2;
   }
 
   .prog-card-date-days {
     font-size: 1.1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    color: var(--color-text-muted);
   }
 
   .prog-card-body {
@@ -191,7 +191,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   .prog-card-title {
     font-size: 1.44rem;
     font-weight: 700;
-    color: var(--color-accent, #f0c040);
+    color: var(--color-accent-themed);
     margin-bottom: 0.7rem;
     line-height: 1.2;
     letter-spacing: 0.03em;
@@ -204,7 +204,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
   .prog-card-desc {
     font-size: 1.1rem;
-    color: var(--color-text-primary-dark, rgba(255,255,255,0.93));
+    color: var(--color-text-primary);
     line-height: 1.65;
     padding: 0.5rem 0;
     margin: 0;
@@ -213,10 +213,10 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   .prog-card-btn {
     display: inline-block;
     padding: 0.6rem 1.5rem;
-    border: 1px solid var(--color-accent, #f0c040);
+    border: 1px solid var(--color-accent-themed);
     border-radius: 2px;
-    color: var(--color-section-bg, #080f1a);
-    background: var(--color-accent, #f0c040);
+    color: var(--color-on-accent);
+    background: var(--color-accent-themed);
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
@@ -242,10 +242,10 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   .topic-tag {
     font-weight: 500;
     font-size: 1.1rem;
-    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    color: var(--color-text-secondary);
     text-decoration: none;
-    background: var(--color-surface-medium, rgba(255,255,255,0.08));
-    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    background: var(--color-surface-medium);
+    border: 1px dashed var(--color-border);
     border-radius: 2px;
     padding: 0.35em 1.1em;
     transition: background 0.15s, color 0.15s;
@@ -259,9 +259,9 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
   .topic-tag:hover {
     opacity: 1;
-    background: var(--color-accent, #f0c040);
-    color: var(--color-section-bg, #080f1a);
-    border-color: var(--color-accent, #f0c040);
+    background: var(--color-accent-themed);
+    color: var(--color-on-accent);
+    border-color: var(--color-accent-themed);
   }
 
   .prog-keynoters {
@@ -273,7 +273,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
     margin-top: 1.5rem;
-    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border: 1px dashed var(--color-border);
     border-radius: 2px;
     overflow: hidden;
   }
@@ -297,7 +297,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
   .prog-events-desc {
     font-size: 1.1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    color: var(--color-text-muted);
     margin-bottom: 1.5rem;
     max-width: 560px;
     margin-left: auto;

@@ -37,7 +37,7 @@ import SearchComponent from "astro-pagefind/components/Search";
 .search-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: var(--color-scrim-70);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
@@ -47,20 +47,20 @@ import SearchComponent from "astro-pagefind/components/Search";
   width: 100%;
   max-width: 680px;
   margin: 0 1.5rem;
-  background: #080f1a;
-  border: 1px solid rgba(100,160,255,0.2);
+  background: var(--color-section-bg);
+  border: 1px solid oklch(0.708 0.153 259.2 / 0.2); /* #64a0ff */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+  box-shadow: 0 16px 48px var(--color-scrim-50);
 }
 
 /* ── Pagefind overrides (use :global because .pagefind-ui elements are rendered by external SearchComponent, not this component) ── */
 .search-modal-content :global(.pagefind-ui) {
   --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: #fff5f0;
-  --pagefind-ui-text: rgba(255,255,255,0.78);
+  --pagefind-ui-primary: var(--color-cream);
+  --pagefind-ui-text: var(--color-text-secondary);
   --pagefind-ui-background: transparent;
-  --pagefind-ui-border: rgba(255,255,255,0.10);
+  --pagefind-ui-border: var(--color-border);
   --pagefind-ui-border-width: 1px;
   --pagefind-ui-border-radius: 8px;
   --pagefind-ui-image-border-radius: 4px;
@@ -73,21 +73,21 @@ import SearchComponent from "astro-pagefind/components/Search";
   width: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
-  color: #ffffff;
+  color: var(--color-text);
   background: transparent !important;
   border: none !important;
-  border-bottom: 1px solid rgba(255,255,255,0.10) !important;
+  border-bottom: 1px solid var(--color-border) !important;
   outline: none;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
 .search-modal-content :global(.pagefind-ui__search-input)::placeholder {
-  color: rgba(255,255,255,0.60);
+  color: var(--color-text-faint);
 }
 
 .search-modal-content :global(.pagefind-ui__search-input:focus) {
-  border-bottom-color: #f0c040 !important;
+  border-bottom-color: var(--color-accent) !important;
 }
 
 /* Hide pagefind's clear button */
@@ -105,7 +105,7 @@ import SearchComponent from "astro-pagefind/components/Search";
 .search-modal-content :global(.pagefind-ui__result) {
   display: block;
   padding: 0.8rem 1.4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--color-surface-faint);
   text-decoration: none;
   cursor: pointer;
   transition: background 0.12s;
@@ -117,7 +117,7 @@ import SearchComponent from "astro-pagefind/components/Search";
 
 .search-modal-content :global(.pagefind-ui__result:hover),
 .search-modal-content :global(.pagefind-ui__result[data-selected]) {
-  background: rgba(100,160,255,0.1);
+  background: oklch(0.708 0.153 259.2 / 0.1); /* #64a0ff */
 }
 
 /* Result link */
@@ -125,27 +125,27 @@ import SearchComponent from "astro-pagefind/components/Search";
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #fff5f0;
+  color: var(--color-cream);
   text-decoration: none;
 }
 
 .search-modal-content :global(.pagefind-ui__result-link:hover) {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 /* Excerpt */
 .search-modal-content :global(.pagefind-ui__result-excerpt) {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  color: rgba(255,255,255,0.70);
+  color: var(--color-text-muted);
   margin-top: 0.15rem;
   line-height: 1.5;
 }
 
 /* Highlighted search terms */
 .search-modal-content :global(.pagefind-ui__result) mark {
-  background: rgba(240,192,64,0.2);
-  color: #f0c040;
+  background: oklch(0.831 0.142 84.4 / 0.2);
+  color: var(--color-accent);
   padding: 0.1em 0.2em;
   border-radius: 2px;
 }
@@ -153,7 +153,7 @@ import SearchComponent from "astro-pagefind/components/Search";
 /* Status message */
 .search-modal-content :global(.pagefind-ui__message) {
   font-family: 'Roboto', sans-serif;
-  color: rgba(255,255,255,0.60);
+  color: var(--color-text-faint);
   padding: 1.2rem 1.4rem;
   font-size: 1.1rem;
 }
@@ -163,7 +163,7 @@ import SearchComponent from "astro-pagefind/components/Search";
   content: "Type to search…";
   display: block;
   padding: 1.2rem 1.4rem;
-  color: rgba(255,255,255,0.60);
+  color: var(--color-text-faint);
   font-size: 1.1rem;
 }
 

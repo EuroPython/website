@@ -92,8 +92,8 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
 
 <style>
   .prog-keynoter {
-    border-right: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
-    border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-right: 1px dashed var(--color-border);
+    border-bottom: 1px dashed var(--color-border);
     overflow: hidden;
     transition: background 0.2s;
     list-style: none;
@@ -108,7 +108,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
   }
 
   .prog-keynoter:hover {
-    background: var(--color-surface-subtle, rgba(255,255,255,0.05));
+    background: var(--color-surface-subtle);
   }
 
   .prog-keynoter-link {
@@ -144,7 +144,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
   .prog-keynoter-photo--empty {
     width: 100%;
     height: 100%;
-    background: var(--color-section-bg, #080f1a);
+    background: var(--color-section-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,13 +153,13 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
   .prog-keynoter-placeholder {
     font-size: 5rem;
     opacity: 0.12;
-    color: #fff;
+    color: var(--color-white);
   }
 
   .prog-keynoter-photo--light {
     width: 100%;
     height: 100%;
-    background: var(--color-surface-medium, rgba(255,255,255,0.08));
+    background: var(--color-surface-medium);
   }
 
 
@@ -170,7 +170,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
 
   .prog-keynoter-name {
     font-size: 1.3rem;
-    color: var(--color-cream, #fff5f0);
+    color: var(--color-text);
     margin-bottom: 0.3rem;
     line-height: 1.2;
   }
@@ -179,7 +179,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
 
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-accent, #f0c040);
+    color: var(--color-accent-themed);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-bottom: 0.8rem;
@@ -188,7 +188,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
   .prog-keynoter-bio {
 
     font-size: 1.1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    color: var(--color-text-muted);
     line-height: 1.6;
     margin: 0;
   }
@@ -202,7 +202,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
   @media (max-width: 640px) {
     .prog-keynoter {
       border-right: none !important;
-      border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+      border-bottom: 1px dashed var(--color-border);
     }
     .prog-keynoter:last-child {
       border-bottom: none;

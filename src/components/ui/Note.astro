@@ -8,32 +8,36 @@ interface Props {
 
 const { type="info", title, icon } = Astro.props;
 
+// Theme-aware status colours: each variant uses a CSS variable for
+// background, text and border so the callout flips between dark and
+// light. Values are defined as --note-<variant>-* tokens in
+// tailwind.css (dark) and light-theme.css (light).
 const styles = {
   warning: {
-    bg: "bg-yellow-500/10",
-    text: "text-yellow-300",
-    border: "border-yellow-500/40",
+    bg: "bg-[var(--note-warning-bg)]",
+    text: "text-[var(--note-warning-text)]",
+    border: "border-[var(--note-warning-border)]",
     defaultIcon: "fas fa-exclamation-triangle fa-2x",
     defaultTitle: "Warning"
   },
   info: {
-    bg: "bg-blue-500/10",
-    text: "text-blue-300",
-    border: "border-blue-500/40",
+    bg: "bg-[var(--note-info-bg)]",
+    text: "text-[var(--note-info-text)]",
+    border: "border-[var(--note-info-border)]",
     defaultIcon: "fas fa-info-circle fa-2x",
     defaultTitle: "Info"
   },
   success: {
-    bg: "bg-green-500/10",
-    text: "text-green-300",
-    border: "border-green-500/40",
+    bg: "bg-[var(--note-success-bg)]",
+    text: "text-[var(--note-success-text)]",
+    border: "border-[var(--note-success-border)]",
     defaultIcon: "fas fa-check-circle fa-2x",
     defaultTitle: "Success"
   },
   error: {
-    bg: "bg-red-500/10",
-    text: "text-red-300",
-    border: "border-red-500/40",
+    bg: "bg-[var(--note-error-bg)]",
+    text: "text-[var(--note-error-text)]",
+    border: "border-[var(--note-error-border)]",
     defaultIcon: "fas fa-times-circle fa-2x",
     defaultTitle: "Error"
   }

@@ -58,7 +58,7 @@ import Section2 from "@ui/Section2.astro";
 
 
 :global(.krakow-section) {
-    background: var(--color-bg-dark, #0a0a1a);
+    background: var(--color-bg-dark);
     scroll-margin-top: 60px;
   }
 
@@ -67,8 +67,8 @@ import Section2 from "@ui/Section2.astro";
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(214,32,32,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(180,20,20,0.06) 0%, transparent 55%);
+      radial-gradient(ellipse 80% 60% at 10% 50%, oklch(0.567 0.214 25.9 / 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, oklch(0.491 0.191 28.1 / 0.06) 0%, transparent 55%); /* #b41414 */
 
 
   .krakow-gallery-container {
@@ -100,7 +100,7 @@ import Section2 from "@ui/Section2.astro";
     position: relative;
     overflow: hidden;
     border-radius: 2px;
-    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border: 1px dashed var(--color-border);
     transition: transform 0.3s ease;
     cursor: pointer;
   }
@@ -136,7 +136,7 @@ import Section2 from "@ui/Section2.astro";
   .image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, var(--color-black-30, rgba(0,0,0,0.3)), transparent 50%);
+    background: linear-gradient(to top, var(--color-scrim-30), transparent 50%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -155,7 +155,7 @@ import Section2 from "@ui/Section2.astro";
   .krakow-credit {
 
     font-size: 1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    color: var(--color-text-muted);
     margin-bottom: 1rem;
   }
 
@@ -167,9 +167,9 @@ import Section2 from "@ui/Section2.astro";
   .krakow-btn {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background: linear-gradient(to bottom, var(--color-green-2e, #2ecc71), var(--color-green-25, #25a85d));
-    color: var(--color-section-bg, #080f1a);
-    border: 1px solid var(--color-green-2e, #2ecc71);
+    background: linear-gradient(to bottom, var(--color-green-2e), var(--color-green-25));
+    color: var(--color-section-bg);
+    border: 1px solid var(--color-green-2e);
     border-radius: 2px;
     font-weight: 700;
     font-size: 1rem;

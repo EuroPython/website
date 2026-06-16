@@ -45,7 +45,7 @@ import Title from "@ui/Title.astro";
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    background-image: radial-gradient(circle, var(--color-surface-subtle, rgba(255,255,255,0.05)) 1px, transparent 1px);
+    background-image: radial-gradient(circle, var(--color-surface-subtle) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 
@@ -54,7 +54,7 @@ import Title from "@ui/Title.astro";
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
-    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border: 1px dashed var(--color-border);
     border-radius: 2px;
     overflow: hidden;
     margin-bottom: 2.5rem;
@@ -62,7 +62,7 @@ import Title from "@ui/Title.astro";
 
   .finaid-card {
     padding: 2.5rem 2rem;
-    border-right: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border-right: 1px dashed var(--color-border);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -74,12 +74,12 @@ import Title from "@ui/Title.astro";
 
   .finaid-title {
     font-size: 1.4rem;
-    color: var(--color-cream, #fff5f0);
+    color: var(--color-text);
   }
 
   .finaid-amount {
     font-size: 2.2rem;
-    color: var(--color-accent, #f0c040);
+    color: var(--color-accent-themed);
     letter-spacing: -0.02em;
     line-height: 1;
     margin: 0.25rem 0;
@@ -87,7 +87,7 @@ import Title from "@ui/Title.astro";
 
   .finaid-desc {
     font-size: 1rem;
-    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    color: var(--color-text-secondary);
     line-height: 1.65;
     flex: 1;
   }
@@ -98,15 +98,15 @@ import Title from "@ui/Title.astro";
     justify-content: space-between;
     gap: 1.5rem;
     padding: 1.5rem 2rem;
-    border: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10));
+    border: 1px dashed var(--color-border);
     border-radius: 2px;
-    background: var(--color-surface-medium, rgba(255,255,255,0.08));
+    background: var(--color-surface-medium);
     flex-wrap: wrap;
   }
 
   .finaid-footer p {
     font-size: 1rem;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    color: var(--color-text-muted);
     line-height: 1.5;
     margin: 0;
     flex: 1;
@@ -115,9 +115,9 @@ import Title from "@ui/Title.astro";
   .finaid-cta {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background: linear-gradient(to bottom, var(--color-cta-red, #d62020), #8a0020);
-    color: #fff;
-    border: 1px solid var(--color-cta-red, #d62020);
+    background: linear-gradient(to bottom, var(--color-cta-red), var(--color-cta-red-dark));
+    color: var(--color-white);
+    border: 1px solid var(--color-cta-red);
     border-radius: 2px;
     font-weight: 700;
     font-size: 1rem;
@@ -130,7 +130,7 @@ import Title from "@ui/Title.astro";
 
   @media (max-width: 900px) {
     .finaid-grid { grid-template-columns: 1fr; }
-    .finaid-card { border-right: none; border-bottom: 1px dashed var(--color-border-dark, rgba(255,255,255,0.10)); }
+    .finaid-card { border-right: none; border-bottom: 1px dashed var(--color-border); }
     .finaid-card:last-child { border-bottom: none; }
     .sec-footer-bar { flex-direction: column; text-align: center; }
   }

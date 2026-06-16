@@ -51,7 +51,7 @@ import Title from "@ui/Title.astro";
 
 
   :global(.ep25-section) {
-    background: var(--color-ep25-bg, #0b1b4d);
+    background: var(--color-ep25-bg);
   }
 
   :global(.ep25-section::before) {
@@ -61,8 +61,8 @@ import Title from "@ui/Title.astro";
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 10% 50%, rgba(255,212,59,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 80% at 90% 20%, rgba(255,212,59,0.05) 0%, transparent 55%);
+      radial-gradient(ellipse 80% 60% at 10% 50%, oklch(0.883 0.165 92.2 / 0.08) 0%, transparent 60%), /* #ffd43b */
+      radial-gradient(ellipse 50% 80% at 90% 20%, oklch(0.883 0.165 92.2 / 0.05) 0%, transparent 55%); /* #ffd43b */
   }
 
   .ep25-inner {
@@ -81,7 +81,7 @@ import Title from "@ui/Title.astro";
 
 
   .ep25-title span {
-    color: var(--color-ep25-yellow, #ffd43b);
+    color: var(--color-ep25-yellow);
   }
 
 
@@ -99,7 +99,7 @@ import Title from "@ui/Title.astro";
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 1px dashed rgba(255,212,59,0.18);
+    border: 1px dashed oklch(0.883 0.165 92.2 / 0.18); /* #ffd43b */
     padding: 1.5rem 1rem;
     min-height: 5rem;
     min-width: 0;
@@ -110,7 +110,7 @@ import Title from "@ui/Title.astro";
   }
 
   .ep25-box:hover {
-    background: rgba(255,212,59,0.08);
+    background: oklch(0.883 0.165 92.2 / 0.08); /* #ffd43b */
   }
 
   .ep25-dimmed {
@@ -124,13 +124,13 @@ import Title from "@ui/Title.astro";
 
   .ep25-box-year {
     font-size: clamp(1.25rem, 1.8vw, 1.5rem);
-    color: var(--color-ep25-yellow, #ffd43b);
+    color: var(--color-ep25-yellow);
     line-height: 1.2;
   }
 
   .ep25-box-city {
     font-size: clamp(1rem, 1.1vw, 1.1rem);
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.70));
+    color: var(--color-text-muted);
     margin-top: 0.2rem;
     line-height: 1.3;
   }
@@ -147,9 +147,9 @@ import Title from "@ui/Title.astro";
   .ep25-cta {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background: linear-gradient(to bottom, var(--color-ep25-yellow, #ffd43b), var(--color-ep25-yellow-dark, #dbb52e));
-    color: var(--color-ep25-bg, #0b1b4d);
-    border: 1px solid var(--color-ep25-yellow, #ffd43b);
+    background: linear-gradient(to bottom, var(--color-ep25-yellow), var(--color-ep25-yellow-dark));
+    color: var(--color-ep25-bg);
+    border: 1px solid var(--color-ep25-yellow);
     border-radius: 2px;
     font-weight: 700;
     font-size: 1.1rem;

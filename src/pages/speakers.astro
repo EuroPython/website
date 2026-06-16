@@ -63,21 +63,21 @@ const sortedSpeakers = speakers
   .filter-input {
     width: 100%;
     padding: 0.75rem 1rem;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: var(--color-surface-medium);
+    border: 1px solid var(--color-border-strong);
     border-radius: 2px;
-    color: #fff;
+    color: var(--color-text);
     font-size: 1rem;
     outline: none;
     transition: border-color 0.2s;
   }
 
   .filter-input::placeholder {
-    color: rgba(255,255,255,0.5);
+    color: oklch(1 0 0 / 0.5); /* rgba(255,255,255,0.5) */
   }
 
   .filter-input:focus {
-    border-color: var(--color-accent, #f0c040);
+    border-color: var(--color-accent);
   }
 
   .speakers-grid {

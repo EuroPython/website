@@ -6,14 +6,14 @@ export interface Props {
   anchorColor?: string;  // anchor link color, default matches color
 }
 
-const { id, subtitle, color = "#fff", anchorColor = color } = Astro.props;
+const { id, subtitle, color = "var(--color-text)", anchorColor = color } = Astro.props;
 ---
 
 <h2 class="sec-title" style={`color: ${color}`}>
   <slot />
   <sup class="sec-anchor"><a href={`#${id}`} style={`color: ${anchorColor}`} aria-label={`Jump to ${id}`}>#</a></sup>
 </h2>
-{subtitle && <p class="sec-subtitle" style={`color: var(--color-text-muted-dark, rgba(255,255,255,0.70))`}>{subtitle}</p>}
+{subtitle && <p class="sec-subtitle" style={`color: var(--color-text-muted)`}>{subtitle}</p>}
 
 <style>
   .sec-title {

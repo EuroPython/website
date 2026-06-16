@@ -120,7 +120,7 @@ const { title, description, toc=false } = Astro.props;
     font-size: 0.95rem;
     line-height: 1.5;
     padding: 1rem;
-    border-left: 1px solid #e0e0e0;
+    border-left: 1px solid oklch(0.907 0 89.9); /* #e0e0e0 */
   }
 
   #toc ul {
@@ -135,13 +135,13 @@ const { title, description, toc=false } = Astro.props;
 
   #toc li ul {
     margin-left: 1em;
-    border-left: 1px dashed #ddd;
+    border-left: 1px dashed oklch(0.898 0 89.9); /* #ddd */
     padding-left: 0.75em;
   }
 
   #toc a {
     display: block;
-    color: var(--color-text-muted-dark, rgba(255,255,255,0.6));
+    color: var(--color-text-muted);
     text-decoration: none;
     padding: 0.3em 0.5em;
     border-left: 1px solid transparent;
@@ -153,14 +153,14 @@ const { title, description, toc=false } = Astro.props;
   }
 
   #toc a:hover {
-    color: var(--color-accent, #f0c040);
-    border-left-color: var(--color-accent, #f0c040);
+    color: var(--color-accent-themed);
+    border-left-color: var(--color-accent-themed);
     padding-left: 0.8em;
   }
 
   #toc a.active {
-    color: var(--color-accent, #f0c040);
-    border-left: 1px solid var(--color-accent, #f0c040);
+    color: var(--color-accent-themed);
+    border-left: 1px solid var(--color-accent-themed);
     font-weight: 500;
   }
 

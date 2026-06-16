@@ -23,10 +23,13 @@ import Button from "@ui/Button.astro";
 </section>
 
 <style>
+  /* Dark (default) hero: bold dark banner with dragon art + red
+     gradient year. Flips to a light gradient banner in light mode
+     via the :global(.light) overrides at the bottom. */
   .hero-main {
     position: relative;
     min-height: 100vh;
-    background-color: var(--color-footer-bg, #0a0003);
+    background-color: var(--color-footer-bg);
     display: flex;
     align-items: center;
     padding: 6rem 2rem;
@@ -95,7 +98,7 @@ import Button from "@ui/Button.astro";
     font-family: var(--font-heading, 'Roboto', sans-serif);
     font-size: clamp(3rem, 6vw, 6rem);
     line-height: 0.85;
-    color: #fff;
+    color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: -0.03em;
     margin: 0;
@@ -107,7 +110,7 @@ import Button from "@ui/Button.astro";
     font-size: clamp(6rem, 12vw, 12rem);
     line-height: 0.82;
     letter-spacing: -0.08em;
-    background: radial-gradient(ellipse at top left, var(--color-cta-red, #d62020) 0%, #a8002d 55%, #700020 100%);
+    background: radial-gradient(ellipse at top left, var(--color-cta-red) 0%, var(--color-cta-mid) 55%, var(--color-cta-end) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,7 +120,7 @@ import Button from "@ui/Button.astro";
   .hero-intro {
     font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
     font-size: 1.3rem;
-    color: var(--color-text-secondary-dark, rgba(255,255,255,0.78));
+    color: var(--color-text-secondary);
     margin-top: 2rem;
     line-height: 1.6;
     max-width: 440px;
@@ -134,17 +137,17 @@ import Button from "@ui/Button.astro";
     font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
     font-size: 1.1rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--color-white);
     letter-spacing: 0.03em;
   }
 
   .hero-schedule span {
-    color: var(--color-accent, #f0c040);
+    color: var(--color-accent);
     font-weight: 700;
   }
 
   .hero-schedule a {
-    color: var(--color-accent, #f0c040);
+    color: var(--color-accent);
     font-weight: 700;
     text-decoration: none;
   }
@@ -162,22 +165,22 @@ import Button from "@ui/Button.astro";
     font-size: 1.3rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--color-white);
     background: none;
-    border: 3px solid var(--color-cta-red, #d62020);
+    border: 3px solid var(--color-cta-red);
     border-radius: 2px;
     padding: 1rem 2.5rem;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-    box-shadow: 0 0 20px rgba(214,32,32,0.3), inset 0 0 20px rgba(214,32,32,0.05);
+    box-shadow: 0 0 20px oklch(0.567 0.214 25.9 / 0.3), inset 0 0 20px oklch(0.567 0.214 25.9 / 0.05);
   }
 
   .hero-cta:hover {
-    background: var(--color-cta-red, #d62020);
-    color: #fff;
-    box-shadow: 0 0 50px rgba(214,32,32,0.6), inset 0 0 25px rgba(214,32,32,0.15);
+    background: var(--color-cta-red);
+    color: var(--color-white);
+    box-shadow: 0 0 50px oklch(0.567 0.214 25.9 / 0.6), inset 0 0 25px oklch(0.567 0.214 25.9 / 0.15);
   }
 
   .hero-cta-alt {
@@ -186,20 +189,20 @@ import Button from "@ui/Button.astro";
     font-size: 1.1rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-accent, #f0c040);
-    border: 3px solid var(--color-accent, #f0c040);
+    color: var(--color-accent);
+    border: 3px solid var(--color-accent);
     border-radius: 2px;
     padding: 0.9rem 2rem;
     text-decoration: none;
     display: inline-block;
     transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-    box-shadow: 0 0 16px rgba(240,192,64,0.2), inset 0 0 16px rgba(240,192,64,0.04);
+    box-shadow: 0 0 16px oklch(0.831 0.142 84.4 / 0.2), inset 0 0 16px oklch(0.831 0.142 84.4 / 0.04);
   }
 
   .hero-cta-alt:hover {
-    background: var(--color-accent, #f0c040);
-    color: var(--color-section-bg, #080f1a);
-    box-shadow: 0 0 40px rgba(240,192,64,0.5), inset 0 0 20px rgba(240,192,64,0.1);
+    background: var(--color-accent);
+    color: var(--color-section-bg);
+    box-shadow: 0 0 40px oklch(0.831 0.142 84.4 / 0.5), inset 0 0 20px oklch(0.831 0.142 84.4 / 0.1);
   }
 
   @media (max-width: 768px) {
@@ -217,5 +220,56 @@ import Button from "@ui/Button.astro";
       width: 140px;
       margin-bottom: 1rem;
     }
+  }
+
+  /* ── Light mode hero ──
+     Flip the banner to a soft light gradient with dark ink. The red
+     gradient year stays (reads great on light too). Amber accents
+     and white text shift to dark ink / brand blue for contrast. */
+  :global(.light) .hero-main {
+    background: linear-gradient(
+      135deg,
+      oklch(0.97 0.003 264) 0%,
+      oklch(0.945 0.004 264) 100%
+    );
+  }
+
+  :global(.light) .hero-heading {
+    color: var(--color-text);
+  }
+
+  :global(.light) .hero-intro {
+    color: var(--color-text-secondary);
+  }
+
+  :global(.light) .hero-schedule {
+    color: var(--color-text);
+  }
+
+  :global(.light) .hero-schedule span,
+  :global(.light) .hero-schedule a {
+    color: var(--color-blue);
+  }
+
+  :global(.light) .hero-cta {
+    color: var(--color-white);
+    background: var(--color-cta-red);
+    border-color: var(--color-cta-red);
+  }
+
+  :global(.light) .hero-cta:hover {
+    background: var(--color-cta-red);
+    color: var(--color-white);
+    filter: brightness(1.1);
+  }
+
+  :global(.light) .hero-cta-alt {
+    color: var(--color-blue);
+    border-color: var(--color-blue);
+  }
+
+  :global(.light) .hero-cta-alt:hover {
+    background: var(--color-blue);
+    color: var(--color-white);
   }
 </style>

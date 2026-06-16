@@ -1,186 +1,109 @@
-/* Light Theme Overrides */
-/* Applied when <html class="light"> */
+/* ============================================================
+   Light theme — thin override layer.
 
-/* ── Core variables ── */
+   The bulk of theming now happens automatically: components use
+   the semantic role tokens (--color-bg, --color-text,
+   --color-surface-*, --color-border, --color-button, …) which are
+   re-valued for .light in tailwind.css. Everything below is only
+   for cases the semantic tokens cannot reach:
+     1. Legacy --ep-* schedule values that need a light variant.
+     2. Third-party widget internals (pagefind) we don't control.
+     3. The intentionally always-dark starfield universe section.
+   No more per-component !important hex overrides.
+   ============================================================ */
+
 .light {
-  --color-body-background: #f5f6f8;
-  --color-text: #1a1a2e;
-  --color-section-bg: #f0f1f4;
-  --color-section-bg-alt: #e6e8ed;
-  --color-bg-dark: #ffffff;
-  --color-primary: #1a1a2e;
-  --color-primary-hover: #2d2d4a;
-  --color-surface-medium: rgba(0, 0, 0, 0.06);
-  --color-surface-subtle: rgba(0, 0, 0, 0.03);
-  --color-border-dark: rgba(0, 0, 0, 0.10);
-  --color-border-bright: rgba(0, 0, 0, 0.20);
-  --color-text-primary-dark: rgba(0, 0, 0, 0.87);
-  --color-text-secondary-dark: rgba(0, 0, 0, 0.65);
-  --color-text-muted-dark: rgba(0, 0, 0, 0.50);
-  --color-text-faint-dark: rgba(0, 0, 0, 0.35);
+  /* Schedule room header bg (legacy --ep-* one-off) */
+  --ep-sched-room-bg: oklch(0.945 0.004 264); /* #e6e8ed */
+  --ep-session-hover-bg: oklch(0.97 0.003 264); /* light hover */
+  --ep-day-end-bg: oklch(0.945 0.004 264);
+  --ep-day-end-text: oklch(0 0 0 / 0.55);
 
-  /* Schedule theme overrides */
-  --ep-bg: #ffffff;
-  --ep-white: #1a1a2e;
-  --ep-text-primary: rgba(0, 0, 0, 0.87);
-  --ep-text-secondary: rgba(0, 0, 0, 0.65);
-  --ep-text-muted: rgba(0, 0, 0, 0.50);
-  --ep-border: rgba(0, 0, 0, 0.10);
-  --ep-surface-subtle: rgba(0, 0, 0, 0.03);
-  --ep-surface-medium: rgba(0, 0, 0, 0.06);
-  --ep-sched-room-bg: #e6e8ed;
+  /* Schedule chrome flips to light surface + dark muted ink */
+  --ep-sched-chrome-bg: oklch(0.945 0.004 264); /* #e6e8ed */
+  --ep-sched-chrome-text: oklch(0 0 0 / 0.55);
+
+  /* Session level stripes: lighter, lower-alpha on light cards so the
+     diagonal hatch stays subtle instead of heavy. */
+  --ep-beginner-stripe: oklch(0.72 0.17 145 / 0.12);
+  --ep-advanced-stripe: oklch(0.6 0.2 25 / 0.1);
+
+  /* Session level pills — light theme: SOLID pastel chips (no
+     opacity). High lightness + low chroma backgrounds with darker
+     ink of the same hue for readable, low-saturation labels. */
+  --ep-level-beginner-bg: oklch(0.92 0.06 145); /* pastel green */
+  --ep-level-beginner-text: oklch(0.42 0.12 145); /* deep green ink */
+  --ep-level-intermediate-bg: oklch(0.92 0.004 264); /* pastel gray */
+  --ep-level-intermediate-text: oklch(0.4 0.005 264); /* deep gray ink */
+  --ep-level-advanced-bg: oklch(0.91 0.05 25); /* pastel red */
+  --ep-level-advanced-text: oklch(0.45 0.15 25); /* deep red ink */
+
+  /* Note / info box — light theme: clear amber callout with strong,
+     near-black warm ink for high contrast. */
+  --ep-note-bg: oklch(0.93 0.07 88); /* amber fill */
+  --ep-note-border: oklch(0.78 0.13 84); /* amber border */
+  --ep-note-text: oklch(0.25 0.04 70); /* near-black warm ink */
+
+  /* Status callouts (Note.astro) — light theme: soft tinted bg with
+     DARK coloured ink for strong contrast (no more light -300 text
+     on a faint tint). */
+  --note-info-bg: oklch(0.95 0.04 245);
+  --note-info-text: oklch(0.4 0.16 250);
+  --note-info-border: oklch(0.6 0.18 250);
+  --note-success-bg: oklch(0.95 0.05 150);
+  --note-success-text: oklch(0.4 0.13 152);
+  --note-success-border: oklch(0.62 0.16 150);
+  --note-warning-bg: oklch(0.95 0.06 88);
+  --note-warning-text: oklch(0.42 0.1 70);
+  --note-warning-border: oklch(0.75 0.13 84);
+  --note-error-bg: oklch(0.95 0.04 25);
+  --note-error-text: oklch(0.45 0.18 25);
+  --note-error-border: oklch(0.62 0.2 25);
+
+  /* Footer gradient stops → flatten to light surface */
+  --ep-footer-g1: oklch(0.97 0.003 264);
+  --ep-footer-g2: oklch(0.97 0.003 264);
+  --ep-footer-g3: oklch(0.945 0.004 264);
+  --ep-footer-g4: oklch(0.97 0.003 264);
 }
 
-/* ── Section text colors ── */
-.light .sec-wrap { color: var(--color-text, #1a1a2e) !important; }
-.light .sec-title { color: #1a1a2e !important; }
-.light .sec-title .sec-anchor a { color: #1a1a2e !important; }
-.light .sec-subtitle { color: rgba(0,0,0,0.60) !important; }
-
-/* ── Cards ── */
-.light .finaid-card,
-.light .prog-card,
-.light .partner-card,
-.light .speaker-card,
-.light .sprint-card,
-.light .testimonial-card,
-.light .ice-venue-details li,
-.light .connect-block,
-.light .news-card {
-  background: #ffffff !important;
-  border-color: rgba(0,0,0,0.10) !important;
+/* ── Pagefind search widget (3rd-party internals) ── */
+.light .pagefind-ui {
+  --pagefind-ui-primary: oklch(0.23 0.04 277);
+  --pagefind-ui-text: oklch(0.23 0.04 277);
+  --pagefind-ui-background: var(--color-white);
+  --pagefind-ui-border: oklch(0 0 0 / 0.1);
 }
 
-.light .finaid-card { color: var(--color-text) !important; }
-.light .finaid-title { color: #1a1a2e !important; }
-
-/* ── Buttons ── */
-.light .finaid-cta,
-.light .pyladies-cta,
-.light .orgsummit-cta,
-.light .euroscipy-cta,
-.light .prog-more-cta {
-  color: #fff !important;
+.light .search-modal-content {
+  background: var(--color-white);
 }
 
-.light .news-cta,
-.light .prog-card-btn {
-  background: #f0c040 !important;
-  border-color: #f0c040 !important;
-  color: #080f1a !important;
+.light .search-modal-content .pagefind-ui__search-input {
+  color: oklch(0.23 0.04 277);
+  border-bottom-color: oklch(0 0 0 / 0.1);
 }
 
-.light .prog-event-btn {
-  opacity: 0.7 !important;
+.light .search-modal-content .pagefind-ui__search-input::placeholder {
+  color: oklch(0 0 0 / 0.4);
 }
 
-/* ── Keynoters ── */
-.light .prog-keynoter-name { color: #1a1a2e !important; }
-.light .prog-keynoter-bio { color: rgba(0,0,0,0.65) !important; }
-.light .prog-keynoter { background: #ffffff !important; }
-
-/* ── Speakers ── */
-.light .speaker-name { color: #1a1a2e !important; }
-
-/* ── Programme ── */
-.light .prog-card-date-main { color: #1a1a2e !important; }
-.light .prog-card-desc { color: rgba(0,0,0,0.65) !important; }
-.light .prog-topics-label { color: #1a1a2e !important; }
-.light .topic-tag {
-  color: rgba(0,0,0,0.65) !important;
-  background: rgba(0,0,0,0.04) !important;
+.light .search-modal-content .pagefind-ui__result {
+  border-bottom-color: oklch(0 0 0 / 0.05);
 }
 
-/* ── Connect section ── */
-.light .connect-block-title { color: #1a1a2e !important; }
-.light .connect-newsletter-input {
-  background: rgba(0,0,0,0.04) !important;
-  color: #1a1a2e !important;
-  border-color: rgba(0,0,0,0.15) !important;
-}
-.light .connect-newsletter-input::placeholder {
-  color: rgba(0,0,0,0.40) !important;
+.light .search-modal-content .pagefind-ui__result-link {
+  color: oklch(0.23 0.04 277);
 }
 
-/* ── Hero ── */
-.light .hero-main {
-  background: linear-gradient(135deg, #f0f2f5 0%, #e6e8ed 100%) !important;
-}
-.light .hero-heading { color: #1a1a2e !important; }
-.light .hero-intro { color: rgba(0,0,0,0.65) !important; }
-.light .hero-schedule { color: #1a1a2e !important; }
-
-.light .hero-cta {
-  border-color: #d62020 !important;
-  color: #d62020 !important;
-}
-.light .hero-cta:hover {
-  background: #d62020 !important;
-  color: #fff !important;
+.light .search-modal-content .pagefind-ui__result-excerpt {
+  color: oklch(0 0 0 / 0.65);
 }
 
-.light .hero-cta-alt {
-  border-color: #1a56db !important;
-  color: #1a56db !important;
-}
-.light .hero-cta-alt:hover {
-  background: #1a56db !important;
-  color: #fff !important;
+.light .search-modal-content .pagefind-ui__message {
+  color: oklch(0 0 0 / 0.5);
 }
 
-/* ── Schedule ── */
-.light .ep-sched-section { background: #f5f6f8 !important; }
-.light .ep-sched-day-title { color: #1a1a2e !important; }
-.light .ep-session { background: #ffffff !important; }
-.light .ep-session h2,
-.light .ep-session-title { color: #1a1a2e !important; }
-.light .ep-session-meta { color: rgba(0,0,0,0.50) !important; }
-.light .ep-sched-tab { color: rgba(0,0,0,0.50) !important; }
-.light .ep-sched-tab.active {
-  color: #1a1a2e !important;
-  border-bottom-color: #1a56db !important;
+.light .search-modal-backdrop {
+  background: oklch(1 0 0 / 0.8);
 }
-.light .ep-legend {
-  background: rgba(0,0,0,0.03) !important;
-  border-color: rgba(0,0,0,0.10) !important;
-}
-.light .ep-break {
-  background: rgba(0,0,0,0.03) !important;
-  color: rgba(0,0,0,0.60) !important;
-}
-
-/* ── TOC ── */
-.light #toc a { color: rgba(0,0,0,0.60) !important; }
-.light #toc a:hover,
-.light #toc a.active { color: #1a56db !important; }
-
-/* ── Filter inputs ── */
-.light .filter-input {
-  background: rgba(0,0,0,0.04) !important;
-  color: #1a1a2e !important;
-  border-color: rgba(0,0,0,0.15) !important;
-}
-.light select {
-  background: #ffffff !important;
-  color: #1a1a2e !important;
-  border-color: rgba(0,0,0,0.15) !important;
-}
-
-/* ── Breadcrumbs ── */
-.light nav[aria-label="Breadcrumb"] a { color: #1a56db !important; }
-
-/* ── Footer ── */
-.light footer {
-  background: var(--color-section-bg, #f0f1f4) !important;
-}
-.light footer,
-.light footer * { color: #1a1a2e !important; }
-.light .footer-title-ep { color: #1a1a2e !important; }
-.light .footer-title-year { color: #d4003a !important; }
-.light .footer-col-title { color: #1a1a2e !important; }
-.light .footer-links a { color: rgba(0,0,0,0.65) !important; }
-.light .footer-links a:hover { color: #1a1a2e !important; }
-.light .footer-copy { color: rgba(0,0,0,0.50) !important; }
-
-/* ── Sponsors ── */
-.light .sponsors-section { background: #fff !important; color: #1a1a2e !important; }
