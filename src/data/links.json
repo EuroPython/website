@@ -121,6 +121,10 @@
           "path": "https://europython-society.org/"
         },
         {
+          "name": "Media Partners",
+          "path": "/media-partners"
+        },
+        {
           "name": "Community Partners",
           "path": "/community-partners"
         }
