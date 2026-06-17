@@ -47,12 +47,6 @@ const keynoters = defineCollection({
       tagline: z.string().optional(),
       image: image(),
       order: z.number(),
-      homepage: z.string().url().optional(),
-      mastodon_url: z.string().url().optional(),
-      bluesky_url: z.string().url().optional(),
-      twitter_url: z.string().url().optional(),
-      linkedin_url: z.string().url().optional(),
-      github_url: z.string().url().optional(),
     }),
 });
 
