@@ -16,7 +16,7 @@ across the globe.
 
 Her impact on open-source leadership is legendary: she is the current co-chair
 of the ACM Practitioner Board, was the previous vice-chair of the Python
-Software Foundation (PSF), and was the lead organizer of the very first PyCon
+Software Foundation (PSF), and was the lead organiser of the very first PyCon
 Africa.
 
 When she's not busy building the future of Python and AI, she is deeply

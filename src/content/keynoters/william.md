@@ -11,7 +11,7 @@ bluesky_url: https://bsky.app/profile/yossarian.net
 William Woodruff is a Member of Technical Staff at Astral, where he works on
 high-performance, secure tooling for the Python ecosystem. Prior to that he was
 an Engineering Director at Trail of Bits, where he was responsible for
-high-impact security contributions to open source ecosystems via the open source
+high-impact security contributions to open-source ecosystems via the open-source
 ecosystem security group.
 
 Outside of work, William is the primary maintainer of zizmor, a maintainer of

@@ -15,7 +15,7 @@ productivity.
 
 He served as Python's Benevolent Dictator For Life until 2019, guiding the
 language's design and evolution, and helping to shape one of the most
-influential open source communities in the world.
+influential open-source communities in the world.
 
 Guido has worked across academia and the private sector, including roles at
 Google, Dropbox, and Microsoft. He's been contributing to developer tools,
