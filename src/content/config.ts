@@ -50,6 +50,12 @@ const keynoters = defineCollection({
       bio: z.string().optional(),
       image: image().optional(),
       order: z.number(),
+      homepage: z.string().url().optional(),
+      mastodon_url: z.string().url().optional(),
+      bluesky_url: z.string().url().optional(),
+      twitter_url: z.string().url().optional(),
+      linkedin_url: z.string().url().optional(),
+      github_url: z.string().url().optional(),
     }),
 });
 
@@ -279,7 +285,9 @@ const jobs = defineCollection({
     salary: z.string().nullable(),
     tags: z.array(z.string()).nullable(),
     description: z.string().nullable(),
-    responsibilities: z.array(z.string()).nullable(),
+    responsibilities: z
+      .array(z.union([z.string(), z.record(z.array(z.string()))]))
+      .nullable(),
     min_requirements: z.array(z.string()).optional().nullable(),
     requirements: z.array(z.string()).nullable(),
     preferred: z.array(z.string()).optional().nullable(),
