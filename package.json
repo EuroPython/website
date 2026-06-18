@@ -26,7 +26,6 @@
     "astro-delete-unused-images": "^1.0.3",
     "astro-meta-tags": "^0.2.0",
     "astro-pagefind": "^1.6.0",
-<<<<<<< HEAD
     "clsx": "^2.1.1",
     "date-fns": "^4.4.0",
     "date-fns-tz": "^3.2.0",
