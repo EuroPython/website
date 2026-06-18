@@ -252,6 +252,7 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
     margin: 0 0 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--color-border);
+    scroll-margin-top: 80px;
   }
 
   .talk-topic-heading a {
@@ -427,5 +428,30 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
 
   input.addEventListener('input', filterCards);
   if (trackSelect) trackSelect.addEventListener('change', filterCards);
+
+  // Auto-filter from URL hash or query param
+  var currentHash = window.location.hash;
+  if (currentHash && currentHash.startsWith('#topic-')) {
+    // Find the heading element to extract track name
+    var headingEl = document.getElementById(currentHash.substring(1));
+    if (headingEl && trackSelect) {
+      var trackName = headingEl.textContent.replace(/^#\s*/, '').trim();
+      var options = trackSelect.options;
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].value === trackName) {
+          trackSelect.value = options[i].value;
+          filterCards();
+          break;
+        }
+      }
+    }
+  }
+
+  var urlParams = new URLSearchParams(window.location.search);
+  var trackParam = urlParams.get('track');
+  if (trackParam && trackSelect && !currentHash) {
+    trackSelect.value = trackParam;
+    filterCards();
+  }
 })();
 </script>

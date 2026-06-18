@@ -71,7 +71,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
       <p class="prog-topics-label">Conference Topics</p>
       <div class="topics-grid">
         {tracks.map((track) => (
-          <a href={`/sessions?track=${encodeURIComponent(track.data.name)}`} class="topic-tag">{track.data.name}</a>
+          <a href={`/talks#topic-${track.data.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`} class="topic-tag">{track.data.name}</a>
         ))}
       </div>
     </div>
