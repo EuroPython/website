@@ -1,4 +1,5 @@
 ---
+import CodeHeart from "@components/island/CodeHeart.svelte";
 import Speakers from "./speakers.astro";
 import { slugify } from "@utils/content";
 
@@ -31,6 +32,12 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
   class:list={["ep-session", session.level, slugify(session.sessionType)]}
   style={style}
 >
+  <CodeHeart
+    client:load
+    mini={true}
+    codeId={session.code}
+    title={session.title}
+  />
   <a href={sessionUrl} class="ep-session-title">{session.title}</a>
 
   {session.speakers && session.speakers.length > 0 && (
