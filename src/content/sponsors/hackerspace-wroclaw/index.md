@@ -12,7 +12,6 @@ description:
 socials:
   facebook: "https://www.facebook.com/HackerspaceWroclaw"
   mastodon: "https://mastodon.radio/@SP6HACK"
-  meetup: "https://www.meetup.com/pl-PL/hackerspace-wroc%C5%82aw/"
 logo_padding: 10px
 tier: Media Partners
 ---
