@@ -145,3 +145,4 @@ src/content/days
 
 # Local secrets (never commit)
 .env.local
+public/content

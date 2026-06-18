@@ -37,6 +37,39 @@ console.log(
   `\x1b[35m[EP]\x1b[0m Fast Build: \x1b[1m\x1b[34m${fastBuild}\x1b[0m`
 );
 
+import fs from "fs";
+import p from "path";
+
+function syncContentImages() {
+  function syncDir(srcDir, destDir) {
+    if (!fs.existsSync(srcDir)) return;
+    const entries = fs.readdirSync(srcDir, { withFileTypes: true });
+    for (const entry of entries) {
+      const srcPath = p.join(srcDir, entry.name);
+      const destPath = p.join(destDir, entry.name);
+      if (entry.isDirectory()) {
+        syncDir(srcPath, destPath);
+      } else if (
+        entry.isFile() &&
+        /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(entry.name)
+      ) {
+        fs.mkdirSync(p.dirname(destPath), { recursive: true });
+        fs.cpSync(srcPath, destPath, { force: true });
+      }
+    }
+  }
+
+  return {
+    name: "sync-content-images",
+    buildStart() {
+      console.log(
+        "\x1b[35m[EP]\x1b[0m Syncing images from src/content/ to public/content/..."
+      );
+      syncDir("src/content", "public/content");
+    },
+  };
+}
+
 function dontDie() {
   return {
     name: "dont-die",
@@ -88,7 +121,7 @@ export default defineConfig({
       },
     },
 
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(), syncContentImages()],
   },
   markdown: {
     remarkPlugins: [
