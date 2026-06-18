@@ -230,13 +230,26 @@ select {
     const days = daysContainer.querySelectorAll('.ep-sched-day');
     if (days.length === 0) return;
 
+    // en-CA gives us YYYY-MM-DD format
+    const today = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/Warsaw',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).format(new Date());
+
+    let defaultIndex = 0;
+    days.forEach(function(day, index) {
+      if (day.getAttribute('data-day') === today) defaultIndex = index;
+    });
+
     days.forEach(function(day, index) {
       const dayName = day.getAttribute('data-day') || 'day-' + index;
       const title = day.querySelector('.ep-sched-day-title');
       const label = title ? title.textContent.trim() : dayName;
 
       const tab = document.createElement('button');
-      tab.className = 'ep-sched-tab' + (index === 0 ? ' active' : '');
+      tab.className = 'ep-sched-tab' + (index === defaultIndex ? ' active' : '');
       tab.textContent = label;
       tab.setAttribute('data-day', dayName);
 
@@ -257,7 +270,6 @@ select {
       tabsContainer.appendChild(tab);
     });
 
-    // Show first day by default
-    if (days[0]) days[0].classList.add('active');
+    if (days[defaultIndex]) days[defaultIndex].classList.add('active');
   });
 </script>
