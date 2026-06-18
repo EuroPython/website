@@ -19,6 +19,10 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 
+const avatarUrl = typeof entry.data.avatar === 'string'
+  ? entry.data.avatar
+  : entry.data.avatar;
+
 const sessions = await getEntries(entry.data.submissions);
 
 function isUrl(str: string): boolean {
@@ -94,7 +98,7 @@ function getGitHosting(url: string): string | undefined {
                   <div class="flex items-start">
                     <div class="speaker-profile-photo border-4 border-white rounded-lg shadow-lg inline-block mb-10">
           <Image
-            src={entry.data.avatar}
+            src={avatarUrl}
             alt={entry.data.name}
             height={400}
             width={300}
