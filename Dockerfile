@@ -1,4 +1,4 @@
-FROM node:20-slim
+FROM node:22-slim
 
 RUN apt-get update && apt-get install -y make
 
@@ -7,11 +7,11 @@ ENV PATH="$PNPM_HOME:$PATH"
 
 RUN corepack enable
 
-RUN pnpm config set store-dir /home/node/.local/share/pnpm/store
-
 WORKDIR /app
 
 COPY Makefile package.json pnpm-lock.yaml ./
+
+RUN pnpm config set store-dir /home/node/.local/share/pnpm/store
 RUN make install
 
 RUN mkdir -p /app/src
