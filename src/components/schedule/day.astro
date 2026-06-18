@@ -349,7 +349,7 @@ posters.forEach((poster) => {
 });
 
 
-const date = parseISO(dayName);
+const date = parseISO(`${dayName}T12:00:00Z`);
 const dateText = format(date, "eeee d MMMM");
 
 
