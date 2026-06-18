@@ -4,6 +4,10 @@
       "name": "Programme",
       "items": [
         {
+          "name": "Overview",
+          "path": "/overview"
+        },
+        {
           "name": "Schedule",
           "path": "/schedule/talks"
         },
@@ -43,6 +47,10 @@
         {
           "name": "Rust Summit",
           "path": "/rust-summit"
+        },
+        {
+          "name": "PyLadies Events",
+          "path": "/pyladies"
         }
       ]
     },
@@ -100,6 +108,14 @@
           "path": "/volunteering"
         },
         {
+          "name": "Accessibility",
+          "path": "/accessibility"
+        },
+        {
+          "name": "Childcare",
+          "path": "/childcare"
+        },
+        {
           "name": "FAQ",
           "path": "/faq"
         },
@@ -148,6 +164,10 @@
           "path": "/krakow"
         },
         {
+          "name": "Hotels",
+          "path": "/hotels"
+        },
+        {
           "name": "Visa Information",
           "path": "/visa"
         }
@@ -156,6 +176,10 @@
     {
       "name": "Programme",
       "items": [
+        {
+          "name": "Overview",
+          "path": "/overview"
+        },
         {
           "name": "Schedule",
           "path": "/schedule/talks"
@@ -196,6 +220,10 @@
         {
           "name": "Rust Summit",
           "path": "/rust-summit"
+        },
+        {
+          "name": "PyLadies Events",
+          "path": "/pyladies"
         }
       ]
     },

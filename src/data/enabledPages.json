@@ -31,7 +31,10 @@
     "/sessions",
     "/speakers",
     "/tickets",
-    "/hotels"
+    "/hotels",
+    "/pyladies",
+    "/accessibility",
+    "/childcare"
   ],
   "navItems": ["Programme", "Venue", "About"]
 }
