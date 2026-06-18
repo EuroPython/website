@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import Headline from "@ui/Headline.astro"
-import Section from "@ui/Section.astro"
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 
 import Button from "@ui/Button.astro";
 
@@ -60,31 +60,33 @@ const sponsorTiers = tiers
 // const topTier = sponsorTiers.find((tier) => tier.name === "Keystone");
 ---
 
-<Section variant="secondary">
-  <Headline id="sponsors" title="Sponsors & Partners" center="true" />
-  <div class="mb-10">
+<Section2 id="sponsors" variant="light" className="sponsors-section">
+  <div class="sponsors-header">
+   <Title id="sponsors" color="var(--color-black)">Sponsors & Partners</Title>
+  </div>
+
+      <div class="text-center mb-12">
     {
       hasSponsors ? (
-        <p class="text-center">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
           EuroPython wouldn't be such an affordable event without the help of
           the sponsors and partners. We'd like to thank all of them for their
           support.
         </p>
       ) : (
-        <p class="text-center">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
           Sponsoring EuroPython guarantees you highly targeted visibility and
           the opportunity to present yourself and your sponsor to one of the
           largest and most diverse Python communities in Europe and beyond.
         </p>
       )
     }
-
-    <div class="mt-4 text-center">
-      <Button url="/sponsor">Become a sponsor</Button>
-    </div>
   </div>
+      <div class="my-10 text-center">
+        <Button url="/sponsor">Become a sponsor</Button>
+      </div>
 
-  {sponsorTiers.length > 0 && <hr />}
+  {sponsorTiers.length > 0 && <hr  />}
 
   <div >
     {
@@ -96,8 +98,20 @@ const sponsorTiers = tiers
       ))
     }
   </div>
-</Section>
+
+</Section2>
 
 <style>
-  hr {margin: 10px 0;}
+  hr {margin: 0;
+  border: 1px solid oklch(0.937 0 0) /* #ededed */;
+  }
+
+
+  .sponsors-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+
+
 </style>

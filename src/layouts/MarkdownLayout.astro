@@ -17,9 +17,9 @@ const { title, description, toc=false } = Astro.props;
         <Fragment slot="content">
           <div
             id="toc"
-            class="mt-24 mb-6 last:mb-0 rounded-lg shadow-md bg-white p-6"
+            class="mt-24 mb-6 last:mb-0 p-6"
           >
-          <span class="text-lg font-bold">Table of contents</span>
+          <span class="text-sm font-medium uppercase tracking-[0.15em] text-white/40">On this page</span>
           </div>
         </Fragment>
         <Fragment slot="sidebar">
@@ -120,9 +120,7 @@ const { title, description, toc=false } = Astro.props;
     font-size: 0.95rem;
     line-height: 1.5;
     padding: 1rem;
-    border-left: 1px solid #e0e0e0;
-    position: sticky;
-    top: 1rem;
+    border-left: 1px solid oklch(0.907 0 89.9); /* #e0e0e0 */
   }
 
   #toc ul {
@@ -137,41 +135,38 @@ const { title, description, toc=false } = Astro.props;
 
   #toc li ul {
     margin-left: 1em;
-    border-left: 1px dashed #ddd;
+    border-left: 1px dashed oklch(0.898 0 89.9); /* #ddd */
     padding-left: 0.75em;
   }
 
   #toc a {
+    display: block;
+    color: var(--color-text-muted);
     text-decoration: none;
-    color: #333;
-    padding: 0.25em 0.5em;
-    transition:
-      background 0.2s ease,
-      color 0.2s ease;
+    padding: 0.3em 0.5em;
+    border-left: 1px solid transparent;
+    transition: color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
+                border-color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
+                padding 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   #toc a:hover {
-    background: #f0f0f0;
-    color: #007acc;
+    color: var(--color-accent-themed);
+    border-left-color: var(--color-accent-themed);
+    padding-left: 0.8em;
   }
 
   #toc a.active {
-    font-weight: 600;
-    color: #007acc;
-    border-left: 3px solid #007acc;
-    background: rgba(0, 122, 204, 0.1);
-    padding-left: 0.5em;
+    color: var(--color-accent-themed);
+    border-left: 1px solid var(--color-accent-themed);
+    font-weight: 500;
   }
 
-  #toc a[href="#"] {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 0.5em;
-  }
-
-  #toc a[href="#"]:hover {
-    color: #007acc;
-    text-decoration: underline;
+  #toc li ul {
+    margin-left: 0.5em;
+    padding-left: 0;
   }
 
 

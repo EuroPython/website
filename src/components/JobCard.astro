@@ -19,7 +19,7 @@ const { title, location, type, level, salary, description, responsibilities, min
 
 ---
 
-<div class="mb-6 rounded-lg shadow-md bg-white">
+<div class="mb-6 rounded-lg border border-white/10 bg-white/5">
   <div class=`flex-1 p-6 ${draft ? "draft": ""}`>
     <p class="text-xl pb-2 inline-block font-bold">
       {sponsor.data.name}
@@ -28,8 +28,8 @@ const { title, location, type, level, salary, description, responsibilities, min
       <h2 class="text-3xl font-bold mb-2">{title}</h2>
     </a>
 
-    <p class="text-gray-600 mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
-    <p class="text-gray-700 mb-4">{salary}</p>
+    <p class="text-white/60 mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
+    <p class="text-white/70 mb-4">{salary}</p>
     <Markdown content={description || ""} class="job-post" />
 
     { responsibilities &&
@@ -105,7 +105,7 @@ const { title, location, type, level, salary, description, responsibilities, min
     border: 1px solid transparent;
     text-decoration: none;
     transition: all 0.1s ease;
-    background: linear-gradient(to right, #16a34a, #22c55e);
+    background: linear-gradient(to right, oklch(0.627 0.17 149.2) /* #16a34a */, oklch(0.723 0.192 149.6) /* #22c55e */);
   }
 
   .apply-btn:hover {

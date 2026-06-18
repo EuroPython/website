@@ -1,6 +1,7 @@
 ---
 import Button from "@ui/Button.astro";
 import Icon from "@ui/Icon.astro";
+import ThemeToggle from "@components/ThemeToggle.astro";
 
 export interface Props {
   mobile?: boolean;
@@ -18,8 +19,9 @@ const IS_LIVE = false;
     !mobile ?
       <>
 
-        <button
-          id="searchButton"
+        <ThemeToggle />
+          <button
+            id="searchButton"
           class="mx-6 md:mx-2"
             data-open-modal="modal-search"
             aria-label="Search"
@@ -50,7 +52,7 @@ const IS_LIVE = false;
 		gap: 0.5rem;
 		border: 0;
 		background-color: transparent;
-    color: grey;
+    color: oklch(0.6 0 0); /* grey */
 		cursor: pointer;
 		height: 2.5rem;
 		font-size: 28px;
@@ -58,20 +60,20 @@ const IS_LIVE = false;
 
 	@media (min-width: 45rem) {
 		button[data-open-modal] {
-			border: 1px solid #ccc;
+			border: 1px solid oklch(0.845 0 0); /* #ccc */
 			border-radius: 0.5rem;
 			padding-inline-start: 0.75rem;
 			padding-inline-end: 0.5rem;
-			background-color: #fff;
+			background-color: var(--color-white);
 			font-size: 16px;
       width:100%;
 			min-width: 10rem;
 			max-width: 22rem;
-			color: #5f3d1b;
+			color: oklch(0.392 0.068 63.4); /* #5f3d1b */
 		}
 		button[data-open-modal]:hover {
-			border-color: #5f3d1b;
-      color: #000;
+			border-color: oklch(0.392 0.068 63.4); /* #5f3d1b */
+      color: var(--color-black);
 		}
 
 		button[data-open-modal] > :last-child {
@@ -84,8 +86,8 @@ const IS_LIVE = false;
 			font-size: 16px;
 		gap: 0.25em;
 		padding-inline: 0.375rem;
-		background-color: #F1E1D4;
-    color: #5f3d1b;
+		background-color: oklch(0.919 0.025 61.6); /* #F1E1D4 */
+    color: oklch(0.392 0.068 63.4); /* #5f3d1b */
 	}
 
 	kbd {
@@ -102,6 +104,6 @@ const IS_LIVE = false;
 		border: 0;
 		background: transparent;
 		cursor: pointer;
-		color: #333;
+		color: oklch(0.321 0 0); /* #333 */
 	}
 </style>

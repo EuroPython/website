@@ -1,0 +1,137 @@
+---
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
+---
+
+<Section2 id="finaid" variant="dark-alt" className="finaid-section">
+  <div class="finaid-bg" aria-hidden="true"></div>
+
+  <div class="section-header">
+    <Title id="finaid" subtitle="No one should miss EuroPython because of money. We offer grants to cover tickets, travel, accommodation, and visa fees for those who need support.">Financial Aid</Title>
+  </div>
+
+  <div class="finaid-grid">
+    <div class="finaid-card">
+      <div class="finaid-title">Free Ticket</div>
+      <div class="finaid-amount">100%</div>
+      <p class="finaid-desc">A three day conference ticket grant for eligible applicants who cannot afford the registration fee.</p>
+    </div>
+    <div class="finaid-card">
+      <div class="finaid-title">Travel &amp; Accommodation</div>
+      <div class="finaid-amount">up to €500</div>
+      <p class="finaid-desc">Financial support to cover travel costs and accommodation for the duration of the conference.</p>
+    </div>
+    <div class="finaid-card">
+      <div class="finaid-title">Visa Fee Support</div>
+      <div class="finaid-amount">€90</div>
+      <p class="finaid-desc">Up to €90 for Schengen visa fees. Poland is in the Schengen Area.</p>
+    </div>
+  </div>
+
+  <div class="sec-footer-bar finaid-footer">
+    <p><strong>Priority:</strong> underrepresented groups, first-time attendees, speakers, and open source contributors.</p>
+    <a href="/finaid" class="finaid-cta">Learn more about Financial Aid</a>
+  </div>
+</Section2>
+
+<style>
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .finaid-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(circle, var(--color-surface-subtle) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+
+  .finaid-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px dashed var(--color-border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+  }
+
+  .finaid-card {
+    padding: 2.5rem 2rem;
+    border-right: 1px dashed var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .finaid-card:last-child { border-right: none; }
+
+  .finaid-title {
+    font-size: 1.4rem;
+    color: var(--color-text);
+  }
+
+  .finaid-amount {
+    font-size: 2.2rem;
+    color: var(--color-accent-themed);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0.25rem 0;
+  }
+
+  .finaid-desc {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .sec-footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    border: 1px dashed var(--color-border);
+    border-radius: 2px;
+    background: var(--color-surface-medium);
+    flex-wrap: wrap;
+  }
+
+  .finaid-footer p {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+  }
+
+  .finaid-cta {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to bottom, var(--color-cta-red), var(--color-cta-red-dark));
+    color: var(--color-white);
+    border: 1px solid var(--color-cta-red);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .finaid-cta:hover { opacity: 0.85; }
+
+  @media (max-width: 900px) {
+    .finaid-grid { grid-template-columns: 1fr; }
+    .finaid-card { border-right: none; border-bottom: 1px dashed var(--color-border); }
+    .finaid-card:last-child { border-bottom: none; }
+    .sec-footer-bar { flex-direction: column; text-align: center; }
+  }
+</style>

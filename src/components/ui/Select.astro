@@ -8,12 +8,12 @@ interface Props {
 const { id, name, defaultValue } = Astro.props;
 
 const selectClasses = [
-  "block w-full bg-transparent text-lg h-16 py-2 pr-16 pl-4 border-[3px] border-primary appearance-none",
-  "focus:outline-hidden focus:border-black focus-visible:bg-white"
+  "block w-full bg-transparent text-lg text-white h-16 py-2 pr-16 pl-4 border-[3px] border-white/20 appearance-none",
+  "focus:outline-hidden focus:border-accent focus-visible:bg-white/5"
 ].join(" ");
 
 const svgClasses = [
-  "absolute top-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none text-primary right-4"
+  "absolute top-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none text-white/40 right-4"
 ].join(" ");
 ---
 

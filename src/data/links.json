@@ -5,7 +5,7 @@
       "items": [
         {
           "name": "Schedule",
-          "path": "/schedule"
+          "path": "/schedule/talks"
         },
         {
           "name": "List of Sessions",
@@ -154,7 +154,7 @@
       "items": [
         {
           "name": "Schedule",
-          "path": "/schedule"
+          "path": "/schedule/talks"
         },
         {
           "name": "List of Sessions",

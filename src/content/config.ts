@@ -1,3 +1,5 @@
+import { existsSync, readdirSync, readFileSync } from "fs";
+import { join } from "path";
 import { defineCollection, reference, z } from "astro:content";
 import { loadData } from "@utils/dataLoader";
 import { glob } from "astro/loaders";
@@ -32,7 +34,9 @@ const week = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      subtitle: z.string(),
+      date: z.string(),
+      weekdays: z.string(),
+      button: z.string(),
       url: z.string(),
       image: image(),
     }),
@@ -45,7 +49,8 @@ const keynoters = defineCollection({
       name: z.string(),
       url: z.string().optional(),
       tagline: z.string().optional(),
-      image: image(),
+      bio: z.string().optional(),
+      image: image().optional(),
       order: z.number(),
       homepage: z.string().url().optional(),
       mastodon_url: z.string().url().optional(),
@@ -94,7 +99,30 @@ const speakers = defineCollection({
   loader: async (): Promise<any> => {
     const { speakersData, sessionsById } = await getCollectionsData();
 
-    return Object.values(speakersData as Record<string, {}>).map(
+    // Load keynoter entries from markdown files
+    const keynoterDir = join(process.cwd(), "src/content/keynoters");
+    const keynoterFiles = readdirSync(keynoterDir).filter((f: string) =>
+      f.endsWith(".md")
+    );
+    const keynoterEntries = keynoterFiles.map((f: string) => {
+      const content = readFileSync(join(keynoterDir, f), "utf-8");
+      const parts = content.split("---");
+      const frontmatter: any = {};
+      const bodyParts: string[] = [];
+      if (parts.length >= 3) {
+        // Parse YAML frontmatter (basic key: value)
+        parts[1].split("\n").forEach((line: string) => {
+          const m = line.match(/^\s*([\w-]+):\s*"?([^"]*)"?\s*$/);
+          if (m) frontmatter[m[1].trim()] = m[2].trim();
+        });
+        // Body text after second ---
+        bodyParts.push(parts.slice(2).join("---").trim());
+      }
+      const slug = f.replace(/\.md$/, "");
+      return { slug, data: frontmatter, body: bodyParts.join("\n") };
+    });
+
+    const apiSpeakers = Object.values(speakersData as Record<string, {}>).map(
       (speaker: any) => ({
         id: speaker.slug,
         ...speaker,
@@ -103,12 +131,72 @@ const speakers = defineCollection({
           .map((sessionId: string) => sessionsById[sessionId].slug),
       })
     );
+
+    // Add virtual entries for keynoters not in the API
+    const apiNames = new Set(
+      apiSpeakers.map((s: any) => s.name?.toLowerCase())
+    );
+
+    const imgExts = ["jpg", "png", "webp"];
+
+    for (const k of keynoterEntries) {
+      const name = k.data?.name;
+      if (!name) continue;
+
+      if (!apiNames.has(name.toLowerCase())) {
+        const nameSlug = name
+          .replace(/[\u0141\u0142]/g, "l")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "");
+
+        apiSpeakers.push({
+          id: nameSlug,
+          code: nameSlug,
+          name: name,
+          slug: nameSlug,
+          avatar: ["jpg", "png", "webp"].reduce(
+            (found: string | null, ext: string) => {
+              try {
+                if (
+                  existsSync(
+                    join(
+                      process.cwd(),
+                      "src/content/keynoters",
+                      k.slug + "." + ext
+                    )
+                  )
+                )
+                  return "/content/keynoters/" + k.slug + "." + ext;
+              } catch {}
+              return found;
+            },
+            null
+          ),
+          biography: (k as any).body || k.data?.bio || null,
+          submissions: [],
+          affiliation: null,
+          homepage: k.data?.homepage || null,
+          gitx_url: k.data?.github_url || null,
+          linkedin_url: k.data?.linkedin_url || null,
+          mastodon_url: k.data?.mastodon_url || null,
+          bluesky_url: k.data?.bluesky_url || null,
+          twitter_url: k.data?.twitter_url || null,
+          discord: null,
+          tiktok: null,
+        });
+      }
+    }
+
+    return apiSpeakers;
   },
   schema: z.object({
     code: z.string(),
     name: z.string(),
     slug: z.string(),
-    avatar: z.string().url().nullable(),
+    avatar: z.string().nullable(),
     biography: z.string().nullable(),
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
@@ -163,6 +251,30 @@ const sessions = defineCollection({
     sessions_before: z.array(z.string()).nullable(),
     next_session: z.string().nullable(),
     prev_session: z.string().nullable(),
+  }),
+});
+
+const tracks = defineCollection({
+  loader: async (): Promise<any[]> => {
+    const { sessionsData } = await getCollectionsData();
+    const trackSet = new Set<string>();
+    Object.values(sessionsData as Record<string, any>).forEach((s: any) => {
+      if (s.track) trackSet.add(s.track);
+    });
+    return Array.from(trackSet)
+      .sort()
+      .map((track, i) => ({
+        id: track
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, ""),
+        name: track,
+        order: i,
+      }));
+  },
+  schema: z.object({
+    name: z.string(),
+    order: z.number(),
   }),
 });
 
@@ -307,6 +419,7 @@ export const collections = {
   speakers,
   sprints,
   keynoters,
+  tracks,
   sponsors,
   jobs,
 };
