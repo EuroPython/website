@@ -33,52 +33,64 @@ window.addEventListener('load', function() {
 
     if (!currentAnchor) return;
 
-    const allMatching = document.querySelectorAll(`h2#${currentAnchor}`);
-    const targetH2 = allMatching[allMatching.length - 1];
+    var targetEl = document.getElementById(currentAnchor);
 
-    if (targetH2) {
-      const parentElement: any = targetH2.parentElement;
+    if (targetEl) {
+      // Find the day this session belongs to
+      var dayEl = targetEl.closest('.ep-sched-day');
+      if (dayEl) {
+        var dayName = dayEl.getAttribute('data-day');
+        var tabsContainer = document.getElementById('sched-tabs');
+        if (tabsContainer) {
+          var tabs = tabsContainer.querySelectorAll('.ep-sched-tab');
+          tabs.forEach(function(t) {
+            if (t.getAttribute('data-day') === dayName) {
+              t.click();
+            }
+          });
+        }
+      }
 
-      if (parentElement) {
-        const originalBorder = parentElement.style.border;
-        const originalBackground = parentElement.style.background;
+      var sessionEl = targetEl.querySelector('.ep-session') || targetEl;
+      var originalOutline = sessionEl.style.outline;
+      var originalBackground = sessionEl.style.background;
 
-        let blinkCount = 0;
-        const maxBlinks = 5;
-        const blinkDuration = 500; // milliseconds
+      var blinkCount = 0;
+      var maxBlinks = 5;
+      var blinkDuration = 500;
 
-        function toggleBorder() {
-          if (blinkCount >= maxBlinks * 2) {
-            parentElement.style.border = originalBorder;
-            parentElement.style.background = originalBackground;
-            return;
-          }
-
-          if (blinkCount % 2 === 0) {
-            parentElement.style.border = '1px solid #ff9900';
-            parentElement.style.background = 'white';
-          } else {
-            parentElement.style.border = originalBorder;
-            parentElement.style.background = originalBackground;
-          }
-
-          blinkCount++;
-          setTimeout(toggleBorder, blinkDuration);
+      function toggleBorder() {
+        if (blinkCount >= maxBlinks * 2) {
+          sessionEl.style.outline = originalOutline;
+          sessionEl.style.background = originalBackground;
+          return;
         }
 
-        toggleBorder();
+        if (blinkCount % 2 === 0) {
+          sessionEl.style.outline = '2px solid var(--ep-accent, #ff9900)';
+          sessionEl.style.outlineOffset = '-2px';
+          sessionEl.style.background = 'var(--ep-session-hover-bg, rgba(255,255,255,0.05))';
+        } else {
+          sessionEl.style.outline = originalOutline;
+          sessionEl.style.background = originalBackground;
+        }
 
-        setTimeout(function() {
-          const scrollOffset = 200;
-          const elementPosition = parentElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - scrollOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }, 500);
+        blinkCount++;
+        setTimeout(toggleBorder, blinkDuration);
       }
+
+      toggleBorder();
+
+      setTimeout(function() {
+        var scrollOffset = 200;
+        var elementPosition = sessionEl.getBoundingClientRect().top;
+        var offsetPosition = elementPosition + window.pageYOffset - scrollOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 500);
     }
   }
 
