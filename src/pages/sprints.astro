@@ -20,7 +20,7 @@ const sprints = (await getCollection("sprints", ({ data }) => {
 
 <Layout title=`${entry.data.title}` description=`${entry.data.subtitle}` toc=true>
 
-      <Markdown content={entry.body} />
+      <Markdown content={entry.body ?? ""} />
       <div class="flex flex-wrap gap-8 justify-center my-8">
         <div class="flex flex-col gap-2">
           <label for="level-filter" class="font-semibold text-white/80 text-lg">Python Level:</label>

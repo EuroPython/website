@@ -1,6 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "fs";
 import { join } from "path";
-import { defineCollection, reference, z } from "astro:content";
+import { defineCollection, reference } from "astro:content";
+import { z } from "astro/zod";
 import { loadData } from "@utils/dataLoader";
 import { glob } from "astro/loaders";
 
@@ -52,12 +53,12 @@ const keynoters = defineCollection({
       bio: z.string().optional(),
       image: image().optional(),
       order: z.number(),
-      homepage: z.string().url().optional(),
-      mastodon_url: z.string().url().optional(),
-      bluesky_url: z.string().url().optional(),
-      twitter_url: z.string().url().optional(),
-      linkedin_url: z.string().url().optional(),
-      github_url: z.string().url().optional(),
+      homepage: z.string().url({}).optional(),
+      mastodon_url: z.string().url({}).optional(),
+      bluesky_url: z.string().url({}).optional(),
+      twitter_url: z.string().url({}).optional(),
+      linkedin_url: z.string().url({}).optional(),
+      github_url: z.string().url({}).optional(),
     }),
 });
 
@@ -199,13 +200,13 @@ const speakers = defineCollection({
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
-    gitx_url: z.string().url().nullable().optional(),
-    linkedin_url: z.string().url().nullable(),
-    mastodon_url: z.string().url().nullable(),
-    bluesky_url: z.string().url().nullable().optional(),
-    twitter_url: z.string().url().nullable(),
-    discord: z.string().url().nullable().optional(),
-    tiktok: z.string().url().nullable().optional(),
+    gitx_url: z.string().url({}).nullable().optional(),
+    linkedin_url: z.string().url({}).nullable(),
+    mastodon_url: z.string().url({}).nullable(),
+    bluesky_url: z.string().url({}).nullable().optional(),
+    twitter_url: z.string().url({}).nullable(),
+    discord: z.string().url({}).nullable().optional(),
+    tiktok: z.string().url({}).nullable().optional(),
   }),
 });
 
@@ -234,7 +235,7 @@ const sessions = defineCollection({
     state: z.enum(["confirmed"]).optional().nullable(),
     tweet: z.string(),
     resources: z
-      .array(z.object({ resource: z.string().url(), description: z.string() }))
+      .array(z.object({ resource: z.string().url({}), description: z.string() }))
       .nullable(),
     duration: z.string(),
     level: z.enum(["beginner", "intermediate", "advanced"]),
@@ -242,8 +243,8 @@ const sessions = defineCollection({
     room: z.string().nullable(),
     start: z.string().nullable(),
     end: z.string().nullable(),
-    website_url: z.string().url(),
-    youtube_url: z.string().url().nullable(),
+    website_url: z.string().url({}),
+    youtube_url: z.string().url({}).nullable(),
     sessions_in_parallel: z.array(z.string()).nullable(),
     sessions_after: z.array(z.string()).nullable(),
     sessions_before: z.array(z.string()).nullable(),
@@ -330,24 +331,24 @@ const sponsors = defineCollection({
   loader: glob({ pattern: "*/index.md", base: "./src/content/sponsors" }),
   schema: z.object({
     name: z.string(),
-    url: z.string().url(),
+    url: z.string().url({}),
     tier: z.string(),
     location: z.string().optional(),
     industry: z.string().optional(),
     description: z.string().optional(),
     socials: z
       .object({
-        linkedin: z.string().url().optional().nullable(),
-        blog: z.string().url().optional().nullable(),
-        github: z.string().url().optional().nullable(),
-        mastodon: z.string().url().optional().nullable(),
-        bluesky: z.string().url().optional().nullable(),
-        twitter: z.string().url().optional().nullable(),
-        instagram: z.string().url().optional().nullable(),
-        discord: z.string().url().optional().nullable(),
-        facebook: z.string().url().optional().nullable(),
-        youtube: z.string().url().optional().nullable(),
-        tiktok: z.string().url().optional().nullable(),
+        linkedin: z.string().url({}).optional().nullable(),
+        blog: z.string().url({}).optional().nullable(),
+        github: z.string().url({}).optional().nullable(),
+        mastodon: z.string().url({}).optional().nullable(),
+        bluesky: z.string().url({}).optional().nullable(),
+        twitter: z.string().url({}).optional().nullable(),
+        instagram: z.string().url({}).optional().nullable(),
+        discord: z.string().url({}).optional().nullable(),
+        facebook: z.string().url({}).optional().nullable(),
+        youtube: z.string().url({}).optional().nullable(),
+        tiktok: z.string().url({}).optional().nullable(),
       })
       .optional(),
     event_name: z.string().optional().nullable(),
@@ -369,7 +370,7 @@ const jobs = defineCollection({
     tags: z.array(z.string()).nullable(),
     description: z.string().nullable(),
     responsibilities: z
-      .array(z.union([z.string(), z.record(z.array(z.string()))]))
+      .array(z.union([z.string(), z.record(z.string(), z.array(z.string()))]))
       .nullable(),
     min_requirements: z.array(z.string()).optional().nullable(),
     requirements: z.array(z.string()).nullable(),
@@ -377,7 +378,7 @@ const jobs = defineCollection({
     stack: z.array(z.string()).optional().nullable(),
     benefits: z.array(z.string()).nullable(),
     description2: z.string().optional().nullable(),
-    apply_link: z.string().url().optional(),
+    apply_link: z.string().url({}).optional(),
     draft: z.boolean().optional().default(false),
     sponsor: reference("sponsors").optional(),
   }),
@@ -400,7 +401,7 @@ const sprints = defineCollection({
       .array(
         z.object({
           title: z.string(),
-          url: z.string().url(),
+          url: z.string().url({}),
         })
       )
       .optional(),
