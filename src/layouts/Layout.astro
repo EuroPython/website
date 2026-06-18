@@ -11,6 +11,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@styles/tailwind.css";
 import "@styles/global.css";
 import "@styles/search.css";
+import "@styles/ep2026-theme.css";
+import "@styles/markdown.css";
+import "@styles/light-theme.css";
 
 
 export interface Props {
@@ -39,6 +42,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
   <head>
     <BaseHead title={title} description={description} />
     <slot name="head" />
+
     </Fragment>
   </head>
   <body>
@@ -48,13 +52,12 @@ const hideFooter = Astro.props.hideFooter ?? false;
         </header>
       }
 
-      <main class="main" role="main">
+      <main class="main pt-15" role="main">
       <Offline />
         {currentPath !== "/" && (
           <Breadcrumbs
               linksData={linksData}
               currentPath={currentPath}
-              homeLabel="EuroPython 2026"
               homePath="/"
               separator="›"
           />
@@ -65,9 +68,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
 
       <!-- if !hideFooter, show footer; if hideFooter, hide footer and -mb-256 -->
       {!hideFooter ?
-        <footer>
           <Footer />
-        </footer>
         :
         <div class="-mb-256"></div>
       }
@@ -77,6 +78,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
 
 
 <style is:global define:vars={{ externalDomain }}>
+
   main section .container {
     max-width: 1150px;
   }
@@ -95,7 +97,6 @@ const hideFooter = Astro.props.hideFooter ?? false;
 
 <style>
 body {
-  background-color: #E8F4F8;
   min-width: 360px;
   margin: 0;
   padding: 0;
@@ -103,15 +104,19 @@ body {
 
 header {
   background-color: transparent;
+  padding: 0;
+}
+
+nav#navbar {
+  position: fixed;
 }
 
 main {
   background-color: transparent;
-  padding-top: 0;
 }
 
 footer {
-  background-color: var(--color-primary);
+  background-color: oklch(0.201 0.039 261.5); /* #0c1628 */
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }

@@ -1,0 +1,208 @@
+---
+import Title from "@ui/Title.astro";
+import Section2 from "@ui/Section2.astro";
+---
+
+<Section2 className="krakow-section" variant="bg-dark" id="krakow">
+  <div class="krakow-gallery-container">
+
+    <div class="sec-header krakow-intro">
+      <Title id="krakow" subtitle="Medieval grandeur, vibrant nightlife, riverside summer — join us in one of Central Europe's most beautiful cities. Explore the historic Old Town, stunning Wawel Castle, and vibrant Vistula boulevards.">Discover Kraków</Title>
+    </div>
+
+    <div class="bento-grid" role="region" aria-label="Gallery of Kraków city photos">
+
+        <div class="bento-item img1" data-orientation="horizontal">
+          <img src="/krakow/Wiosna, Akademia Muzyczna, widok na Stare Miasto_M6B6817-fot. Ela Marchewka_horizontal.jpg"
+               alt="Spring panoramic view of Old Town from Music Academy, Kraków"
+               loading="lazy" class="gallery-image">
+          <div class="image-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="bento-item img2" data-orientation="vertical">
+          <img src="/krakow/Lato, ul. Kanonicza, Wawel_M6B0798-fot. Ela Marchewka.jpg"
+               alt="Summer view of Kanonicza Street with Wawel Castle in the background, Kraków"
+               loading="lazy" class="gallery-image">
+          <div class="image-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="bento-item img3" data-orientation="vertical">
+          <img src="/krakow/Wawel-DJI_0293-fot. Ela Marchewka.jpg"
+               alt="Aerial view of Wawel Castle and cathedral complex, Kraków"
+               loading="lazy" class="gallery-image">
+          <div class="image-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="bento-item img4" data-orientation="vertical">
+          <img src="/krakow/Florianska-Kosciol-Mariacki-M6B4280.jpg"
+               alt="Floriańska Street with St. Mary's Basilica tower framed by historic archway, Kraków Old Town"
+               loading="lazy" class="gallery-image">
+          <div class="image-overlay" aria-hidden="true"></div>
+        </div>
+
+      </div>
+
+    <div class="krakow-footer">
+      <p class="krakow-credit">Photos by Ela Marchewka</p>
+    </div>
+
+    <div class="krakow-more">
+      <a href="/venue/#practical-tips" class="krakow-btn">Learn more about Kraków</a>
+    </div>
+
+  </div>
+</Section2>
+
+<style>
+
+
+
+:global(.krakow-section) {
+    background: var(--color-bg-dark);
+    scroll-margin-top: 60px;
+  }
+
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 50%, oklch(0.567 0.214 25.9 / 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, oklch(0.491 0.191 28.1 / 0.06) 0%, transparent 55%); /* #b41414 */
+
+
+  .krakow-gallery-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .krakow-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+
+  /* ---- sec-title ---- */
+
+
+
+
+  /* ---- Bento grid ---- */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+  }
+
+  .bento-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    border: 1px dashed var(--color-border);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .bento-item:hover {
+    transform: translateY(-4px);
+  }
+
+  .bento-item.img1 {
+    grid-column: span 3;
+    height: 400px;
+  }
+
+  .bento-item.img2,
+  .bento-item.img3,
+  .bento-item.img4 {
+    grid-column: span 1;
+    height: 550px;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+
+  .bento-item:hover .gallery-image {
+    transform: scale(1.05);
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--color-scrim-30), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .bento-item:hover .image-overlay {
+    opacity: 1;
+  }
+
+  /* ---- Footer ---- */
+  .krakow-footer {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .krakow-credit {
+
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .krakow-more {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .krakow-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to bottom, var(--color-green-2e), var(--color-green-25));
+    color: var(--color-section-bg);
+    border: 1px solid var(--color-green-2e);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: filter 0.2s ease;
+  }
+
+  .krakow-btn:hover {
+    filter: brightness(1.1);
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 1024px) {
+    .bento-item.img1 { height: 350px; }
+    .bento-item.img2,
+    .bento-item.img3,
+    .bento-item.img4 { height: 450px; }
+  }
+
+  @media (max-width: 640px) {
+    .krakow-gallery-container { padding: 2rem 0.5rem; }
+    .bento-grid { grid-template-columns: 1fr; }
+    .bento-item.img1,
+    .bento-item.img2,
+    .bento-item.img3,
+    .bento-item.img4 { grid-column: span 1; height: 250px; }
+    .bento-item.img2,
+    .bento-item.img3,
+    .bento-item.img4 { height: 400px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bento-item, .gallery-image, .image-overlay { transition: none; }
+    .bento-item:hover, .bento-item:hover .gallery-image { transform: none; }
+  }
+</style>

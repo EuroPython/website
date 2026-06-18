@@ -1,84 +1,275 @@
 ---
-// import { Picture } from "astro:assets";
-// import heroImage from "/public/images/conference_photo.jpg";
-
-import IconWithLabel from "./icon-label.astro";
-// import Icon from "@ui/Icon.astro";
 import Button from "@ui/Button.astro";
-
-const action1 = "https://programme.europython.eu/europython-2026/";
-const action2 = "https://www.youtube.com/watch?v=laSzm-raS5A";
 ---
 
-<section class="relative z-10">
-  <div
-    class="bg-icons relative flex flex-col items-center justify-center"
-    style=""
-  >
-    <div class="prose-xl relative z-10 text-center">
-      <div class="grid md:flex items-center space-x-3 p-10 pt-32 md:pt-36 justify-center">
-        <div class="flex items-center justify-center">
-          <img
-            class="h-full block md:w-full lg:w-[250px] pr-3"
-            src="/eps-logo.svg"
-            height="250"
-            width="250"
-            alt="EuroPython Society Logo"
-          />
-        </div>
-        <h1
-          class="text-6xl md:text-8xl lg:text-9xl mb-0"
-        >
-          EuroPython
-        </h1>
+<section class="hero-main">
+  <div class="hero-flowers-bg" aria-hidden="true"></div>
+  <div class="hero-container">
+    <div class="hero-content-block">
+      <!-- <img src="/25yr.svg" alt="This Summer. 25 Years." class="hero-tagline-img"> -->
+      <h1 class="hero-heading">EURO<br>PYTHON</h1>
+      <div class="hero-year">2026</div>
+      <p class="hero-intro">A week of talks, tutorials, sprints, and community. Join 1,500+ Pythonistas in July,<br> in <a href="#krakow">Kraków, Poland 🇵🇱</a>.</p>
+      <p class="hero-schedule"><span>Tutorials</span> 13–14 July &nbsp;|&nbsp; <span>Conference</span> 15–17 July <br><span>Sprints</span> 18–19 July &nbsp;|&nbsp; <a href="#euroscipy">EuroSciPy</a> 18–23 July</p>
+      <div class="hero-cta-row">
+        <a href="/tickets" class="hero-cta">Register Now</a>
+        <a href="#programme" class="hero-cta-alt">View Programme</a>
       </div>
-      <p
-        class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 -mt-6"
-      >
-        EuroPython 2026 is coming to Kraków! Join thousands of Python enthusiasts for a week of learning, networking, and community. Stay tuned for more details!
-      </p>
     </div>
-    <!-- First 2x1 Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-6 my-10">
-        <IconWithLabel icon="map-pin" label="ICE, Kraków, Poland" />
-        <IconWithLabel icon="calendar-days" label="13-19 July, 2026" />
-    </div>
-
-    <!-- Second 2x1 Grid with Action Buttons -->
-    <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
-      <div class="btn-outline">
-        <Button outline url="/tickets" class="!text-white !border-white hover:!bg-white hover:!text-primary"> Register now! </Button>
-      </div>
-      <div class="btn-outline">
-        <Button outline url={action2} class="!text-white !border-white hover:!bg-white hover:!text-primary"> Watch the video (no Rickrolls) </Button>
-      </div>
+    <div class="hero-dragon">
+      <img src="/dragon.svg" alt="" class="dragon-svg" loading="lazy">
     </div>
   </div>
-
-  <style>
-    .bg-icons {
-      min-height: 400px;
-      padding-bottom: 50px;
-      overflow: hidden;
-    }
-    .bg-icon {
-      position: absolute;
-      width: 140px;
-      height: 140px;
-      opacity: 0.7;
-    }
-    .bluebox {
-      background-color: #E8F4F8;
-      z-index: -2;
-    }
-    .bluebox-shift {
-      position: relative;
-      top: -100px;
-    }
-    .stats {
-      position: relative;
-      top: 10px;
-    }
-
-  </style>
 </section>
+
+<style>
+  /* Dark (default) hero: bold dark banner with dragon art + red
+     gradient year. Flips to a light gradient banner in light mode
+     via the :global(.light) overrides at the bottom. */
+  .hero-main {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--color-footer-bg);
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem;
+  }
+
+  .hero-flowers-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    /* filter: brightness(1.5) saturate(0.3); */
+    background: url('/flowers/flowers-tile-new.svg') repeat;
+    background-size: 2400px 2400px;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .hero-dragon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+  }
+
+  .dragon-svg {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+    }
+    .hero-dragon {
+      display: none;
+    }
+  }
+
+  .hero-content-block {
+    max-width: 600px;
+  }
+
+  .hero-tagline-img {
+    display: block;
+    width: clamp(12rem, 15vw, 20rem);
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-heading {
+    font-weight: 800;
+    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.85;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+
+  .hero-year {
+    font-weight: 800;
+    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-size: clamp(6rem, 12vw, 12rem);
+    line-height: 0.82;
+    letter-spacing: -0.08em;
+    background: radial-gradient(ellipse at top left, var(--color-cta-red) 0%, var(--color-cta-mid) 55%, var(--color-cta-end) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0.3rem;
+  }
+
+  .hero-intro {
+    font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
+    font-size: 1.3rem;
+    color: var(--color-text-secondary);
+    margin-top: 2rem;
+    line-height: 1.6;
+    max-width: 440px;
+  }
+
+  .hero-intro a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .hero-schedule {
+    margin-top: 1.5rem;
+    font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-white);
+    letter-spacing: 0.03em;
+  }
+
+  .hero-schedule span {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .hero-schedule a {
+    color: var(--color-accent);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .hero-cta-row {
+    margin-top: 5.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-cta {
+    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background: none;
+    border: 3px solid var(--color-cta-red);
+    border-radius: 2px;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    box-shadow: 0 0 20px oklch(0.567 0.214 25.9 / 0.3), inset 0 0 20px oklch(0.567 0.214 25.9 / 0.05);
+  }
+
+  .hero-cta:hover {
+    background: var(--color-cta-red);
+    color: var(--color-white);
+    box-shadow: 0 0 50px oklch(0.567 0.214 25.9 / 0.6), inset 0 0 25px oklch(0.567 0.214 25.9 / 0.15);
+  }
+
+  .hero-cta-alt {
+    font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border: 3px solid var(--color-accent);
+    border-radius: 2px;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    box-shadow: 0 0 16px oklch(0.831 0.142 84.4 / 0.2), inset 0 0 16px oklch(0.831 0.142 84.4 / 0.04);
+  }
+
+  .hero-cta-alt:hover {
+    background: var(--color-accent);
+    color: var(--color-section-bg);
+    box-shadow: 0 0 40px oklch(0.831 0.142 84.4 / 0.5), inset 0 0 20px oklch(0.831 0.142 84.4 / 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .hero-main {
+      padding: 5rem 1.2rem 3rem;
+      min-height: auto;
+    }
+    .hero-content-block {
+      max-width: 100%;
+    }
+    .hero-schedule {
+      font-size: 1rem;
+    }
+    .hero-tagline-img {
+      width: 140px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* ── Light mode hero ──
+     Flip the banner to a soft light gradient with dark ink. The red
+     gradient year stays (reads great on light too). Amber accents
+     and white text shift to dark ink / brand blue for contrast. */
+  :global(.light) .hero-main {
+    background: linear-gradient(
+      135deg,
+      oklch(0.97 0.003 264) 0%,
+      oklch(0.945 0.004 264) 100%
+    );
+  }
+
+  :global(.light) .hero-heading {
+    color: var(--color-text);
+  }
+
+  :global(.light) .hero-intro {
+    color: var(--color-text-secondary);
+  }
+
+  :global(.light) .hero-schedule {
+    color: var(--color-text);
+  }
+
+  :global(.light) .hero-schedule span,
+  :global(.light) .hero-schedule a {
+    color: var(--color-blue);
+  }
+
+  :global(.light) .hero-cta {
+    color: var(--color-white);
+    background: var(--color-cta-red);
+    border-color: var(--color-cta-red);
+  }
+
+  :global(.light) .hero-cta:hover {
+    background: var(--color-cta-red);
+    color: var(--color-white);
+    filter: brightness(1.1);
+  }
+
+  :global(.light) .hero-cta-alt {
+    color: var(--color-blue);
+    border-color: var(--color-blue);
+  }
+
+  :global(.light) .hero-cta-alt:hover {
+    background: var(--color-blue);
+    color: var(--color-white);
+  }
+</style>

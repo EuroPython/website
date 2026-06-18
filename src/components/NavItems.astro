@@ -21,7 +21,7 @@ const { items, inverted = false, level = 1 } = Astro.props;
   class={clsx(
     level === 1 && "ml-1 flex flex-col xl:flex-row",
     level === 2 && "mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px] xl:min-w-[220px]",
-    level === 3 && "bg-[#1c294b] xl:rounded-[20px] xl:my-1 xl:mx-2 xl:min-w-[200px]",
+    level === 3 && "bg-[var(--color-nav-level)] xl:rounded-[20px] xl:my-1 xl:mx-2 xl:min-w-[200px]",
     level > 1 && "shadow-lg"
   )}
   role={level === 1 ? "menubar" : "menu"}
@@ -181,7 +181,7 @@ const { items, inverted = false, level = 1 } = Astro.props;
 
   /* Focus styles for keyboard navigation */
   [role="menuitem"]:focus-visible {
-    outline: 2px solid #3583E2;
+    outline: 2px solid oklch(0.61 0.163 255.4); /* #3583E2 */
     outline-offset: -2px;
     border-radius: 50%;
   }

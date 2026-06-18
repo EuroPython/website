@@ -7,7 +7,7 @@
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:focus {
-  outline: 4px solid #0073e6;
+  outline: 4px solid oklch(0.55 0.18 250.4); /* #0073e6 */
   outline-offset: 5px;
 }
 

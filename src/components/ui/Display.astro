@@ -1,0 +1,66 @@
+---
+export interface Props {
+  id: string;
+  subtitle?: string;
+  span?: string;      // text inside the colored span (e.g. "AT EP2026")
+  spanColor?: string; // color for the span text
+  color?: string;     // title color, default #fff
+}
+
+const { id, subtitle, span, spanColor, color = "" } = Astro.props;
+---
+
+<div class="display-header">
+  <h2 class="display-title" style={color ? `color: ${color}` : undefined}>
+    <slot />
+    <sup class="display-anchor"><a href={`#${id}`} style={color ? `color: ${color}` : undefined}>#</a></sup>
+    {span && <span class="display-span" style={spanColor ? `color: ${spanColor}` : ""}>{span}</span>}
+  </h2>
+  {subtitle && <p class="display-subtitle">{subtitle}</p>}
+</div>
+
+<style>
+  .display-header {
+    text-align: left;
+  }
+
+  .display-title {
+    color: var(--color-text);
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0;
+  }
+
+  .display-title .display-anchor {
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: 0.5em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    line-height: 1;
+  }
+
+  .display-title:hover .display-anchor {
+    opacity: 0.5;
+  }
+
+  .display-anchor a {
+    text-decoration: none;
+  }
+
+  .display-span {
+    display: block;
+  }
+
+  .display-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 1.2rem;
+    line-height: 1.55;
+    max-width: 600px;
+  }
+</style>

@@ -1,5 +1,4 @@
 ---
-import CodeHeart from "@components/island/CodeHeart.svelte";
 import Speakers from "./speakers.astro";
 import { slugify } from "@utils/content";
 
@@ -12,6 +11,7 @@ export interface props {
     start: Date;
     end: Date;
     description?: string;
+    duration?: string | number;
     level?: string | null;
     speakers?: { code: string }[];
     sessionType?: string;
@@ -22,231 +22,151 @@ export interface props {
 const { style, session } = Astro.props;
 
 const hasRoom = session.rooms.length === 1;
-const hasSpeakers = session.speakers && session.speakers.length > 0;
-//const hasFooter = hasRoom || hasSpeakers;
-const hasFooter = true;
+const durationLabel = session.duration ? `${session.duration}min` : "";
+const levelLabel = session.level ? session.level.charAt(0).toUpperCase() + session.level.slice(1) : "";
+const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
 ---
 
 <div
-  class:list={["session", session.level, slugify(session.sessionType)]}
+  class:list={["ep-session", session.level, slugify(session.sessionType)]}
   style={style}
 >
-  <!--
-  <header>
-    {
-      session.sessionType === "poster" && (
-        <>
-          <span class="sr-only">Session type:</span>
-          Poster
-        </>
-      )
-    }
-    {
-      session.sessionType !== "poster" && session.level && (
-        <>
-          <span class="sr-only">Session level:</span>
-          {session.level}
-        </>
-      )
-    }
-    </header>
-    -->
-  <header>
-    {
-      session.rooms.length === 1 && (
-        <div class="room-info">
-          <span class="sr-only">Room:</span>
-          {session.rooms && session.rooms.join(", ")}
-        </div>
-      )
-    }
-  </header>
+  <a href={sessionUrl} class="ep-session-title">{session.title}</a>
 
-  <!--   <div class="time">
-    <span class="sr-only">Session start:</span>
-    <time>
-      {formatInTimeZone(session.start, "Europe/Warsaw", "HH:mm")}
-    </time>
+  {session.speakers && session.speakers.length > 0 && (
+    <div class="ep-session-speakers">
+      <Speakers speakers={session.speakers} />
+    </div>
+  )}
 
-    <span class="minus">-</span>
-    <span class="sr-only">Session end:</span>
-    <time>{formatInTimeZone(session.end, "Europe/Warsaw", "HH:mm")}</time>
+  <div class="ep-session-meta">
+    {hasRoom && <span class="ep-session-room">{session.rooms[0]}</span>}
+    {durationLabel && <span class="ep-session-duration">{durationLabel}</span>}
   </div>
-  -->
-
-  <CodeHeart
-    client:load
-    mini={true}
-    codeId={session.code}
-    title={session.title}
-  />
-  <h2 id=`session-${session.slug}`>
-    {session.title}
-  </h2>
-
-  {
-    hasFooter && (
-      <footer class:list={{ "has-room": hasRoom, "has-speakers": hasSpeakers }}>
-        {session.speakers && (
-          <>
-            <Speakers speakers={session.speakers} />
-          </>
-        )}
-
-      </footer>
-    )
-  }
-
-  <a href={session.slug && `/session/${session.slug}`} class="read-more">
-    <span class="sr-only">Read more</span>
-  </a>
+  {levelLabel && <div class={`ep-session-level--${session.level}`}>{levelLabel}</div>}
 </div>
 
 <style>
-  .session {
-
-    border: 1px solid transparent;
-    font-weight: bold;
+  .ep-session {
     display: flex;
     flex-direction: column;
-
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 30%
-    );
+    gap: 0.15rem;
+    padding: 0.5rem 0.6rem;
+    background: var(--ep-surface-subtle);
+    border: 1px solid var(--ep-border);
+    border-radius: 6px;
+    color: var(--ep-white);
+    font-family: "Inter Tight", system-ui, sans-serif;
     position: relative;
-
-    grid-template-areas:
-      "header header"
-      "time title"
-      "time footer";
-
-    grid-template-columns: 60px 1fr;
+    overflow: hidden;
+    transition: border-color 0.2s, background 0.2s;
   }
 
-  .room-info {
-    display: block;
-    text-align: center;
-
-    @media screen and (min-width: 800px) {
-      display: none;
-    }
+  .ep-session:hover {
+    border-color: var(--ep-accent);
+    background: var(--ep-session-hover-bg) !important;
+    z-index: 10;
   }
 
-  .session > header {
-    grid-area: header;
+  .ep-session-title {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--ep-white);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .read-more {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
+  .ep-session-title:hover {
+    text-decoration: underline;
   }
 
-  footer :global(a) {
-    position: relative;
-    z-index: 2;
+  .ep-session-speakers {
+    font-size: 0.85rem;
+    color: var(--ep-text-secondary);
+    line-height: 1.3;
   }
+
+  .ep-session-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: var(--ep-text-muted);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: auto;
+  }
+
+  .ep-session-room,
+  .ep-session-duration {
+    display: inline;
+  }
+
+  .ep-session-duration::before {
+    content: "·";
+    margin-right: 0.3rem;
+    opacity: 0.5;
+  }
+
+  [class^="ep-session-level--"] {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.25em;
+    padding: 0.1em 0.5em;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  .ep-session-level--beginner {
+    background: var(--ep-level-beginner-bg);
+    color: var(--ep-level-beginner-text);
+  }
+
+  .ep-session-level--intermediate {
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
+  }
+
+  .ep-session-level--advanced {
+    background: var(--ep-level-advanced-bg);
+    color: var(--ep-level-advanced-text);
+  }
+
+
 
   @media screen and (max-width: 800px) {
-    header {
-      /*text-align:right;*/
-    }
-    .session h2 {
-      padding: 0 8px;
-      margin: 0;
-    }
-
-    .session > .time {
-      grid-area: time;
-      padding-block: 8px;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /*border-right: 1px solid var(--color-text);*/
-      gap: 4px;
-
-      & .minus {
-        display: none;
-      }
-    }
-
-    .session > h2 {
-      grid-area: title;
-      padding-block: 0;
-    }
-
-    .session > footer {
-      grid-area: footer;
-    }
-
-    .session > div {
-      display: flex;
+    .ep-session-title {
+      font-size: 0.9rem;
     }
   }
 
-  .session:has(.read-more[href]:focus) {
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 70%
-    );
-    border: 1px solid #33333366;
+  .beginner {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-beginner-stripe) 4px,
+        var(--ep-beginner-stripe) 6px
+      ),
+      var(--ep-surface-subtle);
   }
 
-  .session:hover {
-    background-color: color-mix(
-      in srgb,
-      var(--color-body-background),
-      white 50%
-    );
-    border: 1px solid #e9714d;
-  }
-
-
-  .time,
-  footer {
-    font-size: 0.9em;
-  }
-
-  header,
-  .time,
-  footer,
-  h2 {
-    padding: 0.2em 0.5em;
-  }
-
-  h2 {
-    margin-bottom: 1em;
-    height:100%;
-  }
-
-  footer.has-speakers {
-    margin-top: 5px;
-  }
-
-  header {
-    text-transform: capitalize;
-    font-size: 0.8em;
-    font-weight: 500;
-  }
-
-  .beginner header {
-  }
-
-  .intermediate header {
-  }
-
-  .advanced header {
-  }
-
-  .poster header {
-    text-align:center
+  .advanced {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-advanced-stripe) 4px,
+        var(--ep-advanced-stripe) 6px
+      ),
+      var(--ep-surface-subtle);
   }
 </style>

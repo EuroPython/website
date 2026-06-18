@@ -1,0 +1,170 @@
+---
+import Section2 from "@ui/Section2.astro";
+import Display from "@ui/Display.astro";
+---
+<Section2 id="ice-venue" variant="bg-dark" className="ice-venue-section">
+  <div class="ice-venue-bg" aria-hidden="true"></div>
+  <div class="ice-venue-inner">
+
+    <div class="ice-venue-left">
+      <Display id="ice-venue" span="CONGRESS CENTRE" spanColor="var(--color-cta-red)" subtitle="Opened in 2014, ICE Kraków is a state-of-the-art congress centre located directly opposite the iconic Wawel Castle, right on the banks of the Vistula river. The main conference (13–17 July) will be held here.">ICE<br>KRAKÓW</Display>
+      <div class="ice-venue-cta-row">
+        <a href="https://www.google.com/maps/place/ICE+Krak%C3%B3w+Congress+Centre/@50.0485,19.9355,17z/" class="ice-venue-map-link" target="_blank" rel="noopener">Google Maps</a>
+        <a href="https://www.openstreetmap.org/?mlat=50.0485&mlon=19.9355#map=17/50.0485/19.9355" class="ice-venue-map-link" target="_blank" rel="noopener">OpenStreetMap</a>
+      </div>
+    </div>
+
+    <div class="ice-venue-right">
+      <div class="ice-venue-photo">
+        <img src="/ice.jpg" alt="ICE Kraków Congress Centre exterior at dusk" loading="lazy">
+      </div>
+      <ul class="ice-venue-details">
+        <li><strong>Address</strong> — Marii Konopnickiej 17, 30-302 Kraków</li>
+        <li><strong>Wawel Castle</strong> — directly across the street</li>
+        <li><strong>Old Town</strong> (Stare Miasto) — 10 min walk</li>
+        <li><strong>Vistula Boulevards</strong> — steps away</li>
+        <li><strong>Kraków Główny</strong> railway station — 20 min</li>
+        <li><strong>John Paul II Airport</strong> — 30 min by train</li>
+      </ul>
+    </div>
+
+    <div class="ice-venue-sprints">
+      <div class="ice-venue-sprints-label">Sprints Weekend (18–19 July)</div>
+      <p>Sprints venue to be announced. Stay tuned!</p>
+    </div>
+
+  </div>
+</Section2>
+
+<style>
+
+
+:global(.ice-venue-section) {
+    background: var(--color-bg-dark);
+    scroll-margin-top: 60px;
+  }
+
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 50%, oklch(0.567 0.214 25.9 / 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 90% 20%, oklch(0.491 0.191 28.1 / 0.06) 0%, transparent 55%); /* #b41414 */
+  .ice-venue-bg {
+  }
+
+  .ice-venue-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .ice-venue-left {
+    position: sticky;
+    top: 2rem;
+  }
+
+
+
+
+  .ice-venue-cta-row {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .ice-venue-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1.4rem;
+    border: 1px dashed oklch(0.567 0.214 25.9 / 0.3);
+    border-radius: 2px;
+    color: var(--color-cta-red);
+
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .ice-venue-map-link:hover {
+    color: var(--color-white);
+    background: var(--color-cta-red);
+    border-color: var(--color-cta-red);
+  }
+
+  .ice-venue-photo {
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .ice-venue-photo img {
+    width: 100%;
+    display: block;
+  }
+
+  .ice-venue-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ice-venue-details li {
+
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-surface-medium);
+  }
+
+  .ice-venue-details li:last-child {
+    border-bottom: none;
+  }
+
+  .ice-venue-details li strong {
+    color: var(--color-text-primary);
+  }
+
+  .ice-venue-sprints {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    padding: 1rem 1.2rem;
+    border: 1px dashed oklch(0.567 0.214 25.9 / 0.2);
+    border-radius: 2px;
+    background: oklch(0.567 0.214 25.9 / 0.04);
+    text-align: center;
+  }
+
+  .ice-venue-sprints-label {
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--color-cta-red);
+    margin-bottom: 0.4rem;
+  }
+
+  .ice-venue-sprints p {
+    font-size: 1.1rem;
+    color: var(--color-text-faint);
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .ice-venue-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .ice-venue-left {
+      position: static;
+    }
+
+  /* sec-title styles */
+
+
+
+</style>
