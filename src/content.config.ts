@@ -137,7 +137,6 @@ const speakers = defineCollection({
       apiSpeakers.map((s: any) => s.name?.toLowerCase())
     );
 
-
     for (const k of keynoterEntries) {
       const name = k.data?.name;
       if (!name) continue;
