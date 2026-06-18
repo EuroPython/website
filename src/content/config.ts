@@ -1,3 +1,5 @@
+import { existsSync, readdirSync, readFileSync } from "fs";
+import { join } from "path";
 import { defineCollection, reference, z } from "astro:content";
 import { loadData } from "@utils/dataLoader";
 import { glob } from "astro/loaders";
@@ -98,13 +100,12 @@ const speakers = defineCollection({
     const { speakersData, sessionsById } = await getCollectionsData();
 
     // Load keynoter entries from markdown files
-    const { readdirSync, readFileSync, existsSync } = await import("fs");
-    const keynoterDir = new URL("./keynoters/", import.meta.url);
+    const keynoterDir = join(process.cwd(), "src/content/keynoters");
     const keynoterFiles = readdirSync(keynoterDir).filter((f: string) =>
       f.endsWith(".md")
     );
     const keynoterEntries = keynoterFiles.map((f: string) => {
-      const content = readFileSync(new URL(f, keynoterDir), "utf-8");
+      const content = readFileSync(join(keynoterDir, f), "utf-8");
       const parts = content.split("---");
       const frontmatter: any = {};
       const bodyParts: string[] = [];
@@ -159,7 +160,15 @@ const speakers = defineCollection({
           avatar: ["jpg", "png", "webp"].reduce(
             (found: string | null, ext: string) => {
               try {
-                if (existsSync("src/content/keynoters/" + k.slug + "." + ext))
+                if (
+                  existsSync(
+                    join(
+                      process.cwd(),
+                      "src/content/keynoters",
+                      k.slug + "." + ext
+                    )
+                  )
+                )
                   return "/content/keynoters/" + k.slug + "." + ext;
               } catch {}
               return found;
