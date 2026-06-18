@@ -37,6 +37,10 @@
           "path": "/language-summit"
         },
         {
+          "name": "Packaging Summit",
+          "path": "/packaging-summit"
+        },
+        {
           "name": "Rust Summit",
           "path": "/rust-summit"
         }
@@ -184,6 +188,10 @@
         {
           "name": "Language Summit",
           "path": "/language-summit"
+        },
+        {
+          "name": "Packaging Summit",
+          "path": "/packaging-summit"
         },
         {
           "name": "Rust Summit",
