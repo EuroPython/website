@@ -1,81 +1,365 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* ============================================================
+   EP2026 COLOR SYSTEM — single source of truth (oklch)
+   ------------------------------------------------------------
+   Tokens are organised by ROLE, not by appearance, so that the
+   same token flips correctly between the dark (default) and the
+   light theme. Brand colours are theme-constant and live in the
+   @theme block below; the role tokens that change per theme live
+   in the :root (dark) / .light blocks further down.
+
+   All colours are expressed in oklch(L C H [/ alpha]).
+   The original hex/rgba values are kept in comments for ref.
+   ============================================================ */
+
 @theme {
-  /* Base Colors */
-  --color-black: #000;
-  --color-white: #fff;
+  /* ---------- Primitives ---------- */
+  --color-black: oklch(0 0 0); /* #000 */
+  --color-white: oklch(1 0 0); /* #fff */
   --color-transparent: transparent;
   --color-current: currentColor;
   --color-inherit: inherit;
 
-  /* Text Colors */
-  --color-text: #151f38;
-  --color-text-inverted: #fdfdfd;
+  /* ---------- Brand (theme-constant) ---------- */
+  --color-accent: oklch(0.831 0.142 84.4); /* #f0c040 */
+  --color-accent-hover: oklch(0.755 0.137 78.9); /* #d4a830 */
+  --color-accent-rgb: 240, 192, 64;
+  --color-cream: oklch(0.971 0.014 39.4); /* #fff5f0 */
 
-  /* Body Colors */
-  --color-body-background: #e8f4f8;
-  --color-body-inverted: #001c13;
-  --color-body-light: #888;
+  --color-red: oklch(0.553 0.224 11.6); /* #d4003a */
+  --color-red-on-dark: oklch(0.636 0.244 13.4); /* #ff1a4a */
+  --color-indigo: oklch(0.276 0.13 7.5); /* #4a0018 */
+  --color-magenta: oklch(0.371 0.166 11.3); /* #800020 */
 
-  /* Primary Colors */
-  --color-primary: #151f38;
-  --color-primary-hover: #7a7ebd;
-  --color-primary-active: #7a7ebd;
+  /* CTA gradient (theme-constant red) */
+  --color-cta-red: oklch(0.567 0.214 25.9); /* #d62020 */
+  --color-cta-red-dark: oklch(0.394 0.166 16.4); /* #8a0020 */
+  --color-cta-mid: oklch(0.448 0.193 13.6); /* #a8002d */
+  --color-cta-end: oklch(0.342 0.149 14.9); /* #700020 */
 
-  /* Button Colors */
-  --color-button: #6b5ca5;
-  --color-button-hover: #8572c6;
-  --color-button-active: #514689;
-  --color-button-focus: #9c4222;
-  --color-button-disabled: #b7b2c7;
-  --color-button-text: #fdfdfd;
+  /* Brand accents / status */
+  --color-blue: oklch(0.522 0.218 264.4); /* #1a56db */
+  --color-green-2e: oklch(0.768 0.176 153.6); /* #2ecc71 */
+  --color-green-25: oklch(0.66 0.158 154.6); /* #25a85d */
+  --color-euroscipy: oklch(0.45 0.27 268.7); /* #2e2ed4 */
+  --color-top-notification: oklch(0.708 0.165 41.1); /* #ee714b */
 
-  /* Secondary Colors */
-  --color-secondary: #151f38;
-  --color-secondary-dark: #f5e5d6;
-  --color-secondary-darkest: #ffffff;
-  --color-secondary-light: #7a7ebd;
+  /* ---------- Hero ---------- */
+  --color-hero-primary: oklch(0.27 0.06 268.8); /* #151f38 */
+  --color-hero-secondary: oklch(0.81 0.156 76.9); /* #fabc1b */
 
-  /* Hero Colors */
-  --color-hero-primary: #151f38;
-  --color-hero-secondary: #fabc1b;
+  /* ---------- Session levels (theme-constant) ---------- */
+  --color-session-neutral: oklch(0.927 0.022 56.4); /* #f5e5d6 */
+  --color-session-beginner: oklch(0.79 0.211 145.4); /* #63d452 */
+  --color-session-intermediate: oklch(0.853 0.149 86.6); /* #ffcd45 */
+  --color-session-advanced: oklch(0.616 0.198 22.6); /* #d34847 */
 
-  /* Session Levels */
-  --color-session-neutral: #f5e5d6;
-  --color-session-beginner: #63d452;
-  --color-session-intermediate: #ffcd45;
-  --color-session-advanced: #d34847;
+  /* ---------- Sponsor tiers (theme-constant) ---------- */
+  --color-sponsor-keystone: oklch(0.652 0.066 173.6); /* #5c9f92 */
+  --color-sponsor-diamond: oklch(0.624 0.069 230.9); /* #568497 */
+  --color-sponsor-platinum: oklch(0.508 0.003 247.9); /* #6b6c6e */
+  --color-sponsor-gold: oklch(0.821 0.139 82.5); /* #f5c251 */
+  --color-sponsor-silver: oklch(0.806 0 0); /* #c0c0c0 */
+  --color-sponsor-startup: oklch(0.598 0.144 298.3); /* #8572c6 */
+  --color-sponsor-bronze: oklch(0.475 0.03 67.1); /* #6e6151 */
+  --color-sponsor-patron: oklch(0.452 0.179 22.6); /* #a11217 */
 
-  /* Sponsor Tiers */
-  --color-sponsor-keystone: #5c9f92;
-  --color-sponsor-diamond: #568497;
-  --color-sponsor-platinum: #6b6c6e;
-  --color-sponsor-gold: #f5c251;
-  --color-sponsor-silver: #c0c0c0;
-  --color-sponsor-startup: #8572c6;
-  --color-sponsor-bronze: #6e6151;
-  --color-sponsor-patron: #a11217;
+  /* ---------- Section-specific brand colours ---------- */
+  --color-pyladies: oklch(0.55 0.213 22.4); /* #d42027 */
+  --color-pyladies-dark: oklch(0.49 0.19 22.7); /* #b01a20 */
+  --color-ep25-bg: oklch(0.296 0.119 266.9); /* #0b1b4d */
+  --color-ep25-yellow: oklch(0.879 0.166 90.8); /* #ffd43b */
+  --color-ep25-yellow-dark: oklch(0.77 0.142 90.3); /* #dbb52e */
 
-  --color-top-notification: #ee714b;
+  /* ---------- Footer brand ---------- */
+  --color-footer-red: oklch(0.553 0.224 11.6); /* #d4003a */
+  --color-footer-red-on-dark: oklch(0.636 0.244 13.4); /* #ff1a4a */
+  --color-footer-gray: oklch(0.279 0 0); /* #222 */
 
-  /* Aspect Ratios */
+  /* ---------- Aspect ratios ---------- */
   --aspect-hero: 2.4380530973;
 
-  /* Font Families */
+  /* ---------- Fonts ---------- */
   --font-system: system-ui, sans-serif;
+  --font-heading: "Roboto", sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-display: var(--font-heading);
   --font-title:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* ============================================================
+     ROLE TOKENS — default (DARK) values.
+     These are re-declared inside @theme so Tailwind generates the
+     utility classes (bg-surface, text-muted, border-default, …).
+     Their *runtime* values are overridden by :root / .light below.
+     ============================================================ */
+
+  /* Surfaces / backgrounds */
+  --color-bg: oklch(0.16 0.02 265); /* #070b14 base body */
+  --color-bg-elevated: oklch(0.2 0.03 265);
+  --color-section-bg: oklch(0.17 0.024 264.4); /* #080f1a */
+  --color-section-bg-alt: oklch(0.16 0.02 265.5); /* #070b14 */
+  --color-bg-dark: oklch(0.16 0.03 286.4); /* #0a0a1a */
+  --color-universe-bg: oklch(0.16 0.04 264.6); /* #0b1121 starfield */
+  --color-card: oklch(0.18 0.02 277); /* #141720 elevated card */
+  --color-panel-light: oklch(0.96 0.012 213.4); /* #e8f4f8 light info panel */
+  --color-nav-level: oklch(0.26 0.06 266.4); /* #1c294b nav submenu */
+  --color-surface-faint: oklch(1 0 0 / 0.03);
+  --color-surface-subtle: oklch(1 0 0 / 0.05);
+  --color-surface-medium: oklch(1 0 0 / 0.08);
+
+  /* Text */
+  --color-text: oklch(1 0 0 / 0.9);
+  --color-text-primary: oklch(1 0 0 / 0.93);
+  --color-text-secondary: oklch(1 0 0 / 0.78);
+  --color-text-muted: oklch(1 0 0 / 0.7);
+  --color-text-faint: oklch(1 0 0 / 0.6);
+  --color-text-inverted: oklch(0.991 0 0); /* #fdfdfd */
+
+  /* Borders */
+  --color-border: oklch(1 0 0 / 0.1);
+  --color-border-strong: oklch(1 0 0 / 0.15);
+  --color-border-bright: oklch(1 0 0 / 0.25);
+
+  /* Shadow scrims (black alpha) */
+  --color-scrim-15: oklch(0 0 0 / 0.15);
+  --color-scrim-30: oklch(0 0 0 / 0.3);
+  --color-scrim-40: oklch(0 0 0 / 0.4);
+  --color-scrim-50: oklch(0 0 0 / 0.5);
+  --color-scrim-70: oklch(0 0 0 / 0.7);
+  --color-scrim-75: oklch(0 0 0 / 0.75);
+
+  /* Overlay */
+  --color-overlay-dark: oklch(0.15 0.02 286 / 0.95);
+
+  /* Primary / secondary (UI accents) */
+  --color-primary: oklch(0.27 0.06 268.8); /* #151f38 */
+  --color-primary-hover: oklch(0.62 0.075 290.7); /* #7a7ebd */
+  --color-primary-active: oklch(0.62 0.075 290.7);
+  --color-secondary: oklch(0.27 0.06 268.8); /* #151f38 */
+  --color-secondary-light: oklch(0.62 0.075 290.7); /* #7a7ebd */
+
+  /* Buttons */
+  --color-button: oklch(0.831 0.142 84.4); /* accent */
+  --color-button-hover: oklch(0.755 0.137 78.9);
+  --color-button-text: oklch(0.17 0.024 264.4); /* dark navy on accent */
+  --color-button-disabled: oklch(0.76 0.025 295.6); /* #b7b2c7 */
+
+  /* Theme-aware accent for headings/CTAs: amber on dark, blue on
+     light (amber fails contrast on light surfaces). Pair with
+     --color-on-accent for text placed on top of it. */
+  --color-accent-themed: oklch(0.831 0.142 84.4); /* accent */
+  --color-on-accent: oklch(0.17 0.024 264.4); /* dark text on amber */
+
+  /* Body helpers */
+  --color-body-background: var(--color-bg);
+  --color-body-light: oklch(0.6 0 0); /* #888 */
+
+  /* Footer */
+  --color-footer-bg: oklch(0.13 0.024 18.8); /* #0a0003 */
+  --color-footer-accent: var(--color-accent);
+  --color-footer-text-muted: var(--color-text-muted);
+  --color-footer-text-secondary: var(--color-text-secondary);
+}
+
+/* ============================================================
+   THEME RUNTIME VALUES
+   ============================================================ */
+
+/* DARK (default) — these match the @theme defaults above but are
+   declared on :root so .light can cleanly override them. */
+:root {
+  color-scheme: dark;
+
+  --color-bg: oklch(0.16 0.02 265);
+  --color-bg-elevated: oklch(0.2 0.03 265);
+  --color-section-bg: oklch(0.17 0.024 264.4);
+  --color-section-bg-alt: oklch(0.16 0.02 265.5);
+  --color-bg-dark: oklch(0.16 0.03 286.4);
+  --color-surface-faint: oklch(1 0 0 / 0.03);
+  --color-surface-subtle: oklch(1 0 0 / 0.05);
+  --color-surface-medium: oklch(1 0 0 / 0.08);
+
+  --color-text: oklch(1 0 0 / 0.9);
+  --color-text-primary: oklch(1 0 0 / 0.93);
+  --color-text-secondary: oklch(1 0 0 / 0.78);
+  --color-text-muted: oklch(1 0 0 / 0.7);
+  --color-text-faint: oklch(1 0 0 / 0.6);
+
+  --color-border: oklch(1 0 0 / 0.1);
+  --color-border-strong: oklch(1 0 0 / 0.15);
+  --color-border-bright: oklch(1 0 0 / 0.25);
+
+  --color-primary: oklch(0.27 0.06 268.8);
+  --color-primary-hover: oklch(0.62 0.075 290.7);
+
+  --color-button: oklch(0.831 0.142 84.4);
+  --color-button-hover: oklch(0.755 0.137 78.9);
+  --color-button-text: oklch(0.17 0.024 264.4);
+
+  --color-accent-themed: oklch(0.831 0.142 84.4); /* amber */
+  --color-on-accent: oklch(0.17 0.024 264.4);
+
+  --color-footer-bg: oklch(0.13 0.024 18.8);
+
+  /* Status callouts (Note.astro) — dark theme: faint tint bg + light
+     coloured text + medium border. */
+  --note-info-bg: oklch(0.62 0.19 250 / 0.12);
+  --note-info-text: oklch(0.8 0.11 245);
+  --note-info-border: oklch(0.62 0.19 250 / 0.45);
+  --note-success-bg: oklch(0.72 0.18 150 / 0.12);
+  --note-success-text: oklch(0.82 0.15 150);
+  --note-success-border: oklch(0.72 0.18 150 / 0.45);
+  --note-warning-bg: oklch(0.82 0.14 85 / 0.12);
+  --note-warning-text: oklch(0.86 0.13 88);
+  --note-warning-border: oklch(0.82 0.14 85 / 0.45);
+  --note-error-bg: oklch(0.62 0.21 25 / 0.12);
+  --note-error-text: oklch(0.74 0.16 22);
+  --note-error-border: oklch(0.62 0.21 25 / 0.45);
+}
+
+/* LIGHT — improved, consistent neutral scheme.
+   Only role tokens change; brand colours stay constant.
+   Surfaces are warm-neutral greys; text is dark navy; the primary
+   action colour shifts from amber to brand blue for AA contrast on
+   light backgrounds. */
+.light {
+  color-scheme: light;
+
+  /* Surfaces */
+  --color-bg: oklch(0.985 0.002 264); /* near-white #f7f8fa */
+  --color-bg-elevated: oklch(1 0 0); /* #ffffff cards */
+  --color-section-bg: oklch(0.97 0.003 264); /* #f0f1f4 */
+  --color-section-bg-alt: oklch(0.945 0.004 264); /* #e6e8ed */
+  --color-bg-dark: oklch(1 0 0);
+  --color-surface-faint: oklch(0 0 0 / 0.02);
+  --color-surface-subtle: oklch(0 0 0 / 0.03);
+  --color-surface-medium: oklch(0 0 0 / 0.06);
+
+  /* Text — dark navy ink */
+  --color-text: oklch(0.23 0.04 277); /* #1a1a2e */
+  --color-text-primary: oklch(0 0 0 / 0.87);
+  --color-text-secondary: oklch(0 0 0 / 0.65);
+  --color-text-muted: oklch(0 0 0 / 0.55);
+  --color-text-faint: oklch(0 0 0 / 0.4);
+
+  /* Borders */
+  --color-border: oklch(0 0 0 / 0.1);
+  --color-border-strong: oklch(0 0 0 / 0.15);
+  --color-border-bright: oklch(0 0 0 / 0.22);
+
+  /* UI accents */
+  --color-primary: oklch(0.23 0.04 277);
+  --color-primary-hover: oklch(0.32 0.05 282);
+
+  /* Action colour shifts to brand blue for contrast on light */
+  --color-button: oklch(0.522 0.218 264.4); /* brand blue */
+  --color-button-hover: oklch(0.47 0.2 264.4);
+  --color-button-text: oklch(1 0 0);
+
+  /* Heading/CTA accent → brand blue on light (amber is unreadable) */
+  --color-accent-themed: oklch(0.522 0.218 264.4); /* brand blue */
+  --color-on-accent: oklch(1 0 0); /* white text on blue */
+
+  /* Footer matches section surface in light */
+  --color-footer-bg: oklch(0.97 0.003 264);
+  --color-footer-text-muted: oklch(0 0 0 / 0.55);
+  --color-footer-text-secondary: oklch(0 0 0 / 0.65);
+
+  /* Elevated surfaces flip to white in light */
+  --color-card: oklch(1 0 0);
+  --color-panel-light: oklch(1 0 0);
+  --color-nav-level: oklch(0.97 0.003 264);
+}
+
+/* ============================================================
+   LEGACY ALIASES — keep older class-based CSS (ep2026-theme.css,
+   the old --ep-* palette, and previous --color-*-dark names)
+   working by pointing them at the new semantic tokens. These will
+   flip automatically with the theme. Prefer the semantic tokens in
+   new code.
+   ============================================================ */
+:root,
+.light {
+  /* --ep-* palette (used by ep2026-theme.css class selectors) */
+  --ep-bg: var(--color-bg);
+  --ep-white: var(--color-text); /* was used as foreground colour */
+  --ep-accent: var(--color-accent);
+  --ep-cream: var(--color-cream);
+  --ep-red: var(--color-red);
+  --ep-red-on-dark: var(--color-red-on-dark);
+  --ep-indigo: var(--color-indigo);
+  --ep-magenta: var(--color-magenta);
+  --ep-accent-rgb: var(--color-accent-rgb);
+
+  --ep-text-primary: var(--color-text-primary);
+  --ep-text-secondary: var(--color-text-secondary);
+  --ep-text-muted: var(--color-text-muted);
+  --ep-text-faint: var(--color-text-faint);
+
+  --ep-border: var(--color-border);
+  --ep-border-strong: var(--color-border-strong);
+  --ep-border-bright: var(--color-border-bright);
+  --ep-surface-faint: var(--color-surface-faint);
+  --ep-surface-subtle: var(--color-surface-subtle);
+  --ep-surface-medium: var(--color-surface-medium);
+
+  --ep-black-75: var(--color-scrim-75);
+  --ep-black-70: var(--color-scrim-70);
+  --ep-black-50: var(--color-scrim-50);
+  --ep-black-40: var(--color-scrim-40);
+  --ep-black-30: var(--color-scrim-30);
+  --ep-black-15: var(--color-scrim-15);
+
+  --ep-cta-red: var(--color-cta-red);
+  --ep-cta-red-dark: var(--color-cta-red-dark);
+  --ep-cta-mid: var(--color-cta-mid);
+  --ep-cta-end: var(--color-cta-end);
+
+  --ep-bg-section: var(--color-section-bg);
+  --ep-bg-section-alt: var(--color-section-bg-alt);
+  --ep-bg-dark: var(--color-bg-dark);
+  --ep-overlay-dark: var(--color-overlay-dark);
+
+  --ep-green-2e: var(--color-green-2e);
+  --ep-green-25: var(--color-green-25);
+  --ep-link-color: var(--color-accent);
+  --ep-link-hover: var(--color-text);
+
+  /* Previous duplicate :root tokens / -dark suffixed names */
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --text-faint: var(--color-text-faint);
+  --border: var(--color-border);
+  --border-strong: var(--color-border-strong);
+  --border-bright: var(--color-border-bright);
+  --accent-rgb: var(--color-accent-rgb);
+
+  --color-text-primary-dark: var(--color-text-primary);
+  --color-text-secondary-dark: var(--color-text-secondary);
+  --color-text-muted-dark: var(--color-text-muted);
+  --color-text-faint-dark: var(--color-text-faint);
+  --color-border-dark: var(--color-border);
+  --color-black-30: var(--color-scrim-30);
+
+  --color-secondary-dark: var(--color-session-neutral);
+  --color-secondary-darkest: var(--color-text);
+  --color-button-active: oklch(0.45 0.09 290.7); /* #514689 */
+  --color-button-focus: oklch(0.5 0.13 41.1); /* #9c4222 */
+  --color-body-inverted: oklch(0.23 0.06 167.6); /* #001c13 */
 }
 
 /* Customize typography plugin */
 @layer utilities {
   .prose {
-    --tw-prose-headings: var(--color-black);
+    --tw-prose-headings: var(--color-text);
     --tw-prose-body: var(--color-text);
   }
 }

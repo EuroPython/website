@@ -5,7 +5,7 @@
       "items": [
         {
           "name": "Schedule",
-          "path": "/schedule"
+          "path": "/schedule/talks"
         },
         {
           "name": "List of Sessions",
@@ -35,6 +35,10 @@
         {
           "name": "Language Summit",
           "path": "/language-summit"
+        },
+        {
+          "name": "Packaging Summit",
+          "path": "/packaging-summit"
         },
         {
           "name": "Rust Summit",
@@ -154,7 +158,7 @@
       "items": [
         {
           "name": "Schedule",
-          "path": "/schedule"
+          "path": "/schedule/talks"
         },
         {
           "name": "List of Sessions",
@@ -184,6 +188,10 @@
         {
           "name": "Language Summit",
           "path": "/language-summit"
+        },
+        {
+          "name": "Packaging Summit",
+          "path": "/packaging-summit"
         },
         {
           "name": "Rust Summit",

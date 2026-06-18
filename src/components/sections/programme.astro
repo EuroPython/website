@@ -1,0 +1,361 @@
+---
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
+import Keynoter from "./keynoters/keynoter.astro";
+import { Image } from "astro:assets";
+import { getCollection, getEntry } from "astro:content";
+
+function slugify(name: string): string {
+  return name
+    .replace(/[łŁ]/g, "l")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+const tutorials = await getEntry("week", "tutorials");
+const talks = await getEntry("week", "talks");
+const sprints = await getEntry("week", "sprints");
+const allEntries = [tutorials, talks, sprints];
+const weekCards = await Promise.all(
+  allEntries.map(async (e) => {
+    const { Content } = await e.render();
+    return { data: e.data, Content };
+  })
+);
+
+const allTracks = await getCollection("tracks");
+const tracks = allTracks
+  .filter((t) => !t.data.name.toLowerCase().includes("none of these"))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const allKeynoters = await getCollection("keynoters");
+const keynoters = allKeynoters.sort((a, b) => a.data.order - b.data.order);
+
+const placeholderCount = Math.max(0, 6 - keynoters.length);
+const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
+  name: "",
+  url: "",
+  order: keynoters.length + i + 1,
+}));
+---
+
+<Section2 className="prog-section" variant="dark-alt" id="programme">
+  <div class="prog-inner">
+
+    <div class="sec-header prog-section-header">
+      <Title id="programme" subtitle="A Week of All Things Python!">What to Expect?</Title>
+    </div>
+
+    <div class="prog-grid">
+      {weekCards.map(({ data, Content }) => (
+        <div class="prog-card">
+          <div class="prog-card-img">
+            <Image src={data.image} alt={data.title} class="prog-card-image" loading="lazy" />
+          </div>
+          <div class="prog-card-date">
+            <div class="prog-card-date-main">{data.date}</div>
+            <div class="prog-card-date-days">{data.weekdays}</div>
+          </div>
+          <div class="prog-card-body">
+            <h3 class="prog-card-title"><a href={data.url}>{data.title}</a></h3>
+            <div class="prog-card-desc"><Content /></div>
+            <a href={data.url} class="prog-card-btn">{data.button}</a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="prog-topics">
+      <p class="prog-topics-label">Conference Topics</p>
+      <div class="topics-grid">
+        {tracks.map((track) => (
+          <a href={`/sessions?track=${encodeURIComponent(track.data.name)}`} class="topic-tag">{track.data.name}</a>
+        ))}
+      </div>
+    </div>
+
+    <!--
+    <div class="prog-events">
+      <p class="prog-topics-label">More than just talks</p>
+      <p class="prog-events-desc">EuroPython is a full week of community — from dedicated community days and social events to open spaces, workshops, and sprints.</p>
+      <div class="prog-events-list">
+        <a href="/programme/#beginners-day" class="prog-event-btn" style="--event-color: oklch(0.741 0.143 240.5) /* #3ab8ff */">Beginners' Day</a>
+        <a href="/programme/#open-spaces" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Open Spaces</a>
+        <a href="/programme/#lightning-talks" class="prog-event-btn" style="--event-color: oklch(0.638 0.182 305.0) /* #af6ae0 */">Lightning Talks</a>
+        <a href="/programme/#pyladies" class="prog-event-btn" style="--event-color: var(--color-pyladies)">PyLadies Events</a>
+        <a href="/programme/#orgsummit" class="prog-event-btn" style="--event-color: var(--color-green-2e)">Organisers Summit</a>
+        <a href="/programme/#lang-summit" class="prog-event-btn" style="--event-color: oklch(0.566 0.137 256.0) /* #3c78c8 */">Language Summit</a>
+        <a href="/programme/#rust-summit" class="prog-event-btn" style="--event-color: oklch(0.640 0.180 38.0) /* #de5833 */">Rust Summit</a>
+        <a href="/programme/#pkg-summit" class="prog-event-btn" style="--event-color: oklch(0.685 0.150 86.0) /* #cc9900 */">Packaging Summit</a>
+        <a href="/programme/#wasm-summit" class="prog-event-btn" style="--event-color: oklch(0.473 0.146 304.0) /* #7a4e9e */">WASM Summit</a>
+        <a href="/participate/#tickets" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Social Event</a>
+        <a href="/participate/#tickets" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Speaker Dinner</a>
+        <a href="/participate/#volunteering" class="prog-event-btn" style="--event-color: var(--color-accent-themed)">Volunteering</a>
+      </div>
+    </div>
+    -->
+
+    <div class="prog-keynoters">
+      <p class="prog-topics-label">Keynote Speakers</p>
+      <ul class="prog-keynoters-grid">
+        {keynoters.map((k) => (
+          <Keynoter
+            name={k.data.name}
+            url={k.data.url || slugify(k.data.name)}
+            tagline={k.data.tagline}
+            bio={k.data.bio}
+            image={k.data.image}
+            order={k.data.order}
+          />
+        ))}
+        {placeholders.map((p) => (
+          <Keynoter
+            name={p.name}
+            url={p.url}
+            order={p.order}
+            placeholder={true}
+          />
+        ))}
+      </ul>
+    </div>
+
+  </div>
+</Section2>
+
+<style>
+
+
+  .prog-section {
+    background: var(--color-section-bg-alt);
+  }
+
+  .prog-section-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+
+
+
+
+  .prog-topics-label {
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .prog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .prog-card {
+    text-align: center;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .prog-card-img {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .prog-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .prog-card:hover .prog-card-image {
+    transform: scale(1.05);
+  }
+
+  .prog-card-date {
+    padding: 1.8rem 1.4rem;
+    border-bottom: 1px dashed var(--color-border);
+  }
+
+  .prog-card-date-main {
+    font-size: 1.55rem;
+    color: var(--color-text);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+
+  .prog-card-date-days {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+
+  .prog-card-body {
+    padding: 1.6rem 1.4rem 2rem;
+  }
+
+  .prog-card-title {
+    font-size: 1.44rem;
+    font-weight: 700;
+    color: var(--color-accent-themed);
+    margin-bottom: 0.7rem;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+
+  .prog-card-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .prog-card-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    line-height: 1.65;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+  .prog-card-btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--color-accent-themed);
+    border-radius: 2px;
+    color: var(--color-on-accent);
+    background: var(--color-accent-themed);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .prog-card-btn:hover {
+    opacity: 0.85;
+  }
+
+  .prog-topics {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 0 auto;
+  }
+
+  .topic-tag {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    background: var(--color-surface-medium);
+    border: 1px dashed var(--color-border);
+    border-radius: 2px;
+    padding: 0.35em 1.1em;
+    transition: background 0.15s, color 0.15s;
+    opacity: 0.7;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4rem;
+  }
+
+  .topic-tag:hover {
+    opacity: 1;
+    background: var(--color-accent-themed);
+    color: var(--color-on-accent);
+    border-color: var(--color-accent-themed);
+  }
+
+  .prog-keynoters {
+    margin-top: 4rem;
+  }
+
+  .prog-keynoters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 1.5rem;
+    border: 1px dashed var(--color-border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1024px) {
+    .prog-keynoters-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .prog-keynoters-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .prog-events {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .prog-events-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .prog-events-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .prog-event-btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--event-color);
+    border-radius: 2px;
+    color: var(--event-color);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    background: transparent;
+    text-align: center;
+  }
+
+  .prog-event-btn:hover {
+    opacity: 1;
+    box-shadow: 0 0 40px var(--event-color);
+  }
+
+  @media (max-width: 900px) {
+    .prog-grid {
+      grid-template-columns: 1fr;
+    }
+    .prog-events-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .prog-events-list {
+      grid-template-columns: 1fr;
+    }
+    .topics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

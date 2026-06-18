@@ -21,7 +21,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #4caf50;
+  background: oklch(0.673 0.162 144.2); /* #4caf50 */
   color: white;
   text-align: center;
   padding: 1rem;
@@ -34,41 +34,38 @@
 }
 </style>
 <script>
-function showInstallPrompt() {
-  const installBanner = document.getElementById('install-pwa') as HTMLElement;
-  installBanner.classList.remove('hidden');
-}
-
-function hideInstallPrompt() {
-  const installBanner = document.getElementById('install-pwa') as HTMLElement;
-  installBanner.classList.add('hidden');
-}
-
-const installBtn = document.getElementById('install-btn') as HTMLElement;
-const closeBtn = document.getElementById('close-btn') as HTMLElement;
-
-installBtn.addEventListener('click', () => {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult: any) => {
-      console.log(choiceResult.outcome);
-      deferredPrompt = null;
-      hideInstallPrompt();
-    });
-  }
-});
-
-closeBtn.addEventListener('click', () => {
-  localStorage.setItem('install-pwa-dismissed', 'true');
-  hideInstallPrompt();
-});
-
-let deferredPrompt: any;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  if (localStorage.getItem('install-pwa-dismissed') !== 'true') {
-    showInstallPrompt();
-  }
-});
+// function showInstallPrompt() {
+//   const installBanner = document.getElementById('install-pwa') as HTMLElement;
+//   installBanner.classList.remove('hidden');
+// }
+//
+// function hideInstallPrompt() {
+//   const installBanner = document.getElementById('install-pwa') as HTMLElement;
+//   installBanner.classList.add('hidden');
+// }
+//
+// const installBtn = document.getElementById('install-btn') as HTMLElement;
+// const closeBtn = document.getElementById('close-btn') as HTMLElement;
+//
+// installBtn.addEventListener('click', () => {
+//   if (deferredPrompt) {
+//     deferredPrompt.prompt();
+//     deferredPrompt.userChoice.then((choiceResult: any) => {
+//       console.log(choiceResult.outcome);
+//       deferredPrompt = null;
+//       hideInstallPrompt();
+//     });
+//   }
+// });
+//
+// closeBtn.addEventListener('click', () => {
+//   hideInstallPrompt();
+// });
+//
+// let deferredPrompt: any;
+// window.addEventListener('beforeinstallprompt', (e) => {
+//   e.preventDefault();
+//   deferredPrompt = e;
+//   showInstallPrompt();
+// });
 </script>

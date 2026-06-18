@@ -12,6 +12,7 @@ import { execSync } from "node:child_process";
 import svelte from "@astrojs/svelte";
 import compress from "astro-compress";
 import tailwindcss from "@tailwindcss/vite";
+import pagefind from "astro-pagefind";
 
 let gitVersion = String(process.env.GIT_VERSION ?? "").slice(0, 7);
 
@@ -35,6 +36,39 @@ const fastBuild = loadEnv(mode, process.cwd(), "").EP_FAST_BUILD === "true";
 console.log(
   `\x1b[35m[EP]\x1b[0m Fast Build: \x1b[1m\x1b[34m${fastBuild}\x1b[0m`
 );
+
+import fs from "fs";
+import p from "path";
+
+function syncContentImages() {
+  function syncDir(srcDir, destDir) {
+    if (!fs.existsSync(srcDir)) return;
+    const entries = fs.readdirSync(srcDir, { withFileTypes: true });
+    for (const entry of entries) {
+      const srcPath = p.join(srcDir, entry.name);
+      const destPath = p.join(destDir, entry.name);
+      if (entry.isDirectory()) {
+        syncDir(srcPath, destPath);
+      } else if (
+        entry.isFile() &&
+        /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(entry.name)
+      ) {
+        fs.mkdirSync(p.dirname(destPath), { recursive: true });
+        fs.cpSync(srcPath, destPath, { force: true });
+      }
+    }
+  }
+
+  return {
+    name: "sync-content-images",
+    buildStart() {
+      console.log(
+        "\x1b[35m[EP]\x1b[0m Syncing images from src/content/ to public/content/..."
+      );
+      syncDir("src/content", "public/content");
+    },
+  };
+}
 
 function dontDie() {
   return {
@@ -87,7 +121,7 @@ export default defineConfig({
       },
     },
 
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(), syncContentImages()],
   },
   markdown: {
     remarkPlugins: [
@@ -113,13 +147,12 @@ export default defineConfig({
   redirects: {
     // "/planning/": "https://forms.gle/riw6CvML8ck94A4V9",
     // "/reviewers/": "https://forms.gle/4GTJjwZ1nHBGetM18",
-    // "/speaker/savannah-ostrowski": "/speaker/savannah-bailey",
+    "/packaging-summit": "/session/packaging-summit",
     "/rust-summit": "/session/rust-summit-at-europython",
     "/session/rust-summit": "/session/rust-summit-at-europython",
     "/25anniversary": "https://forms.gle/X4vCPsmHy95s5S9Y8",
     // "/c-api-summit": "/session/c-api-summit",
     // "/wasm-summit": "/session/webassembly-summit",
-    // "/programme/rust-summit": "/session/rust-summit",
     // "/programme/c-api-summit": "/session/c-api-summit",
     // "/programme/wasm-summit": "/session/webassembly-summit",
     // "/discord": "https://discord.gg/BhTN2zJPMh",
@@ -151,6 +184,7 @@ export default defineConfig({
     //   "https://vdo.ninja/?room=EuroPython_2025_Terrace_2B&hash=338a&do",
   },
   integrations: [
+    pagefind(),
     mdx(),
     svelte(),
     ...(fastBuild

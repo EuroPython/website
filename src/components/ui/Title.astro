@@ -1,0 +1,50 @@
+---
+export interface Props {
+  id: string;
+  subtitle?: string;
+  color?: string;  // title text color, default #fff
+  anchorColor?: string;  // anchor link color, default matches color
+}
+
+const { id, subtitle, color = "var(--color-text)", anchorColor = color } = Astro.props;
+---
+
+<h2 class="sec-title" style={`color: ${color}`}>
+  <slot />
+  <sup class="sec-anchor"><a href={`#${id}`} style={`color: ${anchorColor}`} aria-label={`Jump to ${id}`}>#</a></sup>
+</h2>
+{subtitle && <p class="sec-subtitle" style={`color: var(--color-text-muted)`}>{subtitle}</p>}
+
+<style>
+  .sec-title {
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .sec-title .sec-anchor {
+    position: absolute;
+    margin-left: 0.2em;
+    font-size: 0.5em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .sec-title:hover .sec-anchor {
+    opacity: 0.5;
+  }
+
+  .sec-anchor a {
+    text-decoration: none;
+  }
+
+  .sec-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.55;
+    max-width: 600px;
+    margin: 1.2rem auto 0;
+  }
+</style>
