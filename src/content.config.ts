@@ -8,7 +8,7 @@ const mode = import.meta.env.MODE;
 console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
 
 const pages = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/pages" }),
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),
@@ -18,7 +18,7 @@ const pages = defineCollection({
 });
 
 const deadlines = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/deadlines" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -30,7 +30,7 @@ const deadlines = defineCollection({
 });
 
 const week = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/week" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -43,7 +43,7 @@ const week = defineCollection({
 });
 
 const keynoters = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/keynoters" }),
   schema: ({ image }) =>
     z.object({
       name: z.string(),
@@ -384,7 +384,7 @@ const jobs = defineCollection({
 });
 
 const sprints = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/sprints" }),
   schema: z.object({
     title: z.string(),
     slug: z.string().optional(), // Auto-generated from filename if not provided

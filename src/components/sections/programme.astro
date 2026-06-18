@@ -3,7 +3,7 @@ import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
 import Keynoter from "./keynoters/keynoter.astro";
 import { Image } from "astro:assets";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 
 function slugify(name: string): string {
   return name
@@ -20,7 +20,7 @@ const sprints = await getEntry("week", "sprints");
 const allEntries = [tutorials, talks, sprints].filter((e): e is NonNullable<typeof e> => e != null);
 const weekCards = await Promise.all(
   allEntries.map(async (e) => {
-    const { Content } = await e.render();
+    const { Content } = await render(e);
     return { data: e.data, Content };
   })
 );
