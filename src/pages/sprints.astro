@@ -4,11 +4,7 @@ import { getEntry } from 'astro:content';
 import Layout from '@layouts/MarkdownLayout.astro';
 import SprintCard from '@components/SprintCard.astro';
 import Markdown from "@ui/Markdown.astro";
-import Headline from "@ui/Headline.astro";
-import Prose from "@ui/Prose.astro";
 
-import { Image } from 'astro:assets';
-import anacondaLogo from '@src/content/sponsors/anaconda/anaconda.svg';
 
 const entry = await getEntry('pages', 'sprints_info');
 

@@ -1,10 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
 import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
 import Button from "@ui/Button.astro";
-import { sponsorLogos } from "@data/sponsorLogos";
 import SponsorLogo from "@components/SponsorLogo.astro";
 
 
@@ -33,7 +31,6 @@ const lugorhs = allPartners
 
 const partners = [...regular, ...pydata, ...lugorhs];
 
-const sectionTitle = "Community Partners";
 const sectionSubtitle = "Meet the local Python communities joining us at EuroPython 2026";
 ---
 

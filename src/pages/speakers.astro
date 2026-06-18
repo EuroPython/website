@@ -33,15 +33,16 @@ const sortedSpeakers = speakers
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("speakerSearch");
+    const input = document.getElementById("speakerSearch") as HTMLInputElement | null;
     const grid = document.getElementById("speakersGrid");
     if (!input || !grid) return;
     const wraps = grid.querySelectorAll(".speaker-card-wrap");
     input.addEventListener("input", () => {
       const query = input.value.toLowerCase().trim();
       wraps.forEach((wrap) => {
-        const name = wrap.getAttribute("data-name") || "";
-        wrap.style.display = name.includes(query) ? "" : "none";
+        const el = wrap as HTMLElement;
+        const name = el.getAttribute("data-name") || "";
+        el.style.display = name.includes(query) ? "" : "none";
       });
     });
   });
