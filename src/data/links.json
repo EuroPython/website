@@ -4,7 +4,11 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Schedule",
+          "name": "Schedule - Tutorials",
+          "path": "/schedule/tutorials"
+        },
+        {
+          "name": "Schedule - Talks",
           "path": "/schedule/talks"
         },
         {
@@ -157,7 +161,11 @@
       "name": "Programme",
       "items": [
         {
-          "name": "Schedule",
+          "name": "Schedule - Tutorials",
+          "path": "/schedule/tutorials"
+        },
+        {
+          "name": "Schedule - Talks",
           "path": "/schedule/talks"
         },
         {
