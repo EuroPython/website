@@ -1,3 +1,9 @@
+/**
+ * Single source of truth for all navigation and footer links.
+ *
+ * Inspired by ep26-draft/src/menu.py — typed, structured, reusable.
+ */
+
 export interface Link {
   label: string;
   url: string;
