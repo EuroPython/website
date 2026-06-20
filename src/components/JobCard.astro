@@ -73,15 +73,15 @@ const { title, location, type, level, salary, description, responsibilities, min
     </ul>
     }
 
-    { job.data.description2 &&
-      <Markdown content={job.data.description2 || ""} class="job-post" />
-    }
-
     { benefits &&
     <h3 class="text-xl font-semibold mb-2">Benefits</h3>
     <ul class="list-disc list-inside mb-6">
       {benefits.map((item:string) => <li>{item}</li>)}
     </ul>
+    }
+
+    { job.data.description2 &&
+      <Markdown content={job.data.description2 || ""} class="job-post" />
     }
 
       <a
