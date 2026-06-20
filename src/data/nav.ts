@@ -227,9 +227,11 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Programme",
     items: [
       L.schedule,
-      L.sessions,
-      L.speakers,
+      L.talks,
+      L.tutorials,
+      L.posters,
       L.tracks,
+      L.speakers,
       L.guidelines,
       L.mentorship,
     ],
@@ -253,9 +255,5 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Community",
     items: [L.about, L.eps, L.communityPartners, L.blog, L.contacts],
-  },
-  {
-    title: "Policies",
-    items: [L.coc, L.terms, L.privacy],
   },
 ];
