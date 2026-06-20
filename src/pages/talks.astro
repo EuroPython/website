@@ -5,6 +5,21 @@ import Title from "@ui/Title.astro";
 import { getCollection } from "astro:content";
 
 const allSessions = await getCollection("sessions");
+
+// Pre-resolve all speakers for fast lookup
+const allSpeakers = await getCollection("speakers");
+const speakerNames: Record<string, string> = {};
+for (const s of allSpeakers) {
+  speakerNames[s.id] = s.data.name;
+}
+
+function speakerLabel(speakers: any): string {
+  if (!speakers || speakers.length === 0) return "";
+  return speakers.map((s: any) => {
+    const id = typeof s === "string" ? s : s.id;
+    return speakerNames[id] || id;
+  }).join(", ");
+}
 const talks = allSessions
   .filter((s) => {
     const t = s.data.session_type?.toLowerCase();
@@ -111,9 +126,7 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
                 <a href={`/session/${talk.id}`} class:list={["talk-card", talk.data.level]} data-track={talk.data.track || ""} data-search={`${talk.data.title.toLowerCase()} ${talk.data.track?.toLowerCase() || ""}`}>
                   <h4 class="talk-card-title">{talk.data.title}</h4>
                   <p class="talk-card-speakers">
-                    {talk.data.speakers?.length
-                      ? `${talk.data.speakers.length} speaker${talk.data.speakers.length > 1 ? "s" : ""}`
-                      : ""}
+                    {speakerLabel(talk.data.speakers)}
                   </p>
                   <div class="talk-card-meta">
                     <span class="talk-card-tag">{talk.data.duration} min</span>
@@ -166,15 +179,30 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
     margin-bottom: 0.4rem;
   }
 
+  .talk-advantages li:has(.talk-advantages-link) {
+    padding: 0;
+  }
+
   .talk-advantages-link {
     display: block;
+    padding: 1.6rem;
     color: var(--color-text-secondary);
     text-decoration: none;
     height: 100%;
+    transition: color 0.15s;
   }
 
   .talk-advantages-link:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-themed);
+    text-decoration: underline;
+  }
+
+  .talk-advantages-link:hover strong {
+    color: var(--color-accent-themed) !important;
+  }
+
+  .talk-advantages li:has(.talk-advantages-link):hover {
+    border-color: var(--color-accent-themed);
   }
 
   .talks-count {
@@ -271,7 +299,8 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
   }
 
   .talk-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: var(--color-surface-subtle);
     border: 1px solid var(--color-border);
     border-radius: 6px;
@@ -329,6 +358,8 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
   }
 
   .talk-card-meta {
+    margin-top: auto;
+    padding-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
@@ -362,24 +393,6 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
   .talk-card-level--intermediate {
     background: var(--ep-level-intermediate-bg);
     color: var(--ep-level-intermediate-text);
-  }
-
-  .talks-dot-bg {
-    background:
-      radial-gradient(circle, var(--ep-surface-medium) 1px, transparent 1px),
-      linear-gradient(
-        135deg,
-        var(--ep-footer-g1) 0%,
-        var(--ep-footer-g2) 40%,
-        var(--ep-footer-g3) 70%,
-        var(--ep-footer-g4) 100%
-      );
-    background-size:
-      24px 24px,
-      100% 100%;
-    padding: 4rem 2rem;
-    margin-bottom: 2rem;
-    border-radius: 4px;
   }
 
   .talk-card-level--advanced {

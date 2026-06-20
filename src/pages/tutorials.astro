@@ -5,6 +5,21 @@ import Title from "@ui/Title.astro";
 import { getCollection } from "astro:content";
 
 const allSessions = await getCollection("sessions");
+
+// Pre-resolve all speakers for fast lookup
+const allSpeakers = await getCollection("speakers");
+const speakerNames: Record<string, string> = {};
+for (const s of allSpeakers) {
+  speakerNames[s.id] = s.data.name;
+}
+
+function speakerLabel(speakers: any): string {
+  if (!speakers || speakers.length === 0) return "";
+  return speakers.map((s: any) => {
+    const id = typeof s === "string" ? s : s.id;
+    return speakerNames[id] || id;
+  }).join(", ");
+}
 const tutorials = allSessions
   .filter((s) => s.data.session_type?.toLowerCase() === "tutorial")
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
@@ -64,9 +79,7 @@ const tutorials = allSessions
               <a href={`/session/${t.id}`} class:list={["tutorial-card", t.data.level]} data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}>
                 <h3 class="tutorial-card-title">{t.data.title}</h3>
                 <p class="tutorial-card-speakers">
-                  {t.data.speakers?.length
-                    ? `${t.data.speakers.length} speaker${t.data.speakers.length > 1 ? "s" : ""}`
-                    : ""}
+                  {speakerLabel(t.data.speakers)}
                 </p>
                 <div class="tutorial-card-meta">
                   <span class="tutorial-card-tag">{t.data.duration} min</span>
@@ -160,23 +173,6 @@ const tutorials = allSessions
     padding: 3rem;
   }
 
-  .talks-dot-bg {
-    background:
-      radial-gradient(circle, var(--ep-surface-medium) 1px, transparent 1px),
-      linear-gradient(
-        135deg,
-        var(--ep-footer-g1) 0%,
-        var(--ep-footer-g2) 40%,
-        var(--ep-footer-g3) 70%,
-        var(--ep-footer-g4) 100%
-      );
-    background-size:
-      24px 24px,
-      100% 100%;
-    padding: 3rem 2rem;
-    border-radius: 4px;
-  }
-
   .tutorial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -184,7 +180,8 @@ const tutorials = allSessions
   }
 
   .tutorial-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: var(--color-surface-subtle);
     border: 1px solid var(--color-border);
     border-radius: 6px;
@@ -242,6 +239,8 @@ const tutorials = allSessions
   }
 
   .tutorial-card-meta {
+    margin-top: auto;
+    padding-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
@@ -286,7 +285,7 @@ const tutorials = allSessions
     font-family: "Inter Tight", system-ui, sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--color-text-secondary);
     margin: 0.5rem 0 0;
   }
 </style>

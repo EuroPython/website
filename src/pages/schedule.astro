@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
         var tabsContainer = document.getElementById('sched-tabs');
         if (tabsContainer) {
           var tabs = tabsContainer.querySelectorAll('.ep-sched-tab');
-          tabs.forEach(function(t) {
+          tabs.forEach(function(t: HTMLElement) {
             if (t.getAttribute('data-day') === dayName) {
               t.click();
             }
@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
         }
       }
 
-      var sessionEl = targetEl.querySelector('.ep-session') || targetEl;
+      var sessionEl: HTMLElement = targetEl.querySelector('.ep-session') || targetEl;
       var originalOutline = sessionEl.style.outline;
       var originalBackground = sessionEl.style.background;
 

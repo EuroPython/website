@@ -136,7 +136,7 @@ const nextSessionsOrdered = sameRoomNextSession
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
-    <Button class="mb-10" url=`/schedule/#session-${entry.id}`>View in the schedule</Button>
+    <Button class="mb-10 sched-btn" url=`/schedule/#session-${entry.id}`>View in the schedule</Button>
 
 
     <Prose full>
@@ -277,6 +277,13 @@ const nextSessionsOrdered = sameRoomNextSession
     </footer>
   </Section2>
 </Layout>
+
+<style>
+  .sched-btn {
+    background: oklch(0.522 0.218 264.4) !important;
+    color: white !important;
+  }
+</style>
 
 <script is:inline define:vars={{ slug }}>
   const currentUrl = window.location.pathname;

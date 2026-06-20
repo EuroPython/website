@@ -1,4 +1,20 @@
 ---
+import { getCollection } from "astro:content";
+
+const allSpeakers = await getCollection("speakers");
+const speakerNames: Record<string, string> = {};
+for (const s of allSpeakers) {
+  speakerNames[s.id] = s.data.name;
+}
+
+function speakerLabel(speakers: any): string {
+  if (!speakers || speakers.length === 0) return "";
+  return speakers.map((s: any) => {
+    const id = typeof s === "string" ? s : s.id;
+    return speakerNames[id] || id;
+  }).join(", ");
+}
+
 interface Props {
   posters: Array<{
     id: string;
@@ -29,9 +45,7 @@ const { posters } = Astro.props;
           <a href={`/session/${p.id}`} class:list={["poster-card", p.data.level]}>
             <h3 class="poster-title">{p.data.title}</h3>
             <p class="poster-speakers">
-              {p.data.speakers?.length
-                ? `${p.data.speakers.length} speaker${p.data.speakers.length > 1 ? "s" : ""}`
-                : ""}
+              {speakerLabel(p.data.speakers)}
             </p>
             <div class="poster-meta">
               <div class="poster-meta-row">
@@ -56,23 +70,6 @@ const { posters } = Astro.props;
 </section>
 
 <style>
-  .all-posters {
-    margin-top: 2rem;
-    padding: 3rem 1.5rem;
-    background:
-      radial-gradient(circle, var(--ep-surface-medium) 1px, transparent 1px),
-      linear-gradient(
-        135deg,
-        var(--ep-footer-g1) 0%,
-        var(--ep-footer-g2) 40%,
-        var(--ep-footer-g3) 70%,
-        var(--ep-footer-g4) 100%
-      );
-    background-size:
-      24px 24px,
-      100% 100%;
-  }
-
   .poster-count {
     font-size: 1.1rem;
     color: var(--color-text-muted);
@@ -87,7 +84,8 @@ const { posters } = Astro.props;
   }
 
   .poster-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: var(--color-surface-subtle);
     border: 1px solid var(--color-border);
     border-radius: 6px;
@@ -148,6 +146,8 @@ const { posters } = Astro.props;
   }
 
   .poster-meta {
+    margin-top: auto;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -198,7 +198,7 @@ const { posters } = Astro.props;
     font-family: "Inter Tight", system-ui, sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--color-text-secondary);
   }
 
   .poster-empty {
