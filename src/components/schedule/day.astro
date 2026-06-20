@@ -56,7 +56,6 @@ const ROOMS = (day.data.rooms ?? [])
 
 type ScheduleSession = {
   title: string;
-  slug?: string;
   start: Date;
   startTime: string;
   end: Date;
@@ -65,6 +64,7 @@ type ScheduleSession = {
   sessionType?: string | undefined;
   type: string;
   rooms: string[];
+  slug?: string;
 };
 
 // hack for posters :)
@@ -84,16 +84,14 @@ const sessions = day.data.events
     const endTime = format(end, "HH:mm");
 
     const session: ScheduleSession = {
-      title: event.title,
-      ...(event.slug ? { slug: event.slug } : {}),
-      rooms: event.rooms,
-      type: event.event_type,
-      duration,
+      ...event,
       start,
       startTime,
       end,
       endTime,
       sessionType: event.session_type?.toLowerCase(),
+      type: event.event_type,
+      slug: event.slug ? event.slug : "#",
     };
 
     if (session.sessionType === "poster") {
