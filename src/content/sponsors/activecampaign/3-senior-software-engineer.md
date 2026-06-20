@@ -47,10 +47,11 @@ preferred:
     production systems
   - Experience with SaaS productization
 description2: "
-  _This is an exciting time to join ActiveCampaign as we build out our new
-  office in Poland. You will be a large part of developing our office culture in
-  this new Krakow hub location._
-  "
+    **Compensation: zł 224,000 - 336,000 (per year salary)**
+    
+    
+    _This is an exciting time to join ActiveCampaign as we build out our new office in Poland. You will be a large part of developing our office culture in this new Krakow hub location._
+    "
 benefits:
 apply_link: https://www.activecampaign.com/careers/senior-software-engineer_a573e0c3-d417-483f-8105-959c8160f65e
 ---

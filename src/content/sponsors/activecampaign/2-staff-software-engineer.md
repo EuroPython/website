@@ -47,38 +47,32 @@ description: "
   adoption of cutting-edge tools (like Copilot, Cursor, or Devin) to transform
   how our internal teams build and test software.
 
-  - **Mentor and grow the next generation of talent**, using pairing and code
-  reviews to foster a culture of high ownership and technical rigor within the
-  hub.
+    - **Mentor and grow the next generation of talent**, using pairing and code reviews to foster a culture of high ownership and technical rigor within the hub.
+    
+    - **Bridge the gap between strategy and execution**, articulating the basis for technical decisions to both engineers and leadership to balance business speed with long-term architectural health.
+    
 
-  - **Bridge the gap between strategy and execution**, articulating the basis
-  for technical decisions to both engineers and leadership to balance business
-  speed with long-term architectural health.
+    **The ideal candidate will bring:**
 
-  "
+    - **8+ years of hands-on software engineering experience,** with a demonstrated track record of delivering high-impact results across multiple product areas or complex SaaS systems.
+    
+    - **Multi-stack mastery** with deep production experience in PHP and modern backend technologies, complemented by a strong competency in React or Ember.
+    
+    - **Proven expertise in AI and Agentic development,** including real-world experience designing autonomous agents, multi-agent orchestration, or deep LLM integrations.
+    
+    - **The ability to act as a technical advisor,** earning trust across the organization through sound judgment, clear architectural documentation, and a \"whole-system\" ownership mindset.
+    
+    - **Experience in high-growth SaaS environments,** ideally within the marketing automation or CRM domain, with a solid understanding of AWS, CI/CD, and observability at scale.
+    
+    - **A working knowledge of Python** for AI services and experience with data stores like MySQL, DynamoDB, or Redis at scale.
+    
+    - **Fluency in English (B2 minimum)** and the flexibility to collaborate effectively across time zones, specifically overlapping with US Central time.
+    
+    - **Familiarity with emerging AI standards,** such as the Model Context Protocol (MCP) or advanced AI coding assistants.
+    "
 responsibilities:
 requirements:
-  - "**8+ years of hands-on software engineering experience,** with a
-    demonstrated track record of delivering high-impact results across multiple
-    product areas or complex SaaS systems."
-  - "**Multi-stack mastery** with deep production experience in PHP and modern
-    backend technologies, complemented by a strong competency in React or Ember."
-  - "**Proven expertise in AI and Agentic development,** including real-world
-    experience designing autonomous agents, multi-agent orchestration, or deep
-    LLM integrations."
-  - '**The ability to act as a technical advisor,** earning trust across the
-    organization through sound judgment, clear architectural documentation, and
-    a "whole-system" ownership mindset.'
-  - "**Experience in high-growth SaaS environments,** ideally within the
-    marketing automation or CRM domain, with a solid understanding of AWS,
-    CI/CD, and observability at scale."
-  - "**A working knowledge of Python** for AI services and experience with data
-    stores like MySQL, DynamoDB, or Redis at scale."
-  - "**Fluency in English (B2 minimum)** and the flexibility to collaborate
-    effectively across time zones, specifically overlapping with US Central
-    time."
-  - "**Familiarity with emerging AI standards,** such as the Model Context
-    Protocol (MCP) or advanced AI coding assistants."
+
 benefits:
 description2: "
   **Compensation: zł 369,000 - 451,000 (per year salary)**
