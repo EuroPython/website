@@ -9,7 +9,7 @@ const mode = import.meta.env.MODE;
 console.log(`\x1b[35m[EP]\x1b[0m Current MODE: \x1b[1m\x1b[34m${mode}\x1b[0m`);
 
 const pages = defineCollection({
-  loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/pages" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/pages" }),
   schema: z.object({
     title: z.string(),
     subtitle: z.string(),

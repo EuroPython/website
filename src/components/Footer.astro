@@ -1,6 +1,6 @@
 ---
 import SocialLinks from "@components/SocialLinks.astro";
-import links from "@data/links.json";
+import { FOOTER_COLUMNS, TERMS, SOCIALS } from "@data/nav";
 import EPSLogo from "/public/theme/eps-logo.svg";
 
 const buildTimestamp = __TIMESTAMP__;
@@ -18,33 +18,22 @@ const gitVersion = __GIT_VERSION__;
     </div>
     <div class="footer-grid">
     {
-      links.footer.map((section) => (
+      FOOTER_COLUMNS.map((col) => (
         <div>
-          <p class="footer-col-title">{section.name}</p>
-          {section.items ? (
-            <ul class="footer-links">
-              {section.items.map((item) => (
-                <li>
-                  <a
-                    href={item.path}
-                    target={item.path.startsWith("http") ? "_blank" : undefined}
-                    rel={item.path.startsWith("http") ? "noopener" : undefined}
-                  >
-                    {item.name}{item.path.startsWith("http") ? " ↗" : ""}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <a
-              href={section["path"]}
-              class="footer-links"
-              target={section["path"].startsWith("http") ? "_blank" : undefined}
-              rel={section["path"].startsWith("http") ? "noopener" : undefined}
-            >
-              {section.name}{section["path"].startsWith("http") ? " ↗" : ""}
-            </a>
-          )}
+          <p class="footer-col-title">{col.title}</p>
+          <ul class="footer-links">
+            {col.items.map((item) => (
+              <li>
+                <a
+                  href={item.url}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener" : undefined}
+                >
+                  {item.label}{item.external ? " ↗" : ""}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       ))
     }
@@ -90,26 +79,28 @@ const gitVersion = __GIT_VERSION__;
     <div class="flex w-full lg:flex-row flex-col-reverse justify-between">
       <div class="terms py-2 text-center ">
         {
-          links.terms.map((item) => (
+          TERMS.map((item) => (
             <a
-              href={item.path}
+              href={item.url}
               class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200 mx-2"
             >
-              {item.name}
-              {item.path.startsWith("http") && (
-                <span class="inline-block">↗</span>
+              {item.label}
+              {item.external && (
+                <span class="inline-block">342206227</span>
               )}
             </a>
           ))
         }
-      </div>
 
       {
-        links && links["socials"] && (
+        SOCIALS && (
           <SocialLinks
-            socials={links["socials"]}
+            socials={SOCIALS}
             variant="white"
             class="opacity-60 pb-4"
+          />
+        )
+      }
           />
         )
       }

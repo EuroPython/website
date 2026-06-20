@@ -27,8 +27,14 @@ const wrapClass = full ? "" : "sec-inner";
   .sec-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.55rem 0;
+    padding: 0.55rem 1.5rem;
     position: relative;
     z-index: 1;
+  }
+
+  @media (max-width: 640px) {
+    .sec-inner {
+      padding: 0.55rem 1rem;
+    }
   }
 </style>

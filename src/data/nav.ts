@@ -1,0 +1,262 @@
+/**
+ * Single source of truth for all navigation and footer links.
+ *
+ * Inspired by ep26-draft/src/menu.py — typed, structured, reusable.
+ */
+
+export interface Link {
+  label: string;
+  url: string;
+  external?: boolean;
+}
+
+export interface NavSection {
+  label?: string;
+  items: Link[];
+}
+
+export interface NavMenu {
+  label: string;
+  url: string;
+  sections?: NavSection[];
+  wide?: boolean;
+}
+
+export interface FooterColumn {
+  title: string;
+  items: Link[];
+}
+
+// ── Link registry ────────────────────────────────────────────
+
+const L = {
+  // Programme
+  schedule: { label: "Schedule", url: "/schedule" },
+  talks: { label: "Talks", url: "/talks" },
+  tutorials: { label: "Tutorials", url: "/tutorials" },
+  sessions: { label: "List of Sessions", url: "/sessions" },
+  posters: { label: "Posters", url: "/posters" },
+  speakers: { label: "List of Speakers", url: "/speakers" },
+  tracks: { label: "Tracks", url: "/tracks" },
+  guidelines: { label: "Speaker Guidelines", url: "/guidelines" },
+  mentorship: { label: "Speaker Mentorship", url: "/mentorship" },
+
+  // Summits
+  langSummit: { label: "Language Summit", url: "/language-summit" },
+  rustSummit: { label: "Rust Summit", url: "/rust-summit" },
+
+  // Events & Social
+  sprints: { label: "Sprints Weekend", url: "/sprints" },
+  socialEvent: { label: "Social Event", url: "/social-event" },
+  beginnersDay: { label: "Beginners' Day", url: "/beginners-day" },
+  speakersDinner: { label: "Speakers' Dinner", url: "/speakers-dinner" },
+  openSpaces: { label: "Open Spaces", url: "/open-spaces" },
+
+  // Participate
+  tickets: { label: "Tickets", url: "/tickets" },
+  finaid: { label: "Financial Aid", url: "/finaid" },
+  visa: { label: "Visa Information", url: "/visa" },
+  volunteering: { label: "Volunteering", url: "/volunteering" },
+  faq: { label: "FAQ", url: "/faq" },
+  coc: {
+    label: "Code of Conduct",
+    url: "https://www.europython-society.org/coc/",
+    external: true,
+  },
+
+  // Venue
+  venue: { label: "Venue", url: "/venue" },
+  krakow: { label: "Kraków", url: "/krakow" },
+  hotels: { label: "Hotels", url: "/hotels" },
+
+  // Sponsorship
+  ourSponsors: { label: "Our Sponsors", url: "/sponsors" },
+  sponsorPkg: { label: "Sponsor Packages", url: "/sponsorship/sponsor" },
+  sponsorInfo: {
+    label: "Sponsor Information",
+    url: "/sponsorship/information",
+  },
+
+  // Community
+  about: { label: "About Us", url: "/about" },
+  eps: {
+    label: "EuroPython Society",
+    url: "https://europython-society.org/",
+    external: true,
+  },
+  communityPartners: {
+    label: "Community Partners",
+    url: "/community-partners",
+  },
+
+  // Misc
+  jobs: { label: "Jobs", url: "/jobs" },
+  contacts: { label: "Contacts", url: "/contacts" },
+  terms: { label: "Terms", url: "/terms" },
+  privacy: {
+    label: "Privacy Policy",
+    url: "https://www.europython-society.org/privacy/",
+    external: true,
+  },
+  blog: {
+    label: "EuroPython Blog",
+    url: "https://blog.europython.eu/",
+    external: true,
+  },
+  anniversary: {
+    label: "Anniversary Challenge",
+    url: "https://ep2026.europython.eu/25anniversary",
+    external: true,
+  },
+};
+
+// ── Nav menus ────────────────────────────────────────────────
+
+export const NAV_MENUS: NavMenu[] = [
+  // Programme — rich multi-column with labelled sections
+  {
+    label: "Programme",
+    url: "/sessions",
+    wide: true,
+    sections: [
+      {
+        label: "Talks & Schedule",
+        items: [
+          L.schedule,
+          L.talks,
+          L.tutorials,
+          L.sessions,
+          L.posters,
+          L.speakers,
+          L.tracks,
+        ],
+      },
+      {
+        label: "Summits",
+        items: [L.langSummit, L.rustSummit],
+      },
+      {
+        label: "Events & Social",
+        items: [
+          L.sprints,
+          L.socialEvent,
+          L.beginnersDay,
+          L.speakersDinner,
+          L.openSpaces,
+        ],
+      },
+      {
+        label: "For Speakers",
+        items: [L.guidelines, L.mentorship],
+      },
+    ],
+  },
+
+  // Attend — simple flat list
+  {
+    label: "Attend",
+    url: "/tickets",
+    sections: [
+      { items: [L.tickets, L.finaid, L.visa, L.volunteering, L.faq, L.coc] },
+    ],
+  },
+
+  // Venue — simple flat list
+  {
+    label: "Venue",
+    url: "/venue",
+    sections: [{ items: [L.venue, L.krakow, L.hotels] }],
+  },
+
+  // Sponsorship — simple flat list
+  {
+    label: "Sponsorship",
+    url: "/sponsorship/sponsor",
+    sections: [{ items: [L.ourSponsors, L.sponsorPkg, L.sponsorInfo] }],
+  },
+
+  // Community — simple flat list
+  {
+    label: "Community",
+    url: "/about",
+    sections: [{ items: [L.about, L.eps, L.communityPartners] }],
+  },
+
+  // Jobs — single link, no dropdown
+  {
+    label: "Jobs",
+    url: "/jobs",
+  },
+];
+
+// ── Social links ────────────────────────────────────────────
+
+export const SOCIALS: Record<string, string> = {
+  mastodon: "https://fosstodon.org/@europython",
+  linkedin: "https://www.linkedin.com/company/europython",
+  github: "https://github.com/europython",
+  bluesky: "https://bsky.app/profile/europython.eu",
+  twitter: "https://x.com/europython",
+  instagram: "https://www.instagram.com/europython/",
+  youtube: "https://www.youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q",
+  tiktok: "https://www.tiktok.com/@europython",
+};
+
+export const TERMS: Link[] = [
+  { label: "Contacts", url: "/contacts" },
+  { label: "Terms", url: "/terms" },
+  {
+    label: "Code of Conduct",
+    url: "https://www.europython-society.org/coc/",
+    external: true,
+  },
+  {
+    label: "Privacy Policy",
+    url: "https://www.europython-society.org/privacy/",
+    external: true,
+  },
+];
+
+// ── Footer columns ───────────────────────────────────────────
+
+export const FOOTER_COLUMNS: FooterColumn[] = [
+  {
+    title: "Quick links",
+    items: [L.tickets, L.krakow, L.visa],
+  },
+  {
+    title: "Programme",
+    items: [
+      L.schedule,
+      L.sessions,
+      L.speakers,
+      L.tracks,
+      L.guidelines,
+      L.mentorship,
+    ],
+  },
+  {
+    title: "Events",
+    items: [
+      L.sprints,
+      L.socialEvent,
+      L.beginnersDay,
+      L.speakersDinner,
+      L.openSpaces,
+      L.langSummit,
+      L.rustSummit,
+    ],
+  },
+  {
+    title: "Sponsorship",
+    items: [L.ourSponsors, L.sponsorPkg, L.sponsorInfo, L.jobs],
+  },
+  {
+    title: "Community",
+    items: [L.about, L.eps, L.communityPartners, L.blog, L.contacts],
+  },
+  {
+    title: "Policies",
+    items: [L.coc, L.terms, L.privacy],
+  },
+];
