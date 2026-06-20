@@ -18,6 +18,7 @@ import EPSLogo from "@components/markdown/EPSLogo.astro";
 import ProfileCard from "@components/profile/ProfileCard.astro";
 import SpeakerCard from "@components/profile/SpeakerCard.astro";
 import GoogleCalendar from '@components/GoogleCalendar.astro';
+import ThreeCol from "@ui/ThreeCol.astro";
 
 import Prose from "@ui/Prose.astro";
 import enabledPages from "@data/enabledPages.json";
@@ -67,6 +68,7 @@ const description = post.data.subtitle;
   <Prose class="pb-20" full={post.data.full}>
     <Content
       components={{
+        ThreeCol,
         Button,
         Headline,
         Icon,
