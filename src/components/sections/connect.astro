@@ -65,7 +65,7 @@ import Section2 from "@ui/Section2.astro";
   const form = document.getElementById("subscribeForm");
   form?.addEventListener("submit", handleSubscribe);
 
-  async function handleSubscribe(event) {
+  async function handleSubscribe(event: SubmitEvent) {
     event.preventDefault();
 
     const input = document.getElementById("newsletter-email");

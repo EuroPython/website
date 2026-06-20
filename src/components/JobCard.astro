@@ -40,7 +40,7 @@ const { title, location, type, level, salary, description, responsibilities, min
             return <li>{item}</li>;
           }
           const category = Object.keys(item)[0];
-          const subItems = item[category];
+          const subItems = item[category] as string[];
           return (
             <li>
               <strong>{category}</strong>

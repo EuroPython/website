@@ -1,6 +1,5 @@
 ---
 import Keynoter from "./keynoter.astro";
-import Button from "@ui/Button.astro";
 import { getCollection } from "astro:content";
 
 const allKeynoters = await getCollection("keynoters");
@@ -26,7 +25,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
             url={k.data.url || ""}
             tagline={k.data.tagline}
             bio={k.data.bio}
-            image={k.data.image}
+            {...(k.data.image ? { image: k.data.image } : {})}
             order={k.data.order}
           />
         ))}

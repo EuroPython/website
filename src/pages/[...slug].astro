@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import Layout from "@layouts/MarkdownLayout.astro";
 
 import Headline from "@ui/Headline.astro";
@@ -28,23 +28,23 @@ export async function getStaticPaths() {
   // Filter pages based on whitelist if enabled
   const filteredPages = enabledPages.enableWhitelist
     ? pages.filter((page) => {
-        const fullPath = `/${page.slug}`;
-        const shortSlug = page.slug.split("/").pop();
+        const fullPath = `/${page.id}`;
+        const shortSlug = page.id.split("/").pop();
         const shortPath = `/${shortSlug}`;
         return enabledPages.pages.includes(fullPath) || enabledPages.pages.includes(shortPath);
       })
     : pages;
 
   return filteredPages.flatMap((page) => {
-    const slugParts = page.slug.split("/");
+    const slugParts = page.id.split("/");
     const shortSlug = slugParts[slugParts.length - 1];
 
     const paths = [
-      { params: { slug: page.slug }, props: page }, // long slug
+      { params: { slug: page.id }, props: page }, // long slug
     ];
 
     // only add short slug if it's not the same
-    if (page.slug !== shortSlug) {
+    if (page.id !== shortSlug) {
       paths.push({ params: { slug: shortSlug }, props: page }); // short slug
     }
 
@@ -55,7 +55,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"pages">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 let title =
   post.data.title +
