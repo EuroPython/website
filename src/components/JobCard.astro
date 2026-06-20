@@ -28,8 +28,8 @@ const { title, location, type, level, salary, description, responsibilities, min
       <h2 class="text-3xl font-bold mb-2">{title}</h2>
     </a>
 
-    <p class="text-white/60 mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
-    <p class="text-white/70 mb-4">{salary}</p>
+    <p class="text-[var(--color-text-muted)] mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
+    <p class="text-[var(--color-text-secondary)] mb-4">{salary}</p>
     <Markdown content={description || ""} class="job-post" />
 
     { responsibilities &&
