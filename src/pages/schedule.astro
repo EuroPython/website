@@ -43,9 +43,9 @@ window.addEventListener('load', function() {
         var tabsContainer = document.getElementById('sched-tabs');
         if (tabsContainer) {
           var tabs = tabsContainer.querySelectorAll('.ep-sched-tab');
-          tabs.forEach(function(t: HTMLElement) {
+          tabs.forEach(function(t) {
             if (t.getAttribute('data-day') === dayName) {
-              t.click();
+              (t as HTMLElement).click();
             }
           });
         }

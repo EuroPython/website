@@ -84,13 +84,16 @@ const sessions = day.data.events
     const endTime = format(end, "HH:mm");
 
     const session: ScheduleSession = {
-      ...event,
+      title: event.title,
+      ...(event.slug ? { slug: event.slug } : {}),
+      rooms: event.rooms,
+      type: event.event_type,
+      duration,
       start,
       startTime,
       end,
       endTime,
       sessionType: event.session_type?.toLowerCase(),
-      type: event.event_type,
     };
 
     if (session.sessionType === "poster") {
