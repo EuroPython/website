@@ -31,8 +31,8 @@ const descDisplay = compact && descFull.length > descLimit
     <p class="text-xl pb-2 inline-block font-bold">
       {sponsor.data.name}
     </p>
-    <a href={`/sponsor/${jobId}`}>
-      <h2 class="text-3xl font-bold mb-2">{title}</h2>
+    <a href={`/sponsor/${jobId}`} class="group">
+      <h2 class="text-3xl font-bold mb-2 text-[var(--color-text)] group-hover:text-[var(--color-accent-themed)] transition-colors">{title}</h2>
     </a>
 
     <p class="text-[var(--color-text-muted)] mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
