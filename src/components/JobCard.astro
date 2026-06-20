@@ -37,7 +37,7 @@ const { title, location, type, level, salary, description, responsibilities, min
       <ul class="list-disc list-inside mb-4">
         {responsibilities.map((item) => {
           if (typeof item === "string") {
-            return <li>{item}</li>;
+            return <li><Markdown content={item} /></li>;
           }
           const category = Object.keys(item)[0];
           const subItems = item[category];
@@ -45,7 +45,7 @@ const { title, location, type, level, salary, description, responsibilities, min
             <li>
               <strong>{category}</strong>
               <ul class="list-disc list-inside">
-                {subItems.map((sub) => <li>{sub}</li>)}
+                {subItems.map((sub) => <li><Markdown content={sub} /></li>)}
               </ul>
             </li>
           );
@@ -56,27 +56,27 @@ const { title, location, type, level, salary, description, responsibilities, min
     { min_requirements &&
     <h3 class="text-xl font-semibold mb-2">Minimum requirements</h3>
     <ul class="list-disc list-inside mb-4">
-      {min_requirements.map((item:string) => <li>{item}</li>)}
+      {min_requirements.map((item:string) => <li><Markdown content={item} /></li>)}
     </ul>
     }
     { requirements &&
     <h3 class="text-xl font-semibold mb-2">Requirements</h3>
     <ul class="list-disc list-inside mb-4">
-      {requirements.map((item:string) => <li>{item}</li>)}
+      {requirements.map((item:string) => <li><Markdown content={item} /></li>)}
     </ul>
     }
 
     { preferred &&
     <h3 class="text-xl font-semibold mb-2">Nice-to-Haves</h3>
     <ul class="list-disc list-inside mb-4">
-      {preferred.map((item:string) => <li>{item}</li>)}
+      {preferred.map((item:string) => <li><Markdown content={item} /></li>)}
     </ul>
     }
 
     { benefits &&
     <h3 class="text-xl font-semibold mb-2">Benefits</h3>
     <ul class="list-disc list-inside mb-6">
-      {benefits.map((item:string) => <li>{item}</li>)}
+      {benefits.map((item:string) => <li><Markdown content={item} /></li>)}
     </ul>
     }
 
