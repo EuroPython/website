@@ -71,7 +71,7 @@ const nextSessionsOrdered = sameRoomNextSession
   <Section2 id="session-page">
     <Prose full>
       <h1
-        class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [[&>a]:text-inherit>a]:text-inherit text-white text-pretty"
+        class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-pretty"
       >
         {entry.data.title}
         <span class="pl-1">
@@ -183,7 +183,7 @@ const nextSessionsOrdered = sameRoomNextSession
         speakers.length > 0 && (
           <>
             <Separator />
-            <h2 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [[&>a]:text-inherit>a]:text-inherit text-white text-5xl">
+            <h2 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
               The speaker{speakers.length > 1 ? "s" : ""}
             </h2>
             {speakers.map((speaker) => (
