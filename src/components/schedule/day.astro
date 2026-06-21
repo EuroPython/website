@@ -445,11 +445,11 @@ const dateText = format(date, "eeee d MMMM");
                 >
                   <h2>Posters ({posters[0].rooms.join(", ")})</h2>
 
-                  <div>
+                  <div class="poster-cards">
                     {posters.map((session) => {
                       const style = {};
 
-                      return <Session session={session} style={style} />;
+                      return <div><Session session={session} style={style} sessionType="poster" /></div>;
                     })}
                   </div>
                 </div>
@@ -658,6 +658,7 @@ const dateText = format(date, "eeee d MMMM");
     :global(.break) {
       grid-row: var(--start) / var(--end);
       grid-column: var(--col-start) / var(--col-end);
+      display: block;
     }
 
     :global(.ep-break.day-end) {
@@ -691,6 +692,11 @@ const dateText = format(date, "eeee d MMMM");
       display: none;
     }
 
+    .posters:hover,
+    .posters:focus-within {
+      z-index: 15;
+    }
+
     .posters {
       grid-column: 3 / 6;
       position: relative;
@@ -701,7 +707,10 @@ const dateText = format(date, "eeee d MMMM");
       z-index: 5;
     }
 
-    .posters h2 {
+    .poster-cards {
+  }
+
+  .posters h2 {
       font-family: 'Inter Tight', system-ui, sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
@@ -722,6 +731,7 @@ const dateText = format(date, "eeee d MMMM");
     .posters :global(.session.poster),
     .posters :global(.ep-session.poster) {
       display: flex;
+      height: 100%;
     }
   }
 </style>
