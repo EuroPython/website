@@ -13,11 +13,12 @@ for (const s of allSpeakers) {
   speakerNames[s.id] = s.data.name;
 }
 
-function speakerLabel(speakers: any): string {
+function speakerHtml(speakers: any): string {
   if (!speakers || speakers.length === 0) return "";
   return speakers.map((s: any) => {
     const id = typeof s === "string" ? s : s.id;
-    return speakerNames[id] || id;
+    const name = speakerNames[id] || id;
+    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
   }).join(", ");
 }
 const talks = allSessions
@@ -123,16 +124,15 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
             </h3>
             <div class="talk-grid">
               {groups[track].map((talk) => (
-                <a href={`/session/${talk.id}`} class:list={["talk-card", talk.data.level]} data-track={talk.data.track || ""} data-search={`${talk.data.title.toLowerCase()} ${talk.data.track?.toLowerCase() || ""}`}>
-                  <h4 class="talk-card-title">{talk.data.title}</h4>
-                  <p class="talk-card-speakers">
-                    {speakerLabel(talk.data.speakers)}
+                <div class:list={["talk-card", talk.data.level]} data-track={talk.data.track || ""} data-search={`${talk.data.title.toLowerCase()} ${talk.data.track?.toLowerCase() || ""}`}>
+                  <a href={`/session/${talk.id}`} class="talk-card-title">{talk.data.title}</a>
+                  <p class="talk-card-speakers" set:html={speakerHtml(talk.data.speakers)}>
                   </p>
                   <div class="talk-card-meta">
                     <span class="talk-card-tag">{talk.data.duration} min</span>
                     {talk.data.level && <span class={`talk-card-level talk-card-level--${talk.data.level}`}>{talk.data.level.charAt(0).toUpperCase() + talk.data.level.slice(1)}</span>}
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>
@@ -349,12 +349,26 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
     color: var(--color-text);
     margin: 0 0 0.5rem;
     line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .talk-card-title:hover {
+    text-decoration: underline;
   }
 
   .talk-card-speakers {
     font-size: 1.15rem;
     color: var(--color-text-secondary);
     margin: 0 0 0.75rem;
+  }
+
+  :global(.talk-card-speakers .speaker-link) {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  :global(.talk-card-speakers .speaker-link:hover) {
+    text-decoration: underline;
   }
 
   .talk-card-meta {

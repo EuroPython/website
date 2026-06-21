@@ -7,11 +7,12 @@ for (const s of allSpeakers) {
   speakerNames[s.id] = s.data.name;
 }
 
-function speakerLabel(speakers: any): string {
+function speakerHtml(speakers: any): string {
   if (!speakers || speakers.length === 0) return "";
   return speakers.map((s: any) => {
     const id = typeof s === "string" ? s : s.id;
-    return speakerNames[id] || id;
+    const name = speakerNames[id] || id;
+    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
   }).join(", ");
 }
 
@@ -42,10 +43,9 @@ const { posters } = Astro.props;
     posters.length > 0 ? (
       <div class="poster-grid">
         {posters.map((p) => (
-          <a href={`/session/${p.id}`} class:list={["poster-card", p.data.level]}>
-            <h3 class="poster-title">{p.data.title}</h3>
-            <p class="poster-speakers">
-              {speakerLabel(p.data.speakers)}
+          <div class:list={["poster-card", p.data.level]}>
+            <a href={`/session/${p.id}`} class="poster-title">{p.data.title}</a>
+            <p class="poster-speakers" set:html={speakerHtml(p.data.speakers)}>
             </p>
             <div class="poster-meta">
               <div class="poster-meta-row">
@@ -54,7 +54,7 @@ const { posters } = Astro.props;
               </div>
               {p.data.track && <span class="poster-track">{p.data.track}</span>}
             </div>
-          </a>
+          </div>
         ))}
       </div>
     ) : (
@@ -137,12 +137,26 @@ const { posters } = Astro.props;
     color: var(--color-text);
     margin: 0 0 0.5rem;
     line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .poster-title:hover {
+    text-decoration: underline;
   }
 
   .poster-speakers {
     font-size: 1.15rem;
     color: var(--color-text-secondary);
     margin: 0 0 0.75rem;
+  }
+
+  :global(.poster-speakers .speaker-link) {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  :global(.poster-speakers .speaker-link:hover) {
+    text-decoration: underline;
   }
 
   .poster-meta {

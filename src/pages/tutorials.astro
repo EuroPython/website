@@ -13,11 +13,12 @@ for (const s of allSpeakers) {
   speakerNames[s.id] = s.data.name;
 }
 
-function speakerLabel(speakers: any): string {
+function speakerHtml(speakers: any): string {
   if (!speakers || speakers.length === 0) return "";
   return speakers.map((s: any) => {
     const id = typeof s === "string" ? s : s.id;
-    return speakerNames[id] || id;
+    const name = speakerNames[id] || id;
+    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
   }).join(", ");
 }
 const tutorials = allSessions
@@ -76,17 +77,16 @@ const tutorials = allSessions
         <div class="talks-dot-bg">
           <div class="tutorial-grid">
             {tutorials.map((t) => (
-              <a href={`/session/${t.id}`} class:list={["tutorial-card", t.data.level]} data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}>
-                <h3 class="tutorial-card-title">{t.data.title}</h3>
-                <p class="tutorial-card-speakers">
-                  {speakerLabel(t.data.speakers)}
+              <div class:list={["tutorial-card", t.data.level]} data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}>
+                <a href={`/session/${t.id}`} class="tutorial-card-title">{t.data.title}</a>
+                <p class="tutorial-card-speakers" set:html={speakerHtml(t.data.speakers)}>
                 </p>
                 <div class="tutorial-card-meta">
                   <span class="tutorial-card-tag">{t.data.duration} min</span>
                   {t.data.level && <span class={`tutorial-card-level tutorial-card-level--${t.data.level}`}>{t.data.level.charAt(0).toUpperCase() + t.data.level.slice(1)}</span>}
                 </div>
                 {t.data.track && <p class="tutorial-card-track">{t.data.track}</p>}
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -230,12 +230,26 @@ const tutorials = allSessions
     color: var(--color-text);
     margin: 0 0 0.5rem;
     line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .tutorial-card-title:hover {
+    text-decoration: underline;
   }
 
   .tutorial-card-speakers {
     font-size: 1.15rem;
     color: var(--color-text-secondary);
     margin: 0 0 0.75rem;
+  }
+
+  :global(.tutorial-card-speakers .speaker-link) {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  :global(.tutorial-card-speakers .speaker-link:hover) {
+    text-decoration: underline;
   }
 
   .tutorial-card-meta {
