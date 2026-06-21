@@ -35,10 +35,9 @@ window.addEventListener('load', function() {
     if (!currentAnchor) return;
 
     var targetEl = document.getElementById(currentAnchor);
-    console.log(targetEl);
 
+    // Always switch to the correct day tab if we found the session
     if (targetEl) {
-      // Find the day this session belongs to
       var dayEl = targetEl.closest('.ep-sched-day');
       if (dayEl) {
         var dayName = dayEl.getAttribute('data-day');
@@ -47,20 +46,22 @@ window.addEventListener('load', function() {
           var tabs = tabsContainer.querySelectorAll('.ep-sched-tab');
           tabs.forEach(function(t) {
             if (t.getAttribute('data-day') === dayName) {
-              (t as HTMLElement).click();
+              t.click();
             }
           });
         }
       }
+    }
 
-      var sessionEl: HTMLElement = targetEl.querySelector('.ep-session') || targetEl;
+    // Only blink if the session is visible
+    if (targetEl && targetEl.offsetParent !== null) {
+      var sessionEl = targetEl.querySelector('.ep-session') || targetEl;
       var originalOutline = sessionEl.style.outline;
       var originalBackground = sessionEl.style.background;
 
       var blinkCount = 0;
       var maxBlinks = 5;
       var blinkDuration = 500;
-        console.log('0');
 
       function toggleBorder() {
         if (blinkCount >= maxBlinks * 2) {

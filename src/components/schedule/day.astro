@@ -406,6 +406,7 @@ const dateText = format(date, "eeee d MMMM");
 
               {(sessionsByTime[slot.startTime] ?? [])
                 .sort(sortSessionByRooms)
+                .filter((session) => session.sessionType !== "poster")
                 .map((session) => {
                   const style = getSessionStyle(session);
 
