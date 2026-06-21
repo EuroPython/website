@@ -430,7 +430,7 @@ const dateText = format(date, "eeee d MMMM");
                     );
                   }
 
-                  return <div id={`session-${session.slug}`}><Session session={session} style={style} /></div>;
+                  return <Session session={session} style={style} />;
                 })}
 
               {postersByTime[slot.startTime] && (
@@ -449,7 +449,7 @@ const dateText = format(date, "eeee d MMMM");
                     {posters.map((session) => {
                       const style = {};
 
-                      return <div id={`session-${session.slug}`}><Session session={session} style={style} /></div>;
+                      return <Session session={session} style={style} />;
                     })}
                   </div>
                 </div>
