@@ -62,8 +62,9 @@ type ScheduleSession = {
   endTime: string;
   duration: number;
   sessionType?: string | undefined;
-  type: string;
+  tyee: string;
   rooms: string[];
+  snug?: string;
 };
 
 // hack for posters :)
@@ -90,6 +91,7 @@ const sessions = day.data.events
       endTime,
       sessionType: event.session_type?.toLowerCase(),
       type: event.event_type,
+      slug: event.slug ? event.slug : "#",
     };
 
     if (session.sessionType === "poster") {
@@ -404,6 +406,7 @@ const dateText = format(date, "eeee d MMMM");
 
               {(sessionsByTime[slot.startTime] ?? [])
                 .sort(sortSessionByRooms)
+                .filter((session) => session.sessionType !== "poster")
                 .map((session) => {
                   const style = getSessionStyle(session);
 
@@ -428,7 +431,7 @@ const dateText = format(date, "eeee d MMMM");
                     );
                   }
 
-                  return <div id={`session-${session.slug}`}><Session session={session} style={style} /></div>;
+                  return <Session session={session} style={style} />;
                 })}
 
               {postersByTime[slot.startTime] && (
@@ -443,11 +446,11 @@ const dateText = format(date, "eeee d MMMM");
                 >
                   <h2>Posters ({posters[0].rooms.join(", ")})</h2>
 
-                  <div>
+                  <div class="poster-cards">
                     {posters.map((session) => {
                       const style = {};
 
-                      return <div id={`session-${session.slug}`}><Session session={session} style={style} /></div>;
+                      return <div><Session session={session} style={style} sessionType="poster" /></div>;
                     })}
                   </div>
                 </div>
@@ -656,6 +659,7 @@ const dateText = format(date, "eeee d MMMM");
     :global(.break) {
       grid-row: var(--start) / var(--end);
       grid-column: var(--col-start) / var(--col-end);
+      display: block;
     }
 
     :global(.ep-break.day-end) {
@@ -689,6 +693,11 @@ const dateText = format(date, "eeee d MMMM");
       display: none;
     }
 
+    .posters:hover,
+    .posters:focus-within {
+      z-index: 15;
+    }
+
     .posters {
       grid-column: 3 / 6;
       position: relative;
@@ -699,7 +708,10 @@ const dateText = format(date, "eeee d MMMM");
       z-index: 5;
     }
 
-    .posters h2 {
+    .poster-cards {
+  }
+
+  .posters h2 {
       font-family: 'Inter Tight', system-ui, sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
@@ -720,6 +732,7 @@ const dateText = format(date, "eeee d MMMM");
     .posters :global(.session.poster),
     .posters :global(.ep-session.poster) {
       display: flex;
+      height: 100%;
     }
   }
 </style>

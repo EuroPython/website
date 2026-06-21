@@ -34,10 +34,10 @@ const L = {
   schedule: { label: "Schedule", url: "/schedule" },
   talks: { label: "Talks", url: "/talks" },
   tutorials: { label: "Tutorials", url: "/tutorials" },
-  sessions: { label: "List of Sessions", url: "/sessions" },
   posters: { label: "Posters", url: "/posters" },
-  speakers: { label: "List of Speakers", url: "/speakers" },
   tracks: { label: "Tracks", url: "/tracks" },
+  speakers: { label: "Speakers", url: "/speakers" },
+  sessions: { label: "List of all Sessions", url: "/sessions" },
   guidelines: { label: "Speaker Guidelines", url: "/guidelines" },
   mentorship: { label: "Speaker Mentorship", url: "/mentorship" },
 
@@ -125,10 +125,9 @@ export const NAV_MENUS: NavMenu[] = [
           L.schedule,
           L.talks,
           L.tutorials,
-          L.sessions,
           L.posters,
-          L.speakers,
           L.tracks,
+          L.speakers,
         ],
       },
       {
@@ -228,9 +227,11 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Programme",
     items: [
       L.schedule,
-      L.sessions,
-      L.speakers,
+      L.talks,
+      L.tutorials,
+      L.posters,
       L.tracks,
+      L.speakers,
       L.guidelines,
       L.mentorship,
     ],
@@ -254,9 +255,5 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Community",
     items: [L.about, L.eps, L.communityPartners, L.blog, L.contacts],
-  },
-  {
-    title: "Policies",
-    items: [L.coc, L.terms, L.privacy],
   },
 ];

@@ -29,14 +29,15 @@ const days = await getCollection("days");
 <script>
 window.addEventListener('load', function() {
   function checkForAnchorAndHighlight() {
+
     const currentAnchor = window.location.hash.substring(1);
 
-    if (!currentAnchor) return;
+    if (!currentAnchor || currentAnchor.startsWith('day-')) return;
 
     var targetEl = document.getElementById(currentAnchor);
 
+    // Always switch to the correct day tab if we found the session
     if (targetEl) {
-      // Find the day this session belongs to
       var dayEl = targetEl.closest('.ep-sched-day');
       if (dayEl) {
         var dayName = dayEl.getAttribute('data-day');
@@ -50,7 +51,10 @@ window.addEventListener('load', function() {
           });
         }
       }
+    }
 
+    // Only blink if the session is visible
+    if (targetEl && targetEl.offsetParent !== null) {
       var sessionEl = targetEl.querySelector('.ep-session') || targetEl;
       var originalOutline = sessionEl.style.outline;
       var originalBackground = sessionEl.style.background;
@@ -66,7 +70,10 @@ window.addEventListener('load', function() {
           return;
         }
 
+        console.log('a');
         if (blinkCount % 2 === 0) {
+
+          console.log('b');
           sessionEl.style.outline = '2px solid var(--ep-accent, #ff9900)';
           sessionEl.style.outlineOffset = '-2px';
           sessionEl.style.background = 'var(--ep-session-hover-bg, rgba(255,255,255,0.05))';
@@ -95,6 +102,7 @@ window.addEventListener('load', function() {
   }
 
   checkForAnchorAndHighlight();
+
 
   window.addEventListener('hashchange', checkForAnchorAndHighlight);
 });

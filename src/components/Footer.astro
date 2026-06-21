@@ -78,19 +78,20 @@ const gitVersion = __GIT_VERSION__;
 
     <div class="flex w-full lg:flex-row flex-col-reverse justify-between">
       <div class="terms py-2 text-center ">
-        {
-          TERMS.map((item) => (
-            <a
-              href={item.url}
-              class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200 mx-2"
-            >
-              {item.label}
-              {item.external && (
-                <span class="inline-block">342206227</span>
-              )}
-            </a>
-          ))
-        }
+      {
+        TERMS.map((item) => (
+          <a
+            href={item.url}
+            class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200 mx-2"
+          >
+            {item.label}
+            {item.external && (
+              <span class="inline-block">↗</span>
+            )}
+          </a>
+        ))
+      }
+      </div>
 
       {
         SOCIALS && (
@@ -98,9 +99,6 @@ const gitVersion = __GIT_VERSION__;
             socials={SOCIALS}
             variant="white"
             class="opacity-60 pb-4"
-          />
-        )
-      }
           />
         )
       }
