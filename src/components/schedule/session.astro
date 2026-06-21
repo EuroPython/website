@@ -31,6 +31,7 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
 <div
   class:list={["ep-session", session.level, slugify(session.sessionType)]}
   style={style}
+  id={`session-${session.slug}`}
 >
   <CodeHeart
     client:load

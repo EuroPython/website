@@ -29,11 +29,13 @@ const days = await getCollection("days");
 <script>
 window.addEventListener('load', function() {
   function checkForAnchorAndHighlight() {
+
     const currentAnchor = window.location.hash.substring(1);
 
     if (!currentAnchor) return;
 
     var targetEl = document.getElementById(currentAnchor);
+    console.log(targetEl);
 
     if (targetEl) {
       // Find the day this session belongs to
@@ -58,6 +60,7 @@ window.addEventListener('load', function() {
       var blinkCount = 0;
       var maxBlinks = 5;
       var blinkDuration = 500;
+        console.log('0');
 
       function toggleBorder() {
         if (blinkCount >= maxBlinks * 2) {
@@ -66,7 +69,10 @@ window.addEventListener('load', function() {
           return;
         }
 
+        console.log('a');
         if (blinkCount % 2 === 0) {
+
+          console.log('b');
           sessionEl.style.outline = '2px solid var(--ep-accent, #ff9900)';
           sessionEl.style.outlineOffset = '-2px';
           sessionEl.style.background = 'var(--ep-session-hover-bg, rgba(255,255,255,0.05))';
@@ -95,6 +101,7 @@ window.addEventListener('load', function() {
   }
 
   checkForAnchorAndHighlight();
+
 
   window.addEventListener('hashchange', checkForAnchorAndHighlight);
 });
