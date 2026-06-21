@@ -32,7 +32,7 @@ window.addEventListener('load', function() {
 
     const currentAnchor = window.location.hash.substring(1);
 
-    if (!currentAnchor) return;
+    if (!currentAnchor || currentAnchor.startsWith('day-')) return;
 
     var targetEl = document.getElementById(currentAnchor);
 

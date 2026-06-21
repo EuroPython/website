@@ -228,7 +228,11 @@ select {
     if (days.length === 0) return;
 
     // en-CA gives us YYYY-MM-DD format
-    const today = new Intl.DateTimeFormat('en-CA', {
+    // Check URL hash for a specific day, otherwise use today
+    const hashDay = window.location.hash.replace('#day-', '');
+    const hasDayHash = hashDay !== window.location.hash;
+
+    const targetDay = hasDayHash ? hashDay : new Intl.DateTimeFormat('en-CA', {
       timeZone: 'Europe/Warsaw',
       year: 'numeric',
       month: '2-digit',
@@ -237,7 +241,7 @@ select {
 
     let defaultIndex = 0;
     days.forEach(function(day, index) {
-      if (day.getAttribute('data-day') === today) defaultIndex = index;
+      if (day.getAttribute('data-day') === targetDay) defaultIndex = index;
     });
 
     days.forEach(function(day, index) {
@@ -262,6 +266,9 @@ select {
             d.classList.add('active');
           }
         });
+
+        // Update URL hash for the selected day
+        history.replaceState(null, '', '#day-' + dayName);
       });
 
       tabsContainer.appendChild(tab);
