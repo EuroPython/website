@@ -227,22 +227,17 @@ select {
     const days = daysContainer.querySelectorAll('.ep-sched-day');
     if (days.length === 0) return;
 
-    // Check URL hash for a specific day, otherwise use today
-    var hashDay = window.location.hash.replace('#day-', '');
-    var hasHash = hashDay && hashDay !== window.location.hash;
-
-    var today = hasHash ? '' : new Intl.DateTimeFormat('en-CA', {
+    // en-CA gives us YYYY-MM-DD format
+    const today = new Intl.DateTimeFormat('en-CA', {
       timeZone: 'Europe/Warsaw',
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
     }).format(new Date());
 
-    var targetDay = hasHash ? hashDay : today;
-
-    var defaultIndex = 0;
+    let defaultIndex = 0;
     days.forEach(function(day, index) {
-      if (day.getAttribute('data-day') === targetDay) defaultIndex = index;
+      if (day.getAttribute('data-day') === today) defaultIndex = index;
     });
 
     days.forEach(function(day, index) {
@@ -267,8 +262,6 @@ select {
             d.classList.add('active');
           }
         });
-
-        history.replaceState(null, '', '#day-' + dayName);
       });
 
       tabsContainer.appendChild(tab);
