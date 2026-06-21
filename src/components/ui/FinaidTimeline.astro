@@ -1,0 +1,86 @@
+---
+interface TimelineEntry {
+  date: string;
+  event: string;
+  round?: 1 | 2;
+  highlight?: boolean;
+}
+
+interface Props {
+  entries: TimelineEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<div class="finaid-timeline not-prose my-6">
+  <table class="finaid-timeline-table">
+    <thead>
+      <tr>
+        <th class="tl-date">Date</th>
+        <th class="tl-marker"></th>
+        <th class="tl-event">Event</th>
+      </tr>
+    </thead>
+    <tbody>
+      {entries.map((entry) => (
+        <tr>
+          <td class="tl-date" class:list={{ "font-bold": entry.highlight }}>{entry.date}</td>
+          <td class="tl-marker">
+            {entry.round && <img src={`/finaid-round${entry.round}.svg`} alt={`round ${entry.round}`} />}
+          </td>
+          <td class="tl-event">{entry.event}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .finaid-timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .finaid-timeline-table th,
+  .finaid-timeline-table td {
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+  }
+
+  .finaid-timeline-table th {
+    font-weight: 700;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .finaid-timeline-table td {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+  }
+
+  .tl-date {
+    white-space: nowrap;
+    width: 140px;
+  }
+
+  .tl-date.font-bold {
+    color: var(--color-text);
+  }
+
+  .tl-marker {
+    width: 110px;
+    text-align: center;
+  }
+
+  .tl-marker img {
+    width: 90px;
+    height: auto;
+    display: block;
+    padding: 10px;
+  }
+</style>

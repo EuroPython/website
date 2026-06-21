@@ -19,6 +19,7 @@ import ProfileCard from "@components/profile/ProfileCard.astro";
 import SpeakerCard from "@components/profile/SpeakerCard.astro";
 import GoogleCalendar from '@components/GoogleCalendar.astro';
 import ThreeCol from "@ui/ThreeCol.astro";
+import FinaidTimeline from "@ui/FinaidTimeline.astro";
 
 import Prose from "@ui/Prose.astro";
 import { NAV_MENUS, FOOTER_COLUMNS } from "@data/nav";
@@ -85,6 +86,7 @@ const description = post.data.subtitle;
     <Content
       components={{
         ThreeCol,
+        FinaidTimeline,
         Button,
         Headline,
         Icon,
