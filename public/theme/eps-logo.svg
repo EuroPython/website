@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100">
+  <defs>
+    <linearGradient id="b" x1="0" x2="50.9" y1="0" y2="-43.8" gradientTransform="matrix(10 0 0 -10 212 252)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5a9fd4"/>
+      <stop offset="1" stop-color="#0e3d65"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" x2="-35.1" y1="0" y2="50.9" gradientTransform="matrix(10 0 0 -10 822 905)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffc700"/>
+      <stop offset="1" stop-color="#ffe873"/>
+    </linearGradient>
+    <filter id="c" color-interpolation-filters="sRGB">
+      <feOffset dx="7" dy="5"/>
+      <feGaussianBlur result="offset-blur" stdDeviation="4"/>
+      <feComposite in="SourceGraphic" in2="offset-blur" operator="out" result="inverse"/>
+      <feFlood flood-color="#000" flood-opacity=".7" result="color"/>
+      <feComposite in="color" in2="inverse" operator="in" result="shadow"/>
+      <feComposite in="shadow" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path fill="#001b30" d="M56 769a545 545 0 1 1 999-438A545 545 0 0 1 56 769Z"/>
+  <path fill="url(#a)" d="M745 388v75c0 58-49 107-105 107H471c-46 0-84 39-84 85v160c0 46 40 73 84 86 53 16 105 19 169 0 42-13 84-37 84-86v-64H556v-21h252c50 0 68-35 85-85 17-53 17-104 0-172-12-48-35-85-85-85z"/>
+  <path fill="url(#b)" d="M552 207c-29 1-57 4-81 8-71 12-84 38-84 87v64h169v22H324c-49 0-92 30-106 85-15 65-16 105 0 172 12 49 41 85 90 85h58v-78c0-55 48-103 105-103h169c47 0 84-39 84-86V302c0-46-38-80-84-87-29-5-59-8-88-8z"/>
+  <path fill="#5297cc" d="m555 40-16 51h-54l44 32-16 50 42-31 43 31-16-50 43-32h-53l-17-51zm-221 60-17 51h-53l43 31-16 51 43-32 43 32-17-51 44-31h-54l-16-51zm443 0-16 51h-54l44 31-16 51 42-32 43 32-16-51 43-31h-53l-17-51zM172 262l-17 51h-53l43 32-16 50 43-31 42 31-16-50 44-32h-54l-16-51zm-60 222-16 51H42l44 31-17 51 43-32 43 32-16-51 43-31h-53l-17-51zm60 222-17 51h-53l43 31-16 51 43-32 42 32-16-51 44-31h-54l-16-51z"/>
+  <path fill="#ffe357" d="m939 262-16 51h-54l44 31-17 51 43-32 43 32-16-51 43-31h-53l-17-51zm59 221-16 51h-54l44 31-17 51 43-31 43 31-16-51 43-31h-54l-16-51zm-59 223-16 51h-54l44 31-17 51 43-32 43 32-16-51 43-31h-53l-17-51zM334 868l-16 51h-54l44 31-17 51 43-31 43 31-16-51 43-31h-53l-17-51zm443 0-17 51h-53l43 31-16 51 43-31 43 31-17-51 44-31h-54l-16-51zm-222 59-16 51h-54l44 31-16 51 42-31 43 31-16-51 43-31h-53l-17-51z"/>
+  <path fill="#fff" d="M460 259c18 0 32 15 32 32 0 19-14 32-32 32-16 0-31-13-31-32 0-17 15-32 31-32zm191 535c17 0 31 14 31 32s-14 32-31 32a32 32 0 0 1 0-64z" filter="url(#c)"/>
+</svg>

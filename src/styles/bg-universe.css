@@ -1,23 +1,23 @@
 .section-universe {
-  background-color: #0b1121;
+  background-color: var(--color-universe-bg);
   background-image:
     radial-gradient(
       circle at 10% 20%,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0) 0.5%
+      oklch(1 0 0 / 0.05) 0%,
+      oklch(1 0 0 / 0) 0.5%
     ),
     radial-gradient(
       circle at 90% 80%,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0) 0.5%
+      oklch(1 0 0 / 0.05) 0%,
+      oklch(1 0 0 / 0) 0.5%
     );
   background-repeat: repeat;
   background-size:
     100% 100%,
     100% 100%;
-  color: #fff;
-  padding-bottom: 4rem;
+  color: var(--color-white);
   position: relative;
+  overflow: hidden;
 }
 
 .section-universe::before {
@@ -74,11 +74,11 @@
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(2px 2px at 20% 15%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 20% 15%, oklch(1 0 0 / 0.8), transparent),
     radial-gradient(1px 1px at 45% 35%, white, transparent),
-    radial-gradient(1px 1px at 65% 55%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 65% 55%, oklch(1 0 0 / 0.7), transparent),
     radial-gradient(2px 2px at 80% 25%, white, transparent),
-    radial-gradient(1px 1px at 35% 75%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 35% 75%, oklch(1 0 0 / 0.9), transparent),
     radial-gradient(1px 1px at 55% 45%, white, transparent);
   background-size:
     300px 300px,
@@ -189,11 +189,11 @@
 .section-universe strong,
 .section-universe li,
 .section-universe a {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 .section-universe .bg-icons svg text {
-  fill: #a0b7e9;
+  fill: oklch(0.75 0.067 268.8); /* #a0b7e9 */
   opacity: 0.8;
 }
 
@@ -202,7 +202,7 @@
 .section-universe .bg-\[\#E8F4F8\] h4,
 .section-universe .bg-\[\#E8F4F8\] h5,
 .section-universe .bg-\[\#E8F4F8\] h6 {
-  color: #151f38 !important;
+  color: var(--color-hero-primary) !important;
 }
 
 .section-universe .bg-\[\#E8F4F8\] p,
@@ -210,22 +210,22 @@
 .section-universe .bg-\[\#E8F4F8\] strong,
 .section-universe .bg-\[\#E8F4F8\] a,
 .section-universe .bg-\[\#E8F4F8\] li {
-  color: #151f38 !important;
+  color: var(--color-hero-primary) !important;
 }
 
 .section-universe .bg-\[\#E8F4F8\] button,
 .section-universe .bg-\[\#E8F4F8\] .button,
 .section-universe .bg-\[\#E8F4F8\] a[class*="button"] {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 .section-universe .text-center {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .section-universe .text-gray-600,
 .section-universe .text-gray-700,
 .section-universe .text-gray-800,
 .section-universe .text-gray-900 {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }

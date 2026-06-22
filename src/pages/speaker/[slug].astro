@@ -4,8 +4,8 @@ import Layout from "@layouts/Layout.astro";
 import Prose from "@ui/Prose.astro";
 import { Image } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
-import Headline from "@ui/Headline.astro";
-import Section from "@ui/Section.astro"
+import Title from "@ui/Title.astro";
+import Section2 from "@ui/Section2.astro"
 import CodeHeart from "@components/island/CodeHeart.svelte";
 
 
@@ -18,6 +18,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+
+
 
 const sessions = await getEntries(entry.data.submissions);
 
@@ -85,20 +87,20 @@ function getGitHosting(url: string): string | undefined {
 ---
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
-  <Section>
-    <Headline as="h1" id="speaker" title={entry.data.name} />
+  <Section2 variant="dark" id="speaker-page">
+    <Title id="speaker">{entry.data.name}</Title>
 
               <div class="md:grid grid-cols-[460px_1fr] md:gap-6">
     {
       ( entry.data.avatar &&
                   <div class="flex items-start">
-                    <div class="border-4 border-white rounded-lg shadow-lg inline-block mb-10">
+                    <div class="speaker-profile-photo border-4 border-white rounded-lg shadow-lg inline-block mb-10">
           <Image
             src={entry.data.avatar}
             alt={entry.data.name}
             height={400}
-            width={600}
-            class="w-full max-w-[240px] sm:max-w-[540px] xl:max-w-[720px]  max-h-[240px] sm:max-h-[440px] xl:max-h-[540px] object-scale-down"
+            width={300}
+            class="speaker-profile-img"
           />
         </div>
         </div>
@@ -109,7 +111,7 @@ function getGitHosting(url: string): string | undefined {
     {
       entry.data.biography ? (
         <>
-          <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+          <h2 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
             Biography
           </h2>
           <Prose full>
@@ -128,7 +130,7 @@ function getGitHosting(url: string): string | undefined {
       entry.data.mastodon_url ||
       entry.data.twitter_url ? (
         <div class="mb-4">
-          <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+          <h2 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
             More about the speaker
           </h2>
           <dl>
@@ -146,7 +148,7 @@ function getGitHosting(url: string): string | undefined {
                   {isUrl(entry.data.homepage) ? (
                     <a
                       href={ensureHttps(entry.data.homepage)}
-                      class="text-primary underline hover:text-primary-hover"
+                      class="text-white/80 underline hover:text-accent"
                       target="_blank"
                     >
                       {entry.data.homepage}
@@ -166,7 +168,7 @@ function getGitHosting(url: string): string | undefined {
                 <dd>
                   <a
                     href={ensureHttps(entry.data.gitx_url)}
-                    class="text-primary underline hover:text-primary-hover"
+                    class="text-white/80 underline hover:text-accent"
                       target="_blank"
                   >
                     {entry.data.gitx_url}
@@ -181,7 +183,7 @@ function getGitHosting(url: string): string | undefined {
                 <dd>
                   <a
                     href={entry.data.linkedin_url}
-                    class="text-primary underline hover:text-primary-hover"
+                    class="text-white/80 underline hover:text-accent"
                       target="_blank"
                   >
                     {getLinkedInUsername(entry.data.linkedin_url)}
@@ -196,7 +198,7 @@ function getGitHosting(url: string): string | undefined {
                 <dd>
                   <a
                     href={entry.data.mastodon_url}
-                    class="text-primary underline hover:text-primary-hover"
+                    class="text-white/80 underline hover:text-accent"
                       target="_blank"
                   >
                     {getMastodonUsername(entry.data.mastodon_url)}
@@ -211,7 +213,7 @@ function getGitHosting(url: string): string | undefined {
                 <dd>
                   <a
                     href={entry.data.twitter_url}
-                    class="text-primary underline hover:text-primary-hover"
+                    class="text-white/80 underline hover:text-accent"
                       target="_blank"
                   >
                     {getTwitterUsername(entry.data.twitter_url)}
@@ -225,7 +227,7 @@ function getGitHosting(url: string): string | undefined {
                 <dd>
                   <a
                     href={getBlueskyProfileLink(getBlueskyUsername(entry.data.bluesky_url) as string)}
-                    class="text-primary underline hover:text-primary-hover"
+                    class="text-white/80 underline hover:text-accent"
                       target="_blank"
                   >
                     {getBlueskyUsername(entry.data.bluesky_url)}
@@ -242,7 +244,7 @@ function getGitHosting(url: string): string | undefined {
     <br />
 
     <h2
-      class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
+      class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl"
     >
       Session{sessions.length > 1 ? "s" : ""}
     </h2>
@@ -251,7 +253,7 @@ function getGitHosting(url: string): string | undefined {
         sessions.map((session) => (
           <li class="mb-2 text-xl leading-snug">
             <a
-              class="text-primary hover:text-primary-hover font-title underline font-semibold"
+              class="text-white/80 hover:text-accent underline font-semibold"
               href={`/session/${session.id}`}
             >
               {session.data.title}
@@ -267,15 +269,23 @@ function getGitHosting(url: string): string | undefined {
         ))
       }
     </ul>
-  </Section>
+  </Section2>
 </Layout>
 
 <style>
 
+  .speaker-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
 dl,
 dd, dt {
-  font-size: 1.25rem;
-  color: var(--color-text);
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
 }
 
   </style>

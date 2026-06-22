@@ -1,38 +1,40 @@
 ---
-const { full = false, variant = "default", padding = true } = Astro.props;
+const { full = false, variant = "default", id, class: className = "" } = Astro.props;
 
-const variantClass =
-  {
-    default: "",
-    primary: "bg-[#E8F4F8]",
-    secondary: "bg-white",
-  }[variant] || "";
+const variantClass = {
+  default: "",
+  primary: "bg-[var(--color-panel-light)]",
+  secondary: "bg-white",
+  dark: "bg-section-bg",
+  "dark-alt": "bg-section-bg-alt",
+  "bg-dark": "bg-bg-dark",
+}[variant] || "";
+
+const wrapClass = full ? "" : "sec-inner";
 ---
 
-<section class=`${variantClass} ${padding && "py-6"}`>
-  {
-    full ? (
-      <slot />
-    ) : (
-      <div class="container">
-        <slot />
-      </div>
-    )
-  }
+<section class=`sec-wrap ${variantClass} ${className}` id={id}>
+  <div class={wrapClass}>
+    <slot />
+  </div>
 </section>
 
 <style>
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem; /* px-2 = 0.5rem */
-    padding-right: 0.5rem;
+  .sec-wrap {
+    position: relative;
   }
 
-  @media (min-width: 768px) {
-    .container {
-      padding-left: 1.25rem; /* md:px-5 = 1.25rem */
-      padding-right: 1.25rem;
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.55rem 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 640px) {
+    .sec-inner {
+      padding: 0.55rem 1rem;
     }
   }
 </style>

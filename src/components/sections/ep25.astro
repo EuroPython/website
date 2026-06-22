@@ -1,0 +1,192 @@
+---
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
+---
+
+<Section2 className="ep25-section" variant="ep25" id="ep25">
+  <div class="ep25-inner">
+
+    <div class="sec-header ep25-header">
+      <Title id="ep25" subtitle="From a small gathering of enthusiasts to Europe's largest Python conference — a quarter century of community, code, and collaboration.">25 YEARS OF <span>EUROPYTHON</span></Title>
+    </div>
+
+    <div class="ep25-grid">
+      <div class="ep25-box ep25-dimmed"><div><div class="ep25-box-year">2002</div><div class="ep25-box-city">Charleroi</div></div></div>
+      <div class="ep25-box ep25-dimmed"><div><div class="ep25-box-year">2003</div><div class="ep25-box-city">Charleroi</div></div></div>
+      <div class="ep25-box ep25-dimmed"><div><div class="ep25-box-year">2004</div><div class="ep25-box-city">Göteborg</div></div></div>
+      <div class="ep25-box ep25-dimmed"><div><div class="ep25-box-year">2005</div><div class="ep25-box-city">Göteborg</div></div></div>
+      <div class="ep25-box ep25-dimmed"><div><div class="ep25-box-year">2006</div><div class="ep25-box-city">CERN, Geneva</div></div></div>
+
+      <div class="ep25-box ep25-dimmed"><div><div class="ep25-box-year">2007</div><div class="ep25-box-city">Vilnius</div></div></div>
+      <div class="ep25-box ep25-dimmed"><div><div class="ep25-box-year">2008</div><div class="ep25-box-city">Vilnius</div></div></div>
+      <a href="https://ep2009.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2009</div><div class="ep25-box-city">Birmingham</div></div></a>
+      <a href="https://ep2010.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2010</div><div class="ep25-box-city">Birmingham</div></div></a>
+      <a href="https://ep2011.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2011</div><div class="ep25-box-city">Florence</div></div></a>
+
+      <a href="https://ep2012.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2012</div><div class="ep25-box-city">Florence</div></div></a>
+      <a href="https://ep2013.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2013</div><div class="ep25-box-city">Florence</div></div></a>
+      <a href="https://ep2014.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2014</div><div class="ep25-box-city">Berlin</div></div></a>
+      <a href="https://ep2015.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2015</div><div class="ep25-box-city">Bilbao</div></div></a>
+      <a href="https://ep2016.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2016</div><div class="ep25-box-city">Bilbao</div></div></a>
+
+      <a href="https://ep2017.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2017</div><div class="ep25-box-city">Rimini</div></div></a>
+      <a href="https://ep2018.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2018</div><div class="ep25-box-city">Edinburgh</div></div></a>
+      <a href="https://ep2019.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2019</div><div class="ep25-box-city">Basel</div></div></a>
+      <div class="ep25-box ep25-online"><div><div class="ep25-box-year">2020</div><div class="ep25-box-city">Online</div></div></div>
+      <div class="ep25-box ep25-online"><div><div class="ep25-box-year">2021</div><div class="ep25-box-city">Online</div></div></div>
+
+      <a href="https://ep2022.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2022</div><div class="ep25-box-city">Dublin</div></div></a>
+      <a href="https://ep2023.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2023</div><div class="ep25-box-city">Prague</div></div></a>
+      <a href="https://ep2024.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2024</div><div class="ep25-box-city">Prague</div></div></a>
+      <a href="https://ep2025.europython.eu/" class="ep25-box" target="_blank" rel="noopener"><div><div class="ep25-box-year">2025</div><div class="ep25-box-city">Prague</div></div></a>
+      <div class="ep25-box ep25-current"><div><div class="ep25-box-year">2026</div><div class="ep25-box-city">Kraków ✦</div></div></div>
+    </div>
+
+    <div class="ep25-cta-row">
+      <a href="https://www.flickr.com/photos/europython/" class="ep25-cta">Photos on Flickr</a>
+      <a href="https://www.youtube.com/c/EuroPythonConference" class="ep25-cta">Talks on YouTube</a>
+    </div>
+
+  </div>
+</Section2>
+
+<style>
+
+
+  :global(.ep25-section) {
+    background: var(--color-ep25-bg);
+  }
+
+  :global(.ep25-section::before) {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 50%, oklch(0.883 0.165 92.2 / 0.08) 0%, transparent 60%), /* #ffd43b */
+      radial-gradient(ellipse 50% 80% at 90% 20%, oklch(0.883 0.165 92.2 / 0.05) 0%, transparent 55%); /* #ffd43b */
+  }
+
+  .ep25-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ep25-header {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+
+
+  .ep25-title span {
+    color: var(--color-ep25-yellow);
+  }
+
+
+  .ep25-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .ep25-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px dashed oklch(0.883 0.165 92.2 / 0.18); /* #ffd43b */
+    padding: 1.5rem 1rem;
+    min-height: 5rem;
+    min-width: 0;
+    overflow: hidden;
+    transition: background 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ep25-box:hover {
+    background: oklch(0.883 0.165 92.2 / 0.08); /* #ffd43b */
+  }
+
+  .ep25-dimmed {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .ep25-dimmed:hover {
+    background: transparent;
+  }
+
+  .ep25-box-year {
+    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+    color: var(--color-ep25-yellow);
+    line-height: 1.2;
+  }
+
+  .ep25-box-city {
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+    line-height: 1.3;
+  }
+
+  .ep25-cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .ep25-cta {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to bottom, var(--color-ep25-yellow), var(--color-ep25-yellow-dark));
+    color: var(--color-ep25-bg);
+    border: 1px solid var(--color-ep25-yellow);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .ep25-cta:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 900px) {
+    .ep25-grid {
+      grid-template-columns: repeat(5, 1fr);
+      max-width: 100%;
+    }
+    .ep25-box {
+      padding: 0.8rem 0.2rem;
+      min-height: auto;
+    }
+    .ep25-box-year {
+      font-size: clamp(1rem, 3.5vw, 1.5rem);
+    }
+    .ep25-box-city {
+      font-size: clamp(0.7rem, 2.2vw, 1rem);
+    }
+    .ep25-inner {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .ep25-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+</style>

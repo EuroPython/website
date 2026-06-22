@@ -10,12 +10,22 @@ const { class: className, full=false } = Astro.props;
 <article
   class:list={[
     "mb-5 prose prose-xl prose-li:m-0 prose-ul:m-0 prose-ul:mb-4 prose-a:underline",
-    "prose-h1:text-text prose-headings:font-title",
+    "prose-h1:font-bold prose-h2:font-bold prose-h3:font-semibold",
     "prose-headings:text-text",
-    "prose-a:text-text",
-    "prose-a:hover:text-primary-hover",
+    "prose-headings:font-title",
+    "prose-a:text-[var(--color-accent-themed)]",
+    "prose-a:hover:text-[var(--color-accent-themed)]",
     "prose-strong:text-text prose-strong:font-bold",
     "prose-li:marker:text-text",
+    "prose-code:text-[var(--color-accent-themed)]",
+    "prose-code:bg-[var(--color-surface-subtle)]",
+    "prose-pre:bg-[var(--color-surface-subtle)]",
+    "prose-th:text-text",
+    "prose-td:text-text",
+    "prose-hr:border-[var(--color-border)]",
+    "prose-blockquote:text-[var(--color-text-secondary)]",
+    "prose-blockquote:border-l-[var(--color-border-bright)]",
+    "prose-blockquote:not-italic",
     className,
   ]}
     style={full ?  "max-width: none !important;": "margin:auto;"}

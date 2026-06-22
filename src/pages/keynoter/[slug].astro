@@ -1,0 +1,198 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Prose from "@ui/Prose.astro";
+import Headline from "@ui/Headline.astro";
+import Section from "@ui/Section.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("keynoters");
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const {
+  name,
+  tagline,
+  image,
+  mastodon_url,
+  bluesky_url,
+  twitter_url,
+  linkedin_url,
+  github_url,
+  homepage,
+} = entry.data;
+
+const { Content } = await render(entry);
+
+function getMastodonUsername(url: string): string | null {
+  const match = url.match(/https?:\/\/([^\/]+)\/@([^\/]+)(\/|\?|$)/);
+  return match ? `@${match[2]}@${match[1]}` : null;
+}
+
+function getBlueskyUsername(url: string): string {
+  const username = url.split("/").pop()?.replace(/^@/, "");
+  return username ? `@${username}` : url;
+}
+---
+
+<Layout
+  title={name}
+  description={tagline ?? `${name} — EuroPython 2026 Keynote Speaker`}
+>
+  <Section>
+    <!-- Photo + name/tagline: side-by-side on md+, stacked on mobile -->
+    <div class="flex flex-col md:flex-row gap-8 md:gap-10 items-start mb-10">
+      {
+        image && (
+          <div class="shrink-0 border-4 border-white rounded-lg shadow-lg self-start">
+            <Image
+              src={image}
+              alt={`A photo of ${name}`}
+              height={400}
+              width={400}
+              class="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[340px] object-cover rounded-md"
+            />
+          </div>
+        )
+      }
+      <div class="flex flex-col justify-center">
+        <Headline as="h1" id="speaker" title={name} />
+        {tagline && (
+          <p class="text-secondary-hover text-xl italic mt-2">{tagline}</p>
+        )}
+      </div>
+    </div>
+
+    <!-- Bio underneath, full width -->
+    <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+      Biography
+    </h2>
+    <Prose full>
+      <Content />
+    </Prose>
+
+    <!-- Social links -->
+    <Prose full>
+      {
+        (homepage ||
+          mastodon_url ||
+          bluesky_url ||
+          twitter_url ||
+          linkedin_url ||
+          github_url) && (
+          <div class="mb-4">
+            <h2 class="relative font-title text-primary font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+              More about the speaker
+            </h2>
+            <dl>
+              {homepage && (
+                <>
+                  <dt class="font-bold">Website</dt>
+                  <dd>
+                    <a
+                      href={homepage}
+                      class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {homepage.replace(/^https?:\/\//, "")}
+                    </a>
+                  </dd>
+                </>
+              )}
+              {linkedin_url && (
+                <>
+                  <dt class="font-bold">LinkedIn</dt>
+                  <dd>
+                    <a
+                      href={linkedin_url}
+                      class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {linkedin_url}
+                    </a>
+                  </dd>
+                </>
+              )}
+              {mastodon_url && (
+                <>
+                  <dt class="font-bold">Mastodon</dt>
+                  <dd>
+                    <a
+                      href={mastodon_url}
+                      class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {getMastodonUsername(mastodon_url) ?? mastodon_url}
+                    </a>
+                  </dd>
+                </>
+              )}
+              {bluesky_url && (
+                <>
+                  <dt class="font-bold">Bluesky</dt>
+                  <dd>
+                    <a
+                      href={bluesky_url}
+                      class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {getBlueskyUsername(bluesky_url)}
+                    </a>
+                  </dd>
+                </>
+              )}
+              {twitter_url && (
+                <>
+                  <dt class="font-bold">Twitter / X</dt>
+                  <dd>
+                    <a
+                      href={twitter_url}
+                      class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      @{twitter_url.split("/").pop()}
+                    </a>
+                  </dd>
+                </>
+              )}
+              {github_url && (
+                <>
+                  <dt class="font-bold">GitHub</dt>
+                  <dd>
+                    <a
+                      href={github_url}
+                      class="text-primary underline hover:text-primary-hover"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      @{github_url.split("/").pop()}
+                    </a>
+                  </dd>
+                </>
+              )}
+            </dl>
+          </div>
+        )
+      }
+    </Prose>
+  </Section>
+</Layout>
+
+<style>
+  dl,
+  dd,
+  dt {
+    font-size: 1.25rem;
+    color: var(--color-text);
+  }
+</style>

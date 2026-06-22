@@ -1,0 +1,63 @@
+---
+export interface Props {
+  id?: string;
+  variant?: "default" | "dark" | "dark-alt" | "bg-dark" | "ep25" | "light";
+  className?: string;
+  delay?: number;
+}
+
+const { id, variant = "default", className = "", delay = 0 } = Astro.props;
+
+const bg: Record<string, string> = {
+  default: "",
+  dark: "var(--color-section-bg)",
+  "dark-alt": "var(--color-section-bg-alt)",
+  "bg-dark": "var(--color-bg-dark)",
+  ep25: "var(--color-ep25-bg)",
+  light: "var(--color-white)",
+};
+---
+
+<section class={`sec-wrap ${className}`} id={id} style={`${bg[variant] ? `background: ${bg[variant]};` : ""} animation-delay: ${delay}s`}>
+  <div class="sec-inner">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .sec-wrap {
+    position: relative;
+    animation: fadeUp 0.7s cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+
+  .sec-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sec-wrap {
+      animation: none;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .sec-inner {
+      padding: 3rem 1.5rem;
+    }
+  }
+</style>

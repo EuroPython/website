@@ -1,0 +1,129 @@
+---
+import Section2 from "@ui/Section2.astro";
+import Display from "@ui/Display.astro";
+---
+
+<Section2 className="euroscipy-section" id="euroscipy">
+  <div class="split-layout euroscipy-inner">
+
+    <div class="split-left euroscipy-left">
+      <Display id="euroscipy" span="2026" spanColor="var(--color-white)" color="var(--color-white)">EuroSciPy</Display>
+      <div class="euroscipy-dates">
+        18–23 July 2026<br>
+        AGH University of Kraków, Poland
+      </div>
+      <a href="https://euroscipy.org" class="euroscipy-cta">Get Your Ticket</a>
+    </div>
+
+    <div class="euroscipy-right">
+      <p>The EuroSciPy meeting is a cross-disciplinary gathering focused on the use and development of the Python language in scientific research. This event strives to bring together both users and developers of scientific tools, as well as academic research and state of the art industry.</p>
+      <p><strong>We co-organise the sprints together.</strong> The final two days of EuroPython sprints overlap with the opening of EuroSciPy sprints — giving you the unique opportunity to hack alongside both communities at once.</p>
+      <div class="euroscipy-sprint-badge">✦ Joint sprints: 18–19 July</div>
+    </div>
+
+  </div>
+</Section2>
+
+<style>
+
+  /* The section sits on a constant deep-blue background in BOTH
+     themes, so all foreground text is pinned to light values and
+     must not flip with the theme. */
+  :global(.euroscipy-section) {
+    background: var(--color-euroscipy);
+    scroll-margin-top: 60px;
+  }
+
+  :global(.euroscipy-section) .display-subtitle {
+    color: oklch(1 0 0 / 0.7);
+  }
+
+
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .split-left {
+    position: sticky;
+    top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .split-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .split-left {
+      position: static;
+    }
+  }
+
+  /* ---- Title ---- */
+
+
+
+
+
+
+  /* ---- Dates ---- */
+  .euroscipy-dates {
+    font-size: 1rem;
+    color: oklch(1 0 0 / 0.78);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  /* ---- CTA ---- */
+  .euroscipy-cta {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(to bottom, var(--color-cta-red), var(--color-cta-red-dark));
+    color: var(--color-white);
+    border: 1px solid var(--color-cta-red);
+    border-radius: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: filter 0.2s ease;
+    cursor: pointer;
+  }
+
+  .euroscipy-cta:hover {
+    filter: brightness(1.1);
+  }
+
+  /* ---- Right column ---- */
+  .euroscipy-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .euroscipy-right p {
+    font-size: 1rem;
+    color: oklch(1 0 0 / 0.93);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .euroscipy-right p strong {
+    color: var(--color-white);
+  }
+
+  /* ---- Sprint badge ---- */
+  .euroscipy-sprint-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: oklch(1 0 0 / 0.1);
+    border: 1px dashed oklch(1 0 0 / 0.25);
+    border-radius: 2px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-white);
+  }
+</style>

@@ -47,6 +47,10 @@ const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
               padding: logo_padding ? logo_padding : undefined,
             }}
           />
+
+          <h3 class="font-semibold text-gray-900 text-center text-sm">
+          {tier==="Partners" && title}
+          </h3>
         </a>
   ):
           <Image
@@ -65,3 +69,11 @@ const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
     }
   </div>
 </div>
+
+<style>
+
+  div {
+    justify-content: flex-end;
+  }
+
+  </style>

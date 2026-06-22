@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  speaker: {
+    id: string;
+    data: {
+      name: string;
+      avatar?: string | null;
+    };
+  };
+}
+
+const { speaker } = Astro.props;
+---
+
+<a href={`/speaker/${speaker.id}`} class="speaker-card border-4 border-white/10 rounded-lg shadow-lg inline-block">
+  <div class="speaker-photo">
+    {speaker.data.avatar ? (
+      <Image src={speaker.data.avatar} alt={speaker.data.name} class="speaker-img" height={300} width={300} loading="lazy" />
+    ) : (
+      <div class="speaker-placeholder">{speaker.data.name.charAt(0)}</div>
+    )}
+  </div>
+  <div class="speaker-info">
+    <h3 class="speaker-name">{speaker.data.name}</h3>
+  </div>
+</a>
+
+<style>
+  .speaker-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 0;
+  }
+
+  .speaker-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--color-scrim-30);
+  }
+
+  .speaker-photo {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+  }
+
+  .speaker-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s;
+  }
+
+  .speaker-card:hover .speaker-img {
+    transform: scale(1.05);
+  }
+
+  .speaker-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface-medium);
+    color: oklch(1 0 0 / 0.5); /* rgba(255,255,255,0.5) */
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .speaker-info {
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    background: var(--color-surface-faint);
+  }
+
+  .speaker-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>

@@ -1,69 +1,63 @@
 ---
 import SocialLinks from "@components/SocialLinks.astro";
-import links from "@data/links.json";
-import EPSLogo from "/public/eps-logo.svg";
+import { FOOTER_COLUMNS, TERMS, SOCIALS } from "@data/nav";
+import EPSLogo from "/public/theme/eps-logo.svg";
 
 const buildTimestamp = __TIMESTAMP__;
 const gitVersion = __GIT_VERSION__;
 ---
 
-<div class="text-white max-w-4xl lg:max-w-6xl mx-auto py-10 px-6">
-  <div class="links grid grid-cols-2 lg:flex flex-wrap gap-8 justify-between pb-8">
+<footer>
+  <div class="footer-flowers-bg" aria-hidden="true"></div>
+  <div class="text-[var(--color-text)] max-w-4xl lg:max-w-6xl mx-auto py-10 px-6 footer-inner">
+    <div class="footer-top-row">
+      <div>
+        <p class="footer-title"><span class="footer-title-ep">#EP</span><span class="footer-title-year">2026</span></p>
+        <p class="footer-subtitle">KRAKÓW, POLAND &nbsp;·&nbsp; JULY 13–19</p>
+      </div>
+    </div>
+    <div class="footer-grid">
     {
-      links.footer.map((section) => (
-        <div class="md:w-auto mb-8 md:mb-0 text-start">
-          <h2 class="font-bold text-lg mb-4">{section.name}</h2>
-          {section.items ? (
-            <ul class="space-y-2">
-              {section.items.map((item) => (
-                <li>
-                  <a
-                    href={item.path}
-                    class="hover:text-primary-hover transition-colors duration-200"
-                  >
-                    {item.name}
-                    {item.path.startsWith("http") && (
-                      <span class="inline-block ml-1">↗</span>
-                    )}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <a
-              href={section["path"]}
-              class="hover:text-primary-hover transition-colors duration-200"
-            >
-              {section.name}
-              {section["path"].startsWith("http") && (
-                <span class="inline-block ml-1">↗</span>
-              )}
-            </a>
-          )}
+      FOOTER_COLUMNS.map((col) => (
+        <div>
+          <p class="footer-col-title">{col.title}</p>
+          <ul class="footer-links">
+            {col.items.map((item) => (
+              <li>
+                <a
+                  href={item.url}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener" : undefined}
+                >
+                  {item.label}{item.external ? " ↗" : ""}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       ))
     }
   </div>
 
   <div class="flex flex-wrap gap-2 justify-between">
-    <div class="w-full py-2 border-t border-b border-white/10">
+    <div class="w-full py-2 border-t border-b border-[var(--color-border)]">
       <div
         class="flex flex-col lg:flex-row self-center gap-2 lg:gap-12 justify-end"
       >
         <div
-          class="flex flex-col text-white/60 w-full lg:w-2/3 p-5 items-center text-center"
+          class="flex flex-col text-[var(--color-text-faint)] w-full lg:w-2/3 p-5 items-center text-center"
         >
           <p>
             Excited about our mission? Want to collaborate or contribute? Let's
             connect! We're open to partnership opportunities and would love to
             hear your ideas.
-            <a class="text-white/80 hover:text-white underline" href="mailto:helpdesk@europython.eu"
+            <a class="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] underline" href="mailto:helpdesk@europython.eu"
               >helpdesk@europython.eu</a
             >
           </p>
         </div>
         <div
-          class="flex text-white/60 w-full lg:w-1/3 justify-center text-start mb-4 lg:mb-0"
+          class="flex text-[var(--color-text-faint)] w-full lg:w-1/3 justify-center text-start mb-4 lg:mb-0"
         >
           <div>
             <EPSLogo width="90" height="90" class="w-[90px] mr-4 h-auto" />
@@ -84,25 +78,25 @@ const gitVersion = __GIT_VERSION__;
 
     <div class="flex w-full lg:flex-row flex-col-reverse justify-between">
       <div class="terms py-2 text-center ">
-        {
-          links.terms.map((item) => (
-            <a
-              href={item.path}
-              class="text-white/80 hover:text-primary-hover transition-colors duration-200 mx-2"
-            >
-              {item.name}
-              {item.path.startsWith("http") && (
-                <span class="inline-block">↗</span>
-              )}
-            </a>
-          ))
-        }
+      {
+        TERMS.map((item) => (
+          <a
+            href={item.url}
+            class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200 mx-2"
+          >
+            {item.label}
+            {item.external && (
+              <span class="inline-block">↗</span>
+            )}
+          </a>
+        ))
+      }
       </div>
 
       {
-        links && links["socials"] && (
+        SOCIALS && (
           <SocialLinks
-            socials={links["socials"]}
+            socials={SOCIALS}
             variant="white"
             class="opacity-60 pb-4"
           />
@@ -111,16 +105,112 @@ const gitVersion = __GIT_VERSION__;
     </div>
   </div>
 
-  <p class="mb-16 text-white/80 text-center">
+  <p class="mb-16 text-[var(--color-text-secondary)] text-center">
     version: {gitVersion} @ {buildTimestamp}
   </p>
 </div>
+  </footer>
 
 <style>
-  .links > div:first-child {
-    font-size: 1.8rem;
+  footer {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-footer-bg);
   }
+
+  .footer-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-top-row {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-title {
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-title-ep {
+    color: var(--color-text);
+  }
+
+  .footer-title-year {
+    color: var(--color-footer-red);
+  }
+
+  .footer-subtitle {
+    font-size: 1rem;
+    color: var(--color-footer-text-muted);
+    margin-bottom: 3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-flowers-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    filter: brightness(1.5) saturate(0.3);
+    background: url('/theme/flowers-tile-new.svg') repeat;
+    background-size: 2400px 2400px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    border-top: 3px solid var(--color-footer-gray);
+    padding: 2rem 0;
+    margin: 1rem 0;
+  }
+
+  .footer-col-title {
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-links a {
+    font-size: 1.1rem;
+    color: var(--color-footer-text-secondary);
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
   .terms {
     font-size: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

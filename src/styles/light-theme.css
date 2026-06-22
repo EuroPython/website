@@ -1,0 +1,261 @@
+/* ============================================================
+   Light theme — thin override layer.
+
+   The bulk of theming now happens automatically: components use
+   the semantic role tokens (--color-bg, --color-text,
+   --color-surface-*, --color-border, --color-button, …) which are
+   re-valued for .light in tailwind.css. Everything below is only
+   for cases the semantic tokens cannot reach:
+     1. Legacy --ep-* schedule values that need a light variant.
+     2. Third-party widget internals (pagefind) we don't control.
+     3. The intentionally always-dark starfield universe section.
+   No more per-component !important hex overrides.
+   ============================================================ */
+
+.light {
+  /* Schedule room header bg (legacy --ep-* one-off) */
+  --ep-sched-room-bg: oklch(0.945 0.004 264); /* #e6e8ed */
+  --ep-session-hover-bg: oklch(0.97 0.003 264); /* light hover */
+  --ep-day-end-bg: oklch(0.945 0.004 264);
+  --ep-day-end-text: oklch(0 0 0 / 0.55);
+
+  /* Schedule chrome flips to light surface + dark muted ink */
+  --ep-sched-chrome-bg: oklch(0.945 0.004 264); /* #e6e8ed */
+  --ep-sched-chrome-text: oklch(0 0 0 / 0.55);
+
+  /* Session level stripes: lighter, lower-alpha on light cards so the
+     diagonal hatch stays subtle instead of heavy. */
+  --ep-beginner-stripe: oklch(0.72 0.17 145 / 0.12);
+  --ep-advanced-stripe: oklch(0.6 0.2 25 / 0.1);
+
+  /* Session level pills — light theme: SOLID pastel chips (no
+     opacity). High lightness + low chroma backgrounds with darker
+     ink of the same hue for readable, low-saturation labels. */
+  --ep-level-beginner-bg: oklch(0.92 0.06 145); /* pastel green */
+  --ep-level-beginner-text: oklch(0.42 0.12 145); /* deep green ink */
+  --ep-level-intermediate-bg: oklch(0.92 0.004 264); /* pastel gray */
+  --ep-level-intermediate-text: oklch(0.4 0.005 264); /* deep gray ink */
+  --ep-level-advanced-bg: oklch(0.91 0.05 25); /* pastel red */
+  --ep-level-advanced-text: oklch(0.45 0.15 25); /* deep red ink */
+
+  /* Note / info box — light theme: clear amber callout with strong,
+     near-black warm ink for high contrast. */
+  --ep-note-bg: oklch(0.93 0.07 88); /* amber fill */
+  --ep-note-border: oklch(0.78 0.13 84); /* amber border */
+  --ep-note-text: oklch(0.25 0.04 70); /* near-black warm ink */
+
+  /* Status callouts (Note.astro) — light theme: soft tinted bg with
+     DARK coloured ink for strong contrast (no more light -300 text
+     on a faint tint). */
+  --note-info-bg: oklch(0.95 0.04 245);
+  --note-info-text: oklch(0.4 0.16 250);
+  --note-info-border: oklch(0.6 0.18 250);
+  --note-success-bg: oklch(0.95 0.05 150);
+  --note-success-text: oklch(0.4 0.13 152);
+  --note-success-border: oklch(0.62 0.16 150);
+  --note-warning-bg: oklch(0.95 0.06 88);
+  --note-warning-text: oklch(0.42 0.1 70);
+  --note-warning-border: oklch(0.75 0.13 84);
+  --note-error-bg: oklch(0.95 0.04 25);
+  --note-error-text: oklch(0.45 0.18 25);
+  --note-error-border: oklch(0.62 0.2 25);
+
+  /* Footer gradient stops → flatten to light surface */
+  --ep-footer-g1: oklch(0.97 0.003 264);
+  --ep-footer-g2: oklch(0.97 0.003 264);
+  --ep-footer-g3: oklch(0.945 0.004 264);
+  --ep-footer-g4: oklch(0.97 0.003 264);
+}
+
+/* ── Pagefind search widget (3rd-party internals) ── */
+.light .pagefind-ui {
+  --pagefind-ui-primary: oklch(0.23 0.04 277);
+  --pagefind-ui-text: oklch(0.23 0.04 277);
+  --pagefind-ui-background: var(--color-white);
+  --pagefind-ui-border: oklch(0 0 0 / 0.1);
+}
+
+.light .search-modal-content {
+  background: var(--color-white);
+}
+
+.light .search-modal-content .pagefind-ui__search-input {
+  color: oklch(0.23 0.04 277);
+  border-bottom-color: oklch(0 0 0 / 0.1);
+}
+
+.light .search-modal-content .pagefind-ui__search-input::placeholder {
+  color: oklch(0 0 0 / 0.4);
+}
+
+.light nav[aria-label="Breadcrumb"] a {
+  color: oklch(0.39 0.11 277) !important;
+}
+.light nav[aria-label="Breadcrumb"] span {
+  color: oklch(0 0 0 / 0.5) !important;
+}
+.light nav[aria-label="Breadcrumb"] .text-white\/60,
+.light nav[aria-label="Breadcrumb"] .text-white\/40 {
+  color: oklch(0 0 0 / 0.5) !important;
+}
+
+.light .search-modal-content .pagefind-ui__result {
+  border-bottom-color: oklch(0 0 0 / 0.05);
+}
+
+.light .search-modal-content .pagefind-ui__result-link {
+  color: oklch(0.23 0.04 277);
+}
+
+.light .search-modal-content .pagefind-ui__result-excerpt {
+  color: oklch(0 0 0 / 0.65);
+}
+
+.light .search-modal-content .pagefind-ui__message {
+  color: oklch(0 0 0 / 0.5);
+}
+
+.light .search-modal-backdrop {
+  background: oklch(1 0 0 / 0.8);
+}
+
+.light .website-btn {
+  color: #ffffff !important;
+}
+
+/* ── Filter inputs & selects ── */
+.light select,
+.light .filter-input {
+  background: #ffffff !important;
+  color: #1a1a2e !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.light label {
+  color: #1a1a2e !important;
+}
+
+.light .filter-sessions select {
+  background: #ffffff !important;
+  color: #1a1a2e !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ── Sessions page filter input ── */
+.light #sessionSearch {
+  color: #1a1a2e !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  background: #ffffff !important;
+}
+
+.light #sessionSearch:focus {
+  border-color: #1a56db !important;
+}
+
+.light #sessionSearch::placeholder {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.light .filter-sessions select {
+  color: #1a1a2e !important;
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.light .filter-sessions select:focus {
+  border-color: #1a56db !important;
+}
+
+/* ── Labels ── */
+.light label {
+  color: #1a1a2e !important;
+}
+
+/* ── Tags (session type/level badges) ── */
+.light .inline-block.bg-white\/10 {
+  background: rgba(0, 0, 0, 0.06) !important;
+  color: #1a1a2e !important;
+}
+
+/* ── Session list tags ── */
+.light .sessions a.inline-block,
+.light a.inline-block.bg-white\/10 {
+  background: rgba(0, 0, 0, 0.06) !important;
+  color: #1a1a2e !important;
+}
+
+.light .sessions a.inline-block:hover,
+.light a.inline-block.bg-white\/10:hover {
+  background: #1a56db !important;
+  color: #fff !important;
+}
+
+/* ── Pre / code blocks ── */
+.light pre,
+.light code {
+  background: rgba(0, 0, 0, 0.04) !important;
+  color: #1a1a2e !important;
+}
+
+/* ── Sprint cards ── */
+.light .sprint-card {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light .sprint-card h3 {
+  color: #1a1a2e !important;
+}
+
+.light .sprint-card .text-white\/60,
+.light .sprint-card .text-white\/70,
+.light .sprint-card .text-white\/90 {
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.light .sprint-card a {
+  color: #1a56db !important;
+}
+
+/* ── Speaker detail page ── */
+.light #speaker-page h1,
+.light #speaker-page h2,
+.light #speaker-page h3 {
+  color: #1a1a2e !important;
+}
+
+.light #speaker-page a {
+  color: #1a56db !important;
+}
+
+.light #speaker-page dl,
+.light #speaker-page dt,
+.light #speaker-page dd {
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+/* ── Keynoter placeholder ── */
+.light .prog-keynoter-photo--empty {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+.light .prog-keynoter-placeholder {
+  opacity: 0.2 !important;
+  color: #1a1a2e !important;
+}
+
+/* ── Session detail page ── */
+.light #session-page h1,
+.light #session-page h2,
+.light #session-page h3 {
+  color: #1a1a2e !important;
+}
+
+.light #session-page a {
+  color: #1a56db;
+}
+
+/* ── Light footer gradient ── */
+.light footer {
+  background: linear-gradient(135deg, #f4f5f7, #ebedef) !important;
+}

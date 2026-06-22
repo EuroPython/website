@@ -1,0 +1,250 @@
+---
+import Title from "@ui/Title.astro";
+import Section2 from "@ui/Section2.astro";
+---
+<Section2 id="connect" variant="dark" className="connect-section">
+  <div class="connect-bg" aria-hidden="true"></div>
+  <div class="connect-inner">
+
+    <div class="sec-header connect-header">
+      <Title id="connect" subtitle="Want to collaborate or contribute? We're open to partnership opportunities and would love to hear your ideas.">LET'S CONNECT</Title>
+    </div>
+
+    <div class="connect-grid">
+
+      <div class="connect-block">
+        <div class="connect-block-title">Newsletter</div>
+        <form class="connect-newsletter-form" id="subscribeForm">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input type="email" id="newsletter-email" class="connect-newsletter-input" placeholder="your@email.com">
+          <button type="submit" class="connect-newsletter-btn">Subscribe</button>
+        </form>
+        <p class="connect-newsletter-note">Get the latest updates, speaker announcements, and special deals. No spam, unsubscribe anytime.</p>
+      </div>
+
+      <div class="connect-block">
+        <div class="connect-socials">
+          <a href="https://x.com/europython" class="connect-social-link" title="X / Twitter">
+            <i class="fab fa-x-twitter"></i>
+            <span>X</span>
+          </a>
+          <a href="https://fosstodon.org/@europython" class="connect-social-link" title="Mastodon">
+            <i class="fab fa-mastodon"></i>
+            <span>Mastodon</span>
+          </a>
+          <a href="https://bsky.app/profile/europython.eu" class="connect-social-link" title="Bluesky">
+            <i class="fab fa-bluesky"></i>
+            <span>Bluesky</span>
+          </a>
+          <a href="https://linkedin.com/company/europython" class="connect-social-link" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://instagram.com/europython" class="connect-social-link" title="Instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://youtube.com/channel/UC98CzaYuFNAA_gOINFB0e4Q" class="connect-social-link" title="YouTube">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+          <a href="https://github.com/europython" class="connect-social-link" title="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</Section2>
+
+<script>
+  const form = document.getElementById("subscribeForm");
+  form?.addEventListener("submit", handleSubscribe);
+
+  async function handleSubscribe(event: SubmitEvent) {
+    event.preventDefault();
+
+    const input = document.getElementById("newsletter-email");
+    if (!(input instanceof HTMLInputElement)) return;
+
+    const email = input.value.trim();
+    if (!email) return;
+
+    try {
+      const result = await fetch("https://blog.europython.eu/members/api/send-magic-link/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, emailType: "subscribe" })
+      });
+
+      const r = await result.text();
+      if (r === "Created.") {
+        input.value = "";
+        alert("Please check your email to confirm. 📬");
+      }
+    } catch {}
+  }
+</script>
+
+<style>
+
+
+:global(.connect-section) {
+    background: var(--color-section-bg);
+  }
+
+  .connect-bg {
+  }
+
+  .connect-header {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .connect-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .connect-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px dashed var(--color-border);
+    border-radius: 2px;
+  }
+
+  .connect-block {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px dashed var(--color-border);
+    text-align: center;
+  }
+
+  .connect-block:last-child {
+    border-bottom: none;
+  }
+
+  .connect-newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .connect-newsletter-input {
+    padding: 0.75rem 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    background: var(--color-surface-medium);
+    color: var(--color-white);
+    font-size: 1rem;
+    min-width: 240px;
+  }
+
+  .connect-newsletter-input::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .connect-newsletter-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--color-accent-themed);
+    color: var(--color-on-accent);
+    border: 1px solid var(--color-accent-themed);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .connect-newsletter-btn:hover {
+    opacity: 0.85;
+  }
+
+  .connect-newsletter-note {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-top: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .connect-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+  }
+
+  .connect-social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.2rem 1.5rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.15s;
+  }
+
+  .connect-social-link::after {
+     content: none !important;
+  }
+
+  .connect-social-link:hover {
+    color: var(--color-text);
+  }
+
+  .connect-social-link i {
+    font-size: 2rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .connect-contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .connect-contact-col {
+    text-align: center;
+  }
+
+  .connect-contact-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  .connect-contact-col a {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .connect-contact-col a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+</style>

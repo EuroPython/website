@@ -1,13 +1,13 @@
 ---
-title: EuroPython 2025 Sprints Weekend
-subtitle: Organise or join a sprint at EuroPython 2025!
+title: EuroPython 2026 Sprints Weekend
+subtitle: Organise or join a sprint at EuroPython 2026!
 ---
 
-# EuroPython 2025 Sprints
+# EuroPython 2026 Sprints
 
 Join us for two days of open-source hacking, learning, and collaboration! As is
 tradition, the sprints will happen the weekend after EuroPython—this year on
-Saturday and Sunday, 19–20 July.
+Saturday and Sunday, 18–19 July. This year joined with EuroSciPy.
 
 The conference team provides the space, lunch, and coffee—you bring the energy,
 ideas, and code. Whether you're maintaining a major library or trying your first
@@ -19,15 +19,11 @@ Sprints are informal coding sessions (think: mini hackathons) where people
 gather to work on open-source projects, share ideas, and solve problems
 together.
 
-![Sprints photos collage](/images/sprints.png)
+![Sprints photos collage](/content/sections/images/sprints.png)
 
 ## When and Where?
 
-The sprints will take place on Saturday and Sunday, 19-20 July. Doors open at
-8:30 AM, Sprints start at 9:00 AM, Sprints end at 06:00 PM.
-
-The sprints will be held at the
-[WPP Prague](/venue/#sprints-venue--saturday--sunday).
+TBD
 
 ## Who Can Attend:
 
@@ -49,7 +45,7 @@ file `_sprints_template.md` as the template for your project file.
 
 💡 **Quick tip:** You can quickly edit and prepare your changes directly in the
 browser using
-[github web-based editor](https://github.dev/EuroPython/website/blob/ep2025/src/content/sprints/_sprints_template.md).
+[github web-based editor](https://github.dev/EuroPython/website/blob/ep2026/src/content/sprints/_sprints_template.md).
 
 Once your file is added, submit a Pull Request — and you're done!
 

@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
-import Section from "@ui/Section.astro";
-import Headline from "@ui/Headline.astro";
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
 import Button from "@ui/Button.astro";
-import { sponsorLogos } from "@data/sponsorLogos";
+import SponsorLogo from "@components/SponsorLogo.astro";
+
 
 const allPartners = await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
@@ -31,47 +31,36 @@ const lugorhs = allPartners
 
 const partners = [...regular, ...pydata, ...lugorhs];
 
-const sectionTitle = "Community Partners";
 const sectionSubtitle = "Meet the local Python communities joining us at EuroPython 2026";
 ---
 
-<Section variant="secondary">
-  <Headline id="community-partners" title={sectionTitle} center="true" />
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-12">
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
-    </div>
+<Section2 id="community-partners" variant="light">
 
-    <div class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      {partners.map((partner) => {
-        const logo = sponsorLogos[partner.id];
-        return (
-          <a
-            href={`/community-partners#sponsor-${partner.id}`}
-            class="partner-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 border border-gray-100 hover:border-primary hover:-translate-y-1 flex flex-col items-center justify-center aspect-square"
-          >
-            {logo && (
-              <Image
-                src={logo}
-                alt={`${partner.data.name} Logo`}
-                class="max-h-36 max-w-[80%] w-auto object-contain mb-2"
-              />
-            )}
-            <h3 class="font-semibold text-gray-900 text-center text-sm">
-              {partner.data.name}
-            </h3>
-          </a>
-        );
-      })}
-    </div>
+    <div class="community-partners-header">
+      <Title id="community-partners" color="var(--color-black)">Community Partners</Title>
+      </div>
+      <div class="text-center mb-12">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
+      </div>
+      <div class="mt-10 text-center">
+        <Button url="/community-partners">Learn more about our partners</Button>
+      </div>
 
-    <div class="mt-10 text-center">
-      <Button url="/community-partners">Learn more about our partners</Button>
-    </div>
-  </div>
-</Section>
+      <div class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
+        {partners.map((partner) => (
+          <SponsorLogo sponsor={partner.id} />
+        ))}
+      </div>
+
+</Section2>
 
 <style>
+
+  .community-partners-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
   .partner-card:hover {
     transform: translateY(-4px);
   }

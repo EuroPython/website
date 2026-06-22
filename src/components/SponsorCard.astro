@@ -44,9 +44,9 @@ const logo = sponsorLogos[sponsor.id];
 ---
 
 <div
-  class=`lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white text-black mb-6 ${draft ? "draft": "no-draft"}`
+  class=`lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-[var(--color-surface-subtle)] mb-6 ${draft ? "draft": "no-draft"}`
 >
-  <div class="w-full flex justify-center items-center md:items-center min-h-[140px] ">
+  <div class="w-full flex justify-center items-center md:items-center min-h-[140px] bg-white rounded-lg p-4">
     {
       logo && (
           <Image
@@ -74,15 +74,15 @@ const logo = sponsorLogos[sponsor.id];
             <>{title}</>
           }
         </h2>
-        <p class="text-gray-600 mb-4" style="color:oklch(54.6% 0.03 256.802);">
+        <p class="text-[var(--color-text-muted)] mb-4">
           {industry} {industry && location && <>—</>} {location}
         </p>
 
-        <p class="py-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">{description}</p>
+        <p class="py-6 " style="border: 0 solid var(--color-border); border-width: 1px 0 0 0;">{description}</p>
 
 
         {showJobs && jobs && (
-          <div class="py-6 " style="border: 0 solid rgba(33,33,33,0.2); border-width: 1px 0 0 0;">
+          <div class="py-6 " style="border: 0 solid var(--color-border); border-width: 1px 0 0 0;">
             <h3 class="text-xl font-semibold">Job offers</h3>
             <ul class="list-disc list-inside" >
               {Object.values(jobs).map((job) => (
@@ -136,7 +136,7 @@ const logo = sponsorLogos[sponsor.id];
     display: inline-block;
     padding: 8px 24px;
     margin: 0 0 12px 0;
-    color: white;
+    color: var(--color-text-primary);
     border-radius: 9999px;
     border: 1px solid transparent;
     text-decoration: none;
@@ -144,17 +144,17 @@ const logo = sponsorLogos[sponsor.id];
   }
 
   .website-btn-outline {
-    border: 1px solid #1a56db;
+    border: 1px solid var(--color-blue);
   }
 
   .website-btn {
-    background: linear-gradient(to right, #1a56db, #4f46e5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, var(--color-blue), oklch(0.511 0.234 276.9) /* #4f46e5 */);
+    box-shadow: 0 2px 4px oklch(0 0 0 / 0.1); /* rgba(0,0,0,0.1) */
     font-weight: 700;
   }
 
   .website-btn-outline {
-    color: #1a56db;
+    color: var(--color-blue);
   }
 
   .website-btn:hover ,  .website-btn-outline:hover {
