@@ -106,6 +106,7 @@ import SearchComponent from "astro-pagefind/components/Search";
   display: block;
   padding: 0.8rem 1.4rem;
   border-bottom: 1px solid var(--color-surface-faint);
+  position: relative;
   text-decoration: none;
   cursor: pointer;
   transition: background 0.12s;
@@ -113,6 +114,12 @@ import SearchComponent from "astro-pagefind/components/Search";
 
 .search-modal-content :global(.pagefind-ui__result:last-child) {
   border-bottom: none;
+}
+
+.search-modal-content :global(.pagefind-ui__result-link::after) {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .search-modal-content :global(.pagefind-ui__result:hover),

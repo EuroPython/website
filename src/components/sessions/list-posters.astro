@@ -1,0 +1,242 @@
+---
+import { getCollection } from "astro:content";
+
+const allSpeakers = await getCollection("speakers");
+const speakerNames: Record<string, string> = {};
+for (const s of allSpeakers) {
+  speakerNames[s.id] = s.data.name;
+}
+
+function speakerHtml(speakers: any): string {
+  if (!speakers || speakers.length === 0) return "";
+  return speakers.map((s: any) => {
+    const id = typeof s === "string" ? s : s.id;
+    const name = speakerNames[id] || id;
+    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
+  }).join(", ");
+}
+
+interface Props {
+  posters: Array<{
+    id: string;
+    data: {
+      title: string;
+      duration?: string;
+      level?: string;
+      track?: string | null;
+      speakers?: Array<{ id: string; collection: string }>;
+    };
+  }>;
+}
+
+const { posters } = Astro.props;
+---
+
+<section class="all-posters" id="all-posters">
+  <p class="poster-count">
+    {posters.length > 0
+      ? `${posters.length} poster${posters.length !== 1 ? "s" : ""} at EuroPython 2026`
+      : "Poster sessions coming soon"}
+  </p>
+
+  {
+    posters.length > 0 ? (
+      <div class="poster-grid">
+        {posters.map((p) => (
+          <div class:list={["poster-card", p.data.level]}>
+            <a href={`/session/${p.id}`} class="poster-title">{p.data.title}</a>
+            <p class="poster-speakers" set:html={speakerHtml(p.data.speakers)}>
+            </p>
+            <div class="poster-meta">
+              <div class="poster-meta-row">
+                {p.data.duration && <span class="poster-tag">{p.data.duration} min</span>}
+                {p.data.level && <span class={`poster-level poster-level--${p.data.level}`}>{p.data.level.charAt(0).toUpperCase() + p.data.level.slice(1)}</span>}
+              </div>
+              {p.data.track && <span class="poster-track">{p.data.track}</span>}
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="poster-empty">
+        <p class="poster-empty-title">No poster sessions published yet</p>
+        <p class="poster-empty-desc">
+          Check back closer to the conference or browse the{" "}
+          <a href="/schedule" class="poster-empty-link">full schedule</a>.
+        </p>
+      </div>
+    )
+  }
+</section>
+
+<style>
+  .poster-count {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .poster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .poster-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1.25rem;
+    text-decoration: none;
+    font-family: "Inter Tight", system-ui, sans-serif;
+    transition:
+      border-color 0.1s ease-in-out,
+      background 0.1s ease-in-out;
+  }
+
+  .poster-card:hover {
+    border-color: var(--ep-accent);
+    background: var(--ep-session-hover-bg) !important;
+    z-index: 10;
+    transition:
+      border-color 0.1s ease-in-out,
+      background 0.1s ease-in-out;
+  }
+
+  .poster-card.beginner {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-beginner-stripe) 4px,
+        var(--ep-beginner-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .poster-card.advanced {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-advanced-stripe) 4px,
+        var(--ep-advanced-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .poster-title {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .poster-title:hover {
+    text-decoration: underline;
+  }
+
+  .poster-speakers {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.75rem;
+  }
+
+  :global(.poster-speakers .speaker-link) {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  :global(.poster-speakers .speaker-link:hover) {
+    text-decoration: underline;
+  }
+
+  .poster-meta {
+    margin-top: auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .poster-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .poster-tag {
+    font-size: 1.02rem;
+    color: var(--color-text-muted);
+    background: var(--color-surface-medium);
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+  }
+
+  .poster-level {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+  }
+
+  .poster-level--beginner {
+    background: var(--ep-level-beginner-bg);
+    color: var(--ep-level-beginner-text);
+  }
+
+  .poster-level--intermediate {
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
+  }
+
+  .poster-level--advanced {
+    background: var(--ep-level-advanced-bg);
+    color: var(--ep-level-advanced-text);
+  }
+
+  .poster-track {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+  }
+
+  .poster-empty {
+    border: 1px dashed var(--color-border-bright);
+    border-radius: 6px;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--color-surface-subtle);
+  }
+
+  .poster-empty-title {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.5rem;
+  }
+
+  .poster-empty-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .poster-empty-link {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+</style>

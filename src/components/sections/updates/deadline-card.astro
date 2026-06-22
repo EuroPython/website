@@ -1,5 +1,5 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import Card from "./card.astro";
 
 export interface Props {
@@ -14,7 +14,7 @@ if (!deadline) {
   throw new Error(`No deadline found with id ${id}`);
 }
 
-const { Content } = await deadline.render();
+const { Content } = await render(deadline);
 ---
 
 <Card
@@ -22,7 +22,7 @@ const { Content } = await deadline.render();
   title={deadline.data.title}
   url={deadline.data.url}
   subtitle={deadline.data.subtitle}
-  disabled={deadline.data.disabled}
+  {...(deadline.data.disabled ? { disabled: deadline.data.disabled } : {})}
 >
   <Content />
 </Card>

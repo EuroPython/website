@@ -6,7 +6,7 @@ import Section from "@ui/Section.astro";
 
 let parts = await getCollection("week");
 parts = parts
-  .sort((a, b) => a.slug.localeCompare(b.slug))
+  .sort((a, b) => a.id.localeCompare(b.id))
   .reverse()
   .slice(0, 3);
 ---
@@ -14,6 +14,6 @@ parts = parts
 <Section>
   <Headline id="the_week" title="A Week of All Things Python" center="true" />
   <section class="justify-center gap-6 flex flex-wrap px-6">
-    {parts.map((part) => <DeadlineCard id={part.slug} />)}
+    {parts.map((part) => <DeadlineCard id={part.id} />)}
   </section>
 </Section>

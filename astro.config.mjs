@@ -184,7 +184,12 @@ export default defineConfig({
     //   "https://vdo.ninja/?room=EuroPython_2025_Terrace_2B&hash=338a&do",
   },
   integrations: [
-    pagefind(),
+    pagefind({
+      indexConfig: {
+        // Skip media pages from search results
+        excludeSelectors: ["html[data-pagefind-ignore]"],
+      },
+    }),
     mdx(),
     svelte(),
     ...(fastBuild

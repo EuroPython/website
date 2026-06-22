@@ -44,7 +44,7 @@ const logo = sponsorLogos[sponsor.id];
 ---
 
 <div
-  class=`lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-white/5 mb-6 ${draft ? "draft": "no-draft"}`
+  class=`lg:max-w-[400px] flex flex-col gap-6 p-6 rounded-lg shadow-md bg-[var(--color-surface-subtle)] mb-6 ${draft ? "draft": "no-draft"}`
 >
   <div class="w-full flex justify-center items-center md:items-center min-h-[140px] bg-white rounded-lg p-4">
     {
@@ -74,7 +74,7 @@ const logo = sponsorLogos[sponsor.id];
             <>{title}</>
           }
         </h2>
-        <p class="text-white/60 mb-4" style="color:oklch(54.6% 0.03 256.802);">
+        <p class="text-[var(--color-text-muted)] mb-4">
           {industry} {industry && location && <>—</>} {location}
         </p>
 
