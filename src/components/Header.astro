@@ -3,13 +3,57 @@ import HeaderLogo from "@components/header/header-logo.astro";
 import Search from "@components/Search.astro";
 import ThemeToggle from "@components/ThemeToggle.astro";
 
-import links from "@data/links.json";
+import { NAV_MENUS, type NavMenu } from "@data/nav";
+import { getCollection } from "astro:content";
+import { readFileSync } from "fs";
 
-interface NavItem {
-  name: string;
-  path?: string;
-  items?: { name: string; path: string }[];
+// Parse redirect paths from astro.config.mjs at build time
+const configText = readFileSync("astro.config.mjs", "utf-8");
+const redirectMatch = configText.match(/redirects:\s*{([^}]+)}/s);
+const redirectPathsFromConfig: string[] = redirectMatch
+  ? [...redirectMatch[1].matchAll(/"([^"]+)"\s*:/g)].map((m) => m[1].replace(/^\//, "").replace(/\/$/, ""))
+  : [];
+
+// Build list of existing content page slugs to filter nav
+const existingPages = await getCollection("pages");
+const existingSlugs = new Set(existingPages.map((p) => p.id));
+
+// Standalone .astro pages that always exist regardless of content collection
+const alwaysExist = new Set([
+  "sessions", "speakers", "schedule", "posters", "talks", "tutorials",
+  "sprints", "jobs", "sponsors", "community-partners", "media-partners",
+]);
+
+function linkExists(url: string): boolean {
+  if (url.startsWith("http")) return true;
+  const slug = url.replace(/^\//, "").replace(/\/$/, "");
+  if (!slug) return true;
+  if (alwaysExist.has(slug)) return true;
+  const redirectPaths = [...new Set(redirectPathsFromConfig)];
+  if (redirectPaths.includes(slug)) return true;
+  // Check exact match in content pages
+  if (existingSlugs.has(slug)) return true;
+  // Check if slug is the short form of a nested page (e.g. "mentorship" from "programme/mentorship")
+  for (const existing of existingSlugs) {
+    if (existing.endsWith("/" + slug) || existing === slug) return true;
+  }
+  return false;
 }
+
+function sectionHasItems(section: { items: { url: string }[] }): boolean {
+  return section.items.some((item) => linkExists(item.url));
+}
+
+// Filter nav menus to only show links that point to existing pages
+const activeMenus = NAV_MENUS.map((menu) => ({
+  ...menu,
+  sections: menu.sections
+    ?.map((section) => ({
+      ...section,
+      items: section.items.filter((item) => linkExists(item.url)),
+    }))
+    .filter((section) => section.items.length > 0),
+})).filter((menu) => !menu.sections || menu.sections.length > 0);
 ---
 
 <nav aria-label="Main navigation" id="navbar">
@@ -26,34 +70,56 @@ interface NavItem {
         Search
       </button>
     </li>
-    {(links.header as NavItem[]).map((menu) => (
-      menu.items ? (
+    {activeMenus.map((menu: NavMenu) => (
+      menu.sections ? (
         <li class="nav-item has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">
-            {menu.name} <span class="nav-arrow">▾</span>
+          <a href={menu.url || "#"} aria-haspopup="true" aria-expanded="false">
+            {menu.label} <span class="nav-arrow">▾</span>
           </a>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-inner">
-              <ul>
-                {menu.items.map((item) => (
-                  <li>
-                    <a
-                      href={item.path}
-                      target={item.path.startsWith("http") ? "_blank" : undefined}
-                      rel={item.path.startsWith("http") ? "nofollow noopener" : undefined}
-                    >
-                      {item.name}
-                      {item.path.startsWith("http") && <span class="nav-ext">&#8599;</span>}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          <div class="nav-dropdown" class:list={menu.wide ? ["nav-dropdown-wide"] : []}>
+            <div class="nav-dropdown-inner" class:list={menu.wide ? ["nav-dropdown-grid"] : []}>
+              {menu.sections.length === 1 && !menu.sections[0].label ? (
+                <ul>
+                  {menu.sections[0].items.map((item) => (
+                    <li>
+                      <a
+                        href={item.url}
+                        target={item.external ? "_blank" : undefined}
+                        rel={item.external ? "nofollow noopener" : undefined}
+                      >
+                        {item.label}
+                        {item.external && <span class="nav-ext">&#8599;</span>}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                menu.sections.map((section) => (
+                  <div class="nav-dropdown-col">
+                    {section.label && <p class="nav-dropdown-label">{section.label}</p>}
+                    <ul>
+                      {section.items.map((item) => (
+                        <li>
+                          <a
+                            href={item.url}
+                            target={item.external ? "_blank" : undefined}
+                            rel={item.external ? "nofollow noopener" : undefined}
+                          >
+                            {item.label}
+                            {item.external && <span class="nav-ext">&#8599;</span>}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              )}
             </div>
           </div>
         </li>
       ) : (
         <li class="nav-item">
-          <a href={menu.path || "#"}>{menu.name}</a>
+          <a href={menu.url || "#"}>{menu.label}</a>
         </li>
       )
     ))}
@@ -114,16 +180,17 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   color: var(--color-text-primary);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: transparent;
   border-radius: 2px;
-  transition: color 0.15s, background 0.15s;
+  transition: color 0.15s, text-decoration-color 0.15s;
 }
 
 .nav-item > a:hover,
 .nav-item:hover > a,
 .nav-item > a:focus {
-  color: var(--color-text);
-  background: var(--color-border);
+  color: var(--color-accent-themed);
+  text-decoration-color: var(--color-accent-themed);
 }
 
 .nav-arrow {
@@ -170,6 +237,31 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav-dropdown-wide {
+  min-width: 540px;
+}
+
+.nav-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.nav-dropdown-col {
+  break-inside: avoid;
+}
+
+.nav-dropdown-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  padding: 0.65rem 1.2rem 0.3rem;
+  margin: 0;
+  opacity: 0.7;
 }
 
 .nav-dropdown li a {
@@ -354,6 +446,26 @@ nav {
   .nav-dropdown li a {
     padding: 0.6rem 0 0.6rem 1rem;
     font-size: 0.95rem;
+  }
+
+  /* Mobile: stack Programme sections vertically */
+  .nav-dropdown-grid {
+    display: block;
+  }
+
+  .nav-dropdown-col {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-dropdown-label {
+    font-size: 0.75rem;
+    padding: 0.6rem 0 0.2rem 0;
+    margin: 0;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   .nav-item.open .nav-arrow {

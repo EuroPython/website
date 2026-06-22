@@ -31,6 +31,7 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
 <div
   class:list={["ep-session", session.level, slugify(session.sessionType)]}
   style={style}
+  id={`session-${session.slug}`}
 >
   <CodeHeart
     client:load
@@ -50,7 +51,10 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
     {hasRoom && <span class="ep-session-room">{session.rooms[0]}</span>}
     {durationLabel && <span class="ep-session-duration">{durationLabel}</span>}
   </div>
-  {levelLabel && <div class={`ep-session-level--${session.level}`}>{levelLabel}</div>}
+  <div class="ep-session-badges">
+    {session.sessionType === "poster" && <div class="ep-session-poster-badge">Poster</div>}
+    {levelLabel && <div class={`ep-session-level--${session.level}`}>{levelLabel}</div>}
+  </div>
 </div>
 
 <style>
@@ -108,6 +112,29 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
     margin-top: auto;
   }
 
+  .ep-session-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    margin-top: 0.15em;
+  }
+
+  .ep-session-poster-badge {
+    padding: 0.1em 0.5em;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
+  }
+
+  @media (min-width: 800px) {
+    .ep-session-poster-badge {
+      display: none;
+    }
+  }
+
   .ep-session-room,
   .ep-session-duration {
     display: inline;
@@ -122,7 +149,6 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
   [class^="ep-session-level--"] {
     display: inline-block;
     width: fit-content;
-    margin-top: 0.25em;
     padding: 0.1em 0.5em;
     border-radius: 3px;
     font-size: 1rem;

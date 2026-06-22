@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import Layout from "@layouts/MarkdownLayout.astro";
 
 import Headline from "@ui/Headline.astro";
@@ -18,33 +18,51 @@ import EPSLogo from "@components/markdown/EPSLogo.astro";
 import ProfileCard from "@components/profile/ProfileCard.astro";
 import SpeakerCard from "@components/profile/SpeakerCard.astro";
 import GoogleCalendar from '@components/GoogleCalendar.astro';
+import ThreeCol from "@ui/ThreeCol.astro";
+import FinaidTimeline from "@ui/FinaidTimeline.astro";
 
 import Prose from "@ui/Prose.astro";
-import enabledPages from "@data/enabledPages.json";
+import { NAV_MENUS, FOOTER_COLUMNS } from "@data/nav";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("pages");
+  // Build set of all nav-linked paths for orphan detection
+  const navPaths = new Set<string>();
+  for (const menu of NAV_MENUS) {
+    if (menu.url && !menu.sections) navPaths.add(menu.url.replace(/\/$/, ""));
+    for (const section of menu.sections ?? []) {
+      for (const item of section.items) {
+        navPaths.add(item.url.replace(/\/$/, ""));
+      }
+    }
+  }
+  // Add footer links
+  for (const col of FOOTER_COLUMNS) {
+    for (const item of col.items) {
+      navPaths.add(item.url.replace(/\/$/, ""));
+    }
+  }
+  const pages = (await getCollection("pages")).filter((p) => !p.id.startsWith("_"));
 
-  // Filter pages based on whitelist if enabled
-  const filteredPages = enabledPages.enableWhitelist
-    ? pages.filter((page) => {
-        const fullPath = `/${page.slug}`;
-        const shortSlug = page.slug.split("/").pop();
-        const shortPath = `/${shortSlug}`;
-        return enabledPages.pages.includes(fullPath) || enabledPages.pages.includes(shortPath);
-      })
-    : pages;
+  // Warn about top-level pages not linked in nav
+  const ignorePaths = new Set(["/sprints_info", "/terms"]);
+  for (const page of pages) {
+    const fullPath = "/" + page.id;
+    if (ignorePaths.has(fullPath)) continue;
+    if (!page.id.includes("/") && !navPaths.has(fullPath)) {
+      console.warn(`[nav] Top-level page "${fullPath}" exists but is not linked in any nav menu or footer. Add it to src/data/nav.ts`);
+    }
+  }
 
-  return filteredPages.flatMap((page) => {
-    const slugParts = page.slug.split("/");
+  return pages.flatMap((page) => {
+    const slugParts = page.id.split("/");
     const shortSlug = slugParts[slugParts.length - 1];
 
     const paths = [
-      { params: { slug: page.slug }, props: page }, // long slug
+      { params: { slug: page.id }, props: page }, // long slug
     ];
 
     // only add short slug if it's not the same
-    if (page.slug !== shortSlug) {
+    if (page.id !== shortSlug) {
       paths.push({ params: { slug: shortSlug }, props: page }); // short slug
     }
 
@@ -55,7 +73,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"pages">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 let title =
   post.data.title +
@@ -67,6 +85,8 @@ const description = post.data.subtitle;
   <Prose class="pb-20" full={post.data.full}>
     <Content
       components={{
+        ThreeCol,
+        FinaidTimeline,
         Button,
         Headline,
         Icon,
