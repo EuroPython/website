@@ -24,7 +24,6 @@ interface BreadcrumbItem {
 }
 
 function normalizePath(path: string): string {
-console.log(path)
   if (!path) return ""
   if (path === "/") return "/";
   return path.replace(/\/+$/, "");

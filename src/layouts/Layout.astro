@@ -5,7 +5,18 @@ import Footer from "@components/Footer.astro";
 import Offline from "@components/Offline.astro";
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 
-import linksData from '@src/data/links.json';
+import { NAV_MENUS } from '@src/data/nav';
+
+// Convert NavMenu[] to the shape Breadcrumbs expects: { header: [{ name, path, items? }] }
+const breadcrumbData = {
+  header: NAV_MENUS.map((m) => ({
+    name: m.label,
+    path: m.url,
+    items: m.sections
+      ? m.sections.flatMap((s) => s.items.map((i) => ({ name: i.label, path: i.url })))
+      : undefined,
+  })),
+};
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@styles/tailwind.css";
@@ -56,7 +67,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
       <Offline />
         {currentPath !== "/" && (
           <Breadcrumbs
-              linksData={linksData}
+              linksData={breadcrumbData}
               currentPath={currentPath}
               homePath="/"
               separator="›"

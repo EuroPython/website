@@ -65,7 +65,7 @@ import Section2 from "@ui/Section2.astro";
   const form = document.getElementById("subscribeForm");
   form?.addEventListener("submit", handleSubscribe);
 
-  async function handleSubscribe(event) {
+  async function handleSubscribe(event: SubmitEvent) {
     event.preventDefault();
 
     const input = document.getElementById("newsletter-email");
@@ -97,12 +97,6 @@ import Section2 from "@ui/Section2.astro";
     background: var(--color-section-bg);
   }
 
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background-image: radial-gradient(circle, var(--color-surface-subtle) 1px, transparent 1px);
-    background-size: 32px 32px;
   .connect-bg {
   }
 
@@ -112,10 +106,6 @@ import Section2 from "@ui/Section2.astro";
     text-align: center;
     margin-bottom: 2.5rem;
   }
-
-
-
-
 
   .connect-subtitle {
     font-size: 1.1rem;
