@@ -5,8 +5,13 @@ type: Full time
 level:
 tags:
 salary:
-description: Your main job will be to guide users from finding the Apify Store to launching their first AI tool. You will work closely with our product and discovery teams to improve search, categories, and tool recommendations. You will look at user data daily, launch creative feature campaigns, and build a marketing strategy that directly drives sign-ups and growth.
-    
+description:
+  Your main job will be to guide users from finding the Apify Store to launching
+  their first AI tool. You will work closely with our product and discovery
+  teams to improve search, categories, and tool recommendations. You will look
+  at user data daily, launch creative feature campaigns, and build a marketing
+  strategy that directly drives sign-ups and growth.
+
 responsibilities:
 requirements:
 benefits:

@@ -5,8 +5,13 @@ type: Full time
 level:
 tags:
 salary:
-description: Your main job will be to shape the future of our platform and drive its growth. You will work daily with our product and engineering teams in Prague, bringing user feedback directly into the product roadmap. From launching new API features to tracking engagement data, you will make our core tech accessible and easy to understand for everyone.
-    
+description:
+  Your main job will be to shape the future of our platform and drive its
+  growth. You will work daily with our product and engineering teams in Prague,
+  bringing user feedback directly into the product roadmap. From launching new
+  API features to tracking engagement data, you will make our core tech
+  accessible and easy to understand for everyone.
+
 responsibilities:
 requirements:
 benefits:
