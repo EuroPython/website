@@ -1,0 +1,333 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
+import { getCollection } from "astro:content";
+
+const allSessions = await getCollection("sessions");
+
+// Pre-resolve all speakers for fast lookup
+const allSpeakers = await getCollection("speakers");
+const speakerNames: Record<string, string> = {};
+for (const s of allSpeakers) {
+  speakerNames[s.id] = s.data.name;
+}
+
+function speakerHtml(speakers: any): string {
+  if (!speakers || speakers.length === 0) return "";
+  return speakers.map((s: any) => {
+    const id = typeof s === "string" ? s : s.id;
+    const name = speakerNames[id] || id;
+    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
+  }).join(", ");
+}
+const tutorials = allSessions
+  .filter((s) => s.data.session_type?.toLowerCase() === "tutorial")
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<Layout title="Tutorials | EuroPython 2026" description="Full-day, hands-on workshops led by domain experts. Go deeper than any talk can — bring your laptop and leave with real skills.">
+  <Fragment slot="head">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+  </Fragment>
+
+  <Section2 variant="dark" id="tutorials">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12">
+        <Title id="tutorials" subtitle="Full-day, hands-on workshops led by domain experts. Go deeper than any talk can — bring your laptop and leave with real skills.">
+          TUTORIALS
+        </Title>
+        <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
+          <span>Monday & Tuesday, July 13–14</span>
+          <span>Small-group format</span>
+        </div>
+      </div>
+
+      <!-- Advantages grid -->
+      <ul class="tutorial-advantages">
+        <li>
+          <strong>3-hour or 6-hour sessions</strong>
+          Tutorials run for half a day or a full day. Each one is a self-contained workshop with exercises, examples, and hands-on practice.
+        </li>
+        <li>
+          <strong>Small groups, personal attention</strong>
+          Unlike talks, tutorials are capped in size. You get direct access to the instructor and can ask questions as you go.
+        </li>
+        <li>
+          <strong>Wide range of topics</strong>
+          From Python basics and web frameworks to data science pipelines, async programming, and testing strategies — there is a tutorial for every interest.
+        </li>
+        <li>
+          <strong>Separate ticket required</strong>
+          Tutorial participation requires a separate tutorial ticket in addition to your conference pass.
+        </li>
+      </ul>
+
+      <!-- Tutorial count -->
+      <p class="tutorials-count"><span id="sess-count">{tutorials.length}</span> tutorials at EuroPython 2026</p>
+
+      <!-- Filter bar -->
+      <div class="sess-filters">
+        <input type="text" id="sess-search" class="sess-search" placeholder="Filter by title or speaker..." autocomplete="off" aria-label="Filter tutorials by title or speaker">
+      </div>
+
+      <!-- Tutorials list -->
+      <div class="tutorials-section" id="sess-grid">
+        <div class="talks-dot-bg">
+          <div class="tutorial-grid">
+            {tutorials.map((t) => (
+              <div class:list={["tutorial-card", t.data.level]} data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}>
+                <a href={`/session/${t.id}`} class="tutorial-card-title">{t.data.title}</a>
+                <p class="tutorial-card-speakers" set:html={speakerHtml(t.data.speakers)}>
+                </p>
+                <div class="tutorial-card-meta">
+                  <span class="tutorial-card-tag">{t.data.duration} min</span>
+                  {t.data.level && <span class={`tutorial-card-level tutorial-card-level--${t.data.level}`}>{t.data.level.charAt(0).toUpperCase() + t.data.level.slice(1)}</span>}
+                </div>
+                {t.data.track && <p class="tutorial-card-track">{t.data.track}</p>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <p class="sess-no-results" id="sess-no-results" hidden>No tutorials match your search.</p>
+
+    </div>
+  </Section2>
+</Layout>
+
+<style>
+  .tutorial-advantages {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .tutorial-advantages {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .tutorial-advantages li {
+    padding: 1.6rem;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .tutorial-advantages li strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+  }
+
+  .tutorials-count {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .sess-filters {
+    display: flex;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .sess-search {
+    flex: 1;
+    min-width: 0;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border-strong);
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .sess-search::placeholder {
+    color: var(--color-text-faint);
+  }
+
+  .sess-search:focus {
+    border-color: var(--color-accent);
+    background: var(--color-surface-medium);
+  }
+
+  .sess-no-results {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    padding: 3rem;
+  }
+
+  .tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .tutorial-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1.25rem;
+    text-decoration: none;
+    font-family: "Inter Tight", system-ui, sans-serif;
+    transition:
+      border-color 0.1s ease-in-out,
+      background 0.1s ease-in-out;
+  }
+
+  .tutorial-card:hover {
+    border-color: var(--ep-accent);
+    background: var(--ep-session-hover-bg) !important;
+    z-index: 10;
+  }
+
+  .tutorial-card.beginner {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-beginner-stripe) 4px,
+        var(--ep-beginner-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .tutorial-card.advanced {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-advanced-stripe) 4px,
+        var(--ep-advanced-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .tutorial-card-title {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .tutorial-card-title:hover {
+    text-decoration: underline;
+  }
+
+  .tutorial-card-speakers {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.75rem;
+  }
+
+  :global(.tutorial-card-speakers .speaker-link) {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  :global(.tutorial-card-speakers .speaker-link:hover) {
+    text-decoration: underline;
+  }
+
+  .tutorial-card-meta {
+    margin-top: auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .tutorial-card-tag {
+    font-size: 1.02rem;
+    color: var(--color-text-muted);
+    background: var(--color-surface-medium);
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+  }
+
+  .tutorial-card-level {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+  }
+
+  .tutorial-card-level--beginner {
+    background: var(--ep-level-beginner-bg);
+    color: var(--ep-level-beginner-text);
+  }
+
+  .tutorial-card-level--intermediate {
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
+  }
+
+  .tutorial-card-level--advanced {
+    background: var(--ep-level-advanced-bg);
+    color: var(--ep-level-advanced-text);
+  }
+
+  .tutorial-card-track {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin: 0.5rem 0 0;
+  }
+</style>
+
+<script is:inline>
+(function() {
+  var input = document.getElementById('sess-search');
+  if (!input) return;
+  var grid = document.getElementById('sess-grid');
+  var cards = grid.querySelectorAll('.tutorial-card');
+  var countEl = document.getElementById('sess-count');
+  var noResults = document.getElementById('sess-no-results');
+  var total = cards.length;
+
+  function filterCards() {
+    var q = input.value.toLowerCase().trim();
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var show = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    countEl.textContent = (q) ? visible + ' / ' + total : total;
+    if (noResults) noResults.hidden = visible > 0;
+  }
+
+  input.addEventListener('input', filterCards);
+})();
+</script>

@@ -1,0 +1,96 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
+import { getCollection } from "astro:content";
+import ListPosters from "@components/sessions/list-posters.astro";
+
+const allSessions = await getCollection("sessions");
+const posters = allSessions
+  .filter((s) => s.data.session_type?.toLowerCase() === "poster")
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<Layout title="Posters | EuroPython 2026" description="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session.">
+  <Fragment slot="head">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+  </Fragment>
+  <Section2 variant="dark" id="posters">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12">
+        <Title id="posters" subtitle="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session.">
+          POSTERS
+        </Title>
+        <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
+          <span>During the main conference</span>
+          <span>Exhibition area</span>
+        </div>
+      </div>
+
+      <!-- Advantages grid (matching ep26-draft style) -->
+      <ul class="poster-advantages">
+        <li>
+          <strong>Visual format</strong>
+          Posters present a project, library, or research finding as a visual display.
+          Think of it as a paper you can walk up to and discuss.
+        </li>
+        <li>
+          <strong>One-on-one conversations</strong>
+          Unlike talks, poster sessions let you have a direct conversation with the
+          author. Ask questions, give feedback, and dive as deep as you like.
+        </li>
+        <li>
+          <strong>Great for first-time speakers</strong>
+          Posters are an excellent way to share your work without the pressure of a
+          stage presentation. Many speakers start here.
+        </li>
+        <li>
+          <strong>Dedicated session time</strong>
+          A block of time is reserved in the schedule for poster viewing, so you won't
+          have to choose between posters and talks.
+        </li>
+      </ul>
+
+      <!-- Poster list component -->
+      <ListPosters posters={posters} />
+
+    </div>
+  </Section2>
+    </div>
+  </Section2>
+</Layout>
+
+<style>
+  .poster-advantages {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .poster-advantages {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .poster-advantages li {
+    padding: 1.6rem;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .poster-advantages li strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+  }
+</style>

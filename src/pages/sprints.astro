@@ -4,11 +4,7 @@ import { getEntry } from 'astro:content';
 import Layout from '@layouts/MarkdownLayout.astro';
 import SprintCard from '@components/SprintCard.astro';
 import Markdown from "@ui/Markdown.astro";
-import Headline from "@ui/Headline.astro";
-import Prose from "@ui/Prose.astro";
 
-import { Image } from 'astro:assets';
-import anacondaLogo from '@src/content/sponsors/anaconda/anaconda.svg';
 
 const entry = await getEntry('pages', 'sprints_info');
 
@@ -24,7 +20,7 @@ const sprints = (await getCollection("sprints", ({ data }) => {
 
 <Layout title=`${entry.data.title}` description=`${entry.data.subtitle}` toc=true>
 
-      <Markdown content={entry.body} />
+      <Markdown content={entry.body ?? ""} />
       <div class="flex flex-wrap gap-8 justify-center my-8">
         <div class="flex flex-col gap-2">
           <label for="level-filter" class="font-semibold text-white/80 text-lg">Python Level:</label>
@@ -43,7 +39,7 @@ const sprints = (await getCollection("sprints", ({ data }) => {
 
       <section class="max-w-4xl mx-auto" id="sprints-list">
         {sprints.map((sprint) => (
-          <SprintCard slug={sprint.slug} />
+          <SprintCard slug={sprint.id} />
         ))}
       </section>
 

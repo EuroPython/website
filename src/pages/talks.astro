@@ -1,0 +1,484 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
+import { getCollection } from "astro:content";
+
+const allSessions = await getCollection("sessions");
+
+// Pre-resolve all speakers for fast lookup
+const allSpeakers = await getCollection("speakers");
+const speakerNames: Record<string, string> = {};
+for (const s of allSpeakers) {
+  speakerNames[s.id] = s.data.name;
+}
+
+function speakerHtml(speakers: any): string {
+  if (!speakers || speakers.length === 0) return "";
+  return speakers.map((s: any) => {
+    const id = typeof s === "string" ? s : s.id;
+    const name = speakerNames[id] || id;
+    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
+  }).join(", ");
+}
+const talks = allSessions
+  .filter((s) => {
+    const t = s.data.session_type?.toLowerCase();
+    const isTalk = t === "talk" || t === "talk (long session)" || t === "panel";
+    return isTalk && s.data.track !== "~ None of these topics";
+  })
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+// Group talks by track
+const trackOrder = [
+  "Python Core, Internals, Extensions",
+  "Machine Learning: Research & Applications",
+  "Data Engineering and MLOps",
+  "Jupyter and Scientific Python",
+  "Data preparation and visualisation",
+  "Machine Learning, NLP and CV",
+  "Web Development, Web APIs, Front-End Integration",
+  "DevOps, Cloud, Scalable Infrastructure",
+  "Tooling, Packaging, Developer Productivity",
+  "Testing, Quality Assurance, Security",
+  "Community Building, Education, Outreach",
+  "Professional Development, Careers, Leadership",
+  "Ethics, Social Responsibility, Sustainability, Legal",
+  "IoT, Embedded Systems, Hardware Integration",
+  "Python for Games, Art, Play and Expression",
+];
+
+const groups: Record<string, typeof talks> = {};
+for (const talk of talks) {
+  const track = talk.data.track || "Other";
+  if (!groups[track]) groups[track] = [];
+  groups[track].push(talk);
+}
+
+const sortedTracks = trackOrder.filter((t) => groups[t]);
+const otherTracks = Object.keys(groups).filter((t) => !trackOrder.includes(t)).sort();
+const allDisplayTracks = [...sortedTracks, ...otherTracks];
+---
+
+<Layout title="Talks | EuroPython 2026" description="The heart of EuroPython — three days of talks across five parallel tracks, covering every corner of the Python ecosystem.">
+  <Fragment slot="head">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+  </Fragment>
+
+  <Section2 variant="dark" id="talks">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12">
+        <Title id="talks" subtitle="The heart of EuroPython — three days of talks across five parallel tracks, covering every corner of the Python ecosystem.">
+          TALKS
+        </Title>
+        <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
+          <span>Wednesday – Friday, July 15–17</span>
+          <span>5 parallel tracks</span>
+        </div>
+      </div>
+
+      <!-- Advantages grid -->
+      <ul class="talk-advantages">
+        <li>
+          <strong>30-minute talks</strong>
+          Our most common format. Speakers have 30 minutes including Q&amp;A to share a focused idea, project, or lesson learned.
+        </li>
+        <li>
+          <strong>45-minute deep dives</strong>
+          Selected talks get an extended slot for more complex topics that benefit from extra depth and live demonstrations.
+        </li>
+        <li>
+          <strong>For every level</strong>
+          From beginner-friendly introductions to advanced internals — each talk is tagged by experience level so you can plan your day.
+        </li>
+        <li>
+          <a href="/programme/selection" class="talk-advantages-link">
+            <strong>Community-selected</strong>
+            Talks are chosen through an open call for proposals and community voting, ensuring the programme reflects what Pythonistas actually want to learn.
+          </a>
+        </li>
+      </ul>
+
+      <!-- Talk count -->
+      <p class="talks-count"><span id="sess-count">{talks.length}</span> talks at EuroPython 2026</p>
+
+      <!-- Filter bar -->
+      <div class="sess-filters">
+        <input type="text" id="sess-search" class="sess-search" placeholder="Filter by title or speaker..." autocomplete="off" aria-label="Filter talks by title or speaker">
+        <select id="sess-track-filter" class="sess-track-select" aria-label="Filter by topic">
+          <option value="">All topics</option>
+          {allDisplayTracks.map((track) => (
+            <option value={track}>{track}</option>
+          ))}
+        </select>
+      </div>
+
+      <!-- Talks grouped by track -->
+      <div class="talks-section" id="sess-grid">
+        {allDisplayTracks.map((track) => (
+          <div class="talks-dot-bg">
+          <div class="talk-topic-group">
+            <h3 class="talk-topic-heading" id={`topic-${track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>
+              <a href={`#topic-${track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}># {track}</a>
+            </h3>
+            <div class="talk-grid">
+              {groups[track].map((talk) => (
+                <div class:list={["talk-card", talk.data.level]} data-track={talk.data.track || ""} data-search={`${talk.data.title.toLowerCase()} ${talk.data.track?.toLowerCase() || ""}`}>
+                  <a href={`/session/${talk.id}`} class="talk-card-title">{talk.data.title}</a>
+                  <p class="talk-card-speakers" set:html={speakerHtml(talk.data.speakers)}>
+                  </p>
+                  <div class="talk-card-meta">
+                    <span class="talk-card-tag">{talk.data.duration} min</span>
+                    {talk.data.level && <span class={`talk-card-level talk-card-level--${talk.data.level}`}>{talk.data.level.charAt(0).toUpperCase() + talk.data.level.slice(1)}</span>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          </div>
+        ))}
+      </div>
+
+      <p class="sess-no-results" id="sess-no-results" hidden>No talks match your search.</p>
+
+    </div>
+  </Section2>
+</Layout>
+
+<style>
+  .talk-advantages {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .talk-advantages {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .talk-advantages li {
+    padding: 1.6rem;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .talk-advantages li strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+  }
+
+  .talk-advantages li:has(.talk-advantages-link) {
+    padding: 0;
+  }
+
+  .talk-advantages-link {
+    display: block;
+    padding: 1.6rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    height: 100%;
+    transition: color 0.15s;
+  }
+
+  .talk-advantages-link:hover {
+    color: var(--color-accent-themed);
+    text-decoration: underline;
+  }
+
+  .talk-advantages-link:hover strong {
+    color: var(--color-accent-themed) !important;
+  }
+
+  .talk-advantages li:has(.talk-advantages-link):hover {
+    border-color: var(--color-accent-themed);
+  }
+
+  .talks-count {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .sess-filters {
+    display: flex;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .sess-search {
+    flex: 1;
+    min-width: 0;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border-strong);
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .sess-search::placeholder {
+    color: var(--color-text-faint);
+  }
+
+  .sess-search:focus {
+    border-color: var(--color-accent);
+    background: var(--color-surface-medium);
+  }
+
+  .sess-track-select {
+    width: 280px;
+    flex-shrink: 0;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border-strong);
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .sess-track-select:focus {
+    border-color: var(--color-accent);
+    background: var(--color-surface-medium);
+  }
+
+  .sess-no-results {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    padding: 3rem;
+  }
+
+  .talks-section {
+    margin-top: 2rem;
+  }
+
+  .talk-topic-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .talk-topic-heading {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    scroll-margin-top: 80px;
+  }
+
+  .talk-topic-heading a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .talk-topic-heading a:hover {
+    color: var(--color-accent);
+  }
+
+  .talk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .talk-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1.25rem;
+    text-decoration: none;
+    font-family: "Inter Tight", system-ui, sans-serif;
+    transition:
+      border-color 0.1s ease-in-out,
+      background 0.1s ease-in-out;
+  }
+
+  .talk-card:hover {
+    border-color: var(--ep-accent);
+    background: var(--ep-session-hover-bg) !important;
+    z-index: 10;
+  }
+
+  .talk-card.beginner {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-beginner-stripe) 4px,
+        var(--ep-beginner-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .talk-card.advanced {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-advanced-stripe) 4px,
+        var(--ep-advanced-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .talk-card-title {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .talk-card-title:hover {
+    text-decoration: underline;
+  }
+
+  .talk-card-speakers {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.75rem;
+  }
+
+  :global(.talk-card-speakers .speaker-link) {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  :global(.talk-card-speakers .speaker-link:hover) {
+    text-decoration: underline;
+  }
+
+  .talk-card-meta {
+    margin-top: auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .talk-card-tag {
+    font-size: 1.02rem;
+    color: var(--color-text-muted);
+    background: var(--color-surface-medium);
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+  }
+
+  .talk-card-level {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+  }
+
+  .talk-card-level--beginner {
+    background: var(--ep-level-beginner-bg);
+    color: var(--ep-level-beginner-text);
+  }
+
+  .talk-card-level--intermediate {
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
+  }
+
+  .talk-card-level--advanced {
+    background: var(--ep-level-advanced-bg);
+    color: var(--ep-level-advanced-text);
+  }
+</style>
+
+<script is:inline>
+(function() {
+  var input = document.getElementById('sess-search');
+  if (!input) return;
+  var grid = document.getElementById('sess-grid');
+  var cards = grid.querySelectorAll('.talk-card');
+  var groups = grid.querySelectorAll('.talk-topic-group');
+  var countEl = document.getElementById('sess-count');
+  var noResults = document.getElementById('sess-no-results');
+  var trackSelect = document.getElementById('sess-track-filter');
+  var total = cards.length;
+
+  function filterCards() {
+    var q = input.value.toLowerCase().trim();
+    var activeTopic = trackSelect ? trackSelect.value : '';
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var matchText = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+      var matchTopic = !activeTopic || card.getAttribute('data-track') === activeTopic;
+      var show = matchText && matchTopic;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    groups.forEach(function(group) {
+      var wrapper = group.parentElement;
+      var hasVisible = group.querySelector('.talk-card:not([style*="display: none"])');
+      group.style.display = hasVisible ? '' : 'none';
+      if (wrapper && wrapper.classList.contains('talks-dot-bg')) {
+        wrapper.style.display = hasVisible ? '' : 'none';
+      }
+    });
+
+    countEl.textContent = (q || activeTopic) ? visible + ' / ' + total : total;
+    if (noResults) noResults.hidden = visible > 0;
+  }
+
+  input.addEventListener('input', filterCards);
+  if (trackSelect) trackSelect.addEventListener('change', filterCards);
+
+  // Auto-filter from URL hash or query param
+  var currentHash = window.location.hash;
+  if (currentHash && currentHash.startsWith('#topic-')) {
+    // Find the heading element to extract track name
+    var headingEl = document.getElementById(currentHash.substring(1));
+    if (headingEl && trackSelect) {
+      var trackName = headingEl.textContent.replace(/^#\s*/, '').trim();
+      var options = trackSelect.options;
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].value === trackName) {
+          trackSelect.value = options[i].value;
+          filterCards();
+          break;
+        }
+      }
+    }
+  }
+
+  var urlParams = new URLSearchParams(window.location.search);
+  var trackParam = urlParams.get('track');
+  if (trackParam && trackSelect && !currentHash) {
+    trackSelect.value = trackParam;
+    filterCards();
+  }
+})();
+</script>

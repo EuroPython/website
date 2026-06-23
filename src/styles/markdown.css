@@ -1,9 +1,39 @@
+article.prose h1:not([class*="font-normal"]):not([class*="font-light"]) {
+  font-weight: 700 !important;
+}
+
+article.prose h1 {
+  font-weight: 700 !important;
+}
+
+article.prose h2 {
+  font-weight: 700 !important;
+}
+
+article.prose h3 {
+  font-weight: 600 !important;
+}
+
+article.prose h1 a {
+  font-weight: 700 !important;
+}
+
+article.prose h2 a {
+  font-weight: 700 !important;
+}
+
+article.prose h3 a {
+  font-weight: 600 !important;
+}
+
 .prose :is(h1, h2, h3, h4, h5, h6) a {
   text-decoration: none !important;
+  color: inherit !important;
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:hover {
-  text-decoration: underline !important;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 .prose :is(h1, h2, h3, h4, h5, h6) a:focus {
