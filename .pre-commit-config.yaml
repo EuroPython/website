@@ -19,3 +19,10 @@ repos:
         args: ["--tab-width", "2", "--trailing-comma", "es5"]
         additional_dependencies: ["prettier", "prettier-plugin-astro"]
         exclude: "pnpm-lock.yaml"
+
+  - repo: https://github.com/shssoichiro/oxipng
+    rev: v9.1.4
+    hooks:
+      - id: oxipng
+        args: ["-o", "max", "--strip", "all"]
+        types: ["png"]
