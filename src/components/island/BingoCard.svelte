@@ -59,14 +59,15 @@
   const BINGO_PAGE_URL = 'https://ep2026.europython.eu/bingo';
 
   function shareLinkedIn() {
+    const text = buildShareText() + '\n\n' + BINGO_PAGE_URL;
     window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(BINGO_PAGE_URL)}`,
+      `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(text)}`,
       '_blank', 'noopener,noreferrer'
     );
   }
 
   function shareX() {
-    const text = buildShareText() + '\n#EuroPython #Python';
+    const text = buildShareText();
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(PAGE_URL)}`,
       '_blank', 'noopener,noreferrer'
@@ -74,7 +75,7 @@
   }
 
   function shareBlueSky() {
-    const text = `${buildShareText()}\n#EuroPython #Python\n${PAGE_URL}`;
+    const text = `${buildShareText()}\n\n${PAGE_URL}`;
     window.open(
       `https://bsky.app/intent/compose?text=${encodeURIComponent(text)}`,
       '_blank', 'noopener,noreferrer'
@@ -82,7 +83,7 @@
   }
 
   function shareMastodon() {
-    const text = `${buildShareText()}\n#EuroPython #Python\n${PAGE_URL}`;
+    const text = `${buildShareText()}\n\n${PAGE_URL}`;
     window.open(
       `https://shareopenly.org/share/?url=${encodeURIComponent(PAGE_URL)}&text=${encodeURIComponent(text)}`,
       '_blank', 'noopener,noreferrer'
@@ -102,11 +103,9 @@
     canvas.height = H;
     const ctx = canvas.getContext('2d');
 
-    /* background */
     ctx.fillStyle = '#0b1121';
     ctx.fillRect(0, 0, W, H);
 
-    /* title */
     ctx.fillStyle = '#f0c040';
     ctx.font = 'bold 30px system-ui, sans-serif';
     ctx.textAlign = 'center';
@@ -127,12 +126,10 @@
       const isChecked = checked[i];
       const isCurrent = ed.year === 2026;
 
-      /* cell bg */
       ctx.fillStyle = isChecked ? '#f0c040' : isCurrent ? '#111d36' : '#0d1520';
       roundRect(ctx, x + 3, y + 3, CELL - 6, CELL - 6, 2);
       ctx.fill();
 
-      /* cell border — dashed approximation via dotted segments */
       ctx.strokeStyle = isChecked ? '#d4a830' : isCurrent ? '#2a4a80' : 'rgba(255,255,255,0.12)';
       ctx.lineWidth = 1;
       ctx.setLineDash([4, 4]);
@@ -140,13 +137,11 @@
       ctx.stroke();
       ctx.setLineDash([]);
 
-      /* year */
       ctx.fillStyle = isChecked ? '#0b1121' : '#ffffff';
       ctx.font = `bold 21px system-ui, sans-serif`;
       ctx.textAlign = 'center';
       ctx.fillText(ed.year.toString(), x + CELL / 2, y + CELL * 0.46);
 
-      /* city */
       ctx.fillStyle = isChecked ? 'rgba(11,17,33,0.65)' : 'rgba(255,255,255,0.55)';
       ctx.font = `12px system-ui, sans-serif`;
       ctx.fillText(ed.city, x + CELL / 2, y + CELL * 0.68);
@@ -176,7 +171,7 @@
 <div class="bingo-wrapper">
   <p class="bingo-tally">
     {checkedCount === 0
-      ? "Click each edition you’ve attended"
+      ? "Click each edition you've attended"
       : checkedCount === 25
         ? '🎉 You attended all 25 editions!'
         : `${checkedCount} of 25 attended`}
@@ -217,8 +212,11 @@
       <button class="share-btn" onclick={shareMastodon} aria-label="Share on Mastodon">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/></svg>
       </button>
-      <button class="share-btn share-btn--ig" onclick={downloadImage} aria-label="Save image for Instagram">
+      <button class="share-btn share-btn--ig" onclick={downloadImage} aria-label="Share on Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </button>
+      <button class="share-btn share-btn--save" onclick={downloadImage} aria-label="Save image">
+        Save image
       </button>
     </div>
   </div>
@@ -320,7 +318,7 @@
     opacity: 0.7;
   }
 
-.cell-now {
+  .cell-now {
     font-size: clamp(0.45rem, 1vw, 0.6rem);
     font-weight: 700;
     text-transform: uppercase;
@@ -354,6 +352,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
+    align-items: center;
   }
 
   .share-btn {
@@ -385,6 +384,15 @@
   .share-btn--ig:hover {
     border-color: oklch(0.6 0.23 10);
     color: oklch(0.6 0.23 10);
+  }
+
+  .share-btn--save {
+    width: auto;
+    padding: 0 0.875rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 0.02em;
   }
 
   /* ── responsive ── */
