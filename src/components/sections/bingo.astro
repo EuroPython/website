@@ -1,0 +1,41 @@
+---
+import Section2 from "@ui/Section2.astro";
+import Display from "@ui/Display.astro";
+import BingoCard from "@components/island/BingoCard.svelte";
+---
+
+<Section2 variant="bg-dark" id="bingo" className="bingo-section">
+  <div class="bingo-header">
+    <Display
+      id="bingo"
+      span="25 EDITIONS · 13 CITIES"
+      spanColor="var(--color-accent)"
+      subtitle="Check off every EuroPython you've been to, then share your card."
+    >
+      Have you<br />been there?
+    </Display>
+  </div>
+
+  <BingoCard client:load />
+</Section2>
+
+<style>
+  :global(.bingo-section) {
+    background: var(--color-bg-dark);
+    scroll-margin-top: 60px;
+  }
+
+  .bingo-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  :global(.bingo-section .display-header) {
+    text-align: center;
+  }
+
+  :global(.bingo-section .display-subtitle) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
