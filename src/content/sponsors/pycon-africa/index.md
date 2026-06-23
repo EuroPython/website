@@ -22,6 +22,6 @@ socials:
   instagram: "https://www.instagram.com/pyconafrica"
   mastodon: "https://mastodon.social/@pyconafrica"
   youtube: "https://www.youtube.com/@PyconAfrica"
-logo_padding: 10px
+logo_padding:
 tier: Partners
 ---
