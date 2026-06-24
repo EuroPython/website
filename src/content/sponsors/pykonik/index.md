@@ -8,10 +8,10 @@ description:
   meetups where Python enthusiasts can share knowledge, learn from each other,
   and connect with the local tech community."
 socials:
-  linkedin:
+  linkedin: https://www.linkedin.com/company/pykonik/
   twitter:
-  github:
-  discord:
+  github: https://github.com/pykonik
+  discord: http://discord.pykonik.org
   mastodon:
   bluesky:
 logo_padding: 10px 20px
