@@ -44,13 +44,6 @@ const winSet = new Set(line.cells);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EuroPython Bingo — {line.label}</title>
-  <meta property="og:title" content="EuroPython Bingo — {line.label}" />
-  <meta property="og:description" content="I completed {line.label} at EuroPython Bingo!" />
-  <meta property="og:image" content={`${new URL("/bingo-cards/" + line.code + ".png", Astro.site).href}`} />
-  <meta name="twitter:card" content="summary_large_image" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -126,6 +119,16 @@ const winSet = new Set(line.cells);
       text-transform: uppercase;
     }
   </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EuroPython 2026 Bingo — I completed {line.label}!</title>
+  <meta name="description" content={`I completed ${line.label} on the EuroPython 2026 Bingo card — 25 editions, 13 cities, one community. How many have you attended?`} />
+  <meta property="og:title" content={`EuroPython 2026 Bingo — I completed ${line.label}!`} />
+  <meta property="og:description" content={`I completed ${line.label} on the EuroPython 2026 Bingo card — 25 editions, 13 cities, one community. How many have you attended?`} />
+  <meta property="og:site_name" content="EuroPython 2026" />
+  <meta property="og:image" content={new URL("/bingo-cards/" + line.code + ".png", Astro.url)} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 </head>
 <body>
   <div class="card">

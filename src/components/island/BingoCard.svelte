@@ -126,26 +126,28 @@
   }
 
   let bingoCode = $derived(bingo ? getBingoCode() : '');
-  const PAGE_URL = 'https://ep2026.europython.eu/bingo';
+  let shareUrl = $derived(bingoCode
+    ? window.location.origin + '/bingo/' + bingoCode
+    : window.location.origin + '/bingo');
 
   function shareLinkedIn() {
-    const text = buildShareText() + '\n\n' + PAGE_URL;
+    const text = buildShareText() + '\n\n' + shareUrl;
     window.open(`https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
   }
 
   function shareX() {
     const text = buildShareText();
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(PAGE_URL)}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener,noreferrer');
   }
 
   function shareBlueSky() {
-    const text = `${buildShareText()}\n\n${PAGE_URL}`;
+    const text = `${buildShareText()}\n\n${shareUrl}`;
     window.open(`https://bsky.app/intent/compose?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
   }
 
   function shareMastodon() {
-    const text = `${buildShareText()}\n\n${PAGE_URL}`;
-    window.open(`https://shareopenly.org/share/?url=${encodeURIComponent(PAGE_URL)}&text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+    const text = `${buildShareText()}\n\n${shareUrl}`;
+    window.open(`https://shareopenly.org/share/?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
   }
 
   function downloadSvg() {

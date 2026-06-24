@@ -1,10 +1,9 @@
 /**
- * Generate PNG images for bingo winning combinations during build.
- * Runs as part of the build process, after `astro build`.
- * Saves to `public/bingo-cards/{code}.png`
+ * Generate OG image PNGs (1200×630) for all 12 winning bingo combinations.
+ * Runs after `astro build`. Saves to `public/bingo-cards/{code}.png`
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
+import { writeFileSync, mkdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
@@ -54,43 +53,78 @@ const editions = [
   { year: 2026, city: "Kraków" },
 ];
 
-const CELL = 140;
-const GAP = 6;
-const PAD = 32;
-const HEADER = 70;
-const FOOTER = 40;
+const W = 1200;
+const H = 630;
+
+// Card section — right side
+const CARD_LEFT = 660;
+const CARD_TOP = 40;
+const CELL = 88;
+const GAP = 5;
+const PAD = 16;
 const COLS = 5;
-const ROWS = 5;
-const W = COLS * CELL + (COLS - 1) * GAP + PAD * 2;
-const H = HEADER + ROWS * CELL + (ROWS - 1) * GAP + FOOTER + PAD * 2;
+
+const cardGridW = COLS * CELL + (COLS - 1) * GAP;
+const cardGridH = COLS * CELL + (COLS - 1) * GAP;
+const cardW = cardGridW + PAD * 2;
+const cardH = cardGridH + PAD * 2;
+const cardX = CARD_LEFT;
+const cardY = CARD_TOP;
+
+function generateSvg(line) {
+  const winSet = new Set(line.cells);
+  let cells = "";
+
+  // Card background
+  cells += `<rect x="${cardX}" y="${cardY}" width="${cardW}" height="${cardH}" rx="6" fill="#0d1520" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>`;
+
+  // Grid cells
+  editions.forEach((ed, i) => {
+    const col = i % COLS;
+    const row = Math.floor(i / COLS);
+    const x = cardX + PAD + col * (CELL + GAP);
+    const y = cardY + PAD + row * (CELL + GAP);
+    const win = winSet.has(i);
+    cells += `<rect x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="4" fill="${win ? "#f0c040" : "#0d1520"}" stroke="${win ? "#d4a830" : "rgba(255,255,255,0.12)"}" stroke-width="${win ? 2 : 1}" stroke-dasharray="${win ? "0" : "4,4"}"/>`;
+    cells += `<text x="${x + CELL / 2}" y="${y + CELL * 0.34}" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="${win ? "#0b1121" : "#ffffff"}" text-anchor="middle">${ed.year}</text>`;
+    cells += `<text x="${x + CELL / 2}" y="${y + CELL * 0.56}" font-family="system-ui,sans-serif" font-size="10" fill="${win ? "rgba(11,17,33,0.65)" : "rgba(255,255,255,0.4)"}" text-anchor="middle">${ed.city}</text>`;
+  });
+
+  // Left side text
+  const LX = 52;
+  let text = "";
+
+  // Title
+  text += `<text x="${LX}" y="130" font-family="system-ui,sans-serif" font-size="48" font-weight="800" fill="#f0c040" letter-spacing="-1.5">EUROPYTHON</text>`;
+  text += `<text x="${LX}" y="190" font-family="system-ui,sans-serif" font-size="48" font-weight="800" fill="#f0c040" letter-spacing="-1.5">BINGO</text>`;
+
+  // Line completed
+  text += `<text x="${LX}" y="260" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#ffffff">I completed ${line.label}!</text>`;
+
+  // Subtitle
+  text += `<text x="${LX}" y="305" font-family="system-ui,sans-serif" font-size="17" fill="rgba(255,255,255,0.5)">25 editions · 13 cities · One community</text>`;
+
+  // Status line
+  const count = line.cells.length;
+  text += `<text x="${LX}" y="345" font-family="system-ui,sans-serif" font-size="15" fill="rgba(255,255,255,0.35)">${count} of 25 editions in this line</text>`;
+
+  // URL at bottom
+  text += `<text x="${LX}" y="570" font-family="system-ui,sans-serif" font-size="15" fill="rgba(255,255,255,0.25)">ep2026.europython.eu/bingo/${line.code}</text>`;
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+    <rect width="${W}" height="${H}" fill="#0b1121"/>
+    ${text}
+    ${cells}
+  </svg>`;
+
+  return svg;
+}
 
 const outDir = join(dirname(__dirname), "public", "bingo-cards");
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
 
-// Generate SVG, then convert to PNG via sharp
 async function generatePng(line) {
-  const winSet = new Set(line.cells);
-  let cells = "";
-  editions.forEach((ed, i) => {
-    const col = i % COLS;
-    const row = Math.floor(i / COLS);
-    const x = PAD + col * (CELL + GAP);
-    const y = HEADER + row * (CELL + GAP);
-    const win = winSet.has(i);
-    const rx = x;
-    const ry = y;
-    cells += `<rect x="${rx}" y="${ry}" width="${CELL}" height="${CELL}" rx="4" fill="${win ? "#f0c040" : "#0d1520"}" stroke="${win ? "#d4a830" : "rgba(255,255,255,0.12)"}" stroke-width="${win ? 2 : 1}" stroke-dasharray="${win ? "0" : "4,4"}"/>`;
-    cells += `<text x="${rx + CELL / 2}" y="${ry + CELL * 0.38}" font-family="system-ui,sans-serif" font-size="28" font-weight="800" fill="${win ? "#0b1121" : "#ffffff"}" text-anchor="middle">${ed.year}</text>`;
-    cells += `<text x="${rx + CELL / 2}" y="${ry + CELL * 0.62}" font-family="system-ui,sans-serif" font-size="14" fill="${win ? "rgba(11,17,33,0.65)" : "rgba(255,255,255,0.4)"}" text-anchor="middle">${ed.city}</text>`;
-  });
-
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
-    <rect width="${W}" height="${H}" fill="#0b1121" rx="6"/>
-    <text x="${W / 2}" y="46" font-family="system-ui,sans-serif" font-size="26" font-weight="800" fill="#f0c040" text-anchor="middle" letter-spacing="-0.5">EuroPython Bingo</text>
-    <text x="${W / 2}" y="${H - 14}" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.25)" text-anchor="middle">ep2026.europython.eu/bingo/${line.code}</text>
-    ${cells}
-  </svg>`;
-
+  const svg = generateSvg(line);
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
   writeFileSync(join(outDir, `${line.code}.png`), png);
   return `Generated ${line.code}.png (${(png.length / 1024).toFixed(0)} KB)`;
