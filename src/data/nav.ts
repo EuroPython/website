@@ -64,6 +64,7 @@ const L = {
     url: "https://www.europython-society.org/coc/",
     external: true,
   },
+  accessibility: { label: "Accessibility", url: "/accessibility" },
 
   // Venue
   venue: { label: "Venue", url: "/venue" },
@@ -157,7 +158,17 @@ export const NAV_MENUS: NavMenu[] = [
     label: "Attend",
     url: "/tickets",
     sections: [
-      { items: [L.tickets, L.finaid, L.visa, L.volunteering, L.faq, L.coc] },
+      {
+        items: [
+          L.tickets,
+          L.finaid,
+          L.visa,
+          L.volunteering,
+          L.faq,
+          L.coc,
+          L.accessibility,
+        ],
+      },
     ],
   },
 
