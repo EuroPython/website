@@ -221,6 +221,10 @@ const sessions = defineCollection({
         speakers: (session.speakers || [])
           .filter((speakerId: string) => speakerId in speakersById)
           .map((speakerId: string) => speakersById[speakerId].slug),
+        track:
+          session.track === "~ None of these topics"
+            ? "General"
+            : session.track,
       })
     );
   },
