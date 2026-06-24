@@ -5,12 +5,11 @@
 
 import { writeFileSync, mkdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
-import { fileURLToPath } from "url";
 import sharp from "sharp";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const OUT_DIR = join(import.meta.dirname, "..", "public", "bingo-cards");
 
-const lines = [
+const BINGO_LINES = [
   { code: "329K", label: "Row 1", cells: [0, 1, 2, 3, 4] },
   { code: "7XX6", label: "Row 2", cells: [5, 6, 7, 8, 9] },
   { code: "JYUW", label: "Row 3", cells: [10, 11, 12, 13, 14] },
@@ -25,7 +24,7 @@ const lines = [
   { code: "47YA", label: "Diagonal ↗", cells: [4, 8, 12, 16, 20] },
 ];
 
-const editions = [
+const EDITIONS = [
   { year: 2002, city: "Charleroi" },
   { year: 2003, city: "Charleroi" },
   { year: 2004, city: "Gothenburg" },
@@ -79,7 +78,7 @@ function generateSvg(line) {
   cells += `<rect x="${cardX}" y="${cardY}" width="${cardW}" height="${cardH}" rx="6" fill="#0d1520" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>`;
 
   // Grid cells
-  editions.forEach((ed, i) => {
+  EDITIONS.forEach((ed, i) => {
     const col = i % COLS;
     const row = Math.floor(i / COLS);
     const x = cardX + PAD + col * (CELL + GAP);
@@ -120,16 +119,15 @@ function generateSvg(line) {
   return svg;
 }
 
-const outDir = join(dirname(__dirname), "public", "bingo-cards");
-if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
+if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 
 async function generatePng(line) {
   const svg = generateSvg(line);
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
-  writeFileSync(join(outDir, `${line.code}.png`), png);
+  writeFileSync(join(OUT_DIR, `${line.code}.png`), png);
   return `Generated ${line.code}.png (${(png.length / 1024).toFixed(0)} KB)`;
 }
 
-const results = await Promise.all(lines.map(generatePng));
+const results = await Promise.all(BINGO_LINES.map(generatePng));
 results.forEach((r) => console.log(r));
-console.log(`\nDone. ${lines.length} PNGs in public/bingo-cards/`);
+console.log(`\nDone. ${BINGO_LINES.length} PNGs in public/bingo-cards/`);

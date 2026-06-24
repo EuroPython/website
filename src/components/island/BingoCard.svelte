@@ -1,34 +1,8 @@
 <script>
+  import { EDITIONS } from '@data/editions';
+
   const STORAGE_KEY = 'ep-bingo-checked';
-
-  const editions = [
-    { year: 2002, city: 'Charleroi' },
-    { year: 2003, city: 'Charleroi' },
-    { year: 2004, city: 'Gothenburg' },
-    { year: 2005, city: 'Gothenburg' },
-    { year: 2006, city: 'CERN, Geneva' },
-    { year: 2007, city: 'Vilnius' },
-    { year: 2008, city: 'Vilnius' },
-    { year: 2009, city: 'Birmingham' },
-    { year: 2010, city: 'Birmingham' },
-    { year: 2011, city: 'Florence' },
-    { year: 2012, city: 'Florence' },
-    { year: 2013, city: 'Florence' },
-    { year: 2014, city: 'Berlin' },
-    { year: 2015, city: 'Bilbao' },
-    { year: 2016, city: 'Bilbao' },
-    { year: 2017, city: 'Rimini' },
-    { year: 2018, city: 'Edinburgh' },
-    { year: 2019, city: 'Basel' },
-    { year: 2020, city: 'Online' },
-    { year: 2021, city: 'Online' },
-    { year: 2022, city: 'Dublin' },
-    { year: 2023, city: 'Prague' },
-    { year: 2024, city: 'Prague' },
-    { year: 2025, city: 'Prague' },
-    { year: 2026, city: 'Kraków' },
-  ];
-
+  const editions = EDITIONS;
   const COLS = 5;
 
   function loadChecked() {
@@ -222,15 +196,13 @@
 </script>
 
 <div class="bingo-wrapper">
-  {#if !bingo}
-    <p class="bingo-tally">
-      {checked.filter(Boolean).length === 0
+  <p class="bingo-tally">
+    {bingo
+      ? "🎉 BINGO! You completed a line!"
+      : checked.filter(Boolean).length === 0
         ? "Flip cards for editions you've attended"
         : `${checked.filter(Boolean).length} of 25 flipped`}
-    </p>
-  {:else}
-    <p class="bingo-tally bingo-won">🎉 BINGO! You completed a line!</p>
-  {/if}
+  </p>
 
   <div class="bingo-grid-wrap" class:flipped={showResult}>
     <div class="grid-front">
@@ -299,9 +271,9 @@
     min-height: 1.5em;
   }
 
-  .bingo-won { display: none; }
 
-.bingo-grid-wrap {
+
+  .bingo-grid-wrap {
     position: relative;
     max-width: 700px;
     margin: 0 auto 2.5rem;
@@ -431,7 +403,7 @@
   }
 
   /* ── share ── */
-    .result-card {
+  .result-card {
     width: 100%;
     height: 100%;
     display: flex;
@@ -491,10 +463,6 @@
   .result-back:hover {
     border-color: var(--color-accent-themed);
     color: var(--color-accent-themed);
-  }
-
-  .share-wrap {
-    text-align: center;
   }
 
   .share-heading {

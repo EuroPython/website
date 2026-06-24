@@ -1,5 +1,6 @@
 ---
 import { BINGO_LINES } from "@data/bingoCodes";
+import { EDITIONS, UNIQUE_CITIES, EDITION_COUNT } from "@data/editions";
 
 export async function getStaticPaths() {
   return BINGO_LINES.map((line) => ({
@@ -9,116 +10,12 @@ export async function getStaticPaths() {
 }
 
 const { line } = Astro.props;
-
-const editions = [
-  { year: 2002, city: "Charleroi" },
-  { year: 2003, city: "Charleroi" },
-  { year: 2004, city: "Gothenburg" },
-  { year: 2005, city: "Gothenburg" },
-  { year: 2006, city: "CERN, Geneva" },
-  { year: 2007, city: "Vilnius" },
-  { year: 2008, city: "Vilnius" },
-  { year: 2009, city: "Birmingham" },
-  { year: 2010, city: "Birmingham" },
-  { year: 2011, city: "Florence" },
-  { year: 2012, city: "Florence" },
-  { year: 2013, city: "Florence" },
-  { year: 2014, city: "Berlin" },
-  { year: 2015, city: "Bilbao" },
-  { year: 2016, city: "Bilbao" },
-  { year: 2017, city: "Rimini" },
-  { year: 2018, city: "Edinburgh" },
-  { year: 2019, city: "Basel" },
-  { year: 2020, city: "Online" },
-  { year: 2021, city: "Online" },
-  { year: 2022, city: "Dublin" },
-  { year: 2023, city: "Prague" },
-  { year: 2024, city: "Prague" },
-  { year: 2025, city: "Prague" },
-  { year: 2026, city: "Kraków" },
-];
-
 const winSet = new Set(line.cells);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #0b1121;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      font-family: system-ui, sans-serif;
-      padding: 2rem;
-    }
-    .card {
-      background: #0d1520;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      padding: 1.5rem;
-      max-width: 520px;
-      width: 100%;
-    }
-    .title {
-      text-align: center;
-      color: #f0c040;
-      font-size: 1.3rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.75rem;
-    }
-    .sub {
-      text-align: center;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.75rem;
-      margin-bottom: 1rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 4px;
-    }
-    .cell {
-      aspect-ratio: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 3px;
-      padding: 4px;
-      text-align: center;
-      gap: 1px;
-    }
-    .cell.win { background: #f0c040; }
-    .cell.normal { background: #0d1520; border: 1px dashed rgba(255,255,255,0.12); }
-    .year {
-      font-size: clamp(0.75rem, 2.5vw, 0.95rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1;
-    }
-    .cell.win .year { color: #0b1121; }
-    .cell.normal .year { color: #fff; }
-    .city {
-      font-size: clamp(0.45rem, 1.4vw, 0.6rem);
-      line-height: 1;
-    }
-    .cell.win .city { color: rgba(11,17,33,0.65); }
-    .cell.normal .city { color: rgba(255,255,255,0.4); }
-    .footer {
-      text-align: center;
-      margin-top: 1rem;
-      color: rgba(255,255,255,0.25);
-      font-size: 0.6rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-  </style>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EuroPython 2026 Bingo — I completed {line.label}!</title>
@@ -148,21 +45,170 @@ const winSet = new Set(line.cells);
 }
 </script>
 
+  <style is:global>
+    :root {
+      --color-accent: #f0c040;
+      --color-on-accent: #0b1121;
+      --color-bg-dark: #0b1121;
+      --color-surface-faint: #0d1520;
+      --color-text-primary: #ffffff;
+      --color-text-secondary: rgba(255,255,255,0.6);
+      --color-text-muted: rgba(255,255,255,0.45);
+      --color-text-faint: rgba(255,255,255,0.35);
+      --color-border: rgba(255,255,255,0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+    body { background: var(--color-bg-dark); min-height: 100vh; font-family: system-ui, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; color: var(--color-text-primary); }
+    }
+
+    .bingo-page {
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .bingo-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .bingo-title {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      color: var(--color-accent);
+      margin: 0 0 0.5rem;
+      line-height: 0.95;
+    }
+
+    .bingo-lead {
+      font-size: 1.15rem;
+      color: var(--color-text-secondary);
+      max-width: 440px;
+      margin: 0 auto 0.5rem;
+      line-height: 1.6;
+    }
+
+    .bingo-completed {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    .bingo-completed .highlight {
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .grid-wrap {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4px;
+    }
+
+    .cell {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      padding: 4px;
+      text-align: center;
+      gap: 1px;
+    }
+
+    .cell.win {
+      background: var(--color-accent);
+    }
+
+    .cell.normal {
+      background: var(--color-surface-faint);
+      border: 1px dashed var(--color-border);
+    }
+
+    .year {
+      font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .cell.win .year {
+      color: var(--color-on-accent);
+    }
+
+    .cell.normal .year {
+      color: var(--color-text-primary);
+    }
+
+    .city {
+      font-size: clamp(0.45rem, 1.4vw, 0.6rem);
+      line-height: 1;
+    }
+
+    .cell.win .city {
+      color: var(--color-on-accent);
+      opacity: 0.65;
+    }
+
+    .cell.normal .city {
+      color: var(--color-text-faint);
+    }
+
+    .bingo-cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .bingo-cta a {
+      display: inline-block;
+      color: var(--color-accent);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity 0.15s;
+    }
+
+    .bingo-cta a:hover {
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-  <h1 class="sr-only">EuroPython 2026 Bingo — I completed {line.label}!</h1>
-  <div class="card">
-    <p class="title">EuroPython Bingo</p>
-    <p class="sub">Completed {line.label}</p>
-    <div class="grid">
-      {editions.map((ed, i) => (
-        <div class:list={["cell", winSet.has(i) ? "win" : "normal"]}>
-          <span class="year">{ed.year}</span>
-          <span class="city">{ed.city}</span>
-        </div>
-      ))}
+  <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">EuroPython 2026 Bingo — I completed {line.label}!</h1>
+
+  <div class="bingo-page">
+    <div class="bingo-header">
+      <div class="bingo-title">EuroPython<br />Bingo</div>
+      <p class="bingo-lead">
+        {EDITION_COUNT} editions &middot; {UNIQUE_CITIES} cities &middot; One community
+      </p>
+      <p class="bingo-completed">Completed <span class="highlight">{line.label}</span></p>
     </div>
-    <p class="footer">ep2026.europython.eu/bingo</p>
+
+    <div class="grid-wrap">
+      <div class="grid">
+        {EDITIONS.map((ed, i) => (
+          <div class:list={["cell", winSet.has(i) ? "win" : "normal"]}>
+            <span class="year">{ed.year}</span>
+            <span class="city">{ed.city}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <p class="bingo-cta">
+      <a href="/#bingo">Play your own card &rarr;</a>
+    </p>
   </div>
 </body>
 </html>
