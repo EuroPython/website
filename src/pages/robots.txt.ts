@@ -1,6 +1,9 @@
 import type { APIRoute } from "astro";
 
 const previewRobots = `
+User-agent: LinkedInBot
+Allow: /
+
 User-agent: *
 Disallow: /
 `;

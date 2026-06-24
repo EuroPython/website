@@ -127,10 +127,30 @@ const winSet = new Set(line.cells);
   <meta property="og:description" content={`I completed ${line.label} on the EuroPython 2026 Bingo card — 25 editions, 13 cities, one community. How many have you attended?`} />
   <meta property="og:site_name" content="EuroPython 2026" />
   <meta property="og:image" content={new URL("/bingo-cards/" + line.code + ".png", Astro.url)} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content={new URL("/bingo/" + line.code , Astro.url)} />
+  <link rel="canonical" href={new URL("/bingo/" + line.code , Astro.url)} />
+  <meta property="og:image:alt" content={`EuroPython 2026 Bingo — I completed ${line.label}!`} />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:site" content="@europython" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0b1121" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "EuroPython 2026 Bingo — I completed {line.label}!",
+  "description": "I completed {line.label} on the EuroPython 2026 Bingo card — 25 editions, 13 cities, one community. How many have you attended?",
+}
+</script>
+
 </head>
 <body>
+  <h1 class="sr-only">EuroPython 2026 Bingo — I completed {line.label}!</h1>
   <div class="card">
     <p class="title">EuroPython Bingo</p>
     <p class="sub">Completed {line.label}</p>
