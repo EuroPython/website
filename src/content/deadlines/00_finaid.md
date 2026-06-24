@@ -1,10 +1,9 @@
 ---
 title: Financial Aid
-subtitle: Applications now open!
+subtitle: Remote Ticket grants open!
 url: /finaid
 image: "./finaid.jpeg"
-disabled: true
 ---
 
-Need support to attend EuroPython 2026? Check details and submit your financial
-aid application! Second-round applications close on 11 May 2026!
+Can't attend in person? Apply for a free Remote Ticket grant for EuroPython
+2026! Deadline: 10 July 2026.
