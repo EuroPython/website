@@ -98,6 +98,34 @@
     return `${base}\n${count} editions attended\n${attended.join(' · ')}`;
   }
 
+  // Generate coupon code from flipped cells
+  function getBingoCode() {
+    const flipped = checked.map((v, i) => v ? i : -1).filter(i => i >= 0);
+    // Map flipped cells to the winning line code
+    const lines = [
+      { code: '329K', cells: [0,1,2,3,4] },
+      { code: '7XX6', cells: [5,6,7,8,9] },
+      { code: 'JYUW', cells: [10,11,12,13,14] },
+      { code: '5G5U', cells: [15,16,17,18,19] },
+      { code: '99SR', cells: [20,21,22,23,24] },
+      { code: 'PFKN', cells: [0,5,10,15,20] },
+      { code: 'HFVK', cells: [1,6,11,16,21] },
+      { code: 'JPYK', cells: [2,7,12,17,22] },
+      { code: 'W3V8', cells: [3,8,13,18,23] },
+      { code: '6HKX', cells: [4,9,14,19,24] },
+      { code: 'VMHN', cells: [0,6,12,18,24] },
+      { code: '47YA', cells: [4,8,12,16,20] },
+    ];
+    const sorted = [...flipped].sort((a, b) => a - b).join(',');
+    for (const line of lines) {
+      if ([...line.cells].sort((a, b) => a - b).join(',') === sorted) {
+        return line.code;
+      }
+    }
+    return '';
+  }
+
+  let bingoCode = $derived(bingo ? getBingoCode() : '');
   const PAGE_URL = 'https://ep2026.europython.eu/bingo';
 
   function shareLinkedIn() {
