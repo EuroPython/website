@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+  <rect width="120" height="120" fill="#FB471F"></rect>
+  <g>
+        <rect x="34" y="102" width="52" height="6" fill="#ffffff"></rect>
+        <rect x="39" y="96" width="42" height="6" fill="#ffffff"></rect>
+        <rect x="44" y="90" width="32" height="6" fill="#ffffff"></rect>
+        <rect x="45" y="64" width="4" height="26" fill="#ffffff"></rect>
+        <rect x="55" y="64" width="4" height="26" fill="#ffffff"></rect>
+        <rect x="61" y="64" width="4" height="26" fill="#ffffff"></rect>
+        <rect x="71" y="64" width="4" height="26" fill="#ffffff"></rect>
+        <path d="M49,90 V72 Q52,66 55,72 V90 Z" fill="#FB471F"></path>
+        <path d="M65,90 V72 Q68,66 71,72 V90 Z" fill="#FB471F"></path>
+        <rect x="43" y="58" width="34" height="6" fill="#ffffff"></rect>
+        <polygon points="43,58 60,32 77,58" fill="#ffffff"></polygon>
+        <polygon points="40,58 44,46 48,58" fill="#ffffff"></polygon>
+        <polygon points="72,58 76,46 80,58" fill="#ffffff"></polygon>
+        <polygon points="54,42 60,14 66,42" fill="#ffffff"></polygon>
+        <rect x="58.8" y="9" width="2.4" height="7" fill="#ffffff"></rect>
+        <circle cx="60" cy="9" r="2.2" fill="#ffffff"></circle>
+      </g>
+</svg>

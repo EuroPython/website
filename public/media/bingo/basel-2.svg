@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+  <rect width="120" height="120" fill="#FB471F"></rect>
+  <g>
+        <rect x="42" y="58" width="36" height="46" fill="#ffffff"></rect>
+        <polygon points="42,58 60,40 78,58" fill="#ffffff"></polygon>
+        <line x1="48" y1="54" x2="56" y2="44" stroke="#FB471F" stroke-width="1.6"></line>
+        <line x1="56" y1="56" x2="66" y2="44" stroke="#FB471F" stroke-width="1.6"></line>
+        <line x1="64" y1="56" x2="72" y2="48" stroke="#FB471F" stroke-width="1.6"></line>
+        <path d="M54,104 V90 a6 6 0 0 1 12 0 V104 Z" fill="#FB471F"></path>
+        <circle cx="60" cy="72" r="6" fill="#FB471F"></circle>
+        <circle cx="60" cy="72" r="2" fill="#ffffff"></circle>
+        <rect x="31" y="44" width="14" height="60" fill="#ffffff"></rect>
+        <polygon points="31,44 38,16 45,44" fill="#ffffff"></polygon>
+        <rect x="37" y="9" width="2" height="9" fill="#ffffff"></rect>
+        <rect x="75" y="42" width="14" height="62" fill="#ffffff"></rect>
+        <polygon points="75,42 82,12 89,42" fill="#ffffff"></polygon>
+        <rect x="81" y="5" width="2" height="9" fill="#ffffff"></rect>
+        <path d="M35,60 V52 a3 3 0 0 1 6 0 V60 Z" fill="#FB471F"></path>
+        <path d="M79,58 V50 a3 3 0 0 1 6 0 V58 Z" fill="#FB471F"></path>
+      </g>
+</svg>
