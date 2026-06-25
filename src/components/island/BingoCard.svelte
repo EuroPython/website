@@ -2,31 +2,31 @@
   const STORAGE_KEY = 'ep-bingo-checked';
 
   const editions = [
-    { year: 2002, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg' },
-    { year: 2003, city: 'Charleroi',   icon: '/media/bingo/charleroi-2.svg' },
-    { year: 2004, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg' },
-    { year: 2005, city: 'Gothenburg',  icon: '/media/bingo/gothenburg-2.svg' },
-    { year: 2006, city: 'CERN, Geneva',icon: '/media/bingo/geneva.svg' },
-    { year: 2007, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg' },
-    { year: 2008, city: 'Vilnius',     icon: '/media/bingo/vilnius-2.svg' },
-    { year: 2009, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg' },
-    { year: 2010, city: 'Birmingham',  icon: '/media/bingo/birmingham-2.svg' },
-    { year: 2011, city: 'Florence',    icon: '/media/bingo/florence.svg' },
-    { year: 2012, city: 'Florence',    icon: '/media/bingo/florence-2.svg' },
-    { year: 2013, city: 'Florence',    icon: '/media/bingo/florence-3.svg' },
-    { year: 2014, city: 'Berlin',      icon: '/media/bingo/berlin.svg' },
-    { year: 2015, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg' },
-    { year: 2016, city: 'Bilbao',      icon: '/media/bingo/bilbao-2.svg' },
-    { year: 2017, city: 'Rimini',      icon: '/media/bingo/rimini.svg' },
-    { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg' },
-    { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg' },
-    { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg' },
-    { year: 2021, city: 'Online',      icon: '/media/bingo/online-2.svg' },
-    { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg' },
-    { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg' },
-    { year: 2024, city: 'Prague',      icon: '/media/bingo/prague-2.svg' },
-    { year: 2025, city: 'Prague',      icon: '/media/bingo/prague-3.svg' },
-    { year: 2026, city: 'Kraków',      icon: '/media/bingo/krakow.svg' },
+    { year: 2002, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',    bg: '#1003A3' },
+    { year: 2003, city: 'Charleroi',   icon: '/media/bingo/charleroi-2.svg',  bg: '#FB471F' },
+    { year: 2004, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',   bg: '#1003A3' },
+    { year: 2005, city: 'Gothenburg',  icon: '/media/bingo/gothenburg-2.svg', bg: '#FB471F' },
+    { year: 2006, city: 'CERN, Geneva',icon: '/media/bingo/geneva.svg',       bg: '#1003A3' },
+    { year: 2007, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',      bg: '#1003A3' },
+    { year: 2008, city: 'Vilnius',     icon: '/media/bingo/vilnius-2.svg',    bg: '#FB471F' },
+    { year: 2009, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',   bg: '#1003A3' },
+    { year: 2010, city: 'Birmingham',  icon: '/media/bingo/birmingham-2.svg', bg: '#FB471F' },
+    { year: 2011, city: 'Florence',    icon: '/media/bingo/florence.svg',     bg: '#1003A3' },
+    { year: 2012, city: 'Florence',    icon: '/media/bingo/florence-2.svg',   bg: '#FB471F' },
+    { year: 2013, city: 'Florence',    icon: '/media/bingo/florence-3.svg',   bg: '#008624' },
+    { year: 2014, city: 'Berlin',      icon: '/media/bingo/berlin.svg',       bg: '#1003A3' },
+    { year: 2015, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',       bg: '#1003A3' },
+    { year: 2016, city: 'Bilbao',      icon: '/media/bingo/bilbao-2.svg',     bg: '#FB471F' },
+    { year: 2017, city: 'Rimini',      icon: '/media/bingo/rimini.svg',       bg: '#1003A3' },
+    { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg',    bg: '#1003A3' },
+    { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg',        bg: '#1003A3' },
+    { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg',       bg: '#1003A3' },
+    { year: 2021, city: 'Online',      icon: '/media/bingo/online-2.svg',     bg: '#FB471F' },
+    { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg',       bg: '#1003A3' },
+    { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg',       bg: '#1003A3' },
+    { year: 2024, city: 'Prague',      icon: '/media/bingo/prague-2.svg',     bg: '#FB471F' },
+    { year: 2025, city: 'Prague',      icon: '/media/bingo/prague-3.svg',     bg: '#008624' },
+    { year: 2026, city: 'Kraków',      icon: '/media/bingo/krakow.svg',       bg: '#1003A3' },
   ];
 
   function loadChecked() {
@@ -257,8 +257,10 @@
               <span class="cell-now">Now!</span>
             {/if}
           </div>
-          <div class="card-face card-back">
+          <div class="card-face card-back" style="background:{edition.bg}">
             <img src={edition.icon} alt="" aria-hidden="true" class="cell-icon" />
+            <span class="cell-year">{edition.year}</span>
+            <span class="cell-city">{edition.city}</span>
           </div>
         </div>
       </button>
@@ -355,14 +357,20 @@
 
   .card-back {
     transform: rotateY(180deg);
-    padding: 0;
-    background: var(--color-surface-faint);
   }
 
   .cell-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 50%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .card-back .cell-year {
+    color: white;
+  }
+
+  .card-back .cell-city {
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .bingo-cell:hover {
