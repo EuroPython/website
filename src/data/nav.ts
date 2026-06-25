@@ -45,6 +45,10 @@ const L = {
   langSummit: { label: "Language Summit", url: "/language-summit" },
   rustSummit: { label: "Rust Summit", url: "/rust-summit" },
   packagingSummit: { label: "Packaging Summit", url: "/packaging-summit" },
+  communityOrganizersSummit: {
+    label: "Community Organizers Summit",
+    url: "/community-organizers-summit",
+  },
 
   // Events & Social
   sprints: { label: "Sprints Weekend", url: "/sprints" },
@@ -134,7 +138,12 @@ export const NAV_MENUS: NavMenu[] = [
       },
       {
         label: "Summits",
-        items: [L.langSummit, L.rustSummit, L.packagingSummit],
+        items: [
+          L.langSummit,
+          L.rustSummit,
+          L.packagingSummit,
+          L.communityOrganizersSummit,
+        ],
       },
       {
         label: "Events & Social",
@@ -259,6 +268,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       L.langSummit,
       L.rustSummit,
       L.packagingSummit,
+      L.communityOrganizersSummit,
     ],
   },
   {
