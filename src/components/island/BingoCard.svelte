@@ -21,7 +21,7 @@
     { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg' },
     { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg' },
     { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg' },
-    { year: 2021, city: 'Online',      icon: '/media/bingo/online.svg' },
+    { year: 2021, city: 'Online',      icon: '/media/bingo/online-2.svg' },
     { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg' },
     { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg' },
     { year: 2024, city: 'Prague',      icon: '/media/bingo/prague-2.svg' },
@@ -90,7 +90,7 @@
     );
   }
 
-  function downloadImage() {
+  async function downloadImage() {
     const COLS = 5;
     const CELL = 130;
     const PAD = 28;
@@ -98,12 +98,46 @@
     const W = COLS * CELL + PAD * 2;
     const H = COLS * CELL + PAD * 2 + HEADER_H;
 
+    // Resolve actual CSS variables from the page so the export matches the current theme
+    const style = getComputedStyle(document.documentElement);
+    const resolve = (v) => style.getPropertyValue(v).trim();
+
+    // Background colour: use the section background from the live theme
+    const sectionBgRaw = resolve('--color-section-bg');
+    const bgColor = sectionBgRaw || '#f0f1f4';
+
+    // Detect whether we are in light mode (section-bg is light)
+    // so we can pick appropriately contrasting cell colours.
+    const isLight = document.documentElement.classList.contains('light');
+
+    const cellFill       = isLight ? 'rgba(0,0,0,0.025)' : '#0d1520';
+    const cellFillCur    = isLight ? 'rgba(0,0,0,0.04)'  : '#111d36';
+    const cellBorder     = isLight ? 'rgba(0,0,0,0.1)'   : 'rgba(255,255,255,0.12)';
+    const cellBorderCur  = isLight ? 'rgba(0,0,0,0.22)'  : '#2a4a80';
+    const cellBorderChk  = isLight ? 'rgba(0,0,0,0.1)'   : '#f0c040';
+    const yearColor      = isLight ? 'rgba(0,0,0,0.87)'  : 'rgba(255,255,255,0.93)';
+    const cityColor      = isLight ? 'rgba(0,0,0,0.4)'   : 'rgba(255,255,255,0.6)';
+    const subtitleColor  = isLight ? 'rgba(0,0,0,0.4)'   : 'rgba(255,255,255,0.4)';
+
+    // Preload SVG icons for checked cells (matches the flipped card-back shown on screen)
+    const images = await Promise.all(
+      editions.map((ed, i) => {
+        if (!checked[i]) return Promise.resolve(null);
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = () => resolve(null);
+          img.src = ed.icon;
+        });
+      })
+    );
+
     const canvas = document.createElement('canvas');
     canvas.width = W;
     canvas.height = H;
     const ctx = canvas.getContext('2d');
 
-    ctx.fillStyle = '#0b1121';
+    ctx.fillStyle = bgColor;
     ctx.fillRect(0, 0, W, H);
 
     ctx.fillStyle = '#f0c040';
@@ -111,10 +145,10 @@
     ctx.textAlign = 'center';
     ctx.fillText('EuroPython Bingo', W / 2, PAD + 34);
 
-    ctx.fillStyle = 'rgba(255,255,255,0.4)';
+    ctx.fillStyle = subtitleColor;
     ctx.font = '13px system-ui, sans-serif';
     ctx.fillText(
-      `${checkedCount} of 25 editions attended · ep2026.europython.eu/#bingo`,
+      `${checkedCount} of 25 editions attended · ep2026.europython.eu/bingo`,
       W / 2, PAD + 60
     );
 
@@ -125,26 +159,53 @@
       const y = HEADER_H + PAD + row * CELL;
       const isChecked = checked[i];
       const isCurrent = ed.year === 2026;
+      const cx = x + 3, cy = y + 3, cw = CELL - 6, ch = CELL - 6;
 
-      ctx.fillStyle = isChecked ? '#f0c040' : isCurrent ? '#111d36' : '#0d1520';
-      roundRect(ctx, x + 3, y + 3, CELL - 6, CELL - 6, 2);
-      ctx.fill();
+      if (isChecked && images[i]) {
+        // Checked: show SVG city icon (matches the flipped card-back on screen)
+        ctx.fillStyle = cellFill;
+        roundRect(ctx, cx, cy, cw, ch, 2);
+        ctx.fill();
 
-      ctx.strokeStyle = isChecked ? '#d4a830' : isCurrent ? '#2a4a80' : 'rgba(255,255,255,0.12)';
-      ctx.lineWidth = 1;
-      ctx.setLineDash([4, 4]);
-      roundRect(ctx, x + 3, y + 3, CELL - 6, CELL - 6, 2);
-      ctx.stroke();
-      ctx.setLineDash([]);
+        ctx.strokeStyle = cellBorderChk;
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([]);
+        roundRect(ctx, cx, cy, cw, ch, 2);
+        ctx.stroke();
 
-      ctx.fillStyle = isChecked ? '#0b1121' : '#ffffff';
-      ctx.font = `bold 21px system-ui, sans-serif`;
-      ctx.textAlign = 'center';
-      ctx.fillText(ed.year.toString(), x + CELL / 2, y + CELL * 0.46);
+        ctx.save();
+        roundRect(ctx, cx, cy, cw, ch, 2);
+        ctx.clip();
+        ctx.drawImage(images[i], cx, cy, cw, ch);
+        ctx.restore();
+      } else {
+        // Unchecked: text card (matches the card-front on screen)
+        ctx.fillStyle = isCurrent ? cellFillCur : cellFill;
+        roundRect(ctx, cx, cy, cw, ch, 2);
+        ctx.fill();
 
-      ctx.fillStyle = isChecked ? 'rgba(11,17,33,0.65)' : 'rgba(255,255,255,0.55)';
-      ctx.font = `12px system-ui, sans-serif`;
-      ctx.fillText(ed.city, x + CELL / 2, y + CELL * 0.68);
+        ctx.strokeStyle = isCurrent ? cellBorderCur : cellBorder;
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        roundRect(ctx, cx, cy, cw, ch, 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = yearColor;
+        ctx.font = `bold 21px system-ui, sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(ed.year.toString(), x + CELL / 2, y + CELL * 0.46);
+
+        ctx.fillStyle = cityColor;
+        ctx.font = `12px system-ui, sans-serif`;
+        ctx.fillText(ed.city, x + CELL / 2, y + CELL * 0.65);
+
+        if (isCurrent) {
+          ctx.fillStyle = '#f0c040';
+          ctx.font = `bold 9px system-ui, sans-serif`;
+          ctx.fillText('NOW!', x + CELL / 2, y + CELL * 0.82);
+        }
+      }
     });
 
     const link = document.createElement('a');
@@ -223,6 +284,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
       </button>
       <button class="share-btn share-btn--save" onclick={downloadImage} aria-label="Save image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
         Save image
       </button>
     </div>
@@ -434,6 +496,7 @@
 
   .share-btn--save {
     width: auto;
+    gap: 0.375rem;
     padding: 0 0.875rem;
     font-size: 0.8rem;
     font-weight: 600;

@@ -1,19 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
   <rect width="120" height="120" fill="#1003A3"></rect>
   <g>
-        <rect x="26" y="98" width="68" height="6" fill="#ffffff"></rect>
-        <rect x="28" y="56" width="64" height="42" fill="#ffffff"></rect>
-        <rect x="35" y="62" width="6" height="36" fill="#1003A3"></rect>
-        <rect x="47" y="62" width="6" height="36" fill="#1003A3"></rect>
-        <path d="M57,98 V70 a6.5 6.5 0 0 1 13 0 V98 Z" fill="#1003A3"></path>
-        <rect x="74" y="62" width="6" height="36" fill="#1003A3"></rect>
-        <rect x="86" y="62" width="6" height="36" fill="#1003A3"></rect>
-        <rect x="24" y="48" width="72" height="9" fill="#ffffff"></rect>
-        <rect x="48" y="42" width="24" height="6" fill="#ffffff"></rect>
-        <path d="M44,42 C44,30 52,28 58,30 C62,27 70,29 73,38 L73,42 Z" fill="#ffffff"></path>
-        <polygon points="44,40 37,44 43,33" fill="#ffffff"></polygon>
-        <polygon points="50,38 44,42 49,32" fill="#ffffff"></polygon>
-        <rect x="68" y="22" width="2.4" height="20" fill="#ffffff"></rect>
-        <rect x="63" y="26" width="3" height="16" fill="#ffffff"></rect>
-      </g>
+    
+    <rect x="20" y="98" width="80" height="6" fill="#ffffff"></rect>
+    
+    <rect x="24" y="52" width="72" height="46" fill="#ffffff"></rect>
+    
+    <rect x="20" y="44" width="80" height="9" fill="#ffffff"></rect>
+    
+    <rect x="30" y="58" width="6" height="40" fill="#1003A3"></rect>
+    <rect x="42" y="58" width="6" height="40" fill="#1003A3"></rect>
+    <path d="M54,98 V70 a6 6 0 0 1 12 0 V98 Z" fill="#1003A3"></path>
+    <rect x="72" y="58" width="6" height="40" fill="#1003A3"></rect>
+    <rect x="84" y="58" width="6" height="40" fill="#1003A3"></rect>
+    
+    <rect x="44" y="38" width="32" height="6" fill="#ffffff"></rect>
+    
+    <circle cx="52" cy="34.5" r="4" fill="#ffffff"></circle>
+    <circle cx="52" cy="34.5" r="1.6" fill="#1003A3"></circle>
+    
+    <rect x="49.8" y="24" width="2.8" height="7" fill="#ffffff"></rect>
+    <circle cx="51.2" cy="22" r="2" fill="#ffffff"></circle>
+    <polygon points="52,23 56.5,22 56.5,24 52,25" fill="#ffffff"></polygon>
+    
+    <rect x="55" y="28" width="17" height="5.5" rx="2" fill="#ffffff"></rect>
+    <rect x="56.5" y="33" width="2.6" height="5" fill="#ffffff"></rect>
+    <rect x="60" y="33" width="2.6" height="5" fill="#ffffff"></rect>
+    <rect x="66" y="33" width="2.6" height="5" fill="#ffffff"></rect>
+    <rect x="69.5" y="33" width="2.6" height="5" fill="#ffffff"></rect>
+    <polygon points="67,29 68.5,21.5 74,23 75,26 71,27 69,29" fill="#ffffff"></polygon>
+    <polygon points="70,29 72,23 78,25 79,28 75,28 73,29" fill="#ffffff"></polygon>
+  </g>
 </svg>
