@@ -1,5 +1,10 @@
 ---
 import BingoCard from "@components/island/BingoCard.svelte";
+
+const cellsParam = Astro.url.searchParams.get("cells") || "";
+const ogImageUrl = cellsParam
+  ? new URL("/api/og-bingo.png?cells=" + cellsParam, Astro.url)
+  : null;
 ---
 
 <!DOCTYPE html>
@@ -9,10 +14,13 @@ import BingoCard from "@components/island/BingoCard.svelte";
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EuroPython 2026 Bingo — Play your own card!</title>
   <meta name="description" content="25 editions, 13 cities, one community. How many EuroPythons have you attended? Play your own bingo card!" />
-  <meta property="og:title" content="EuroPython 2026 Bingo" />
-  <meta property="og:description" content="25 editions, 13 cities, one community. How many EuroPythons have you attended?" />
+  <meta property="og:title" content={cellsParam ? "EuroPython 2026 Bingo" : "EuroPython 2026 Bingo — Play your own card!"} />
+  <meta property="og:description" content={cellsParam ? "25 editions, 13 cities, one community. How many have you attended?" : "25 editions, 13 cities, one community. How many EuroPythons have you attended? Play your own bingo card!"} />
   <meta property="og:site_name" content="EuroPython 2026" />
-  <meta property="og:url" content={new URL("/bingo", Astro.url)} />
+  <meta property="og:url" content={new URL("/bingo" + (cellsParam ? "?cells=" + cellsParam : ""), Astro.url)} />
+  {ogImageUrl && <meta property="og:image" content={String(ogImageUrl)} />}
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <link rel="canonical" href={new URL("/bingo", Astro.url)} />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:site" content="@europython" />
