@@ -90,6 +90,10 @@ const L = {
     label: "Community Partners",
     url: "/community-partners",
   },
+  mediaPartners: {
+    label: "Media Partners",
+    url: "/media-partners",
+  },
 
   // Misc
   jobs: { label: "Jobs", url: "/jobs" },
@@ -190,7 +194,9 @@ export const NAV_MENUS: NavMenu[] = [
   {
     label: "Community",
     url: "/about",
-    sections: [{ items: [L.about, L.eps, L.communityPartners] }],
+    sections: [
+      { items: [L.about, L.eps, L.communityPartners, L.mediaPartners] },
+    ],
   },
 
   // Jobs — single link, no dropdown
@@ -267,6 +273,13 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   },
   {
     title: "Community",
-    items: [L.about, L.eps, L.communityPartners, L.blog, L.contacts],
+    items: [
+      L.about,
+      L.eps,
+      L.communityPartners,
+      L.mediaPartners,
+      L.blog,
+      L.contacts,
+    ],
   },
 ];
