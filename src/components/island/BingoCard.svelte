@@ -2,31 +2,31 @@
   const STORAGE_KEY = 'ep-bingo-checked';
 
   const editions = [
-    { year: 2002, city: 'Charleroi' },
-    { year: 2003, city: 'Charleroi' },
-    { year: 2004, city: 'Gothenburg' },
-    { year: 2005, city: 'Gothenburg' },
-    { year: 2006, city: 'CERN, Geneva' },
-    { year: 2007, city: 'Vilnius' },
-    { year: 2008, city: 'Vilnius' },
-    { year: 2009, city: 'Birmingham' },
-    { year: 2010, city: 'Birmingham' },
-    { year: 2011, city: 'Florence' },
-    { year: 2012, city: 'Florence' },
-    { year: 2013, city: 'Florence' },
-    { year: 2014, city: 'Berlin' },
-    { year: 2015, city: 'Bilbao' },
-    { year: 2016, city: 'Bilbao' },
-    { year: 2017, city: 'Rimini' },
-    { year: 2018, city: 'Edinburgh' },
-    { year: 2019, city: 'Basel' },
-    { year: 2020, city: 'Online' },
-    { year: 2021, city: 'Online' },
-    { year: 2022, city: 'Dublin' },
-    { year: 2023, city: 'Prague' },
-    { year: 2024, city: 'Prague' },
-    { year: 2025, city: 'Prague' },
-    { year: 2026, city: 'Kraków' },
+    { year: 2002, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg' },
+    { year: 2003, city: 'Charleroi',   icon: '/media/bingo/charleroi-2.svg' },
+    { year: 2004, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg' },
+    { year: 2005, city: 'Gothenburg',  icon: '/media/bingo/gothenburg-2.svg' },
+    { year: 2006, city: 'CERN, Geneva',icon: '/media/bingo/geneva.svg' },
+    { year: 2007, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg' },
+    { year: 2008, city: 'Vilnius',     icon: '/media/bingo/vilnius-2.svg' },
+    { year: 2009, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg' },
+    { year: 2010, city: 'Birmingham',  icon: '/media/bingo/birmingham-2.svg' },
+    { year: 2011, city: 'Florence',    icon: '/media/bingo/florence.svg' },
+    { year: 2012, city: 'Florence',    icon: '/media/bingo/florence-2.svg' },
+    { year: 2013, city: 'Florence',    icon: '/media/bingo/florence-3.svg' },
+    { year: 2014, city: 'Berlin',      icon: '/media/bingo/berlin.svg' },
+    { year: 2015, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg' },
+    { year: 2016, city: 'Bilbao',      icon: '/media/bingo/bilbao-2.svg' },
+    { year: 2017, city: 'Rimini',      icon: '/media/bingo/rimini.svg' },
+    { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg' },
+    { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg' },
+    { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg' },
+    { year: 2021, city: 'Online',      icon: '/media/bingo/online.svg' },
+    { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg' },
+    { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg' },
+    { year: 2024, city: 'Prague',      icon: '/media/bingo/prague-2.svg' },
+    { year: 2025, city: 'Prague',      icon: '/media/bingo/prague-3.svg' },
+    { year: 2026, city: 'Kraków',      icon: '/media/bingo/krakow.svg' },
   ];
 
   function loadChecked() {
@@ -188,11 +188,18 @@
         aria-label={`${edition.year} ${edition.city}${checked[i] ? ' — attended' : ''}`}
         role="gridcell"
       >
-        <span class="cell-year">{edition.year}</span>
-        <span class="cell-city">{edition.city}</span>
-        {#if edition.year === 2026}
-          <span class="cell-now">Now!</span>
-        {/if}
+        <div class="card-inner" class:flipped={checked[i]}>
+          <div class="card-face card-front">
+            <span class="cell-year">{edition.year}</span>
+            <span class="cell-city">{edition.city}</span>
+            {#if edition.year === 2026}
+              <span class="cell-now">Now!</span>
+            {/if}
+          </div>
+          <div class="card-face card-back">
+            <img src={edition.icon} alt="" aria-hidden="true" class="cell-icon" />
+          </div>
+        </div>
       </button>
     {/each}
   </div>
@@ -247,21 +254,53 @@
 
   /* ── cell ── */
   .bingo-cell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     aspect-ratio: 1;
     border: 1px dashed var(--color-border);
     border-radius: 2px;
     background: var(--color-surface-faint);
     cursor: pointer;
     transition: border-color 0.15s, background 0.15s, transform 0.15s;
-    padding: 8px 6px;
-    gap: 3px;
     text-align: center;
     font-family: inherit;
     -webkit-tap-highlight-color: transparent;
+    perspective: 600px;
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.45s ease;
+  }
+
+  .card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    padding: 8px 6px;
+    gap: 3px;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    padding: 0;
+    background: var(--color-surface-faint);
+  }
+
+  .cell-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .bingo-cell:hover {
@@ -281,17 +320,24 @@
     border-color: var(--color-border-bright);
   }
 
-  /* checked state */
+  /* checked state — background lives on the front face only, not the button */
   .bingo-cell.checked {
-    background: var(--color-accent);
     border-style: solid;
-    border-color: var(--color-accent-hover);
+    border-color: var(--color-border);
+  }
+
+  .bingo-cell.checked .card-front {
+    background: var(--color-accent);
   }
 
   .bingo-cell.checked:hover {
-    border-color: var(--color-accent-hover);
-    background: var(--color-accent-hover);
+    border-color: var(--color-border);
+    background: var(--color-surface-faint);
     transform: translateY(-3px);
+  }
+
+  .bingo-cell.checked:hover .card-front {
+    background: var(--color-accent-hover);
   }
 
   /* ── cell text ── */
@@ -403,5 +449,6 @@
   @media (prefers-reduced-motion: reduce) {
     .bingo-cell { transition: border-color 0.15s, background 0.15s; }
     .bingo-cell:hover { transform: none; }
+    .card-inner { transition: none; }
   }
 </style>
