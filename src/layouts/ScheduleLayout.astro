@@ -7,9 +7,10 @@ export interface Props {
   title?: string;
   description: string;
   headline: string;
+  hideNotices?: string[];
 }
 
-const { title, description, headline } = Astro.props;
+const { title, description, headline, hideNotices = [] } = Astro.props;
 ---
 <Layout title={title || "Schedule for 2026"} description={description} >
   <Fragment slot="head">
@@ -26,6 +27,45 @@ const { title, description, headline } = Astro.props;
   <Section>
     <h1 class="ep-headline" id={slugify(headline)}><a href={`#${slugify(headline)}`} aria-label={`Jump to ${headline}`}>{headline}</a></h1>
 
+
+    <div class="sched-notice-grid">
+      {!hideNotices.includes("talks") && (
+      <a href="/schedule/talks" class="sched-notice-card">
+        <strong>Talks</strong>
+        <span>Three days of talks across six parallel tracks</span>
+        <span class="sched-notice-date">Wed–Fri, Jul 15–17</span>
+      </a>
+      )}
+      {!hideNotices.includes("tutorials") && (
+      <a href="/schedule/tutorials" class="sched-notice-card">
+        <strong>Tutorials</strong>
+        <span>Two days of hands-on workshops</span>
+        <span class="sched-notice-date">Mon–Tue, Jul 13–14</span>
+      </a>
+      )}
+      {!hideNotices.includes("open-spaces") && (
+      <a href="/open-spaces" class="sched-notice-card">
+        <strong>Open Spaces</strong>
+        <span>Participant-led sessions</span>
+        <span class="sched-notice-date">Throughout the conference</span>
+      </a>
+      )}
+      {!hideNotices.includes("sprints") && (
+      <a href="/sprints" class="sched-notice-card">
+        <strong>Sprints</strong>
+        <span>Two days of coding sprints, co-organised with EuroSciPy at a separate venue</span>
+        <span class="sched-notice-date">Sat–Sun, Jul 19–20</span>
+      </a>
+      )}
+      {!hideNotices.includes("euroscipy") && (
+      <a href="https://euroscipy.org/schedule/" class="sched-notice-card" target="_blank" rel="nofollow noopener">
+        <strong>EuroSciPy ↗</strong>
+        <span>The scientific Python conference</span>
+        <span class="sched-notice-date">Mon–Thu, Jul 20–23</span>
+      </a>
+      )}
+
+    </div>
 
     <div class="ep-sched-tabs" id="sched-tabs"></div>
 
@@ -55,6 +95,64 @@ main {
   background-color: transparent !important;
 }
 
+
+/* Schedule notice grid */
+.sched-notice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.sched-notice-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem;
+  border: 1px solid var(--ep-border);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+  background: var(--ep-surface-subtle);
+}
+
+.sched-notice-card:hover {
+  border-color: var(--ep-accent);
+  background: var(--ep-session-hover-bg);
+}
+
+.sched-notice-card strong {
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--ep-white);
+  margin-bottom: 0.3rem;
+}
+
+.sched-notice-card span {
+  font-size: 0.95rem;
+  color: var(--ep-text-secondary);
+  line-height: 1.5;
+}
+
+.sched-notice-date {
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1rem !important;
+  color: var(--color-accent-themed) !important;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .sched-notice-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .sched-notice-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Unset Tailwind light theme on schedule pages */
 .text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900,

@@ -2,7 +2,9 @@
 import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
+
+const featuresEntry = await getEntry("pages", "tutorials");
 
 const allSessions = await getCollection("sessions");
 
@@ -46,22 +48,17 @@ const tutorials = allSessions
 
       <!-- Advantages grid -->
       <ul class="tutorial-advantages">
-        <li>
-          <strong>3-hour or 6-hour sessions</strong>
-          Tutorials run for half a day or a full day. Each one is a self-contained workshop with exercises, examples, and hands-on practice.
-        </li>
-        <li>
-          <strong>Small groups, personal attention</strong>
-          Unlike talks, tutorials are capped in size. You get direct access to the instructor and can ask questions as you go.
-        </li>
-        <li>
-          <strong>Wide range of topics</strong>
-          From Python basics and web frameworks to data science pipelines, async programming, and testing strategies — there is a tutorial for every interest.
-        </li>
-        <li>
-          <strong>Separate ticket required</strong>
-          Tutorial participation requires a separate tutorial ticket in addition to your conference pass.
-        </li>
+        {featuresEntry && ["box1", "box2", "box3", "box4"].map((box) => {
+          const text = featuresEntry.data[box as keyof typeof featuresEntry.data] as string | undefined;
+          if (!text) return null;
+          const [title, ...rest] = text.split(" — ");
+          return (
+            <li>
+              <strong>{title}</strong>
+              {rest.join(" — ")}
+            </li>
+          );
+        })}
       </ul>
 
       <!-- Tutorial count -->
