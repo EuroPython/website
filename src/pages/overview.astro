@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 import Headline from "@ui/Headline.astro"
 import Section from "@ui/Section.astro";
 
@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 const categories = [
   {
     title: "Talks, Tutorials & Posters",
-    image: "/overview/conference.jpg",
+    image: "/content/pages/overview/conference.jpg",
     items: [
       { name: "Talks", href: "/sessions/" },
       { name: "Tutorials", href: "/sessions/" },
@@ -18,7 +18,7 @@ const categories = [
   },
   {
     title: "Summits",
-    image: "/overview/summits.jpg",
+    image: "/content/pages/overview/summits.jpg",
     items: [
       { name: "Language Summit", href: "/language-summit/" },
       { name: "Packaging Summit", href: "/packaging-summit/" },
@@ -27,7 +27,7 @@ const categories = [
   },
   {
     title: "PyLadies Events",
-    image: "/overview/pyladies-lunch.jpg",
+    image: "/content/pages/overview/pyladies-lunch.jpg",
     items: [
       { name: "PyLadies Booth", href: "/pyladies" },
       { name: "PyLadies Workshops", href: "/pyladies" },
