@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
 import { getCollection, getEntry } from "astro:content";
+import SessionCard from "@components/SessionCard.astro";
 
 const featuresEntry = await getEntry("pages", "tutorials");
 
@@ -74,16 +75,15 @@ const tutorials = allSessions
         <div class="talks-dot-bg">
           <div class="tutorial-grid">
             {tutorials.map((t) => (
-              <div class:list={["tutorial-card", t.data.level]} data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}>
-                <a href={`/session/${t.id}`} class="tutorial-card-title">{t.data.title}</a>
-                <p class="tutorial-card-speakers" set:html={speakerHtml(t.data.speakers)}>
-                </p>
-                <div class="tutorial-card-meta">
-                  <span class="tutorial-card-tag">{t.data.duration} min</span>
-                  {t.data.level && <span class={`tutorial-card-level tutorial-card-level--${t.data.level}`}>{t.data.level.charAt(0).toUpperCase() + t.data.level.slice(1)}</span>}
-                </div>
-                {t.data.track && <p class="tutorial-card-track">{t.data.track}</p>}
-              </div>
+              <SessionCard
+                  title={t.data.title}
+                  slug={t.id}
+                  speakers={speakerHtml(t.data.speakers)}
+                  duration={t.data.duration}
+                  level={t.data.level}
+                  track={t.data.track}
+                  searchText={`${t.data.title} ${t.data.track || ""}`}
+                />
             ))}
           </div>
         </div>
@@ -175,130 +175,6 @@ const tutorials = allSessions
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1rem;
   }
-
-  .tutorial-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-surface-subtle);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 1.25rem;
-    text-decoration: none;
-    font-family: "Inter Tight", system-ui, sans-serif;
-    transition:
-      border-color 0.1s ease-in-out,
-      background 0.1s ease-in-out;
-  }
-
-  .tutorial-card:hover {
-    border-color: var(--ep-accent);
-    background: var(--ep-session-hover-bg) !important;
-    z-index: 10;
-  }
-
-  .tutorial-card.beginner {
-    background:
-      repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 4px,
-        var(--ep-beginner-stripe) 4px,
-        var(--ep-beginner-stripe) 6px
-      ),
-      var(--color-surface-subtle);
-  }
-
-  .tutorial-card.advanced {
-    background:
-      repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 4px,
-        var(--ep-advanced-stripe) 4px,
-        var(--ep-advanced-stripe) 6px
-      ),
-      var(--color-surface-subtle);
-  }
-
-  .tutorial-card-title {
-    font-family: "Inter Tight", system-ui, sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0 0 0.5rem;
-    line-height: 1.35;
-    text-decoration: none;
-  }
-
-  .tutorial-card-title:hover {
-    text-decoration: underline;
-  }
-
-  .tutorial-card-speakers {
-    font-size: 1.15rem;
-    color: var(--color-text-secondary);
-    margin: 0 0 0.75rem;
-  }
-
-  :global(.tutorial-card-speakers .speaker-link) {
-    color: var(--color-text-secondary);
-    text-decoration: none;
-  }
-
-  :global(.tutorial-card-speakers .speaker-link:hover) {
-    text-decoration: underline;
-  }
-
-  .tutorial-card-meta {
-    margin-top: auto;
-    padding-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    align-items: center;
-  }
-
-  .tutorial-card-tag {
-    font-size: 1.02rem;
-    color: var(--color-text-muted);
-    background: var(--color-surface-medium);
-    padding: 0.2em 0.6em;
-    border-radius: 3px;
-    border: 1px solid var(--color-border);
-  }
-
-  .tutorial-card-level {
-    display: inline-block;
-    padding: 0.2em 0.6em;
-    border-radius: 3px;
-    font-size: 1.02rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    border: 1px solid transparent;
-  }
-
-  .tutorial-card-level--beginner {
-    background: var(--ep-level-beginner-bg);
-    color: var(--ep-level-beginner-text);
-  }
-
-  .tutorial-card-level--intermediate {
-    background: var(--ep-level-intermediate-bg);
-    color: var(--ep-level-intermediate-text);
-  }
-
-  .tutorial-card-level--advanced {
-    background: var(--ep-level-advanced-bg);
-    color: var(--ep-level-advanced-text);
-  }
-
-  .tutorial-card-track {
-    font-family: "Inter Tight", system-ui, sans-serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--color-text-secondary);
-    margin: 0.5rem 0 0;
-  }
 </style>
 
 <script is:inline>
@@ -306,7 +182,7 @@ const tutorials = allSessions
   var input = document.getElementById('sess-search');
   if (!input) return;
   var grid = document.getElementById('sess-grid');
-  var cards = grid.querySelectorAll('.tutorial-card');
+  var cards = grid.querySelectorAll('.session-card');
   var countEl = document.getElementById('sess-count');
   var noResults = document.getElementById('sess-no-results');
   var total = cards.length;
