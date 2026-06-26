@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
 import { getCollection, getEntry } from "astro:content";
+import SessionCard from "@components/SessionCard.astro";
 
 const featuresEntry = await getEntry("pages", "talks");
 
@@ -129,15 +130,14 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
             </h3>
             <div class="talk-grid">
               {groups[track].map((talk) => (
-                <div class:list={["talk-card", talk.data.level]} data-track={talk.data.track || ""} data-search={`${talk.data.title.toLowerCase()} ${talk.data.track?.toLowerCase() || ""}`}>
-                  <a href={`/session/${talk.id}`} class="talk-card-title">{talk.data.title}</a>
-                  <p class="talk-card-speakers" set:html={speakerHtml(talk.data.speakers)}>
-                  </p>
-                  <div class="talk-card-meta">
-                    <span class="talk-card-tag">{talk.data.duration} min</span>
-                    {talk.data.level && <span class={`talk-card-level talk-card-level--${talk.data.level}`}>{talk.data.level.charAt(0).toUpperCase() + talk.data.level.slice(1)}</span>}
-                  </div>
-                </div>
+                <SessionCard
+                  title={talk.data.title}
+                  slug={talk.id}
+                  speakers={speakerHtml(talk.data.speakers)}
+                  duration={talk.data.duration}
+                  level={talk.data.level}
+                  searchText={`${talk.data.title} ${talk.data.track || ""}`}
+                />
               ))}
             </div>
           </div>
@@ -302,122 +302,6 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1rem;
   }
-
-  .talk-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-surface-subtle);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 1.25rem;
-    text-decoration: none;
-    font-family: "Inter Tight", system-ui, sans-serif;
-    transition:
-      border-color 0.1s ease-in-out,
-      background 0.1s ease-in-out;
-  }
-
-  .talk-card:hover {
-    border-color: var(--ep-accent);
-    background: var(--ep-session-hover-bg) !important;
-    z-index: 10;
-  }
-
-  .talk-card.beginner {
-    background:
-      repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 4px,
-        var(--ep-beginner-stripe) 4px,
-        var(--ep-beginner-stripe) 6px
-      ),
-      var(--color-surface-subtle);
-  }
-
-  .talk-card.advanced {
-    background:
-      repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 4px,
-        var(--ep-advanced-stripe) 4px,
-        var(--ep-advanced-stripe) 6px
-      ),
-      var(--color-surface-subtle);
-  }
-
-  .talk-card-title {
-    font-family: "Inter Tight", system-ui, sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0 0 0.5rem;
-    line-height: 1.35;
-    text-decoration: none;
-  }
-
-  .talk-card-title:hover {
-    text-decoration: underline;
-  }
-
-  .talk-card-speakers {
-    font-size: 1.15rem;
-    color: var(--color-text-secondary);
-    margin: 0 0 0.75rem;
-  }
-
-  :global(.talk-card-speakers .speaker-link) {
-    color: var(--color-text-secondary);
-    text-decoration: none;
-  }
-
-  :global(.talk-card-speakers .speaker-link:hover) {
-    text-decoration: underline;
-  }
-
-  .talk-card-meta {
-    margin-top: auto;
-    padding-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    align-items: center;
-  }
-
-  .talk-card-tag {
-    font-size: 1.02rem;
-    color: var(--color-text-muted);
-    background: var(--color-surface-medium);
-    padding: 0.2em 0.6em;
-    border-radius: 3px;
-    border: 1px solid var(--color-border);
-  }
-
-  .talk-card-level {
-    display: inline-block;
-    padding: 0.2em 0.6em;
-    border-radius: 3px;
-    font-size: 1.02rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    border: 1px solid transparent;
-  }
-
-  .talk-card-level--beginner {
-    background: var(--ep-level-beginner-bg);
-    color: var(--ep-level-beginner-text);
-  }
-
-  .talk-card-level--intermediate {
-    background: var(--ep-level-intermediate-bg);
-    color: var(--ep-level-intermediate-text);
-  }
-
-  .talk-card-level--advanced {
-    background: var(--ep-level-advanced-bg);
-    color: var(--ep-level-advanced-text);
-  }
 </style>
 
 <script is:inline>
@@ -425,7 +309,7 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
   var input = document.getElementById('sess-search');
   if (!input) return;
   var grid = document.getElementById('sess-grid');
-  var cards = grid.querySelectorAll('.talk-card');
+  var cards = grid.querySelectorAll('.session-card');
   var groups = grid.querySelectorAll('.talk-topic-group');
   var countEl = document.getElementById('sess-count');
   var noResults = document.getElementById('sess-no-results');
@@ -447,7 +331,7 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
 
     groups.forEach(function(group) {
       var wrapper = group.parentElement;
-      var hasVisible = group.querySelector('.talk-card:not([style*="display: none"])');
+      var hasVisible = group.querySelector('.session-card:not([style*="display: none"])');
       group.style.display = hasVisible ? '' : 'none';
       if (wrapper && wrapper.classList.contains('talks-dot-bg')) {
         wrapper.style.display = hasVisible ? '' : 'none';

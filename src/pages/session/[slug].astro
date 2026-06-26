@@ -8,6 +8,7 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
 import { Picture } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Section2 from "@ui/Section2.astro";
+import SessionCard from "@components/SessionCard.astro";
 //
 import CodeHeart from "@components/island/CodeHeart.svelte";
 import Button from "@ui/Button.astro";
@@ -136,7 +137,18 @@ const nextSessionsOrdered = sameRoomNextSession
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
-    <Button class="mb-10 sched-btn" url=`/schedule/#session-${entry.id}`>View in the schedule</Button>
+    <div class="sched-actions">
+      <Button class="sched-btn       " url=`/schedule/#session-${entry.id}`>View in schedule</Button>
+      {
+         entry.data.youtube_url && (
+          <a href={entry.data.youtube_url} target="_blank" rel="noopener" class="sched-yt-link button-link font-bold px-8 py-3 rounded-sm inline-flex items-center justify-center leading-6 transition-colors duration-200 not-prose border
+      bg-button border-0
+">
+            Watch on YouTube ↗
+          </a>
+         )
+       }
+    </div>
 
 
     <Prose full>
@@ -231,44 +243,41 @@ const nextSessionsOrdered = sameRoomNextSession
         (nextSessionsInAllRooms?.length ?? 0) > 0 ? (
           <>
             <Separator />
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="detail-related">
               {(parallelSessions?.length ?? 0) > 0 && (
-                <div>
-                  <Prose>
-                    <h3>Sessions at the same time</h3>
-                  </Prose>
-                  <ul class="list-disc">
+                <>
+                  <h3 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
+                  Sessions at the same time</h3>
+                  <div class="sched-related-grid">
                     {parallelSessions.map((session: any) => (
-                      <li>
-                        <Prose>
-                          <a href={`/session/${session.id}`}>
-                            {session.data.title}
-                          </a>
-                        </Prose>
-                      </li>
+                      <SessionCard
+                        title={session.data.title}
+                        slug={session.id}
+                        duration={session.data.duration}
+                        level={session.data.level}
+                      />
                     ))}
-                  </ul>
-                </div>
+                  </div>
+                </>
               )}
 
               {(nextSessionsInAllRooms?.length ?? 0) > 0 && (
-                <div>
-                  <Prose>
-                    <h3>After this session</h3>
-                    <ul class="list-disc">
-                      {nextSessionsOrdered.map((session: any) => (
-                        <li>
-                          <a
-                            href={`/session/${session.id}`}
-                            class={`${session === sameRoomNextSession ? "text-white font-bold" : ""}`}
-                          >
-                            {session.data.title}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </Prose>
-                </div>
+                <>
+                  <Separator />
+
+                  <h3 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
+                    After this session</h3>
+                  <div class="sched-related-grid">
+                    {nextSessionsOrdered.map((session: any) => (
+                      <SessionCard
+                        title={session.data.title}
+                        slug={session.id}
+                        duration={session.data.duration}
+                        level={session.data.level}
+                      />
+                    ))}
+                  </div>
+                </>
               )}
             </div>
           </>
@@ -279,9 +288,50 @@ const nextSessionsOrdered = sameRoomNextSession
 </Layout>
 
 <style>
+  .sched-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
   .sched-btn {
     background: oklch(0.522 0.218 264.4) !important;
     color: white !important;
+  }
+
+  .sched-yt-link {
+    color: white;
+    background: oklch(0.551 0.187 25.8); /* red */
+  }
+
+  .sched-yt-link:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+
+  .detail-related {
+    margin-bottom: 2.5rem;
+  }
+
+  .sched-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .sched-related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .sched-related-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 
