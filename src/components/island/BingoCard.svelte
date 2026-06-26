@@ -52,14 +52,14 @@
     const attended = editions.filter((_, i) => checked[i]).map(e => `${e.year} ${e.city}`);
     const count = attended.length;
     const base = `I've attended ${count} EuroPython conference${count !== 1 ? 's' : ''}! 🐍`;
-    return count > 0 ? `${base}\n${attended.join(' · ')}` : base;
+    const body = count > 0 ? `${base}\n\n${attended.join(' · ')}` : base;
+    return `${body}\n\nWhat about you: ${BINGO_PAGE_URL}`;
   }
 
-  const PAGE_URL = 'https://ep2026.europython.eu/#bingo';
-  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/bingo';
+  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/#bingo';
 
   function shareLinkedIn() {
-    const text = buildShareText() + '\n\n' + BINGO_PAGE_URL;
+    const text = buildShareText();
     window.open(
       `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(text)}`,
       '_blank', 'noopener,noreferrer'
@@ -69,13 +69,13 @@
   function shareX() {
     const text = buildShareText();
     window.open(
-      `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(PAGE_URL)}`,
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,
       '_blank', 'noopener,noreferrer'
     );
   }
 
   function shareBlueSky() {
-    const text = `${buildShareText()}\n\n${PAGE_URL}`;
+    const text = buildShareText();
     window.open(
       `https://bsky.app/intent/compose?text=${encodeURIComponent(text)}`,
       '_blank', 'noopener,noreferrer'
@@ -83,9 +83,9 @@
   }
 
   function shareMastodon() {
-    const text = `${buildShareText()}\n\n${PAGE_URL}`;
+    const text = buildShareText();
     window.open(
-      `https://shareopenly.org/share/?url=${encodeURIComponent(PAGE_URL)}&text=${encodeURIComponent(text)}`,
+      `https://shareopenly.org/share/?url=${encodeURIComponent(BINGO_PAGE_URL)}&text=${encodeURIComponent(text)}`,
       '_blank', 'noopener,noreferrer'
     );
   }
@@ -162,8 +162,8 @@
       const cx = x + 3, cy = y + 3, cw = CELL - 6, ch = CELL - 6;
 
       if (isChecked && images[i]) {
-        // Checked: show SVG city icon (matches the flipped card-back on screen)
-        ctx.fillStyle = cellFill;
+        // Checked: bg colour + icon at 50% + year + city (matches card-back on screen)
+        ctx.fillStyle = ed.bg;
         roundRect(ctx, cx, cy, cw, ch, 2);
         ctx.fill();
 
@@ -173,11 +173,24 @@
         roundRect(ctx, cx, cy, cw, ch, 2);
         ctx.stroke();
 
+        const iconSize = Math.round(cw * 0.5);
+        const ix = cx + Math.round((cw - iconSize) / 2);
+        const iy = cy + Math.round(ch * 0.08);
         ctx.save();
         roundRect(ctx, cx, cy, cw, ch, 2);
         ctx.clip();
-        ctx.drawImage(images[i], cx, cy, cw, ch);
+        ctx.drawImage(images[i], ix, iy, iconSize, iconSize);
         ctx.restore();
+
+        const yearY = iy + iconSize + Math.round(ch * 0.12);
+        ctx.fillStyle = 'white';
+        ctx.font = `bold 18px system-ui, sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(ed.year.toString(), x + CELL / 2, yearY);
+
+        ctx.fillStyle = 'rgba(255,255,255,0.7)';
+        ctx.font = `11px system-ui, sans-serif`;
+        ctx.fillText(ed.city, x + CELL / 2, yearY + Math.round(ch * 0.13));
       } else {
         // Unchecked: text card (matches the card-front on screen)
         ctx.fillStyle = isCurrent ? cellFillCur : cellFill;
