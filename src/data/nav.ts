@@ -31,7 +31,7 @@ export interface FooterColumn {
 
 const L = {
   // Programme
-  schedule: { label: "Schedule", url: "/schedule" },
+  schedule: { label: "Schedule", url: "/schedule/talks" },
   talks: { label: "Talks", url: "/talks" },
   tutorials: { label: "Tutorials", url: "/tutorials" },
   posters: { label: "Posters", url: "/posters" },

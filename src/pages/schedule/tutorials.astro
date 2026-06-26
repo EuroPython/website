@@ -24,7 +24,7 @@ const tutorialDays = new Set(["2026-07-13", "2026-07-14"]);
 
 ---
 
-<Layout description="Browse all scheduled tutorials." headline="Tutorials schedule">
+<Layout description="Browse all scheduled tutorials." headline="Tutorials schedule" hideNotices={["tutorials"]}>
   {
   days
     .filter((day) => tutorialDays.has(day.id))

@@ -1,0 +1,140 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Section2 from "@ui/Section2.astro";
+import Title from "@ui/Title.astro";
+import Markdown from "@ui/Markdown.astro";
+import { getEntry } from "astro:content";
+
+const articleEntry = await getEntry("pages", "open-spaces");
+---
+
+
+<Layout title="Open Spaces | EuroPython 2026" description="Participant-led unconference sessions at EuroPython 2026.">
+  <Fragment slot="head">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+  </Fragment>
+
+  <Section2 variant="dark" id="open-spaces">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="text-center mb-12">
+        <Title id="open-spaces" subtitle="Unconference-style sessions proposed and led by participants. Grab a room, pick a topic, and start a conversation.">
+          Open Spaces
+        </Title>
+        <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
+          <span>Wednesday – Friday, July 15–17</span>
+          <span>Dedicated open space rooms</span>
+        </div>
+      </div>
+
+      <ul class="open-space-features">
+        {articleEntry && ["box1", "box2", "box3", "box4"].map((box) => {
+          const text = articleEntry.data[box as keyof typeof articleEntry.data];
+          if (!text) return null;
+          const [title, ...rest] = text.split(" — ");
+          return (
+            <li>
+              <strong>{title}</strong>
+              {rest.join(" — ")}
+            </li>
+          );
+        })}
+      </ul>
+
+      {articleEntry && (
+        <div class="open-space-article">
+          <Markdown content={articleEntry.body ?? ""} />
+        </div>
+      )}
+
+    </div>
+  </Section2>
+
+</Layout>
+
+<style is:global>
+  .open-space-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .open-space-features {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .open-space-features li {
+    padding: 1.6rem;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    margin: 0 !important;
+  }
+
+  .open-space-features li::marker {
+    display: none !important;
+    content: "";
+  }
+
+  .open-space-features li strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+  }
+
+  .open-space-article {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  .open-space-article :global(h2) {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 2.5rem 0 1rem;
+  }
+
+  .open-space-article :global(p) {
+    margin-bottom: 1.2rem;
+  }
+
+  .open-space-article :global(a) {
+    color: var(--color-accent-themed);
+    text-decoration: underline;
+  }
+
+  .open-space-article :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 3rem 0;
+  }
+
+  .open-space-article :global(ul) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0 2rem;
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 500px) {
+    .open-space-article :global(ul) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

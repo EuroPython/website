@@ -20,8 +20,8 @@ const existingSlugs = new Set(existingPages.map((p) => p.id));
 
 // Standalone .astro pages that always exist regardless of content collection
 const alwaysExist = new Set([
-  "sessions", "speakers", "schedule", "posters", "talks", "tutorials",
-  "sprints", "jobs", "sponsors", "community-partners", "media-partners",
+  "sessions", "speakers", "schedule", "schedule/talks", "schedule/tutorials", "posters", "talks", "tutorials",
+  "sprints", "jobs", "sponsors", "community-partners", "media-partners", "open-space",
 ]);
 
 function linkExists(url: string): boolean {

@@ -2,8 +2,10 @@
 import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import ListPosters from "@components/sessions/list-posters.astro";
+
+const featuresEntry = await getEntry("pages", "posters");
 
 const allSessions = await getCollection("sessions");
 const posters = allSessions
@@ -28,28 +30,19 @@ const posters = allSessions
         </div>
       </div>
 
-      <!-- Advantages grid (matching ep26-draft style) -->
+      <!-- Advantages grid -->
       <ul class="poster-advantages">
-        <li>
-          <strong>Visual format</strong>
-          Posters present a project, library, or research finding as a visual display.
-          Think of it as a paper you can walk up to and discuss.
-        </li>
-        <li>
-          <strong>One-on-one conversations</strong>
-          Unlike talks, poster sessions let you have a direct conversation with the
-          author. Ask questions, give feedback, and dive as deep as you like.
-        </li>
-        <li>
-          <strong>Great for first-time speakers</strong>
-          Posters are an excellent way to share your work without the pressure of a
-          stage presentation. Many speakers start here.
-        </li>
-        <li>
-          <strong>Dedicated session time</strong>
-          A block of time is reserved in the schedule for poster viewing, so you won't
-          have to choose between posters and talks.
-        </li>
+        {featuresEntry && ["box1", "box2", "box3", "box4"].map((box) => {
+          const text = featuresEntry.data[box as keyof typeof featuresEntry.data];
+          if (!text) return null;
+          const [title, ...rest] = text.split(" — ");
+          return (
+            <li>
+              <strong>{title}</strong>
+              {rest.join(" — ")}
+            </li>
+          );
+        })}
       </ul>
 
       <!-- Poster list component -->
