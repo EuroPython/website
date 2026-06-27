@@ -2,31 +2,31 @@
   const STORAGE_KEY = 'ep-bingo-checked';
 
   const editions = [
-    { year: 2002, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',    bg: '#1003A3' },
-    { year: 2003, city: 'Charleroi',   icon: '/media/bingo/charleroi-2.svg',  bg: '#FB471F' },
-    { year: 2004, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',   bg: '#1003A3' },
-    { year: 2005, city: 'Gothenburg',  icon: '/media/bingo/gothenburg-2.svg', bg: '#FB471F' },
-    { year: 2006, city: 'CERN, Geneva',icon: '/media/bingo/geneva.svg',       bg: '#1003A3' },
-    { year: 2007, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',      bg: '#1003A3' },
-    { year: 2008, city: 'Vilnius',     icon: '/media/bingo/vilnius-2.svg',    bg: '#FB471F' },
-    { year: 2009, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',   bg: '#1003A3' },
-    { year: 2010, city: 'Birmingham',  icon: '/media/bingo/birmingham-2.svg', bg: '#FB471F' },
-    { year: 2011, city: 'Florence',    icon: '/media/bingo/florence.svg',     bg: '#1003A3' },
-    { year: 2012, city: 'Florence',    icon: '/media/bingo/florence-2.svg',   bg: '#FB471F' },
-    { year: 2013, city: 'Florence',    icon: '/media/bingo/florence-3.svg',   bg: '#008624' },
-    { year: 2014, city: 'Berlin',      icon: '/media/bingo/berlin.svg',       bg: '#1003A3' },
-    { year: 2015, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',       bg: '#1003A3' },
-    { year: 2016, city: 'Bilbao',      icon: '/media/bingo/bilbao-2.svg',     bg: '#FB471F' },
-    { year: 2017, city: 'Rimini',      icon: '/media/bingo/rimini.svg',       bg: '#1003A3' },
-    { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg',    bg: '#1003A3' },
-    { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg',        bg: '#1003A3' },
-    { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg',       bg: '#1003A3' },
-    { year: 2021, city: 'Online',      icon: '/media/bingo/online-2.svg',     bg: '#FB471F' },
-    { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg',       bg: '#1003A3' },
-    { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg',       bg: '#1003A3' },
-    { year: 2024, city: 'Prague',      icon: '/media/bingo/prague-2.svg',     bg: '#FB471F' },
-    { year: 2025, city: 'Prague',      icon: '/media/bingo/prague-3.svg',     bg: '#008624' },
-    { year: 2026, city: 'Kraków',      icon: '/media/bingo/krakow.svg',       bg: '#1003A3' },
+    { year: 2002, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',   bg: '#1003A3' },
+    { year: 2003, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',   bg: '#1003A3' },
+    { year: 2004, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',  bg: '#1003A3' },
+    { year: 2005, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',  bg: '#1003A3' },
+    { year: 2006, city: 'CERN, Geneva',icon: '/media/bingo/geneva.svg',      bg: '#1003A3' },
+    { year: 2007, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',     bg: '#1003A3' },
+    { year: 2008, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',     bg: '#1003A3' },
+    { year: 2009, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',  bg: '#1003A3' },
+    { year: 2010, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',  bg: '#1003A3' },
+    { year: 2011, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3' },
+    { year: 2012, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3' },
+    { year: 2013, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3' },
+    { year: 2014, city: 'Berlin',      icon: '/media/bingo/berlin.svg',      bg: '#1003A3' },
+    { year: 2015, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',      bg: '#1003A3' },
+    { year: 2016, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',      bg: '#1003A3' },
+    { year: 2017, city: 'Rimini',      icon: '/media/bingo/rimini.svg',      bg: '#1003A3' },
+    { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg',   bg: '#1003A3' },
+    { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg',       bg: '#1003A3' },
+    { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg',      bg: '#1003A3' },
+    { year: 2021, city: 'Online',      icon: '/media/bingo/online.svg',      bg: '#1003A3' },
+    { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg',      bg: '#1003A3' },
+    { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3' },
+    { year: 2024, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3' },
+    { year: 2025, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3' },
+    { year: 2026, city: 'Kraków',      icon: '/media/bingo/krakow.svg',      bg: '#1003A3' },
   ];
 
   function loadChecked() {
@@ -182,15 +182,15 @@
         ctx.drawImage(images[i], ix, iy, iconSize, iconSize);
         ctx.restore();
 
-        const yearY = iy + iconSize + Math.round(ch * 0.12);
+        const cityY = iy + iconSize + Math.round(ch * 0.12);
         ctx.fillStyle = 'white';
-        ctx.font = `bold 18px system-ui, sans-serif`;
+        ctx.font = `bold 13px system-ui, sans-serif`;
         ctx.textAlign = 'center';
-        ctx.fillText(ed.year.toString(), x + CELL / 2, yearY);
+        ctx.fillText(ed.city, x + CELL / 2, cityY);
 
         ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.font = `11px system-ui, sans-serif`;
-        ctx.fillText(ed.city, x + CELL / 2, yearY + Math.round(ch * 0.13));
+        ctx.font = `12px system-ui, sans-serif`;
+        ctx.fillText(ed.year.toString(), x + CELL / 2, cityY + Math.round(ch * 0.14));
       } else {
         // Unchecked: text card (matches the card-front on screen)
         ctx.fillStyle = isCurrent ? cellFillCur : cellFill;
@@ -204,14 +204,14 @@
         ctx.stroke();
         ctx.setLineDash([]);
 
-        ctx.fillStyle = yearColor;
-        ctx.font = `bold 21px system-ui, sans-serif`;
-        ctx.textAlign = 'center';
-        ctx.fillText(ed.year.toString(), x + CELL / 2, y + CELL * 0.46);
-
         ctx.fillStyle = cityColor;
-        ctx.font = `12px system-ui, sans-serif`;
-        ctx.fillText(ed.city, x + CELL / 2, y + CELL * 0.65);
+        ctx.font = `bold 14px system-ui, sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(ed.city, x + CELL / 2, y + CELL * 0.44);
+
+        ctx.fillStyle = yearColor;
+        ctx.font = `13px system-ui, sans-serif`;
+        ctx.fillText(ed.year.toString(), x + CELL / 2, y + CELL * 0.62);
 
         if (isCurrent) {
           ctx.fillStyle = '#f0c040';
@@ -263,17 +263,17 @@
         role="gridcell"
       >
         <div class="card-inner" class:flipped={checked[i]}>
-          <div class="card-face card-front">
-            <span class="cell-year">{edition.year}</span>
+          <div class="card-face card-front" style={checked[i] ? `background:${edition.bg}` : ''}>
             <span class="cell-city">{edition.city}</span>
+            <span class="cell-year">{edition.year}</span>
             {#if edition.year === 2026}
               <span class="cell-now">Now!</span>
             {/if}
           </div>
           <div class="card-face card-back" style="background:{edition.bg}">
             <img src={edition.icon} alt="" aria-hidden="true" class="cell-icon" />
-            <span class="cell-year">{edition.year}</span>
             <span class="cell-city">{edition.city}</span>
+            <span class="cell-year">{edition.year}</span>
           </div>
         </div>
       </button>
@@ -378,11 +378,11 @@
     object-fit: contain;
   }
 
-  .card-back .cell-year {
+  .card-back .cell-city {
     color: white;
   }
 
-  .card-back .cell-city {
+  .card-back .cell-year {
     color: rgba(255, 255, 255, 0.7);
   }
 
@@ -403,14 +403,10 @@
     border-color: var(--color-border-bright);
   }
 
-  /* checked state — background lives on the front face only, not the button */
+  /* checked state */
   .bingo-cell.checked {
     border-style: solid;
     border-color: var(--color-border);
-  }
-
-  .bingo-cell.checked .card-front {
-    background: var(--color-accent);
   }
 
   .bingo-cell.checked:hover {
@@ -419,32 +415,28 @@
     transform: translateY(-3px);
   }
 
-  .bingo-cell.checked:hover .card-front {
-    background: var(--color-accent-hover);
-  }
-
   /* ── cell text ── */
-  .cell-year {
-    font-size: clamp(1rem, 2.5vw, 1.35rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: var(--color-text-primary);
-    line-height: 1;
-  }
-
-  .bingo-cell.checked .cell-year {
-    color: var(--color-on-accent);
-  }
-
   .cell-city {
-    font-size: clamp(0.6rem, 1.4vw, 0.75rem);
-    color: var(--color-text-faint);
+    font-size: clamp(0.75rem, 1.9vw, 1.05rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
     line-height: 1.1;
   }
 
-  .bingo-cell.checked .cell-city {
-    color: var(--color-on-accent);
-    opacity: 0.7;
+  .cell-year {
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--color-text-faint);
+    line-height: 1;
+  }
+
+  .bingo-cell.checked .card-front .cell-city {
+    color: white;
+  }
+
+  .bingo-cell.checked .card-front .cell-year {
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .cell-now {
@@ -457,9 +449,8 @@
     margin-top: 1px;
   }
 
-  .bingo-cell.checked .cell-now {
-    color: var(--color-on-accent);
-    opacity: 0.6;
+  .bingo-cell.checked .card-front .cell-now {
+    color: rgba(255, 255, 255, 0.6);
   }
 
   /* ── share ── */

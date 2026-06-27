@@ -1,21 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
   <rect width="120" height="120" fill="#1003A3"></rect>
-  <g>
-        <rect x="42" y="58" width="36" height="46" fill="#ffffff"></rect>
-        <polygon points="42,58 60,40 78,58" fill="#ffffff"></polygon>
-        <line x1="48" y1="54" x2="56" y2="44" stroke="#1003A3" stroke-width="1.6"></line>
-        <line x1="56" y1="56" x2="66" y2="44" stroke="#1003A3" stroke-width="1.6"></line>
-        <line x1="64" y1="56" x2="72" y2="48" stroke="#1003A3" stroke-width="1.6"></line>
-        <path d="M54,104 V90 a6 6 0 0 1 12 0 V104 Z" fill="#1003A3"></path>
-        <circle cx="60" cy="72" r="6" fill="#1003A3"></circle>
-        <circle cx="60" cy="72" r="2" fill="#ffffff"></circle>
-        <rect x="31" y="44" width="14" height="60" fill="#ffffff"></rect>
-        <polygon points="31,44 38,16 45,44" fill="#ffffff"></polygon>
-        <rect x="37" y="9" width="2" height="9" fill="#ffffff"></rect>
-        <rect x="75" y="42" width="14" height="62" fill="#ffffff"></rect>
-        <polygon points="75,42 82,12 89,42" fill="#ffffff"></polygon>
-        <rect x="81" y="5" width="2" height="9" fill="#ffffff"></rect>
-        <path d="M35,60 V52 a3 3 0 0 1 6 0 V60 Z" fill="#1003A3"></path>
-        <path d="M79,58 V50 a3 3 0 0 1 6 0 V58 Z" fill="#1003A3"></path>
-      </g>
+
+  
+  <rect x="44" y="82" width="32" height="38" fill="#ffffff"></rect>
+
+  
+  <polygon points="48,66 72,66 74,82 46,82" fill="#ffffff"></polygon>
+  <rect x="45" y="62.5" width="30" height="3.8" fill="#ffffff"></rect>
+
+  
+  
+  <rect x="41" y="58" width="4" height="14" fill="#ffffff"></rect>
+  <polygon points="39,64 43,49 47,64" fill="#ffffff"></polygon>
+  <rect x="42.3" y="45" width="1.4" height="5" fill="#ffffff"></rect>
+  <polygon points="40.1,58 38,57 40.1,55.4" fill="#ffffff"></polygon>
+  <polygon points="45.9,58 48,57 45.9,55.4" fill="#ffffff"></polygon>
+  
+  <rect x="75" y="56" width="4" height="16" fill="#ffffff"></rect>
+  <polygon points="73,64 77,46 81,64" fill="#ffffff"></polygon>
+  <rect x="76.3" y="42" width="1.4" height="5" fill="#ffffff"></rect>
+  <polygon points="74.1,57 72,56 74.1,54.4" fill="#ffffff"></polygon>
+  <polygon points="79.9,57 82,56 79.9,54.4" fill="#ffffff"></polygon>
+
+  
+  <polygon points="49,66 60,12 71,66" fill="#ffffff"></polygon>
+  
+  <polygon points="50.2,60 47,58.5 50.2,56.5" fill="#ffffff"></polygon>
+  <polygon points="51.85,52 48.65,50.5 51.85,48.5" fill="#ffffff"></polygon>
+  <polygon points="53.5,44 50.3,42.5 53.5,40.5" fill="#ffffff"></polygon>
+  <polygon points="55.1,36 51.9,34.5 55.1,32.5" fill="#ffffff"></polygon>
+  <polygon points="56.7,28 53.5,26.5 56.7,24.5" fill="#ffffff"></polygon>
+  <polygon points="58.4,20 55.2,18.5 58.4,16.5" fill="#ffffff"></polygon>
+  
+  <polygon points="69.78,60 73,58.5 69.78,56.5" fill="#ffffff"></polygon>
+  <polygon points="68.15,52 71.35,50.5 68.15,48.5" fill="#ffffff"></polygon>
+  <polygon points="66.52,44 69.72,42.5 66.52,40.5" fill="#ffffff"></polygon>
+  <polygon points="64.89,36 68.09,34.5 64.89,32.5" fill="#ffffff"></polygon>
+  <polygon points="63.26,28 66.46,26.5 63.26,24.5" fill="#ffffff"></polygon>
+  <polygon points="61.63,20 64.83,18.5 61.63,16.5" fill="#ffffff"></polygon>
+
+  
+  <rect x="59" y="4" width="2" height="9" fill="#ffffff"></rect>
+  <rect x="56" y="7" width="8" height="1.6" fill="#ffffff"></rect>
+  <polygon points="60,1.5 62,4 60,6.5 58,4" fill="#ffffff"></polygon>
+
+  
+  
+  <polygon points="60,55.4 62.6,58 60,60.6 57.4,58" fill="#1003A3"></polygon>
+  <polygon points="60,47.8 62.2,50 60,52.2 57.8,50" fill="#1003A3"></polygon>
+  <polygon points="60,40.1 61.9,42 60,43.9 58.1,42" fill="#1003A3"></polygon>
+  <polygon points="60,32.5 61.5,34 60,35.5 58.5,34" fill="#1003A3"></polygon>
+  <polygon points="60,24.8 61.2,26 60,27.2 58.8,26" fill="#1003A3"></polygon>
+
+  
+  <path d="M52,81 L52,73 L54,70 L56,73 L56,81 Z" fill="#1003A3"></path>
+  <path d="M58,81 L58,72 L60,69 L62,72 L62,81 Z" fill="#1003A3"></path>
+  <path d="M64,81 L64,73 L66,70 L68,73 L68,81 Z" fill="#1003A3"></path>
+
+  
+  <rect x="47" y="63" width="1.5" height="2.6" fill="#1003A3"></rect>
+  <rect x="51" y="63" width="1.5" height="2.6" fill="#1003A3"></rect>
+  <rect x="55" y="63" width="1.5" height="2.6" fill="#1003A3"></rect>
+  <rect x="59" y="63" width="1.5" height="2.6" fill="#1003A3"></rect>
+  <rect x="63" y="63" width="1.5" height="2.6" fill="#1003A3"></rect>
+  <rect x="67" y="63" width="1.5" height="2.6" fill="#1003A3"></rect>
+  <rect x="71" y="63" width="1.5" height="2.6" fill="#1003A3"></rect>
+
+  
+  <path d="M53,120 L53,93 L60,85 L67,93 L67,120 Z" fill="#1003A3"></path>
+  <rect x="59.2" y="93" width="1.6" height="27" fill="#ffffff"></rect>
+  <rect x="53" y="104" width="14" height="1.6" fill="#ffffff"></rect>
+  
+  <rect x="46.5" y="97" width="2.5" height="20" fill="#1003A3"></rect>
+  <rect x="71" y="97" width="2.5" height="20" fill="#1003A3"></rect>
 </svg>

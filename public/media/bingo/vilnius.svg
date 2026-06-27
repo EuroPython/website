@@ -1,19 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" role="img" aria-label="Bell Tower of Vilnius Cathedral">
+  <title>Vilnius Cathedral Bell Tower</title>
   <rect width="120" height="120" fill="#1003A3"></rect>
-  <g>
-        <rect x="44" y="100" width="32" height="8" fill="#ffffff"></rect>
-        <rect x="47" y="62" width="26" height="40" fill="#ffffff"></rect>
-        <path d="M54,102 V90 a6 6 0 0 1 12 0 V102 Z" fill="#1003A3"></path>
-        <rect x="45" y="56" width="30" height="6" fill="#ffffff"></rect>
-        <rect x="50" y="40" width="20" height="16" fill="#ffffff"></rect>
-        <circle cx="60" cy="48" r="5" fill="#1003A3"></circle>
-        <circle cx="60" cy="48" r="1.6" fill="#ffffff"></circle>
-        <rect x="49" y="36" width="22" height="4" fill="#ffffff"></rect>
-        <rect x="53" y="26" width="14" height="10" fill="#ffffff"></rect>
-        <path d="M55,26 V20 a5 5 0 0 1 10 0 V26 Z" fill="#1003A3"></path>
-        <path d="M53,26 Q53,16 60,16 Q67,16 67,26 Z" fill="#ffffff"></path>
-        <rect x="58" y="9" width="4" height="7" fill="#ffffff"></rect>
-        <rect x="59" y="2" width="2" height="9" fill="#ffffff"></rect>
-        <rect x="56" y="4.5" width="8" height="2" fill="#ffffff"></rect>
-      </g>
+  <path d="M38 110 Q40 95 45 80 L46 62 L46.5 46 L45.5 45 Q45 40 50 36 Q54 33.5 57 33 L60 12 L63 33 Q66 33.5 70 36 Q75 40 74.5 45 L73.5 46 L74 62 L75 80 Q80 95 82 110 Z M56.6 52 A3.4 3.4 0 1 0 63.4 52 A3.4 3.4 0 1 0 56.6 52 Z M51 76 L51 70 A2 2 0 0 1 55 70 L55 76 Z M58 76 L58 70 A2 2 0 0 1 62 70 L62 76 Z M65 76 L65 70 A2 2 0 0 1 69 70 L69 76 Z M58.9 90 L61.1 90 L61.1 99 L58.9 99 Z M45.5 44.3 L74.5 44.3 L74.5 45.6 L45.5 45.6 Z M46 61.3 L74 61.3 L74 62.6 L46 62.6 Z M45 79.2 L75 79.2 L75 80.6 L45 80.6 Z" fill="#ffffff" fill-rule="evenodd"></path>
+  <path d="M59.2 8 L60.8 8 L60.8 11.5 L63.4 11.5 L63.4 13 L60.8 13 L60.8 19 L59.2 19 L59.2 13 L56.6 13 L56.6 11.5 L59.2 11.5 Z" fill="#ffffff"></path>
 </svg>
