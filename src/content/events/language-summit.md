@@ -7,7 +7,6 @@ location: "ICE Kraków Congress Centre, room TBA"
 url: /language-summit
 description:
   CPython and alternative implementation developers gather to share information,
-  discuss common problems, and solve them. Invite-only for Python core
-  developers.
+  discuss common problems, and solve them. Invite only.
 draft: false
 ---
