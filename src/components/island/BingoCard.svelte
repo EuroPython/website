@@ -2,31 +2,31 @@
   const STORAGE_KEY = 'ep-bingo-checked';
 
   const editions = [
-    { year: 2002, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',   bg: '#1003A3' },
-    { year: 2003, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',   bg: '#1003A3' },
-    { year: 2004, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',  bg: '#1003A3' },
-    { year: 2005, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',  bg: '#1003A3' },
-    { year: 2006, city: 'CERN, Geneva',icon: '/media/bingo/geneva.svg',      bg: '#1003A3' },
-    { year: 2007, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',     bg: '#1003A3' },
-    { year: 2008, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',     bg: '#1003A3' },
-    { year: 2009, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',  bg: '#1003A3' },
-    { year: 2010, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',  bg: '#1003A3' },
-    { year: 2011, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3' },
-    { year: 2012, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3' },
-    { year: 2013, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3' },
-    { year: 2014, city: 'Berlin',      icon: '/media/bingo/berlin.svg',      bg: '#1003A3' },
-    { year: 2015, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',      bg: '#1003A3' },
-    { year: 2016, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',      bg: '#1003A3' },
-    { year: 2017, city: 'Rimini',      icon: '/media/bingo/rimini.svg',      bg: '#1003A3' },
-    { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg',   bg: '#1003A3' },
-    { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg',       bg: '#1003A3' },
-    { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg',      bg: '#1003A3' },
-    { year: 2021, city: 'Online',      icon: '/media/bingo/online.svg',      bg: '#1003A3' },
-    { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg',      bg: '#1003A3' },
-    { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3' },
-    { year: 2024, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3' },
-    { year: 2025, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3' },
-    { year: 2026, city: 'Kraków',      icon: '/media/bingo/krakow.svg',      bg: '#1003A3' },
+    { year: 2002, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',   bg: '#1003A3', logo: '/media/bingo/logos/europython-2002.png' },
+    { year: 2003, city: 'Charleroi',   icon: '/media/bingo/charleroi.svg',   bg: '#1003A3', logo: '/media/bingo/logos/europython-2003.png' },
+    { year: 2004, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',  bg: '#1003A3', logo: '/media/bingo/logos/europython-2004.png' },
+    { year: 2005, city: 'Gothenburg',  icon: '/media/bingo/gothenburg.svg',  bg: '#1003A3', logo: '/media/bingo/logos/europython-2005.png' },
+    { year: 2006, city: 'CERN, Geneva',icon: '/media/bingo/geneva.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2006.png' },
+    { year: 2007, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',     bg: '#1003A3', logo: '/media/bingo/logos/europython-2007.png' },
+    { year: 2008, city: 'Vilnius',     icon: '/media/bingo/vilnius.svg',     bg: '#1003A3', logo: '/media/bingo/logos/europython-2008.png' },
+    { year: 2009, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',  bg: '#1003A3', logo: '/media/bingo/logos/europython-2009.png' },
+    { year: 2010, city: 'Birmingham',  icon: '/media/bingo/birmingham.svg',  bg: '#1003A3', logo: '/media/bingo/logos/europython-2010.png' },
+    { year: 2011, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3', logo: '/media/bingo/logos/europython-2011.png' },
+    { year: 2012, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3', logo: '/media/bingo/logos/europython-2012.png' },
+    { year: 2013, city: 'Florence',    icon: '/media/bingo/florence.svg',    bg: '#1003A3', logo: '/media/bingo/logos/europython-2013.png' },
+    { year: 2014, city: 'Berlin',      icon: '/media/bingo/berlin.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2014.png' },
+    { year: 2015, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2015.png' },
+    { year: 2016, city: 'Bilbao',      icon: '/media/bingo/bilbao.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2016.png' },
+    { year: 2017, city: 'Rimini',      icon: '/media/bingo/rimini.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2017.png' },
+    { year: 2018, city: 'Edinburgh',   icon: '/media/bingo/edinburgh.svg',   bg: '#1003A3', logo: '/media/bingo/logos/europython-2018.png' },
+    { year: 2019, city: 'Basel',       icon: '/media/bingo/basel.svg',       bg: '#1003A3', logo: '/media/bingo/logos/europython-2019.png' },
+    { year: 2020, city: 'Online',      icon: '/media/bingo/online.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2020.png' },
+    { year: 2021, city: 'Online',      icon: '/media/bingo/online.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2021.png' },
+    { year: 2022, city: 'Dublin',      icon: '/media/bingo/dublin.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2022.png' },
+    { year: 2023, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2023.svg' },
+    { year: 2024, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2024.png' },
+    { year: 2025, city: 'Prague',      icon: '/media/bingo/prague.svg',      bg: '#1003A3', logo: '/media/bingo/logos/europython-2025.svg' },
+    { year: 2026, city: 'Kraków',      icon: '/media/bingo/krakow.svg',      bg: '#1003A3', logo: null },
   ];
 
   function loadChecked() {
@@ -119,7 +119,7 @@
     const cityColor      = isLight ? 'rgba(0,0,0,0.4)'   : 'rgba(255,255,255,0.6)';
     const subtitleColor  = isLight ? 'rgba(0,0,0,0.4)'   : 'rgba(255,255,255,0.4)';
 
-    // Preload SVG icons for checked cells (matches the flipped card-back shown on screen)
+    // Preload logos (or city icons for editions without a logo) for checked cells
     const images = await Promise.all(
       editions.map((ed, i) => {
         if (!checked[i]) return Promise.resolve(null);
@@ -127,7 +127,7 @@
           const img = new Image();
           img.onload = () => resolve(img);
           img.onerror = () => resolve(null);
-          img.src = ed.icon;
+          img.src = ed.logo || ed.icon;
         });
       })
     );
@@ -162,35 +162,58 @@
       const cx = x + 3, cy = y + 3, cw = CELL - 6, ch = CELL - 6;
 
       if (isChecked && images[i]) {
-        // Checked: bg colour + icon at 50% + year + city (matches card-back on screen)
-        ctx.fillStyle = ed.bg;
-        roundRect(ctx, cx, cy, cw, ch, 2);
-        ctx.fill();
+        if (ed.logo) {
+          // Logo editions: white background, logo fills the cell
+          ctx.fillStyle = 'white';
+          roundRect(ctx, cx, cy, cw, ch, 2);
+          ctx.fill();
 
-        ctx.strokeStyle = cellBorderChk;
-        ctx.lineWidth = 1.5;
-        ctx.setLineDash([]);
-        roundRect(ctx, cx, cy, cw, ch, 2);
-        ctx.stroke();
+          ctx.strokeStyle = cellBorderChk;
+          ctx.lineWidth = 1.5;
+          ctx.setLineDash([]);
+          roundRect(ctx, cx, cy, cw, ch, 2);
+          ctx.stroke();
 
-        const iconSize = Math.round(cw * 0.5);
-        const ix = cx + Math.round((cw - iconSize) / 2);
-        const iy = cy + Math.round(ch * 0.08);
-        ctx.save();
-        roundRect(ctx, cx, cy, cw, ch, 2);
-        ctx.clip();
-        ctx.drawImage(images[i], ix, iy, iconSize, iconSize);
-        ctx.restore();
+          const pad = Math.round(cw * 0.08);
+          const imgSize = cw - pad * 2;
+          const ix = cx + pad;
+          const iy = cy + pad;
+          ctx.save();
+          roundRect(ctx, cx, cy, cw, ch, 2);
+          ctx.clip();
+          ctx.drawImage(images[i], ix, iy, imgSize, imgSize);
+          ctx.restore();
+        } else {
+          // 2026 fallback: dark bg + city icon + text (original behaviour)
+          ctx.fillStyle = ed.bg;
+          roundRect(ctx, cx, cy, cw, ch, 2);
+          ctx.fill();
 
-        const cityY = iy + iconSize + Math.round(ch * 0.12);
-        ctx.fillStyle = 'white';
-        ctx.font = `bold 13px system-ui, sans-serif`;
-        ctx.textAlign = 'center';
-        ctx.fillText(ed.city, x + CELL / 2, cityY);
+          ctx.strokeStyle = cellBorderChk;
+          ctx.lineWidth = 1.5;
+          ctx.setLineDash([]);
+          roundRect(ctx, cx, cy, cw, ch, 2);
+          ctx.stroke();
 
-        ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.font = `12px system-ui, sans-serif`;
-        ctx.fillText(ed.year.toString(), x + CELL / 2, cityY + Math.round(ch * 0.14));
+          const iconSize = Math.round(cw * 0.5);
+          const ix = cx + Math.round((cw - iconSize) / 2);
+          const iy = cy + Math.round(ch * 0.08);
+          ctx.save();
+          roundRect(ctx, cx, cy, cw, ch, 2);
+          ctx.clip();
+          ctx.drawImage(images[i], ix, iy, iconSize, iconSize);
+          ctx.restore();
+
+          const cityY = iy + iconSize + Math.round(ch * 0.12);
+          ctx.fillStyle = 'white';
+          ctx.font = `bold 13px system-ui, sans-serif`;
+          ctx.textAlign = 'center';
+          ctx.fillText(ed.city, x + CELL / 2, cityY);
+
+          ctx.fillStyle = 'rgba(255,255,255,0.7)';
+          ctx.font = `12px system-ui, sans-serif`;
+          ctx.fillText(ed.year.toString(), x + CELL / 2, cityY + Math.round(ch * 0.14));
+        }
       } else {
         // Unchecked: text card (matches the card-front on screen)
         ctx.fillStyle = isCurrent ? cellFillCur : cellFill;
@@ -270,10 +293,14 @@
               <span class="cell-now">Now!</span>
             {/if}
           </div>
-          <div class="card-face card-back" style="background:{edition.bg}">
-            <img src={edition.icon} alt="" aria-hidden="true" class="cell-icon" />
-            <span class="cell-city">{edition.city}</span>
-            <span class="cell-year">{edition.year}</span>
+          <div class="card-face card-back" class:card-back--logo={edition.logo} style={edition.logo ? '' : `background:${edition.bg}`}>
+            {#if edition.logo}
+              <img src={edition.logo} alt={`EuroPython ${edition.year} logo`} class="edition-logo" />
+            {:else}
+              <img src={edition.icon} alt="" aria-hidden="true" class="cell-icon" />
+              <span class="cell-city">{edition.city}</span>
+              <span class="cell-year">{edition.year}</span>
+            {/if}
           </div>
         </div>
       </button>
@@ -376,6 +403,17 @@
     width: 50%;
     aspect-ratio: 1;
     object-fit: contain;
+  }
+
+  .edition-logo {
+    width: 84%;
+    height: 84%;
+    object-fit: contain;
+  }
+
+  .card-back--logo {
+    background: white;
+    padding: 8%;
   }
 
   .card-back .cell-city {
