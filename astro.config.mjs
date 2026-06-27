@@ -151,6 +151,7 @@ export default defineConfig({
     "/rust-summit": "/session/rust-summit-at-europython",
     "/session/rust-summit": "/session/rust-summit-at-europython",
     "/25anniversary": "https://forms.gle/X4vCPsmHy95s5S9Y8",
+    "/discord": "https://discord.gg/pbbBHS4E45",
     // "/c-api-summit": "/session/c-api-summit",
     // "/wasm-summit": "/session/webassembly-summit",
     // "/programme/c-api-summit": "/session/c-api-summit",
