@@ -1,0 +1,165 @@
+---
+interface TriviaItem {
+  text: string;
+  year?: string;
+}
+
+interface Props {
+  trivia: TriviaItem[];
+}
+
+const { trivia } = Astro.props;
+---
+
+<div class="ep25-carousel not-prose" id="ep25-carousel">
+  <div class="ep25-carousel-inner">
+    {trivia.map((item, i) => (
+      <div class={`ep25-slide ${i === 0 ? 'active' : ''}`} aria-hidden={i !== 0 ? "true" : "false"}>
+        {item.year && <div class="ep25-slide-year">{item.year}</div>}
+        <p class="ep25-slide-text">{item.text}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="ep25-controls">
+    <button class="ep25-btn" id="ep25-prev" aria-label="Previous">←</button>
+    <div class="ep25-dots">
+      {trivia.map((_, i) => (
+        <button
+          class={`ep25-dot ${i === 0 ? 'active' : ''}`}
+          data-index={i}
+          aria-label={`Go to item ${i + 1}`}
+        ></button>
+      ))}
+    </div>
+    <button class="ep25-btn" id="ep25-next" aria-label="Next">→</button>
+  </div>
+</div>
+
+<script>
+  const carousel = document.getElementById("ep25-carousel");
+  if (carousel) {
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>(".ep25-slide"));
+    const dots = Array.from(carousel.querySelectorAll<HTMLElement>(".ep25-dot"));
+    let current = 0;
+    let timer: ReturnType<typeof setInterval>;
+
+    function goTo(index: number) {
+      slides[current].classList.remove("active");
+      slides[current].setAttribute("aria-hidden", "true");
+      dots[current].classList.remove("active");
+      current = ((index % slides.length) + slides.length) % slides.length;
+      slides[current].classList.add("active");
+      slides[current].setAttribute("aria-hidden", "false");
+      dots[current].classList.add("active");
+    }
+
+    function startAutoplay() {
+      timer = setInterval(() => goTo(current + 1), 9000);
+    }
+
+    function resetAutoplay() {
+      clearInterval(timer);
+      startAutoplay();
+    }
+
+    carousel.querySelector("#ep25-prev")?.addEventListener("click", () => { goTo(current - 1); resetAutoplay(); });
+    carousel.querySelector("#ep25-next")?.addEventListener("click", () => { goTo(current + 1); resetAutoplay(); });
+    dots.forEach((dot, i) => dot.addEventListener("click", () => { goTo(i); resetAutoplay(); }));
+
+    startAutoplay();
+  }
+</script>
+
+<style>
+  .ep25-carousel {
+    border: 1px dashed var(--color-border);
+    border-left: 3px solid rgb(255, 181, 0);
+    border-radius: 2px;
+    padding: 2rem 2rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--color-surface-subtle, transparent);
+  }
+
+  .ep25-carousel-inner {
+    min-height: 6rem;
+  }
+
+  .ep25-slide {
+    display: none;
+    animation: ep25FadeIn 0.35s ease;
+  }
+
+  .ep25-slide.active {
+    display: block;
+  }
+
+  @keyframes ep25FadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .ep25-slide-year {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent-themed, var(--color-primary));
+    margin-bottom: 0.5rem;
+  }
+
+  .ep25-slide-text {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text-primary);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .ep25-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .ep25-btn {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    line-height: 1;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .ep25-btn:hover {
+    border-color: var(--color-accent-themed);
+    background: var(--color-surface-subtle);
+  }
+
+  .ep25-dots {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .ep25-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .ep25-dot.active {
+    background: var(--color-accent-themed, var(--color-primary));
+    border-color: var(--color-accent-themed, var(--color-primary));
+  }
+</style>
