@@ -1,20 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
   <rect width="120" height="120" fill="#1003A3"></rect>
-  <g>
-        <rect x="38" y="98" width="44" height="6" fill="#ffffff"></rect>
-        <rect x="42" y="92" width="36" height="6" fill="#ffffff"></rect>
-        <rect x="44" y="64" width="6" height="28" fill="#ffffff"></rect>
-        <rect x="70" y="64" width="6" height="28" fill="#ffffff"></rect>
-        <path d="M52,92 V74 a8 8 0 0 1 16 0 V92 Z" fill="#1003A3"></path>
-        <rect x="40" y="58" width="40" height="6" fill="#ffffff"></rect>
-        <circle cx="45" cy="55" r="2.4" fill="#ffffff"></circle>
-        <circle cx="75" cy="55" r="2.4" fill="#ffffff"></circle>
-        <path d="M47,58 Q47,46 60,46 Q73,46 73,58 Z" fill="#ffffff"></path>
-        <rect x="52" y="34" width="16" height="12" fill="#ffffff"></rect>
-        <path d="M55,46 V40 a4 4 0 0 1 10 0 V46 Z" fill="#1003A3"></path>
-        <path d="M52,34 Q52,24 60,24 Q68,24 68,34 Z" fill="#ffffff"></path>
-        <rect x="56" y="16" width="8" height="8" fill="#ffffff"></rect>
-        <rect x="59" y="8" width="2" height="9" fill="#ffffff"></rect>
-        <circle cx="60" cy="8" r="2" fill="#ffffff"></circle>
-      </g>
+  <g fill="#ffffff" stroke="none">
+    
+    <path d="M59.1,6 h1.8 v2.6 h2.2 v1.6 h-2.2 v6 h-1.8 v-6 h-2.2 v-1.6 h2.2 Z"></path>
+    <circle cx="60" cy="16.2" r="1.5"></circle>
+    
+    <path d="M47,40 C44,32 49,21 60,18.5 C71,21 76,32 73,40 Z"></path>
+    
+    <path d="M49.5,37 Q60,32.5 70.5,37" fill="none" stroke="#1003A3" stroke-width="1"></path>
+    <path d="M51.5,32 Q60,28 68.5,32" fill="none" stroke="#1003A3" stroke-width="1"></path>
+    <path d="M54,27 Q60,24 66,27" fill="none" stroke="#1003A3" stroke-width="1"></path>
+    
+    <rect x="45" y="40" width="30" height="2.5"></rect>
+    
+    <rect x="45.5" y="42.5" width="29" height="8"></rect>
+    <path d="M48,50.5 V48 a2,2 0 0 1 4,0 V50.5 Z" fill="#1003A3"></path>
+    <path d="M58,50.5 V48 a2,2 0 0 1 4,0 V50.5 Z" fill="#1003A3"></path>
+    <path d="M68,50.5 V48 a2,2 0 0 1 4,0 V50.5 Z" fill="#1003A3"></path>
+    
+    <rect x="42.5" y="52.5" width="35" height="2.5"></rect>
+    
+    <path d="M47,78 L47,57 L51,54.5 L69,54.5 L73,57 L73,78 Z"></path>
+    
+    <path d="M50.5,76 V62 Q50.5,56.5 53.5,56.5 Q56.5,56.5 56.5,62 V76 Z" fill="#1003A3"></path>
+    <path d="M63.5,76 V62 Q63.5,56.5 66.5,56.5 Q69.5,56.5 69.5,62 V76 Z" fill="#1003A3"></path>
+    <rect x="47.8" y="55.5" width="0.9" height="22.5" fill="#1003A3"></rect>
+    <rect x="71.3" y="55.5" width="0.9" height="22.5" fill="#1003A3"></rect>
+    
+    <rect x="42" y="78" width="36" height="3.5"></rect>
+    
+    <path d="M38.5,90 V83 Q38.5,80 41,80 Q43.5,80 43.5,83 V90 Z"></path>
+    <path d="M76.5,90 V83 Q76.5,80 79,80 Q81.5,80 81.5,83 V90 Z"></path>
+    
+    <path d="M44,90 C44,82 50,80 60,80 C70,80 76,82 76,90 Z"></path>
+    
+    <rect x="38" y="90" width="44" height="2.5"></rect>
+    
+    <rect x="35" y="92" width="50" height="3"></rect>
+    
+    <rect x="37" y="95" width="46" height="15"></rect>
+    <rect x="44" y="96" width="0.9" height="12" fill="#1003A3"></rect>
+    <rect x="75.1" y="96" width="0.9" height="12" fill="#1003A3"></rect>
+    
+    <path d="M53,110 V102 Q53,94.5 60,94.5 Q67,94.5 67,102 V110 Z" fill="#1003A3"></path>
+    
+    <rect x="34" y="108" width="52" height="4"></rect>
+  </g>
 </svg>

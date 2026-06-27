@@ -1,15 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
   <rect width="120" height="120" fill="#1003A3"></rect>
-  <g>
-        <rect x="40" y="96" width="40" height="8" fill="#ffffff"></rect>
-        <ellipse cx="60" cy="60" rx="42" ry="33" fill="#ffffff"></ellipse>
-        <ellipse cx="44" cy="42" rx="16" ry="12" fill="#ffffff"></ellipse>
-        <g fill="#1003A3">
-          <circle cx="52" cy="38" r="2.3"></circle><circle cx="62" cy="36" r="2.3"></circle><circle cx="72" cy="40" r="2.3"></circle>
-          <circle cx="40" cy="46" r="2.3"></circle><circle cx="50" cy="48" r="2.3"></circle><circle cx="60" cy="46" r="2.3"></circle><circle cx="70" cy="48" r="2.3"></circle><circle cx="80" cy="48" r="2.3"></circle>
-          <circle cx="34" cy="56" r="2.3"></circle><circle cx="44" cy="58" r="2.3"></circle><circle cx="54" cy="56" r="2.3"></circle><circle cx="64" cy="58" r="2.3"></circle><circle cx="74" cy="56" r="2.3"></circle><circle cx="84" cy="58" r="2.3"></circle>
-          <circle cx="38" cy="68" r="2.3"></circle><circle cx="48" cy="66" r="2.3"></circle><circle cx="58" cy="68" r="2.3"></circle><circle cx="68" cy="66" r="2.3"></circle><circle cx="78" cy="68" r="2.3"></circle>
-          <circle cx="46" cy="78" r="2.3"></circle><circle cx="56" cy="78" r="2.3"></circle><circle cx="66" cy="78" r="2.3"></circle><circle cx="76" cy="78" r="2.3"></circle>
-        </g>
-      </g>
+
+  <defs>
+    
+    <pattern id="discs" width="5" height="8.66" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.16" r="1.95" fill="#ffffff"></circle>
+      <circle cx="0" cy="6.49" r="1.95" fill="#ffffff"></circle>
+      <circle cx="5" cy="6.49" r="1.95" fill="#ffffff"></circle>
+    </pattern>
+    
+    <clipPath id="blob">
+      <path d="M42,23 C64,13 90,19 101,38 C112,51 113,71 105,86 C99,98 84,104 69,104 C60,104 53,105 45,102 C33,98 23,92 19,82 C14,70 12,54 20,44 C27,34 31,29 42,23 Z"></path>
+    </clipPath>
+  </defs>
+
+  
+  <path d="M0,50 C25,44 50,46 76,56" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"></path>
+  <path d="M0,45 C25,39 50,41 78,51" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="0.1 3.4"></path>
+
+  
+  <g clip-path="url(#blob)">
+    <rect x="12" y="10" width="102" height="98" fill="url(#discs)"></rect>
+  </g>
+
+  
+  
+  <ellipse cx="70" cy="42" rx="9" ry="6.5" fill="#1003A3" stroke="#ffffff" stroke-width="1.6"></ellipse>
+  
+  <ellipse cx="62" cy="74" rx="24" ry="7.5" fill="#1003A3" stroke="#ffffff" stroke-width="1.8"></ellipse>
+  
+  <ellipse cx="58" cy="99" rx="15" ry="5.5" fill="#1003A3" stroke="#ffffff" stroke-width="1.6"></ellipse>
 </svg>

@@ -1,17 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" role="img" aria-label="Feskekôrka — Gothenburg Fish Church">
+  <title>Feskekôrka</title>
   <rect width="120" height="120" fill="#1003A3"></rect>
-  <g>
-        <polygon points="42,104 42,42 68,32 68,104" fill="#ffffff"></polygon>
-        <rect x="42" y="50" width="26" height="2.4" fill="#1003A3"></rect>
-        <rect x="42" y="62" width="26" height="2.4" fill="#1003A3"></rect>
-        <rect x="42" y="74" width="26" height="2.4" fill="#1003A3"></rect>
-        <rect x="42" y="86" width="26" height="2.4" fill="#1003A3"></rect>
-        <rect x="50" y="94" width="10" height="10" fill="#1003A3"></rect>
-        <rect x="80" y="16" width="2.6" height="88" fill="#ffffff"></rect>
-        <rect x="68" y="40" width="14" height="2.4" fill="#ffffff"></rect>
-        <rect x="74" y="24" width="8.6" height="2.2" fill="#ffffff"></rect>
-        <rect x="74" y="58" width="8.6" height="2.2" fill="#ffffff"></rect>
-        <rect x="74" y="78" width="8.6" height="2.2" fill="#ffffff"></rect>
-        <polygon points="80,16 86,28 80,28" fill="#ffffff"></polygon>
-      </g>
+  <path d="M14 43L23.2 25L32.4 43L41.6 25L50.8 43L60 25L69.2 43L78.4 25L87.6 43L96.8 25L106 43L106 95L14 95ZM19.2 87L19.2 63A8 8 0 0 1 23.2 56.07A8 8 0 0 1 27.2 63L27.2 87ZM37.6 87L37.6 63A8 8 0 0 1 41.6 56.07A8 8 0 0 1 45.6 63L45.6 87ZM56 87L56 63A8 8 0 0 1 60 56.07A8 8 0 0 1 64 63L64 87ZM74.4 87L74.4 63A8 8 0 0 1 78.4 56.07A8 8 0 0 1 82.4 63L82.4 87ZM92.8 87L92.8 63A8 8 0 0 1 96.8 56.07A8 8 0 0 1 100.8 63L100.8 87Z" fill="#ffffff" fill-rule="evenodd"></path>
 </svg>

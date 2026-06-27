@@ -13,11 +13,15 @@
         <circle cx="65" cy="71" r="3" fill="#1003A3"></circle>
         <circle cx="77" cy="71" r="3" fill="#1003A3"></circle>
         <circle cx="89" cy="71" r="3" fill="#1003A3"></circle>
-        <path d="M56,60 Q56,36 77,26 Q98,36 98,60 Z" fill="#ffffff"></path>
-        <rect x="66" y="33" width="1.8" height="27" fill="#1003A3"></rect>
-        <rect x="76.2" y="29" width="1.8" height="31" fill="#1003A3"></rect>
-        <rect x="86.4" y="33" width="1.8" height="27" fill="#1003A3"></rect>
-        <rect x="72" y="18" width="10" height="10" fill="#ffffff"></rect>
-        <circle cx="77" cy="15" r="3" fill="#ffffff"></circle>
+        <path d="M56,60 C57,44 73,33 77,26 C81,33 97,44 98,60 Z" fill="#ffffff"></path>
+        <rect x="76.1" y="28" width="1.8" height="32" fill="#1003A3"></rect>
+        <line x1="65" y1="59" x2="73.5" y2="31" stroke="#1003A3" stroke-width="1.8"></line>
+        <line x1="89" y1="59" x2="80.5" y2="31" stroke="#1003A3" stroke-width="1.8"></line>
+        <rect x="73" y="18" width="8" height="8" fill="#ffffff"></rect>
+        <rect x="76.4" y="19.5" width="1.2" height="6.5" fill="#1003A3"></rect>
+        <path d="M71.5,18 L82.5,18 L77,11 Z" fill="#ffffff"></path>
+        <circle cx="77" cy="9.3" r="1.7" fill="#ffffff"></circle>
+        <rect x="76.4" y="4.8" width="1.2" height="4.5" fill="#ffffff"></rect>
+        <rect x="74.6" y="6.2" width="4.8" height="1.2" fill="#ffffff"></rect>
       </g>
 </svg>

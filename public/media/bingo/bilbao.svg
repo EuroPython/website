@@ -1,13 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
   <rect width="120" height="120" fill="#1003A3"></rect>
-  <g>
-        <path d="M16,100 C16,84 30,80 46,82 C70,84 92,82 104,100 Z" fill="#ffffff"></path>
-        <path d="M30,100 C28,74 36,58 46,50 C52,64 50,84 52,100 Z" fill="#ffffff"></path>
-        <path d="M50,100 C48,56 58,34 68,24 C74,40 72,74 72,100 Z" fill="#ffffff"></path>
-        <path d="M70,100 C72,72 82,60 94,62 C98,76 94,90 100,100 Z" fill="#ffffff"></path>
-        <path d="M52,99 C50,60 58,38 67,27" fill="none" stroke="#1003A3" stroke-width="1.8"></path>
-        <path d="M51,99 C49,76 56,60 66,52" fill="none" stroke="#1003A3" stroke-width="1.8"></path>
-        <path d="M71,99 C73,74 82,63 93,63" fill="none" stroke="#1003A3" stroke-width="1.8"></path>
-        <rect x="16" y="100" width="88" height="4" fill="#ffffff"></rect>
-      </g>
+  <g fill="#FFFFFF">
+    <path d="M 13 80 C 13 72, 13 64, 16 61 C 25 58, 35 60, 45 63 C 49 65, 52 65, 54 64 C 55 55, 58 46, 63 43 C 67 41, 71 42, 74 45 C 76 47, 78 48, 80 49 C 82 47, 85 47, 88 49 C 89 51, 90 53, 91 54 C 93 53, 96 53, 98 55 C 100 57, 101 59, 102 60 C 103 62, 105 65, 105 72 L 105 80 L 13 80 Z"></path>
+    <rect x="15" y="80" width="90" height="4.2" rx="0.6"></rect>
+    <rect x="9" y="88" width="102" height="1.8" rx="0.9"></rect>
+  </g>
+  <g fill="none" stroke="#1003A3" stroke-width="1.3" stroke-linecap="round">
+    <path d="M 19 65 C 29 63, 40 65, 51 68"></path>
+    <path d="M 57 53 C 63 50, 70 51, 76 54"></path>
+    <path d="M 84 52 C 89 52, 94 54, 99 57"></path>
+  </g>
+  <g fill="#1003A3">
+    <rect x="62" y="67" width="1.4" height="13"></rect>
+    <rect x="68" y="67" width="1.4" height="13"></rect>
+    <rect x="74" y="67" width="1.4" height="13"></rect>
+  </g>
 </svg>

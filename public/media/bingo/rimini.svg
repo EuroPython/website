@@ -1,16 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" role="img" aria-label="Arco d&#39;Augusto, Rimini">
+  <title>Arco d&#39;Augusto</title>
   <rect width="120" height="120" fill="#1003A3"></rect>
-  <g>
-        <rect x="32" y="64" width="56" height="40" fill="#ffffff"></rect>
-        <path d="M48,104 V80 a12 12 0 0 1 24 0 V104 Z" fill="#1003A3"></path>
-        <rect x="38" y="70" width="2" height="32" fill="#1003A3"></rect>
-        <rect x="43" y="70" width="2" height="32" fill="#1003A3"></rect>
-        <rect x="75" y="70" width="2" height="32" fill="#1003A3"></rect>
-        <rect x="80" y="70" width="2" height="32" fill="#1003A3"></rect>
-        <circle cx="44" cy="74" r="4" fill="#1003A3"></circle>
-        <circle cx="76" cy="74" r="4" fill="#1003A3"></circle>
-        <rect x="30" y="56" width="60" height="8" fill="#ffffff"></rect>
-        <polygon points="42,56 60,40 78,56" fill="#ffffff"></polygon>
-        <rect x="58" y="32" width="4" height="9" fill="#ffffff"></rect>
-      </g>
+  <path d="M24 14L96 14L96 104L24 104Z M30.51 14L34.91 14L34.91 26L30.51 26ZM41.43 14L45.83 14L45.83 26L41.43 26ZM52.34 14L56.74 14L56.74 26L52.34 26ZM63.26 14L67.66 14L67.66 26L63.26 26ZM74.17 14L78.57 14L78.57 26L74.17 26ZM85.09 14L89.49 14L89.49 26L85.09 26Z M46 100L46 66A14 14 0 0 1 74 66L74 100Z M26 42L94 42L94 43.6L26 43.6Z M60 30.5L43 40.5L77 40.5Z M60 33.2L45.5 38.8L74.5 38.8Z M28 47.45L44 47.45L44 48.95L28 48.95Z M76 47.45L92 47.45L92 48.95L76 48.95Z M28 93.85L44 93.85L44 95.35L28 95.35Z M76 93.85L92 93.85L92 95.35L76 95.35Z M32.5 52L33.5 52L33.5 93L32.5 93Z M38.5 52L39.5 52L39.5 93L38.5 93Z M86.5 52L87.5 52L87.5 93L86.5 93Z M80.5 52L81.5 52L81.5 93L80.5 93Z" fill="#ffffff" fill-rule="evenodd"></path>
 </svg>
