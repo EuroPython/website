@@ -47,6 +47,7 @@ const L = {
   packagingSummit: { label: "Packaging Summit", url: "/packaging-summit" },
 
   // Events & Social
+  sideEvents: { label: "Side Events", url: "/schedule/events" },
   sprints: { label: "Sprints Weekend", url: "/sprints" },
   socialEvent: { label: "Social Event", url: "/social-event" },
   beginnersDay: { label: "Beginners' Day", url: "/beginners-day" },
@@ -129,6 +130,7 @@ export const NAV_MENUS: NavMenu[] = [
         label: "Talks & Schedule",
         items: [
           L.schedule,
+          L.sideEvents,
           L.talks,
           L.tutorials,
           L.posters,
@@ -257,6 +259,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Events",
     items: [
+      L.sideEvents,
       L.sprints,
       L.socialEvent,
       L.beginnersDay,

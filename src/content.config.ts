@@ -384,6 +384,21 @@ const jobs = defineCollection({
   }),
 });
 
+const events = defineCollection({
+  loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/events" }),
+  schema: z.object({
+    title: z.string(),
+    date: z.string(),
+    date_end: z.string().optional(),
+    time_start: z.string().optional(),
+    time_end: z.string().optional(),
+    location: z.string().optional(),
+    url: z.string().optional(),
+    description: z.string(),
+    draft: z.boolean().optional().default(false),
+  }),
+});
+
 const sprints = defineCollection({
   loader: glob({ pattern: "*.{md,mdx}", base: "./src/content/sprints" }),
   schema: z.object({
@@ -411,6 +426,7 @@ const sprints = defineCollection({
 
 export const collections = {
   days,
+  events,
   pages,
   deadlines,
   week,
