@@ -16,8 +16,6 @@ const ALWAYS_EXIST = new Set([
   "sponsors",
   "community-partners",
   "media-partners",
-  "open-space",
-  "open-spaces",
 ]);
 
 /**
