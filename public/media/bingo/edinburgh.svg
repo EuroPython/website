@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+  <rect width="120" height="120" fill="#1003A3"></rect>
+
+  
+  <polygon fill="#ffffff" points="15,66 92,66 92,73 110,73 117,96 3,96 8,66"></polygon>
+
+  
+  <polygon fill="#ffffff" points="0,120 0,103 10,99 30,99 36,94 64,94 70,99 108,99 120,103 120,120"></polygon>
+
+  
+  <rect x="14" y="44" width="24" height="22" fill="#ffffff"></rect>
+  <polygon fill="#ffffff" points="11,45 26,27 41,45"></polygon>
+  <rect x="22" y="31" width="3" height="6" fill="#ffffff"></rect>
+
+  
+  <rect x="38" y="48" width="32" height="18" fill="#ffffff"></rect>
+  <polygon fill="#ffffff" points="39,49 43,40 47,49"></polygon>
+  <polygon fill="#ffffff" points="47,49 51,40 55,49"></polygon>
+  <polygon fill="#ffffff" points="55,49 59,40 63,49"></polygon>
+  <polygon fill="#ffffff" points="63,49 67,40 71,49"></polygon>
+
+  
+  <rect x="70" y="40" width="22" height="26" fill="#ffffff"></rect>
+  <polygon fill="#ffffff" points="67,41 81,26 95,41"></polygon>
+  <rect x="76" y="19" width="3" height="11" fill="#ffffff"></rect>
+  <rect x="83" y="19" width="3" height="11" fill="#ffffff"></rect>
+
+  
+  <rect x="94" y="56" width="14" height="17" fill="#ffffff"></rect>
+  <polygon fill="#ffffff" points="91,57 101,46 111,57"></polygon>
+  <rect x="103" y="49" width="3" height="6" fill="#ffffff"></rect>
+
+  
+  
+  <rect x="18" y="50" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="24" y="50" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="30" y="50" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="18" y="58" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="24" y="58" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="30" y="58" width="3" height="5" fill="#1003A3"></rect>
+
+  
+  <rect x="41" y="53" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="47" y="53" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="53" y="53" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="59" y="53" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="65" y="53" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="41" y="60" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="47" y="60" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="53" y="60" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="59" y="60" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="65" y="60" width="3" height="4" fill="#1003A3"></rect>
+
+  
+  <rect x="73" y="45" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="80" y="45" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="87" y="45" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="73" y="54" width="3" height="5" fill="#1003A3"></rect>
+  <rect x="87" y="54" width="3" height="5" fill="#1003A3"></rect>
+  
+  <path fill="#1003A3" d="M78,66 V62 a4,4 0 0 1 8,0 V66 Z"></path>
+
+  
+  <rect x="97" y="60" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="102" y="60" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="97" y="66" width="3" height="4" fill="#1003A3"></rect>
+  <rect x="102" y="66" width="3" height="4" fill="#1003A3"></rect>
+</svg>
