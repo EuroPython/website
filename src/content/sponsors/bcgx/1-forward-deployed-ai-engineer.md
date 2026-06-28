@@ -1,6 +1,6 @@
 ---
 title: Forward Deployed AI Engineer
-type: 
+type:
 location:
 level:
 salary:

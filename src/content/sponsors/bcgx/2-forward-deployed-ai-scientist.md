@@ -1,6 +1,6 @@
 ---
 title: Forward Deployed AI Scientist
-type: 
+type:
 location:
 level:
 salary:
