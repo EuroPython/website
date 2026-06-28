@@ -4,45 +4,9 @@ import Search from "@components/Search.astro";
 import ThemeToggle from "@components/ThemeToggle.astro";
 
 import { NAV_MENUS, type NavMenu } from "@data/nav";
-import { getCollection } from "astro:content";
-import { readFileSync } from "fs";
+import { buildLinkChecker } from "@utils/nav";
 
-// Parse redirect paths from astro.config.mjs at build time
-const configText = readFileSync("astro.config.mjs", "utf-8");
-const redirectMatch = configText.match(/redirects:\s*{([^}]+)}/s);
-const redirectPathsFromConfig: string[] = redirectMatch
-  ? [...redirectMatch[1].matchAll(/"([^"]+)"\s*:/g)].map((m) => m[1].replace(/^\//, "").replace(/\/$/, ""))
-  : [];
-
-// Build list of existing content page slugs to filter nav
-const existingPages = await getCollection("pages");
-const existingSlugs = new Set(existingPages.map((p) => p.id));
-
-// Standalone .astro pages that always exist regardless of content collection
-const alwaysExist = new Set([
-  "sessions", "speakers", "schedule", "posters", "talks", "tutorials",
-  "sprints", "jobs", "sponsors", "community-partners", "media-partners",
-]);
-
-function linkExists(url: string): boolean {
-  if (url.startsWith("http")) return true;
-  const slug = url.replace(/^\//, "").replace(/\/$/, "");
-  if (!slug) return true;
-  if (alwaysExist.has(slug)) return true;
-  const redirectPaths = [...new Set(redirectPathsFromConfig)];
-  if (redirectPaths.includes(slug)) return true;
-  // Check exact match in content pages
-  if (existingSlugs.has(slug)) return true;
-  // Check if slug is the short form of a nested page (e.g. "mentorship" from "programme/mentorship")
-  for (const existing of existingSlugs) {
-    if (existing.endsWith("/" + slug) || existing === slug) return true;
-  }
-  return false;
-}
-
-function sectionHasItems(section: { items: { url: string }[] }): boolean {
-  return section.items.some((item) => linkExists(item.url));
-}
+const linkExists = await buildLinkChecker();
 
 // Filter nav menus to only show links that point to existing pages
 const activeMenus = NAV_MENUS.map((menu) => ({
