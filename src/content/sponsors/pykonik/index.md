@@ -10,7 +10,7 @@ description:
 socials:
   linkedin: https://www.linkedin.com/company/pykonik/
   twitter:
-  github: https://github.com/pykonik
+  github:
   discord: http://discord.pykonik.org
   mastodon:
   bluesky:
