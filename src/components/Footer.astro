@@ -1,7 +1,16 @@
 ---
 import SocialLinks from "@components/SocialLinks.astro";
 import { FOOTER_COLUMNS, TERMS, SOCIALS } from "@data/nav";
+import { buildLinkChecker } from "@utils/nav";
 import EPSLogo from "/public/theme/eps-logo.svg";
+
+const linkExists = await buildLinkChecker();
+
+// Filter footer columns to only show links that point to existing pages
+const activeFooterColumns = FOOTER_COLUMNS.map((col) => ({
+  ...col,
+  items: col.items.filter((item) => linkExists(item.url)),
+})).filter((col) => col.items.length > 0);
 
 const buildTimestamp = __TIMESTAMP__;
 const gitVersion = __GIT_VERSION__;
@@ -18,7 +27,7 @@ const gitVersion = __GIT_VERSION__;
     </div>
     <div class="footer-grid">
     {
-      FOOTER_COLUMNS.map((col) => (
+      activeFooterColumns.map((col) => (
         <div>
           <p class="footer-col-title">{col.title}</p>
           <ul class="footer-links">

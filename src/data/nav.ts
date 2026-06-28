@@ -114,6 +114,7 @@ const L = {
     url: "https://ep2026.europython.eu/25anniversary",
     external: true,
   },
+  yearsOfEp: { label: "25 Years of EuroPython", url: "/25yearsofep" },
 };
 
 // ── Nav menus ────────────────────────────────────────────────
@@ -148,6 +149,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.beginnersDay,
           L.speakersDinner,
           L.openSpaces,
+          L.yearsOfEp,
         ],
       },
       {

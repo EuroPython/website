@@ -30,13 +30,14 @@ import "@styles/light-theme.css";
 export interface Props {
   title: string;
   description: string;
+  image?: string;
   hideHeader?: boolean;
   hideFooter?: boolean;
 }
 
 const currentPath = Astro.url.pathname;
 
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 
 if (!title || !description) {
 throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be set.`);
@@ -51,7 +52,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} image={image} />
     <slot name="head" />
 
     </Fragment>
