@@ -97,6 +97,8 @@
     const HEADER_H = 100;
     const W = COLS * CELL + PAD * 2;
     const H = COLS * CELL + PAD * 2 + HEADER_H;
+    const SIZE = Math.max(W, H);
+    const xOffset = Math.round((SIZE - W) / 2);
 
     // Resolve actual CSS variables from the page so the export matches the current theme
     const style = getComputedStyle(document.documentElement);
@@ -133,29 +135,29 @@
     );
 
     const canvas = document.createElement('canvas');
-    canvas.width = W;
-    canvas.height = H;
+    canvas.width = SIZE;
+    canvas.height = SIZE;
     const ctx = canvas.getContext('2d');
 
     ctx.fillStyle = bgColor;
-    ctx.fillRect(0, 0, W, H);
+    ctx.fillRect(0, 0, SIZE, SIZE);
 
     ctx.fillStyle = '#f0c040';
     ctx.font = 'bold 30px system-ui, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('EuroPython Bingo', W / 2, PAD + 34);
+    ctx.fillText('EuroPython Bingo', SIZE / 2, PAD + 34);
 
     ctx.fillStyle = subtitleColor;
     ctx.font = '13px system-ui, sans-serif';
     ctx.fillText(
       `${checkedCount} of 25 editions attended · ep2026.europython.eu/bingo`,
-      W / 2, PAD + 60
+      SIZE / 2, PAD + 60
     );
 
     editions.forEach((ed, i) => {
       const col = i % COLS;
       const row = Math.floor(i / COLS);
-      const x = PAD + col * CELL;
+      const x = xOffset + PAD + col * CELL;
       const y = HEADER_H + PAD + row * CELL;
       const isChecked = checked[i];
       const isCurrent = ed.year === 2026;
