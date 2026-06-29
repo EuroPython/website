@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" role="img" aria-label="Prague Astronomical Clock">
+  <title>Prague Astronomical Clock</title>
+  <rect width="120" height="120" fill="#1003A3"></rect>
+  <g fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="60" cy="60" r="53"></circle>
+    <circle cx="60" cy="60" r="44" stroke-width="1.4"></circle>
+    <circle cx="56" cy="50" r="23" stroke-width="1.8"></circle>
+    <circle cx="63" cy="71" r="22" stroke-width="1.8"></circle>
+    <circle cx="60" cy="60" r="7" stroke-width="1.6"></circle>
+    <circle cx="50" cy="57" r="6" stroke-width="1.4"></circle>
+    <path d="M50 51 A 4 6 0 0 0 50 63" stroke-width="1.2"></path>
+    <line x1="30" y1="82" x2="93" y2="37"></line>
+    <line x1="57" y1="25" x2="65" y2="95"></line>
+    <line x1="60" y1="60" x2="31" y2="70" stroke-width="1.8"></line>
+  </g>
+  <path d="M93 37L89.34 43.92L85.27 38.22Z" fill="#ffffff"></path>
+  <path d="M65 95L60.73 88.44L67.68 87.65Z" fill="#ffffff"></path>
+  <path d="M26 63.5L26.99 67.6L30.6 65.4L28.4 69.01L32.5 70L28.4 70.99L30.6 74.6L26.99 72.4L26 76.5L25.01 72.4L21.4 74.6L23.6 70.99L19.5 70L23.6 69.01L21.4 65.4L25.01 67.6Z" fill="#ffffff"></path>
+</svg>
