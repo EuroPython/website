@@ -53,10 +53,10 @@
     const count = attended.length;
     const base = `I've attended ${count} EuroPython conference${count !== 1 ? 's' : ''}! 🐍`;
     const body = count > 0 ? `${base}\n\n${attended.join(' · ')}` : base;
-    return `${body}\n\nWhat about you: ${BINGO_PAGE_URL}`;
+    return `${body}\n\nWhat about you: ${BINGO_PAGE_URL}\n#EuroPython #Python`;
   }
 
-  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/#bingo';
+  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/bingo';
 
   function shareLinkedIn() {
     const text = buildShareText();
