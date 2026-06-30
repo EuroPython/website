@@ -52,5 +52,5 @@ description: |-
   - **Tools:** Jupyter Notebooks, Google Colab, Git (GitHub/GitLab), MLflow, TensorBoard
   - **Deployment:** Flask, FastAPI, TensorFlow Serving, Streamlit
 requirements:
-apply_link: https://careers.bcg.com/global/en/search-results?keywords=bcg%20x
+apply_link: https://careers.bcg.com/global/en/job/55983/Forward-Deployed-AI-Engineer-Italy-BCG-X
 ---

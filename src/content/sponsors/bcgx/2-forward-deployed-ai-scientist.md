@@ -35,5 +35,5 @@ description: |-
 
   - **Programming:** Python
 requirements:
-apply_link: https://careers.bcg.com/global/en/search-results?keywords=bcg%20x
+apply_link: https://careers.bcg.com/global/en/job/55984/Forward-Deployed-AI-Scientist-Italy-BCG-X
 ---
