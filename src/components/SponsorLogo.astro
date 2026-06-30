@@ -3,8 +3,7 @@ import { getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import { sponsorLogos } from "@data/sponsorLogos";
 
-const { sponsor: sponsorId, special_event=false } = Astro.props;
-
+const { sponsor: sponsorId, special_event = false } = Astro.props;
 
 const sponsor = await getEntry("sponsors", sponsorId);
 
@@ -22,24 +21,29 @@ const {
 } = sponsor.data;
 
 const logo = sponsorLogos[sponsor.id];
-const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
-: tier==="Platinum" ? `/sponsor/${sponsorId}`
-: tier==="Media Partners" ? `/media-partners#sponsor-${sponsorId}` : tier==="Startups" ? `/startups#sponsor-${sponsorId}` : `/sponsors#sponsor-${sponsorId}`
-
+const slug =
+  tier === "Partners"
+    ? `/community-partners#sponsor-${sponsorId}`
+    : tier === "Platinum"
+      ? `/sponsor/${sponsorId}`
+      : tier === "Media Partners"
+        ? `/media-partners#sponsor-${sponsorId}`
+        : tier === "Startups"
+          ? `/startups#sponsor-${sponsorId}`
+          : `/sponsors#sponsor-${sponsorId}`;
 ---
 
-<div
-  class="lg:max-w-[400px] flex flex-col p-6 bg-white"
->
-  <div class={`w-full grid text-center justify-center items-center md:items-center ${tier === "Platinum" ? "min-h-[140px]" : ""}`}>
+<div class="lg:max-w-[400px] flex flex-col p-6 bg-white">
+  <div
+    class={`w-full grid text-center justify-center items-center md:items-center ${tier === "Platinum" ? "min-h-[140px]" : ""}`}
+  >
     {
       website && slug ? (
-
-      <a href={slug} aria-label={`Link to ${title}`}
->
+        <a href={slug} aria-label={`Link to ${title}`}>
           <Image
             src={logo}
             alt={`${title} Logo`}
+            width={400}
             class={`max-w-full ${logo_max_width ? `lg:max-w-[${logo_max_width}]` : ""}`}
             style={{
               maxHeight: "120px",
@@ -49,31 +53,29 @@ const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
           />
 
           <h3 class="font-semibold text-gray-900 text-center text-sm">
-          {tier==="Partners" && title}
+            {tier === "Partners" && title}
           </h3>
         </a>
-  ):
-          <Image
-            src={logo}
-            alt={`${title} Logo`}
-            class={`max-w-full ${logo_max_width ? `lg:max-w-[${logo_max_width}]` : ""}`}
-            style={{
-              maxHeight: "120px",
-              objectFit: "contain",
-              padding: logo_padding ? logo_padding : undefined,
-            }}
-          />
+      ) : (
+        <Image
+          src={logo}
+          alt={`${title} Logo`}
+          width={400}
+          class={`max-w-full ${logo_max_width ? `lg:max-w-[${logo_max_width}]` : ""}`}
+          style={{
+            maxHeight: "120px",
+            objectFit: "contain",
+            padding: logo_padding ? logo_padding : undefined,
+          }}
+        />
+      )
     }
-    { special_event && event_name &&
-    <span class="">{event_name}</span>
-    }
+    {special_event && event_name && <span class="">{event_name}</span>}
   </div>
 </div>
 
 <style>
-
   div {
     justify-content: flex-end;
   }
-
-  </style>
+</style>
