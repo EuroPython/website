@@ -56,7 +56,7 @@
     return `${body}\n\nWhat about you: ${BINGO_PAGE_URL}`;
   }
 
-  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/#bingo';
+  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/bingo';
 
   function shareLinkedIn() {
     const text = buildShareText();
