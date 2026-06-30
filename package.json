@@ -64,7 +64,7 @@
     "proseWrap": "always"
   },
   "lint-staged": {
-    "*.{svg}": [
+    "*.svg": [
       "svgo --config svgo.config.mjs"
     ],
     "*.{png,jpg,jpeg}": [
