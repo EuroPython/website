@@ -9,15 +9,18 @@
 export default {
   multipass: true,
   plugins: [
+    "preset-default",
     {
-      name: "preset-default",
-      params: {
-        overrides: {
-          removeViewBox: false,
-          removeTitle: false,
-          removeDesc: false,
-        },
-      },
+      name: "removeViewBox",
+      active: false,
+    },
+    {
+      name: "removeTitle",
+      active: false,
+    },
+    {
+      name: "removeDesc",
+      active: false,
     },
   ],
 };
