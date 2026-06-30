@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" role="img" aria-label="Bell Tower of Vilnius Cathedral">
-  <title>Vilnius Cathedral Bell Tower</title>
-  <rect width="120" height="120" fill="#1003A3"></rect>
-  <path d="M38 110 Q40 95 45 80 L46 62 L46.5 46 L45.5 45 Q45 40 50 36 Q54 33.5 57 33 L60 12 L63 33 Q66 33.5 70 36 Q75 40 74.5 45 L73.5 46 L74 62 L75 80 Q80 95 82 110 Z M56.6 52 A3.4 3.4 0 1 0 63.4 52 A3.4 3.4 0 1 0 56.6 52 Z M51 76 L51 70 A2 2 0 0 1 55 70 L55 76 Z M58 76 L58 70 A2 2 0 0 1 62 70 L62 76 Z M65 76 L65 70 A2 2 0 0 1 69 70 L69 76 Z M58.9 90 L61.1 90 L61.1 99 L58.9 99 Z M45.5 44.3 L74.5 44.3 L74.5 45.6 L45.5 45.6 Z M46 61.3 L74 61.3 L74 62.6 L46 62.6 Z M45 79.2 L75 79.2 L75 80.6 L45 80.6 Z" fill="#ffffff" fill-rule="evenodd"></path>
-  <path d="M59.2 8 L60.8 8 L60.8 11.5 L63.4 11.5 L63.4 13 L60.8 13 L60.8 19 L59.2 19 L59.2 13 L56.6 13 L56.6 11.5 L59.2 11.5 Z" fill="#ffffff"></path>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" aria-label="Bell Tower of Vilnius Cathedral" viewBox="0 0 120 120"><path fill="#1003a3" d="M0 0h120v120H0z"/><path fill="#fff" fill-rule="evenodd" d="M38 110q2-15 7-30l1-18 .5-16-1-1q-.5-5 4.5-9 4-2.5 7-3l3-21 3 21q3 .5 7 3 5 4 4.5 9l-1 1 .5 16 1 18q5 15 7 30Zm18.6-58a3.4 3.4 0 1 0 6.8 0 3.4 3.4 0 1 0-6.8 0M51 76v-6a2 2 0 0 1 4 0v6Zm7 0v-6a2 2 0 0 1 4 0v6Zm7 0v-6a2 2 0 0 1 4 0v6Zm-6.1 14h2.2v9h-2.2ZM45.5 44.3h29v1.3h-29Zm.5 17h28v1.3H46Zm-1 17.9h30v1.4H45Z"/><path fill="#fff" d="M59.2 8h1.6v3.5h2.6V13h-2.6v6h-1.6v-6h-2.6v-1.5h2.6Z"/></svg>
