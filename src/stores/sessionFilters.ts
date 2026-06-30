@@ -53,7 +53,11 @@ export const DATA_AI_TRACKS: string[] = [
 
 export const DURATIONS = [
   { label: "≤30 min", value: "short", test: (d: number) => d <= 30 },
-  { label: "31–60 min", value: "medium", test: (d: number) => d > 30 && d <= 60 },
+  {
+    label: "31–60 min",
+    value: "medium",
+    test: (d: number) => d > 30 && d <= 60,
+  },
   { label: "60+ min", value: "long", test: (d: number) => d > 60 },
 ];
 
@@ -61,14 +65,14 @@ export const DURATIONS = [
 
 export interface FilterState {
   search: string;
-  types: string[];       // session type names
-  levels: string[];      // "beginner" | "intermediate" | "advanced"
-  tracks: string[];      // full track names
-  days: string[];        // "2026-07-13" etc.
+  types: string[]; // session type names
+  levels: string[]; // "beginner" | "intermediate" | "advanced"
+  tracks: string[]; // full track names
+  days: string[]; // "2026-07-13" etc.
   rooms: string[];
-  durations: string[];   // "short" | "medium" | "long"
+  durations: string[]; // "short" | "medium" | "long"
   favoritesOnly: boolean;
-  dataAi: boolean;       // Data & AI quick toggle
+  dataAi: boolean; // Data & AI quick toggle
 }
 
 const defaults: FilterState = {
@@ -124,7 +128,10 @@ export function getFilters(): FilterState {
 }
 
 /** Write a single filter value. Empties from store if it matches the default. */
-export function setFilter<K extends keyof FilterState>(key: K, value: FilterState[K]) {
+export function setFilter<K extends keyof FilterState>(
+  key: K,
+  value: FilterState[K]
+) {
   writeValue(key, value);
 }
 
@@ -148,7 +155,7 @@ export function filterSessions(
   sessions: any[],
   speakerMap: Record<string, string>,
   favorites: Record<string, any>,
-  filters?: FilterState,
+  filters?: FilterState
 ): any[] {
   const f = filters ?? getFilters();
   const q = f.search.toLowerCase().trim();
@@ -173,7 +180,10 @@ export function filterSessions(
       const st = (d.session_type ?? "").toLowerCase();
       const match = f.types.some((t) => {
         const tt = t.toLowerCase();
-        if (tt === "talk") return st === "talk" || st === "talk (long session)" || st === "panel";
+        if (tt === "talk")
+          return (
+            st === "talk" || st === "talk (long session)" || st === "panel"
+          );
         return st === tt || st === tt.toLowerCase();
       });
       if (!match) return false;
@@ -218,10 +228,7 @@ export function filterSessions(
  * Filter schedule events (from days collection) by current filter state.
  * Matches by session_type, level, track against events.
  */
-export function filterDayEvents(
-  events: any[],
-  filters?: FilterState,
-): any[] {
+export function filterDayEvents(events: any[], filters?: FilterState): any[] {
   const f = filters ?? getFilters();
 
   return events.filter((ev: any) => {
@@ -230,7 +237,10 @@ export function filterDayEvents(
       const st = (ev.session_type ?? ev.event_type ?? "").toLowerCase();
       const match = f.types.some((t) => {
         const tt = t.toLowerCase();
-        if (tt === "talk") return st === "talk" || st === "talk (long session)" || st === "panel";
+        if (tt === "talk")
+          return (
+            st === "talk" || st === "talk (long session)" || st === "panel"
+          );
         return st === tt;
       });
       if (!match) return false;
