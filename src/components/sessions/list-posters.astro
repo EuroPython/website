@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 
+import { t } from "@utils/i18n";
+
 const allSpeakers = await getCollection("speakers");
 const speakerNames: Record<string, string> = {};
 for (const s of allSpeakers) {
@@ -52,7 +54,7 @@ const { posters } = Astro.props;
                 {p.data.duration && <span class="poster-tag">{p.data.duration} min</span>}
                 {p.data.level && <span class={`poster-level poster-level--${p.data.level}`}>{p.data.level.charAt(0).toUpperCase() + p.data.level.slice(1)}</span>}
               </div>
-              {p.data.track && <span class="poster-track">{p.data.track}</span>}
+              {p.data.track && <span class="poster-track">{t(p.data.track)}</span>}
             </div>
           </div>
         ))}

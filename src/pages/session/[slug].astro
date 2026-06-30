@@ -11,6 +11,7 @@ import Section2 from "@ui/Section2.astro";
 //
 import CodeHeart from "@components/island/CodeHeart.svelte";
 import Button from "@ui/Button.astro";
+import { t } from "@utils/i18n";
 
 export async function getStaticPaths() {
   const sessions = await getCollection("sessions");
@@ -89,7 +90,7 @@ const nextSessionsOrdered = sameRoomNextSession
         entry.data.track && (
           <>
             <dt class="font-bold">Track:</dt>
-            <dd class="capitalize">{entry.data.track}</dd>
+            <dd class="capitalize">{t(entry.data.track)}</dd>
           </>
         )
       }

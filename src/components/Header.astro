@@ -6,18 +6,38 @@ import ThemeToggle from "@components/ThemeToggle.astro";
 import { NAV_MENUS, type NavMenu } from "@data/nav";
 import { buildLinkChecker } from "@utils/nav";
 
+const showHidden =
+  import.meta.env.EP_SHOW_HIDDEN === "true" ||
+  import.meta.env.PUBLIC_EP_SHOW_HIDDEN === "true";
+
 const linkExists = await buildLinkChecker();
 
-// Filter nav menus to only show links that point to existing pages
+// Build a set of existing URLs for hidden-page detection
+const existingUrls = new Set<string>();
+for (const menu of NAV_MENUS) {
+  if (menu.url && linkExists(menu.url)) existingUrls.add(menu.url);
+  for (const section of menu.sections ?? []) {
+    for (const item of section.items) {
+      if (linkExists(item.url)) existingUrls.add(item.url);
+    }
+  }
+}
+
+// Filter nav menus — in showHidden mode keep everything and mark missing pages
 const activeMenus = NAV_MENUS.map((menu) => ({
   ...menu,
   sections: menu.sections
     ?.map((section) => ({
       ...section,
-      items: section.items.filter((item) => linkExists(item.url)),
+      items: section.items
+        .filter((item) => showHidden || linkExists(item.url))
+        .map((item) => ({
+          ...item,
+          _hidden: !linkExists(item.url),
+        })),
     }))
-    .filter((section) => section.items.length > 0),
-})).filter((menu) => !menu.sections || menu.sections.length > 0);
+    .filter((section) => showHidden || section.items.length > 0 || (!section.label && section.items.length === 0)),
+})).filter((menu) => showHidden || !menu.sections || menu.sections.length > 0);
 ---
 
 <nav aria-label="Main navigation" id="navbar">
@@ -26,20 +46,12 @@ const activeMenus = NAV_MENUS.map((menu) => ({
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links-menu">
-    <li class="nav-item nav-mobile-search" id="nav-mobile-search">
-      <button type="button" class="nav-mobile-search-btn" aria-label="Search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        Search
-      </button>
-    </li>
     {activeMenus.map((menu: NavMenu) => (
       menu.sections ? (
         <li class="nav-item has-dropdown">
-          <a href={menu.url || "#"} aria-haspopup="true" aria-expanded="false">
+          <button type="button" aria-haspopup="true" aria-expanded="false">
             {menu.label} <span class="nav-arrow">▾</span>
-          </a>
+          </button>
           <div class="nav-dropdown" class:list={menu.wide ? ["nav-dropdown-wide"] : []}>
             <div class="nav-dropdown-inner" class:list={menu.wide ? ["nav-dropdown-grid"] : []}>
               {menu.sections.length === 1 && !menu.sections[0].label ? (
@@ -50,6 +62,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
                         href={item.url}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "nofollow noopener" : undefined}
+                        class:list={item._hidden ? ["nav-hidden-page"] : []}
                       >
                         {item.label}
                         {item.external && <span class="nav-ext">&#8599;</span>}
@@ -68,6 +81,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
                             href={item.url}
                             target={item.external ? "_blank" : undefined}
                             rel={item.external ? "nofollow noopener" : undefined}
+                            class:list={item._hidden ? ["nav-hidden-page"] : []}
                           >
                             {item.label}
                             {item.external && <span class="nav-ext">&#8599;</span>}
@@ -88,13 +102,18 @@ const activeMenus = NAV_MENUS.map((menu) => ({
       )
     ))}
   </ul>
-  <ThemeToggle />
   <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
     </svg>
-    Search
   </button>
+  <a href="https://discord.gg/europython" class="nav-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="Join EuroPython Discord">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+    </svg>
+  </a>
+  <ThemeToggle />
+  <a href="/jobs" class="nav-cta-secondary">Job Board</a>
   <a href="/tickets" class="nav-cta">Register Now</a>
 </nav>
 
@@ -133,7 +152,8 @@ nav {
   position: relative;
 }
 
-.nav-item > a {
+.nav-item > a,
+.nav-item > button {
   display: flex;
   align-items: center;
   gap: 0.3em;
@@ -150,11 +170,24 @@ nav {
   transition: color 0.15s, text-decoration-color 0.15s;
 }
 
+.nav-item > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .nav-item > a:hover,
+.nav-item > button:hover,
 .nav-item:hover > a,
-.nav-item > a:focus {
+.nav-item:hover > button,
+.nav-item > a:focus-visible,
+.nav-item > button:focus-visible {
   color: var(--color-accent-themed);
   text-decoration-color: var(--color-accent-themed);
+}
+
+.nav-hidden-page {
+  color: oklch(0.6 0.2 30) !important;
 }
 
 .nav-arrow {
@@ -204,12 +237,42 @@ nav {
 }
 
 .nav-dropdown-wide {
-  min-width: 540px;
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .nav-dropdown-wide {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0;
+    max-width: none;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-dropdown-wide {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
 }
 
 .nav-dropdown-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.5rem;
 }
 
@@ -256,26 +319,38 @@ nav {
 .nav-mobile-search { display: none; }
 
 .nav-search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.45rem;
+  border-radius: 4px;
+  color: var(--color-text-secondary);
+  transition: color 0.2s, background 0.2s;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-  background: var(--color-surface-medium);
-  border: 1px solid var(--color-border-strong);
-  border-radius: 4px;
-  padding: 0.45rem 0.9rem;
+  justify-content: center;
+  flex-shrink: 0;
   margin-left: auto;
-  margin-right: 0.5rem;
-  cursor: pointer;
+  margin-right: 0.25rem;
+}
+
+.nav-icon-btn {
+  background: none;
+  border: none;
+  padding: 0.45rem;
+  border-radius: 4px;
   color: var(--color-text-secondary);
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  transition: background 0.15s, color 0.15s;
+  transition: color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-.nav-search-btn:hover {
-  background: var(--color-border-strong);
+.nav-search-btn:hover,
+.nav-icon-btn:hover {
   color: var(--color-text);
+  background: var(--color-border);
 }
 
 .nav-cta {
@@ -293,6 +368,25 @@ nav {
   transition: opacity 0.15s;
 }
 .nav-cta:hover { opacity: 0.85; }
+
+.nav-cta-secondary {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 2px;
+  padding: 0.55rem 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav-cta-secondary:hover {
+  color: var(--color-accent-themed);
+  border-color: var(--color-accent-themed);
+}
 
 /* Hamburger toggle - visible on mobile */
 .nav-toggle {
@@ -314,6 +408,11 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    order: 100;
+    margin-left: 0;
+  }
+
+  .nav-search-btn {
     margin-left: auto;
   }
 
@@ -348,14 +447,11 @@ nav {
     display: flex;
   }
 
-  .nav-item > a {
+  .nav-item > a,
+  .nav-item > button {
     font-size: 1.1rem;
     padding: 0.8rem 0;
     border-bottom: 1px solid var(--color-border);
-  }
-
-  .nav-search-btn {
-    display: none;
   }
 
   .nav-mobile-search {
@@ -381,7 +477,8 @@ nav {
     text-align: left;
   }
 
-  .nav-cta {
+  .nav-cta,
+  .nav-cta-secondary {
     display: none;
   }
 
@@ -447,26 +544,37 @@ nav {
   border-bottom-color: oklch(0 0 0 / 0.1) !important;
 }
 
-:global(.light) nav a:not(.nav-cta),
+:global(.light) nav a:not(.nav-cta):not(.nav-cta-secondary),
 :global(.light) .nav-item > a,
+:global(.light) .nav-item > button,
 :global(.light) .nav-toggle span,
 :global(.light) .theme-toggle {
   color: oklch(0.228 0.038 282.9) !important; /* #1a1a2e */
 }
 
-:global(.light) .nav-search-btn {
-  background: oklch(0 0 0 / 0.04) !important;
-  border-color: var(--color-scrim-15) !important;
-  color: var(--color-scrim-50) !important;
+:global(.light) .nav-search-btn,
+:global(.light) .nav-icon-btn {
+  color: oklch(0.228 0.038 282.9) !important; /* #1a1a2e */
 }
 
-:global(.light) .nav-search-btn:hover {
+:global(.light) .nav-search-btn:hover,
+:global(.light) .nav-icon-btn:hover {
   color: oklch(0.228 0.038 282.9) !important; /* #1a1a2e */
+  background: oklch(0 0 0 / 0.06) !important;
 }
 
 :global(.light) a.nav-cta {
   background: linear-gradient(to bottom, var(--color-cta-red), var(--color-cta-red-dark)) !important;
   color: var(--color-white) !important;
+}
+
+:global(.light) a.nav-cta-secondary {
+  color: var(--color-scrim-60) !important;
+  border-color: var(--color-scrim-30) !important;
+}
+:global(.light) a.nav-cta-secondary:hover {
+  color: var(--color-accent-themed) !important;
+  border-color: var(--color-accent-themed) !important;
 }
 
 :global(.light) .nav-dropdown-inner {
@@ -476,6 +584,10 @@ nav {
 
 :global(.light) .nav-dropdown li a {
   color: oklch(0.228 0.038 282.9) !important; /* #1a1a2e */
+}
+
+:global(.light) .nav-dropdown li a.nav-hidden-page {
+  color: oklch(0.6 0.2 30) !important;
 }
 
 :global(.light) .nav-dropdown li a:hover {
@@ -527,7 +639,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Dropdown toggle on mobile
-    navLinksEl.querySelectorAll(".nav-item.has-dropdown > a").forEach(function(link) {
+    navLinksEl.querySelectorAll(".nav-item.has-dropdown > button").forEach(function(link) {
       link.addEventListener("click", function(e) {
         if (window.innerWidth <= 900) {
           e.preventDefault();
@@ -551,8 +663,8 @@ document.addEventListener("DOMContentLoaded", function() {
           var isOpen = item.classList.contains("dropdown-open");
           navLinksEl.querySelectorAll(".nav-item.dropdown-open").forEach(function(other) {
             other.classList.remove("dropdown-open");
-            var otherLink = other.querySelector(":scope > a");
-            if (otherLink) otherLink.setAttribute("aria-expanded", "false");
+            var otherTrigger = other.querySelector(":scope > a, :scope > button");
+            if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
           });
           if (!isOpen) {
             item.classList.add("dropdown-open");
@@ -575,7 +687,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (ke.key === "Escape") {
           var item = ddLink.closest(".nav-item.has-dropdown") as HTMLElement | null;
           if (item) item.classList.remove("dropdown-open");
-          var trigger = item ? item.querySelector(":scope > a") as HTMLElement | null : null;
+          var trigger = item ? item.querySelector(":scope > a, :scope > button") as HTMLElement | null : null;
           if (trigger) {
             trigger.setAttribute("aria-expanded", "false");
             trigger.focus();
@@ -689,4 +801,34 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+  // Keep wide dropdowns open while moving mouse from trigger to dropdown
+  var ddTimeout = null as any;
+  var activeDropdown = null as HTMLElement | null;
+  document.querySelectorAll('.nav-item.has-dropdown').forEach(function(item) {
+    var itemEl = item as HTMLElement;
+    itemEl.addEventListener('mouseenter', function() {
+      // Close previous dropdown immediately
+      if (activeDropdown && activeDropdown !== itemEl) {
+        if (ddTimeout) clearTimeout(ddTimeout);
+        activeDropdown.classList.remove('dropdown-open');
+        var prevBtn = activeDropdown.querySelector(':scope > button');
+        if (prevBtn) prevBtn.setAttribute('aria-expanded', 'false');
+      }
+      activeDropdown = itemEl;
+      itemEl.classList.add('dropdown-open');
+      var btn = itemEl.querySelector(':scope > button');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    });
+    itemEl.addEventListener('mouseleave', function() {
+      if (ddTimeout) clearTimeout(ddTimeout);
+      ddTimeout = setTimeout(function() {
+        itemEl.classList.remove('dropdown-open');
+        var btn = itemEl.querySelector(':scope > button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+        if (activeDropdown === itemEl) activeDropdown = null;
+      }, 250);
+    });
+  });
+</script>
 </script>

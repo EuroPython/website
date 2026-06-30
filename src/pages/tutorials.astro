@@ -4,6 +4,8 @@ import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
 import { getCollection } from "astro:content";
 
+import { t } from "@utils/i18n";
+
 const allSessions = await getCollection("sessions");
 
 // Pre-resolve all speakers for fast lookup
@@ -76,16 +78,16 @@ const tutorials = allSessions
       <div class="tutorials-section" id="sess-grid">
         <div class="talks-dot-bg">
           <div class="tutorial-grid">
-            {tutorials.map((t) => (
-              <div class:list={["tutorial-card", t.data.level]} data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}>
-                <a href={`/session/${t.id}`} class="tutorial-card-title">{t.data.title}</a>
-                <p class="tutorial-card-speakers" set:html={speakerHtml(t.data.speakers)}>
+            {tutorials.map((tut) => (
+              <div class:list={["tutorial-card", tut.data.level]} data-search={`${tut.data.title.toLowerCase()} ${tut.data.track?.toLowerCase() || ""}`}>
+                <a href={`/session/${tut.id}`} class="tutorial-card-title">{tut.data.title}</a>
+                <p class="tutorial-card-speakers" set:html={speakerHtml(tut.data.speakers)}>
                 </p>
                 <div class="tutorial-card-meta">
-                  <span class="tutorial-card-tag">{t.data.duration} min</span>
-                  {t.data.level && <span class={`tutorial-card-level tutorial-card-level--${t.data.level}`}>{t.data.level.charAt(0).toUpperCase() + t.data.level.slice(1)}</span>}
+                  <span class="tutorial-card-tag">{tut.data.duration} min</span>
+                  {tut.data.level && <span class={`tutorial-card-level tutorial-card-level--${tut.data.level}`}>{tut.data.level.charAt(0).toUpperCase() + tut.data.level.slice(1)}</span>}
                 </div>
-                {t.data.track && <p class="tutorial-card-track">{t.data.track}</p>}
+                {tut.data.track && <p class="tutorial-card-track">{t(tut.data.track)}</p>}
               </div>
             ))}
           </div>

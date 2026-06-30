@@ -1,13 +1,8 @@
-/**
- * Single source of truth for all navigation and footer links.
- *
- * Inspired by ep26-draft/src/menu.py — typed, structured, reusable.
- */
-
 export interface Link {
   label: string;
   url: string;
   external?: boolean;
+  _hidden?: boolean;
 }
 
 export interface NavSection {
@@ -31,12 +26,13 @@ export interface FooterColumn {
 
 const L = {
   // Programme
+
   schedule: { label: "Schedule", url: "/schedule" },
   talks: { label: "Talks", url: "/talks" },
   tutorials: { label: "Tutorials", url: "/tutorials" },
   posters: { label: "Posters", url: "/posters" },
   tracks: { label: "Tracks", url: "/tracks" },
-  speakers: { label: "Speakers", url: "/speakers" },
+  speakers: { label: "Our Speakers", url: "/speakers" },
   sessions: { label: "List of all Sessions", url: "/sessions" },
   guidelines: { label: "Speaker Guidelines", url: "/guidelines" },
   mentorship: { label: "Speaker Mentorship", url: "/mentorship" },
@@ -51,7 +47,22 @@ const L = {
   socialEvent: { label: "Social Event", url: "/social-event" },
   beginnersDay: { label: "Beginners' Day", url: "/beginners-day" },
   speakersDinner: { label: "Speakers' Dinner", url: "/speakers-dinner" },
+  cfp: { label: "CFP & Talk Selection", url: "/cfp" },
   openSpaces: { label: "Open Spaces", url: "/open-spaces" },
+  keynotes: { label: "Keynotes", url: "/keynotes" },
+  cAPISummit: { label: "C-API Summit", url: "/c-api-summit" },
+  wasmSummit: { label: "WASM Summit", url: "/wasm-summit" },
+  pyladies: { label: "PyLadies", url: "/pyladies" },
+  euroSciPy: { label: "EuroSciPy", url: "/euroscipy" },
+  organisersSummit: { label: "Organisers Summit", url: "/organisers-summit" },
+  beginners: { label: "Beginners", url: "/beginners" },
+  lightningTalks: { label: "Lightning Talks", url: "/lightning-talks" },
+  dataAI: { label: "Data & AI", url: "/data-ai" },
+  inclusivity: { label: "Inclusivity", url: "/inclusivity" },
+  childcare: { label: "Childcare", url: "/childcare" },
+  help: { label: "Help", url: "/help" },
+  discord: { label: "Discord", url: "/discord" },
+  team: { label: "Our Team", url: "/team" },
 
   // Participate
   tickets: { label: "Tickets", url: "/tickets" },
@@ -68,7 +79,7 @@ const L = {
 
   // Venue
   venue: { label: "Venue", url: "/venue" },
-  krakow: { label: "Kraków", url: "/krakow" },
+  krakow: { label: "Tips", url: "/tips" },
   hotels: { label: "Hotels", url: "/hotels" },
 
   // Sponsorship
@@ -80,7 +91,7 @@ const L = {
   },
 
   // Community
-  about: { label: "About Us", url: "/about" },
+  about: { label: "About EuroPython", url: "/about" },
   eps: {
     label: "EuroPython Society",
     url: "https://europython-society.org/",
@@ -123,23 +134,34 @@ export const NAV_MENUS: NavMenu[] = [
   // Programme — rich multi-column with labelled sections
   {
     label: "Programme",
-    url: "/sessions",
+    url: "/schedule",
     wide: true,
     sections: [
       {
-        label: "Talks & Schedule",
+        label: "Sessions",
         items: [
-          L.schedule,
+          L.keynotes,
           L.talks,
           L.tutorials,
           L.posters,
-          L.tracks,
-          L.speakers,
+          L.lightningTalks,
+          L.openSpaces,
+          L.dataAI,
         ],
       },
       {
         label: "Summits",
-        items: [L.langSummit, L.rustSummit, L.packagingSummit],
+        items: [
+          L.langSummit,
+          L.cAPISummit,
+          L.packagingSummit,
+          L.rustSummit,
+          L.wasmSummit,
+        ],
+      },
+      {
+        label: "Community",
+        items: [L.pyladies, L.euroSciPy, L.organisersSummit],
       },
       {
         label: "Events & Social",
@@ -147,64 +169,84 @@ export const NAV_MENUS: NavMenu[] = [
           L.sprints,
           L.socialEvent,
           L.beginnersDay,
-          L.speakersDinner,
-          L.openSpaces,
+          L.beginners,
           L.yearsOfEp,
         ],
       },
-      {
-        label: "For Speakers",
-        items: [L.guidelines, L.mentorship],
-      },
     ],
   },
 
-  // Attend — simple flat list
+  // Attend — wide dropdown with 4 columns
   {
     label: "Attend",
     url: "/tickets",
+    wide: true,
     sections: [
       {
+        label: "Registration",
+        items: [L.tickets, L.finaid, L.visa, L.hotels],
+      },
+      {
+        label: "Speakers",
         items: [
-          L.tickets,
-          L.finaid,
-          L.visa,
-          L.volunteering,
-          L.faq,
-          L.coc,
-          L.accessibility,
+          L.speakers,
+          L.guidelines,
+          L.mentorship,
+          L.cfp,
+          L.speakersDinner,
         ],
+      },
+      {
+        label: "Community",
+        items: [L.volunteering, L.inclusivity, L.accessibility],
+      },
+      {
+        label: "Support",
+        items: [L.childcare, L.help, L.faq, L.coc],
       },
     ],
   },
 
-  // Venue — simple flat list
+  // Venue — single link, no dropdown
   {
     label: "Venue",
     url: "/venue",
-    sections: [{ items: [L.venue, L.krakow, L.hotels] }],
   },
 
-  // Sponsorship — simple flat list
+  // Sponsors — single link, no dropdown
   {
-    label: "Sponsorship",
-    url: "/sponsorship/sponsor",
-    sections: [{ items: [L.ourSponsors, L.sponsorPkg, L.sponsorInfo] }],
+    label: "Sponsors",
+    url: "/sponsors",
   },
 
-  // Community — simple flat list
+  // About — simple flat list
   {
     label: "Community",
     url: "/about",
+    wide: true,
     sections: [
-      { items: [L.about, L.eps, L.communityPartners, L.mediaPartners] },
+      {
+        label: "Organization",
+        items: [
+          L.about,
+          L.team,
+          L.communityPartners,
+          L.mediaPartners,
+          L.sponsorPkg,
+          L.sponsorInfo,
+        ],
+      },
+      {
+        label: "Online",
+        items: [L.blog, L.eps],
+      },
+      {
+        items: [],
+      },
+      {
+        items: [],
+      },
     ],
-  },
-
-  // Jobs — single link, no dropdown
-  {
-    label: "Jobs",
-    url: "/jobs",
   },
 ];
 
@@ -244,7 +286,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     items: [L.tickets, L.krakow, L.visa],
   },
   {
-    title: "Programme",
+    title: "Schedule",
     items: [
       L.schedule,
       L.talks,
@@ -270,7 +312,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     ],
   },
   {
-    title: "Sponsorship",
+    title: "Sponsors",
     items: [L.ourSponsors, L.sponsorPkg, L.sponsorInfo, L.jobs],
   },
   {

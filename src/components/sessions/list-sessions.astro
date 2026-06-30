@@ -3,6 +3,7 @@ const { sessions } = Astro.props;
 import Prose from "@ui/Prose.astro";
 import Tag from "@ui/Tag.astro";
 import CodeHeart from "@components/island/CodeHeart.svelte";
+import { t } from "@utils/i18n";
 import SessionSpeakers from "./session-speakers.astro";
 
 type Session = {
@@ -27,7 +28,7 @@ type Session = {
     sessions.map((session: Session) => (
       <li
         class="mb-12"
-        data-track={session.data.track}
+        data-track={t(session.data.track)}
         data-type={session.data.session_type}
         data-level={session.data.level}
       >
@@ -65,10 +66,10 @@ type Session = {
           {session.data.track && (
             <li class="md:inline-block">
               <Tag
-                href={`/sessions?track=${encodeURIComponent(session.data.track)}`}
+                href={`/sessions?track=${encodeURIComponent(t(session.data.track))}`}
               >
                 <span class="sr-only">Track:</span>
-                {session.data.track}
+                {t(session.data.track)}
               </Tag>
             </li>
           )}
