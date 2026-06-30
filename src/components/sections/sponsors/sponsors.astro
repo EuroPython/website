@@ -20,8 +20,8 @@ const tiers = [
   "Special Event",
   "Financial Aid",
   "Supporters",
-//  "Partners",
-  "Media Partners"
+  //  "Partners",
+  "Media Partners",
 ] as const;
 
 const sponsors = await getCollection("sponsors");
@@ -37,9 +37,11 @@ const sponsorTiers = tiers
       }
 
       // Also include in "Special Event" if sponsor has event_name
-      if (tier === "Special Event" &&
-          sponsor.data.event_name &&
-          sponsor.data.event_name.trim() !== "") {
+      if (
+        tier === "Special Event" &&
+        sponsor.data.event_name &&
+        sponsor.data.event_name.trim() !== ""
+      ) {
         return true;
       }
 
@@ -62,10 +64,10 @@ const sponsorTiers = tiers
 
 <Section2 id="sponsors" variant="light" className="sponsors-section">
   <div class="sponsors-header">
-   <Title id="sponsors" color="var(--color-black)">Sponsors & Partners</Title>
+    <Title id="sponsors" color="var(--color-black)">Sponsors & Partners</Title>
   </div>
 
-      <div class="text-center mb-12">
+  <div class="text-center mb-12">
     {
       hasSponsors ? (
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -82,36 +84,32 @@ const sponsorTiers = tiers
       )
     }
   </div>
-      <div class="my-10 text-center">
-        <Button url="/sponsor">Become a sponsor</Button>
-      </div>
+  <div class="my-10 text-center">
+    <Button url="/sponsor">Become a sponsor</Button>
+  </div>
 
-  {sponsorTiers.length > 0 && <hr  />}
+  {sponsorTiers.length > 0 && <hr />}
 
-  <div >
+  <div>
     {
       sponsorTiers.map((tier, index) => (
         <Fragment>
-        <SponsorTier tier={tier} level={index} />
+          <SponsorTier tier={tier} level={index} />
           {index !== sponsorTiers.length - 1 && <hr />}
         </Fragment>
       ))
     }
   </div>
-
 </Section2>
 
 <style>
-  hr {margin: 0;
-  border: 1px solid oklch(0.937 0 0) /* #ededed */;
+  hr {
+    margin: 0;
+    border: 1px solid oklch(0.937 0 0) /* #ededed */;
   }
-
 
   .sponsors-header {
     text-align: center;
     margin-bottom: 2.5rem;
   }
-
-
-
 </style>

@@ -19,7 +19,7 @@ Sprints are informal coding sessions (think: mini hackathons) where people
 gather to work on open-source projects, share ideas, and solve problems
 together.
 
-![Sprints photos collage](/content/sections/images/sprints.png)
+![Sprints photos collage](./sprints/sprints.png)
 
 ## When and Where?
 

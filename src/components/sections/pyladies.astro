@@ -6,27 +6,34 @@ import Display from "@ui/Display.astro";
 <Section2 id="pyladies" variant="bg-dark" className="pyladies-section">
   <div class="pyladies-bg" aria-hidden="true"></div>
   <div class="split-layout pyladies-inner">
-
     <div class="split-left pyladies-left">
-      <Display id="pyladies" span="AT EP2026" spanColor="var(--color-pyladies)" subtitle="Dedicated events for women and gender minorities in the Python community.">PYLADIES</Display>
+      <Display
+        id="pyladies"
+        span="AT EP2026"
+        spanColor="var(--color-pyladies)"
+        subtitle="Dedicated events for women and gender minorities in the Python community."
+        >PYLADIES</Display
+      >
       <a href="#" class="pyladies-cta">Learn more</a>
     </div>
 
     <ul class="event-list pyladies-events">
       <li>
         <strong>Self-Promotion Workshop — 17 July, 12:00–13:00</strong>
-        Learn how to communicate your technical work effectively and build your personal brand in tech.
+        Learn how to communicate your technical work effectively and build your personal
+        brand in tech.
       </li>
       <li>
         <strong>PyLadies Lunch — 17 July, 13:00–14:00</strong>
-        Community lunch following the workshop. Meet fellow PyLadies from across Europe and beyond.
+        Community lunch following the workshop. Meet fellow PyLadies from across Europe
+        and beyond.
       </li>
       <li>
         <strong>Open Space Sessions — 16–18 July, Various</strong>
-        Drop-in conversations on diversity, inclusion, and building welcoming Python communities.
+        Drop-in conversations on diversity, inclusion, and building welcoming Python
+        communities.
       </li>
     </ul>
-
   </div>
 </Section2>
 
@@ -37,8 +44,18 @@ import Display from "@ui/Display.astro";
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 10% 50%, oklch(0.553 0.205 12.5 / 0.12) 0%, transparent 60%) /* #d21e3c */,
-      radial-gradient(ellipse 50% 80% at 90% 20%, oklch(0.446 0.176 8.5 / 0.08) 0%, transparent 55%) /* #a0143c */;
+      radial-gradient(
+          ellipse 80% 60% at 10% 50%,
+          oklch(0.553 0.205 12.5 / 0.12) 0%,
+          transparent 60%
+        )
+        /* #d21e3c */,
+      radial-gradient(
+          ellipse 50% 80% at 90% 20%,
+          oklch(0.446 0.176 8.5 / 0.08) 0%,
+          transparent 55%
+        )
+        /* #a0143c */;
   }
 
   .split-layout {
@@ -55,7 +72,7 @@ import Display from "@ui/Display.astro";
   }
 
   @media (max-width: 900px) {
-  .split-layout {
+    .split-layout {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
@@ -64,13 +81,15 @@ import Display from "@ui/Display.astro";
     }
   }
 
-
-
   .pyladies-cta {
     display: inline-block;
     margin-top: 2rem;
     padding: 0.75rem 2rem;
-    background: linear-gradient(to bottom, var(--color-pyladies), var(--color-pyladies-dark));
+    background: linear-gradient(
+      to bottom,
+      var(--color-pyladies),
+      var(--color-pyladies-dark)
+    );
     color: var(--color-white);
     border: 1px solid var(--color-pyladies);
     border-radius: 2px;

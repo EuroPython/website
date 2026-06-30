@@ -14,14 +14,14 @@ const cards = await Promise.all(
   deadlineEntries.map(async (entry) => {
     const { Content } = await render(entry);
     return { data: entry.data, Content };
-  })
+  }),
 );
 ---
 
 <Section2 className="news-section" variant="dark-alt" id="updates">
-
-    <div class="news-grid">
-      {cards.map(({ data, Content }) => (
+  <div class="news-grid">
+    {
+      cards.map(({ data, Content }) => (
         <div class="news-card">
           {data.image && (
             <div class="news-image">
@@ -36,7 +36,9 @@ const cards = await Promise.all(
             </div>
           )}
           <div class="news-title">{data.title}</div>
-          <div class="news-desc"><Content /></div>
+          <div class="news-desc">
+            <Content />
+          </div>
           <a
             href={data.url}
             class="news-cta"
@@ -45,8 +47,9 @@ const cards = await Promise.all(
             {data.subtitle}
           </a>
         </div>
-      ))}
-    </div>
+      ))
+    }
+  </div>
 </Section2>
 
 <style>
@@ -63,7 +66,8 @@ const cards = await Promise.all(
     gap: 0.75rem;
     text-align: center;
     align-items: center;
-    transition: transform 0.35s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+    transition: transform 0.35s
+      var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
   }
 
   .news-image {
@@ -78,7 +82,8 @@ const cards = await Promise.all(
     object-fit: cover;
     display: block;
     border-radius: 2px;
-    transition: transform 0.5s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+    transition: transform 0.5s
+      var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
   }
 
   .news-card:hover .news-img {

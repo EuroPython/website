@@ -13,7 +13,7 @@ export interface Props {
   level: number;
 }
 
-const { tier, level = 2} = Astro.props;
+const { tier, level = 2 } = Astro.props;
 const special_event = tier.name === "Special Event";
 ---
 
@@ -30,16 +30,18 @@ const special_event = tier.name === "Special Event";
       "grid ml-12 items-center justify-items-center",
       `level-${level}`,
       {
-        "grid-cols-1 md:grid-cols-2 m-10 [&>*]:scale-110": level===0,
-        "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 [&>*]:scale-90": level > 0 && level < 6,
-        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-70" : level >= 6 && level < 7,
-        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-85" : level >= 7,
+        "grid-cols-1 md:grid-cols-2 m-10 [&>*]:scale-110": level === 0,
+        "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 [&>*]:scale-90":
+          level > 0 && level < 6,
+        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-70":
+          level >= 6 && level < 7,
+        "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 [&>*]:scale-85": level >= 7,
       },
     ]}
   >
     {
       tier.sponsors.map((sponsor) => (
-      <SponsorLogo sponsor={sponsor.id} {special_event} />
+        <SponsorLogo sponsor={sponsor.id} {special_event} />
       ))
     }
   </div>

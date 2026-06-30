@@ -20,115 +20,130 @@ const { items, inverted = false, level = 1 } = Astro.props;
 <ul
   class={clsx(
     level === 1 && "ml-1 flex flex-col xl:flex-row",
-    level === 2 && "mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px] xl:min-w-[220px]",
-    level === 3 && "bg-[var(--color-nav-level)] xl:rounded-[20px] xl:my-1 xl:mx-2 xl:min-w-[200px]",
-    level > 1 && "shadow-lg"
+    level === 2 &&
+      "mb-3 xl:bg-secondary xl:mt-2 xl:rounded-[30px] xl:min-w-[220px]",
+    level === 3 &&
+      "bg-[var(--color-nav-level)] xl:rounded-[20px] xl:my-1 xl:mx-2 xl:min-w-[200px]",
+    level > 1 && "shadow-lg",
   )}
   role={level === 1 ? "menubar" : "menu"}
-  aria-label={level === 1 ? "Main navigation" : level === 2 ? "Submenu" : "Sub-submenu"}
+  aria-label={level === 1
+    ? "Main navigation"
+    : level === 2
+      ? "Submenu"
+      : "Sub-submenu"}
 >
-  {items.map((item) => (
-    <li
-      class={clsx(
-        "relative transition-all duration-200 ease-in-out",
-        level === 1 && "border-b border-border-secondary-dark xl:border-0 group",
-        level === 2 && "bg-secondary text-white block w-full font-bold text-center xl:text-left xl:hover:bg-secondary-light xl:first:rounded-t-[30px] xl:first:pt-2 xl:last:rounded-b-[30px] xl:last:pb-2 group",
-        level === 3 && "text-white xl:hover:bg-secondary-light xl:first:rounded-t-[20px] xl:last:rounded-b-[20px]",
-        inverted ? "text-white" : level === 1 && "text-primary"
-      )}
-      role="none"
-    >
-      {!item.items ? (
-        <a
-          href={item.path || "#"}
-          class={clsx(
-            "flex items-center justify-between",
-            level === 1 && "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:py-2 xl:px-4 xl:hover:bg-secondary xl:hover:rounded-[30px] xl:hover:text-white xl:focus:bg-secondary xl:focus:rounded-[30px] xl:focus:text-white",
-            level === 2 && "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:ps-5",
-            level === 3 && "block w-full p-2 text-sm xl:text-left"
-          )}
-          rel={item.path?.startsWith("http") ? "nofollow noopener" : undefined}
-          target={item.path?.startsWith("http") ? "_blank" : undefined}
-          role="menuitem"
-        >
-          {item.name}
-          {item.path?.startsWith("http") && (
-            <span aria-hidden="true">↗</span>
-          )}
-        </a>
-      ) : (
-        <button
-          type="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          class={clsx(
-            "flex items-center justify-around",
-            level === 1 && "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:py-2 xl:px-4 xl:hover:bg-secondary xl:hover:rounded-[30px] xl:hover:text-white xl:focus:bg-secondary xl:focus:rounded-[30px] xl:focus:text-white",
-            level === 2 && "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:ps-5",
-            level === 3 && "block w-full p-2 text-sm xl:text-left"
-          )}
-          role="menuitem"
-        >
-          {item.name}
-          {level === 2 && (
-            <span aria-hidden="true">
-              <Icon name="caret-right" />
-            </span>
-          )}
-        </button>
-      )}
+  {
+    items.map((item) => (
+      <li
+        class={clsx(
+          "relative transition-all duration-200 ease-in-out",
+          level === 1 &&
+            "border-b border-border-secondary-dark xl:border-0 group",
+          level === 2 &&
+            "bg-secondary text-white block w-full font-bold text-center xl:text-left xl:hover:bg-secondary-light xl:first:rounded-t-[30px] xl:first:pt-2 xl:last:rounded-b-[30px] xl:last:pb-2 group",
+          level === 3 &&
+            "text-white xl:hover:bg-secondary-light xl:first:rounded-t-[20px] xl:last:rounded-b-[20px]",
+          inverted ? "text-white" : level === 1 && "text-primary",
+        )}
+        role="none"
+      >
+        {!item.items ? (
+          <a
+            href={item.path || "#"}
+            class={clsx(
+              "flex items-center justify-between",
+              level === 1 &&
+                "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:py-2 xl:px-4 xl:hover:bg-secondary xl:hover:rounded-[30px] xl:hover:text-white xl:focus:bg-secondary xl:focus:rounded-[30px] xl:focus:text-white",
+              level === 2 &&
+                "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:ps-5",
+              level === 3 && "block w-full p-2 text-sm xl:text-left",
+            )}
+            rel={
+              item.path?.startsWith("http") ? "nofollow noopener" : undefined
+            }
+            target={item.path?.startsWith("http") ? "_blank" : undefined}
+            role="menuitem"
+          >
+            {item.name}
+            {item.path?.startsWith("http") && <span aria-hidden="true">↗</span>}
+          </a>
+        ) : (
+          <button
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            class={clsx(
+              "flex items-center justify-around",
+              level === 1 &&
+                "font-bold inline-block w-full text-3xl xl:text-base p-5 text-center xl:text-left xl:py-2 xl:px-4 xl:hover:bg-secondary xl:hover:rounded-[30px] xl:hover:text-white xl:focus:bg-secondary xl:focus:rounded-[30px] xl:focus:text-white",
+              level === 2 &&
+                "block w-full font-bold text-center xl:text-left mb-[2px] p-2 xl:ps-5",
+              level === 3 && "block w-full p-2 text-sm xl:text-left",
+            )}
+            role="menuitem"
+          >
+            {item.name}
+            {level === 2 && (
+              <span aria-hidden="true">
+                <Icon name="caret-right" />
+              </span>
+            )}
+          </button>
+        )}
 
-      {item.items && (
-        <div
-          class={clsx(
-            level === 1 && "xl:hidden group-hover:block xl:absolute z-50 xl:top-full xl:left-0 xl:focus-within:block",
-            level === 2 && "xl:hidden group-hover:block xl:absolute z-50 xl:left-full xl:top-0 xl:-mt-2 xl:focus-within:block"
-          )}
-        >
-          {level === 1 && (
-            <Astro.self items={item.items} level={2} />
-          )}
+        {item.items && (
+          <div
+            class={clsx(
+              level === 1 &&
+                "xl:hidden group-hover:block xl:absolute z-50 xl:top-full xl:left-0 xl:focus-within:block",
+              level === 2 &&
+                "xl:hidden group-hover:block xl:absolute z-50 xl:left-full xl:top-0 xl:-mt-2 xl:focus-within:block",
+            )}
+          >
+            {level === 1 && <Astro.self items={item.items} level={2} />}
 
-          {level === 2 && (
-            <Astro.self items={item.items} level={3} />
-          )}
-        </div>
-      )}
-    </li>
-  ))}
+            {level === 2 && <Astro.self items={item.items} level={3} />}
+          </div>
+        )}
+      </li>
+    ))
+  }
 </ul>
 
 <script>
   // Add keyboard navigation support
-  document.addEventListener('DOMContentLoaded', () => {
-    const navButtons = document.querySelectorAll('[role="menuitem"][aria-haspopup="true"]');
+  document.addEventListener("DOMContentLoaded", () => {
+    const navButtons = document.querySelectorAll(
+      '[role="menuitem"][aria-haspopup="true"]',
+    );
 
-    navButtons.forEach(button => {
-      button.addEventListener('keydown', (e:any) => {
+    navButtons.forEach((button) => {
+      button.addEventListener("keydown", (e: any) => {
         const key = e.key;
 
-        if (key === 'Enter' || key === ' ' || key === 'ArrowDown') {
+        if (key === "Enter" || key === " " || key === "ArrowDown") {
           e.preventDefault();
           toggleSubmenu(button, true);
-        } else if (key === 'Escape') {
+        } else if (key === "Escape") {
           e.preventDefault();
           toggleSubmenu(button, false);
         }
       });
 
       // Close submenu when focus leaves
-      button.addEventListener('blur', (e:any) => {
+      button.addEventListener("blur", (e: any) => {
         if (!e.currentTarget.contains(e.relatedTarget)) {
           toggleSubmenu(button, false);
         }
       });
     });
 
-    function toggleSubmenu(button:any, show:any) {
-      const expanded = button.getAttribute('aria-expanded') === 'true';
+    function toggleSubmenu(button: any, show: any) {
+      const expanded = button.getAttribute("aria-expanded") === "true";
 
       if (show && !expanded) {
-        button.setAttribute('aria-expanded', 'true');
+        button.setAttribute("aria-expanded", "true");
         // Add focus to first link in submenu
         const submenu = button.nextElementSibling;
         if (submenu) {
@@ -136,27 +151,31 @@ const { items, inverted = false, level = 1 } = Astro.props;
           if (firstLink) setTimeout(() => firstLink.focus(), 10);
         }
       } else if (!show && expanded) {
-        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute("aria-expanded", "false");
       }
     }
 
     // Add arrow key navigation within same level
-    const menuLists = document.querySelectorAll('[role="menu"], [role="menubar"]') as NodeListOf<HTMLElement>;
-    menuLists.forEach(menu => {
-      const menuItems = menu.querySelectorAll('[role="menuitem"]') as NodeListOf<HTMLElement>;
+    const menuLists = document.querySelectorAll(
+      '[role="menu"], [role="menubar"]',
+    ) as NodeListOf<HTMLElement>;
+    menuLists.forEach((menu) => {
+      const menuItems = menu.querySelectorAll(
+        '[role="menuitem"]',
+      ) as NodeListOf<HTMLElement>;
 
       menuItems.forEach((item, index) => {
-        item.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowRight' && index < menuItems.length - 1) {
+        item.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" && index < menuItems.length - 1) {
             e.preventDefault();
             menuItems[index + 1].focus();
-          } else if (e.key === 'ArrowLeft' && index > 0) {
+          } else if (e.key === "ArrowLeft" && index > 0) {
             e.preventDefault();
             menuItems[index - 1].focus();
-          } else if (e.key === 'Home') {
+          } else if (e.key === "Home") {
             e.preventDefault();
             menuItems[0].focus();
-          } else if (e.key === 'End') {
+          } else if (e.key === "End") {
             e.preventDefault();
             menuItems[menuItems.length - 1].focus();
           }

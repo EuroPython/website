@@ -1,51 +1,47 @@
-
 ---
 import Layout from "@layouts/SectionLayout.astro";
 import Button from "@ui/Button.astro";
-import Headline from "@ui/Headline.astro"
-import Icon from "@ui/Icon.astro"
+import Headline from "@ui/Headline.astro";
+import Icon from "@ui/Icon.astro";
 ---
 
 <Layout
   title="test components"
   description="Showcase for all components and variants."
 >
+  <head>
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
+  <Headline as="h1" id="components" title="Example components" />
 
+  Key Features
+  <Headline id="button" title="Button" />
+  <div class="grid gap-2 w-[200px]">
+    <Button>Primary Button</Button>
+    <Button secondary>Secondary Button</Button>
+    <Button clear>Clear Button</Button>
+    <Button outline>Outline Button</Button>
+    <Button disabled>Disabled Button</Button>
+    <Button url="/about">Internal Link</Button>
+    <Button url="https://example.com">External Link</Button>
+  </div>
 
-<Headline as="h1" id="components" title="Example components" />
+  <Headline id="button" title="Icons" />
+  <div class="grid gap-2 w-[200px]">
+    <Icon name="check" />
+    <Icon name="times" size="fa-2x" />
+    <Icon name="times" size="fa-3x" />
+    <Icon name="times" size="fa-4x" />
+    <Icon name="times" size="fa-5x" />
+    <Icon name="times" size="fa-6x" />
+    <Icon name="cog" />
+    <Button icon="arrow-right" iconRight={true}>Next</Button>
+    <Button icon="arrow-left" iconRight={false}>Prev</Button>
+    <Button icon="clock" iconRight={false} size="fa-2xl">Prev</Button>
 
-Key Features
-    <Headline id="button" title="Button" />
-    <div class="grid gap-2 w-[200px]">
-      <Button>Primary Button</Button>
-      <Button secondary>Secondary Button</Button>
-      <Button clear>Clear Button</Button>
-      <Button outline>Outline Button</Button>
-      <Button disabled>Disabled Button</Button>
-      <Button url="/about">Internal Link</Button>
-      <Button url="https://example.com">External Link</Button>
-    </div>
-
-    <Headline id="button" title="Icons" />
-    <div class="grid gap-2 w-[200px]">
-      <Icon name="check" />
-      <Icon name="times" size="fa-2x" />
-      <Icon name="times" size="fa-3x" />
-      <Icon name="times" size="fa-4x" />
-      <Icon name="times" size="fa-5x" />
-      <Icon name="times" size="fa-6x" />
-      <Icon name="cog" />
-      <Button icon="arrow-right" iconRight={true} >Next</Button>
-      <Button icon="arrow-left" iconRight={false} >Prev</Button>
-      <Button icon="clock" iconRight={false} size="fa-2xl">Prev</Button>
-
-      <Button icon="arrow-right" iconRight={true} iconSize="fa-3xl">Next</Button>
-      <Button icon="arrow-left" iconRight={false} iconSize="fa-xl">Prev</Button>
-      <Button icon="clock" iconRight={false} iconSize="fa-2xl">Prev</Button>
-
-    </div>
+    <Button icon="arrow-right" iconRight={true} iconSize="fa-3xl">Next</Button>
+    <Button icon="arrow-left" iconRight={false} iconSize="fa-xl">Prev</Button>
+    <Button icon="clock" iconRight={false} iconSize="fa-2xl">Prev</Button>
+  </div>
 </Layout>

@@ -1,5 +1,5 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry } from "astro:content";
 import Markdown from "@ui/Markdown.astro";
 
 const { slug } = Astro.props;
@@ -33,29 +33,78 @@ const { data, body } = sprint;
     <div>
       <span class="text-white/90">Contact:</span>
       <span class="text-white/70">{data.contactPerson.name}</span>
-      {data.contactPerson.email && (
-        <span> (<a href={`mailto:${data.contactPerson.email}`} class="text-white/60 hover:text-accent underline">{data.contactPerson.email}</a>)</span>
-      )}
-      {data.contactPerson.github && (
-        <span> (<a href={`https://github.com/${data.contactPerson.github}`} target="_blank" rel="noopener" class="text-white/60 hover:text-accent underline">@{data.contactPerson.github}</a>)</span>
-      )}
-      {data.contactPerson.twitter && (
-        <span> (<a href={`https://x.com/${data.contactPerson.twitter}`} target="_blank" rel="noopener" class="text-white/60 hover:text-accent underline">@{data.contactPerson.twitter}</a>)</span>
-      )}
+      {
+        data.contactPerson.email && (
+          <span>
+            {" "}
+            (
+            <a
+              href={`mailto:${data.contactPerson.email}`}
+              class="text-white/60 hover:text-accent underline"
+            >
+              {data.contactPerson.email}
+            </a>
+            )
+          </span>
+        )
+      }
+      {
+        data.contactPerson.github && (
+          <span>
+            {" "}
+            (
+            <a
+              href={`https://github.com/${data.contactPerson.github}`}
+              target="_blank"
+              rel="noopener"
+              class="text-white/60 hover:text-accent underline"
+            >
+              @{data.contactPerson.github}
+            </a>
+            )
+          </span>
+        )
+      }
+      {
+        data.contactPerson.twitter && (
+          <span>
+            {" "}
+            (
+            <a
+              href={`https://x.com/${data.contactPerson.twitter}`}
+              target="_blank"
+              rel="noopener"
+              class="text-white/60 hover:text-accent underline"
+            >
+              @{data.contactPerson.twitter}
+            </a>
+            )
+          </span>
+        )
+      }
     </div>
 
-    {(data.links) && (
-      <div>
-        <span class="font-medium text-white/90">Links:</span>
-        <ul class="mt-2 ml-6 space-y-1 list-disc">
-          {data.links?.map((link) => (
-            <li>
-              <a href={link.url} target="_blank" rel="noopener" class="text-white/60 hover:text-accent underline">{link.title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    )}
+    {
+      data.links && (
+        <div>
+          <span class="font-medium text-white/90">Links:</span>
+          <ul class="mt-2 ml-6 space-y-1 list-disc">
+            {data.links?.map((link) => (
+              <li>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener"
+                  class="text-white/60 hover:text-accent underline"
+                >
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
 
     {body && <Markdown content={body} />}
   </div>

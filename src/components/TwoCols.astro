@@ -1,12 +1,16 @@
 ---
+
 ---
-  <section class="space-y-12 overflow-visible">
-    <div class="flex flex-col lg:flex-row-reverse gap-6">
-      <div class="twocol-content w-full lg:max-w-[400px]  lg:sticky lg:top-6 self-start">
-        <slot name="content"/>
-      </div>
-      <div class="twocol-sidebar flex-1 w-max-[730px]">
-        <slot name="sidebar" />
-      </div>
+
+<section class="space-y-12 overflow-visible">
+  <div class="flex flex-col lg:flex-row-reverse gap-6">
+    <div
+      class="twocol-content w-full lg:max-w-[400px] lg:sticky lg:top-6 self-start"
+    >
+      <slot name="content" />
     </div>
-  </section>
+    <div class="twocol-sidebar flex-1 w-max-[730px]">
+      <slot name="sidebar" />
+    </div>
+  </div>
+</section>

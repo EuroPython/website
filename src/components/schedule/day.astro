@@ -1,11 +1,9 @@
-
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Break from "@components/schedule/break.astro";
 import Session from "@components/schedule/session.astro";
 import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
 import { formatInTimeZone } from "date-fns-tz";
-
 
 interface Props {
   day: CollectionEntry<"days">;
@@ -34,7 +32,6 @@ export const getStaticPaths = async () => {
   });
 };
 
-
 const { day } = Astro.props;
 const dayName = day.id;
 //const day = getEntry("days", dayName);
@@ -62,9 +59,9 @@ type ScheduleSession = {
   endTime: string;
   duration: number;
   sessionType?: string | undefined;
-  tyee: string;
+  type: string;
   rooms: string[];
-  snug?: string;
+  slug?: string;
 };
 
 // hack for posters :)
@@ -142,9 +139,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
     continue;
   }
 
-  const end = new Date(
-    Math.max(...candidateEndTimes),
-  );
+  const end = new Date(Math.max(...candidateEndTimes));
 
   const hasBreakAfter = nextSessions.some(
     (session) => session.type === "break",
@@ -163,7 +158,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
       timesToSkip.push(roomChangeTime);
       continue;
     } else {
-      if (duration != 0){
+      if (duration != 0) {
         console.warn("Missing room change", end, nextStart, duration);
       }
     }
@@ -350,23 +345,21 @@ posters.forEach((poster) => {
   postersByTime[poster.startTime].push(poster);
 });
 
-
 const date = parseISO(`${dayName}T12:00:00Z`);
 const dateText = format(date, "eeee d MMMM");
 
+const lastEndTime = Math.max(
+  ...slots.flatMap((slot) => slot.sessions.map((s) => timeToNumber(s.endTime))),
+);
 
-
-
-  const lastEndTime = Math.max(
-    ...slots.flatMap((slot) => slot.sessions.map((s) => timeToNumber(s.endTime)))
-  );
-
-  const endStart = numberToTime(lastEndTime);
-
+const endStart = numberToTime(lastEndTime);
 ---
 
 <div class="day ep-sched-day" data-day={dayName}>
-<h3 class="ep-sched-day-title" id={`day-${dayName}`}><a href={`#day-${dayName}`} aria-label={`Jump to ${dateText}`}>{dateText}</a></h3>
+  <h3 class="ep-sched-day-title" id={`day-${dayName}`}>
+    <a href={`#day-${dayName}`} aria-label={`Jump to ${dateText}`}>{dateText}</a
+    >
+  </h3>
 
   <div class="schedule-wrapper">
     <header class="schedule-container header">
@@ -450,7 +443,15 @@ const dateText = format(date, "eeee d MMMM");
                     {posters.map((session) => {
                       const style = {};
 
-                      return <div><Session session={session} style={style} sessionType="poster" /></div>;
+                      return (
+                        <div>
+                          <Session
+                            session={session}
+                            style={style}
+                            sessionType="poster"
+                          />
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
@@ -458,7 +459,6 @@ const dateText = format(date, "eeee d MMMM");
             </div>
           ))
         }
-
       </div>
 
       <Break
@@ -472,10 +472,10 @@ const dateText = format(date, "eeee d MMMM");
 </div>
 
 <style is:global>
-.layout-wrapper {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 100%) 1fr !important;
-}
+  .layout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 100%) 1fr !important;
+  }
 </style>
 
 <style>
@@ -513,7 +513,7 @@ const dateText = format(date, "eeee d MMMM");
   }
 
   :global(.schedule *) {
-    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-family: "Inter Tight", system-ui, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 0.9rem;
@@ -681,7 +681,7 @@ const dateText = format(date, "eeee d MMMM");
     }
 
     .time h2 {
-      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-family: "Inter Tight", system-ui, sans-serif;
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--color-text-muted);
@@ -709,10 +709,10 @@ const dateText = format(date, "eeee d MMMM");
     }
 
     .poster-cards {
-  }
+    }
 
-  .posters h2 {
-      font-family: 'Inter Tight', system-ui, sans-serif;
+    .posters h2 {
+      font-family: "Inter Tight", system-ui, sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
       color: var(--color-accent-themed);
