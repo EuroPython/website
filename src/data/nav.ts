@@ -174,6 +174,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.faq,
           L.coc,
           L.accessibility,
+          L.childcare,
         ],
       },
     ],
