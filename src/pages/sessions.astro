@@ -6,12 +6,13 @@ import Title from "@ui/Title.astro";
 import Section2 from "@ui/Section2.astro";
 import Filter from "@components/sessions/filter.astro";
 import ListSessions from "@components/sessions/list-sessions.astro";
+import { t } from "@utils/i18n";
 
 const sessions = await getCollection("sessions");
 
 const allTracks = Array.from(
   new Set(sessions.map((session) => session.data.track).filter((track) => track))
-).sort();
+).sort().map(t);
 
 const allTypes = Array.from(
   new Set(sessions.map((session) => session.data.session_type).filter((type) => type))

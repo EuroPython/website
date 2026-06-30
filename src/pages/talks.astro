@@ -4,6 +4,8 @@ import Section2 from "@ui/Section2.astro";
 import Title from "@ui/Title.astro";
 import { getCollection } from "astro:content";
 
+import { t } from "@utils/i18n";
+
 const allSessions = await getCollection("sessions");
 
 // Pre-resolve all speakers for fast lookup
@@ -23,9 +25,9 @@ function speakerHtml(speakers: any): string {
 }
 const talks = allSessions
   .filter((s) => {
-    const t = s.data.session_type?.toLowerCase();
-    const isTalk = t === "talk" || t === "talk (long session)" || t === "panel";
-    return isTalk && s.data.track !== "~ None of these topics";
+    const st = s.data.session_type?.toLowerCase();
+    const isTalk = st === "talk" || st === "talk (long session)" || st === "panel";
+    return isTalk && t(s.data.track) !== "General";
   })
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
@@ -109,7 +111,7 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
         <select id="sess-track-filter" class="sess-track-select" aria-label="Filter by topic">
           <option value="">All topics</option>
           {allDisplayTracks.map((track) => (
-            <option value={track}>{track}</option>
+            <option value={t(track)}>{t(track)}</option>
           ))}
         </select>
       </div>
@@ -119,12 +121,12 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
         {allDisplayTracks.map((track) => (
           <div class="talks-dot-bg">
           <div class="talk-topic-group">
-            <h3 class="talk-topic-heading" id={`topic-${track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>
-              <a href={`#topic-${track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}># {track}</a>
+            <h3 class="talk-topic-heading" id={`topic-${t(track).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>
+              <a href={`#topic-${t(track).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}># {t(track)}</a>
             </h3>
             <div class="talk-grid">
               {groups[track].map((talk) => (
-                <div class:list={["talk-card", talk.data.level]} data-track={talk.data.track || ""} data-search={`${talk.data.title.toLowerCase()} ${talk.data.track?.toLowerCase() || ""}`}>
+                <div class:list={["talk-card", talk.data.level]} data-track={t(talk.data.track) || ""} data-search={`${talk.data.title.toLowerCase()} ${t(talk.data.track)?.toLowerCase() || ""}`}>
                   <a href={`/session/${talk.id}`} class="talk-card-title">{talk.data.title}</a>
                   <p class="talk-card-speakers" set:html={speakerHtml(talk.data.speakers)}>
                   </p>

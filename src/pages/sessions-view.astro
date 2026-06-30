@@ -1,0 +1,57 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Prose from "@ui/Prose.astro";
+import Title from "@ui/Title.astro";
+import Section2 from "@ui/Section2.astro";
+import SessionView from "@components/island/SessionView.svelte";
+import { getCollection } from "astro:content";
+
+// --- sessions ---
+const sessions = await getCollection("sessions");
+
+// --- speakers map (id → name) ---
+const allSpeakers = await getCollection("speakers");
+const speakerMap: Record<string, string> = {};
+for (const s of allSpeakers) {
+  speakerMap[s.id] = s.data.name;
+}
+
+// --- days (for schedule view) ---
+const days = await getCollection("days");
+
+// --- all day IDs (for filter bar) ---
+const allDays = days.map((d) => d.id);
+
+// --- all room names (for filter bar) ---
+const allRooms = Array.from(
+  new Set(days.flatMap((d) => d.data?.rooms ?? []))
+).filter(Boolean).sort();
+
+const pageTitle = "Sessions — View Demo";
+const pageDescription = "Interactive session views: schedule, list, and grid";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Section2>
+    <Title id="session-views">Interactive Session Views</Title>
+    <Prose>
+      <p>
+        Switch between <strong>Schedule</strong> (day-by-day timetable),
+        <strong>List</strong> (compact list), and <strong>Grid</strong> (card grid)
+        views using the tabs below.
+        This uses <code>SessionView.svelte</code> — a client-side island
+        component that wraps all three view components.
+      </p>
+    </Prose>
+
+    <SessionView
+      client:load
+      sessions={JSON.parse(JSON.stringify(sessions))}
+      days={JSON.parse(JSON.stringify(days))}
+      speakerMap={JSON.parse(JSON.stringify(speakerMap))}
+      allDays={JSON.parse(JSON.stringify(allDays))}
+      allRooms={JSON.parse(JSON.stringify(allRooms))}
+      initialView="schedule"
+    />
+  </Section2>
+</Layout>
