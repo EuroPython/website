@@ -14,7 +14,7 @@ const {
   currentPath,
   homeLabel = "Home",
   homePath = "/",
-  separator = "/"
+  separator = "/",
 } = Astro.props;
 
 interface BreadcrumbItem {
@@ -24,7 +24,7 @@ interface BreadcrumbItem {
 }
 
 function normalizePath(path: string): string {
-  if (!path) return ""
+  if (!path) return "";
   if (path === "/") return "/";
   return path.replace(/\/+$/, "");
 }
@@ -32,7 +32,11 @@ function normalizePath(path: string): string {
 const normalizedCurrentPath = normalizePath(currentPath);
 
 // Recursive function to build breadcrumb trail
-function findBreadcrumbTrail(items: any[], currentPath: string, parentName?: string): BreadcrumbItem[] {
+function findBreadcrumbTrail(
+  items: any[],
+  currentPath: string,
+  parentName?: string,
+): BreadcrumbItem[] {
   for (const item of items) {
     const itemPath = normalizePath(item.path);
 
@@ -40,14 +44,11 @@ function findBreadcrumbTrail(items: any[], currentPath: string, parentName?: str
       const breadcrumb: BreadcrumbItem = {
         name: item.name,
         path: item.path,
-        isActive: true
+        isActive: true,
       };
 
       if (parentName) {
-        return [
-          { name: parentName, path: '', isActive: false },
-          breadcrumb
-        ];
+        return [{ name: parentName, path: "", isActive: false }, breadcrumb];
       }
 
       return [breadcrumb];
@@ -70,7 +71,7 @@ const breadcrumbs: BreadcrumbItem[] = [];
 breadcrumbs.push({
   name: homeLabel,
   path: homePath,
-  isActive: normalizedCurrentPath === normalizePath(homePath)
+  isActive: normalizedCurrentPath === normalizePath(homePath),
 });
 
 if (normalizedCurrentPath !== normalizePath(homePath) && linksData?.header) {
@@ -78,51 +79,60 @@ if (normalizedCurrentPath !== normalizePath(homePath) && linksData?.header) {
   breadcrumbs.push(...trail);
 }
 
-if (breadcrumbs.length === 1 && normalizedCurrentPath !== normalizePath(homePath)) {
-  const pathSegments = normalizedCurrentPath.split('/').filter(Boolean);
+if (
+  breadcrumbs.length === 1 &&
+  normalizedCurrentPath !== normalizePath(homePath)
+) {
+  const pathSegments = normalizedCurrentPath.split("/").filter(Boolean);
   const lastSegment = pathSegments[pathSegments.length - 1];
 
   if (lastSegment) {
     breadcrumbs.push({
-      name: lastSegment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      name: lastSegment
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (l) => l.toUpperCase()),
       path: currentPath,
-      isActive: true
+      isActive: true,
     });
   }
 }
 ---
 
 <Section>
-{ currentPath !== homePath &&
-  <nav aria-label="Breadcrumb" class="px-4">
-    <ol class="flex flex-wrap items-center text-sm list-none m-0 p-0">
-      {breadcrumbs.map((crumb, index) => (
-        <li class="flex items-center">
-          {crumb.isActive ? (
-            <span class="text-white font-medium px-2 py-1" aria-current="page">
-              {crumb.name}
-            </span>
-          ) : crumb.path ? (
-            <a href={crumb.path} class="underline hover:text-button-hover px-2 py-1 rounded transition-colors duration-200 hover:underline">
-              {crumb.name}
-            </a>
-          ) : (
-            <span class="text-white/60 italic px-2 py-1">
-              {crumb.name}
-            </span>
-          )}
-          {index < breadcrumbs.length - 1 && (
-            <span class="mx-2 text-white/40 select-none" aria-hidden="true">
-              {separator}
-            </span>
-          )}
-        </li>
-      ))}
-    </ol>
-  </nav>
+  {
+    currentPath !== homePath && (
+      <nav aria-label="Breadcrumb" class="px-4">
+        <ol class="flex flex-wrap items-center text-sm list-none m-0 p-0">
+          {breadcrumbs.map((crumb, index) => (
+            <li class="flex items-center">
+              {crumb.isActive ? (
+                <span
+                  class="text-white font-medium px-2 py-1"
+                  aria-current="page"
+                >
+                  {crumb.name}
+                </span>
+              ) : crumb.path ? (
+                <a
+                  href={crumb.path}
+                  class="underline hover:text-button-hover px-2 py-1 rounded transition-colors duration-200 hover:underline"
+                >
+                  {crumb.name}
+                </a>
+              ) : (
+                <span class="text-white/60 italic px-2 py-1">{crumb.name}</span>
+              )}
+              {index < breadcrumbs.length - 1 && (
+                <span class="mx-2 text-white/40 select-none" aria-hidden="true">
+                  {separator}
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )
   }
 </Section>
 
-<style>
-
-  </style>
+<style></style>

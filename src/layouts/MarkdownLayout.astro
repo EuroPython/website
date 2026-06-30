@@ -5,31 +5,29 @@ import TwoCols from "@components/TwoCols.astro";
 
 import "@styles/markdown.css";
 
-const { title, description, toc=false } = Astro.props;
-
+const { title, description, toc = false } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
   <Section>
-  {
-    toc ? (
-      <TwoCols>
-        <Fragment slot="content">
-          <div
-            id="toc"
-            class="mt-24 mb-6 last:mb-0 p-6"
-          >
-          <span class="text-sm font-medium uppercase tracking-[0.15em] text-[var(--color-text-muted)]">On this page</span>
-          </div>
-        </Fragment>
-        <Fragment slot="sidebar">
-          <slot   />
-        </Fragment>
-      </TwoCols>
-    ) : (
-      <slot />
-    )
-  }
+    {
+      toc ? (
+        <TwoCols>
+          <Fragment slot="content">
+            <div id="toc" class="mt-24 mb-6 last:mb-0 p-6">
+              <span class="text-sm font-medium uppercase tracking-[0.15em] text-[var(--color-text-muted)]">
+                On this page
+              </span>
+            </div>
+          </Fragment>
+          <Fragment slot="sidebar">
+            <slot />
+          </Fragment>
+        </TwoCols>
+      ) : (
+        <slot />
+      )
+    }
   </Section>
 </Layout>
 
@@ -145,9 +143,10 @@ const { title, description, toc=false } = Astro.props;
     text-decoration: none;
     padding: 0.3em 0.5em;
     border-left: 1px solid transparent;
-    transition: color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
-                border-color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
-                padding 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
+    transition:
+      color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
+      border-color 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1)),
+      padding 0.3s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
     font-size: 0.9rem;
     line-height: 1.5;
   }
@@ -169,11 +168,10 @@ const { title, description, toc=false } = Astro.props;
     padding-left: 0;
   }
 
-
-article h2,
-article h3,
-article h4,
-article summary span:nth-child(1) {
-  scroll-margin-top: 120px;
-}
+  article h2,
+  article h3,
+  article h4,
+  article summary span:nth-child(1) {
+    scroll-margin-top: 120px;
+  }
 </style>
