@@ -6,4 +6,3 @@ npx lint-staged
 
 # Run Astro type checking (local only, not in CI)
 pnpm astro check
-
