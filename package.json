@@ -8,7 +8,10 @@
     "build": "astro check && astro build && pnpm pagefind",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write --plugin=prettier-plugin-astro ."
+    "format": "prettier --write --plugin=prettier-plugin-astro .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",
@@ -43,12 +46,34 @@
     "vite": "^6.4.3"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "eslint-plugin-astro": "^2.1.1",
+    "eslint-plugin-svelte": "^3.20.0",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "oxipng": "^1.0.1",
     "prettier": "^3.8.4",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.8.3"
+    "svgo": "^4.0.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.62.1"
   },
   "prettier": {
     "proseWrap": "always"
+  },
+  "lint-staged": {
+    "*.{svg}": [
+      "svgo --config svgo.config.mjs"
+    ],
+    "*.{png,jpg,jpeg}": [
+      "oxipng"
+    ],
+    "*.{ts,js,astro,svelte}": [
+      "eslint --fix",
+      "prettier --write --plugin=prettier-plugin-astro"
+    ]
   },
   "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631",
   "pnpm": {

@@ -36,6 +36,12 @@ jobs:
       - name: Install dependencies
         run: make install
 
+      - name: Optimize SVGs
+        run: pnpm exec svgo --config svgo.config.mjs -r .
+
+      - name: Optimize PNGs
+        run: pnpm exec oxipng -r . --strip safe
+
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.9.1
         with:
