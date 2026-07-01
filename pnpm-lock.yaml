@@ -40,7 +40,7 @@ importers:
         version: 6.7.2
       '@nanostores/persistent':
         specifier: ^1.3.4
-        version: 1.3.4(nanostores@1.3.0)
+        version: 1.3.4(nanostores@1.4.0)
       '@tailwindcss/typography':
         specifier: ^0.5.20
         version: 0.5.20(tailwindcss@4.3.1)
@@ -78,8 +78,8 @@ importers:
         specifier: ^16.4.2
         version: 16.4.2
       nanostores:
-        specifier: ^1.3.0
-        version: 1.3.0
+        specifier: ^1.4.0
+        version: 1.4.0
       pagefind:
         specifier: ^1.5.2
         version: 1.5.2
@@ -2033,8 +2033,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nanostores@1.3.0:
-    resolution: {integrity: sha512-XPUa/jz+P1oJvN9VBxw4L9MtdFfaH3DAryqPssqhb2kXjmb9npz0dly6rCsgFWOPr4Yg9mTfM3MDZgZZ+7A3lA==}
+  nanostores@1.4.0:
+    resolution: {integrity: sha512-i0tloweeudshAEuddpDxcg9Ik6pkPfVsHIgKyf143JrgG7/MOh0+q7BypdLXZPoOP7fOYt1eTcwGkyiVmhJFkA==}
     engines: {node: ^20.0.0 || >=22.0.0}
 
   neotraverse@0.6.18:
@@ -3359,9 +3359,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@nanostores/persistent@1.3.4(nanostores@1.3.0)':
+  '@nanostores/persistent@1.3.4(nanostores@1.4.0)':
     dependencies:
-      nanostores: 1.3.0
+      nanostores: 1.4.0
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -5182,7 +5182,7 @@ snapshots:
 
   nanoid@3.3.12: {}
 
-  nanostores@1.3.0: {}
+  nanostores@1.4.0: {}
 
   neotraverse@0.6.18: {}
 
