@@ -69,6 +69,7 @@ const L = {
     external: true,
   },
   accessibility: { label: "Accessibility", url: "/accessibility" },
+  childcare: { label: "Childcare", url: "/childcare" },
 
   // Venue
   venue: { label: "Venue", url: "/venue" },
@@ -182,6 +183,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.faq,
           L.coc,
           L.accessibility,
+          L.childcare,
         ],
       },
     ],
