@@ -269,7 +269,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       L.langSummit,
       L.rustSummit,
       L.packagingSummit,
-      L.pyladiesEvents
+      L.pyladiesEvents,
     ],
   },
   {
