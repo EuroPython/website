@@ -45,6 +45,10 @@ const L = {
   langSummit: { label: "Language Summit", url: "/language-summit" },
   rustSummit: { label: "Rust Summit", url: "/rust-summit" },
   packagingSummit: { label: "Packaging Summit", url: "/packaging-summit" },
+  communityOrganisersSummit: {
+    label: "Community Organisers Summit",
+    url: "/community-organisers-summit",
+  },
 
   // Events & Social
   sprints: { label: "Sprints Weekend", url: "/sprints" },
@@ -66,6 +70,7 @@ const L = {
     external: true,
   },
   accessibility: { label: "Accessibility", url: "/accessibility" },
+  childcare: { label: "Childcare", url: "/childcare" },
 
   // Venue
   venue: { label: "Venue", url: "/venue" },
@@ -140,7 +145,12 @@ export const NAV_MENUS: NavMenu[] = [
       },
       {
         label: "Summits",
-        items: [L.langSummit, L.rustSummit, L.packagingSummit],
+        items: [
+          L.langSummit,
+          L.rustSummit,
+          L.packagingSummit,
+          L.communityOrganisersSummit,
+        ],
       },
       {
         label: "Events & Social",
@@ -175,6 +185,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.faq,
           L.coc,
           L.accessibility,
+          L.childcare,
         ],
       },
     ],
@@ -270,6 +281,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       L.rustSummit,
       L.packagingSummit,
       L.pyladiesEvents,
+      L.communityOrganisersSummit,
     ],
   },
   {
