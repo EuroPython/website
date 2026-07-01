@@ -20,7 +20,7 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@nanostores/persistent": "^1.3.4",
     "@tailwindcss/typography": "^0.5.20",
-    "@tailwindcss/vite": "^4.3.1",
+    "@tailwindcss/vite": "^4.3.2",
     "astro": "^6.4.8",
     "astro-compress": "^2.4.1",
     "astro-delete-unused-images": "^1.0.3",
