@@ -52,7 +52,7 @@ const L = {
   beginnersDay: { label: "Beginners' Day", url: "/beginners-day" },
   speakersDinner: { label: "Speakers' Dinner", url: "/speakers-dinner" },
   openSpaces: { label: "Open Spaces", url: "/open-spaces" },
-  pyladiesEvents: { label: "PyLadies' Events", url: "/pyladies" }
+  pyladiesEvents: { label: "PyLadies' Events", url: "/pyladies" },
 
   // Participate
   tickets: { label: "Tickets", url: "/tickets" },
