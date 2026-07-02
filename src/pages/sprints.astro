@@ -16,9 +16,16 @@ const sprints = (await getCollection("sprints", ({ data }) => {
   return import.meta.env.MODE === "production" ? data.draft !== true : true;
 })).sort((a, b) => a.id.localeCompare(b.id));
 
+const GITHUB_ROOT = "https://github.com/EuroPython/website";
+const GITHUB_BRANCH = "ep2026";
+
+const contentSourceUrl = entry.filePath
+  ? `${GITHUB_ROOT}/blob/${GITHUB_BRANCH}/${entry.filePath}`
+  : null;
+
 ---
 
-<Layout title=`${entry.data.title}` description=`${entry.data.subtitle}` toc=true>
+<Layout title=`${entry.data.title}` description=`${entry.data.subtitle}` toc=true contentSourceUrl={contentSourceUrl}>
 
       <Markdown content={entry.body ?? ""} />
       <div class="flex flex-wrap gap-8 justify-center my-8">

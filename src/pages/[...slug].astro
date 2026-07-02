@@ -79,9 +79,17 @@ let title =
   post.data.title +
   " | EuroPython 2026 | July 13th-19th 2026 | Kraków, Poland";
 const description = post.data.subtitle;
+
+const GITHUB_ROOT = "https://github.com/EuroPython/website";
+const GITHUB_BRANCH = "ep2026";
+
+let contentSourceUrl: string | null = null;
+if (post.filePath) {
+  contentSourceUrl = `${GITHUB_ROOT}/blob/${GITHUB_BRANCH}/${post.filePath}`;
+}
 ---
 
-<Layout title={title} description={description} toc={post.data.toc}>
+<Layout title={title} description={description} toc={post.data.toc} contentSourceUrl={contentSourceUrl}>
   <Prose class="pb-20" full={post.data.full}>
     <Content
       components={{

@@ -2,10 +2,11 @@
 import Layout from "@layouts/Layout.astro";
 import Section from "@ui/Section2.astro";
 import TwoCols from "@components/TwoCols.astro";
+import SourceLink from "@components/SourceLink.astro";
 
 import "@styles/markdown.css";
 
-const { title, description, toc=false } = Astro.props;
+const { title, description, toc = false, contentSourceUrl } = Astro.props;
 
 ---
 
@@ -30,6 +31,11 @@ const { title, description, toc=false } = Astro.props;
       <slot />
     )
   }
+  {contentSourceUrl && (
+    <div class="flex flex-wrap items-center gap-4 mt-12 pt-4 border-t border-[var(--color-border)]">
+      <SourceLink href={contentSourceUrl} label="Edit this page" />
+    </div>
+  )}
   </Section>
 </Layout>
 
