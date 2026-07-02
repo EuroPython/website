@@ -1,7 +1,7 @@
 ---
 import { getEntry } from "astro:content";
 import Markdown from "@ui/Markdown.astro";
-const { job:jobId, sponsor:sponsorId } = Astro.props;
+const { job:jobId, sponsor:sponsorId, compact = true } = Astro.props;
 
 const job = await getEntry("jobs", jobId);
 if (!job) {
@@ -17,22 +17,30 @@ if (!sponsor) {
 // TODO: add tags
 const { title, location, type, level, salary, description, responsibilities, min_requirements, requirements, preferred, benefits, apply_link, draft } = job.data;
 
+const jobUrl = `/sponsor/${jobId}`;
+const descLimit = 500;
+const descFull = description || "";
+const descDisplay = compact && descFull.length > descLimit
+  ? descFull.slice(0, descLimit).replace(/\s+\S*$/, "") + "…"
+  : descFull;
+
 ---
 
-<div class="mb-6 rounded-lg border border-white/10 bg-white/5">
+<div class="mb-6 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-subtle)]">
   <div class=`flex-1 p-6 ${draft ? "draft": ""}`>
     <p class="text-xl pb-2 inline-block font-bold">
       {sponsor.data.name}
     </p>
-    <a href={`/sponsor/${jobId}`}>
-      <h2 class="text-3xl font-bold mb-2">{title}</h2>
+    <a href={`/sponsor/${jobId}`} class="group">
+      <h2 class="text-3xl font-bold mb-2 text-[var(--color-text)] group-hover:text-[var(--color-accent-themed)] transition-colors">{title}</h2>
     </a>
 
-    <p class="text-white/60 mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
-    <p class="text-white/70 mb-4">{salary}</p>
-    <Markdown content={description || ""} class="job-post" />
+    <p class="text-[var(--color-text-muted)] mb-2">{([level, type, location].filter(Boolean)).join(" • ")}</p>
+    <p class="text-[var(--color-text-secondary)] mb-4">{salary}</p>
+    <Markdown content={descDisplay} class="job-post" />
+    {compact && <div class="mt-4"><a href={jobUrl} class="more-btn">Read more</a></div>}
 
-    { responsibilities &&
+    {!compact && responsibilities &&
       <h3 class="text-xl font-semibold mb-2">Responsibilities</h3>
       <ul class="list-disc list-inside mb-4">
         {responsibilities.map((item) => {
@@ -40,7 +48,7 @@ const { title, location, type, level, salary, description, responsibilities, min
             return <li>{item}</li>;
           }
           const category = Object.keys(item)[0];
-          const subItems = item[category];
+          const subItems = item[category] as string[];
           return (
             <li>
               <strong>{category}</strong>
@@ -53,48 +61,60 @@ const { title, location, type, level, salary, description, responsibilities, min
       </ul>
     }
 
-    { min_requirements &&
+    {!compact && min_requirements &&
     <h3 class="text-xl font-semibold mb-2">Minimum requirements</h3>
     <ul class="list-disc list-inside mb-4">
       {min_requirements.map((item:string) => <li>{item}</li>)}
     </ul>
     }
-    { requirements &&
+    {!compact && requirements &&
     <h3 class="text-xl font-semibold mb-2">Requirements</h3>
     <ul class="list-disc list-inside mb-4">
       {requirements.map((item:string) => <li>{item}</li>)}
     </ul>
     }
 
-    { preferred &&
+    {!compact && preferred &&
     <h3 class="text-xl font-semibold mb-2">Nice-to-Haves</h3>
     <ul class="list-disc list-inside mb-4">
       {preferred.map((item:string) => <li>{item}</li>)}
     </ul>
     }
 
-    { benefits &&
+    {!compact && benefits &&
     <h3 class="text-xl font-semibold mb-2">Benefits</h3>
     <ul class="list-disc list-inside mb-6">
       {benefits.map((item:string) => <li>{item}</li>)}
     </ul>
     }
 
-    { job.data.description2 &&
+    {!compact && job.data.description2 &&
       <Markdown content={job.data.description2 || ""} class="job-post" />
     }
 
-      <a
-        href={apply_link}
-        target="_blank"
-        class="apply-btn"
->
-        Apply Now
-      </a>
+    {!compact && apply_link && (
+      <a href={apply_link} target="_blank" class="apply-btn">Apply Now</a>
+    )}
   </div>
 </div>
 
 <style>
+
+  .more-btn {
+    display: inline-block;
+    padding: 8px 24px;
+    color: white;
+    font-weight: 700;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    background: linear-gradient(to right, oklch(0.522 0.218 264.4), oklch(0.422 0.218 264.4));
+  }
+
+  .more-btn:hover {
+    color: white;
+  }
 
   .apply-btn {
     display: inline-block;

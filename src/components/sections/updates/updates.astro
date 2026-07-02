@@ -1,18 +1,18 @@
 ---
 import Section2 from "@ui/Section2.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
 
 let deadlineEntries = await getCollection("deadlines");
 deadlineEntries = deadlineEntries
   .filter((d) => !d.data.disabled)
-  .sort((a, b) => a.slug.localeCompare(b.slug))
+  .sort((a, b) => a.id.localeCompare(b.id))
   .reverse()
   .slice(0, 3);
 
 const cards = await Promise.all(
   deadlineEntries.map(async (entry) => {
-    const { Content } = await entry.render();
+    const { Content } = await render(entry);
     return { data: entry.data, Content };
   })
 );

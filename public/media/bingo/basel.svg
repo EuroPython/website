@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512" role="img" aria-label="Cathedral icon">
+  <rect width="120" height="120" fill="#1003A3"></rect>
+  <g fill="#ffffff">
+    <path d="M32 40 L39 10 L46 40 Z"></path>
+    <path d="M74 40 L81 10 L88 40 Z"></path>
+    <rect x="30" y="38" width="18" height="66"></rect>
+    <rect x="72" y="38" width="18" height="66"></rect>
+    <path d="M47.5 104 L47.5 56 L60 44 L72.5 56 L72.5 104 Z"></path>
+    <path d="M14 104 L14 90 L30 72 L30 104 Z"></path>
+    <path d="M106 104 L106 90 L90 72 L90 104 Z"></path>
+  </g>
+  <g fill="#1003A3">
+    <rect x="30" y="65.5" width="60" height="2.5"></rect>
+    <rect x="30" y="41" width="18" height="2"></rect>
+    <rect x="72" y="41" width="18" height="2"></rect>
+    <rect x="34.5" y="50" width="2" height="8" rx="1"></rect>
+    <rect x="41.5" y="50" width="2" height="8" rx="1"></rect>
+    <rect x="76.5" y="50" width="2" height="8" rx="1"></rect>
+    <rect x="83.5" y="50" width="2" height="8" rx="1"></rect>
+    <path d="M53 104 L53 86 L60 79 L67 86 L67 104 Z"></path>
+    <path d="M58 68 L58 62 L60 59 L62 62 L62 68 Z"></path>
+  </g>
+</svg>

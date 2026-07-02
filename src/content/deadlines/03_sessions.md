@@ -1,7 +1,7 @@
 ---
-title: Conference Sessions
-subtitle: View sessions
-url: /sessions
+title: Conference Schedule
+subtitle: View Schedule
+url: /schedule
 image: "./cfp.jpg"
 ---
 

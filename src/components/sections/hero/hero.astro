@@ -1,5 +1,4 @@
 ---
-import Button from "@ui/Button.astro";
 ---
 
 <section class="hero-main">
@@ -7,7 +6,19 @@ import Button from "@ui/Button.astro";
   <div class="hero-container">
     <div class="hero-content-block">
       <!-- <img src="/25yr.svg" alt="This Summer. 25 Years." class="hero-tagline-img"> -->
-      <h1 class="hero-heading">EURO<br>PYTHON</h1>
+      <div class="hero-eps-logo">
+        <img src="/theme/eps-logo.svg" alt="EuroPython Society" />
+      </div>
+      <h1 class="hero-heading" aria-label="EURO
+PYTHON">
+        <span class="hero-heading-text">EURO<br>PYTHON</span>
+        <svg class="hero-heading-svg" aria-hidden="true">
+          <text x="0" font-weight="800" letter-spacing="0.02em" stroke="#000" stroke-width="4" fill="#fff" paint-order="stroke fill" stroke-linejoin="round" stroke-linecap="round">
+            <tspan x="0" dy="0">EURO</tspan>
+            <tspan x="0" dy="1em">PYTHON</tspan>
+          </text>
+        </svg>
+      </h1>
       <div class="hero-year">2026</div>
       <p class="hero-intro">A week of talks, tutorials, sprints, and community. Join 1,500+ Pythonistas in July,<br> in <a href="#krakow">Kraków, Poland 🇵🇱</a>.</p>
       <p class="hero-schedule"><span>Tutorials</span> 13–14 July &nbsp;|&nbsp; <span>Conference</span> 15–17 July <br><span>Sprints</span> 18–19 July &nbsp;|&nbsp; <a href="#euroscipy">EuroSciPy</a> 18–23 July</p>
@@ -15,9 +26,15 @@ import Button from "@ui/Button.astro";
         <a href="/tickets" class="hero-cta">Register Now</a>
         <a href="#programme" class="hero-cta-alt">View Programme</a>
       </div>
+      <div class="hero-flowers" aria-hidden="true">
+        <img src="/theme/flower2.svg" alt="" class="flower flower-tl" loading="lazy">
+        <img src="/theme/flower1.svg" alt="" class="flower flower-tr" loading="lazy">
+        <img src="/theme/flower3.svg" alt="" class="flower flower-bl" loading="lazy">
+        <img src="/theme/flower4.svg" alt="" class="flower flower-br" loading="lazy">
+      </div>
     </div>
     <div class="hero-dragon">
-      <img src="/dragon.svg" alt="" class="dragon-svg" loading="lazy">
+      <img src="/theme/dragon.svg" alt="" class="dragon-svg" loading="lazy">
     </div>
   </div>
 </section>
@@ -40,10 +57,11 @@ import Button from "@ui/Button.astro";
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.04;
+    opacity: 0.08;
     /* filter: brightness(1.5) saturate(0.3); */
-    background: url('/flowers/flowers-tile-new.svg') repeat;
+    background: url('/theme/flowers-tile-new.svg') repeat;
     background-size: 2400px 2400px;
+    background-position: -400px 0;
   }
 
   .hero-container {
@@ -70,7 +88,7 @@ import Button from "@ui/Button.astro";
     height: auto;
     max-height: 80vh;
     object-fit: contain;
-    opacity: 0.7;
+    /* opacity: 0.7; */
   }
 
   @media (max-width: 768px) {
@@ -84,6 +102,68 @@ import Button from "@ui/Button.astro";
 
   .hero-content-block {
     max-width: 600px;
+    position: relative;
+  }
+
+  /* ── EPS Logo above heading ── */
+  .hero-eps-logo {
+    margin-bottom: 1rem;
+  }
+
+  .hero-eps-logo img {
+    display: block;
+    width: clamp(7.5rem, 12vw, 12rem);
+    height: auto;
+  }
+
+  /* ── Decorative flowers on right of content block ── */
+  .hero-flowers {
+    position: absolute;
+    right: -3rem;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-flowers .flower {
+    position: absolute;
+    display: block;
+  }
+
+  .flower-tl {
+    width: 120px;
+    right: 190px;
+    top: 180px;
+    /* opacity: 0.7; */
+  }
+
+  .flower-tr {
+    width: 156px;
+    right: 70px;
+    top: 190px;
+    /* opacity: 0.6; */
+  }
+
+  .flower-bl {
+    width: 100px;
+    right: 180px;
+    bottom: 130px;
+    /* opacity: 0.65; */
+  }
+
+  .flower-br {
+    width: 140px;
+    right: 50px;
+    bottom: 120px;
+    /* opacity: 0.55; */
+  }
+
+  @media (max-width: 1200px) {
+    .hero-flowers {
+      display: none;
+    }
   }
 
   .hero-tagline-img {
@@ -97,11 +177,30 @@ import Button from "@ui/Button.astro";
     font-weight: 800;
     font-family: var(--font-heading, 'Roboto', sans-serif);
     font-size: clamp(3rem, 6vw, 6rem);
-    line-height: 0.85;
+    line-height: 1;
     color: var(--color-white);
     text-transform: uppercase;
-    letter-spacing: -0.03em;
+    letter-spacing: 0.02em;
     margin: 0;
+  }
+
+  .hero-heading-text {
+    display: block;
+  }
+
+  .hero-heading-svg {
+    display: none;
+    width: 100%;
+    height: calc(2 * clamp(3rem, 6vw, 6rem));
+    min-height: 4rem;
+    overflow: visible;
+  }
+
+  .hero-heading-svg text {
+    font-family: var(--font-heading, 'Roboto', sans-serif);
+    text-transform: uppercase;
+    font-size: inherit;
+    dominant-baseline: text-before-edge;
   }
 
   .hero-year {
@@ -220,6 +319,9 @@ import Button from "@ui/Button.astro";
       width: 140px;
       margin-bottom: 1rem;
     }
+    .hero-flowers {
+      display: none;
+    }
   }
 
   /* ── Light mode hero ──
@@ -234,8 +336,12 @@ import Button from "@ui/Button.astro";
     );
   }
 
-  :global(.light) .hero-heading {
-    color: var(--color-text);
+  :global(.light) .hero-heading-text {
+    display: none;
+  }
+
+  :global(.light) .hero-heading-svg {
+    display: block;
   }
 
   :global(.light) .hero-intro {

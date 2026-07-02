@@ -4,6 +4,7 @@ import Section from "@ui/Section.astro";
 export interface Props {
   linksData: any;
   currentPath: string;
+  currentLabel?: string;
   homeLabel?: string;
   homePath?: string;
   separator?: string;
@@ -12,6 +13,7 @@ export interface Props {
 const {
   linksData,
   currentPath,
+  currentLabel,
   homeLabel = "Home",
   homePath = "/",
   separator = "/"
@@ -24,7 +26,6 @@ interface BreadcrumbItem {
 }
 
 function normalizePath(path: string): string {
-console.log(path)
   if (!path) return ""
   if (path === "/") return "/";
   return path.replace(/\/+$/, "");
@@ -85,7 +86,7 @@ if (breadcrumbs.length === 1 && normalizedCurrentPath !== normalizePath(homePath
 
   if (lastSegment) {
     breadcrumbs.push({
-      name: lastSegment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      name: currentLabel ?? lastSegment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
       path: currentPath,
       isActive: true
     });

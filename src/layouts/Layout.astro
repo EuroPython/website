@@ -5,7 +5,18 @@ import Footer from "@components/Footer.astro";
 import Offline from "@components/Offline.astro";
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 
-import linksData from '@src/data/links.json';
+import { NAV_MENUS } from '@src/data/nav';
+
+// Convert NavMenu[] to the shape Breadcrumbs expects: { header: [{ name, path, items? }] }
+const breadcrumbData = {
+  header: NAV_MENUS.map((m) => ({
+    name: m.label,
+    path: m.url,
+    items: m.sections
+      ? m.sections.flatMap((s) => s.items.map((i) => ({ name: i.label, path: i.url })))
+      : undefined,
+  })),
+};
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@styles/tailwind.css";
@@ -19,13 +30,14 @@ import "@styles/light-theme.css";
 export interface Props {
   title: string;
   description: string;
+  image?: string;
   hideHeader?: boolean;
   hideFooter?: boolean;
 }
 
 const currentPath = Astro.url.pathname;
 
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 
 if (!title || !description) {
 throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be set.`);
@@ -40,7 +52,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} image={image} />
     <slot name="head" />
 
     </Fragment>
@@ -56,8 +68,9 @@ const hideFooter = Astro.props.hideFooter ?? false;
       <Offline />
         {currentPath !== "/" && (
           <Breadcrumbs
-              linksData={linksData}
+              linksData={breadcrumbData}
               currentPath={currentPath}
+              currentLabel={title}
               homePath="/"
               separator="›"
           />
