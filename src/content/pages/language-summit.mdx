@@ -35,15 +35,17 @@ subtitle: The Python Language Summit is an event for the developers of Python im
 
 ## Talk details
 
-In alphabetical order by title, schedule coming soon!
+### **One namespace to namespacing them all** — Pablo Galindo Salgado
 
-### **A Roadmap for Rust for CPython** — David Hewitt
+We know you have shadowed `random` with your own `random.py`. Don’t lie. We’ve all done it, and one of us shipped it to prod. The stdlib lives in the same flat namespace as everything on PyPI, which means `os` and `leftpad` are equals in the eyes of the import system, and that is frankly embarrassing for `os`.
 
-The Rust for CPython project would like to present the current state of the project and the plans as we head towards a PEP. We will cover the roadmap we are working towards as well as the design choices for the "internal Rust API". We'd like to invite discussion to shape the project. Do attendees agree with the proposed scope for the initial implementation? What success criteria would attendees like to see if Rust were to become permanent? Should more exotic designs be explored for the Rust API?
+This talk pitches a single top-level namespace for the stdlib and we can discuss better ways to do experimental features and other advantages. We will gesture at what it could look like, admit upfront it’s a year-long migration nobody asked for, and mostly try to find out whether you all want to hurt us for proposing it. Bring opinions.
 
-### **Developer in Residence update & future** — Petr Viktorin
+### **Python releases for macOS** — Ned Deily
 
-A big part of the Developer in Residence role should be helping other core devs, so they can focus volunteer time on enjoyable tasks. What are the best ways to do that?
+For many years the Python release team has provided Windows and macOS binaries with every Python release. For macOS, how and what we provide has not changed much over the years even though packaging and distribution guidelines and user expectations have. Plus there are now more options available through third-party distributors than in the past.
+
+Let's discuss the benefits and costs of providing macOS binary releases going forward as part of a macOS support policy addition to PEP 11 and, based on that, start a discussion of what changes (features, release artifacts, CI / buildbot, core developer and release team commitment) we should be aiming for.
 
 ### **GC: Generational? Incremental? Both.** — Mark Shannon
 
@@ -63,21 +65,9 @@ Various WebAssembly Python distributions (both Cloudflare and Fastly) are using 
 
 Taking a memory snapshot introduces two separate stages of execution: initialization time vs execution time. In order to work, client code may need to know  The Python language model has no concept of initialization time, there is only runtime. Faster alternative implementations like PyPy and GraalPython introduce this distinction in order to make Python code run faster. JavaScript ES6 modules introduced a similar distinction. Could Python benefit from a formal notion of an "initialization phase"?
 
-### **One namespace to namespacing them all** — Pablo Galindo Salgado
+### **A Roadmap for Rust for CPython** — David Hewitt
 
-We know you have shadowed `random` with your own `random.py`. Don’t lie. We’ve all done it, and one of us shipped it to prod. The stdlib lives in the same flat namespace as everything on PyPI, which means `os` and `leftpad` are equals in the eyes of the import system, and that is frankly embarrassing for `os`.
-
-This talk pitches a single top-level namespace for the stdlib and we can discuss better ways to do experimental features and other advantages. We will gesture at what it could look like, admit upfront it’s a year-long migration nobody asked for, and mostly try to find out whether you all want to hurt us for proposing it. Bring opinions.
-
-### **PEP 827 - Type manipulation and annotationlib** — Michael J. Sullivan
-
-PEP 827 proposes adding powerful type-level introspection and construction facilities to Python’s type system. This design is inspired largely by TypeScript’s conditional and mapped types, but is heavily adapted to the very different semantics and constraints of Python’s typing model. It will allow typing a wide range of dynamic APIs and metaprogramming that currently are not well typeable.
-
-### **Python releases for macOS** — Ned Deily
-
-For many years the Python release team has provided Windows and macOS binaries with every Python release. For macOS, how and what we provide has not changed much over the years even though packaging and distribution guidelines and user expectations have. Plus there are now more options available through third-party distributors than in the past.
-
-Let's discuss the benefits and costs of providing macOS binary releases going forward as part of a macOS support policy addition to PEP 11 and, based on that, start a discussion of what changes (features, release artifacts, CI / buildbot, core developer and release team commitment) we should be aiming for.
+The Rust for CPython project would like to present the current state of the project and the plans as we head towards a PEP. We will cover the roadmap we are working towards as well as the design choices for the "internal Rust API". We'd like to invite discussion to shape the project. Do attendees agree with the proposed scope for the initial implementation? What success criteria would attendees like to see if Rust were to become permanent? Should more exotic designs be explored for the Rust API?
 
 ### **Spicycrab, the Rust transpiler** — Kushal Das
 
@@ -87,11 +77,19 @@ more Rust crates are available as stub typed Python modules, which we can use
 like normal Python code while developing and then compiling the generated Rust
 code as final output. The final goal is to be able to write smaller production code using spicycrab.
 
+### **Developer in Residence update & future** — Petr Viktorin
+
+A big part of the Developer in Residence role should be helping other core devs, so they can focus volunteer time on enjoyable tasks. What are the best ways to do that?
+
 ### **Thinking about the post era of free-threading Python** — Donghee Na, Tobias Wrigstad, Fridtjof
 
 In the free-threading era, Python users will need high-level concurrency primitives that make concurrent programming easier and safer.
 
 This session will discuss what kinds of primitives we could provide in the Python standard library, and how to make them feel natural for everyday Python users.
+
+### **PEP 827 - Type manipulation and annotationlib** — Michael J. Sullivan
+
+PEP 827 proposes adding powerful type-level introspection and construction facilities to Python’s type system. This design is inspired largely by TypeScript’s conditional and mapped types, but is heavily adapted to the very different semantics and constraints of Python’s typing model. It will allow typing a wide range of dynamic APIs and metaprogramming that currently are not well typeable.
 
 
 ## FAQ
