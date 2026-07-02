@@ -67,7 +67,7 @@ const logo = sponsorLogos[sponsor.id];
     description && (
       <div class="flex-1">
         <h2 id=`sponsor-${sponsorId}` class="sponsor text-2xl font-bold mb-2 ">
-          { !isSponsorPage && tier !== 'Partners' && ["Diamond", "Platinum"].includes(tier) ?
+          { !isSponsorPage && tier !== 'Partners' && (tier === "Diamond" || tier === "Platinum" || sponsor.data.page) ?
             <a href={`/sponsor/${sponsor.id}`}>
             {title}
             </a> :
@@ -103,7 +103,7 @@ const logo = sponsorLogos[sponsor.id];
         {website && (
           <div class="website-btn-container flex flex-col sm:flex-row justify-center gap-2 mt-4">
 
-            { !isSponsorPage && sponsor.body && tier && ["Diamond", "Platinum"].includes(tier) &&
+            { !isSponsorPage && sponsor.body && tier && (tier === "Diamond" || tier === "Platinum" || sponsor.data.page) &&
             <a href={`/sponsor/${sponsor.id}`} class="website-btn-outline">
               About {title}
             </a>

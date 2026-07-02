@@ -15,9 +15,9 @@ export async function getStaticPaths() {
   const sponsors = await getCollection(
     "sponsors",
     ({ data }) =>
-      data.tier &&
-      ["Diamond", "Platinum"].includes(data.tier) &&
-      (isProduction ? data.draft !== true : true),
+      (data.tier && ["Diamond", "Platinum"].includes(data.tier)) ||
+      (data.page === true &&
+        (isProduction ? data.draft !== true : true))
   );
 
   return sponsors.map((sponsor: any) => ({
