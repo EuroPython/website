@@ -69,23 +69,23 @@ async function getCollectionsData() {
   ]);
 
   const speakersById = Object.entries(
-    speakersData as Record<string, {}>
+    speakersData as Record<string, {}>,
   ).reduce(
     (acc, [id, speaker]: [string, any]) => {
       acc[id] = { id, ...speaker };
       return acc;
     },
-    {} as Record<string, any>
+    {} as Record<string, any>,
   );
 
   const sessionsById = Object.entries(
-    sessionsData as Record<string, {}>
+    sessionsData as Record<string, {}>,
   ).reduce(
     (acc, [id, session]: [string, any]) => {
       acc[id] = { id, ...session };
       return acc;
     },
-    {} as Record<string, any>
+    {} as Record<string, any>,
   );
 
   return {
@@ -103,7 +103,7 @@ const speakers = defineCollection({
     // Load keynoter entries from markdown files
     const keynoterDir = join(process.cwd(), "src/content/keynoters");
     const keynoterFiles = readdirSync(keynoterDir).filter((f: string) =>
-      f.endsWith(".md")
+      f.endsWith(".md"),
     );
     const keynoterEntries = keynoterFiles.map((f: string) => {
       const content = readFileSync(join(keynoterDir, f), "utf-8");
@@ -130,12 +130,12 @@ const speakers = defineCollection({
         submissions: (speaker.submissions || [])
           .filter((sessionId: string) => sessionId in sessionsById)
           .map((sessionId: string) => sessionsById[sessionId].slug),
-      })
+      }),
     );
 
     // Add virtual entries for keynoters not in the API
     const apiNames = new Set(
-      apiSpeakers.map((s: any) => s.name?.toLowerCase())
+      apiSpeakers.map((s: any) => s.name?.toLowerCase()),
     );
 
     for (const k of keynoterEntries) {
@@ -164,15 +164,15 @@ const speakers = defineCollection({
                     join(
                       process.cwd(),
                       "src/content/keynoters",
-                      k.slug + "." + ext
-                    )
+                      k.slug + "." + ext,
+                    ),
                   )
                 )
                   return "/content/keynoters/" + k.slug + "." + ext;
               } catch {}
               return found;
             },
-            null
+            null,
           ),
           biography: (k as any).body || k.data?.bio || null,
           submissions: [],
@@ -218,10 +218,14 @@ const sessions = defineCollection({
       (session: any) => ({
         id: session.slug,
         ...session,
+        track:
+          session.track === "~ None of these topics"
+            ? "General"
+            : session.track,
         speakers: (session.speakers || [])
           .filter((speakerId: string) => speakerId in speakersById)
           .map((speakerId: string) => speakersById[speakerId].slug),
-      })
+      }),
     );
   },
   schema: z.object({
@@ -258,7 +262,10 @@ const tracks = defineCollection({
     const { sessionsData } = await getCollectionsData();
     const trackSet = new Set<string>();
     Object.values(sessionsData as Record<string, any>).forEach((s: any) => {
-      if (s.track) trackSet.add(s.track);
+      if (s.track)
+        trackSet.add(
+          s.track === "~ None of these topics" ? "General" : s.track,
+        );
     });
     return Array.from(trackSet)
       .sort()
@@ -284,7 +291,7 @@ interface ScheduleData {
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
     const schedule = (await loadData(
-      import.meta.env.EP_SCHEDULE_API
+      import.meta.env.EP_SCHEDULE_API,
     )) as ScheduleData;
 
     if (!schedule || Object.keys(schedule).length === 0) {
@@ -314,7 +321,7 @@ const days = defineCollection({
               code: z.string(),
               name: z.string(),
               website_url: z.string(),
-            })
+            }),
           )
           .optional(),
         start: z.string(),
@@ -322,7 +329,7 @@ const days = defineCollection({
         track: z.string().optional().nullable(),
         tweet: z.string().optional().nullable(),
         website_url: z.string().optional().nullable(),
-      })
+      }),
     ),
   }),
 });
@@ -411,7 +418,7 @@ const sprints = defineCollection({
         z.object({
           title: z.string(),
           url: z.string().url(),
-        })
+        }),
       )
       .optional(),
     draft: z.boolean().optional().default(false),
