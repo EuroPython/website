@@ -1,9 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
-import { getEntry } from 'astro:content';
+import { getCollection, getEntry, render } from "astro:content";
 import Layout from '@layouts/MarkdownLayout.astro';
 import SprintCard from '@components/SprintCard.astro';
-import Markdown from "@ui/Markdown.astro";
+import Prose from "@ui/Prose.astro";
+import Map from "@components/Map.astro";
 
 
 const entry = await getEntry('pages', 'sprints_info');
@@ -11,6 +11,8 @@ const entry = await getEntry('pages', 'sprints_info');
 if (!entry) {
   throw new Error('Could not find page entry.');
 }
+
+const { Content } = await render(entry);
 
 const sprints = (await getCollection("sprints", ({ data }) => {
   return import.meta.env.MODE === "production" ? data.draft !== true : true;
@@ -20,7 +22,9 @@ const sprints = (await getCollection("sprints", ({ data }) => {
 
 <Layout title=`${entry.data.title}` description=`${entry.data.subtitle}` toc=true>
 
-      <Markdown content={entry.body ?? ""} />
+      <Prose>
+        <Content components={{ Map }} />
+      </Prose>
       <div class="flex flex-wrap gap-8 justify-center my-8">
         <div class="flex flex-col gap-2">
           <label for="level-filter" class="font-semibold text-white/80 text-lg">Python Level:</label>
