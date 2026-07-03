@@ -1,7 +1,6 @@
 ---
-import { getEntry } from 'astro:content';
-import ProfileCard from './ProfileCard.astro'
-
+import { getEntry } from "astro:content";
+import ProfileCard from "./ProfileCard.astro";
 
 const { speakerId } = Astro.props;
 
@@ -10,6 +9,6 @@ const speaker = await getEntry("speakers", speakerId);
 if (!speaker) {
   throw new Error(`Speaker entry "${Astro.params.day}" not found`);
 }
-
 ---
+
 <ProfileCard {...speaker.data} company={speaker.data.affiliation} />

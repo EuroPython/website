@@ -7,33 +7,50 @@ import SpeakerCard from "@ui/SpeakerCard.astro";
 
 const speakers = await getCollection("speakers");
 const sortedSpeakers = speakers
-  .filter(s => !!s.data?.name)
+  .filter((s) => !!s.data?.name)
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
 ---
 
 <Layout title="Speakers" description="All speakers at EuroPython 2026">
   <Section2 id="all-speakers">
     <div class="section-header">
-      <Title id="all-speakers" subtitle={`${sortedSpeakers.length} speakers at EuroPython 2026`}>All Speakers</Title>
+      <Title
+        id="all-speakers"
+        subtitle={`${sortedSpeakers.length} speakers at EuroPython 2026`}
+        >All Speakers</Title
+      >
     </div>
 
     <div class="speaker-filter">
-      <input type="text" id="speakerSearch" class="filter-input" placeholder="Search speakers..." />
+      <input
+        type="text"
+        id="speakerSearch"
+        class="filter-input"
+        placeholder="Search speakers..."
+      />
     </div>
 
     <div class="speakers-grid" id="speakersGrid">
-      {sortedSpeakers.map((speaker) => (
-        <div class="speaker-card-wrap" data-name={speaker.data.name.toLowerCase()} style="min-width: 0">
-          <SpeakerCard speaker={speaker} />
-        </div>
-      ))}
+      {
+        sortedSpeakers.map((speaker) => (
+          <div
+            class="speaker-card-wrap"
+            data-name={speaker.data.name.toLowerCase()}
+            style="min-width: 0"
+          >
+            <SpeakerCard speaker={speaker} />
+          </div>
+        ))
+      }
     </div>
   </Section2>
 </Layout>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("speakerSearch") as HTMLInputElement | null;
+    const input = document.getElementById(
+      "speakerSearch",
+    ) as HTMLInputElement | null;
     const grid = document.getElementById("speakersGrid");
     if (!input || !grid) return;
     const wraps = grid.querySelectorAll(".speaker-card-wrap");
@@ -88,12 +105,18 @@ const sortedSpeakers = speakers
   }
 
   @media (max-width: 1024px) {
-    .speakers-grid { grid-template-columns: repeat(4, 1fr); }
+    .speakers-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   @media (max-width: 768px) {
-    .speakers-grid { grid-template-columns: repeat(3, 1fr); }
+    .speakers-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   @media (max-width: 480px) {
-    .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+    .speakers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>

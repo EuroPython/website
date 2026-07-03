@@ -4,37 +4,36 @@ import { Image } from "astro:assets";
 import cityImage from "/public/prague2.jpg";
 import Logo from "/public/prague.svg";
 import Headline from "@ui/Headline.astro";
-import Section from "@ui/Section.astro"
+import Section from "@ui/Section.astro";
 ---
 
 <Section>
-  <Headline id="city" title="Krakow & Venue" center=true />
+  <Headline id="city" title="Krakow & Venue" center="true" />
 
-<article class="lg:grid gap-12 grid-cols-2 items-center min-h-[300px]">
-  <div class="relative hidden lg:block">
-    <Image
-      src={cityImage}
-      class="w-full h-auto border-4 border-white rounded-lg shadow-lg"
-      alt="Beautiful view of Krakow"
-      width={1200}
-      height={900}
-    />
-  </div>
+  <article class="lg:grid gap-12 grid-cols-2 items-center min-h-[300px]">
+    <div class="relative hidden lg:block">
+      <Image
+        src={cityImage}
+        class="w-full h-auto border-4 border-white rounded-lg shadow-lg"
+        alt="Beautiful view of Krakow"
+        width={1200}
+        height={900}
+      />
+    </div>
 
-<div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-  <p class="mt-4 mb-8">
-    EuroPython 2026 returns to one of Europe’s most picturesque cities!
-    Join us at the Krakow Congress Centre, just steps away from the
-    historic Vyšehrad Castle and its scenic views of the city.
-  </p>
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <p class="mt-4 mb-8">
+        EuroPython 2026 returns to one of Europe’s most picturesque cities! Join
+        us at the Krakow Congress Centre, just steps away from the historic
+        Vyšehrad Castle and its scenic views of the city.
+      </p>
 
-  <div class="flex w-full justify-evenly items-center">
-    <Button url="/krakow">About Krakow</Button>
-    <Button url="/venue">About Venue</Button>
-  </div>
-
-  </div>
-</article>
+      <div class="flex w-full justify-evenly items-center">
+        <Button url="/krakow">About Krakow</Button>
+        <Button url="/venue">About Venue</Button>
+      </div>
+    </div>
+  </article>
 </Section>
 
 <div class="city" id="one">
@@ -61,5 +60,4 @@ import Section from "@ui/Section.astro"
     bottom: -4px;
     z-index: 1;
   }
-
 </style>

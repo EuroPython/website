@@ -15,35 +15,40 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
 
 <section class="sec-wrap progtalk-section" id="keynoters">
   <div class="sec-inner">
-
     <div class="prog-keynoters">
-      <h2 class="sec-title prog-topics-label">Keynote Speakers <sup class="sec-anchor"><a href="#keynoters">#</a></sup></h2>
+      <h2 class="sec-title prog-topics-label">
+        Keynote Speakers <sup class="sec-anchor"><a href="#keynoters">#</a></sup
+        >
+      </h2>
       <ul class="prog-keynoters-grid">
-        {keynoters.map((k) => (
-          <Keynoter
-            name={k.data.name}
-            url={k.data.url || ""}
-            tagline={k.data.tagline}
-            bio={k.data.bio}
-            {...(k.data.image ? { image: k.data.image } : {})}
-            order={k.data.order}
-          />
-        ))}
-        {placeholders.map((p) => (
-          <Keynoter
-            name={p.name}
-            url={p.url}
-            order={p.order}
-            placeholder={true}
-          />
-        ))}
+        {
+          keynoters.map((k) => (
+            <Keynoter
+              name={k.data.name}
+              url={k.data.url || ""}
+              tagline={k.data.tagline}
+              bio={k.data.bio}
+              {...(k.data.image ? { image: k.data.image } : {})}
+              order={k.data.order}
+            />
+          ))
+        }
+        {
+          placeholders.map((p) => (
+            <Keynoter
+              name={p.name}
+              url={p.url}
+              order={p.order}
+              placeholder={true}
+            />
+          ))
+        }
       </ul>
     </div>
 
     <div class="prog-more">
       <a href="/sessions" class="prog-more-cta">Explore the full programme</a>
     </div>
-
   </div>
 </section>
 
@@ -71,7 +76,7 @@ const placeholders = Array.from({ length: placeholderCount }, (_, i) => ({
   }
 
   .prog-topics-label {
-    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-family: var(--font-heading, "Roboto", sans-serif);
     font-size: clamp(2.8rem, 6vw, 5.2rem);
     line-height: 1.05;
     letter-spacing: -0.02em;

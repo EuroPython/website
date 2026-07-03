@@ -5,7 +5,11 @@ interface FilterSessionsProps {
   allLevels?: string[];
 }
 
-const { allTracks = [], allTypes = [], allLevels = [] }: FilterSessionsProps = Astro.props;
+const {
+  allTracks = [],
+  allTypes = [],
+  allLevels = [],
+}: FilterSessionsProps = Astro.props;
 import Label from "@ui/Label.astro";
 import Select from "@ui/Select.astro";
 ---
@@ -23,41 +27,47 @@ import Select from "@ui/Select.astro";
   </div>
 
   <div class="flex flex-wrap gap-x-4 gap-y-4 mb-6">
-    {allTracks.length > 0 && (
-      <div>
-        <Label htmlFor="track">Track</Label>
-        <Select id="track" name="track">
-          <option value="">All</option>
-          {allTracks.map((track: string) => (
-            <option value={track}>{track}</option>
-          ))}
-        </Select>
-      </div>
-    )}
+    {
+      allTracks.length > 0 && (
+        <div>
+          <Label htmlFor="track">Track</Label>
+          <Select id="track" name="track">
+            <option value="">All</option>
+            {allTracks.map((track: string) => (
+              <option value={track}>{track}</option>
+            ))}
+          </Select>
+        </div>
+      )
+    }
 
-    {allTypes.length > 0 && (
-      <div>
-        <Label htmlFor="type">Session type</Label>
-        <Select id="type" name="type">
-          <option value="">All</option>
-          {allTypes.map((type: string) => (
-            <option value={type}>{type}</option>
-          ))}
-        </Select>
-      </div>
-    )}
+    {
+      allTypes.length > 0 && (
+        <div>
+          <Label htmlFor="type">Session type</Label>
+          <Select id="type" name="type">
+            <option value="">All</option>
+            {allTypes.map((type: string) => (
+              <option value={type}>{type}</option>
+            ))}
+          </Select>
+        </div>
+      )
+    }
 
-    {allLevels.length > 0 && (
-      <div>
-        <Label htmlFor="level">Level</Label>
-        <Select id="level" name="level">
-          <option value="">All</option>
-          {allLevels.map((level: string) => (
-            <option value={level}>{level}</option>
-          ))}
-        </Select>
-      </div>
-    )}
+    {
+      allLevels.length > 0 && (
+        <div>
+          <Label htmlFor="level">Level</Label>
+          <Select id="level" name="level">
+            <option value="">All</option>
+            {allLevels.map((level: string) => (
+              <option value={level}>{level}</option>
+            ))}
+          </Select>
+        </div>
+      )
+    }
   </div>
 
   <button
@@ -81,7 +91,9 @@ import Select from "@ui/Select.astro";
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const forms = document.querySelectorAll<HTMLFormElement>("form.filter-sessions");
+    const forms = document.querySelectorAll<HTMLFormElement>(
+      "form.filter-sessions",
+    );
     const resultsInfo = document.getElementById("results-info");
 
     function getUrlParams(): FilterParams {
@@ -101,7 +113,8 @@ import Select from "@ui/Select.astro";
         const trackSelect = form.querySelector<HTMLSelectElement>("#track");
         const typeSelect = form.querySelector<HTMLSelectElement>("#type");
         const levelSelect = form.querySelector<HTMLSelectElement>("#level");
-        const searchInput = form.querySelector<HTMLInputElement>("#sessionSearch");
+        const searchInput =
+          form.querySelector<HTMLInputElement>("#sessionSearch");
 
         if (trackSelect) trackSelect.value = track;
         if (typeSelect) typeSelect.value = type;
@@ -110,7 +123,12 @@ import Select from "@ui/Select.astro";
       });
     }
 
-    function updateUrlParams(track: string, type: string, level: string, search: string): void {
+    function updateUrlParams(
+      track: string,
+      type: string,
+      level: string,
+      search: string,
+    ): void {
       const params = new URLSearchParams();
 
       if (track) params.set("track", track);
@@ -130,7 +148,8 @@ import Select from "@ui/Select.astro";
         const trackSelect = form.querySelector<HTMLSelectElement>("#track");
         const typeSelect = form.querySelector<HTMLSelectElement>("#type");
         const levelSelect = form.querySelector<HTMLSelectElement>("#level");
-        const searchInput = form.querySelector<HTMLInputElement>("#sessionSearch");
+        const searchInput =
+          form.querySelector<HTMLInputElement>("#sessionSearch");
 
         const track = trackSelect?.value || "";
         const type = typeSelect?.value || "";
@@ -139,7 +158,8 @@ import Select from "@ui/Select.astro";
 
         updateUrlParams(track, type, level, search);
 
-        const sessionItems = document.querySelectorAll<HTMLLIElement>("ol.sessions > li");
+        const sessionItems =
+          document.querySelectorAll<HTMLLIElement>("ol.sessions > li");
 
         sessionItems.forEach((session) => {
           const sessionTrack = session.getAttribute("data-track") || "";
@@ -153,27 +173,31 @@ import Select from "@ui/Select.astro";
           const searchMatch = search === "" || sessionText.includes(search);
 
           session.style.display =
-            trackMatch && typeMatch && levelMatch && searchMatch ? "block" : "none";
+            trackMatch && typeMatch && levelMatch && searchMatch
+              ? "block"
+              : "none";
         });
 
-        const trackGroups = document.querySelectorAll<HTMLDivElement>("div.track-group");
+        const trackGroups =
+          document.querySelectorAll<HTMLDivElement>("div.track-group");
 
         trackGroups.forEach((group) => {
           const visibleSessions = group.querySelectorAll(
-            "ol.sessions > li:not([style*='display: none'])"
+            "ol.sessions > li:not([style*='display: none'])",
           ).length;
 
           group.style.display = visibleSessions > 0 ? "block" : "none";
         });
 
         const visibleCount = document.querySelectorAll(
-          "ol.sessions > li:not([style*='display: none'])"
+          "ol.sessions > li:not([style*='display: none'])",
         ).length;
 
         if (resultsInfo) {
-          resultsInfo.textContent = visibleCount > 0
-            ? `${visibleCount} result${visibleCount === 1 ? "" : "s"} found.`
-            : "No results found.";
+          resultsInfo.textContent =
+            visibleCount > 0
+              ? `${visibleCount} result${visibleCount === 1 ? "" : "s"} found.`
+              : "No results found.";
         }
       });
     }
@@ -190,12 +214,14 @@ import Select from "@ui/Select.astro";
         select.addEventListener("change", filterSessions);
       });
 
-      const searchInput = form.querySelector<HTMLInputElement>("#sessionSearch");
+      const searchInput =
+        form.querySelector<HTMLInputElement>("#sessionSearch");
       if (searchInput) {
         searchInput.addEventListener("input", filterSessions);
       }
 
-      const resetButton = form.querySelector<HTMLButtonElement>("#reset-filters");
+      const resetButton =
+        form.querySelector<HTMLButtonElement>("#reset-filters");
       if (resetButton) {
         resetButton.addEventListener("click", () => {
           selectElements.forEach((select) => {

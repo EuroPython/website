@@ -22,7 +22,7 @@ const { Content } = await render(deadline);
   title={deadline.data.title}
   url={deadline.data.url}
   subtitle={deadline.data.subtitle}
-  {...(deadline.data.disabled ? { disabled: deadline.data.disabled } : {})}
+  {...deadline.data.disabled ? { disabled: deadline.data.disabled } : {}}
 >
   <Content />
 </Card>

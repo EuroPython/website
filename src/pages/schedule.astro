@@ -16,95 +16,87 @@ export const getStaticPaths = async () => {
 };
 
 const days = await getCollection("days");
-
 ---
 
 <Layout description="Browse all scheduled events." headline="Schedule">
+  {days.map((day) => <ScheduleDay day={day} />)}
+  <script>
+    window.addEventListener("load", function () {
+      function checkForAnchorAndHighlight() {
+        const currentAnchor = window.location.hash.substring(1);
 
-  {
-    days.map((day) => (
-      <ScheduleDay day={day} />
-    ))
-  }
-<script>
-window.addEventListener('load', function() {
-  function checkForAnchorAndHighlight() {
+        if (!currentAnchor || currentAnchor.startsWith("day-")) return;
 
-    const currentAnchor = window.location.hash.substring(1);
+        const targetEl = document.getElementById(currentAnchor);
 
-    if (!currentAnchor || currentAnchor.startsWith('day-')) return;
-
-    var targetEl = document.getElementById(currentAnchor);
-
-    // Always switch to the correct day tab if we found the session
-    if (targetEl) {
-      var dayEl = targetEl.closest('.ep-sched-day');
-      if (dayEl) {
-        var dayName = dayEl.getAttribute('data-day');
-        var tabsContainer = document.getElementById('sched-tabs');
-        if (tabsContainer) {
-          var tabs = tabsContainer.querySelectorAll('.ep-sched-tab');
-          tabs.forEach(function(t) {
-            if (t.getAttribute('data-day') === dayName) {
-              t.click();
+        // Always switch to the correct day tab if we found the session
+        if (targetEl) {
+          const dayEl = targetEl.closest(".ep-sched-day");
+          if (dayEl) {
+            const dayName = dayEl.getAttribute("data-day");
+            const tabsContainer = document.getElementById("sched-tabs");
+            if (tabsContainer) {
+              const tabs = tabsContainer.querySelectorAll(".ep-sched-tab");
+              tabs.forEach(function (t) {
+                if (t.getAttribute("data-day") === dayName) {
+                  (t as HTMLElement).click();
+                }
+              });
             }
-          });
+          }
+        }
+
+        // Only blink if the session is visible
+        if (targetEl && targetEl.offsetParent !== null) {
+          const sessionEl = (targetEl.querySelector(".ep-session") ||
+            targetEl) as HTMLElement;
+          const originalOutline = sessionEl.style.outline;
+          const originalBackground = sessionEl.style.background;
+
+          let blinkCount = 0;
+          const maxBlinks = 5;
+          const blinkDuration = 500;
+
+          function toggleBorder() {
+            if (blinkCount >= maxBlinks * 2) {
+              sessionEl.style.outline = originalOutline;
+              sessionEl.style.background = originalBackground;
+              return;
+            }
+
+            if (blinkCount % 2 === 0) {
+              sessionEl.style.outline = "2px solid var(--ep-accent, #ff9900)";
+              sessionEl.style.outlineOffset = "-2px";
+              sessionEl.style.background =
+                "var(--ep-session-hover-bg, rgba(255,255,255,0.05))";
+            } else {
+              sessionEl.style.outline = originalOutline;
+              sessionEl.style.background = originalBackground;
+            }
+
+            blinkCount++;
+            setTimeout(toggleBorder, blinkDuration);
+          }
+
+          toggleBorder();
+
+          setTimeout(function () {
+            const scrollOffset = 200;
+            const elementPosition = sessionEl.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - scrollOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }, 500);
         }
       }
-    }
 
-    // Only blink if the session is visible
-    if (targetEl && targetEl.offsetParent !== null) {
-      var sessionEl = targetEl.querySelector('.ep-session') || targetEl;
-      var originalOutline = sessionEl.style.outline;
-      var originalBackground = sessionEl.style.background;
+      checkForAnchorAndHighlight();
 
-      var blinkCount = 0;
-      var maxBlinks = 5;
-      var blinkDuration = 500;
-
-      function toggleBorder() {
-        if (blinkCount >= maxBlinks * 2) {
-          sessionEl.style.outline = originalOutline;
-          sessionEl.style.background = originalBackground;
-          return;
-        }
-
-        console.log('a');
-        if (blinkCount % 2 === 0) {
-
-          console.log('b');
-          sessionEl.style.outline = '2px solid var(--ep-accent, #ff9900)';
-          sessionEl.style.outlineOffset = '-2px';
-          sessionEl.style.background = 'var(--ep-session-hover-bg, rgba(255,255,255,0.05))';
-        } else {
-          sessionEl.style.outline = originalOutline;
-          sessionEl.style.background = originalBackground;
-        }
-
-        blinkCount++;
-        setTimeout(toggleBorder, blinkDuration);
-      }
-
-      toggleBorder();
-
-      setTimeout(function() {
-        var scrollOffset = 200;
-        var elementPosition = sessionEl.getBoundingClientRect().top;
-        var offsetPosition = elementPosition + window.pageYOffset - scrollOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }, 500);
-    }
-  }
-
-  checkForAnchorAndHighlight();
-
-
-  window.addEventListener('hashchange', checkForAnchorAndHighlight);
-});
-</script>
+      window.addEventListener("hashchange", checkForAnchorAndHighlight);
+    });
+  </script>
 </Layout>

@@ -5,14 +5,11 @@ import SponsorCard from "@components/SponsorCard.astro";
 import TwoCols from "@components/TwoCols.astro";
 import { getCollection } from "astro:content";
 
-
 const { sponsor, job: jobId } = Astro.params;
 
 const job = `${sponsor}/${jobId}`;
 
 export async function getStaticPaths() {
-
-
   const jobs = await getCollection("jobs", ({ data }) => {
     return import.meta.env.MODE === "production" ? data.draft !== true : true;
   });
@@ -34,20 +31,18 @@ export async function getStaticPaths() {
     })
     .filter(Boolean);
 }
-
-
 ---
 
 <Layout
   title="EuroPython 2026 | July 13th-19th 2026 | Krakow, Poland & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-    <TwoCols>
-      <Fragment slot="content">
-        <SponsorCard {sponsor} showJobs />
-      </Fragment>
-      <Fragment slot="sidebar">
-        {(<JobCard {job} {sponsor} compact={false} />)}
-      </Fragment>
-    </TwoCols>
+  <TwoCols>
+    <Fragment slot="content">
+      <SponsorCard {sponsor} showJobs />
+    </Fragment>
+    <Fragment slot="sidebar">
+      {(<JobCard {job} {sponsor} compact={false} />)}
+    </Fragment>
+  </TwoCols>
 </Layout>

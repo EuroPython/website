@@ -1,14 +1,17 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Headline from "@ui/Headline.astro"
+import Headline from "@ui/Headline.astro";
 import Section from "@ui/Section.astro";
 
 import { Image } from "astro:assets";
+import conferenceImg from "@content/pages/overview/conference.jpg";
+import summitsImg from "@content/pages/overview/summits.jpg";
+import pyladiesImg from "@content/pages/overview/pyladies-lunch.jpg";
 
 const categories = [
   {
     title: "Talks, Tutorials & Posters",
-    image: "/content/pages/overview/conference.jpg",
+    image: conferenceImg,
     items: [
       { name: "Talks", href: "/sessions/" },
       { name: "Tutorials", href: "/sessions/" },
@@ -18,17 +21,20 @@ const categories = [
   },
   {
     title: "Summits",
-    image: "/content/pages/overview/summits.jpg",
+    image: summitsImg,
     items: [
       { name: "Language Summit", href: "/language-summit/" },
       { name: "Packaging Summit", href: "/packaging-summit/" },
       { name: "Rust Summit", href: "/rust-summit/" },
-      { name: "Community Organisers Summit", href: "/community-organisers-summit/" },
+      {
+        name: "Community Organisers Summit",
+        href: "/community-organisers-summit/",
+      },
     ],
   },
   {
     title: "PyLadies Events",
-    image: "/content/pages/overview/pyladies-lunch.jpg",
+    image: pyladiesImg,
     items: [
       { name: "PyLadies Booth", href: "/pyladies" },
       { name: "PyLadies Workshops", href: "/pyladies" },
@@ -44,35 +50,44 @@ const categories = [
   description="An overview of the talks, tutorials, summits and community events happening at EuroPython 2026 in Kraków, Poland."
 >
   <Section>
-    <Headline id="overview" as="h1" title="Programme & Events Overview" center=true />
+    <Headline
+      id="overview"
+      as="h1"
+      title="Programme & Events Overview"
+      center="true"
+    />
 
     <p class="overview-intro">
-      A week packed with talks, tutorials, summits and community events. Here's a
-      quick look at what's happening at EuroPython 2026 in Kraków.
+      A week packed with talks, tutorials, summits and community events. Here's
+      a quick look at what's happening at EuroPython 2026 in Kraków.
     </p>
 
     <div class="overview-grid">
-      {categories.map((category) => (
-        <article class="overview-card">
-          <div class="card-media">
-            <Image
-              src={category.image}
-              alt={category.title}
-              height={340}
-              width={600}
-              class="card-img"
-            />
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">{category.title}</h2>
-            <ul class="card-list">
-              {category.items.map((item) => (
-                <li><a href={item.href}>{item.name}</a></li>
-              ))}
-            </ul>
-          </div>
-        </article>
-      ))}
+      {
+        categories.map((category) => (
+          <article class="overview-card">
+            <div class="card-media">
+              <Image
+                src={category.image}
+                alt={category.title}
+                height={340}
+                width={600}
+                class="card-img"
+              />
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">{category.title}</h2>
+              <ul class="card-list">
+                {category.items.map((item) => (
+                  <li>
+                    <a href={item.href}>{item.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))
+      }
     </div>
   </Section>
 </Layout>
@@ -102,7 +117,10 @@ const categories = [
     border: 1px solid var(--color-border);
     border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
   }
 
   .overview-card:hover {

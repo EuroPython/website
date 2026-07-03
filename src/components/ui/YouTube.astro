@@ -1,78 +1,77 @@
 ---
-
-import 'lite-youtube-embed/src/lite-yt-embed.css';
-import liteJS from 'lite-youtube-embed/src/lite-yt-embed.js?url';
+import "lite-youtube-embed/src/lite-yt-embed.css";
+import liteJS from "lite-youtube-embed/src/lite-yt-embed.js?url";
 
 const urlPattern =
-	/(?=(\s*))\1(?:<a [^>]*?>)??(?=(\s*))\2(?:https?:\/\/)??(?:w{3}\.)??(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|shorts\/)??([A-Za-z0-9-_]{11})(?:[^\s<>]*)(?=(\s*))\4(?:<\/a>)??(?=(\s*))\5/;
+  /(?=(\s*))\1(?:<a [^>]*?>)??(?=(\s*))\2(?:https?:\/\/)??(?:w{3}\.)??(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|shorts\/)??([A-Za-z0-9-_]{11})(?:[^\s<>]*)(?=(\s*))\4(?:<\/a>)??(?=(\s*))\5/;
 
 function urlMatcher(url: string): string | undefined {
-	const match = url.match(urlPattern);
-	return match?.[3];
+  const match = url.match(urlPattern);
+  return match?.[3];
 }
 
 export interface Props extends astroHTML.JSX.HTMLAttributes {
-	id: string;
-	poster?: string;
-	posterQuality?: 'max' | 'high' | 'default' | 'low';
-	params?: string;
-	playlabel?: string;
+  id: string;
+  poster?: string;
+  posterQuality?: "max" | "high" | "default" | "low";
+  params?: string;
+  playlabel?: string;
 }
 
 const {
-	id,
-	poster,
-	posterQuality = 'default',
-	title,
-  class: userClass = '',
-	...attrs
+  id,
+  poster,
+  posterQuality = "default",
+  title,
+  class: userClass = "",
+  ...attrs
 } = Astro.props as Props;
 
-const defaultClass = 'border-4 border-white rounded-lg shadow-lg';
+const defaultClass = "border-4 border-white rounded-lg shadow-lg";
 const className = `${defaultClass} ${userClass}`.trim();
 
 const idRegExp = /^[A-Za-z0-9-_]{11}$/;
 
 function extractID(idOrUrl: string) {
-	if (idRegExp.test(idOrUrl)) return idOrUrl;
-	return urlMatcher(idOrUrl);
+  if (idRegExp.test(idOrUrl)) return idOrUrl;
+  return urlMatcher(idOrUrl);
 }
 
 const videoid = extractID(id);
 const posterFile =
-	{
-		max: 'maxresdefault',
-		high: 'sddefault',
-		default: 'hqdefault',
-		low: 'default',
-	}[posterQuality] || 'hqdefault';
+  {
+    max: "maxresdefault",
+    high: "sddefault",
+    default: "hqdefault",
+    low: "default",
+  }[posterQuality] || "hqdefault";
 const posterURL =
-	poster || `https://i.ytimg.com/vi/${videoid}/${posterFile}.jpg`;
+  poster || `https://i.ytimg.com/vi/${videoid}/${posterFile}.jpg`;
 const href = `https://youtube.com/watch?v=${videoid}`;
 ---
 
 <lite-youtube
-	{videoid}
-	{title}
-	data-title={title}
-	{...attrs}
+  {videoid}
+  {title}
+  data-title={title}
+  {...attrs}
   class={className}
-	style=`background-image: url('${posterURL}');`
+  style=`background-image: url('${posterURL}');`
 >
-	<a {href} class="lty-playbtn ">
-		<span class="lyt-visually-hidden">{attrs.playlabel || 'Play'}</span>
-	</a>
+  <a {href} class="lty-playbtn">
+    <span class="lyt-visually-hidden">{attrs.playlabel || "Play"}</span>
+  </a>
 </lite-youtube>
 
 <script is:inline type="module" src={liteJS}></script>
 
 <style is:global>
-	lite-youtube > iframe {
-		all: unset !important;
-		width: 100% !important;
-		height: 100% !important;
-		position: absolute !important;
-		inset: 0 !important;
-		border: 0 !important;
-	}
+  lite-youtube > iframe {
+    all: unset !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    inset: 0 !important;
+    border: 0 !important;
+  }
 </style>

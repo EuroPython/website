@@ -1,90 +1,103 @@
 ---
-import { getCollection, getEntry, render } from "astro:content";
-import Layout from '@layouts/MarkdownLayout.astro';
-import SprintCard from '@components/SprintCard.astro';
-import Prose from "@ui/Prose.astro";
-import Map from "@components/Map.astro";
+import { getCollection } from "astro:content";
+import { getEntry } from "astro:content";
+import Layout from "@layouts/MarkdownLayout.astro";
+import SprintCard from "@components/SprintCard.astro";
+import Markdown from "@ui/Markdown.astro";
 
-
-const entry = await getEntry('pages', 'sprints_info');
+const entry = await getEntry("pages", "sprints_info");
 
 if (!entry) {
-  throw new Error('Could not find page entry.');
+  throw new Error("Could not find page entry.");
 }
 
-const { Content } = await render(entry);
-
-const sprints = (await getCollection("sprints", ({ data }) => {
-  return import.meta.env.MODE === "production" ? data.draft !== true : true;
-})).sort((a, b) => a.id.localeCompare(b.id));
-
+const sprints = (
+  await getCollection("sprints", ({ data }) => {
+    return import.meta.env.MODE === "production" ? data.draft !== true : true;
+  })
+).sort((a, b) => a.id.localeCompare(b.id));
 ---
 
-<Layout title=`${entry.data.title}` description=`${entry.data.subtitle}` toc=true>
+<Layout
+  title=`${entry.data.title}`
+  description=`${entry.data.subtitle}`
+  toc="true"
+>
+  <Markdown content={entry.body ?? ""} />
+  <div class="flex flex-wrap gap-8 justify-center my-8">
+    <div class="flex flex-col gap-2">
+      <label for="level-filter" class="font-semibold text-white/80 text-lg"
+        >Python Level:</label
+      >
+      <select
+        id="level-filter"
+        class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-lg min-w-[150px] focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white"
+      >
+        <option value="">All Levels</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+  </div>
 
-      <Prose>
-        <Content components={{ Map }} />
-      </Prose>
-      <div class="flex flex-wrap gap-8 justify-center my-8">
-        <div class="flex flex-col gap-2">
-          <label for="level-filter" class="font-semibold text-white/80 text-lg">Python Level:</label>
-          <select id="level-filter" class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-lg min-w-[150px] focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white">
-            <option value="">All Levels</option>
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-          </select>
-        </div>
+  <div class="text-center mb-8">
+    <p class="text-white/60 font-medium">
+      {sprints.length} active {sprints.length === 1 ? "sprint" : "sprints"}
+    </p>
+  </div>
+
+  <section class="max-w-4xl mx-auto" id="sprints-list">
+    {sprints.map((sprint) => <SprintCard slug={sprint.id} />)}
+  </section>
+
+  {
+    sprints.length === 0 && (
+      <div class="text-center py-12">
+        <p class="text-gray-500 text-lg">
+          No sprints are currently available. Check back soon!
+        </p>
       </div>
-
-      <div class="text-center mb-8">
-        <p class="text-white/60 font-medium">{sprints.length} active {sprints.length === 1 ? 'sprint' : 'sprints'}</p>
-      </div>
-
-      <section class="max-w-4xl mx-auto" id="sprints-list">
-        {sprints.map((sprint) => (
-          <SprintCard slug={sprint.id} />
-        ))}
-      </section>
-
-      {sprints.length === 0 && (
-        <div class="text-center py-12">
-          <p class="text-gray-500 text-lg">No sprints are currently available. Check back soon!</p>
-        </div>
-      )}
+    )
+  }
 </Layout>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const levelFilter = document.getElementById('level-filter') as HTMLSelectElement;
-      const sprintsList = document.getElementById('sprints-list');
-      const sprintsCount = document.querySelector('.text-center.mb-8 p');
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const levelFilter = document.getElementById(
+      "level-filter",
+    ) as HTMLSelectElement;
+    const sprintsList = document.getElementById("sprints-list");
+    const sprintsCount = document.querySelector(".text-center.mb-8 p");
 
-      function filterSprints() {
-        const selectedLevel = levelFilter.value;
-        const sprintCards = sprintsList?.querySelectorAll('.sprint-card');
+    function filterSprints() {
+      const selectedLevel = levelFilter.value;
+      const sprintCards = sprintsList?.querySelectorAll(".sprint-card");
 
-        let visibleCount = 0;
+      let visibleCount = 0;
 
-        sprintCards?.forEach((card) => {
-          const cardElement = card as HTMLElement;
-          const pythonLevel = cardElement.getAttribute('data-python-level');
+      sprintCards?.forEach((card) => {
+        const cardElement = card as HTMLElement;
+        const pythonLevel = cardElement.getAttribute("data-python-level");
 
-          const levelMatch = !selectedLevel || pythonLevel === selectedLevel || pythonLevel === 'Any';
+        const levelMatch =
+          !selectedLevel ||
+          pythonLevel === selectedLevel ||
+          pythonLevel === "Any";
 
-          if (levelMatch) {
-            cardElement.style.display = 'block';
-            visibleCount++;
-          } else {
-            cardElement.style.display = 'none';
-          }
-        });
-
-        if (sprintsCount) {
-          sprintsCount.textContent = `${visibleCount} active ${visibleCount === 1 ? 'sprint' : 'sprints'}`;
+        if (levelMatch) {
+          cardElement.style.display = "block";
+          visibleCount++;
+        } else {
+          cardElement.style.display = "none";
         }
-      }
+      });
 
-      levelFilter?.addEventListener('change', filterSprints);
-    });
-  </script>
+      if (sprintsCount) {
+        sprintsCount.textContent = `${visibleCount} active ${visibleCount === 1 ? "sprint" : "sprints"}`;
+      }
+    }
+
+    levelFilter?.addEventListener("change", filterSprints);
+  });
+</script>

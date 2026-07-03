@@ -18,107 +18,113 @@ const gitVersion = __GIT_VERSION__;
 
 <footer>
   <div class="footer-flowers-bg" aria-hidden="true"></div>
-  <div class="text-[var(--color-text)] max-w-4xl lg:max-w-6xl mx-auto py-10 px-6 footer-inner">
+  <div
+    class="text-[var(--color-text)] max-w-4xl lg:max-w-6xl mx-auto py-10 px-6 footer-inner"
+  >
     <div class="footer-top-row">
       <div>
-        <p class="footer-title"><span class="footer-title-ep">#EP</span><span class="footer-title-year">2026</span></p>
+        <p class="footer-title">
+          <span class="footer-title-ep">#EP</span><span
+            class="footer-title-year">2026</span
+          >
+        </p>
         <p class="footer-subtitle">KRAKÓW, POLAND &nbsp;·&nbsp; JULY 13–19</p>
       </div>
     </div>
     <div class="footer-grid">
-    {
-      activeFooterColumns.map((col) => (
-        <div>
-          <p class="footer-col-title">{col.title}</p>
-          <ul class="footer-links">
-            {col.items.map((item) => (
-              <li>
-                <a
-                  href={item.url}
-                  target={item.external ? "_blank" : undefined}
-                  rel={item.external ? "noopener" : undefined}
-                >
-                  {item.label}{item.external ? " ↗" : ""}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))
-    }
-  </div>
-
-  <div class="flex flex-wrap gap-2 justify-between">
-    <div class="w-full py-2 border-t border-b border-[var(--color-border)]">
-      <div
-        class="flex flex-col lg:flex-row self-center gap-2 lg:gap-12 justify-end"
-      >
-        <div
-          class="flex flex-col text-[var(--color-text-faint)] w-full lg:w-2/3 p-5 items-center text-center"
-        >
-          <p>
-            Excited about our mission? Want to collaborate or contribute? Let's
-            connect! We're open to partnership opportunities and would love to
-            hear your ideas.
-            <a class="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] underline" href="mailto:helpdesk@europython.eu"
-              >helpdesk@europython.eu</a
-            >
-          </p>
-        </div>
-        <div
-          class="flex text-[var(--color-text-faint)] w-full lg:w-1/3 justify-center text-start mb-4 lg:mb-0"
-        >
-          <div>
-            <EPSLogo width="90" height="90" class="w-[90px] mr-4 h-auto" />
-          </div>
-          <div>
-            <address class="not-italic">
-              EuroPython Society (EPS)
-              <br />Ramnebacken 45
-              <br />
-              424 38 Agnesberg
-              <br />
-              Sweden
-            </address>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex w-full lg:flex-row flex-col-reverse justify-between">
-      <div class="terms py-2 text-center ">
       {
-        TERMS.map((item) => (
-          <a
-            href={item.url}
-            class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200 mx-2"
-          >
-            {item.label}
-            {item.external && (
-              <span class="inline-block">↗</span>
-            )}
-          </a>
+        activeFooterColumns.map((col) => (
+          <div>
+            <p class="footer-col-title">{col.title}</p>
+            <ul class="footer-links">
+              {col.items.map((item) => (
+                <li>
+                  <a
+                    href={item.url}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener" : undefined}
+                  >
+                    {item.label}
+                    {item.external ? " ↗" : ""}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         ))
       }
+    </div>
+
+    <div class="flex flex-wrap gap-2 justify-between">
+      <div class="w-full py-2 border-t border-b border-[var(--color-border)]">
+        <div
+          class="flex flex-col lg:flex-row self-center gap-2 lg:gap-12 justify-end"
+        >
+          <div
+            class="flex flex-col text-[var(--color-text-faint)] w-full lg:w-2/3 p-5 items-center text-center"
+          >
+            <p>
+              Excited about our mission? Want to collaborate or contribute?
+              Let's connect! We're open to partnership opportunities and would
+              love to hear your ideas.
+              <a
+                class="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] underline"
+                href="mailto:helpdesk@europython.eu">helpdesk@europython.eu</a
+              >
+            </p>
+          </div>
+          <div
+            class="flex text-[var(--color-text-faint)] w-full lg:w-1/3 justify-center text-start mb-4 lg:mb-0"
+          >
+            <div>
+              <EPSLogo width="90" height="90" class="w-[90px] mr-4 h-auto" />
+            </div>
+            <div>
+              <address class="not-italic">
+                EuroPython Society (EPS)
+                <br />Ramnebacken 45
+                <br />
+                424 38 Agnesberg
+                <br />
+                Sweden
+              </address>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {
-        SOCIALS && (
-          <SocialLinks
-            socials={SOCIALS}
-            variant="white"
-            class="opacity-60 pb-4"
-          />
-        )
-      }
-    </div>
-  </div>
+      <div class="flex w-full lg:flex-row flex-col-reverse justify-between">
+        <div class="terms py-2 text-center">
+          {
+            TERMS.map((item) => (
+              <a
+                href={item.url}
+                class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200 mx-2"
+              >
+                {item.label}
+                {item.external && <span class="inline-block">↗</span>}
+              </a>
+            ))
+          }
+        </div>
 
-  <p class="mb-16 text-[var(--color-text-secondary)] text-center">
-    version: {gitVersion} @ {buildTimestamp}
-  </p>
-</div>
-  </footer>
+        {
+          SOCIALS && (
+            <SocialLinks
+              socials={SOCIALS}
+              variant="white"
+              class="opacity-60 pb-4"
+            />
+          )
+        }
+      </div>
+    </div>
+
+    <p class="mb-16 text-[var(--color-text-secondary)] text-center">
+      version: {gitVersion} @ {buildTimestamp}
+    </p>
+  </div>
+</footer>
 
 <style>
   footer {
@@ -166,7 +172,7 @@ const gitVersion = __GIT_VERSION__;
     pointer-events: none;
     opacity: 0.04;
     filter: brightness(1.5) saturate(0.3);
-    background: url('/theme/flowers-tile-new.svg') repeat;
+    background: url("/theme/flowers-tile-new.svg") repeat;
     background-size: 2400px 2400px;
   }
 
