@@ -40,32 +40,38 @@ console.log(
 import fs from "fs";
 import p from "path";
 
-function syncContentImages() {
-  function syncDir(srcDir, destDir) {
+function syncKeynoterImages() {
+  const srcDir = "src/content/keynoters";
+  const destDir = "public/content/keynoters";
+
+  function sync() {
     if (!fs.existsSync(srcDir)) return;
+    fs.mkdirSync(destDir, { recursive: true });
     const entries = fs.readdirSync(srcDir, { withFileTypes: true });
     for (const entry of entries) {
-      const srcPath = p.join(srcDir, entry.name);
-      const destPath = p.join(destDir, entry.name);
-      if (entry.isDirectory()) {
-        syncDir(srcPath, destPath);
-      } else if (
-        entry.isFile() &&
-        /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(entry.name)
-      ) {
-        fs.mkdirSync(p.dirname(destPath), { recursive: true });
-        fs.cpSync(srcPath, destPath, { force: true });
+      if (!entry.isFile()) continue;
+      if (!/\.(jpg|jpeg|png|webp)$/i.test(entry.name)) continue;
+      fs.cpSync(p.join(srcDir, entry.name), p.join(destDir, entry.name), {
+        force: true,
+      });
+    }
+  }
+
+  function cleanStale() {
+    if (!fs.existsSync(destDir)) return;
+    for (const entry of fs.readdirSync(destDir, { withFileTypes: true })) {
+      if (!entry.isFile()) continue;
+      if (!fs.existsSync(p.join(srcDir, entry.name))) {
+        fs.unlinkSync(p.join(destDir, entry.name));
       }
     }
   }
 
   return {
-    name: "sync-content-images",
+    name: "sync-keynoter-images",
     buildStart() {
-      console.log(
-        "\x1b[35m[EP]\x1b[0m Syncing images from src/content/ to public/content/..."
-      );
-      syncDir("src/content", "public/content");
+      sync();
+      cleanStale();
     },
   };
 }
@@ -110,6 +116,7 @@ export default defineConfig({
         "@utils": path.resolve("./src/utils"),
         "@data": path.resolve("./src/data"),
         "@components": path.resolve("./src/components"),
+        "@content": path.resolve("./src/content"),
         "@stores": path.resolve("./src/stores"),
         "@sections": path.resolve("./src/components/sections"),
         "@layouts": path.resolve("./src/layouts"),
@@ -121,7 +128,7 @@ export default defineConfig({
       },
     },
 
-    plugins: [tailwindcss(), syncContentImages()],
+    plugins: [tailwindcss(), syncKeynoterImages()],
   },
   markdown: {
     remarkPlugins: [

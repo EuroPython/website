@@ -5,7 +5,6 @@ import Title from "@ui/Title.astro";
 import Button from "@ui/Button.astro";
 import SponsorLogo from "@components/SponsorLogo.astro";
 
-
 const allPartners = await getCollection("sponsors", ({ data }) => {
   const isProd = import.meta.env.MODE === "production";
   const notDraft = !isProd || data.draft !== true;
@@ -15,47 +14,48 @@ const allPartners = await getCollection("sponsors", ({ data }) => {
 
 const isPyData = (name: string) => name.startsWith("PyData");
 
-const isLUGorHS = (name: string) => (name.includes("Linux") || name.includes("Hackerspace"));
+const isLUGorHS = (name: string) =>
+  name.includes("Linux") || name.includes("Hackerspace");
 
 const regular = allPartners
-  .filter(p => (!isPyData(p.data.name)) && !isLUGorHS(p.data.name))
+  .filter((p) => !isPyData(p.data.name) && !isLUGorHS(p.data.name))
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
 
 const pydata = allPartners
-  .filter(p => isPyData(p.data.name))
+  .filter((p) => isPyData(p.data.name))
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
 
 const lugorhs = allPartners
-  .filter(p => isLUGorHS(p.data.name))
+  .filter((p) => isLUGorHS(p.data.name))
   .sort((a, b) => a.data.name.localeCompare(b.data.name));
 
 const partners = [...regular, ...pydata, ...lugorhs];
 
-const sectionSubtitle = "Meet the local Python communities joining us at EuroPython 2026";
+const sectionSubtitle =
+  "Meet the local Python communities joining us at EuroPython 2026";
 ---
 
 <Section2 id="community-partners" variant="light">
+  <div class="community-partners-header">
+    <Title id="community-partners" color="var(--color-black)"
+      >Community Partners</Title
+    >
+  </div>
+  <div class="text-center mb-12">
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
+  </div>
+  <div class="mt-10 text-center">
+    <Button url="/community-partners">Learn more about our partners</Button>
+  </div>
 
-    <div class="community-partners-header">
-      <Title id="community-partners" color="var(--color-black)">Community Partners</Title>
-      </div>
-      <div class="text-center mb-12">
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
-      </div>
-      <div class="mt-10 text-center">
-        <Button url="/community-partners">Learn more about our partners</Button>
-      </div>
-
-      <div class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
-        {partners.map((partner) => (
-          <SponsorLogo sponsor={partner.id} />
-        ))}
-      </div>
-
+  <div
+    class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+  >
+    {partners.map((partner) => <SponsorLogo sponsor={partner.id} />)}
+  </div>
 </Section2>
 
 <style>
-
   .community-partners-header {
     text-align: center;
     margin-bottom: 2.5rem;

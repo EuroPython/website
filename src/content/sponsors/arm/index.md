@@ -18,6 +18,6 @@ socials:
   youtube: https://www.youtube.com/@arm/
 
 tier: Gold
-event_name: PyLadies Lunch & Women at Python 5K Run
+event_name: PyLadies Lunch | Women at Python 5K Run | Open Space
 logo_padding: 35px
 ---

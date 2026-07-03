@@ -5,39 +5,38 @@ import Title from "@ui/Title.astro";
 import Button from "@ui/Button.astro";
 import SponsorLogo from "@components/SponsorLogo.astro";
 
+const partners = (
+  await getCollection("sponsors", ({ data }) => {
+    const isProd = import.meta.env.MODE === "production";
+    const notDraft = !isProd || data.draft !== true;
+    const isMediaPartner = data.tier === "Media Partners";
+    return notDraft && isMediaPartner;
+  })
+).sort((a, b) => a.data.name.localeCompare(b.data.name));
 
-const partners = (await getCollection("sponsors", ({ data }) => {
-  const isProd = import.meta.env.MODE === "production";
-  const notDraft = !isProd || data.draft !== true;
-  const isMediaPartner = data.tier === "Media Partners";
-  return notDraft && isMediaPartner;
-})).sort((a, b) => a.data.name.localeCompare(b.data.name));
-
-const sectionSubtitle = "Meet the media organisations supporting EuroPython 2026";
+const sectionSubtitle =
+  "Meet the media organisations supporting EuroPython 2026";
 ---
 
 <Section2 id="media-partners" variant="light">
+  <div class="media-partners-header">
+    <Title id="media-partners" color="var(--color-black)">Media Partners</Title>
+  </div>
+  <div class="text-center mb-12">
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
+  </div>
+  <div class="mt-10 text-center">
+    <Button url="/media-partners">Learn more about our media partners</Button>
+  </div>
 
-    <div class="media-partners-header">
-      <Title id="media-partners" color="var(--color-black)">Media Partners</Title>
-      </div>
-      <div class="text-center mb-12">
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sectionSubtitle}</p>
-      </div>
-      <div class="mt-10 text-center">
-        <Button url="/media-partners">Learn more about our media partners</Button>
-      </div>
-
-      <div class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
-        {partners.map((partner) => (
-          <SponsorLogo sponsor={partner.id} />
-        ))}
-      </div>
-
+  <div
+    class="partners-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+  >
+    {partners.map((partner) => <SponsorLogo sponsor={partner.id} />)}
+  </div>
 </Section2>
 
 <style>
-
   .media-partners-header {
     text-align: center;
     margin-bottom: 2.5rem;

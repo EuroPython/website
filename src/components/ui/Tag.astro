@@ -9,18 +9,20 @@ const { className = "", href } = Astro.props;
 const baseClasses = [
   "inline-block bg-white/10 text-white/80 px-3 py-1 rounded font-medium text-sm",
   "hover:bg-accent hover:text-section-bg transition-colors",
-  "duration-200 ease-in-out cursor-pointer"
+  "duration-200 ease-in-out cursor-pointer",
 ];
 
 const combinedClasses = [...baseClasses, className].join(" ");
 ---
 
-{href ? (
-  <a class={combinedClasses} href={href}>
-    <slot/>
-  </a>
-) : (
-  <span class={combinedClasses}>
-    <slot/>
-  </span>
-)}
+{
+  href ? (
+    <a class={combinedClasses} href={href}>
+      <slot />
+    </a>
+  ) : (
+    <span class={combinedClasses}>
+      <slot />
+    </span>
+  )
+}

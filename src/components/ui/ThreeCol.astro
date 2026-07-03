@@ -6,7 +6,12 @@ interface Props {
 const { class: className = "" } = Astro.props;
 ---
 
-<div class:list={["grid grid-cols-1 md:grid-cols-3 gap-4 not-prose my-6", className]}>
+<div
+  class:list={[
+    "grid grid-cols-1 md:grid-cols-3 gap-4 not-prose my-6",
+    className,
+  ]}
+>
   <slot />
 </div>
 

@@ -11,7 +11,6 @@ export const getStaticPaths = async () => {
   });
 };
 
-
 type Day = CollectionEntry<"days">;
 const dayEntry = await getEntry("days", Astro.params.day);
 
@@ -22,6 +21,9 @@ if (!dayEntry) {
 const day: Day = dayEntry;
 ---
 
-<Layout description=`Schedule for the day: ${day.id}` headline=`Schedule for the day: ${day.id}`>
+<Layout
+  description=`Schedule for the day: ${day.id}`
+  headline=`Schedule for the day: ${day.id}`
+>
   <ScheduleDay day={day} />
 </Layout>

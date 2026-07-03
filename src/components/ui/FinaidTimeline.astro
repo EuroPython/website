@@ -23,15 +23,24 @@ const { entries } = Astro.props;
       </tr>
     </thead>
     <tbody>
-      {entries.map((entry) => (
-        <tr>
-          <td class="tl-date" class:list={{ "font-bold": entry.highlight }}>{entry.date}</td>
-          <td class="tl-marker">
-            {entry.round && <img src={`/finaid-round${entry.round}.svg`} alt={`round ${entry.round}`} />}
-          </td>
-          <td class="tl-event">{entry.event}</td>
-        </tr>
-      ))}
+      {
+        entries.map((entry) => (
+          <tr>
+            <td class="tl-date" class:list={{ "font-bold": entry.highlight }}>
+              {entry.date}
+            </td>
+            <td class="tl-marker">
+              {entry.round && (
+                <img
+                  src={`/finaid-round${entry.round}.svg`}
+                  alt={`round ${entry.round}`}
+                />
+              )}
+            </td>
+            <td class="tl-event">{entry.event}</td>
+          </tr>
+        ))
+      }
     </tbody>
   </table>
 </div>

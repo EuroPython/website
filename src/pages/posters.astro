@@ -11,15 +11,23 @@ const posters = allSessions
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
-<Layout title="Posters | EuroPython 2026" description="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session.">
+<Layout
+  title="Posters | EuroPython 2026"
+  description="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session."
+>
   <Fragment slot="head">
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block"
+      rel="stylesheet"
+    />
   </Fragment>
   <Section2 variant="dark" id="posters">
     <div class="max-w-5xl mx-auto">
-
       <div class="text-center mb-12">
-        <Title id="posters" subtitle="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session.">
+        <Title
+          id="posters"
+          subtitle="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session."
+        >
           POSTERS
         </Title>
         <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
@@ -42,8 +50,8 @@ const posters = allSessions
         </li>
         <li>
           <strong>Great for first-time speakers</strong>
-          Posters are an excellent way to share your work without the pressure of a
-          stage presentation. Many speakers start here.
+          Posters are an excellent way to share your work without the pressure of
+          a stage presentation. Many speakers start here.
         </li>
         <li>
           <strong>Dedicated session time</strong>
@@ -54,9 +62,6 @@ const posters = allSessions
 
       <!-- Poster list component -->
       <ListPosters posters={posters} />
-
-    </div>
-  </Section2>
     </div>
   </Section2>
 </Layout>
