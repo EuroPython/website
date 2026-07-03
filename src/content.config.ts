@@ -359,6 +359,7 @@ const sponsors = defineCollection({
     logo_padding: z.string().optional(),
     logo_max_width: z.string().optional(),
     draft: z.boolean().optional().default(false),
+    page: z.boolean().optional().default(false),
     jobs: z.array(reference("jobs")).optional().default([]),
   }),
 });
