@@ -60,6 +60,7 @@ const L = {
 
   // Participate
   tickets: { label: "Tickets", url: "/tickets" },
+  remote: { label: "Remote", url: "/remote" },
   finaid: { label: "Financial Aid", url: "/finaid" },
   visa: { label: "Visa Information", url: "/visa" },
   volunteering: { label: "Volunteering", url: "/volunteering" },
@@ -179,6 +180,7 @@ export const NAV_MENUS: NavMenu[] = [
       {
         items: [
           L.tickets,
+          L.remote,
           L.finaid,
           L.visa,
           L.volunteering,
@@ -254,7 +256,7 @@ export const TERMS: Link[] = [
 export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Quick links",
-    items: [L.tickets, L.krakow, L.visa],
+    items: [L.tickets, L.remote, L.krakow, L.visa],
   },
   {
     title: "Programme",
