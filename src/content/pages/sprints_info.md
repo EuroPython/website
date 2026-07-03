@@ -23,7 +23,10 @@ together.
 
 ## When and Where?
 
-TBD
+The sprints will take place on **Saturday and Sunday, 18–19 July**, at
+[Echo Miasta](https://echomiasta.com/).
+
+**Address:** [Kapelanka 56, 30-347 Kraków, Poland](https://maps.app.goo.gl/DZs3Ektm1TKyzCkn7)
 
 ## Who Can Attend:
 
