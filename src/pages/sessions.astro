@@ -10,15 +10,21 @@ import ListSessions from "@components/sessions/list-sessions.astro";
 const sessions = await getCollection("sessions");
 
 const allTracks = Array.from(
-  new Set(sessions.map((session) => session.data.track).filter((track) => track))
+  new Set(
+    sessions.map((session) => session.data.track).filter((track) => track),
+  ),
 ).sort();
 
 const allTypes = Array.from(
-  new Set(sessions.map((session) => session.data.session_type).filter((type) => type))
+  new Set(
+    sessions.map((session) => session.data.session_type).filter((type) => type),
+  ),
 ).sort();
 
 const allLevels = Array.from(
-  new Set(sessions.map((session) => session.data.level).filter((level) => level))
+  new Set(
+    sessions.map((session) => session.data.level).filter((level) => level),
+  ),
 ).sort();
 
 const title = "Sessions";

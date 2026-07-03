@@ -1,8 +1,8 @@
 ---
-const {name, slug, url, avatar, company, position=""} = Astro.props;
+const { name, slug, url, avatar, company, position = "" } = Astro.props;
 const defaultAltText = `Profile photo of ${name}`;
 
-const link = url? url:`/speaker/${slug}`
+const link = url ? url : `/speaker/${slug}`;
 const isExternal = Boolean(url);
 ---
 
@@ -11,12 +11,8 @@ const isExternal = Boolean(url);
   class=`hover:scale-105 transition-transform  ${isExternal && "external"}`
   target=`${isExternal && "_blank"}`
 >
-<div class=`profile-card`>
-    <img
-      src={avatar}
-      alt={defaultAltText}
-      class="profile-image"
-    />
+  <div class=`profile-card`>
+    <img src={avatar} alt={defaultAltText} class="profile-image" />
     <span class="profile-text">{name}</span>
     {position && <span class="text-sm">{position}</span>}
     {company && <span class="text-sm">@ {company}</span>}
@@ -29,12 +25,10 @@ const isExternal = Boolean(url);
     color: inherit;
   }
 
-
   a.external .profile-text::after {
     font-size: 0.8em;
     content: " ↗";
   }
-
 
   .profile-card {
     display: flex;
@@ -48,18 +42,18 @@ const isExternal = Boolean(url);
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    margin:0;
+    margin: 0;
     border-width: 4px;
     border-color: var(--color-white);
     border-style: solid;
-    box-shadow: 0 10px 15px -3px oklch(0 0 0 / 0.1), 0 4px 6px -2px oklch(0 0 0 / 0.05); /* rgba(0,0,0,0.1), rgba(0,0,0,0.05) */
+    box-shadow:
+      0 10px 15px -3px oklch(0 0 0 / 0.1),
+      0 4px 6px -2px oklch(0 0 0 / 0.05); /* rgba(0,0,0,0.1), rgba(0,0,0,0.05) */
   }
 
   .profile-text {
-    padding-top:10px;
+    padding-top: 10px;
     text-align: center;
     width: 100%;
   }
-
-
 </style>

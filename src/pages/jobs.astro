@@ -2,7 +2,7 @@
 import { type CollectionEntry, getEntry, getCollection } from "astro:content";
 
 import Layout from "@layouts/SectionLayout.astro";
-import Headline from "@ui/Headline.astro"
+import Headline from "@ui/Headline.astro";
 import SponsorCard from "@components/SponsorCard.astro";
 import JobCard from "@components/JobCard.astro";
 import TwoCols from "@components/TwoCols.astro";
@@ -60,8 +60,8 @@ sponsors.forEach((sponsor) => {
 const sponsorsWithJobs = sponsors
   .filter((sponsor) => sponsor.data.jobs && sponsor.data.jobs.length > 0)
   .sort((a, b) => {
-    const aTierIndex = tiers.indexOf(a.data.tier as typeof tiers[number]);
-    const bTierIndex = tiers.indexOf(b.data.tier as typeof tiers[number]);
+    const aTierIndex = tiers.indexOf(a.data.tier as (typeof tiers)[number]);
+    const bTierIndex = tiers.indexOf(b.data.tier as (typeof tiers)[number]);
 
     // If tier not found in array, put it at the end
     const aIndex = aTierIndex === -1 ? tiers.length : aTierIndex;
@@ -75,7 +75,6 @@ const sponsorsWithJobs = sponsors
   title="EuroPython 2026 | July 13th-19th 2026 | Kraków, Poland"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-
   <Headline id="jobs" as="h1" title="Job board" />
   {
     sponsorsWithJobs.map((sponsor) => {

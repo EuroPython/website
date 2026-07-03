@@ -127,8 +127,8 @@ const tiers: SponsorTierProps[] = [
     price: "Special  Rate",
     slotsLeft: "enquire for eligibility",
     features: [
-    "<strong>Exhibition Space for 3 days</strong>",
-    "<strong>2 conference tickets (€1000 value)</strong>",
+      "<strong>Exhibition Space for 3 days</strong>",
+      "<strong>2 conference tickets (€1000 value)</strong>",
       "1 remote ticket (€150 value)",
       "Logo on website and signage",
       "Welcome post on EuroPython social media",
@@ -230,7 +230,8 @@ const formatPrice = (price: number | string) => {
                     </>
                   ) : (
                     <>
-                      {tier.slotsLeft} slot{tier.slotsLeft === 1 ? "" : "s"} available
+                      {tier.slotsLeft} slot{tier.slotsLeft === 1 ? "" : "s"}{" "}
+                      available
                     </>
                   )
                 ) : (
@@ -256,11 +257,11 @@ const formatPrice = (price: number | string) => {
     }
   </div>
 
-
   <div class="text-center mb-8 mt-16">
     <h2 class="text-3xl font-bold">Startups</h2>
     <p class="text-xl mt-2 mb-12">
-      For early-stage companies ready to connect with the community, boost visibility, and make a strong first impression.
+      For early-stage companies ready to connect with the community, boost
+      visibility, and make a strong first impression.
     </p>
   </div>
   <div class="grid grid-cols-1 gap-10 md:mx-50 lg:mx-60 xl:mx-96">
@@ -281,9 +282,7 @@ const formatPrice = (price: number | string) => {
               />
               <Headline as="h3" title={tier.title} />
               <div class="font-bold text-3xl">{formatPrice(tier.price)}</div>
-              <div class="text-xl">
-                {tier.slotsLeft}
-              </div>
+              <div class="text-xl">{tier.slotsLeft}</div>
             </div>
 
             <p class="font-bold text-base">This tier includes:</p>
@@ -302,7 +301,6 @@ const formatPrice = (price: number | string) => {
         ))
     }
   </div>
-
 
   <div class="text-center mb-8 mt-16">
     <h2 class="text-3xl font-bold">Major Supporters</h2>
@@ -338,7 +336,8 @@ const formatPrice = (price: number | string) => {
                     </>
                   ) : (
                     <>
-                      {tier.slotsLeft} slot{tier.slotsLeft === 1 ? "" : "s"} available
+                      {tier.slotsLeft} slot{tier.slotsLeft === 1 ? "" : "s"}{" "}
+                      available
                     </>
                   )
                 ) : (

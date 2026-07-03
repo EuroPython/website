@@ -24,7 +24,9 @@ const { style, session } = Astro.props;
 
 const hasRoom = session.rooms.length === 1;
 const durationLabel = session.duration ? `${session.duration}min` : "";
-const levelLabel = session.level ? session.level.charAt(0).toUpperCase() + session.level.slice(1) : "";
+const levelLabel = session.level
+  ? session.level.charAt(0).toUpperCase() + session.level.slice(1)
+  : "";
 const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
 ---
 
@@ -41,19 +43,29 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
   />
   <a href={sessionUrl} class="ep-session-title">{session.title}</a>
 
-  {session.speakers && session.speakers.length > 0 && (
-    <div class="ep-session-speakers">
-      <Speakers speakers={session.speakers} />
-    </div>
-  )}
+  {
+    session.speakers && session.speakers.length > 0 && (
+      <div class="ep-session-speakers">
+        <Speakers speakers={session.speakers} />
+      </div>
+    )
+  }
 
   <div class="ep-session-meta">
     {hasRoom && <span class="ep-session-room">{session.rooms[0]}</span>}
     {durationLabel && <span class="ep-session-duration">{durationLabel}</span>}
   </div>
   <div class="ep-session-badges">
-    {session.sessionType === "poster" && <div class="ep-session-poster-badge">Poster</div>}
-    {levelLabel && <div class={`ep-session-level--${session.level}`}>{levelLabel}</div>}
+    {
+      session.sessionType === "poster" && (
+        <div class="ep-session-poster-badge">Poster</div>
+      )
+    }
+    {
+      levelLabel && (
+        <div class={`ep-session-level--${session.level}`}>{levelLabel}</div>
+      )
+    }
   </div>
 </div>
 
@@ -70,7 +82,9 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
     font-family: "Inter Tight", system-ui, sans-serif;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.2s, background 0.2s;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
   }
 
   .ep-session:hover {
@@ -170,8 +184,6 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
     background: var(--ep-level-advanced-bg);
     color: var(--ep-level-advanced-text);
   }
-
-
 
   @media screen and (max-width: 800px) {
     .ep-session-title {

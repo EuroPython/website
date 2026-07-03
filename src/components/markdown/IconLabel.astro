@@ -6,11 +6,14 @@ export interface Props {
   icon: string;
 }
 
-const { icon, title:label } = Astro.props;
-
+const { icon, title: label } = Astro.props;
 ---
 
-<div class="flex items-center gap-2 text-xl font-semibold" role="group" aria-label={label}>
+<div
+  class="flex items-center gap-2 text-xl font-semibold"
+  role="group"
+  aria-label={label}
+>
   <Icon name={icon} class="mr-1" />
   <span>{label}</span>
 </div>

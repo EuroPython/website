@@ -22,9 +22,15 @@ const {
 } = sponsor.data;
 
 const logo = sponsorLogos[sponsor.id];
-const slug = tier==="Partners"? `/community-partners#sponsor-${sponsorId}`
-: tier==="Platinum" ? `/sponsor/${sponsorId}`
-: tier==="Media Partners" ? `/media-partners#sponsor-${sponsorId}` : tier==="Startups" ? `/startups#sponsor-${sponsorId}` : `/sponsors#sponsor-${sponsorId}`
+const slug = (tier === "Diamond" || tier === "Platinum" || sponsor.data.page)
+  ? `/sponsor/${sponsorId}`
+  : tier === "Partners"
+    ? `/community-partners#sponsor-${sponsorId}`
+    : tier === "Media Partners"
+      ? `/media-partners#sponsor-${sponsorId}`
+      : tier === "Startups"
+        ? `/startups#sponsor-${sponsorId}`
+        : `/sponsors#sponsor-${sponsorId}`
 
 ---
 

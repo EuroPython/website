@@ -1,0 +1,49 @@
+---
+import { getEntry } from "astro:content";
+import { sponsorLogos } from "@data/sponsorLogos";
+import LinkedImage from "@components/markdown/LinkedImage.astro";
+
+export interface Props {
+  sponsor: string;
+  alt?: string;
+  mode?: "button" | "imageLink" | "image";
+  class?: string;
+}
+
+const {
+  sponsor: sponsorId,
+  alt,
+  mode = "imageLink",
+  class: className = "",
+} = Astro.props;
+
+const sponsor = await getEntry("sponsors", sponsorId);
+if (!sponsor) {
+  throw new Error(`Sponsor "${sponsorId}" not found`);
+}
+
+const { name, tier } = sponsor.data;
+const logo = sponsorLogos[sponsor.id];
+
+const url =
+  tier === "Diamond" || tier === "Platinum" || sponsor.data.page
+    ? `/sponsor/${sponsorId}`
+    : tier === "Partners"
+      ? `/community-partners#sponsor-${sponsorId}`
+      : tier === "Media Partners"
+        ? `/media-partners#sponsor-${sponsorId}`
+        : tier === "Startups"
+          ? `/startups#sponsor-${sponsorId}`
+          : `/sponsors#sponsor-${sponsorId}`;
+---
+
+<LinkedImage
+  image={logo}
+  alt={alt || `${name} logo`}
+  url={url}
+  mode={mode}
+  padding="1.5rem"
+  class={className}
+>
+  <slot />
+</LinkedImage>

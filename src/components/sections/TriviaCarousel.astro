@@ -13,24 +13,31 @@ const { trivia } = Astro.props;
 
 <div class="ep25-carousel not-prose" id="ep25-carousel">
   <div class="ep25-carousel-inner">
-    {trivia.map((item, i) => (
-      <div class={`ep25-slide ${i === 0 ? 'active' : ''}`} aria-hidden={i !== 0 ? "true" : "false"}>
-        {item.year && <div class="ep25-slide-year">{item.year}</div>}
-        <p class="ep25-slide-text">{item.text}</p>
-      </div>
-    ))}
+    {
+      trivia.map((item, i) => (
+        <div
+          class={`ep25-slide ${i === 0 ? "active" : ""}`}
+          aria-hidden={i !== 0 ? "true" : "false"}
+        >
+          {item.year && <div class="ep25-slide-year">{item.year}</div>}
+          <p class="ep25-slide-text">{item.text}</p>
+        </div>
+      ))
+    }
   </div>
 
   <div class="ep25-controls">
     <button class="ep25-btn" id="ep25-prev" aria-label="Previous">←</button>
     <div class="ep25-dots">
-      {trivia.map((_, i) => (
-        <button
-          class={`ep25-dot ${i === 0 ? 'active' : ''}`}
-          data-index={i}
-          aria-label={`Go to item ${i + 1}`}
-        ></button>
-      ))}
+      {
+        trivia.map((_, i) => (
+          <button
+            class={`ep25-dot ${i === 0 ? "active" : ""}`}
+            data-index={i}
+            aria-label={`Go to item ${i + 1}`}
+          />
+        ))
+      }
     </div>
     <button class="ep25-btn" id="ep25-next" aria-label="Next">→</button>
   </div>
@@ -39,8 +46,12 @@ const { trivia } = Astro.props;
 <script>
   const carousel = document.getElementById("ep25-carousel");
   if (carousel) {
-    const slides = Array.from(carousel.querySelectorAll<HTMLElement>(".ep25-slide"));
-    const dots = Array.from(carousel.querySelectorAll<HTMLElement>(".ep25-dot"));
+    const slides = Array.from(
+      carousel.querySelectorAll<HTMLElement>(".ep25-slide"),
+    );
+    const dots = Array.from(
+      carousel.querySelectorAll<HTMLElement>(".ep25-dot"),
+    );
     let current = 0;
     let timer: ReturnType<typeof setInterval>;
 
@@ -63,9 +74,20 @@ const { trivia } = Astro.props;
       startAutoplay();
     }
 
-    carousel.querySelector("#ep25-prev")?.addEventListener("click", () => { goTo(current - 1); resetAutoplay(); });
-    carousel.querySelector("#ep25-next")?.addEventListener("click", () => { goTo(current + 1); resetAutoplay(); });
-    dots.forEach((dot, i) => dot.addEventListener("click", () => { goTo(i); resetAutoplay(); }));
+    carousel.querySelector("#ep25-prev")?.addEventListener("click", () => {
+      goTo(current - 1);
+      resetAutoplay();
+    });
+    carousel.querySelector("#ep25-next")?.addEventListener("click", () => {
+      goTo(current + 1);
+      resetAutoplay();
+    });
+    dots.forEach((dot, i) =>
+      dot.addEventListener("click", () => {
+        goTo(i);
+        resetAutoplay();
+      }),
+    );
 
     startAutoplay();
   }
@@ -95,8 +117,14 @@ const { trivia } = Astro.props;
   }
 
   @keyframes ep25FadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .ep25-slide-year {
@@ -133,7 +161,9 @@ const { trivia } = Astro.props;
     color: var(--color-text-primary);
     font-size: 1rem;
     line-height: 1;
-    transition: border-color 0.2s, background 0.2s;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
   }
 
   .ep25-btn:hover {
@@ -155,7 +185,9 @@ const { trivia } = Astro.props;
     background: transparent;
     cursor: pointer;
     padding: 0;
-    transition: background 0.2s, border-color 0.2s;
+    transition:
+      background 0.2s,
+      border-color 0.2s;
   }
 
   .ep25-dot.active {
