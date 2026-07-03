@@ -53,12 +53,12 @@ const keynoters = defineCollection({
       bio: z.string().optional(),
       image: image().optional(),
       order: z.number(),
-      homepage: z.url().optional(),
-      mastodon_url: z.url().optional(),
-      bluesky_url: z.url().optional(),
-      twitter_url: z.url().optional(),
-      linkedin_url: z.url().optional(),
-      github_url: z.url().optional(),
+      homepage: z.string().url().optional(),
+      mastodon_url: z.string().url().optional(),
+      bluesky_url: z.string().url().optional(),
+      twitter_url: z.string().url().optional(),
+      linkedin_url: z.string().url().optional(),
+      github_url: z.string().url().optional(),
     }),
 });
 
@@ -69,23 +69,23 @@ async function getCollectionsData() {
   ]);
 
   const speakersById = Object.entries(
-    speakersData as Record<string, {}>
+    speakersData as Record<string, {}>,
   ).reduce(
     (acc, [id, speaker]: [string, any]) => {
       acc[id] = { id, ...speaker };
       return acc;
     },
-    {} as Record<string, any>
+    {} as Record<string, any>,
   );
 
   const sessionsById = Object.entries(
-    sessionsData as Record<string, {}>
+    sessionsData as Record<string, {}>,
   ).reduce(
     (acc, [id, session]: [string, any]) => {
       acc[id] = { id, ...session };
       return acc;
     },
-    {} as Record<string, any>
+    {} as Record<string, any>,
   );
 
   return {
@@ -103,7 +103,7 @@ const speakers = defineCollection({
     // Load keynoter entries from markdown files
     const keynoterDir = join(process.cwd(), "src/content/keynoters");
     const keynoterFiles = readdirSync(keynoterDir).filter((f: string) =>
-      f.endsWith(".md")
+      f.endsWith(".md"),
     );
     const keynoterEntries = keynoterFiles.map((f: string) => {
       const content = readFileSync(join(keynoterDir, f), "utf-8");
@@ -130,12 +130,12 @@ const speakers = defineCollection({
         submissions: (speaker.submissions || [])
           .filter((sessionId: string) => sessionId in sessionsById)
           .map((sessionId: string) => sessionsById[sessionId].slug),
-      })
+      }),
     );
 
     // Add virtual entries for keynoters not in the API
     const apiNames = new Set(
-      apiSpeakers.map((s: any) => s.name?.toLowerCase())
+      apiSpeakers.map((s: any) => s.name?.toLowerCase()),
     );
 
     for (const k of keynoterEntries) {
@@ -164,15 +164,15 @@ const speakers = defineCollection({
                     join(
                       process.cwd(),
                       "src/content/keynoters",
-                      k.slug + "." + ext
-                    )
+                      k.slug + "." + ext,
+                    ),
                   )
                 )
                   return "/content/keynoters/" + k.slug + "." + ext;
               } catch {}
               return found;
             },
-            null
+            null,
           ),
           biography: (k as any).body || k.data?.bio || null,
           submissions: [],
@@ -200,13 +200,13 @@ const speakers = defineCollection({
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
     homepage: z.string().nullable(),
-    gitx_url: z.url().nullable().optional(),
-    linkedin_url: z.url().nullable(),
-    mastodon_url: z.url().nullable(),
-    bluesky_url: z.url().nullable().optional(),
-    twitter_url: z.url().nullable(),
-    discord: z.url().nullable().optional(),
-    tiktok: z.url().nullable().optional(),
+    gitx_url: z.string().url().nullable().optional(),
+    linkedin_url: z.string().url().nullable(),
+    mastodon_url: z.string().url().nullable(),
+    bluesky_url: z.string().url().nullable().optional(),
+    twitter_url: z.string().url().nullable(),
+    discord: z.string().url().nullable().optional(),
+    tiktok: z.string().url().nullable().optional(),
   }),
 });
 
@@ -221,7 +221,7 @@ const sessions = defineCollection({
         speakers: (session.speakers || [])
           .filter((speakerId: string) => speakerId in speakersById)
           .map((speakerId: string) => speakersById[speakerId].slug),
-      })
+      }),
     );
   },
   schema: z.object({
@@ -235,7 +235,7 @@ const sessions = defineCollection({
     state: z.enum(["confirmed"]).optional().nullable(),
     tweet: z.string(),
     resources: z
-      .array(z.object({ resource: z.url(), description: z.string() }))
+      .array(z.object({ resource: z.string().url(), description: z.string() }))
       .nullable(),
     duration: z.string(),
     level: z.enum(["beginner", "intermediate", "advanced"]),
@@ -243,8 +243,8 @@ const sessions = defineCollection({
     room: z.string().nullable(),
     start: z.string().nullable(),
     end: z.string().nullable(),
-    website_url: z.url(),
-    youtube_url: z.url().nullable(),
+    website_url: z.string().url(),
+    youtube_url: z.string().url().nullable(),
     sessions_in_parallel: z.array(z.string()).nullable(),
     sessions_after: z.array(z.string()).nullable(),
     sessions_before: z.array(z.string()).nullable(),
@@ -284,7 +284,7 @@ interface ScheduleData {
 const days = defineCollection({
   loader: async (): Promise<any[]> => {
     const schedule = (await loadData(
-      import.meta.env.EP_SCHEDULE_API
+      import.meta.env.EP_SCHEDULE_API,
     )) as ScheduleData;
 
     if (!schedule || Object.keys(schedule).length === 0) {
@@ -314,7 +314,7 @@ const days = defineCollection({
               code: z.string(),
               name: z.string(),
               website_url: z.string(),
-            })
+            }),
           )
           .optional(),
         start: z.string(),
@@ -322,33 +322,37 @@ const days = defineCollection({
         track: z.string().optional().nullable(),
         tweet: z.string().optional().nullable(),
         website_url: z.string().optional().nullable(),
-      })
+      }),
     ),
   }),
 });
 
 const sponsors = defineCollection({
-  loader: glob({ pattern: "*/index.md", base: "./src/content/sponsors" }),
+  loader: glob({
+    pattern: "*/index.md",
+    base: "./src/content/sponsors",
+    generateId: ({ entry }) => entry.replace(/\/index\.md$/, ""),
+  }),
   schema: z.object({
     name: z.string(),
-    url: z.url(),
+    url: z.string().url(),
     tier: z.string(),
     location: z.string().optional(),
     industry: z.string().optional(),
     description: z.string().optional(),
     socials: z
       .object({
-        linkedin: z.url().optional().nullable(),
-        blog: z.url().optional().nullable(),
-        github: z.url().optional().nullable(),
-        mastodon: z.url().optional().nullable(),
-        bluesky: z.url().optional().nullable(),
-        twitter: z.url().optional().nullable(),
-        instagram: z.url().optional().nullable(),
-        discord: z.url().optional().nullable(),
-        facebook: z.url().optional().nullable(),
-        youtube: z.url().optional().nullable(),
-        tiktok: z.url().optional().nullable(),
+        linkedin: z.string().url().optional().nullable(),
+        blog: z.string().url().optional().nullable(),
+        github: z.string().url().optional().nullable(),
+        mastodon: z.string().url().optional().nullable(),
+        bluesky: z.string().url().optional().nullable(),
+        twitter: z.string().url().optional().nullable(),
+        instagram: z.string().url().optional().nullable(),
+        discord: z.string().url().optional().nullable(),
+        facebook: z.string().url().optional().nullable(),
+        youtube: z.string().url().optional().nullable(),
+        tiktok: z.string().url().optional().nullable(),
       })
       .optional(),
     event_name: z.string().optional().nullable(),
@@ -360,7 +364,11 @@ const sponsors = defineCollection({
 });
 
 const jobs = defineCollection({
-  loader: glob({ pattern: "*/!(index).md", base: "./src/content/sponsors" }),
+  loader: glob({
+    pattern: "*/!(index).md",
+    base: "./src/content/sponsors",
+    generateId: ({ entry }) => entry.replace(/\.md$/, ""),
+  }),
   schema: z.object({
     title: z.string(),
     location: z.string().nullable(),
@@ -378,7 +386,7 @@ const jobs = defineCollection({
     stack: z.array(z.string()).optional().nullable(),
     benefits: z.array(z.string()).nullable(),
     description2: z.string().optional().nullable(),
-    apply_link: z.url().optional(),
+    apply_link: z.string().url().optional(),
     draft: z.boolean().optional().default(false),
     sponsor: reference("sponsors").optional(),
   }),
@@ -393,7 +401,7 @@ const sprints = defineCollection({
     pythonLevel: z.enum(["Any", "Beginner", "Intermediate", "Advanced"]),
     contactPerson: z.object({
       name: z.string(),
-      email: z.email().optional().nullable(),
+      email: z.string().email().optional().nullable(),
       github: z.string().optional().nullable(),
       twitter: z.string().optional().nullable(),
     }),
@@ -401,8 +409,8 @@ const sprints = defineCollection({
       .array(
         z.object({
           title: z.string(),
-          url: z.url(),
-        })
+          url: z.string().url(),
+        }),
       )
       .optional(),
     draft: z.boolean().optional().default(false),

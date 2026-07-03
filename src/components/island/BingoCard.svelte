@@ -38,8 +38,8 @@
     return new Array(25).fill(false);
   }
 
-  let checked = $state(loadChecked());
-  let checkedCount = $derived(checked.filter(Boolean).length);
+  const checked = $state(loadChecked());
+  const checkedCount = $derived(checked.filter(Boolean).length);
 
   function toggle(i) {
     checked[i] = !checked[i];
@@ -56,7 +56,7 @@
     return `${body}\n\nWhat about you: ${BINGO_PAGE_URL}`;
   }
 
-  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/#bingo';
+  const BINGO_PAGE_URL = 'https://ep2026.europython.eu/bingo';
 
   function shareLinkedIn() {
     const text = buildShareText();
@@ -92,11 +92,14 @@
 
   async function downloadImage() {
     const COLS = 5;
-    const CELL = 130;
-    const PAD = 28;
+    const CELL = 170;
+    const PAD = 14;
     const HEADER_H = 100;
-    const W = COLS * CELL + PAD * 2;
-    const H = COLS * CELL + PAD * 2 + HEADER_H;
+    const W = COLS * CELL + PAD * 2;       // 878
+    const H = COLS * CELL + PAD * 2 + HEADER_H; // 978
+    const SIZE = 1080;
+    const xOffset = Math.round((SIZE - W) / 2); // 101
+    const yOffset = Math.round((SIZE - H) / 2); // 51
 
     // Resolve actual CSS variables from the page so the export matches the current theme
     const style = getComputedStyle(document.documentElement);
@@ -133,30 +136,30 @@
     );
 
     const canvas = document.createElement('canvas');
-    canvas.width = W;
-    canvas.height = H;
+    canvas.width = SIZE;
+    canvas.height = SIZE;
     const ctx = canvas.getContext('2d');
 
     ctx.fillStyle = bgColor;
-    ctx.fillRect(0, 0, W, H);
+    ctx.fillRect(0, 0, SIZE, SIZE);
 
     ctx.fillStyle = '#f0c040';
-    ctx.font = 'bold 30px system-ui, sans-serif';
+    ctx.font = 'bold 38px system-ui, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('EuroPython Bingo', W / 2, PAD + 34);
+    ctx.fillText('EuroPython Bingo', SIZE / 2, yOffset + PAD + 44);
 
     ctx.fillStyle = subtitleColor;
-    ctx.font = '13px system-ui, sans-serif';
+    ctx.font = '16px system-ui, sans-serif';
     ctx.fillText(
       `${checkedCount} of 25 editions attended · ep2026.europython.eu/bingo`,
-      W / 2, PAD + 60
+      SIZE / 2, yOffset + PAD + 76
     );
 
     editions.forEach((ed, i) => {
       const col = i % COLS;
       const row = Math.floor(i / COLS);
-      const x = PAD + col * CELL;
-      const y = HEADER_H + PAD + row * CELL;
+      const x = xOffset + PAD + col * CELL;
+      const y = yOffset + HEADER_H + PAD + row * CELL;
       const isChecked = checked[i];
       const isCurrent = ed.year === 2026;
       const cx = x + 3, cy = y + 3, cw = CELL - 6, ch = CELL - 6;
@@ -184,12 +187,12 @@
 
         const cityY = iy + iconSize + Math.round(ch * 0.12);
         ctx.fillStyle = 'white';
-        ctx.font = `bold 13px system-ui, sans-serif`;
+        ctx.font = `bold 17px system-ui, sans-serif`;
         ctx.textAlign = 'center';
         ctx.fillText(ed.city, x + CELL / 2, cityY);
 
         ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.font = `12px system-ui, sans-serif`;
+        ctx.font = `15px system-ui, sans-serif`;
         ctx.fillText(ed.year.toString(), x + CELL / 2, cityY + Math.round(ch * 0.14));
       } else {
         // Unchecked: text card (matches the card-front on screen)
@@ -205,17 +208,17 @@
         ctx.setLineDash([]);
 
         ctx.fillStyle = cityColor;
-        ctx.font = `bold 14px system-ui, sans-serif`;
+        ctx.font = `bold 18px system-ui, sans-serif`;
         ctx.textAlign = 'center';
         ctx.fillText(ed.city, x + CELL / 2, y + CELL * 0.44);
 
         ctx.fillStyle = yearColor;
-        ctx.font = `13px system-ui, sans-serif`;
+        ctx.font = `17px system-ui, sans-serif`;
         ctx.fillText(ed.year.toString(), x + CELL / 2, y + CELL * 0.62);
 
         if (isCurrent) {
           ctx.fillStyle = '#f0c040';
-          ctx.font = `bold 9px system-ui, sans-serif`;
+          ctx.font = `bold 12px system-ui, sans-serif`;
           ctx.fillText('NOW!', x + CELL / 2, y + CELL * 0.82);
         }
       }

@@ -45,6 +45,10 @@ const L = {
   langSummit: { label: "Language Summit", url: "/language-summit" },
   rustSummit: { label: "Rust Summit", url: "/rust-summit" },
   packagingSummit: { label: "Packaging Summit", url: "/packaging-summit" },
+  communityOrganisersSummit: {
+    label: "Community Organisers Summit",
+    url: "/community-organisers-summit",
+  },
 
   // Events & Social
   sprints: { label: "Sprints Weekend", url: "/sprints" },
@@ -52,9 +56,11 @@ const L = {
   beginnersDay: { label: "Beginners' Day", url: "/beginners-day" },
   speakersDinner: { label: "Speakers' Dinner", url: "/speakers-dinner" },
   openSpaces: { label: "Open Spaces", url: "/open-spaces" },
+  pyladiesEvents: { label: "PyLadies' Events", url: "/pyladies" },
 
   // Participate
   tickets: { label: "Tickets", url: "/tickets" },
+  remote: { label: "Remote", url: "/remote" },
   finaid: { label: "Financial Aid", url: "/finaid" },
   visa: { label: "Visa Information", url: "/visa" },
   volunteering: { label: "Volunteering", url: "/volunteering" },
@@ -65,6 +71,7 @@ const L = {
     external: true,
   },
   accessibility: { label: "Accessibility", url: "/accessibility" },
+  childcare: { label: "Childcare", url: "/childcare" },
 
   // Venue
   venue: { label: "Venue", url: "/venue" },
@@ -139,7 +146,12 @@ export const NAV_MENUS: NavMenu[] = [
       },
       {
         label: "Summits",
-        items: [L.langSummit, L.rustSummit, L.packagingSummit],
+        items: [
+          L.langSummit,
+          L.rustSummit,
+          L.packagingSummit,
+          L.communityOrganisersSummit,
+        ],
       },
       {
         label: "Events & Social",
@@ -150,6 +162,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.speakersDinner,
           L.openSpaces,
           L.yearsOfEp,
+          L.pyladiesEvents,
         ],
       },
       {
@@ -167,12 +180,14 @@ export const NAV_MENUS: NavMenu[] = [
       {
         items: [
           L.tickets,
+          L.remote,
           L.finaid,
           L.visa,
           L.volunteering,
           L.faq,
           L.coc,
           L.accessibility,
+          L.childcare,
         ],
       },
     ],
@@ -241,7 +256,7 @@ export const TERMS: Link[] = [
 export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Quick links",
-    items: [L.tickets, L.krakow, L.visa],
+    items: [L.tickets, L.remote, L.krakow, L.visa],
   },
   {
     title: "Programme",
@@ -267,6 +282,8 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       L.langSummit,
       L.rustSummit,
       L.packagingSummit,
+      L.pyladiesEvents,
+      L.communityOrganisersSummit,
     ],
   },
   {
