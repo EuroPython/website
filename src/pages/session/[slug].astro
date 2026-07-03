@@ -15,7 +15,7 @@ import Button from "@ui/Button.astro";
 export async function getStaticPaths() {
   const sessions = await getCollection("sessions");
   return sessions.map((entry) => ({
-    params: { slug: entry.id},
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
@@ -75,11 +75,11 @@ const nextSessionsOrdered = sameRoomNextSession
       >
         {entry.data.title}
         <span class="pl-1">
-        <CodeHeart
-          client:load
-          codeId={entry.data.code}
-          title={entry.data.title}
-        />
+          <CodeHeart
+            client:load
+            codeId={entry.data.code}
+            title={entry.data.title}
+          />
         </span>
       </h1>
     </Prose>
@@ -113,7 +113,7 @@ const nextSessionsOrdered = sameRoomNextSession
               {formatInTimeZone(
                 entry.data.start,
                 "Europe/Warsaw",
-                "HH:mm 'on' EEEE, dd MMMM yyyy"
+                "HH:mm 'on' EEEE, dd MMMM yyyy",
               )}
             </dd>
           </>
@@ -127,7 +127,7 @@ const nextSessionsOrdered = sameRoomNextSession
               {formatInTimeZone(
                 entry.data.end,
                 "Europe/Warsaw",
-                "HH:mm 'on' EEEE, dd MMMM yyyy"
+                "HH:mm 'on' EEEE, dd MMMM yyyy",
               )}
             </dd>
           </>
@@ -136,8 +136,9 @@ const nextSessionsOrdered = sameRoomNextSession
       <dt class="font-bold">Duration:</dt>
       <dd>{entry.data.duration} minutes</dd>
     </dl>
-    <Button class="mb-10 sched-btn" url=`/schedule/#session-${entry.id}`>View in the schedule</Button>
-
+    <Button class="mb-10 sched-btn" url=`/schedule/#session-${entry.id}`
+      >View in the schedule</Button
+    >
 
     <Prose full>
       <h2>Abstract</h2>

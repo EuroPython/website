@@ -15,27 +15,37 @@ for (const s of allSpeakers) {
 
 function speakerHtml(speakers: any): string {
   if (!speakers || speakers.length === 0) return "";
-  return speakers.map((s: any) => {
-    const id = typeof s === "string" ? s : s.id;
-    const name = speakerNames[id] || id;
-    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
-  }).join(", ");
+  return speakers
+    .map((s: any) => {
+      const id = typeof s === "string" ? s : s.id;
+      const name = speakerNames[id] || id;
+      return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
+    })
+    .join(", ");
 }
 const tutorials = allSessions
   .filter((s) => s.data.session_type?.toLowerCase() === "tutorial")
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
-<Layout title="Tutorials | EuroPython 2026" description="Full-day, hands-on workshops led by domain experts. Go deeper than any talk can — bring your laptop and leave with real skills.">
+<Layout
+  title="Tutorials | EuroPython 2026"
+  description="Full-day, hands-on workshops led by domain experts. Go deeper than any talk can — bring your laptop and leave with real skills."
+>
   <Fragment slot="head">
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block"
+      rel="stylesheet"
+    />
   </Fragment>
 
   <Section2 variant="dark" id="tutorials">
     <div class="max-w-5xl mx-auto">
-
       <div class="text-center mb-12">
-        <Title id="tutorials" subtitle="Full-day, hands-on workshops led by domain experts. Go deeper than any talk can — bring your laptop and leave with real skills.">
+        <Title
+          id="tutorials"
+          subtitle="Full-day, hands-on workshops led by domain experts. Go deeper than any talk can — bring your laptop and leave with real skills."
+        >
           TUTORIALS
         </Title>
         <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
@@ -48,52 +58,84 @@ const tutorials = allSessions
       <ul class="tutorial-advantages">
         <li>
           <strong>3-hour or 6-hour sessions</strong>
-          Tutorials run for half a day or a full day. Each one is a self-contained workshop with exercises, examples, and hands-on practice.
+          Tutorials run for half a day or a full day. Each one is a self-contained
+          workshop with exercises, examples, and hands-on practice.
         </li>
         <li>
           <strong>Small groups, personal attention</strong>
-          Unlike talks, tutorials are capped in size. You get direct access to the instructor and can ask questions as you go.
+          Unlike talks, tutorials are capped in size. You get direct access to the
+          instructor and can ask questions as you go.
         </li>
         <li>
           <strong>Wide range of topics</strong>
-          From Python basics and web frameworks to data science pipelines, async programming, and testing strategies — there is a tutorial for every interest.
+          From Python basics and web frameworks to data science pipelines, async programming,
+          and testing strategies — there is a tutorial for every interest.
         </li>
         <li>
           <strong>Separate ticket required</strong>
-          Tutorial participation requires a separate tutorial ticket in addition to your conference pass.
+          Tutorial participation requires a separate tutorial ticket in addition to
+          your conference pass.
         </li>
       </ul>
 
       <!-- Tutorial count -->
-      <p class="tutorials-count"><span id="sess-count">{tutorials.length}</span> tutorials at EuroPython 2026</p>
+      <p class="tutorials-count">
+        <span id="sess-count">{tutorials.length}</span> tutorials at EuroPython 2026
+      </p>
 
       <!-- Filter bar -->
       <div class="sess-filters">
-        <input type="text" id="sess-search" class="sess-search" placeholder="Filter by title or speaker..." autocomplete="off" aria-label="Filter tutorials by title or speaker">
+        <input
+          type="text"
+          id="sess-search"
+          class="sess-search"
+          placeholder="Filter by title or speaker..."
+          autocomplete="off"
+          aria-label="Filter tutorials by title or speaker"
+        />
       </div>
 
       <!-- Tutorials list -->
       <div class="tutorials-section" id="sess-grid">
         <div class="talks-dot-bg">
           <div class="tutorial-grid">
-            {tutorials.map((t) => (
-              <div class:list={["tutorial-card", t.data.level]} data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}>
-                <a href={`/session/${t.id}`} class="tutorial-card-title">{t.data.title}</a>
-                <p class="tutorial-card-speakers" set:html={speakerHtml(t.data.speakers)}>
-                </p>
-                <div class="tutorial-card-meta">
-                  <span class="tutorial-card-tag">{t.data.duration} min</span>
-                  {t.data.level && <span class={`tutorial-card-level tutorial-card-level--${t.data.level}`}>{t.data.level.charAt(0).toUpperCase() + t.data.level.slice(1)}</span>}
+            {
+              tutorials.map((t) => (
+                <div
+                  class:list={["tutorial-card", t.data.level]}
+                  data-search={`${t.data.title.toLowerCase()} ${t.data.track?.toLowerCase() || ""}`}
+                >
+                  <a href={`/session/${t.id}`} class="tutorial-card-title">
+                    {t.data.title}
+                  </a>
+                  <p
+                    class="tutorial-card-speakers"
+                    set:html={speakerHtml(t.data.speakers)}
+                  />
+                  <div class="tutorial-card-meta">
+                    <span class="tutorial-card-tag">{t.data.duration} min</span>
+                    {t.data.level && (
+                      <span
+                        class={`tutorial-card-level tutorial-card-level--${t.data.level}`}
+                      >
+                        {t.data.level.charAt(0).toUpperCase() +
+                          t.data.level.slice(1)}
+                      </span>
+                    )}
+                  </div>
+                  {t.data.track && (
+                    <p class="tutorial-card-track">{t.data.track}</p>
+                  )}
                 </div>
-                {t.data.track && <p class="tutorial-card-track">{t.data.track}</p>}
-              </div>
-            ))}
+              ))
+            }
           </div>
         </div>
       </div>
 
-      <p class="sess-no-results" id="sess-no-results" hidden>No tutorials match your search.</p>
-
+      <p class="sess-no-results" id="sess-no-results" hidden>
+        No tutorials match your search.
+      </p>
     </div>
   </Section2>
 </Layout>
@@ -305,29 +347,29 @@ const tutorials = allSessions
 </style>
 
 <script is:inline>
-(function() {
-  var input = document.getElementById('sess-search');
-  if (!input) return;
-  var grid = document.getElementById('sess-grid');
-  var cards = grid.querySelectorAll('.tutorial-card');
-  var countEl = document.getElementById('sess-count');
-  var noResults = document.getElementById('sess-no-results');
-  var total = cards.length;
+  (function () {
+    const input = document.getElementById("sess-search");
+    if (!input) return;
+    const grid = document.getElementById("sess-grid");
+    const cards = grid.querySelectorAll(".tutorial-card");
+    const countEl = document.getElementById("sess-count");
+    const noResults = document.getElementById("sess-no-results");
+    const total = cards.length;
 
-  function filterCards() {
-    var q = input.value.toLowerCase().trim();
-    var visible = 0;
+    function filterCards() {
+      const q = input.value.toLowerCase().trim();
+      let visible = 0;
 
-    cards.forEach(function(card) {
-      var show = !q || card.getAttribute('data-search').indexOf(q) !== -1;
-      card.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
+      cards.forEach(function (card) {
+        const show = !q || card.getAttribute("data-search").indexOf(q) !== -1;
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
 
-    countEl.textContent = (q) ? visible + ' / ' + total : total;
-    if (noResults) noResults.hidden = visible > 0;
-  }
+      countEl.textContent = q ? visible + " / " + total : total;
+      if (noResults) noResults.hidden = visible > 0;
+    }
 
-  input.addEventListener('input', filterCards);
-})();
+    input.addEventListener("input", filterCards);
+  })();
 </script>

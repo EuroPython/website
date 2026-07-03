@@ -9,32 +9,22 @@ const { id, name, defaultValue } = Astro.props;
 
 const selectClasses = [
   "block w-full bg-transparent text-lg text-white h-16 py-2 pr-16 pl-4 border-[3px] border-white/20 appearance-none",
-  "focus:outline-hidden focus:border-accent focus-visible:bg-white/5"
+  "focus:outline-hidden focus:border-accent focus-visible:bg-white/5",
 ].join(" ");
 
 const svgClasses = [
-  "absolute top-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none text-white/40 right-4"
+  "absolute top-1/2 -translate-y-1/2 w-6 h-6 pointer-events-none text-white/40 right-4",
 ].join(" ");
 ---
 
 <div class="relative">
-  <select
-    id={id}
-    name={name}
-    value={defaultValue}
-    class={selectClasses}
-  >
-  <slot />
+  <select id={id} name={name} value={defaultValue} class={selectClasses}>
+    <slot />
   </select>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 12 8"
-    class={svgClasses}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" class={svgClasses}>
     <path
       d="M10.59.59 6 5.17 1.41.59 0 2l6 6 6-6z"
       class="fill-current"
-      fill-rule="evenodd"
-    />
+      fill-rule="evenodd"></path>
   </svg>
 </div>

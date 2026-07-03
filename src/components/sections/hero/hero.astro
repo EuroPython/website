@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <section class="hero-main">
@@ -11,30 +12,68 @@
       </div>
       <h1 class="hero-heading" aria-label="EURO
 PYTHON">
-        <span class="hero-heading-text">EURO<br>PYTHON</span>
+        <span class="hero-heading-text">EURO<br />PYTHON</span>
         <svg class="hero-heading-svg" aria-hidden="true">
-          <text x="0" font-weight="800" letter-spacing="0.02em" stroke="#000" stroke-width="4" fill="#fff" paint-order="stroke fill" stroke-linejoin="round" stroke-linecap="round">
+          <text
+            x="0"
+            font-weight="800"
+            letter-spacing="0.02em"
+            stroke="#000"
+            stroke-width="4"
+            fill="#fff"
+            paint-order="stroke fill"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          >
             <tspan x="0" dy="0">EURO</tspan>
             <tspan x="0" dy="1em">PYTHON</tspan>
           </text>
         </svg>
       </h1>
       <div class="hero-year">2026</div>
-      <p class="hero-intro">A week of talks, tutorials, sprints, and community. Join 1,500+ Pythonistas in July,<br> in <a href="#krakow">Kraków, Poland 🇵🇱</a>.</p>
-      <p class="hero-schedule"><span>Tutorials</span> 13–14 July &nbsp;|&nbsp; <span>Conference</span> 15–17 July <br><span>Sprints</span> 18–19 July &nbsp;|&nbsp; <a href="#euroscipy">EuroSciPy</a> 18–23 July</p>
+      <p class="hero-intro">
+        A week of talks, tutorials, sprints, and community. Join 1,500+
+        Pythonistas in July,<br /> in <a href="#krakow">Kraków, Poland 🇵🇱</a>.
+      </p>
+      <p class="hero-schedule">
+        <span>Tutorials</span> 13–14 July &nbsp;|&nbsp; <span>Conference</span> 15–17
+        July <br /><span>Sprints</span> 18–19 July &nbsp;|&nbsp; <a
+          href="#euroscipy">EuroSciPy</a
+        > 18–23 July
+      </p>
       <div class="hero-cta-row">
         <a href="/tickets" class="hero-cta">Register Now</a>
         <a href="#programme" class="hero-cta-alt">View Programme</a>
       </div>
       <div class="hero-flowers" aria-hidden="true">
-        <img src="/theme/flower2.svg" alt="" class="flower flower-tl" loading="lazy">
-        <img src="/theme/flower1.svg" alt="" class="flower flower-tr" loading="lazy">
-        <img src="/theme/flower3.svg" alt="" class="flower flower-bl" loading="lazy">
-        <img src="/theme/flower4.svg" alt="" class="flower flower-br" loading="lazy">
+        <img
+          src="/theme/flower2.svg"
+          alt=""
+          class="flower flower-tl"
+          loading="lazy"
+        />
+        <img
+          src="/theme/flower1.svg"
+          alt=""
+          class="flower flower-tr"
+          loading="lazy"
+        />
+        <img
+          src="/theme/flower3.svg"
+          alt=""
+          class="flower flower-bl"
+          loading="lazy"
+        />
+        <img
+          src="/theme/flower4.svg"
+          alt=""
+          class="flower flower-br"
+          loading="lazy"
+        />
       </div>
     </div>
     <div class="hero-dragon">
-      <img src="/theme/dragon.svg" alt="" class="dragon-svg" loading="lazy">
+      <img src="/theme/dragon.svg" alt="" class="dragon-svg" loading="lazy" />
     </div>
   </div>
 </section>
@@ -59,7 +98,7 @@ PYTHON">
     pointer-events: none;
     opacity: 0.08;
     /* filter: brightness(1.5) saturate(0.3); */
-    background: url('/theme/flowers-tile-new.svg') repeat;
+    background: url("/theme/flowers-tile-new.svg") repeat;
     background-size: 2400px 2400px;
     background-position: -400px 0;
   }
@@ -175,7 +214,7 @@ PYTHON">
 
   .hero-heading {
     font-weight: 800;
-    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-family: var(--font-heading, "Roboto", sans-serif);
     font-size: clamp(3rem, 6vw, 6rem);
     line-height: 1;
     color: var(--color-white);
@@ -197,7 +236,7 @@ PYTHON">
   }
 
   .hero-heading-svg text {
-    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-family: var(--font-heading, "Roboto", sans-serif);
     text-transform: uppercase;
     font-size: inherit;
     dominant-baseline: text-before-edge;
@@ -205,11 +244,16 @@ PYTHON">
 
   .hero-year {
     font-weight: 800;
-    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-family: var(--font-heading, "Roboto", sans-serif);
     font-size: clamp(6rem, 12vw, 12rem);
     line-height: 0.82;
     letter-spacing: -0.08em;
-    background: radial-gradient(ellipse at top left, var(--color-cta-red) 0%, var(--color-cta-mid) 55%, var(--color-cta-end) 100%);
+    background: radial-gradient(
+      ellipse at top left,
+      var(--color-cta-red) 0%,
+      var(--color-cta-mid) 55%,
+      var(--color-cta-end) 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -217,7 +261,7 @@ PYTHON">
   }
 
   .hero-intro {
-    font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
+    font-family: var(--font-body, "Roboto", system-ui, sans-serif);
     font-size: 1.3rem;
     color: var(--color-text-secondary);
     margin-top: 2rem;
@@ -233,7 +277,7 @@ PYTHON">
 
   .hero-schedule {
     margin-top: 1.5rem;
-    font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
+    font-family: var(--font-body, "Roboto", system-ui, sans-serif);
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-white);
@@ -260,7 +304,7 @@ PYTHON">
   }
 
   .hero-cta {
-    font-family: var(--font-heading, 'Roboto', sans-serif);
+    font-family: var(--font-heading, "Roboto", sans-serif);
     font-size: 1.3rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -272,18 +316,25 @@ PYTHON">
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-    box-shadow: 0 0 20px oklch(0.567 0.214 25.9 / 0.3), inset 0 0 20px oklch(0.567 0.214 25.9 / 0.05);
+    transition:
+      background 0.15s,
+      color 0.15s,
+      box-shadow 0.15s;
+    box-shadow:
+      0 0 20px oklch(0.567 0.214 25.9 / 0.3),
+      inset 0 0 20px oklch(0.567 0.214 25.9 / 0.05);
   }
 
   .hero-cta:hover {
     background: var(--color-cta-red);
     color: var(--color-white);
-    box-shadow: 0 0 50px oklch(0.567 0.214 25.9 / 0.6), inset 0 0 25px oklch(0.567 0.214 25.9 / 0.15);
+    box-shadow:
+      0 0 50px oklch(0.567 0.214 25.9 / 0.6),
+      inset 0 0 25px oklch(0.567 0.214 25.9 / 0.15);
   }
 
   .hero-cta-alt {
-    font-family: var(--font-body, 'Roboto', system-ui, sans-serif);
+    font-family: var(--font-body, "Roboto", system-ui, sans-serif);
     font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 0.1em;
@@ -294,14 +345,21 @@ PYTHON">
     padding: 0.9rem 2rem;
     text-decoration: none;
     display: inline-block;
-    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
-    box-shadow: 0 0 16px oklch(0.831 0.142 84.4 / 0.2), inset 0 0 16px oklch(0.831 0.142 84.4 / 0.04);
+    transition:
+      background 0.15s,
+      color 0.15s,
+      box-shadow 0.15s;
+    box-shadow:
+      0 0 16px oklch(0.831 0.142 84.4 / 0.2),
+      inset 0 0 16px oklch(0.831 0.142 84.4 / 0.04);
   }
 
   .hero-cta-alt:hover {
     background: var(--color-accent);
     color: var(--color-section-bg);
-    box-shadow: 0 0 40px oklch(0.831 0.142 84.4 / 0.5), inset 0 0 20px oklch(0.831 0.142 84.4 / 0.1);
+    box-shadow:
+      0 0 40px oklch(0.831 0.142 84.4 / 0.5),
+      inset 0 0 20px oklch(0.831 0.142 84.4 / 0.1);
   }
 
   @media (max-width: 768px) {

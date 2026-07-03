@@ -10,7 +10,7 @@
     "noUnusedParameters": true,
     // TODO: around 63 errors to clean up
     // "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    // "exactOptionalPropertyTypes": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
 

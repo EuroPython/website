@@ -13,23 +13,63 @@ export interface Props {
   class?: string;
 }
 
-const { name, url, tagline, bio, image, placeholder, class: className } = Astro.props;
+const {
+  name,
+  url,
+  tagline,
+  bio,
+  image,
+  placeholder,
+  class: className,
+} = Astro.props;
 ---
 
 <li class:list={["prog-keynoter", className]}>
-  {placeholder ? (
-    <div class="prog-keynoter-link">
-      <div class="prog-keynoter-photo">
-        <div class="prog-keynoter-photo--empty">
-          <span class="prog-keynoter-placeholder">?</span>
+  {
+    placeholder ? (
+      <div class="prog-keynoter-link">
+        <div class="prog-keynoter-photo">
+          <div class="prog-keynoter-photo--empty">
+            <span class="prog-keynoter-placeholder">?</span>
+          </div>
         </div>
       </div>
-    </div>
-  ) : !image ? (
-    url ? (
+    ) : !image ? (
+      url ? (
+        <a href={`/speaker/${url}/`} class="prog-keynoter-link">
+          <div class="prog-keynoter-photo">
+            <div class="prog-keynoter-photo--light" />
+          </div>
+          <div class="prog-keynoter-body">
+            <div class="prog-keynoter-name">{name}</div>
+            {tagline && <div class="prog-keynoter-role">{tagline}</div>}
+            {bio && <p class="prog-keynoter-bio">{bio}</p>}
+          </div>
+        </a>
+      ) : (
+        <div class="prog-keynoter-link">
+          <div class="prog-keynoter-photo">
+            <div class="prog-keynoter-photo--light" />
+          </div>
+          <div class="prog-keynoter-body">
+            <div class="prog-keynoter-name">{name}</div>
+            {tagline && <div class="prog-keynoter-role">{tagline}</div>}
+            {bio && <p class="prog-keynoter-bio">{bio}</p>}
+          </div>
+        </div>
+      )
+    ) : url ? (
       <a href={`/speaker/${url}/`} class="prog-keynoter-link">
         <div class="prog-keynoter-photo">
-          <div class="prog-keynoter-photo--light"></div>
+          {image ? (
+            <>
+              <Image src={image} alt={name} class="prog-keynoter-img" />
+            </>
+          ) : (
+            <div class="prog-keynoter-photo--empty">
+              <span class="prog-keynoter-placeholder">?</span>
+            </div>
+          )}
         </div>
         <div class="prog-keynoter-body">
           <div class="prog-keynoter-name">{name}</div>
@@ -40,7 +80,15 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
     ) : (
       <div class="prog-keynoter-link">
         <div class="prog-keynoter-photo">
-          <div class="prog-keynoter-photo--light"></div>
+          {image ? (
+            <>
+              <Image src={image} alt={name} class="prog-keynoter-img" />
+            </>
+          ) : (
+            <div class="prog-keynoter-photo--empty">
+              <span class="prog-keynoter-placeholder">?</span>
+            </div>
+          )}
         </div>
         <div class="prog-keynoter-body">
           <div class="prog-keynoter-name">{name}</div>
@@ -49,45 +97,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
         </div>
       </div>
     )
-  ) : url ? (
-    <a href={`/speaker/${url}/`} class="prog-keynoter-link">
-      <div class="prog-keynoter-photo">
-        {image ? (
-          <>
-            <Image src={image} alt={name} class="prog-keynoter-img" />
-          </>
-        ) : (
-          <div class="prog-keynoter-photo--empty">
-            <span class="prog-keynoter-placeholder">?</span>
-          </div>
-        )}
-      </div>
-      <div class="prog-keynoter-body">
-        <div class="prog-keynoter-name">{name}</div>
-        {tagline && <div class="prog-keynoter-role">{tagline}</div>}
-        {bio && <p class="prog-keynoter-bio">{bio}</p>}
-      </div>
-    </a>
-  ) : (
-    <div class="prog-keynoter-link">
-      <div class="prog-keynoter-photo">
-        {image ? (
-          <>
-            <Image src={image} alt={name} class="prog-keynoter-img" />
-          </>
-        ) : (
-          <div class="prog-keynoter-photo--empty">
-            <span class="prog-keynoter-placeholder">?</span>
-          </div>
-        )}
-      </div>
-      <div class="prog-keynoter-body">
-        <div class="prog-keynoter-name">{name}</div>
-        {tagline && <div class="prog-keynoter-role">{tagline}</div>}
-        {bio && <p class="prog-keynoter-bio">{bio}</p>}
-      </div>
-    </div>
-  )}
+  }
 </li>
 
 <style>
@@ -103,7 +113,7 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
     border-right: none;
   }
 
-  .prog-keynoter:nth-last-child(-n+3) {
+  .prog-keynoter:nth-last-child(-n + 3) {
     border-bottom: none;
   }
 
@@ -162,8 +172,6 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
     background: var(--color-surface-medium);
   }
 
-
-
   .prog-keynoter-body {
     padding: 1.8rem 1.8rem 2rem;
   }
@@ -176,7 +184,6 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
   }
 
   .prog-keynoter-role {
-
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-accent-themed);
@@ -186,7 +193,6 @@ const { name, url, tagline, bio, image, placeholder, class: className } = Astro.
   }
 
   .prog-keynoter-bio {
-
     font-size: 1.1rem;
     color: var(--color-text-muted);
     line-height: 1.6;

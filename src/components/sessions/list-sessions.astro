@@ -19,7 +19,6 @@ type Session = {
   };
   id: string;
 };
-
 ---
 
 <ol class="sessions">
@@ -37,12 +36,12 @@ type Session = {
               {session.data.title}
             </a>
 
-  <CodeHeart
-    client:load
-    mini={true}
-    codeId={session.data.code}
-    title={session.data.title}
-  />
+            <CodeHeart
+              client:load
+              mini={true}
+              codeId={session.data.code}
+              title={session.data.title}
+            />
           </h4>
           <p>
             <span class="sr-only">Speakers:</span>

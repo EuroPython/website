@@ -3,9 +3,9 @@ import BaseHead from "@components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Offline from "@components/Offline.astro";
-import Breadcrumbs from '@components/Breadcrumbs.astro';
+import Breadcrumbs from "@components/Breadcrumbs.astro";
 
-import { NAV_MENUS } from '@src/data/nav';
+import { NAV_MENUS } from "@src/data/nav";
 
 // Convert NavMenu[] to the shape Breadcrumbs expects: { header: [{ name, path, items? }] }
 const breadcrumbData = {
@@ -13,7 +13,9 @@ const breadcrumbData = {
     name: m.label,
     path: m.url,
     items: m.sections
-      ? m.sections.flatMap((s) => s.items.map((i) => ({ name: i.label, path: i.url })))
+      ? m.sections.flatMap((s) =>
+          s.items.map((i) => ({ name: i.label, path: i.url })),
+        )
       : undefined,
   })),
 };
@@ -25,7 +27,6 @@ import "@styles/search.css";
 import "@styles/ep2026-theme.css";
 import "@styles/markdown.css";
 import "@styles/light-theme.css";
-
 
 export interface Props {
   title: string;
@@ -40,7 +41,9 @@ const currentPath = Astro.url.pathname;
 const { title, description, image } = Astro.props;
 
 if (!title || !description) {
-throw new Error(`${Astro.url.pathname} Both 'title' and 'description' must be set.`);
+  throw new Error(
+    `${Astro.url.pathname} Both 'title' and 'description' must be set.`,
+  );
 }
 
 const externalDomain = new URL(Astro.site || "").hostname;
@@ -49,140 +52,143 @@ const hideHeader = Astro.props.hideHeader ?? false;
 const hideFooter = Astro.props.hideFooter ?? false;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
     <slot name="head" />
-
-    </Fragment>
   </head>
   <body>
-      {!hideHeader &&
+    {
+      !hideHeader && (
         <header>
           <Header />
         </header>
-      }
+      )
+    }
 
-      <main class="main pt-15" role="main">
+    <main class="main pt-15" role="main">
       <Offline />
-        {currentPath !== "/" && (
+      {
+        currentPath !== "/" && (
           <Breadcrumbs
-              linksData={breadcrumbData}
-              currentPath={currentPath}
-              currentLabel={title}
-              homePath="/"
-              separator="›"
+            linksData={breadcrumbData}
+            currentPath={currentPath}
+            currentLabel={title}
+            homePath="/"
+            separator="›"
           />
-        )}
-        <slot />
-      </main>
-
-
-      <!-- if !hideFooter, show footer; if hideFooter, hide footer and -mb-256 -->
-      {!hideFooter ?
-          <Footer />
-        :
-        <div class="-mb-256"></div>
+        )
       }
+      <slot />
+    </main>
 
+    <!-- if !hideFooter, show footer; if hideFooter, hide footer and -mb-256 -->
+    {!hideFooter ? <Footer /> : <div class="-mb-256" />}
   </body>
 </html>
 
-
 <style is:global define:vars={{ externalDomain }}>
-
   main section .container {
     max-width: 1150px;
   }
 
-  article a[href^="http"]:not([href*="var(--externalDomain)"]):not(.button-link):not(:has(img))::after {
+  article
+    a[href^="http"]:not([href*="var(--externalDomain)"]):not(.button-link):not(
+      :has(img)
+    )::after {
     font-size: 0.8em;
     content: " ↗";
   }
 
-  article a[href^="http"]:not([href*="var(--externalDomain)"]):not(.button-link):not(:has(img)) {
+  article
+    a[href^="http"]:not([href*="var(--externalDomain)"]):not(.button-link):not(
+      :has(img)
+    ) {
     overflow-wrap: anywhere;
     word-break: break-word;
   }
 </style>
 
-
 <style>
-body {
-  min-width: 360px;
-  margin: 0;
-  padding: 0;
-}
+  body {
+    min-width: 360px;
+    margin: 0;
+    padding: 0;
+  }
 
-header {
-  background-color: transparent;
-  padding: 0;
-}
+  header {
+    background-color: transparent;
+    padding: 0;
+  }
 
-nav#navbar {
-  position: fixed;
-}
+  nav#navbar {
+    position: fixed;
+  }
 
-main {
-  background-color: transparent;
-}
-
-footer {
-  background-color: oklch(0.201 0.039 261.5); /* #0c1628 */
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-@media screen and (width>1200px){
   main {
-    min-height: calc(100vh - 200px);
+    background-color: transparent;
   }
-}
 
-@media all and (display-mode: standalone) {
   footer {
-    display: none;
+    background-color: oklch(0.201 0.039 261.5); /* #0c1628 */
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
-}
+
+  @media screen and (width>1200px) {
+    main {
+      min-height: calc(100vh - 200px);
+    }
+  }
+
+  @media all and (display-mode: standalone) {
+    footer {
+      display: none;
+    }
+  }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.matchMedia('(display-mode: standalone)').matches) {
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia("(display-mode: standalone)").matches) {
+      (document.querySelector(".home-link") as HTMLAnchorElement).href =
+        "/schedule/?utm_source=pwa";
 
-    (document.querySelector('.home-link') as HTMLAnchorElement).href = '/schedule/?utm_source=pwa';
+      document.addEventListener(
+        "click",
+        function (e: Event) {
+          const target = e.target as HTMLElement;
+          const anchor = target.closest("a") as HTMLAnchorElement;
 
-    document.addEventListener('click', function (e: Event) {
+          if (!anchor || !anchor.href) return;
 
-      const target = e.target as HTMLElement;
-      const anchor = target.closest('a') as HTMLAnchorElement;
+          const origin = window.location.origin;
+          const href = anchor.getAttribute("href");
 
-      if (!anchor || !anchor.href) return;
+          if (!href) return;
 
-      const origin = window.location.origin;
-      const href = anchor.getAttribute('href');
+          const normalizedHref = href.trim().toLowerCase();
 
-      if (!href) return;
+          if (
+            normalizedHref.startsWith("#") ||
+            normalizedHref.startsWith("/") ||
+            normalizedHref.startsWith(origin.toLowerCase()) ||
+            (!normalizedHref.includes("://") &&
+              !normalizedHref.startsWith("//"))
+          ) {
+            return;
+          }
 
-      const normalizedHref = href.trim().toLowerCase();
+          e.preventDefault();
+          e.stopPropagation();
 
-      if (
-        normalizedHref.startsWith('#') ||
-        normalizedHref.startsWith('/') ||
-        normalizedHref.startsWith(origin.toLowerCase()) ||
-        (!normalizedHref.includes('://') && !normalizedHref.startsWith('//'))
-      ) {
-        return;
-      }
-
-      e.preventDefault();
-      e.stopPropagation();
-
-      const message = 'Please visit the website to access external content.';
-      alert(message);
-
-    }, { passive: false });
-  }
-});
+          const message =
+            "Please visit the website to access external content.";
+          alert(message);
+        },
+        { passive: false },
+      );
+    }
+  });
 </script>

@@ -1,24 +1,80 @@
 ---
 import Icon from "@ui/Icon.astro";
 
-const {
-  class: className,
-  socials,
-  variant = "color",
-} = Astro.props;
+const { class: className, socials, variant = "color" } = Astro.props;
 const socialMap = {
-  website: { icon: "globe", label: "Website", color: "oklch(0.546 0.13 242.3)", style: "brands" },
-  blog: { icon: "rss", label: "Blog", color: "oklch(0.676 0.189 42.0)", style: "solid" },
-  linkedin: { icon: "linkedin", label: "LinkedIn", color: "oklch(0.516 0.163 254.7)", style: "brands" },
-  github: { icon: "github", label: "GitHub", color: "oklch(0.321 0 0)", style: "brands" },
-  youtube: { icon: "youtube", label: "YouTube", color: "oklch(0.628 0.258 29.2)", style: "brands" },
-  discord: { icon: "discord", label: "Discord", color: "oklch(0.577 0.209 273.9)", style: "brands" },
-  mastodon: { icon: "mastodon", label: "Mastodon", color: "oklch(0.593 0.224 276.8)", style: "brands" },
-  bluesky: { icon: "bluesky", label: "Bluesky", color: "oklch(0.626 0.205 254.9)", style: "brands" },
-  instagram: { icon: "instagram", label: "Instagram", color: "oklch(0.619 0.2 14.6)", style: "brands" },
-  tiktok: { icon: "tiktok", label: "TikTok", color: "var(--color-black)", style: "brands" },
-  facebook: { icon: "facebook", label: "Facebook", color: "oklch(0.589 0.203 257.9)", style: "brands" },
-  twitter: { icon: "x-twitter", label: "Twitter", color: "oklch(0.682 0.158 243.4)", style: "brands" },
+  website: {
+    icon: "globe",
+    label: "Website",
+    color: "oklch(0.546 0.13 242.3)",
+    style: "brands",
+  },
+  blog: {
+    icon: "rss",
+    label: "Blog",
+    color: "oklch(0.676 0.189 42.0)",
+    style: "solid",
+  },
+  linkedin: {
+    icon: "linkedin",
+    label: "LinkedIn",
+    color: "oklch(0.516 0.163 254.7)",
+    style: "brands",
+  },
+  github: {
+    icon: "github",
+    label: "GitHub",
+    color: "oklch(0.321 0 0)",
+    style: "brands",
+  },
+  youtube: {
+    icon: "youtube",
+    label: "YouTube",
+    color: "oklch(0.628 0.258 29.2)",
+    style: "brands",
+  },
+  discord: {
+    icon: "discord",
+    label: "Discord",
+    color: "oklch(0.577 0.209 273.9)",
+    style: "brands",
+  },
+  mastodon: {
+    icon: "mastodon",
+    label: "Mastodon",
+    color: "oklch(0.593 0.224 276.8)",
+    style: "brands",
+  },
+  bluesky: {
+    icon: "bluesky",
+    label: "Bluesky",
+    color: "oklch(0.626 0.205 254.9)",
+    style: "brands",
+  },
+  instagram: {
+    icon: "instagram",
+    label: "Instagram",
+    color: "oklch(0.619 0.2 14.6)",
+    style: "brands",
+  },
+  tiktok: {
+    icon: "tiktok",
+    label: "TikTok",
+    color: "var(--color-black)",
+    style: "brands",
+  },
+  facebook: {
+    icon: "facebook",
+    label: "Facebook",
+    color: "oklch(0.589 0.203 257.9)",
+    style: "brands",
+  },
+  twitter: {
+    icon: "x-twitter",
+    label: "Twitter",
+    color: "oklch(0.682 0.158 243.4)",
+    style: "brands",
+  },
 };
 ---
 
@@ -29,7 +85,9 @@ const socialMap = {
       .map(([key, { icon, label, color, style: iconStyle = "brands" }]) => {
         const url = socials[key];
         const style =
-          variant === "color" && color ? `color: ${color}` : "color: currentColor";
+          variant === "color" && color
+            ? `color: ${color}`
+            : "color: currentColor";
         return (
           <a
             href={url}
