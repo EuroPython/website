@@ -29,6 +29,8 @@ The sprints will take place on **Saturday and Sunday, 18–19 July**, at
 **Address:**
 [Kapelanka 56, 30-347 Kraków, Poland](https://maps.app.goo.gl/DZs3Ektm1TKyzCkn7)
 
+<Map location="Echo Miasta, Kapelanka 56, 30-347 Kraków" zoom={15} />
+
 ## Who Can Attend:
 
 - EuroPython ticket holders (Conference, Tutorial, or Combined) can join the
