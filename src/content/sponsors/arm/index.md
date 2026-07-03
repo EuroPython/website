@@ -25,4 +25,8 @@ page: true
 
 # About Arm
 
-Arm powers the compute foundation of modern life, with more than 350 billion Arm-based chips shipped to date. The world’s leading companies build on Arm to meet growing compute demand in the AI era. From the smallest edge devices to the world’s largest data centres, Arm achieves the impossible by enabling intelligent experiences that shape the future for everyone.
+Arm powers the compute foundation of modern life, with more than 350 billion
+Arm-based chips shipped to date. The world’s leading companies build on Arm to
+meet growing compute demand in the AI era. From the smallest edge devices to the
+world’s largest data centres, Arm achieves the impossible by enabling
+intelligent experiences that shape the future for everyone.
