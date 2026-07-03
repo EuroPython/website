@@ -17,7 +17,7 @@ import Center from "@components/markdown/Center.astro";
 import EPSLogo from "@components/markdown/EPSLogo.astro";
 import ProfileCard from "@components/profile/ProfileCard.astro";
 import SpeakerCard from "@components/profile/SpeakerCard.astro";
-import GoogleCalendar from '@components/GoogleCalendar.astro';
+import GoogleCalendar from "@components/GoogleCalendar.astro";
 import ThreeCol from "@ui/ThreeCol.astro";
 import FinaidTimeline from "@ui/FinaidTimeline.astro";
 
@@ -41,7 +41,9 @@ export async function getStaticPaths() {
       navPaths.add(item.url.replace(/\/$/, ""));
     }
   }
-  const pages = (await getCollection("pages")).filter((p) => !p.id.startsWith("_"));
+  const pages = (await getCollection("pages")).filter(
+    (p) => !p.id.startsWith("_"),
+  );
 
   // Warn about top-level pages not linked in nav
   const ignorePaths = new Set(["/sprints_info", "/terms"]);
@@ -49,7 +51,9 @@ export async function getStaticPaths() {
     const fullPath = "/" + page.id;
     if (ignorePaths.has(fullPath)) continue;
     if (!page.id.includes("/") && !navPaths.has(fullPath)) {
-      console.warn(`[nav] Top-level page "${fullPath}" exists but is not linked in any nav menu or footer. Add it to src/data/nav.ts`);
+      console.warn(
+        `[nav] Top-level page "${fullPath}" exists but is not linked in any nav menu or footer. Add it to src/data/nav.ts`,
+      );
     }
   }
 
@@ -75,9 +79,8 @@ type Props = CollectionEntry<"pages">;
 const post = Astro.props;
 const { Content } = await render(post);
 
-let title =
-  post.data.title +
-  " | EuroPython 2026 | July 13th-19th 2026 | Kraków, Poland";
+const title =
+  post.data.title + " | EuroPython 2026 | July 13th-19th 2026 | Kraków, Poland";
 const description = post.data.subtitle;
 ---
 
@@ -102,12 +105,11 @@ const description = post.data.subtitle;
         Accordion,
         ProfileCard,
         SpeakerCard,
-        GoogleCalendar
+        GoogleCalendar,
       }}
     />
   </Prose>
 </Layout>
-
 
 <style is:global>
   .speakers-grid {

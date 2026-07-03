@@ -38,8 +38,8 @@
     return new Array(25).fill(false);
   }
 
-  let checked = $state(loadChecked());
-  let checkedCount = $derived(checked.filter(Boolean).length);
+  const checked = $state(loadChecked());
+  const checkedCount = $derived(checked.filter(Boolean).length);
 
   function toggle(i) {
     checked[i] = !checked[i];

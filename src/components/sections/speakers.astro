@@ -5,9 +5,13 @@ import Title from "@ui/Title.astro";
 import SpeakerCard from "@ui/SpeakerCard.astro";
 
 const allSpeakers = await getCollection("speakers");
-const validSpeakers = allSpeakers.filter(s => !!s.data?.name && !!s.data?.avatar);
+const validSpeakers = allSpeakers.filter(
+  (s) => !!s.data?.name && !!s.data?.avatar,
+);
 
-const featuredSpeakers = validSpeakers.sort(() => 0.5 - Math.random()).slice(0, 6);
+const featuredSpeakers = validSpeakers
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 6);
 const sectionTitle = "Featured Speakers";
 const sectionSubtitle = "Meet some of our amazing speakers";
 ---
@@ -18,9 +22,7 @@ const sectionSubtitle = "Meet some of our amazing speakers";
   </div>
 
   <div class="speakers-grid">
-    {featuredSpeakers.map((speaker) => (
-      <SpeakerCard speaker={speaker} />
-    ))}
+    {featuredSpeakers.map((speaker) => <SpeakerCard speaker={speaker} />)}
   </div>
 
   <div class="speakers-footer">
@@ -60,16 +62,26 @@ const sectionSubtitle = "Meet some of our amazing speakers";
     transition: all 0.35s var(--ease-premium, cubic-bezier(0.32, 0.72, 0, 1));
   }
 
-  .speakers-cta:active { transform: scale(0.97); }
-  .speakers-cta:hover { filter: brightness(1.1); }
+  .speakers-cta:active {
+    transform: scale(0.97);
+  }
+  .speakers-cta:hover {
+    filter: brightness(1.1);
+  }
 
   @media (max-width: 1024px) {
-    .speakers-grid { grid-template-columns: repeat(4, 1fr); }
+    .speakers-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   @media (max-width: 768px) {
-    .speakers-grid { grid-template-columns: repeat(3, 1fr); }
+    .speakers-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   @media (max-width: 480px) {
-    .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+    .speakers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>

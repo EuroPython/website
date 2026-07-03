@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" shape-rendering="geometricPrecision">
-  <defs>
-    <clipPath id="domeClip" clipPathUnits="userSpaceOnUse">
-      <rect x="0" y="0" width="120" height="99.69"></rect>
-    </clipPath>
-  </defs>
-  <rect x="0" y="0" width="120" height="120" fill="#1003A3"></rect>
-  <g clip-path="url(#domeClip)">
-    <ellipse cx="60" cy="77.01" rx="54" ry="56.7" fill="#ffffff"></ellipse>
-    <ellipse cx="60" cy="77.01" rx="39.96" ry="56.7" fill="none" stroke="#1003A3" stroke-width="5"></ellipse>
-    <ellipse cx="60" cy="77.01" rx="21.6" ry="56.7" fill="none" stroke="#1003A3" stroke-width="5"></ellipse>
-    <line x1="60" y1="20.31" x2="60" y2="133.71" stroke="#1003A3" stroke-width="5"></line>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" shape-rendering="geometricPrecision" viewBox="0 0 120 120"><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 0h120v99.69H0z"/></clipPath></defs><path fill="#1003a3" d="M0 0h120v120H0z"/><g clip-path="url(#a)"><ellipse cx="60" cy="77.01" fill="#fff" rx="54" ry="56.7"/><ellipse cx="60" cy="77.01" fill="none" stroke="#1003a3" stroke-width="5" rx="39.96" ry="56.7"/><ellipse cx="60" cy="77.01" fill="none" stroke="#1003a3" stroke-width="5" rx="21.6" ry="56.7"/><path stroke="#1003a3" stroke-width="5" d="M60 20.31v113.4"/></g></svg>

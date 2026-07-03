@@ -18,7 +18,11 @@ const bg: Record<string, string> = {
 };
 ---
 
-<section class={`sec-wrap ${className}`} id={id} style={`${bg[variant] ? `background: ${bg[variant]};` : ""} animation-delay: ${delay}s`}>
+<section
+  class={`sec-wrap ${className}`}
+  id={id}
+  style={`${bg[variant] ? `background: ${bg[variant]};` : ""} animation-delay: ${delay}s`}
+>
   <div class="sec-inner">
     <slot />
   </div>

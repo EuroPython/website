@@ -1,12 +1,11 @@
 ---
-
 interface Props {
   type: "warning" | "info" | "success" | "error";
   title?: string;
   icon?: string;
 }
 
-const { type="info", title, icon } = Astro.props;
+const { type = "info", title, icon } = Astro.props;
 
 // Theme-aware status colours: each variant uses a CSS variable for
 // background, text and border so the callout flips between dark and
@@ -18,29 +17,29 @@ const styles = {
     text: "text-[var(--note-warning-text)]",
     border: "border-[var(--note-warning-border)]",
     defaultIcon: "fas fa-exclamation-triangle fa-2x",
-    defaultTitle: "Warning"
+    defaultTitle: "Warning",
   },
   info: {
     bg: "bg-[var(--note-info-bg)]",
     text: "text-[var(--note-info-text)]",
     border: "border-[var(--note-info-border)]",
     defaultIcon: "fas fa-info-circle fa-2x",
-    defaultTitle: "Info"
+    defaultTitle: "Info",
   },
   success: {
     bg: "bg-[var(--note-success-bg)]",
     text: "text-[var(--note-success-text)]",
     border: "border-[var(--note-success-border)]",
     defaultIcon: "fas fa-check-circle fa-2x",
-    defaultTitle: "Success"
+    defaultTitle: "Success",
   },
   error: {
     bg: "bg-[var(--note-error-bg)]",
     text: "text-[var(--note-error-text)]",
     border: "border-[var(--note-error-border)]",
     defaultIcon: "fas fa-times-circle fa-2x",
-    defaultTitle: "Error"
-  }
+    defaultTitle: "Error",
+  },
 };
 
 const currentStyle = styles[type];
@@ -48,10 +47,10 @@ const noteIcon = icon || currentStyle.defaultIcon;
 const noteTitle = title || currentStyle.defaultTitle;
 ---
 
-<p class={`${currentStyle.bg} ${currentStyle.text} border-l-4 ${currentStyle.border} p-4 flex items-center space-x-2 my-2`}>
-  { noteIcon &&
-  <i class={noteIcon}></i>
-  }
+<p
+  class={`${currentStyle.bg} ${currentStyle.text} border-l-4 ${currentStyle.border} p-4 flex items-center space-x-2 my-2`}
+>
+  {noteIcon && <i class={noteIcon} />}
   <span>
     {title && <strong>{noteTitle}:</strong>}
     <slot />

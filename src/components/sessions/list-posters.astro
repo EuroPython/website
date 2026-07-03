@@ -9,11 +9,13 @@ for (const s of allSpeakers) {
 
 function speakerHtml(speakers: any): string {
   if (!speakers || speakers.length === 0) return "";
-  return speakers.map((s: any) => {
-    const id = typeof s === "string" ? s : s.id;
-    const name = speakerNames[id] || id;
-    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
-  }).join(", ");
+  return speakers
+    .map((s: any) => {
+      const id = typeof s === "string" ? s : s.id;
+      const name = speakerNames[id] || id;
+      return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
+    })
+    .join(", ");
 }
 
 interface Props {
@@ -34,9 +36,11 @@ const { posters } = Astro.props;
 
 <section class="all-posters" id="all-posters">
   <p class="poster-count">
-    {posters.length > 0
-      ? `${posters.length} poster${posters.length !== 1 ? "s" : ""} at EuroPython 2026`
-      : "Poster sessions coming soon"}
+    {
+      posters.length > 0
+        ? `${posters.length} poster${posters.length !== 1 ? "s" : ""} at EuroPython 2026`
+        : "Poster sessions coming soon"
+    }
   </p>
 
   {
@@ -44,13 +48,24 @@ const { posters } = Astro.props;
       <div class="poster-grid">
         {posters.map((p) => (
           <div class:list={["poster-card", p.data.level]}>
-            <a href={`/session/${p.id}`} class="poster-title">{p.data.title}</a>
-            <p class="poster-speakers" set:html={speakerHtml(p.data.speakers)}>
-            </p>
+            <a href={`/session/${p.id}`} class="poster-title">
+              {p.data.title}
+            </a>
+            <p
+              class="poster-speakers"
+              set:html={speakerHtml(p.data.speakers)}
+            />
             <div class="poster-meta">
               <div class="poster-meta-row">
-                {p.data.duration && <span class="poster-tag">{p.data.duration} min</span>}
-                {p.data.level && <span class={`poster-level poster-level--${p.data.level}`}>{p.data.level.charAt(0).toUpperCase() + p.data.level.slice(1)}</span>}
+                {p.data.duration && (
+                  <span class="poster-tag">{p.data.duration} min</span>
+                )}
+                {p.data.level && (
+                  <span class={`poster-level poster-level--${p.data.level}`}>
+                    {p.data.level.charAt(0).toUpperCase() +
+                      p.data.level.slice(1)}
+                  </span>
+                )}
               </div>
               {p.data.track && <span class="poster-track">{p.data.track}</span>}
             </div>
@@ -62,7 +77,10 @@ const { posters } = Astro.props;
         <p class="poster-empty-title">No poster sessions published yet</p>
         <p class="poster-empty-desc">
           Check back closer to the conference or browse the{" "}
-          <a href="/schedule" class="poster-empty-link">full schedule</a>.
+          <a href="/schedule" class="poster-empty-link">
+            full schedule
+          </a>
+          .
         </p>
       </div>
     )

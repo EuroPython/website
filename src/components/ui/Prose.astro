@@ -4,7 +4,7 @@ export interface Props {
   full?: boolean;
 }
 
-const { class: className, full=false } = Astro.props;
+const { class: className, full = false } = Astro.props;
 ---
 
 <article
@@ -28,7 +28,7 @@ const { class: className, full=false } = Astro.props;
     "prose-blockquote:not-italic",
     className,
   ]}
-    style={full ?  "max-width: none !important;": "margin:auto;"}
+  style={full ? "max-width: none !important;" : "margin:auto;"}
 >
   <slot />
 </article>
