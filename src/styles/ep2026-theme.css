@@ -47,8 +47,6 @@
      light-theme.css). These flip so the schedule chrome matches the
      active theme instead of staying navy/dark in light mode. */
   --ep-session-hover-bg: oklch(0.24 0.05 266.4); /* #0f1a2e */
-  --ep-beginner-stripe: oklch(0.66 0.18 145 / 0.2); /* rgba(50,180,50,.2) */
-  --ep-advanced-stripe: oklch(0.55 0.18 25 / 0.2); /* rgba(200,50,50,.2) */
   --ep-break-bg: oklch(0.75 0.15 70 / 0.06); /* rgba(255,150,0,.06) */
   --ep-break-border: oklch(0.75 0.15 70 / 0.18); /* rgba(255,150,0,.18) */
   --ep-day-end-bg: oklch(0.34 0.03 266); /* #2d3548 */
@@ -253,31 +251,6 @@ body.ep2026-theme {
   outline: 2px solid var(--ep-accent);
   outline-offset: 2px;
   border-radius: 6px;
-}
-
-/* Session levels */
-.ep-session.beginner {
-  background:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 4px,
-      var(--ep-beginner-stripe) 4px,
-      var(--ep-beginner-stripe) 6px
-    ),
-    var(--ep-surface-subtle);
-}
-
-.ep-session.advanced {
-  background:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 4px,
-      var(--ep-advanced-stripe) 4px,
-      var(--ep-advanced-stripe) 6px
-    ),
-    var(--ep-surface-subtle);
 }
 
 /* Breaks */
