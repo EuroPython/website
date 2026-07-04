@@ -286,7 +286,9 @@ main a[href^="#"]::before {
 }
 
 main
-  a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"])::after {
+  a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"]):not(
+    :has(img)
+  )::after {
   content: " \2197";
   font-size: 0.75em;
   display: inline-block;
@@ -296,8 +298,8 @@ main
 }
 
 main
-  a[href^="http"]:not([href*="europython.eu"]):not(
-    [href*="localhost"]
+  a[href^="http"]:not([href*="europython.eu"]):not([href*="localhost"]):not(
+    :has(img)
   ):hover::after {
   opacity: 1;
 }
