@@ -36,21 +36,31 @@ const { day } = Astro.props;
 const dayName = day.id;
 //const day = getEntry("days", dayName);
 
+// Predefined display order; rooms not listed here sort last, alphabetically.
+const ROOM_ORDER = [
+  "S1",
+  "S2",
+  "S3A",
+  "S3B",
+  "S4",
+  "S4A",
+  "S4B",
+  "Glass room",
+  "2.017/2.018",
+  "Fishbowl",
+  "Exhibit Hall",
+];
+
 const getRoomSortKey = (room: string) => {
-  // rooms without an S-number ("Glass room", "Fishbowl") sort last
-  const match = room.match(/^S(\d+)([A-Z]?)$/i);
-
-  if (!match) {
-    return `99-${room}`;
-  }
-
-  const [, number, suffix = ""] = match;
-  return `${number.padStart(2, "0")}-${suffix || "0"}-${room}`;
+  const index = ROOM_ORDER.indexOf(room);
+  return index === -1 ? ROOM_ORDER.length : index;
 };
 
 const ROOMS = (day.data.rooms ?? [])
   .filter((room) => room.toLowerCase() !== "exhibit hall")
-  .sort((a, b) => getRoomSortKey(a).localeCompare(getRoomSortKey(b)));
+  .sort(
+    (a, b) => getRoomSortKey(a) - getRoomSortKey(b) || a.localeCompare(b),
+  );
 
 type ScheduleSession = {
   title: string;
