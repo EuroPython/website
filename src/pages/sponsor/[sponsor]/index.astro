@@ -7,14 +7,17 @@ import TwoCols from "@components/TwoCols.astro";
 
 import { getCollection } from "astro:content";
 
-const {sponsor } = Astro.params;
+const { sponsor } = Astro.params;
 
 export async function getStaticPaths() {
-
   const isProduction = import.meta.env.MODE === "production";
 
-  const sponsors = await getCollection("sponsors", ({ data }) =>
-  data.tier && ["Diamond", "Platinum"].includes(data.tier) && (isProduction ? data.draft !== true : true)
+  const sponsors = await getCollection(
+    "sponsors",
+    ({ data }) =>
+      (data.tier && ["Diamond", "Platinum"].includes(data.tier)) ||
+      (data.page === true &&
+        (isProduction ? data.draft !== true : true))
   );
 
   return sponsors.map((sponsor: any) => ({
@@ -29,7 +32,7 @@ export async function getStaticPaths() {
   title="EuroPython 2026 | July 13th-19th 2026 | Krakow, Poland & Remote"
   description="EuroPython is the largest Python conference in Europe. We are looking forward to seeing you in Prague, Czech Republic & Remote from July 14th-20th 2025."
 >
-<h1>
+  <h1>
     <SponsorDisplay {sponsor} />
     <TwoCols>
       <Fragment slot="content">
@@ -39,4 +42,5 @@ export async function getStaticPaths() {
         <CardContent collection="sponsors" entry={sponsor} />
       </Fragment>
     </TwoCols>
+  </h1>
 </Layout>

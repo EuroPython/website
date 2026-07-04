@@ -2,9 +2,9 @@
 export interface Props {
   id: string;
   subtitle?: string;
-  span?: string;      // text inside the colored span (e.g. "AT EP2026")
+  span?: string; // text inside the colored span (e.g. "AT EP2026")
   spanColor?: string; // color for the span text
-  color?: string;     // title color, default #fff
+  color?: string; // title color, default #fff
 }
 
 const { id, subtitle, span, spanColor, color = "" } = Astro.props;
@@ -13,8 +13,20 @@ const { id, subtitle, span, spanColor, color = "" } = Astro.props;
 <div class="display-header">
   <h2 class="display-title" style={color ? `color: ${color}` : undefined}>
     <slot />
-    <sup class="display-anchor"><a href={`#${id}`} style={color ? `color: ${color}` : undefined}>#</a></sup>
-    {span && <span class="display-span" style={spanColor ? `color: ${spanColor}` : ""}>{span}</span>}
+    <sup class="display-anchor"
+      ><a href={`#${id}`} style={color ? `color: ${color}` : undefined}>#</a
+      ></sup
+    >
+    {
+      span && (
+        <span
+          class="display-span"
+          style={spanColor ? `color: ${spanColor}` : ""}
+        >
+          {span}
+        </span>
+      )
+    }
   </h2>
   {subtitle && <p class="display-subtitle">{subtitle}</p>}
 </div>

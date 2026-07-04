@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="1218.6317"
+   height="479.85785"
+   viewBox="0 0 1218.6318 479.85787"
+   xml:space="preserve"
+   sodipodi:docname="arm-white-bg.svg"
+   inkscape:version="1.4.4 (1:1.4.4+202605061436+dcaf3e7d9e)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs1" /><sodipodi:namedview
+   id="namedview1"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.29054806"
+   inkscape:cx="745.14352"
+   inkscape:cy="173.80946"
+   inkscape:window-width="1920"
+   inkscape:window-height="1043"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style1">
+	.st0{fill:#080225;}
+</style>
+<g
+   id="g2"
+   transform="matrix(0.35610549,0,0,0.35610549,175.53034,69.118181)"
+   style="stroke-width:2.80816"><rect
+     style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:8.42447;stroke-linecap:square;stroke-miterlimit:20;paint-order:fill markers stroke"
+     id="rect1"
+     width="3422.1089"
+     height="1347.516"
+     x="-492.91669"
+     y="-194.09468"
+     inkscape:export-filename="arm_round_white_bg.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     rx="22.465254"
+     ry="22.465254" /><g
+     id="g1"
+     style="stroke:none;stroke-width:4.5846"
+     transform="matrix(0.61251949,0,0,0.61251949,137.78687,173.27462)">
+	<path
+   class="st0"
+   d="m 575.53206,-126.53948 h 290.4 V 1121.0605 h -290.4 V 990.66052 c -127.4,148.09998 -284.5,168.89998 -373.4,168.89998 -385.2,0 -604.5,-319.99998 -604.5,-663.79998 0,-405.999996 278.5,-654.9 607.5,-654.9 91.9,0 251.9,23.7 370.4,177.800004 z m -681.6,628.2 c 0,216.3 136.299998,397.1 346.7,397.1 183.7,0 352.6,-133.3 352.6,-394.1 0,-272.6 -168.9,-403 -352.6,-403 -210.400002,0 -346.7,177.8 -346.7,400 z m 1317.80004,-628.2 h 290.4 v 112.600004 c 32.6,-38.5 80,-80 121.5,-103.700004 56.3,-32.6 112.6,-41.5 177.8,-41.5 71.1,0 148.2,11.9 228.2,59.300004 l -118.5,263.699996 c -65.2,-41.5 -118.5,-44.4 -148.2,-44.4 -62.2,0 -124.5,8.9 -180.8,68.2 -80,85.9 -80,204.5 -80,287.4 v 645.99998 h -290.4 z m 1005.4,0 h 290.4 v 115.600004 c 97.8,-118.500004 213.4,-148.200004 308.2,-148.200004 130.4,0 251.9,62.200004 323,183.700004 103.7,-148.100004 260.8,-183.700004 370.4,-183.700004 151.1,0 284.5,71.100004 355.6,195.600004 23.7,41.5 65.2,133.299996 65.2,314.099996 v 770.49998 h -290.4 V 433.56052 c 0,-139.3 -14.8,-195.6 -26.7,-222.2 -17.8,-47.4 -62.2,-109.6 -165.9,-109.6 -71.1,0 -133.3,38.5 -171.9,91.9 -50.4,71.1 -56.3,177.8 -56.3,284.5 v 642.99998 h -290.4 V 433.56052 c 0,-139.3 -14.8,-195.6 -26.7,-222.2 -17.8,-47.4 -62.2,-109.6 -166,-109.6 -71.1,0 -133.3,38.5 -171.9,91.9 -50.4,71.1 -56.3,177.8 -56.3,284.5 v 642.99998 h -290.4 V -126.53948 Z"
+   id="path1"
+   style="stroke:none;stroke-width:4.5846" />
+</g></g>
+</svg>

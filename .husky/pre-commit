@@ -1,0 +1,8 @@
+# Run Python pre-commit hooks (if installed)
+pre-commit run --hook-stage commit 2>/dev/null || true
+
+# Run lint-staged (Husky + image/JS/TS/formatting checks)
+npx lint-staged
+
+# Run Astro type checking (local only, not in CI)
+pnpm astro check

@@ -1,22 +1,36 @@
 ---
-const { as = "h2", id, title, href, center} = Astro.props;
+const { as = "h2", id, title, href, center } = Astro.props;
 const Tag = as;
 const Title = title;
 const isAnchor = !!id;
 const isLink = !!href;
 const isCenter = center ? "text-center" : "";
-
 ---
 
-<Tag id={isAnchor ? id : undefined} class={`${isCenter} py-4 font-bold max-w-[90vw]`}>
-  {isAnchor ? (
-    <a href={`#${id}`} aria-label={`Jump to ${id}`}>
-      {Title}
-    </a>
-    ):
-    <>{Title}</>
-    }
-  {isLink && <a aria-label="Read more about {Title}" href={href} class="hover:underline">{Title}</a> }
+<Tag
+  id={isAnchor ? id : undefined}
+  class={`${isCenter} py-4 font-bold max-w-[90vw]`}
+>
+  {
+    isAnchor ? (
+      <a href={`#${id}`} aria-label={`Jump to ${id}`}>
+        {Title}
+      </a>
+    ) : (
+      <>{Title}</>
+    )
+  }
+  {
+    isLink && (
+      <a
+        aria-label="Read more about {Title}"
+        href={href}
+        class="hover:underline"
+      >
+        {Title}
+      </a>
+    )
+  }
 </Tag>
 
 <style>
@@ -88,6 +102,6 @@ const isCenter = center ? "text-center" : "";
   }
 
   a:hover {
-    color:var(--color-primary-hover);
+    color: var(--color-primary-hover);
   }
 </style>

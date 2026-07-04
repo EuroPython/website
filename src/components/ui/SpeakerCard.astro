@@ -14,13 +14,25 @@ export interface Props {
 const { speaker } = Astro.props;
 ---
 
-<a href={`/speaker/${speaker.id}`} class="speaker-card border-4 border-white/10 rounded-lg shadow-lg inline-block">
+<a
+  href={`/speaker/${speaker.id}`}
+  class="speaker-card border-4 border-white/10 rounded-lg shadow-lg inline-block"
+>
   <div class="speaker-photo">
-    {speaker.data.avatar ? (
-      <Image src={speaker.data.avatar} alt={speaker.data.name} class="speaker-img" height={300} width={300} loading="lazy" />
-    ) : (
-      <div class="speaker-placeholder">{speaker.data.name.charAt(0)}</div>
-    )}
+    {
+      speaker.data.avatar ? (
+        <Image
+          src={speaker.data.avatar}
+          alt={speaker.data.name}
+          class="speaker-img"
+          height={300}
+          width={300}
+          loading="lazy"
+        />
+      ) : (
+        <div class="speaker-placeholder">{speaker.data.name.charAt(0)}</div>
+      )
+    }
   </div>
   <div class="speaker-info">
     <h3 class="speaker-name">{speaker.data.name}</h3>
@@ -33,7 +45,9 @@ const { speaker } = Astro.props;
     flex-direction: column;
     text-decoration: none;
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s;
     min-width: 0;
   }
 

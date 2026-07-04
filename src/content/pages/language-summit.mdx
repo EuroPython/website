@@ -13,53 +13,63 @@ subtitle: The Python Language Summit is an event for the developers of Python im
 <b>Blogger</b>: Seth Michael Larson<br />
 
 
+## Schedule
+
+09:00 **Welcome & introductions**<br/ >
+09:30 **[One namespace to namespacing them all](#one-namespace-to-namespacing-them-all--pablo-galindo-salgado)** *Pablo Galindo Salgado*<br/ >
+10:00 **[Python releases for macOS](#python-releases-for-macos--ned-deily)** *Ned Deily*<br/ >
+10:30 **— Coffee break —**<br/ >
+11:00 **[GC: Generational? Incremental? Both.](#gc-generational-incremental-both--mark-shannon)** *Mark Shannon*<br/ >
+11:30 **[Improving the Python buffer protocol](#improving-the-python-buffer-protocol--nathan-goldbaum)** *Nathan Goldbaum*<br/ >
+12:00 **[Memory snapshots and the CPython runtime](#memory-snapshots-and-the-cpython-runtime--hood-chatham)** *Hood Chatham*<br/ >
+12:30 **— Lunch —**<br/ >
+13:30 **[A Roadmap for Rust for CPython](#a-roadmap-for-rust-for-cpython--david-hewitt)** *David Hewitt*<br/ >
+14:00 **[Spicycrab, the Rust transpiler](#spicycrab-the-rust-transpiler--kushal-das)** *Kushal Das*<br/ >
+14:30 **[Developer in Residence update & future](#developer-in-residence-update--future--petr-viktorin)** *Petr Viktorin*<br/ >
+15:00 **— Group photo & coffee break —**<br/ >
+15:30 **[Thinking about the post era of free-threading Python](#thinking-about-the-post-era-of-free-threading-python--donghee-na-tobias-wrigstad-fridtjof)** *Donghee Na, Tobias Wrigstad, Fridtjof*<br/ >
+16:00 **[PEP 827 - Type manipulation and annotationlib](#pep-827---type-manipulation-and-annotationlib--michael-j-sullivan)** *Michael J. Sullivan*<br/ >
+16:30 **— Lightning talks —**<br/ >
+17:30 **— We're done! —**<br/ >
+
+
 ## Talk details
 
-In alphabetical order by title, schedule coming soon!
-
-### **A Roadmap for Rust for CPython** — David Hewitt
-
-The Rust for CPython project would like to present the current state of the project and the plans as we head towards a PEP. We will cover the roadmap we are working towards as well as the design choices for the "internal Rust API". We'd like to invite discussion to shape the project. Do attendees agree with the proposed scope for the initial implementation? What success criteria would attendees like to see if Rust were to become permanent? Should more exotic designs be explored for the Rust API?
-
-### **Developer in Residence update & future** — Petr Viktorin
-
-A big part of the Developer in Residence role should be helping other core devs, so they can focus volunteer time on enjoyable tasks. What are the best ways to do that?
-
-### **GC: Generational? Incremental? Both.** — Mark Shannon
-
-The incremental GC was reverted for 3.14, due to negative performance impact on some applications. But that reversion had a [negative performance impact on other code](https://discuss.python.org/t/reverting-the-incremental-gc-in-python-3-14-and-3-15/107014/59).
-
-I want to show a bit of theory to show that a GC that is both generational and incremental is both possible and provably as good or better at collecting young cycles as the current generational-only GC.
-
-### **Improving the Python buffer protocol** — Nathan Goldbaum
-
-I will propose an effort for Python 3.16 to improve the buffer protocol. I'm interested in adding a protocol for projects to export and consume buffers with types that aren't known to CPython, removing Python from its position as arbiter of what data types are supported by the buffer protocol and what aren't. I'd also like to add Rust-like mutability semantics with 1 writer XOR 1 or more readers allowed per buffer.
-
-Additionally, I'd like to generally improve the documentation for the buffer protocol in CPython. I think there should be reference docs that replace PEP 3118 as the authoritative source of truth for the semantics of the buffer protocol.
-
-### **Memory snapshots and the CPython runtime** — Hood Chatham
-
-Various WebAssembly Python distributions (both Cloudflare and Fastly) are using memory snapshots to improve Python startup time. This leads to complications around entropy use at startup. For example, the dictionary hash seed is chosen at startup and cannot be changed later so we give up hash randomization. Should Python expose an API to reseed dictionaries after startup?
-
-Taking a memory snapshot introduces two separate stages of execution: initialization time vs execution time. In order to work, client code may need to know  The Python language model has no concept of initialization time, there is only runtime. Faster alternative implementations like PyPy and GraalPython introduce this distinction in order to make Python code run faster. JavaScript ES6 modules introduced a similar distinction. Could Python benefit from a formal notion of an "initialization phase"?
-
-### **One namespace to namespacing them all** — Pablo Galindo Salgado
+### One namespace to namespacing them all — *Pablo Galindo Salgado*
 
 We know you have shadowed `random` with your own `random.py`. Don’t lie. We’ve all done it, and one of us shipped it to prod. The stdlib lives in the same flat namespace as everything on PyPI, which means `os` and `leftpad` are equals in the eyes of the import system, and that is frankly embarrassing for `os`.
 
 This talk pitches a single top-level namespace for the stdlib and we can discuss better ways to do experimental features and other advantages. We will gesture at what it could look like, admit upfront it’s a year-long migration nobody asked for, and mostly try to find out whether you all want to hurt us for proposing it. Bring opinions.
 
-### **PEP 827 - Type manipulation and annotationlib** — Michael J. Sullivan
-
-PEP 827 proposes adding powerful type-level introspection and construction facilities to Python’s type system. This design is inspired largely by TypeScript’s conditional and mapped types, but is heavily adapted to the very different semantics and constraints of Python’s typing model. It will allow typing a wide range of dynamic APIs and metaprogramming that currently are not well typeable.
-
-### **Python releases for macOS** — Ned Deily
+### Python releases for macOS — *Ned Deily*
 
 For many years the Python release team has provided Windows and macOS binaries with every Python release. For macOS, how and what we provide has not changed much over the years even though packaging and distribution guidelines and user expectations have. Plus there are now more options available through third-party distributors than in the past.
 
 Let's discuss the benefits and costs of providing macOS binary releases going forward as part of a macOS support policy addition to PEP 11 and, based on that, start a discussion of what changes (features, release artifacts, CI / buildbot, core developer and release team commitment) we should be aiming for.
 
-### **Spicycrab, the Rust transpiler** — Kushal Das
+### GC: Generational? Incremental? Both. — *Mark Shannon*
+
+The incremental GC was reverted for 3.14, due to negative performance impact on some applications. But that reversion had a [negative performance impact on other code](https://discuss.python.org/t/reverting-the-incremental-gc-in-python-3-14-and-3-15/107014/59).
+
+I want to show a bit of theory to show that a GC that is both generational and incremental is both possible and provably as good or better at collecting young cycles as the current generational-only GC.
+
+### Improving the Python buffer protocol — *Nathan Goldbaum*
+
+I will propose an effort for Python 3.16 to improve the buffer protocol. I'm interested in adding a protocol for projects to export and consume buffers with types that aren't known to CPython, removing Python from its position as arbiter of what data types are supported by the buffer protocol and what aren't. I'd also like to add Rust-like mutability semantics with 1 writer XOR 1 or more readers allowed per buffer.
+
+Additionally, I'd like to generally improve the documentation for the buffer protocol in CPython. I think there should be reference docs that replace PEP 3118 as the authoritative source of truth for the semantics of the buffer protocol.
+
+### Memory snapshots and the CPython runtime — *Hood Chatham*
+
+Various WebAssembly Python distributions (both Cloudflare and Fastly) are using memory snapshots to improve Python startup time. This leads to complications around entropy use at startup. For example, the dictionary hash seed is chosen at startup and cannot be changed later so we give up hash randomization. Should Python expose an API to reseed dictionaries after startup?
+
+Taking a memory snapshot introduces two separate stages of execution: initialization time vs execution time. In order to work, client code may need to know  The Python language model has no concept of initialization time, there is only runtime. Faster alternative implementations like PyPy and GraalPython introduce this distinction in order to make Python code run faster. JavaScript ES6 modules introduced a similar distinction. Could Python benefit from a formal notion of an "initialization phase"?
+
+### A Roadmap for Rust for CPython — *David Hewitt*
+
+The Rust for CPython project would like to present the current state of the project and the plans as we head towards a PEP. We will cover the roadmap we are working towards as well as the design choices for the "internal Rust API". We'd like to invite discussion to shape the project. Do attendees agree with the proposed scope for the initial implementation? What success criteria would attendees like to see if Rust were to become permanent? Should more exotic designs be explored for the Rust API?
+
+### Spicycrab, the Rust transpiler — *Kushal Das*
 
 Write typed Python and generate working Rust code via spicycrab. This currently
 includes part of stdlib, async (via tokio), actix-web examples. Slowly more and
@@ -67,11 +77,19 @@ more Rust crates are available as stub typed Python modules, which we can use
 like normal Python code while developing and then compiling the generated Rust
 code as final output. The final goal is to be able to write smaller production code using spicycrab.
 
-### **Thinking about the post era of free-threading Python** — Donghee Na, Tobias Wrigstad, Fridtjof
+### Developer in Residence update & future — *Petr Viktorin*
+
+A big part of the Developer in Residence role should be helping other core devs, so they can focus volunteer time on enjoyable tasks. What are the best ways to do that?
+
+### Thinking about the post era of free-threading Python — *Donghee Na, Tobias Wrigstad, Fridtjof*
 
 In the free-threading era, Python users will need high-level concurrency primitives that make concurrent programming easier and safer.
 
 This session will discuss what kinds of primitives we could provide in the Python standard library, and how to make them feel natural for everyday Python users.
+
+### PEP 827 - Type manipulation and annotationlib — *Michael J. Sullivan*
+
+PEP 827 proposes adding powerful type-level introspection and construction facilities to Python’s type system. This design is inspired largely by TypeScript’s conditional and mapped types, but is heavily adapted to the very different semantics and constraints of Python’s typing model. It will allow typing a wide range of dynamic APIs and metaprogramming that currently are not well typeable.
 
 
 ## FAQ

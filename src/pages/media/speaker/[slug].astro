@@ -13,91 +13,103 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const allSessions = await getEntries(entry.data.submissions);
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en" data-pagefind-ignore>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"
+    ></script>
   </head>
   <body class="overflow-auto">
-{
-  entry && allSessions.map((session) =>
-    <div class="social relative w-[900px] h-[900px] overflow-hidden" data-slug={entry.id} data-code={session?.data.code}>
-      <SocialMediaCard entry={entry} session={session} />
-    </div>
-  )
-}
-
+    {
+      entry &&
+        allSessions.map((session) => (
+          <div
+            class="social relative w-[900px] h-[900px] overflow-hidden"
+            data-slug={entry.id}
+            data-code={session?.data.code}
+          >
+            <SocialMediaCard entry={entry} session={session} />
+          </div>
+        ))
+    }
   </body>
 </html>
 
 <style is:global>
+  .social {
+    width: 900px;
+    height: 900px;
+  }
 
-.social {
-  width: 900px;
-  height: 900px;
-}
-
-.social svg {
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+  .social svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
   body * {
-      font-family: Inter, sans-serif;
+    font-family: Inter, sans-serif;
   }
 
   .avatar {
-    object-position:50% 25%;
+    object-position: 50% 25%;
   }
-
 </style>
 
 <script is:inline>
-function fitText(container) {
-  const maxFont = parseInt(container.dataset.maxFont) || 100;
-  let fontSize = maxFont;
-  container.style.fontSize = fontSize + 'px';
+  function fitText(container) {
+    const maxFont = parseInt(container.dataset.maxFont) || 100;
+    let fontSize = maxFont;
+    container.style.fontSize = fontSize + "px";
 
-  while (
-    (container.scrollWidth > container.clientWidth || container.scrollHeight > container.clientHeight)
-    && fontSize > 5
-  ) {
-    fontSize -= 1;
-    container.style.fontSize = fontSize + 'px';
+    while (
+      (container.scrollWidth > container.clientWidth ||
+        container.scrollHeight > container.clientHeight) &&
+      fontSize > 5
+    ) {
+      fontSize -= 1;
+      container.style.fontSize = fontSize + "px";
+    }
   }
-}
 
-function fitAllText() {
-  const boxes = document.querySelectorAll('.fit-text');
-  boxes.forEach(box => fitText(box));
-}
+  function fitAllText() {
+    const boxes = document.querySelectorAll(".fit-text");
+    boxes.forEach((box) => fitText(box));
+  }
 
-fitAllText();
+  fitAllText();
 
-window.addEventListener('resize', fitAllText);
+  window.addEventListener("resize", fitAllText);
 </script>
 
-<script is:inline define:vars={{slug: entry.id, sessionCount: allSessions.length}}>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.social').forEach((socialDiv) => {
+<script
+  is:inline
+  define:vars={{ slug: entry.id, sessionCount: allSessions.length }}
+>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".social").forEach((socialDiv) => {
       const cardSlug = socialDiv.dataset.slug;
       const cardCode = socialDiv.dataset.code;
 
-      socialDiv.addEventListener('click', () => {
-        const svgs = socialDiv.querySelectorAll('svg');
+      socialDiv.addEventListener("click", () => {
+        const svgs = socialDiv.querySelectorAll("svg");
 
         if (svgs.length === 0) {
-          alert('No SVGs found!');
+          alert("No SVGs found!");
           return;
         }
 
@@ -108,7 +120,7 @@ window.addEventListener('resize', fitAllText);
         combinedSvg.setAttribute("height", "900");
         combinedSvg.setAttribute("viewBox", "0 0 900 900");
 
-        svgs.forEach(svg => {
+        svgs.forEach((svg) => {
           const g = document.createElementNS(xmlns, "g");
           g.innerHTML = svg.innerHTML;
           combinedSvg.appendChild(g);
@@ -117,15 +129,16 @@ window.addEventListener('resize', fitAllText);
         const serializer = new XMLSerializer();
         const svgString = serializer.serializeToString(combinedSvg);
 
-        const blob = new Blob([svgString], {type: "image/svg+xml"});
+        const blob = new Blob([svgString], { type: "image/svg+xml" });
         const url = URL.createObjectURL(blob);
 
-        const a = document.createElement('a');
+        const a = document.createElement("a");
         a.href = url;
         // Use session code suffix only when speaker has multiple sessions
-        a.download = (sessionCount > 1 && cardCode)
-          ? `social-${cardSlug}-${cardCode}.svg`
-          : `social-${cardSlug}.svg`;
+        a.download =
+          sessionCount > 1 && cardCode
+            ? `social-${cardSlug}-${cardCode}.svg`
+            : `social-${cardSlug}.svg`;
         a.style.display = "none";
         document.body.appendChild(a);
         a.click();

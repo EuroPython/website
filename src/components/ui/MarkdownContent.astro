@@ -1,8 +1,7 @@
 ---
 import Markdown from "@ui/Markdown.astro";
 
-const content = await Astro.slots.render('default')
-
+const content = await Astro.slots.render("default");
 ---
 
 <Markdown content={content} />

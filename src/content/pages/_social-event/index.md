@@ -16,14 +16,14 @@ a laid-back evening with:
 - **Live music and jamming**—bring your instruments or join in with others for a
   jam session!
 
-![Riverside view of Střelecký Island, the social event venue](/content/sections/images/social-event-venue.jpg)
+![Riverside view of Střelecký Island, the social event venue](./social-event-venue.jpg)
 
 ## Bring Your Board Games
 
 We’ll have space reserved for board games, so whether you're into competitive
 strategy or casual party games, bring your favourites along!
 
-![People playing board and social games at an outdoor event](/content/sections/images/social-event-games.jpg)
+![People playing board and social games at an outdoor event](./social-event-games.jpg)
 
 ## Bring Your Instruments
 
@@ -31,7 +31,7 @@ Music has been a highlight of the past year, and we’re keeping that tradition
 alive. You’re welcome to bring your own instruments or borrow one from the local
 community. Let’s make some music together!
 
-![People playing music together in an outdoor jam session](/content/sections/images/social-event-jam.jpg)
+![People playing music together in an outdoor jam session](./social-event-jam.jpg)
 
 ## Pack Your Picnic Blankets & Sportswear
 
@@ -44,11 +44,11 @@ Whether you’re joining in or just watching from your blanket, come as you are
 and enjoy the summer vibe! Don’t forget to bring your sporty clothes or
 comfortable shoes if you’d like to take part in the games!
 
-<!-- ![Archery at the social event venue](/content/sections/images/social-event-archery.jpg) -->
+<!-- ![Archery at the social event venue](./social-event-archery.jpg) -->
 
-![Night view of the social event venue](/content/sections/images/social-event-night.jpg)
+![Night view of the social event venue](./social-event-night.jpg)
 
-![Campfire at the social event venue](/content/sections/images/social-event-campfire.jpg)
+![Campfire at the social event venue](./social-event-campfire.jpg)
 
 ## Tickets
 

@@ -10,7 +10,11 @@ const { time, title, style, className }: Props = Astro.props;
 const label = [time, title].filter(Boolean).join(" ");
 ---
 
-<div class={className ? className : "break ep-break"} style={style} aria-label={label} >
+<div
+  class={className ? className : "break ep-break"}
+  style={style}
+  aria-label={label}
+>
   {time && `${time} `}
   {title}
 </div>
@@ -22,7 +26,7 @@ const label = [time, title].filter(Boolean).join(" ");
     justify-content: center;
     text-align: center;
     padding: 0.4rem 0.8rem;
-    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-family: "Inter Tight", system-ui, sans-serif;
     font-size: 0.95rem;
     color: var(--ep-text-secondary);
     font-weight: 500;
