@@ -16,8 +16,8 @@ links: # Add as many links as relevant.
 
 Feature-engine was originally designed to bridge the gap between pandas and
 scikit-learn while encouraging good practices through a strict API. As the
-Python ecosystem has evolved, with native pandas support in scikit-learn,
-the emergence of Polars, and demand for more flexible workflows, Feature-engine
+Python ecosystem has evolved, with native pandas support in scikit-learn, the
+emergence of Polars, and demand for more flexible workflows, Feature-engine
 needs to evolve while maintaining backward compatibility.
 
 In this sprint, you'll help evolve Feature-engine's API by:
@@ -31,4 +31,5 @@ In this sprint, you'll help evolve Feature-engine's API by:
 The sprint is open to anyone interested in machine learning libraries, API
 design, testing, documentation, and open source development.
 
-More details [here](https://github.com/feature-engine/feature_engine/issues/935).
+More details
+[here](https://github.com/feature-engine/feature_engine/issues/935).
