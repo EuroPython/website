@@ -37,7 +37,8 @@ const dayName = day.id;
 //const day = getEntry("days", dayName);
 
 const getRoomSortKey = (room: string) => {
-  const match = room.match(/\(S(\d+)([A-Z]?)\)/i);
+  // rooms without an S-number ("Glass room", "Fishbowl") sort last
+  const match = room.match(/^S(\d+)([A-Z]?)$/i);
 
   if (!match) {
     return `99-${room}`;
