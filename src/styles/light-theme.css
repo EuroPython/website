@@ -23,11 +23,6 @@
   --ep-sched-chrome-bg: oklch(0.945 0.004 264); /* #e6e8ed */
   --ep-sched-chrome-text: oklch(0 0 0 / 0.55);
 
-  /* Session level stripes: lighter, lower-alpha on light cards so the
-     diagonal hatch stays subtle instead of heavy. */
-  --ep-beginner-stripe: oklch(0.72 0.17 145 / 0.12);
-  --ep-advanced-stripe: oklch(0.6 0.2 25 / 0.1);
-
   /* Session level pills — light theme: SOLID pastel chips (no
      opacity). High lightness + low chroma backgrounds with darker
      ink of the same hue for readable, low-saturation labels. */
