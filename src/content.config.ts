@@ -218,6 +218,10 @@ const sessions = defineCollection({
       (session: any) => ({
         id: session.slug,
         ...session,
+        track:
+          session.track === "~ None of these topics"
+            ? "General"
+            : session.track,
         speakers: (session.speakers || [])
           .filter((speakerId: string) => speakerId in speakersById)
           .map((speakerId: string) => speakersById[speakerId].slug),
@@ -258,7 +262,10 @@ const tracks = defineCollection({
     const { sessionsData } = await getCollectionsData();
     const trackSet = new Set<string>();
     Object.values(sessionsData as Record<string, any>).forEach((s: any) => {
-      if (s.track) trackSet.add(s.track);
+      if (s.track)
+        trackSet.add(
+          s.track === "~ None of these topics" ? "General" : s.track
+        );
     });
     return Array.from(trackSet)
       .sort()
