@@ -67,7 +67,7 @@
     "*.svg": [
       "svgo --config svgo.config.mjs"
     ],
-    "*.{png,jpg,jpeg}": [
+    "*.png": [
       "oxipng"
     ],
     "*.{ts,js,astro}": [
