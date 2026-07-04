@@ -27,7 +27,7 @@ const talks = allSessions
   .filter((s) => {
     const t = s.data.session_type?.toLowerCase();
     const isTalk = t === "talk" || t === "talk (long session)" || t === "panel";
-    return isTalk && s.data.track !== "~ None of these topics";
+    return isTalk && s.data.track !== "General";
   })
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
