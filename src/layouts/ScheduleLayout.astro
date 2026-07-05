@@ -27,7 +27,7 @@ const { title, description, headline } = Astro.props;
 
   <div class="ep-sched-section">
     <div class="ep-sched-inner">
-      <Section>
+      <Section full>
         <h1 class="ep-headline" id={slugify(headline)}>
           <a href={`#${slugify(headline)}`} aria-label={`Jump to ${headline}`}
             >{headline}</a
