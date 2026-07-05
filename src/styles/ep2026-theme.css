@@ -105,18 +105,13 @@ body.ep2026-theme {
 
 /* Schedule section wrapper */
 .ep-sched-section {
-  background:
-    radial-gradient(circle, var(--ep-surface-medium) 1px, transparent 1px),
-    linear-gradient(
-      135deg,
-      var(--ep-footer-g1) 0%,
-      var(--ep-footer-g2) 40%,
-      var(--ep-footer-g3) 70%,
-      var(--ep-footer-g4) 100%
-    );
-  background-size:
-    24px 24px,
-    100% 100%;
+  background: linear-gradient(
+    135deg,
+    var(--ep-footer-g1) 0%,
+    var(--ep-footer-g2) 40%,
+    var(--ep-footer-g3) 70%,
+    var(--ep-footer-g4) 100%
+  );
   color: var(--ep-white);
 }
 
