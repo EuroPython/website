@@ -202,6 +202,38 @@ const slots = Object.entries(sessionsByTime)
     };
   });
 
+// Merge adjacent 5-minute-apart session slots when earlier sessions
+// are still running into the later slot. Fixes cases like 14:30 (one room)
+// and 14:35 (other rooms) where timeline shows two close start times.
+for (let i = slots.length - 1; i > 0; i--) {
+  const current = slots[i];
+  const prev = slots[i - 1];
+
+  if (current.type !== "session" || prev.type !== "session") continue;
+
+  const gap = timeToNumber(current.startTime) - timeToNumber(prev.startTime);
+  if (gap !== 5) continue;
+
+  // Only merge when all earlier-slot sessions are still running
+  // at the later slot's start time
+  const allStillRunning = prev.sessions.every(
+    (s) => s.end.getTime() > current.start.getTime(),
+  );
+  if (!allStillRunning) continue;
+
+  // Merge: combine sessions into the earlier slot
+  prev.sessions.push(...current.sessions);
+
+  // Update end to the latest among merged sessions
+  const allEnds = prev.sessions.map((s) => s.end.getTime());
+  const latestEnd = new Date(Math.max(...allEnds));
+  prev.end = latestEnd;
+  prev.endTime = format(latestEnd, "HH:mm");
+
+  // Remove the later slot
+  slots.splice(i, 1);
+}
+
 const gridRows: string[] = [];
 
 let row = 1;
@@ -408,7 +440,7 @@ const endStart = numberToTime(lastEndTime);
                 </div>
               )}
 
-              {(sessionsByTime[slot.startTime] ?? [])
+              {(slot.sessions ?? [])
                 .sort(sortSessionByRooms)
                 .filter((session) => session.sessionType !== "poster")
                 .map((session) => {
