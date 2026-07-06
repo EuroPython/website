@@ -9,7 +9,7 @@ meta:
 start_datetime: "2026-07-14T09:30:00+02:00"
 end_datetime: "2026-07-14T12:45:00+02:00"
 location: "Room Club C"
-contact: "Cheuk Ting Ho & Velda Kiara"
+contact: "Cheuk Ting Ho"
 link: "/programme/rust-summit"
 highlight: "SUMMIT"
 ---
