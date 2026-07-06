@@ -4,11 +4,11 @@ subtitle:
   "Exploring how Python benefits from Rust — from high-performance libraries to
   ecosystem tooling."
 meta:
-  - text: "Tuesday, July 14 — 9:30–12:45"
-  - text: "Room Club C"
-start_datetime: "2026-07-14T09:30:00+02:00"
-end_datetime: "2026-07-14T12:45:00+02:00"
-location: "Room Club C"
+  - text: "Monday, 13 July — 9:30–17:00"
+  - text: "Fishbowl"
+start_datetime: "2026-07-13T09:30:00+02:00"
+end_datetime: "2026-07-13T117:00:00+02:00"
+location: "Fishbowl"
 contact: "Cheuk Ting Ho"
 link: "/programme/rust-summit"
 highlight: "SUMMIT"
