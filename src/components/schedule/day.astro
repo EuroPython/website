@@ -409,7 +409,7 @@ const endStart = numberToTime(lastEndTime);
       <div
         class="schedule"
         style={{
-          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(100px, 1fr))`,
+          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(120px, 1fr))`,
         }}
       >
         <div>Time</div>
@@ -422,7 +422,7 @@ const endStart = numberToTime(lastEndTime);
         class="schedule"
         style={{
           gridTemplateRows: gridRows.join(" "),
-          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(100px, 1fr))`,
+          gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(120px, 1fr))`,
         }}
       >
         {
@@ -559,13 +559,13 @@ const endStart = numberToTime(lastEndTime);
     font-family: "Inter Tight", system-ui, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .schedule {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -671,7 +671,7 @@ const endStart = numberToTime(lastEndTime);
     }
 
     header.schedule-container.header > div > div {
-      padding: 0.5rem 0.3rem;
+      padding: 0.6rem 0.4rem;
       font-weight: 700;
       font-size: 1.1rem;
       color: var(--ep-text-primary);
@@ -690,7 +690,7 @@ const endStart = numberToTime(lastEndTime);
       --room-change: 52px;
 
       display: grid;
-      gap: 4px;
+      gap: 8px;
       padding: 0;
     }
 
