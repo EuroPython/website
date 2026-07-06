@@ -4,11 +4,11 @@ subtitle:
   "Coordinating the rapidly evolving Python packaging landscape — tool creators,
   library maintainers, and distributors in one room."
 meta:
-  - text: "Tuesday, July 14 — 13:45–17:00"
-  - text: "Room Club C"
-start_datetime: "2026-07-14T13:45:00+02:00"
-end_datetime: "2026-07-14T17:00:00+02:00"
-location: "Room Club C"
+  - text: "Monday, 13 July — 9:30–17:00"
+  - text: "2.017/2.018"
+start_datetime: "2026-07-13T9:30:00+02:00"
+end_datetime: "2026-07-13T17:00:00+02:00"
+location: "2.017/2.018"
 contact: "Pradyun Gedam & Jannis Leidel"
 link: "/programme/packaging-summit"
 highlight: "SUMMIT"
