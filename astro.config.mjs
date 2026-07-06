@@ -8,7 +8,6 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import metaTags from "astro-meta-tags";
 import deleteUnusedImages from "astro-delete-unused-images";
-import serviceWorker from "astrojs-service-worker";
 import { execSync } from "node:child_process";
 import svelte from "@astrojs/svelte";
 import compress from "astro-compress";
@@ -122,13 +121,36 @@ export default defineConfig({
     "/programme/c-api-summit": "/session/c-api-summit",
     "/programme/wasm-summit": "/session/webassembly-summit",
     "/discord": "https://discord.gg/BhTN2zJPMh",
+    // For AV team internal use: break screens
+    "/break/forum-hall":
+      "https://overlays.gbdl.in/ep-forum-hall/scene-schedule.html",
+    "/break/north-hall":
+      "https://overlays.gbdl.in/ep-north-hall/scene-schedule.html",
+    "/break/south-hall-2a":
+      "https://overlays.gbdl.in/ep-south-hall-2a/scene-schedule.html",
+    "/break/south-hall-2b":
+      "https://overlays.gbdl.in/ep-south-hall-2b/scene-schedule.html",
+    "/break/terrace-2a":
+      "https://overlays.gbdl.in/ep-terrace-2a/scene-schedule.html",
+    "/break/terrace-2b":
+      "https://overlays.gbdl.in/ep-terrace-2b/scene-schedule.html",
+    // For AV team internal use: VDO ninja screen share
+    "/ninja/forum-hall":
+      "https://vdo.ninja/?room=EuroPython_2025_Forum_Hall&hash=338a&do",
+    "/ninja/north-hall":
+      "https://vdo.ninja/?room=EuroPython_2025_North_Hall&hash=338a&do",
+    "/ninja/south-hall-2a":
+      "https://vdo.ninja/?room=EuroPython_2025_Southhall_2A&hash=338a&do",
+    "/ninja/south-hall-2b":
+      "https://vdo.ninja/?room=EuroPython_2025_Southhall_2B&hash=338a&do",
+    "/ninja/terrace-2a":
+      "https://vdo.ninja/?room=EuroPython_2025_Terrace_2A&hash=338a&do",
+    "/ninja/terrace-2b":
+      "https://vdo.ninja/?room=EuroPython_2025_Terrace_2B&hash=338a&do",
   },
   integrations: [
     mdx(),
     svelte(),
-    serviceWorker({
-      workbox: { inlineWorkboxRuntime: true },
-    }),
     ...(fastBuild
       ? []
       : [
@@ -152,7 +174,6 @@ export default defineConfig({
     domains: ["programme.europython.eu", "placehold.co"],
   },
   prefetch: {
-    prefetchAll: true,
-    defaultStrategy: "load",
+    prefetchAll: false,
   },
 });

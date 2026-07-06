@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/MarkdownLayout.astro";
 
+import Headline from "@ui/Headline.astro";
 import Separator from "@ui/Separator.astro";
 import Map from "@components/Map.astro";
 import YouTube from "@ui/YouTube.astro";
@@ -16,6 +17,7 @@ import Center from "@components/markdown/Center.astro";
 import EPSLogo from "@components/markdown/EPSLogo.astro";
 import ProfileCard from "@components/profile/ProfileCard.astro";
 import SpeakerCard from "@components/profile/SpeakerCard.astro";
+import GoogleCalendar from '@components/GoogleCalendar.astro';
 
 import Prose from "@ui/Prose.astro";
 
@@ -55,6 +57,7 @@ const description = post.data.subtitle;
     <Content
       components={{
         Button,
+        Headline,
         Icon,
         IconLabel,
         Center,
@@ -67,7 +70,8 @@ const description = post.data.subtitle;
         hr: Separator,
         Accordion,
         ProfileCard,
-        SpeakerCard
+        SpeakerCard,
+        GoogleCalendar
       }}
     />
   </Prose>

@@ -6,8 +6,8 @@ import IconWithLabel from "./icon-label.astro";
 import Icon from "@ui/Icon.astro";
 import Button from "@ui/Button.astro";
 
-const action1 = "/tickets";
-const action2 = "/sponsorship/sponsor/";
+const action1 = "https://www.youtube.com/@EuroPythonConference";
+const action2 = "https://www.flickr.com/photos/europython/collections/72157724135241893/";
 ---
 
 <section class="relative z-10">
@@ -82,7 +82,7 @@ const action2 = "/sponsorship/sponsor/";
       >
     </div>
     <div class="prose-xl relative z-10 text-center">
-      <div class="grid md:flex items-center space-x-3 p-10 md:mt-20 justify-center">
+      <div class="grid md:flex items-center space-x-3 p-10 md:mt-0 justify-center">
         <div class="flex items-center justify-center">
           <img
             class="h-full block md:w-full lg:w-[200px] pr-3 lg:pr-8"
@@ -101,9 +101,7 @@ const action2 = "/sponsorship/sponsor/";
       <p
         class="max-w-2xl mx-10 md:mx-40 text-center text-xl text-gray-700 mt-2"
       >
-        Discover the latest Python trends, learn from 180+ expert speakers,
-        network with fellow developers, enjoy social events, and explore open
-        spaces to spark new ideas.
+        Thank you to everyone who joined us! We were thrilled to welcome over 1,600 Python enthusiasts from around the world. We can't wait to see you again next year!
       </p>
     </div>
     <!-- First 2x1 Grid -->
@@ -115,78 +113,19 @@ const action2 = "/sponsorship/sponsor/";
     <!-- Second 2x1 Grid with Action Buttons -->
     <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-4 m-6">
       <div>
-        <Button secondary url={action1}> Register Now </Button>
+        <Button secondary url={action1}> Check out talks on YouTube </Button>
       </div>
       <div class="btn-outline">
-        <Button outline url={action2}> Call for Sponsors </Button>
+        <Button outline url={action2}> Conference photos </Button>
       </div>
     </div>
   </div>
 
-  <div
-    class="bluebox relative flex flex-col items-center justify-center"
-    style=""
-  >
-    <div class="bluebox-shift">
-      <div class="hero-image overflow-hidden -mt-12">
-        <!-- Image with Rounded Corners and Shadow -->
-        <div class="px-5 md:px-10 md:m-10">
-          <Picture
-            src={heroImage}
-            alt="EuroPython 2025 Conference"
-            layout='full-width'
-            formats={['avif', 'webp', 'jpeg']}
-            class="w-full max-w-5xl lg:max-w-full h-auto lg:h-full rounded-2xl shadow-xl"
-            loading="eager"
-            priority={true}
-          />
-        </div>
-      </div>
-      <!-- 3x1 Grid with Conference Stats -->
-      <div
-        class="stats flex flex-wrap flex-col md:flex-row justify-around items-center"
-      >
-        <div class="p-4 rounded-lg flex items-center">
-          <div
-            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
-          >
-            <Icon name="calendar-days" size="fa-3x" />
-          </div>
-          <div>
-            <h2 class="text-2xl md:text-5xl font-bold">7</h2>
-            <h3 class="text-xl md:text-3xl">Days</h3>
-          </div>
-        </div>
-        <div class="p-4 rounded-lg flex items-center">
-          <div
-            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
-          >
-            <Icon name="users" size="fa-3x" />
-          </div>
-          <div>
-            <h2 class="text-2xl md:text-5xl font-bold">1.3k+</h2>
-            <h3 class="text-xl md:text-3xl">Attendees</h3>
-          </div>
-        </div>
-        <div class="p-4 rounded-lg flex items-center">
-          <div
-            class="w-16 h-16 flex items-center justify-center rounded-full mr-4"
-          >
-            <Icon name="comments" size="fa-3x" />
-          </div>
-          <div>
-            <h2 class="text-2xl md:text-5xl font-bold">180+</h2>
-            <h3 class="text-xl md:text-3xl">Speakers</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <style>
     .bg-icons {
-      min-height: 600px;
-      padding-bottom: 150px;
+      min-height: 400px;
+      padding-bottom: 50px;
       overflow: hidden;
     }
     .bg-icon {

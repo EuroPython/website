@@ -45,6 +45,10 @@
           "path": "/speakers-dinner"
         },
         {
+          "name": "Wednesday Local Community Drinks",
+          "path": "/pyvo"
+        },
+        {
           "name": "Beginners' Day",
           "path": "/beginners-day"
         },
@@ -87,6 +91,10 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
@@ -110,6 +118,10 @@
     {
       "name": "Sponsorship",
       "items": [
+        {
+          "name": "Our Sponsors",
+          "path": "/sponsors"
+        },
         {
           "name": "Sponsor Packages",
           "path": "/sponsorship/sponsor"
@@ -152,6 +164,10 @@
           "path": "/faq"
         },
         {
+          "name": "Discord",
+          "path": "/discord"
+        },
+        {
           "name": "Code of Conduct",
           "path": "https://www.europython-society.org/coc/"
         }
@@ -167,6 +183,10 @@
         {
           "name": "EuroPython Society",
           "path": "https://europython-society.org/"
+        },
+        {
+          "name": "Team",
+          "path": "/thank-you"
         },
         {
           "name": "Community Partners",
@@ -250,6 +270,10 @@
           "path": "/beginners-day"
         },
         {
+          "name": "Wednesday Local Community Drinks",
+          "path": "/pyvo"
+        },
+        {
           "name": "Thursday Social Event",
           "path": "/social-event"
         },
@@ -288,12 +312,20 @@
         {
           "name": "Open Spaces",
           "path": "/open-spaces"
+        },
+        {
+          "name": "CV Feedback Session",
+          "path": "/feedback-session"
         }
       ]
     },
     {
       "name": "Sponsorship",
       "items": [
+        {
+          "name": "Our Sponsors",
+          "path": "/sponsors"
+        },
         {
           "name": "Sponsor Packages",
           "path": "/sponsorship/sponsor"
@@ -326,6 +358,10 @@
         {
           "name": "Childcare",
           "path": "/childcare"
+        },
+        {
+          "name": "Remote",
+          "path": "/remote"
         }
       ]
     },

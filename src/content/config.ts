@@ -98,7 +98,7 @@ const speakers = defineCollection({
     code: z.string(),
     name: z.string(),
     slug: z.string(),
-    avatar: z.string(),
+    avatar: z.string().url().nullable(),
     biography: z.string().nullable(),
     submissions: z.array(reference("sessions")),
     affiliation: z.string().nullable(),
@@ -108,6 +108,8 @@ const speakers = defineCollection({
     mastodon_url: z.string().url().nullable(),
     bluesky_url: z.string().url().nullable().optional(),
     twitter_url: z.string().url().nullable(),
+    discord: z.string().url().nullable().optional(),
+    tiktok: z.string().url().nullable().optional(),
   }),
 });
 
@@ -224,6 +226,7 @@ const sponsors = defineCollection({
         discord: z.string().url().optional().nullable(),
         facebook: z.string().url().optional().nullable(),
         youtube: z.string().url().optional().nullable(),
+        tiktok: z.string().url().optional().nullable(),
       })
       .optional(),
     event_name: z.string().optional().nullable(),
@@ -256,6 +259,31 @@ const jobs = defineCollection({
   }),
 });
 
+const sprints = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    slug: z.string().optional(), // Auto-generated from filename if not provided
+    numberOfPeople: z.string().or(z.number()),
+    pythonLevel: z.enum(["Any", "Beginner", "Intermediate", "Advanced"]),
+    contactPerson: z.object({
+      name: z.string(),
+      email: z.string().email().optional().nullable(),
+      github: z.string().optional().nullable(),
+      twitter: z.string().optional().nullable(),
+    }),
+    links: z
+      .array(
+        z.object({
+          title: z.string(),
+          url: z.string().url(),
+        })
+      )
+      .optional(),
+    draft: z.boolean().optional().default(false),
+  }),
+});
+
 export const collections = {
   days,
   pages,
@@ -263,6 +291,7 @@ export const collections = {
   week,
   sessions,
   speakers,
+  sprints,
   keynoters,
   sponsors,
   jobs,

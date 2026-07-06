@@ -252,6 +252,12 @@ main a[href^="#"]::before {
   background-color: white;
 }
 
+.draft2 {
+  background: url("/draft2.png");
+  background-size: 25%;
+  background-color: white;
+}
+
 .social-icon {
   display: inline-flex;
   align-items: center;
@@ -281,4 +287,21 @@ main a[href^="#"]::before {
 
 h2.sponsor {
   scroll-margin-top: 300px;
+}
+
+.prose dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  margin-bottom: 1rem;
+}
+
+.prose dt {
+  margin-top: 0.6em;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .prose dl {
+    display: block;
+  }
 }
