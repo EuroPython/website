@@ -1,8 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
-import Title from "@ui/Title.astro";
-import { getCollection } from "astro:content";
+import SessionHeader from "@sections/SessionHeader.astro";
+import { getCollection, getEntry } from "astro:content";
 
 const allSessions = await getCollection("sessions");
 
@@ -23,6 +23,7 @@ function speakerHtml(speakers: any): string {
     })
     .join(", ");
 }
+const tutorialHeader = await getEntry("programme", "tutorials/header");
 const tutorials = allSessions
   .filter((s) => s.data.session_type?.toLowerCase() === "tutorial")
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
@@ -41,42 +42,13 @@ const tutorials = allSessions
 
   <Section2 variant="dark" id="tutorials">
     <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <Title
-          id="tutorials"
-          subtitle="Full-day, hands-on workshops led by domain experts. Go deeper than any talk can — bring your laptop and leave with real skills."
-        >
-          TUTORIALS
-        </Title>
-        <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
-          <span>Monday & Tuesday, July 13–14</span>
-          <span>Small-group format</span>
-        </div>
-      </div>
-
-      <!-- Advantages grid -->
-      <ul class="tutorial-advantages">
-        <li>
-          <strong>3-hour or 6-hour sessions</strong>
-          Tutorials run for half a day or a full day. Each one is a self-contained
-          workshop with exercises, examples, and hands-on practice.
-        </li>
-        <li>
-          <strong>Small groups, personal attention</strong>
-          Unlike talks, tutorials are capped in size. You get direct access to the
-          instructor and can ask questions as you go.
-        </li>
-        <li>
-          <strong>Wide range of topics</strong>
-          From Python basics and web frameworks to data science pipelines, async programming,
-          and testing strategies — there is a tutorial for every interest.
-        </li>
-        <li>
-          <strong>Separate ticket required</strong>
-          Tutorial participation requires a separate tutorial ticket in addition to
-          your conference pass.
-        </li>
-      </ul>
+      <SessionHeader
+        id="tutorials"
+        title={tutorialHeader!.data.title}
+        subtitle={tutorialHeader!.data.subtitle!}
+        metaItems={tutorialHeader!.data.meta}
+        advantages={tutorialHeader!.data.advantages}
+      />
 
       <!-- Tutorial count -->
       <p class="tutorials-count">
@@ -141,38 +113,6 @@ const tutorials = allSessions
 </Layout>
 
 <style>
-  .tutorial-advantages {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 3rem;
-  }
-
-  @media (min-width: 640px) {
-    .tutorial-advantages {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .tutorial-advantages li {
-    padding: 1.6rem;
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-  }
-
-  .tutorial-advantages li strong {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.4rem;
-  }
-
   .tutorials-count {
     font-size: 1.1rem;
     color: var(--color-text-muted);

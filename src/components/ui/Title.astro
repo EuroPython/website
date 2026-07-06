@@ -1,9 +1,31 @@
 ---
+function highlightTitle(
+  text: string,
+  highlight?: string,
+  color?: string,
+): string {
+  if (!highlight) return text;
+  const idx = text.toUpperCase().indexOf(highlight.toUpperCase());
+  if (idx === -1) return text;
+  const before = text.slice(0, idx).trimEnd();
+  const match = text.slice(idx, idx + highlight.length);
+  const after = text.slice(idx + highlight.length);
+  if (!before) {
+    // Highlight at start — put br after the highlight
+    return `<span style="color: ${color || "var(--color-accent)"}">${match}</span><br>${after.trimStart()}`;
+  }
+  // Highlight not at start — put br before the highlight
+  return `${before}<br><span style="color: ${color || "var(--color-accent)"}">${match}</span>${after}`;
+}
+
 export interface Props {
   id: string;
   subtitle?: string;
   color?: string; // title text color, default #fff
   anchorColor?: string; // anchor link color, default matches color
+  title?: string; // optional title text (overrides slot)
+  highlight?: string; // word to color differently
+  highlightColor?: string; // color for highlighted word
 }
 
 const {
@@ -11,11 +33,18 @@ const {
   subtitle,
   color = "var(--color-text)",
   anchorColor = color,
+  title: titleText,
+  highlight,
+  highlightColor,
 } = Astro.props;
+
+const rendered = titleText
+  ? highlightTitle(titleText, highlight, highlightColor)
+  : null;
 ---
 
 <h2 class="sec-title" style={`color: ${color}`}>
-  <slot />
+  {rendered ? <Fragment set:html={rendered} /> : <slot />}
   <sup class="sec-anchor"
     ><a
       href={`#${id}`}

@@ -1,188 +1,168 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Headline from "@ui/Headline.astro";
-import Section from "@ui/Section.astro";
+import Section2 from "@ui/Section2.astro";
+import SessionHeader from "@sections/SessionHeader.astro";
+import EventSection from "@sections/EventSection.astro";
+import Programme from "@sections/programme.astro";
+import EuroSciPy from "@sections/euroscipy.astro";
+import Connect from "@sections/connect.astro";
+import { getEntry, render } from "astro:content";
 
-import { Image } from "astro:assets";
-import conferenceImg from "@content/pages/overview/conference.jpg";
-import summitsImg from "@content/pages/overview/summits.jpg";
-import pyladiesImg from "@content/pages/overview/pyladies-lunch.jpg";
+const talkHeader = await getEntry("programme", "talks/header");
+const tutorialHeader = await getEntry("programme", "tutorials/header");
+const posterHeader = await getEntry("programme", "posters/header");
+const lightningHeader = await getEntry("programme", "lightning-talks/header");
+const openSpacesHeader = await getEntry("programme", "open-spaces/header");
 
-const categories = [
-  {
-    title: "Talks, Tutorials & Posters",
-    image: conferenceImg,
-    items: [
-      { name: "Talks", href: "/sessions/" },
-      { name: "Tutorials", href: "/sessions/" },
-      { name: "Keynotes", href: "/sessions/" },
-      { name: "Posters", href: "/sessions/" },
-    ],
-  },
-  {
-    title: "Summits",
-    image: summitsImg,
-    items: [
-      { name: "Language Summit", href: "/language-summit/" },
-      { name: "Packaging Summit", href: "/packaging-summit/" },
-      { name: "Rust Summit", href: "/rust-summit/" },
-      {
-        name: "Community Organisers Summit",
-        href: "/community-organisers-summit/",
-      },
-    ],
-  },
-  {
-    title: "PyLadies Events",
-    image: pyladiesImg,
-    items: [
-      { name: "PyLadies Booth", href: "/pyladies" },
-      { name: "PyLadies Workshops", href: "/pyladies" },
-      { name: "PyLadies Lunch", href: "/pyladies" },
-      { name: "Organizer Open Space", href: "/pyladies" },
-    ],
-  },
+const eventEntries = [
+  await getEntry("programme", "language_summit/event"),
+  await getEntry("programme", "packaging_summit/event"),
+  await getEntry("programme", "rust_summit/event"),
+  await getEntry("programme", "wasm_summit/event"),
+  await getEntry("programme", "pyladies/event"),
+  await getEntry("programme", "community_day/event"),
 ];
+
+const ACCENT_MAP: Record<string, string> = {
+  language_summit: "capi",
+  packaging_summit: "pkg",
+  rust_summit: "rust",
+  wasm_summit: "wasm",
+  pyladies: "pyladies",
+  community_day: "community",
+};
+
+const eventSections = await Promise.all(
+  eventEntries.filter(Boolean).map(async (entry) => {
+    const { Content } = await render(entry as any);
+    const slug = entry!.id.split("/")[0];
+    return {
+      data: entry!.data,
+      Content,
+      accent: ACCENT_MAP[slug],
+      highlight: (entry!.data as any).highlight,
+    };
+  }),
+);
 ---
 
 <Layout
-  title="Programme & Events Overview | EuroPython 2026 | July 13th-19th 2026 | Kraków, Poland"
-  description="An overview of the talks, tutorials, summits and community events happening at EuroPython 2026 in Kraków, Poland."
+  title="Programme Overview | EuroPython 2026"
+  description="A week of talks, tutorials, posters, and more at EuroPython 2026 in Kraków, Poland."
 >
-  <Section>
-    <Headline
-      id="overview"
-      as="h1"
-      title="Programme & Events Overview"
-      center="true"
-    />
+  <Programme />
 
-    <p class="overview-intro">
-      A week packed with talks, tutorials, summits and community events. Here's
-      a quick look at what's happening at EuroPython 2026 in Kraków.
-    </p>
-
-    <div class="overview-grid">
-      {
-        categories.map((category) => (
-          <article class="overview-card">
-            <div class="card-media">
-              <Image
-                src={category.image}
-                alt={category.title}
-                height={340}
-                width={600}
-                class="card-img"
-              />
-            </div>
-            <div class="card-body">
-              <h2 class="card-title">{category.title}</h2>
-              <ul class="card-list">
-                {category.items.map((item) => (
-                  <li>
-                    <a href={item.href}>{item.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </article>
-        ))
-      }
+  <Section2 variant="dark" id="sessions">
+    <div class="session-group">
+      <SessionHeader
+        id="talks"
+        title={talkHeader!.data.title}
+        subtitle={talkHeader!.data.subtitle!}
+        metaItems={talkHeader!.data.meta}
+        advantages={talkHeader!.data.advantages}
+        cta={talkHeader!.data.cta}
+        track="talk"
+        highlight={talkHeader!.data.highlight}
+      />
     </div>
-  </Section>
+
+    <div class="session-group">
+      <SessionHeader
+        id="tutorials"
+        title={tutorialHeader!.data.title}
+        subtitle={tutorialHeader!.data.subtitle!}
+        metaItems={tutorialHeader!.data.meta}
+        advantages={tutorialHeader!.data.advantages}
+        cta={tutorialHeader!.data.cta}
+        track="tutorial"
+        highlight={tutorialHeader!.data.highlight}
+      />
+    </div>
+
+    <div class="session-group">
+      <SessionHeader
+        id="posters"
+        title={posterHeader!.data.title}
+        subtitle={posterHeader!.data.subtitle!}
+        metaItems={posterHeader!.data.meta}
+        advantages={posterHeader!.data.advantages}
+        cta={posterHeader!.data.cta}
+        track="poster"
+        highlight={posterHeader!.data.highlight}
+      />
+    </div>
+
+    <div class="session-group">
+      <SessionHeader
+        id="lightning-talks"
+        title={lightningHeader!.data.title}
+        subtitle={lightningHeader!.data.subtitle!}
+        metaItems={lightningHeader!.data.meta}
+        advantages={lightningHeader!.data.advantages}
+        track="lightning"
+        highlight={lightningHeader!.data.highlight}
+      />
+    </div>
+
+    <div class="session-group">
+      <SessionHeader
+        id="open-spaces"
+        title={openSpacesHeader!.data.title}
+        subtitle={openSpacesHeader!.data.subtitle!}
+        metaItems={openSpacesHeader!.data.meta}
+        advantages={openSpacesHeader!.data.advantages}
+        track="open"
+        highlight={openSpacesHeader!.data.highlight}
+      />
+    </div>
+  </Section2>
+
+  <Section2 variant="dark-alt" id="events">
+    {
+      eventSections.map(({ data, Content, accent, highlight }) => (
+        <div class="event-group">
+          <EventSection
+            id={data
+              .title!.toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/-$/g, "")}
+            title={data.title!}
+            subtitle={data.subtitle}
+            meta={data.meta}
+            startDatetime={data.start_datetime}
+            endDatetime={data.end_datetime}
+            location={data.location}
+            contact={data.contact}
+            link={data.link}
+            accent={accent as any}
+            highlight={highlight}
+          >
+            <Content />
+          </EventSection>
+        </div>
+      ))
+    }
+  </Section2>
+
+  <EuroSciPy />
+
+  <Connect />
 </Layout>
 
 <style>
-  .overview-intro {
-    max-width: 720px;
-    margin: 0 auto 2.5rem;
-    text-align: center;
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
+  .session-group + .session-group {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px dashed var(--color-border);
   }
 
-  .overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.75rem;
-    max-width: 1100px;
-    margin: 0 auto 2rem;
-  }
-
-  .overview-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-surface-subtle);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    overflow: hidden;
-    transition:
-      transform 0.2s ease,
-      border-color 0.2s ease,
-      box-shadow 0.2s ease;
-  }
-
-  .overview-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-accent);
-    box-shadow: 0 12px 30px oklch(0 0 0 / 0.25);
-  }
-
-  .card-media {
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-  }
-
-  .card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .card-body {
-    padding: 1.25rem 1.5rem 1.5rem;
-  }
-
-  .card-title {
-    margin: 0 0 0.85rem;
-    padding-bottom: 0.5rem;
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    border-bottom: 3px solid var(--color-accent);
-  }
-
-  .card-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .card-list li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .card-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--color-accent);
-    font-weight: bold;
-  }
-
-  .card-list a {
+  .events-heading {
     color: var(--color-text);
-    text-decoration: none;
-    transition: color 0.15s ease;
   }
 
-  .card-list a:hover,
-  .card-list a:focus-visible {
-    color: var(--color-accent);
-    text-decoration: underline;
+  .event-group + .event-group {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px dashed var(--color-border);
   }
 </style>

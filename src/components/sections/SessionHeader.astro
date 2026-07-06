@@ -1,0 +1,227 @@
+---
+import Title from "@ui/Title.astro";
+
+export interface AdvantageItem {
+  title: string;
+  description: string;
+  url?: string;
+}
+
+export interface MetaItem {
+  text: string;
+}
+
+export interface CTALink {
+  text: string;
+  url: string;
+}
+
+const TRACK_COLORS: Record<string, { color: string; dark: string }> = {
+  talk: {
+    color: "var(--color-track-talk)",
+    dark: "var(--color-track-talk-dark)",
+  },
+  tutorial: {
+    color: "var(--color-track-tutorial)",
+    dark: "var(--color-track-tutorial-dark)",
+  },
+  poster: {
+    color: "var(--color-track-poster)",
+    dark: "var(--color-track-poster-dark)",
+  },
+  lightning: {
+    color: "var(--color-track-lightning)",
+    dark: "var(--color-track-lightning-dark)",
+  },
+  open: {
+    color: "var(--color-track-open)",
+    dark: "var(--color-track-open-dark)",
+  },
+};
+
+export type TrackKey = keyof typeof TRACK_COLORS;
+
+export interface Props {
+  id: string;
+  title: string;
+  subtitle: string;
+  metaItems?: MetaItem[];
+  advantages: AdvantageItem[];
+  cta?: CTALink;
+  track?: TrackKey;
+  highlight?: string;
+}
+
+const {
+  id,
+  title,
+  subtitle,
+  metaItems = [],
+  advantages,
+  cta,
+  track,
+  highlight,
+} = Astro.props;
+const tc = track ? TRACK_COLORS[track] : undefined;
+const trackStyle = tc ? `--track-color: ${tc.color}` : "";
+---
+
+<div class="session-header" style={trackStyle}>
+  <div class="text-center mb-12">
+    <Title
+      id={id}
+      subtitle={subtitle}
+      anchorColor={tc?.color}
+      title={title}
+      highlight={highlight}
+      highlightColor={tc?.color}
+    />
+    {
+      metaItems.length > 0 && (
+        <div
+          class:list={[
+            "flex justify-center gap-6 text-sm mt-4",
+            tc ? "meta-items" : "text-white/50",
+          ]}
+        >
+          {metaItems.map((item) => (
+            <span>{item.text}</span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+
+  {
+    cta && (
+      <div class="talk-cta-wrap">
+        <a
+          href={cta.url}
+          class="talk-cta"
+          style={
+            tc
+              ? `background: linear-gradient(to bottom, ${tc.color}, ${tc.dark}); border-color: ${tc.color}; color: var(--color-cta-text);`
+              : ""
+          }
+        >
+          {cta.text}
+        </a>
+      </div>
+    )
+  }
+
+  <ul class:list={["talk-advantages", tc ? "talk-advantages--tracked" : ""]}>
+    {
+      advantages.map((item) => (
+        <li>
+          {item.url ? (
+            <a href={item.url} class="talk-advantages-link">
+              <strong>{item.title}</strong>
+              {item.description}
+            </a>
+          ) : (
+            <>
+              <strong>{item.title}</strong>
+              {item.description}
+            </>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .talk-advantages {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .talk-advantages {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .talk-advantages li {
+    padding: 1.6rem;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .talk-advantages li strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+  }
+
+  .talk-advantages li:has(.talk-advantages-link) {
+    padding: 0;
+  }
+
+  .talk-advantages-link {
+    display: block;
+    padding: 1.6rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    height: 100%;
+    transition: color 0.15s;
+  }
+
+  .talk-advantages-link:hover {
+    color: var(--color-accent-themed);
+    text-decoration: underline;
+  }
+
+  .talk-advantages-link:hover strong {
+    color: var(--color-accent-themed) !important;
+  }
+
+  .talk-advantages li:has(.talk-advantages-link):hover {
+    border-color: var(--color-accent-themed);
+  }
+
+  /* Subtle track-colored hover on advantage cards */
+  .talk-advantages--tracked li:hover {
+    border-color: var(--track-color);
+  }
+
+  .talk-advantages--tracked li:has(.talk-advantages-link):hover {
+    border-color: var(--track-color);
+  }
+
+  .talk-cta-wrap {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .talk-cta {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    background: var(--color-cta-red);
+    color: var(--color-white);
+    border: 1px solid var(--color-cta-red);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .talk-cta:hover {
+    opacity: 0.85;
+  }
+
+  .meta-items {
+    color: var(--track-color);
+  }
+</style>
