@@ -35,7 +35,8 @@ design.
 Founded in 2015 and headquartered in Barcelona, we've grown to over 1,400 people
 across Europe and North America. In 2022 we became a 'unicorn' and in 2025 we
 raised $200 million in a Series E funding round, increasing our valuation of
-$2.7 billion
+$2.7
+billion
 [](https://www.travelperk.com/blog/travelperk-acquires-yokoy/?utm_campaign=Oktopost-Corporate%20Announcements&utm_content=Oktopost-LinkedIn&utm_medium=social&utm_source=LinkedIn).
 
 We've been winning awards too. Since 2023, we've been voted one of the
