@@ -57,6 +57,10 @@ const L = {
   speakersDinner: { label: "Speakers' Dinner", url: "/speakers-dinner" },
   openSpaces: { label: "Open Spaces", url: "/open-spaces" },
   pyladiesEvents: { label: "PyLadies' Events", url: "/pyladies" },
+  womenInPythonRun: {
+    label: "Women in Python 5k Run",
+    url: "/women-in-python-run",
+  },
 
   // Participate
   tickets: { label: "Tickets", url: "/tickets" },
@@ -163,6 +167,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.openSpaces,
           L.yearsOfEp,
           L.pyladiesEvents,
+          L.womenInPythonRun,
         ],
       },
       {
@@ -283,6 +288,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       L.rustSummit,
       L.packagingSummit,
       L.pyladiesEvents,
+      L.womenInPythonRun,
       L.communityOrganisersSummit,
     ],
   },
