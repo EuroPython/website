@@ -52,7 +52,7 @@ const L = {
 
   // Events & Social
   sprints: { label: "Sprints Weekend", url: "/sprints" },
-  socialEvent: { label: "Social Event", url: "/social-event" },
+  socialEvent: { label: "Thursday Social Event", url: "/social-event" },
   beginnersDay: { label: "Beginners' Day", url: "/beginners-day" },
   speakersDinner: { label: "Speakers' Dinner", url: "/speakers-dinner" },
   openSpaces: { label: "Open Spaces", url: "/open-spaces" },
