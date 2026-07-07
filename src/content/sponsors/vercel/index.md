@@ -20,4 +20,8 @@ logo_padding: 25px
 
 # About Vercel
 
-Vercel is the agentic infrastructure company. As the team behind Next.js, AI SDK, and v0, Vercel is the platform where humans and AI agents build, ship, and scale software together. Vercel is trusted by OpenAI, Ramp, Supreme, and millions of developers worldwide to ship what's next. Learn more at [vercel.com](https://vercel.com).
+Vercel is the agentic infrastructure company. As the team behind Next.js, AI
+SDK, and v0, Vercel is the platform where humans and AI agents build, ship, and
+scale software together. Vercel is trusted by OpenAI, Ramp, Supreme, and
+millions of developers worldwide to ship what's next. Learn more at
+[vercel.com](https://vercel.com).
