@@ -4,6 +4,7 @@ export interface Props {
   subtitle?: string;
   color?: string; // title text color, default #fff
   anchorColor?: string; // anchor link color, default matches color
+  as?: "h1" | "h2"; // h1 when the Title is the page's main heading
 }
 
 const {
@@ -11,10 +12,11 @@ const {
   subtitle,
   color = "var(--color-text)",
   anchorColor = color,
+  as: Tag = "h2",
 } = Astro.props;
 ---
 
-<h2 class="sec-title" style={`color: ${color}`}>
+<Tag class="sec-title" style={`color: ${color}`}>
   <slot />
   <sup class="sec-anchor"
     ><a
@@ -23,7 +25,7 @@ const {
       aria-label={`Jump to ${id}`}>#</a
     ></sup
   >
-</h2>
+</Tag>
 {
   subtitle && (
     <p class="sec-subtitle" style={`color: var(--color-text-muted)`}>
