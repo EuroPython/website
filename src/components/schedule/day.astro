@@ -1,11 +1,9 @@
-
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Break from "@components/schedule/break.astro";
 import Session from "@components/schedule/session.astro";
 import { addMinutes, differenceInMinutes, parseISO } from "date-fns";
 import { formatInTimeZone } from "date-fns-tz";
-
 
 interface Props {
   day: CollectionEntry<"days">;
@@ -34,25 +32,35 @@ export const getStaticPaths = async () => {
   });
 };
 
-
 const { day } = Astro.props;
 const dayName = day.id;
 //const day = getEntry("days", dayName);
 
+// Predefined display order; rooms not listed here sort last, alphabetically.
+const ROOM_ORDER = [
+  "S1",
+  "S2",
+  "S3A",
+  "S3B",
+  "S4",
+  "S4A",
+  "S4B",
+  "Glass room",
+  "2.017/2.018",
+  "Fishbowl",
+  "Exhibit Hall",
+];
+
 const getRoomSortKey = (room: string) => {
-  const match = room.match(/\(S(\d+)([A-Z]?)\)/i);
-
-  if (!match) {
-    return `99-${room}`;
-  }
-
-  const [, number, suffix = ""] = match;
-  return `${number.padStart(2, "0")}-${suffix || "0"}-${room}`;
+  const index = ROOM_ORDER.indexOf(room);
+  return index === -1 ? ROOM_ORDER.length : index;
 };
 
 const ROOMS = (day.data.rooms ?? [])
   .filter((room) => room.toLowerCase() !== "exhibit hall")
-  .sort((a, b) => getRoomSortKey(a).localeCompare(getRoomSortKey(b)));
+  .sort(
+    (a, b) => getRoomSortKey(a) - getRoomSortKey(b) || a.localeCompare(b),
+  );
 
 type ScheduleSession = {
   title: string;
@@ -62,9 +70,9 @@ type ScheduleSession = {
   endTime: string;
   duration: number;
   sessionType?: string | undefined;
-  tyee: string;
+  type: string;
   rooms: string[];
-  snug?: string;
+  slug?: string;
 };
 
 // hack for posters :)
@@ -142,9 +150,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
     continue;
   }
 
-  const end = new Date(
-    Math.max(...candidateEndTimes),
-  );
+  const end = new Date(Math.max(...candidateEndTimes));
 
   const hasBreakAfter = nextSessions.some(
     (session) => session.type === "break",
@@ -163,7 +169,7 @@ for (let i = 0; i < sessionAndTimes.length - 1; i++) {
       timesToSkip.push(roomChangeTime);
       continue;
     } else {
-      if (duration != 0){
+      if (duration != 0) {
         console.warn("Missing room change", end, nextStart, duration);
       }
     }
@@ -195,6 +201,38 @@ const slots = Object.entries(sessionsByTime)
       sessions,
     };
   });
+
+// Merge adjacent 5-minute-apart session slots when earlier sessions
+// are still running into the later slot. Fixes cases like 14:30 (one room)
+// and 14:35 (other rooms) where timeline shows two close start times.
+for (let i = slots.length - 1; i > 0; i--) {
+  const current = slots[i];
+  const prev = slots[i - 1];
+
+  if (current.type !== "session" || prev.type !== "session") continue;
+
+  const gap = timeToNumber(current.startTime) - timeToNumber(prev.startTime);
+  if (gap !== 5) continue;
+
+  // Only merge when all earlier-slot sessions are still running
+  // at the later slot's start time
+  const allStillRunning = prev.sessions.every(
+    (s) => s.end.getTime() > current.start.getTime(),
+  );
+  if (!allStillRunning) continue;
+
+  // Merge: combine sessions into the earlier slot
+  prev.sessions.push(...current.sessions);
+
+  // Update end to the latest among merged sessions
+  const allEnds = prev.sessions.map((s) => s.end.getTime());
+  const latestEnd = new Date(Math.max(...allEnds));
+  prev.end = latestEnd;
+  prev.endTime = format(latestEnd, "HH:mm");
+
+  // Remove the later slot
+  slots.splice(i, 1);
+}
 
 const gridRows: string[] = [];
 
@@ -350,23 +388,21 @@ posters.forEach((poster) => {
   postersByTime[poster.startTime].push(poster);
 });
 
-
 const date = parseISO(`${dayName}T12:00:00Z`);
 const dateText = format(date, "eeee d MMMM");
 
+const lastEndTime = Math.max(
+  ...slots.flatMap((slot) => slot.sessions.map((s) => timeToNumber(s.endTime))),
+);
 
-
-
-  const lastEndTime = Math.max(
-    ...slots.flatMap((slot) => slot.sessions.map((s) => timeToNumber(s.endTime)))
-  );
-
-  const endStart = numberToTime(lastEndTime);
-
+const endStart = numberToTime(lastEndTime);
 ---
 
 <div class="day ep-sched-day" data-day={dayName}>
-<h3 class="ep-sched-day-title" id={`day-${dayName}`}><a href={`#day-${dayName}`} aria-label={`Jump to ${dateText}`}>{dateText}</a></h3>
+  <h3 class="ep-sched-day-title" id={`day-${dayName}`}>
+    <a href={`#day-${dayName}`} aria-label={`Jump to ${dateText}`}>{dateText}</a
+    >
+  </h3>
 
   <div class="schedule-wrapper">
     <header class="schedule-container header">
@@ -404,7 +440,7 @@ const dateText = format(date, "eeee d MMMM");
                 </div>
               )}
 
-              {(sessionsByTime[slot.startTime] ?? [])
+              {(slot.sessions ?? [])
                 .sort(sortSessionByRooms)
                 .filter((session) => session.sessionType !== "poster")
                 .map((session) => {
@@ -450,7 +486,15 @@ const dateText = format(date, "eeee d MMMM");
                     {posters.map((session) => {
                       const style = {};
 
-                      return <div><Session session={session} style={style} sessionType="poster" /></div>;
+                      return (
+                        <div>
+                          <Session
+                            session={session}
+                            style={style}
+                            sessionType="poster"
+                          />
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
@@ -458,7 +502,6 @@ const dateText = format(date, "eeee d MMMM");
             </div>
           ))
         }
-
       </div>
 
       <Break
@@ -472,10 +515,10 @@ const dateText = format(date, "eeee d MMMM");
 </div>
 
 <style is:global>
-.layout-wrapper {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 100%) 1fr !important;
-}
+  .layout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 100%) 1fr !important;
+  }
 </style>
 
 <style>
@@ -513,7 +556,7 @@ const dateText = format(date, "eeee d MMMM");
   }
 
   :global(.schedule *) {
-    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-family: "Inter Tight", system-ui, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 0.9rem;
@@ -681,7 +724,7 @@ const dateText = format(date, "eeee d MMMM");
     }
 
     .time h2 {
-      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-family: "Inter Tight", system-ui, sans-serif;
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--color-text-muted);
@@ -709,10 +752,10 @@ const dateText = format(date, "eeee d MMMM");
     }
 
     .poster-cards {
-  }
+    }
 
-  .posters h2 {
-      font-family: 'Inter Tight', system-ui, sans-serif;
+    .posters h2 {
+      font-family: "Inter Tight", system-ui, sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
       color: var(--color-accent-themed);

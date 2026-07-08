@@ -5,9 +5,8 @@ import Prose from "@ui/Prose.astro";
 import { Image } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Title from "@ui/Title.astro";
-import Section2 from "@ui/Section2.astro"
+import Section2 from "@ui/Section2.astro";
 import CodeHeart from "@components/island/CodeHeart.svelte";
-
 
 export async function getStaticPaths() {
   const entries = await getCollection("speakers");
@@ -18,8 +17,6 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-
-
 
 const sessions = await getEntries(entry.data.submissions);
 
@@ -88,25 +85,25 @@ function getGitHosting(url: string): string | undefined {
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
   <Section2 variant="dark" id="speaker-page">
-    <Title id="speaker">{entry.data.name}</Title>
+    <Title id="speaker" as="h1">{entry.data.name}</Title>
 
-              <div class="md:grid grid-cols-[460px_1fr] md:gap-6">
-    {
-      ( entry.data.avatar &&
-                  <div class="flex items-start">
-                    <div class="speaker-profile-photo border-4 border-white rounded-lg shadow-lg inline-block mb-10">
-          <Image
-            src={entry.data.avatar}
-            alt={entry.data.name}
-            height={400}
-            width={300}
-            class="speaker-profile-img"
-          />
-        </div>
-        </div>
-      )
-    }
-                </div>
+    <div class="md:grid grid-cols-[460px_1fr] md:gap-6">
+      {
+        entry.data.avatar && (
+          <div class="flex items-start">
+            <div class="speaker-profile-photo border-4 border-white rounded-lg shadow-lg inline-block mb-10">
+              <Image
+                src={entry.data.avatar}
+                alt={entry.data.name}
+                height={400}
+                width={300}
+                class="speaker-profile-img"
+              />
+            </div>
+          </div>
+        )
+      }
+    </div>
 
     {
       entry.data.biography ? (
@@ -122,123 +119,125 @@ function getGitHosting(url: string): string | undefined {
     }
 
     <Prose full>
-    {
-      entry.data.affiliation ||
-      entry.data.homepage ||
-      entry.data.gitx_url ||
-      entry.data.linkedin_url ||
-      entry.data.mastodon_url ||
-      entry.data.twitter_url ? (
-        <div class="mb-4">
-          <h2 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
-            More about the speaker
-          </h2>
-          <dl>
-            {entry.data.affiliation && (
-              <>
-                <dt class="font-bold">Affiliation</dt>
-                <dd>{entry.data.affiliation}</dd>
-              </>
-            )}
+      {
+        entry.data.affiliation ||
+        entry.data.homepage ||
+        entry.data.gitx_url ||
+        entry.data.linkedin_url ||
+        entry.data.mastodon_url ||
+        entry.data.twitter_url ? (
+          <div class="mb-4">
+            <h2 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit text-5xl">
+              More about the speaker
+            </h2>
+            <dl>
+              {entry.data.affiliation && (
+                <>
+                  <dt class="font-bold">Affiliation</dt>
+                  <dd>{entry.data.affiliation}</dd>
+                </>
+              )}
 
-            {entry.data.homepage && (
-              <>
-                <dt class="font-bold">Homepage</dt>
-                <dd>
-                  {isUrl(entry.data.homepage) ? (
+              {entry.data.homepage && (
+                <>
+                  <dt class="font-bold">Homepage</dt>
+                  <dd>
+                    {isUrl(entry.data.homepage) ? (
+                      <a
+                        href={ensureHttps(entry.data.homepage)}
+                        class="text-white/80 underline hover:text-accent"
+                        target="_blank"
+                      >
+                        {entry.data.homepage}
+                      </a>
+                    ) : (
+                      <span>{entry.data.homepage}</span>
+                    )}
+                  </dd>
+                </>
+              )}
+
+              {entry.data.gitx_url && (
+                <>
+                  <dt class="font-bold">
+                    {getGitHosting(entry.data.gitx_url) ?? "Git"}
+                  </dt>
+                  <dd>
                     <a
-                      href={ensureHttps(entry.data.homepage)}
+                      href={ensureHttps(entry.data.gitx_url)}
                       class="text-white/80 underline hover:text-accent"
                       target="_blank"
                     >
-                      {entry.data.homepage}
+                      {entry.data.gitx_url}
                     </a>
-                  ) : (
-                    <span>{entry.data.homepage}</span>
-                  )}
-                </dd>
-              </>
-            )}
+                  </dd>
+                </>
+              )}
 
-            {entry.data.gitx_url && (
-              <>
-                <dt class="font-bold">
-                  {getGitHosting(entry.data.gitx_url) ?? "Git"}
-                </dt>
-                <dd>
-                  <a
-                    href={ensureHttps(entry.data.gitx_url)}
-                    class="text-white/80 underline hover:text-accent"
+              {entry.data.linkedin_url && (
+                <>
+                  <dt class="font-bold">LinkedIn</dt>
+                  <dd>
+                    <a
+                      href={entry.data.linkedin_url}
+                      class="text-white/80 underline hover:text-accent"
                       target="_blank"
-                  >
-                    {entry.data.gitx_url}
-                  </a>
-                </dd>
-              </>
-            )}
+                    >
+                      {getLinkedInUsername(entry.data.linkedin_url)}
+                    </a>
+                  </dd>
+                </>
+              )}
 
-            {entry.data.linkedin_url && (
-              <>
-                <dt class="font-bold">LinkedIn</dt>
-                <dd>
-                  <a
-                    href={entry.data.linkedin_url}
-                    class="text-white/80 underline hover:text-accent"
+              {entry.data.mastodon_url && (
+                <>
+                  <dt class="font-bold">Mastodon</dt>
+                  <dd>
+                    <a
+                      href={entry.data.mastodon_url}
+                      class="text-white/80 underline hover:text-accent"
                       target="_blank"
-                  >
-                    {getLinkedInUsername(entry.data.linkedin_url)}
-                  </a>
-                </dd>
-              </>
-            )}
+                    >
+                      {getMastodonUsername(entry.data.mastodon_url)}
+                    </a>
+                  </dd>
+                </>
+              )}
 
-            {entry.data.mastodon_url && (
-              <>
-                <dt class="font-bold">Mastodon</dt>
-                <dd>
-                  <a
-                    href={entry.data.mastodon_url}
-                    class="text-white/80 underline hover:text-accent"
+              {entry.data.twitter_url && (
+                <>
+                  <dt class="font-bold">Twitter / X</dt>
+                  <dd>
+                    <a
+                      href={entry.data.twitter_url}
+                      class="text-white/80 underline hover:text-accent"
                       target="_blank"
-                  >
-                    {getMastodonUsername(entry.data.mastodon_url)}
-                  </a>
-                </dd>
-              </>
-            )}
-
-            {entry.data.twitter_url && (
-              <>
-                <dt class="font-bold">Twitter / X</dt>
-                <dd>
-                  <a
-                    href={entry.data.twitter_url}
-                    class="text-white/80 underline hover:text-accent"
+                    >
+                      {getTwitterUsername(entry.data.twitter_url)}
+                    </a>
+                  </dd>
+                </>
+              )}
+              {entry.data.bluesky_url && (
+                <>
+                  <dt class="font-bold">Bluesky</dt>
+                  <dd>
+                    <a
+                      href={getBlueskyProfileLink(
+                        getBlueskyUsername(entry.data.bluesky_url) as string,
+                      )}
+                      class="text-white/80 underline hover:text-accent"
                       target="_blank"
-                  >
-                    {getTwitterUsername(entry.data.twitter_url)}
-                  </a>
-                </dd>
-              </>
-            )}
-            {entry.data.bluesky_url && (
-              <>
-                <dt class="font-bold">Bluesky</dt>
-                <dd>
-                  <a
-                    href={getBlueskyProfileLink(getBlueskyUsername(entry.data.bluesky_url) as string)}
-                    class="text-white/80 underline hover:text-accent"
-                      target="_blank"
-                  >
-                    {getBlueskyUsername(entry.data.bluesky_url)}
-                  </a>
-                </dd>
-              </>
-            )}
-          </dl>
-        </div>
-      ) : null
-    }
+                    >
+                      {getBlueskyUsername(entry.data.bluesky_url)}
+                    </a>
+                  </dd>
+                </>
+              )}
+            </dl>
+          </div>
+        ) : null
+      }
     </Prose>
 
     <br />
@@ -259,12 +258,12 @@ function getGitHosting(url: string): string | undefined {
               {session.data.title}
             </a>
 
-  <CodeHeart
-    client:load
-    mini={true}
-    codeId={session.data.code}
-    title={session.data.title}
-  />
+            <CodeHeart
+              client:load
+              mini={true}
+              codeId={session.data.code}
+              title={session.data.title}
+            />
           </li>
         ))
       }
@@ -273,7 +272,6 @@ function getGitHosting(url: string): string | undefined {
 </Layout>
 
 <style>
-
   .speaker-profile-img {
     width: 100%;
     height: 100%;
@@ -282,10 +280,10 @@ function getGitHosting(url: string): string | undefined {
     display: block;
   }
 
-dl,
-dd, dt {
-  font-size: 1.1rem;
-  color: var(--color-text-primary);
-}
-
-  </style>
+  dl,
+  dd,
+  dt {
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+  }
+</style>

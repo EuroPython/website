@@ -1,5 +1,5 @@
 ---
-import { marked } from 'marked';
+import { marked } from "marked";
 import { replaceYouTubeLinks } from "@utils/markdown";
 
 interface Props {
@@ -8,37 +8,40 @@ interface Props {
 }
 
 const { content, class: className } = Astro.props;
-const defaultClass = className? className: "prose-xl";
-const html = marked.parse(await replaceYouTubeLinks(content) );
+const defaultClass = className ? className : "prose-xl";
+const html = marked.parse(await replaceYouTubeLinks(content));
 ---
-<div class:list={[
-    'prose',
-    'prose-xl',
-    'max-w-none',
-    'prose-li:m-0',
-    'prose-ul:m-0',
-    'prose-ul:mb-4',
-    'prose-a:underline',
-    'prose-h1:font-bold',
-    'prose-h2:font-bold',
-    'prose-h3:font-semibold',
-    'prose-headings:text-text',
-    'prose-headings:font-title',
-    'prose-a:text-[var(--color-accent-themed)]',
-    'prose-a:hover:text-[var(--color-accent-themed)]',
-    'prose-strong:text-text',
-    'prose-strong:font-bold',
-    'prose-li:marker:text-text',
-    'prose-code:text-[var(--color-accent-themed)]',
-    'prose-code:bg-[var(--color-surface-subtle)]',
-    'prose-pre:bg-[var(--color-surface-subtle)]',
-    'prose-th:text-text',
-    'prose-td:text-text',
-    'prose-hr:border-[var(--color-border)]',
-    'prose-blockquote:text-[var(--color-text-secondary)]',
-    'prose-blockquote:border-l-[var(--color-border-bright)]',
-    'prose-blockquote:not-italic',
+
+<div
+  class:list={[
+    "prose",
+    "prose-xl",
+    "max-w-none",
+    "prose-li:m-0",
+    "prose-ul:m-0",
+    "prose-ul:mb-4",
+    "prose-a:underline",
+    "prose-h1:font-bold",
+    "prose-h2:font-bold",
+    "prose-h3:font-semibold",
+    "prose-headings:text-text",
+    "prose-headings:font-title",
+    "prose-a:text-[var(--color-accent-themed)]",
+    "prose-a:hover:text-[var(--color-accent-themed)]",
+    "prose-strong:text-text",
+    "prose-strong:font-bold",
+    "prose-li:marker:text-text",
+    "prose-code:text-[var(--color-accent-themed)]",
+    "prose-code:bg-[var(--color-surface-subtle)]",
+    "prose-pre:bg-[var(--color-surface-subtle)]",
+    "prose-th:text-text",
+    "prose-td:text-text",
+    "prose-hr:border-[var(--color-border)]",
+    "prose-blockquote:text-[var(--color-text-secondary)]",
+    "prose-blockquote:border-l-[var(--color-border-bright)]",
+    "prose-blockquote:not-italic",
     defaultClass,
-]}>
-    <article set:html={html} />
+  ]}
+>
+  <article set:html={html} />
 </div>

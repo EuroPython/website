@@ -1,0 +1,105 @@
+---
+import type { ImageMetadata } from "astro";
+
+export interface Props {
+  src?: string;
+  image?: ImageMetadata;
+  alt?: string;
+  url?: string;
+  mode?: "button" | "imageLink" | "image";
+  class?: string;
+  maxWidth?: string;
+  maxHeight?: string;
+  padding?: string;
+}
+
+const {
+  src,
+  image: img,
+  alt = "",
+  url,
+  mode,
+  class: className = "",
+  maxWidth = "300px",
+  maxHeight = "200px",
+  padding,
+} = Astro.props;
+
+const hasDefaultSlot = Astro.slots.has("default");
+
+const resolvedMode =
+  mode ?? (url ? (hasDefaultSlot ? "button" : "imageLink") : "image");
+
+const isLinked = url !== undefined;
+const isImageLink = resolvedMode === "imageLink";
+const isButton = resolvedMode === "button";
+const isExternal = url?.startsWith("http");
+
+const cardClasses = `max-w-80 mx-auto flex flex-col items-center ${className}${isLinked ? " hover:-translate-y-1 transition-all duration-300" : ""}`;
+
+const imgSrc = img ? img.src : src;
+
+const imgStyle: Record<string, string> = {
+  maxHeight,
+  objectFit: "contain",
+};
+if (padding) {
+  imgStyle.padding = padding;
+}
+if (maxWidth) {
+  imgStyle.maxWidth = maxWidth;
+}
+---
+
+{isImageLink && url ? (
+  <a
+    href={url}
+    target={isExternal ? "_blank" : undefined}
+    rel={isExternal ? "noopener noreferrer" : undefined}
+    class={cardClasses}
+    aria-label={alt || "Linked image"}
+  >
+    <img
+      src={imgSrc}
+      alt={alt}
+      class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
+      style={imgStyle}
+    />
+  </a>
+) : (
+  <div class={cardClasses}>
+    {url ? (
+      <a
+        href={url}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        aria-label={alt || "Linked image"}
+      >
+        <img
+          src={imgSrc}
+          alt={alt}
+          class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
+          style={imgStyle}
+        />
+      </a>
+    ) : (
+      <img
+        src={imgSrc}
+        alt={alt}
+        class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
+        style={imgStyle}
+      />
+    )}
+
+    {isButton && url && (
+      <a
+        href={url}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        class="button-link font-bold text-base px-8 py-3 rounded-sm inline-flex items-center justify-center leading-6 transition-colors duration-200 not-prose border bg-button text-button-text hover:bg-button-hover border-0"
+      >
+        <slot />
+      </a>
+    )}
+  </div>
+)}

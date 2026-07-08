@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/ScheduleLayout.astro";
 import ScheduleDay from "@components/schedule/day.astro";
-import { slugify } from '@utils/content';
+import { slugify } from "@utils/content";
 
 export const getStaticPaths = async () => {
   const sessions = await getCollection("sessions");
@@ -11,8 +11,8 @@ export const getStaticPaths = async () => {
     new Set(
       sessions
         .map((session) => slugify(session.data.session_type))
-        .filter((type) => type)
-    )
+        .filter((type) => type),
+    ),
   ).sort();
   return allTypes.map((type) => {
     return { params: { type } };
@@ -21,15 +21,12 @@ export const getStaticPaths = async () => {
 
 const days = await getCollection("days");
 const talkDays = new Set(["2026-07-15", "2026-07-16", "2026-07-17"]);
-
 ---
 
 <Layout description="Browse all scheduled talks." headline="Talks schedule" hideNotices={["talks"]}>
   {
-  days
-    .filter((day) => talkDays.has(day.id))
-    .map((day) => (
-      <ScheduleDay day={day} />
-    ))
+    days
+      .filter((day) => talkDays.has(day.id))
+      .map((day) => <ScheduleDay day={day} />)
   }
 </Layout>

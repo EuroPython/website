@@ -1,9 +1,15 @@
 ---
 import SearchComponent from "astro-pagefind/components/Search";
-
 ---
 
-<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search" hidden>
+<div
+  class="search-modal"
+  id="search-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  hidden
+>
   <div class="search-modal-backdrop"></div>
   <div class="search-modal-content">
     <SearchComponent
@@ -21,247 +27,251 @@ import SearchComponent from "astro-pagefind/components/Search";
 </div>
 
 <style>
-/* ── Overlay ── */
-.search-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 10001;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 12vh;
-}
+  /* ── Overlay ── */
+  .search-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 12vh;
+  }
 
-.search-modal[hidden] { display: none; }
+  .search-modal[hidden] {
+    display: none;
+  }
 
-.search-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: var(--color-scrim-70);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
+  .search-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: var(--color-scrim-70);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
 
-.search-modal-content {
-  position: relative;
-  width: 100%;
-  max-width: 680px;
-  margin: 0 1.5rem;
-  background: var(--color-section-bg);
-  border: 1px solid oklch(0.708 0.153 259.2 / 0.2); /* #64a0ff */
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 16px 48px var(--color-scrim-50);
-}
+  .search-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 1.5rem;
+    background: var(--color-section-bg);
+    border: 1px solid oklch(0.708 0.153 259.2 / 0.2); /* #64a0ff */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px var(--color-scrim-50);
+  }
 
-/* ── Pagefind overrides (use :global because .pagefind-ui elements are rendered by external SearchComponent, not this component) ── */
-.search-modal-content :global(.pagefind-ui) {
-  --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: var(--color-cream);
-  --pagefind-ui-text: var(--color-text-secondary);
-  --pagefind-ui-background: transparent;
-  --pagefind-ui-border: var(--color-border);
-  --pagefind-ui-border-width: 1px;
-  --pagefind-ui-border-radius: 8px;
-  --pagefind-ui-image-border-radius: 4px;
-  --pagefind-ui-font: 'Roboto', sans-serif;
-}
+  /* ── Pagefind overrides (use :global because .pagefind-ui elements are rendered by external SearchComponent, not this component) ── */
+  .search-modal-content :global(.pagefind-ui) {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: var(--color-cream);
+    --pagefind-ui-text: var(--color-text-secondary);
+    --pagefind-ui-background: transparent;
+    --pagefind-ui-border: var(--color-border);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 8px;
+    --pagefind-ui-image-border-radius: 4px;
+    --pagefind-ui-font: "Roboto", sans-serif;
+  }
 
-/* Input — transparent with only a bottom border, like website-ep2026-new */
-.search-modal-content :global(.pagefind-ui__search-input) {
-  display: block;
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.1rem;
-  color: var(--color-text);
-  background: transparent !important;
-  border: none !important;
-  border-bottom: 1px solid var(--color-border) !important;
-  outline: none;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
+  /* Input — transparent with only a bottom border, like website-ep2026-new */
+  .search-modal-content :global(.pagefind-ui__search-input) {
+    display: block;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    outline: none;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
 
-.search-modal-content :global(.pagefind-ui__search-input)::placeholder {
-  color: var(--color-text-faint);
-}
+  .search-modal-content :global(.pagefind-ui__search-input)::placeholder {
+    color: var(--color-text-faint);
+  }
 
-.search-modal-content :global(.pagefind-ui__search-input:focus) {
-  border-bottom-color: var(--color-accent) !important;
-}
+  .search-modal-content :global(.pagefind-ui__search-input:focus) {
+    border-bottom-color: var(--color-accent) !important;
+  }
 
-/* Hide pagefind's clear button */
-.search-modal-content :global(.pagefind-ui__search-clear) {
-  display: none !important;
-}
+  /* Hide pagefind's clear button */
+  .search-modal-content :global(.pagefind-ui__search-clear) {
+    display: none !important;
+  }
 
-/* Results area */
-.search-modal-content :global(.pagefind-ui__results-area) {
-  max-height: 50vh;
-  overflow-y: auto;
-}
+  /* Results area */
+  .search-modal-content :global(.pagefind-ui__results-area) {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
 
-/* Result items — like website-ep2026-new search-modal-item */
-.search-modal-content :global(.pagefind-ui__result) {
-  display: block;
-  padding: 0.8rem 1.4rem;
-  border-bottom: 1px solid var(--color-surface-faint);
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.12s;
-}
+  /* Result items — like website-ep2026-new search-modal-item */
+  .search-modal-content :global(.pagefind-ui__result) {
+    display: block;
+    padding: 0.8rem 1.4rem;
+    border-bottom: 1px solid var(--color-surface-faint);
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.12s;
+  }
 
-.search-modal-content :global(.pagefind-ui__result:last-child) {
-  border-bottom: none;
-}
+  .search-modal-content :global(.pagefind-ui__result:last-child) {
+    border-bottom: none;
+  }
 
-.search-modal-content :global(.pagefind-ui__result-link::after) {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
+  .search-modal-content :global(.pagefind-ui__result-link::after) {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
 
-.search-modal-content :global(.pagefind-ui__result:hover),
-.search-modal-content :global(.pagefind-ui__result[data-selected]) {
-  background: oklch(0.708 0.153 259.2 / 0.1); /* #64a0ff */
-}
+  .search-modal-content :global(.pagefind-ui__result:hover),
+  .search-modal-content :global(.pagefind-ui__result[data-selected]) {
+    background: oklch(0.708 0.153 259.2 / 0.1); /* #64a0ff */
+  }
 
-/* Result link */
-.search-modal-content :global(.pagefind-ui__result-link) {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--color-cream);
-  text-decoration: none;
-}
+  /* Result link */
+  .search-modal-content :global(.pagefind-ui__result-link) {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-cream);
+    text-decoration: none;
+  }
 
-.search-modal-content :global(.pagefind-ui__result-link:hover) {
-  color: var(--color-text);
-}
+  .search-modal-content :global(.pagefind-ui__result-link:hover) {
+    color: var(--color-text);
+  }
 
-/* Excerpt */
-.search-modal-content :global(.pagefind-ui__result-excerpt) {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  color: var(--color-text-muted);
-  margin-top: 0.15rem;
-  line-height: 1.5;
-}
+  /* Excerpt */
+  .search-modal-content :global(.pagefind-ui__result-excerpt) {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.15rem;
+    line-height: 1.5;
+  }
 
-/* Highlighted search terms */
-.search-modal-content :global(.pagefind-ui__result) mark {
-  background: oklch(0.831 0.142 84.4 / 0.2);
-  color: var(--color-accent);
-  padding: 0.1em 0.2em;
-  border-radius: 2px;
-}
+  /* Highlighted search terms */
+  .search-modal-content :global(.pagefind-ui__result) mark {
+    background: oklch(0.831 0.142 84.4 / 0.2);
+    color: var(--color-accent);
+    padding: 0.1em 0.2em;
+    border-radius: 2px;
+  }
 
-/* Status message */
-.search-modal-content :global(.pagefind-ui__message) {
-  font-family: 'Roboto', sans-serif;
-  color: var(--color-text-faint);
-  padding: 1.2rem 1.4rem;
-  font-size: 1.1rem;
-}
+  /* Status message */
+  .search-modal-content :global(.pagefind-ui__message) {
+    font-family: "Roboto", sans-serif;
+    color: var(--color-text-faint);
+    padding: 1.2rem 1.4rem;
+    font-size: 1.1rem;
+  }
 
-/* Empty state */
-:global(.pagefind-ui .pagefind-ui__drawer:empty)::after {
-  content: "Type to search…";
-  display: block;
-  padding: 1.2rem 1.4rem;
-  color: var(--color-text-faint);
-  font-size: 1.1rem;
-}
+  /* Empty state */
+  :global(.pagefind-ui .pagefind-ui__drawer:empty)::after {
+    content: "Type to search…";
+    display: block;
+    padding: 1.2rem 1.4rem;
+    color: var(--color-text-faint);
+    font-size: 1.1rem;
+  }
 
-/* Hide image thumbnails */
-.search-modal-content :global(.pagefind-ui__result-thumb) {
-  display: none !important;
-}
+  /* Hide image thumbnails */
+  .search-modal-content :global(.pagefind-ui__result-thumb) {
+    display: none !important;
+  }
 
-/* Hide the search toggle */
-.search-modal-content :global(.pagefind-ui__search-toggle) {
-  display: none !important;
-}
+  /* Hide the search toggle */
+  .search-modal-content :global(.pagefind-ui__search-toggle) {
+    display: none !important;
+  }
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const modal = document.getElementById("search-modal");
-  const backdrop = modal?.querySelector(".search-modal-backdrop");
-  const searchBtn = document.getElementById("nav-search-btn");
-  const mobileSearch = document.getElementById("nav-mobile-search");
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("search-modal");
+    const backdrop = modal?.querySelector(".search-modal-backdrop");
+    const searchBtn = document.getElementById("nav-search-btn");
+    const mobileSearch = document.getElementById("nav-mobile-search");
 
-  function openSearch() {
-    if (!modal) return;
-    modal.hidden = false;
-    document.body.style.overflow = "hidden";
-    setTimeout(function() {
-      var input = modal.querySelector(".pagefind-ui__search-input") as HTMLInputElement | null;
-      if (input) input.focus();
-    }, 100);
-  }
-
-  function closeSearch() {
-    if (!modal) return;
-    modal.hidden = true;
-    document.body.style.overflow = "";
-    if (searchBtn) searchBtn.focus();
-  }
-
-  if (searchBtn) {
-    searchBtn.addEventListener("click", openSearch);
-  }
-
-  if (mobileSearch) {
-    mobileSearch.addEventListener("click", function(e) {
-      e.preventDefault();
-      var navLinks = document.querySelector(".nav-links");
-      var toggle = document.querySelector(".nav-toggle");
-      if (navLinks) navLinks.classList.remove("open");
-      if (toggle) toggle.classList.remove("active");
-      document.body.style.overflow = "";
-      openSearch();
-    });
-  }
-
-  if (backdrop) {
-    backdrop.addEventListener("click", closeSearch);
-  }
-
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape" && modal && !modal.hidden) {
-      closeSearch();
+    function openSearch() {
+      if (!modal) return;
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+      setTimeout(function () {
+        const input = modal.querySelector(
+          ".pagefind-ui__search-input",
+        ) as HTMLInputElement | null;
+        if (input) input.focus();
+      }, 100);
     }
-    if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-      e.preventDefault();
-      if (modal && modal.hidden) {
+
+    function closeSearch() {
+      if (!modal) return;
+      modal.hidden = true;
+      document.body.style.overflow = "";
+      if (searchBtn) searchBtn.focus();
+    }
+
+    if (searchBtn) {
+      searchBtn.addEventListener("click", openSearch);
+    }
+
+    if (mobileSearch) {
+      mobileSearch.addEventListener("click", function (e) {
+        e.preventDefault();
+        const navLinks = document.querySelector(".nav-links");
+        const toggle = document.querySelector(".nav-toggle");
+        if (navLinks) navLinks.classList.remove("open");
+        if (toggle) toggle.classList.remove("active");
+        document.body.style.overflow = "";
         openSearch();
-      } else {
+      });
+    }
+
+    if (backdrop) {
+      backdrop.addEventListener("click", closeSearch);
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal && !modal.hidden) {
         closeSearch();
       }
-    }
-  });
-
-  // Focus trap inside modal
-  if (modal) {
-    modal.addEventListener("keydown", function(e) {
-      if (e.key === "Tab") {
-        var focusable = modal.querySelectorAll(
-          'input, button, [href], [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusable.length < 2) return;
-        var first = focusable[0] as HTMLElement;
-        var last = focusable[focusable.length - 1] as HTMLElement;
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        if (modal && modal.hidden) {
+          openSearch();
+        } else {
+          closeSearch();
         }
       }
     });
-  }
-});
+
+    // Focus trap inside modal
+    if (modal) {
+      modal.addEventListener("keydown", function (e) {
+        if (e.key === "Tab") {
+          const focusable = modal.querySelectorAll(
+            'input, button, [href], [tabindex]:not([tabindex="-1"])',
+          );
+          if (focusable.length < 2) return;
+          const first = focusable[0] as HTMLElement;
+          const last = focusable[focusable.length - 1] as HTMLElement;
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
+    }
+  });
 </script>
