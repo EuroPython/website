@@ -4,8 +4,8 @@ url: https://hackerspace-krk.pl/
 location: "Poland"
 industry: "Technology & Community"
 description:
-  "Hackerspace Kraków is creating a space in which everyone can spin up their 
-  creativity. It's an open community worshop where people can come to learn, 
+  "Hackerspace Kraków is creating a space in which everyone can spin up their
+  creativity. It's an open community worshop where people can come to learn,
   create and share their knowledge."
 socials:
   linkedin: https://www.linkedin.com/company/hackerspace-krak-w-foundation/
