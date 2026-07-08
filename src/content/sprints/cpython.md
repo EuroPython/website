@@ -11,8 +11,6 @@ links:
     url: "https://devguide.python.org/"
   - title: "Setup & Building"
     url: "https://devguide.python.org/getting-started/setup-building/"
-  - title: "Code of Conduct"
-    url: "https://policies.python.org/python.org/code-of-conduct/"
   - title: "Easy Issues"
     url: "https://github.com/python/cpython/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy"
 ---
@@ -30,4 +28,4 @@ October 2027).
 3. Fork and clone the repository _before_ coming to the venue in case of slow
    wifi :)
 4. Use the [Python Developer's Guide](https://devguide.python.org/) to go
-   through the initial build on you machine.
+   through the initial build on your machine.
