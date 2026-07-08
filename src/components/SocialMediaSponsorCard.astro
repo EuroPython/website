@@ -1,10 +1,13 @@
 ---
-import { sponsorLogos } from "@data/sponsorLogos";
+import { getSponsorLogo } from "@data/sponsorLogos";
 
 const { sponsor } = Astro.props;
 const { name: title, tier, logo_padding = false } = sponsor.data;
 
-const logo = sponsorLogos[sponsor.id];
+const logo = await getSponsorLogo(sponsor.id);
+
+// Guard: if no logo found, return early
+if (!logo) { return; }
 
 const tiers = [
   "Keystone",

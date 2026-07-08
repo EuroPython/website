@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getEntry } from "astro:content";
 import { Image } from "astro:assets";
-import { sponsorLogos } from "@data/sponsorLogos";
+import { getSponsorLogo } from "@data/sponsorLogos";
 import Icon from "@ui/Icon.astro";
 import SocialLinks from "@components/SocialLinks.astro";
 
@@ -40,7 +40,7 @@ for (const path in jobFiles) {
 
 const jobs: CollectionEntry<"jobs">[] = sponsorsJobsMap[sponsor.id];
 const isSponsorPage = Astro.url.pathname == `/sponsor/${sponsor.id}`;
-const logo = sponsorLogos[sponsor.id];
+const logo = await getSponsorLogo(sponsor.id);
 ---
 
 <div

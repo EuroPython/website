@@ -1,7 +1,7 @@
 ---
 import { getEntry } from "astro:content";
 import { Image } from "astro:assets";
-import { sponsorLogos } from "@data/sponsorLogos";
+import { getSponsorLogo } from "@data/sponsorLogos";
 
 const { sponsor: sponsorId, special_event=false } = Astro.props;
 
@@ -21,7 +21,7 @@ const {
   logo_max_width,
 } = sponsor.data;
 
-const logo = sponsorLogos[sponsor.id];
+const logo = await getSponsorLogo(sponsor.id);
 const slug = (tier === "Diamond" || tier === "Platinum" || sponsor.data.page)
   ? `/sponsor/${sponsorId}`
   : tier === "Partners"
