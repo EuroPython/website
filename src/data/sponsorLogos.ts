@@ -1,9 +1,5 @@
 import type { ImageMetadata } from "astro";
 
-const displayImports = import.meta.glob<{ default: ImageMetadata }>(
-  "../content/sponsors/*/display.png"
-);
-
 const logoImports = import.meta.glob<{ default: ImageMetadata }>(
   "../content/sponsors/*/*.svg"
 );
