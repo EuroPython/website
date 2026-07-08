@@ -157,7 +157,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
     </svg>
   </a>
   <ThemeToggle />
-  <a href="/jobs" class="nav-cta nav-cta-desktop">Jobs</a>
+  <a href="/jobs" class="nav-cta-desktop">Jobs</a>
   <a href="/tickets" class="nav-cta">Register Now</a>
   <button
     class="nav-toggle"
@@ -491,6 +491,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
   :global(.light) .nav-cta-desktop {
     color: oklch(0.228 0.038 282.9);
     border-color: oklch(0 0 0 / 0.15);
+    background: transparent !important;
   }
   :global(.light) .nav-cta-desktop:hover {
     background: oklch(0 0 0 / 0.04);
