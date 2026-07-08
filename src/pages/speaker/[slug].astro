@@ -85,7 +85,7 @@ function getGitHosting(url: string): string | undefined {
 
 <Layout title={entry.data.name} description={`Profile of ${entry.data.name}`}>
   <Section2 variant="dark" id="speaker-page">
-    <Title id="speaker">{entry.data.name}</Title>
+    <Title id="speaker" as="h1">{entry.data.name}</Title>
 
     <div class="md:grid grid-cols-[460px_1fr] md:gap-6">
       {
