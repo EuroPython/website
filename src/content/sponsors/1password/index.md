@@ -17,5 +17,5 @@ socials:
   youtube: "https://www.youtube.com/1PasswordVideos"
   bluesky:
 tier: Supporters
-logo_padding: 35px
+logo_padding: 15px
 ---

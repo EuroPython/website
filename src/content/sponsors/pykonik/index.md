@@ -14,6 +14,6 @@ socials:
   discord: http://discord.pykonik.org
   mastodon:
   bluesky:
-logo_padding: 0px 20px
+logo_padding: 10px
 tier: Partners
 ---
