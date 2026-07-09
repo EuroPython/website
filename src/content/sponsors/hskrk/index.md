@@ -15,6 +15,6 @@ socials:
   mastodon: https://social.hackerspace.pl/@hskrk
   facebook: https://www.facebook.com/HackerspaceKrakow
   bluesky:
-logo_padding: 0px
+logo_padding: 0px 50px
 tier: Partners
 ---
