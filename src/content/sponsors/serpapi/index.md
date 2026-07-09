@@ -20,5 +20,5 @@ socials:
   github: https://github.com/serpapi/
 
 tier: Patron
-logo_padding: 45px
+logo_padding: 15px 45px
 ---
