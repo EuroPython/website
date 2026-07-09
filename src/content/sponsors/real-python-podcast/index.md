@@ -14,6 +14,6 @@ socials:
   youtube: "https://www.youtube.com/@realpython"
   github: "https://github.com/realpython"
   facebook: "https://www.facebook.com/LearnRealPython"
-logo_padding: 10px
+logo_padding: 20px 10px
 tier: Media Partners
 ---

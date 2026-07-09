@@ -16,5 +16,4 @@ socials:
   bluesky: "https://bsky.app/profile/europython.eu"
   tiktok: "https://www.tiktok.com/@europython"
 tier: Financial Aid
-logo_padding: 15px
 ---
