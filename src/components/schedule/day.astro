@@ -483,10 +483,12 @@ const endStart = numberToTime(lastEndTime);
                   if (session.sessionType === "poster") return false;
                   if (isLunchSideEvent(session)) return false;
                   // Hide the "Lunch" break session — shown inside lunch-block
+                  // Only hide when there are actually posters or side events to show
                   if (
                     lunchSlotForPosters &&
                     slot.startTime === lunchSlotForPosters.startTime &&
-                    session.title.toLowerCase() === "lunch"
+                    session.title.toLowerCase() === "lunch" &&
+                    (posters.length > 0 || lunchSideEvents.length > 0)
                   )
                     return false;
                   return true;
