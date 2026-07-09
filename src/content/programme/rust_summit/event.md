@@ -7,7 +7,7 @@ meta:
   - text: "Monday, 13 July — 9:30–17:00"
   - text: "Fishbowl"
 start_datetime: "2026-07-13T09:30:00+02:00"
-end_datetime: "2026-07-13T117:00:00+02:00"
+end_datetime: "2026-07-13T17:00:00+02:00"
 location: "Fishbowl"
 contact: "Cheuk Ting Ho"
 link: "/programme/rust-summit"
