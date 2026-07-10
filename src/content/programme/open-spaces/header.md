@@ -7,6 +7,9 @@ meta:
   - text: "Wednesday – Friday, July 16–18"
   - text: "Dedicated open space rooms"
 highlight: "SPACES"
+cta:
+  text: "Browse open spaces"
+  url: "/open-spaces/"
 advantages:
   - title: "You set the agenda"
     description:
