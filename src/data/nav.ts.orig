@@ -31,10 +31,16 @@ export interface FooterColumn {
 
 const L = {
   // Programme
-  schedule: { label: "Schedule", url: "/schedule" },
+<<<<<<< HEAD
+  schedule: { label: "Schedule", url: "/schedule/talks" },
   keynotes: { label: "Keynotes", url: "/#keynoters" },
+  talks: { label: "Talks", url: "/talks" },
+  tutorials: { label: "Tutorials", url: "/tutorials" },
+=======
+  schedule: { label: "Schedule", url: "/schedule" },
   tutorials: { label: "Tutorials", url: "/schedule/tutorials" },
   talks: { label: "Talks", url: "/schedule/talks" },
+>>>>>>> origin/ep2026
   posters: { label: "Posters", url: "/posters" },
   tracks: { label: "Tracks", url: "/tracks" },
   speakers: { label: "Speakers", url: "/speakers" },
@@ -142,7 +148,11 @@ export const NAV_MENUS: NavMenu[] = [
         label: "Talks & Schedule",
         items: [
           L.schedule,
-	  L.keynotes,
+<<<<<<< HEAD
+          L.keynotes,
+          L.talks,
+=======
+>>>>>>> origin/ep2026
           L.tutorials,
           L.talks,
           L.posters,
@@ -167,7 +177,6 @@ export const NAV_MENUS: NavMenu[] = [
           L.beginnersDay,
           L.speakersDinner,
           L.openSpaces,
-          L.yearsOfEp,
           L.pyladiesEvents,
           L.womenInPythonRun,
         ],

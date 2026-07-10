@@ -15,6 +15,6 @@ socials:
   mastodon: "https://fosstodon.org/@pyladiescon"
   bluesky: "https://bsky.app/profile/pyladiescon.bsky.social"
   youtube: "https://www.youtube.com/@PyLadiesGlobal"
-logo_padding: 10px 10px
+logo_padding: 30px 0
 tier: Partners
 ---

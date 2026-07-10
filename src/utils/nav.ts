@@ -11,6 +11,8 @@ const ALWAYS_EXIST = new Set([
   "posters",
   "talks",
   "tutorials",
+  "schedule/talks",
+  "schedule/tutorials",
   "sprints",
   "jobs",
   "sponsors",
