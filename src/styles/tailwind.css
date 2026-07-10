@@ -66,6 +66,29 @@
   --color-sponsor-bronze: oklch(0.475 0.03 67.1); /* #6e6151 */
   --color-sponsor-patron: oklch(0.452 0.179 22.6); /* #a11217 */
 
+  /* ---------- Track colors (theme-constant) ---------- */
+  --color-track-talk: oklch(0.78 0.17 72); /* #f5a623 amber */
+  --color-track-talk-dark: oklch(0.65 0.16 68);
+  --color-track-tutorial: oklch(0.72 0.14 178); /* #4ecdc4 teal */
+  --color-track-tutorial-dark: oklch(0.6 0.13 175);
+  --color-track-poster: oklch(0.68 0.2 303); /* #c084fc purple */
+  --color-track-poster-dark: oklch(0.55 0.19 300);
+  --color-track-lightning: oklch(0.87 0.16 100); /* #ffd166 gold */
+  --color-track-lightning-dark: oklch(0.77 0.14 98);
+  --color-track-open: oklch(0.76 0.13 175); /* #56d4c8 mint */
+  --color-track-open-dark: oklch(0.63 0.12 173);
+  --color-cta-text: oklch(0.15 0.03 260); /* dark text on color buttons */
+
+  /* ---------- Summit/event accent colors ---------- */
+  --color-summit-capi: oklch(0.65 0.18 303); /* purple ~#a374d5 */
+  --color-summit-capi-dark: oklch(0.52 0.17 300);
+  --color-summit-pkg: oklch(0.72 0.14 82); /* gold ~#d4a520 */
+  --color-summit-pkg-dark: oklch(0.58 0.13 78);
+  --color-summit-rust: oklch(0.62 0.18 38); /* rust ~#e06030 */
+  --color-summit-rust-dark: oklch(0.52 0.17 35);
+  --color-summit-wasm: oklch(0.64 0.14 190); /* teal ~#35b8b8 */
+  --color-summit-wasm-dark: oklch(0.5 0.13 187);
+
   /* ---------- Section-specific brand colours ---------- */
   --color-pyladies: oklch(0.55 0.213 22.4); /* #d42027 */
   --color-pyladies-dark: oklch(0.49 0.19 22.7); /* #b01a20 */
@@ -206,6 +229,8 @@
   --color-accent-themed: oklch(0.831 0.142 84.4); /* amber */
   --color-on-accent: oklch(0.17 0.024 264.4);
 
+  --color-cta-text: oklch(0.15 0.03 260); /* dark text on track CTA */
+
   --color-footer-bg: oklch(0.13 0.024 18.8);
 
   /* Status callouts (Note.astro) — dark theme: faint tint bg + light
@@ -267,6 +292,10 @@
   --color-accent-themed: oklch(0.522 0.218 264.4); /* brand blue */
   --color-on-accent: oklch(1 0 0); /* white text on blue */
 
+  --color-cta-text: oklch(
+    1 0 0
+  ); /* white text on darker track CTA in light mode */
+
   /* Footer matches section surface in light */
   --color-footer-bg: oklch(0.97 0.003 264);
   --color-footer-text-muted: oklch(0 0 0 / 0.55);
@@ -276,6 +305,28 @@
   --color-card: oklch(1 0 0);
   --color-panel-light: oklch(1 0 0);
   --color-nav-level: oklch(0.97 0.003 264);
+
+  /* Track colors — dark enough for AA contrast on light bg */
+  --color-track-talk: oklch(0.5 0.17 72);
+  --color-track-talk-dark: oklch(0.42 0.16 68);
+  --color-track-tutorial: oklch(0.45 0.14 178);
+  --color-track-tutorial-dark: oklch(0.38 0.13 175);
+  --color-track-poster: oklch(0.42 0.2 303);
+  --color-track-poster-dark: oklch(0.35 0.19 300);
+  --color-track-lightning: oklch(0.55 0.16 100);
+  --color-track-lightning-dark: oklch(0.47 0.14 98);
+  --color-track-open: oklch(0.48 0.13 175);
+  --color-track-open-dark: oklch(0.4 0.12 173);
+
+  /* Summit colors — darker for light bg contrast */
+  --color-summit-capi: oklch(0.5 0.18 300);
+  --color-summit-capi-dark: oklch(0.4 0.17 298);
+  --color-summit-pkg: oklch(0.55 0.14 80);
+  --color-summit-pkg-dark: oklch(0.45 0.13 76);
+  --color-summit-rust: oklch(0.48 0.18 36);
+  --color-summit-rust-dark: oklch(0.38 0.17 33);
+  --color-summit-wasm: oklch(0.48 0.14 188);
+  --color-summit-wasm-dark: oklch(0.38 0.13 185);
 }
 
 /* ============================================================

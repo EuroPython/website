@@ -1,0 +1,287 @@
+---
+import Title from "@ui/Title.astro";
+
+const ACCENTS: Record<string, { color: string; dark: string }> = {
+  capi: {
+    color: "var(--color-summit-capi)",
+    dark: "var(--color-summit-capi-dark)",
+  },
+  pkg: {
+    color: "var(--color-summit-pkg)",
+    dark: "var(--color-summit-pkg-dark)",
+  },
+  rust: {
+    color: "var(--color-summit-rust)",
+    dark: "var(--color-summit-rust-dark)",
+  },
+  wasm: {
+    color: "var(--color-summit-wasm)",
+    dark: "var(--color-summit-wasm-dark)",
+  },
+  pyladies: {
+    color: "var(--color-pyladies)",
+    dark: "var(--color-pyladies-dark)",
+  },
+  community: { color: "var(--color-green-2e)", dark: "var(--color-green-25)" },
+};
+
+export type AccentKey = keyof typeof ACCENTS;
+
+export interface Props {
+  id: string;
+  title: string;
+  subtitle?: string;
+  meta?: { text: string }[];
+  startDatetime?: string;
+  endDatetime?: string;
+  location?: string;
+  contact?: string;
+  link?: string;
+  accent?: AccentKey;
+  highlight?: string;
+}
+
+const {
+  id,
+  title,
+  subtitle,
+  meta = [],
+  startDatetime,
+  endDatetime,
+  location,
+  contact,
+  link,
+  accent,
+  highlight,
+} = Astro.props;
+
+const ac = accent ? ACCENTS[accent] : undefined;
+const accentStyle = ac
+  ? `--accent-color: ${ac.color}; --accent-dark: ${ac.dark};`
+  : "";
+
+function formatDateRange(start?: string, end?: string): string {
+  if (!start) return "";
+  const opts: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+  const startDate = new Date(start);
+  if (!end) return startDate.toLocaleDateString("en-GB", opts);
+  const endDate = new Date(end);
+  const sameDay = startDate.toDateString() === endDate.toDateString();
+  if (sameDay) {
+    const startStr = startDate.toLocaleDateString("en-GB", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    });
+    const startTime = startDate.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    const endTime = endDate.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    return `${startStr} — ${startTime}–${endTime}`;
+  }
+  return `${startDate.toLocaleDateString("en-GB", opts)} – ${endDate.toLocaleDateString("en-GB", opts)}`;
+}
+---
+
+<section class="sec-wrap event-section" id={id} style={accentStyle}>
+  <div class="sec-inner">
+    <div class="event-grid">
+      <div class="event-info">
+        <Title
+          id={id}
+          subtitle={subtitle || ""}
+          anchorColor={ac?.color}
+          title={title}
+          highlight={highlight}
+          highlightColor={ac?.color}
+        />
+
+        {
+          meta.length > 0 ? (
+            <div class="event-meta-chips">
+              {meta.map((item) => (
+                <span class="event-chip">{item.text}</span>
+              ))}
+            </div>
+          ) : (
+            <dl class="event-details">
+              {startDatetime && (
+                <>
+                  <dt>Date &amp; Time</dt>
+                  <dd>{formatDateRange(startDatetime, endDatetime)}</dd>
+                </>
+              )}
+              {location && (
+                <>
+                  <dt>Location</dt>
+                  <dd>{location}</dd>
+                </>
+              )}
+              {contact && (
+                <>
+                  <dt>Organised by</dt>
+                  <dd>{contact}</dd>
+                </>
+              )}
+            </dl>
+          )
+        }
+
+        {
+          link && (
+            <a
+              href={link}
+              class="event-cta"
+              style={
+                ac
+                  ? `background: linear-gradient(to bottom, ${ac.color}, ${ac.dark}); border-color: ${ac.color}; color: var(--color-cta-text);`
+                  : ""
+              }
+            >
+              {link.includes("pyladies") ? "Learn more" : "Sign up"}
+            </a>
+          )
+        }
+      </div>
+
+      <div class="event-body">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .event-section {
+  }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .event-meta-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .event-chip {
+    padding: 0.35em 0.9em;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    background: var(--color-surface-medium);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+  }
+
+  .event-section[style*="--accent-color"] .event-chip {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  .event-section[style*="--accent-color"] dt {
+    color: var(--accent-color);
+  }
+
+  .event-details {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .event-details dt {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.1rem;
+  }
+
+  .event-details dd {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .event-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.7rem 2rem;
+    background: var(--color-cta-red);
+    color: var(--color-white);
+    border: 1px solid var(--color-cta-red);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .event-cta:hover {
+    opacity: 0.85;
+  }
+
+  .event-section[style*="--accent-color"] .event-cta {
+    background: linear-gradient(
+      to bottom,
+      var(--accent-color),
+      var(--accent-dark)
+    );
+    border-color: var(--accent-color);
+    color: var(--color-cta-text);
+  }
+
+  .event-section[style*="--accent-color"] .event-cta:hover {
+    filter: brightness(1.1);
+    opacity: 1;
+  }
+
+  .event-body {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  .event-body :global(p) {
+    margin: 0 0 1.2rem;
+  }
+
+  .event-body :global(strong) {
+    color: var(--color-text);
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .event-body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .event-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .event-info {
+      position: static;
+    }
+  }
+</style>

@@ -1,9 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
-import Title from "@ui/Title.astro";
-import { getCollection } from "astro:content";
+import SessionHeader from "@sections/SessionHeader.astro";
+import { getCollection, getEntry } from "astro:content";
 
+const talkHeader = await getEntry("programme", "talks/header");
 const allSessions = await getCollection("sessions");
 
 // Pre-resolve all speakers for fast lookup
@@ -77,45 +78,13 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
 
   <Section2 variant="dark" id="talks">
     <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <Title
-          id="talks"
-          as="h1"
-          subtitle="The heart of EuroPython — three days of talks across five parallel tracks, covering every corner of the Python ecosystem."
-        >
-          TALKS
-        </Title>
-        <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
-          <span>Wednesday – Friday, July 15–17</span>
-          <span>5 parallel tracks</span>
-        </div>
-      </div>
-
-      <!-- Advantages grid -->
-      <ul class="talk-advantages">
-        <li>
-          <strong>30-minute talks</strong>
-          Our most common format. Speakers have 30 minutes including Q&amp;A to share
-          a focused idea, project, or lesson learned.
-        </li>
-        <li>
-          <strong>45-minute deep dives</strong>
-          Selected talks get an extended slot for more complex topics that benefit
-          from extra depth and live demonstrations.
-        </li>
-        <li>
-          <strong>For every level</strong>
-          From beginner-friendly introductions to advanced internals — each talk is
-          tagged by experience level so you can plan your day.
-        </li>
-        <li>
-          <a href="/programme/selection" class="talk-advantages-link">
-            <strong>Community-selected</strong>
-            Talks are chosen through an open call for proposals and community voting,
-            ensuring the programme reflects what Pythonistas actually want to learn.
-          </a>
-        </li>
-      </ul>
+      <SessionHeader
+        id="talks"
+        title={talkHeader!.data.title}
+        subtitle={talkHeader!.data.subtitle!}
+        metaItems={talkHeader!.data.meta}
+        advantages={talkHeader!.data.advantages}
+      />
 
       <!-- Talk count -->
       <p class="talks-count">
@@ -212,64 +181,6 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
 </Layout>
 
 <style>
-  .talk-advantages {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 3rem;
-  }
-
-  @media (min-width: 640px) {
-    .talk-advantages {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .talk-advantages li {
-    padding: 1.6rem;
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-  }
-
-  .talk-advantages li strong {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.4rem;
-  }
-
-  .talk-advantages li:has(.talk-advantages-link) {
-    padding: 0;
-  }
-
-  .talk-advantages-link {
-    display: block;
-    padding: 1.6rem;
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    height: 100%;
-    transition: color 0.15s;
-  }
-
-  .talk-advantages-link:hover {
-    color: var(--color-accent-themed);
-    text-decoration: underline;
-  }
-
-  .talk-advantages-link:hover strong {
-    color: var(--color-accent-themed) !important;
-  }
-
-  .talk-advantages li:has(.talk-advantages-link):hover {
-    border-color: var(--color-accent-themed);
-  }
-
   .talks-count {
     font-size: 1.1rem;
     color: var(--color-text-muted);
