@@ -1,10 +1,30 @@
 ---
+function highlightTitle(
+  text: string,
+  highlight?: string,
+  color?: string,
+): string {
+  if (!highlight) return text;
+  const idx = text.toUpperCase().indexOf(highlight.toUpperCase());
+  if (idx === -1) return text;
+  const before = text.slice(0, idx).trimEnd();
+  const match = text.slice(idx, idx + highlight.length);
+  const after = text.slice(idx + highlight.length);
+  if (!before) {
+    return `<span style="color: ${color || "var(--color-accent)"}">${match}</span><br>${after.trimStart()}`;
+  }
+  return `${before}<br><span style="color: ${color || "var(--color-accent)"}">${match}</span>${after}`;
+}
+
 export interface Props {
   id: string;
   subtitle?: string;
-  color?: string; // title text color, default #fff
-  anchorColor?: string; // anchor link color, default matches color
-  as?: "h1" | "h2"; // h1 when the Title is the page's main heading
+  color?: string;
+  anchorColor?: string;
+  title?: string;
+  highlight?: string;
+  highlightColor?: string;
+  as?: "h1" | "h2";
 }
 
 const {
@@ -12,12 +32,19 @@ const {
   subtitle,
   color = "var(--color-text)",
   anchorColor = color,
+  title: titleText,
+  highlight,
+  highlightColor,
   as: Tag = "h2",
 } = Astro.props;
+
+const rendered = titleText
+  ? highlightTitle(titleText, highlight, highlightColor)
+  : null;
 ---
 
 <Tag class="sec-title" style={`color: ${color}`}>
-  <slot />
+  {rendered ? <Fragment set:html={rendered} /> : <slot />}
   <sup class="sec-anchor"
     ><a
       href={`#${id}`}

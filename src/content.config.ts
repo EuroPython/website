@@ -429,6 +429,46 @@ const sprints = defineCollection({
   }),
 });
 
+const programme = defineCollection({
+  loader: glob({
+    pattern: "**/*.{md,mdx}",
+    base: "./src/content/programme",
+    generateId: ({ entry }) => entry.replace(/\.(md|mdx)$/, ""),
+  }),
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string().optional(),
+    description: z.string().optional(),
+    meta: z
+      .array(z.object({ text: z.string() }))
+      .optional()
+      .default([]),
+    advantages: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          url: z.string().optional(),
+        })
+      )
+      .optional()
+      .default([]),
+    cta: z
+      .object({
+        text: z.string(),
+        url: z.string(),
+      })
+      .optional(),
+    highlight: z.string().optional(),
+    // Shared with event templates
+    start_datetime: z.string().optional(),
+    end_datetime: z.string().optional(),
+    location: z.string().optional(),
+    contact: z.string().optional(),
+    link: z.string().optional(),
+  }),
+});
+
 export const collections = {
   days,
   pages,
@@ -441,4 +481,5 @@ export const collections = {
   tracks,
   sponsors,
   jobs,
+  programme,
 };

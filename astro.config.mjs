@@ -163,21 +163,13 @@ export default defineConfig({
     // "/wasm-summit": "/session/webassembly-summit",
     // "/programme/c-api-summit": "/session/c-api-summit",
     // "/programme/wasm-summit": "/session/webassembly-summit",
-    // "/discord": "https://discord.gg/BhTN2zJPMh",
     // For AV team internal use: break screens
-    // "/break/forum-hall":
-    //   "https://overlays.gbdl.in/ep-forum-hall/scene-schedule.html",
-    // "/break/north-hall":
-    //   "https://overlays.gbdl.in/ep-north-hall/scene-schedule.html",
-    // "/break/south-hall-2a":
-    //   "https://overlays.gbdl.in/ep-south-hall-2a/scene-schedule.html",
-    // "/break/south-hall-2b":
-    //   "https://overlays.gbdl.in/ep-south-hall-2b/scene-schedule.html",
-    // "/break/terrace-2a":
-    //   "https://overlays.gbdl.in/ep-terrace-2a/scene-schedule.html",
-    // "/break/terrace-2b":
-    //   "https://overlays.gbdl.in/ep-terrace-2b/scene-schedule.html",
-    // // For AV team internal use: VDO ninja screen share
+    "/break/s1": "https://overlays.gbdl.in/ep-s1/scene-schedule.html",
+    "/break/s2": "https://overlays.gbdl.in/ep-s2/scene-schedule.html",
+    "/break/s3a": "https://overlays.gbdl.in/ep-s3a/scene-schedule.html",
+    "/break/s3b": "https://overlays.gbdl.in/ep-s3b/scene-schedule.html",
+    "/break/s4": "https://overlays.gbdl.in/ep-s4/scene-schedule.html",
+    // For AV team internal use: VDO ninja screen share
     // "/ninja/forum-hall":
     //   "https://vdo.ninja/?room=EuroPython_2025_Forum_Hall&hash=338a&do",
     // "/ninja/north-hall":

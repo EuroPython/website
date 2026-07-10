@@ -1,12 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
-import Title from "@ui/Title.astro";
+import SessionHeader from "@sections/SessionHeader.astro";
 import { getCollection, getEntry } from "astro:content";
-import SessionCard from "@components/SessionCard.astro";
 
-const featuresEntry = await getEntry("pages", "talks");
-
+const talkHeader = await getEntry("programme", "talks/header");
 const allSessions = await getCollection("sessions");
 
 // Pre-resolve all speakers for fast lookup
@@ -70,41 +68,13 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
 
   <Section2 variant="dark" id="talks">
     <div class="max-w-5xl mx-auto">
-
-      <div class="text-center mb-12">
-        <Title id="talks" subtitle="The heart of EuroPython — three days of talks across five parallel tracks, covering every corner of the Python ecosystem.">
-          TALKS
-        </Title>
-        <div class="flex justify-center gap-6 text-sm text-white/50 mt-4">
-          <span>Wednesday – Friday, July 15–17</span>
-          <span>5 parallel tracks</span>
-        </div>
-      </div>
-
-      <!-- Advantages grid -->
-      <ul class="talk-advantages">
-        {featuresEntry && ["box1", "box2", "box3", "box4"].map((box, i) => {
-          const text = featuresEntry.data[box as keyof typeof featuresEntry.data] as string | undefined;
-          if (!text) return null;
-          const [title, ...rest] = text.split(" — ");
-          const desc = rest.join(" — ");
-          return (
-            <li>
-              {i === 3 ? (
-                <a href="/programme/selection" class="talk-advantages-link">
-                  <strong>{title}</strong>
-                  {desc}
-                </a>
-              ) : (
-                <>
-                  <strong>{title}</strong>
-                  {desc}
-                </>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+      <SessionHeader
+        id="talks"
+        title={talkHeader!.data.title}
+        subtitle={talkHeader!.data.subtitle!}
+        metaItems={talkHeader!.data.meta}
+        advantages={talkHeader!.data.advantages}
+      />
 
       <!-- Talk count -->
       <p class="talks-count"><span id="sess-count">{talks.length}</span> talks at EuroPython 2026</p>
@@ -152,64 +122,6 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
 </Layout>
 
 <style>
-  .talk-advantages {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 3rem;
-  }
-
-  @media (min-width: 640px) {
-    .talk-advantages {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .talk-advantages li {
-    padding: 1.6rem;
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-  }
-
-  .talk-advantages li strong {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.4rem;
-  }
-
-  .talk-advantages li:has(.talk-advantages-link) {
-    padding: 0;
-  }
-
-  .talk-advantages-link {
-    display: block;
-    padding: 1.6rem;
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    height: 100%;
-    transition: color 0.15s;
-  }
-
-  .talk-advantages-link:hover {
-    color: var(--color-accent-themed);
-    text-decoration: underline;
-  }
-
-  .talk-advantages-link:hover strong {
-    color: var(--color-accent-themed) !important;
-  }
-
-  .talk-advantages li:has(.talk-advantages-link):hover {
-    border-color: var(--color-accent-themed);
-  }
-
   .talks-count {
     font-size: 1.1rem;
     color: var(--color-text-muted);
