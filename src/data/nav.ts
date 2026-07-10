@@ -142,7 +142,7 @@ export const NAV_MENUS: NavMenu[] = [
         label: "Talks & Schedule",
         items: [
           L.schedule,
-	  L.keynotes,
+          L.keynotes,
           L.tutorials,
           L.talks,
           L.posters,
@@ -219,7 +219,15 @@ export const NAV_MENUS: NavMenu[] = [
     label: "Community",
     url: "/about",
     sections: [
-      { items: [L.about, L.eps, L.communityPartners, L.mediaPartners, L.yearsOfEp] },
+      {
+        items: [
+          L.about,
+          L.eps,
+          L.communityPartners,
+          L.mediaPartners,
+          L.yearsOfEp,
+        ],
+      },
     ],
   },
 
