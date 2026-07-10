@@ -13,29 +13,41 @@ description: |-
 
 responsibilities:
   - Deploy, maintain and monitor our in-house built trading systems
-  - Improve the reliability, scalability and performance of production systems, especially under extreme market conditions
-  - Cover market access, monitoring, compliance, strategy evaluation and trading automation
-  - Work face-to-face with Traders, Researchers and Engineers to resolve issues quickly
+  - Improve the reliability, scalability and performance of production systems,
+    especially under extreme market conditions
+  - Cover market access, monitoring, compliance, strategy evaluation and trading
+    automation
+  - Work face-to-face with Traders, Researchers and Engineers to resolve issues
+    quickly
   - Set and uphold engineering standards for the production environment
 
 requirements:
-  - Experience managing day-to-day operations of software and hardware infrastructure
+  - Experience managing day-to-day operations of software and hardware
+    infrastructure
   - Strong affinity with Unix/Linux systems
   - Ability to automate tasks using Python
   - Strong design, debugging and problem-solving skills
-  - "Experience with relational databases (Optiver uses PostgreSQL, but other DB experience is welcome)"
+  - "Experience with relational databases (Optiver uses PostgreSQL, but other DB
+    experience is welcome)"
   - Understanding of networking fundamentals and protocols
-  - "No prior trading or financial experience is needed – Optiver's onboarding program will kick-start your career and get you up to speed on the business."
+  - "No prior trading or financial experience is needed – Optiver's onboarding
+    program will kick-start your career and get you up to speed on the business."
 
 preferred:
 
 benefits:
-  - A performance-based bonus structure unmatched anywhere in the industry – profits are combined across desks, teams and offices into a global profit pool
-  - The opportunity to work alongside best-in-class professionals from over 40 different countries
+  - A performance-based bonus structure unmatched anywhere in the industry –
+    profits are combined across desks, teams and offices into a global profit
+    pool
+  - The opportunity to work alongside best-in-class professionals from over 40
+    different countries
   - 25 paid vacation days and fully paid first-class commuting expenses
   - Training opportunities and discounts on health insurance
-  - "Extensive office perks: breakfast and lunch, world-class barista coffee, sports and leisure activities, Friday afternoon drinks, and weekly in-house chair massages"
-  - Competitive relocation packages and visa sponsorship where necessary for expats
+  - "Extensive office perks: breakfast and lunch, world-class barista coffee,
+    sports and leisure activities, Friday afternoon drinks, and weekly in-house
+    chair massages"
+  - Competitive relocation packages and visa sponsorship where necessary for
+    expats
 
 apply_link: "https://www.optiver.com/join-us/jobs/technology/amsterdam/production-engineer/"
 ---
