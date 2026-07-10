@@ -4,7 +4,7 @@ subtitle:
   "The heart of EuroPython — three days of talks across five parallel tracks,
   covering every corner of the Python ecosystem."
 meta:
-  - text: "Wednesday – Friday, July 15–17"
+  - text: "Wednesday – Friday, 15–17 July"
   - text: "5 parallel tracks"
 cta:
   text: "Browse all talks"
