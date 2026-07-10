@@ -8,7 +8,7 @@ meta:
   - text: "Small-group format"
 cta:
   text: "Browse all tutorials"
-  url: "/tutorials"
+  url: "/schedule/tutorials"
 advantages:
   - title: "3-hour sessions"
     description:

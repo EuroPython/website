@@ -34,8 +34,8 @@ const L = {
   overview: { label: "Overview", url: "/overview" },
   schedule: { label: "Schedule", url: "/schedule" },
   keynotes: { label: "Keynotes", url: "/#keynoters" },
-  tutorials: { label: "Tutorials", url: "/schedule/tutorials" },
-  talks: { label: "Talks", url: "/schedule/talks" },
+  tutorials: { label: "Tutorials Schedule", url: "/schedule/tutorials" },
+  talks: { label: "Talks Schedule", url: "/schedule/talks" },
   posters: { label: "Posters", url: "/posters" },
   tracks: { label: "Tracks", url: "/tracks" },
   speakers: { label: "Speakers", url: "/speakers" },
@@ -143,7 +143,6 @@ export const NAV_MENUS: NavMenu[] = [
         label: "Talks & Schedule",
         items: [
           L.overview,
-          L.schedule,
           L.tutorials,
           L.talks,
           L.posters,
@@ -277,7 +276,6 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Programme",
     items: [
-      L.schedule,
       L.talks,
       L.tutorials,
       L.posters,
