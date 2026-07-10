@@ -178,7 +178,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
 
   nav {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -192,7 +192,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
     padding: 0.55rem calc((100% - 1200px) / 2);
     white-space: nowrap;
     box-shadow: 0 2px 20px oklch(0 0 0 / 0.05);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, top 0.3s ease;
     transform: translateY(0);
   }
 
@@ -681,15 +681,36 @@ const activeMenus = NAV_MENUS.map((menu) => ({
       });
     }
 
-    // ── Scroll-to-hide nav ──
+    // ── Scroll-to-hide nav + banner ──
     let prevScrollPos =
       window.pageYOffset || document.documentElement.scrollTop;
     let ticking = false;
     let isVisible = true;
+    const banner = document.getElementById("ep-banner");
+
+    function getNavOffset() {
+      return parseInt(getComputedStyle(navbar).top) || 0;
+    }
+
+    function setBannerState(atTop) {
+      if (!banner) return;
+      if (atTop) {
+        banner.style.transform = "translateY(0)";
+        navbar.style.top = "40px";
+      } else {
+        banner.style.transform = "translateY(-100%)";
+        navbar.style.top = "0";
+      }
+    }
 
     function updateNavbar() {
       const raw = window.pageYOffset || document.documentElement.scrollTop;
       const cur = Math.max(0, raw);
+
+      // ── Banner: only visible at top ──
+      setBannerState(raw <= 0 || cur <= 50);
+
+      // ── Nav: scroll-based hide/show ──
       if (raw <= 0 || cur <= 50) {
         if (!isVisible) {
           navbar.style.transform = "translateY(0)";
@@ -718,7 +739,8 @@ const activeMenus = NAV_MENUS.map((menu) => ({
         navbar.style.transform = "translateY(0)";
         isVisible = true;
       } else if (prevScrollPos < cur && isVisible && cur > 100) {
-        navbar.style.transform = "translateY(-100%)";
+        const offset = getNavOffset();
+        navbar.style.transform = `translateY(calc(-100% - ${offset}px))`;
         isVisible = false;
       }
       prevScrollPos = cur;
@@ -747,6 +769,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
             navbar.style.transform = "translateY(0)";
             isVisible = true;
             prevScrollPos = finalScroll;
+            setBannerState(true);
           }
         }, 150);
       },
@@ -763,6 +786,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
           navbar.style.transform = "translateY(0)";
           isVisible = true;
           prevScrollPos = cur;
+          setBannerState(true);
         }
       }
     });
