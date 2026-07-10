@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "eu.europython.companion",
+      "sha256_cert_fingerprints": [
+        "12:61:6C:BC:9E:6F:53:29:B8:A8:92:57:51:17:67:0D:FB:A7:0B:A6:7F:1E:2B:FC:D3:AB:86:AE:A8:7C:26:36",
+        "2F:A3:E5:98:A9:15:4E:DB:1A:15:BD:74:BB:90:DA:06:B1:83:35:5E:CE:0C:35:B2:B9:94:6D:86:DC:A9:CF:CA",
+        "3E:66:79:C2:67:29:28:86:EC:42:A6:CB:79:66:B1:94:F0:28:04:F5:36:37:92:83:2B:5B:B4:88:40:36:38:B0"
+      ]
+    }
+  }
+]
