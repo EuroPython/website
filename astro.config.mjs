@@ -163,7 +163,6 @@ export default defineConfig({
     // "/wasm-summit": "/session/webassembly-summit",
     // "/programme/c-api-summit": "/session/c-api-summit",
     // "/programme/wasm-summit": "/session/webassembly-summit",
-    // "/discord": "https://discord.gg/BhTN2zJPMh",
     // For AV team internal use: break screens
     "/break/s1":
       "https://overlays.gbdl.in/ep-s1/scene-schedule.html",
