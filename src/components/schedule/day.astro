@@ -58,9 +58,7 @@ const getRoomSortKey = (room: string) => {
 
 const ROOMS = (day.data.rooms ?? [])
   .filter((room) => room.toLowerCase() !== "exhibit hall")
-  .sort(
-    (a, b) => getRoomSortKey(a) - getRoomSortKey(b) || a.localeCompare(b),
-  );
+  .sort((a, b) => getRoomSortKey(a) - getRoomSortKey(b) || a.localeCompare(b));
 
 type ScheduleSession = {
   title: string;
@@ -77,6 +75,13 @@ type ScheduleSession = {
 
 // hack for posters :)
 const posters: Array<ScheduleSession> = [];
+
+const isLunchSideEvent = (session: ScheduleSession): boolean => {
+  const title = session.title.toLowerCase();
+  return title === "pyladies lunch" || title === "communities organizers lunch";
+};
+
+const lunchSideEvents: Array<ScheduleSession> = [];
 
 const sessions = day.data.events
   .map((event) => {
@@ -104,6 +109,10 @@ const sessions = day.data.events
 
     if (session.sessionType === "poster") {
       posters.push(session);
+    }
+
+    if (isLunchSideEvent(session)) {
+      lunchSideEvents.push(session);
     }
 
     return session;
@@ -234,6 +243,13 @@ for (let i = slots.length - 1; i > 0; i--) {
   slots.splice(i, 1);
 }
 
+// Find the main Lunch break slot to place posters inside it
+// We match exact title "Lunch" (case-insensitive) to get the communal
+// lunch break, not side events like "PyLadies Lunch"
+const lunchSlotForPosters = slots.find((slot) =>
+  slot.sessions.some((s) => s.title.toLowerCase() === "lunch"),
+);
+
 const gridRows: string[] = [];
 
 let row = 1;
@@ -266,7 +282,18 @@ for (let i = 0; i < slots.length; i++) {
     // visually small breaks :)
     size = Math.max(3, size);
 
-    rowSize = `var(--break)`;
+    // When the "Lunch" break also holds posters, we need taller rows
+    // so the poster cards don't overflow into sessions below.
+    // The var(--break) = 14px per row is way too small for posters.
+    if (
+      lunchSlotForPosters &&
+      posters.length > 0 &&
+      current.startTime === lunchSlotForPosters.startTime
+    ) {
+      rowSize = `auto`;
+    } else {
+      rowSize = `var(--break)`;
+    }
   } else if (current.type === "room-change") {
     size = 1;
     rowSize = `var(--room-change)`;
@@ -428,21 +455,44 @@ const endStart = numberToTime(lastEndTime);
         {
           slots.map((slot) => (
             <div class="slot">
-              {slot.type !== "room-change" && (
-                <div
-                  class="time"
-                  style={{
-                    "--start": timeToRow[slot.startTime],
-                    "--end": timeToRow[slot.endTime],
-                  }}
-                >
-                  <h2>{format(slot.start, "HH:mm")}</h2>
-                </div>
-              )}
+              {slot.type !== "room-change" &&
+                (() => {
+                  const hasRegular = (slot.sessions ?? []).some(
+                    (s) => s.sessionType !== "poster" && !isLunchSideEvent(s),
+                  );
+                  const hasPosterBlock =
+                    lunchSlotForPosters &&
+                    slot.startTime === lunchSlotForPosters.startTime &&
+                    (posters.length > 0 || lunchSideEvents.length > 0);
+                  return hasRegular || hasPosterBlock;
+                })() && (
+                  <div
+                    class="time"
+                    style={{
+                      "--start": timeToRow[slot.startTime],
+                      "--end": timeToRow[slot.endTime],
+                    }}
+                  >
+                    <h2>{format(slot.start, "HH:mm")}</h2>
+                  </div>
+                )}
 
               {(slot.sessions ?? [])
                 .sort(sortSessionByRooms)
-                .filter((session) => session.sessionType !== "poster")
+                .filter((session) => {
+                  if (session.sessionType === "poster") return false;
+                  if (isLunchSideEvent(session)) return false;
+                  // Hide the "Lunch" break session — shown inside lunch-block
+                  // Only hide when there are actually posters or side events to show
+                  if (
+                    lunchSlotForPosters &&
+                    slot.startTime === lunchSlotForPosters.startTime &&
+                    session.title.toLowerCase() === "lunch" &&
+                    (posters.length > 0 || lunchSideEvents.length > 0)
+                  )
+                    return false;
+                  return true;
+                })
                 .map((session) => {
                   const style = getSessionStyle(session);
 
@@ -470,35 +520,77 @@ const endStart = numberToTime(lastEndTime);
                   return <Session session={session} style={style} />;
                 })}
 
-              {postersByTime[slot.startTime] && (
-                // big assumption here, that all posters start at the same
-                // time, we should add a check for that
-                <div
-                  class="posters"
-                  style={{
-                    "--start": timeToRow[posters[0].startTime],
-                    "--end": timeToRow[posters[0].endTime],
-                  }}
-                >
-                  <h2>Posters ({posters[0].rooms.join(", ")})</h2>
-
-                  <div class="poster-cards">
-                    {posters.map((session) => {
-                      const style = {};
-
-                      return (
-                        <div>
-                          <Session
-                            session={session}
-                            style={style}
-                            sessionType="poster"
-                          />
+              {lunchSlotForPosters &&
+                slot.startTime === lunchSlotForPosters.startTime &&
+                (posters.length > 0 || lunchSideEvents.length > 0) && (
+                  <div
+                    class="break ep-break lunch-break"
+                    style={{
+                      "--start": timeToRow[lunchSlotForPosters.startTime],
+                      "--end": timeToRow[lunchSlotForPosters.endTime],
+                      gridRow: "var(--start) / var(--end)",
+                      gridColumn: "2 / -1",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <div class="lunch-break-header">
+                      {lunchSlotForPosters.startTime} Lunch
+                    </div>
+                    <div
+                      class="lunch-break-content"
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(90px, 1fr))`,
+                      }}
+                    >
+                      {posters.length > 0 && (
+                        <div
+                          class="posters-inside"
+                          style={{
+                            gridColumn: "1 / -1",
+                            justifySelf: "center",
+                          }}
+                        >
+                          <h2>Posters ({posters[0].rooms.join(", ")})</h2>
+                          <div class="poster-cards">
+                            {posters.map((session) => {
+                              const style = {};
+                              return (
+                                <div>
+                                  <Session
+                                    session={session}
+                                    style={style}
+                                    sessionType="poster"
+                                  />
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
-                      );
-                    })}
+                      )}
+                      {lunchSideEvents.length > 0 && (
+                        <div
+                          class="lunch-side-events"
+                          style={{
+                            gridColumn: "1 / -1",
+                            justifySelf: "center",
+                          }}
+                        >
+                          {lunchSideEvents.map((session) => {
+                            const style = {};
+                            return (
+                              <Session
+                                session={session}
+                                style={style}
+                                sessionType={session.sessionType}
+                              />
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
             </div>
           ))
         }
@@ -612,8 +704,11 @@ const endStart = numberToTime(lastEndTime);
     letter-spacing: 0;
   }
 
-  .posters {
-    text-align: center;
+  .lunch-break .lunch-break-content {
+    display: none;
+  }
+
+  .lunch-break-header {
     display: none;
   }
 
@@ -736,25 +831,38 @@ const endStart = numberToTime(lastEndTime);
       display: none;
     }
 
-    .posters:hover,
-    .posters:focus-within {
+    .lunch-break:hover,
+    .lunch-break:focus-within {
       z-index: 15;
     }
 
-    .posters {
-      grid-column: 3 / 6;
-      position: relative;
+    .lunch-break {
+      padding: 0 !important;
+    }
+
+    .lunch-break-header {
+      width: 100%;
       display: block;
-      border: 2px solid var(--color-accent-themed);
-      border-radius: 6px;
-      background: var(--ep-sched-chrome-bg);
-      z-index: 5;
+      font-family: "Inter Tight", system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ep-text-secondary);
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      background: oklch(0.75 0.171 60.3 / 0.06);
+      border-bottom: 1px solid oklch(0.75 0.171 60.3 / 0.18);
+      text-align: center;
     }
 
-    .poster-cards {
+    .lunch-break .lunch-break-content {
+      background: oklch(0.75 0.171 60.3 / 0.06);
     }
 
-    .posters h2 {
+    .lunch-break .posters-inside {
+      border-bottom: 1px solid var(--color-surface-medium);
+      text-align: left;
+    }
+
+    .lunch-break h2 {
       font-family: "Inter Tight", system-ui, sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
@@ -764,16 +872,37 @@ const endStart = numberToTime(lastEndTime);
       background: transparent;
     }
 
-    .posters > div {
+    .lunch-break .poster-cards {
       display: flex;
+      flex-wrap: wrap;
     }
 
-    .posters > div > :global(*) {
+    .lunch-break .poster-cards :global(*) {
       flex: 1;
+      max-width: 320px;
     }
 
-    .posters :global(.session.poster),
-    .posters :global(.ep-session.poster) {
+    .lunch-break .posters-inside {
+      padding: 0.5rem;
+      border-bottom: 1px solid var(--color-surface-medium);
+    }
+
+    .lunch-break .lunch-side-events {
+      padding: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      text-align: left;
+    }
+
+    .lunch-break .lunch-side-events :global(*) {
+      flex: 1;
+      min-width: 200px;
+      max-width: 320px;
+    }
+
+    .lunch-break :global(.session.poster),
+    .lunch-break :global(.ep-session.poster) {
       display: flex;
       height: 100%;
     }
