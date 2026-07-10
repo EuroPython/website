@@ -4,7 +4,7 @@ subtitle:
   "Unconference-style sessions proposed and led by participants. Grab a room,
   pick a topic, and start a conversation."
 meta:
-  - text: "Wednesday – Friday, July 16–18"
+  - text: "Wednesday – Friday, 16–18 July"
   - text: "Dedicated open space rooms"
 highlight: "SPACES"
 cta:
