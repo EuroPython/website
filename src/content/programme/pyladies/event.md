@@ -1,16 +1,22 @@
 ---
 title: "PYLADIES AT EP2026"
 subtitle:
-  "Dedicated events for women and gender minorities in the Python community."
+  "Booth, workshops, lunch, and open space — dedicated events for women,
+  non-binary people and minorities in the Python community."
 link: "/pyladies"
 highlight: "PYLADIES"
 ---
 
-**Self-Promotion Workshop — 17 July, 12:00–13:00** Learn how to communicate your
-technical work effectively and build your personal brand in tech.
+**PyLadies Booth** Visit us in the Community area to learn more about the
+initiative and how you can support women, non-binary people and minorities in
+Python.
 
-**PyLadies Lunch — 17 July, 13:00–14:00** Community lunch following the
-workshop. Meet fellow PyLadies from across Europe and beyond.
+**PyLadies Workshops** Hands-on sessions on creative coding with
+gesture-controlled musical instruments and leading under pressure — led by
+expert instructors.
 
-**Open Space Sessions — 16–18 July, Various** Drop-in conversations on
-diversity, inclusion, and building welcoming Python communities.
+**PyLadies Lunch** A special lunch event fostering community and empowerment in
+tech. Enjoy meaningful conversations and networking.
+
+**Organiser Open Space** Discuss the current status of PyLadies communities,
+identify shared challenges, and explore opportunities for collaboration.

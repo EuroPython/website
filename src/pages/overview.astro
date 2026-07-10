@@ -1,12 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
+import Headline from "@ui/Headline.astro";
 import SessionHeader from "@sections/SessionHeader.astro";
-import EventSection from "@sections/EventSection.astro";
-import Programme from "@sections/programme.astro";
-import EuroSciPy from "@sections/euroscipy.astro";
 import Connect from "@sections/connect.astro";
-import { getEntry, render } from "astro:content";
+import { getEntry } from "astro:content";
 
 const talkHeader = await getEntry("programme", "talks/header");
 const tutorialHeader = await getEntry("programme", "tutorials/header");
@@ -14,45 +12,27 @@ const posterHeader = await getEntry("programme", "posters/header");
 const lightningHeader = await getEntry("programme", "lightning-talks/header");
 const openSpacesHeader = await getEntry("programme", "open-spaces/header");
 
-const eventEntries = [
-  await getEntry("programme", "language_summit/event"),
-  await getEntry("programme", "packaging_summit/event"),
-  await getEntry("programme", "rust_summit/event"),
-  await getEntry("programme", "wasm_summit/event"),
-  await getEntry("programme", "pyladies/event"),
-  await getEntry("programme", "community_day/event"),
-];
-
-const ACCENT_MAP: Record<string, string> = {
-  language_summit: "capi",
-  packaging_summit: "pkg",
-  rust_summit: "rust",
-  wasm_summit: "wasm",
-  pyladies: "pyladies",
-  community_day: "community",
-};
-
-const eventSections = await Promise.all(
-  eventEntries.filter(Boolean).map(async (entry) => {
-    const { Content } = await render(entry as any);
-    const slug = entry!.id.split("/")[0];
-    return {
-      data: entry!.data,
-      Content,
-      accent: ACCENT_MAP[slug],
-      highlight: (entry!.data as any).highlight,
-    };
-  }),
-);
+const summitHeader = await getEntry("programme", "summits/header");
+const socialHeader = await getEntry("programme", "social/header");
 ---
 
 <Layout
   title="Programme Overview | EuroPython 2026"
   description="A week of talks, tutorials, posters, and more at EuroPython 2026 in Kraków, Poland."
 >
-  <Programme />
-
   <Section2 variant="dark" id="sessions">
+    <Headline
+      id="overview"
+      as="h1"
+      title="Programme & Events Overview"
+      center="true"
+    />
+
+    <p class="overview-intro">
+      A week packed with talks, tutorials, summits and community events. Here's
+      a quick look at what's happening at EuroPython 2026 in Kraków.
+    </p>
+
     <div class="session-group">
       <SessionHeader
         id="talks"
@@ -115,36 +95,25 @@ const eventSections = await Promise.all(
         highlight={openSpacesHeader!.data.highlight}
       />
     </div>
-  </Section2>
 
-  <Section2 variant="dark-alt" id="events">
-    {
-      eventSections.map(({ data, Content, accent, highlight }) => (
-        <div class="event-group">
-          <EventSection
-            id={data
-              .title!.toLowerCase()
-              .replace(/[^a-z0-9]+/g, "-")
-              .replace(/-$/g, "")}
-            title={data.title!}
-            subtitle={data.subtitle}
-            meta={data.meta}
-            startDatetime={data.start_datetime}
-            endDatetime={data.end_datetime}
-            location={data.location}
-            contact={data.contact}
-            link={data.link}
-            accent={accent as any}
-            highlight={highlight}
-          >
-            <Content />
-          </EventSection>
-        </div>
-      ))
-    }
-  </Section2>
+    <div class="session-group">
+      <SessionHeader
+        id="summits"
+        title={summitHeader!.data.title}
+        subtitle={summitHeader!.data.subtitle!}
+        advantages={summitHeader!.data.advantages}
+      />
+    </div>
 
-  <EuroSciPy />
+    <div class="session-group">
+      <SessionHeader
+        id="social"
+        title={socialHeader!.data.title}
+        subtitle={socialHeader!.data.subtitle!}
+        advantages={socialHeader!.data.advantages}
+      />
+    </div>
+  </Section2>
 
   <Connect />
 </Layout>
@@ -156,13 +125,13 @@ const eventSections = await Promise.all(
     border-top: 1px dashed var(--color-border);
   }
 
-  .events-heading {
-    color: var(--color-text);
-  }
-
-  .event-group + .event-group {
-    margin-top: 4rem;
-    padding-top: 4rem;
-    border-top: 1px dashed var(--color-border);
+  .overview-intro {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    padding-bottom: 2rem;
   }
 </style>
