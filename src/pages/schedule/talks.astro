@@ -23,7 +23,7 @@ const days = await getCollection("days");
 const talkDays = new Set(["2026-07-15", "2026-07-16", "2026-07-17"]);
 ---
 
-<Layout description="Browse all scheduled talks." headline="Talks schedule">
+<Layout description="Browse all scheduled talks." headline="Talks schedule" hideNotices={["talks"]}>
   {
     days
       .filter((day) => talkDays.has(day.id))

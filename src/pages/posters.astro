@@ -12,15 +12,9 @@ const posters = allSessions
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
-<Layout
-  title="Posters | EuroPython 2026"
-  description="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session."
->
+<Layout title="Posters | EuroPython 2026" description="A visual showcase of projects, research, and ideas — presented in person during a dedicated poster session.">
   <Fragment slot="head">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
   </Fragment>
   <Section2 variant="dark" id="posters">
     <div class="max-w-5xl mx-auto">
@@ -34,6 +28,9 @@ const posters = allSessions
 
       <!-- Poster list component -->
       <ListPosters posters={posters} />
+
+    </div>
+  </Section2>
     </div>
   </Section2>
 </Layout>

@@ -6,6 +6,8 @@ const ALWAYS_EXIST = new Set([
   "sessions",
   "speakers",
   "schedule",
+  "schedule/talks",
+  "schedule/tutorials",
   "posters",
   "talks",
   "tutorials",
@@ -44,6 +46,7 @@ export async function buildLinkChecker(): Promise<(url: string) => boolean> {
 
   return function linkExists(url: string): boolean {
     if (url.startsWith("http")) return true;
+    if (url.startsWith("/#")) return true; // homepage anchor links always valid
     const slug = url.replace(/^\//, "").replace(/\/$/, "");
     if (!slug) return true;
     if (ALWAYS_EXIST.has(slug)) return true;

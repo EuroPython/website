@@ -1,299 +1,382 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Section from "@ui/Section.astro";
-import { slugify } from "@utils/content";
+import { slugify } from '@utils/content';
 
 export interface Props {
   title?: string;
   description: string;
   headline: string;
+  hideNotices?: string[];
 }
 
-const { title, description, headline } = Astro.props;
----
+const { title, description, headline, hideNotices = [] } = Astro.props;
 
-<Layout title={title || "Schedule for 2026"} description={description}>
+// Hide the notice grid on the schedule overview page, show on sub-pages
+const showNoticeGrid = !Astro.url.pathname.match(/^\/schedule\/?$/);
+---
+<Layout title={title || "Schedule for 2026"} description={description} >
   <Fragment slot="head">
     <link rel="manifest" href="/manifest.json" />
-    <link rel="mask-icon" href="/maskable_icon.png" color="#d4003a" />
-    <meta name="msapplication-TileColor" content="#d4003a" />
-    <meta name="theme-color" content="#080002" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block"
-      rel="stylesheet"
-    />
+    <link rel="mask-icon" href="/maskable_icon.png" color="#d4003a">
+    <meta name="msapplication-TileColor" content="#d4003a">
+    <meta name="theme-color" content="#080002">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
   </Fragment>
 
   <div class="ep-sched-section">
-    <div class="ep-sched-inner">
-      <Section full>
-        <h1 class="ep-headline" id={slugify(headline)}>
-          <a href={`#${slugify(headline)}`} aria-label={`Jump to ${headline}`}
-            >{headline}</a
-          >
-        </h1>
+  <div class="ep-sched-inner">
+  <Section>
+    <h1 class="ep-headline" id={slugify(headline)}><a href={`#${slugify(headline)}`} aria-label={`Jump to ${headline}`}>{headline}</a></h1>
 
-        <div class="ep-sched-tabs" id="sched-tabs"></div>
 
-        <div class="layout-wrapper2" id="sched-days">
-          <slot />
-        </div>
+    {showNoticeGrid && (
+    <div class="sched-notice-grid">
+      {!hideNotices.includes("talks") && (
+      <a href="/schedule/talks" class="sched-notice-card">
+        <strong>Talks</strong>
+        <span>Three days of talks across six parallel tracks</span>
+        <span class="sched-notice-date">Wed–Fri, Jul 15–17</span>
+      </a>
+      )}
+      {!hideNotices.includes("tutorials") && (
+      <a href="/schedule/tutorials" class="sched-notice-card">
+        <strong>Tutorials</strong>
+        <span>Two days of hands-on workshops</span>
+        <span class="sched-notice-date">Mon–Tue, Jul 13–14</span>
+      </a>
+      )}
+      {!hideNotices.includes("open-spaces") && (
+      <a href="/open-spaces" class="sched-notice-card">
+        <strong>Open Spaces</strong>
+        <span>Participant-led sessions</span>
+        <span class="sched-notice-date">Throughout the conference</span>
+      </a>
+      )}
+      {!hideNotices.includes("sprints") && (
+      <a href="/sprints" class="sched-notice-card">
+        <strong>Sprints</strong>
+        <span>Two days of coding sprints, co-organised with EuroSciPy at a separate venue</span>
+        <span class="sched-notice-date">Sat–Sun, Jul 19–20</span>
+      </a>
+      )}
+      {!hideNotices.includes("euroscipy") && (
+      <a href="https://euroscipy.org/schedule/" class="sched-notice-card" target="_blank" rel="nofollow noopener">
+        <strong>EuroSciPy ↗</strong>
+        <span>The scientific Python conference</span>
+        <span class="sched-notice-date">Mon–Thu, Jul 20–23</span>
+      </a>
+      )}
 
-        <div class="ep-note">
-          💚 Mark talks as favorites by opening their details and tapping the ❤️
-          icon. Your selections are saved locally and will only be visible on
-          this device.
-        </div>
-      </Section>
     </div>
+    )}
+
+    <div class="ep-sched-tabs" id="sched-tabs"></div>
+
+    <div class="layout-wrapper2" id="sched-days">
+      <slot />
+    </div>
+
+  <div class="ep-note">💚 Mark talks as favorites by opening their details and tapping the ❤️ icon. Your selections are saved locally and will only be visible on this device.</div>
+
+  </Section>
+  </div>
   </div>
 </Layout>
 
 <style is:global>
-  /* Dark theme for schedule pages */
-  body {
-    background: var(--ep-bg) !important;
-    color: var(--ep-white);
+/* Dark theme for schedule pages */
+body {
+  background: var(--ep-bg) !important;
+  color: var(--ep-white);
+}
+
+.layout-wrapper2 > * {
+  grid-column: 2;
+}
+
+main {
+  background-color: transparent !important;
+}
+
+
+/* Schedule notice grid */
+.sched-notice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.sched-notice-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem;
+  border: 1px solid var(--ep-border);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+  background: var(--ep-surface-subtle);
+}
+
+.sched-notice-card:hover {
+  border-color: var(--ep-accent);
+  background: var(--ep-session-hover-bg);
+}
+
+.sched-notice-card strong {
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--ep-white);
+  margin-bottom: 0.3rem;
+}
+
+.sched-notice-card span {
+  font-size: 0.95rem;
+  color: var(--ep-text-secondary);
+  line-height: 1.5;
+}
+
+.sched-notice-date {
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1rem !important;
+  color: var(--color-accent-themed) !important;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .sched-notice-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .sched-notice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Unset Tailwind light theme on schedule pages */
+.text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900,
+.text-gray-500, .text-gray-400 {
+  color: var(--ep-text-secondary) !important;
+}
+
+/* Nav items on dark background */
+header#navbar .text-primary {
+  color: var(--ep-text-primary) !important;
+}
+
+header#navbar .bg-\[\#1c294b\] {
+  background: var(--ep-surface-medium) !important;
+}
+
+/* Day tabs */
+.ep-sched-tabs {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ep-sched-tab {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--ep-border);
+  border-radius: 6px;
+  background: var(--ep-surface-subtle);
+  color: var(--ep-text-muted);
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ep-sched-tab:hover {
+  border-color: var(--color-accent-themed);
+  color: var(--ep-white);
+  background: var(--color-surface-subtle);
+}
+
+.ep-sched-tab.active {
+  background: var(--color-accent-themed);
+  border-color: var(--color-accent-themed);
+  color: var(--color-on-accent);
+  font-weight: 600;
+}
+
+.ep-sched-day {
+  display: none;
+}
+
+.ep-sched-day.active {
+  display: block;
+}
+
+/* Schedule legend */
+.ep-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1rem;
+  background: var(--ep-surface-subtle);
+  border: 1px solid var(--ep-border);
+  border-radius: 6px;
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ep-text-secondary);
+}
+
+.ep-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ep-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--ep-border);
+  flex-shrink: 0;
+}
+
+.ep-legend-default {
+  background: var(--ep-surface-subtle);
+}
+
+.ep-legend-beginner {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 2px,
+    oklch(0.675 0.201 142.9 / 0.3) 2px, /* rgba(50,180,50,0.3) */
+    oklch(0.675 0.201 142.9 / 0.3) 4px /* rgba(50,180,50,0.3) */
+  );
+  background-color: var(--ep-surface-subtle);
+}
+
+.ep-legend-advanced {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 2px,
+    oklch(0.551 0.187 25.8 / 0.3) 2px, /* rgba(200,50,50,0.3) */
+    oklch(0.551 0.187 25.8 / 0.3) 4px /* rgba(200,50,50,0.3) */
+  );
+  background-color: var(--ep-surface-subtle);
+}
+
+.ep-legend-break {
+  background: oklch(0.767 0.175 63.1 / 0.2); /* rgba(255,150,0,0.2) */
+  border-color: oklch(0.767 0.175 63.1 / 0.4); /* rgba(255,150,0,0.4) */
+}
+
+.ep-legend-room-change {
+  background: var(--ep-surface-subtle);
+  border: 1px dashed var(--ep-border);
+}
+
+/* Improve select appearance on dark */
+select {
+  background: var(--ep-surface-subtle);
+  color: var(--ep-white);
+  border: 1px solid var(--ep-border);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 1281px) {
+  .layout-wrapper2 .schedule * {
+    font-size: 1.1rem;
+    --header-height: 40px !important;
+    --break: 10px !important;
   }
 
-  .layout-wrapper2 > * {
-    grid-column: 2;
+  .layout-wrapper2 h2, .layout-wrapper2 .break {
+    font-size: 1.3rem;
   }
+}
 
-  main {
-    background-color: transparent !important;
+@media screen and (min-width: 1201px) {
+  .layout-wrapper2.scaled-up .schedule * {
+    font-size: 1.4rem;
+    --header-height: 60px !important;
+    --break: 14px !important;
   }
-
-  /* Unset Tailwind light theme on schedule pages */
-  .text-gray-600,
-  .text-gray-700,
-  .text-gray-800,
-  .text-gray-900,
-  .text-gray-500,
-  .text-gray-400 {
-    color: var(--ep-text-secondary) !important;
+  .layout-wrapper2.scaled-up h2, .layout-wrapper2.scaled-up .break {
+    font-size: 1.4rem;
   }
-
-  /* Nav items on dark background */
-  header#navbar .text-primary {
-    color: var(--ep-text-primary) !important;
+}
+@media screen and (min-width: 1601px) {
+  .maximize-btn {
+    visibility: initial;
   }
-
-  header#navbar .bg-\[\#1c294b\] {
-    background: var(--ep-surface-medium) !important;
-  }
-
-  /* Day tabs */
-  .ep-sched-tabs {
-    display: flex;
-    gap: 0.6rem;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .ep-sched-tab {
-    padding: 0.5rem 1.2rem;
-    border: 1px solid var(--ep-border);
-    border-radius: 6px;
-    background: var(--ep-surface-subtle);
-    color: var(--ep-text-muted);
-    font-family: "Inter Tight", system-ui, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s ease;
-  }
-
-  .ep-sched-tab:hover {
-    border-color: var(--color-accent-themed);
-    color: var(--ep-white);
-    background: var(--color-surface-subtle);
-  }
-
-  .ep-sched-tab.active {
-    background: var(--color-accent-themed);
-    border-color: var(--color-accent-themed);
-    color: var(--color-on-accent);
-    font-weight: 600;
-  }
-
-  .ep-sched-day {
-    display: none;
-  }
-
-  .ep-sched-day.active {
-    display: block;
-  }
-
-  /* Schedule legend */
-  .ep-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin: 1.5rem 0;
-    padding: 0.8rem 1rem;
-    background: var(--ep-surface-subtle);
-    border: 1px solid var(--ep-border);
-    border-radius: 6px;
-    font-family: "Inter Tight", system-ui, sans-serif;
-    font-size: 0.9rem;
-    color: var(--ep-text-secondary);
-  }
-
-  .ep-legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .ep-legend-swatch {
-    width: 14px;
-    height: 14px;
-    border-radius: 3px;
-    border: 1px solid var(--ep-border);
-    flex-shrink: 0;
-  }
-
-  .ep-legend-default {
-    background: var(--ep-surface-subtle);
-  }
-
-  .ep-legend-beginner {
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 2px,
-      oklch(0.675 0.201 142.9 / 0.3) 2px,
-      /* rgba(50,180,50,0.3) */ oklch(0.675 0.201 142.9 / 0.3) 4px
-        /* rgba(50,180,50,0.3) */
-    );
-    background-color: var(--ep-surface-subtle);
-  }
-
-  .ep-legend-advanced {
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 2px,
-      oklch(0.551 0.187 25.8 / 0.3) 2px,
-      /* rgba(200,50,50,0.3) */ oklch(0.551 0.187 25.8 / 0.3) 4px
-        /* rgba(200,50,50,0.3) */
-    );
-    background-color: var(--ep-surface-subtle);
-  }
-
-  .ep-legend-break {
-    background: oklch(0.767 0.175 63.1 / 0.2); /* rgba(255,150,0,0.2) */
-    border-color: oklch(0.767 0.175 63.1 / 0.4); /* rgba(255,150,0,0.4) */
-  }
-
-  .ep-legend-room-change {
-    background: var(--ep-surface-subtle);
-    border: 1px dashed var(--ep-border);
-  }
-
-  /* Improve select appearance on dark */
-  select {
-    background: var(--ep-surface-subtle);
-    color: var(--ep-white);
-    border: 1px solid var(--ep-border);
-    border-radius: 4px;
-    padding: 0.5rem;
-  }
-
-  @media screen and (min-width: 1281px) {
-    .layout-wrapper2 .schedule * {
-      font-size: 1.1rem;
-      --header-height: 40px !important;
-      --break: 10px !important;
-    }
-
-    .layout-wrapper2 h2,
-    .layout-wrapper2 .break {
-      font-size: 1.3rem;
-    }
-  }
-
-  @media screen and (min-width: 1201px) {
-    .layout-wrapper2.scaled-up .schedule * {
-      font-size: 1.4rem;
-      --header-height: 60px !important;
-      --break: 14px !important;
-    }
-    .layout-wrapper2.scaled-up h2,
-    .layout-wrapper2.scaled-up .break {
-      font-size: 1.4rem;
-    }
-  }
-  @media screen and (min-width: 1601px) {
-    .maximize-btn {
-      visibility: initial;
-    }
-  }
+}
 </style>
 
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", function () {
-    const daysContainer = document.getElementById("sched-days");
-    const tabsContainer = document.getElementById("sched-tabs");
+  document.addEventListener('DOMContentLoaded', function () {
+    const daysContainer = document.getElementById('sched-days');
+    const tabsContainer = document.getElementById('sched-tabs');
     if (!daysContainer || !tabsContainer) return;
 
-    const days = daysContainer.querySelectorAll(".ep-sched-day");
+    const days = daysContainer.querySelectorAll('.ep-sched-day');
     if (days.length === 0) return;
 
     // en-CA gives us YYYY-MM-DD format
     // Check URL hash for a specific day, otherwise use today
-    const hashDay = window.location.hash.replace("#day-", "");
+    const hashDay = window.location.hash.replace('#day-', '');
     const hasDayHash = hashDay !== window.location.hash;
 
-    const targetDay = hasDayHash
-      ? hashDay
-      : new Intl.DateTimeFormat("en-CA", {
-          timeZone: "Europe/Warsaw",
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        }).format(new Date());
+    const targetDay = hasDayHash ? hashDay : new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/Warsaw',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).format(new Date());
 
     let defaultIndex = 0;
-    days.forEach(function (day, index) {
-      if (day.getAttribute("data-day") === targetDay) defaultIndex = index;
+    days.forEach(function(day, index) {
+      if (day.getAttribute('data-day') === targetDay) defaultIndex = index;
     });
 
-    days.forEach(function (day, index) {
-      const dayName = day.getAttribute("data-day") || "day-" + index;
-      const title = day.querySelector(".ep-sched-day-title");
+    days.forEach(function(day, index) {
+      const dayName = day.getAttribute('data-day') || 'day-' + index;
+      const title = day.querySelector('.ep-sched-day-title');
       const label = title ? title.textContent.trim() : dayName;
 
-      const tab = document.createElement("button");
-      tab.className =
-        "ep-sched-tab" + (index === defaultIndex ? " active" : "");
+      const tab = document.createElement('button');
+      tab.className = 'ep-sched-tab' + (index === defaultIndex ? ' active' : '');
       tab.textContent = label;
-      tab.setAttribute("data-day", dayName);
+      tab.setAttribute('data-day', dayName);
 
-      tab.addEventListener("click", function () {
-        tabsContainer.querySelectorAll(".ep-sched-tab").forEach(function (t) {
-          t.classList.remove("active");
+      tab.addEventListener('click', function () {
+        tabsContainer.querySelectorAll('.ep-sched-tab').forEach(function(t) {
+          t.classList.remove('active');
         });
-        tab.classList.add("active");
+        tab.classList.add('active');
 
-        days.forEach(function (d) {
-          d.classList.remove("active");
-          if (d.getAttribute("data-day") === dayName) {
-            d.classList.add("active");
+        days.forEach(function(d) {
+          d.classList.remove('active');
+          if (d.getAttribute('data-day') === dayName) {
+            d.classList.add('active');
           }
         });
 
         // Update URL hash for the selected day
-        history.replaceState(null, "", "#day-" + dayName);
+        history.replaceState(null, '', '#day-' + dayName);
       });
 
       tabsContainer.appendChild(tab);
     });
 
-    if (days[defaultIndex]) days[defaultIndex].classList.add("active");
+    if (days[defaultIndex]) days[defaultIndex].classList.add('active');
   });
 </script>

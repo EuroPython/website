@@ -8,7 +8,7 @@ meta:
   - text: "5 parallel tracks"
 cta:
   text: "Browse all talks"
-  url: "/talks"
+  url: "/schedule/talks"
 advantages:
   - title: "30-minute talks"
     description:

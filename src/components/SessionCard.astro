@@ -1,0 +1,179 @@
+---
+export interface Props {
+  title: string;
+  slug: string;
+  speakers?: string;
+  duration: string;
+  level?: string;
+  track?: string;
+  searchText?: string;
+  highlight?: boolean;
+}
+
+const { title, slug, speakers, duration, level, track, searchText, highlight = false } = Astro.props;
+---
+<div
+  class:list={["session-card", level && `level-${level}`, highlight && "session-card--highlight"]}
+  data-search={searchText ? searchText.toLowerCase() : `${title.toLowerCase()} ${(track ?? "").toLowerCase()}`}
+>
+  {highlight && <span class="card-current-label">Current session</span>}
+
+  {highlight ? (
+    <span class="card-title">{title}</span>
+  ) : (
+    <a href={`/session/${slug}`} class="card-title">{title}</a>
+  )}
+
+  {speakers && <p class="card-speakers" set:html={speakers} />}
+
+  <div class="card-meta">
+    <span class="card-duration">{duration} min</span>
+    {level && (
+      <span class:list={["card-level", `card-level--${level}`]}>
+        {level.charAt(0).toUpperCase() + level.slice(1)}
+      </span>
+    )}
+  </div>
+
+  {track && <p class="card-track">{track}</p>}
+</div>
+
+<style>
+  .session-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1.25rem;
+    transition: border-color 0.1s ease-in-out, background 0.1s ease-in-out;
+  }
+
+  .session-card:hover {
+    border-color: var(--ep-accent);
+    background: var(--ep-session-hover-bg) !important;
+    z-index: 10;
+  }
+
+  .session-card--highlight {
+    outline: 2px solid var(--color-accent-themed);
+    outline-offset: -1px;
+    background: var(--color-surface-medium);
+  }
+
+  .session-card--highlight:hover {
+    border-color: var(--color-accent-themed);
+    background: var(--color-surface-medium);
+  }
+
+  .session-card.level-beginner {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-beginner-stripe) 4px,
+        var(--ep-beginner-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .session-card.level-advanced {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-advanced-stripe) 4px,
+        var(--ep-advanced-stripe) 6px
+      ),
+      var(--color-surface-subtle);
+  }
+
+  .card-current-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent-themed);
+    margin-bottom: 0.3rem;
+  }
+
+  .card-title {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .card-title:hover {
+    text-decoration: underline;
+  }
+
+  .card-speakers {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 0.75rem;
+  }
+
+  :global(.card-speakers .speaker-link) {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+
+  :global(.card-speakers .speaker-link:hover) {
+    text-decoration: underline;
+  }
+
+  .card-meta {
+    margin-top: auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .card-duration {
+    font-size: 1.02rem;
+    color: var(--color-text-muted);
+    background: var(--color-surface-medium);
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+  }
+
+  .card-level {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+  }
+
+  .card-level--beginner {
+    background: var(--ep-level-beginner-bg);
+    color: var(--ep-level-beginner-text);
+  }
+
+  .card-level--intermediate {
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
+  }
+
+  .card-level--advanced {
+    background: var(--ep-level-advanced-bg);
+    color: var(--ep-level-advanced-text);
+  }
+
+  .card-track {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+  }
+</style>

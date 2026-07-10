@@ -251,6 +251,25 @@
 }
 
 /* ── Light footer gradient ── */
-.light footer {
+.light footer:not(#session-page *) {
   background: linear-gradient(135deg, #f4f5f7, #ebedef) !important;
+}
+
+.light #session-page footer {
+  background: none !important;
+}
+
+/* Speaker links in Sessions at the same time cards — dark as heading */
+.light .sched-row-speaker-link {
+  color: var(--color-text) !important;
+}
+
+/* Session detail page title — dark text on light */
+.light #session-page h1:first-child {
+  color: var(--color-text) !important;
+}
+
+/* ScheduleRow session titles — dark on light */
+.light .sched-row-title {
+  color: var(--color-text) !important;
 }
