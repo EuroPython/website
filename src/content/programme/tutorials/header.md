@@ -14,7 +14,7 @@ advantages:
     description:
       "Tutorials run for half a day. Each one is a self-contained workshop with
       exercises, examples, and hands-on practice."
-  - title: "Small groups, personal attention"
+  - title: "Personal attention"
     description:
       "Unlike talks, tutorials are capped in size. You get direct access to the
       instructor and can ask questions as you go."

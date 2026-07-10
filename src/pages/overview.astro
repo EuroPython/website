@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Section2 from "@ui/Section2.astro";
 import Headline from "@ui/Headline.astro";
 import SessionHeader from "@sections/SessionHeader.astro";
+import EuroSciPy from "@sections/euroscipy.astro";
 import Connect from "@sections/connect.astro";
 import { getEntry } from "astro:content";
 
@@ -119,6 +120,8 @@ const summitHeader = await getEntry("programme", "summits/header");
       />
     </div>
   </Section2>
+
+  <EuroSciPy />
 
   <Connect />
 </Layout>
