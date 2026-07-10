@@ -11,6 +11,9 @@ export interface Props {
 }
 
 const { title, description, headline, hideNotices = [] } = Astro.props;
+
+// Hide the notice grid on the schedule overview page, show on sub-pages
+const showNoticeGrid = !Astro.url.pathname.match(/^\/schedule\/?$/);
 ---
 <Layout title={title || "Schedule for 2026"} description={description} >
   <Fragment slot="head">
@@ -28,6 +31,7 @@ const { title, description, headline, hideNotices = [] } = Astro.props;
     <h1 class="ep-headline" id={slugify(headline)}><a href={`#${slugify(headline)}`} aria-label={`Jump to ${headline}`}>{headline}</a></h1>
 
 
+    {showNoticeGrid && (
     <div class="sched-notice-grid">
       {!hideNotices.includes("talks") && (
       <a href="/schedule/talks" class="sched-notice-card">
@@ -66,6 +70,7 @@ const { title, description, headline, hideNotices = [] } = Astro.props;
       )}
 
     </div>
+    )}
 
     <div class="ep-sched-tabs" id="sched-tabs"></div>
 

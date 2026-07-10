@@ -32,7 +32,6 @@ export interface FooterColumn {
 const L = {
   // Programme
   schedule: { label: "Schedule", url: "/schedule" },
-  keynotes: { label: "Keynotes", url: "/#keynoters" },
   tutorials: { label: "Tutorials", url: "/schedule/tutorials" },
   talks: { label: "Talks", url: "/schedule/talks" },
   posters: { label: "Posters", url: "/posters" },
@@ -142,6 +141,10 @@ export const NAV_MENUS: NavMenu[] = [
         label: "Talks & Schedule",
         items: [
           L.schedule,
+<<<<<<< HEAD
+=======
+          L.keynotes,
+>>>>>>> refs/remotes/origin/ep2026-talks-tutorials
           L.tutorials,
           L.talks,
           L.posters,
@@ -218,6 +221,9 @@ export const NAV_MENUS: NavMenu[] = [
     label: "Community",
     url: "/about",
     sections: [
+<<<<<<< HEAD
+      { items: [L.about, L.eps, L.communityPartners, L.mediaPartners] },
+=======
       {
         items: [
           L.about,
@@ -227,6 +233,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.yearsOfEp,
         ],
       },
+>>>>>>> refs/remotes/origin/ep2026-talks-tutorials
     ],
   },
 
