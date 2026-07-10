@@ -12,8 +12,8 @@ const posterHeader = await getEntry("programme", "posters/header");
 const lightningHeader = await getEntry("programme", "lightning-talks/header");
 const openSpacesHeader = await getEntry("programme", "open-spaces/header");
 
-const summitHeader = await getEntry("programme", "summits/header");
 const socialHeader = await getEntry("programme", "social/header");
+const summitHeader = await getEntry("programme", "summits/header");
 ---
 
 <Layout
@@ -103,6 +103,8 @@ const socialHeader = await getEntry("programme", "social/header");
         title={summitHeader!.data.title}
         subtitle={summitHeader!.data.subtitle!}
         advantages={summitHeader!.data.advantages}
+        track="summit"
+        highlight={summitHeader!.data.title}
       />
     </div>
 
@@ -112,6 +114,8 @@ const socialHeader = await getEntry("programme", "social/header");
         title={socialHeader!.data.title}
         subtitle={socialHeader!.data.subtitle!}
         advantages={socialHeader!.data.advantages}
+        track="event"
+        highlight={"& SOCIAL"}
       />
     </div>
   </Section2>

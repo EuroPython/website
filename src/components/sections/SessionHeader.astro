@@ -37,6 +37,18 @@ const TRACK_COLORS: Record<string, { color: string; dark: string }> = {
     color: "var(--color-track-open)",
     dark: "var(--color-track-open-dark)",
   },
+  summit: {
+    color: "oklch(0.68 0.16 165)",
+    dark: "oklch(0.55 0.14 163)",
+  },
+  event: {
+    color: "oklch(0.72 0.18 32)",
+    dark: "oklch(0.6 0.17 30)",
+  },
+  social: {
+    color: "oklch(0.62 0.18 270)",
+    dark: "oklch(0.5 0.17 268)",
+  },
 };
 
 export type TrackKey = keyof typeof TRACK_COLORS;
@@ -177,13 +189,13 @@ const trackStyle = tc ? `--track-color: ${tc.color}` : "";
     transition: color 0.15s;
   }
 
-  .talk-advantages-link:hover {
-    color: var(--color-accent-themed);
-    text-decoration: underline;
+  .talk-advantages li .talk-advantages-link strong {
+    color: var(--color-accent);
   }
 
-  .talk-advantages-link:hover strong {
-    color: var(--color-accent-themed) !important;
+  .talk-advantages li .talk-advantages-link:hover strong {
+    color: var(--color-accent);
+    text-decoration: underline;
   }
 
   .talk-advantages li:has(.talk-advantages-link):hover {
