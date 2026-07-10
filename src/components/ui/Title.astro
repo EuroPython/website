@@ -11,21 +11,20 @@ function highlightTitle(
   const match = text.slice(idx, idx + highlight.length);
   const after = text.slice(idx + highlight.length);
   if (!before) {
-    // Highlight at start — put br after the highlight
     return `<span style="color: ${color || "var(--color-accent)"}">${match}</span><br>${after.trimStart()}`;
   }
-  // Highlight not at start — put br before the highlight
   return `${before}<br><span style="color: ${color || "var(--color-accent)"}">${match}</span>${after}`;
 }
 
 export interface Props {
   id: string;
   subtitle?: string;
-  color?: string; // title text color, default #fff
-  anchorColor?: string; // anchor link color, default matches color
-  title?: string; // optional title text (overrides slot)
-  highlight?: string; // word to color differently
-  highlightColor?: string; // color for highlighted word
+  color?: string;
+  anchorColor?: string;
+  title?: string;
+  highlight?: string;
+  highlightColor?: string;
+  as?: "h1" | "h2";
 }
 
 const {
@@ -36,6 +35,7 @@ const {
   title: titleText,
   highlight,
   highlightColor,
+  as: Tag = "h2",
 } = Astro.props;
 
 const rendered = titleText
@@ -43,7 +43,7 @@ const rendered = titleText
   : null;
 ---
 
-<h2 class="sec-title" style={`color: ${color}`}>
+<Tag class="sec-title" style={`color: ${color}`}>
   {rendered ? <Fragment set:html={rendered} /> : <slot />}
   <sup class="sec-anchor"
     ><a
@@ -52,7 +52,7 @@ const rendered = titleText
       aria-label={`Jump to ${id}`}>#</a
     ></sup
   >
-</h2>
+</Tag>
 {
   subtitle && (
     <p class="sec-subtitle" style={`color: var(--color-text-muted)`}>

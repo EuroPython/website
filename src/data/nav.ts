@@ -32,8 +32,8 @@ export interface FooterColumn {
 const L = {
   // Programme
   schedule: { label: "Schedule", url: "/schedule" },
-  talks: { label: "Talks", url: "/talks" },
-  tutorials: { label: "Tutorials", url: "/tutorials" },
+  tutorials: { label: "Tutorials", url: "/schedule/tutorials" },
+  talks: { label: "Talks", url: "/schedule/talks" },
   posters: { label: "Posters", url: "/posters" },
   tracks: { label: "Tracks", url: "/tracks" },
   speakers: { label: "Speakers", url: "/speakers" },
@@ -46,7 +46,7 @@ const L = {
   rustSummit: { label: "Rust Summit", url: "/rust-summit" },
   packagingSummit: { label: "Packaging Summit", url: "/packaging-summit" },
   communityOrganisersSummit: {
-    label: "Community Organisers Summit",
+    label: "Organisers Summit",
     url: "/community-organisers-summit",
   },
 
@@ -57,6 +57,10 @@ const L = {
   speakersDinner: { label: "Speakers' Dinner", url: "/speakers-dinner" },
   openSpaces: { label: "Open Spaces", url: "/open-spaces" },
   pyladiesEvents: { label: "PyLadies' Events", url: "/pyladies" },
+  womenInPythonRun: {
+    label: "Women in Python 5k Run",
+    url: "/women-in-python-run",
+  },
 
   // Participate
   tickets: { label: "Tickets", url: "/tickets" },
@@ -137,8 +141,8 @@ export const NAV_MENUS: NavMenu[] = [
         label: "Talks & Schedule",
         items: [
           L.schedule,
-          L.talks,
           L.tutorials,
+          L.talks,
           L.posters,
           L.tracks,
           L.speakers,
@@ -163,6 +167,7 @@ export const NAV_MENUS: NavMenu[] = [
           L.openSpaces,
           L.yearsOfEp,
           L.pyladiesEvents,
+          L.womenInPythonRun,
         ],
       },
       {
@@ -283,6 +288,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       L.rustSummit,
       L.packagingSummit,
       L.pyladiesEvents,
+      L.womenInPythonRun,
       L.communityOrganisersSummit,
     ],
   },

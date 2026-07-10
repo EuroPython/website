@@ -19,6 +19,6 @@ socials:
   github: "https://github.com/arjancodes"
   facebook: "https://www.facebook.com/arjancodes"
   discord: "https://discord.com/invite/K9CKfWrX4A"
-logo_padding: 10px
+logo_padding: 30px 0px
 tier: Media Partners
 ---

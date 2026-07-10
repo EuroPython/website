@@ -12,6 +12,6 @@ socials:
   linkedin: "https://www.linkedin.com/company/paged-out"
   twitter: "https://x.com/pagedout_zine"
   bluesky: "https://bsky.app/profile/pagedout.bsky.social"
-logo_padding: 10px
+logo_padding: 30px 0px
 tier: Media Partners
 ---
