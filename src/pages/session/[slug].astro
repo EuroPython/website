@@ -8,10 +8,11 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
 import { Picture } from "astro:assets";
 import Markdown from "@ui/Markdown.astro";
 import Section2 from "@ui/Section2.astro";
-import SessionCard from "@components/SessionCard.astro";
+
 //
 import CodeHeart from "@components/island/CodeHeart.svelte";
 import Button from "@ui/Button.astro";
+import ScheduleRow from "@components/ScheduleRow.astro";
 
 export async function getStaticPaths() {
   const sessions = await getCollection("sessions");
@@ -23,6 +24,10 @@ export async function getStaticPaths() {
 
 // Fetch the collection of sessions
 const sessions = await getCollection("sessions");
+const allSpeakers = await getCollection("speakers");
+const speakerNames = Object.fromEntries(
+  allSpeakers.map((s: any) => [s.id, s.data.name])
+);
 
 const { entry } = Astro.props;
 const slug = entry.id;
@@ -41,6 +46,7 @@ speakers.sort((a, b) => {
 });
 
 // Resolve session codes to session data
+
 const resolveSessions = (codes: string[]) =>
   codes.map((code) => sessions.find((s) => s.data.code === code)!);
 
@@ -66,6 +72,10 @@ const nextSessionsOrdered = sameRoomNextSession
       ...nextSessionsInAllRooms.filter((s) => s !== sameRoomNextSession),
     ]
   : nextSessionsInAllRooms;
+const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
+  ? new Date(nextSessionsOrdered[0].data.start).toLocaleDateString("en-GB", { timeZone: "Europe/Warsaw", weekday: "short", day: "numeric", month: "short" }) + " · " +
+    new Date(nextSessionsOrdered[0].data.start).toLocaleTimeString("en-GB", { timeZone: "Europe/Warsaw", hour: "2-digit", minute: "2-digit" })
+  : "";
 ---
 
 <Layout title={entry.data.title} description={entry.data.tweet}>
@@ -248,35 +258,16 @@ const nextSessionsOrdered = sameRoomNextSession
                 <>
                   <h3 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
                   Sessions at the same time</h3>
-                  <div class="sched-related-grid">
-                    {parallelSessions.map((session: any) => (
-                      <SessionCard
-                        title={session.data.title}
-                        slug={session.id}
-                        duration={session.data.duration}
-                        level={session.data.level}
-                      />
-                    ))}
-                  </div>
+                  <ScheduleRow session={entry} speakerNames={speakerNames} />
                 </>
               )}
 
               {(nextSessionsInAllRooms?.length ?? 0) > 0 && (
                 <>
                   <Separator />
-
                   <h3 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
                     After this session</h3>
-                  <div class="sched-related-grid">
-                    {nextSessionsOrdered.map((session: any) => (
-                      <SessionCard
-                        title={session.data.title}
-                        slug={session.id}
-                        duration={session.data.duration}
-                        level={session.data.level}
-                      />
-                    ))}
-                  </div>
+                  <ScheduleRow session={entry} parallelCodes={entry.data.sessions_after} timeLabel={nextTimeLabel} speakerNames={speakerNames} showViewLink={false} />
                 </>
               )}
             </div>
@@ -313,25 +304,6 @@ const nextSessionsOrdered = sameRoomNextSession
 
   .detail-related {
     margin-bottom: 2.5rem;
-  }
-
-  .sched-related-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    margin-top: 1rem;
-  }
-
-  @media (max-width: 900px) {
-    .sched-related-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 500px) {
-    .sched-related-grid {
-      grid-template-columns: 1fr;
-    }
   }
 </style>
 

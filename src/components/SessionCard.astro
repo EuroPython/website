@@ -7,15 +7,22 @@ export interface Props {
   level?: string;
   track?: string;
   searchText?: string;
+  highlight?: boolean;
 }
 
-const { title, slug, speakers, duration, level, track, searchText } = Astro.props;
+const { title, slug, speakers, duration, level, track, searchText, highlight = false } = Astro.props;
 ---
 <div
-  class:list={["session-card", level && `level-${level}`]}
+  class:list={["session-card", level && `level-${level}`, highlight && "session-card--highlight"]}
   data-search={searchText ? searchText.toLowerCase() : `${title.toLowerCase()} ${(track ?? "").toLowerCase()}`}
 >
-  <a href={`/session/${slug}`} class="card-title">{title}</a>
+  {highlight && <span class="card-current-label">Current session</span>}
+
+  {highlight ? (
+    <span class="card-title">{title}</span>
+  ) : (
+    <a href={`/session/${slug}`} class="card-title">{title}</a>
+  )}
 
   {speakers && <p class="card-speakers" set:html={speakers} />}
 
@@ -48,6 +55,17 @@ const { title, slug, speakers, duration, level, track, searchText } = Astro.prop
     z-index: 10;
   }
 
+  .session-card--highlight {
+    outline: 2px solid var(--color-accent-themed);
+    outline-offset: -1px;
+    background: var(--color-surface-medium);
+  }
+
+  .session-card--highlight:hover {
+    border-color: var(--color-accent-themed);
+    background: var(--color-surface-medium);
+  }
+
   .session-card.level-beginner {
     background:
       repeating-linear-gradient(
@@ -70,6 +88,15 @@ const { title, slug, speakers, duration, level, track, searchText } = Astro.prop
         var(--ep-advanced-stripe) 6px
       ),
       var(--color-surface-subtle);
+  }
+
+  .card-current-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent-themed);
+    margin-bottom: 0.3rem;
   }
 
   .card-title {

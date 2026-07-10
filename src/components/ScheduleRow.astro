@@ -1,0 +1,297 @@
+---
+import { getCollection } from "astro:content";
+import Button from "@ui/Button.astro";
+
+export interface Props {
+  session: any;
+  parallelCodes?: string[];
+  timeLabel?: string;
+  highlight?: string;
+  showViewLink?: boolean;
+  speakerNames?: Record<string, string>;
+}
+
+const { session: entry, parallelCodes, timeLabel, highlight, showViewLink = true, speakerNames: speakerNamesProp } = Astro.props;
+
+// Load data
+const sessions = await getCollection("sessions");
+const allDays = await getCollection("days");
+
+// Use passed speaker names or load them
+const allSpeakers = speakerNamesProp ? null : await getCollection("speakers");
+const speakerNames = speakerNamesProp || Object.fromEntries(
+  (allSpeakers || []).map((s: any) => [s.id, s.data.name])
+);
+
+// Room order matching the schedule
+const ROOM_ORDER = [
+  "S1", "S2", "S3A", "S3B", "S4", "S4A", "S4B",
+  "Glass room", "2.017/2.018", "Fishbowl", "Exhibit Hall",
+];
+
+const getRoomSortKey = (room: string) => {
+  const match = room.match(/\((S\d+[A-Z]?)\)/i);
+  if (!match) {
+    const idx = ROOM_ORDER.indexOf(room);
+    return idx === -1 ? `99-${room}` : String(idx).padStart(2, "0");
+  }
+  const idx = ROOM_ORDER.indexOf(match[1]);
+  return idx === -1 ? `99-${room}` : String(idx).padStart(2, "0");
+};
+
+// Find the schedule day
+const sessionDate = entry.data.start ? entry.data.start.slice(0, 10) : null;
+const currentDay = sessionDate ? allDays.find((d: any) => d.id === sessionDate) : null;
+
+// Ordered rooms for this day
+const dayRooms = (currentDay?.data?.rooms ?? [])
+  .filter((r: string) => r.toLowerCase() !== "exhibit hall")
+  .sort((a: string, b: string) => getRoomSortKey(a).localeCompare(getRoomSortKey(b)));
+
+// Resolve parallel sessions
+const parallelSessionCodes: string[] = parallelCodes ?? entry.data.sessions_in_parallel ?? [];
+const parallelSessions = parallelSessionCodes
+  .map((code) => sessions.find((s: any) => s.data.code === code))
+  .filter(Boolean)
+  .filter((s: any) => s?.data?.room !== "Exhibit Hall");
+
+// Build room → session map
+const sessionByRoom = new Map<string, any>();
+sessionByRoom.set(entry.data.room, entry);
+for (const s of parallelSessions as any[]) {
+  if (s.data.room) sessionByRoom.set(s.data.room, s);
+}
+
+// Build row entries
+const rowEntries = dayRooms.map((room: string) => {
+  const session = sessionByRoom.get(room) ?? null;
+  return {
+    room,
+    session,
+    isCurrent: session?.id === (highlight || entry.id),
+  };
+});
+
+const rowTime = timeLabel || (entry.data.start
+  ? new Date(entry.data.start).toLocaleDateString("en-GB", { timeZone: "Europe/Warsaw", weekday: "short", day: "numeric", month: "short" }) + " \u00b7 " +
+    new Date(entry.data.start).toLocaleTimeString("en-GB", { timeZone: "Europe/Warsaw", hour: "2-digit", minute: "2-digit" })
+  : "");
+---
+
+<div class="sched-row-wrapper">
+  {rowTime && <div class="sched-row-time">{rowTime}</div>}
+
+  <div class="sched-row-grid" style={`--cols: ${dayRooms.length}`}>
+    {rowEntries.map(({ room, session, isCurrent }) =>
+      session ? (
+        <div class:list={["sched-row-card", session.data.level, isCurrent && "sched-row-card--current"]}>
+          {isCurrent && <div class="sched-row-current-label">You are here</div>}
+          <a href={`/session/${session.id}`} class="sched-row-title">{session.data.title}</a>
+          {session.data.speakers?.length > 0 && (
+            <div class="sched-row-speakers">
+              {session.data.speakers.map((sp: any) => {
+                const id = typeof sp === "string" ? sp : (sp.code || sp.slug || "");
+                const name = speakerNames[id] || (typeof sp === "object" ? sp.name : "") || id;
+                return name;
+              }).filter(Boolean).join(", ")}
+            </div>
+          )}
+          <div class="sched-row-meta">
+            {room && <span class="sched-row-room">{room}</span>}
+            {room && session.data.duration && <span class="sched-row-sep">&middot;</span>}
+            {session.data.duration && <span class="sched-row-duration">{session.data.duration}min</span>}
+          </div>
+          {session.data.level && (
+            <span class={`sched-row-level--${session.data.level}`}>
+              {session.data.level.charAt(0).toUpperCase() + session.data.level.slice(1)}
+            </span>
+          )}
+        </div>
+      ) : (
+        <div class="sched-row-empty" title={room}>{room}</div>
+      )
+    )}
+  </div>
+
+  {showViewLink && (
+    <div class="sched-row-footer">
+      <Button class="sched-row-btn" url={`/schedule/#session-${entry.id}`}>View in schedule</Button>
+    </div>
+  )}
+</div>
+
+<style is:global>
+  .sched-row-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .sched-row-time {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ep-accent);
+    margin: 0 0 0.4rem;
+  }
+
+  .sched-row-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 4), 1fr);
+    gap: 4px;
+  }
+
+  .sched-row-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.5rem 0.6rem;
+    background: var(--ep-surface-subtle);
+    border: 1px solid var(--ep-border);
+    border-radius: 6px;
+    color: var(--ep-white);
+    font-family: "Inter Tight", system-ui, sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none;
+  }
+
+  .sched-row-card:hover {
+    border-color: var(--ep-accent);
+    background: var(--ep-session-hover-bg) !important;
+    z-index: 10;
+  }
+
+  .sched-row-card.beginner {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-beginner-stripe) 4px,
+        var(--ep-beginner-stripe) 6px
+      ),
+      var(--ep-surface-subtle);
+  }
+
+  .sched-row-card.advanced {
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 4px,
+        var(--ep-advanced-stripe) 4px,
+        var(--ep-advanced-stripe) 6px
+      ),
+      var(--ep-surface-subtle);
+  }
+
+  .sched-row-card--current {
+    outline: 2px solid var(--color-accent-themed);
+    outline-offset: -2px;
+    background: var(--color-surface-medium);
+  }
+
+  .sched-row-current-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent-themed);
+    margin-bottom: 0.1rem;
+  }
+
+  .sched-row-title {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--ep-white);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sched-row-title:hover {
+    text-decoration: underline;
+  }
+
+  .sched-row-speakers {
+    font-size: 0.85rem;
+    color: var(--ep-text-secondary);
+    line-height: 1.3;
+  }
+
+  .sched-row-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: var(--ep-text-muted);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: auto;
+  }
+
+  .sched-row-room { display: inline; }
+  .sched-row-duration { display: inline; }
+  .sched-row-sep { opacity: 0.5; }
+
+  [class^="sched-row-level--"] {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.1em 0.5em;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  .sched-row-level--beginner {
+    background: var(--ep-level-beginner-bg);
+    color: var(--ep-level-beginner-text);
+  }
+
+  .sched-row-level--intermediate {
+    background: var(--ep-level-intermediate-bg);
+    color: var(--ep-level-intermediate-text);
+  }
+
+  .sched-row-level--advanced {
+    background: var(--ep-level-advanced-bg);
+    color: var(--ep-level-advanced-text);
+  }
+
+  .sched-row-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--ep-text-muted);
+    background: var(--ep-surface-faint);
+    border: 1px dashed var(--ep-border);
+    border-radius: 6px;
+  }
+
+  .sched-row-footer {
+    margin-top: 1rem;
+  }
+
+  .sched-row-btn {
+    background: oklch(0.522 0.218 264.4) !important;
+    color: white !important;
+  }
+
+  @media (max-width: 900px) {
+    .sched-row-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .sched-row-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
