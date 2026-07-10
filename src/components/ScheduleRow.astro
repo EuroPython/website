@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Button from "@ui/Button.astro";
+import CodeHeart from "@components/island/CodeHeart.svelte";
 
 export interface Props {
   session: any;
@@ -86,14 +87,25 @@ const rowTime = timeLabel || (entry.data.start
       session ? (
         <div class:list={["sched-row-card", session.data.level, isCurrent && "sched-row-card--current"]}>
           {isCurrent && <div class="sched-row-current-label">You are here</div>}
+          <CodeHeart
+            client:load
+            mini={true}
+            codeId={session.data.code}
+            title={session.data.title}
+          />
           <a href={`/session/${session.id}`} class="sched-row-title">{session.data.title}</a>
           {session.data.speakers?.length > 0 && (
             <div class="sched-row-speakers">
-              {session.data.speakers.map((sp: any) => {
-                const id = typeof sp === "string" ? sp : (sp.code || sp.slug || "");
+              {session.data.speakers.map((sp: any, idx: number) => {
+                const id = typeof sp === "string" ? sp : (sp.id || sp.code || sp.slug || "");
                 const name = speakerNames[id] || (typeof sp === "object" ? sp.name : "") || id;
-                return name;
-              }).filter(Boolean).join(", ")}
+                return (
+                  <>
+                    {idx > 0 && <span>, </span>}
+                    <a href={`/speaker/${id}`} class="sched-row-speaker-link">{name}</a>
+                  </>
+                );
+              })}
             </div>
           )}
           <div class="sched-row-meta">
@@ -129,7 +141,7 @@ const rowTime = timeLabel || (entry.data.start
     font-family: "Inter Tight", system-ui, sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
-    color: var(--ep-accent);
+    color: var(--ep-white);
     margin: 0 0 0.4rem;
   }
 
@@ -189,6 +201,15 @@ const rowTime = timeLabel || (entry.data.start
     outline: 2px solid var(--color-accent-themed);
     outline-offset: -2px;
     background: var(--color-surface-medium);
+  }
+
+  .sched-row-speaker-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .sched-row-speaker-link:hover {
+    text-decoration: underline;
   }
 
   .sched-row-current-label {

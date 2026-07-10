@@ -267,7 +267,7 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
                   <Separator />
                   <h3 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
                     After this session</h3>
-                  <ScheduleRow session={entry} parallelCodes={entry.data.sessions_after} timeLabel={nextTimeLabel} speakerNames={speakerNames} showViewLink={false} />
+                  <ScheduleRow session={entry} parallelCodes={entry.data.sessions_after ?? undefined} timeLabel={nextTimeLabel} speakerNames={speakerNames} showViewLink={false} />
                 </>
               )}
             </div>
@@ -304,6 +304,10 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
 
   .detail-related {
     margin-bottom: 2.5rem;
+  }
+
+  footer {
+    background: none;
   }
 </style>
 

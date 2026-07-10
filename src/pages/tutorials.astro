@@ -61,7 +61,7 @@ const tutorials = allSessions
                   speakers={speakerHtml(t.data.speakers)}
                   duration={t.data.duration}
                   level={t.data.level}
-                  track={t.data.track}
+                  track={t.data.track ?? undefined}
                   searchText={`${t.data.title} ${t.data.track || ""}`}
                 />
             ))}
