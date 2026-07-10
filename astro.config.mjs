@@ -164,16 +164,11 @@ export default defineConfig({
     // "/programme/c-api-summit": "/session/c-api-summit",
     // "/programme/wasm-summit": "/session/webassembly-summit",
     // For AV team internal use: break screens
-    "/break/s1":
-      "https://overlays.gbdl.in/ep-s1/scene-schedule.html",
-    "/break/s2":
-      "https://overlays.gbdl.in/ep-s2/scene-schedule.html",
-    "/break/s3a":
-      "https://overlays.gbdl.in/ep-s3a/scene-schedule.html",
-    "/break/s3b":
-      "https://overlays.gbdl.in/ep-s3b/scene-schedule.html",
-    "/break/s4":
-      "https://overlays.gbdl.in/ep-s4/scene-schedule.html",
+    "/break/s1": "https://overlays.gbdl.in/ep-s1/scene-schedule.html",
+    "/break/s2": "https://overlays.gbdl.in/ep-s2/scene-schedule.html",
+    "/break/s3a": "https://overlays.gbdl.in/ep-s3a/scene-schedule.html",
+    "/break/s3b": "https://overlays.gbdl.in/ep-s3b/scene-schedule.html",
+    "/break/s4": "https://overlays.gbdl.in/ep-s4/scene-schedule.html",
     // For AV team internal use: VDO ninja screen share
     // "/ninja/forum-hall":
     //   "https://vdo.ninja/?room=EuroPython_2025_Forum_Hall&hash=338a&do",
