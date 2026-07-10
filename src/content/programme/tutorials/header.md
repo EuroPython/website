@@ -10,9 +10,9 @@ cta:
   text: "Browse all tutorials"
   url: "/tutorials"
 advantages:
-  - title: "3-hour or 6-hour sessions"
+  - title: "3-hour sessions"
     description:
-      "Tutorials run for half a day or a full day. Each one is a self-contained
+      "Tutorials run for half a day. Each one is a self-contained
       workshop with exercises, examples, and hands-on practice."
   - title: "Small groups, personal attention"
     description:
