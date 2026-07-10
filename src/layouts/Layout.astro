@@ -59,6 +59,16 @@ const hideFooter = Astro.props.hideFooter ?? false;
     <slot name="head" />
   </head>
   <body>
+    <!-- ═══════════════════════════════════════════
+         OLD-EUROPYTHON BANNER
+         ═══════════════════════════════════════════ -->
+    <a
+      id="ep-banner"
+      href="/remote"
+      class="text-white hover:text-white hover:underline text-center px-2 font-bold fixed top-0 w-full h-[40px] z-50 flex items-center justify-center transition-transform duration-300 ease-out"
+    >
+      Can’t join us in Kraków? Attend remotely — online options available!
+    </a>
     {
       !hideHeader && (
         <header>
@@ -128,6 +138,10 @@ const hideFooter = Astro.props.hideFooter ?? false;
 
   main {
     background-color: transparent;
+  }
+
+  #ep-banner {
+    background: #FF3C00;
   }
 
   footer {
