@@ -142,7 +142,7 @@ export const NAV_MENUS: NavMenu[] = [
         label: "Talks & Schedule",
         items: [
           L.schedule,
-	  L.keynotes,
+          L.keynotes,
           L.tutorials,
           L.talks,
           L.posters,
