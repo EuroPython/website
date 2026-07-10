@@ -36,6 +36,7 @@ preferred:
   - Experience with Kubernetes security controls (network policies, RBAC, policy engines)
   - Knowledge of low-latency or performance-sensitive environments
   - Experience contributing to internal platform tooling
+  - "No prior trading or financial experience is needed – Optiver's onboarding program will kick-start your career and get you up to speed on the business."
 
 benefits:
   - A performance-based bonus structure, enabling all employees to benefit from our global profit pool
@@ -44,9 +45,6 @@ benefits:
   - Training opportunities, discounts on health insurance, and fully paid first-class commuting expenses
   - "Extensive office perks: breakfast, lunch and dinner, world-class barista coffee, in-house physio and chair massages, organized sports and leisure activities, and Friday afternoon drinks"
   - Access to conferences and tech events for continuous learning
-
-description2: |-
-  No prior trading or financial experience is needed – Optiver's onboarding program will kick-start your career and get you up to speed on the business.
 
 apply_link: "https://www.optiver.com/join-us/jobs/technology/amsterdam/linux-engineer-bare-metal-and-kubernetes/"
 ---

@@ -25,6 +25,7 @@ requirements:
   - Strong design, debugging and problem-solving skills
   - "Experience with relational databases (Optiver uses PostgreSQL, but other DB experience is welcome)"
   - Understanding of networking fundamentals and protocols
+  - "No prior trading or financial experience is needed – Optiver's onboarding program will kick-start your career and get you up to speed on the business."
 
 preferred:
 
@@ -35,9 +36,6 @@ benefits:
   - Training opportunities and discounts on health insurance
   - "Extensive office perks: breakfast and lunch, world-class barista coffee, sports and leisure activities, Friday afternoon drinks, and weekly in-house chair massages"
   - Competitive relocation packages and visa sponsorship where necessary for expats
-
-description2: |-
-  No prior trading or financial experience is needed – Optiver's onboarding program will kick-start your career and get you up to speed on the business.
 
 apply_link: "https://www.optiver.com/join-us/jobs/technology/amsterdam/production-engineer/"
 ---
