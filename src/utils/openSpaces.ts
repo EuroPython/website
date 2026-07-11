@@ -41,7 +41,8 @@ function detectRoom(rawDesc: string): string {
     .replace(/<[^>]+>/g, "")
     .replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)")
     .replace(/https?:\/\/[^\s]+/g, "")
-    .replace(/&amp;/g, "&").replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;/g, "'")
     .trim()
     .toLowerCase();
   const roomMatch = plain.match(/room\s+([\d\+]+)/);
@@ -57,18 +58,24 @@ function detectRoom(rawDesc: string): string {
 function extractHost(rawDesc: string): string {
   const plain = rawDesc
     .replace(/<[^>]+>/g, "")
-    .replace(/&amp;/g, "&").replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;/g, "'")
     .replace(/\\n/g, "\n");
   const m = plain.match(/booked\s*by[\s:]*(.+?)(?:\r?\n|\n)/i);
   if (m) return m[1].trim();
-  const m2 = plain.match(/booked\s*by[\s:]*(.+?)\s+(?:open space title|open space description|room)/i);
+  const m2 = plain.match(
+    /booked\s*by[\s:]*(.+?)\s+(?:open space title|open space description|room)/i
+  );
   if (m2) return m2[1].trim();
   return "";
 }
 
 function shortenEuroPythonLinks(text: string): string {
   // Replace https://ep*.europython.eu/path with [/path](/path), but only if path has content
-  return text.replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)");
+  return text.replace(
+    /https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g,
+    "[$1]($1)"
+  );
 }
 
 function slugify(text: string): string {
@@ -82,23 +89,33 @@ function slugify(text: string): string {
     .slice(0, 80);
 }
 
-function parseDt(raw: string): null | { iso: string; hhmm: string; date: string } {
+function parseDt(
+  raw: string
+): null | { iso: string; hhmm: string; date: string } {
   const tzMatch = raw.match(/TZID=.*?[ :](\d{8}T\d{6})/);
   if (tzMatch) {
     const dt = tzMatch[1];
-    const date = `${dt.slice(0,4)}-${dt.slice(4,6)}-${dt.slice(6,8)}`;
-    const hhmm = `${dt.slice(9,11)}:${dt.slice(11,13)}`;
+    const date = `${dt.slice(0, 4)}-${dt.slice(4, 6)}-${dt.slice(6, 8)}`;
+    const hhmm = `${dt.slice(9, 11)}:${dt.slice(11, 13)}`;
     return { iso: `${date}T${hhmm}:00+02:00`, hhmm, date };
   }
   const utcMatch = raw.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/);
   if (utcMatch) {
     const date = `${utcMatch[1]}-${utcMatch[2]}-${utcMatch[3]}`;
-    return { iso: `${date}T${utcMatch[4]}:${utcMatch[5]}:00Z`, hhmm: `${utcMatch[4]}:${utcMatch[5]}`, date };
+    return {
+      iso: `${date}T${utcMatch[4]}:${utcMatch[5]}:00Z`,
+      hhmm: `${utcMatch[4]}:${utcMatch[5]}`,
+      date,
+    };
   }
   const localMatch = raw.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})/);
   if (localMatch) {
     const date = `${localMatch[1]}-${localMatch[2]}-${localMatch[3]}`;
-    return { iso: `${date}T${localMatch[4]}:${localMatch[5]}:00+02:00`, hhmm: `${localMatch[4]}:${localMatch[5]}`, date };
+    return {
+      iso: `${date}T${localMatch[4]}:${localMatch[5]}:00+02:00`,
+      hhmm: `${localMatch[4]}:${localMatch[5]}`,
+      date,
+    };
   }
   const allDay = raw.match(/^(\d{4})(\d{2})(\d{2})$/);
   if (allDay) {
@@ -123,7 +140,8 @@ function parseICal(ics: string): OpenSpaceEvent[] {
       const re = new RegExp(`^${key}(?:;[^:]*)?:(.+)$`, "im");
       const m = vevent.match(re);
       if (!m) return "";
-      return m[1].trim()
+      return m[1]
+        .trim()
         .replace(/\\,/g, ",")
         .replace(/\\;/g, ";")
         .replace(/\\n/g, "\n")
@@ -143,21 +161,33 @@ function parseICal(ics: string): OpenSpaceEvent[] {
     const endDt = parseDt(dtEndRaw) || startDt;
 
     const detectedRoom = detectRoom(rawDescription);
-    const host = extractHost(rawDescription) || organizer.replace(/^.*?CN=([^;]+).*$/, "$1").replace(/"/g, "").trim() || organizer.match(/mailto:(.+)/i)?.[1] || "";
+    const host =
+      extractHost(rawDescription) ||
+      organizer
+        .replace(/^.*?CN=([^;]+).*$/, "$1")
+        .replace(/"/g, "")
+        .trim() ||
+      organizer.match(/mailto:(.+)/i)?.[1] ||
+      "";
 
     // Build full description from "Open Space Description" section
     let fullDescription = "";
-    const descMatch = rawDescription.match(/open space description\s*:?\s*([\s\S]+?)(?:room\s+\S+|$)/i);
+    const descMatch = rawDescription.match(
+      /open space description\s*:?\s*([\s\S]+?)(?:room\s+\S+|$)/i
+    );
     if (descMatch) {
       fullDescription = descMatch[1]
         .replace(/<[^>]+>/g, "")
-        .replace(/&amp;/g, "&").replace(/&#39;/g, "'")
+        .replace(/&amp;/g, "&")
+        .replace(/&#39;/g, "'")
         .replace(/\\n/g, "\n")
         .replace(/room\s+\S+/gi, "")
         .replace(/\n{3,}/g, "\n\n")
         .trim();
       fullDescription = shortenEuroPythonLinks(fullDescription);
-      fullDescription = fullDescription.replace(/this is the open space registration calendar.*/gi, "").trim();
+      fullDescription = fullDescription
+        .replace(/this is the open space registration calendar.*/gi, "")
+        .trim();
     }
 
     const description = stripHtml(rawDescription);
@@ -165,7 +195,11 @@ function parseICal(ics: string): OpenSpaceEvent[] {
 
     // Generate unique slug
     let slug = slugify(title);
-    if (!slug) slug = uid.replace(/[^a-z0-9]/gi, "-").toLowerCase().slice(0, 40);
+    if (!slug)
+      slug = uid
+        .replace(/[^a-z0-9]/gi, "-")
+        .toLowerCase()
+        .slice(0, 40);
     const count = slugCounts.get(slug) || 0;
     if (count > 0) slug = `${slug}-${count}`;
     slugCounts.set(slug.replace(/-\d+$/, ""), count + 1);
@@ -206,7 +240,9 @@ export async function fetchOpenSpacesEvents(): Promise<OpenSpaceEvent[]> {
       return [];
     }
     const events = parseICal(text);
-    console.log(`[OpenSpacesCalendar] Loaded ${events.length} events from iCal`);
+    console.log(
+      `[OpenSpacesCalendar] Loaded ${events.length} events from iCal`
+    );
     return events;
   } catch (err) {
     console.error("[OpenSpacesCalendar] iCal fetch failed:", err);
