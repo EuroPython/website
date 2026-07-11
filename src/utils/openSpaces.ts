@@ -42,8 +42,8 @@ function detectRoom(rawDesc: string): string {
     .replace(/<[^>]+>/g, "")
     .replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)")
     .replace(/https?:\/\/[^\s]+/g, "")
-    .replace(/&amp;/g, "&")
     .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
     .trim()
     .toLowerCase();
   const roomMatch = plain.match(/room\s+([\d\+]+)/);
