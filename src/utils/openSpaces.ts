@@ -56,8 +56,8 @@ function detectRoom(rawDesc: string): string {
 function extractHost(rawDesc: string): string {
   const plain = rawDesc
     .replace(/[<>]/g, "")
-    .replace(/&amp;/g, "&")
     .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
     .replace(/\\n/g, "\n");
   const m = plain.match(/booked\s*by[\s:]*(.+?)(?:\r?\n|\n)/i);
   if (m) return m[1].trim();
