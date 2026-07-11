@@ -1,0 +1,66 @@
+---
+import { fetchOpenSpacesEvents, type OpenSpaceEvent } from "@utils/openSpaces";
+import Layout from "@layouts/Layout.astro";
+import Prose from "@ui/Prose.astro";
+import Markdown from "@ui/Markdown.astro";
+import Button from "@ui/Button.astro";
+import Section2 from "@ui/Section2.astro";
+
+export async function getStaticPaths() {
+  const events = await fetchOpenSpacesEvents();
+  return events.map((ev) => ({
+    params: { slug: ev.slug },
+    props: { event: ev },
+  }));
+}
+
+const { event } = Astro.props as { event: OpenSpaceEvent };
+
+const dateLabel = new Date(event.date + "T12:00:00Z").toLocaleDateString(
+  "en-GB",
+  { timeZone: "Europe/Warsaw", weekday: "long", day: "numeric", month: "long", year: "numeric" }
+);
+
+const backUrl = event.date
+  ? `/open-spaces#osp-day-${event.date}`
+  : "/open-spaces";
+---
+
+<Layout
+  title={`${event.title} — Open Space | EuroPython 2026`}
+  description={`Open Space: ${event.title} by ${event.host || "a participant"}`}
+>
+  <Section2 id="open-space-page">
+    <Prose full>
+      <h1 class="font-heading text-white font-bold mb-4">{event.title}</h1>
+    </Prose>
+
+    <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2 mb-6">
+      {event.host && (
+        <>
+          <dt class="font-bold text-text">Host:</dt>
+          <dd class="text-text">{event.host}</dd>
+        </>
+      )}
+      <dt class="font-bold text-text">Room:</dt>
+      <dd class="text-text">{event.room}</dd>
+      <dt class="font-bold text-text">Date:</dt>
+      <dd class="text-text">{dateLabel}</dd>
+      <dt class="font-bold text-text">Time:</dt>
+      <dd class="text-text">
+        {event.startTime} &ndash; {event.endTime}
+      </dd>
+    </dl>
+
+    <div class="mb-8">
+      <Button url={backUrl}>← Back to Open Spaces</Button>
+    </div>
+
+    {event.fullDescription && (
+      <Prose full>
+        <h2>Description</h2>
+        <Markdown content={event.fullDescription} />
+      </Prose>
+    )}
+  </Section2>
+</Layout>
