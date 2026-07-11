@@ -319,6 +319,255 @@ select {
     visibility: initial;
   }
 }
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+
+  /* Flip the dark palette to the light-theme values. The schedule
+     reads colours from these custom properties, so overriding them
+     re-themes every card, break and badge at once. */
+  :root {
+    --ep-bg: #fff !important;
+    --ep-white: oklch(0.23 0.04 277) !important;
+    --ep-text-primary: oklch(0 0 0 / 0.87) !important;
+    --ep-text-secondary: oklch(0 0 0 / 0.7) !important;
+    --ep-text-muted: oklch(0 0 0 / 0.6) !important;
+    --ep-border: oklch(0 0 0 / 0.2) !important;
+    --ep-border-strong: oklch(0 0 0 / 0.3) !important;
+    --ep-surface-subtle: oklch(0 0 0 / 0.03) !important;
+    --ep-surface-medium: oklch(0 0 0 / 0.06) !important;
+    --color-surface-subtle: oklch(0 0 0 / 0.03) !important;
+    --color-surface-medium: oklch(0 0 0 / 0.06) !important;
+    --color-text-muted: oklch(0 0 0 / 0.6) !important;
+    --color-accent-themed: oklch(0.522 0.218 264.4) !important;
+    --color-on-accent: #fff !important;
+    --ep-accent: oklch(0.522 0.218 264.4) !important;
+    --ep-sched-room-bg: oklch(0.945 0.004 264) !important;
+    --ep-sched-chrome-bg: oklch(0.945 0.004 264) !important;
+    --ep-sched-chrome-text: oklch(0 0 0 / 0.6) !important;
+    --ep-day-end-bg: oklch(0.945 0.004 264) !important;
+    --ep-day-end-text: oklch(0 0 0 / 0.55) !important;
+    --ep-break-bg: oklch(0.93 0.07 88) !important;
+    --ep-break-border: oklch(0.78 0.13 84) !important;
+    --ep-level-beginner-bg: oklch(0.92 0.06 145) !important;
+    --ep-level-beginner-text: oklch(0.42 0.12 145) !important;
+    --ep-level-intermediate-bg: oklch(0.92 0.004 264) !important;
+    --ep-level-intermediate-text: oklch(0.4 0.005 264) !important;
+    --ep-level-advanced-bg: oklch(0.91 0.05 25) !important;
+    --ep-level-advanced-text: oklch(0.45 0.15 25) !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* The dark theme sets color-scheme: dark, which paints the sheet
+     canvas black (visible as a frame in N-pages-per-sheet printing) */
+  :root {
+    color-scheme: light !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  main,
+  section,
+  .ep-sched-section,
+  .ep-sched-inner {
+    background: transparent !important;
+  }
+
+  /* Hide page chrome and screen-only interactive bits */
+  #ep-banner,
+  body > header,
+  footer,
+  nav[aria-label="Breadcrumb"],
+  .sched-notice-grid,
+  .ep-sched-tabs,
+  .ep-note,
+  .maximize-btn,
+  .ep-session astro-island,
+  .code-heart {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  main section .container {
+    max-width: none !important;
+  }
+
+  /* Strip trailing whitespace (day margins, spacers, section
+     padding): if the last grid ends near a page bottom, that tail
+     spills onto an extra blank page. */
+  .day {
+    margin-block: 0 !important;
+  }
+
+  .day .h-12 {
+    display: none !important;
+  }
+
+  .sec-inner {
+    padding-block: 0 !important;
+  }
+
+  .ep-sched-section,
+  .ep-sched-inner {
+    padding: 0 !important;
+  }
+
+  h1.ep-headline {
+    display: none !important;
+  }
+
+  /* Show every day, one per page (the tabs normally hide inactive
+     days). The days wrapper must be a block: Chrome ignores forced
+     page breaks on grid items. */
+  .layout-wrapper2 {
+    display: block !important;
+  }
+
+  .ep-sched-day {
+    display: block !important;
+  }
+
+  /* `~` not `+`: Astro emits a <script> element between the days */
+  .ep-sched-day ~ .ep-sched-day {
+    break-before: page;
+  }
+
+  .ep-sched-day-title,
+  .ep-sched-day-title a {
+    font-size: 13pt !important;
+    color: #111 !important;
+    text-decoration: none !important;
+  }
+
+  /* No "⤵" in-page-anchor markers (from global.css) on paper */
+  main a[href^="#"]::after {
+    content: none !important;
+  }
+
+  /* Recreate the desktop time × room grid: the grid CSS in
+     day.astro is scoped to `@media screen`, so print would
+     otherwise fall back to a broken stacked list. Column/row
+     templates and the per-cell placement vars come from inline
+     styles on the elements. */
+  .schedule-container.header {
+    display: block !important;
+    position: static !important;
+  }
+
+  .schedule {
+    display: grid !important;
+    gap: 3px !important;
+    padding: 0 !important;
+    --break: 12px;
+    --room-change: 24px;
+  }
+
+  .slot {
+    display: contents !important;
+  }
+
+  .session,
+  .ep-session,
+  .time,
+  .break,
+  .room-change {
+    grid-row: var(--start) / var(--end);
+    grid-column: var(--col-start) / var(--col-end);
+  }
+
+  .ep-session,
+  .break {
+    break-inside: avoid;
+  }
+
+  /* Room-name header row */
+  header.schedule-container.header > div > div {
+    padding: 3pt 2pt !important;
+    font-weight: 700 !important;
+    font-size: 9pt !important;
+    color: #111 !important;
+    background: oklch(0.945 0.004 264) !important;
+    border-radius: 3px !important;
+    text-align: center !important;
+  }
+
+  header.schedule-container.header > div > div:first-child {
+    background: transparent !important;
+  }
+
+  /* Time column */
+  .time {
+    display: block !important;
+    grid-column: 1 / 2;
+    text-align: right !important;
+    padding: 2pt 4pt !important;
+  }
+
+  .time h2 {
+    font-size: 8pt !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+  }
+
+  /* Compact type for paper */
+  .schedule * {
+    font-size: 7pt !important;
+    line-height: 1.25 !important;
+  }
+
+  .ep-session {
+    padding: 2pt 3pt !important;
+    gap: 1pt !important;
+    border-radius: 3px !important;
+  }
+
+  .ep-session-title {
+    font-size: 7.5pt !important;
+  }
+
+  .ep-session-meta,
+  .ep-session-badges * {
+    font-size: 6pt !important;
+  }
+
+  [class^="ep-session-level--"] {
+    padding: 0 2pt !important;
+  }
+
+  .break,
+  .ep-break {
+    font-size: 7.5pt !important;
+    padding: 1pt 4pt !important;
+  }
+
+  /* Lunch slot: show the "13:00 Lunch" bar, skip the poster cards
+     (they have their own page at /schedule/day/…) */
+  .lunch-break-header {
+    display: block !important;
+    font-size: 8pt !important;
+    padding: 2pt !important;
+    border-bottom: none !important;
+    background: transparent !important;
+  }
+
+  .lunch-break-content {
+    display: none !important;
+  }
+}
 </style>
 
 <script is:inline>
