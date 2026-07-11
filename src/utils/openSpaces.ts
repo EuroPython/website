@@ -30,6 +30,7 @@ export interface OpenSpaceEvent {
 function stripHtml(s: string): string {
   return s
     .replace(/<[^>]+>/g, "")
+    .replace(/[<>]/g, "")
     .replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)")
     .replace(/https?:\/\/[^\s]+/g, "")
     .trim()
