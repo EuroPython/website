@@ -27,7 +27,6 @@ export interface OpenSpaceEvent {
 
 function stripHtml(s: string): string {
   return s
-    .replace(/<[^>]+>/g, "")
     .replace(/[<>]/g, "")
     .replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)")
     .replace(/https?:\/\/[^\s]+/g, "")
@@ -37,7 +36,7 @@ function stripHtml(s: string): string {
 
 function detectRoom(rawDesc: string): string {
   const plain = rawDesc
-    .replace(/<[^>]+>/g, "")
+    .replace(/[<>]/g, "")
     .replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)")
     .replace(/https?:\/\/[^\s]+/g, "")
     .replace(/&#39;/g, "'")
