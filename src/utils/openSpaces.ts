@@ -58,7 +58,7 @@ function detectRoom(rawDesc: string): string {
 
 function extractHost(rawDesc: string): string {
   const plain = rawDesc
-    .replace(/<[^>]+>/g, "")
+    .replace(/[<>]/g, "")
     .replace(/&amp;/g, "&")
     .replace(/&#39;/g, "'")
     .replace(/\\n/g, "\n");
