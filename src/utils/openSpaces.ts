@@ -175,7 +175,7 @@ function parseICal(ics: string): OpenSpaceEvent[] {
     );
     if (descMatch) {
       fullDescription = descMatch[1]
-        .replace(/<[^>]+>/g, "")
+        .replace(/[<>]/g, "")
         .replace(/&#39;/g, "'")
         .replace(/&amp;/g, "&")
         .replace(/\\n/g, "\n")
