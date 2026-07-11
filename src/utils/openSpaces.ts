@@ -1,8 +1,6 @@
 // Shared utilities for Open Spaces iCal parsing
 // Standalone .ts file to avoid Astro compilation scope issues
 
-import { marked } from "marked";
-
 // Room mapping: iCal codes → display names
 const ROOM_MAP: Record<string, string> = {
   "221+222": "S4(1,2,3)",
