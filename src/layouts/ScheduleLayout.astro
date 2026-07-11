@@ -554,8 +554,8 @@ select {
     padding: 1pt 4pt !important;
   }
 
-  /* Lunch slot: show the "13:00 Lunch" bar, skip the poster cards
-     (they have their own page at /schedule/day/…) */
+  /* Lunch slot: the "13:00 Lunch" bar plus compact cards for the
+     posters and side events (PyLadies lunch etc.) running alongside */
   .lunch-break-header {
     display: block !important;
     font-size: 8pt !important;
@@ -564,8 +564,51 @@ select {
     background: transparent !important;
   }
 
+  /* `flex`, not the inline-style grid (which reserves an 80px
+     time-column gutter): pack the "Posters" label, poster cards and
+     side-event cards onto one compact row so a day still fits its
+     pages */
   .lunch-break-content {
-    display: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2pt 6pt !important;
+    background: transparent !important;
+    padding: 0 2pt 2pt !important;
+  }
+
+  .lunch-break-content h2 {
+    font-size: 7pt !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    padding: 1pt 2pt !important;
+  }
+
+  .posters-inside,
+  .lunch-side-events {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 2pt !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .poster-cards {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    gap: 2pt !important;
+  }
+
+  .poster-cards > div {
+    display: flex;
+    max-width: 200px;
+  }
+
+  .lunch-side-events .ep-session {
+    max-width: 200px;
   }
 }
 </style>
