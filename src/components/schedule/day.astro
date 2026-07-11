@@ -569,24 +569,23 @@ const endStart = numberToTime(lastEndTime);
                         </div>
                       )}
                       {lunchSideEvents.length > 0 && (
-                        <div
-                          class="lunch-side-events"
-                          style={{
-                            gridColumn: "1 / -1",
-                            justifySelf: "center",
-                          }}
-                        >
-                          {lunchSideEvents.map((session) => {
-                            const style = {};
-                            return (
-                              <Session
-                                session={session}
-                                style={style}
-                                sessionType={session.sessionType}
-                              />
-                            );
-                          })}
-                        </div>
+                        <>
+                          <hr class="sched-lunch-hr" />
+                          <div class="sched-lunch-events">
+                            <div class="sched-lunch-events-label">
+                              Also During Lunch
+                            </div>
+                            <ul class="sched-posters-list">
+                              {lunchSideEvents.map((session) => (
+                                <li>
+                                  <a href={`/session/${session.slug}`}>
+                                    {session.title}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </>
                       )}
                     </div>
                   </div>
@@ -887,18 +886,56 @@ const endStart = numberToTime(lastEndTime);
       border-bottom: 1px solid var(--color-surface-medium);
     }
 
-    .lunch-break .lunch-side-events {
+    .sched-lunch-hr {
+      grid-column: 1 / -1;
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 0.5rem 0;
+    }
+
+    .sched-lunch-events {
+      grid-column: 1 / -1;
+      justify-self: center;
       padding: 0.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
       text-align: left;
     }
 
-    .lunch-break .lunch-side-events :global(*) {
-      flex: 1;
-      min-width: 200px;
-      max-width: 320px;
+    .sched-lunch-events-label {
+      font-family: "Inter Tight", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.35rem;
+      text-align: center;
+    }
+
+    .sched-posters-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .sched-posters-list a {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      font-size: 1.02rem;
+      line-height: 1.4;
+      color: var(--color-accent-themed);
+      text-decoration: none;
+      transition:
+        border-color 0.2s,
+        background 0.2s;
+    }
+
+    .sched-posters-list a:hover {
+      border-color: var(--color-accent);
+      background: var(--color-surface-medium);
     }
 
     .lunch-break :global(.session.poster),
