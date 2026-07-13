@@ -15,9 +15,6 @@ export interface Props {
 }
 
 const {
-  calendarId = "c_b87075b29cf4a9dd4da3fe724fcba92a4b406aa3f91cb7e7ce50fede43215b17@group.calendar.google.com",
-  timeMin = "20260713",
-  timeMax = "20260719",
   rooms = ["S4(1,2,3)", "S4(4)", "S4(5)"],
 } = Astro.props;
 
@@ -34,6 +31,7 @@ function fmtDateLabel(isoDate: string): string {
     return new Date(isoDate + "T12:00:00Z").toLocaleDateString("en-GB", { timeZone: TZ, weekday: "long", day: "numeric", month: "long" });
   } catch { return isoDate; }
 }
+
 
 // ── Main data fetch ──
 
@@ -57,7 +55,7 @@ const displayRooms = rooms;
 function buildTimeSlots(dayEvents: OpenSpaceEvent[]) {
   const timeMap = new Map<string, Record<string, OpenSpaceEvent>>();
   for (const ev of dayEvents) {
-    const label = ev.startTime;
+    const label = fmtTime(ev.startISO);
     if (!timeMap.has(label)) timeMap.set(label, {});
     const slot = timeMap.get(label);
     if (slot) slot[ev.room] = ev;
@@ -87,7 +85,7 @@ const hasEvents = sortedDates.length > 0;
             {timeSlots.length > 0 ? (
               <div class="osp-grid" style={`--osp-cols: ${displayRooms.length}`}>
                 <div class="osp-grid-header">
-                  <div class="osp-time-col osp-header-cell">Time</div>
+                  <div class="osp-time-col osp-header-cell">Time (CEST)</div>
                   {displayRooms.map((room) => (
                     <div class="osp-room-col osp-header-cell">{room}</div>
                   ))}
