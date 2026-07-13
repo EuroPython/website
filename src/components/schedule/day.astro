@@ -543,47 +543,53 @@ const endStart = numberToTime(lastEndTime);
                         gridTemplateColumns: `80px repeat(${ROOMS.length}, minmax(90px, 1fr))`,
                       }}
                     >
-                      {posters.length > 0 && (
-                        <div
-                          class="posters-inside"
-                          style={{
-                            gridColumn: "1 / -1",
-                            justifySelf: "center",
-                          }}
-                        >
-                          <h2>Posters ({posters[0].rooms.join(", ")})</h2>
-                          <div class="poster-cards">
-                            {posters.map((session) => {
-                              const style = {};
-                              return (
-                                <div>
-                                  <Session
-                                    session={session}
-                                    style={style}
-                                    sessionType="poster"
-                                  />
-                                </div>
-                              );
-                            })}
+                      {lunchSideEvents.length > 0 && (
+                        <div class="sched-lunch-events">
+                          <div class="sched-lunch-events-label">
+                            Also During Lunch
                           </div>
+                          <ul class="sched-posters-list">
+                            {lunchSideEvents.map((session) => (
+                              <li>
+                                <a href={`/session/${session.slug}`}>
+                                  {session.title}
+                                </a>
+                                {session.title.toLowerCase() ===
+                                  "pyladies lunch" && (
+                                  <span class="pyladies-location">
+                                    — 2nd Floor Red Carpet, starting 13:20
+                                  </span>
+                                )}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       )}
-                      {lunchSideEvents.length > 0 && (
+                      {posters.length > 0 && (
                         <>
                           <hr class="sched-lunch-hr" />
-                          <div class="sched-lunch-events">
-                            <div class="sched-lunch-events-label">
-                              Also During Lunch
+                          <div
+                            class="posters-inside"
+                            style={{
+                              gridColumn: "1 / -1",
+                              justifySelf: "center",
+                            }}
+                          >
+                            <h2>Posters ({posters[0].rooms.join(", ")})</h2>
+                            <div class="poster-cards">
+                              {posters.map((session) => {
+                                const style = {};
+                                return (
+                                  <div>
+                                    <Session
+                                      session={session}
+                                      style={style}
+                                      sessionType="poster"
+                                    />
+                                  </div>
+                                );
+                              })}
                             </div>
-                            <ul class="sched-posters-list">
-                              {lunchSideEvents.map((session) => (
-                                <li>
-                                  <a href={`/session/${session.slug}`}>
-                                    {session.title}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
                           </div>
                         </>
                       )}
@@ -917,6 +923,12 @@ const endStart = numberToTime(lastEndTime);
       flex-wrap: wrap;
       gap: 0.35rem 0.75rem;
       margin-bottom: 2rem;
+    }
+
+    .pyladies-location {
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
     }
 
     .sched-posters-list a {
