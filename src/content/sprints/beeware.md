@@ -18,7 +18,7 @@ links: # Add as many links as relevant.
 Do you want to write an app for your phone or computer using nothing but Python?
 Have you got some Python code that you'd like to distribute to users as a
 standalone installer? Do you use or maintain a Python package that you'd like to
-suppport Android or iOS?
+build for Android or iOS?
 
 BeeWare is a collection of libraries and tools for building a cross-platform
 native graphical user interface using nothing but Python, and then packaging
