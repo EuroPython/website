@@ -16,10 +16,18 @@ export async function getStaticPaths() {
 
 const { event } = Astro.props as { event: OpenSpaceEvent };
 
+const tz = "Europe/Warsaw";
+
 const dateLabel = new Date(event.date + "T12:00:00Z").toLocaleDateString(
   "en-GB",
-  { timeZone: "Europe/Warsaw", weekday: "long", day: "numeric", month: "long", year: "numeric" }
+  { timeZone: tz, weekday: "long", day: "numeric", month: "long", year: "numeric" }
 );
+
+const timeLabel = (() => {
+  const start = new Date(event.startISO).toLocaleTimeString("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit" });
+  const end = new Date(event.endISO).toLocaleTimeString("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit" });
+  return `${start} \u2013 ${end} CEST`;
+})();
 
 const backUrl = event.date
   ? `/open-spaces#osp-day-${event.date}`
@@ -47,9 +55,7 @@ const backUrl = event.date
       <dt class="font-bold text-text">Date:</dt>
       <dd class="text-text">{dateLabel}</dd>
       <dt class="font-bold text-text">Time:</dt>
-      <dd class="text-text">
-        {event.startTime} &ndash; {event.endTime}
-      </dd>
+      <dd class="text-text">{timeLabel}</dd>
     </dl>
 
     <div class="mb-8">
