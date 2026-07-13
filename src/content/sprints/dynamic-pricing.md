@@ -10,12 +10,12 @@ contactPerson:
 
 draft: true
 ---
+
 ## What is it?
 
-Think about how Uber works: when lots of people need rides but there aren't
-many drivers around, prices go up. When it's quiet, prices go down. This
-project builds that kind of "smart pricing" system from scratch.
-
+Think about how Uber works: when lots of people need rides but there aren't many
+drivers around, prices go up. When it's quiet, prices go down. This project
+builds that kind of "smart pricing" system from scratch.
 
 ## Stack
 
