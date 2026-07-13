@@ -731,6 +731,28 @@ const endStart = numberToTime(lastEndTime);
     .room-info {
       text-align: center;
     }
+
+    /* Override inline grid on mobile — fits viewport */
+    .lunch-break .lunch-break-content {
+      display: block !important;
+      grid-template-columns: none !important;
+      width: 100%;
+    }
+
+    .lunch-break .posters-inside {
+      grid-column: auto !important;
+      justify-self: auto !important;
+      width: 100%;
+    }
+
+    .lunch-break .poster-cards {
+      flex-direction: column;
+    }
+
+    .lunch-break .poster-cards :global(*) {
+      flex: none;
+      max-width: 100%;
+    }
   }
 
   @media screen and (min-width: 800px) {
