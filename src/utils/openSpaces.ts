@@ -28,6 +28,7 @@ export interface OpenSpaceEvent {
 function stripHtml(s: string): string {
   return s
     .replace(/<[^>]*>/g, "")
+    .replace(/</g, "")
     .replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)")
     .replace(/https?:\/\/[^\s]+/g, "")
     .trim()
@@ -37,6 +38,7 @@ function stripHtml(s: string): string {
 function detectRoom(rawDesc: string): string {
   const plain = rawDesc
     .replace(/<[^>]*>/g, "")
+    .replace(/</g, "")
     .replace(/https?:\/\/ep[^.]*\.europython\.eu(\/[^\s<!]+)/g, "[$1]($1)")
     .replace(/https?:\/\/[^\s]+/g, "")
     .replace(/&#39;/g, "'")
@@ -56,6 +58,7 @@ function detectRoom(rawDesc: string): string {
 function extractHost(rawDesc: string): string {
   const plain = rawDesc
     .replace(/<[^>]*>/g, "")
+    .replace(/</g, "")
     .replace(/&#39;/g, "'")
     .replace(/&amp;/g, "&")
     .replace(/\\n/g, "\n");
@@ -176,6 +179,7 @@ function parseICal(ics: string): OpenSpaceEvent[] {
     if (descMatch) {
       fullDescription = descMatch[1]
         .replace(/<[^>]*>/g, "")
+        .replace(/</g, "")
         .replace(/&#39;/g, "'")
         .replace(/&amp;/g, "&")
         .replace(/\\n/g, "\n")
