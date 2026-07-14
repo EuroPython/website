@@ -10,29 +10,51 @@ export interface Props {
   highlight?: boolean;
 }
 
-const { title, slug, speakers, duration, level, track, searchText, highlight = false } = Astro.props;
+const {
+  title,
+  slug,
+  speakers,
+  duration,
+  level,
+  track,
+  searchText,
+  highlight = false,
+} = Astro.props;
 ---
+
 <div
-  class:list={["session-card", level && `level-${level}`, highlight && "session-card--highlight"]}
-  data-search={searchText ? searchText.toLowerCase() : `${title.toLowerCase()} ${(track ?? "").toLowerCase()}`}
+  class:list={[
+    "session-card",
+    level && `level-${level}`,
+    highlight && "session-card--highlight",
+  ]}
+  data-search={searchText
+    ? searchText.toLowerCase()
+    : `${title.toLowerCase()} ${(track ?? "").toLowerCase()}`}
 >
   {highlight && <span class="card-current-label">Current session</span>}
 
-  {highlight ? (
-    <span class="card-title">{title}</span>
-  ) : (
-    <a href={`/session/${slug}`} class="card-title">{title}</a>
-  )}
+  {
+    highlight ? (
+      <span class="card-title">{title}</span>
+    ) : (
+      <a href={`/session/${slug}`} class="card-title">
+        {title}
+      </a>
+    )
+  }
 
   {speakers && <p class="card-speakers" set:html={speakers} />}
 
   <div class="card-meta">
     <span class="card-duration">{duration} min</span>
-    {level && (
-      <span class:list={["card-level", `card-level--${level}`]}>
-        {level.charAt(0).toUpperCase() + level.slice(1)}
-      </span>
-    )}
+    {
+      level && (
+        <span class:list={["card-level", `card-level--${level}`]}>
+          {level.charAt(0).toUpperCase() + level.slice(1)}
+        </span>
+      )
+    }
   </div>
 
   {track && <p class="card-track">{track}</p>}
@@ -46,7 +68,9 @@ const { title, slug, speakers, duration, level, track, searchText, highlight = f
     border: 1px solid var(--color-border);
     border-radius: 6px;
     padding: 1.25rem;
-    transition: border-color 0.1s ease-in-out, background 0.1s ease-in-out;
+    transition:
+      border-color 0.1s ease-in-out,
+      background 0.1s ease-in-out;
   }
 
   .session-card:hover {

@@ -114,7 +114,7 @@ Everything is in oklch with hex/rgba in comments for reference.
 </div>
 
 <!-- ❌ Wrong: ad-hoc values -->
-<div style="background: #123; color: rgb(200,200,200);">
+<div style="background: #123; color: rgb(200,200,200);"></div>
 ```
 
 ### Key surface & text tokens
@@ -220,6 +220,7 @@ import Section from "@ui/Section.astro";
 import CardContent from "@components/CardContent.astro";
 import Button from "@ui/Button.astro";
 ---
+
 <Section>
   <CardContent title="Programme" />
   <Button variant="primary">View Schedule</Button>
