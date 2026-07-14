@@ -1,7 +1,7 @@
 ---
 title: "Pandas Extending & Plotting"
 numberOfPeople: "5-10" # How many people you expect to be able to accommodate.
-pythonLevel: "Intermediate & Advanced" # Any, Beginner, Intermediate, or Advanced.
+pythonLevel: "Intermediate" # Any, Beginner, Intermediate, or Advanced.
 contactPerson: # The main person to reach out to regarding the sprint.
   name: "Julian Harbeck"
   email: harbeck@tu-berlin.de
