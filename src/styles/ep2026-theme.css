@@ -121,6 +121,12 @@ body.ep2026-theme {
   padding: 2rem 1.5rem;
 }
 
+@media (max-width: 799px) {
+  .ep-sched-inner {
+    padding: 0;
+  }
+}
+
 /* Day title */
 .ep-sched-day-title {
   font-family: "Inter Tight", system-ui, sans-serif;
