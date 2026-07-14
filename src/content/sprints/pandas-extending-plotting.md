@@ -25,6 +25,6 @@ This includes arithmetic operations, but also unit conversions (`ft` -> `m`) or 
 `skyfield-pandas` implements an EA wrapper for the Skyfield library for orbit propagation of satellites and fast vectorized operations on them (exampels see [doc/skyfield_position.ipynb](https://github.com/Julian-Harbeck/pandas-skyfield-extension/blob/main/doc/skyfield_position.ipynb)).
 
 For this sprint I am open to work on one or more of the following topics depending where the most interested is in:
-- Conitinue working on one of the two existing extensions, giving an introduction how they work and implement smaller new features including tests.
+- Conitinue working on one of the two existing extensions, giving an introduction how they work and implement smaller new features (e.g. JSON serialization, accumulative operations) including tests.
 - Start the development of an entirely new EA. Which array-like object did you always wanted to be compatible with pandas including vectorized operations? Let's develop a first working prototype of an EA supporting the basic functionallity.
 - Working on pandas directly, how to write a good first issue, how to implement and test a new feature locally and how to create a good PR. I am not an export on the whole pandas package yet as I have only joined the team recently, but I have worked especially on the ExtensionArray and plotting API.
