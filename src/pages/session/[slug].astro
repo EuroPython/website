@@ -17,7 +17,7 @@ import ScheduleRow from "@components/ScheduleRow.astro";
 export async function getStaticPaths() {
   const sessions = await getCollection("sessions");
   return sessions.map((entry) => ({
-    params: { slug: entry.id},
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 const sessions = await getCollection("sessions");
 const allSpeakers = await getCollection("speakers");
 const speakerNames = Object.fromEntries(
-  allSpeakers.map((s: any) => [s.id, s.data.name])
+  allSpeakers.map((s: any) => [s.id, s.data.name]),
 );
 
 const { entry } = Astro.props;
@@ -73,8 +73,18 @@ const nextSessionsOrdered = sameRoomNextSession
     ]
   : nextSessionsInAllRooms;
 const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
-  ? new Date(nextSessionsOrdered[0].data.start).toLocaleDateString("en-GB", { timeZone: "Europe/Warsaw", weekday: "short", day: "numeric", month: "short" }) + " · " +
-    new Date(nextSessionsOrdered[0].data.start).toLocaleTimeString("en-GB", { timeZone: "Europe/Warsaw", hour: "2-digit", minute: "2-digit" })
+  ? new Date(nextSessionsOrdered[0].data.start).toLocaleDateString("en-GB", {
+      timeZone: "Europe/Warsaw",
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+    }) +
+    " · " +
+    new Date(nextSessionsOrdered[0].data.start).toLocaleTimeString("en-GB", {
+      timeZone: "Europe/Warsaw",
+      hour: "2-digit",
+      minute: "2-digit",
+    })
   : "";
 ---
 
@@ -86,11 +96,11 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
       >
         {entry.data.title}
         <span class="pl-1">
-        <CodeHeart
-          client:load
-          codeId={entry.data.code}
-          title={entry.data.title}
-        />
+          <CodeHeart
+            client:load
+            codeId={entry.data.code}
+            title={entry.data.title}
+          />
         </span>
       </h1>
     </Prose>
@@ -124,7 +134,7 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
               {formatInTimeZone(
                 entry.data.start,
                 "Europe/Warsaw",
-                "HH:mm 'on' EEEE, dd MMMM yyyy"
+                "HH:mm 'on' EEEE, dd MMMM yyyy",
               )}
             </dd>
           </>
@@ -138,7 +148,7 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
               {formatInTimeZone(
                 entry.data.end,
                 "Europe/Warsaw",
-                "HH:mm 'on' EEEE, dd MMMM yyyy"
+                "HH:mm 'on' EEEE, dd MMMM yyyy",
               )}
             </dd>
           </>
@@ -148,18 +158,24 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
       <dd>{entry.data.duration} minutes</dd>
     </dl>
     <div class="sched-actions">
-      <Button class="sched-btn       " url=`/schedule/#session-${entry.id}`>View in schedule</Button>
+      <Button class="sched-btn" url=`/schedule/#session-${entry.id}`
+        >View in schedule</Button
+      >
       {
-         entry.data.youtube_url && (
-          <a href={entry.data.youtube_url} target="_blank" rel="noopener" class="sched-yt-link button-link font-bold px-8 py-3 rounded-sm inline-flex items-center justify-center leading-6 transition-colors duration-200 not-prose border
+        entry.data.youtube_url && (
+          <a
+            href={entry.data.youtube_url}
+            target="_blank"
+            rel="noopener"
+            class="sched-yt-link button-link font-bold px-8 py-3 rounded-sm inline-flex items-center justify-center leading-6 transition-colors duration-200 not-prose border
       bg-button border-0
-">
+"
+          >
             Watch on YouTube ↗
           </a>
-         )
-       }
+        )
+      }
     </div>
-
 
     <Prose full>
       <h2>Abstract</h2>
@@ -257,7 +273,8 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
               {(parallelSessions?.length ?? 0) > 0 && (
                 <>
                   <h3 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
-                  Sessions at the same time</h3>
+                    Sessions at the same time
+                  </h3>
                   <ScheduleRow session={entry} speakerNames={speakerNames} />
                 </>
               )}
@@ -266,8 +283,15 @@ const nextTimeLabel = nextSessionsOrdered[0]?.data?.start
                 <>
                   <Separator />
                   <h3 class="relative font-heading text-white font-bold mb-[0.6em] [&>a]:border-0 [&>a]:text-inherit>a:text-inherit text-white text-5xl">
-                    After this session</h3>
-                  <ScheduleRow session={entry} parallelCodes={entry.data.sessions_after ?? undefined} timeLabel={nextTimeLabel} speakerNames={speakerNames} showViewLink={false} />
+                    After this session
+                  </h3>
+                  <ScheduleRow
+                    session={entry}
+                    parallelCodes={entry.data.sessions_after ?? undefined}
+                    timeLabel={nextTimeLabel}
+                    speakerNames={speakerNames}
+                    showViewLink={false}
+                  />
                 </>
               )}
             </div>

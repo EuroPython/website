@@ -17,11 +17,13 @@ for (const s of allSpeakers) {
 
 function speakerHtml(speakers: any): string {
   if (!speakers || speakers.length === 0) return "";
-  return speakers.map((s: any) => {
-    const id = typeof s === "string" ? s : s.id;
-    const name = speakerNames[id] || id;
-    return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
-  }).join(", ");
+  return speakers
+    .map((s: any) => {
+      const id = typeof s === "string" ? s : s.id;
+      const name = speakerNames[id] || id;
+      return `<a href="/speaker/${id}" class="speaker-link">${name}</a>`;
+    })
+    .join(", ");
 }
 const talks = allSessions
   .filter((s) => {
@@ -58,13 +60,21 @@ for (const talk of talks) {
 }
 
 const sortedTracks = trackOrder.filter((t) => groups[t]);
-const otherTracks = Object.keys(groups).filter((t) => !trackOrder.includes(t)).sort();
+const otherTracks = Object.keys(groups)
+  .filter((t) => !trackOrder.includes(t))
+  .sort();
 const allDisplayTracks = [...sortedTracks, ...otherTracks];
 ---
 
-<Layout title="Talks | EuroPython 2026" description="The heart of EuroPython — three days of talks across five parallel tracks, covering every corner of the Python ecosystem.">
+<Layout
+  title="Talks | EuroPython 2026"
+  description="The heart of EuroPython — three days of talks across five parallel tracks, covering every corner of the Python ecosystem."
+>
   <Fragment slot="head">
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block"
+      rel="stylesheet"
+    />
   </Fragment>
 
   <Section2 variant="dark" id="talks">
@@ -78,46 +88,77 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
       />
 
       <!-- Talk count -->
-      <p class="talks-count"><span id="sess-count">{talks.length}</span> talks at EuroPython 2026</p>
+      <p class="talks-count">
+        <span id="sess-count">{talks.length}</span> talks at EuroPython 2026
+      </p>
 
       <!-- Filter bar -->
       <div class="sess-filters">
-        <input type="text" id="sess-search" class="sess-search" placeholder="Filter by title or speaker..." autocomplete="off" aria-label="Filter talks by title or speaker">
-        <select id="sess-track-filter" class="sess-track-select" aria-label="Filter by topic">
+        <input
+          type="text"
+          id="sess-search"
+          class="sess-search"
+          placeholder="Filter by title or speaker..."
+          autocomplete="off"
+          aria-label="Filter talks by title or speaker"
+        />
+        <select
+          id="sess-track-filter"
+          class="sess-track-select"
+          aria-label="Filter by topic"
+        >
           <option value="">All topics</option>
-          {allDisplayTracks.map((track) => (
-            <option value={track}>{track}</option>
-          ))}
+          {
+            allDisplayTracks.map((track) => (
+              <option value={track}>{track}</option>
+            ))
+          }
         </select>
       </div>
 
       <!-- Talks grouped by track -->
       <div class="talks-section" id="sess-grid">
-        {allDisplayTracks.map((track) => (
-          <div class="talks-dot-bg">
-          <div class="talk-topic-group">
-            <h3 class="talk-topic-heading" id={`topic-${track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}>
-              <a href={`#topic-${track.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}># {track}</a>
-            </h3>
-            <div class="talk-grid">
-              {groups[track].map((talk) => (
-                <SessionCard
-                  title={talk.data.title}
-                  slug={talk.id}
-                  speakers={speakerHtml(talk.data.speakers)}
-                  duration={talk.data.duration}
-                  level={talk.data.level}
-                  searchText={`${talk.data.title} ${talk.data.track || ""}`}
-                />
-              ))}
+        {
+          allDisplayTracks.map((track) => (
+            <div class="talks-dot-bg">
+              <div class="talk-topic-group">
+                <h3
+                  class="talk-topic-heading"
+                  id={`topic-${track
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/^-|-$/g, "")}`}
+                >
+                  <a
+                    href={`#topic-${track
+                      .toLowerCase()
+                      .replace(/[^a-z0-9]+/g, "-")
+                      .replace(/^-|-$/g, "")}`}
+                  >
+                    # {track}
+                  </a>
+                </h3>
+                <div class="talk-grid">
+                  {groups[track].map((talk) => (
+                    <SessionCard
+                      title={talk.data.title}
+                      slug={talk.id}
+                      speakers={speakerHtml(talk.data.speakers)}
+                      duration={talk.data.duration}
+                      level={talk.data.level}
+                      searchText={`${talk.data.title} ${talk.data.track || ""}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
 
-      <p class="sess-no-results" id="sess-no-results" hidden>No talks match your search.</p>
-
+      <p class="sess-no-results" id="sess-no-results" hidden>
+        No talks match your search.
+      </p>
     </div>
   </Section2>
 </Layout>
@@ -218,69 +259,73 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
 </style>
 
 <script is:inline>
-(function() {
-  var input = document.getElementById('sess-search');
-  if (!input) return;
-  var grid = document.getElementById('sess-grid');
-  var cards = grid.querySelectorAll('.session-card');
-  var groups = grid.querySelectorAll('.talk-topic-group');
-  var countEl = document.getElementById('sess-count');
-  var noResults = document.getElementById('sess-no-results');
-  var trackSelect = document.getElementById('sess-track-filter');
-  var total = cards.length;
+  (function () {
+    const input = document.getElementById("sess-search");
+    if (!input) return;
+    const grid = document.getElementById("sess-grid");
+    const cards = grid.querySelectorAll(".session-card");
+    const groups = grid.querySelectorAll(".talk-topic-group");
+    const countEl = document.getElementById("sess-count");
+    const noResults = document.getElementById("sess-no-results");
+    const trackSelect = document.getElementById("sess-track-filter");
+    const total = cards.length;
 
-  function filterCards() {
-    var q = input.value.toLowerCase().trim();
-    var activeTopic = trackSelect ? trackSelect.value : '';
-    var visible = 0;
+    function filterCards() {
+      const q = input.value.toLowerCase().trim();
+      const activeTopic = trackSelect ? trackSelect.value : "";
+      let visible = 0;
 
-    cards.forEach(function(card) {
-      var matchText = !q || card.getAttribute('data-search').indexOf(q) !== -1;
-      var matchTopic = !activeTopic || card.getAttribute('data-track') === activeTopic;
-      var show = matchText && matchTopic;
-      card.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
+      cards.forEach(function (card) {
+        const matchText =
+          !q || card.getAttribute("data-search").indexOf(q) !== -1;
+        const matchTopic =
+          !activeTopic || card.getAttribute("data-track") === activeTopic;
+        const show = matchText && matchTopic;
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
 
-    groups.forEach(function(group) {
-      var wrapper = group.parentElement;
-      var hasVisible = group.querySelector('.session-card:not([style*="display: none"])');
-      group.style.display = hasVisible ? '' : 'none';
-      if (wrapper && wrapper.classList.contains('talks-dot-bg')) {
-        wrapper.style.display = hasVisible ? '' : 'none';
-      }
-    });
+      groups.forEach(function (group) {
+        const wrapper = group.parentElement;
+        const hasVisible = group.querySelector(
+          '.session-card:not([style*="display: none"])',
+        );
+        group.style.display = hasVisible ? "" : "none";
+        if (wrapper && wrapper.classList.contains("talks-dot-bg")) {
+          wrapper.style.display = hasVisible ? "" : "none";
+        }
+      });
 
-    countEl.textContent = (q || activeTopic) ? visible + ' / ' + total : total;
-    if (noResults) noResults.hidden = visible > 0;
-  }
+      countEl.textContent = q || activeTopic ? visible + " / " + total : total;
+      if (noResults) noResults.hidden = visible > 0;
+    }
 
-  input.addEventListener('input', filterCards);
-  if (trackSelect) trackSelect.addEventListener('change', filterCards);
+    input.addEventListener("input", filterCards);
+    if (trackSelect) trackSelect.addEventListener("change", filterCards);
 
-  // Auto-filter from URL hash or query param
-  var currentHash = window.location.hash;
-  if (currentHash && currentHash.startsWith('#topic-')) {
-    // Find the heading element to extract track name
-    var headingEl = document.getElementById(currentHash.substring(1));
-    if (headingEl && trackSelect) {
-      var trackName = headingEl.textContent.replace(/^#\s*/, '').trim();
-      var options = trackSelect.options;
-      for (var i = 0; i < options.length; i++) {
-        if (options[i].value === trackName) {
-          trackSelect.value = options[i].value;
-          filterCards();
-          break;
+    // Auto-filter from URL hash or query param
+    const currentHash = window.location.hash;
+    if (currentHash && currentHash.startsWith("#topic-")) {
+      // Find the heading element to extract track name
+      const headingEl = document.getElementById(currentHash.substring(1));
+      if (headingEl && trackSelect) {
+        const trackName = headingEl.textContent.replace(/^#\s*/, "").trim();
+        const options = trackSelect.options;
+        for (let i = 0; i < options.length; i++) {
+          if (options[i].value === trackName) {
+            trackSelect.value = options[i].value;
+            filterCards();
+            break;
+          }
         }
       }
     }
-  }
 
-  var urlParams = new URLSearchParams(window.location.search);
-  var trackParam = urlParams.get('track');
-  if (trackParam && trackSelect && !currentHash) {
-    trackSelect.value = trackParam;
-    filterCards();
-  }
-})();
+    const urlParams = new URLSearchParams(window.location.search);
+    const trackParam = urlParams.get("track");
+    if (trackParam && trackSelect && !currentHash) {
+      trackSelect.value = trackParam;
+      filterCards();
+    }
+  })();
 </script>

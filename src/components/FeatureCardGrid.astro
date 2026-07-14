@@ -12,26 +12,32 @@ interface Props {
 const { items, columns = 4 } = Astro.props;
 ---
 
-<div
-  class="feature-card-grid"
-  style={`--grid-columns: ${columns}`}
->
-  {items.map((item) =>
-    item.href ? (
-      <a
-        href={item.href}
-        class:list={["feature-card", item.highlight && "feature-card--highlight"]}
-      >
-        <strong class="feature-card-title">{item.title}</strong>
-        {item.description && <span class="feature-card-desc">{item.description}</span>}
-      </a>
-    ) : (
-      <div class="feature-card">
-        <strong class="feature-card-title">{item.title}</strong>
-        {item.description && <span class="feature-card-desc">{item.description}</span>}
-      </div>
+<div class="feature-card-grid" style={`--grid-columns: ${columns}`}>
+  {
+    items.map((item) =>
+      item.href ? (
+        <a
+          href={item.href}
+          class:list={[
+            "feature-card",
+            item.highlight && "feature-card--highlight",
+          ]}
+        >
+          <strong class="feature-card-title">{item.title}</strong>
+          {item.description && (
+            <span class="feature-card-desc">{item.description}</span>
+          )}
+        </a>
+      ) : (
+        <div class="feature-card">
+          <strong class="feature-card-title">{item.title}</strong>
+          {item.description && (
+            <span class="feature-card-desc">{item.description}</span>
+          )}
+        </div>
+      ),
     )
-  )}
+  }
 </div>
 
 <style is:global>
