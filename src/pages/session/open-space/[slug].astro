@@ -16,10 +16,32 @@ export async function getStaticPaths() {
 
 const { event } = Astro.props as { event: OpenSpaceEvent };
 
+const tz = "Europe/Warsaw";
+
 const dateLabel = new Date(event.date + "T12:00:00Z").toLocaleDateString(
   "en-GB",
-  { timeZone: "Europe/Warsaw", weekday: "long", day: "numeric", month: "long", year: "numeric" }
+  {
+    timeZone: tz,
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  },
 );
+
+const timeLabel = (() => {
+  const start = new Date(event.startISO).toLocaleTimeString("en-GB", {
+    timeZone: tz,
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  const end = new Date(event.endISO).toLocaleTimeString("en-GB", {
+    timeZone: tz,
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  return `${start} \u2013 ${end} CEST`;
+})();
 
 const backUrl = event.date
   ? `/open-spaces#osp-day-${event.date}`
@@ -36,31 +58,33 @@ const backUrl = event.date
     </Prose>
 
     <dl class="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-2 mb-6">
-      {event.host && (
-        <>
-          <dt class="font-bold text-text">Host:</dt>
-          <dd class="text-text">{event.host}</dd>
-        </>
-      )}
+      {
+        event.host && (
+          <>
+            <dt class="font-bold text-text">Host:</dt>
+            <dd class="text-text">{event.host}</dd>
+          </>
+        )
+      }
       <dt class="font-bold text-text">Room:</dt>
       <dd class="text-text">{event.room}</dd>
       <dt class="font-bold text-text">Date:</dt>
       <dd class="text-text">{dateLabel}</dd>
       <dt class="font-bold text-text">Time:</dt>
-      <dd class="text-text">
-        {event.startTime} &ndash; {event.endTime}
-      </dd>
+      <dd class="text-text">{timeLabel}</dd>
     </dl>
 
     <div class="mb-8">
       <Button url={backUrl}>← Back to Open Spaces</Button>
     </div>
 
-    {event.fullDescription && (
-      <Prose full>
-        <h2>Description</h2>
-        <Markdown content={event.fullDescription} />
-      </Prose>
-    )}
+    {
+      event.fullDescription && (
+        <Prose full>
+          <h2>Description</h2>
+          <Markdown content={event.fullDescription} />
+        </Prose>
+      )
+    }
   </Section2>
 </Layout>

@@ -51,55 +51,57 @@ if (maxWidth) {
 }
 ---
 
-{isImageLink && url ? (
-  <a
-    href={url}
-    target={isExternal ? "_blank" : undefined}
-    rel={isExternal ? "noopener noreferrer" : undefined}
-    class={cardClasses}
-    aria-label={alt || "Linked image"}
-  >
-    <img
-      src={imgSrc}
-      alt={alt}
-      class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
-      style={imgStyle}
-    />
-  </a>
-) : (
-  <div class={cardClasses}>
-    {url ? (
-      <a
-        href={url}
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noopener noreferrer" : undefined}
-        aria-label={alt || "Linked image"}
-      >
-        <img
-          src={imgSrc}
-          alt={alt}
-          class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
-          style={imgStyle}
-        />
-      </a>
-    ) : (
+{
+  isImageLink && url ? (
+    <a
+      href={url}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      class={cardClasses}
+      aria-label={alt || "Linked image"}
+    >
       <img
         src={imgSrc}
         alt={alt}
         class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
         style={imgStyle}
       />
-    )}
+    </a>
+  ) : (
+    <div class={cardClasses}>
+      {url ? (
+        <a
+          href={url}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          aria-label={alt || "Linked image"}
+        >
+          <img
+            src={imgSrc}
+            alt={alt}
+            class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
+            style={imgStyle}
+          />
+        </a>
+      ) : (
+        <img
+          src={imgSrc}
+          alt={alt}
+          class="max-w-full bg-white border-4 border-white rounded-lg shadow-lg"
+          style={imgStyle}
+        />
+      )}
 
-    {isButton && url && (
-      <a
-        href={url}
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noopener noreferrer" : undefined}
-        class="button-link font-bold text-base px-8 py-3 rounded-sm inline-flex items-center justify-center leading-6 transition-colors duration-200 not-prose border bg-button text-button-text hover:bg-button-hover border-0"
-      >
-        <slot />
-      </a>
-    )}
-  </div>
-)}
+      {isButton && url && (
+        <a
+          href={url}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          class="button-link font-bold text-base px-8 py-3 rounded-sm inline-flex items-center justify-center leading-6 transition-colors duration-200 not-prose border bg-button text-button-text hover:bg-button-hover border-0"
+        >
+          <slot />
+        </a>
+      )}
+    </div>
+  )
+}
