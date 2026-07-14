@@ -364,7 +364,7 @@ Speaker/session data is fetched from `programme.europython.eu` at build time via
 | File                        | What it does                                                                      |
 | --------------------------- | --------------------------------------------------------------------------------- |
 | `astro.config.mjs`          | Build config, Vite aliases, integrations, redirects, build modes                  |
-| `src/content.config.ts`     | All 11 collections: schemas, loaders, API ↔ local data merging                   |
+| `src/content.config.ts`     | All 11 collections: schemas, loaders, API ↔ local data merging                    |
 | `src/styles/tailwind.css`   | **Design system** — all colors, fonts, tokens (DO NOT add to this without asking) |
 | `src/utils/dataLoader.ts`   | Remote JSON fetcher with 3 retries + in-flight dedup                              |
 | `src/data/nav.ts`           | Single registry: all nav menus, footer columns, social links, legal links         |
