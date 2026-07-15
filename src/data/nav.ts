@@ -48,7 +48,7 @@ const L = {
   rustSummit: { label: "Rust Summit", url: "/rust-summit" },
   packagingSummit: { label: "Packaging Summit", url: "/packaging-summit" },
   communityOrganisersSummit: {
-    label: "Organisers Summit",
+    label: "Community Organisers Summit",
     url: "/community-organisers-summit",
   },
 
