@@ -146,6 +146,7 @@ const allDisplayTracks = [...sortedTracks, ...otherTracks];
                       speakers={speakerHtml(talk.data.speakers)}
                       duration={talk.data.duration}
                       level={talk.data.level}
+                      track={talk.data.track}
                       searchText={`${talk.data.title} ${talk.data.track || ""}`}
                     />
                   ))}
