@@ -5,7 +5,7 @@ export interface Props {
   speakers?: string;
   duration: string;
   level?: string;
-  track?: string;
+  track?: string | null;
   searchText?: string;
   highlight?: boolean;
 }
@@ -31,6 +31,7 @@ const {
   data-search={searchText
     ? searchText.toLowerCase()
     : `${title.toLowerCase()} ${(track ?? "").toLowerCase()}`}
+  data-track={track}
 >
   {highlight && <span class="card-current-label">Current session</span>}
 
