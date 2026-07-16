@@ -86,7 +86,10 @@ const activeMenus = NAV_MENUS.map((menu) => ({
                                 item.external ? "nofollow noopener" : undefined
                               }
                             >
-                              <span class="mn-link-label">{item.label}</span>
+                              <span
+                                class="mn-link-label"
+                                set:html={item.label}
+                              />
                               {item.external && (
                                 <span class="nav-ext">&#8599;</span>
                               )}
