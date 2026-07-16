@@ -119,6 +119,11 @@ const sessions = day.data.events
   })
   .sort((a, b) => {
     return a!.start.getTime() - b!.start.getTime();
+  })
+  .filter((session) => {
+    // PyLadies workshops displayed on the PyLadies page, not in the talk grid
+    if (session.title === "Leading Under Pressure") return false;
+    return true;
   }) as Array<ScheduleSession>;
 
 const sessionsByTime: { [key: string]: Array<(typeof sessions)[0]> } = {};
