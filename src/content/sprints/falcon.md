@@ -22,9 +22,9 @@ performance at scale.
 
 Falcon has zero hard dependencies outside of the standard library!
 
-This sprint is open to contributors of all experience levels —
-items to sprint on range from improving documentation & adding new recipes
-to implementing new features in the framework, including (but not limited to!):
+This sprint is open to contributors of all experience levels — items to sprint
+on range from improving documentation & adding new recipes to implementing new
+features in the framework, including (but not limited to!):
 
 - Implement native OpenTelemetry support
 - Better OpenAPI story
