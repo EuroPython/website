@@ -10,6 +10,6 @@ description:
   professional development for programmers and IT professionals."
 socials:
   facebook: "https://www.facebook.com/ProgramistaMagazyn"
-logo_padding: 20px 10px
+logo_padding: 35px 0px
 tier: Media Partners
 ---
