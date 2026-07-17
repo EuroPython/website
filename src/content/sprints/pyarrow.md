@@ -13,12 +13,12 @@ links: # Add as many links as relevant.
     url: "https://github.com/apache/arrow/issues"
 ---
 
-Apache Arrow is a universal columnar format and multi-language toolbox for
-fast data interchange and in-memory analytics.
+Apache Arrow is a universal columnar format and multi-language toolbox for fast
+data interchange and in-memory analytics.
 
-The project specifies a language-independent column-oriented memory format
-for flat and hierarchical data, organized for efficient analytic operations
-on modern hardware. 
+The project specifies a language-independent column-oriented memory format for
+flat and hierarchical data, organized for efficient analytic operations on
+modern hardware.
 
-Do you want to discuss something (Py)Arrow related?
-Let's discuss usage, issues, PRs, roadmap we'll be there on Saturday.
+Do you want to discuss something (Py)Arrow related? Let's discuss usage, issues,
+PRs, roadmap we'll be there on Saturday.
