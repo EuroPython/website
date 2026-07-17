@@ -3,9 +3,9 @@ title: "Python Packaging with Nix & NixOS"
 numberOfPeople: "8"
 pythonLevel: "Any"
 contactPerson:
-name: "Hugo Herter"
-email: "contact@hugoherter.com"
-github: "hoh"
+    name: "Hugo Herter"
+    email: "contact@hugoherter.com"
+    github: "hoh"
 links:
   - title: "Nix/NixOS website"
     url: "https://nixos.org/"
