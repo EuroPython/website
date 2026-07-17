@@ -3,9 +3,9 @@ title: "Realtime dynamic pricing AI system in Python"
 numberOfPeople: "3"
 pythonLevel: "Intermediate"
 contactPerson:
-    name: "Gabby Demirkiran"
-    email: "gulcindemirkirann@gmail.com"
-    github: "https://github.com/radioactivityy"
+  name: "Gabby Demirkiran"
+  email: "gulcindemirkirann@gmail.com"
+  github: "https://github.com/radioactivityy"
 ---
 
 ## What is it?
