@@ -14,6 +14,8 @@ links: # Add as many links as relevant.
     url: https://github.com/astral-sh/uv/blob/main/CONTRIBUTING.md
 ---
 
-Join us on Saturday for a development sprint on your favourite Python package and project manager, `uv`.
+Join us on Saturday for a development sprint on your favourite Python package
+and project manager, `uv`.
 
-Prior Rust experience is a plus, but if you don't have any we can help you get started contributing to the documentation, for example.
+Prior Rust experience is a plus, but if you don't have any we can help you get
+started contributing to the documentation, for example.
