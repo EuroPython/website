@@ -31,18 +31,18 @@ The benchmark ranges from thousands of small matrices to one 32768-by-32768
 matrix, leaving room for many different ideas. Tests and benchmarks run on
 hosted B200s, so you do not need a local GPU.
 
-Bryce will help participants install and register the Popcorn CLI, understand
-the problem, make a first correct submission, read benchmark and profiling
-results, and choose an optimization to try. The goal is for every newcomer to
-leave knowing the complete contest workflow; experienced GPU programmers are
-welcome to team up and chase the leaderboard.
+Bryce from NVIDIA will help participants install and register the Popcorn CLI,
+understand the problem, make a first correct submission, read benchmark and
+profiling results, and choose an optimization to try. The goal is for every
+newcomer to leave knowing the complete contest workflow; experienced GPU
+programmers are welcome to team up and chase the leaderboard.
 
-Agentic GPU programming will be a first-class track. Popcorn can scaffold skills
-for coding agents, allowing participants to explore an iterative
-edit-test-benchmark loop while learning how to give an agent useful direction,
-check its evidence, and protect numerical correctness. Working directly by hand,
-pairing with another person, or bringing your preferred coding agent are all
-equally welcome.
+Participants who want to use a coding agent can have Popcorn scaffold the
+agent's contest workflow. Bryce will show how to give an agent a concrete
+optimization goal, let it run the iterative edit-test-benchmark loop, inspect
+its performance evidence, and keep numerically incorrect changes off the
+leaderboard. Working directly by hand, pairing with another person, or bringing
+your preferred coding agent are all equally welcome.
 
 No previous GPU-kernel or agent experience is required. Bring a laptop and a
 GitHub or Discord account for authentication; basic Python familiarity will
