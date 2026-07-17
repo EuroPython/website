@@ -6,12 +6,9 @@ contactPerson: # The main person to reach out to regarding the sprint.
   name: "Leah Wasser"
   email: leah@pyopensci.org
   github: lwasser
-  twitter: NA
 links: # Add as many links as relevant.
   - title: "pyOpenSci Help Wanted Project Board"
-    url:
-      "[[Help Wanted
-      Issues](https://github.com/orgs/pyOpenSci/projects/3/views/2)](https://github.com/orgs/pyOpenSci/projects/3/views/2)"
+    url: https://github.com/orgs/pyOpenSci/projects/3/views/2"
 ---
 
 Hi Friends! pyOpenSci runs beginner friendly sprints that anyone can attend.
