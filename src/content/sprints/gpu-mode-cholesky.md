@@ -44,6 +44,9 @@ its performance evidence, and keep numerically incorrect changes off the
 leaderboard. Working directly by hand, pairing with another person, or bringing
 your preferred coding agent are all equally welcome.
 
+NVIDIA will provide participants with a free sandbox VM and inference keys for
+the purposes of the contest.
+
 No previous GPU-kernel or agent experience is required. Bring a laptop and a
 GitHub or Discord account for authentication; basic Python familiarity will
 help.
