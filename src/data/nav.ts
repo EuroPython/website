@@ -48,7 +48,7 @@ const L = {
   rustSummit: { label: "Rust Summit", url: "/rust-summit" },
   packagingSummit: { label: "Packaging Summit", url: "/packaging-summit" },
   communityOrganisersSummit: {
-    label: "Community Organisers Summit",
+    label: "Community Organisers<br>Summit",
     url: "/community-organisers-summit",
   },
 
@@ -237,7 +237,6 @@ export const NAV_MENUS: NavMenu[] = [
     url: "/jobs",
   },
 ];
-
 // ── Social links ────────────────────────────────────────────
 
 export const SOCIALS: Record<string, string> = {
