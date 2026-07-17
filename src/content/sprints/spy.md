@@ -13,4 +13,5 @@ links: # Add as many links as relevant.
     url: "https://spylang.github.io/spy/"
 ---
 
-SPy is a compiler for a statically typed variant of Python. Let's have fun with it.
+SPy is a compiler for a statically typed variant of Python. Let's have fun with
+it.
