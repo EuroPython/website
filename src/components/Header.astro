@@ -614,14 +614,18 @@ const activeMenus = NAV_MENUS.map((menu) => ({
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.getElementById("navbar");
-    if (!navbar) return;
+    const navbarElement = document.getElementById("navbar");
+    if (!navbarElement) return;
+    const navbar = navbarElement;
 
     // ── Mobile hamburger toggle ──
-    const toggle = navbar.querySelector(".nav-toggle");
-    const navLinks = navbar.querySelector(".nav-links");
+    const toggleElement =
+      navbar.querySelector<HTMLButtonElement>(".nav-toggle");
+    const navLinksElement = navbar.querySelector<HTMLElement>(".nav-links");
 
-    if (toggle && navLinks) {
+    if (toggleElement && navLinksElement) {
+      const toggle = toggleElement;
+      const navLinks = navLinksElement;
       function closeMenuMob() {
         navLinks.classList.remove("open");
         toggle.classList.remove("active");
@@ -697,7 +701,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
       return parseInt(getComputedStyle(navbar).top) || 0;
     }
 
-    function setBannerState(atTop) {
+    function setBannerState(atTop: boolean) {
       if (!banner) return;
       if (atTop) {
         banner.style.transform = "translateY(0)";
@@ -760,7 +764,7 @@ const activeMenus = NAV_MENUS.map((menu) => ({
     }
     window.addEventListener("scroll", requestTick, { passive: true });
 
-    let bounceCheck = null;
+    let bounceCheck: ReturnType<typeof setTimeout> | null = null;
     window.addEventListener(
       "scroll",
       function () {
