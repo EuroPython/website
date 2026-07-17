@@ -18,6 +18,7 @@ It's a brand new project meaning we won't be contributing to an already existing
 project.
 
 Stack:
+
 - Python 3.14
 - "online machine learning" => https://pypi.org/project/river/
 - dataset: https://www.kaggle.com/datasets/arashnic/dynamic-pricing-dataset
