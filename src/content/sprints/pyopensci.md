@@ -8,7 +8,7 @@ contactPerson: # The main person to reach out to regarding the sprint.
   github: lwasser
 links: # Add as many links as relevant.
   - title: "pyOpenSci Help Wanted Project Board"
-    url: https://github.com/orgs/pyOpenSci/projects/3/views/2"
+    url: "https://github.com/orgs/pyOpenSci/projects/3/views/2"
 ---
 
 Hi Friends! pyOpenSci runs beginner friendly sprints that anyone can attend.
