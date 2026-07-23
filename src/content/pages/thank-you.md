@@ -33,6 +33,8 @@ The board members for the 2026 conference are:
 
 ## Team Anežka 💪
 
+- Anežka Müller
+
 Following our successful collaboration last year, Anežka continued to provide
 support this year too as our event manager.
 
