@@ -65,10 +65,11 @@ const L = {
   },
 
   // Participate
-  tickets: { label: "Tickets", url: "/tickets" },
-  remote: { label: "Remote", url: "/remote" },
+  // TODO: Re-enable next year!
+  // tickets: { label: "Tickets", url: "/tickets" },
+  // remote: { label: "Remote", url: "/remote" },
   finaid: { label: "Financial Aid", url: "/finaid" },
-  visa: { label: "Visa Information", url: "/visa" },
+  // visa: { label: "Visa Information", url: "/visa" },
   volunteering: { label: "Volunteering", url: "/volunteering" },
   faq: { label: "FAQ", url: "/faq" },
   coc: {
@@ -179,26 +180,27 @@ export const NAV_MENUS: NavMenu[] = [
     ],
   },
 
-  // Attend — simple flat list
-  {
-    label: "Attend",
-    url: "/tickets",
-    sections: [
-      {
-        items: [
-          L.tickets,
-          L.remote,
-          L.finaid,
-          L.visa,
-          L.volunteering,
-          L.faq,
-          L.coc,
-          L.accessibility,
-          L.childcare,
-        ],
-      },
-    ],
-  },
+  // TODO: Re-enable next year!
+  // Attend
+  // {
+  //   label: "Attend",
+  //   url: "/tickets",
+  //   sections: [
+  //     {
+  //       items: [
+  //         L.tickets,
+  //         L.remote,
+  //         L.finaid,
+  //         L.visa,
+  //         L.volunteering,
+  //         L.faq,
+  //         L.coc,
+  //         L.accessibility,
+  //         L.childcare,
+  //       ],
+  //     },
+  //   ],
+  // },
 
   // Venue — simple flat list
   {
@@ -270,7 +272,9 @@ export const TERMS: Link[] = [
 export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Quick links",
-    items: [L.tickets, L.remote, L.krakow, L.visa],
+    // TODO: Re-enable next year!
+    // items: [L.tickets, L.remote, L.krakow, L.visa],
+    items: [L.krakow],
   },
   {
     title: "Programme",

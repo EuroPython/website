@@ -111,12 +111,15 @@ const activeMenus = NAV_MENUS.map((menu) => ({
           ),
         )
     }
+    <!--
+    TODO: Re-enable next year!
     <li class="nav-item nav-mobile-cta">
       <a class="nav-link-btn" href="/jobs">Jobs</a>
     </li>
     <li class="nav-item nav-mobile-cta">
       <a class="nav-link-btn" href="/tickets">Register Now</a>
     </li>
+    -->
   </ul>
 
   <button
@@ -140,6 +143,8 @@ const activeMenus = NAV_MENUS.map((menu) => ({
       <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
     </svg>
   </button>
+  <!--
+  TODO: Re-enable next year!
   <a
     href="/discord"
     class="nav-icon-btn"
@@ -159,9 +164,13 @@ const activeMenus = NAV_MENUS.map((menu) => ({
       ></path>
     </svg>
   </a>
+  -->
   <ThemeToggle />
+  <!--
+  TODO: Re-enable next year!
   <a href="/jobs" class="nav-cta-desktop">Jobs</a>
   <a href="/tickets" class="nav-cta">Register Now</a>
+  -->
   <button
     class="nav-toggle"
     aria-label="Toggle menu"
@@ -181,7 +190,8 @@ const activeMenus = NAV_MENUS.map((menu) => ({
 
   nav {
     position: fixed;
-    top: 40px;
+    /* top: 40px when #ep-banner HTML is enabled in Layout.astro */
+    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;

@@ -60,8 +60,9 @@ const hideFooter = Astro.props.hideFooter ?? false;
   </head>
   <body>
     <!-- ═══════════════════════════════════════════
-         OLD-EUROPYTHON BANNER
-         ═══════════════════════════════════════════ -->
+         OLD-EUROPYTHON BANNER (disabled — uncomment to re-enable)
+         When enabling: also set nav { top: 40px } in Header.astro
+         ═══════════════════════════════════════════
     <a
       id="ep-banner"
       href="/remote"
@@ -69,6 +70,7 @@ const hideFooter = Astro.props.hideFooter ?? false;
     >
       Can’t join us in Kraków? Attend remotely — online options available!
     </a>
+    -->
     {
       !hideHeader && (
         <header>
