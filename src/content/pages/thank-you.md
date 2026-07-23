@@ -95,7 +95,7 @@ Thank to our local superstar for his all round help.
 
 ## Sponsorship 🤝
 
-Conference runs from ticket sales and sponsorships. The Sponsors Team contacts
+The conference runs from ticket sales and sponsorships. The Sponsors Team contacts
 sponsors early, manages contracts, invoices, logistics and ensures all
 deliverables are fulfilled by other teams.
 
