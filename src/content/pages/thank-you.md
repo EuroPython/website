@@ -70,9 +70,11 @@ proposals and, if accepted, build their confidence and prepare their talks.
 The Communications & Design team works year-round, with significant efforts
 during the conference launch, and major deadlines, like CFP, tickets, etc.
 
-This team is responsible for EuroPython’s social media accounts, blog,
-newsletter, media partnerships, overall communications, as well as digital and
-printed designs throughout the year:
+This team is also responsible for the EuroPython social media accounts: the design team will
+produce high quality artwork to go along with the copy written by the Communications boffins.
+
+There are quite a few more forms of communication that we didn't yet mention. Unsurprisingly,
+they all come under the Communications remit, too!
 
 - Daria Linhart Grudzien
 - Mia Bajić
