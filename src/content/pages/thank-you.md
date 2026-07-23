@@ -5,13 +5,19 @@ subtitle: For the EuroPython 2026 Team
 
 ## Thank You 🤗
 
-EuroPython has been organised by volunteers since 2002, driven by the passion and dedication of the community.
+EuroPython has been organised by volunteers since 2002, driven by the passion
+and dedication of the community.
 
-What does it take to organise a conference? Let's go through it chronologically and tell you a bit more about the efforts and people behind it.
+What does it take to organise a conference? Let's go through it chronologically
+and tell you a bit more about the efforts and people behind it.
 
 ## EuroPython Society Board 🏛️
 
-Before the conference preparations even start, a board is elected annually. The board manages the day-to-day operations of the EPS, the non-profit behind the series. They're responsible for fiscal and legal work, as well as making the conference happen. That includes picking a location, finding a suitable venue, local lawyers and accountants, and finally building teams.
+Before the conference preparations even start, a board is elected annually. The
+board manages the day-to-day operations of the EPS, the non-profit behind the
+series. They're responsible for fiscal and legal work, as well as making the
+conference happen. That includes picking a location, finding a suitable venue,
+local lawyers and accountants, and finally building teams.
 
 The board finds leads and build teams of volunteers to work in different areas.
 
@@ -27,15 +33,22 @@ The board members for the 2026 conference are:
 
 ## Team Anežka 💪
 
-Following our successful collaboration last year, Anežka continued to provide support this year too as our event manager.
+Following our successful collaboration last year, Anežka continued to provide
+support this year too as our event manager.
 
-She handled communication with all suppliers, relieving volunteers and board members of logistical tasks. She coordinated with the venue, catering, speakers' dinner, social events, sprints venue, booth builders, t-shirts, stickers, and numerous other smaller suppliers.
+She handled communication with all suppliers, relieving volunteers and board
+members of logistical tasks. She coordinated with the venue, catering, speakers'
+dinner, social events, sprints venue, booth builders, t-shirts, stickers, and
+numerous other smaller suppliers.
 
-We are deeply grateful to Anežka for her invaluable work and all the support she provided throughout the year.
+We are deeply grateful to Anežka for her invaluable work and all the support she
+provided throughout the year.
 
 ## Programme 📅
 
-This team manages the Call for Proposals, Community Voting, Proposals Screening, Panels, final selection of the Talks, Tutorials, Posters, Scheduling, Keynotes, Open Spaces, and all the last minute cancellations 😅.
+This team manages the Call for Proposals, Community Voting, Proposals Screening,
+Panels, final selection of the Talks, Tutorials, Posters, Scheduling, Keynotes,
+Open Spaces, and all the last minute cancellations 😅.
 
 - Marina Moro Lopez
 - Maria José Molina Contreras
@@ -46,15 +59,20 @@ This team manages the Call for Proposals, Community Voting, Proposals Screening,
 
 ## Speaker Mentorship 🎓
 
-In parallel with the Call for Proposals, we kick off the Speaker Mentorship Programme. It's designed to help new and less experienced speakers submit proposals and, if accepted, build their confidence and prepare their talks.
+In parallel with the Call for Proposals, we kick off the Speaker Mentorship
+Programme. It's designed to help new and less experienced speakers submit
+proposals and, if accepted, build their confidence and prepare their talks.
 
 - Naa Nortey
 
 ## Communications & Design 📧
 
-The Communications & Design team works year-round, with significant efforts during the conference launch, and major deadlines, like CFP, tickets, etc.
+The Communications & Design team works year-round, with significant efforts
+during the conference launch, and major deadlines, like CFP, tickets, etc.
 
-This team is responsible for EuroPython’s social media accounts, blog, newsletter, media partnerships, overall communications, as well as digital and printed designs throughout the year:
+This team is responsible for EuroPython’s social media accounts, blog,
+newsletter, media partnerships, overall communications, as well as digital and
+printed designs throughout the year:
 
 - Daria Linhart Grudzien
 - Mia Bajić
@@ -75,7 +93,9 @@ Thank to our local superstar for his all round help.
 
 ## Sponsorship 🤝
 
-Conference runs from ticket sales and sponsorships. The Sponsors Team contacts sponsors early, manages contracts, invoices, logistics and ensures all deliverables are fulfilled by other teams.
+Conference runs from ticket sales and sponsorships. The Sponsors Team contacts
+sponsors early, manages contracts, invoices, logistics and ensures all
+deliverables are fulfilled by other teams.
 
 - Angel Ramboi
 - Artur Czepiel
@@ -86,17 +106,19 @@ Conference runs from ticket sales and sponsorships. The Sponsors Team contacts s
 
 ## Financial Aid 💰
 
-This team manages financial aid applications, selects recipients, handles communications, and ensures invoices are submitted:
+This team manages financial aid applications, selects recipients, handles
+communications, and ensures invoices are submitted:
 
 - Doreen Peace Nangira Wanyama
-- Theofanis Petkos 
+- Theofanis Petkos
 - Raquel Dou
 - Aris Nivorlis
 - Panagiotis Skias
 
 ## Operations ⚙️
 
-This is the largest team, divided into several smaller teams. You might have met them onsite or online when contacting our helpdesk.
+This is the largest team, divided into several smaller teams. You might have met
+them onsite or online when contacting our helpdesk.
 
 Operations Team:
 
@@ -119,7 +141,9 @@ Operations Team:
 
 ## Code of Conduct Committee 🛡️
 
-We have a code of conduct in place to make sure that the conference is a safe place for many different people. This team is responsible for receiving and handling CoC reports:
+We have a code of conduct in place to make sure that the conference is a safe
+place for many different people. This team is responsible for receiving and
+handling CoC reports:
 
 - Vicky Twomey-Lee
 - Cheuk Ting Ho
@@ -135,24 +159,29 @@ We have a code of conduct in place to make sure that the conference is a safe pl
 
 ## Pyladies Lunch 🥗
 
-Bug hugs to Jodie Burchell for hosting the PyLadies lunch, interview sessions with sponsors, and for a second year in a row managing all the Beginners Days activities.
+Bug hugs to Jodie Burchell for hosting the PyLadies lunch, interview sessions
+with sponsors, and for a second year in a row managing all the Beginners Days
+activities.
 
 ## PYO 🐍
 
 - George Margaritis
-- Theofanis Petkos 
+- Theofanis Petkos
 - Maria José Molina Contreras
 
 ## Accessibility 🌻
 
-The Accessibility team ensured that the conference, both online and onsite, was welcoming and accessible to people with diverse needs.
+The Accessibility team ensured that the conference, both online and onsite, was
+welcoming and accessible to people with diverse needs.
 
 - Emma Cooke
 - Marcin Wierzbanowski
 
 ## Onsite Volunteers Team 🦸
 
-Once you enter the conference, the first what you see are people in yellow t-shirts (Pockets of Sunshine ☀️). They're our volunteers, who assist attendees, chair sessions, and hand out materials.
+Once you enter the conference, the first what you see are people in yellow
+t-shirts (Pockets of Sunshine ☀️). They're our volunteers, who assist attendees,
+chair sessions, and hand out materials.
 
 Onsite volunteers:
 
@@ -176,7 +205,7 @@ Onsite volunteers:
 - ELENI TOKMATΚSI
 - Emmanuel Leblond
 - Filip Będkowski
-- Gaweng Tan 
+- Gaweng Tan
 - Hugo van Kemenade
 - Jakub Červinka
 - Jakub Wasielak
@@ -225,8 +254,9 @@ Onsite volunteers:
 The official EuroPython conference and social event photos were taken by:
 
 Bartosz Pawlik
-  - Website: [bartpawlik.format.com](https://bartpawlik.format.com/)
-  - Instagram: [@bart.pawlik](https://www.instagram.com/bart.pawlik/)
+
+- Website: [bartpawlik.format.com](https://bartpawlik.format.com/)
+- Instagram: [@bart.pawlik](https://www.instagram.com/bart.pawlik/)
 
 EuroPython Speakers Dinner and Sprints photographs were taken by our volunteers:
 
@@ -234,4 +264,5 @@ EuroPython Speakers Dinner and Sprints photographs were taken by our volunteers:
 
 ## Childcare 🧸
 
-Big thanks to our childcare vendor [Cud Niania](https://cudniania.pl/) for making our conference more accessible!
+Big thanks to our childcare vendor [Cud Niania](https://cudniania.pl/) for
+making our conference more accessible!
