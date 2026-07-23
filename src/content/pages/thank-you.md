@@ -69,10 +69,10 @@ proposals and, if accepted, build their confidence and prepare their talks.
 
 ## Communications & Design 📧
 
-The Communications & Design team works year-round, however they are at their busiest
-during the conference week itself. Daily updates, monthly newsletters, WiFi passwords,
-venue maps, social media posts, and even website copy are all things produced by this
-incredible team of heroes.
+The Communications & Design team works year-round, however they are at their
+busiest during the conference week itself. Daily updates, monthly newsletters,
+WiFi passwords, venue maps, social media posts, and even website copy are all
+things produced by this incredible team of heroes.
 
 This team is also responsible for the EuroPython social media accounts: the
 design team will produce high quality artwork to go along with the copy written
@@ -100,8 +100,8 @@ Thank to our local superstar for his all round help.
 
 ## Sponsorship 🤝
 
-The conference runs from ticket sales and sponsorships. The Sponsors Team contacts
-sponsors early, manages contracts, invoices, logistics and ensures all
+The conference runs from ticket sales and sponsorships. The Sponsors Team
+contacts sponsors early, manages contracts, invoices, logistics and ensures all
 deliverables are fulfilled by other teams.
 
 - Angel Ramboi
