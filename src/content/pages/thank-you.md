@@ -3,7 +3,7 @@ title: Thank You
 subtitle: For the EuroPython 2026 Team
 ---
 
-## Thank You 🤗
+# Thank You 🤗
 
 EuroPython has been organised by volunteers since 2002, driven by the passion
 and dedication of the community.
@@ -19,7 +19,7 @@ series. They're responsible for fiscal and legal work, as well as making the
 conference happen. That includes picking a location, finding a suitable venue,
 local lawyers and accountants, and finally building teams.
 
-The board finds leads and build teams of volunteers to work in different areas.
+The board finds leads and builds teams of volunteers to work in different areas.
 
 The board members for the 2026 conference are:
 
@@ -202,7 +202,7 @@ welcoming and accessible to people with diverse needs.
 
 ## Onsite Volunteers Team 🦸
 
-Once you enter the conference, the first what you see are people in yellow
+Once you enter the conference, the first thing you see are people in yellow
 t-shirts (Pockets of Sunshine ☀️). They're our volunteers, who assist attendees,
 chair sessions, and hand out materials.
 
