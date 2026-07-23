@@ -163,11 +163,27 @@ Bug hugs to Jodie Burchell for hosting the PyLadies lunch, interview sessions
 with sponsors, and for a second year in a row managing all the Beginners Days
 activities.
 
-## PYO 🐍
+## Community Organizers Summit 🐍
 
 - George Margaritis
 - Theofanis Petkos
 - Maria José Molina Contreras
+
+## Language Summit 💻
+
+- Emily Morehouse-Valcarcel
+- Hugo van Kemenade
+- Lysandros Nikolaou
+- Łukasz Langa
+
+## Rust Summit 🦀
+
+- Cheuk Ting Ho
+
+## Packaging Summit 📦
+
+- Jannis Leidel
+- Pradyun Gedam
 
 ## Accessibility 🌻
 
