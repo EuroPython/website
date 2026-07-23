@@ -72,11 +72,12 @@ during the conference week itself. Daily updates, monthly newsletters, WiFi pass
 venue maps, social media posts, and even website copy are all things produced by this
 incredible team of heroes.
 
-This team is also responsible for the EuroPython social media accounts: the design team will
-produce high quality artwork to go along with the copy written by the Communications boffins.
+This team is also responsible for the EuroPython social media accounts: the
+design team will produce high quality artwork to go along with the copy written
+by the Communications boffins.
 
-There are quite a few more forms of communication that we didn't yet mention. Unsurprisingly,
-they all come under the Communications remit, too!
+There are quite a few more forms of communication that we didn't yet mention.
+Unsurprisingly, they all come under the Communications remit, too!
 
 - Daria Linhart Grudzien
 - Mia Bajić
