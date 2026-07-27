@@ -1,6 +1,6 @@
 ---
 title: Thank You
-subtitle: For the EuroPython 2026 Team
+subtitle: To the EuroPython 2026 Team
 ---
 
 # Thank You 🤗
@@ -17,9 +17,9 @@ Before the conference preparations even start, a board is elected annually. The
 board manages the day-to-day operations of the EPS, the non-profit behind the
 series. They're responsible for fiscal and legal work, as well as making the
 conference happen. That includes picking a location, finding a suitable venue,
-local lawyers and accountants, and finally building teams.
+local lawyers and accountants.
 
-The board finds leads and builds teams of volunteers to work in different areas.
+Finally, the board finds leads and builds teams of volunteers to work in different areas.
 
 The board members for the 2026 conference are:
 
@@ -52,12 +52,12 @@ This team manages the Call for Proposals, Community Voting, Proposals Screening,
 Panels, final selection of the Talks, Tutorials, Posters, Scheduling, Keynotes,
 Open Spaces, and all the last minute cancellations 😅.
 
+- Cristián Maureira-Fredes
 - Marina Moro Lopez
 - Maria José Molina Contreras
 - Naa Nortey
 - Diego Russo
 - Rodrigo Girão Serrão
-- Cristián Maureira-Fredes
 
 ## Speaker Mentorship 🎓
 
@@ -67,34 +67,40 @@ proposals and, if accepted, build their confidence and prepare their talks.
 
 - Naa Nortey
 
-## Communications & Design 📧
+## Communications 📧
 
-The Communications & Design team works year-round, however they are at their
-busiest during the conference week itself. Daily updates, monthly newsletters,
-WiFi passwords, venue maps, social media posts, and even website copy are all
-things produced by this incredible team of heroes.
-
-This team is also responsible for the EuroPython social media accounts: the
-design team will produce high quality artwork to go along with the copy written
-by the Communications boffins.
-
-There are quite a few more forms of communication that we didn't yet mention.
-Unsurprisingly, they all come under the Communications remit, too!
+The Communications team works year-round, however they are at their busiest
+during the conference week itself. Daily updates, monthly newsletters, Wi-Fi
+passwords, venue maps, and website copy are all things produced by this
+incredible team. There are quite a few more forms of communication that we
+didn't yet mention. Unsurprisingly, they all come under the Communications
+remit, too!
 
 - Daria Linhart Grudzien
 - Mia Bajić
 - Celina Czyszczon
 - Andrew Northall
 - Sangarshanan Veera
+
+## Design 🎨
+
+The Design team is responsible for producing high quality artwork and visual
+content, especially the EuroPython social media posts that accompany the
+communications copy written by the Communications team. They work closely with
+Communications to ensure all visual deliverables are on-brand and polished.
+
+- Mia Bajić
 - Daksh P. Jain
 
-### Website, Automation & More 💻
+### Infrastructure 💻
 
 Thank to our local superstar for his all round help.
 
 - Marcin Wierzbanowski
 
 ## EuroPython Advocacy 🗣️
+
+This role is crucial for spreading the word about EuroPython and building excitement in the local community. With EuroPython 2026 taking place in Krakow, we were fortunate to have Maciej Majewski as our advocate. As a Python organizer and organiser of PyData Krakow, Maciej helped us build local support.
 
 - Maciej Majewski
 
