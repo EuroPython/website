@@ -19,7 +19,8 @@ series. They're responsible for fiscal and legal work, as well as making the
 conference happen. That includes picking a location, finding a suitable venue,
 local lawyers and accountants.
 
-Finally, the board finds leads and builds teams of volunteers to work in different areas.
+Finally, the board finds leads and builds teams of volunteers to work in
+different areas.
 
 The board members for the 2026 conference are:
 
@@ -100,7 +101,10 @@ Thank to our local superstar for his all round help.
 
 ## EuroPython Advocacy 🗣️
 
-This role is crucial for spreading the word about EuroPython and building excitement in the local community. With EuroPython 2026 taking place in Krakow, we were fortunate to have Maciej Majewski as our advocate. As a Python organizer and organiser of PyData Krakow, Maciej helped us build local support.
+This role is crucial for spreading the word about EuroPython and building
+excitement in the local community. With EuroPython 2026 taking place in Krakow,
+we were fortunate to have Maciej Majewski as our advocate. As a Python organizer
+and organiser of PyData Krakow, Maciej helped us build local support.
 
 - Maciej Majewski
 
