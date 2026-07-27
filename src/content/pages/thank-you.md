@@ -174,7 +174,7 @@ handling CoC reports:
 - Agata Skamruk
 - Anna Wszeborowska
 
-## Pyladies Lunch 🥗
+## PyLadies Lunch 🥗
 
 Big hugs to Jodie Burchell for hosting the PyLadies lunch, interview sessions
 with sponsors, and for a second year in a row managing all the Beginners Days
