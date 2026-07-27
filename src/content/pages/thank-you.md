@@ -101,12 +101,9 @@ Thanks to our local superstar for his all-round help.
 
 ## EuroPython Advocacy 🗣️
 
-This role is crucial for spreading the word about EuroPython and building
-excitement in the local community. With EuroPython 2026 taking place in Krakow,
-we were fortunate to have Maciej Majewski as our advocate. As a Python organizer
-and organiser of PyData Krakow, Maciej helped us build local support.
-
 - Maciej Majewski
+
+This role is crucial for spreading the word about EuroPython and building excitement in the local community. With EuroPython 2026 taking place in Krakow, we were fortunate to have Maciej Majewski as our advocate. As the organiser of PyData Krakow, Maciej helped us build local support.
 
 ## Sponsorship 🤝
 
@@ -286,10 +283,9 @@ Onsite volunteers:
 
 The official EuroPython conference and social event photos were taken by:
 
-Bartosz Pawlik
-
-- Website: [bartpawlik.format.com](https://bartpawlik.format.com/)
-- Instagram: [@bart.pawlik](https://www.instagram.com/bart.pawlik/)
+- Bartosz Pawlik
+    - Website: [bartpawlik.format.com](https://bartpawlik.format.com/)
+    - Instagram: [@bart.pawlik](https://www.instagram.com/bart.pawlik/)
 
 EuroPython Speakers Dinner and Sprints photographs were taken by our volunteers:
 
