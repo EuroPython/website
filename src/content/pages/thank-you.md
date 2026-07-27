@@ -93,7 +93,7 @@ Communications to ensure all visual deliverables are on-brand and polished.
 - Mia Bajić
 - Daksh P. Jain
 
-### Infrastructure 💻
+## Infrastructure 💻
 
 Thanks to our local superstar for his all-round help.
 
