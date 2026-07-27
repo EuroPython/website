@@ -180,7 +180,7 @@ Bug hugs to Jodie Burchell for hosting the PyLadies lunch, interview sessions
 with sponsors, and for a second year in a row managing all the Beginners Days
 activities.
 
-## Community Organizers Summit 🐍
+## Community Organisers Summit 🐍
 
 - George Margaritis
 - Theofanis Petkos
