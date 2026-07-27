@@ -95,7 +95,7 @@ Communications to ensure all visual deliverables are on-brand and polished.
 
 ### Infrastructure 💻
 
-Thank to our local superstar for his all round help.
+Thanks to our local superstar for his all-round help.
 
 - Marcin Wierzbanowski
 
