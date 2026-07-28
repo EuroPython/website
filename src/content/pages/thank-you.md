@@ -178,7 +178,8 @@ handling CoC reports:
 
 ## PyLadies Lunch 🥗
 
-Big hugs to the organisers for hosting the PyLadies lunch, Open Space, Workshops, and more!.
+Big hugs to the organisers for hosting the PyLadies lunch, Open Space,
+Workshops, and more!.
 
 - Anwesha Das
 - Jodie Burchell
@@ -186,7 +187,8 @@ Big hugs to the organisers for hosting the PyLadies lunch, Open Space, Workshops
 
 ## Beginners' Day 🐥
 
-Thank you for the organisation of the Humble Data and DjangoGirls Workshop at the sprints days of the conference:
+Thank you for the organisation of the Humble Data and DjangoGirls Workshop at
+the sprints days of the conference:
 
 - Jodie Burchell
 - Raffaella Suardini
@@ -301,7 +303,8 @@ The official EuroPython conference and social event photos were taken by:
   - Website: [bartpawlik.format.com](https://bartpawlik.format.com/)
   - Instagram: [@bart.pawlik](https://www.instagram.com/bart.pawlik/)
 
-EuroPython PyLadies lunch along with some workshops were photographed by our volunteers:
+EuroPython PyLadies lunch along with some workshops were photographed by our
+volunteers:
 
 - Moisés Guimarães
 
