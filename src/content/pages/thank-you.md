@@ -28,8 +28,8 @@ The board members for the 2026 conference are:
 - Angel Ramboi
 - Aris Nivorlis
 - Artur Czepiel
-- Mia Bajić
 - Ege Akman
+- Mia Bajić
 - Yuliia Barabash
 
 ## Team Anežka 💪
@@ -54,10 +54,10 @@ Panels, final selection of the Talks, Tutorials, Posters, Scheduling, Keynotes,
 Open Spaces, and all the last minute cancellations 😅.
 
 - Cristián Maureira-Fredes
-- Marina Moro Lopez
-- Maria José Molina Contreras
-- Naa Nortey
 - Diego Russo
+- Maria José Molina Contreras
+- Marina Moro Lopez
+- Naa Nortey
 - Rodrigo Girão Serrão
 
 ## Speaker Mentorship 🎓
@@ -78,9 +78,9 @@ didn't yet mention. Unsurprisingly, they all come under the Communications
 remit, too!
 
 - Daria Linhart Grudzien
-- Mia Bajić
-- Celina Czyszczon
 - Andrew Northall
+- Celina Czyszczon
+- Mia Bajić
 - Sangarshanan Veera
 
 ## Design 🎨
@@ -114,10 +114,10 @@ The conference runs from ticket sales and sponsorships. The Sponsors Team
 contacts sponsors early, manages contracts, invoices, logistics and ensures all
 deliverables are fulfilled by other teams.
 
+- Kshitijaa Jaglan
 - Angel Ramboi
 - Artur Czepiel
 - Iryna Kondrashchenko
-- Kshitijaa Jaglan
 - Oleh Kostromin
 - Raquel Dou
 
@@ -126,11 +126,11 @@ deliverables are fulfilled by other teams.
 This team manages financial aid applications, selects recipients, handles
 communications, and ensures invoices are submitted:
 
-- Doreen Peace Nangira Wanyama
 - Theofanis Petkos
-- Raquel Dou
 - Aris Nivorlis
+- Doreen Peace Nangira Wanyama
 - Panagiotis Skias
+- Raquel Dou
 
 ## Operations ⚙️
 
@@ -140,21 +140,23 @@ them onsite or online when contacting our helpdesk.
 Operations Team:
 
 - Jake Balas
+- Aeneas Christodoulou
+- Aris Nivorlis
+- Çınar Fidanboy
 - George Zisopoulos
+- Jakub Červinka
 - Janusz Kamieński
+- Kshitijaa Jaglan
 - Liberta Gani
 - Mahe Iram Khan
-- Moisés Guimarães
 - Martin Borus
+- Moisés Guimarães
 - Niklas Mertsch
 - Panagiotis Kyrillos
 - Piotr Gnus
 - Raquel Dou
-- Çınar Fidanboy
-- Aeneas Christodoulou
-- Toomas Ormisson
 - Szymon Cader
-- Jakub Červinka
+- Toomas Ormisson
 
 ## Code of Conduct Committee 🛡️
 
@@ -162,36 +164,45 @@ We have a code of conduct in place to make sure that the conference is a safe
 place for many different people. This team is responsible for receiving and
 handling CoC reports:
 
-- Vicky Twomey-Lee
 - Cheuk Ting Ho
 - Georgi Ker
 - Jakub Vysoký
 - Michał Karzyński
+- Vicky Twomey-Lee
 
 ## PyLadies Poland 👩‍💻
 
-- Dorota Ostrowska
 - Agata Skamruk
 - Anna Wszeborowska
+- Dorota Ostrowska
 
 ## PyLadies Lunch 🥗
 
-Big hugs to Jodie Burchell for hosting the PyLadies lunch, interview sessions
-with sponsors, and for a second year in a row managing all the Beginners Days
-activities.
+Big hugs to the organisers for hosting the PyLadies lunch, Open Space, Workshops, and more!.
+
+- Anwesha Das
+- Jodie Burchell
+- Maria José Molina Contreras
+
+## Beginners' Day 🐥
+
+Thank you for the organisation of the Humble Data and DjangoGirls Workshop at the sprints days of the conference:
+
+- Jodie Burchell
+- Raffaella Suardini
 
 ## Community Organisers Summit 🐍
 
 - George Margaritis
-- Theofanis Petkos
 - Maria José Molina Contreras
+- Theofanis Petkos
 
 ## Language Summit 💻
 
 - Emily Morehouse-Valcarcel
 - Hugo van Kemenade
-- Lysandros Nikolaou
 - Łukasz Langa
+- Lysandros Nikolaou
 
 ## Rust Summit 🦀
 
@@ -290,7 +301,7 @@ The official EuroPython conference and social event photos were taken by:
   - Website: [bartpawlik.format.com](https://bartpawlik.format.com/)
   - Instagram: [@bart.pawlik](https://www.instagram.com/bart.pawlik/)
 
-EuroPython Speakers Dinner and Sprints photographs were taken by our volunteers:
+EuroPython PyLadies lunch along with some workshops were photographed by our volunteers:
 
 - Moisés Guimarães
 
