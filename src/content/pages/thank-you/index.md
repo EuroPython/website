@@ -11,6 +11,8 @@ and dedication of the community.
 What does it take to organise a conference? Let's go through it chronologically
 and tell you a bit more about the efforts and people behind it.
 
+![Closing photo](./closing-2026.jpg)
+
 ## EuroPython Society Board 🏛️
 
 Before the conference preparations even start, a board is elected annually. The
@@ -137,7 +139,7 @@ communications, and ensures invoices are submitted:
 This is the largest team, divided into several smaller teams. You might have met
 them onsite or online when contacting our helpdesk.
 
-Operations Team:
+### Operations Team:
 
 - Jake Balas
 - Aeneas Christodoulou
@@ -157,6 +159,108 @@ Operations Team:
 - Raquel Dou
 - Szymon Cader
 - Toomas Ormisson
+
+### Discord Team:
+
+Everyone with a valid conference ticket received access to our Discord server, where participants could chat with fellow attendees, speakers, and organisers. The Discord team managed the server, ensuring that participants had access and the appropriate permissions.
+
+A huge thank you to Niklas Mertsch for leading the Discord team and to Szymon Cader for his significant contributions!
+
+The work involved in maintaining and updating the Discord bot can be found in the EuroPython Discord bot repository: https://github.com/EuroPython/discord
+
+### A/V Team:
+
+Although an external supplier handled the streaming and recording, this team coordinated with the venue, managed the digital screens, and dealt with unexpected technical issues.
+
+A big thank you to Raquel Dou, Piotr Gnus, Panagiotis Kyrillos, Aeneas Christodoulou, and Anežka Müller for coordinating all things A/V!
+
+### Registration Desk:
+
+The registration desk is one of the first points of contact for everyone arriving at EuroPython. Thanks to the careful preparation and coordination of Martin Borus and Gaweng Tan, registration was a smooth experience for both attendees and the onsite volunteers working at the desk.
+
+A huge thank you to Martin and Gaweng for making everyone’s arrival so welcoming and well organised!
+
+### Helpdesk:
+
+Throughout the conference, the helpdesk answered questions and assisted participants whenever they needed support.
+
+A special thank you to George Zisopoulos, who led the helpdesk and worked relentlessly to answer questions, resolve issues, and help everyone who reached out.
+
+
+As soon as you enter the conference, some of the first people you see are those wearing yellow T-shirts—our Pockets of Sunshine ☀️. These are our onsite volunteers, who assist attendees, chair sessions, distribute materials, and help keep the conference running smoothly.
+
+A huge thank you to Janusz Kamieński for coordinating the entire onsite volunteer team and ensuring that everyone had the information and support they needed throughout the conference.
+
+### Onsite Volunteers Team
+
+Once you enter the conference, the first thing you see are people in yellow
+t-shirts (🦸 Pockets of Sunshine ☀️). They're our volunteers, who assist attendees,
+chair sessions, and hand out materials.
+
+- Aditri Das
+- Ajinkya Dahale
+- Alex Salynski
+- Amine BENDAHMANE
+- Antonio Spadaro
+- Ashish Gupta
+- Augustin Ramboi
+- Barbora Hůlová
+- Bartek Nowak
+- Bas Bloemsaat
+- Björn Brandt
+- Carli* Freudenberg
+- Carlijn van der Vleuten
+- Celina Czyszczon
+- Daksh P. Jain
+- David Slavíček
+- Dieter Vansteenwegen
+- ELENI TOKMAKTSI
+- Emmanuel Leblond
+- Filip Będkowski
+- Gaweng Tan
+- Hugo van Kemenade
+- Jakub Červinka
+- Jakub Wasielak
+- Jannis Lübbe
+- Jarek Potiuk
+- Juan Sebastian Velasquez Acevedo
+- Julia Demitraszek
+- Kacper Wojtowicz
+- Kaja Łucka
+- Laura Oberländer
+- Łukasz Taczuk
+- Maciej Majewski
+- Maja Nieragden
+- Maja Sankowska
+- Marine Guyot
+- Michael Seifert
+- Michał Lowas-Rzechonek
+- Ned Deily
+- Niels Meijer
+- Nika
+- Nikos Chatzis
+- Pelle Koster
+- Petr Viktorin
+- Priyansh Saxena
+- Reuven Lerner
+- Roberto Polli
+- Sara Czasak
+- Sara Garcia
+- Sebastian Witowski
+- Selina Rajk
+- Stefanie Molin
+- Teodora Miletic
+- Thibaud Colas
+- Thomas Berger
+- Tomáš Roun
+- Tytus Walkowiak
+- Ulrik Södergren
+- Urszula
+- Vladyslav Fedoriuk
+- Wiktor Kołodziej
+- Wilfried Pollan
+
+![Pockets of sunshine](./sunshine-2026.jpg)
 
 ## Code of Conduct Committee 🛡️
 
@@ -187,7 +291,7 @@ Workshops, and more!.
 
 ## Beginners' Day 🐥
 
-Thank you for the organisation of the Humble Data and DjangoGirls Workshop at
+Thank you for the organisation of the Humble Data and Django Girls Workshop at
 the sprints days of the conference:
 
 - Jodie Burchell
@@ -222,78 +326,6 @@ welcoming and accessible to people with diverse needs.
 
 - Emma Cooke
 - Marcin Wierzbanowski
-
-## Onsite Volunteers Team 🦸
-
-Once you enter the conference, the first thing you see are people in yellow
-t-shirts (Pockets of Sunshine ☀️). They're our volunteers, who assist attendees,
-chair sessions, and hand out materials.
-
-Onsite volunteers:
-
-- Aditri Das
-- Ajinkya Dahale
-- Alex Salynski
-- Amine BENDAHMANE
-- Antonio Spadaro
-- Ashish Gupta
-- Augustin Ramboi
-- Barbora Hůlová
-- Bartek Nowak
-- Bas Bloemsaat
-- Björn Brandt
-- Carli Freudenberg
-- Carlijn van der Vleuten
-- Celina Czyszczon
-- Daksh P. Jain
-- David Slavíček
-- Dieter Vansteenwegen
-- ELENI TOKMATΚSI
-- Emmanuel Leblond
-- Filip Będkowski
-- Gaweng Tan
-- Hugo van Kemenade
-- Jakub Červinka
-- Jakub Wasielak
-- Jannis Lübbe
-- Jarek Potiuk
-- Juan Sebastian Velasquez Acevedo
-- Julia Demitraszek
-- Kacper Wojtowicz
-- Kaja Łucka
-- Laura Oberländer
-- Łukasz Taczuk
-- Maciej Majewski
-- Maja Nieragden
-- Maja Sankowska
-- Marine Guyot
-- Michael Seifert
-- Michał Lowas-Rzechonek
-- Natalia Traczewska
-- Ned Deily
-- Niels Meijer
-- Nika
-- Nikos Chatzis
-- Pelle Koster
-- Petr Viktorin
-- Priyansh Saxena
-- Reuven Lerner
-- Roberto Polli
-- Sara Czasak
-- Sara Garcia
-- Sebastian Witowski
-- Selina Rajk
-- Stefanie Molin
-- Teodora Miletic
-- Thibaud Colas
-- Thomas Berger
-- Tomáš Roun
-- Tytus Walkowiak
-- Ulrik Södergren
-- Urszula
-- Vladyslav Fedoriuk
-- Wiktor Kołodziej
-- Wilfried Pollan
 
 ## Conference Photographer 📸
 
