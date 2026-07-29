@@ -139,7 +139,7 @@ communications, and ensures invoices are submitted:
 This is the largest team, divided into several smaller teams. You might have met
 them onsite or online when contacting our helpdesk.
 
-### Operations Team:
+### Operations Team
 
 - Jake Balas
 - Aeneas Christodoulou
@@ -160,7 +160,7 @@ them onsite or online when contacting our helpdesk.
 - Szymon Cader
 - Toomas Ormisson
 
-### Discord Team:
+### Discord Team
 
 Everyone with a valid conference ticket received access to our Discord server,
 where participants could chat with fellow attendees, speakers, and organisers.
@@ -173,7 +173,7 @@ Cader for his significant contributions!
 The work involved in maintaining and updating the Discord bot can be found in
 the EuroPython Discord bot repository: https://github.com/EuroPython/discord
 
-### A/V Team:
+### A/V Team
 
 Although an external supplier handled the streaming and recording, this team
 coordinated with the venue, managed the digital screens, and dealt with
@@ -182,7 +182,7 @@ unexpected technical issues.
 A big thank you to Raquel Dou, Piotr Gnus, Panagiotis Kyrillos, Aeneas
 Christodoulou, and Anežka Müller for coordinating all things A/V!
 
-### Registration Desk:
+### Registration Desk
 
 The registration desk is one of the first points of contact for everyone
 arriving at EuroPython. Thanks to the careful preparation and coordination of
@@ -192,7 +192,7 @@ attendees and the onsite volunteers working at the desk.
 A huge thank you to Martin and Gaweng for making everyone’s arrival so welcoming
 and well organised!
 
-### Helpdesk:
+### Helpdesk
 
 Throughout the conference, the helpdesk answered questions and assisted
 participants whenever they needed support.
