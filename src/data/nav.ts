@@ -99,6 +99,7 @@ const L = {
     url: "https://europython-society.org/",
     external: true,
   },
+  team: { label: "Team", url: "/thank-you" },
   communityPartners: {
     label: "Community Partners",
     url: "/community-partners",
@@ -223,6 +224,7 @@ export const NAV_MENUS: NavMenu[] = [
         items: [
           L.about,
           L.eps,
+          L.team,
           L.communityPartners,
           L.mediaPartners,
           L.yearsOfEp,
@@ -309,6 +311,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     items: [
       L.about,
       L.eps,
+      L.team,
       L.communityPartners,
       L.mediaPartners,
       L.blog,
