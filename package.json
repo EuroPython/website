@@ -33,7 +33,7 @@
     "date-fns": "^4.4.0",
     "date-fns-tz": "^3.2.0",
     "lite-youtube-embed": "^0.3.4",
-    "marked": "^16.4.2",
+    "marked": "^18.0.7",
     "nanostores": "^1.4.0",
     "pagefind": "^1.5.2",
     "rehype-autolink-headings": "^7.1.0",
