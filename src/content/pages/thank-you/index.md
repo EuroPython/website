@@ -344,7 +344,6 @@ The Accessibility team ensured that the conference, both online and onsite, was
 welcoming and accessible to people with diverse needs.
 
 - Emma Cooke
-- Marcin Wierzbanowski
 
 ## Conference Photographer 📸
 
