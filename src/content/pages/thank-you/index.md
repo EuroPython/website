@@ -227,7 +227,7 @@ attendees, chair sessions, and hand out materials.
 - Bartek Nowak
 - Bas Bloemsaat
 - Björn Brandt
-- Carli* Freudenberg
+- Carli\* Freudenberg
 - Carlijn van der Vleuten
 - Celina Czyszczon
 - Daksh P. Jain

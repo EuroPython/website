@@ -6,6 +6,11 @@ const { name: title, tier, logo_padding = false } = sponsor.data;
 
 const logo = sponsorLogos[sponsor.id];
 
+// Skip sponsors without a matching logo file
+if (!logo) {
+  return new Response(null, { status: 404 });
+}
+
 const tiers = [
   "Keystone",
   "Diamond",

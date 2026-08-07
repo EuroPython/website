@@ -17,7 +17,7 @@ const jobs = await getCollection("jobs", ({ data }) => {
 
 const jobsMap = Object.fromEntries(jobs.map((job) => [job.id, job]));
 
-const jobFiles = import.meta.glob("../content/sponsors/*/!(index).md");
+const jobFiles = import.meta.glob("../content/sponsors/*/*.md");
 const sponsorsJobsMap: Record<string, CollectionEntry<"jobs">[]> = {};
 
 const tiers = [
@@ -34,6 +34,8 @@ for (const path in jobFiles) {
   if (match) {
     const sponsorId = match[1];
     const jobId = match[2];
+    // Skip index.md files (sponsor pages, not job listings)
+    if (jobId === "index") continue;
 
     const entry: CollectionEntry<"jobs"> = jobsMap[`${sponsorId}/${jobId}`];
     const sponsor = await getEntry("sponsors", sponsorId);
