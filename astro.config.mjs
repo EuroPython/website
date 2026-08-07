@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { unified } from "@astrojs/markdown-remark";
 import metaTags from "astro-meta-tags";
 import deleteUnusedImages from "astro-delete-unused-images";
 import { execSync } from "node:child_process";
@@ -131,24 +132,25 @@ export default defineConfig({
     plugins: [tailwindcss(), syncKeynoterImages()],
   },
   markdown: {
-    remarkPlugins: [
-      [
-        remarkToc,
-        {
-          heading: "contents",
-        },
+    processor: unified({
+      remarkPlugins: [
+        [
+          remarkToc,
+          {
+            heading: "contents",
+          },
+        ],
       ],
-    ],
-    rehypePlugins: [
-      rehypeSlug,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-        },
+      rehypePlugins: [
+        rehypeSlug,
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: "wrap",
+          },
+        ],
       ],
-    ],
-    plugins: [tailwindcss()],
+    }),
   },
   site: process.env.SITE_URL || "https://ep2026.europython.eu",
   redirects: {
