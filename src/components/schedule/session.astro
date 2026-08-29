@@ -73,8 +73,8 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
   .ep-session {
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
-    padding: 0.5rem 0.6rem;
+    gap: 0.3rem;
+    padding: 0.7rem 0.8rem;
     background: var(--ep-surface-subtle);
     border: 1px solid var(--ep-border);
     border-radius: 6px;
@@ -95,9 +95,9 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
 
   .ep-session-title {
     font-family: "Inter Tight", system-ui, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.35;
     color: var(--ep-white);
     text-decoration: none;
     margin: 0;
@@ -109,9 +109,9 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
   }
 
   .ep-session-speakers {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--ep-text-secondary);
-    line-height: 1.3;
+    line-height: 1.35;
   }
 
   .ep-session-meta {
@@ -119,7 +119,7 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
     flex-wrap: wrap;
     align-items: center;
     gap: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--ep-text-muted);
     font-weight: 500;
     line-height: 1.4;
@@ -187,7 +187,7 @@ const sessionUrl = session.slug ? `/session/${session.slug}` : "#";
 
   @media screen and (max-width: 800px) {
     .ep-session-title {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
 </style>
