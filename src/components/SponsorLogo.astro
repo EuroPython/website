@@ -40,6 +40,29 @@ const slug =
     {
       website && slug ? (
         <a href={slug} aria-label={`Link to ${title}`}>
+          {logo && (
+            <Image
+              src={logo}
+              alt={`${title} Logo`}
+              class={`max-w-full ${logo_max_width ? `lg:max-w-[${logo_max_width}]` : ""}`}
+              style={{
+                maxHeight: "120px",
+                minWidth:
+                  tier === "Partners" || tier === "Media Partners"
+                    ? "140px"
+                    : undefined,
+                objectFit: "contain",
+                padding: logo_padding ? logo_padding : undefined,
+              }}
+            />
+          )}
+
+          <h3 class="font-semibold text-gray-900 text-center text-sm">
+            {tier === "Partners" && title}
+          </h3>
+        </a>
+      ) : (
+        logo && (
           <Image
             src={logo}
             alt={`${title} Logo`}
@@ -54,26 +77,7 @@ const slug =
               padding: logo_padding ? logo_padding : undefined,
             }}
           />
-
-          <h3 class="font-semibold text-gray-900 text-center text-sm">
-            {tier === "Partners" && title}
-          </h3>
-        </a>
-      ) : (
-        <Image
-          src={logo}
-          alt={`${title} Logo`}
-          class={`max-w-full ${logo_max_width ? `lg:max-w-[${logo_max_width}]` : ""}`}
-          style={{
-            maxHeight: "120px",
-            minWidth:
-              tier === "Partners" || tier === "Media Partners"
-                ? "140px"
-                : undefined,
-            objectFit: "contain",
-            padding: logo_padding ? logo_padding : undefined,
-          }}
-        />
+        )
       )
     }
     {

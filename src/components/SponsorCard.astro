@@ -24,12 +24,14 @@ const {
   draft
 } = sponsor.data;
 
-const jobFiles = import.meta.glob("../content/sponsors/*/!(index).md");
+const jobFiles = import.meta.glob("../content/sponsors/*/*.md");
 const sponsorsJobsMap = {};
 
 for (const path in jobFiles) {
   const match = path.match(/\.\.\/content\/sponsors\/([^/]+)\/([^/]+)\.md$/);
   if (match) {
+    // Skip index.md files (sponsor pages, not job listings)
+    if (match[2] === "index") continue;
     const sponsorId = match[1];
     if (!sponsorsJobsMap[sponsorId]) sponsorsJobsMap[sponsorId] = [];
     sponsorsJobsMap[sponsorId].push(
