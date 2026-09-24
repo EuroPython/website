@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - ep2026
-  schedule:
-    - cron: "7,27,47 * * * *"
 
 jobs:
   deploy:
