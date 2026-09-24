@@ -1,5 +1,5 @@
 ---
-
+import DateGate from "@ui/DateGate.astro";
 ---
 
 <section class="hero-main">
@@ -42,7 +42,10 @@ PYTHON">
         > 18–23 July
       </p>
       <div class="hero-cta-row">
-        <a href="/tickets" class="hero-cta">Register Now</a>
+        <DateGate before="2026-07-20">
+          <a slot="before" href="/tickets" class="hero-cta">Register Now</a>
+          <a slot="during" href="/tickets" class="hero-cta">Register Now</a>
+        </DateGate>
         <a href="#programme" class="hero-cta-alt">View Programme</a>
       </div>
       <div class="hero-flowers" aria-hidden="true">
@@ -360,6 +363,18 @@ PYTHON">
     box-shadow:
       0 0 40px oklch(0.831 0.142 84.4 / 0.5),
       inset 0 0 20px oklch(0.831 0.142 84.4 / 0.1);
+  }
+
+  .hero-cta-after {
+    font-family: var(--font-heading, "Roboto", sans-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--color-text-secondary);
+    border: 3px solid var(--color-border);
+    border-radius: 2px;
+    padding: 1rem 2.5rem;
+    display: inline-block;
   }
 
   @media (max-width: 768px) {

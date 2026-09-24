@@ -2,6 +2,7 @@
 import HeaderLogo from "@components/header/header-logo.astro";
 import Search from "@components/Search.astro";
 import ThemeToggle from "@components/ThemeToggle.astro";
+import DateGate from "@ui/DateGate.astro";
 
 import { NAV_MENUS } from "@data/nav";
 import { buildLinkChecker } from "@utils/nav";
@@ -111,12 +112,24 @@ const activeMenus = NAV_MENUS.map((menu) => ({
           ),
         )
     }
-    <li class="nav-item nav-mobile-cta">
-      <a class="nav-link-btn" href="/jobs">Jobs</a>
-    </li>
-    <li class="nav-item nav-mobile-cta">
-      <a class="nav-link-btn" href="/tickets">Register Now</a>
-    </li>
+    <DateGate before="2026-07-20">
+      <Fragment slot="before">
+        <li class="nav-item nav-mobile-cta">
+          <a class="nav-link-btn" href="/jobs">Jobs</a>
+        </li>
+        <li class="nav-item nav-mobile-cta">
+          <a class="nav-link-btn" href="/tickets">Register Now</a>
+        </li>
+      </Fragment>
+      <Fragment slot="during">
+        <li class="nav-item nav-mobile-cta">
+          <a class="nav-link-btn" href="/jobs">Jobs</a>
+        </li>
+        <li class="nav-item nav-mobile-cta">
+          <a class="nav-link-btn" href="/tickets">Register Now</a>
+        </li>
+      </Fragment>
+    </DateGate>
   </ul>
 
   <button
@@ -160,8 +173,21 @@ const activeMenus = NAV_MENUS.map((menu) => ({
     </svg>
   </a>
   <ThemeToggle />
-  <a href="/jobs" class="nav-cta-desktop">Jobs</a>
-  <a href="/tickets" class="nav-cta">Register Now</a>
+  <DateGate before="2026-07-20">
+    <Fragment slot="before">
+      <a href="/jobs" class="nav-cta-desktop">Jobs</a>
+      <a href="/tickets" class="nav-cta">Register Now</a>
+    </Fragment>
+    <Fragment slot="during">
+      <a href="/jobs" class="nav-cta-desktop">Jobs</a>
+      <a href="/tickets" class="nav-cta">Register Now</a>
+    </Fragment>
+    <Fragment slot="after">
+      <span class="nav-cta" style="opacity:0.5;cursor:default"
+        >See you next year!</span
+      >
+    </Fragment>
+  </DateGate>
   <button
     class="nav-toggle"
     aria-label="Toggle menu"

@@ -1,0 +1,79 @@
+---
+/**
+ * DateGate — conditionally render content based on build-time date.
+ *
+ * Defines a date window via `after` and/or `before` props. At build time,
+ * the component determines which time period "now" falls into and renders
+ * exactly one of three named slots: "before", "during", or "after".
+ *
+ * Any omitted slot simply renders nothing — use 2 slots for a simple
+ * on/off gate or all 3 for a full before/during/after split.
+ *
+ * Date strings are parsed as UTC midnight when no time portion is given
+ * (e.g. "2026-07-14" = 2026-07-14T00:00:00.000Z). For precise time-of-day
+ * gating in a specific timezone, include the offset:
+ *   after="2026-07-14T00:00:00+02:00"   (midnight CEST)
+ *
+ * @example
+ * // 3-state: before CfP / open / closed
+ * <DateGate after="2026-06-01" before="2026-07-01">
+ *   <p slot="before">CfP opens June 1st!</p>
+ *   <a slot="during" href="/cfp">Submit your talk</a>
+ *   <p slot="after">CfP closed. See you in Kraków!</p>
+ * </DateGate>
+ *
+ * @example
+ * // 2-state: teaser → live (omit "after" slot)
+ * <DateGate after="2026-07-14">
+ *   <p slot="before">Tickets coming soon!</p>
+ *   <a slot="during" href="/tickets">Buy Tickets</a>
+ * </DateGate>
+ */
+
+interface Props {
+  /**
+   * Window start — ISO 8601 date string, inclusive.
+   * Date-only strings (e.g. "2026-07-14") are parsed as UTC midnight.
+   * Include offset for timezone-aware gating: "2026-07-14T00:00:00+02:00"
+   */
+  after?: string;
+  /**
+   * Window end — ISO 8601 date string, inclusive.
+   * Same parsing rules as `after`.
+   */
+  before?: string;
+}
+
+const { after, before } = Astro.props;
+
+// --- Parse dates ---
+// Date-only strings (no "T") get interpreted as UTC midnight by new Date().
+// DateTime strings with offset (e.g. "...T00:00:00+02:00") parse correctly.
+const parseDate = (s: string): Date => {
+  const iso = s.includes("T") ? s : `${s}T00:00:00.000Z`;
+  return new Date(iso);
+};
+
+const now = new Date();
+const afterDate = after ? parseDate(after) : null;
+const beforeDate = before ? parseDate(before) : null;
+
+// --- Determine which period "now" falls into ---
+type Period = "before" | "during" | "after";
+
+let period: Period = "during";
+
+if (afterDate && beforeDate) {
+  if (now < afterDate) period = "before";
+  else if (now > beforeDate) period = "after";
+  else period = "during";
+} else if (afterDate) {
+  period = now < afterDate ? "before" : "during";
+} else if (beforeDate) {
+  period = now > beforeDate ? "after" : "during";
+}
+---
+
+{period === "before" ? <slot name="before" /> : null}
+{period === "during" ? <slot name="during" /> : null}
+{period === "after" ? <slot name="after" /> : null}
