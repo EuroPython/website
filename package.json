@@ -54,7 +54,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "oxipng": "^1.0.1",
-    "prettier": "^3.9.4",
+    "prettier": "^3.9.9",
     "prettier-plugin-astro": "^0.14.1",
     "svgo": "^4.0.1",
     "typescript": "^5.8.3",
