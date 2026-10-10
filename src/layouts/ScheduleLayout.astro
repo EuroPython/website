@@ -520,7 +520,11 @@ const showNoticeGrid = !Astro.url.pathname.match(/^\/schedule\/?$/);
     }
 
     .ep-session,
-    .break {
+    .time,
+    .break,
+    .lunch-break,
+    .posters-inside,
+    .sched-lunch-events {
       break-inside: avoid;
     }
 
@@ -584,18 +588,100 @@ const showNoticeGrid = !Astro.url.pathname.match(/^\/schedule\/?$/);
       padding: 1pt 4pt !important;
     }
 
-    /* Lunch slot: show the "13:00 Lunch" bar, skip the poster cards
-     (they have their own page at /schedule/day/…) */
+    /* Lunch slot: show header bar + poster cards + side events */
     .lunch-break-header {
       display: block !important;
       font-size: 8pt !important;
       padding: 2pt !important;
-      border-bottom: none !important;
+      border-bottom: 1px solid #ccc !important;
       background: transparent !important;
     }
 
     .lunch-break-content {
-      display: none !important;
+      display: block !important;
+      background: transparent !important;
+    }
+
+    .lunch-break-content .posters-inside h2 {
+      font-size: 8pt !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
+      padding: 3pt 2pt !important;
+      border-bottom: 1px solid #ccc !important;
+    }
+
+    .lunch-break-content .poster-cards {
+      display: flex !important;
+      flex-wrap: wrap !important;
+    }
+
+    .lunch-break-content .poster-cards > div {
+      flex: 1 1 200px !important;
+      max-width: 250px !important;
+    }
+
+    .lunch-break-content .ep-session.poster {
+      display: flex !important;
+      padding: 2pt 3pt !important;
+      margin: 1pt !important;
+      border: 1px solid #ccc !important;
+      border-radius: 2px !important;
+      background: oklch(0 0 0 / 0.03) !important;
+    }
+
+    .lunch-break-content .ep-session.poster .ep-session-title {
+      font-size: 7pt !important;
+      line-height: 1.2 !important;
+    }
+
+    .lunch-break-content .ep-session.poster .ep-session-speakers {
+      font-size: 6.5pt !important;
+    }
+
+    .lunch-break-content .ep-session.poster .ep-session-meta {
+      font-size: 6pt !important;
+    }
+
+    .lunch-break-content .sched-lunch-hr {
+      display: block !important;
+      border: none !important;
+      border-top: 1px solid #ccc !important;
+      margin: 4pt 0 !important;
+    }
+
+    .lunch-break-content .sched-lunch-events {
+      display: block !important;
+      padding: 2pt !important;
+    }
+
+    .lunch-break-content .sched-lunch-events-label {
+      font-size: 7pt !important;
+      font-weight: 600 !important;
+      margin-bottom: 2pt !important;
+    }
+
+    .lunch-break-content .sched-posters-list {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 2pt 6pt !important;
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .lunch-break-content .sched-posters-list li {
+      font-size: 6.5pt !important;
+    }
+
+    .lunch-break-content .sched-posters-list a {
+      display: inline-block !important;
+      border: 1px solid #ccc !important;
+      border-radius: 3px !important;
+      padding: 2pt 6pt !important;
+      color: oklch(0.522 0.218 264.4) !important;
+      text-decoration: none !important;
+      font-size: 6.5pt !important;
     }
   }
 </style>
